@@ -17,6 +17,12 @@ interface Row {
   updated_at: string
 }
 
+interface ContentRow {
+  language: string
+  slug: string
+  updated_at: string
+}
+
 async function fetchAllPublished(): Promise<Row[]> {
   const rows: Row[] = []
   for (let from = 0; ; from += BATCH) {
@@ -42,8 +48,17 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const site = getSiteUrl()
   const rows = await fetchAllPublished()
+  const { data: contentPages, error: contentError } = await supabase
+    .from('content_pages')
+    .select('language, slug, updated_at')
+    .eq('published', true)
+  if (contentError) throw new Error(`Sitemap content: ${contentError.message}`)
 
   const groups = new Map<string, Row[]>()
+  for (const page of (contentPages ?? []) as ContentRow[]) {
+    entries.push({ url: `${site}/${page.language}/${page.slug}`, lastModified: page.updated_at })
+  }
+
   for (const row of rows) {
     const list = groups.get(row.recipe_group_id) ?? []
     list.push(row)
