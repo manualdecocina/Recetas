@@ -1,12 +1,15 @@
 import { createClient } from '@supabase/supabase-js'
 import { PUBLIC_REVALIDATE_SECONDS, RECIPES_CACHE_TAG } from '@/lib/cache'
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL ?? 'https://eqbdtctxbpepbeickhqi.supabase.co'
+const supabaseKey =
+  process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY ??
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ??
+  'sb_publishable_5j3BnF3q24MVuU-BTEVzbg_UXTyp6CM'
 
-if (!supabaseUrl || !supabaseAnonKey) {
+if (!supabaseUrl || !supabaseKey) {
   throw new Error(
-    'Faltan NEXT_PUBLIC_SUPABASE_URL o NEXT_PUBLIC_SUPABASE_ANON_KEY en .env.local. ' +
+    'Faltan NEXT_PUBLIC_SUPABASE_URL o NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY en .env.local. ' +
       'Cópialos desde Supabase → Project Settings → API.'
   )
 }
@@ -25,7 +28,7 @@ const taggedFetch: typeof fetch = (input, init) =>
 
 // Cliente público (sin sesión): solo lee recetas publicadas (RLS "public read published recipes").
 // Usado en páginas públicas y sitemap. El panel admin usa ./server.ts (sin caché, con sesión).
-export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
+export const supabase = createClient(supabaseUrl, supabaseKey, {
   global: { fetch: taggedFetch },
   auth: { persistSession: false, autoRefreshToken: false },
 })
