@@ -21,6 +21,8 @@ export function generateStaticParams() {
   return SUPPORTED_LANGUAGES.map((lang) => ({ lang }))
 }
 
+export const dynamicParams = true
+
 export default function LanguageRootLayout({
   children,
   params,
