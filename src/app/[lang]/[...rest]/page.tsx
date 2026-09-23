@@ -3,6 +3,14 @@ import { notFound } from 'next/navigation'
 import { supabase } from '@/lib/supabase/public'
 import { SUPPORTED_LANGUAGES, type RecipeLanguage } from '@/types/recipe'
 
+function cleanHtml(html: string): string {
+  return html
+    .replace(/<script[\s\S]*?<\/script>/gi, '')
+    .replace(/<style[\s\S]*?<\/style>/gi, '')
+    .replace(/\son\w+\s*=\s*(['"]).*?\1/gi, '')
+    .replace(/javascript:/gi, '')
+}
+
 interface Props { params: { lang: string; rest: string[] } }
 
 function isLang(value: string): value is RecipeLanguage {
@@ -38,7 +46,7 @@ export default async function ContentPage({ params }: Props) {
       <article>
         <h1>{page.title}</h1>
         {page.excerpt && <p>{page.excerpt}</p>}
-        {page.content_html && <div dangerouslySetInnerHTML={{ __html: page.content_html }} />}
+        {page.content_html && <div dangerouslySetInnerHTML={{ __html: cleanHtml(page.content_html) }} />}
       </article>
     </main>
   )
