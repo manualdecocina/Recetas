@@ -10,7 +10,6 @@ for (const host of (process.env.NEXT_PUBLIC_IMAGE_HOSTS ?? '').split(',')) {
 // WordPress legacy media remains valid during migration; the browser may still request it.
 for (const host of ['manualdecocina.com', 'www.manualdecocina.com']) hosts.add(host)
 
-}
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
