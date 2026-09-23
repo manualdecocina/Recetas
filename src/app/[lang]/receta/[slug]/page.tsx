@@ -8,6 +8,14 @@ import { recipeAlternates } from '@/lib/seo'
 import { recipeUrl } from '@/lib/site'
 import { SUPPORTED_LANGUAGES, type Recipe, type RecipeLanguage } from '@/types/recipe'
 
+function cleanHtml(html: string): string {
+  return html
+    .replace(/<script[\s\S]*?<\/script>/gi, '')
+    .replace(/<style[\s\S]*?<\/style>/gi, '')
+    .replace(/\son\w+\s*=\s*(['"]).*?\1/gi, '')
+    .replace(/javascript:/gi, '')
+}
+
 export const revalidate = 3600 // respaldo; la invalidación real es revalidateTag (ver docs/cache.md)
 
 interface Props {
@@ -67,7 +75,7 @@ export default async function RecipeDetailPage({ params }: Props) {
   const recipe = await getRecipe(params.lang, params.slug)
   if (!recipe) notFound()
   const text = UI_TEXT[recipe.language]
-  const editorialText = recipe.content_html?.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim()
+  const editorialHtml = recipe.content_html ? cleanHtml(recipe.content_html) : ''
 
   const totalMinutes = (recipe.prep_time_minutes ?? 0) + (recipe.cook_time_minutes ?? 0)
 
@@ -99,7 +107,6 @@ export default async function RecipeDetailPage({ params }: Props) {
 
   return (
     <main>
-      {/* TODO(diseño): diseño final de la página de receta */}
       <script
         type="application/ld+json"
         // Escapa "<" para que ningún texto de la receta pueda cerrar la etiqueta script.
@@ -107,7 +114,7 @@ export default async function RecipeDetailPage({ params }: Props) {
       />
       <h1>{recipe.title}</h1>
       {recipe.excerpt && <p>{recipe.excerpt}</p>}
-      {editorialText && <p>{editorialText}</p>}
+      {editorialHtml && <div dangerouslySetInnerHTML={{ __html: editorialHtml }} />}
 
       {recipe.image_url && (
         <Image
