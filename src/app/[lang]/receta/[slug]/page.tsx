@@ -67,6 +67,7 @@ export default async function RecipeDetailPage({ params }: Props) {
   const recipe = await getRecipe(params.lang, params.slug)
   if (!recipe) notFound()
   const text = UI_TEXT[recipe.language]
+  const editorialText = recipe.content_html?.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim()
 
   const totalMinutes = (recipe.prep_time_minutes ?? 0) + (recipe.cook_time_minutes ?? 0)
 
@@ -106,6 +107,8 @@ export default async function RecipeDetailPage({ params }: Props) {
       />
       <h1>{recipe.title}</h1>
       {recipe.excerpt && <p>{recipe.excerpt}</p>}
+      {editorialText && <p>{editorialText}</p>}
+
       {recipe.image_url && (
         <Image
           src={recipe.image_url}
