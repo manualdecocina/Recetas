@@ -182,3 +182,24 @@ Para las filas confirmadas, el objetivo final es la misma URL histórica. Por ta
 - **E013 Pulpo a la Gallega** — la URL histórica DE `/de/oktopus-rezept-nach-galizischer-art/` queda **KEEP / REBUILD**. La revisión editorial afecta al contenido nuevo, no cambia la URL histórica mientras no aparezca evidencia de equivalencia incorrecta.
 
 Estas decisiones cierran la **decisión de URL**, no autorizan todavía publicación. El contenido debe superar la gate editorial antes de indexarse.
+
+
+## Cierre adicional P0 — E005 y E010 — 2026-09-25
+
+### E005 — Jugo anticancerígeno
+
+**URL decision: KEEP / REBUILD**, manteniendo las URLs históricas de alto valor ya documentadas:
+- `/en/anti-cancer-juice/`
+- `/de/saft-gegen-krebs/`
+
+La conservación de la URL histórica no implica conservar la afirmación terapéutica. El contenido nuevo deberá ser estrictamente culinario/nutricional y no presentar el jugo como prevención, tratamiento o cura del cáncer. No se añadirá Recipe schema hasta que el contenido visible corresponda realmente a una receta completa. Esta separación permite conservar la evidencia SEO histórica sin reproducir el claim médico.
+
+### E010 — Batido Grimace
+
+**URL decision: KEEP / REBUILD** para las URLs históricas:
+- `/fr/milkshake-grimace-mcdonalds/`
+- `/de/milchshake-grimaze-mcdonalds/`
+
+La revisión de relevancia queda resuelta como decisión de URL: existe evidencia oficial reciente de McDonald's Alemania de que el Grimace Shake volvió a comercializarse en 2026, por lo que la entidad sigue teniendo una referencia culinaria real. El contenido nuevo deberá ser original y dejar claro si se trata de una recreación casera/inspirada, sin presentarla como receta oficial de McDonald's. citeturn1search0
+
+Estas decisiones cierran la URL, no autorizan todavía publicación automática de las localizaciones. Cada versión deberá tener contenido localizado completo antes de entrar en sitemap/hreflang.
