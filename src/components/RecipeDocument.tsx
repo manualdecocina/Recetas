@@ -17,6 +17,8 @@ export function RecipeDocument({ recipe }: { recipe: Recipe }) {
   const totalMinutes = recipe.total_time_minutes ??
     ((recipe.prep_time_minutes ?? 0) + (recipe.cook_time_minutes ?? 0))
 
+  const breadcrumbLd = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [ { '@type': 'ListItem', position: 1, name: text.home, item: publicUrl('/' + recipe.language) }, { '@type': 'ListItem', position: 2, name: text.recipes, item: publicUrl('/' + recipe.language + '/recetas') }, { '@type': 'ListItem', position: 3, name: recipe.title, item: publicUrl(recipe.public_path) } ] }
+
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Recipe',
@@ -46,6 +48,7 @@ export function RecipeDocument({ recipe }: { recipe: Recipe }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }}
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd).replace(/</g, '\\u003c') }} />
       <article>
         <h1>{recipe.title}</h1>
         {recipe.excerpt && <p>{recipe.excerpt}</p>}
