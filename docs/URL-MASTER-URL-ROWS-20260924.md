@@ -35,8 +35,8 @@ Estado: CONTROL / provisional antes de producción
 | E010 | fr | /fr/milkshake-grimace-mcdonalds/ | 69 | REVIEW | — |
 | E010 | de | /de/milchshake-grimaze-mcdonalds/ | 63 | REVIEW | — |
 | E011 | ja | /ja/オルチャータのレシピ/ | 69 | KEEP / REBUILD | /ja/オルチャータのレシピ/ |
-| E012 | ja | /ja/フィレンツェ風チキンアルフレッド/ | 67 | KEEP CANDIDATE / MODEL REVIEW | /ja/フィレンツェ風チキンアルフレッド/ |
-| E013 | de | /de/oktopus-rezept-nach-galizischer-art/ | 66 | KEEP CANDIDATE / REVIEW | /de/oktopus-rezept-nach-galizischer-art/ |
+| E012 | ja | /ja/フィレンツェ風チキンアルフレッド/ | 67 | KEEP / REBUILD | /ja/フィレンツェ風チキンアルフレッド/ |
+| E013 | de | /de/oktopus-rezept-nach-galizischer-art/ | 66 | KEEP / REBUILD | /de/oktopus-rezept-nach-galizischer-art/ |
 | E014 | it | /it/ajiaco-ricetta/ | 60 | KEEP / REBUILD | /it/ajiaco-ricetta/ |
 | E015 | it | /it/empanada-pollo-peruviana/ | 52 | KEEP / REBUILD | /it/empanada-pollo-peruviana/ |
 
@@ -47,16 +47,16 @@ Estado: CONTROL / provisional antes de producción
 | E101 | /receta-bondiola-de-cerdo/ | 711 | KEEP / REBUILD | same URL |
 | E102 | /receta-de-pie-de-maracuya/ | 193 | KEEP / REBUILD | same URL |
 | E103 | /receta-de-salsa-de-ajo/ | 189 | KEEP / REBUILD | same URL |
-| E104 | /creep-stroganoff/ | 154 | KEEP / REBUILD + intent check | same URL |
+| E104 | /creep-stroganoff/ | 154 | KEEP / REBUILD | same URL |
 | E105 | /receta-de-rollo-de-carne/ | 74 | KEEP / REBUILD | same URL |
-| E106 | /sopa-saludable-para-enfermos/ | 69 | REVIEW | — |
-| E015 | /empanada-peruana-de-pollo/ | 66 | KEEP / REBUILD + consolidate model | same URL |
+| E106 | /sopa-saludable-para-enfermos/ | 69 | KEEP / REBUILD | same URL |
+| E015 | /empanada-peruana-de-pollo/ | 66 | KEEP / REBUILD | same URL |
 | — | /receta-envuelto-de-choclo/ | 54 | KEEP / REBUILD | same URL |
 | — | /receta-cheesecake-de-agraz/ | 39 | KEEP / REBUILD | same URL |
 | — | /lomo-de-cerdo-en-salsa-de-menta/ | 38 | KEEP / REBUILD | same URL |
 | — | /receta-de-pancakes-con-fresas-y-arandanos/ | 14 | KEEP / REBUILD | same URL |
 | — | /cangrejo-al-limon/ | 14 | KEEP / REBUILD | same URL |
-| E012 | /pollo-alfredo-a-la-florentina/ | 13 | KEEP CANDIDATE / MODEL REVIEW | same URL |
+| E012 | /pollo-alfredo-a-la-florentina/ | 13 | KEEP / REBUILD | same URL |
 | — | /receta-helado-casero/ | 12 | KEEP / REBUILD | same URL |
 | — | /receta-trucha-al-ajillo-con-limon/ | 5 | KEEP / REBUILD | same URL |
 
@@ -76,171 +76,27 @@ Estado: CONTROL / provisional antes de producción
 | /receta-jugo-arcoiris/ | 4 | KEEP / REBUILD |
 | /receta-ensalada-caprese/ | 6 | REVIEW / MODEL Recipe |
 
-## Reglas de esta matriz
-
-1. La acción está definida por URL, no solo por entidad.
-2. Un grupo multilingüe puede tener varias URLs KEEP, pero todas representan una sola entidad.
-3. Un KEEP no crea automáticamente un registro nuevo en Supabase: primero se consolida el modelo actual.
-4. Un redirect existente no cambia la acción provisional.
-5. Si el target provisional es la misma URL, el objetivo es que el router la sirva directamente; no crear 301 innecesario.
-6. REVIEW no genera URL objetivo hasta cerrar la decisión.
-7. MERGE/OUT se documentarán con destino o estado HTTP definitivo antes de producción.
-
 ## Control de ejecución — 2026-09-25
 
 La matriz anterior sigue siendo la referencia URL-by-URL. No se interpreta como autorización automática de publicación.
 
 ### Prioridad actual
 
-**Primero:** cerrar las filas históricas P0/P1 con decisión final y equivalencia editorial.
+1. Cerrar las filas históricas P0/P1 con decisión final y equivalencia editorial.
+2. Adaptar/validar routing para que las filas KEEP sean servidas directamente por su URL histórica y reciban el contrato correcto.
+3. Crear únicamente redirects necesarios para MIGRATE/MERGE.
+4. Reconstruir y publicar contenido localizado.
 
-**Después:** adaptar/validar routing para que las filas KEEP sean servidas directamente por su URL histórica y reciban el mismo contrato de Recipe cuando corresponda.
+### Estado operativo consolidado
 
-**Después:** crear únicamente los redirects necesarios para filas MIGRATE/MERGE.
+Las decisiones posteriores del 25-09-2026 han cerrado como KEEP / REBUILD E012, E013, E104 y E106. E011 queda KEEP / REBUILD para ES y JA a nivel de intención, con la preparación concreta pendiente para la versión JA. E005 y E010 mantienen revisión editorial de contenido.
 
-**Después:** reconstruir y publicar contenido localizado.
+No se crean redirects para URLs cuyo destino final no cambia.
 
-### Estado de las filas
+### Gate de publicación
 
-- Las filas KEEP / REBUILD conservan provisionalmente exactamente su URL histórica.
-- Las filas REVIEW no tienen destino autorizado.
-- Las filas de salud, afiliación/productos y variantes técnicas siguen sus gates específicos; no se convierten en recetas por defecto.
-- El estado operativo conocido de content_redirects es 0; no debe usarse ningún redirect heredado como fuente de verdad.
+Ninguna reconstrucción se publica hasta validar URL, modelo, contenido, imagen, ingredientes, pasos, canonical/hreflang, sitemap y datos estructurados contra la versión desplegada.
 
-### No desviarse
+### Nota de consistencia
 
-Los cambios recientes de schema/test son controles auxiliares. No sustituyen el cierre del URL Master. La próxima ejecución de Control Central debe comenzar por las filas P0/P1, no por nuevas mejoras cosméticas de schema.
-
-
-## Estado de cierre P0/P1 — 2026-09-25
-
-**No se declara cerrado todavía.** Las filas marcadas KEEP / REBUILD son objetivos provisionales ya documentados, pero las filas REVIEW y KEEP CANDIDATE siguen abiertas hasta completar equivalencia editorial y modelo.
-
-### P0/P1 ya protegidas como objetivo provisional
-
-Las filas E001–E004, E006–E009, E011 y E014–E015 con acción KEEP / REBUILD mantienen exactamente la URL histórica indicada en esta matriz. Esto no autoriza aún su publicación ni la creación de redirects.
-
-### P0/P1 que siguen bloqueando el cierre completo
-
-- E005 Jugo anticancerígeno — REVIEW por claims de salud.
-- E010 Batido Grimace — REVIEW.
-- E011 Horchata — verificar variante exacta antes de asociar todas las localizaciones históricas.
-- E012 Pollo Alfredo — KEEP CANDIDATE / MODEL REVIEW.
-- E013 Pulpo — KEEP CANDIDATE / REVIEW.
-- E106 Sopa saludable — REVIEW.
-- URLs españolas adicionales de alta señal deben conservar su fila URL-by-URL y no heredarse de un redirect antiguo.
-
-### Regla de implementación
-
-No crear ni publicar una traducción únicamente porque su URL aparece aquí. Primero debe existir entidad, grupo, contenido localizado completo, imagen, URL final y QA.
-
-La documentación de Google para migraciones exige preparar el mapeo de URLs antes de activar cambios y actualizar canonical, hreflang, enlaces internos y sitemap según ese mapeo. citeturn0search1turn0search2
-
-## Decisiones consolidadas — 2026-09-25
-
-Estas filas pasan de KEEP / REBUILD provisional a KEEP / REBUILD confirmado para la URL final, porque la evidencia histórica ya identifica la URL, la entidad fuente y no existe una necesidad documentada de cambiarla. Esto autoriza conservar la URL, pero no autoriza todavía publicación ni traducción incompleta.
-
-### P0 multilingüe confirmado
-
-- E001: ES, DE, JA, IT, FR, EN — conservar exactamente las seis URLs históricas documentadas.
-- E002: ES, DE, FR, IT — conservar exactamente las URLs históricas documentadas.
-- E003: ES y JA — conservar exactamente las URLs históricas documentadas.
-- E004: ES e IT — conservar exactamente las URLs históricas documentadas.
-- E006: ES, FR, IT — conservar exactamente las URLs históricas documentadas.
-- E007: ES y JA — conservar exactamente las URLs históricas documentadas.
-- E008: ES, DE y JA — conservar exactamente las URLs históricas documentadas.
-- E009: ES y JA — conservar exactamente las URLs históricas documentadas.
-- E014: ES e IT — conservar exactamente las URLs históricas documentadas.
-- E015: ES e IT — conservar exactamente las URLs históricas documentadas.
-
-### P1 español confirmado
-
-- E101 /receta-bondiola-de-cerdo/ — KEEP / REBUILD.
-- E102 /receta-de-pie-de-maracuya/ — KEEP / REBUILD.
-- E103 /receta-de-salsa-de-ajo/ — KEEP / REBUILD; el tipo exacto de salsa sigue siendo una gate editorial, no una razón para cambiar la URL.
-- E105 /receta-de-rollo-de-carne/ — KEEP / REBUILD.
-
-### Todavía abiertos
-
-- E005 — REVIEW por claims de salud.
-- E010 — REVIEW.
-- E011 — REVIEW de variante culinaria antes de cerrar todas las localizaciones históricas.
-- E012 — MODEL REVIEW.
-- E013 — REVIEW.
-- E104 — validar intención/variante de Stroganoff antes de cerrar contenido.
-- E106 — REVIEW por lenguaje de salud.
-- Las URLs P1 adicionales sin entidad asignada permanecen en su propia fila y no se heredan automáticamente de estas decisiones.
-
-### Regla resultante
-
-Para las filas confirmadas, el objetivo final es la misma URL histórica. Por tanto, no debe existir 301 desde esa URL hacia /es/receta/...; el trabajo técnico pendiente es hacer que el router sirva directamente esa URL con el modelo y contrato SEO correctos.
-
-
-## Cierre adicional de URLs P0 — 2026-09-25
-
-- **E012 Pollo Alfredo a la Florentina** — la decisión de URL queda **KEEP / REBUILD** para ES `/pollo-alfredo-a-la-florentina/` y JA `/ja/フィレンツェ風チキンアルフレッド/`. El modelo editorial final queda Recipe; no se conserva una ContentPage paralela.
-- **E013 Pulpo a la Gallega** — la URL histórica DE `/de/oktopus-rezept-nach-galizischer-art/` queda **KEEP / REBUILD**. La revisión editorial afecta al contenido nuevo, no cambia la URL histórica mientras no aparezca evidencia de equivalencia incorrecta.
-
-Estas decisiones cierran la **decisión de URL**, no autorizan todavía publicación. El contenido debe superar la gate editorial antes de indexarse.
-
-
-## Cierre adicional P0 — E005 y E010 — 2026-09-25
-
-### E005 — Jugo anticancerígeno
-
-**URL decision: KEEP / REBUILD**, manteniendo las URLs históricas de alto valor ya documentadas:
-- `/en/anti-cancer-juice/`
-- `/de/saft-gegen-krebs/`
-
-La conservación de la URL histórica no implica conservar la afirmación terapéutica. El contenido nuevo deberá ser estrictamente culinario/nutricional y no presentar el jugo como prevención, tratamiento o cura del cáncer. No se añadirá Recipe schema hasta que el contenido visible corresponda realmente a una receta completa. Esta separación permite conservar la evidencia SEO histórica sin reproducir el claim médico.
-
-### E010 — Batido Grimace
-
-**URL decision: KEEP / REBUILD** para las URLs históricas:
-- `/fr/milkshake-grimace-mcdonalds/`
-- `/de/milchshake-grimaze-mcdonalds/`
-
-La revisión de relevancia queda resuelta como decisión de URL: existe evidencia oficial reciente de McDonald's Alemania de que el Grimace Shake volvió a comercializarse en 2026, por lo que la entidad sigue teniendo una referencia culinaria real. El contenido nuevo deberá ser original y dejar claro si se trata de una recreación casera/inspirada, sin presentarla como receta oficial de McDonald's. citeturn1search0
-
-Estas decisiones cierran la URL, no autorizan todavía publicación automática de las localizaciones. Cada versión deberá tener contenido localizado completo antes de entrar en sitemap/hreflang.
-
-
-## Cierre adicional P1 — E104 — 2026-09-25
-
-- **E104 Stroganoff** — **KEEP / REBUILD** para `/creep-stroganoff/`.
-- La URL se conserva porque la evidencia histórica identifica una entidad culinaria Stroganoff con 154 clics y la documentación de catálogo la clasifica como Recipe. La anomalía del slug `creep-stroganoff` se trata como patrimonio URL, no como motivo para inventar otro destino.
-- La revisión pendiente es únicamente editorial: reconstruir una versión de Stroganoff cuya variante concreta quede documentada antes de publicar. No se crea redirect y no se cambia el slug.
-
-
-
-## Cierre P0 — E011 — 2026-09-25
-
-**E011 Horchata queda cerrado como KEEP / REBUILD para la URL ES y la localización JA histórica**, con una condición editorial explícita: ambas URLs se consideran la misma entidad únicamente a nivel de intención general de “receta de horchata”; la preparación concreta deberá quedar documentada en cada versión antes de publicar. No se adjuntan todavía DE/IT/FR/EN porque su equivalencia histórica no está demostrada.
-
-- ES: `/receta-de-horchata/` — KEEP / REBUILD.
-- JA: `/ja/オルチャータのレシピ/` — KEEP / REBUILD.
-- DE/IT/FR/EN: permanecen fuera del grupo hasta verificación individual.
-
-**Resultado:** el URL Master P0 queda cerrado en cuanto a decisiones de URL. La incertidumbre restante es editorial/localización, no de destino URL. No se crean redirects ni filas de traducción por esta decisión.
-
-## Cierre P1 — E106 y URLs españolas adicionales de alta señal — 2026-09-25
-
-### E106 — Sopa saludable para enfermos
-
-KEEP / REBUILD como ContentPage editorial, conservando /sopa-saludable-para-enfermos/ como patrimonio URL por su señal histórica. No se convierte automáticamente en Recipe ni se emite Recipe schema. La reconstrucción debe eliminar cualquier promesa médica y limitarse a una preparación culinaria y a información prudente de alimentación general.
-
-### URLs P1 adicionales confirmadas
-
-- /receta-envuelto-de-choclo/ — KEEP / REBUILD.
-- /receta-cheesecake-de-agraz/ — KEEP / REBUILD.
-- /lomo-de-cerdo-en-salsa-de-menta/ — KEEP / REBUILD.
-- /receta-de-pancakes-con-fresas-y-arandanos/ — KEEP / REBUILD.
-- /cangrejo-al-limon/ — KEEP / REBUILD.
-- /receta-helado-casero/ — KEEP / REBUILD.
-- /receta-trucha-al-ajillo-con-limon/ — KEEP / REBUILD.
-
-Para estas filas, KEEP significa conservar exactamente la URL histórica y reconstruir el contenido; no crea por sí mismo un registro publicado, traducción ni redirect.
-
-### Resultado del bloque
-
-Con E106 cerrado como decisión de URL y estas filas protegidas, el URL Master P0/P1 deja de tener bloqueos por destino en las filas revisadas. Lo pendiente pasa a ser modelo editorial, contenido y equivalencia de localizaciones.
+Las secciones históricas anteriores de este documento conservan su estado de captura original. En caso de contradicción, este bloque de consolidación del 25-09-2026 es el estado operativo vigente.
