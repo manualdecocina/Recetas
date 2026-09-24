@@ -155,3 +155,23 @@ Existen 27 redirects P1 actualmente activos hacia rutas `/es/...`. Varios apunta
 5. Solo entonces crear migraciones de datos/traducciones finales.
 
 No se autoriza borrar, redirigir masivamente ni publicar traducciones en bloque antes de superar estos gates.
+
+
+## Actualización de control — 2026-09-25 — continuidad automática de trabajo
+
+### Cerrados en este ciclo
+
+- [x] Control de paginación del catálogo: página 1 mantiene hreflang; páginas 2+ mantienen canonical propio y no se incluyen como URLs independientes del sitemap.
+- [x] ItemList del catálogo: solo se emite cuando existen al menos 2 recetas visibles.
+- [x] Recipe-card: tratado como artefacto técnico/histórico, no como entidad editorial.
+- [x] Recipe-card: excluido explícitamente del sitemap.
+- [x] Producto/afiliación: 8 URLs cerradas como OUT del catálogo.
+- [x] Producto/afiliación: registros fuera de publicación y redirects históricos no equivalentes eliminados por la migración existente.
+- [x] No se autorizan redirects hacia recetas genéricas para las URLs de producto/afiliación.
+- [x] Evidencia Search Console de producto/afiliación incorporada al cierre.
+
+### Estado operativo
+
+El trabajo continúa por bloques sin requerir una confirmación entre cada bloque. Las decisiones ya cerradas no vuelven a abrirse salvo evidencia nueva.
+
+Siguiente prioridad: cerrar decisiones de URLs históricas P1 y sus equivalencias reales antes de activar nuevos redirects; después continuar con la reconstrucción editorial de entidades que ya tienen content packs completos.
