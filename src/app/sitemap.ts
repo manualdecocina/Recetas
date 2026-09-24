@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next'
 import { supabase } from '@/lib/supabase/public'
 import { getSiteUrl, isIndexingAllowed, normalizePublicPath, publicUrl } from '@/lib/site'
-import { DEFAULT_LANGUAGE, SUPPORTED_LANGUAGES } from '@/types/recipe'
+import { SUPPORTED_LANGUAGES } from '@/types/recipe'
 
 export const revalidate = 3600
 
@@ -87,7 +87,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     if (siblings.length > 1) {
       const map: Record<string, string> = {}
-      for (const s of siblings) map[s.language] = publicUrl(s.public_path)      entry.alternates = { languages: map as SitemapLanguages }
+      for (const s of siblings) map[s.language] = publicUrl(s.public_path)
+      entry.alternates = { languages: map as SitemapLanguages }
     }
 
     entries.push(entry)
