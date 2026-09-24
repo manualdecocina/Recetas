@@ -8,24 +8,39 @@ let n = 0
 const check = (name: string, fn: () => void) => { fn(); n++; console.log('OK', name) }
 
 check('getSiteUrl quita la barra final', () => assert.equal(site.getSiteUrl(), 'https://manualdecocina.com'))
+check('normalizePublicPath normaliza rutas históricas con barra final', () => assert.equal(site.normalizePublicPath('/receta-bondiola-de-cerdo/'), '/receta-bondiola-de-cerdo'))
 
-check('receta sin traducciones: solo canonical, sin hreflang ni x-default', () => {
-  const a = recipeAlternates({ language: 'de', slug: 'lechona' }, [{ language: 'de', slug: 'lechona' }])
-  assert.deepEqual(a, { canonical: 'https://manualdecocina.com/de/receta/lechona' })
+check('receta sin traducciones: solo canonical', () => {
+  const a = recipeAlternates(
+    { language: 'de', public_path: '/de/kolumbianisches-lechona-rezept' },
+    [{ language: 'de', public_path: '/de/kolumbianisches-lechona-rezept' }]
+  )
+  assert.deepEqual(a, { canonical: 'https://manualdecocina.com/de/kolumbianisches-lechona-rezept' })
 })
 
-check('receta con traducciones incluyendo es: hreflang completo + x-default a es', () => {
-  const tr = [{ language: 'es', slug: 'lechona-colombiana' }, { language: 'de', slug: 'kolumbianisches-lechona-rezept' }, { language: 'ja', slug: 'コロンビアのレチョナレシピ' }]
-  const a: any = recipeAlternates({ language: 'de', slug: 'kolumbianisches-lechona-rezept' }, tr)
-  assert.equal(a.canonical, 'https://manualdecocina.com/de/receta/kolumbianisches-lechona-rezept')
+check('receta localizada: hreflang usa las URL públicas históricas', () => {
+  const tr = [
+    { language: 'es', public_path: '/receta-de-lechona-colombiana' },
+    { language: 'de', public_path: '/de/kolumbianisches-lechona-rezept' },
+    { language: 'ja', public_path: '/ja/コロンビアのレチョナレシピ' },
+  ]
+  const a: any = recipeAlternates(
+    { language: 'de', public_path: '/de/kolumbianisches-lechona-rezept' },
+    tr
+  )
+  assert.equal(a.canonical, 'https://manualdecocina.com/de/kolumbianisches-lechona-rezept')
   assert.deepEqual(Object.keys(a.languages).sort(), ['de', 'es', 'ja', 'x-default'])
-  assert.equal(a.languages['x-default'], 'https://manualdecocina.com/es/receta/lechona-colombiana')
-  assert.equal(a.languages.de, a.canonical, 'hreflang incluye la propia versión')
+  assert.equal(a.languages.es, 'https://manualdecocina.com/receta-de-lechona-colombiana')
+  assert.equal(a.languages.de, a.canonical)
+  assert.equal(a.languages['x-default'], a.languages.es)
 })
 
 check('traducciones sin versión es: hreflang sin x-default', () => {
-  const tr = [{ language: 'de', slug: 'a' }, { language: 'it', slug: 'b' }]
-  const a: any = recipeAlternates({ language: 'it', slug: 'b' }, tr)
+  const tr = [
+    { language: 'de', public_path: '/de/a' },
+    { language: 'it', public_path: '/it/b' },
+  ]
+  const a: any = recipeAlternates({ language: 'it', public_path: '/it/b' }, tr)
   assert.deepEqual(Object.keys(a.languages).sort(), ['de', 'it'])
   assert.equal('x-default' in a.languages, false)
 })
@@ -47,7 +62,7 @@ check('robots sin permiso: Disallow / y sin sitemap', () => {
 process.env.NEXT_PUBLIC_ALLOW_INDEXING = 'true'
 check('robots con permiso: permite /, bloquea /admin/, declara sitemap', () => {
   const r: any = robots()
-  assert.deepEqual(r.rules, [{ userAgent: '*', allow: '/', disallow: '/admin/' }])
+  assert.deepEqual((robots() as any).rules, [{ userAgent: '*', allow: '/', disallow: '/admin/' }])
   assert.equal(r.sitemap, 'https://manualdecocina.com/sitemap.xml')
 })
 process.env.NEXT_PUBLIC_ALLOW_INDEXING = 'TRUE'
