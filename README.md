@@ -1,8 +1,9 @@
 # Manual de Cocina — v0.3 (cierre de infraestructura)
 
 Next.js 14 (App Router) + TypeScript + Supabase. Multilingüe: es, de, ja, it, fr, en.
-Esta fase cierra infraestructura y seguridad. Diseño visual avanzado y migración de
-recetas antiguas quedan fuera a propósito.
+Esta fase cierra la infraestructura pública, el contrato SEO/routing, seguridad de base y el
+modelo de recuperación de URLs históricas. El contenido editorial multilingüe se reconstruye
+por etapas y se guarda como datos nuevos, no como copia ciega del WordPress antiguo.
 
 ## Puesta en marcha
 
@@ -40,6 +41,8 @@ leer borradores ni escribir (lo impide la RLS, no solo la interfaz).
   - cualquier intento de escribirlo a mano se ignora.
 - Toda entrada del formulario se valida en runtime con Zod (`src/lib/validation.ts`).
 - Imágenes: solo https y dominios permitidos (Supabase + `NEXT_PUBLIC_IMAGE_HOSTS`).
+- `public_path` define la URL pública/canónica. Si existe una URL histórica recuperable, esa URL se conserva.
+- Las nuevas traducciones pueden introducir una URL histórica en `public_path`; si se omite, la BD genera `/idioma/receta/slug`.
 
 ## Estado de verificación v0.3
 
@@ -47,9 +50,9 @@ leer borradores ni escribir (lo impide la RLS, no solo la interfaz).
 |---|---|---|
 | Reglas de BD y permisos por rol | **Ejecutado: VERIFICACION_OK, 32/32** contra Supabase real | `supabase/tests/verificacion.sql` |
 | Linter de seguridad de Supabase | **Ejecutado: 0 alertas** | dashboard → Advisors |
-| Lógica SEO (canonical, hreflang, x-default, robots, sitemap) | **Ejecutado: 14/14** con Node, datos simulados | `npm run test:logic` |
+| Lógica SEO (canonical, hreflang, x-default, robots, sitemap) | **Ejecutado: OK** con URLs públicas históricas | `npm run test:logic` |
 | Sintaxis TypeScript de `src/` | **Ejecutado: sin errores de sintaxis** | — |
-| `npm install` / `npm run typecheck` / `npm run build` | **NO ejecutado**: sin acceso a npm en el entorno de desarrollo | pendiente |
+| `npm install` / `npm run typecheck` / `npm run build` | **Pendiente de ejecutar en Hostinger/CI**: no hay dependencias instaladas en este entorno | `docs/PRODUCTION-GATE-20260924.md` |
 | Pruebas funcionales HTTP (middleware, login, CRUD en navegador, `<html lang>`, caché) | **NO ejecutado**: requiere la app corriendo | lista abajo |
 
 ## Cómo probar
@@ -98,7 +101,7 @@ src/lib/validation.ts             Zod + parseo de ingredientes/pasos
 src/lib/seo.ts                    canonical / hreflang / x-default
 src/app/admin/actions.ts          Server Actions (solo RPC; revalidateTag tras escribir)
 src/app/sitemap.ts, robots.ts
-supabase/schema.sql               ESTADO FINAL completo (ejecutable sobre base vacía)
+supabase/schema.sql               baseline v0.3 válido; producción se reproduce con `supabase/migrations/`
 supabase/migrations/              historial de las 6 migraciones aplicadas
 supabase/tests/verificacion.sql   32 comprobaciones de BD
 supabase/proposals/               borradores NO aplicados (importación histórica)
@@ -114,5 +117,6 @@ tests/logic/                      pruebas de lógica SEO/sitemap
 - Subida de imágenes a Supabase Storage desde el panel (hoy se pega una URL).
 - Implementar la importación histórica (diseño listo en `docs/importacion-historica.md`).
 - Ruta de revalidación protegida para cambios hechos fuera del panel.
-- Redirecciones 301 de URLs antiguas y de slugs cambiados.
+- Redirecciones 301 solo para cambios reales de URL; las URLs históricas recuperadas se sirven directamente mediante `public_path`.
+- El estado operativo de publicación está en `docs/PRODUCTION-GATE-20260924.md`.
 - Sitemap dividido (`generateSitemaps`) al acercarse a 50.000 URLs.
