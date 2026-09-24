@@ -135,3 +135,42 @@ Las filas E001–E004, E006–E009, E011 y E014–E015 con acción KEEP / REBUIL
 No crear ni publicar una traducción únicamente porque su URL aparece aquí. Primero debe existir entidad, grupo, contenido localizado completo, imagen, URL final y QA.
 
 La documentación de Google para migraciones exige preparar el mapeo de URLs antes de activar cambios y actualizar canonical, hreflang, enlaces internos y sitemap según ese mapeo. citeturn0search1turn0search2
+
+## Decisiones consolidadas — 2026-09-25
+
+Estas filas pasan de KEEP / REBUILD provisional a KEEP / REBUILD confirmado para la URL final, porque la evidencia histórica ya identifica la URL, la entidad fuente y no existe una necesidad documentada de cambiarla. Esto autoriza conservar la URL, pero no autoriza todavía publicación ni traducción incompleta.
+
+### P0 multilingüe confirmado
+
+- E001: ES, DE, JA, IT, FR, EN — conservar exactamente las seis URLs históricas documentadas.
+- E002: ES, DE, FR, IT — conservar exactamente las URLs históricas documentadas.
+- E003: ES y JA — conservar exactamente las URLs históricas documentadas.
+- E004: ES e IT — conservar exactamente las URLs históricas documentadas.
+- E006: ES, FR, IT — conservar exactamente las URLs históricas documentadas.
+- E007: ES y JA — conservar exactamente las URLs históricas documentadas.
+- E008: ES, DE y JA — conservar exactamente las URLs históricas documentadas.
+- E009: ES y JA — conservar exactamente las URLs históricas documentadas.
+- E014: ES e IT — conservar exactamente las URLs históricas documentadas.
+- E015: ES e IT — conservar exactamente las URLs históricas documentadas.
+
+### P1 español confirmado
+
+- E101 /receta-bondiola-de-cerdo/ — KEEP / REBUILD.
+- E102 /receta-de-pie-de-maracuya/ — KEEP / REBUILD.
+- E103 /receta-de-salsa-de-ajo/ — KEEP / REBUILD; el tipo exacto de salsa sigue siendo una gate editorial, no una razón para cambiar la URL.
+- E105 /receta-de-rollo-de-carne/ — KEEP / REBUILD.
+
+### Todavía abiertos
+
+- E005 — REVIEW por claims de salud.
+- E010 — REVIEW.
+- E011 — REVIEW de variante culinaria antes de cerrar todas las localizaciones históricas.
+- E012 — MODEL REVIEW.
+- E013 — REVIEW.
+- E104 — validar intención/variante de Stroganoff antes de cerrar contenido.
+- E106 — REVIEW por lenguaje de salud.
+- Las URLs P1 adicionales sin entidad asignada permanecen en su propia fila y no se heredan automáticamente de estas decisiones.
+
+### Regla resultante
+
+Para las filas confirmadas, el objetivo final es la misma URL histórica. Por tanto, no debe existir 301 desde esa URL hacia /es/receta/...; el trabajo técnico pendiente es hacer que el router sirva directamente esa URL con el modelo y contrato SEO correctos.
