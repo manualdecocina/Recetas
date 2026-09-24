@@ -241,9 +241,21 @@ For all four entities:
 
 The Colombian cultural framing for E002 is consistent with official Colombia country-brand material describing regional diversity and the importance of beans in Antioquia/Eje Cafetero. The Spanish tourism authority identifies porra antequerana among Andalusian cold gazpacho preparations. These sources support contextual wording, not claims that a single household recipe is uniquely authentic.
 
-## Implementation readiness — 2026-09-25
+## Implementation closure — 2026-09-25
 
-These four entities now satisfy the editorial-specification gate for data reconstruction. Their localized rows must use the existing Spanish `recipe_group_id` and remain unpublished until the localized title, excerpt, image, ingredients, steps and metadata are complete.
+The four entities were implemented in Supabase using their existing Spanish `recipe_group_id` values.
 
-No database mutation is executed here because direct Supabase mutation is not available in this control operation. The corresponding data migration must be generated only from the finalized localized content, not from historical HTML.
+- E002: ES + DE + FR + IT — 4 Recipe rows.
+- E003: ES + JA — 2 Recipe rows.
+- E004: ES + IT — 2 Recipe rows.
+- E006: ES + FR + IT — 3 Recipe rows.
+- Total: 11 Recipe rows across the four entities.
+- All localized rows remain `published=false`.
+- Existing ES rows remain the live historical Recipe rows and were completed without changing their final URLs.
+- All 11 rows have non-empty ingredients, steps, editorial HTML, image, timing and yield.
+- No duplicate `public_path` was found in the final batch verification query.
+- No ContentPage exists for the final URLs checked.
+- No redirect was created because the selected final URLs did not change.
+
+The batch is now ready for the next global publication-QA stage: route, metadata, Recipe JSON-LD, canonical/hreflang, sitemap and visual QA. No localized page is published by this batch.
 
