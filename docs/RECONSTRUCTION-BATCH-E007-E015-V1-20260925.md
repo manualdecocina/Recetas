@@ -103,3 +103,26 @@ E012: conversion to Recipe is staged; NOT PUBLISHED.
 ## Next implementation gate
 
 Populate the staged/base Recipe records only after the localized editorial copy and image assets are complete. Then validate route → metadata → schema → hreflang → sitemap → visual output before publication.
+
+
+## Control editorial E007 — Pandebono — 2026-09-25
+
+**Contrato cerrado para reconstrucción, sin publicación:**
+- ES final: `/pandebono-casero/`
+- JA final: `/ja/パンデボノ自家製/`
+- Modelo: una sola entidad Recipe / un solo `recipe_group_id`.
+- No se reutiliza el cuerpo histórico.
+- La versión JA debe ser una receta completa localizada, no un contenedor traducido.
+
+**Ficha editorial mínima antes de staging/publicación:**
+- rendimiento: 10–12 pandebonos;
+- preparación: masa de almidón de yuca/queso, hidratación gradual, formado y horneado;
+- ingredientes y cantidades: deben quedar cerrados antes de crear la fila publicable;
+- instrucciones: pasos numerados y reproducibles, con temperatura y señal visual de cocción;
+- textura objetivo: exterior ligeramente dorado y firme, interior tierno y elástico;
+- servicio: mejor recién horneado; incluir conservación y recalentado;
+- FAQ: sustituciones razonables, masa seca/blanda, expansión y almacenamiento.
+
+**Gate SEO/schema:** no emitir Recipe JSON-LD como contrato final hasta disponer de imagen real del plato, nombre, ingredientes, instrucciones y datos visibles coherentes. Google exige `image` y `name` para Recipe y recomienda ingredientes/instrucciones, entre otros campos. citeturn0search0
+
+**Estado:** MASTER EDITORIAL → DEFINIDO; DATOS/IMAGEN → PENDIENTES; PUBLICACIÓN → BLOQUEADA.
