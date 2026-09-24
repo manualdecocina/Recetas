@@ -81,10 +81,12 @@ export default async function RecipesListPage({ params, searchParams }: Props) {
 
   return (
     <main>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd).replace(/</g, '\\u003c') }}
-      />
+      {(recipes ?? []).length >= 2 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd).replace(/</g, '\\u003c') }}
+        />
+      )}
       <h1>{text.recipesTitle}</h1>
       {total === 0 ? (
         <p>{text.noRecipes}</p>
