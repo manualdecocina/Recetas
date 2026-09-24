@@ -69,8 +69,22 @@ export default async function RecipesListPage({ params, searchParams }: Props) {
   const totalPages = Math.max(1, Math.ceil(total / PAGE_SIZE))
   if (page > totalPages) notFound() // página inexistente → 404 real, no página vacía
 
+  const itemListJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    itemListElement: (recipes ?? []).map((recipe, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      url: getSiteUrl() + recipe.public_path,
+    })),
+  }
+
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd).replace(/</g, '\\u003c') }}
+      />
       <h1>{text.recipesTitle}</h1>
       {total === 0 ? (
         <p>{text.noRecipes}</p>
