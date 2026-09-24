@@ -11,7 +11,6 @@ export function allLanguageAlternates(
   const site = getSiteUrl()
   const map: Record<string, string> = {}
   for (const l of SUPPORTED_LANGUAGES) map[l] = `${site}${normalizePublicPath(path(l))}`
-  map['x-default'] = `${site}${normalizePublicPath(path(DEFAULT_LANGUAGE))}`
   return { canonical: `${site}${normalizePublicPath(currentPath)}`, languages: map as Languages }
 }
 
@@ -29,9 +28,6 @@ export function recipeAlternates(
 
   const map: Record<string, string> = {}
   for (const t of translations) map[t.language] = publicUrl(t.public_path)
-
-  const spanish = translations.find((t) => t.language === DEFAULT_LANGUAGE)
-  if (spanish) map['x-default'] = publicUrl(spanish.public_path)
 
   return { canonical, languages: map as Languages }
 }
