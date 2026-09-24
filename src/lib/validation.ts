@@ -16,6 +16,15 @@ const slugSchema = z
     'Solo minúsculas, números y guiones (sin espacios ni guiones al inicio/fin)'
   )
 
+const publicPathSchema = z.preprocess(
+  (v) => (typeof v === 'string' && v.trim() === '' ? undefined : v),
+  z.string()
+    .trim()
+    .max(300, 'Máximo 300 caracteres')
+    .regex(/^\/(?!\/)[^\\s?#]+$/u, 'La URL pública debe empezar por / y no contener espacios, ? o #')
+    .optional()
+)
+
 const ingredientSchema = z.object({
   amount: z.string().trim().min(1).max(50),
   unit: z.string().trim().max(30).optional(),
@@ -58,6 +67,7 @@ const imageUrlSchema = z.preprocess(
 
 export const recipeFieldsSchema = z.object({
   slug: slugSchema,
+  public_path: publicPathSchema,
   title: z.string().trim().min(3, 'Mínimo 3 caracteres').max(120, 'Máximo 120 caracteres'),
   excerpt: optionalText(300),
   category: optionalText(60),
@@ -115,6 +125,7 @@ export function stepsToText(steps: RecipeStep[]): string {
 export function readRecipeForm(formData: FormData) {
   return recipeFieldsSchema.safeParse({
     slug: formData.get('slug'),
+    public_path: formData.get('public_path'),
     title: formData.get('title'),
     excerpt: formData.get('excerpt'),
     category: formData.get('category'),
