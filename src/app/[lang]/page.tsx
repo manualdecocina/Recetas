@@ -8,7 +8,7 @@ import { SUPPORTED_LANGUAGES, type RecipeLanguage } from '@/types/recipe'
 
 export const revalidate = 3600 // respaldo; la invalidación real es revalidateTag (ver docs/cache.md)
 
-const CARD_FIELDS = 'id, language, slug, title, excerpt, category, image_url'
+const CARD_FIELDS = 'id, language, slug, public_path, title, excerpt, category, image_url'
 
 export async function generateStaticParams() {
   return SUPPORTED_LANGUAGES.map((lang) => ({ lang }))
