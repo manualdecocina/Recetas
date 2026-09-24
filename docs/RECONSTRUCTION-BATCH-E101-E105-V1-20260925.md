@@ -61,3 +61,17 @@ E101, E102 and E105 are ready for controlled recipe drafting/testing. E103 and E
 
 Historical URLs remain protected candidates and no slug or redirect mutation is authorized by this document.
 
+
+## Implementation closure — 2026-09-25
+
+The E101–E105 batch was executed against the existing Spanish Recipe entities.
+
+- E101 Bondiola: reconstructed as a controlled oven recipe with explicit weight, timing, yield, temperature guidance, resting, storage and FAQ.
+- E102 Pie de maracuyá: reconstruction fixed the documented variant as baked, with base, filling, chilling, storage and FAQ.
+- E103 Salsa de ajo: historical ingredients/steps establish one concrete creamy garlic-sauce preparation; it is now treated as a Recipe reconstruction rather than an undefined generic sauce.
+- E104 Stroganoff: historical evidence establishes that the entity is a crepe filled/served with beef-and-mushroom Stroganoff-style sauce. The historical /creep-stroganoff/ path remains unchanged; no slug cleanup was performed.
+- E105 Rollo de carne: reconstructed with a defined meat mixture, oven method, temperature/doneness gate, resting, tomato sauce, storage and FAQ.
+- All five existing Recipe rows retain their historical public paths.
+- No new parallel entity was created.
+- No redirect was created.
+- Final publication/indexing QA remains pending: route, metadata, Recipe JSON-LD, canonical, sitemap and visual QA.
