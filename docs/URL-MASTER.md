@@ -127,3 +127,71 @@ Auditoría automática sobre las 1.000 URLs exportadas de Search Console:
 Una URL con tráfico histórico no se considera perdida hasta agotar estas comprobaciones: WordPress → inventario → Supabase/source_url → redirects → equivalencia de contenido → traducción histórica.
 
 El campo de control del cruce masivo queda definido como: PROTEGER_Y_RECUPERAR, PROTEGER_REVISAR, MAPEADA o HISTORICA_SIN_FUENTE_LOCAL. No es todavía una decisión SEO final.
+
+
+## Recuperación 2 — Las 25 URLs de alto tráfico tienen fuente histórica identificable
+
+Cruce adicional realizado el 2026-09-24 sobre las **25 URLs con 50+ clics que inicialmente no tenían correspondencia directa en WordPress/inventario**.
+
+El WXR de WordPress conserva metadatos de TranslatePress con los slugs históricos traducidos ('_trp_automatically_translated_slug_*'). Esto permite recuperar la relación entre muchas URLs multilingües históricas y su contenido fuente en WordPress, aunque esas URLs no aparezcan como 'link' independiente en el WXR.
+
+**Resultado:** las 25 URLs no deben considerarse contenido perdido. Se identificó un post fuente de WordPress para las 25.
+
+| URL histórica | Clics | Idioma | Post WP fuente | Slug ES fuente | Estado |
+|---|---:|---|---|---|---|
+| /de/kolumbianisches-lechona-rezept/ | 1.183 | DE | Irresistible Lechona Colombiana | receta-de-lechona-colombiana | RECUPERADA_FUENTE |
+| /ja/コロンビアのレチョナレシピ/ | 853 | JA | Irresistible Lechona Colombiana | receta-de-lechona-colombiana | RECUPERADA_FUENTE |
+| /it/ricetta-colombiana-lechona/ | 623 | IT | Irresistible Lechona Colombiana | receta-de-lechona-colombiana | RECUPERADA_FUENTE |
+| /fr/casuela-aux-haricots-colombiens/ | 320 | FR | Casuela de frijoles Colombianos | casuela-de-frijoles-colombianos | RECUPERADA_FUENTE |
+| /fr/recette-lechona-colombienne/ | 269 | FR | Irresistible Lechona Colombiana | receta-de-lechona-colombiana | RECUPERADA_FUENTE |
+| /ja/メキシカンブリトーのレシピ/ | 245 | JA | Burrito mexicano | receta-de-burrito-mexicano | RECUPERADA_FUENTE |
+| /it/teriyaki-ricetta-pollo/ | 219 | IT | Pollo Teriyaki con Verduras al Wok | receta-de-pollo-teriyaki | RECUPERADA_FUENTE |
+| /en/anti-cancer-juice/ | 159 | EN | Jugo Anticancerígeno | jugo-anticancerigeno | RECUPERADA_FUENTE |
+| /fr/recette-porra-antequerana/ | 130 | FR | Porra Antequerana | porra-antequerana-receta | RECUPERADA_FUENTE |
+| /en/colombian-lechona-recipe/ | 119 | EN | Irresistible Lechona Colombiana | receta-de-lechona-colombiana | RECUPERADA_FUENTE |
+| /de/kolumbianische-bohnen-casuela/ | 114 | DE | Casuela de frijoles Colombianos | casuela-de-frijoles-colombianos | RECUPERADA_FUENTE |
+| /ja/パンデボノ自家製/ | 109 | JA | Pandebono casero (Colombia) | pandebono-casero | RECUPERADA_FUENTE |
+| /ja/マッツォパンのレシピ/ | 74 | JA | Pan Matzá Casero | receta-de-pan-matza | RECUPERADA_FUENTE |
+| /ja/レモンパイのレシピ/ | 70 | JA | Pie de Limón | receta-pie-de-limon | RECUPERADA_FUENTE |
+| /fr/milkshake-grimace-mcdonalds/ | 69 | FR | Batido Grimace | batido-grimace-mcdonalds | RECUPERADA_FUENTE |
+| /ja/オルチャータのレシピ/ | 69 | JA | Horchata Casera Refrescante | receta-de-horchata | RECUPERADA_FUENTE |
+| /ja/フィレンツェ風チキンアルフレッド/ | 67 | JA | Pollo Alfredo a la Florentina | pollo-alfredo-a-la-florentina | RECUPERADA_FUENTE |
+| /de/oktopus-rezept-nach-galizischer-art/ | 66 | DE | Pulpo a la Gallega (España) | receta-de-pulpo-a-la-gallega | RECUPERADA_FUENTE |
+| /de/matza-brot-rezept/ | 64 | DE | Pan Matzá Casero | receta-de-pan-matza | RECUPERADA_FUENTE |
+| /de/milchshake-grimaze-mcdonalds/ | 63 | DE | Batido Grimace | batido-grimace-mcdonalds | RECUPERADA_FUENTE |
+| /it/casuela-colombiana-di-fagioli/ | 62 | IT | Casuela de frijoles Colombianos | casuela-de-frijoles-colombianos | RECUPERADA_FUENTE |
+| /de/saft-gegen-krebs/ | 61 | DE | Jugo Anticancerígeno | jugo-anticancerigeno | RECUPERADA_FUENTE |
+| /it/ajiaco-ricetta/ | 60 | IT | Ajiaco (100% Colombiano) | receta-de-ajiaco | RECUPERADA_FUENTE |
+| /it/porra-antequerana-ricetta/ | 59 | IT | Porra Antequerana | porra-antequerana-receta | RECUPERADA_FUENTE |
+| /it/empanada-pollo-peruviana/ | 52 | IT | La Increíble Empanada Peruana de Pollo que Debes Probar | empanada-peruana-de-pollo | RECUPERADA_FUENTE |
+
+### Hallazgo crítico
+
+La ausencia de estas URLs en 'source_url' de Supabase **no significa que las traducciones históricas no existieran**. WordPress conserva sus slugs traducidos en los metadatos de TranslatePress.
+
+Esto cambia el diagnóstico del Sprint 0:
+
+- **25/25 URLs de alto tráfico tienen fuente histórica recuperable.**
+- La mayoría son traducciones de contenido español concreto.
+- Varias URLs históricas de distintos idiomas apuntan al mismo contenido fuente, lo que permite reconstruir los grupos de traducción sin inventar relaciones.
+- Aún **NO** se decide si la URL histórica exacta se conserva, se sirve directamente, o se redirige.
+- Aún **NO** se deben crear registros traducidos nuevos en Supabase.
+- Aún **NO** se debe aplicar una arquitectura '/lang/receta/slug' a estas URLs.
+
+### Comprobación Supabase / redirects
+
+Para las 25 URLs anteriores:
+
+- No existe actualmente una coincidencia por 'source_url' en 'recipes'/'content_pages'.
+- No existe actualmente un redirect registrado en 'content_redirects' para estas rutas históricas.
+- Por tanto, el patrimonio histórico está identificado en WordPress pero todavía **no está representado en el modelo actual de URLs de Supabase**.
+
+### Nueva fase de trabajo
+
+El siguiente cruce ya no es «¿de dónde salió esta URL?». Eso está resuelto para estas 25.
+
+Ahora es:
+
+**URL histórica → post fuente WP → contenido fuente → traducción histórica → contenido traducido disponible → grupo de contenido/receta → estado actual Supabase → decisión KEEP/MIGRATE/MERGE/NOINDEX/404**
+
+No se modifica producción hasta cerrar este segundo nivel de equivalencia.
