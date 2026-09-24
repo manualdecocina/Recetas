@@ -1,15 +1,13 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import type { Recipe } from '@/types/recipe'
-import { recipePath } from '@/lib/site'
+import { normalizePublicPath } from '@/lib/site'
 
-type CardRecipe = Pick<Recipe, 'id' | 'language' | 'slug' | 'title' | 'excerpt' | 'category' | 'image_url'>
+type CardRecipe = Pick<Recipe, 'id' | 'language' | 'slug' | 'public_path' | 'title' | 'excerpt' | 'category' | 'image_url'>
 
-// TODO(diseño): cuadro funcional sin diseño final.
-// Usa next/image: solo carga imágenes de los dominios permitidos en next.config.mjs.
 export function RecipeCard({ recipe, priority = false }: { recipe: CardRecipe; priority?: boolean }) {
   return (
-    <Link href={recipePath(recipe.language, recipe.slug)}>
+    <Link href={normalizePublicPath(recipe.public_path)}>
       <article>
         {recipe.image_url && (
           <Image
