@@ -1,0 +1,41 @@
+# PUBLICATION READINESS AUDIT — 2026-09-25
+
+## Estado técnico
+
+Auditoría ejecutada sobre la base publicada después de las correcciones SEO/routing.
+
+| Control | Resultado |
+|---|---:|
+| Recetas publicadas | 132 |
+| Recetas publicadas con huecos críticos | 0 |
+| public_path duplicado en recetas publicadas | 0 |
+| public_path duplicado en ContentPages publicadas | 0 |
+| Solapamiento Recipe/ContentPage publicado | 0 |
+| Idioma duplicado dentro del mismo recipe_group_id | 0 |
+
+## Schema
+
+Las páginas Recipe generan Recipe JSON-LD y BreadcrumbList. Google documenta Recipe como el marcado específico para recetas y recomienda HowToStep para las instrucciones; BreadcrumbList requiere una secuencia ordenada de ListItem. La validación final debe hacerse con Rich Results Test y URL Inspection sobre páginas desplegadas.
+
+## Supabase
+
+La auditoría de advisors no detectó avisos de rendimiento.
+
+Existe un aviso de seguridad de Supabase Auth: Leaked Password Protection está desactivada. No afecta al renderizado público ni a la arquitectura SEO, pero queda pendiente de configuración en Auth.
+
+Referencia: https://supabase.com/docs/guides/auth/password-security#password-strength-and-leaked-password-protection
+
+## Regla de publicación
+
+No publicar una reconstrucción hasta que:
+1. la URL final esté cerrada;
+2. el modelo sea Recipe cuando corresponda;
+3. exista contenido editorial completo;
+4. exista imagen válida;
+5. ingredientes y pasos estén completos;
+6. canonical/hreflang estén alineados;
+7. sitemap y datos estructurados correspondan a la URL final.
+
+## Siguiente bloque
+
+Consolidar los ContentPages que representan recetas reales, empezando por los P0/P1 ya clasificados, sin crear URLs paralelas.
