@@ -13,6 +13,8 @@ interface UiText {
   page: string
   ingredients: string
   preparation: string
+  home: string
+  recipes: string
 }
 
 export const UI_TEXT: Record<RecipeLanguage, UiText> = {
@@ -23,7 +25,9 @@ export const UI_TEXT: Record<RecipeLanguage, UiText> = {
     recipesDescription: 'Catálogo completo de recetas de Manual de Cocina, ordenadas de la más reciente a la más antigua.',
     noRecipes: 'Todavía no hay recetas publicadas en este idioma.',
     previous: 'Anterior', next: 'Siguiente', page: 'Página',
-    ingredients: 'Ingredientes', preparation: 'Preparación',
+    ingredients: 'Ingredientes',
+    home: 'Inicio',
+    recipes: 'Recetas', preparation: 'Preparación',
   },
   en: {
     homeTitle: 'Manual de Cocina — Colombian and international recipes',
@@ -32,7 +36,9 @@ export const UI_TEXT: Record<RecipeLanguage, UiText> = {
     recipesDescription: 'The full Manual de Cocina recipe catalog, newest first.',
     noRecipes: 'No recipes published in this language yet.',
     previous: 'Previous', next: 'Next', page: 'Page',
-    ingredients: 'Ingredients', preparation: 'Preparation',
+    ingredients: 'Ingredients',
+    home: 'Home',
+    recipes: 'Recipes', preparation: 'Preparation',
   },
   de: {
     homeTitle: 'Manual de Cocina — Kolumbianische und internationale Rezepte',
@@ -41,7 +47,9 @@ export const UI_TEXT: Record<RecipeLanguage, UiText> = {
     recipesDescription: 'Der vollständige Rezeptkatalog von Manual de Cocina, neueste zuerst.',
     noRecipes: 'In dieser Sprache sind noch keine Rezepte veröffentlicht.',
     previous: 'Zurück', next: 'Weiter', page: 'Seite',
-    ingredients: 'Zutaten', preparation: 'Zubereitung',
+    ingredients: 'Zutaten',
+    home: 'Startseite',
+    recipes: 'Rezepte', preparation: 'Zubereitung',
   },
   it: {
     homeTitle: 'Manual de Cocina — Ricette colombiane e internazionali',
@@ -50,7 +58,9 @@ export const UI_TEXT: Record<RecipeLanguage, UiText> = {
     recipesDescription: 'Il catalogo completo delle ricette di Manual de Cocina, dalla più recente.',
     noRecipes: 'Non ci sono ancora ricette pubblicate in questa lingua.',
     previous: 'Precedente', next: 'Successiva', page: 'Pagina',
-    ingredients: 'Ingredienti', preparation: 'Preparazione',
+    ingredients: 'Ingredienti',
+    home: 'Home',
+    recipes: 'Ricette', preparation: 'Preparazione',
   },
   fr: {
     homeTitle: 'Manual de Cocina — Recettes colombiennes et internationales',
@@ -59,7 +69,9 @@ export const UI_TEXT: Record<RecipeLanguage, UiText> = {
     recipesDescription: 'Le catalogue complet des recettes de Manual de Cocina, de la plus récente à la plus ancienne.',
     noRecipes: 'Aucune recette publiée dans cette langue pour le moment.',
     previous: 'Précédente', next: 'Suivante', page: 'Page',
-    ingredients: 'Ingrédients', preparation: 'Préparation',
+    ingredients: 'Ingrédients',
+    home: 'Accueil',
+    recipes: 'Recettes', preparation: 'Préparation',
   },
   ja: {
     homeTitle: 'Manual de Cocina — コロンビア料理と世界のレシピ',
@@ -68,6 +80,8 @@ export const UI_TEXT: Record<RecipeLanguage, UiText> = {
     recipesDescription: 'Manual de Cocina のレシピ一覧（新しい順）。',
     noRecipes: 'この言語で公開されているレシピはまだありません。',
     previous: '前へ', next: '次へ', page: 'ページ',
-    ingredients: '材料', preparation: '作り方',
+    ingredients: '材料',
+    home: 'ホーム',
+    recipes: 'レシピ', preparation: '作り方',
   },
 }
