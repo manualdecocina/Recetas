@@ -4,7 +4,6 @@ export function getSiteUrl(): string {
   return (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://manualdecocina.com').replace(/\/$/, '')
 }
 
-// Seguro anti-duplicado: solo "true" explícito permite indexar.
 export function isIndexingAllowed(): boolean {
   return process.env.NEXT_PUBLIC_ALLOW_INDEXING === 'true'
 }
