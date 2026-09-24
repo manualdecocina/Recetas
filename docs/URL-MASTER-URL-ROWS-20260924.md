@@ -203,3 +203,11 @@ La conservación de la URL histórica no implica conservar la afirmación terap�
 La revisión de relevancia queda resuelta como decisión de URL: existe evidencia oficial reciente de McDonald's Alemania de que el Grimace Shake volvió a comercializarse en 2026, por lo que la entidad sigue teniendo una referencia culinaria real. El contenido nuevo deberá ser original y dejar claro si se trata de una recreación casera/inspirada, sin presentarla como receta oficial de McDonald's. citeturn1search0
 
 Estas decisiones cierran la URL, no autorizan todavía publicación automática de las localizaciones. Cada versión deberá tener contenido localizado completo antes de entrar en sitemap/hreflang.
+
+
+## Cierre adicional P1 — E104 — 2026-09-25
+
+- **E104 Stroganoff** — **KEEP / REBUILD** para `/creep-stroganoff/`.
+- La URL se conserva porque la evidencia histórica identifica una entidad culinaria Stroganoff con 154 clics y la documentación de catálogo la clasifica como Recipe. La anomalía del slug `creep-stroganoff` se trata como patrimonio URL, no como motivo para inventar otro destino.
+- La revisión pendiente es únicamente editorial: reconstruir una versión de Stroganoff cuya variante concreta quede documentada antes de publicar. No se crea redirect y no se cambia el slug.
+
