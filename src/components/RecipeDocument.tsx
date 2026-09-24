@@ -15,7 +15,9 @@ export function RecipeDocument({ recipe }: { recipe: Recipe }) {
   const text = UI_TEXT[recipe.language]
   const editorialHtml = recipe.content_html ? cleanHtml(recipe.content_html) : ''
   const totalMinutes = recipe.total_time_minutes ??
-    ((recipe.prep_time_minutes ?? 0) + (recipe.cook_time_minutes ?? 0))
+    ((recipe.prep_time_minutes != null && recipe.cook_time_minutes != null)
+      ? recipe.prep_time_minutes + recipe.cook_time_minutes
+      : 0)
 
   const breadcrumbLd = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [ { '@type': 'ListItem', position: 1, name: text.home, item: publicUrl('/' + recipe.language) }, { '@type': 'ListItem', position: 2, name: text.recipes, item: publicUrl('/' + recipe.language + '/recetas') }, { '@type': 'ListItem', position: 3, name: recipe.title, item: publicUrl(recipe.public_path) } ] }
 
@@ -35,8 +37,8 @@ export function RecipeDocument({ recipe }: { recipe: Recipe }) {
       name: s.title,
       text: s.content,
     })),
-    prepTime: recipe.prep_time_minutes ? `PT${recipe.prep_time_minutes}M` : undefined,
-    cookTime: recipe.cook_time_minutes ? `PT${recipe.cook_time_minutes}M` : undefined,
+    prepTime: recipe.prep_time_minutes != null && recipe.cook_time_minutes != null ? `PT${recipe.prep_time_minutes}M` : undefined,
+    cookTime: recipe.prep_time_minutes != null && recipe.cook_time_minutes != null ? `PT${recipe.cook_time_minutes}M` : undefined,
     totalTime: totalMinutes > 0 ? `PT${totalMinutes}M` : undefined,
     recipeYield: recipe.servings ? String(recipe.servings) : undefined,
     recipeCategory: recipe.category ?? undefined,
