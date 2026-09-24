@@ -70,7 +70,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticAlternates = (path: (l: string) => string) => {
     const map: Record<string, string> = {}
     for (const l of SUPPORTED_LANGUAGES) map[l] = `${site}${normalizePublicPath(path(l))}`
-    map['x-default'] = `${site}${normalizePublicPath(path(DEFAULT_LANGUAGE))}`
     return { languages: map as SitemapLanguages }
   }
 
@@ -88,10 +87,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     if (siblings.length > 1) {
       const map: Record<string, string> = {}
-      for (const s of siblings) map[s.language] = publicUrl(s.public_path)
-      const spanish = siblings.find((s) => s.language === DEFAULT_LANGUAGE)
-      if (spanish) map['x-default'] = publicUrl(spanish.public_path)
-      entry.alternates = { languages: map as SitemapLanguages }
+      for (const s of siblings) map[s.language] = publicUrl(s.public_path)      entry.alternates = { languages: map as SitemapLanguages }
     }
 
     entries.push(entry)
