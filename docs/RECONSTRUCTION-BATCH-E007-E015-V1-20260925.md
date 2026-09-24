@@ -126,3 +126,32 @@ Populate the staged/base Recipe records only after the localized editorial copy 
 **Gate SEO/schema:** no emitir Recipe JSON-LD como contrato final hasta disponer de imagen real del plato, nombre, ingredientes, instrucciones y datos visibles coherentes. Google exige `image` y `name` para Recipe y recomienda ingredientes/instrucciones, entre otros campos. citeturn0search0
 
 **Estado:** MASTER EDITORIAL → DEFINIDO; DATOS/IMAGEN → PENDIENTES; PUBLICACIÓN → BLOQUEADA.
+
+
+## E007 Editorial closure — Pandebono
+
+### Canonical entity contract
+- Entity: Pandebono casero
+- Type: Recipe
+- ES public_path: /pandebono-casero/
+- JA public_path: /ja/パンデボノ自家製/
+- One recipe_group_id for ES and JA.
+- No ContentPage parallel representation at the final URL.
+
+### Editorial contract ES
+- Yield: 10–12 pandebonos.
+- Preparation: 25 min.
+- Baking: 18–22 min.
+- Total: approximately 45–50 min.
+- Core ingredients: almidón de yuca, fécula/almidón de maíz, queso fresco o queso costeño suitable for baking, huevo, leche as needed, mantequilla and salt.
+- Method: combine dry starches and salt; incorporate cheese and butter; add egg; hydrate gradually until soft dough; portion and shape; bake until expanded and lightly golden.
+- Editorial requirements: explain dough hydration, shaping, baking cues, texture troubleshooting, serving, storage and FAQ.
+- Do not present a single cheese substitution as culturally mandatory; explain that cheese choice changes saltiness and texture.
+
+### Editorial contract JA
+- Same culinary entity and formulation logic, fully localized rather than machine-translated shell.
+- Preserve the Spanish/Colombian culinary identity while explaining ingredients in terms usable by Japanese readers.
+- Localized metadata and headings; no invented historical claims.
+
+### Publication gate
+The entity is editorially defined but remains unpublished until the final image asset, complete visible ingredients and steps, metadata, canonical/hreflang and route QA are present. Recipe structured data must mirror those visible facts. Google currently requires a dish image and recipe name for Recipe rich-result eligibility and recommends explicit ingredient/instruction fields where applicable. citeturn0search0turn0search4
