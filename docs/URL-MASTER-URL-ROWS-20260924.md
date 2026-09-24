@@ -222,3 +222,25 @@ Estas decisiones cierran la URL, no autorizan todavía publicación automática 
 - DE/IT/FR/EN: permanecen fuera del grupo hasta verificación individual.
 
 **Resultado:** el URL Master P0 queda cerrado en cuanto a decisiones de URL. La incertidumbre restante es editorial/localización, no de destino URL. No se crean redirects ni filas de traducción por esta decisión.
+
+## Cierre P1 — E106 y URLs españolas adicionales de alta señal — 2026-09-25
+
+### E106 — Sopa saludable para enfermos
+
+KEEP / REBUILD como ContentPage editorial, conservando /sopa-saludable-para-enfermos/ como patrimonio URL por su señal histórica. No se convierte automáticamente en Recipe ni se emite Recipe schema. La reconstrucción debe eliminar cualquier promesa médica y limitarse a una preparación culinaria y a información prudente de alimentación general.
+
+### URLs P1 adicionales confirmadas
+
+- /receta-envuelto-de-choclo/ — KEEP / REBUILD.
+- /receta-cheesecake-de-agraz/ — KEEP / REBUILD.
+- /lomo-de-cerdo-en-salsa-de-menta/ — KEEP / REBUILD.
+- /receta-de-pancakes-con-fresas-y-arandanos/ — KEEP / REBUILD.
+- /cangrejo-al-limon/ — KEEP / REBUILD.
+- /receta-helado-casero/ — KEEP / REBUILD.
+- /receta-trucha-al-ajillo-con-limon/ — KEEP / REBUILD.
+
+Para estas filas, KEEP significa conservar exactamente la URL histórica y reconstruir el contenido; no crea por sí mismo un registro publicado, traducción ni redirect.
+
+### Resultado del bloque
+
+Con E106 cerrado como decisión de URL y estas filas protegidas, el URL Master P0/P1 deja de tener bloqueos por destino en las filas revisadas. Lo pendiente pasa a ser modelo editorial, contenido y equivalencia de localizaciones.
