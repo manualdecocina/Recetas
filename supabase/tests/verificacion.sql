@@ -1,4 +1,4 @@
--- Verificación de reglas de BD y permisos por rol (32 comprobaciones).
+-- Verificación de reglas de BD y permisos por rol (34 comprobaciones).
 -- Cada caso negativo exige el error EXACTO esperado (mensaje o SQLSTATE): un error
 -- inesperado no cuenta como éxito.
 -- Se revierte entera al final: no deja recetas, usuarios ni admins de prueba.
@@ -27,8 +27,9 @@ begin
 
   if not public.is_admin() then raise exception 'FALLO A0: is_admin() falso para un admin'; end if;
 
-  r := public.create_recipe('es', 'zz-verif-es', 'Verificación', null, ing, stp, null, null, null, null, null, false);
+  r := public.create_recipe('es', 'zz-verif-es', 'Verificación', null, ing, stp, null, null, null, null, null, false, null);
   if r.published_at is not null or r.recipe_group_id is null then raise exception 'FALLO A1: crear borrador'; end if;
+  if r.public_path is distinct from '/es/receta/zz-verif-es' then raise exception 'FALLO A1b: public_path automático incorrecto'; end if;
 
   r := public.update_recipe(r.id, r.slug, r.title, null, ing, stp, null, null, null, null, null, true);
   if r.published_at is null then raise exception 'FALLO A2: publicar no fijó published_at'; end if;
@@ -53,22 +54,23 @@ begin
   exception when raise_exception then ok := sqlerrm like 'recipe_group_id y language no se pueden modificar%'; end;
   if not ok then raise exception 'FALLO A7: se pudo cambiar el grupo'; end if;
 
-  t := public.create_recipe_translation(r.id, 'de', 'zz-verif-de', 'Verifikation', null, ing, stp, null, null, null, null, null, false);
+  t := public.create_recipe_translation(r.id, 'de', 'zz-verif-de', 'Verifikation', null, ing, stp, null, null, null, null, null, false, '/de/zz-verif-de/');
   if t.recipe_group_id is distinct from r.recipe_group_id then raise exception 'FALLO A8: la traducción no heredó el grupo'; end if;
+  if t.public_path is distinct from '/de/zz-verif-de' then raise exception 'FALLO A8b: public_path histórico no se conservó'; end if;
   if t.published_at is not null then raise exception 'FALLO A9: traducción en borrador con fecha'; end if;
 
   ok := false;
-  begin perform public.create_recipe_translation(r.id, 'de', 'zz-verif-de-2', 'Dup', null, ing, stp, null, null, null, null, null, false);
+  begin perform public.create_recipe_translation(r.id, 'de', 'zz-verif-de-2', 'Dup', null, ing, stp, null, null, null, null, null, false, null);
   exception when raise_exception then ok := sqlerrm like 'Ya existe una traducción en de%'; end;
   if not ok then raise exception 'FALLO A10: se duplicó un idioma en el grupo'; end if;
 
   ok := false;
-  begin perform public.create_recipe_translation(t.id, 'es', 'zz-verif-es-2', 'Dup', null, ing, stp, null, null, null, null, null, false);
+  begin perform public.create_recipe_translation(t.id, 'es', 'zz-verif-es-2', 'Dup', null, ing, stp, null, null, null, null, null, false, null);
   exception when raise_exception then ok := sqlerrm like 'Ya existe una traducción en es%'; end;
   if not ok then raise exception 'FALLO A11: se duplicó el idioma de origen desde una hermana'; end if;
 
   ok := false;
-  begin perform public.create_recipe_translation(gen_random_uuid(), 'fr', 'zz-verif-fr', 'X', null, ing, stp, null, null, null, null, null, false);
+  begin perform public.create_recipe_translation(gen_random_uuid(), 'fr', 'zz-verif-fr', 'X', null, ing, stp, null, null, null, null, null, false, null);
   exception when raise_exception then ok := sqlerrm = 'La receta de origen no existe'; end;
   if not ok then raise exception 'FALLO A12: aceptó una receta origen inexistente'; end if;
 
@@ -78,7 +80,7 @@ begin
   if not ok then raise exception 'FALLO A13: el índice único grupo+idioma no protege'; end if;
 
   ok := false;
-  begin perform public.create_recipe('es', 'zz-verif-es', 'Slug repetido', null, ing, stp, null, null, null, null, null, false);
+  begin perform public.create_recipe('es', 'zz-verif-es', 'Slug repetido', null, ing, stp, null, null, null, null, null, false, null);
   exception when unique_violation then ok := sqlerrm like '%recipes_language_slug_key%'; end;
   if not ok then raise exception 'FALLO A14: slug repetido en el mismo idioma aceptado'; end if;
 
@@ -97,7 +99,7 @@ begin
   if n <> 1 then raise exception 'FALLO U2: un no admin no ve una receta publicada'; end if;
 
   ok := false;
-  begin perform public.create_recipe('es', 'zz-hack-1', 'Hack', null, ing, stp, null, null, null, null, null, true);
+  begin perform public.create_recipe('es', 'zz-hack-1', 'Hack', null, ing, stp, null, null, null, null, null, true, null);
   exception when raise_exception then ok := sqlerrm = 'No autorizado'; end;
   if not ok then raise exception 'FALLO U3: un no admin creó una receta'; end if;
 
@@ -133,7 +135,7 @@ begin
   if n <> 1 then raise exception 'FALLO N2: anónimo no ve una receta publicada'; end if;
 
   ok := false;
-  begin perform public.create_recipe('es', 'zz-hack-3', 'Hack', null, ing, stp, null, null, null, null, null, true);
+  begin perform public.create_recipe('es', 'zz-hack-3', 'Hack', null, ing, stp, null, null, null, null, null, true, null);
   exception when insufficient_privilege then ok := true; end;
   if not ok then raise exception 'FALLO N3: anónimo ejecutó create_recipe'; end if;
 
@@ -156,5 +158,5 @@ begin
   select count(*) into n from public.recipes where id = t.id;
   if n <> 0 then raise exception 'FALLO A18: la receta eliminada sigue existiendo'; end if;
 
-  raise exception 'VERIFICACION_OK: 32 comprobaciones superadas (todo revertido, no quedan datos)';
+  raise exception 'VERIFICACION_OK: 34 comprobaciones superadas (todo revertido, no quedan datos)';
 end $$;
