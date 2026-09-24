@@ -186,3 +186,30 @@ The entity is editorially defined but remains unpublished until the final image 
 
 ### Publication gate
 E008 remains unpublished until the final image asset, complete visible ingredients and instructions, metadata and route QA are ready. Recipe JSON-LD must match the visible formulation and timing. Google requires Recipe markup to represent recipe content accurately and recommends validation with the Rich Results Test before deployment. citeturn0search0turn0search4
+
+
+## E009 Editorial closure — Pie de limón
+
+### Canonical entity contract
+- Entity: Pie de limón
+- Type: Recipe
+- ES public_path: /receta-pie-de-limon/
+- JA public_path: /ja/レモンパイのレシピ/
+- One recipe_group_id for ES and JA.
+- No ContentPage parallel representation at the final URLs.
+
+### Editorial contract ES
+- Yield: 8 servings.
+- Preparation: 30 min.
+- Chilling/baking time depends on the selected final formulation; the publication record must use measured values from the actual recipe, not estimates copied from historical content.
+- Final recipe must explicitly settle whether the formulation is baked, no-bake, or uses a baked crust with chilled filling. Do not mix methods in the same entity.
+- Required editorial blocks: crust, lemon filling, acidity/sweetness balance, baking or chilling sequence, topping, slicing, storage and FAQ.
+- Ingredients and steps must form one internally consistent formulation.
+
+### Editorial contract JA
+- Fully localized recipe equivalent of the final ES formulation.
+- Japanese title, metadata, ingredient terminology and instructions must describe the same culinary preparation.
+- Do not create the JA page as a translation shell before the ES formulation is frozen.
+
+### Publication gate
+E009 is editorially classified as Recipe but remains unpublished until the final preparation method is frozen, the image is available, and all visible ingredients/steps and metadata are complete. Recipe JSON-LD must use only those final visible facts. Google specifies that Recipe structured data is for preparing a particular dish and recommends validating the deployed markup with Rich Results Test and URL Inspection. citeturn0search0turn0search1
