@@ -29,6 +29,7 @@ export default async function NewRecipePage({ searchParams }: { searchParams: { 
         <RecipeForm
           action={createRecipeAction}
           submitLabel="Crear receta"
+          showPublicPath
           languageOptions={SUPPORTED_LANGUAGES.map((l) => ({ value: l, label: LANGUAGE_LABELS[l] }))}
         />
       </main>
@@ -65,6 +66,7 @@ export default async function NewRecipePage({ searchParams }: { searchParams: { 
           submitLabel="Crear traducción"
           hidden={{ name: 'source_id', value: source.id }}
           languageOptions={available.map((l) => ({ value: l, label: LANGUAGE_LABELS[l] }))}
+          showPublicPath
           defaults={{
             // Solo datos neutros al idioma; textos y categoría se escriben en el idioma nuevo.
             prep_time_minutes: source.prep_time_minutes,
