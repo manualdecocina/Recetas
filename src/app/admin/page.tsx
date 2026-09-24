@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import { requireAdmin } from '@/lib/supabase/admin-guard'
-import { recipePath } from '@/lib/site'
+import { normalizePublicPath } from '@/lib/site'
 import { deleteRecipeAction, signOutAction } from './actions'
 import { DeleteButton } from './DeleteButton'
 import { NotAdmin } from './NotAdmin'
@@ -27,7 +27,7 @@ export default async function AdminDashboardPage({
 
   const { data: recipes, count, error } = await supabase
     .from('recipes')
-    .select('id, recipe_group_id, language, slug, title, published, published_at, updated_at', {
+    .select('id, recipe_group_id, language, slug, public_path, title, published, published_at, updated_at', {
       count: 'exact',
     })
     .order('updated_at', { ascending: false })
@@ -73,7 +73,7 @@ export default async function AdminDashboardPage({
                 <td>
                   <Link href={`/admin/recetas/${r.id}`}>Editar</Link>{' '}
                   <Link href={`/admin/recetas/nueva?from=${r.id}`}>Añadir traducción</Link>{' '}
-                  {r.published && <Link href={recipePath(r.language, r.slug)}>Ver</Link>}{' '}
+                  {r.published && <Link href={normalizePublicPath(r.public_path)}>Ver</Link>}{' '}
                   <form action={deleteRecipeAction} style={{ display: 'inline' }}>
                     <input type="hidden" name="id" value={r.id} />
                     <DeleteButton title={r.title} />
