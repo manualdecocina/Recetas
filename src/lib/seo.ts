@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { SUPPORTED_LANGUAGES, DEFAULT_LANGUAGE } from '@/types/recipe'
+import { SUPPORTED_LANGUAGES } from '@/types/recipe'
 import { getSiteUrl, normalizePublicPath, publicUrl } from '@/lib/site'
 
 type Languages = NonNullable<NonNullable<Metadata['alternates']>['languages']>
