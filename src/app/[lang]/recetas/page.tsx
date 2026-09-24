@@ -9,7 +9,7 @@ import { getSiteUrl } from '@/lib/site'
 import { SUPPORTED_LANGUAGES, type RecipeLanguage } from '@/types/recipe'
 
 const PAGE_SIZE = 24
-const CARD_FIELDS = 'id, language, slug, title, excerpt, category, image_url'
+const CARD_FIELDS = 'id, language, slug, public_path, title, excerpt, category, image_url'
 
 interface Props {
   params: { lang: string }
