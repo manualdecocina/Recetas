@@ -283,3 +283,49 @@ El rendimiento de Search Console es evidencia histórica, no una garantía de re
 ## Gate actual
 
 No se crea todavía una migración masiva de URLs. Primero se termina la tabla maestra y se aprueban las decisiones.
+
+## Hallazgo 2026-09-24 — Supabase NEW_SEED frente a patrimonio histórico
+
+La auditoría de `public.recipes` identifica 28 filas sin `source_url`. Todas tienen `published_at` del 23 de septiembre de 2026, por lo que se tratan como **NEW_SEED / reconstrucción actual**, no como recuperación documental histórica.
+
+### Regla
+
+Una fila NEW_SEED no crea por sí misma una URL histórica ni justifica conservar un slug. Debe pasar el mismo filtro editorial y de entidad que cualquier contenido nuevo.
+
+### Casos que deben consolidarse
+
+- Lechona: `lechona-colombiana` y `lechona-colombiana-receta-tradicional-paso-a-paso` no serán entidades independientes de E001.
+- Empanada peruana: el Recipe NEW_SEED y la ContentPage histórica deben consolidarse en E015.
+- Pasta al pesto: Recipe y ContentPage comparten slug; no deben publicarse ambas.
+- Bowl de carne: Recipe y ContentPage representan la misma entidad; consolidar.
+- Soufflé: Recipe NEW_SEED y `/souffle-de-queso/` requieren consolidación/revisión.
+- Sopa Minestrone: Recipe y ContentPage representan la misma entidad editorial; consolidar.
+- Sopa saludable para enfermos: consolidar y mantener revisión de salud.
+- Papas al horno: consolidar y mantener revisión de claims de salud.
+
+### Evidencia histórica dentro de NEW_SEED
+
+De las filas NEW_SEED auditadas, solo se ha identificado evidencia directa de Search Console para:
+
+- Lechona: `/receta-de-lechona-colombiana/` — 265 clics históricos; además EN `/en/colombian-lechona-recipe/` — 119 clics.
+- Empanada peruana: `/empanada-peruana-de-pollo/` — 66 clics.
+
+La presencia de una fila nueva en Supabase no se usará como sustituto de esa evidencia.
+
+## Hallazgo 2026-09-24 — 27 redirects P1 en conflicto con el URL Master
+
+La tabla `content_redirects` contiene 27 redirects para URLs españolas prioritarias que actualmente apuntan a rutas `/es/...`. Varias de esas URLs están clasificadas en el URL Master como candidatas a KEEP por valor histórico.
+
+**No se ejecuta todavía ningún cambio de redirects.** Primero se decide la URL definitiva y después se adapta el router. La estructura del código no debe obligar al URL Master a cambiar de URL.
+
+## Gate reforzado
+
+Antes de crear traducciones, eliminar filas NEW_SEED o modificar redirects, deben quedar cerrados:
+
+1. entidad única;
+2. procedencia histórica vs NEW_SEED;
+3. URL definitiva por idioma;
+4. modelo Supabase final;
+5. resolución del router para la URL definitiva;
+6. canonical/hreflang/sitemap;
+7. redirect solo cuando exista un cambio real de URL.
