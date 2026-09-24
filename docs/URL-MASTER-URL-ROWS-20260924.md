@@ -85,3 +85,28 @@ Estado: CONTROL / provisional antes de producción
 5. Si el target provisional es la misma URL, el objetivo es que el router la sirva directamente; no crear 301 innecesario.
 6. REVIEW no genera URL objetivo hasta cerrar la decisión.
 7. MERGE/OUT se documentarán con destino o estado HTTP definitivo antes de producción.
+
+## Control de ejecución — 2026-09-25
+
+La matriz anterior sigue siendo la referencia URL-by-URL. No se interpreta como autorización automática de publicación.
+
+### Prioridad actual
+
+**Primero:** cerrar las filas históricas P0/P1 con decisión final y equivalencia editorial.
+
+**Después:** adaptar/validar routing para que las filas KEEP sean servidas directamente por su URL histórica y reciban el mismo contrato de Recipe cuando corresponda.
+
+**Después:** crear únicamente los redirects necesarios para filas MIGRATE/MERGE.
+
+**Después:** reconstruir y publicar contenido localizado.
+
+### Estado de las filas
+
+- Las filas KEEP / REBUILD conservan provisionalmente exactamente su URL histórica.
+- Las filas REVIEW no tienen destino autorizado.
+- Las filas de salud, afiliación/productos y variantes técnicas siguen sus gates específicos; no se convierten en recetas por defecto.
+- El estado operativo conocido de content_redirects es 0; no debe usarse ningún redirect heredado como fuente de verdad.
+
+### No desviarse
+
+Los cambios recientes de schema/test son controles auxiliares. No sustituyen el cierre del URL Master. La próxima ejecución de Control Central debe comenzar por las filas P0/P1, no por nuevas mejoras cosméticas de schema.
