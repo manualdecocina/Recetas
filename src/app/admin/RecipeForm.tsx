@@ -7,6 +7,7 @@ type Action = (prev: FormState, formData: FormData) => Promise<FormState>
 
 interface Defaults {
   slug?: string
+  public_path?: string | null
   title?: string
   excerpt?: string | null
   category?: string | null
@@ -28,6 +29,7 @@ interface Props {
   // Nunca recipe_group_id.
   hidden?: { name: 'id' | 'source_id'; value: string }
   defaults?: Defaults
+  showPublicPath?: boolean
 }
 
 function SubmitButton({ label }: { label: string }) {
@@ -43,7 +45,7 @@ function FieldError({ errors }: { errors?: string[] }) {
   return errors?.length ? <p role="alert">{errors[0]}</p> : null
 }
 
-export function RecipeForm({ action, submitLabel, languageOptions, hidden, defaults = {} }: Props) {
+export function RecipeForm({ action, submitLabel, languageOptions, hidden, defaults = {}, showPublicPath = false }: Props) {
   const [state, formAction] = useFormState(action, initialFormState)
   const e = state.fieldErrors ?? {}
 
@@ -60,6 +62,18 @@ export function RecipeForm({ action, submitLabel, languageOptions, hidden, defau
             ))}
           </select>
           <FieldError errors={e.language} />
+        </label>
+      )}
+
+      {showPublicPath && (
+        <label>
+          URL pública histórica (opcional)
+          <input
+            name="public_path"
+            defaultValue={defaults.public_path ?? ''}
+            placeholder="/de/kolumbianisches-lechona-rezept/"
+          />
+          <FieldError errors={e.public_path} />
         </label>
       )}
 
