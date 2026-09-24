@@ -55,3 +55,16 @@ Una vez cerrado el URL Master:
 - OUT → 404/410 o 301 solo si existe un equivalente editorial real.
 
 Google recomienda evitar cadenas y redirecciones irrelevantes, y que las redirecciones permanentes apunten directamente al destino final. citeturn789202search0turn789202search2
+
+
+## Actualización de estado — 2026-09-25
+
+La etapa posterior de limpieza eliminó los redirects históricos que ya no estaban aprobados como destino definitivo. El estado conocido de `content_redirects` quedó en **0 registros**.
+
+Por tanto, la tabla de 27 redirects de este documento es evidencia histórica del problema, no un inventario operativo actual.
+
+La arquitectura vigente vuelve a partir de:
+
+`URL histórica → entidad → URL definitiva → redirect solo si corresponde`
+
+Esto evita que redirects heredados decidan por adelantado el URL Master.
