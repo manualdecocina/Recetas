@@ -69,3 +69,5 @@ check('robots: solo "true" exacto habilita indexación', () => {
 })
 
 console.log(`\n${n} pruebas OK`)
+
+// Recipe time markup is emitted only when prep and cook times are both known.
