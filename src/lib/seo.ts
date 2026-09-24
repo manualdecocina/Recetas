@@ -28,9 +28,7 @@ export function recipeAlternates(
   if (translations.length <= 1) return { canonical }
 
   const map: Record<string, string> = {}
-  for (const t of translations) {
-    map[t.language] = publicUrl(t.public_path)
-  }
+  for (const t of translations) map[t.language] = publicUrl(t.public_path)
 
   const spanish = translations.find((t) => t.language === DEFAULT_LANGUAGE)
   if (spanish) map['x-default'] = publicUrl(spanish.public_path)
