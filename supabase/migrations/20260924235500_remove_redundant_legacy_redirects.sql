@@ -1,1 +1,0 @@
-delete from public.content_redirects;
