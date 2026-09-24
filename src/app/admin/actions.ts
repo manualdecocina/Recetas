@@ -46,6 +46,7 @@ export async function signOutAction() {
 function toRpcParams(fields: RecipeFields) {
   return {
     p_slug: fields.slug,
+    p_public_path: fields.public_path ?? null,
     p_title: fields.title,
     p_excerpt: fields.excerpt ?? null,
     p_ingredients: fields.ingredients,
@@ -146,9 +147,11 @@ export async function updateRecipeAction(_prev: FormState, formData: FormData): 
   const fields = readRecipeForm(formData)
   if (!fields.success) return { ok: false, fieldErrors: fields.error.flatten().fieldErrors }
 
+  const updateParams = toRpcParams(fields.data)
+  delete (updateParams as Record<string, unknown>).p_public_path
   const { error } = await supabase.rpc('update_recipe', {
     p_id: id.data,
-    ...toRpcParams(fields.data),
+    ...updateParams,
   })
   if (error) return { ok: false, message: dbErrorMessage(error) }
 
