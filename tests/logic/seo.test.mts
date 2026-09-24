@@ -29,10 +29,9 @@ check('receta localizada: hreflang usa las URL públicas históricas', () => {
     tr
   )
   assert.equal(a.canonical, 'https://manualdecocina.com/de/kolumbianisches-lechona-rezept')
-  assert.deepEqual(Object.keys(a.languages).sort(), ['de', 'es', 'ja', 'x-default'])
+  assert.deepEqual(Object.keys(a.languages).sort(), ['de', 'es', 'ja'])
   assert.equal(a.languages.es, 'https://manualdecocina.com/receta-de-lechona-colombiana')
   assert.equal(a.languages.de, a.canonical)
-  assert.equal(a.languages['x-default'], a.languages.es)
 })
 
 check('traducciones sin versión es: hreflang sin x-default', () => {
@@ -45,11 +44,10 @@ check('traducciones sin versión es: hreflang sin x-default', () => {
   assert.equal('x-default' in a.languages, false)
 })
 
-check('home/listado: 6 idiomas + x-default a /es, canonical propia', () => {
+check('home/listado: 6 idiomas, canonical propia', () => {
   const a: any = allLanguageAlternates('/ja/recetas', (l: string) => `/${l}/recetas`)
   assert.equal(a.canonical, 'https://manualdecocina.com/ja/recetas')
-  assert.deepEqual(Object.keys(a.languages).sort(), ['de', 'en', 'es', 'fr', 'it', 'ja', 'x-default'])
-  assert.equal(a.languages['x-default'], 'https://manualdecocina.com/es/recetas')
+  assert.deepEqual(Object.keys(a.languages).sort(), ['de', 'en', 'es', 'fr', 'it', 'ja'])
 })
 
 process.env.NEXT_PUBLIC_ALLOW_INDEXING = 'false'
