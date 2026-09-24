@@ -111,3 +111,19 @@ Periodo de Search Console: 2025-05-23 → 2026-09-21.
 ## Regla de cierre del Sprint 0
 
 La arquitectura definitiva no se aprueba mientras existan URLs históricas de valor sin una decisión documentada.
+
+## Resultado del cruce masivo Search Console ↔ WordPress ↔ Inventario
+
+Auditoría automática sobre las 1.000 URLs exportadas de Search Console:
+
+- **209/1.000** tienen correspondencia directa en WordPress y en el inventario.
+- **25/1.000** tienen 50+ clics y no aparecen ni en WordPress ni en el inventario: **PROTEGER_Y_RECUPERAR**.
+- **9/1.000** tienen 50+ clics y sí aparecen en WordPress/inventario: **PROTEGER_REVISAR**.
+- **790/1.000** no tienen correspondencia directa en estas dos fuentes locales. Esto no significa que sean inexistentes: incluye especialmente URLs multilingües históricas que deben investigarse contra traducciones, migraciones anteriores, redirects y Supabase.
+- Las decisiones siguen deliberadamente en **PENDIENTE** hasta cruzar el contenido y el estado actual.
+
+### Regla nueva de trabajo
+
+Una URL con tráfico histórico no se considera perdida hasta agotar estas comprobaciones: WordPress → inventario → Supabase/source_url → redirects → equivalencia de contenido → traducción histórica.
+
+El campo de control del cruce masivo queda definido como: PROTEGER_Y_RECUPERAR, PROTEGER_REVISAR, MAPEADA o HISTORICA_SIN_FUENTE_LOCAL. No es todavía una decisión SEO final.
