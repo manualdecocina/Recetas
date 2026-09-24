@@ -240,3 +240,10 @@ For all four entities:
 ## Evidence note
 
 The Colombian cultural framing for E002 is consistent with official Colombia country-brand material describing regional diversity and the importance of beans in Antioquia/Eje Cafetero. The Spanish tourism authority identifies porra antequerana among Andalusian cold gazpacho preparations. These sources support contextual wording, not claims that a single household recipe is uniquely authentic.
+
+## Implementation readiness — 2026-09-25
+
+These four entities now satisfy the editorial-specification gate for data reconstruction. Their localized rows must use the existing Spanish `recipe_group_id` and remain unpublished until the localized title, excerpt, image, ingredients, steps and metadata are complete.
+
+No database mutation is executed here because direct Supabase mutation is not available in this control operation. The corresponding data migration must be generated only from the finalized localized content, not from historical HTML.
+
