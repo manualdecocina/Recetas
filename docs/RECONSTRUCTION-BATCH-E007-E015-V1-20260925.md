@@ -155,3 +155,34 @@ Populate the staged/base Recipe records only after the localized editorial copy 
 
 ### Publication gate
 The entity is editorially defined but remains unpublished until the final image asset, complete visible ingredients and steps, metadata, canonical/hreflang and route QA are present. Recipe structured data must mirror those visible facts. Google currently requires a dish image and recipe name for Recipe rich-result eligibility and recommends explicit ingredient/instruction fields where applicable. citeturn0search0turn0search4
+
+
+## E008 Editorial closure — Pan Matzá
+
+### Canonical entity contract
+- Entity: Pan matzá / matzo bread
+- Type: Recipe
+- ES public_path: /receta-de-pan-matza/
+- DE public_path: /de/matza-brot-rezept/
+- JA public_path: /ja/マッツォパンのレシピ/
+- One recipe_group_id for all published equivalents.
+- No ContentPage parallel representation at the final URLs.
+
+### Editorial contract
+- Yield: 8–10 pieces.
+- Preparation: 15 min.
+- Rest: none required for the dough; work quickly after hydration.
+- Baking: approximately 8–12 min at high heat, adjusted to thickness and oven behavior.
+- Total: approximately 25–30 min.
+- Core ingredients: wheat flour suitable for bread/flatbread, water and salt; optional neutral oil only if the final formulation explicitly includes it.
+- Method: heat oven and baking surface; combine flour, salt and water into a firm dough; divide; roll very thin; perforate thoroughly; bake immediately until dry and crisp with light browning.
+- Editorial blocks: culinary context, ingredients, dough handling, rolling, perforation, baking, texture, storage and FAQ.
+- Cultural claims must be factual and restrained. Do not invent religious requirements or present one household formulation as the only traditional version.
+
+### Localization contract
+- DE and JA are complete localized recipe pages, not translation shells.
+- Preserve the distinction between the culinary recipe and broader religious/cultural context.
+- Localized ingredient terminology and metadata must remain consistent with the visible recipe.
+
+### Publication gate
+E008 remains unpublished until the final image asset, complete visible ingredients and instructions, metadata and route QA are ready. Recipe JSON-LD must match the visible formulation and timing. Google requires Recipe markup to represent recipe content accurately and recommends validation with the Rich Results Test before deployment. citeturn0search0turn0search4
