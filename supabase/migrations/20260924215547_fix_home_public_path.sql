@@ -1,1 +1,0 @@
-update public.content_pages set public_path='/' where id='4857845b-aadf-4b13-8b9b-a539a43787a7';
