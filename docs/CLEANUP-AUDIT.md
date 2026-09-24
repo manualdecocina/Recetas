@@ -10,7 +10,7 @@ El inventario contiene 392 filas correspondientes a 368 URLs publicadas.
 
 ## Afiliación/productos — FUERA DEL NUEVO CATÁLOGO
 
-Se identificaron 6 URLs claramente orientadas a productos/equipamiento y no a recetas:
+Se identificaron 8 URLs claramente orientadas a productos/equipamiento y no a recetas:
 
 1. `/licuadoras-para-cocina/` — Licuadoras Para Cocina
 2. `/mejor-batidora-de-vaso-en-2025/` — Guía para elegir la mejor batidora de vaso en 2025
@@ -18,6 +18,8 @@ Se identificaron 6 URLs claramente orientadas a productos/equipamiento y no a re
 4. `/productos-cocina-cafeteras/` — Cafeteras
 5. `/productos-de-cocina-recomendados-por-el-chef/` — Productos de Cocina
 6. `/utensilios-de-cocina/` — Utensilios de Cocina
+7. `/refrijeradores-de-cocina/` — Refrijeradores de Cocina
+8. `/baterias-de-cocina/` — Baterías de Cocina
 
 **Decisión editorial:** no reconstruir estas páginas como parte del nuevo catálogo de Manual de Cocina. No se crea una nueva sección de Amazon/afiliación.
 
