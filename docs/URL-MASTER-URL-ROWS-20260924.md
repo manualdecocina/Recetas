@@ -211,3 +211,14 @@ Estas decisiones cierran la URL, no autorizan todavía publicación automática 
 - La URL se conserva porque la evidencia histórica identifica una entidad culinaria Stroganoff con 154 clics y la documentación de catálogo la clasifica como Recipe. La anomalía del slug `creep-stroganoff` se trata como patrimonio URL, no como motivo para inventar otro destino.
 - La revisión pendiente es únicamente editorial: reconstruir una versión de Stroganoff cuya variante concreta quede documentada antes de publicar. No se crea redirect y no se cambia el slug.
 
+
+
+## Cierre P0 — E011 — 2026-09-25
+
+**E011 Horchata queda cerrado como KEEP / REBUILD para la URL ES y la localización JA histórica**, con una condición editorial explícita: ambas URLs se consideran la misma entidad únicamente a nivel de intención general de “receta de horchata”; la preparación concreta deberá quedar documentada en cada versión antes de publicar. No se adjuntan todavía DE/IT/FR/EN porque su equivalencia histórica no está demostrada.
+
+- ES: `/receta-de-horchata/` — KEEP / REBUILD.
+- JA: `/ja/オルチャータのレシピ/` — KEEP / REBUILD.
+- DE/IT/FR/EN: permanecen fuera del grupo hasta verificación individual.
+
+**Resultado:** el URL Master P0 queda cerrado en cuanto a decisiones de URL. La incertidumbre restante es editorial/localización, no de destino URL. No se crean redirects ni filas de traducción por esta decisión.
