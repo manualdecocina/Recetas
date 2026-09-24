@@ -34,4 +34,4 @@ Route, metadata, Recipe JSON-LD, canonical/hreflang, sitemap and visual QA remai
 
 ## Commit
 
-Pending Git commit for this documentation block.
+- Documentation commit: 2ffb1ba105807b19c8f353d8c7a8b0a8c38a246d
