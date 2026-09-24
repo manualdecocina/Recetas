@@ -195,3 +195,21 @@ Ahora es:
 **URL histórica → post fuente WP → contenido fuente → traducción histórica → contenido traducido disponible → grupo de contenido/receta → estado actual Supabase → decisión KEEP/MIGRATE/MERGE/NOINDEX/404**
 
 No se modifica producción hasta cerrar este segundo nivel de equivalencia.
+
+
+## Recuperación 3 — TranslatePress confirma los grupos multilingües históricos
+
+Nueva comprobación del WXR: los posts fuente conservan metadatos `_trp_automatically_translated_slug_*` con los slugs históricos por idioma. Esto permite reconstruir de forma documental el mapa URL→grupo para las 25 URLs prioritarias.
+
+Ejemplos confirmados:
+- Lechona: DE `kolumbianisches-lechona-rezept`, JA `コロンビアのレチョナレシピ`, IT `ricetta-colombiana-lechona`, FR `recette-lechona-colombienne`, EN `colombian-lechona-recipe`.
+- Casuela: DE `kolumbianische-bohnen-casuela`, FR `casuela-aux-haricots-colombiens`, IT `casuela-colombiana-di-fagioli`, EN `colombian-bean-casuela`.
+- Pan Matzá: DE `matza-brot-rezept`, JA `マッツォパンのレシピ`, IT `ricetta-del-pane-matza`, FR `recette-pain-matza`, EN `matza-bread-recipe`.
+- Horchata: DE `horchata-rezept`, JA `オルチャータのレシピ`, IT `ricetta-horchata`, FR `recette-dhorchata`, EN `horchata-recipe`.
+- Porra: DE `porra-antequerana-rezept`, JA `ポッラ・アンテケラナ・レシピ`, IT `porra-antequerana-ricetta`, FR `recette-porra-antequerana`, EN `porra-antequerana-recipe`.
+- Batido Grimace: DE `milchshake-grimaze-mcdonalds`, JA `ミルクセーキ-しかめっ面-マクドナルド`, FR `milkshake-grimace-mcdonalds`, IT `frappe-smorfia-mcdonalds`, EN `milkshake-grimace-mcdonalds-2`.
+- Jugo Anticancerígeno: DE `saft-gegen-krebs`, JA `抗がん剤ジュース`, FR `jus-anti-cancer`, IT `succo-antitumorale`, EN `anti-cancer-juice`.
+
+**Conclusión de control:** ya no estamos reconstruyendo los grupos a partir de similitud de títulos. Para estas URLs existe evidencia directa en WordPress/TranslatePress de la relación lingüística. Lo que sigue es recuperar el **contenido textual traducido**, no volver a descubrir qué URL pertenecía a qué grupo.
+
+**Bloqueo:** no crear traducciones nuevas ni redirects todavía. El siguiente paso es auditar el paquete de migración y cualquier contenido HTML/JSON almacenado para comprobar si conserva los cuerpos traducidos.
