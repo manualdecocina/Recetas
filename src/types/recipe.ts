@@ -1,6 +1,3 @@
-// Refleja exactamente la tabla `recipes` de Supabase (supabase/schema.sql).
-// Si cambia el esquema, este archivo debe actualizarse junto con la migración.
-
 export type RecipeLanguage = 'es' | 'de' | 'ja' | 'it' | 'fr' | 'en'
 
 export interface RecipeIngredient {
@@ -20,6 +17,7 @@ export interface Recipe {
   recipe_group_id: string
   language: RecipeLanguage
   slug: string
+  public_path: string
   title: string
   excerpt: string | null
   ingredients: RecipeIngredient[]
@@ -50,5 +48,4 @@ export interface Recipe {
 }
 
 export const SUPPORTED_LANGUAGES: RecipeLanguage[] = ['es', 'de', 'ja', 'it', 'fr', 'en']
-
 export const DEFAULT_LANGUAGE: RecipeLanguage = 'es'
