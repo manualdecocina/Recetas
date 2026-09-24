@@ -174,3 +174,11 @@ Estas filas pasan de KEEP / REBUILD provisional a KEEP / REBUILD confirmado para
 ### Regla resultante
 
 Para las filas confirmadas, el objetivo final es la misma URL histórica. Por tanto, no debe existir 301 desde esa URL hacia /es/receta/...; el trabajo técnico pendiente es hacer que el router sirva directamente esa URL con el modelo y contrato SEO correctos.
+
+
+## Cierre adicional de URLs P0 — 2026-09-25
+
+- **E012 Pollo Alfredo a la Florentina** — la decisión de URL queda **KEEP / REBUILD** para ES `/pollo-alfredo-a-la-florentina/` y JA `/ja/フィレンツェ風チキンアルフレッド/`. El modelo editorial final queda Recipe; no se conserva una ContentPage paralela.
+- **E013 Pulpo a la Gallega** — la URL histórica DE `/de/oktopus-rezept-nach-galizischer-art/` queda **KEEP / REBUILD**. La revisión editorial afecta al contenido nuevo, no cambia la URL histórica mientras no aparezca evidencia de equivalencia incorrecta.
+
+Estas decisiones cierran la **decisión de URL**, no autorizan todavía publicación. El contenido debe superar la gate editorial antes de indexarse.
