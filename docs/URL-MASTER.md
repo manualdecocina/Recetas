@@ -236,3 +236,50 @@ Esto impide justificar todavía una migración literal de las 25 URLs como pági
 La vía que queda pendiente es la propia instalación/backup de WordPress/TranslatePress o cualquier snapshot de base de datos que conserve las tablas de TranslatePress. El WXR de WordPress no exporta esas tablas de plugin. Si no existe esa fuente, las traducciones deberán clasificarse como **reconstrucción editorial**, no como recuperación documental.
 
 **Regla de control:** una reconstrucción editorial puede conservar una URL histórica si existe contenido equivalente suficiente, pero deberá quedar registrada como reconstrucción y no como recuperación del texto original.
+
+## Cambio de estrategia — 2026-09-24
+
+La recuperación del cuerpo textual traducido histórico queda cerrada como requisito. El proyecto no necesita reproducir las traducciones antiguas de TranslatePress.
+
+Las relaciones históricas URL→idioma→entidad siguen siendo evidencia válida y se conservan. El contenido de cada idioma se reconstruirá editorialmente desde cero.
+
+Por tanto, el siguiente cruce del URL Master ya no debe buscar contenido traducido disponible como condición de recuperación. Debe resolver:
+
+URL histórica → idioma → entidad editorial → intención → rendimiento → estado actual → URL objetivo → acción SEO.
+
+### Acciones permitidas
+
+- KEEP: reconstruir contenido nuevo en la URL histórica.
+- MIGRATE: crear una URL nueva y 301 desde la histórica.
+- MERGE: consolidar dos URLs cuando representan la misma intención/entidad y una sola URL canónica es suficiente.
+- NOINDEX: caso excepcional y documentado.
+- 404/410: retirar cuando no exista una equivalencia editorial válida.
+
+### Regla para URLs multilingües históricas
+
+Una URL histórica con tráfico no debe redirigirse únicamente porque la arquitectura nueva prefiera otra estructura. Primero se comprueba si puede reconstruirse como versión localizada de la entidad.
+
+Ejemplo de grupo histórico ya demostrado:
+
+- ES /receta-de-lechona-colombiana/
+- DE /de/kolumbianisches-lechona-rezept/
+- JA /ja/コロンビアのレチョナレシピ/
+- IT /it/ricetta-colombiana-lechona/
+- FR /fr/recette-lechona-colombienne/
+- EN /en/colombian-lechona-recipe/
+
+Estas URLs forman un grupo editorial candidato; la decisión final de conservación se toma por URL, no por una regla automática de estructura.
+
+## Criterio de prioridad del URL Master
+
+1. URLs con alto tráfico histórico.
+2. URLs con alta impresión y posición orgánica fuerte aunque tengan pocos clics.
+3. URLs que forman grupos multilingües históricos demostrables.
+4. URLs con enlaces/redirects históricos relevantes.
+5. Resto del inventario histórico.
+
+El rendimiento de Search Console es evidencia histórica, no una garantía de rendimiento futuro.
+
+## Gate actual
+
+No se crea todavía una migración masiva de URLs. Primero se termina la tabla maestra y se aprueban las decisiones.
