@@ -140,3 +140,14 @@ npm run start
 con Node.js compatible con Next.js y las variables anteriores.
 
 Después del cambio de hosting, Google recomienda revisar Search Console, sitemap, canonical/hreflang, tráfico de URLs antiguas y nuevas y errores de rastreo. citeturn491842search0
+
+
+## Reconciliación de estado — 2026-09-25
+
+Este documento contiene cifras históricas de una auditoría anterior y **no debe usarse como fuente actual de conteos de publicación**. En particular, la cifra histórica de 159 Recipes publicadas quedó superada por las posteriores operaciones de staging/consolidación.
+
+La referencia vigente para readiness de publicación es `docs/PUBLICATION-READINESS-AUDIT-20260925.md`, que registra 132 Recipes publicadas y 0 huecos críticos en esa auditoría.
+
+La diferencia no se interpreta como un nuevo problema SEO hasta ejecutar una lectura directa de producción; simplemente se evita que un documento histórico contradiga el control más reciente.
+
+La prioridad sigue siendo URL Master → routing histórico → modelo → contenido → QA → deploy. No se autoriza el lanzamiento editorial completo mientras las localizaciones históricas y las decisiones REVIEW permanezcan abiertas.
