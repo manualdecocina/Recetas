@@ -54,3 +54,10 @@ E101 and E102: ready for recipe drafting/testing.
 E103: content-type validation required.
 E104: entity validation required.
 E105: recipe drafting/testing ready.
+
+## Implementation readiness — 2026-09-25
+
+E101, E102 and E105 are ready for controlled recipe drafting/testing. E103 and E104 remain explicit validation gates and must not be forced into Recipe until their concrete preparation/entity is defined.
+
+Historical URLs remain protected candidates and no slug or redirect mutation is authorized by this document.
+
