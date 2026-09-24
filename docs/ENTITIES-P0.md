@@ -47,3 +47,54 @@ Este documento no autoriza todavía cambios de producción. Es el primer lote de
 ## Siguiente lote
 
 Extender esta tabla al resto de las URLs de Search Console y después cruzarla con las 368 URLs publicadas del inventario para descubrir entidades adicionales, duplicados y páginas que nunca llegaron a Search Console con tráfico relevante.
+
+## Nueva regla editorial — limpieza radical del catálogo
+
+El nuevo Manual de Cocina no conservará contenido por el simple hecho de existir en el WordPress histórico.
+
+Se elimina del alcance editorial todo contenido que:
+
+- no tenga relación real con cocina, recetas, alimentación o el propósito editorial definido;
+- sea contenido ajeno introducido por estrategias antiguas;
+- sea duplicado o clon de otra entidad;
+- exista principalmente por una estrategia de monetización que ya no forma parte del proyecto;
+- esté ligado a afiliación de productos que ya no se utiliza, incluyendo páginas de batidoras y contenido equivalente de Amazon;
+- no tenga una entidad editorial útil que queramos reconstruir.
+
+### Regla de limpieza
+
+Si sirve → reconstruir.
+Si está duplicado → consolidar en una sola entidad.
+Si no pertenece al proyecto → eliminar del catálogo nuevo.
+Si solo existía para Amazon/afiliación → fuera.
+
+La existencia de tráfico histórico no convierte automáticamente una página en contenido que deba conservarse. Primero debe pasar el filtro de relevancia editorial.
+
+### Importante: eliminar del catálogo no significa borrar una URL a ciegas
+
+Antes de retirar una URL se comprobará:
+
+1. tráfico e impresiones históricos;
+2. intención de búsqueda;
+3. existencia de una entidad relacionada;
+4. posibilidad de consolidación;
+5. backlinks/redirects conocidos cuando estén disponibles;
+6. si existe una URL equivalente válida.
+
+Después se decide entre MERGE, 301 o 404/410.
+
+No se redirigirá una página irrelevante hacia una receta simplemente para evitar un 404. Google considera legítimos los redirects para migraciones y consolidaciones cuando son coherentes, pero los redirects que llevan a contenido significativamente distinto pueden ser problemáticos. citeturn0search4
+
+### Amazon / afiliación
+
+Las páginas creadas principalmente para monetización mediante Amazon o productos de terceros quedan fuera del nuevo modelo editorial, salvo que una página concreta tenga una función editorial independiente que se decida conservar.
+
+No se reconstruirá una sección de batidoras, comparativas de productos ni contenido equivalente únicamente para rellenar el sitio.
+
+La nueva arquitectura se centra en Manual de Cocina, no en un catálogo de afiliación.
+
+### Google y calidad del sitio
+
+Esta limpieza también protege la coherencia temática del proyecto. Google advierte contra grandes cantidades de contenido creado principalmente para manipular rankings y contra páginas sin valor añadido; además, la política de reputación del sitio contempla contenido de terceros publicado principalmente para aprovechar señales de posicionamiento existentes. citeturn0search1turn0search6
+
+La regla del proyecto no es borrar por borrar: es reconstruir un catálogo editorial coherente y útil.
