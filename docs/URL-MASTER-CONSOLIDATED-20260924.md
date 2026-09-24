@@ -180,3 +180,12 @@ No se autoriza todavía:
 - migración definitiva de Supabase.
 
 El próximo entregable debe convertir esta matriz de entidades en **filas URL-by-URL del URL Master**, con una sola acción y una sola URL objetivo por fila.
+
+
+## Estado actualizado — 2026-09-25
+
+La sección de redirects de 27 elementos es histórica. Tras las migraciones de limpieza y normalización, el estado operativo conocido de `content_redirects` es **0 registros**.
+
+Esto es intencional: ningún redirect heredado debe decidir por sí mismo la URL final. Las futuras redirecciones se crearán únicamente después de cerrar la fila URL-by-URL correspondiente en el URL Master.
+
+También queda cerrado un nuevo control de datos: una Recipe marcada como publicada debe tener título, imagen, contenido editorial, ingredientes y pasos; la migración `20260925010000_guard_published_recipe_completeness.sql` bloquea publicaciones incompletas.
