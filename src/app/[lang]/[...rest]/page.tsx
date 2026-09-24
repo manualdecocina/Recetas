@@ -1,7 +1,20 @@
 import type { Metadata } from 'next'
-import { notFound } from 'next/navigation'
-import { supabase } from '@/lib/supabase/public'
-import { SUPPORTED_LANGUAGES, type RecipeLanguage } from '@/types/recipe'
+import { notFound, permanentRedirect } from 'next/navigation'
+import { getContentPageByPublicPath, getRecipeByPublicPath, getRecipeTranslations } from '@/lib/public-content'
+import { recipeAlternates } from '@/lib/seo'
+import { publicUrl } from '@/lib/site'
+import { SUPPORTED_LANGUAGES } from '@/types/recipe'
+import { RecipeDocument } from '@/components/RecipeDocument'
+
+interface Props { params: { lang: string; rest: string[] } }
+
+function isLang(value: string): boolean {
+  return (SUPPORTED_LANGUAGES as string[]).includes(value)
+}
+
+function pathFor(params: Props): string {
+  return '/' + params.lang + '/' + params.rest.join('/')
+}
 
 function cleanHtml(html: string): string {
   return html
@@ -11,43 +24,70 @@ function cleanHtml(html: string): string {
     .replace(/javascript:/gi, '')
 }
 
-interface Props { params: { lang: string; rest: string[] } }
-
-function isLang(value: string): value is RecipeLanguage {
-  return (SUPPORTED_LANGUAGES as string[]).includes(value)
-}
-
-async function getPage(lang: string, slug: string) {
-  const { data, error } = await supabase.from('content_pages').select('*').eq('language', lang).eq('slug', slug).eq('published', true).maybeSingle()
-  if (error) throw new Error('No se pudo cargar el contenido: ' + error.message)
-  return data
-}
-
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!isLang(params.lang)) return {}
-  const slug = params.rest.join('/')
-  const page = await getPage(params.lang, slug)
+  const path = pathFor(params)
+
+  const recipe = await getRecipeByPublicPath(path)
+  if (recipe) {
+    const translations = await getRecipeTranslations(recipe.recipe_group_id)
+    return {
+      title: recipe.title,
+      description: recipe.excerpt ?? undefined,
+      alternates: recipeAlternates(recipe, translations),
+      openGraph: {
+        type: 'article',
+        title: recipe.title,
+        description: recipe.excerpt ?? undefined,
+        url: publicUrl(recipe.public_path),
+        images: recipe.image_url ? [recipe.image_url] : undefined,
+      },
+    }
+  }
+
+  const page = await getContentPageByPublicPath(path)
   if (!page) return {}
+
   return {
     title: page.title,
     description: page.excerpt ?? undefined,
-    alternates: { canonical: '/' + page.language + '/' + page.slug },
-    openGraph: { title: page.title, description: page.excerpt ?? undefined, url: '/' + page.language + '/' + page.slug, images: page.featured_image_url ? [page.featured_image_url] : undefined },
+    alternates: { canonical: publicUrl(page.public_path) },
+    openGraph: {
+      type: 'article',
+      title: page.title,
+      description: page.excerpt ?? undefined,
+      url: publicUrl(page.public_path),
+      images: page.featured_image_url ? [page.featured_image_url] : undefined,
+    },
   }
 }
 
-export default async function ContentPage({ params }: Props) {
+export default async function PublicLanguageRoute({ params }: Props) {
   if (!isLang(params.lang)) notFound()
-  const slug = params.rest.join('/')
-  const page = await getPage(params.lang, slug)
-  if (!page) notFound()
-  return (
-    <main>
-      <article>
-        <h1>{page.title}</h1>
-        {page.excerpt && <p>{page.excerpt}</p>}
-        {page.content_html && <div dangerouslySetInnerHTML={{ __html: cleanHtml(page.content_html) }} />}
-      </article>
-    </main>
+  const path = pathFor(params)
+
+  const recipe = await getRecipeByPublicPath(path)
+  if (recipe) return <RecipeDocument recipe={recipe} />
+
+  const page = await getContentPageByPublicPath(path)
+  if (page) {
+    return (
+      <main>
+        <article>
+          <h1>{page.title}</h1>
+          {page.excerpt && <p>{page.excerpt}</p>}
+          {page.content_html && <div dangerouslySetInnerHTML={{ __html: cleanHtml(page.content_html) }} />}
+        </article>
+      </main>
+    )
+  }
+
+  const normalized = path.replace(/\/+$/, '') || '/'
+  const candidates = [path, normalized, normalized + '/']
+  const { data } = await import('@/lib/supabase/public').then(({ supabase }) =>
+    supabase.from('content_redirects').select('target_path').in('source_path', candidates).limit(1).maybeSingle()
   )
+  if (data?.target_path) permanentRedirect(data.target_path)
+
+  notFound()
 }
