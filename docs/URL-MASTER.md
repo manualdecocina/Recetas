@@ -329,3 +329,24 @@ Antes de crear traducciones, eliminar filas NEW_SEED o modificar redirects, debe
 5. resolución del router para la URL definitiva;
 6. canonical/hreflang/sitemap;
 7. redirect solo cuando exista un cambio real de URL.
+
+
+## Documentos operativos derivados — 2026-09-24
+
+La matriz principal se complementa con estos cortes, que no sustituyen este documento:
+
+- `docs/URL-MASTER-CONSOLIDATED-20260924.md` — decisiones agrupadas por entidad.
+- `docs/URL-MASTER-URL-ROWS-20260924.md` — filas prioritarias URL por URL.
+- `docs/P1-SUPABASE-MODEL-CROSSWALK-20260924.md` — estado del modelo Supabase para P1.
+- `docs/P1-REDIRECT-VALIDATION-20260924.md` — validación de los 27 redirects P1.
+- `docs/ROUTING-REDIRECT-CONFLICTS-P1.md` — conflicto entre redirects actuales y conservación de URLs históricas.
+- `docs/SUPABASE-NEW-SEED-AUDIT-20260924.md` — 28 filas nuevas sin `source_url`.
+- `docs/PRODUCT-AFFILIATE-AUDIT-20260924.md` — 8 URLs de producto/afiliación fuera del catálogo.
+- `docs/HEALTH-NUTRITION-AUDIT-20260924.md` — contenido de salud/nutrición pendiente de revisión.
+
+### Regla de precedencia
+
+1. Este URL Master define el contrato general.
+2. Las filas URL-by-URL definen la acción para una URL concreta.
+3. Los documentos por entidad justifican la agrupación.
+4. Los documentos técnicos no pueden cambiar una decisión editorial sin devolverla a Control Central.
