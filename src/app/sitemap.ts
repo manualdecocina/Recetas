@@ -34,7 +34,7 @@ async function fetchAllPublished(): Promise<Row[]> {
       .order('id')
       .range(from, from + BATCH - 1)
     if (error) throw new Error(`Sitemap: ${error.message}`)
-    rows.push(...(data ?? []))
+    rows.push(...(data ?? []).filter((row) => !row.public_path.startsWith('/recipe-cards/')))
     if (!data || data.length < BATCH) break
   }
   return rows
