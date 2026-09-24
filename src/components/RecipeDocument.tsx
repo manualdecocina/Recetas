@@ -44,7 +44,7 @@ export function RecipeDocument({ recipe }: { recipe: Recipe }) {
     <main>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\u003c') }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }}
       />
       <article>
         <h1>{recipe.title}</h1>
