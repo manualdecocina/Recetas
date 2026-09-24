@@ -110,3 +110,28 @@ La matriz anterior sigue siendo la referencia URL-by-URL. No se interpreta como 
 ### No desviarse
 
 Los cambios recientes de schema/test son controles auxiliares. No sustituyen el cierre del URL Master. La próxima ejecución de Control Central debe comenzar por las filas P0/P1, no por nuevas mejoras cosméticas de schema.
+
+
+## Estado de cierre P0/P1 — 2026-09-25
+
+**No se declara cerrado todavía.** Las filas marcadas KEEP / REBUILD son objetivos provisionales ya documentados, pero las filas REVIEW y KEEP CANDIDATE siguen abiertas hasta completar equivalencia editorial y modelo.
+
+### P0/P1 ya protegidas como objetivo provisional
+
+Las filas E001–E004, E006–E009, E011 y E014–E015 con acción KEEP / REBUILD mantienen exactamente la URL histórica indicada en esta matriz. Esto no autoriza aún su publicación ni la creación de redirects.
+
+### P0/P1 que siguen bloqueando el cierre completo
+
+- E005 Jugo anticancerígeno — REVIEW por claims de salud.
+- E010 Batido Grimace — REVIEW.
+- E011 Horchata — verificar variante exacta antes de asociar todas las localizaciones históricas.
+- E012 Pollo Alfredo — KEEP CANDIDATE / MODEL REVIEW.
+- E013 Pulpo — KEEP CANDIDATE / REVIEW.
+- E106 Sopa saludable — REVIEW.
+- URLs españolas adicionales de alta señal deben conservar su fila URL-by-URL y no heredarse de un redirect antiguo.
+
+### Regla de implementación
+
+No crear ni publicar una traducción únicamente porque su URL aparece aquí. Primero debe existir entidad, grupo, contenido localizado completo, imagen, URL final y QA.
+
+La documentación de Google para migraciones exige preparar el mapeo de URLs antes de activar cambios y actualizar canonical, hreflang, enlaces internos y sitemap según ese mapeo. citeturn0search1turn0search2
