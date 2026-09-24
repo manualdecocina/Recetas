@@ -118,3 +118,40 @@ No se autoriza la construcción masiva del contenido ni el cierre de la arquitec
 ## Regla de cambio
 
 Si cualquier chat de implementación descubre que una decisión técnica obliga a cambiar URLs, canonicals, grupos lingüísticos, redirects, indexación o modelo editorial, debe devolver la decisión a Control Central antes de modificar el contrato.
+
+
+## Actualización de control — 2026-09-24
+
+### Limpieza del catálogo
+
+La auditoría completa del inventario confirmó **8 URLs de producto/equipamiento fuera del nuevo catálogo**. La primera auditoría había identificado 6; posteriormente se detectaron también:
+- `/refrijeradores-de-cocina/`
+- `/baterias-de-cocina/`
+
+Esto corrige el conteo anterior y queda como 8 definitivo para este corte.
+
+También quedan separadas:
+- 2 URLs técnicas WPRM;
+- 9 páginas institucionales/legales;
+- 5 páginas de salud/nutrición para revisión;
+- 2 posibles CollectionPage;
+- 1 artículo editorial de veganismo;
+- 61 URLs culinarias de baja señal como P4/CATALOG CANDIDATE.
+
+### Supabase / procedencia
+
+Se confirmó que las 28 recetas sin `source_url` tienen `published_at` del 23 de septiembre de 2026. Se consideran NEW_SEED, no evidencia histórica, salvo cuando otra fuente demuestra la URL histórica.
+
+### Conflicto de routing
+
+Existen 27 redirects P1 actualmente activos hacia rutas `/es/...`. Varios apuntan correctamente a registros existentes en Supabase, pero todavía no están aprobados como URLs definitivas porque el URL Master puede conservar la URL histórica.
+
+### Bloqueadores antes de producción
+
+1. Cerrar URL Master por entidad/idioma.
+2. Resolver las 27 decisiones de redirect P1.
+3. Resolver el routing de URLs históricas raíz si se mantienen.
+4. Consolidar NEW_SEED duplicado con entidades históricas.
+5. Solo entonces crear migraciones de datos/traducciones finales.
+
+No se autoriza borrar, redirigir masivamente ni publicar traducciones en bloque antes de superar estos gates.
