@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next'
 import { supabase } from '@/lib/supabase/public'
-import { getSiteUrl, isIndexingAllowed, recipeUrl } from '@/lib/site'
+import { getSiteUrl, isIndexingAllowed, normalizePublicPath, publicUrl } from '@/lib/site'
 import { DEFAULT_LANGUAGE, SUPPORTED_LANGUAGES } from '@/types/recipe'
 
 export const revalidate = 3600
@@ -8,18 +8,19 @@ export const revalidate = 3600
 type Entry = MetadataRoute.Sitemap[number]
 type SitemapLanguages = NonNullable<NonNullable<Entry['alternates']>['languages']>
 
-const BATCH = 1000 // límite de filas por consulta de la API de Supabase
+const BATCH = 1000
 
 interface Row {
   recipe_group_id: string
   language: string
   slug: string
+  public_path: string
   updated_at: string
 }
 
 interface ContentRow {
   language: string
-  slug: string
+  public_path: string
   updated_at: string
 }
 
@@ -28,7 +29,7 @@ async function fetchAllPublished(): Promise<Row[]> {
   for (let from = 0; ; from += BATCH) {
     const { data, error } = await supabase
       .from('recipes')
-      .select('recipe_group_id, language, slug, updated_at')
+      .select('recipe_group_id, language, slug, public_path, updated_at')
       .eq('published', true)
       .order('id')
       .range(from, from + BATCH - 1)
@@ -39,26 +40,27 @@ async function fetchAllPublished(): Promise<Row[]> {
   return rows
 }
 
-// Sitemap multilingüe: cada URL declara sus alternates (mismas reglas que las páginas).
-// En entornos de prueba devuelve un sitemap vacío.
-// Límite de 50.000 URLs por sitemap: cuando el catálogo se acerque, dividir con
-// generateSitemaps (decisión pendiente, no bloquea el lanzamiento).
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   if (!isIndexingAllowed()) return []
 
   const site = getSiteUrl()
+  const entries: MetadataRoute.Sitemap = []
   const rows = await fetchAllPublished()
+
   const { data: contentPages, error: contentError } = await supabase
     .from('content_pages')
-    .select('language, slug, updated_at')
+    .select('language, public_path, updated_at')
     .eq('published', true)
   if (contentError) throw new Error(`Sitemap content: ${contentError.message}`)
 
-  const groups = new Map<string, Row[]>()
   for (const page of (contentPages ?? []) as ContentRow[]) {
-    entries.push({ url: `${site}/${page.language}/${page.slug}`, lastModified: page.updated_at })
+    entries.push({
+      url: publicUrl(page.public_path),
+      lastModified: page.updated_at,
+    })
   }
 
+  const groups = new Map<string, Row[]>()
   for (const row of rows) {
     const list = groups.get(row.recipe_group_id) ?? []
     list.push(row)
@@ -67,12 +69,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const staticAlternates = (path: (l: string) => string) => {
     const map: Record<string, string> = {}
-    for (const l of SUPPORTED_LANGUAGES) map[l] = `${site}${path(l)}`
-    map['x-default'] = `${site}${path(DEFAULT_LANGUAGE)}`
+    for (const l of SUPPORTED_LANGUAGES) map[l] = `${site}${normalizePublicPath(path(l))}`
+    map['x-default'] = `${site}${normalizePublicPath(path(DEFAULT_LANGUAGE))}`
     return { languages: map as SitemapLanguages }
   }
-
-  const entries: MetadataRoute.Sitemap = []
 
   for (const l of SUPPORTED_LANGUAGES) {
     entries.push({ url: `${site}/${l}`, alternates: staticAlternates((x) => `/${x}`) })
@@ -82,16 +82,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   for (const row of rows) {
     const siblings = groups.get(row.recipe_group_id) ?? [row]
     const entry: Entry = {
-      url: recipeUrl(row.language, row.slug),
+      url: publicUrl(row.public_path),
       lastModified: row.updated_at,
     }
+
     if (siblings.length > 1) {
       const map: Record<string, string> = {}
-      for (const s of siblings) map[s.language] = recipeUrl(s.language, s.slug)
+      for (const s of siblings) map[s.language] = publicUrl(s.public_path)
       const spanish = siblings.find((s) => s.language === DEFAULT_LANGUAGE)
-      if (spanish) map['x-default'] = recipeUrl(spanish.language, spanish.slug)
+      if (spanish) map['x-default'] = publicUrl(spanish.public_path)
       entry.alternates = { languages: map as SitemapLanguages }
     }
+
     entries.push(entry)
   }
 
