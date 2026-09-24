@@ -175,3 +175,31 @@ No se autoriza borrar, redirigir masivamente ni publicar traducciones en bloque 
 El trabajo continúa por bloques sin requerir una confirmación entre cada bloque. Las decisiones ya cerradas no vuelven a abrirse salvo evidencia nueva.
 
 Siguiente prioridad: cerrar decisiones de URLs históricas P1 y sus equivalencias reales antes de activar nuevos redirects; después continuar con la reconstrucción editorial de entidades que ya tienen content packs completos.
+
+
+## Ruta de ejecución vigente — 2026-09-25
+
+Esta sección es la referencia operativa para no desviarse del objetivo. Si una tarea técnica entra en conflicto con esta ruta, se detiene la ejecución de esa tarea y se vuelve a Control Central.
+
+### Orden obligatorio
+
+1. **URL Master** — cerrar decisiones URL-by-URL de las históricas P0/P1: KEEP / MIGRATE / MERGE / NOINDEX / 404-410.
+2. **Routing histórico** — garantizar que cada URL KEEP pueda resolverse directamente como la entidad editorial correcta, con el contrato SEO completo.
+3. **Redirects** — solo crear/ajustar 301 después de que la fila URL Master tenga destino definitivo; estado operativo actual conocido: 0 redirects.
+4. **Modelo editorial** — consolidar Recipe/ContentPage y eliminar representaciones paralelas antes de publicar.
+5. **Contenido** — reconstruir/localizar entidades ya aprobadas por el URL Master.
+6. **Schema/SEO** — validar Recipe, BreadcrumbList, canonical, hreflang y sitemap contra contenido visible y URL final.
+7. **QA/deploy** — probar rutas, metadata, schema, 404/redirects, sitemap y páginas desplegadas.
+8. **Search Console** — verificar indexación y resultados después del despliegue.
+
+### Guardas
+
+- No crear traducciones masivas antes de cerrar URL Master.
+- No publicar contenido staged incompleto.
+- No convertir una tarea de schema o código en sustituto del cierre de URLs.
+- No abrir de nuevo decisiones ya cerradas sin evidencia nueva.
+- Los packs E002–E006 y E101–E105 pueden estar preparados editorialmente, pero su preparación **no autoriza** publicación ni altera el orden anterior.
+
+### Corrección de rumbo
+
+Durante este ciclo se hicieron ajustes de QA de schema y pruebas de contrato. Son controles auxiliares, no un cambio de prioridad. La prioridad vuelve ahora al cierre URL-by-URL P0/P1 antes de continuar con la reconstrucción masiva.
