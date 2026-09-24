@@ -213,3 +213,26 @@ Ejemplos confirmados:
 **Conclusión de control:** ya no estamos reconstruyendo los grupos a partir de similitud de títulos. Para estas URLs existe evidencia directa en WordPress/TranslatePress de la relación lingüística. Lo que sigue es recuperar el **contenido textual traducido**, no volver a descubrir qué URL pertenecía a qué grupo.
 
 **Bloqueo:** no crear traducciones nuevas ni redirects todavía. El siguiente paso es auditar el paquete de migración y cualquier contenido HTML/JSON almacenado para comprobar si conserva los cuerpos traducidos.
+
+
+## Recuperación 4 — Auditoría de fuentes de contenido traducido
+
+Se auditó el paquete `manualdecocina-migration-package.zip` (archivo `migration-data.json`, 203 posts, 17 páginas y 158 recetas) contra los 25 grupos/URLs prioritarios.
+
+Resultado:
+
+1. El paquete conserva los **posts fuente en español** y su contenido HTML/receta para los contenidos históricos.
+2. El paquete **no contiene registros independientes de las traducciones DE/JA/IT/FR/EN**. Los objetos de migración están modelados esencialmente a partir del contenido español.
+3. El WXR tampoco contiene las tablas internas de TranslatePress: en sus postmeta solo aparecen las claves `_trp_automatically_translated_slug_*` y `_trp_translated_slug_*`. El análisis de las claves `_trp_` del XML no encontró una capa de contenido traducido almacenada como postmeta.
+4. Por tanto, queda confirmada la siguiente separación de evidencia:
+   - **URL histórica + idioma + relación con el contenido fuente:** RECUPERADO.
+   - **Contenido traducido histórico completo:** NO RECUPERADO desde los archivos auditados hasta ahora.
+   - **Contenido español fuente:** RECUPERADO en el WXR/paquete de migración.
+
+Esto impide justificar todavía una migración literal de las 25 URLs como páginas traducidas. No se deben fabricar cuerpos traducidos ni marcar como recuperado aquello que no está en las fuentes.
+
+### Próxima fuente a investigar
+
+La vía que queda pendiente es la propia instalación/backup de WordPress/TranslatePress o cualquier snapshot de base de datos que conserve las tablas de TranslatePress. El WXR de WordPress no exporta esas tablas de plugin. Si no existe esa fuente, las traducciones deberán clasificarse como **reconstrucción editorial**, no como recuperación documental.
+
+**Regla de control:** una reconstrucción editorial puede conservar una URL histórica si existe contenido equivalente suficiente, pero deberá quedar registrada como reconstrucción y no como recuperación del texto original.
