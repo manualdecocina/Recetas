@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 
 export function SiteFooter({ lang }: { lang: string }) {
@@ -6,14 +7,7 @@ export function SiteFooter({ lang }: { lang: string }) {
       <div className="site-footer__inner">
         <div className="site-footer__brand">
           <Link className="site-footer__brand-link" href={'/' + lang} aria-label="Manual de Cocina, inicio">
-            <span className="brand__mark" aria-hidden="true">
-              <span className="brand__fold" />
-              <span className="brand__pot"><i /><i /><i /></span>
-            </span>
-            <span className="brand__text">
-              <strong>manual</strong>
-              <small>de cocina</small>
-            </span>
+            <Image className="brand__logo" src="/brand/manual-de-cocina-horizontal.svg" alt="Manual de Cocina" width={260} height={48} />
           </Link>
           <p>Un manual de cocina para descubrir, aprender y cocinar mejor.</p>
         </div>
