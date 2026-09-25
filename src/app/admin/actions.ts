@@ -36,7 +36,7 @@ export async function signInAction(_prev: FormState, formData: FormData): Promis
 }
 
 export async function signOutAction() {
-  const supabase = createSupabaseServerClient()
+  const supabase = await createSupabaseServerClient()
   await supabase.auth.signOut()
   redirect('/admin/login')
 }
