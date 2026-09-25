@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 const links = [
   ['Recetas', '/recetas/'],
@@ -12,14 +13,14 @@ export function SiteHeader({ lang }: { lang: string }) {
     <header className="site-header">
       <div className="site-header__inner">
         <Link className="brand" href={'/' + lang} aria-label="Manual de Cocina, inicio">
-          <span className="brand__mark" aria-hidden="true">
-            <span className="brand__fold" />
-            <span className="brand__pot"><i /><i /><i /></span>
-          </span>
-          <span className="brand__text">
-            <strong>manual</strong>
-            <small>de cocina</small>
-          </span>
+          <Image
+            className="brand__logo"
+            src="/brand/manual-de-cocina-horizontal.svg"
+            alt="Manual de Cocina"
+            width={260}
+            height={48}
+            priority
+          />
         </Link>
 
         <nav className="site-nav" aria-label="Principal">
