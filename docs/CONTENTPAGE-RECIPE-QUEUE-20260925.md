@@ -77,3 +77,10 @@ QA bloque 38: `docs/QA-BLOQUE-CONTENTPAGE-RECIPE-20260925-38.md`.
 QA bloque 39: `docs/QA-BLOQUE-CONTENTPAGE-RECIPE-20260925-39.md`.
 
 Estado de esta fase: STAGED / CONSOLIDACIÓN PENDIENTE.
+
+
+## Segunda ola completa — Bloque 50 — 2026-09-25
+
+La auditoría integral detectó 48 ContentPages publicadas con Recipe ES homónima staged/unpublished. Las 48 Recipes tienen título, imagen, contenido, ingredientes, pasos y metadata básica completa. Quedan clasificadas como MODEL Recipe / STAGED / READY FOR PUBLICATION GATE. No se retira ninguna ContentPage hasta publicar y verificar su Recipe equivalente.
+
+QA: docs/QA-BLOQUE-CONTENTPAGE-RECIPE-20260925-50.md.
