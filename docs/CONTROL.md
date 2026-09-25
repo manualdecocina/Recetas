@@ -219,3 +219,14 @@ La consulta inicial del bloque se hizo sobre todas las Recipes con metadata inco
 
 ### Documentación
 QA completo: `docs/QA-BLOQUE-METADATA-STAGED-20260925-36.md`.
+
+
+## Actualización de control — 2026-09-25 — Bloque 37 metadata staged
+
+### Cierre del conjunto de 24
+Se procesaron las últimas 4 entidades staged del conjunto estable de metadata incompleta:
+`sopa-minestrone-casera-el-secreto-definitivo-para-un-sabor-autentico`; `sopa-saludable-para-enfermos-receta-nutritiva-y-facil-de-preparar`; `tacos-de-carne-molida`; `vasitos-de-mousse-de-aguacate-y-cacao`.
+
+No existe evidencia nueva suficiente para completar prep/total/servings sin inferencia. Los cook times parciales ya respaldados se mantienen.
+
+Documentación: `docs/QA-BLOQUE-METADATA-STAGED-20260925-37.md`.
