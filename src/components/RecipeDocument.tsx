@@ -71,7 +71,7 @@ export function RecipeDocument({ recipe, relatedRecipes = [] }: { recipe: Recipe
             <PrintRecipeButton />
           </div>
         </div>
-        {editorialHtml && <div dangerouslySetInnerHTML={{ __html: editorialHtml }} />}
+        {editorialHtml && <div className="recipe-document__editorial" dangerouslySetInnerHTML={{ __html: editorialHtml }} />}
         {recipe.image_url && (
           <Image
             src={recipe.image_url}
