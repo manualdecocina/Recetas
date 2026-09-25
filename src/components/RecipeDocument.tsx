@@ -4,6 +4,8 @@ import { UI_TEXT } from '@/lib/i18n'
 import { publicUrl } from '@/lib/site'
 import { FavoriteStar } from '@/components/FavoriteStar'
 import { RecipeCookingMode } from '@/components/RecipeCookingMode'
+import { PrintRecipeButton } from '@/components/PrintRecipeButton'
+import { ShareRecipeButton } from '@/components/ShareRecipeButton'
 
 function cleanHtml(html: string): string {
   return html
@@ -61,6 +63,8 @@ export function RecipeDocument({ recipe }: { recipe: Recipe }) {
           </div>
           <div className="recipe-document__actions">
             <FavoriteStar recipeId={recipe.id} />
+            <ShareRecipeButton title={recipe.title} />
+            <PrintRecipeButton />
           </div>
         </div>
         {editorialHtml && <div dangerouslySetInnerHTML={{ __html: editorialHtml }} />}
