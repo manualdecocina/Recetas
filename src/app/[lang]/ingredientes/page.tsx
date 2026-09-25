@@ -8,8 +8,9 @@ function parseLang(value: string): RecipeLanguage | null {
   return (SUPPORTED_LANGUAGES as string[]).includes(value) ? value as RecipeLanguage : null
 }
 
-export default async function IngredientsPage({ params }: { params: { lang: string } }) {
-  const lang = parseLang(params.lang)
+export default async function IngredientsPage({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang: rawLang } = await params
+  const lang = parseLang(rawLang)
   if (!lang || lang !== 'es') notFound()
 
   const { data: ingredients, error } = await supabase
