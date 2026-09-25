@@ -67,3 +67,10 @@ No se crea una segunda entidad por ausencia de una traducción histórica en la 
 ### Siguiente acción
 
 Completar primero E007 Pandebono y E008 Pan Matzá como entidades Recipe únicas; después pasar a E009 y E012. E011 Horchata permanece fuera del lote hasta cerrar su identidad de preparación.
+
+
+## Cierre operativo — Bloque 38 — 2026-09-25
+
+Se procesó un bloque de 20 entidades de la cola. Las Recipes equivalentes existen y las 19 que permanecen staged tienen imagen, ingredientes, pasos y metadata estructurada completa. No se publicaron ni se retiraron ContentPages porque los gates superiores de URL Master, canonical/hreflang, schema, sitemap y despliegue siguen abiertos. Pollo Alfredo ya tiene Recipe publicada y su ContentPage equivalente permanece retirada de publicación.
+
+QA: `docs/QA-BLOQUE-CONTENTPAGE-RECIPE-20260925-38.md`.
