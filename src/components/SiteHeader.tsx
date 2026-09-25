@@ -1,5 +1,12 @@
 import Link from 'next/link'
 
+const links = [
+  ['Recetas', '/recetas/'],
+  ['Categorías', '/categorias/'],
+  ['Colecciones', '/colecciones/'],
+  ['Guías', '/guias/'],
+]
+
 export function SiteHeader({ lang }: { lang: string }) {
   return (
     <header className="site-header">
@@ -14,16 +21,25 @@ export function SiteHeader({ lang }: { lang: string }) {
             <small>de cocina</small>
           </span>
         </Link>
+
         <nav className="site-nav" aria-label="Principal">
-          <Link href={'/' + lang + '/recetas'}>Recetas</Link>
-          <Link href={'/' + lang + '/categorias'}>Categorías</Link>
-          <Link href={'/' + lang + '/colecciones'}>Colecciones</Link>
-          <Link href={'/' + lang + '/guias'}>Guías</Link>
+          {links.map(([label, href]) => <Link key={href} href={'/' + lang + href}>{label}</Link>)}
         </nav>
-        <Link className="header-search" href={'/' + lang + '/recetas'} aria-label="Buscar recetas">
+
+        <Link className="header-search" href={'/' + lang + '/recetas/'} aria-label="Buscar recetas">
           <span aria-hidden="true">⌕</span>
           <span>Buscar</span>
         </Link>
+
+        <details className="mobile-menu">
+          <summary>Menú</summary>
+          <nav aria-label="Menú móvil">
+            {links.map(([label, href]) => <Link key={href} href={'/' + lang + href}>{label}</Link>)}
+            <Link href={'/' + lang + '/ingredientes/'}>Ingredientes</Link>
+            <Link href={'/' + lang + '/quienes-somos/'}>Quiénes somos</Link>
+            <Link href={'/' + lang + '/contacto/'}>Contacto</Link>
+          </nav>
+        </details>
       </div>
     </header>
   )
