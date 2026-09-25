@@ -18,11 +18,11 @@ grant select, insert, update, delete on public.recipe_ingredient_pending to auth
 
 create policy "anon read indexable ingredients"
 on public.ingredients for select to anon
-using (indexable = true and status in ('canonical','review'));
+using (searchable = true and status = 'canonical');
 
 create policy "authenticated read indexable ingredients"
 on public.ingredients for select to authenticated
-using ((indexable = true and status in ('canonical','review')) or is_admin());
+using ((searchable = true and status = 'canonical') or is_admin());
 
 create policy "anon read ingredient aliases"
 on public.ingredient_aliases for select to anon
@@ -53,10 +53,10 @@ create policy "admin delete pending ingredients"
 on public.recipe_ingredient_pending for delete to authenticated
 using (is_admin());
 
-create policy "anon read indexable cuisines"
+create policy "anon read searchable cuisines"
 on public.cuisines for select to anon
 using (indexable = true and status in ('canonical','review'));
-create policy "authenticated read indexable cuisines"
+create policy "authenticated read searchable cuisines"
 on public.cuisines for select to authenticated
 using ((indexable = true and status in ('canonical','review')) or is_admin());
 
