@@ -6,6 +6,7 @@ import { FavoriteStar } from '@/components/FavoriteStar'
 import { RecipeCookingMode } from '@/components/RecipeCookingMode'
 import { PrintRecipeButton } from '@/components/PrintRecipeButton'
 import { ShareRecipeButton } from '@/components/ShareRecipeButton'
+import { RelatedRecipes } from '@/components/RelatedRecipes'
 
 function cleanHtml(html: string): string {
   return html
@@ -15,7 +16,7 @@ function cleanHtml(html: string): string {
     .replace(/javascript:/gi, '')
 }
 
-export function RecipeDocument({ recipe }: { recipe: Recipe }) {
+export function RecipeDocument({ recipe, relatedRecipes = [] }: { recipe: Recipe; relatedRecipes?: Array<Pick<Recipe, 'id' | 'language' | 'slug' | 'public_path' | 'title' | 'excerpt' | 'category' | 'image_url'>> }) {
   const text = UI_TEXT[recipe.language]
   const editorialHtml = recipe.content_html ? cleanHtml(recipe.content_html) : ''
   const totalMinutes = recipe.total_time_minutes ??
@@ -105,7 +106,14 @@ export function RecipeDocument({ recipe }: { recipe: Recipe }) {
             </li>
           ))}
         </ol>
+        {recipe.notes && (
+          <section className="recipe-notes" aria-labelledby="recipe-notes-title">
+            <h2 id="recipe-notes-title">Notas</h2>
+            <div dangerouslySetInnerHTML={{ __html: cleanHtml(recipe.notes) }} />
+          </section>
+        )}
         <div id="modo-cocina"><RecipeCookingMode title={recipe.title} steps={recipe.steps} /></div>
+        <RelatedRecipes recipes={relatedRecipes} />
       </article>
     </main>
   )
