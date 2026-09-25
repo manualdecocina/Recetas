@@ -5,8 +5,8 @@ import { createServerClient, type CookieOptions } from '@supabase/ssr'
 // Cliente con la SESIÓN del usuario (cookies). Se usa en el panel admin y en las
 // Server Actions. Usa solo la anon key: los permisos los decide la RLS de Supabase
 // (is_admin), no una llave privilegiada. No se necesita service_role en ningún punto.
-export function createSupabaseServerClient() {
-  const cookieStore = cookies()
+export async function createSupabaseServerClient() {
+  const cookieStore = await cookies()
 
   return createServerClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
