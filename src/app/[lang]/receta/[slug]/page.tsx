@@ -12,7 +12,7 @@ import { SiteHeader } from '@/components/SiteHeader'
 export const revalidate = 3600
 
 interface Props {
-  params: { lang: string; slug: string }
+  params: Promise<{ lang: string; slug: string }>
 }
 
 const getRecipe = cache(async (lang: string, slug: string): Promise<Recipe | null> => {
@@ -66,8 +66,9 @@ function isLang(value: string): value is RecipeLanguage {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  if (!isLang(params.lang)) return {}
-  const recipe = await getRecipe(params.lang, params.slug)
+  const { lang, slug } = await params
+  if (!isLang(lang)) return {}
+  const recipe = await getRecipe(lang, slug)
   if (!recipe) return {}
   const translations = await getTranslations(recipe.recipe_group_id)
 
@@ -100,14 +101,15 @@ async function getRelatedRecipes(recipe: Recipe) {
 }
 
 export default async function RecipeDetailPage({ params }: Props) {
-  if (!isLang(params.lang)) notFound()
-  const recipe = await getRecipe(params.lang, params.slug)
+  const { lang, slug } = await params
+  if (!isLang(lang)) notFound()
+  const recipe = await getRecipe(lang, slug)
   if (!recipe) notFound()
 
-  const routePath = normalizePublicPath(recipePath(params.lang, recipe.slug))
+  const routePath = normalizePublicPath(recipePath(lang, recipe.slug))
   const publicPath = normalizePublicPath(recipe.public_path)
   if (routePath !== publicPath) permanentRedirect(publicPath)
 
   const relatedRecipes = await getRelatedRecipes(recipe)
-  return <><SiteHeader lang={params.lang} /><RecipeDocument recipe={recipe} relatedRecipes={relatedRecipes} /></>
+  return <><SiteHeader lang={lang} /><RecipeDocument recipe={recipe} relatedRecipes={relatedRecipes} /></>
 }
