@@ -172,7 +172,12 @@ button, input { font: inherit; }
   background: var(--sand); padding-left: clamp(24px, 5vw, 72px); padding-right: clamp(24px, 5vw, 72px);
 }
 .editorial-band h2 { font-size: clamp(2.5rem, 5vw, 5rem); }
-.editorial-band > p { max-width: 500px; color: var(--muted); font-size: 1.05rem; }
+.editorial-band > p, .editorial-band__content { max-width: 500px; color: var(--muted); font-size: 1.05rem; }
+.editorial-band__content > p { margin: 0; }
+.editorial-links { display: grid; margin-top: 28px; border-top: 1px solid var(--stone); }
+.editorial-links a { display: flex; justify-content: space-between; gap: 20px; padding: 14px 0; border-bottom: 1px solid var(--stone); color: var(--ink); font-size: .9rem; font-weight: 700; }
+.editorial-links a span { color: var(--olive); }
+.editorial-links a:hover { text-decoration: underline; text-underline-offset: 4px; }
 .closing-cta { text-align: center; padding: 130px 0 110px; }
 .closing-cta h2 { font-size: clamp(3rem, 8vw, 7rem); }
 .button { display: inline-flex; align-items: center; min-height: 50px; margin-top: 32px; }
