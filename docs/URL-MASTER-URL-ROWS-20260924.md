@@ -121,3 +121,10 @@ QA: docs/QA-BLOQUE-URLMASTER-20260925-41.md.
 Se cerraron las 11 filas restantes de la primera tanda P2. Diez URLs quedan KEEP / REBUILD y /receta-ensalada-caprese/ permanece REVIEW / MODEL Recipe. No se crean redirects ni se publica contenido.
 
 QA: docs/QA-BLOQUE-URLMASTER-20260925-42.md.
+
+
+## Cierre operativo — Bloque 44 — 2026-09-25
+
+Se cerraron las 19 URLs restantes del inventario P3/P4: /receta-de-wrap-de-pollo-con-vegetales/ queda CATALOG CANDIDATE; 8 URLs de productos/equipamiento quedan OUT del catálogo; 2 URLs técnicas WPRM quedan OUT técnico; 8 URLs de salud, colecciones y veganismo permanecen REVIEW. No se crean redirects, no se ejecutan borrados y no se publica contenido.
+
+QA: docs/QA-BLOQUE-URLMASTER-20260925-44.md.
