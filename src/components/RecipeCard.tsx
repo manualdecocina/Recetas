@@ -18,8 +18,7 @@ export function RecipeCard({
   return (
     <article className={featured ? 'recipe-card recipe-card--featured' : 'recipe-card'}>
       <Link href={normalizePublicPath(recipe.public_path)} className="recipe-card__link">
-        {recipe.image_url && (
-          <div className="recipe-card__image">
+        <div className="recipe-card__image">
           {recipe.image_url ? (
             <Image
               src={recipe.image_url}
