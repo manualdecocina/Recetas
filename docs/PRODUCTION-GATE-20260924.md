@@ -2,7 +2,7 @@
 
 ## Estado
 
-**Infraestructura / SEO / datos:** READY para despliegue técnico, con verificación externa pendiente en Hostinger.
+**Infraestructura / SEO / datos:** READY para despliegue técnico, con verificación externa pendiente en Hostinger/CI.
 
 **Contenido editorial multilingüe:** NO CERRADO. Las localizaciones existentes están estructuralmente completas, pero siguen staged y requieren revisión editorial/canonical antes de publicación.
 
@@ -51,7 +51,7 @@ Esto **no autoriza todavía su publicación**: queda pendiente QA editorial de t
 
 ## Seguridad / rendimiento Supabase
 
-- Advisors de seguridad: únicamente **Leaked Password Protection Disabled**.
+- Advisors de seguridad: únicamente **Leaked Password Protection Disabled** (1 warning).
 - Advisors de rendimiento: **0 avisos**.
 
 La protección de contraseñas filtradas sigue pendiente antes de considerar cerrado el gate de seguridad al 100%.
@@ -68,7 +68,7 @@ Pasaron las comprobaciones lógicas de código para:
 - protección de publicación de Recipes incompletas
 - integridad estructural de las 20 localizaciones no-ES
 
-La ejecución completa de `npm run typecheck` y `npm run build` sigue pendiente de Hostinger/CI porque este entorno no dispone de `node_modules` ni acceso de red para instalar dependencias.
+La ejecución completa de `npm run typecheck`, `npm run test:logic` y `npm run build` sigue pendiente de CI/Hostinger porque este entorno no dispone de `node_modules` ni acceso de red para instalar dependencias. El commit vigente no reporta checks CI ejecutados.
 
 ## Smoke test obligatorio después del deploy
 
