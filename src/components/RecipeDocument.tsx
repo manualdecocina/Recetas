@@ -25,7 +25,11 @@ export function RecipeDocument({ recipe, relatedRecipes = [] }: { recipe: Recipe
       ? recipe.prep_time_minutes + recipe.cook_time_minutes
       : null)
 
-  const breadcrumbLd = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [ { '@type': 'ListItem', position: 1, name: text.home, item: publicUrl('/' + recipe.language) }, { '@type': 'ListItem', position: 2, name: text.recipes, item: publicUrl('/' + recipe.language + '/recetas') }, { '@type': 'ListItem', position: 3, name: recipe.title, item: publicUrl(recipe.public_path) } ] }
+  const breadcrumbLd = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+    { '@type': 'ListItem', position: 1, name: text.home, item: publicUrl('/' + recipe.language) },
+    { '@type': 'ListItem', position: 2, name: text.recipes, item: publicUrl('/' + recipe.language + '/recetas') },
+    { '@type': 'ListItem', position: 3, name: recipe.title, item: publicUrl(recipe.public_path) },
+  ] }
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -38,13 +42,9 @@ export function RecipeDocument({ recipe, relatedRecipes = [] }: { recipe: Recipe
     datePublished: recipe.published_at ?? undefined,
     dateModified: recipe.updated_at,
     recipeIngredient: recipe.ingredients.map((i) => [i.amount, i.unit, i.name].filter(Boolean).join(' ')),
-    recipeInstructions: recipe.steps.map((s) => ({
-      '@type': 'HowToStep',
-      name: s.title,
-      text: s.content,
-    })),
-    prepTime: recipe.prep_time_minutes != null && recipe.cook_time_minutes != null ? `PT${recipe.prep_time_minutes}M` : undefined,
-    cookTime: recipe.prep_time_minutes != null && recipe.cook_time_minutes != null ? `PT${recipe.cook_time_minutes}M` : undefined,
+    recipeInstructions: recipe.steps.map((s) => ({ '@type': 'HowToStep', name: s.title || undefined, text: s.content })),
+    prepTime: recipe.prep_time_minutes != null ? `PT${recipe.prep_time_minutes}M` : undefined,
+    cookTime: recipe.cook_time_minutes != null ? `PT${recipe.cook_time_minutes}M` : undefined,
     totalTime: totalMinutes != null && totalMinutes > 0 ? `PT${totalMinutes}M` : undefined,
     recipeYield: recipe.servings ? String(recipe.servings) : undefined,
     recipeCategory: recipe.category ?? undefined,
@@ -54,63 +54,91 @@ export function RecipeDocument({ recipe, relatedRecipes = [] }: { recipe: Recipe
 
   return (
     <main>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd).replace(/</g, '\\u003c') }} />
+
       <article className="recipe-document">
-        <div className="recipe-document__heading">
-          <div>
-            <h1>{recipe.title}</h1>
-            {recipe.excerpt && <p>{recipe.excerpt}</p>}
+        <header className="recipe-document__hero">
+          <div className="recipe-document__hero-copy">
+            {recipe.category && <p className="eyebrow">{recipe.category}</p>}
+            <div className="recipe-document__heading">
+              <div>
+                <h1>{recipe.title}</h1>
+                {recipe.excerpt && <p>{recipe.excerpt}</p>}
+              </div>
+            </div>
+            <div className="recipe-document__actions">
+              <FavoriteStar recipeId={recipe.id} />
+              <ShareRecipeButton title={recipe.title} />
+              <PrintRecipeButton />
+            </div>
           </div>
-          <div className="recipe-document__actions">
-            <FavoriteStar recipeId={recipe.id} />
-            <ShareRecipeButton title={recipe.title} />
-            <PrintRecipeButton />
-          </div>
-        </div>
-        {recipe.image_url && (
-          <Image
-            src={recipe.image_url}
-            alt={recipe.title}
-            width={1200}
-            height={800}
-            sizes="100vw"
-            style={{ width: '100%', height: 'auto' }}
-            priority
-          />
-        )}
+
+          {recipe.image_url && (
+            <figure className="recipe-document__hero-image">
+              <Image
+                src={recipe.image_url}
+                alt={recipe.title}
+                width={1400}
+                height={930}
+                sizes="(max-width: 900px) 100vw, 58vw"
+                priority
+              />
+              <figcaption>Manual de Cocina · {recipe.category ?? 'Receta'}</figcaption>
+            </figure>
+          )}
+        </header>
+
         <div className="recipe-document__facts" aria-label="Información de la receta">
-          {recipe.total_time_minutes != null && <span><strong>{recipe.total_time_minutes}</strong> min</span>}
-          {recipe.servings != null && <span><strong>{recipe.servings}</strong> porciones</span>}
-          {recipe.difficulty && <span>{recipe.difficulty}</span>}
-          {recipe.cuisine && <span>{recipe.cuisine}</span>}
+          {totalMinutes != null && <span><strong>{totalMinutes}</strong><small>minutos</small></span>}
+          {recipe.servings != null && <span><strong>{recipe.servings}</strong><small>porciones</small></span>}
+          {recipe.difficulty && <span><strong>{recipe.difficulty}</strong><small>dificultad</small></span>}
+          {recipe.cuisine && <span><strong>{recipe.cuisine}</strong><small>cocina</small></span>}
         </div>
-        {editorialHtml && <div className="recipe-document__editorial" dangerouslySetInnerHTML={{ __html: editorialHtml }} />}
-        <div className="recipe-document__jump">
+
+        <nav className="recipe-document__jump" aria-label="Ir a">
+          <span>En esta receta</span>
           <a href="#ingredientes">Ingredientes</a>
           <a href="#preparacion">Preparación</a>
-          {recipe.steps.length > 0 && <a href="#modo-cocina">Empezar a cocinar</a>}
+          {recipe.steps.length > 0 && <a href="#modo-cocina">Modo cocina</a>}
+        </nav>
+
+        {editorialHtml && (
+          <section className="recipe-document__editorial" aria-label="Sobre esta receta">
+            <p className="eyebrow">El punto clave</p>
+            <div dangerouslySetInnerHTML={{ __html: editorialHtml }} />
+          </section>
+        )}
+
+        <div className="recipe-document__content">
+          <section className="recipe-document__ingredients" aria-labelledby="ingredientes">
+            <p className="eyebrow">Antes de empezar</p>
+            <h2 id="ingredientes">{text.ingredients}</h2>
+            <RecipeIngredients recipeId={recipe.id} language={recipe.language} ingredients={recipe.ingredients} />
+          </section>
+
+          <section className="recipe-document__preparation" aria-labelledby="preparacion">
+            <p className="eyebrow">Paso a paso</p>
+            <h2 id="preparacion">{text.preparation}</h2>
+            <ol className="recipe-steps">
+              {recipe.steps.map((step, i) => (
+                <li key={i}>
+                  <h3>{step.title || `Paso ${i + 1}`}</h3>
+                  <p>{step.content}</p>
+                </li>
+              ))}
+            </ol>
+          </section>
         </div>
-        <h2 id="ingredientes">{text.ingredients}</h2>
-        <RecipeIngredients recipeId={recipe.id} language={recipe.language} ingredients={recipe.ingredients} />
-        <h2 id="preparacion">{text.preparation}</h2>
-        <ol className="recipe-steps">
-          {recipe.steps.map((step, i) => (
-            <li key={i}>
-              <h3>{step.title || `Paso ${i + 1}`}</h3>
-              <p>{step.content}</p>
-            </li>
-          ))}
-        </ol>
+
         {recipe.notes && (
           <section className="recipe-notes" aria-labelledby="recipe-notes-title">
-            <h2 id="recipe-notes-title">Notas</h2>
+            <p className="eyebrow">Notas del manual</p>
+            <h2 id="recipe-notes-title">Consejos para que salga bien</h2>
             <div dangerouslySetInnerHTML={{ __html: cleanHtml(recipe.notes) }} />
           </section>
         )}
+
         <div id="modo-cocina"><RecipeCookingMode title={recipe.title} steps={recipe.steps} /></div>
         <RelatedRecipes recipes={relatedRecipes} />
       </article>
