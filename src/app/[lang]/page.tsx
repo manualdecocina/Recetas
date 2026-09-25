@@ -33,7 +33,7 @@ const intents = [
   ['Algo dulce', 'Postres y masas cuando el antojo manda.', '→', 'postres'],
   ['Con lo que tengo', 'Ideas para convertir básicos de despensa en comida de verdad.', '→', 'ingredientes'],
   ['Quiero aprender', 'Técnicas explicadas para entender qué haces y por qué funciona.', '→', 'aprender-tecnicas'],
-  ['Desde cero', 'Bases, fondos, cortes y preparaciones que construyen una buena cocina.', '→', 'escuela'],
+  ['Desde cero', 'Bases, fondos, cortes y preparaciones que construyen una buena cocina.', '→', 'aprender-tecnicas'],
 ] as const
 
 const categories = [
