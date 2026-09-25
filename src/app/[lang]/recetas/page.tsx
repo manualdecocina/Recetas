@@ -202,8 +202,23 @@ export default async function RecipesListPage({ params, searchParams }: Props) {
                   <option value="Difícil">Difícil</option>
                 </select>
               </fieldset>
+              <fieldset>
+                <legend>Ingrediente</legend>
+                <input name="ingrediente" defaultValue={ingrediente} placeholder="Ej. ajo (slug)" />
+              </fieldset>
+              <fieldset>
+                <legend>Tiempo total</legend>
+                <select name="tiempo" defaultValue={tiempo}>
+                  <option value="">Cualquier tiempo</option>
+                  <option value="0-20">Hasta 20 min</option>
+                  <option value="21-40">21–40 min</option>
+                  <option value="41-60">41–60 min</option>
+                  <option value="61-120">61–120 min</option>
+                  <option value="121+">Más de 120 min</option>
+                </select>
+              </fieldset>
               <button className="button button--dark" type="submit">Aplicar filtros</button>
-              <Link className="filter-clear" href={buildUrl(lang, { q, ingrediente, tiempo })}>Limpiar filtros</Link>
+              <Link className="filter-clear" href={buildUrl(lang, {})}>Limpiar filtros</Link>
             </form>
           </details>
 
@@ -231,7 +246,7 @@ export default async function RecipesListPage({ params, searchParams }: Props) {
           <div className="active-filters" aria-label="Filtros activos">
             <span>Estás viendo:</span>
             {filters.map(([label, value]) => <span className="filter-chip" key={label}>{label}: {value}</span>)}
-            <Link href={buildUrl(lang, { q })}>Limpiar</Link>
+            <Link href={buildUrl(lang, {})}>Limpiar</Link>
           </div>
         )}
 
