@@ -33,6 +33,8 @@ interface Props {
     categoria?: string
     cocina?: string
     dificultad?: string
+    ingrediente?: string
+    tiempo?: string
     ordenar?: string
   }
 }
@@ -83,6 +85,8 @@ export default async function RecipesListPage({ params, searchParams }: Props) {
   const categoria = clean(searchParams.categoria)
   const cocina = clean(searchParams.cocina)
   const dificultad = clean(searchParams.dificultad)
+  const ingrediente = clean(searchParams.ingrediente)
+  const tiempo = clean(searchParams.tiempo)
   const ordenar = searchParams.ordenar === 'antiguas' ? 'antiguas' : 'recientes'
   const from = (page - 1) * PAGE_SIZE
 
@@ -99,6 +103,31 @@ export default async function RecipesListPage({ params, searchParams }: Props) {
   }
   if (cocina) query = query.eq('cuisine', cocina)
   if (dificultad) query = query.eq('difficulty', dificultad)
+
+  if (ingrediente) {
+    const { data: ingredient } = await supabase
+      .from('ingredients')
+      .select('id')
+      .eq('slug', ingrediente)
+      .eq('status', 'canonical')
+      .eq('indexable', true)
+      .maybeSingle()
+    if (!ingredient) query = query.in('id', ['00000000-0000-0000-0000-000000000000'])
+    else {
+      const { data: ingredientRelations } = await supabase
+        .from('recipe_ingredients')
+        .select('recipe_id')
+        .eq('ingredient_id', ingredient.id)
+      const ids = [...new Set((ingredientRelations ?? []).map((row) => row.recipe_id))]
+      query = query.in('id', ids.length ? ids : ['00000000-0000-0000-0000-000000000000'])
+    }
+  }
+
+  if (tiempo === '0-20') query = query.gte('total_time_minutes', 0).lte('total_time_minutes', 20)
+  if (tiempo === '21-40') query = query.gte('total_time_minutes', 21).lte('total_time_minutes', 40)
+  if (tiempo === '41-60') query = query.gte('total_time_minutes', 41).lte('total_time_minutes', 60)
+  if (tiempo === '61-120') query = query.gte('total_time_minutes', 61).lte('total_time_minutes', 120)
+  if (tiempo === '121+') query = query.gte('total_time_minutes', 121)
 
   query = query
     .order('published_at', { ascending: ordenar === 'antiguas', nullsFirst: false })
