@@ -6,7 +6,7 @@ process.env.NEXT_PUBLIC_SITE_URL = 'https://manualdecocina.com'
   { recipe_group_id: 'bbbbbbbb-0000-0000-0000-000000000002', language: 'de', slug: 'nur-deutsch', public_path: '/de/receta/nur-deutsch', updated_at: '2026-09-22T00:00:00Z' },
   { recipe_group_id: 'cccccccc-0000-0000-0000-000000000003', language: 'es', slug: 'legacy-card', public_path: '/recipe-cards/legacy-card', updated_at: '2026-09-23T00:00:00Z' },
 ]
-;(globalThis as any).__CONTENT_PAGES__ = [
+;(globalThis as any).__INGREDIENTS__ = [\n  { slug: 'ajo', updated_at: '2026-09-24T00:00:00Z' },\n  { slug: 'aceite-de-oliva', updated_at: '2026-09-23T00:00:00Z' },\n]\n(globalThis as any).__CONTENT_PAGES__ = [
   { language: 'es', public_path: '/about-manual-de-cocina', updated_at: '2026-09-22T00:00:00Z' },
 ]
 const sitemap = (await import('@/app/sitemap')).default
@@ -18,9 +18,9 @@ console.log('OK sitemap vacío si no se permite indexar')
 process.env.NEXT_PUBLIC_ALLOW_INDEXING = 'true'
 const s: any[] = await sitemap()
 const urls = s.map((e) => e.url)
-assert.equal(s.length, 6 * 2 + 3 + 1)
+assert.equal(s.length, 6 * 2 + 3 + 1 + 1 + 2)
 assert.ok(!urls.some((url) => url.includes('/recipe-cards/')), 'recipe-cards no deben entrar en sitemap')
-console.log('OK home/listado + recetas + contenido')
+assert.ok(urls.includes('https://manualdecocina.com/es/ingredientes'))\nassert.ok(urls.includes('https://manualdecocina.com/es/ingredientes/ajo'))\nconsole.log('OK home/listado + recetas + ingredientes + contenido')
 
 assert.ok(urls.includes('https://manualdecocina.com/ja/recetas'))
 const es = s.find((e) => e.url === 'https://manualdecocina.com/receta-de-lechona-colombiana')
