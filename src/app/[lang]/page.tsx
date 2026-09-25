@@ -29,6 +29,19 @@ const CATEGORIES = [
   ['Bebidas', 'bebidas'],
 ] as const
 
+const CATEGORY_IMAGES: Record<string, string> = {
+  'platos-principales': 'https://manualdecocina.com/wp-content/uploads/2024/04/alfredo-2.png',
+  'entrantes-y-aperitivos': 'https://manualdecocina.com/wp-content/uploads/2024/02/Hummus-530x501.jpg',
+  'sopas-y-cremas': 'https://manualdecocina.com/wp-content/uploads/2023/06/ajiaco.jpg',
+  'ensaladas': 'https://manualdecocina.com/wp-content/uploads/2023/06/ensalada-caprese.jpg',
+  'guarniciones': 'https://manualdecocina.com/wp-content/uploads/2024/03/Como-hacer-kimchi-copia-530x501.jpg',
+  'salsas-y-aderezos': 'https://manualdecocina.com/wp-content/uploads/2025/06/Receta-Salsa-de-Tomate-Casera-Facil-Rapida-y-Deliciosa-1-530x530.jpg',
+  'panes-y-masas': 'https://manualdecocina.com/wp-content/uploads/2023/04/Empanada-Peruana-de-Pollo.jpg',
+  'postres': 'https://manualdecocina.com/wp-content/uploads/2025/06/Cheesecake-de-Oreo-Postre-Cremoso-y-Facil-de-Preparar-530x530.jpg',
+  'desayunos-y-brunch': 'https://manualdecocina.com/wp-content/uploads/2025/06/Acai-Bowl-2.jpg',
+  'bebidas': 'https://manualdecocina.com/wp-content/uploads/2024/04/Receta-Jugo-Anticancerigeno-530x489.jpg',
+}
+
 function parseLang(value: string): RecipeLanguage | null {
   return (SUPPORTED_LANGUAGES as string[]).includes(value) ? (value as RecipeLanguage) : null
 }
@@ -136,16 +149,10 @@ export default async function LanguageHome({ params }: { params: Promise<{ lang:
                 const value = (recipe.category ?? '').toLowerCase()
                 return value === label.toLowerCase() || value.includes(label.split(' ')[0].toLowerCase())
               })
+              const imageUrl = categoryRecipe?.image_url ?? CATEGORY_IMAGES[slug]
               return (
                 <a key={slug} href={`/${lang}/recetas/?categoria=${slug}`} className={`category-link category-link--${index + 1}`}>
-                  {categoryRecipe?.image_url && (
-                    <Image
-                      src={categoryRecipe.image_url}
-                      alt=""
-                      fill
-                      sizes="(max-width: 600px) 50vw, (max-width: 900px) 33vw, 20vw"
-                    />
-                  )}
+                  <Image src={imageUrl} alt="" fill sizes="(max-width: 700px) 50vw, (max-width: 1000px) 33vw, 20vw" />
                   <span className="category-link__veil" aria-hidden="true" />
                   <strong>{label}</strong>
                   <span className="category-link__arrow" aria-hidden="true">↗</span>
