@@ -17,11 +17,12 @@ const LANGUAGE_LABELS: Record<string, string> = {
 
 // Sin ?from → plato nuevo (create_recipe).
 // Con ?from=<id de receta existente> → traducción de ese plato (create_recipe_translation).
-export default async function NewRecipePage({ searchParams }: { searchParams: { from?: string } }) {
+export default async function NewRecipePage({ searchParams }: { searchParams: Promise<{ from?: string }> }) {
+  const query = await searchParams
   const { supabase, user, isAdmin } = await requireAdmin()
   if (!isAdmin) return <NotAdmin email={user.email} />
 
-  if (!searchParams.from) {
+  if (!query.from) {
     return (
       <main>
         <p><Link href="/admin">← Volver al panel</Link></p>
@@ -36,7 +37,7 @@ export default async function NewRecipePage({ searchParams }: { searchParams: { 
     )
   }
 
-  const sourceId = uuidSchema.safeParse(searchParams.from)
+  const sourceId = uuidSchema.safeParse(query.from)
   if (!sourceId.success) notFound()
 
   const { data: source } = await supabase
