@@ -24,16 +24,17 @@ export function generateStaticParams() {
 
 export const dynamicParams = true
 
-export default function LanguageRootLayout({
+export default async function LanguageRootLayout({
   children,
   params,
 }: {
   children: React.ReactNode
-  params: { lang: string }
+  params: Promise<{ lang: string }>
 }) {
   // Un segmento desconocido (/xx/...) no es un idioma: las páginas responden 404 y el
   // documento usa el idioma por defecto en lugar de un lang inválido.
-  const lang = (SUPPORTED_LANGUAGES as string[]).includes(params.lang) ? params.lang : DEFAULT_LANGUAGE
+  const { lang: rawLang } = await params
+  const lang = (SUPPORTED_LANGUAGES as string[]).includes(rawLang) ? rawLang : DEFAULT_LANGUAGE
 
   return (
     <html lang={lang}>
