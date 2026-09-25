@@ -2,6 +2,7 @@ import Image from 'next/image'
 import type { Recipe } from '@/types/recipe'
 import { UI_TEXT } from '@/lib/i18n'
 import { publicUrl } from '@/lib/site'
+import { FavoriteStar } from '@/components/FavoriteStar'
 
 function cleanHtml(html: string): string {
   return html
@@ -51,9 +52,14 @@ export function RecipeDocument({ recipe }: { recipe: Recipe }) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }}
       />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd).replace(/</g, '\\u003c') }} />
-      <article>
-        <h1>{recipe.title}</h1>
-        {recipe.excerpt && <p>{recipe.excerpt}</p>}
+      <article className="recipe-document">
+        <div className="recipe-document__heading">
+          <div>
+            <h1>{recipe.title}</h1>
+            {recipe.excerpt && <p>{recipe.excerpt}</p>}
+          </div>
+          <FavoriteStar recipeId={recipe.id} />
+        </div>
         {editorialHtml && <div dangerouslySetInnerHTML={{ __html: editorialHtml }} />}
         {recipe.image_url && (
           <Image
