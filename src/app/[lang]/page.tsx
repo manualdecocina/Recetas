@@ -88,6 +88,8 @@ export default async function LanguageHome({ params }: { params: { lang: string 
   if (error) throw new Error(`No se pudieron cargar las recetas: ${error.message}`)
 
   const [latest, ...grid] = recipes ?? []
+  const secondary = grid.slice(0, 6)
+  const remaining = grid.slice(6, 12)
 
   return (
     <>
@@ -127,7 +129,12 @@ export default async function LanguageHome({ params }: { params: { lang: string 
             <div className="featured-recipe">
               <RecipeCard recipe={latest} priority featured />
             </div>
-            {grid.length > 0 && <div className="recipe-grid">{grid.slice(0, 6).map((recipe) => <RecipeCard key={recipe.id} recipe={recipe} />)}</div>}
+            {secondary.length > 0 && <div className="recipe-grid">{secondary.map((recipe, index) => <RecipeCard key={recipe.id} recipe={recipe} priority={index < 2} />)}</div>}
+            {remaining.length > 0 && (
+              <div className="home-secondary-grid">
+                {remaining.map((recipe) => <RecipeCard key={recipe.id} recipe={recipe} />)}
+              </div>
+            )}
           </section>
         )}
 
