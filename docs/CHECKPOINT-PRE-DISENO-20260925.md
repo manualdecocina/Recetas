@@ -22,9 +22,9 @@ Cerrar arquitectura, contenido, taxonomía, datos, operación, seguridad y descu
 - Sistema editorial visual preliminar y dirección de marca editorial culinaria definidos como base para la fase de diseño.
 
 ## Pendiente antes del diseño visual definitivo
-1. Aplicar y probar RLS de las seis tablas nuevas de taxonomía/ingredientes. Existe SQL preparado, pero no se ejecuta automáticamente porque puede cortar el acceso hasta que existan las políticas correctas.
+1. Aplicar y probar RLS de las seis tablas nuevas de taxonomía/ingredientes. **CERRADO:** RLS activo en las 6 tablas y políticas públicas/admin aplicadas; verificación estructural completada.
 2. QA técnico final de rutas, sitemap, filtros y páginas de ingrediente.
-3. Cerrar la arquitectura de cuisine pública: actualmente no hay cocinas indexables V1; se mantiene así hasta disponer de suficiente contenido.
+3. Cerrar la arquitectura de cuisine pública: **CERRADO V1:** no hay cocinas indexables todavía; las 7 entidades canónicas y 9 relaciones quedan como infraestructura de descubrimiento futura, sin indexación pública hasta alcanzar contenido suficiente.
 4. Revisar si la excepción Cómo preparar Queso justifica en el futuro una dimensión de preparaciones/básicos; no bloquea la arquitectura actual.
 5. Cerrar identidad visual final: logo/SVG maestro, símbolo/favicon, tipografía definitiva, paleta definitiva, iconografía y sistema de componentes.
 6. Cerrar especificación de espacios publicitarios propios; implementación al final, no antes.
@@ -36,4 +36,4 @@ No empezar el rediseño visual definitivo hasta que los puntos 1–3 estén resu
 ## Estado
 **Arquitectura y modelo de contenido: prácticamente cerrados.**
 **Diseño visual definitivo: todavía no iniciado como fase cerrada.**
-**Bloqueo actual: seguridad RLS + QA técnico.**
+**Estado actual: listo para QA técnico final y entrada en la fase de diseño visual definitivo.**
