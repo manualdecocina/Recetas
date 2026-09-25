@@ -705,3 +705,12 @@ button, input { font: inherit; }
   .recipe-ingredients input { display: none; }
   .recipe-ingredients label { padding-left: 0; }
 }
+
+
+.recipe-ingredient__text { display:flex; flex-wrap:wrap; gap:0 7px; line-height:1.5; }
+.recipe-ingredient__amount { font-weight:700; }
+.recipe-ingredient__unit { color:var(--muted); }
+.recipe-ingredient__name { color:var(--ink); }
+.recipe-ingredients li.is-checked .recipe-ingredient__name,
+.recipe-ingredients li.is-checked .recipe-ingredient__unit,
+.recipe-ingredients li.is-checked .recipe-ingredient__amount { color:var(--muted); }
