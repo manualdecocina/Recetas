@@ -44,10 +44,11 @@ async function getIngredient(lang: RecipeLanguage, slug: string) {
   return { ingredient: data, recipes: recipes ?? [] }
 }
 
-export async function generateMetadata({ params }: { params: { lang: string; slug: string } }): Promise<Metadata> {
-  const lang = parseLang(params.lang)
+export async function generateMetadata({ params }: { params: Promise<{ lang: string; slug: string }> }): Promise<Metadata> {
+  const { lang: rawLang, slug } = await params
+  const lang = parseLang(rawLang)
   if (!lang || lang !== 'es') return {}
-  const result = await getIngredient(lang, params.slug)
+  const result = await getIngredient(lang, slug)
   if (!result) return {}
   return {
     title: result.ingredient.name,
@@ -60,7 +61,7 @@ export default async function IngredientPage({ params }: { params: { lang: strin
   const lang = parseLang(params.lang)
   if (!lang || lang !== 'es') notFound()
 
-  const result = await getIngredient(lang, params.slug)
+  const result = await getIngredient(lang, slug)
   if (!result) notFound()
 
   const { ingredient, recipes } = result
