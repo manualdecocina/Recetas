@@ -151,6 +151,7 @@ button, input { font: inherit; }
 }
 .featured-recipe article { display: grid; grid-template-columns: minmax(0,1.35fr) minmax(300px,.65fr); }
 .recipe-card__image { position: relative; overflow: hidden; background: var(--sand); }
+.recipe-card__placeholder { position: absolute; inset: 0; display: grid; place-items: center; padding: 24px; background: var(--sand); color: var(--olive); font-family: var(--serif); font-size: 1.7rem; text-align: center; }
 .recipe-card__image img { object-fit: cover; object-position: center; display: block; transition: transform .25s ease; }
 .recipe-card:hover .recipe-card__image img { transform: scale(1.015); }
 .recipe-card--featured .recipe-card__image { min-height: 440px; }
