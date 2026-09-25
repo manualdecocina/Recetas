@@ -10,7 +10,7 @@ function parseLang(value: string): RecipeLanguage | null {
 
 export default async function IngredientsPage({ params }: { params: { lang: string } }) {
   const lang = parseLang(params.lang)
-  if (!lang) notFound()
+  if (!lang || lang !== 'es') notFound()
 
   const { data: ingredients, error } = await supabase
     .from('ingredients')
