@@ -22,7 +22,7 @@
 3. Resolver actualización de Next.js: el proyecto está en Next 14.2.x, y la documentación oficial actual marca 14 como no soportado; antes de producción debe planificarse una actualización a una rama soportada y ejecutar su migración/QA.
 4. Configurar variables de producción reales: `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` y hosts de imágenes.
 5. Integrar los assets maestros reales de marca/SVG/favicon si aún no están publicados en `public/`.
-6. Confirmar infraestructura Hostinger capaz de ejecutar Node.js/Next.js. Hostinger documenta Node.js para VPS; los planes Web/Cloud no ofrecen el acceso de sistema necesario para ejecutar Node.js de esta forma.
+6. Confirmar el plan Hostinger actual. Hostinger ofrece actualmente alojamiento gestionado de aplicaciones Node.js/Next.js en planes Business Web y Cloud, con despliegue desde GitHub; por tanto, no se requiere VPS si el plan contratado es compatible. VPS queda como alternativa de control total, no como requisito.
 7. Configurar dominio, HTTPS, proceso de Node, reinicio automático y logs en Hostinger.
 8. Hacer smoke test en dominio real: Home, catálogo, filtros, ingrediente, receta, favoritos, compartir, imprimir, sitemap y robots.
 9. Ejecutar Lighthouse sobre el build de producción y corregir regresiones de Core Web Vitals.
