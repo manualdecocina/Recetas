@@ -20,6 +20,7 @@ export function RecipeCard({
       <Link href={normalizePublicPath(recipe.public_path)} className="recipe-card__link">
         {recipe.image_url && (
           <div className="recipe-card__image">
+          {recipe.image_url ? (
             <Image
               src={recipe.image_url}
               alt={recipe.title}
@@ -27,8 +28,10 @@ export function RecipeCard({
               sizes={featured ? '(max-width: 900px) 100vw, 65vw' : '(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw'}
               priority={priority}
             />
-          </div>
-        )}
+          ) : (
+            <span className="recipe-card__placeholder" aria-hidden="true">Manual de Cocina</span>
+          )}
+        </div>
         <div className="recipe-card__body">
           {recipe.category && <span className="recipe-card__category">{recipe.category}</span>}
           <h3>{recipe.title}</h3>
