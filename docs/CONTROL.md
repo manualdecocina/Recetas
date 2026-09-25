@@ -237,3 +237,10 @@ Documentación: `docs/QA-BLOQUE-METADATA-STAGED-20260925-37.md`.
 Se cerraron las primeras 20 filas URL-by-URL P0 en orden estable: 17 KEEP / REBUILD y 3 REVIEW. E001, E002, E003, E004, E006, E007, E008 y E009 quedan cerradas como KEEP / REBUILD para las URLs procesadas. E005 mantiene sus dos URLs en REVIEW y E010 mantiene en REVIEW la URL francesa procesada; la URL alemana de E010 queda para el siguiente bloque. No se crean redirects ni se publica contenido.
 
 QA: docs/QA-BLOQUE-URLMASTER-20260925-40.md. Commit de matriz URL: e595d7384674f7c08f3d422010b696e653899fee.
+
+
+## Actualización de control — 2026-09-25 — Bloque 41 URL Master
+
+Se cerraron las filas 21–40 del URL Master P0/P1: 20 URLs, todas KEEP / REBUILD. E010 queda cerrado en sus dos URLs históricas. También quedan procesadas E011–E015 y las filas españolas E101–E106, E015 y las URLs adicionales hasta /receta-helado-casero/. No se crean redirects para KEEP y no se publica contenido.
+
+QA: docs/QA-BLOQUE-URLMASTER-20260925-41.md. Commit de matriz URL: c0778ecf4038780cd514fe3fbad75ca5e16f01d1.
