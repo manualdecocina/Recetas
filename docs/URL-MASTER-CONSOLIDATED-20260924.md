@@ -64,9 +64,9 @@ MODEL REVIEW:
 - /receta-ensalada-caprese/
 
 REVIEW:
-- /receta-de-aborrajado/
-- /receta-de-horchata/
-- /receta-de-lasana-de-pollo-con-champinones/
+- /receta-de-aborrajado/ → KEEP / REBUILD — MODEL Recipe
+- /receta-de-horchata/ → KEEP / REBUILD — MODEL Recipe
+- /receta-de-lasana-de-pollo-con-champinones/ → KEEP / REBUILD — MODEL Recipe
 
 ## P3
 
