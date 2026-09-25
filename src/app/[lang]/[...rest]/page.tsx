@@ -8,7 +8,7 @@ import { RecipeDocument } from '@/components/RecipeDocument'
 
 type LangRestParams = { lang: string; rest: string[] }
 
-interface Props { params: LangRestParams }
+interface Props { params: Promise<LangRestParams> }
 
 function isLang(value: string): boolean {
   return (SUPPORTED_LANGUAGES as string[]).includes(value)
@@ -27,8 +27,9 @@ function cleanHtml(html: string): string {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  if (!isLang(params.lang)) return {}
-  const path = pathFor(params)
+  const resolvedParams = await params
+  if (!isLang(resolvedParams.lang)) return {}
+  const path = pathFor(resolvedParams)
 
   const recipe = await getRecipeByPublicPath(path)
   if (recipe) {
@@ -65,8 +66,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function PublicLanguageRoute({ params }: Props) {
-  if (!isLang(params.lang)) notFound()
-  const path = pathFor(params)
+  const resolvedParams = await params
+  if (!isLang(resolvedParams.lang)) notFound()
+  const path = pathFor(resolvedParams)
 
   const recipe = await getRecipeByPublicPath(path)
   if (recipe) return <RecipeDocument recipe={recipe} />
