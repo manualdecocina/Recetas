@@ -3,6 +3,7 @@ import type { Recipe } from '@/types/recipe'
 import { UI_TEXT } from '@/lib/i18n'
 import { publicUrl } from '@/lib/site'
 import { FavoriteStar } from '@/components/FavoriteStar'
+import { RecipeCookingMode } from '@/components/RecipeCookingMode'
 
 function cleanHtml(html: string): string {
   return html
@@ -58,7 +59,9 @@ export function RecipeDocument({ recipe }: { recipe: Recipe }) {
             <h1>{recipe.title}</h1>
             {recipe.excerpt && <p>{recipe.excerpt}</p>}
           </div>
-          <FavoriteStar recipeId={recipe.id} />
+          <div className="recipe-document__actions">
+            <FavoriteStar recipeId={recipe.id} />
+          </div>
         </div>
         {editorialHtml && <div dangerouslySetInnerHTML={{ __html: editorialHtml }} />}
         {recipe.image_url && (
@@ -72,14 +75,25 @@ export function RecipeDocument({ recipe }: { recipe: Recipe }) {
             priority
           />
         )}
-        <h2>{text.ingredients}</h2>
-        <ul>
+        <div className="recipe-document__facts" aria-label="Información de la receta">
+          {recipe.total_time_minutes != null && <span><strong>{recipe.total_time_minutes}</strong> min</span>}
+          {recipe.servings != null && <span><strong>{recipe.servings}</strong> porciones</span>}
+          {recipe.difficulty && <span>{recipe.difficulty}</span>}
+          {recipe.cuisine && <span>{recipe.cuisine}</span>}
+        </div>
+        <div className="recipe-document__jump">
+          <a href="#ingredientes">Ingredientes</a>
+          <a href="#preparacion">Preparación</a>
+          {recipe.steps.length > 0 && <button type="button" onClick={() => undefined}>Empezar a cocinar</button>}
+        </div>
+        <h2 id="ingredientes">{text.ingredients}</h2>
+        <ul className="recipe-ingredients">
           {recipe.ingredients.map((ing, i) => (
             <li key={i}>{[ing.amount, ing.unit, ing.name].filter(Boolean).join(' ')}</li>
           ))}
         </ul>
-        <h2>{text.preparation}</h2>
-        <ol>
+        <h2 id="preparacion">{text.preparation}</h2>
+        <ol className="recipe-steps">
           {recipe.steps.map((step, i) => (
             <li key={i}>
               <h3>{step.title}</h3>
@@ -87,6 +101,7 @@ export function RecipeDocument({ recipe }: { recipe: Recipe }) {
             </li>
           ))}
         </ol>
+        <RecipeCookingMode title={recipe.title} steps={recipe.steps} />
       </article>
     </main>
   )
