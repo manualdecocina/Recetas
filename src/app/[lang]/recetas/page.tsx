@@ -115,7 +115,7 @@ export default async function RecipesListPage({ params, searchParams }: Props) {
     q ? ['Búsqueda', q] : null,
     categoria ? ['Categoría', CATEGORIES.find(([, slug]) => slug === categoria)?.[0] ?? categoria] : null,
     cocina ? ['Cocina', cocina] : null,
-    dificultad ? ['Dificultad', dificultad] : null,
+    dificultad ? ['Dificultad', dificultad] : null,\n    ingrediente ? ['Ingrediente', ingrediente] : null,\n    tiempo ? ['Tiempo', tiempo + ' min'] : null,
   ].filter(Boolean) as [string, string][]
 
   const itemListJsonLd = {
@@ -172,7 +172,7 @@ export default async function RecipesListPage({ params, searchParams }: Props) {
                 </select>
               </fieldset>
               <button className="button button--dark" type="submit">Aplicar filtros</button>
-              <Link className="filter-clear" href={buildUrl(lang, { q })}>Limpiar filtros</Link>
+              <Link className="filter-clear" href={buildUrl(lang, { q, ingrediente, tiempo })}>Limpiar filtros</Link>
             </form>
           </details>
 
@@ -182,7 +182,7 @@ export default async function RecipesListPage({ params, searchParams }: Props) {
               {q && <input type="hidden" name="q" value={q} />}
               {categoria && <input type="hidden" name="categoria" value={categoria} />}
               {cocina && <input type="hidden" name="cocina" value={cocina} />}
-              {dificultad && <input type="hidden" name="dificultad" value={dificultad} />}
+              {dificultad && <input type="hidden" name="dificultad" value={dificultad} />}\n              {ingrediente && <input type="hidden" name="ingrediente" value={ingrediente} />}\n              {tiempo && <input type="hidden" name="tiempo" value={tiempo} />}
               <label>
                 Ordenar
                 <select name="ordenar" defaultValue={ordenar} onChange={(event) => event.currentTarget.form?.requestSubmit()}>
@@ -217,7 +217,7 @@ export default async function RecipesListPage({ params, searchParams }: Props) {
 
         {totalPages > 1 && (
           <nav className="pagination" aria-label="Paginación">
-            {page > 1 && <Link href={buildUrl(lang, { q, categoria, cocina, dificultad, ordenar, page: page === 2 ? undefined : String(page - 1) })} rel="prev">← Anteriores</Link>}
+            {page > 1 && <Link href={buildUrl(lang, { q, categoria, cocina, dificultad, ingrediente, tiempo, ordenar, page: page === 2 ? undefined : String(page - 1) })} rel="prev">← Anteriores</Link>}
             <span>Página {page} de {totalPages}</span>
             {page < totalPages && <Link href={buildUrl(lang, { q, categoria, cocina, dificultad, ordenar, page: String(page + 1) })} rel="next">Siguientes →</Link>}
           </nav>
