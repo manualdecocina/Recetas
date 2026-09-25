@@ -57,8 +57,9 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   }
 }
 
-export default async function IngredientPage({ params }: { params: { lang: string; slug: string } }) {
-  const lang = parseLang(params.lang)
+export default async function IngredientPage({ params }: { params: Promise<{ lang: string; slug: string }> }) {
+  const { lang: rawLang, slug } = await params
+  const lang = parseLang(rawLang)
   if (!lang || lang !== 'es') notFound()
 
   const result = await getIngredient(lang, slug)
