@@ -1,18 +1,16 @@
 import Image from 'next/image'
-import { notFound, permanentRedirect } from 'next/navigation'
+import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
-import { supabase } from '@/lib/supabase/public'
-import { getContentPageByPublicPath, getRecipeByPublicPath, getRecipeTranslations } from '@/lib/public-content'
-import { RecipeCard } from '@/components/RecipeCard'
-import { RecipeDocument } from '@/components/RecipeDocument'
 import { SiteHeader } from '@/components/SiteHeader'
-import { publicUrl } from '@/lib/site'
-import { recipeAlternates } from '@/lib/seo'
 import { UI_TEXT } from '@/lib/i18n'
 import { allLanguageAlternates } from '@/lib/seo'
 import { SUPPORTED_LANGUAGES, type RecipeLanguage } from '@/types/recipe'
 
 export const revalidate = 3600
+
+function parseLang(value: string): RecipeLanguage | null {
+  return (SUPPORTED_LANGUAGES as string[]).includes(value) ? (value as RecipeLanguage) : null
+}
 
 const CARD_FIELDS = 'id, language, slug, public_path, title, excerpt, category, image_url'
 
@@ -23,7 +21,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang: rawLang } = await params
   const lang = parseLang(rawLang)
-  if (!lang) return rootLegacyMetadata(`/${rawLang}`)
+  if (!lang) return {}
   const text = UI_TEXT[lang]
   return { title: text.homeTitle, description: text.homeDescription, alternates: allLanguageAlternates(`/${lang}`, (l) => `/${l}`) }
 }
@@ -66,7 +64,7 @@ const guides = [
 export default async function LanguageHome({ params }: { params: Promise<{ lang: string }> }) {
   const { lang: rawLang } = await params
   const lang = parseLang(rawLang)
-  if (!lang) { const legacy = await rootLegacyPage('/' + rawLang); if (legacy) return legacy; notFound() }
+  if (!lang) notFound()
   return (
     <>
       <SiteHeader lang={lang} />
