@@ -48,10 +48,14 @@ async function rootLegacyPage(path: string) {
   if (recipe) return <RecipeDocument recipe={recipe} />
   const page = await getContentPageByPublicPath(path)
   if (page) {
-    const html = (page.content_html ?? '').replace(/<script[\\s\\S]*?<\\/script>/gi, '').replace(/<style[\\s\\S]*?<\\/style>/gi, '').replace(/\\son\\w+\\s*=\\s*(['"]).*?\\1/gi, '').replace(/javascript:/gi, '')
+    const html = (page.content_html ?? '')
+      .replace(/<script[\s\S]*?<\/script>/gi, '')
+      .replace(/<style[\s\S]*?<\/style>/gi, '')
+      .replace(/\son\w+\s*=\s*(['"]).*?\1/gi, '')
+      .replace(/javascript:/gi, '')
     return <main><article><h1>{page.title}</h1>{page.excerpt && <p>{page.excerpt}</p>}{html && <div dangerouslySetInnerHTML={{ __html: html }} />}</article></main>
   }
-  const normalized = path.replace(/\\/+$/, '') || '/'
+  const normalized = path.replace(/\/+$/, '') || '/'
   const candidates = [path, normalized, normalized + '/']
   const { data } = await supabase.from('content_redirects').select('target_path').in('source_path', candidates).limit(1).maybeSingle()
   if (data?.target_path) permanentRedirect(data.target_path)
