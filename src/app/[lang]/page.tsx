@@ -90,7 +90,7 @@ export default async function LanguageHome({ params }: { params: Promise<{ lang:
     .eq('language', lang)
     .eq('published', true)
     .order('published_at', { ascending: false })
-    .limit(13)
+    .limit(40)
 
   if (error) throw new Error(`No se pudieron cargar las recetas: ${error.message}`)
 
@@ -131,9 +131,27 @@ export default async function LanguageHome({ params }: { params: Promise<{ lang:
             <a href={`/${lang}/recetas/`}>Ver todas las recetas</a>
           </div>
           <div className="category-grid">
-            {CATEGORIES.map(([label, slug]) => (
-              <a key={slug} href={`/${lang}/recetas/?categoria=${slug}`} className="category-link">{label}<span aria-hidden="true">↗</span></a>
-            ))}
+            {CATEGORIES.map(([label, slug], index) => {
+              const categoryRecipe = (recipes ?? []).find((recipe) => {
+                const value = (recipe.category ?? '').toLowerCase()
+                return value === label.toLowerCase() || value.includes(label.split(' ')[0].toLowerCase())
+              })
+              return (
+                <a key={slug} href={`/${lang}/recetas/?categoria=${slug}`} className={`category-link category-link--${index + 1}`}>
+                  {categoryRecipe?.image_url && (
+                    <Image
+                      src={categoryRecipe.image_url}
+                      alt=""
+                      fill
+                      sizes="(max-width: 600px) 50vw, (max-width: 900px) 33vw, 20vw"
+                    />
+                  )}
+                  <span className="category-link__veil" aria-hidden="true" />
+                  <strong>{label}</strong>
+                  <span className="category-link__arrow" aria-hidden="true">↗</span>
+                </a>
+              )
+            })}
           </div>
         </section>
 
