@@ -8,9 +8,9 @@ Cierre de las 19 URLs restantes del inventario P3/P4 documentado. Al quedar meno
 
 ### P3 — 1 URL
 
-- /receta-de-wrap-de-pollo-con-vegetales/ → **CATALOG CANDIDATE / P3**
+- /receta-de-wrap-de-pollo-con-vegetales/ → **RESUELTA COMO RECIPE**.
 
-No se convierte automáticamente en KEEP ni se elimina.
+Verificación posterior en Supabase: existe la Recipe `receta-de-wrap-de-pollo-con-vegetales` con `public_path=/receta-de-wrap-de-pollo-con-vegetales` y `published=true`. Por tanto, la clasificación histórica P3 CATALOG CANDIDATE queda superada por el modelo editorial ya materializado; no se crea ContentPage paralela ni redirect adicional.
 
 ### P4 OUT — catálogo editorial — 8 URLs
 
@@ -52,7 +52,7 @@ Estas 8 permanecen **REVIEW**; no se fuerza un modelo ni una decisión de public
 
 ## Balance
 
-- 1 P3 CATALOG CANDIDATE
+- 1 P3 resuelta como Recipe publicada
 - 10 OUT
 - 8 REVIEW
 - 0 redirects
