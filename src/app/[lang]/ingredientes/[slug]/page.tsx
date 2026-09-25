@@ -5,6 +5,7 @@ import { supabase } from '@/lib/supabase/public'
 import { SiteHeader } from '@/components/SiteHeader'
 import { RecipeCard } from '@/components/RecipeCard'
 import { SUPPORTED_LANGUAGES, type RecipeLanguage } from '@/types/recipe'
+import { publicUrl } from '@/lib/site'
 
 function parseLang(value: string): RecipeLanguage | null {
   return (SUPPORTED_LANGUAGES as string[]).includes(value) ? value as RecipeLanguage : null
@@ -63,11 +64,22 @@ export default async function IngredientPage({ params }: { params: { lang: strin
   if (!result) notFound()
 
   const { ingredient, recipes } = result
+  const itemListLd = recipes.length > 1 ? {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    itemListElement: recipes.map((recipe, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      url: publicUrl(recipe.public_path),
+      name: recipe.title,
+    })),
+  } : null
 
   return (
     <>
       <SiteHeader lang={lang} />
       <main className="ingredient-page">
+        {itemListLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListLd).replace(/</g, '\\u003c') }} />}
         <header className="ingredient-page__hero">
           <Link href={`/${lang}/ingredientes`} className="eyebrow">← Ingredientes</Link>
           <p className="eyebrow">Ingrediente</p>
