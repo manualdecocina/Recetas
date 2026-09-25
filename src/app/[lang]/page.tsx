@@ -66,15 +66,17 @@ export async function generateStaticParams() {
   return SUPPORTED_LANGUAGES.map((lang) => ({ lang }))
 }
 
-export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
-  const lang = parseLang(params.lang)
-  if (!lang) return rootLegacyMetadata(`/${params.lang}`)
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang: rawLang } = await params
+  const lang = parseLang(rawLang)
+  if (!lang) return rootLegacyMetadata(`/${rawLang}`)
   const text = UI_TEXT[lang]
   return { title: text.homeTitle, description: text.homeDescription, alternates: allLanguageAlternates(`/${lang}`, (l) => `/${l}`) }
 }
 
-export default async function LanguageHome({ params }: { params: { lang: string } }) {
-  const lang = parseLang(params.lang)
+export default async function LanguageHome({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang: rawLang } = await params
+  const lang = parseLang(rawLang)
   if (!lang) {
     const legacy = await rootLegacyPage(`/${params.lang}`)
     if (legacy) return legacy
