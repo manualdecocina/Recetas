@@ -24,16 +24,22 @@ const getRecipe = cache(async (lang: string, slug: string): Promise<Recipe | nul
   if (error) throw new Error(`No se pudo cargar la receta: ${error.message}`)
   if (!data) return null
   const row = data as any
-  const structured = Array.isArray(row.recipe_ingredients) ? [...row.recipe_ingredients].sort((a: any, b: any) => (a.position ?? 0) - (b.position ?? 0)) : []
-  const ingredients = structured.length
-    ? structured.map((item: any) => ({
-        name: item.ingredients?.name ?? '',
-        amount: item.amount ?? '',
-        unit: item.unit ?? undefined,
-        preparation: item.preparation ?? undefined,
-        note: item.note ?? undefined,
-      })).filter((item: any) => item.name)
-    : row.ingredients
+  const structured = Array.isArray(row.recipe_ingredients) ? row.recipe_ingredients : []
+  const structuredByPosition = new Map<number, any>(
+    structured.map((item: any) => [Number(item.position ?? 0), item]),
+  )
+  const rawIngredients = Array.isArray(row.ingredients) ? row.ingredients : []
+  const ingredients = rawIngredients.map((raw: any, index: number) => {
+    const item = structuredByPosition.get(index)
+    if (!item) return raw
+    return {
+      ...raw,
+      amount: item.amount ?? raw.amount ?? '',
+      unit: item.unit ?? raw.unit ?? undefined,
+      preparation: item.preparation ?? undefined,
+      note: item.note ?? undefined,
+    }
+  })
   const { recipe_ingredients: _recipeIngredients, ...recipeRow } = row
   return { ...recipeRow, ingredients } as Recipe
 })
