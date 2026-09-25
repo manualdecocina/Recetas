@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 import './editorial.css'
 import './home-discovery.css'
+import { editorialSerif, uiSans } from './fonts'
 import { getSiteUrl, isIndexingAllowed } from '@/lib/site'
 
 const allowIndexing = isIndexingAllowed()
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="es">
+    <html lang="es" className={`${editorialSerif.variable} ${uiSans.variable}`}>
       <body>{children}</body>
     </html>
   )
