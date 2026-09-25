@@ -23,8 +23,9 @@ function parseLang(value: string): RecipeLanguage | null {
   return (SUPPORTED_LANGUAGES as string[]).includes(value) ? value as RecipeLanguage : null
 }
 
-export async function generateMetadata({ params }: { params: { lang: string; slug: string } }): Promise<Metadata> {
-  const category = CATEGORIES.find(([, slug]) => slug === params.slug)
+export async function generateMetadata({ params }: { params: Promise<{ lang: string; slug: string }> }): Promise<Metadata> {
+  const { slug } = await params
+  const category = CATEGORIES.find(([, categorySlug]) => categorySlug === slug)
   return category ? { title: category[0], description: 'Recetas de ' + category[0].toLowerCase() + ' en Manual de Cocina.' } : {}
 }
 
