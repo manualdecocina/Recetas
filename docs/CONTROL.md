@@ -279,3 +279,10 @@ QA: docs/QA-BLOQUE-NEWSEED-20260925-45.md.
 Se procesaron las 11 decisiones REVIEW pendientes: E005 (2 URLs), E010 (2), Caprese (1), salud/nutrición (5), colecciones (2) y artículo de veganismo (1). No se forzaron decisiones editoriales. E005/E010 no tienen ContentPage equivalente bajo los slugs consultados; Caprese tiene ContentPage unpublished y no Recipe visible con ese slug; salud, colecciones y veganismo mantienen sus ContentPages publicadas. No se crean redirects, borrados ni publicaciones.
 
 QA: docs/QA-BLOQUE-REVIEW-20260925-46.md.
+
+
+## Actualización de control — Bloque 50 — 2026-09-25
+
+Se dejó atrás la revisión incremental de candidatos ContentPage→Recipe. Auditoría integral: 48 ContentPages publicadas tienen una Recipe ES homónima staged, y las 48 Recipes están completas en los campos básicos (imagen, contenido, ingredientes, pasos y metadata). No se publican ni retiran aún por el gate de routing/SEO/despliegue. El siguiente punto de trabajo es Publication Gate: validar contrato de URL pública, canonical/hreflang, schema, sitemap y verificación desplegada, y después ejecutar publicaciones/retiros por lotes.
+
+QA: docs/QA-BLOQUE-CONTENTPAGE-RECIPE-20260925-50.md.
