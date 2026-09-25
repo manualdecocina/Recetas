@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 
-type Ingredient = { amount: string; unit?: string; name: string }
+type Ingredient = { amount: string; unit?: string; name: string; preparation?: string; note?: string }
 
 export function RecipeIngredients({ recipeId, ingredients }: { recipeId: string | number; ingredients: Ingredient[] }) {
   const key = `manualdecocina:ingredients:${recipeId}`
@@ -28,6 +28,8 @@ export function RecipeIngredients({ recipeId, ingredients }: { recipeId: string 
       {ingredients.map((ing, i) => {
         const hasAmount = Boolean(ing.amount?.trim())
         const hasUnit = Boolean(ing.unit?.trim())
+        const hasPreparation = Boolean(ing.preparation?.trim())
+        const hasNote = Boolean(ing.note?.trim())
         return (
           <li key={i} className={checked[i] ? 'is-checked' : ''}>
             <label>
@@ -36,6 +38,8 @@ export function RecipeIngredients({ recipeId, ingredients }: { recipeId: string 
                 {hasAmount && <span className="recipe-ingredient__amount">{ing.amount}</span>}
                 {hasUnit && <span className="recipe-ingredient__unit">{ing.unit}</span>}
                 <span className="recipe-ingredient__name">{ing.name}</span>
+                {hasPreparation && <span className="recipe-ingredient__preparation">, {ing.preparation}</span>}
+                {hasNote && <span className="recipe-ingredient__note"> ({ing.note})</span>}
               </span>
             </label>
           </li>
