@@ -219,7 +219,7 @@ export default async function RecipesListPage({ params, searchParams }: Props) {
           <nav className="pagination" aria-label="Paginación">
             {page > 1 && <Link href={buildUrl(lang, { q, categoria, cocina, dificultad, ingrediente, tiempo, ordenar, page: page === 2 ? undefined : String(page - 1) })} rel="prev">← Anteriores</Link>}
             <span>Página {page} de {totalPages}</span>
-            {page < totalPages && <Link href={buildUrl(lang, { q, categoria, cocina, dificultad, ordenar, page: String(page + 1) })} rel="next">Siguientes →</Link>}
+            {page < totalPages && <Link href={buildUrl(lang, { q, categoria, cocina, dificultad, ingrediente, tiempo, ordenar, page: String(page + 1) })} rel="next">Siguientes →</Link>}
           </nav>
         )}
       </main>
