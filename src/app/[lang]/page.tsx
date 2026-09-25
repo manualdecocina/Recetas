@@ -78,7 +78,7 @@ export default async function LanguageHome({ params }: { params: Promise<{ lang:
   const { lang: rawLang } = await params
   const lang = parseLang(rawLang)
   if (!lang) {
-    const legacy = await rootLegacyPage(`/${params.lang}`)
+    const legacy = await rootLegacyPage(`/${rawLang}`)
     if (legacy) return legacy
     notFound()
   }
