@@ -48,4 +48,4 @@ No corresponde al modelo Recipe. Se mantiene como artículo editorial pendiente 
 
 El REVIEW de modelo queda clasificado: salud/nutrición = revisión editorial/factual; colecciones = ContentPage; veganismo = artículo editorial.
 
-El siguiente trabajo real pasa a la preparación editorial de estos bloques y a la resolución de los 24 metadatos insuficientes + 2 imágenes bloqueadas, sin publicar mientras permanezcan abiertos los gates globales.
+El siguiente trabajo real pasa a la preparación editorial de estos bloques y al cierre de los gates P3/P4, media y build/deploy. La antigua referencia a 24 metadatos insuficientes + 2 imágenes bloqueadas queda obsoleta: esos bloqueadores ya fueron resueltos o clasificados en los ciclos posteriores.
