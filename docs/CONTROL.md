@@ -258,3 +258,10 @@ QA: docs/QA-BLOQUE-URLMASTER-20260925-42.md. Commit de matriz URL: 50995d8cb05de
 Se procesaron 20 URLs P3. Las 20 permanecen CATALOG CANDIDATE; esta clasificación no equivale a KEEP/MIGRATE/MERGE/NOINDEX/404-410. No se crean redirects, no se borran URLs y no se publica contenido.
 
 QA: docs/QA-BLOQUE-URLMASTER-20260925-43.md.
+
+
+## Actualización de control — 2026-09-25 — Bloque 44 URL Master P3/P4
+
+Se procesaron las 19 URLs restantes del inventario P3/P4 en un único bloque: 1 CATALOG CANDIDATE, 10 OUT (8 catálogo + 2 técnicos) y 8 REVIEW. No se crean redirects, no se ejecutan borrados y no se publica contenido. Las clasificaciones OUT/REVIEW quedan documentadas como decisiones de control, no como ejecución destructiva.
+
+QA: docs/QA-BLOQUE-URLMASTER-20260925-44.md. Commit de matriz URL: 7bcadec499f831450025cbedc40dded49beca72c.
