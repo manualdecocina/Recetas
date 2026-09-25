@@ -17,12 +17,13 @@ const PAGE_SIZE = 50
 export default async function AdminDashboardPage({
   searchParams,
 }: {
-  searchParams: { page?: string }
+  searchParams: Promise<{ page?: string }>
 }) {
+  const query = await searchParams
   const { supabase, user, isAdmin } = await requireAdmin()
   if (!isAdmin) return <NotAdmin email={user.email} />
 
-  const page = Math.max(1, Number.parseInt(searchParams.page ?? '1', 10) || 1)
+  const page = Math.max(1, Number.parseInt(query.page ?? '1', 10) || 1)
   const from = (page - 1) * PAGE_SIZE
 
   const { data: recipes, count, error } = await supabase
