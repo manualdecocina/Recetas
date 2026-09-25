@@ -178,13 +178,19 @@ export default async function RecipesListPage({ params, searchParams }: Props) {
 
           <div className="catalog__sort">
             <span>{total} {total === 1 ? 'receta' : 'recetas'}</span>
-            <label>
-              Ordenar
-              <select defaultValue={ordenar} onChange={() => {}}>
-                <option value="recientes">Más recientes</option>
-                <option value="antiguas">Más antiguas</option>
-              </select>
-            </label>
+            <form action={`/${lang}/recetas`} method="get">
+              {q && <input type="hidden" name="q" value={q} />}
+              {categoria && <input type="hidden" name="categoria" value={categoria} />}
+              {cocina && <input type="hidden" name="cocina" value={cocina} />}
+              {dificultad && <input type="hidden" name="dificultad" value={dificultad} />}
+              <label>
+                Ordenar
+                <select name="ordenar" defaultValue={ordenar} onChange={(event) => event.currentTarget.form?.requestSubmit()}>
+                  <option value="recientes">Más recientes</option>
+                  <option value="antiguas">Más antiguas</option>
+                </select>
+              </label>
+            </form>
           </div>
         </section>
 
