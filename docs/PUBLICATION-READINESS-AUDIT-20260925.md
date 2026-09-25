@@ -53,3 +53,19 @@ QA: docs/QA-BLOQUE-CONTENTPAGE-RECIPE-20260925-50.md.
 Auditoría directa de las 95 Recipes staged: 95/95 tienen `public_path`; 0 tienen `public_path` duplicado dentro del conjunto staged; 2 no tienen imagen; 24 tienen metadata incompleta (prep/total/servings), sin evidencia suficiente para completar por inferencia; 75 son ES; 1 tiene SEO description vacía (`la-guia-definitiva-para-lograr-un-verde-esmeralda-perfecto`). No se hicieron cambios de datos ni publicaciones. El Publication Gate queda verificado a nivel de integridad de routing staged, pero la publicación sigue condicionada por los gates editoriales globales y por la verificación externa de build/deploy.
 
 QA: `docs/QA-BLOQUE-PUBLICATION-GATE-20260925-52.md`.
+
+
+## Actualización — Cierre de recuperación — 2026-09-25
+
+El inventario fue reconciliado después de las correcciones de metadata y limpieza de ContentPages.
+
+- Recipes: **229 / 134 publicadas / 95 staged**.
+- De las 95 staged, **94 cumplen completitud operativa** y 1 está descartada mediante redirect 308.
+- ContentPages: **74 / 69 publicadas / 5 staged**.
+- Las 5 staged restantes corresponden a pares Recipe equivalentes y no se retiran hasta cerrar su ciclo de publicación.
+- El único redirect operativo restante es el de la Recipe inválida.
+- Advisors Supabase: rendimiento **0**; seguridad **1 warning** por protección contra contraseñas filtradas desactivada.
+
+La auditoría de publicación queda técnicamente preparada, pero no cerrada: faltan QA editorial de las 20 localizaciones no-ES, consolidación de los 5 pares staged, revisión salud/nutrición, cierre P3/P4, validación final de media y verificación externa de build/smoke tests.
+
+No se autoriza publicación masiva mientras esos gates permanezcan abiertos.
