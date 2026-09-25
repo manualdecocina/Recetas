@@ -5,6 +5,7 @@ import { getContentPageByPublicPath, getRecipeByPublicPath, getRecipeTranslation
 import { RecipeCard } from '@/components/RecipeCard'
 import { RecipeDocument } from '@/components/RecipeDocument'
 import { SiteHeader } from '@/components/SiteHeader'
+import { SiteFooter } from '@/components/SiteFooter'
 import { publicUrl } from '@/lib/site'
 import { recipeAlternates } from '@/lib/seo'
 import { UI_TEXT } from '@/lib/i18n'
@@ -142,6 +143,7 @@ export default async function LanguageHome({ params }: { params: { lang: string 
           <a className="button button--dark" href={`/${lang}/recetas/`}>Explorar recetas</a>
         </section>
       </main>
+      <SiteFooter lang={lang} />
     </>
   )
 }
