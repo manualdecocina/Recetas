@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import type { Recipe } from '@/types/recipe'
 import { normalizePublicPath } from '@/lib/site'
+import { FavoriteStar } from '@/components/FavoriteStar'
 
 type CardRecipe = Pick<Recipe, 'id' | 'language' | 'slug' | 'public_path' | 'title' | 'excerpt' | 'category' | 'image_url'>
 
@@ -15,8 +16,8 @@ export function RecipeCard({
   featured?: boolean
 }) {
   return (
-    <Link href={normalizePublicPath(recipe.public_path)} className={featured ? 'recipe-card recipe-card--featured' : 'recipe-card'}>
-      <article>
+    <article className={featured ? 'recipe-card recipe-card--featured' : 'recipe-card'}>
+      <Link href={normalizePublicPath(recipe.public_path)} className="recipe-card__link">
         {recipe.image_url && (
           <div className="recipe-card__image">
             <Image
@@ -33,7 +34,8 @@ export function RecipeCard({
           <h3>{recipe.title}</h3>
           {recipe.excerpt && <p>{recipe.excerpt}</p>}
         </div>
-      </article>
-    </Link>
+      </Link>
+      <FavoriteStar recipeId={recipe.id} />
+    </article>
   )
 }
