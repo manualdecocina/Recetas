@@ -26,12 +26,17 @@ export function RecipeIngredients({ recipeId, ingredients }: { recipeId: string 
   return (
     <ul className="recipe-ingredients">
       {ingredients.map((ing, i) => {
-        const label = [ing.amount, ing.unit, ing.name].filter(Boolean).join(' ')
+        const hasAmount = Boolean(ing.amount?.trim())
+        const hasUnit = Boolean(ing.unit?.trim())
         return (
           <li key={i} className={checked[i] ? 'is-checked' : ''}>
             <label>
               <input type="checkbox" checked={Boolean(checked[i])} onChange={() => toggle(i)} />
-              <span>{label}</span>
+              <span className="recipe-ingredient__text">
+                {hasAmount && <span className="recipe-ingredient__amount">{ing.amount}</span>}
+                {hasUnit && <span className="recipe-ingredient__unit">{ing.unit}</span>}
+                <span className="recipe-ingredient__name">{ing.name}</span>
+              </span>
             </label>
           </li>
         )
