@@ -107,3 +107,10 @@ Las secciones históricas anteriores de este documento conservan su estado de ca
 Se revisaron las primeras 20 filas P0 en orden estable. Quedan cerradas 17 URLs como KEEP / REBUILD: E001 (6), E002 (3), E003 (1), E004 (1), E006 (2), E007 (1), E008 (2), E009 (1). E005 mantiene sus 2 URLs en REVIEW y E010 mantiene /fr/milkshake-grimace-mcdonalds/ en REVIEW; la segunda URL de E010 queda para el siguiente bloque. No se crean redirects para KEEP y no se publica contenido.
 
 QA: docs/QA-BLOQUE-URLMASTER-20260925-40.md.
+
+
+## Cierre operativo — Bloque 41 — 2026-09-25
+
+Se procesaron las filas 21–40: 20 URLs. Todas quedan KEEP / REBUILD. Esto cierra E010 en sus dos URLs históricas y las filas E011–E015 correspondientes, además de E101–E106, E015 ES y las URLs españolas adicionales hasta /receta-helado-casero/. No se crean redirects ni se publica contenido.
+
+QA: docs/QA-BLOQUE-URLMASTER-20260925-41.md.
