@@ -159,6 +159,10 @@ button, input { font: inherit; }
 .recipe-card--featured h3 { font-size: clamp(2.4rem, 4vw, 4.2rem); }
 .recipe-card--featured p, .recipe-grid p { color: var(--muted); }
 .recipe-grid .recipe-card__image { aspect-ratio: 4 / 3; }
+.recipe-card__link { display: block; }
+.recipe-card__body h3 { text-wrap: balance; }
+.recipe-card:focus-within { outline: 2px solid var(--olive); outline-offset: 3px; }
+.recipe-card__link:hover h3 { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .12em; }
 .recipe-grid .recipe-card__body { padding: 22px; }
 .recipe-card__category { display: block; margin-bottom: 12px; color: var(--olive); font-size: .7rem; font-weight: 750; letter-spacing: .14em; text-transform: uppercase; }
 .recipe-grid h3 { font-size: 1.75rem; }
