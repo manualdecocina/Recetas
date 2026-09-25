@@ -652,3 +652,21 @@ button, input { font: inherit; }
   .related-recipes { display:none !important; }
   .recipe-notes { background:#fff; border-left:2px solid #000; }
 }
+
+.categories-page, .category-page { width:min(calc(100% - 40px),1200px); margin:0 auto; padding:70px 0 100px; }
+.categories-page__hero, .category-page__hero { max-width:820px; padding:20px 0 55px; }
+.categories-page__hero h1, .category-page__hero h1 { font-family:var(--serif); font-size:clamp(3.4rem,7vw,6.5rem); line-height:.92; letter-spacing:-.05em; margin:12px 0 22px; }
+.categories-page__hero p:last-child, .category-page__hero p:last-child { max-width:600px; color:var(--muted); font-size:1.08rem; }
+.category-directory { border-top:1px solid var(--stone); }
+.category-directory__item { display:grid; grid-template-columns:70px 1fr auto; gap:24px; align-items:center; padding:23px 8px; border-bottom:1px solid var(--stone); color:var(--ink); text-decoration:none; transition:padding .18s ease; }
+.category-directory__item:hover { padding-left:16px; padding-right:0; }
+.category-directory__number { font-size:.78rem; color:var(--olive); }
+.category-directory__item strong { display:block; font-family:var(--serif); font-size:1.8rem; font-weight:500; }
+.category-directory__item small { display:block; margin-top:4px; color:var(--muted); }
+.category-page__hero .eyebrow { color:var(--olive); text-decoration:none; }
+@media(max-width:600px) {
+  .categories-page, .category-page { width:min(calc(100% - 24px),1200px); padding-top:50px; }
+  .category-directory__item { grid-template-columns:38px 1fr auto; gap:12px; }
+  .category-directory__item strong { font-size:1.45rem; }
+  .category-directory__item:hover { padding-left:8px; }
+}
