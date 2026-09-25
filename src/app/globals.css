@@ -37,7 +37,9 @@ button, input { font: inherit; }
   align-items: center;
   gap: 38px;
 }
-.brand { display: inline-flex; align-items: center; gap: 12px; min-width: 220px; }
+.brand { display: inline-flex; align-items: center; min-width: 260px; }
+.brand__logo { display: block; width: 260px; height: auto; }
+
 .brand__mark {
   position: relative;
   display: block;
@@ -104,7 +106,13 @@ button, input { font: inherit; }
 .header-search span:first-child { font-size: 1.5rem; line-height: .5; }
 
 .home { width: min(calc(100% - 40px), var(--max)); margin: 0 auto; padding-bottom: 80px; }
-.hero { padding: clamp(76px, 11vw, 150px) 0 100px; max-width: 1020px; }
+.hero { padding: clamp(62px, 8vw, 105px) 0 90px; }
+.hero__layout { display: grid; grid-template-columns: minmax(0, 1.18fr) minmax(320px, .72fr); gap: clamp(36px, 6vw, 90px); align-items: end; }
+.hero__copy { min-width: 0; }
+.hero__image { position: relative; min-height: 560px; overflow: hidden; background: var(--sand); border: 1px solid var(--stone); }
+.hero__image img { object-fit: cover; }
+.hero__image::after { content: ""; position: absolute; inset: auto 0 0; height: 35%; background: linear-gradient(transparent, rgba(23,22,20,.45)); pointer-events: none; }
+.hero__image span { position: absolute; z-index: 1; left: 18px; bottom: 18px; padding: 7px 10px; background: var(--ivory); color: var(--ink); font-size: .7rem; font-weight: 750; letter-spacing: .12em; text-transform: uppercase; }
 .eyebrow {
   margin: 0 0 14px;
   color: var(--olive);
@@ -201,11 +209,11 @@ button, input { font: inherit; }
   .site-header__inner, .home { width: min(calc(100% - 24px), var(--max)); }
   .site-header__inner { min-height: 72px; }
   .brand { min-width: 0; }
-  .brand__mark { width: 35px; height: 40px; }
-  .brand__text strong { font-size: 1.28rem; }
-  .brand__text small { font-size: .5rem; }
+  .brand__logo { width: 214px; max-width: 62vw; }
   .header-search span:last-child { display: none; }
-  .hero { padding: 62px 0 72px; }
+  .hero { padding: 48px 0 72px; }
+  .hero__layout { grid-template-columns: 1fr; gap: 38px; }
+  .hero__image { min-height: 420px; order: 2; }
   .hero h1 { font-size: clamp(3rem, 16vw, 5rem); }
   .hero__intro { font-size: 1rem; }
   .hero-search > div { display: block; border: 1px solid var(--ink); }
