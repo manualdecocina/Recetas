@@ -71,7 +71,6 @@ export function RecipeDocument({ recipe, relatedRecipes = [] }: { recipe: Recipe
             <PrintRecipeButton />
           </div>
         </div>
-        {editorialHtml && <div className="recipe-document__editorial" dangerouslySetInnerHTML={{ __html: editorialHtml }} />}
         {recipe.image_url && (
           <Image
             src={recipe.image_url}
@@ -89,6 +88,7 @@ export function RecipeDocument({ recipe, relatedRecipes = [] }: { recipe: Recipe
           {recipe.difficulty && <span>{recipe.difficulty}</span>}
           {recipe.cuisine && <span>{recipe.cuisine}</span>}
         </div>
+        {editorialHtml && <div className="recipe-document__editorial" dangerouslySetInnerHTML={{ __html: editorialHtml }} />}
         <div className="recipe-document__jump">
           <a href="#ingredientes">Ingredientes</a>
           <a href="#preparacion">Preparación</a>
@@ -100,7 +100,7 @@ export function RecipeDocument({ recipe, relatedRecipes = [] }: { recipe: Recipe
         <ol className="recipe-steps">
           {recipe.steps.map((step, i) => (
             <li key={i}>
-              <h3>{step.title}</h3>
+              <h3>{step.title || `Paso {i + 1}`}</h3>
               <p>{step.content}</p>
             </li>
           ))}
