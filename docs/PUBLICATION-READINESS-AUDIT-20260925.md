@@ -39,3 +39,10 @@ No publicar una reconstrucción hasta que:
 ## Siguiente bloque
 
 Consolidar los ContentPages que representan recetas reales, empezando por los P0/P1 ya clasificados, sin crear URLs paralelas.
+
+
+## Actualización — Bloque 50 — 2026-09-25
+
+Se completó una auditoría integral de la segunda ola ContentPage→Recipe. Se detectaron 48 ContentPages publicadas con Recipe ES homónima staged. Las 48 Recipes tienen imagen, contenido, ingredientes, pasos y metadata básica completa. Ninguna fue publicada ni se retiró su ContentPage: la secuencia sigue siendo publicar Recipe → verificar → retirar ContentPage. El siguiente punto operativo es el Publication Gate de routing/SEO, no más descubrimiento de candidatos.
+
+QA: docs/QA-BLOQUE-CONTENTPAGE-RECIPE-20260925-50.md.
