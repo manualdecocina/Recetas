@@ -5,6 +5,7 @@ import { supabase } from '@/lib/supabase/public'
 import { recipeAlternates } from '@/lib/seo'
 import { normalizePublicPath, recipePath, publicUrl } from '@/lib/site'
 import { RecipeDocument } from '@/components/RecipeDocument'
+import type { RecipeIngredient } from '@/types/recipe'
 import { SUPPORTED_LANGUAGES, type Recipe, type RecipeLanguage } from '@/types/recipe'
 
 export const revalidate = 3600
@@ -16,7 +17,7 @@ interface Props {
 const getRecipe = cache(async (lang: string, slug: string): Promise<Recipe | null> => {
   const { data, error } = await supabase
     .from('recipes')
-    .select('*, recipe_ingredients(amount, unit, preparation, note, position, ingredients(name))', { count: 'exact' })
+    .select('*, recipe_ingredients(amount, unit, preparation, note, position, ingredients(id, name, slug, indexable))', { count: 'exact' })
     .eq('language', lang)
     .eq('slug', decodeURIComponent(slug))
     .eq('published', true)
@@ -29,15 +30,20 @@ const getRecipe = cache(async (lang: string, slug: string): Promise<Recipe | nul
     structured.map((item: any) => [Number(item.position ?? 0), item]),
   )
   const rawIngredients = Array.isArray(row.ingredients) ? row.ingredients : []
-  const ingredients = rawIngredients.map((raw: any, index: number) => {
+  const ingredients: RecipeIngredient[] = rawIngredients.map((raw: any, index: number) => {
     const item = structuredByPosition.get(index)
     if (!item) return raw
+    const canonical = item.ingredients
     return {
       ...raw,
       amount: item.amount ?? raw.amount ?? '',
       unit: item.unit ?? raw.unit ?? undefined,
       preparation: item.preparation ?? undefined,
       note: item.note ?? undefined,
+      ...(canonical?.indexable && canonical?.slug ? {
+        canonicalIngredientSlug: canonical.slug,
+        canonicalIngredientName: canonical.name,
+      } : {}),
     }
   })
   const { recipe_ingredients: _recipeIngredients, ...recipeRow } = row
