@@ -1,6 +1,6 @@
 // Imágenes restringidas a dominios reales (antes: hostname "**", abierto a cualquiera).
 // Debe coincidir con src/lib/image-hosts.ts, que valida lo mismo al guardar una receta.
-const hosts = new Set()
+const hosts = new Set(['eqbdtctxbpepbeickhqi.supabase.co'])
 if (process.env.NEXT_PUBLIC_SUPABASE_URL) {
   hosts.add(new URL(process.env.NEXT_PUBLIC_SUPABASE_URL).hostname)
 }
