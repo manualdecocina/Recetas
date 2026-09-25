@@ -59,6 +59,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
+async function getRelatedRecipes(recipe: Recipe) {
+  if (!recipe.category && !recipe.cuisine) return []
+  let query = supabase.from('recipes')
+    .select('id, language, slug, public_path, title, excerpt, category, image_url')
+    .eq('language', recipe.language)
+    .eq('published', true)
+    .neq('id', recipe.id)
+    .limit(4)
+  if (recipe.category) query = query.eq('category', recipe.category)
+  else if (recipe.cuisine) query = query.eq('cuisine', recipe.cuisine)
+  const { data } = await query
+  return data ?? []
+}
+
 export default async function RecipeDetailPage({ params }: Props) {
   if (!isLang(params.lang)) notFound()
   const recipe = await getRecipe(params.lang, params.slug)
@@ -68,5 +82,6 @@ export default async function RecipeDetailPage({ params }: Props) {
   const publicPath = normalizePublicPath(recipe.public_path)
   if (routePath !== publicPath) permanentRedirect(publicPath)
 
-  return <RecipeDocument recipe={recipe} />
+  const relatedRecipes = await getRelatedRecipes(recipe)
+  return <RecipeDocument recipe={recipe} relatedRecipes={relatedRecipes} />
 }
