@@ -29,9 +29,10 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   return category ? { title: category[0], description: 'Recetas de ' + category[0].toLowerCase() + ' en Manual de Cocina.' } : {}
 }
 
-export default async function CategoryPage({ params }: { params: { lang: string; slug: string } }) {
-  const lang = parseLang(params.lang)
-  const category = CATEGORIES.find(([, slug]) => slug === params.slug)
+export default async function CategoryPage({ params }: { params: Promise<{ lang: string; slug: string }> }) {
+  const { lang: rawLang, slug } = await params
+  const lang = parseLang(rawLang)
+  const category = CATEGORIES.find(([, categorySlug]) => categorySlug === slug)
   if (!lang || !category) notFound()
 
   const { data: recipes, error } = await supabase.from('recipes')
