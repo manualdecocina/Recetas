@@ -12,21 +12,18 @@ Lectura directa de Supabase:
 - `recipes`: **229 filas; 134 publicadas; 95 staged**.
 - De las 95 Recipes staged: **94 cumplen completitud operativa** (imagen, ingredientes, pasos, prep, cook, total y servings).
 - **1 staged no apta para catálogo:** `la-guia-definitiva-para-lograr-un-verde-esmeralda-perfecto`; permanece descartada mediante redirect 308 a `/es`.
-- `content_pages`: **84 filas; 69 publicadas; 15 staged**.
-- Las 15 ContentPages staged restantes son casos que todavía requieren consolidación/modelo o decisión editorial; ya fueron retirados los duplicados resueltos y las páginas clasificadas OUT.
+- `content_pages`: **74 filas; 69 publicadas; 5 staged**.
+- Las 5 ContentPages staged restantes son pares con Recipes equivalentes staged; no se retiran todavía porque su Recipe aún no está publicada.
 
 ## ContentPages staged restantes
 
-Quedan:
 - `bowl-de-carne-con-miel-picante-y-queso-cottage`
 - `receta-de-pan-de-platano-clasico`
 - `receta-facil-de-pasta-al-pesto-casera`
 - `souffle-de-queso`
 - `vasitos-de-mousse-de-aguacate-y-cacao`
 
-Estos cinco tienen Recipe equivalente staged. No se retira el ContentPage mientras la Recipe equivalente no haya cerrado su ciclo de publicación/modelo.
-
-Las páginas `receta-ensalada-caprese` y `tienda` fueron retiradas del staged: Caprese ya tiene Recipe publicada en la misma URL; Tienda era un placeholder WooCommerce vacío y no forma parte del modelo público actual.
+Estos cinco quedan bloqueados únicamente por el cierre del ciclo de publicación/modelo de sus Recipes equivalentes.
 
 ## Localizaciones
 
@@ -38,6 +35,8 @@ Las **20 Recipes no-ES** existentes están estructuralmente completas:
 - JA: 6
 
 No presentan faltantes estructurales de título, imagen, contenido, ingredientes, pasos ni metadata principal.
+
+El QA actual confirma que cada localización conserva imagen, número de ingredientes/pasos y tiempos/porciones coherentes con su propio registro. Hay algunos `total_time_minutes` que incluyen reposo/enfriamiento y por eso pueden ser superiores a prep+cook; no se corrigen por inferencia.
 
 Esto **no autoriza todavía su publicación**: queda pendiente QA editorial de traducción, relación de grupo, canonical/hreflang y decisión de qué idiomas se abren.
 
@@ -57,10 +56,6 @@ Esto **no autoriza todavía su publicación**: queda pendiente QA editorial de t
 
 La protección de contraseñas filtradas sigue pendiente antes de considerar cerrado el gate de seguridad al 100%.
 
-## Git / migraciones
-
-Las operaciones recientes de datos están versionadas en `supabase/migrations/` y documentadas en commits de `main`.
-
 ## Pruebas realizadas
 
 Pasaron las comprobaciones lógicas de código para:
@@ -71,6 +66,7 @@ Pasaron las comprobaciones lógicas de código para:
 - sitemap
 - resolución por `public_path`
 - protección de publicación de Recipes incompletas
+- integridad estructural de las 20 localizaciones no-ES
 
 La ejecución completa de `npm run typecheck` y `npm run build` sigue pendiente de Hostinger/CI porque este entorno no dispone de `node_modules` ni acceso de red para instalar dependencias.
 
@@ -90,7 +86,7 @@ La ejecución completa de `npm run typecheck` y `npm run build` sigue pendiente 
 ## Gate editorial pendiente
 
 Todavía falta cerrar:
-- consolidación de los 5 ContentPages con sus Recipes equivalentes;
+- publicación/modelo de los 5 pares ContentPage → Recipe;
 - QA editorial de las 20 localizaciones;
 - revisión final de salud/nutrición;
 - decisión institucional/legal;
