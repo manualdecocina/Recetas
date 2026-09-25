@@ -24,6 +24,12 @@ interface ContentRow {
   updated_at: string
 }
 
+interface IngredientRow {
+  language: string
+  slug: string
+  updated_at: string
+}
+
 async function fetchAllPublished(): Promise<Row[]> {
   const rows: Row[] = []
   for (let from = 0; ; from += BATCH) {
