@@ -714,3 +714,9 @@ button, input { font: inherit; }
 .recipe-ingredients li.is-checked .recipe-ingredient__name,
 .recipe-ingredients li.is-checked .recipe-ingredient__unit,
 .recipe-ingredients li.is-checked .recipe-ingredient__amount { color:var(--muted); }
+
+
+.recipe-ingredient__preparation { color:var(--muted); font-style:italic; }
+.recipe-ingredient__note { color:var(--muted); }
+.recipe-ingredients li.is-checked .recipe-ingredient__preparation,
+.recipe-ingredients li.is-checked .recipe-ingredient__note { color:var(--muted); }
