@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import './editorial.css'
 import { getSiteUrl, isIndexingAllowed } from '@/lib/site'
 
 const allowIndexing = isIndexingAllowed()
