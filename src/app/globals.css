@@ -677,3 +677,31 @@ button, input { font: inherit; }
   .site-nav a { flex:0 0 auto; padding:7px 2px; }
   .header-search { margin-left:auto; padding-left:16px; }
 }
+
+
+.recipe-ingredients { list-style: none; padding-left: 0; max-width: 720px; }
+.recipe-ingredients li { padding: 0; border-bottom: 1px solid var(--sand); }
+.recipe-ingredients label {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 14px 4px;
+  cursor: pointer;
+}
+.recipe-ingredients input {
+  width: 20px;
+  height: 20px;
+  margin: 1px 0 0;
+  accent-color: var(--olive);
+  flex: 0 0 auto;
+}
+.recipe-ingredients li.is-checked span {
+  color: var(--muted);
+  text-decoration: line-through;
+  text-decoration-thickness: 1px;
+}
+.recipe-ingredients label:hover { background: rgba(234,228,217,.35); }
+@media print {
+  .recipe-ingredients input { display: none; }
+  .recipe-ingredients label { padding-left: 0; }
+}
