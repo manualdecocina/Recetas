@@ -90,6 +90,11 @@ export default async function RecipesListPage({ params, searchParams }: Props) {
   const ordenar = searchParams.ordenar === 'antiguas' ? 'antiguas' : 'recientes'
   const from = (page - 1) * PAGE_SIZE
 
+  const [{ data: cuisineOptions }, { data: ingredientOptions }] = await Promise.all([
+    supabase.from('cuisines').select('slug, name').eq('status', 'canonical').eq('searchable', true).order('name'),
+    supabase.from('ingredients').select('slug, name').eq('status', 'canonical').eq('indexable', true).order('name'),
+  ])
+
   let query = supabase
     .from('recipes')
     .select(CARD_FIELDS, { count: 'exact' })
@@ -101,7 +106,23 @@ export default async function RecipesListPage({ params, searchParams }: Props) {
     const label = CATEGORIES.find(([, slug]) => slug === categoria)?.[0]
     if (label) query = query.eq('category', label)
   }
-  if (cocina) query = query.eq('cuisine', cocina)
+  if (cocina) {
+    const { data: cuisine } = await supabase
+      .from('cuisines')
+      .select('id')
+      .eq('slug', cocina)
+      .eq('status', 'canonical')
+      .maybeSingle()
+    if (!cuisine) query = query.in('id', ['00000000-0000-0000-0000-000000000000'])
+    else {
+      const { data: cuisineRelations } = await supabase
+        .from('recipe_cuisines')
+        .select('recipe_id')
+        .eq('cuisine_id', cuisine.id)
+      const ids = [...new Set((cuisineRelations ?? []).map((row) => row.recipe_id))]
+      query = query.in('id', ids.length ? ids : ['00000000-0000-0000-0000-000000000000'])
+    }
+  }
   if (dificultad) query = query.eq('difficulty', dificultad)
 
   if (ingrediente) {
@@ -143,7 +164,7 @@ export default async function RecipesListPage({ params, searchParams }: Props) {
   const filters = [
     q ? ['Búsqueda', q] : null,
     categoria ? ['Categoría', CATEGORIES.find(([, slug]) => slug === categoria)?.[0] ?? categoria] : null,
-    cocina ? ['Cocina', cocina] : null,
+    cocina ? ['Cocina', cuisineOptions?.find((item) => item.slug === cocina)?.name ?? cocina] : null,
     dificultad ? ['Dificultad', dificultad] : null,
     ingrediente ? ['Ingrediente', ingrediente] : null,
     tiempo ? ['Tiempo', tiempo + ' min'] : null,
@@ -191,7 +212,10 @@ export default async function RecipesListPage({ params, searchParams }: Props) {
               </fieldset>
               <fieldset>
                 <legend>Cocina</legend>
-                <input name="cocina" defaultValue={cocina} placeholder="Ej. mexicana" />
+                <select name="cocina" defaultValue={cocina}>
+                  <option value="">Todas</option>
+                  {(cuisineOptions ?? []).map((item) => <option key={item.slug} value={item.slug}>{item.name}</option>)}
+                </select>
               </fieldset>
               <fieldset>
                 <legend>Dificultad</legend>
@@ -204,7 +228,10 @@ export default async function RecipesListPage({ params, searchParams }: Props) {
               </fieldset>
               <fieldset>
                 <legend>Ingrediente</legend>
-                <input name="ingrediente" defaultValue={ingrediente} placeholder="Ej. ajo (slug)" />
+                <select name="ingrediente" defaultValue={ingrediente}>
+                  <option value="">Todos</option>
+                  {(ingredientOptions ?? []).map((item) => <option key={item.slug} value={item.slug}>{item.name}</option>)}
+                </select>
               </fieldset>
               <fieldset>
                 <legend>Tiempo total</legend>
