@@ -79,19 +79,19 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
 
 export default async function RecipesListPage({ params, searchParams }: Props) {
   const { lang: rawLang } = await params
-  const query = await searchParams
+  const search = await searchParams
   const lang = parseLang(rawLang)
   if (!lang) notFound()
 
   const text = UI_TEXT[lang]
-  const page = parsePage(query.page)
-  const q = clean(query.q)
-  const categoria = clean(query.categoria)
-  const cocina = clean(query.cocina)
-  const dificultad = clean(query.dificultad)
-  const ingrediente = clean(query.ingrediente)
-  const tiempo = clean(query.tiempo)
-  const ordenar = query.ordenar === 'antiguas' ? 'antiguas' : 'recientes'
+  const page = parsePage(search.page)
+  const q = clean(search.q)
+  const categoria = clean(search.categoria)
+  const cocina = clean(search.cocina)
+  const dificultad = clean(search.dificultad)
+  const ingrediente = clean(search.ingrediente)
+  const tiempo = clean(search.tiempo)
+  const ordenar = search.ordenar === 'antiguas' ? 'antiguas' : 'recientes'
   const from = (page - 1) * PAGE_SIZE
 
   const [{ data: cuisineOptions }, { data: ingredientOptions }] = await Promise.all([
