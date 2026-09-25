@@ -16,13 +16,26 @@ interface Props {
 const getRecipe = cache(async (lang: string, slug: string): Promise<Recipe | null> => {
   const { data, error } = await supabase
     .from('recipes')
-    .select('*')
+    .select('*, recipe_ingredients(amount, unit, preparation, note, position, ingredients(name))', { count: 'exact' })
     .eq('language', lang)
     .eq('slug', decodeURIComponent(slug))
     .eq('published', true)
     .maybeSingle()
   if (error) throw new Error(`No se pudo cargar la receta: ${error.message}`)
-  return data as Recipe | null
+  if (!data) return null
+  const row = data as any
+  const structured = Array.isArray(row.recipe_ingredients) ? [...row.recipe_ingredients].sort((a: any, b: any) => (a.position ?? 0) - (b.position ?? 0)) : []
+  const ingredients = structured.length
+    ? structured.map((item: any) => ({
+        name: item.ingredients?.name ?? '',
+        amount: item.amount ?? '',
+        unit: item.unit ?? undefined,
+        preparation: item.preparation ?? undefined,
+        note: item.note ?? undefined,
+      })).filter((item: any) => item.name)
+    : row.ingredients
+  const { recipe_ingredients: _recipeIngredients, ...recipeRow } = row
+  return { ...recipeRow, ingredients } as Recipe
 })
 
 const getTranslations = cache(async (recipeGroupId: string) => {
