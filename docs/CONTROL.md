@@ -244,3 +244,10 @@ QA: docs/QA-BLOQUE-URLMASTER-20260925-40.md. Commit de matriz URL: e595d7384674f
 Se cerraron las filas 21–40 del URL Master P0/P1: 20 URLs, todas KEEP / REBUILD. E010 queda cerrado en sus dos URLs históricas. También quedan procesadas E011–E015 y las filas españolas E101–E106, E015 y las URLs adicionales hasta /receta-helado-casero/. No se crean redirects para KEEP y no se publica contenido.
 
 QA: docs/QA-BLOQUE-URLMASTER-20260925-41.md. Commit de matriz URL: c0778ecf4038780cd514fe3fbad75ca5e16f01d1.
+
+
+## Actualización de control — 2026-09-25 — Bloque 42 URL Master
+
+Se procesaron las 11 filas restantes de la primera tanda P2 en un único bloque por quedar menos de 20. Diez quedan KEEP / REBUILD y /receta-ensalada-caprese/ permanece REVIEW / MODEL Recipe. No se crean redirects ni se publica contenido.
+
+QA: docs/QA-BLOQUE-URLMASTER-20260925-42.md. Commit de matriz URL: 50995d8cb05de07a08c494a8fe5e3c10fe70c5c4.
