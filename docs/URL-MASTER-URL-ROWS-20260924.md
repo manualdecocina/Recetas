@@ -100,3 +100,10 @@ Ninguna reconstrucción se publica hasta validar URL, modelo, contenido, imagen,
 ### Nota de consistencia
 
 Las secciones históricas anteriores de este documento conservan su estado de captura original. En caso de contradicción, este bloque de consolidación del 25-09-2026 es el estado operativo vigente.
+
+
+## Cierre operativo — Bloque 40 — 2026-09-25
+
+Se revisaron las primeras 20 filas P0 en orden estable. Quedan cerradas 17 URLs como KEEP / REBUILD: E001 (6), E002 (3), E003 (1), E004 (1), E006 (2), E007 (1), E008 (2), E009 (1). E005 mantiene sus 2 URLs en REVIEW y E010 mantiene /fr/milkshake-grimace-mcdonalds/ en REVIEW; la segunda URL de E010 queda para el siguiente bloque. No se crean redirects para KEEP y no se publica contenido.
+
+QA: docs/QA-BLOQUE-URLMASTER-20260925-40.md.
