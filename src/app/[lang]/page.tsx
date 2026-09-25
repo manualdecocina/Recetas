@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { notFound, permanentRedirect } from 'next/navigation'
 import type { Metadata } from 'next'
 import { supabase } from '@/lib/supabase/public'
@@ -102,16 +103,26 @@ export default async function LanguageHome({ params }: { params: Promise<{ lang:
       <SiteHeader lang={lang} />
       <main className="home">
         <section className="hero">
-          <p className="eyebrow">Manual de Cocina</p>
-          <h1>Recetas para cocinar<br /><em>bien, todos los días.</em></h1>
-          <p className="hero__intro">Recetas claras, ideas para descubrir y herramientas para cocinar sin complicaciones.</p>
-          <form className="hero-search" action={`/${lang}/recetas/`} method="get">
-            <label htmlFor="home-search">¿Qué quieres cocinar?</label>
-            <div>
-              <input id="home-search" name="q" type="search" placeholder="Prueba «pollo rápido» o «pasta»" />
-              <button type="submit">Buscar</button>
+          <div className="hero__layout">
+            <div className="hero__copy">
+              <p className="eyebrow">Manual de Cocina</p>
+              <h1>Recetas para cocinar<br /><em>bien, todos los días.</em></h1>
+              <p className="hero__intro">Recetas claras, ideas para descubrir y herramientas para cocinar sin complicaciones.</p>
+              <form className="hero-search" action={`/${lang}/recetas/`} method="get">
+                <label htmlFor="home-search">¿Qué quieres cocinar?</label>
+                <div>
+                  <input id="home-search" name="q" type="search" placeholder="Prueba «pollo rápido» o «pasta»" />
+                  <button type="submit">Buscar</button>
+                </div>
+              </form>
             </div>
-          </form>
+            {latest?.image_url && (
+              <div className="hero__image">
+                <Image src={latest.image_url} alt={latest.title} fill priority sizes="(max-width: 900px) 100vw, 43vw" />
+                <span>{latest.category ?? 'Receta destacada'}</span>
+              </div>
+            )}
+          </div>
         </section>
 
         <section id="categorias" className="home-section category-section" aria-labelledby="categories-title">
