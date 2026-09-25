@@ -203,3 +203,19 @@ Esta sección es la referencia operativa para no desviarse del objetivo. Si una 
 ### Corrección de rumbo
 
 Durante este ciclo se hicieron ajustes de QA de schema y pruebas de contrato. Son controles auxiliares, no un cambio de prioridad. La prioridad vuelve ahora al cierre URL-by-URL P0/P1 antes de continuar con la reconstrucción masiva.
+
+
+## Actualización de control — 2026-09-25 — Bloque 36 metadata staged
+
+### Bloque 36 cerrado
+Se procesó el siguiente bloque estable de 20 Recipes staged con metadata incompleta:
+
+`albondigas-suecas`; `bowl-de-carne-con-miel-picante-y-queso-cottage`; `chili-con-carne-express`; `empanadas-argentinas`; `espaguetis-con-salsa-de-carne`; `hamburguesas-caseras`; `irresistible-salmon-en-air-fryer-con-costra-de-hierbas-y-limon`; `la-guia-definitiva-para-lograr-un-verde-esmeralda-perfecto`; `lasana-de-sarten`; `pastel-de-carne`; `picadillo-de-carne-molida-rapido-y-facil`; `receta-clasica-de-galletas-toll-house-original-con-chispas-de-chocolate`; `receta-de-arroz-con-leche-un-postre-reconfortante`; `receta-de-pan-de-platano-clasico`; `receta-de-papas-al-horno-y-los-beneficios-para-la-salud`; `receta-de-souffle-de-queso-esponjoso`; `receta-facil-de-pasta-al-pesto-casera`; `salmon-en-costra-de-hierbas-y-limon-con-esparragos-crujientes`; `sloppy-joes`; `solomillo-de-pavo-glaseado-con-cafe-y-chipotle-sobre-hummus-de-edamame`.
+
+Los tiempos parciales previamente establecidos y respaldados se mantienen. No se rellenan prep/total/servings sin evidencia suficiente. No se publica ninguna de estas entidades.
+
+### Incidente de ejecución
+La consulta inicial del bloque se hizo sobre todas las Recipes con metadata incompleta en vez de limitarse a `published=false`. Se modificaron temporalmente 8 Recipes publicadas fuera del objetivo. El desvío se detectó y se revirtió inmediatamente; los 8 registros quedaron restaurados a sus valores previos. Sin cambio neto.
+
+### Documentación
+QA completo: `docs/QA-BLOQUE-METADATA-STAGED-20260925-36.md`.
