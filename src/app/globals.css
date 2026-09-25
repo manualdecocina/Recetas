@@ -396,3 +396,46 @@ button, input { font: inherit; }
   .active-filters { overflow-x: auto; flex-wrap: nowrap; padding-bottom: 4px; }
   .pagination { gap: 16px; }
 }
+
+
+/* Local favorites: ready now, account sync can replace the storage adapter later. */
+.recipe-card { position: relative; }
+.recipe-card__link { display: block; }
+.favorite-star {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 2;
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(23,22,20,.18);
+  border-radius: 50%;
+  background: rgba(255,255,255,.94);
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 1.15rem;
+  line-height: 1;
+  transition: transform .15s ease, background .15s ease;
+}
+.favorite-star:hover { transform: scale(1.05); }
+.favorite-star.is-saved {
+  background: var(--ink);
+  color: var(--white);
+}
+.recipe-document__heading {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 28px;
+}
+.recipe-document__heading .favorite-star {
+  position: static;
+  flex: 0 0 auto;
+  margin-top: 8px;
+}
+@media (max-width: 600px) {
+  .favorite-star { width: 38px; height: 38px; top: 10px; right: 10px; }
+  .recipe-document__heading { gap: 16px; }
+}
