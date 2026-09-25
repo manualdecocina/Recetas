@@ -46,3 +46,10 @@ Consolidar los ContentPages que representan recetas reales, empezando por los P0
 Se completó una auditoría integral de la segunda ola ContentPage→Recipe. Se detectaron 48 ContentPages publicadas con Recipe ES homónima staged. Las 48 Recipes tienen imagen, contenido, ingredientes, pasos y metadata básica completa. Ninguna fue publicada ni se retiró su ContentPage: la secuencia sigue siendo publicar Recipe → verificar → retirar ContentPage. El siguiente punto operativo es el Publication Gate de routing/SEO, no más descubrimiento de candidatos.
 
 QA: docs/QA-BLOQUE-CONTENTPAGE-RECIPE-20260925-50.md.
+
+
+## Actualización — Bloque 52 — 2026-09-25
+
+Auditoría directa de las 95 Recipes staged: 95/95 tienen `public_path`; 0 tienen `public_path` duplicado dentro del conjunto staged; 2 no tienen imagen; 24 tienen metadata incompleta (prep/total/servings), sin evidencia suficiente para completar por inferencia; 75 son ES; 1 tiene SEO description vacía (`la-guia-definitiva-para-lograr-un-verde-esmeralda-perfecto`). No se hicieron cambios de datos ni publicaciones. El Publication Gate queda verificado a nivel de integridad de routing staged, pero la publicación sigue condicionada por los gates editoriales globales y por la verificación externa de build/deploy.
+
+QA: `docs/QA-BLOQUE-PUBLICATION-GATE-20260925-52.md`.
