@@ -115,7 +115,9 @@ export default async function RecipesListPage({ params, searchParams }: Props) {
     q ? ['Búsqueda', q] : null,
     categoria ? ['Categoría', CATEGORIES.find(([, slug]) => slug === categoria)?.[0] ?? categoria] : null,
     cocina ? ['Cocina', cocina] : null,
-    dificultad ? ['Dificultad', dificultad] : null,\n    ingrediente ? ['Ingrediente', ingrediente] : null,\n    tiempo ? ['Tiempo', tiempo + ' min'] : null,
+    dificultad ? ['Dificultad', dificultad] : null,
+    ingrediente ? ['Ingrediente', ingrediente] : null,
+    tiempo ? ['Tiempo', tiempo + ' min'] : null,
   ].filter(Boolean) as [string, string][]
 
   const itemListJsonLd = {
@@ -182,7 +184,9 @@ export default async function RecipesListPage({ params, searchParams }: Props) {
               {q && <input type="hidden" name="q" value={q} />}
               {categoria && <input type="hidden" name="categoria" value={categoria} />}
               {cocina && <input type="hidden" name="cocina" value={cocina} />}
-              {dificultad && <input type="hidden" name="dificultad" value={dificultad} />}\n              {ingrediente && <input type="hidden" name="ingrediente" value={ingrediente} />}\n              {tiempo && <input type="hidden" name="tiempo" value={tiempo} />}
+              {dificultad && <input type="hidden" name="dificultad" value={dificultad} />}
+              {ingrediente && <input type="hidden" name="ingrediente" value={ingrediente} />}
+              {tiempo && <input type="hidden" name="tiempo" value={tiempo} />}
               <label>
                 Ordenar
                 <select name="ordenar" defaultValue={ordenar} onChange={(event) => event.currentTarget.form?.requestSubmit()}>
