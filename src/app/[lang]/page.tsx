@@ -16,66 +16,6 @@ export const revalidate = 3600
 
 const CARD_FIELDS = 'id, language, slug, public_path, title, excerpt, category, image_url'
 
-const CATEGORIES = [
-  ['Platos principales', 'platos-principales'],
-  ['Entrantes y aperitivos', 'entrantes-y-aperitivos'],
-  ['Sopas y cremas', 'sopas-y-cremas'],
-  ['Ensaladas', 'ensaladas'],
-  ['Guarniciones', 'guarniciones'],
-  ['Salsas y aderezos', 'salsas-y-aderezos'],
-  ['Panes y masas', 'panes-y-masas'],
-  ['Postres', 'postres'],
-  ['Desayunos y brunch', 'desayunos-y-brunch'],
-  ['Bebidas', 'bebidas'],
-] as const
-
-const CATEGORY_IMAGES: Record<string, string> = {
-  'platos-principales': 'https://manualdecocina.com/wp-content/uploads/2024/04/alfredo-2.png',
-  'entrantes-y-aperitivos': 'https://manualdecocina.com/wp-content/uploads/2024/02/Hummus-530x501.jpg',
-  'sopas-y-cremas': 'https://manualdecocina.com/wp-content/uploads/2023/06/ajiaco.jpg',
-  'ensaladas': 'https://manualdecocina.com/wp-content/uploads/2023/06/ensalada-caprese.jpg',
-  'guarniciones': 'https://manualdecocina.com/wp-content/uploads/2024/03/Como-hacer-kimchi-copia-530x501.jpg',
-  'salsas-y-aderezos': 'https://manualdecocina.com/wp-content/uploads/2025/06/Receta-Salsa-de-Tomate-Casera-Facil-Rapida-y-Deliciosa-1-530x530.jpg',
-  'panes-y-masas': 'https://manualdecocina.com/wp-content/uploads/2023/04/Empanada-Peruana-de-Pollo.jpg',
-  'postres': 'https://manualdecocina.com/wp-content/uploads/2025/06/Cheesecake-de-Oreo-Postre-Cremoso-y-Facil-de-Preparar-530x530.jpg',
-  'desayunos-y-brunch': 'https://manualdecocina.com/wp-content/uploads/2025/06/Acai-Bowl-2.jpg',
-  'bebidas': 'https://manualdecocina.com/wp-content/uploads/2024/04/Receta-Jugo-Anticancerigeno-530x489.jpg',
-}
-
-function parseLang(value: string): RecipeLanguage | null {
-  return (SUPPORTED_LANGUAGES as string[]).includes(value) ? (value as RecipeLanguage) : null
-}
-
-async function rootLegacyMetadata(path: string): Promise<Metadata> {
-  const recipe = await getRecipeByPublicPath(path)
-  if (recipe) {
-    const translations = await getRecipeTranslations(recipe.recipe_group_id)
-    return { title: recipe.title, description: recipe.excerpt ?? undefined, alternates: recipeAlternates(recipe, translations), openGraph: { type: 'article', title: recipe.title, description: recipe.excerpt ?? undefined, url: publicUrl(recipe.public_path), images: recipe.image_url ? [recipe.image_url] : undefined } }
-  }
-  const page = await getContentPageByPublicPath(path)
-  if (!page) return {}
-  return { title: page.title, description: page.excerpt ?? undefined, alternates: { canonical: publicUrl(page.public_path) }, openGraph: { type: 'article', title: page.title, description: page.excerpt ?? undefined, url: publicUrl(page.public_path), images: page.featured_image_url ? [page.featured_image_url] : undefined } }
-}
-
-async function rootLegacyPage(path: string) {
-  const recipe = await getRecipeByPublicPath(path)
-  if (recipe) return <RecipeDocument recipe={recipe} />
-  const page = await getContentPageByPublicPath(path)
-  if (page) {
-    const html = (page.content_html ?? '')
-      .replace(/<script[\s\S]*?<\/script>/gi, '')
-      .replace(/<style[\s\S]*?<\/style>/gi, '')
-      .replace(/\son\w+\s*=\s*(['"]).*?\1/gi, '')
-      .replace(/javascript:/gi, '')
-    return <main><article><h1>{page.title}</h1>{page.excerpt && <p>{page.excerpt}</p>}{html && <div dangerouslySetInnerHTML={{ __html: html }} />}</article></main>
-  }
-  const normalized = path.replace(/\/+$/, '') || '/'
-  const candidates = [path, normalized, normalized + '/']
-  const { data } = await supabase.from('content_redirects').select('target_path').in('source_path', candidates).limit(1).maybeSingle()
-  if (data?.target_path) permanentRedirect(data.target_path)
-  return null
-}
-
 export async function generateStaticParams() {
   return SUPPORTED_LANGUAGES.map((lang) => ({ lang }))
 }
@@ -88,114 +28,58 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   return { title: text.homeTitle, description: text.homeDescription, alternates: allLanguageAlternates(`/${lang}`, (l) => `/${l}`) }
 }
 
+const PHOTOS = {
+  hero: 'https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=1800&q=88',
+  spices: 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=1200&q=88',
+  entradas: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1200&q=88',
+  panes: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1200&q=88',
+  fuertes: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=88',
+  postres: 'https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=1200&q=88',
+  salsas: 'https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=1200&q=88',
+  bebidas: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=1200&q=88',
+  sopas: 'https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1200&q=88',
+  ciencia: 'https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=1200&q=88',
+  compra: 'https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1200&q=88',
+  tecnicas: 'https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1200&q=88',
+  destacado: 'https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=1600&q=88',
+}
+const categories = [
+  ['Entradas y picadas','Aperitivos, bocados, tablas, dips y platos para compartir.','entradas',PHOTOS.entradas],
+  ['Panadería y masas','Panes, pizzas, empanadas, tartas y masas caseras.','panes',PHOTOS.panes],
+  ['Platos fuertes','Comidas completas para almuerzos, cenas y reuniones.','fuertes',PHOTOS.fuertes],
+  ['Postres y dulces','Tortas, cremas, galletas, rellenos y dulces caseros.','postres',PHOTOS.postres],
+  ['Salsas y fondos','Caldos, fondos, reducciones y bases llenas de sabor.','salsas',PHOTOS.salsas],
+  ['Bebidas','Jugos, refrescos, infusiones, batidos y bebidas caseras.','bebidas',PHOTOS.bebidas],
+  ['Sopas y cremas','Platos de cuchara, cremas suaves y sopas reconfortantes.','sopas',PHOTOS.sopas],
+] as const
+const school = [
+  ['Escuela','Ciencia gastronómica','Sabor, textura, calor, emulsiones, fermentación y técnica explicada.',PHOTOS.ciencia,'/es/aprender-tecnicas/'],
+  ['Consejos','Guía de compra','Ingredientes frescos, utensilios útiles y básicos de despensa.',PHOTOS.compra,'/es/guias/'],
+  ['Técnicas','Técnicas de cocina','Cortes, cocciones, organización y métodos básicos para cocinar mejor.',PHOTOS.tecnicas,'/es/aprender-tecnicas/'],
+] as const
+const guides = [
+  ['Técnicas básicas','Cortes, cocciones, salteados, horneados y métodos que se repiten en muchas recetas.','/es/aprender-tecnicas/'],
+  ['Ingredientes y utensilios','Cómo elegir productos frescos, básicos de despensa y herramientas útiles.','/es/guias/'],
+  ['Bases de sabor','Fondos, caldos, salsas y preparaciones que elevan platos sencillos.','/es/recetas/'],
+  ['Masas y panadería','Harinas, fermentación, amasado, reposos y horneado para recetas caseras.','/es/recetas/'],
+] as const
 export default async function LanguageHome({ params }: { params: Promise<{ lang: string }> }) {
   const { lang: rawLang } = await params
   const lang = parseLang(rawLang)
-  if (!lang) {
-    const legacy = await rootLegacyPage(`/${rawLang}`)
-    if (legacy) return legacy
-    notFound()
-  }
-  const text = UI_TEXT[lang]
-  const { data: recipes, error } = await supabase
-    .from('recipes')
-    .select(CARD_FIELDS)
-    .eq('language', lang)
-    .eq('published', true)
-    .order('published_at', { ascending: false })
-    .limit(40)
-
-  if (error) throw new Error(`No se pudieron cargar las recetas: ${error.message}`)
-
-  const [latest, ...grid] = recipes ?? []
-  const secondary = grid.slice(0, 6)
-  const remaining = grid.slice(6, 12)
-
+  if (!lang) { const legacy = await rootLegacyPage('/' + rawLang); if (legacy) return legacy; notFound() }
   return (
     <>
       <SiteHeader lang={lang} />
-      <main className="home">
-        <section className="hero">
-          <div className="hero__layout">
-            <div className="hero__copy">
-              <p className="eyebrow">Manual de Cocina</p>
-              <h1>Recetas para cocinar<br /><em>bien, todos los días.</em></h1>
-              <p className="hero__intro">Recetas claras, ideas para descubrir y herramientas para cocinar sin complicaciones.</p>
-              <form className="hero-search" action={`/${lang}/recetas/`} method="get">
-                <label htmlFor="home-search">¿Qué quieres cocinar?</label>
-                <div>
-                  <input id="home-search" name="q" type="search" placeholder="Prueba «pollo rápido» o «pasta»" />
-                  <button type="submit">Buscar</button>
-                </div>
-              </form>
-            </div>
-            {latest?.image_url && (
-              <div className="hero__image">
-                <Image src={latest.image_url} alt={latest.title} fill priority sizes="(max-width: 900px) 100vw, 43vw" />
-                <span>{latest.category ?? 'Receta destacada'}</span>
-              </div>
-            )}
-          </div>
-        </section>
-
-        <section id="categorias" className="home-section category-section" aria-labelledby="categories-title">
-          <div className="section-heading">
-            <div><p className="eyebrow">Explora</p><h2 id="categories-title">¿Qué te apetece cocinar?</h2></div>
-            <a href={`/${lang}/recetas/`}>Ver todas las recetas</a>
-          </div>
-          <div className="category-grid">
-            {CATEGORIES.map(([label, slug], index) => {
-              const categoryRecipe = (recipes ?? []).find((recipe) => {
-                const value = (recipe.category ?? '').toLowerCase()
-                return value === label.toLowerCase() || value.includes(label.split(' ')[0].toLowerCase())
-              })
-              const imageUrl = categoryRecipe?.image_url ?? CATEGORY_IMAGES[slug]
-              return (
-                <a key={slug} href={`/${lang}/recetas/?categoria=${slug}`} className={`category-link category-link--${index + 1}`}>
-                  <Image src={imageUrl} alt="" fill sizes="(max-width: 700px) 50vw, (max-width: 1000px) 33vw, 20vw" />
-                  <span className="category-link__veil" aria-hidden="true" />
-                  <strong>{label}</strong>
-                  <span className="category-link__arrow" aria-hidden="true">↗</span>
-                </a>
-              )
-            })}
-          </div>
-        </section>
-
-        {latest && (
-          <section className="home-section latest-section" aria-labelledby="latest-title">
-            <div className="section-heading">
-              <div><p className="eyebrow">Recién publicado</p><h2 id="latest-title">Para cocinar hoy</h2></div>
-              <a href={`/${lang}/recetas/`}>Ver recetas</a>
-            </div>
-            <div className="featured-recipe">
-              <RecipeCard recipe={latest} priority featured />
-            </div>
-            {secondary.length > 0 && <div className="recipe-grid">{secondary.map((recipe, index) => <RecipeCard key={recipe.id} recipe={recipe} priority={index < 2} />)}</div>}
-            {remaining.length > 0 && (
-              <div className="home-secondary-grid">
-                {remaining.map((recipe) => <RecipeCard key={recipe.id} recipe={recipe} />)}
-              </div>
-            )}
-          </section>
-        )}
-
-        <section id="colecciones" className="home-section editorial-band">
-          <div><p className="eyebrow">Más que recetas</p><h2>Un manual para descubrir, aprender y cocinar.</h2></div>
-          <div className="editorial-band__content">
-            <p>Recetas claras, ingredientes, categorías y herramientas para pasar de la idea al plato.</p>
-            <div className="editorial-links">
-              <a href={`/${lang}/recetas/`}>Explorar recetas <span>→</span></a>
-              <a href={`/${lang}/ingredientes/`}>Explorar ingredientes <span>→</span></a>
-            </div>
-          </div>
-        </section>
-
-        <section id="guias" className="home-section closing-cta">
-          <p className="eyebrow">Manual de Cocina</p>
-          <h2>Busca una receta.<br />Abre el manual.<br /><em>Empieza a cocinar.</em></h2>
-          <a className="button button--dark" href={`/${lang}/recetas/`}>Explorar recetas</a>
-        </section>
+      <main className="reference-home">
+        <section className="reference-hero"><div className="reference-hero__photo"><img src={PHOTOS.hero} alt="Pasta recién preparada" /></div><div className="reference-hero__panel"><span className="reference-pill">RECETAS · TÉCNICAS · ESCUELA</span><h1>Manual de<br />Cocina</h1><p>Recetas caseras, técnicas culinarias y guías prácticas para cocinar con más confianza, mejor sabor y menos complicaciones.</p><div className="reference-actions"><a className="reference-button reference-button--gold" href={'/' + lang + '/recetas/'}>EXPLORAR RECETAS</a><a className="reference-button" href={'/' + lang + '/aprender-tecnicas/'}>APRENDER TÉCNICAS</a></div></div></section>
+        <section className="reference-intro"><div className="reference-intro__image"><img src={PHOTOS.spices} alt="Especias e ingredientes" /></div><div className="reference-card"><span className="reference-kicker">RECETAS DE COCINA</span><h2>Cocina mejor con recetas claras, técnicas útiles y una guía pensada para el día a día.</h2><p>Manual de Cocina reúne recetas de cocina organizadas por categoría, explicaciones prácticas y consejos para que cada preparación tenga sentido desde el primer paso. Aquí encontrarás ideas para cocinar en casa, mejorar tus platos, aprender técnicas culinarias y elegir mejor los ingredientes.</p><p>La web está pensada para quienes buscan recetas fáciles, platos completos, postres caseros, masas, bebidas, sopas, cremas, salsas y fondos. También incluye escuela de cocina, ciencia gastronómica, guías de compra y técnicas para entender mejor la cocción, la textura, el sabor y la organización.</p></div></section>
+        <section className="reference-search"><span className="reference-kicker">BUSCAR EN MANUAL DE COCINA</span><h2>Encuentra recetas,<br />técnicas, postres, masas,<br />bebidas y más.</h2><form action={'/' + lang + '/recetas/'} method="get"><input name="q" type="search" placeholder="Buscar: postres, masas, bebidas, salsas, técnicas..." /><button>Buscar</button></form></section>
+        <section className="reference-section"><span className="reference-kicker">CATEGORÍA PADRE</span><h2>Recetas</h2><p className="reference-lead">Recetas de cocina para preparar entradas, panes, platos fuertes, postres, salsas, bebidas, sopas y cremas.</p><div className="reference-card-grid">{categories.map(([label,desc,slug,image]) => <a className="photo-card" key={slug} href={'/' + lang + '/recetas/?categoria=' + slug}><img src={image} alt="" /><span className="photo-card__shade" /><span className="photo-card__tag">RECETAS</span><h3>{label}</h3><p>{desc}</p></a>)}</div></section>
+        <section className="reference-section reference-school"><span className="reference-kicker">CATEGORÍA PADRE</span><h2>Tips y Escuela</h2><p className="reference-lead">Aprende técnicas de cocina, compra mejor y entiende el porqué de cada preparación.</p><div className="reference-card-grid">{school.map(([tag,title,desc,image,href]) => <a className="photo-card" key={title} href={href}><img src={image} alt="" /><span className="photo-card__shade" /><span className="photo-card__tag">{tag.toUpperCase()}</span><h3>{title}</h3><p>{desc}</p></a>)}</div></section>
+        <section className="reference-section"><span className="reference-kicker">DESTACADOS</span><h2>Ideas para cocinar hoy</h2><p className="reference-lead">Enlaces pensados para llevarte directamente a las categorías principales de la web.</p><a className="featured-reference-card" href={'/' + lang + '/recetas/?categoria=platos-principales'}><img src={PHOTOS.destacado} alt="Platos fuertes" /><div><h3>Platos fuertes para comidas completas</h3><p>Recetas de cocina para almuerzos, cenas y preparaciones principales con ingredientes claros, buena técnica y sabor casero.</p><span>VER PLATOS FUERTES ↗</span></div></a></section>
+        <section className="reference-section reference-guides"><span className="reference-kicker">EMPIEZA POR AQUÍ</span><h2>Guías esenciales para cocinar mejor</h2><div className="guide-grid">{guides.map(([title,desc,href]) => <a key={title} href={href}><h3>{title}</h3><p>{desc}</p><span>↗</span></a>)}</div></section>
+        <section className="reference-section reference-faq"><span className="reference-kicker">PREGUNTAS FRECUENTES</span><h2>Dudas comunes sobre recetas de cocina</h2><details><summary>¿Qué tipo de recetas puedo encontrar?</summary><p>Entradas, masas, platos fuertes, postres, salsas, bebidas, sopas y cremas organizadas por categoría.</p></details><details><summary>¿Manual de Cocina sirve para principiantes?</summary><p>Sí. La web está pensada para aprender con recetas fáciles, explicaciones claras y técnicas paso a paso.</p></details><details><summary>¿Qué aporta Tips y Escuela?</summary><p>Ciencia gastronómica, guías de compra y técnicas culinarias para cocinar con más criterio.</p></details><details><summary>¿Dónde aprendo técnicas de cocina?</summary><p>En Técnicas de cocina encontrarás cortes, cocciones, organización, utensilios y métodos básicos.</p></details></section>
+        <section className="reference-cta"><span className="reference-kicker">MANUAL DE COCINA</span><h2>Cocina con más confianza.</h2><p>Explora recetas, aprende técnicas culinarias y usa Manual de Cocina como una guía práctica para preparar mejores platos en casa.</p><a className="reference-button reference-button--gold" href={'/' + lang + '/recetas/'}>VER RECETAS</a></section>
       </main>
     </>
   )

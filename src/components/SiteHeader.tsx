@@ -1,47 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-
-const links = [
-  ['Recetas', '/recetas/'],
-  ['Categorías', '/categorias/'],
-  ['Colecciones', '/colecciones/'],
-  ['Guías', '/guias/'],
-]
-
+const links = [['Inicio','/'],['Quiénes somos','/quienes-somos/'],['Recetas','/recetas/'],['Aprender Técnicas','/aprender-tecnicas/'],['Contáctanos','/contacto/']]
 export function SiteHeader({ lang }: { lang: string }) {
-  return (
-    <header className="site-header">
-      <div className="site-header__inner">
-        <Link className="brand" href={'/' + lang} aria-label="Manual de Cocina, inicio">
-          <Image
-            className="brand__logo"
-            src="/brand/manual-de-cocina-horizontal.svg"
-            alt="Manual de Cocina"
-            width={260}
-            height={70}
-            priority
-          />
-        </Link>
-
-        <nav className="site-nav" aria-label="Principal">
-          {links.map(([label, href]) => <Link key={href} href={'/' + lang + href}>{label}</Link>)}
-        </nav>
-
-        <Link className="header-search" href={'/' + lang + '/recetas/'} aria-label="Buscar recetas">
-          <span aria-hidden="true">⌕</span>
-          <span>Buscar</span>
-        </Link>
-
-        <details className="mobile-menu">
-          <summary>Menú</summary>
-          <nav aria-label="Menú móvil">
-            {links.map(([label, href]) => <Link key={href} href={'/' + lang + href}>{label}</Link>)}
-            <Link href={'/' + lang + '/ingredientes/'}>Ingredientes</Link>
-            <Link href={'/' + lang + '/quienes-somos/'}>Quiénes somos</Link>
-            <Link href={'/' + lang + '/contacto/'}>Contacto</Link>
-          </nav>
-        </details>
-      </div>
-    </header>
-  )
+  return <header className="reference-header"><div className="reference-header__inner"><Link className="reference-header__brand" href={'/' + lang} aria-label="Manual de Cocina, inicio"><Image src="/brand/manual-master.svg" alt="Manual de Cocina" width={105} height={105} priority /></Link><nav className="reference-header__nav" aria-label="Principal">{links.map(([label,href])=><Link key={href} href={'/' + lang + href}>{label}</Link>)}</nav><Link className="reference-header__search" href={'/' + lang + '/recetas/'} aria-label="Buscar recetas">⌕</Link><details className="reference-header__menu"><summary>Menú</summary><nav aria-label="Menú móvil">{links.map(([label,href])=><Link key={href} href={'/' + lang + href}>{label}</Link>)}</nav></details></div></header>
 }
