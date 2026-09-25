@@ -49,10 +49,10 @@ leer borradores ni escribir (lo impide la RLS, no solo la interfaz).
 | Qué | Resultado | Dónde |
 |---|---|---|
 | Reglas de BD y permisos por rol | **Ejecutado: VERIFICACION_OK, 32/32** contra Supabase real | `supabase/tests/verificacion.sql` |
-| Linter de seguridad de Supabase | **Ejecutado: 0 alertas** | dashboard → Advisors |
+| Linter de seguridad de Supabase | **Actual: 1 warning de seguridad** (Leaked Password Protection); performance 0 | dashboard → Advisors |
 | Lógica SEO (canonical, hreflang, x-default, robots, sitemap) | **Ejecutado: OK** con URLs públicas históricas | `npm run test:logic` |
 | Sintaxis TypeScript de `src/` | **Ejecutado: sin errores de sintaxis** | — |
-| `npm install` / `npm run typecheck` / `npm run build` | **Pendiente de ejecutar en Hostinger/CI**: no hay dependencias instaladas en este entorno | `docs/PRODUCTION-GATE-20260924.md` |
+| `npm install` / `npm run typecheck` / `npm run build` | **Pendiente de ejecución real en Hostinger/CI**: este entorno no dispone de `node_modules` ni acceso de red | `docs/PRODUCTION-GATE-20260924.md` |
 | Pruebas funcionales HTTP (middleware, login, CRUD en navegador, `<html lang>`, caché) | **NO ejecutado**: requiere la app corriendo | lista abajo |
 
 ## Cómo probar
@@ -102,7 +102,7 @@ src/lib/seo.ts                    canonical / hreflang / x-default
 src/app/admin/actions.ts          Server Actions (solo RPC; revalidateTag tras escribir)
 src/app/sitemap.ts, robots.ts
 supabase/schema.sql               baseline v0.3 válido; producción se reproduce con `supabase/migrations/`
-supabase/migrations/              historial de las 6 migraciones aplicadas
+supabase/migrations/              historial de migraciones aplicadas
 supabase/tests/verificacion.sql   32 comprobaciones de BD
 supabase/proposals/               borradores NO aplicados (importación histórica)
 docs/cache.md                     invalidación de caché por evento
