@@ -2,7 +2,9 @@
 function query(kind) {
   const source = kind === 'content_pages'
     ? (globalThis.__CONTENT_PAGES__ ?? [])
-    : (globalThis.__ROWS__ ?? [])
+    : kind === 'ingredients'
+      ? (globalThis.__INGREDIENTS__ ?? [])
+      : (globalThis.__ROWS__ ?? [])
   let from = 0, to = Infinity
   const q = {
     select() { return q },
