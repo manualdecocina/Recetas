@@ -100,7 +100,7 @@ export function RecipeDocument({ recipe, relatedRecipes = [] }: { recipe: Recipe
         <ol className="recipe-steps">
           {recipe.steps.map((step, i) => (
             <li key={i}>
-              <h3>{step.title || `Paso {i + 1}`}</h3>
+              <h3>{step.title || `Paso ${i + 1}`}</h3>
               <p>{step.content}</p>
             </li>
           ))}
