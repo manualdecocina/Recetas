@@ -45,7 +45,6 @@ Close entity and URL first. Then create a staged Recipe row, rebuild content, in
 
 Historical bodies are reference material only; the new editorial content is rebuilt from scratch.
 
-
 ## Control de consolidación — 2026-09-25
 
 ### Lote E007–E015
@@ -68,9 +67,13 @@ No se crea una segunda entidad por ausencia de una traducción histórica en la 
 
 Completar primero E007 Pandebono y E008 Pan Matzá como entidades Recipe únicas; después pasar a E009 y E012. E011 Horchata permanece fuera del lote hasta cerrar su identidad de preparación.
 
+## Cierre operativo — Bloques 38–39 — 2026-09-25
 
-## Cierre operativo — Bloque 38 — 2026-09-25
+Bloque 38: 20 entidades procesadas; las Recipes equivalentes existen y las 19 que permanecen staged tienen imagen, ingredientes, pasos y metadata estructurada completa. No se publicaron ni se retiraron ContentPages porque los gates superiores siguen abiertos.
 
-Se procesó un bloque de 20 entidades de la cola. Las Recipes equivalentes existen y las 19 que permanecen staged tienen imagen, ingredientes, pasos y metadata estructurada completa. No se publicaron ni se retiraron ContentPages porque los gates superiores de URL Master, canonical/hreflang, schema, sitemap y despliegue siguen abiertos. Pollo Alfredo ya tiene Recipe publicada y su ContentPage equivalente permanece retirada de publicación.
+Bloque 39: se procesaron las 6 entidades restantes. Las 6 Recipes están staged con imagen, ingredientes, pasos y metadata completa; las 6 ContentPages equivalentes siguen publicadas. No se publicó ni retiró contenido.
 
-QA: `docs/QA-BLOQUE-CONTENTPAGE-RECIPE-20260925-38.md`.
+QA bloque 38: `docs/QA-BLOQUE-CONTENTPAGE-RECIPE-20260925-38.md`.
+QA bloque 39: `docs/QA-BLOQUE-CONTENTPAGE-RECIPE-20260925-39.md`.
+
+Estado de esta fase: STAGED / CONSOLIDACIÓN PENDIENTE.
