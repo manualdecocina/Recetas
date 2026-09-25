@@ -133,7 +133,13 @@ export default async function LanguageHome({ params }: { params: { lang: string 
 
         <section id="colecciones" className="home-section editorial-band">
           <div><p className="eyebrow">Más que recetas</p><h2>Un manual para descubrir, aprender y cocinar.</h2></div>
-          <p>Próximamente: colecciones, guías, técnicas e ideas para aprovechar lo que ya tienes en casa.</p>
+          <div className="editorial-band__content">
+            <p>Recetas claras, ingredientes, categorías y herramientas para pasar de la idea al plato.</p>
+            <div className="editorial-links">
+              <a href={`/${lang}/recetas/`}>Explorar recetas <span>→</span></a>
+              <a href={`/${lang}/ingredientes/`}>Explorar ingredientes <span>→</span></a>
+            </div>
+          </div>
         </section>
 
         <section id="guias" className="home-section closing-cta">
