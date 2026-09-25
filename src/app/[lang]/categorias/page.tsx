@@ -53,3 +53,6 @@ export default async function CategoriesPage({ params }: { params: { lang: strin
     </>
   )
 }
+
+// Ingredient discovery is backed by the canonical ingredient model in Supabase.
+// Population/alias normalization is intentionally a separate migration phase.
