@@ -633,3 +633,22 @@ button, input { font: inherit; }
 @media print {
   .share-recipe-button { display:none !important; }
 }
+
+.recipe-notes {
+  margin-top: 65px;
+  padding: 30px;
+  background: var(--sand);
+  border-left: 3px solid var(--olive);
+}
+.recipe-notes h2 { margin-top: 0; }
+.recipe-notes > div { max-width: 760px; color: var(--muted); }
+.related-recipes {
+  margin-top: 90px;
+  padding-top: 50px;
+  border-top: 1px solid var(--stone);
+}
+.related-recipes h2 { margin-top: 0; margin-bottom: 30px; }
+@media print {
+  .related-recipes { display:none !important; }
+  .recipe-notes { background:#fff; border-left:2px solid #000; }
+}
