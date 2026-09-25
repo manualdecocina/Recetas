@@ -15,10 +15,10 @@ export function SiteHeader({ lang }: { lang: string }) {
         <Link className="brand" href={'/' + lang} aria-label="Manual de Cocina, inicio">
           <Image
             className="brand__logo"
-            src="/brand/manual-de-cocina-horizontal.svg"
+            src="https://manualdecocina.com/wp-content/uploads/2026/06/Logo-Manual-de-Cocina.png"
             alt="Manual de Cocina"
-            width={260}
-            height={48}
+            width={360}
+            height={120}
             priority
           />
         </Link>
