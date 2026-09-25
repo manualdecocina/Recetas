@@ -84,7 +84,7 @@ export function RecipeDocument({ recipe }: { recipe: Recipe }) {
         <div className="recipe-document__jump">
           <a href="#ingredientes">Ingredientes</a>
           <a href="#preparacion">Preparación</a>
-          {recipe.steps.length > 0 && <button type="button" onClick={() => undefined}>Empezar a cocinar</button>}
+          {recipe.steps.length > 0 && <a href="#modo-cocina">Empezar a cocinar</a>}
         </div>
         <h2 id="ingredientes">{text.ingredients}</h2>
         <ul className="recipe-ingredients">
@@ -101,7 +101,7 @@ export function RecipeDocument({ recipe }: { recipe: Recipe }) {
             </li>
           ))}
         </ol>
-        <RecipeCookingMode title={recipe.title} steps={recipe.steps} />
+        <div id="modo-cocina"><RecipeCookingMode title={recipe.title} steps={recipe.steps} /></div>
       </article>
     </main>
   )
