@@ -114,3 +114,10 @@ QA: docs/QA-BLOQUE-URLMASTER-20260925-40.md.
 Se procesaron las filas 21–40: 20 URLs. Todas quedan KEEP / REBUILD. Esto cierra E010 en sus dos URLs históricas y las filas E011–E015 correspondientes, además de E101–E106, E015 ES y las URLs españolas adicionales hasta /receta-helado-casero/. No se crean redirects ni se publica contenido.
 
 QA: docs/QA-BLOQUE-URLMASTER-20260925-41.md.
+
+
+## Cierre operativo — Bloque 42 — 2026-09-25
+
+Se cerraron las 11 filas restantes de la primera tanda P2. Diez URLs quedan KEEP / REBUILD y /receta-ensalada-caprese/ permanece REVIEW / MODEL Recipe. No se crean redirects ni se publica contenido.
+
+QA: docs/QA-BLOQUE-URLMASTER-20260925-42.md.
