@@ -26,8 +26,8 @@ const CATEGORIES = [
 ] as const
 
 interface Props {
-  params: { lang: string }
-  searchParams: {
+  params: Promise<{ lang: string }>
+  searchParams: Promise<{
     page?: string
     q?: string
     categoria?: string
@@ -36,7 +36,7 @@ interface Props {
     ingrediente?: string
     tiempo?: string
     ordenar?: string
-  }
+  }>
 }
 
 function parseLang(value: string): RecipeLanguage | null {
@@ -61,10 +61,12 @@ function buildUrl(lang: string, params: Record<string, string | undefined>) {
 }
 
 export async function generateMetadata({ params, searchParams }: Props): Promise<Metadata> {
-  const lang = parseLang(params.lang)
+  const { lang: rawLang } = await params
+  const query = await searchParams
+  const lang = parseLang(rawLang)
   if (!lang) return {}
   const text = UI_TEXT[lang]
-  const page = parsePage(searchParams.page)
+  const page = parsePage(query.page)
 
   return {
     title: page === 1 ? text.recipesTitle : `${text.recipesTitle} — ${text.page} ${page}`,
@@ -76,18 +78,20 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
 }
 
 export default async function RecipesListPage({ params, searchParams }: Props) {
-  const lang = parseLang(params.lang)
+  const { lang: rawLang } = await params
+  const query = await searchParams
+  const lang = parseLang(rawLang)
   if (!lang) notFound()
 
   const text = UI_TEXT[lang]
-  const page = parsePage(searchParams.page)
-  const q = clean(searchParams.q)
-  const categoria = clean(searchParams.categoria)
-  const cocina = clean(searchParams.cocina)
-  const dificultad = clean(searchParams.dificultad)
-  const ingrediente = clean(searchParams.ingrediente)
-  const tiempo = clean(searchParams.tiempo)
-  const ordenar = searchParams.ordenar === 'antiguas' ? 'antiguas' : 'recientes'
+  const page = parsePage(query.page)
+  const q = clean(query.q)
+  const categoria = clean(query.categoria)
+  const cocina = clean(query.cocina)
+  const dificultad = clean(query.dificultad)
+  const ingrediente = clean(query.ingrediente)
+  const tiempo = clean(query.tiempo)
+  const ordenar = query.ordenar === 'antiguas' ? 'antiguas' : 'recientes'
   const from = (page - 1) * PAGE_SIZE
 
   const [{ data: cuisineOptions }, { data: ingredientOptions }] = await Promise.all([
