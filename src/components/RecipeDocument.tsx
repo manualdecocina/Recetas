@@ -42,11 +42,13 @@ export function RecipeDocument({ recipe, relatedRecipes = [] }: { recipe: Recipe
       name: s.title,
       text: s.content,
     })),
-    prepTime: recipe.prep_time_minutes != null ? `PT${recipe.prep_time_minutes}M` : undefined,
-    cookTime: recipe.cook_time_minutes != null ? `PT${recipe.cook_time_minutes}M` : undefined,
+    prepTime: recipe.prep_time_minutes != null && recipe.cook_time_minutes != null ? `PT${recipe.prep_time_minutes}M` : undefined,
+    cookTime: recipe.prep_time_minutes != null && recipe.cook_time_minutes != null ? `PT${recipe.cook_time_minutes}M` : undefined,
     totalTime: totalMinutes != null && totalMinutes > 0 ? `PT${totalMinutes}M` : undefined,
     recipeYield: recipe.servings ? String(recipe.servings) : undefined,
     recipeCategory: recipe.category ?? undefined,
+    recipeCuisine: recipe.cuisine ?? undefined,
+    keywords: recipe.keywords?.length ? recipe.keywords.join(', ') : undefined,
   }
 
   return (
