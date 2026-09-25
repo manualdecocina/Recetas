@@ -17,7 +17,7 @@
 - espacios publicitarios todavía no activos
 
 ## Bloqueos antes de publicar
-1. Ejecutar `npm install`, `npm run typecheck`, `npm run test:logic` y `npm run build` en un entorno con red/dependencias. En esta sesión el entorno de ejecución no pudo acceder a GitHub, por lo que no se declara un build verificado.
+1. Ejecutar `npm install`, `npm run typecheck`, `npm run test:logic` y `npm run build` en un entorno con red/dependencias. En esta sesión no se declara un build verificado.
 2. Generar y comprometer `package-lock.json`; el workflow de calidad usa actualmente `npm install` porque el repositorio no contiene lockfile.
 3. Resolver actualización de Next.js: el proyecto está en Next 14.2.x, y la documentación oficial actual marca 14 como no soportado; antes de producción debe planificarse una actualización a una rama soportada y ejecutar su migración/QA.
 4. Configurar variables de producción reales: `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` y hosts de imágenes.
