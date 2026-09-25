@@ -6,6 +6,8 @@ export interface RecipeIngredient {
   unit?: string
   preparation?: string
   note?: string
+  canonicalIngredientSlug?: string
+  canonicalIngredientName?: string
 }
 
 export interface RecipeStep {
