@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { getSiteUrl, isIndexingAllowed } from '@/lib/site'
 import { DEFAULT_LANGUAGE, SUPPORTED_LANGUAGES } from '@/types/recipe'
-import { SiteFooter } from '@/components/SiteFooter'
 
 // Layout RAÍZ del sitio público (patrón i18n oficial de Next.js App Router).
 // Cada idioma produce su propio <html lang>: /es → lang="es", /de → lang="de", etc.
@@ -38,7 +37,7 @@ export default async function LanguageRootLayout({
 
   return (
     <html lang={lang}>
-      <body>{children}<SiteFooter lang={lang} /></body>
+      <body>{children}</body>
     </html>
   )
 }
