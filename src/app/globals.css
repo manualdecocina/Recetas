@@ -1731,3 +1731,9 @@ body{background:var(--mc-paper);color:var(--mc-ink);font-family:var(--mc-sans)}
  .category-directory__item{grid-template-columns:38px 82px minmax(0,1fr) auto;gap:12px;min-height:112px}
  .category-directory__image{width:82px;height:72px}
 }
+
+
+/* Exact supplied logo: preserve its square master proportions in the header */
+.mc-brand{width:78px;flex:0 0 78px}
+.mc-brand img{width:78px;height:75px;object-fit:contain}
+@media(max-width:700px){.mc-brand{width:68px;flex:0 0 68px}.mc-brand img{width:68px;height:65px}}
