@@ -26,7 +26,7 @@ export async function signInAction(_prev: FormState, formData: FormData): Promis
     return { ok: false, fieldErrors: parsed.error.flatten().fieldErrors }
   }
 
-  const supabase = createSupabaseServerClient()
+  const supabase = await createSupabaseServerClient()
   const { error } = await supabase.auth.signInWithPassword(parsed.data)
   if (error) {
     // Mensaje genérico a propósito: no revelar si el email existe.
@@ -79,7 +79,7 @@ function dbErrorMessage(error: PostgrestError): string {
 // se regeneran en la siguiente visita. En una Server Action también limpia el Router
 // Cache del navegador del administrador.
 function revalidatePublicRecipes() {
-  revalidateTag(RECIPES_CACHE_TAG)
+  revalidateTag(RECIPES_CACHE_TAG, 'max')
 }
 
 const NOT_ADMIN: FormState = { ok: false, message: 'Tu usuario no tiene permisos de administrador.' }
