@@ -78,7 +78,7 @@ async function rootLegacyPage(path: string) {
     )
   }
 
-  const normalized = path.replace(/\\/+$/, '') || '/'
+  const normalized = path.replace(/\/+$/, '') || '/'
   const candidates = [path, normalized, normalized + '/']
   const { data } = await supabase
     .from('content_redirects')
