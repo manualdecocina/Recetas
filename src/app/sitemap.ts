@@ -25,7 +25,6 @@ interface ContentRow {
 }
 
 interface IngredientRow {
-  language: string
   slug: string
   updated_at: string
 }
@@ -82,6 +81,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   for (const l of SUPPORTED_LANGUAGES) {
     entries.push({ url: `${site}/${l}`, alternates: staticAlternates((x) => `/${x}`) })
     entries.push({ url: `${site}/${l}/recetas`, alternates: staticAlternates((x) => `/${x}/recetas`) })
+  }
+
+  const { data: ingredients, error: ingredientError } = await supabase
+    .from('ingredients')
+    .select('slug, updated_at')
+    .eq('status', 'canonical')
+    .eq('indexable', true)
+    .order('name', { ascending: true })
+  if (ingredientError) throw new Error(`Sitemap ingredients: ${ingredientError.message}`)
+
+  entries.push({ url: `${site}/es/ingredientes`, lastModified: new Date().toISOString() })
+  for (const ingredient of (ingredients ?? []) as IngredientRow[]) {
+    entries.push({ url: `${site}/es/ingredientes/${ingredient.slug}`, lastModified: ingredient.updated_at })
   }
 
   for (const row of rows) {
