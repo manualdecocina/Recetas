@@ -602,3 +602,21 @@ button, input { font: inherit; }
   .recipe-document h2 { margin-top: 52px; }
   .recipe-steps { padding-left: 28px; }
 }
+
+.print-recipe-button { border: 1px solid var(--stone); background: var(--white); color: var(--ink); padding: 10px 14px; cursor: pointer; }
+@media print {
+  @page { size: A4; margin: 16mm 15mm 18mm; }
+  body { background: #fff !important; color: #000 !important; }
+  .site-header, .favorite-star, .recipe-document__jump, .cooking-mode, .print-recipe-button,
+  nav, footer, button { display: none !important; }
+  .recipe-document { width: 100%; max-width: none; margin: 0; padding: 0; }
+  .recipe-document__heading { display: block; padding-top: 8mm; }
+  .recipe-document__heading::after { content: "MANUAL DE COCINA"; display: block; position: fixed; top: 0; right: 0; font: 700 9pt Arial, sans-serif; letter-spacing: .08em; }
+  .recipe-document__heading h1 { font-size: 30pt; color: #000; }
+  .recipe-document > img { max-height: 90mm; margin: 8mm 0 10mm; object-fit: cover; }
+  .recipe-document__facts { border-color: #999; margin-bottom: 8mm; }
+  .recipe-document h2 { font-size: 21pt; margin-top: 10mm; break-after: avoid; color: #000; }
+  .recipe-ingredients li, .recipe-steps li { break-inside: avoid; color: #000; }
+  .recipe-steps li { padding-bottom: 7mm; }
+  .recipe-document a { color: #000; text-decoration: none; }
+}
