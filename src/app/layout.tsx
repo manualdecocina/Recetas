@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import './editorial.css'
-import './home-discovery.css'
 import { editorialSerif, uiSans } from './fonts'
 import { getSiteUrl, isIndexingAllowed } from '@/lib/site'
 
