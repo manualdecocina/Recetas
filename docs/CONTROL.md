@@ -286,3 +286,37 @@ QA: docs/QA-BLOQUE-REVIEW-20260925-46.md.
 Se dejó atrás la revisión incremental de candidatos ContentPage→Recipe. Auditoría integral: 48 ContentPages publicadas tienen una Recipe ES homónima staged, y las 48 Recipes están completas en los campos básicos (imagen, contenido, ingredientes, pasos y metadata). No se publican ni retiran aún por el gate de routing/SEO/despliegue. El siguiente punto de trabajo es Publication Gate: validar contrato de URL pública, canonical/hreflang, schema, sitemap y verificación desplegada, y después ejecutar publicaciones/retiros por lotes.
 
 QA: docs/QA-BLOQUE-CONTENTPAGE-RECIPE-20260925-50.md.
+
+
+## Actualización de control — 2026-09-25 — CIERRE DE RECUPERACIÓN / PUBLICATION GATE
+
+La recuperación de metadata staged queda cerrada.
+
+### Inventario vigente
+- Recipes: **229**
+- Published: **134**
+- Staged: **95**
+- Staged completas operativamente: **94**
+- Staged inválida descartada: **1** (la-guia-definitiva-para-lograr-un-verde-esmeralda-perfecto)
+- ContentPages: **74**
+- Published: **69**
+- Staged: **5**
+- Redirects operativos: **1**
+
+### Correcciones posteriores cerradas
+- Se reconstruyeron de forma editorial segura las Recipes recuperables que no podían cerrarse con evidencia histórica suficiente.
+- Se completó el total de 9 Recipes donde prep+cook permitían establecerlo sin inferencia editorial.
+- Se retiraron ContentPages duplicadas de Recipes ya publicadas.
+- Se retiraron las 8 ContentPages de producto/equipamiento fuera de catálogo.
+- Se retiraron las representaciones ContentPage resueltas de Caprese y tienda.
+- El único redirect operativo restante corresponde a la entidad inválida descartada.
+
+### Gate editorial vigente
+No se autoriza publicación masiva todavía. Permanecen:
+1. QA editorial de las 20 localizaciones no-ES.
+2. Consolidación/publicación del ciclo de los 5 pares ContentPage → Recipe staged.
+3. Revisión específica de salud/nutrición.
+4. Cierre P3/P4 y validación final de media.
+5. Build/typecheck/tests y smoke HTTP en CI/Hostinger.
+
+Las decisiones cerradas no se reabren sin evidencia nueva.
