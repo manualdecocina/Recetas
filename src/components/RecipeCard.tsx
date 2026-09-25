@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import Image from 'next/image'
 import type { Recipe } from '@/types/recipe'
 import { normalizePublicPath } from '@/lib/site'
 import { FavoriteStar } from '@/components/FavoriteStar'
@@ -20,12 +19,11 @@ export function RecipeCard({
       <Link href={normalizePublicPath(recipe.public_path)} className="recipe-card__link">
         <div className="recipe-card__image">
           {recipe.image_url ? (
-            <Image
+            <img
               src={recipe.image_url}
               alt={recipe.title}
-              fill
-              sizes={featured ? '(max-width: 900px) 100vw, 65vw' : '(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw'}
-              priority={priority}
+              loading={priority ? 'eager' : 'lazy'}
+              fetchPriority={priority ? 'high' : 'auto'}
             />
           ) : (
             <span className="recipe-card__placeholder" aria-hidden="true">Manual de Cocina</span>
