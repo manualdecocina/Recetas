@@ -7,6 +7,7 @@ import { RecipeCookingMode } from '@/components/RecipeCookingMode'
 import { PrintRecipeButton } from '@/components/PrintRecipeButton'
 import { ShareRecipeButton } from '@/components/ShareRecipeButton'
 import { RelatedRecipes } from '@/components/RelatedRecipes'
+import { RecipeIngredients } from '@/components/RecipeIngredients'
 
 function cleanHtml(html: string): string {
   return html
@@ -94,11 +95,7 @@ export function RecipeDocument({ recipe, relatedRecipes = [] }: { recipe: Recipe
           {recipe.steps.length > 0 && <a href="#modo-cocina">Empezar a cocinar</a>}
         </div>
         <h2 id="ingredientes">{text.ingredients}</h2>
-        <ul className="recipe-ingredients">
-          {recipe.ingredients.map((ing, i) => (
-            <li key={i}>{[ing.amount, ing.unit, ing.name].filter(Boolean).join(' ')}</li>
-          ))}
-        </ul>
+        <RecipeIngredients recipeId={recipe.id} ingredients={recipe.ingredients} />
         <h2 id="preparacion">{text.preparation}</h2>
         <ol className="recipe-steps">
           {recipe.steps.map((step, i) => (
