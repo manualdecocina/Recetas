@@ -7,7 +7,7 @@ import { createSupabaseServerClient } from './server'
 // 2) el usuario está en la tabla admins.
 // El middleware solo filtra "sin sesión"; la autorización real se hace aquí y en la RLS.
 export async function requireAdmin() {
-  const supabase = createSupabaseServerClient()
+  const supabase = await createSupabaseServerClient()
   const {
     data: { user },
   } = await supabase.auth.getUser()
