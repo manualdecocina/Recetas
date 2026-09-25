@@ -8,14 +8,14 @@ Inventario verificado directamente en Supabase:
 - Staged: 95
 - Staged incompletas por prep/cook/servings: 7
 - Staged sin imagen: 2 (las dos ya retiradas del catálogo público mediante redirect)
-- ContentPages: 69 published / 18 staged
-- content_redirects operativos: 2
+- ContentPages: 74 total / 69 published / 5 staged
+- content_redirects operativos: 1
 
 ## Siguiente fase
 
 La fase de recuperación segura de metadata queda cerrada. No se publica ninguna Recipe incompleta.
 
-Se abre el cierre del Publication Gate técnico/editorial: revisar localizaciones históricas pendientes, REVIEW editoriales, contrato canonical/hreflang/schema/sitemap y preparación de verificación externa de build/deploy.
+Se abre el cierre del Publication Gate técnico/editorial: cerrar QA editorial de localizaciones, consolidación de los 5 pares ContentPage → Recipe, revisión de salud/nutrición, P3/P4 y preparación de verificación externa de build/deploy.
 
 Build/typecheck y smoke HTTP siguen pendientes de Hostinger/CI; no se declara producción verificada hasta ejecutarlos allí.
 
