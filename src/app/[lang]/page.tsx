@@ -65,7 +65,7 @@ async function rootLegacyPage(path: string) {
     const html = (page.content_html ?? '')
       .replace(/<script[\\s\\S]*?<\\/script>/gi, '')
       .replace(/<style[\\s\\S]*?<\\/style>/gi, '')
-      .replace(/\\son\\w+\\s*=\\s*(['"]).*?\\1/gi, '')
+      .replace(/\son\w+\s*=\s*(['"]).*?\1/gi, '')
       .replace(/javascript:/gi, '')
     return (
       <main>
