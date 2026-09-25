@@ -1,8 +1,9 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import Link from 'next/link'
 
-type Ingredient = { amount: string; unit?: string; name: string; preparation?: string; note?: string }
+type Ingredient = { amount: string; unit?: string; name: string; preparation?: string; note?: string; canonicalIngredientSlug?: string; canonicalIngredientName?: string }
 
 export function RecipeIngredients({ recipeId, ingredients }: { recipeId: string | number; ingredients: Ingredient[] }) {
   const key = `manualdecocina:ingredients:${recipeId}`
@@ -37,7 +38,7 @@ export function RecipeIngredients({ recipeId, ingredients }: { recipeId: string 
               <span className="recipe-ingredient__text">
                 {hasAmount && <span className="recipe-ingredient__amount">{ing.amount}</span>}
                 {hasUnit && <span className="recipe-ingredient__unit">{ing.unit}</span>}
-                <span className="recipe-ingredient__name">{ing.name}</span>
+                {ing.canonicalIngredientSlug ? <Link href={`/es/ingredientes/${ing.canonicalIngredientSlug}`} className="recipe-ingredient__name recipe-ingredient__name--link">{ing.name}</Link> : <span className="recipe-ingredient__name">{ing.name}</span>}
                 {hasPreparation && <span className="recipe-ingredient__preparation">, {ing.preparation}</span>}
                 {hasNote && <span className="recipe-ingredient__note"> ({ing.note})</span>}
               </span>
