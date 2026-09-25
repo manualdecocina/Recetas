@@ -95,7 +95,7 @@ export function RecipeDocument({ recipe, relatedRecipes = [] }: { recipe: Recipe
           {recipe.steps.length > 0 && <a href="#modo-cocina">Empezar a cocinar</a>}
         </div>
         <h2 id="ingredientes">{text.ingredients}</h2>
-        <RecipeIngredients recipeId={recipe.id} ingredients={recipe.ingredients} />
+        <RecipeIngredients recipeId={recipe.id} language={recipe.language} ingredients={recipe.ingredients} />
         <h2 id="preparacion">{text.preparation}</h2>
         <ol className="recipe-steps">
           {recipe.steps.map((step, i) => (
