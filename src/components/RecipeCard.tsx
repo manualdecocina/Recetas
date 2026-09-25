@@ -5,24 +5,34 @@ import { normalizePublicPath } from '@/lib/site'
 
 type CardRecipe = Pick<Recipe, 'id' | 'language' | 'slug' | 'public_path' | 'title' | 'excerpt' | 'category' | 'image_url'>
 
-export function RecipeCard({ recipe, priority = false }: { recipe: CardRecipe; priority?: boolean }) {
+export function RecipeCard({
+  recipe,
+  priority = false,
+  featured = false,
+}: {
+  recipe: CardRecipe
+  priority?: boolean
+  featured?: boolean
+}) {
   return (
-    <Link href={normalizePublicPath(recipe.public_path)}>
+    <Link href={normalizePublicPath(recipe.public_path)} className={featured ? 'recipe-card recipe-card--featured' : 'recipe-card'}>
       <article>
         {recipe.image_url && (
-          <Image
-            src={recipe.image_url}
-            alt={recipe.title}
-            width={800}
-            height={600}
-            sizes="(max-width: 768px) 100vw, 33vw"
-            style={{ width: '100%', height: 'auto' }}
-            priority={priority}
-          />
+          <div className="recipe-card__image">
+            <Image
+              src={recipe.image_url}
+              alt={recipe.title}
+              fill
+              sizes={featured ? '(max-width: 900px) 100vw, 65vw' : '(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw'}
+              priority={priority}
+            />
+          </div>
         )}
-        <h3>{recipe.title}</h3>
-        {recipe.excerpt && <p>{recipe.excerpt}</p>}
-        {recipe.category && <span>{recipe.category}</span>}
+        <div className="recipe-card__body">
+          {recipe.category && <span className="recipe-card__category">{recipe.category}</span>}
+          <h3>{recipe.title}</h3>
+          {recipe.excerpt && <p>{recipe.excerpt}</p>}
+        </div>
       </article>
     </Link>
   )
