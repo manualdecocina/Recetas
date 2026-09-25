@@ -208,3 +208,191 @@ button, input { font: inherit; }
   .editorial-band { padding-left: 22px; padding-right: 22px; }
   .closing-cta { padding: 90px 0; }
 }
+
+
+/* Recipe catalog */
+.catalog {
+  width: min(calc(100% - 40px), var(--max));
+  margin: 0 auto;
+  padding-bottom: 90px;
+}
+.catalog__hero {
+  padding: clamp(70px, 10vw, 130px) 0 70px;
+  max-width: 900px;
+}
+.catalog__hero h1 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(3.6rem, 8vw, 7rem);
+  line-height: .92;
+  letter-spacing: -.05em;
+}
+.catalog__hero h1 em { font-weight: 400; }
+.catalog__hero > p:not(.eyebrow) {
+  max-width: 560px;
+  margin: 26px 0 30px;
+  color: var(--muted);
+  font-size: 1.08rem;
+}
+.catalog-search {
+  display: flex;
+  max-width: 780px;
+  border: 1px solid var(--ink);
+  background: var(--white);
+}
+.catalog-search input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  padding: 17px 18px;
+  background: transparent;
+}
+.catalog-search button {
+  border: 0;
+  background: var(--ink);
+  color: var(--white);
+  padding: 0 25px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.catalog__toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  border-top: 1px solid var(--stone);
+  border-bottom: 1px solid var(--stone);
+  padding: 18px 0;
+  margin-bottom: 24px;
+}
+.filter-panel summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+.filter-panel form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  align-items: end;
+  padding-top: 22px;
+}
+.filter-panel fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 190px;
+}
+.filter-panel legend {
+  margin-bottom: 7px;
+  font-size: .72rem;
+  font-weight: 750;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.filter-panel select,
+.filter-panel input,
+.catalog__sort select {
+  min-height: 42px;
+  border: 1px solid var(--stone);
+  background: var(--white);
+  padding: 8px 12px;
+  color: var(--ink);
+}
+.filter-panel .button {
+  margin-top: 0;
+  min-height: 42px;
+}
+.filter-clear {
+  padding: 11px 0;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.catalog__sort {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  color: var(--muted);
+  font-size: .88rem;
+}
+.catalog__sort form { margin: 0; }
+.catalog__sort label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.active-filters {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 28px;
+  font-size: .82rem;
+}
+.active-filters > span:first-child {
+  color: var(--muted);
+  margin-right: 4px;
+}
+.filter-chip {
+  border: 1px solid var(--stone);
+  background: var(--white);
+  padding: 7px 10px;
+}
+.active-filters a {
+  margin-left: 8px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.catalog-grid {
+  margin-top: 0;
+}
+.catalog-empty {
+  border-top: 1px solid var(--stone);
+  border-bottom: 1px solid var(--stone);
+  padding: 90px 0;
+  max-width: 720px;
+}
+.catalog-empty h2 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(2.6rem, 5vw, 4.5rem);
+  line-height: .95;
+  letter-spacing: -.04em;
+}
+.catalog-empty p:not(.eyebrow) {
+  color: var(--muted);
+  max-width: 520px;
+}
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--stone);
+  margin-top: 50px;
+  padding-top: 20px;
+  font-size: .88rem;
+}
+.pagination a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+@media (max-width: 900px) {
+  .catalog__toolbar { align-items: flex-start; flex-direction: column; }
+  .catalog__sort { width: 100%; justify-content: space-between; }
+}
+@media (max-width: 600px) {
+  .catalog { width: min(calc(100% - 24px), var(--max)); }
+  .catalog__hero { padding: 62px 0 55px; }
+  .catalog__hero h1 { font-size: clamp(3.1rem, 15vw, 5rem); }
+  .catalog-search { display: block; }
+  .catalog-search input { width: 100%; }
+  .catalog-search button { width: 100%; min-height: 48px; }
+  .filter-panel { width: 100%; }
+  .filter-panel form { display: grid; grid-template-columns: 1fr; }
+  .filter-panel fieldset { min-width: 0; }
+  .filter-panel .button { width: 100%; }
+  .catalog__sort { font-size: .8rem; }
+  .catalog__sort label { flex-wrap: wrap; justify-content: flex-end; }
+  .active-filters { overflow-x: auto; flex-wrap: nowrap; padding-bottom: 4px; }
+  .pagination { gap: 16px; }
+}
