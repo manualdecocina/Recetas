@@ -7,7 +7,7 @@ export function SiteFooter({ lang }: { lang: string }) {
       <div className="site-footer__inner">
         <div className="site-footer__brand">
           <Link className="site-footer__brand-link" href={'/' + lang} aria-label="Manual de Cocina, inicio">
-            <Image className="brand__logo" src="/brand/manual-de-cocina-horizontal.svg" alt="Manual de Cocina" width={260} height={48} />
+            <Image className="brand__logo" src="https://manualdecocina.com/wp-content/uploads/2026/06/Logo-Manual-de-Cocina.png" alt="Manual de Cocina" width={360} height={120} />
           </Link>
           <p>Un manual de cocina para descubrir, aprender y cocinar mejor.</p>
         </div>
