@@ -25,8 +25,23 @@ Tampoco se rellenan los 110 valores ausentes mediante inferencia.
 ## Producto
 `total_time_minutes` puede utilizarse como filtro V1 cuando existe. Las recetas sin dato deben seguir siendo visibles y no recibir un tiempo inventado.
 
-## Próximo paso
-Auditar manualmente las 7 inconsistencias y, después, decidir si el modelo de tiempo necesita un tercer concepto explícito de tiempo activo/pasivo antes de corregir datos históricos.
+## Auditoría manual de las 7 inconsistencias
+Las recetas fueron revisadas contra sus pasos publicados. Las diferencias son explicables por tiempos pasivos o de proceso:
+- Horchata de arroz: 4 h de remojo + 1 h de refrigeración; 255 min es coherente con el proceso.
+- Helado casero de vainilla: al menos 4 h de refrigeración, además de congelación; 280 min es coherente como mínimo editorial.
+- Cheesecake de agraz: al menos 4 h de refrigeración; 320 min es coherente.
+- Pie de maracuyá: al menos 2 h de refrigeración; 185 min es coherente.
+- Salsa de ajo cremosa: al menos 1 h de refrigeración; 75 min es coherente.
+- Porra antequerana: al menos 1 h de refrigeración; 80 min es coherente.
+- Pulpo a la Gallega: cocción de 45–60 min + preparación/reposo; 80 min es coherente.
+
+No se modifica ningún valor histórico.
+
+## Cierre V1
+- Las 24 recetas con tiempo completo conservan su información existente.
+- Las 110 recetas sin tiempo total permanecen sin tiempo.
+- `total_time_minutes` queda aprobado como filtro V1 cuando existe.
+- Para nuevas recetas, conviene separar en el modelo futuro tiempo activo y tiempo pasivo para representar correctamente procesos de reposo, enfriado, remojo y congelación.
 
 ## Nota de seguridad
 La documentación oficial de Supabase recomienda proteger las tablas expuestas con RLS y usar políticas para controlar las filas accesibles. Esta auditoría no cambia todavía las políticas de seguridad.
