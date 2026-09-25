@@ -1392,3 +1392,30 @@ body{background:var(--ivory);color:var(--ink);}
   .category-link{min-height:132px;padding:15px}
   .category-link strong{font-size:1.15rem}
 }
+
+
+/* Category photography: real food imagery, no pastel blocks. */
+.category-link{
+  color:#fff;
+  background-color:#25251f !important;
+  background-size:cover !important;
+  background-position:center !important;
+  box-shadow:0 12px 28px rgba(29,36,32,.12);
+}
+.category-link--1{background-image:linear-gradient(180deg,rgba(12,15,12,.02) 15%,rgba(12,15,12,.78) 100%),url("https://manualdecocina.com/wp-content/uploads/2023/04/alfredo-2.png") !important;}
+.category-link--2{background-image:linear-gradient(180deg,rgba(12,15,12,.02) 15%,rgba(12,15,12,.78) 100%),url("https://manualdecocina.com/wp-content/uploads/2024/04/Pollo-Agridulce-530x530.jpg") !important;}
+.category-link--3{background-image:linear-gradient(180deg,rgba(12,15,12,.02) 15%,rgba(12,15,12,.78) 100%),url("https://manualdecocina.com/wp-content/uploads/2023/06/ajiaco.jpg") !important;}
+.category-link--4{background-image:linear-gradient(180deg,rgba(12,15,12,.02) 15%,rgba(12,15,12,.78) 100%),url("https://manualdecocina.com/wp-content/uploads/2023/06/ensalada-caprese.jpg") !important;}
+.category-link--5{background-image:linear-gradient(180deg,rgba(12,15,12,.02) 15%,rgba(12,15,12,.78) 100%),url("https://manualdecocina.com/wp-content/uploads/2024/03/Como-hacer-kimchi-copia-530x501.jpg") !important;}
+.category-link--6{background-image:linear-gradient(180deg,rgba(12,15,12,.02) 15%,rgba(12,15,12,.78) 100%),url("https://manualdecocina.com/wp-content/uploads/2025/06/Receta-Salsa-de-Tomate-Casera-Facil-Rapida-y-Deliciosa-1-530x530.jpg") !important;}
+.category-link--7{background-image:linear-gradient(180deg,rgba(12,15,12,.02) 15%,rgba(12,15,12,.78) 100%),url("https://manualdecocina.com/wp-content/uploads/2023/04/Empanada-Peruana-de-Pollo.jpg") !important;}
+.category-link--8{background-image:linear-gradient(180deg,rgba(12,15,12,.02) 15%,rgba(12,15,12,.78) 100%),url("https://manualdecocina.com/wp-content/uploads/2025/06/Cheesecake-de-Oreo-Postre-Cremoso-y-Facil-de-Preparar-530x530.jpg") !important;}
+.category-link--9{background-image:linear-gradient(180deg,rgba(12,15,12,.02) 15%,rgba(12,15,12,.78) 100%),url("https://manualdecocina.com/wp-content/uploads/2025/06/Acai-Bowl-2.jpg") !important;}
+.category-link--10{background-image:linear-gradient(180deg,rgba(12,15,12,.02) 15%,rgba(12,15,12,.78) 100%),url("https://manualdecocina.com/wp-content/uploads/2024/04/Receta-Jugo-Anticancerigeno-530x489.jpg") !important;}
+.category-link strong{color:#fff !important;text-shadow:0 2px 12px rgba(0,0,0,.28)}
+.category-link__arrow{background:#fff;color:#171614}
+.category-link__veil{display:none}
+.category-link img{display:none}
+@media(max-width:700px){
+  .category-link{min-height:155px}
+}
