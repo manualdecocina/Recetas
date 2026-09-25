@@ -1,37 +1,19 @@
-# QA P1 URL MASTER — FILA ESPAÑOLA RESTANTE — 2026-09-25
+# QA P1 — cierre de las 5 URLs inicialmente ausentes — 2026-09-25
 
-## Estado
-CONTROL / sin publicación ni creación de entidades.
+La consulta inicial por `public_path`/slug exactos no reflejó estas entidades, pero el cruce por `source_url` confirmó que las cinco sí existen en `public.recipes` y están publicadas.
 
-Se verificaron las siete filas españolas que permanecían después de E101–E106 y E012–E015:
+| URL histórica | Modelo | Estado |
+|---|---|---|
+| /receta-envuelto-de-choclo/ | Recipe | publicada, completa |
+| /receta-cheesecake-de-agraz/ | Recipe | publicada, completa |
+| /receta-de-pancakes-con-fresas-y-arandanos/ | Recipe | publicada, completa |
+| /receta-helado-casero/ | Recipe | publicada, completa |
+| /receta-trucha-al-ajillo-con-limon/ | Recipe | publicada, completa |
 
-| URL histórica | Resultado actual Supabase |
-|---|---|
-| /receta-envuelto-de-choclo/ | No existe Recipe ni ContentPage por slug/path consultado |
-| /receta-cheesecake-de-agraz/ | No existe Recipe ni ContentPage por slug/path consultado |
-| /lomo-de-cerdo-en-salsa-de-menta/ | Recipe existente y publicada |
-| /receta-de-pancakes-con-fresas-y-arandanos/ | No existe Recipe ni ContentPage por slug/path consultado |
-| /cangrejo-al-limon/ | Recipe existente y publicada |
-| /receta-helado-casero/ | No existe Recipe ni ContentPage por slug/path consultado |
-| /receta-trucha-al-ajillo-con-limon/ | No existe Recipe ni ContentPage por slug/path consultado |
+Se verificaron imagen, contenido, ingredientes, pasos, tiempos y servings en las cinco. No se modificó ninguna entidad porque ya está publicada y no apareció evidencia nueva que justifique reabrirla.
 
-## Incidentes reales
+## Resultado
 
-### Ya resueltas en producción
-- `/lomo-de-cerdo-en-salsa-de-menta`
-- `/cangrejo-al-limon`
+Se corrige el falso bloqueo de la comprobación anterior: las cinco filas no estaban ausentes; la discrepancia provenía de la consulta inicial por identificador de ruta/slug.
 
-No se tocaron: cambiar una entidad ya publicada sin evidencia nueva violaría el control vigente.
-
-### Sin representación actual
-Cinco URLs KEEP / REBUILD del URL Master no tienen una entidad actual en Recipe ni ContentPage. No se crean filas nuevas automáticamente porque el URL Master exige cerrar primero la procedencia, entidad y modelo antes de materializar NEW_SEED.
-
-Estas cinco quedan como bloqueo de recuperación/modelado, no como permiso de inventar contenido.
-
-## Decisión
-
-No se modificó producción, no se crearon redirects y no se publicaron traducciones. La comprobación confirma que el siguiente trabajo debe resolver la procedencia y entidad de estas cinco URLs antes de su reconstrucción.
-
-## Siguiente
-
-Cerrar la procedencia/modelo de las cinco filas P1 ausentes; después continuar con el siguiente bloque URL-by-URL.
+No se crean filas, redirects ni traducciones.
