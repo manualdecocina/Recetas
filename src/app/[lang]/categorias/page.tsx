@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import { supabase } from '@/lib/supabase/public'
 import { SiteHeader } from '@/components/SiteHeader'
@@ -26,10 +27,17 @@ export default async function CategoriesPage({ params }: { params: Promise<{ lan
   const lang = parseLang(rawLang)
   if (!lang) notFound()
 
-  const counts = await Promise.all(CATEGORIES.map(async ([label]) => {
+  const categoryData = await Promise.all(CATEGORIES.map(async ([label]) => {
+    const { data } = await supabase.from('recipes')
+      .select('image_url, title')
+      .eq('language', lang).eq('published', true).eq('category', label)
+      .not('image_url', 'is', null)
+      .order('published_at', { ascending: false, nullsFirst: false })
+      .limit(1)
+      .maybeSingle()
     const { count } = await supabase.from('recipes').select('id', { count: 'exact', head: true })
       .eq('language', lang).eq('published', true).eq('category', label)
-    return count ?? 0
+    return { count: count ?? 0, image: data?.image_url ?? null, imageAlt: data?.title ?? label }
   }))
 
   return (
@@ -45,7 +53,7 @@ export default async function CategoriesPage({ params }: { params: Promise<{ lan
           {CATEGORIES.map(([label, slug], index) => (
             <Link key={slug} href={'/' + lang + '/categorias/' + slug} className="category-directory__item">
               <span className="category-directory__number">{String(index + 1).padStart(2, '0')}</span>
-              <span><strong>{label}</strong><small>{counts[index]} {counts[index] === 1 ? 'receta' : 'recetas'}</small></span>
+              <span className="category-directory__image">{categoryData[index].image ? <img src={categoryData[index].image} alt="" /> : <span aria-hidden="true" />}<i /></span><span><strong>{label}</strong><small>{categoryData[index].count} {categoryData[index].count === 1 ? 'receta' : 'recetas'}</small></span>
               <span aria-hidden="true">↗</span>
             </Link>
           ))}
