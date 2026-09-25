@@ -272,3 +272,10 @@ QA: docs/QA-BLOQUE-URLMASTER-20260925-44.md. Commit de matriz URL: 7bcadec499f83
 Se revisaron los 10 casos de duplicidad NEW_SEED documentados. Se confirmó que lechona-colombiana tiene fuente histórica y no debe tratarse como NEW_SEED puro; empanada-peruana-de-pollo está consolidada como Recipe; los demás casos sin source_url permanecen NEW_SEED/DUPLICATE REVIEW. No se eliminan ni publican entidades.
 
 QA: docs/QA-BLOQUE-NEWSEED-20260925-45.md.
+
+
+## Actualización de control — 2026-09-25 — Bloque 46 REVIEW
+
+Se procesaron las 11 decisiones REVIEW pendientes: E005 (2 URLs), E010 (2), Caprese (1), salud/nutrición (5), colecciones (2) y artículo de veganismo (1). No se forzaron decisiones editoriales. E005/E010 no tienen ContentPage equivalente bajo los slugs consultados; Caprese tiene ContentPage unpublished y no Recipe visible con ese slug; salud, colecciones y veganismo mantienen sus ContentPages publicadas. No se crean redirects, borrados ni publicaciones.
+
+QA: docs/QA-BLOQUE-REVIEW-20260925-46.md.
