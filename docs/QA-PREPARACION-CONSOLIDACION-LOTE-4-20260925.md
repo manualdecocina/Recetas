@@ -3,8 +3,9 @@
 Fecha: 2026-09-25
 
 ## Alcance
-Siguiente bloque disponible solicitado de 20; el conjunto restante contiene 18 entidades (posiciones 31–48 del solapamiento ES):
+Último tramo del conjunto de Recipe STAGED/UNPUBLISHED con ContentPage publicado en la misma URL/lenguaje. La consulta devolvió 18 entidades, no 20, porque el universo total de solapamientos es 48.
 
+Entidades:
 - pure-de-papa-cremoso
 - crema-de-calabaza
 - tarta-de-manzana-clasica
@@ -27,5 +28,9 @@ Siguiente bloque disponible solicitado de 20; el conjunto restante contiene 18 e
 ## Verificación
 18/18 tienen imagen, ingredientes, pasos, tiempos, porciones y SEO title/description.
 
-## Estado
-No se ejecutó publicación ni despublicación. El gate de despliegue/producción continúa pendiente para poder hacer la transición Recipe -> ContentPage con verificación de URL, canonical/hreflang, JSON-LD, sitemap y smoke test.
+Universo de solapamientos confirmado: 48 Recipe STAGED + ContentPage PUBLISHED, todos en ES.
+
+No se modificaron datos editoriales ni se ejecutó publicación/despublicación.
+
+## Gate pendiente
+La consolidación requiere primero verificación de despliegue/producción: resolución pública, canonical/hreflang, Recipe JSON-LD, BreadcrumbList, sitemap y smoke test HTTP.
