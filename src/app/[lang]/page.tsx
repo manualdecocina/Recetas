@@ -125,7 +125,7 @@ export default async function LanguageHome({ params }: { params: { lang: string 
               <a href={`/${lang}/recetas/`}>Ver recetas</a>
             </div>
             <div className="featured-recipe">
-              <RecipeCard recipe={latest} priority />
+              <RecipeCard recipe={latest} priority featured />
             </div>
             {grid.length > 0 && <div className="recipe-grid">{grid.slice(0, 6).map((recipe) => <RecipeCard key={recipe.id} recipe={recipe} />)}</div>}
           </section>
