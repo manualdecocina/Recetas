@@ -11,11 +11,12 @@ import { NotAdmin } from '../../NotAdmin'
 export const dynamic = 'force-dynamic'
 export const metadata: Metadata = { title: 'Editar receta', robots: { index: false, follow: false } }
 
-export default async function EditRecipePage({ params }: { params: { id: string } }) {
+export default async function EditRecipePage({ params }: { params: Promise<{ id: string }> }) {
+  const { id: rawId } = await params
   const { supabase, user, isAdmin } = await requireAdmin()
   if (!isAdmin) return <NotAdmin email={user.email} />
 
-  const id = uuidSchema.safeParse(params.id)
+  const id = uuidSchema.safeParse(rawId)
   if (!id.success) notFound()
 
   const { data } = await supabase.from('recipes').select('*').eq('id', id.data).maybeSingle()
