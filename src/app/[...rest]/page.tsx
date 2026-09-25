@@ -4,9 +4,11 @@ import { recipeAlternates } from '@/lib/seo'
 import { publicUrl } from '@/lib/site'
 import { RecipeDocument } from '@/components/RecipeDocument'
 
-interface Props { params: { rest: string[] } }
+type RestParams = { rest: string[] }
 
-function sourcePath(params: Props): string {
+interface Props { params: RestParams }
+
+function sourcePath(params: RestParams): string {
   return '/' + params.rest.join('/')
 }
 
