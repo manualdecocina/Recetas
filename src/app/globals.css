@@ -1578,3 +1578,145 @@ body{background:var(--ivory);color:var(--ink)}
   .reference-hero__panel h1{font-size:clamp(4.25rem,17.8vw,6.2rem);line-height:.84;margin:38px 0 30px}
   .reference-hero__panel p{font-size:1.08rem;line-height:1.72}
 }
+
+/* ============================================================
+   MANUAL DE COCINA — ORIGINAL DESIGN SYSTEM
+   This layer is intentionally independent from the legacy/reference UI.
+   ============================================================ */
+:root{
+  --mc-ink:#17120f;
+  --mc-paper:#f4efe6;
+  --mc-paper-2:#e9dfd1;
+  --mc-copper:#b85d38;
+  --mc-gold:#d7a53a;
+  --mc-sage:#65705a;
+  --mc-line:rgba(23,18,15,.18);
+  --mc-serif:var(--font-editorial-serif),Georgia,"Times New Roman",serif;
+  --mc-sans:var(--font-ui-sans),Inter,ui-sans-serif,system-ui,sans-serif;
+}
+html,body{max-width:100%;overflow-x:hidden}
+body{background:var(--mc-paper);color:var(--mc-ink);font-family:var(--mc-sans)}
+.mc-header{position:relative;z-index:20;background:var(--mc-paper);border-bottom:1px solid var(--mc-line)}
+.mc-header__inner{width:min(100% - 48px,1360px);height:92px;margin:auto;display:flex;align-items:center;gap:44px}
+.mc-brand{display:block;width:178px;flex:0 0 178px}
+.mc-brand img{display:block;width:100%;height:auto}
+.mc-nav{display:flex;align-items:center;gap:30px;margin-left:auto}
+.mc-nav a,.mc-menu summary{font-size:.82rem;font-weight:700;letter-spacing:.02em}
+.mc-nav a:hover,.mc-menu summary:hover{color:var(--mc-copper)}
+.mc-header__actions{display:flex;align-items:center;gap:12px}
+.mc-search{width:42px;height:42px;border:1px solid var(--mc-ink);border-radius:50%;display:grid;place-items:center}
+.mc-search span{font-family:Georgia,serif;font-size:1.65rem;line-height:1;transform:rotate(-15deg)}
+.mc-menu{position:relative}
+.mc-menu summary{list-style:none;cursor:pointer;border:1px solid var(--mc-ink);padding:12px 17px}
+.mc-menu summary::-webkit-details-marker{display:none}
+.mc-menu nav{position:absolute;right:0;top:calc(100% + 8px);width:220px;padding:10px;background:var(--mc-paper);border:1px solid var(--mc-ink);box-shadow:8px 8px 0 var(--mc-ink)}
+.mc-menu nav a{display:block;padding:12px;border-bottom:1px solid var(--mc-line)}
+.mc-menu nav a:last-child{border:0}
+
+.mc-home{width:min(100% - 48px,1360px);margin:auto}
+.mc-overline{display:block;font-size:.68rem;font-weight:800;letter-spacing:.17em;line-height:1.3}
+.mc-hero{min-height:calc(100vh - 92px);display:grid;grid-template-columns:minmax(0,1.04fr) minmax(420px,.96fr);border-bottom:1px solid var(--mc-line)}
+.mc-hero__statement{display:flex;flex-direction:column;justify-content:center;padding:clamp(55px,8vw,120px) clamp(10px,5vw,75px) clamp(70px,8vw,110px) 0}
+.mc-hero h1{margin:20px 0 28px;max-width:780px;font:700 clamp(4.5rem,8.7vw,9.6rem)/.82 var(--mc-serif);letter-spacing:-.065em}
+.mc-hero h1 i,.mc-section-head h2 i,.mc-method h2 i{font-weight:400}
+.mc-hero__statement>p{max-width:560px;margin:0;color:#5f554c;font-size:clamp(1rem,1.4vw,1.18rem);line-height:1.65}
+.mc-hero__actions{display:flex;gap:12px;align-items:center;margin-top:38px;flex-wrap:wrap}
+.mc-btn{display:inline-flex;align-items:center;justify-content:center;gap:22px;min-height:50px;padding:0 22px;font-size:.76rem;font-weight:800;letter-spacing:.04em}
+.mc-btn--solid{background:var(--mc-ink);color:var(--mc-paper)}
+.mc-btn--solid span{font-size:1rem}
+.mc-btn--text{border-bottom:1px solid var(--mc-ink);padding-left:0;padding-right:0}
+.mc-btn--outline{border:1px solid var(--mc-ink)}
+.mc-hero__object{position:relative;min-height:650px;background:var(--mc-ink);overflow:hidden;display:grid;place-items:center}
+.mc-hero__object:before{content:"";position:absolute;width:72%;aspect-ratio:1;border:1px solid rgba(244,239,230,.2);border-radius:50%}
+.mc-hero__object:after{content:"COCINA · TÉCNICA · SABOR";position:absolute;top:32px;right:34px;color:#bcb0a1;font-size:.62rem;letter-spacing:.18em;writing-mode:vertical-rl}
+.mc-plate{position:relative;width:min(72%,500px);aspect-ratio:1;border-radius:50%;background:#d8d0c1;box-shadow:0 28px 60px rgba(0,0,0,.3),inset 0 0 0 18px #ede7dc,inset 0 0 0 20px rgba(23,18,15,.12)}
+.mc-plate__center{position:absolute;inset:31%;display:grid;place-items:center;border-radius:50%;background:#7d8a62;color:#f4efe6;font:700 clamp(1.8rem,4vw,3rem) var(--mc-serif);letter-spacing:.08em}
+.mc-plate__tomato,.mc-plate__leaf,.mc-plate__herb{position:absolute;display:block}
+.mc-plate__tomato{width:15%;aspect-ratio:1;border-radius:50%;background:#b84e34;box-shadow:inset -8px -5px 0 rgba(75,25,15,.16)}
+.mc-plate__tomato--a{top:22%;left:23%}.mc-plate__tomato--b{right:21%;bottom:24%}
+.mc-plate__leaf{width:27%;height:9%;background:#65705a;border-radius:100% 0 100% 0;transform:rotate(-28deg)}
+.mc-plate__leaf--a{right:18%;top:25%}.mc-plate__leaf--b{left:17%;bottom:25%;transform:rotate(35deg)}
+.mc-plate__herb{width:20%;height:3px;background:#526047;transform:rotate(42deg)}
+.mc-plate__herb--a{left:33%;top:20%}.mc-plate__herb--b{right:29%;bottom:20%;transform:rotate(-42deg)}
+.mc-hero__note{position:absolute;bottom:28px;left:30px;right:30px;display:flex;align-items:center;gap:15px;color:#d9cfc1;font-size:.78rem}
+.mc-hero__note b{font:400 1.4rem var(--mc-serif);color:var(--mc-gold)}
+
+.mc-intents,.mc-categories,.mc-method{padding:clamp(75px,10vw,145px) 0;border-bottom:1px solid var(--mc-line)}
+.mc-section-head h2{margin:17px 0 0;font:700 clamp(3rem,6vw,6.8rem)/.88 var(--mc-serif);letter-spacing:-.06em}
+.mc-intent-grid{margin-top:55px;border-top:1px solid var(--mc-line);display:grid;grid-template-columns:repeat(3,1fr)}
+.mc-intent{min-height:205px;padding:25px 24px 27px 0;border-bottom:1px solid var(--mc-line);display:grid;grid-template-columns:42px 1fr 24px;gap:14px;transition:background .2s,padding .2s}
+.mc-intent:nth-child(3n+2),.mc-intent:nth-child(3n+3){padding-left:24px;border-left:1px solid var(--mc-line)}
+.mc-intent:hover{background:rgba(255,255,255,.35);padding-right:16px}
+.mc-intent__number{font-size:.65rem;font-weight:800;color:var(--mc-copper)}
+.mc-intent h3{margin:0;font:700 1.75rem/1 var(--mc-serif);letter-spacing:-.03em}
+.mc-intent p{max-width:280px;margin:12px 0 0;color:#71665c;font-size:.88rem;line-height:1.55}
+.mc-intent__arrow{align-self:end;font-size:1.2rem}
+
+.mc-section-head--row{display:flex;justify-content:space-between;align-items:end;gap:30px}
+.mc-section-head--row>a{font-size:.76rem;font-weight:800;border-bottom:1px solid var(--mc-ink);padding-bottom:5px}
+.mc-category-grid{margin-top:55px;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--mc-line);border-left:1px solid var(--mc-line)}
+.mc-category{position:relative;min-height:285px;padding:25px;border-right:1px solid var(--mc-line);border-bottom:1px solid var(--mc-line);background:var(--mc-paper);transition:transform .2s,background .2s}
+.mc-category:hover{background:var(--mc-paper-2);transform:translateY(-3px)}
+.mc-category>span{font-size:.65rem;font-weight:800;color:var(--mc-copper)}
+.mc-category h3{margin:72px 0 0;font:700 clamp(1.8rem,2.5vw,2.65rem)/.9 var(--mc-serif);letter-spacing:-.04em}
+.mc-category p{max-width:250px;color:#71665c;font-size:.84rem;line-height:1.5}
+.mc-category b{position:absolute;right:25px;bottom:24px;font-size:1.2rem}
+
+.mc-method{display:grid;grid-template-columns:1fr 1fr;gap:clamp(45px,9vw,140px);background:var(--mc-paper-2);padding-left:clamp(25px,6vw,90px);padding-right:clamp(25px,6vw,90px)}
+.mc-method__lead h2{margin-top:18px;font:700 clamp(3.1rem,5.8vw,6rem)/.88 var(--mc-serif);letter-spacing:-.06em}
+.mc-method__lead>p{max-width:460px;color:#62584e;font-size:1rem;line-height:1.65}
+.mc-method__lead .mc-btn{margin-top:20px}
+.mc-principles{align-self:center}
+.mc-principles article{display:grid;grid-template-columns:42px 1fr;gap:20px;padding:26px 0;border-top:1px solid var(--mc-line)}
+.mc-principles article:last-child{border-bottom:1px solid var(--mc-line)}
+.mc-principles article>span{font-size:.65rem;font-weight:800;color:var(--mc-copper)}
+.mc-principles h3{margin:0;font:700 1.55rem/1 var(--mc-serif)}
+.mc-principles p{margin:9px 0 0;color:#62584e;font-size:.87rem;line-height:1.55}
+
+.mc-manifesto{padding:clamp(100px,14vw,190px) 0;text-align:center;max-width:1000px;margin:auto}
+.mc-manifesto blockquote{margin:28px 0 38px;font:700 clamp(3rem,6.5vw,7.5rem)/.86 var(--mc-serif);letter-spacing:-.065em}
+.mc-manifesto a{font-size:.78rem;font-weight:800;border-bottom:1px solid var(--mc-ink);padding-bottom:7px}
+.mc-manifesto a span{margin-left:12px;color:var(--mc-copper)}
+
+@media(max-width:900px){
+  .mc-header__inner{width:min(100% - 28px,1360px);height:76px;gap:18px}
+  .mc-brand{width:142px;flex-basis:142px}
+  .mc-nav{display:none}
+  .mc-header__actions{margin-left:auto}
+  .mc-hero{grid-template-columns:1fr}
+  .mc-hero__statement{padding:70px 0 65px}
+  .mc-hero h1{font-size:clamp(4rem,15vw,7rem)}
+  .mc-hero__object{min-height:470px;margin:0 -14px}
+  .mc-intent-grid{grid-template-columns:1fr 1fr}
+  .mc-intent:nth-child(3n+2),.mc-intent:nth-child(3n+3){padding-left:0;border-left:0}
+  .mc-intent:nth-child(even){padding-left:24px;border-left:1px solid var(--mc-line)}
+  .mc-category-grid{grid-template-columns:1fr 1fr}
+  .mc-method{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  .mc-home{width:calc(100% - 28px)}
+  .mc-brand{width:128px;flex-basis:128px}
+  .mc-search{width:38px;height:38px}
+  .mc-menu summary{padding:10px 12px}
+  .mc-hero{min-height:0}
+  .mc-hero__statement{padding:55px 0 48px}
+  .mc-hero h1{font-size:clamp(3.65rem,17vw,5.5rem);margin:16px 0 23px}
+  .mc-hero__statement>p{font-size:.96rem}
+  .mc-hero__actions{margin-top:28px}
+  .mc-btn{min-height:48px}
+  .mc-hero__object{min-height:350px;margin:0 -14px}
+  .mc-plate{width:72%}
+  .mc-hero__note{left:20px;right:20px;bottom:18px}
+  .mc-section-head h2{font-size:clamp(2.8rem,13vw,4.5rem)}
+  .mc-intents,.mc-categories,.mc-method{padding:76px 0}
+  .mc-intent-grid,.mc-category-grid{grid-template-columns:1fr}
+  .mc-intent,.mc-intent:nth-child(even){min-height:170px;padding:22px 0;border-left:0}
+  .mc-intent h3{font-size:1.6rem}
+  .mc-section-head--row{align-items:start;flex-direction:column}
+  .mc-category{min-height:220px}
+  .mc-category h3{margin-top:50px}
+  .mc-method{margin:0 -14px;padding-left:28px;padding-right:28px}
+  .mc-method__lead h2{font-size:clamp(2.9rem,12vw,4.5rem)}
+  .mc-manifesto{padding:90px 0}
+  .mc-manifesto blockquote{font-size:clamp(2.8rem,12vw,4.4rem)}
+}
