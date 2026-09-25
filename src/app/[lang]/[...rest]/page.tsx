@@ -6,13 +6,15 @@ import { publicUrl } from '@/lib/site'
 import { SUPPORTED_LANGUAGES } from '@/types/recipe'
 import { RecipeDocument } from '@/components/RecipeDocument'
 
-interface Props { params: { lang: string; rest: string[] } }
+type LangRestParams = { lang: string; rest: string[] }
+
+interface Props { params: LangRestParams }
 
 function isLang(value: string): boolean {
   return (SUPPORTED_LANGUAGES as string[]).includes(value)
 }
 
-function pathFor(params: Props): string {
+function pathFor(params: LangRestParams): string {
   return '/' + params.lang + '/' + params.rest.join('/')
 }
 
