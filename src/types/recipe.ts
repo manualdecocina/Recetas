@@ -4,6 +4,8 @@ export interface RecipeIngredient {
   name: string
   amount: string
   unit?: string
+  preparation?: string
+  note?: string
 }
 
 export interface RecipeStep {
