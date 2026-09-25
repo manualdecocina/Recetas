@@ -251,3 +251,10 @@ QA: docs/QA-BLOQUE-URLMASTER-20260925-41.md. Commit de matriz URL: c0778ecf40387
 Se procesaron las 11 filas restantes de la primera tanda P2 en un único bloque por quedar menos de 20. Diez quedan KEEP / REBUILD y /receta-ensalada-caprese/ permanece REVIEW / MODEL Recipe. No se crean redirects ni se publica contenido.
 
 QA: docs/QA-BLOQUE-URLMASTER-20260925-42.md. Commit de matriz URL: 50995d8cb05de07a08c494a8fe5e3c10fe70c5c4.
+
+
+## Actualización de control — 2026-09-25 — Bloque 43 URL Master P3
+
+Se procesaron 20 URLs P3. Las 20 permanecen CATALOG CANDIDATE; esta clasificación no equivale a KEEP/MIGRATE/MERGE/NOINDEX/404-410. No se crean redirects, no se borran URLs y no se publica contenido.
+
+QA: docs/QA-BLOQUE-URLMASTER-20260925-43.md.
