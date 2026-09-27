@@ -6,18 +6,17 @@ import { publicUrl } from '@/lib/site'
 import { SUPPORTED_LANGUAGES } from '@/types/recipe'
 import { RecipeDocument } from '@/components/RecipeDocument'
 import { InstitutionalPage } from '@/components/InstitutionalPage'
-import { legacyMetadata, LegacyPublicPage } from '@/lib/legacy-route'
 
-type LangRestParams = { lang: string; rest: string[] }
+/**
+ * Resolución de URLs públicas por `public_path` (recetas, páginas de contenido y redirecciones 301).
+ * Se usa desde tres rutas: `[...rest]` (raíz), `[lang]/page` y `[lang]/[...rest]`.
+ * Next da prioridad a `[lang]` sobre `[...rest]`, así que una URL de un solo segmento como
+ * `/receta-bondiola-de-cerdo` llega a `[lang]` con lang="receta-bondiola-de-cerdo": esas rutas
+ * deben delegar aquí cuando el primer segmento no es un idioma.
+ */
 
-interface Props { params: Promise<LangRestParams> }
-
-function isLang(value: string): boolean {
+export function isSupportedLang(value: string): boolean {
   return (SUPPORTED_LANGUAGES as string[]).includes(value)
-}
-
-function pathFor(params: LangRestParams): string {
-  return '/' + params.lang + '/' + params.rest.join('/')
 }
 
 function cleanHtml(html: string): string {
@@ -28,12 +27,7 @@ function cleanHtml(html: string): string {
     .replace(/javascript:/gi, '')
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const resolvedParams = await params
-  const path = pathFor(resolvedParams)
-  // Primer segmento que no es idioma: ruta histórica de la raíz con varios segmentos.
-  if (!isLang(resolvedParams.lang)) return legacyMetadata(path)
-
+export async function legacyMetadata(path: string): Promise<Metadata> {
   const recipe = await getRecipeByPublicPath(path)
   if (recipe) {
     const translations = await getRecipeTranslations(recipe.recipe_group_id)
@@ -68,25 +62,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-export default async function PublicLanguageRoute({ params }: Props) {
-  const resolvedParams = await params
-  const path = pathFor(resolvedParams)
-  if (!isLang(resolvedParams.lang)) return <LegacyPublicPage path={path} />
-
+export async function LegacyPublicPage({ path, lang = 'es' }: { path: string; lang?: string }) {
   const recipe = await getRecipeByPublicPath(path)
   if (recipe) return <RecipeDocument recipe={recipe} />
 
   const page = await getContentPageByPublicPath(path)
   if (page) {
     return (
-      <InstitutionalPage lang={resolvedParams.lang} title={page.title} intro={page.excerpt ?? undefined}>
+      <InstitutionalPage lang={lang} title={page.title} intro={page.excerpt ?? undefined}>
         {page.content_html && <div className="md-rich" dangerouslySetInnerHTML={{ __html: cleanHtml(page.content_html) }} />}
       </InstitutionalPage>
     )
   }
 
   const normalized = path.replace(/\/+$/, '') || '/'
-  const candidates = [path, normalized, normalized + '/']
+  const candidates = normalized === '/' ? [path] : [path, normalized, normalized + '/']
   const { data } = await import('@/lib/supabase/public').then(({ supabase }) =>
     supabase.from('content_redirects').select('target_path').in('source_path', candidates).limit(1).maybeSingle()
   )
