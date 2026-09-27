@@ -1,9 +1,10 @@
-import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import { supabase } from '@/lib/supabase/public'
-import { RecipeCard } from '@/components/RecipeCard'
-import { SiteHeader } from '@/components/SiteHeader'
+import SiteHeader from '@/components/md/SiteHeader'
+import SiteFooter from '@/components/md/SiteFooter'
+import RecipeListingView, { type MdListingFilters, type MdListingOptions } from '@/components/md/RecipeListingView'
+import type { MdRecipeCardData } from '@/components/md/md-types'
 import { UI_TEXT } from '@/lib/i18n'
 import { allLanguageAlternates } from '@/lib/seo'
 import { getSiteUrl } from '@/lib/site'
@@ -50,14 +51,6 @@ function parsePage(value?: string): number {
 
 function clean(value?: string) {
   return value?.trim().slice(0, 100) || ''
-}
-
-function buildUrl(lang: string, params: Record<string, string | undefined>) {
-  const query = new URLSearchParams()
-  for (const [key, value] of Object.entries(params)) {
-    if (value) query.set(key, value)
-  }
-  return query.toString() ? `/${lang}/recetas?${query.toString()}` : `/${lang}/recetas`
 }
 
 export async function generateMetadata({ params, searchParams }: Props): Promise<Metadata> {
@@ -165,19 +158,30 @@ export default async function RecipesListPage({ params, searchParams }: Props) {
   const totalPages = Math.max(1, Math.ceil(total / PAGE_SIZE))
   if (page > totalPages) notFound()
 
-  const filters = [
-    q ? ['Búsqueda', q] : null,
-    categoria ? ['Categoría', CATEGORIES.find(([, slug]) => slug === categoria)?.[0] ?? categoria] : null,
-    cocina ? ['Cocina', cuisineOptions?.find((item) => item.slug === cocina)?.name ?? cocina] : null,
-    dificultad ? ['Dificultad', dificultad] : null,
-    ingrediente ? ['Ingrediente', ingrediente] : null,
-    tiempo ? ['Tiempo', tiempo + ' min'] : null,
-  ].filter(Boolean) as [string, string][]
+  const cardRecipes = (recipes ?? []) as MdRecipeCardData[]
+
+  // Valores y filtros idénticos a los que ya acepta la consulta de arriba.
+  const listingFilters: MdListingFilters = {
+    q, categoria, cocina, dificultad, ingrediente, tiempo,
+    ordenar: ordenar === 'antiguas' ? 'antiguas' : undefined,
+  }
+  const options: MdListingOptions = {
+    cuisines: (cuisineOptions ?? []).map((item) => ({ value: item.slug, label: item.name })),
+    difficulties: ['Fácil', 'Media', 'Difícil'].map((value) => ({ value, label: value })),
+    ingredients: (ingredientOptions ?? []).map((item) => ({ value: item.slug, label: item.name })),
+    times: [
+      { value: '0-20', label: 'Hasta 20 min' },
+      { value: '21-40', label: '21–40 min' },
+      { value: '41-60', label: '41–60 min' },
+      { value: '61-120', label: '61–120 min' },
+      { value: '121+', label: 'Más de 120 min' },
+    ],
+  }
 
   const itemListJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    itemListElement: (recipes ?? []).map((recipe, index) => ({
+    itemListElement: cardRecipes.map((recipe, index) => ({
       '@type': 'ListItem',
       position: index + 1,
       url: getSiteUrl() + recipe.public_path,
@@ -185,123 +189,21 @@ export default async function RecipesListPage({ params, searchParams }: Props) {
   }
 
   return (
-    <>
+    <div className="md-site" lang={lang}>
       <SiteHeader lang={lang} />
-      <main className="catalog">
-        {(recipes ?? []).length >= 2 && (
-          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd).replace(/</g, '\\u003c') }} />
-        )}
-
-        <header className="catalog__hero">
-          <p className="eyebrow">El catálogo</p>
-          <h1>Recetas para<br /><em>cualquier momento.</em></h1>
-          <p>Busca, filtra y descubre recetas que te apetezca cocinar.</p>
-          <form className="catalog-search" action={`/${lang}/recetas`} method="get">
-            <input name="q" type="search" defaultValue={q} placeholder="Busca por receta o ingrediente…" aria-label="Buscar recetas" />
-            <button type="submit">Buscar</button>
-          </form>
-        </header>
-
-        <section className="catalog__toolbar" aria-label="Filtros y ordenación">
-          <details className="filter-panel">
-            <summary>Filtrar recetas</summary>
-            <form action={`/${lang}/recetas`} method="get">
-              {q && <input type="hidden" name="q" value={q} />}
-              <fieldset>
-                <legend>Categoría</legend>
-                <select name="categoria" defaultValue={categoria}>
-                  <option value="">Todas</option>
-                  {CATEGORIES.map(([label, slug]) => <option key={slug} value={slug}>{label}</option>)}
-                </select>
-              </fieldset>
-              <fieldset>
-                <legend>Cocina</legend>
-                <select name="cocina" defaultValue={cocina}>
-                  <option value="">Todas</option>
-                  {(cuisineOptions ?? []).map((item) => <option key={item.slug} value={item.slug}>{item.name}</option>)}
-                </select>
-              </fieldset>
-              <fieldset>
-                <legend>Dificultad</legend>
-                <select name="dificultad" defaultValue={dificultad}>
-                  <option value="">Todas</option>
-                  <option value="Fácil">Fácil</option>
-                  <option value="Media">Media</option>
-                  <option value="Difícil">Difícil</option>
-                </select>
-              </fieldset>
-              <fieldset>
-                <legend>Ingrediente</legend>
-                <select name="ingrediente" defaultValue={ingrediente}>
-                  <option value="">Todos</option>
-                  {(ingredientOptions ?? []).map((item) => <option key={item.slug} value={item.slug}>{item.name}</option>)}
-                </select>
-              </fieldset>
-              <fieldset>
-                <legend>Tiempo total</legend>
-                <select name="tiempo" defaultValue={tiempo}>
-                  <option value="">Cualquier tiempo</option>
-                  <option value="0-20">Hasta 20 min</option>
-                  <option value="21-40">21–40 min</option>
-                  <option value="41-60">41–60 min</option>
-                  <option value="61-120">61–120 min</option>
-                  <option value="121+">Más de 120 min</option>
-                </select>
-              </fieldset>
-              <button className="button button--dark" type="submit">Aplicar filtros</button>
-              <Link className="filter-clear" href={buildUrl(lang, {})}>Limpiar filtros</Link>
-            </form>
-          </details>
-
-          <div className="catalog__sort">
-            <span>{total} {total === 1 ? 'receta' : 'recetas'}</span>
-            <form action={`/${lang}/recetas`} method="get">
-              {q && <input type="hidden" name="q" value={q} />}
-              {categoria && <input type="hidden" name="categoria" value={categoria} />}
-              {cocina && <input type="hidden" name="cocina" value={cocina} />}
-              {dificultad && <input type="hidden" name="dificultad" value={dificultad} />}
-              {ingrediente && <input type="hidden" name="ingrediente" value={ingrediente} />}
-              {tiempo && <input type="hidden" name="tiempo" value={tiempo} />}
-              <label>
-                Ordenar
-                <select name="ordenar" defaultValue={ordenar} onChange={(event) => event.currentTarget.form?.requestSubmit()}>
-                  <option value="recientes">Más recientes</option>
-                  <option value="antiguas">Más antiguas</option>
-                </select>
-              </label>
-            </form>
-          </div>
-        </section>
-
-        {filters.length > 0 && (
-          <div className="active-filters" aria-label="Filtros activos">
-            <span>Estás viendo:</span>
-            {filters.map(([label, value]) => <span className="filter-chip" key={label}>{label}: {value}</span>)}
-            <Link href={buildUrl(lang, {})}>Limpiar</Link>
-          </div>
-        )}
-
-        {total === 0 ? (
-          <section className="catalog-empty">
-            <p className="eyebrow">Sin resultados</p>
-            <h2>No encontramos esa receta.</h2>
-            <p>Prueba con otro término o elimina algún filtro para ampliar la búsqueda.</p>
-            <Link className="button button--dark" href={`/${lang}/recetas`}>Ver todas las recetas</Link>
-          </section>
-        ) : (
-          <section className="recipe-grid catalog-grid" aria-label="Recetas">
-            {(recipes ?? []).map((recipe, index) => <RecipeCard key={recipe.id} recipe={recipe} priority={index < 4} />)}
-          </section>
-        )}
-
-        {totalPages > 1 && (
-          <nav className="pagination" aria-label="Paginación">
-            {page > 1 && <Link href={buildUrl(lang, { q, categoria, cocina, dificultad, ingrediente, tiempo, ordenar, page: page === 2 ? undefined : String(page - 1) })} rel="prev">← Anteriores</Link>}
-            <span>Página {page} de {totalPages}</span>
-            {page < totalPages && <Link href={buildUrl(lang, { q, categoria, cocina, dificultad, ingrediente, tiempo, ordenar, page: String(page + 1) })} rel="next">Siguientes →</Link>}
-          </nav>
-        )}
-      </main>
-    </>
+      {cardRecipes.length >= 2 && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd).replace(/</g, '\\u003c') }} />
+      )}
+      <RecipeListingView
+        lang={lang}
+        recipes={cardRecipes}
+        filters={listingFilters}
+        options={options}
+        page={page}
+        totalPages={totalPages}
+        totalResults={total}
+      />
+      <SiteFooter lang={lang} />
+    </div>
   )
 }

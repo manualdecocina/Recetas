@@ -1,13 +1,9 @@
-import Image from 'next/image'
 import type { Recipe } from '@/types/recipe'
-import { UI_TEXT } from '@/lib/i18n'
 import { publicUrl } from '@/lib/site'
-import { FavoriteStar } from '@/components/FavoriteStar'
-import { RecipeCookingMode } from '@/components/RecipeCookingMode'
-import { PrintRecipeButton } from '@/components/PrintRecipeButton'
-import { ShareRecipeButton } from '@/components/ShareRecipeButton'
-import { RelatedRecipes } from '@/components/RelatedRecipes'
-import { RecipeIngredients } from '@/components/RecipeIngredients'
+import { UI_TEXT } from '@/lib/i18n'
+import SiteHeader from '@/components/md/SiteHeader'
+import SiteFooter from '@/components/md/SiteFooter'
+import RecipeDocumentVisual from '@/components/md/RecipeDocumentVisual'
 
 function cleanHtml(html: string): string {
   return html
@@ -17,9 +13,14 @@ function cleanHtml(html: string): string {
     .replace(/javascript:/gi, '')
 }
 
+// Contrato público sin cambios: mismas props, mismo JSON-LD Recipe y BreadcrumbList.
+// Solo cambió la presentación (src/components/md/*). Este componente ahora también
+// pinta cabecera y pie, para que las rutas que lo usan no tengan que hacerlo.
+
 export function RecipeDocument({ recipe, relatedRecipes = [] }: { recipe: Recipe; relatedRecipes?: Array<Pick<Recipe, 'id' | 'language' | 'slug' | 'public_path' | 'title' | 'excerpt' | 'category' | 'image_url'>> }) {
   const text = UI_TEXT[recipe.language]
   const editorialHtml = recipe.content_html ? cleanHtml(recipe.content_html) : ''
+  const notesHtml = recipe.notes ? cleanHtml(recipe.notes) : ''
   const totalMinutes = recipe.total_time_minutes ??
     ((recipe.prep_time_minutes != null && recipe.cook_time_minutes != null)
       ? recipe.prep_time_minutes + recipe.cook_time_minutes
@@ -53,95 +54,19 @@ export function RecipeDocument({ recipe, relatedRecipes = [] }: { recipe: Recipe
   }
 
   return (
-    <main>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd).replace(/</g, '\\u003c') }} />
-
-      <article className="recipe-document">
-        <header className="recipe-document__hero">
-          <div className="recipe-document__hero-copy">
-            {recipe.category && <p className="eyebrow">{recipe.category}</p>}
-            <div className="recipe-document__heading">
-              <div>
-                <h1>{recipe.title}</h1>
-                {recipe.excerpt && <p>{recipe.excerpt}</p>}
-              </div>
-            </div>
-            <div className="recipe-document__actions">
-              <FavoriteStar recipeId={recipe.id} />
-              <ShareRecipeButton title={recipe.title} />
-              <PrintRecipeButton />
-            </div>
-          </div>
-
-          {recipe.image_url && (
-            <figure className="recipe-document__hero-image">
-              <Image
-                src={recipe.image_url}
-                alt={recipe.title}
-                width={1400}
-                height={930}
-                sizes="(max-width: 900px) 100vw, 58vw"
-                priority
-              />
-              <figcaption>Manual de Cocina · {recipe.category ?? 'Receta'}</figcaption>
-            </figure>
-          )}
-        </header>
-
-        <div className="recipe-document__facts" aria-label="Información de la receta">
-          {totalMinutes != null && <span><strong>{totalMinutes}</strong><small>minutos</small></span>}
-          {recipe.servings != null && <span><strong>{recipe.servings}</strong><small>porciones</small></span>}
-          {recipe.difficulty && <span><strong>{recipe.difficulty}</strong><small>dificultad</small></span>}
-          {recipe.cuisine && <span><strong>{recipe.cuisine}</strong><small>cocina</small></span>}
-        </div>
-
-        <nav className="recipe-document__jump" aria-label="Ir a">
-          <span>En esta receta</span>
-          <a href="#ingredientes">Ingredientes</a>
-          <a href="#preparacion">Preparación</a>
-          {recipe.steps.length > 0 && <a href="#modo-cocina">Modo cocina</a>}
-        </nav>
-
-        {editorialHtml && (
-          <section className="recipe-document__editorial" aria-label="Sobre esta receta">
-            <p className="eyebrow">El punto clave</p>
-            <div dangerouslySetInnerHTML={{ __html: editorialHtml }} />
-          </section>
-        )}
-
-        <div className="recipe-document__content">
-          <section className="recipe-document__ingredients" aria-labelledby="ingredientes">
-            <p className="eyebrow">Antes de empezar</p>
-            <h2 id="ingredientes">{text.ingredients}</h2>
-            <RecipeIngredients recipeId={recipe.id} language={recipe.language} ingredients={recipe.ingredients} />
-          </section>
-
-          <section className="recipe-document__preparation" aria-labelledby="preparacion">
-            <p className="eyebrow">Paso a paso</p>
-            <h2 id="preparacion">{text.preparation}</h2>
-            <ol className="recipe-steps">
-              {recipe.steps.map((step, i) => (
-                <li key={i}>
-                  <h3>{step.title || `Paso ${i + 1}`}</h3>
-                  <p>{step.content}</p>
-                </li>
-              ))}
-            </ol>
-          </section>
-        </div>
-
-        {recipe.notes && (
-          <section className="recipe-notes" aria-labelledby="recipe-notes-title">
-            <p className="eyebrow">Notas del manual</p>
-            <h2 id="recipe-notes-title">Consejos para que salga bien</h2>
-            <div dangerouslySetInnerHTML={{ __html: cleanHtml(recipe.notes) }} />
-          </section>
-        )}
-
-        <div id="modo-cocina"><RecipeCookingMode title={recipe.title} steps={recipe.steps} /></div>
-        <RelatedRecipes recipes={relatedRecipes} />
-      </article>
-    </main>
+    <div className="md-site" lang={recipe.language}>
+      <SiteHeader lang={recipe.language} />
+      <main id="md-main">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd).replace(/</g, '\\u003c') }} />
+        <RecipeDocumentVisual
+          recipe={recipe}
+          relatedRecipes={relatedRecipes}
+          editorialHtml={editorialHtml}
+          notesHtml={notesHtml}
+        />
+      </main>
+      <SiteFooter lang={recipe.language} />
+    </div>
   )
 }
