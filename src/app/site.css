@@ -327,20 +327,71 @@ a.md-lang-item:hover { background: var(--md-sand); }
   .md-step-item.has-photo { grid-template-columns: 54px minmax(0, 1fr); }
   .md-step-item.has-photo .md-step-photo { grid-column: 1 / -1; max-width: 420px; }
 }
+.md-print-brand, .md-print-foot { display: none; }
 @media print {
-  @page { margin: 14mm; }
-  .md-site { color: black; background: white; font: 11pt/1.4 Georgia,serif; }
-  .md-header,.md-footer,.md-article-actions,.md-article-toc,.md-ad-slot,.md-cooking-overlay,.md-related,.md-skip,.md-step-photo,.md-lightbox,.md-video { display: none !important; }
-  .md-container,.md-reading { width: 100%; max-width: none; margin: 0; }
-  .md-article-head { padding: 0 0 10px; }
-  .md-article-head .md-display { font-size: 25pt; line-height: 1.1; }
-  .md-article-cover { max-width: 100%; margin-bottom: 10px; }
-  .md-article-cover img { max-height: 85mm; object-fit: contain; }
-  .md-recipe-body { display: block; padding-top: 14px; }
-  .md-recipe-section { page-break-inside: avoid; margin-bottom: 18px; }
-  .md-step-item { page-break-inside: avoid; padding: 7px 0; }
-  .md-keypoint,.md-notes { background: white; border: 1px solid #bbb; }
-  .md-ingredient-checkbox input { appearance: auto; }
+  @page { size: A4; margin: 13mm 14mm 15mm; }
+  :root, :root[data-theme="dark"] { --md-ink: #16261a; --md-paper: #fff; --md-white: #fff; --md-sand: #e6efe1; --md-stone: #b9cdb2; --md-line: #b9cdb2; --md-olive: #1f6b2e; --md-olive-dark: #124a1e; --md-muted: #3f5546; --md-accent: #ffd84d; --md-on-accent: #16261a; --md-accent-soft: #fff; color-scheme: light; }
+  html, body, .md-site { background: #fff !important; color: #16261a !important; }
+  .md-site { font-family: var(--md-sans); font-size: 10.5pt; line-height: 1.45; min-height: 0; }
+  * { box-shadow: none !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .md-header, .md-footer, .md-article-actions, .md-article-toc, .md-ad-slot, .md-cooking-overlay, .md-related, .md-skip,
+  .md-step-photo, .md-lightbox, .md-video, .md-faq, .md-about, .md-crumbs, .md-step-photos-note { display: none !important; }
+  .md-container, .md-reading { width: 100% !important; max-width: none !important; margin: 0 !important; padding-inline: 0 !important; }
+
+  .md-print-brand { display: flex !important; align-items: center; justify-content: space-between; gap: 12mm; padding-bottom: 3mm; margin-bottom: 5mm; border-bottom: 1.5pt solid #1f6b2e; }
+  .md-print-brand img { width: 44mm; height: auto; display: block; }
+  .md-print-brand span { font-size: 9pt; color: #3f5546; letter-spacing: .02em; }
+
+  .md-recipe-hero { display: grid !important; grid-template-columns: minmax(0, 1fr) 62mm !important; gap: 8mm !important; align-items: start !important; padding: 0 0 5mm !important; break-inside: avoid; }
+  .md-recipe-hero-copy { min-width: 0; }
+  .md-eyebrow { background: none !important; padding: 0 !important; border: 0 !important; color: #1f6b2e !important; font-size: 8.5pt; }
+  .md-recipe-hero .md-display { font-size: 21pt !important; line-height: 1.1; margin: 1mm 0 2.5mm !important; color: #124a1e !important; }
+  .md-recipe-hero .md-lead { font-size: 10.5pt !important; line-height: 1.4; margin: 0 0 2.5mm !important; color: #3f5546; max-width: none; }
+  .md-byline { font-size: 8.5pt; margin: 0 0 3mm; opacity: 1; }
+  .md-byline a { text-decoration: none; }
+  .md-recipe-facts { gap: 2mm !important; margin: 0 !important; }
+  .md-recipe-fact { padding: 1.2mm 3mm !important; border: .75pt solid #b9cdb2 !important; border-radius: 3mm !important; background: #fff !important; }
+  .md-recipe-fact dt { font-size: 6.5pt; }
+  .md-recipe-fact dd { font-size: 9.5pt; }
+  .md-recipe-hero-photo { border-radius: 4mm !important; margin: 0; }
+  .md-recipe-hero-photo img { width: 100% !important; height: 46mm !important; aspect-ratio: auto !important; object-fit: cover; border-radius: 4mm; }
+
+  .md-recipe-wrap { padding-top: 0 !important; }
+  .md-recipe-body { display: block !important; }
+  .md-recipe-side { position: static !important; order: 0 !important; margin-bottom: 5mm; }
+  .md-recipe-side .md-recipe-section { background: #fff !important; border: .75pt solid #b9cdb2 !important; border-radius: 3mm !important; overflow: visible; }
+  .md-recipe-side .md-title { padding: 2mm 4mm !important; background: #ffd84d !important; color: #16261a !important; font-size: 13pt !important; border-radius: 3mm 3mm 0 0; }
+  .md-recipe-section .md-title, .md-title { font-size: 14pt; margin: 0 0 2.5mm; break-after: avoid; }
+  .md-ingredient-checks { padding: 2mm 4mm 3mm !important; column-count: 2; column-gap: 8mm; }
+  .md-ingredient-checks li { break-inside: avoid; border-bottom: .5pt dotted #b9cdb2 !important; }
+  .md-ingredient-checkbox { grid-template-columns: 4mm 1fr !important; gap: 2.5mm !important; padding: 1.4mm 0 !important; font-size: 10pt; }
+  .md-ingredient-checkbox input { appearance: none !important; -webkit-appearance: none !important; width: 3.4mm !important; height: 3.4mm !important; border: .9pt solid #16261a; border-radius: .8mm; margin-top: .6mm !important; }
+  .md-ingredient-checkbox input:checked + span { text-decoration: none !important; color: inherit !important; }
+  .md-ingredient-group { font-size: 10pt !important; margin: 3mm 0 1mm !important; break-after: avoid; column-span: none; }
+  .md-ingredient-has-group { break-inside: avoid; }
+
+  .md-recipe-section, #md-preparacion { break-inside: auto !important; page-break-inside: auto !important; }
+  #md-preparacion { margin-bottom: 5mm; }
+  .md-step-list { padding: 0; }
+  .md-step-item, .md-step-item.has-photo { display: grid !important; grid-template-columns: 8mm minmax(0, 1fr) !important; gap: 3mm !important; padding: 2.2mm 0 !important; break-inside: avoid; border-top: .5pt solid #cfe3c6 !important; }
+  .md-step-item:first-child { border-top: 0 !important; }
+  .md-step-count { width: 7mm !important; height: 7mm !important; border-radius: 50% !important; background: #1f6b2e !important; color: #fff !important; font-size: 10pt !important; }
+  .md-step-text h3 { font-size: 11pt !important; margin: 0 0 .8mm !important; }
+  .md-step-text p { font-size: 10pt !important; line-height: 1.45 !important; opacity: 1 !important; }
+
+  .md-nutrition { margin: 4mm 0 0 !important; padding: 3mm 4mm !important; border: .75pt solid #b9cdb2 !important; border-radius: 3mm !important; break-inside: avoid; }
+  .md-nutrition .md-title { font-size: 11pt !important; }
+  .md-nutrition th, .md-nutrition td { font-size: 9pt; padding: .8mm 0 !important; }
+  .md-nutrition-note { font-size: 7pt; }
+
+  .md-notes { background: #fff !important; border: .75pt solid #b9cdb2 !important; border-radius: 3mm !important; padding: 3mm 5mm !important; margin: 0 0 4mm; break-inside: avoid; }
+  .md-notes .md-title { font-size: 12pt !important; margin-bottom: 1mm !important; }
+  .md-notes .md-rich h3 { font-size: 10pt !important; margin: 2.5mm 0 .8mm !important; }
+  .md-notes .md-rich li, .md-notes .md-rich p { font-size: 9.5pt !important; line-height: 1.4 !important; }
+  .md-notes .md-rich .md-sources { font-size: 8pt !important; }
+  .md-notes .md-rich a { text-decoration: none; }
+
+  .md-print-foot { display: flex !important; justify-content: space-between; gap: 8mm; margin-top: 5mm; padding-top: 2.5mm; border-top: .75pt solid #b9cdb2; font-size: 8pt; color: #3f5546; }
 }
 .md-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 
