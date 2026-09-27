@@ -24,7 +24,7 @@ export default function LanguageSwitcher({ lang, alternates = {}, available }: {
   return (
     <details className="md-lang">
       <summary className="md-lang-toggle" aria-label="Idioma / Language">
-        <span aria-hidden="true">🌐</span> {current.label}
+        <span aria-hidden="true">🌐</span> <span className="md-lang-code" aria-hidden="true">{current.code.toUpperCase()}</span><span className="md-lang-label">{current.label}</span>
       </summary>
       <ul className="md-lang-panel">
         {LANGUAGES.map((item) => {
