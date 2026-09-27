@@ -40,8 +40,10 @@ export default function RecipeIngredients({ recipeId, lang, ingredients }: {
       <ul className="md-ingredient-checks">
         {ingredients.map((item, index) => {
           const amount = [item.amount, item.unit].filter(Boolean).join(' ');
+          const showGroup = item.group && item.group !== ingredients[index - 1]?.group;
           return (
-            <li key={`${recipeId}-ingredient-${index}`}>
+            <li key={`${recipeId}-ingredient-${index}`} className={showGroup ? 'md-ingredient-has-group' : undefined}>
+              {showGroup && <h3 className="md-ingredient-group">{item.group}</h3>}
               <label className="md-ingredient-checkbox">
                 <input type="checkbox" checked={Boolean(checked[index])} onChange={() => toggle(index)} />
                 <span>

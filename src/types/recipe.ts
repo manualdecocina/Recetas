@@ -6,6 +6,7 @@ export interface RecipeIngredient {
   unit?: string
   preparation?: string
   note?: string
+  group?: string
   canonicalIngredientSlug?: string
   canonicalIngredientName?: string
 }
@@ -14,6 +15,8 @@ export interface RecipeStep {
   title: string
   content: string
   timer_seconds?: number
+  image_url?: string
+  image_alt?: string
 }
 
 export interface Recipe {

@@ -59,6 +59,22 @@ const es = {
   keyPoint: "El punto clave",
   aboutRecipe: "Sobre esta receta",
   toggleTheme: "Cambiar entre tema claro y oscuro",
+  nutritionTitle: "Información nutricional",
+  perServing: "por porción",
+  nutritionEstimated: "Valores estimados a partir de los ingredientes; pueden variar según marcas y porciones.",
+  calories: "Calorías",
+  protein: "Proteínas",
+  carbs: "Carbohidratos",
+  fat: "Grasas",
+  saturatedFat: "Grasas saturadas",
+  fiber: "Fibra",
+  sugars: "Azúcares",
+  sodium: "Sodio",
+  writtenBy: "Por",
+  updatedOn: "Actualizada el",
+  videoTitle: "Video de la receta",
+  faqTitle: "Preguntas frecuentes",
+  sourcesTitle: "Fuentes",
   relatedRecipes: "También te puede gustar",
   totalTime: "Tiempo total",
   servings: "Porciones",
@@ -147,6 +163,22 @@ const en = {
   keyPoint: "The key point",
   aboutRecipe: "About this recipe",
   toggleTheme: "Switch between light and dark theme",
+  nutritionTitle: "Nutrition facts",
+  perServing: "per serving",
+  nutritionEstimated: "Estimated values calculated from the ingredients; they may vary by brand and portion size.",
+  calories: "Calories",
+  protein: "Protein",
+  carbs: "Carbohydrates",
+  fat: "Fat",
+  saturatedFat: "Saturated fat",
+  fiber: "Fiber",
+  sugars: "Sugars",
+  sodium: "Sodium",
+  writtenBy: "By",
+  updatedOn: "Updated on",
+  videoTitle: "Recipe video",
+  faqTitle: "Frequently asked questions",
+  sourcesTitle: "Sources",
   relatedRecipes: "You might also like",
   totalTime: "Total time",
   servings: "Servings",
@@ -235,6 +267,22 @@ const de = {
   keyPoint: "Das Wichtigste", // REVISAR
   aboutRecipe: "Über dieses Rezept", // REVISAR
   toggleTheme: "Zwischen hellem und dunklem Design wechseln", // REVISAR
+  nutritionTitle: "Nährwerte", // REVISAR
+  perServing: "pro Portion", // REVISAR
+  nutritionEstimated: "Geschätzte Werte auf Basis der Zutaten; sie können je nach Marke und Portion abweichen.", // REVISAR
+  calories: "Kalorien", // REVISAR
+  protein: "Eiweiß", // REVISAR
+  carbs: "Kohlenhydrate", // REVISAR
+  fat: "Fett", // REVISAR
+  saturatedFat: "Gesättigte Fettsäuren", // REVISAR
+  fiber: "Ballaststoffe", // REVISAR
+  sugars: "Zucker", // REVISAR
+  sodium: "Natrium", // REVISAR
+  writtenBy: "Von", // REVISAR
+  updatedOn: "Aktualisiert am", // REVISAR
+  videoTitle: "Rezeptvideo", // REVISAR
+  faqTitle: "Häufige Fragen", // REVISAR
+  sourcesTitle: "Quellen", // REVISAR
   relatedRecipes: "Das könnte dir auch gefallen", // REVISAR
   totalTime: "Gesamtzeit", // REVISAR
   servings: "Portionen", // REVISAR
@@ -323,6 +371,22 @@ const it = {
   keyPoint: "Il punto chiave", // REVISAR
   aboutRecipe: "Su questa ricetta", // REVISAR
   toggleTheme: "Passa dal tema chiaro a quello scuro", // REVISAR
+  nutritionTitle: "Valori nutrizionali", // REVISAR
+  perServing: "per porzione", // REVISAR
+  nutritionEstimated: "Valori stimati in base agli ingredienti; possono variare in base a marca e porzione.", // REVISAR
+  calories: "Calorie", // REVISAR
+  protein: "Proteine", // REVISAR
+  carbs: "Carboidrati", // REVISAR
+  fat: "Grassi", // REVISAR
+  saturatedFat: "Grassi saturi", // REVISAR
+  fiber: "Fibre", // REVISAR
+  sugars: "Zuccheri", // REVISAR
+  sodium: "Sodio", // REVISAR
+  writtenBy: "Di", // REVISAR
+  updatedOn: "Aggiornata il", // REVISAR
+  videoTitle: "Video della ricetta", // REVISAR
+  faqTitle: "Domande frequenti", // REVISAR
+  sourcesTitle: "Fonti", // REVISAR
   relatedRecipes: "Potrebbe piacerti anche", // REVISAR
   totalTime: "Tempo totale", // REVISAR
   servings: "Porzioni", // REVISAR
@@ -411,6 +475,22 @@ const fr = {
   keyPoint: "Le point clé", // REVISAR
   aboutRecipe: "À propos de cette recette", // REVISAR
   toggleTheme: "Basculer entre thème clair et sombre", // REVISAR
+  nutritionTitle: "Valeurs nutritionnelles", // REVISAR
+  perServing: "par portion", // REVISAR
+  nutritionEstimated: "Valeurs estimées à partir des ingrédients ; elles peuvent varier selon les marques et les portions.", // REVISAR
+  calories: "Calories", // REVISAR
+  protein: "Protéines", // REVISAR
+  carbs: "Glucides", // REVISAR
+  fat: "Lipides", // REVISAR
+  saturatedFat: "Acides gras saturés", // REVISAR
+  fiber: "Fibres", // REVISAR
+  sugars: "Sucres", // REVISAR
+  sodium: "Sodium", // REVISAR
+  writtenBy: "Par", // REVISAR
+  updatedOn: "Mise à jour le", // REVISAR
+  videoTitle: "Vidéo de la recette", // REVISAR
+  faqTitle: "Questions fréquentes", // REVISAR
+  sourcesTitle: "Sources", // REVISAR
   relatedRecipes: "Vous aimerez aussi", // REVISAR
   totalTime: "Temps total", // REVISAR
   servings: "Portions", // REVISAR
@@ -499,6 +579,22 @@ const ja = {
   keyPoint: "大切なポイント", // REVISAR
   aboutRecipe: "このレシピについて", // REVISAR
   toggleTheme: "ライト／ダークテーマを切り替える", // REVISAR
+  nutritionTitle: "栄養成分", // REVISAR
+  perServing: "1人分", // REVISAR
+  nutritionEstimated: "材料から算出した推定値です。ブランドや分量により異なる場合があります。", // REVISAR
+  calories: "カロリー", // REVISAR
+  protein: "たんぱく質", // REVISAR
+  carbs: "炭水化物", // REVISAR
+  fat: "脂質", // REVISAR
+  saturatedFat: "飽和脂肪酸", // REVISAR
+  fiber: "食物繊維", // REVISAR
+  sugars: "糖類", // REVISAR
+  sodium: "ナトリウム", // REVISAR
+  writtenBy: "著者", // REVISAR
+  updatedOn: "更新日", // REVISAR
+  videoTitle: "レシピ動画", // REVISAR
+  faqTitle: "よくある質問", // REVISAR
+  sourcesTitle: "出典", // REVISAR
   relatedRecipes: "こちらもおすすめ", // REVISAR
   totalTime: "合計時間", // REVISAR
   servings: "人数", // REVISAR

@@ -26,3 +26,10 @@ export function recipeUrl(language: RecipeLanguage | string, slug: string): stri
 export function publicUrl(publicPath: string): string {
   return `${getSiteUrl()}${normalizePublicPath(publicPath)}`
 }
+
+/** Autor editorial de las recetas. La biografía completa vive en la página "Quiénes somos". */
+export const RECIPE_AUTHOR = { name: 'Néstor Bastidas', aboutPath: 'quienes-somos' } as const
+
+export function authorUrl(language: string): string {
+  return `${getSiteUrl()}/${language}/${RECIPE_AUTHOR.aboutPath}`
+}

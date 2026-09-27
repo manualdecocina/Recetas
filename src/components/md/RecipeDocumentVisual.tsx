@@ -8,6 +8,10 @@ import FavoriteButton from './FavoriteButton';
 import SharePrintActions from './SharePrintActions';
 import AdSlot from './AdSlot';
 import RelatedRecipes from './RelatedRecipes';
+import { youtubeId } from '@/lib/video';
+import { RECIPE_AUTHOR } from '@/lib/site';
+
+const LOCALES: Record<string, string> = { es: 'es-ES', en: 'en-GB', de: 'de-DE', it: 'it-IT', fr: 'fr-FR', ja: 'ja-JP' };
 
 /**
  * Capa visual de la receta. NO contiene JSON-LD, migas de pan, canonical ni hreflang:
@@ -33,6 +37,18 @@ export default function RecipeDocumentVisual({ recipe, relatedRecipes = [], note
 
   const categorySlug = MD_CATEGORIES.find((item) => item.label === recipe.category)?.slug;
   const lang = recipe.language;
+  const updated = new Intl.DateTimeFormat(LOCALES[lang] ?? 'es-ES', { dateStyle: 'long', timeZone: 'UTC' }).format(new Date(recipe.updated_at));
+  const seo = (recipe.seo ?? {}) as Record<string, unknown>;
+  const faq = Array.isArray(seo.faq) ? (seo.faq as Array<{ q?: string; a?: string }>).filter((f) => f?.q && f?.a) : [];
+  const videoId = youtubeId(recipe.video_urls?.[0]);
+  const nutrition = (recipe.nutrition ?? {}) as Record<string, unknown>;
+  const nv = (k: string) => (typeof nutrition[k] === 'number' ? (nutrition[k] as number) : null);
+  const nutritionRows = [
+    [t.calories, nv('calories'), 'kcal'], [t.fat, nv('fat_g'), 'g'], [t.saturatedFat, nv('saturated_fat_g'), 'g'],
+    [t.carbs, nv('carbs_g'), 'g'], [t.sugars, nv('sugar_g'), 'g'], [t.fiber, nv('fiber_g'), 'g'],
+    [t.protein, nv('protein_g'), 'g'], [t.sodium, nv('sodium_mg'), 'mg'],
+  ].filter((r): r is [string, number, string] => r[1] !== null);
+  const summaryParagraphs = (recipe.summary ?? '').split(/\n{2,}/).map((x) => x.trim()).filter(Boolean);
 
   return (
     <>
@@ -47,6 +63,7 @@ export default function RecipeDocumentVisual({ recipe, relatedRecipes = [], note
             {recipe.category && <p className="md-eyebrow">{recipe.category}</p>}
             <h1 className="md-display">{recipe.title}</h1>
             {recipe.excerpt && <p className="md-lead">{recipe.excerpt}</p>}
+            <p className="md-byline">{t.writtenBy} <Link href={`/${lang}/quienes-somos`} rel="author">{RECIPE_AUTHOR.name}</Link> · {t.updatedOn} <time dateTime={recipe.updated_at}>{updated}</time></p>
             {facts.length > 0 && <dl className="md-recipe-facts">{facts.map((fact) => (
               <div className="md-recipe-fact" key={fact.label}><dt>{fact.label}</dt><dd>{fact.value}</dd></div>
             ))}</dl>}
@@ -73,23 +90,55 @@ export default function RecipeDocumentVisual({ recipe, relatedRecipes = [], note
           <div className="md-recipe-body">
             {recipe.ingredients.length > 0 && <div className="md-recipe-side">
               <RecipeIngredients recipeId={recipe.id} lang={lang} ingredients={recipe.ingredients} />
+              {nutritionRows.length > 0 && (
+                <section className="md-nutrition" aria-labelledby="md-nutrition-heading">
+                  <h2 className="md-title" id="md-nutrition-heading">{t.nutritionTitle}</h2>
+                  <p className="md-nutrition-serving">{typeof nutrition.serving_size === 'string' ? nutrition.serving_size : t.perServing}</p>
+                  <table><tbody>{nutritionRows.map(([label, value, unit]) => (
+                    <tr key={label}><th scope="row">{label}</th><td>{value} {unit}</td></tr>
+                  ))}</tbody></table>
+                  <p className="md-nutrition-note">{t.nutritionEstimated}</p>
+                </section>
+              )}
               <AdSlot placement="after-ingredients" />
             </div>}
             {recipe.steps.length > 0 && (
               <section className="md-recipe-section" id="md-preparacion" aria-labelledby="md-preparation-heading">
                 <h2 className="md-title" id="md-preparation-heading">{t.preparation}</h2>
                 <ol className="md-step-list">{recipe.steps.map((step, index) => (
-                  <li className="md-step-item" key={`${recipe.id}-step-${index}`}>
+                  <li className="md-step-item" id={`paso-${index + 1}`} key={`${recipe.id}-step-${index}`}>
                     <span className="md-step-count" aria-hidden="true">{index + 1}</span>
-                    <div className="md-step-text"><h3>{step.title || `${t.step} ${index + 1}`}</h3><p>{step.content}</p></div>
+                    <div className="md-step-text"><h3>{step.title || `${t.step} ${index + 1}`}</h3><p>{step.content}</p>
+                      {step.image_url && <figure className="md-step-photo"><Image src={step.image_url} alt={step.image_alt || step.title || `${t.step} ${index + 1}`} width={1200} height={800} sizes="(max-width: 900px) 100vw, 640px" loading="lazy" /></figure>}
+                    </div>
                   </li>
                 ))}</ol>
+              </section>
+            )}
+            {videoId && (
+              <section className="md-video" id="md-video" aria-labelledby="md-video-heading">
+                <h2 className="md-title" id="md-video-heading">{t.videoTitle}</h2>
+                <div className="md-video-frame">
+                  <iframe src={`https://www.youtube-nocookie.com/embed/${videoId}`} title={`${t.videoTitle}: ${recipe.title}`} loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowFullScreen referrerPolicy="strict-origin-when-cross-origin" />
+                </div>
+              </section>
+            )}
+            {summaryParagraphs.length > 0 && (
+              <section className="md-about md-rich" id="md-sobre" aria-labelledby="md-about-heading">
+                <h2 className="md-title" id="md-about-heading">{t.aboutRecipe}</h2>
+                {summaryParagraphs.map((paragraph, i) => <p key={i}>{paragraph}</p>)}
               </section>
             )}
             {notesHtml && <section className="md-notes" id="md-notas" aria-labelledby="md-notes-heading">
               <h2 className="md-title" id="md-notes-heading">{t.notes}</h2>
               <div className="md-rich" dangerouslySetInnerHTML={{ __html: notesHtml }} />
             </section>}
+            {faq.length > 0 && (
+              <section className="md-faq" id="md-faq" aria-labelledby="md-faq-heading">
+                <h2 className="md-title" id="md-faq-heading">{t.faqTitle}</h2>
+                {faq.map((item, i) => <details key={i}><summary>{item.q}</summary><p>{item.a}</p></details>)}
+              </section>
+            )}
             {notesHtml && <AdSlot placement="after-notes" />}
           </div>
         </div>

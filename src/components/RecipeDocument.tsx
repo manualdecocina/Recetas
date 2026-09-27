@@ -1,5 +1,6 @@
 import type { Recipe } from '@/types/recipe'
-import { publicUrl } from '@/lib/site'
+import { youtubeId } from '@/lib/video'
+import { publicUrl, getSiteUrl, RECIPE_AUTHOR, authorUrl } from '@/lib/site'
 import { UI_TEXT } from '@/lib/i18n'
 import { getRecipeTranslations } from '@/lib/public-content'
 import { normalizePublicPath } from '@/lib/site'
@@ -37,18 +38,51 @@ export async function RecipeDocument({ recipe, relatedRecipes = [] }: { recipe: 
     { '@type': 'ListItem', position: 3, name: recipe.title, item: publicUrl(recipe.public_path) },
   ] }
 
+  const galleryImages = [recipe.image_url, ...(Array.isArray(recipe.gallery) ? recipe.gallery.map((g) => (typeof g?.url === 'string' ? g.url : null)) : [])]
+    .filter((u): u is string => Boolean(u))
+  const n = (recipe.nutrition ?? {}) as Record<string, unknown>
+  const num = (k: string) => (typeof n[k] === 'number' ? (n[k] as number) : null)
+  const nutritionLd = num('calories') != null ? {
+    '@type': 'NutritionInformation',
+    servingSize: typeof n.serving_size === 'string' ? n.serving_size : undefined,
+    calories: `${num('calories')} calories`,
+    proteinContent: num('protein_g') != null ? `${num('protein_g')} g` : undefined,
+    carbohydrateContent: num('carbs_g') != null ? `${num('carbs_g')} g` : undefined,
+    fatContent: num('fat_g') != null ? `${num('fat_g')} g` : undefined,
+    saturatedFatContent: num('saturated_fat_g') != null ? `${num('saturated_fat_g')} g` : undefined,
+    fiberContent: num('fiber_g') != null ? `${num('fiber_g')} g` : undefined,
+    sugarContent: num('sugar_g') != null ? `${num('sugar_g')} g` : undefined,
+    sodiumContent: num('sodium_mg') != null ? `${num('sodium_mg')} mg` : undefined,
+  } : undefined
+  const seoMeta = (recipe.seo ?? {}) as Record<string, unknown>
+  const videoId = youtubeId(recipe.video_urls?.[0])
+  const videoLd = videoId && typeof seoMeta.video_upload_date === 'string' ? {
+    '@type': 'VideoObject',
+    name: typeof seoMeta.video_name === 'string' ? seoMeta.video_name : recipe.title,
+    description: recipe.excerpt ?? recipe.title,
+    thumbnailUrl: [`https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`],
+    uploadDate: seoMeta.video_upload_date,
+    embedUrl: `https://www.youtube-nocookie.com/embed/${videoId}`,
+    contentUrl: `https://www.youtube.com/watch?v=${videoId}`,
+  } : undefined
+
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Recipe',
     name: recipe.title,
     description: recipe.excerpt ?? undefined,
-    image: recipe.image_url ? [recipe.image_url] : undefined,
+    image: galleryImages.length ? galleryImages : undefined,
+    author: { '@type': 'Person', name: RECIPE_AUTHOR.name, url: authorUrl(recipe.language) },
+    publisher: { '@type': 'Organization', name: 'Manual de Cocina', url: getSiteUrl() },
+    mainEntityOfPage: publicUrl(recipe.public_path),
+    nutrition: nutritionLd,
+    video: videoLd,
     inLanguage: recipe.language,
     url: publicUrl(recipe.public_path),
     datePublished: recipe.published_at ?? undefined,
     dateModified: recipe.updated_at,
     recipeIngredient: recipe.ingredients.map((i) => [i.amount, i.unit, i.name].filter(Boolean).join(' ')),
-    recipeInstructions: recipe.steps.map((s) => ({ '@type': 'HowToStep', name: s.title || undefined, text: s.content })),
+    recipeInstructions: recipe.steps.map((s, i) => ({ '@type': 'HowToStep', position: i + 1, name: s.title || undefined, text: s.content, image: s.image_url ? s.image_url : undefined, url: `${publicUrl(recipe.public_path)}#paso-${i + 1}` })),
     prepTime: recipe.prep_time_minutes != null ? `PT${recipe.prep_time_minutes}M` : undefined,
     cookTime: recipe.cook_time_minutes != null ? `PT${recipe.cook_time_minutes}M` : undefined,
     totalTime: totalMinutes != null && totalMinutes > 0 ? `PT${totalMinutes}M` : undefined,

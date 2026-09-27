@@ -7,6 +7,7 @@ export interface MdIngredient {
   unit?: string;
   preparation?: string;
   note?: string;
+  group?: string;
   canonicalIngredientSlug?: string;
 }
 
@@ -14,6 +15,8 @@ export interface MdStep {
   title: string;
   content: string;
   timer_seconds?: number;
+  image_url?: string;
+  image_alt?: string;
 }
 
 export interface MdRecipe {
@@ -35,6 +38,12 @@ export interface MdRecipe {
   cuisine?: string | null;
   content_html?: string | null;
   notes?: string | null;
+  summary?: string | null;
+  keywords?: string[] | null;
+  nutrition?: Record<string, unknown> | null;
+  gallery?: Array<Record<string, unknown>> | null;
+  video_urls?: string[] | null;
+  seo?: Record<string, unknown> | null;
   published_at: string | null;
   updated_at: string;
 }
