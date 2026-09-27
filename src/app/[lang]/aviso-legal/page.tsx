@@ -1,2 +1,22 @@
-import { InstitutionalPage } from '@/components/InstitutionalPage'
-export default async function Page({ params }: { params: Promise<{ lang: string }> }) { const { lang } = await params; return <InstitutionalPage lang={lang} slug="aviso-legal" eyebrow="Información legal" title="Aviso legal"><h2>Responsable</h2><p>Manual de Cocina — manualdecocina.com</p><p>Responsable: Néstor Bastidas.</p><p>Dirección declarada: Cali, Valle del Cauca, Colombia.</p><p>Email: <a href="mailto:hola@manualdecocina.com">hola@manualdecocina.com</a>.</p><p>Teléfono para información legal: 302 815 0839.</p><h2>Actividad</h2><p>Manual de Cocina es un proyecto editorial gastronómico digital. No es un restaurante, no presta servicios profesionales y no realiza venta directa de productos.</p><h2>Publicidad</h2><p>El proyecto prevé monetización mediante publicidad. Los servicios publicitarios no se consideran activos hasta que exista una integración técnica efectiva y se hayan configurado sus requisitos de privacidad y consentimiento.</p><p>No se declara NIF/VAT porque no se dispone de ese dato confirmado.</p></InstitutionalPage> }
+import type { Metadata } from 'next'
+import { LegalPageView } from '@/components/LegalPageView'
+import { resolveLegalLanguage } from '@/lib/legal-content'
+import { getSiteUrl, normalizePublicPath } from '@/lib/site'
+import { AVISO_LEGAL_CONTENT } from './content'
+
+const SLUG = 'aviso-legal'
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = await params
+  const t = AVISO_LEGAL_CONTENT[resolveLegalLanguage(lang)]
+  return {
+    title: t.metaTitle,
+    description: t.metaDescription,
+    alternates: { canonical: `${getSiteUrl()}${normalizePublicPath(`/${lang}/${SLUG}`)}` },
+  }
+}
+
+export default async function Page({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params
+  return <LegalPageView lang={lang} slug={SLUG} content={AVISO_LEGAL_CONTENT[resolveLegalLanguage(lang)]} />
+}

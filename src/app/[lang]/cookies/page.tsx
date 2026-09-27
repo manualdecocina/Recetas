@@ -1,2 +1,22 @@
-import { InstitutionalPage } from '@/components/InstitutionalPage'
-export default async function Page({ params }: { params: Promise<{ lang: string }> }) { const { lang } = await params; return <InstitutionalPage lang={lang} slug="cookies" eyebrow="Cookies y almacenamiento" title="Cookies" intro="No declaramos servicios o cookies que no estén realmente instalados."><h2>Estado actual</h2><p>La función de favoritas utiliza almacenamiento local del navegador, no una cuenta de usuario.</p><p>Google Analytics no está definido como proveedor activo en esta versión. Google AdSense está previsto, pero no se considera activo hasta completar su integración y el sistema de consentimiento correspondiente.</p><h2>Preferencias</h2><p>Cuando se incorporen tecnologías que requieran consentimiento, esta página se actualizará para describir los proveedores y finalidades reales y el sitio incorporará un mecanismo para gestionar las preferencias.</p></InstitutionalPage> }
+import type { Metadata } from 'next'
+import { LegalPageView } from '@/components/LegalPageView'
+import { resolveLegalLanguage } from '@/lib/legal-content'
+import { getSiteUrl, normalizePublicPath } from '@/lib/site'
+import { COOKIES_CONTENT } from './content'
+
+const SLUG = 'cookies'
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = await params
+  const t = COOKIES_CONTENT[resolveLegalLanguage(lang)]
+  return {
+    title: t.metaTitle,
+    description: t.metaDescription,
+    alternates: { canonical: `${getSiteUrl()}${normalizePublicPath(`/${lang}/${SLUG}`)}` },
+  }
+}
+
+export default async function Page({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params
+  return <LegalPageView lang={lang} slug={SLUG} content={COOKIES_CONTENT[resolveLegalLanguage(lang)]} />
+}

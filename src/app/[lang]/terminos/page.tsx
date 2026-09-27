@@ -1,2 +1,22 @@
-import { InstitutionalPage } from '@/components/InstitutionalPage'
-export default async function Page({ params }: { params: Promise<{ lang: string }> }) { const { lang } = await params; return <InstitutionalPage lang={lang} slug="terminos" eyebrow="Condiciones" title="Términos de uso"><h2>Uso del sitio</h2><p>Manual de Cocina ofrece contenido editorial gastronómico para consulta personal. Puedes leer, guardar localmente y utilizar las recetas para cocinar.</p><h2>Contenido</h2><p>El contenido, la estructura y los elementos de marca del sitio están sujetos a los derechos que correspondan a sus respectivos titulares.</p><h2>Alcance</h2><p>Las recetas y contenidos no constituyen asesoramiento médico, nutricional, profesional ni una garantía sobre resultados concretos.</p></InstitutionalPage> }
+import type { Metadata } from 'next'
+import { LegalPageView } from '@/components/LegalPageView'
+import { resolveLegalLanguage } from '@/lib/legal-content'
+import { getSiteUrl, normalizePublicPath } from '@/lib/site'
+import { TERMINOS_CONTENT } from './content'
+
+const SLUG = 'terminos'
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = await params
+  const t = TERMINOS_CONTENT[resolveLegalLanguage(lang)]
+  return {
+    title: t.metaTitle,
+    description: t.metaDescription,
+    alternates: { canonical: `${getSiteUrl()}${normalizePublicPath(`/${lang}/${SLUG}`)}` },
+  }
+}
+
+export default async function Page({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params
+  return <LegalPageView lang={lang} slug={SLUG} content={TERMINOS_CONTENT[resolveLegalLanguage(lang)]} />
+}

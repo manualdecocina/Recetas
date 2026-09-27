@@ -1,2 +1,22 @@
-import { InstitutionalPage } from '@/components/InstitutionalPage'
-export default async function Page({ params }: { params: Promise<{ lang: string }> }) { const { lang } = await params; return <InstitutionalPage lang={lang} slug="privacidad" eyebrow="Privacidad" title="Privacidad" intro="Esta página describe, a nivel informativo, cómo funciona actualmente el sitio."><h2>Datos y servicios</h2><p>Las páginas públicas consultan contenido editorial almacenado en Supabase. El sitio se aloja mediante infraestructura de Hostinger.</p><h2>Favoritas</h2><p>La función de guardar recetas utiliza almacenamiento local del navegador para recordar las recetas guardadas en ese dispositivo. No requiere crear una cuenta.</p><h2>Analítica y publicidad</h2><p>Google Analytics no se considera activo en esta versión. La publicidad mediante Google AdSense está prevista, pero no se considera instalada hasta completar su integración técnica y las medidas de consentimiento correspondientes.</p><h2>Contacto</h2><p>Si escribes a hola@manualdecocina.com, la información del mensaje se utilizará para atender la consulta. No envíes información sensible que no sea necesaria para la consulta.</p></InstitutionalPage> }
+import type { Metadata } from 'next'
+import { LegalPageView } from '@/components/LegalPageView'
+import { resolveLegalLanguage } from '@/lib/legal-content'
+import { getSiteUrl, normalizePublicPath } from '@/lib/site'
+import { PRIVACIDAD_CONTENT } from './content'
+
+const SLUG = 'privacidad'
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = await params
+  const t = PRIVACIDAD_CONTENT[resolveLegalLanguage(lang)]
+  return {
+    title: t.metaTitle,
+    description: t.metaDescription,
+    alternates: { canonical: `${getSiteUrl()}${normalizePublicPath(`/${lang}/${SLUG}`)}` },
+  }
+}
+
+export default async function Page({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params
+  return <LegalPageView lang={lang} slug={SLUG} content={PRIVACIDAD_CONTENT[resolveLegalLanguage(lang)]} />
+}

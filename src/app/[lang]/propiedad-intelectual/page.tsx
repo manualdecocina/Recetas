@@ -1,2 +1,22 @@
-import { InstitutionalPage } from '@/components/InstitutionalPage'
-export default async function Page({ params }: { params: Promise<{ lang: string }> }) { const { lang } = await params; return <InstitutionalPage lang={lang} slug="propiedad-intelectual" eyebrow="Derechos" title="Propiedad intelectual"><h2>Marca y diseño</h2><p>Manual de Cocina, su identidad visual, logotipo, textos, diseño y elementos gráficos están protegidos por los derechos que resulten aplicables.</p><h2>Contenido gastronómico</h2><p>Las fotografías, textos y demás materiales publicados pueden estar sujetos a derechos de sus respectivos titulares. No se debe asumir que todo material del sitio es reutilizable libremente.</p><h2>Consultas</h2><p>Para solicitar información sobre derechos o usos concretos, escribe a <a href="mailto:hola@manualdecocina.com">hola@manualdecocina.com</a>.</p></InstitutionalPage> }
+import type { Metadata } from 'next'
+import { LegalPageView } from '@/components/LegalPageView'
+import { resolveLegalLanguage } from '@/lib/legal-content'
+import { getSiteUrl, normalizePublicPath } from '@/lib/site'
+import { PROPIEDAD_INTELECTUAL_CONTENT } from './content'
+
+const SLUG = 'propiedad-intelectual'
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = await params
+  const t = PROPIEDAD_INTELECTUAL_CONTENT[resolveLegalLanguage(lang)]
+  return {
+    title: t.metaTitle,
+    description: t.metaDescription,
+    alternates: { canonical: `${getSiteUrl()}${normalizePublicPath(`/${lang}/${SLUG}`)}` },
+  }
+}
+
+export default async function Page({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params
+  return <LegalPageView lang={lang} slug={SLUG} content={PROPIEDAD_INTELECTUAL_CONTENT[resolveLegalLanguage(lang)]} />
+}

@@ -1,2 +1,22 @@
-import { InstitutionalPage } from '@/components/InstitutionalPage'
-export default async function Page({ params }: { params: Promise<{ lang: string }> }) { const { lang } = await params; return <InstitutionalPage lang={lang} slug="politica-editorial" eyebrow="Criterio editorial" title="Política editorial" intro="Cocinar es el centro: la información debe ser clara, útil y honesta."><h2>Contenido</h2><p>Las recetas se presentan como contenido gastronómico práctico. Procuramos conservar instrucciones comprensibles, ingredientes reconocibles y una estructura que permita cocinar desde el móvil o imprimir la receta.</p><h2>Información</h2><p>No inventamos datos que no estén disponibles. Cuando un dato editorial no está confirmado, se evita presentarlo como un hecho.</p><h2>Alcance</h2><p>Manual de Cocina no es un servicio médico, nutricional, de restauración ni de asesoría profesional.</p></InstitutionalPage> }
+import type { Metadata } from 'next'
+import { LegalPageView } from '@/components/LegalPageView'
+import { resolveLegalLanguage } from '@/lib/legal-content'
+import { getSiteUrl, normalizePublicPath } from '@/lib/site'
+import { POLITICA_EDITORIAL_CONTENT } from './content'
+
+const SLUG = 'politica-editorial'
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = await params
+  const t = POLITICA_EDITORIAL_CONTENT[resolveLegalLanguage(lang)]
+  return {
+    title: t.metaTitle,
+    description: t.metaDescription,
+    alternates: { canonical: `${getSiteUrl()}${normalizePublicPath(`/${lang}/${SLUG}`)}` },
+  }
+}
+
+export default async function Page({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params
+  return <LegalPageView lang={lang} slug={SLUG} content={POLITICA_EDITORIAL_CONTENT[resolveLegalLanguage(lang)]} />
+}
