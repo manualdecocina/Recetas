@@ -202,7 +202,7 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
   const language = resolveLanguage(lang)
   const t = CONTENT[language]
   return (
-    <InstitutionalPage lang={lang} eyebrow={t.eyebrow} title={t.title} intro={t.intro}>
+    <InstitutionalPage lang={lang} slug="quienes-somos" eyebrow={t.eyebrow} title={t.title} intro={t.intro}>
       <div className="md-author">
         <figure className="md-author-photo">
           <Image

@@ -4,6 +4,14 @@ import { getMdCopy } from '@/lib/copy';
 import SiteHeader from './SiteHeader';
 import SiteFooter from './SiteFooter';
 import RecipeCard from './RecipeCard';
+import { SUPPORTED_LANGUAGES } from '@/types/recipe';
+
+/** Alternates de una ruta con el mismo slug en los 7 idiomas (categorías: el slug es
+ * neutro por idioma, solo cambia la etiqueta mostrada). Evita que el selector de idioma
+ * caiga al inicio en vez de quedarse en la misma categoría. */
+function samePathAlternates(path: (lang: MdLanguage) => string): Partial<Record<MdLanguage, string>> {
+  return Object.fromEntries(SUPPORTED_LANGUAGES.map((l) => [l, path(l)]));
+}
 
 /** Photo must come from a real recipe in the category; never fabricate one. */
 export interface MdCategorySummary {
@@ -40,9 +48,10 @@ export function CategoriesIndexView({ lang, categories }: {
   lang: MdLanguage; categories: MdCategorySummary[];
 }) {
   const t = getMdCopy(lang);
+  const alternates = samePathAlternates((l) => `/${l}/categorias`);
   return (
     <div className="md-site" lang={lang}>
-      <SiteHeader lang={lang} />
+      <SiteHeader lang={lang} alternates={alternates} />
       <main className="md-container" id="md-main">
         <header className="md-page-head"><h1 className="md-display">{t.categoryCatalog}</h1></header>
         <section className="md-section">
@@ -62,9 +71,10 @@ export function CategoryDetailView({ lang, category, recipes }: {
   recipes: MdRecipeCardData[];
 }) {
   const t = getMdCopy(lang);
+  const alternates = samePathAlternates((l) => `/${l}/categorias/${category.slug}`);
   return (
     <div className="md-site" lang={lang}>
-      <SiteHeader lang={lang} />
+      <SiteHeader lang={lang} alternates={alternates} />
       <main className="md-container" id="md-main">
         <header className="md-page-head"><p className="md-eyebrow">{t.recipesInCategory}</p><h1 className="md-display">{category.label}</h1></header>
         {recipes.length > 0 ? (

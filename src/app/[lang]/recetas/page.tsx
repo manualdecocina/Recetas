@@ -179,9 +179,11 @@ export default async function RecipesListPage({ params, searchParams }: Props) {
     })),
   }
 
+  const headerAlternates = Object.fromEntries(SUPPORTED_LANGUAGES.map((l) => [l, `/${l}/recetas`]))
+
   return (
     <div className="md-site" lang={lang}>
-      <SiteHeader lang={lang} />
+      <SiteHeader lang={lang} alternates={headerAlternates} />
       {cardRecipes.length >= 2 && (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd).replace(/</g, '\\u003c') }} />
       )}
