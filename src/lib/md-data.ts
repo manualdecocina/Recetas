@@ -67,7 +67,7 @@ export async function getHomeData(lang: RecipeLanguage): Promise<MdHomeData> {
       .eq('language', lang)
       .eq('published', true)
       .order('published_at', { ascending: false, nullsFirst: false })
-      .limit(9),
+      .limit(10),
     getCategorySummaries(lang),
     lang === 'es' ? getIngredientSummaries(12) : Promise.resolve([] as MdIngredientSummary[]),
   ])
@@ -80,7 +80,7 @@ export async function getHomeData(lang: RecipeLanguage): Promise<MdHomeData> {
   // Si al quitar la destacada no queda nada (idioma con una sola receta publicada, como
   // hoy de/en/fr/it/ja/pt con solo la lechona), se muestra igual esa receta en "últimas":
   // si no, la sección entera desaparece de la home en vez de mostrar la única receta que hay.
-  const latest = (withoutFeatured.length > 0 ? withoutFeatured : latestRaw).slice(0, 8)
+  const latest = (withoutFeatured.length > 0 ? withoutFeatured : latestRaw).slice(0, 9)
 
   return { featured, latest, categories, ingredients }
 }
