@@ -7,7 +7,6 @@ import { normalizePublicPath, recipePath, publicUrl } from '@/lib/site'
 import { RecipeDocument } from '@/components/RecipeDocument'
 import type { RecipeIngredient } from '@/types/recipe'
 import { SUPPORTED_LANGUAGES, type Recipe, type RecipeLanguage } from '@/types/recipe'
-import { SiteHeader } from '@/components/SiteHeader'
 
 export const revalidate = 3600
 
@@ -111,5 +110,5 @@ export default async function RecipeDetailPage({ params }: Props) {
   if (routePath !== publicPath) permanentRedirect(publicPath)
 
   const relatedRecipes = await getRelatedRecipes(recipe)
-  return <><SiteHeader lang={lang} /><RecipeDocument recipe={recipe} relatedRecipes={relatedRecipes} /></>
+  return <RecipeDocument recipe={recipe} relatedRecipes={relatedRecipes} />
 }

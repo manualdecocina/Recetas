@@ -1,14 +1,12 @@
-import Link from 'next/link'
+'use client'
 
-// 404 mínimo (sin diseño en esta fase). Next 14 no pasa params a not-found,
-// por eso el texto es neutro y el enlace lleva a la raíz (que redirige a /es).
+import { usePathname } from 'next/navigation'
+import LocalizedNotFound from '@/components/md/LocalizedNotFound'
+import { SUPPORTED_LANGUAGES, type RecipeLanguage } from '@/types/recipe'
+
+// Next no pasa params a not-found: el idioma se deduce del primer segmento de la URL.
 export default function NotFound() {
-  return (
-    <main>
-      <h1>404</h1>
-      <p>
-        <Link href="/">Manual de Cocina</Link>
-      </p>
-    </main>
-  )
+  const first = (usePathname() ?? '').split('/')[1] ?? ''
+  const lang: RecipeLanguage = (SUPPORTED_LANGUAGES as string[]).includes(first) ? (first as RecipeLanguage) : 'es'
+  return <LocalizedNotFound lang={lang} />
 }
