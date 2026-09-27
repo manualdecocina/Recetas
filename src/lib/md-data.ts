@@ -1,15 +1,19 @@
 import { supabase } from '@/lib/supabase/public'
 import type { RecipeLanguage } from '@/types/recipe'
-import { MD_CATEGORIES, type MdRecipeCardData } from '@/components/md/md-types'
+import type { MdRecipeCardData } from '@/components/md/md-types'
 import type { MdCategorySummary } from '@/components/md/CategoryViews'
 import type { MdIngredientSummary } from '@/components/md/IngredientViews'
 import type { MdHomeData } from '@/components/md/HomePageView'
+import { CATEGORY_TAXONOMY } from '@/lib/categories'
 
 // Solo lectura, con el mismo cliente público y las mismas tablas/filtros que ya usan las
 // demás rutas (recetas publicadas por idioma). No inventa datos: si no hay, devuelve vacío.
 const CARD_FIELDS = 'id, language, slug, public_path, title, excerpt, category, image_url'
 
-/** Una sola consulta: conteo real por categoría y una foto real de una receta de esa categoría. */
+/** Una sola consulta: conteo real por categoría y una foto real de una receta de esa categoría.
+ *  `category` se guarda traducido por idioma, así que la comparación usa la etiqueta de ese
+ *  mismo idioma (CATEGORY_TAXONOMY) y no la española fija: si no, de/en/fr/it/ja/pt siempre
+ *  daban 0 en todas las categorías aunque hubiera recetas publicadas y con categoría. */
 export async function getCategorySummaries(lang: RecipeLanguage): Promise<MdCategorySummary[]> {
   const { data, error } = await supabase
     .from('recipes')
@@ -19,7 +23,8 @@ export async function getCategorySummaries(lang: RecipeLanguage): Promise<MdCate
     .order('published_at', { ascending: false, nullsFirst: false })
   if (error) throw new Error(`No se pudieron cargar las categorías: ${error.message}`)
   const rows = (data ?? []) as Array<{ category: string | null; image_url: string | null }>
-  return MD_CATEGORIES.map(({ label, slug }) => {
+  return CATEGORY_TAXONOMY.map(({ slug, labels }) => {
+    const label = labels[lang]
     const inCategory = rows.filter((row) => row.category === label)
     return {
       slug,
@@ -70,9 +75,12 @@ export async function getHomeData(lang: RecipeLanguage): Promise<MdHomeData> {
   if (latestResult.error) throw new Error(`No se pudieron cargar las últimas recetas: ${latestResult.error.message}`)
 
   const featured = (featuredResult.data ?? null) as MdRecipeCardData | null
-  const latest = ((latestResult.data ?? []) as MdRecipeCardData[])
-    .filter((recipe) => recipe.id !== featured?.id)
-    .slice(0, 8)
+  const latestRaw = (latestResult.data ?? []) as MdRecipeCardData[]
+  const withoutFeatured = latestRaw.filter((recipe) => recipe.id !== featured?.id)
+  // Si al quitar la destacada no queda nada (idioma con una sola receta publicada, como
+  // hoy de/en/fr/it/ja/pt con solo la lechona), se muestra igual esa receta en "últimas":
+  // si no, la sección entera desaparece de la home en vez de mostrar la única receta que hay.
+  const latest = (withoutFeatured.length > 0 ? withoutFeatured : latestRaw).slice(0, 8)
 
   return { featured, latest, categories, ingredients }
 }

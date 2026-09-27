@@ -9,22 +9,10 @@ import { UI_TEXT } from '@/lib/i18n'
 import { allLanguageAlternates } from '@/lib/seo'
 import { getSiteUrl } from '@/lib/site'
 import { SUPPORTED_LANGUAGES, type RecipeLanguage } from '@/types/recipe'
+import { categoryLabel } from '@/lib/categories'
 
 const PAGE_SIZE = 24
 const CARD_FIELDS = 'id, language, slug, public_path, title, excerpt, category, image_url'
-
-const CATEGORIES = [
-  ['Platos principales', 'platos-principales'],
-  ['Entrantes y aperitivos', 'entrantes-y-aperitivos'],
-  ['Sopas y cremas', 'sopas-y-cremas'],
-  ['Ensaladas', 'ensaladas'],
-  ['Guarniciones', 'guarniciones'],
-  ['Salsas y aderezos', 'salsas-y-aderezos'],
-  ['Panes y masas', 'panes-y-masas'],
-  ['Postres', 'postres'],
-  ['Desayunos y brunch', 'desayunos-y-brunch'],
-  ['Bebidas', 'bebidas'],
-] as const
 
 interface Props {
   params: Promise<{ lang: string }>
@@ -100,7 +88,10 @@ export default async function RecipesListPage({ params, searchParams }: Props) {
 
   if (q) query = query.or(`title.ilike.%${q}%,excerpt.ilike.%${q}%`)
   if (categoria) {
-    const label = CATEGORIES.find(([, slug]) => slug === categoria)?.[0]
+    // `category` está traducido por idioma en la base de datos: hay que buscar la
+    // etiqueta de ESTE idioma (antes comparaba siempre con la española y el filtro
+    // no devolvía nada fuera de /es).
+    const label = categoryLabel(lang, categoria)
     if (label) query = query.eq('category', label)
   }
   if (cocina) {

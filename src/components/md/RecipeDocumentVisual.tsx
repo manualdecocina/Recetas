@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { MD_CATEGORIES, type MdRecipe, type MdRecipeCardData } from './md-types';
+import type { MdRecipe, MdRecipeCardData } from './md-types';
+import { categorySlugFromLabel } from '@/lib/categories';
 import { getMdCopy } from '@/lib/copy';
 import RecipeIngredients from './RecipeIngredients';
 import RecipeCookingMode from './RecipeCookingMode';
@@ -37,8 +38,10 @@ export default function RecipeDocumentVisual({ recipe, relatedRecipes = [], note
     recipe.cuisine ? { label: t.cuisine, value: recipe.cuisine } : null,
   ].filter((value): value is { label: string; value: string } => value !== null);
 
-  const categorySlug = MD_CATEGORIES.find((item) => item.label === recipe.category)?.slug;
   const lang = recipe.language;
+  // `recipe.category` está traducido a este idioma; buscar el slug con la etiqueta
+  // española fija fallaba siempre fuera de /es (categorySlug quedaba undefined).
+  const categorySlug = categorySlugFromLabel(lang, recipe.category);
   const updated = new Intl.DateTimeFormat(LOCALES[lang] ?? 'es-ES', { dateStyle: 'long', timeZone: 'UTC' }).format(new Date(recipe.updated_at));
   const seo = (recipe.seo ?? {}) as Record<string, unknown>;
   const faq = Array.isArray(seo.faq) ? (seo.faq as Array<{ q?: string; a?: string }>).filter((f) => f?.q && f?.a) : [];

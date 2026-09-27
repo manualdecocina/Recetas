@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import type { MdLanguage, MdRecipeCardData } from './md-types';
-import { MD_CATEGORIES } from './md-types';
 import { getMdCopy } from '@/lib/copy';
+import { CATEGORY_TAXONOMY } from '@/lib/categories';
 import RecipeCard from './RecipeCard';
 
 export type MdFilterParam = 'q' | 'categoria' | 'cocina' | 'dificultad' | 'ingrediente' | 'tiempo' | 'ordenar';
@@ -39,7 +39,7 @@ export default function RecipeListingView({ lang, recipes, filters, options, pag
   const action = `/${lang}/recetas`;
   const active = filterKeys.filter((key) => filters[key]);
   const selectFields: Array<{ key: MdFilterParam; label: string; options: MdSelectOption[] }> = [
-    { key: 'categoria', label: t.category, options: MD_CATEGORIES.map((item) => ({ value: item.slug, label: item.label })) },
+    { key: 'categoria', label: t.category, options: CATEGORY_TAXONOMY.map((item) => ({ value: item.slug, label: item.labels[lang] })) },
     { key: 'cocina', label: t.cuisine, options: options.cuisines },
     { key: 'dificultad', label: t.difficulty, options: options.difficulties },
     ...(lang === 'es' ? [{ key: 'ingrediente' as const, label: t.ingredient, options: options.ingredients }] : []),
