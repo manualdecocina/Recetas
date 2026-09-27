@@ -18,7 +18,7 @@ export default function SiteHeader({ lang }: { lang: MdLanguage }) {
       <header className="md-header">
         <div className="md-container md-header-inner">
           <Link className="md-brand" href={base} aria-label="Manual de Cocina">
-            <img className="md-brand-image" src="/brand/manual-de-cocina-horizontal.svg" alt="Manual de Cocina" width="240" height="46" />
+            <img className="md-brand-image" src="/brand/logo-manual-de-cocina.png" alt="Manual de Cocina" width="640" height="188" />
           </Link>
           <nav className="md-header-nav" aria-label={t.navRecipes}>
             {nav.map((item) => <Link key={item.href} href={item.href}>{item.label}</Link>)}

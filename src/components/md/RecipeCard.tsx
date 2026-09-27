@@ -18,7 +18,7 @@ export default function RecipeCard({ recipe, priority = false }: {
             loading={priority ? 'eager' : 'lazy'} fetchPriority={priority ? 'high' : 'auto'} />
         ) : (
           <div className="md-card-photo-placeholder">
-            <img src="/brand/manual-de-cocina-mark.svg" width="52" height="52" alt="" />
+            <img src="/brand/mark.png" width="52" height="52" alt="" />
             <span>{t.noPhoto}</span>
           </div>
         )}

@@ -23,7 +23,7 @@ export default function SiteFooter({ lang }: { lang: MdLanguage }) {
         <div className="md-footer-grid">
           <div>
             <Link href={base} aria-label="Manual de Cocina">
-              <img className="md-footer-mark" src="/brand/manual-de-cocina-mark.svg" alt="" width="42" height="42" />
+              <img className="md-footer-mark" src="/brand/logo-manual-de-cocina.png" alt="" width="640" height="188" />
             </Link>
             <p className="md-footer-intro">{t.footerIntro}</p>
           </div>

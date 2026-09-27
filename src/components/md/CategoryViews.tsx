@@ -25,7 +25,7 @@ export function CategoryGrid({ lang, categories }: {
             <img className="md-category-photo" src={item.image_url} alt="" width="360" height="270" loading="lazy" />
           ) : (
             <span className="md-category-fallback" aria-hidden="true">
-              <img src="/brand/manual-de-cocina-mark.svg" alt="" width="42" height="42" />
+              <img src="/brand/mark.png" alt="" width="42" height="42" />
             </span>
           )}
           <span className="md-category-body"><strong className="md-category-name">{item.label}</strong>
