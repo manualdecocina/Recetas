@@ -3,6 +3,7 @@ import '../globals.css'
 import '../editorial.css'
 import '../site.css'
 import { editorialSerif, uiSans } from '../fonts'
+import ThemeSync from '@/components/md/ThemeSync'
 import { getSiteUrl, isIndexingAllowed } from '@/lib/site'
 import { DEFAULT_LANGUAGE, SUPPORTED_LANGUAGES } from '@/types/recipe'
 
@@ -44,7 +45,7 @@ export default async function LanguageRootLayout({
       <head>
         <script dangerouslySetInnerHTML={{ __html: "try{var t=localStorage.getItem('md-theme');if(t==='dark'||t==='light')document.documentElement.dataset.theme=t}catch(e){}" }} />
       </head>
-      <body>{children}</body>
+      <body><ThemeSync />{children}</body>
     </html>
   )
 }
