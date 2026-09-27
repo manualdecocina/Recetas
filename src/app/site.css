@@ -221,6 +221,12 @@
 .md-notes { background: var(--md-accent-soft); border: 2px solid var(--md-accent); border-radius: 24px; padding: 24px 28px; }
 .md-notes .md-title { font-size: 1.7rem; margin-bottom: 8px; }
 .md-notes p { white-space: pre-line; margin-bottom: 0; }
+.md-notes .md-rich h3 { font-family: var(--md-serif); font-size: 1.15rem; line-height: 1.2; font-weight: 800; margin: 18px 0 6px; color: var(--md-olive-dark); }
+.md-notes .md-rich h3:first-child { margin-top: 0; }
+.md-notes .md-rich ul { margin: 0 0 6px; }
+.md-notes .md-rich li { line-height: 1.6; margin-bottom: 4px; }
+.md-notes .md-rich .md-sources { font-size: .9rem; margin-top: 14px; opacity: .85; }
+.md-notes .md-rich .md-sources a { text-decoration: underline; }
 .md-about { background: var(--md-white); border: 2px solid var(--md-stone); border-radius: 26px; padding: clamp(22px, 3.4vw, 40px); }
 .md-about .md-title { font-size: 2rem; }
 .md-about .md-rich { max-width: 780px; }
