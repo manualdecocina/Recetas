@@ -1,6 +1,8 @@
 import type { Recipe } from '@/types/recipe'
 import { publicUrl } from '@/lib/site'
 import { UI_TEXT } from '@/lib/i18n'
+import { getRecipeTranslations } from '@/lib/public-content'
+import { normalizePublicPath } from '@/lib/site'
 import SiteHeader from '@/components/md/SiteHeader'
 import SiteFooter from '@/components/md/SiteFooter'
 import RecipeDocumentVisual from '@/components/md/RecipeDocumentVisual'
@@ -17,8 +19,12 @@ function cleanHtml(html: string): string {
 // Solo cambió la presentación (src/components/md/*). Este componente ahora también
 // pinta cabecera y pie, para que las rutas que lo usan no tengan que hacerlo.
 
-export function RecipeDocument({ recipe, relatedRecipes = [] }: { recipe: Recipe; relatedRecipes?: Array<Pick<Recipe, 'id' | 'language' | 'slug' | 'public_path' | 'title' | 'excerpt' | 'category' | 'image_url'>> }) {
+export async function RecipeDocument({ recipe, relatedRecipes = [] }: { recipe: Recipe; relatedRecipes?: Array<Pick<Recipe, 'id' | 'language' | 'slug' | 'public_path' | 'title' | 'excerpt' | 'category' | 'image_url'>> }) {
   const text = UI_TEXT[recipe.language]
+  const translations = recipe.recipe_group_id ? await getRecipeTranslations(recipe.recipe_group_id) : []
+  const alternates = Object.fromEntries(
+    translations.filter((t) => t.language !== recipe.language).map((t) => [t.language, normalizePublicPath(t.public_path)])
+  )
   const editorialHtml = recipe.content_html ? cleanHtml(recipe.content_html) : ''
   const notesHtml = recipe.notes ? cleanHtml(recipe.notes) : ''
   const totalMinutes = recipe.total_time_minutes ??
@@ -55,7 +61,7 @@ export function RecipeDocument({ recipe, relatedRecipes = [] }: { recipe: Recipe
 
   return (
     <div className="md-site" lang={recipe.language}>
-      <SiteHeader lang={recipe.language} />
+      <SiteHeader lang={recipe.language} alternates={alternates} />
       <main id="md-main">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd).replace(/</g, '\\u003c') }} />

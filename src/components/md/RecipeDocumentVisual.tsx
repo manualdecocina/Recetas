@@ -51,7 +51,7 @@ export default function RecipeDocumentVisual({ recipe, relatedRecipes = [], edit
             />
           </figure>
         )}
-        <div className="md-reading">
+        <div className="md-container md-recipe-wrap">
           {facts.length > 0 && <dl className="md-recipe-facts">{facts.map((fact) => (
             <div className="md-recipe-fact" key={fact.label}><dt>{fact.label}</dt><dd>{fact.value}</dd></div>
           ))}</dl>}
@@ -72,10 +72,10 @@ export default function RecipeDocumentVisual({ recipe, relatedRecipes = [], edit
             </aside>
           )}
           <div className="md-recipe-body">
-            {recipe.ingredients.length > 0 && <>
+            {recipe.ingredients.length > 0 && <div className="md-recipe-side">
               <RecipeIngredients recipeId={recipe.id} lang={recipe.language} ingredients={recipe.ingredients} />
               <AdSlot placement="after-ingredients" />
-            </>}
+            </div>}
             {recipe.steps.length > 0 && (
               <section className="md-recipe-section" id="md-preparacion" aria-labelledby="md-preparation-heading">
                 <h2 className="md-title" id="md-preparation-heading">{t.preparation}</h2>

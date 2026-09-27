@@ -76,3 +76,14 @@ export async function getHomeData(lang: RecipeLanguage): Promise<MdHomeData> {
 
   return { featured, latest, categories, ingredients }
 }
+
+/** Idiomas que tienen al menos una receta publicada (los demás se muestran deshabilitados en el selector). */
+export async function getAvailableLanguages(): Promise<RecipeLanguage[]> {
+  const { data, error } = await supabase
+    .from('recipes')
+    .select('language')
+    .eq('published', true)
+    .limit(2000)
+  if (error) return ['es']
+  return Array.from(new Set((data ?? []).map((row: { language: string }) => row.language as RecipeLanguage)))
+}
