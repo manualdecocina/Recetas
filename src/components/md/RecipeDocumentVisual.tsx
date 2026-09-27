@@ -1,5 +1,6 @@
 import Image from 'next/image';
-import type { MdRecipe, MdRecipeCardData } from './md-types';
+import Link from 'next/link';
+import { MD_CATEGORIES, type MdRecipe, type MdRecipeCardData } from './md-types';
 import { getMdCopy } from '@/lib/copy';
 import RecipeIngredients from './RecipeIngredients';
 import RecipeCookingMode from './RecipeCookingMode';
@@ -25,51 +26,54 @@ export default function RecipeDocumentVisual({ recipe, relatedRecipes = [], edit
       ? recipe.prep_time_minutes + recipe.cook_time_minutes : null
   );
   const facts = [
-    recipe.category ? { label: t.category, value: recipe.category } : null,
     computedTotal != null && computedTotal > 0 ? { label: t.totalTime, value: `${computedTotal} min` } : null,
     recipe.servings != null && recipe.servings > 0 ? { label: t.servings, value: String(recipe.servings) } : null,
     recipe.difficulty ? { label: t.difficulty, value: recipe.difficulty } : null,
     recipe.cuisine ? { label: t.cuisine, value: recipe.cuisine } : null,
   ].filter((value): value is { label: string; value: string } => value !== null);
 
+  const categorySlug = MD_CATEGORIES.find((item) => item.label === recipe.category)?.slug;
+  const lang = recipe.language;
+
   return (
     <>
       <article className="md-article">
-        <header className="md-reading md-article-head">
-          {recipe.category && <p className="md-eyebrow">{recipe.category}</p>}
-          <h1 className="md-display">{recipe.title}</h1>
-        </header>
-        {recipe.image_url && (
-          <figure className="md-article-cover">
-            <Image
-              src={recipe.image_url}
-              alt={`${t.photoOf} ${recipe.title}`}
-              width={1400}
-              height={930}
-              sizes="(max-width: 1200px) 100vw, 1200px"
-              priority
-            />
-          </figure>
-        )}
-        <div className="md-container md-recipe-wrap">
-          {recipe.excerpt && <p className="md-lead md-recipe-lead">{recipe.excerpt}</p>}
-          {facts.length > 0 && <dl className="md-recipe-facts">{facts.map((fact) => (
-            <div className="md-recipe-fact" key={fact.label}><dt>{fact.label}</dt><dd>{fact.value}</dd></div>
-          ))}</dl>}
-          <div className="md-article-actions">
-            <FavoriteButton recipeId={recipe.id} lang={recipe.language} />
-            <SharePrintActions lang={recipe.language} title={recipe.title} />
-            <RecipeCookingMode lang={recipe.language} steps={recipe.steps} />
+        <header className="md-container md-recipe-hero">
+          <div className="md-recipe-hero-copy">
+            <nav className="md-crumbs" aria-label="Breadcrumb">
+              <Link href={`/${lang}`}>Manual de Cocina</Link><span aria-hidden="true">/</span>
+              <Link href={`/${lang}/recetas`}>{t.navRecipes}</Link>
+              {recipe.category && categorySlug && <><span aria-hidden="true">/</span><Link href={`/${lang}/categorias/${categorySlug}`}>{recipe.category}</Link></>}
+            </nav>
+            {recipe.category && <p className="md-eyebrow">{recipe.category}</p>}
+            <h1 className="md-display">{recipe.title}</h1>
+            {recipe.excerpt && <p className="md-lead">{recipe.excerpt}</p>}
+            {facts.length > 0 && <dl className="md-recipe-facts">{facts.map((fact) => (
+              <div className="md-recipe-fact" key={fact.label}><dt>{fact.label}</dt><dd>{fact.value}</dd></div>
+            ))}</dl>}
+            <div className="md-article-actions">
+              <RecipeCookingMode lang={lang} steps={recipe.steps} />
+              <FavoriteButton recipeId={recipe.id} lang={lang} />
+              <SharePrintActions lang={lang} title={recipe.title} />
+            </div>
           </div>
-          <nav className="md-article-toc" aria-label={t.recipeContents}>
-            {recipe.ingredients.length > 0 && <a href="#md-ingredientes">{t.ingredients}</a>}
-            {recipe.steps.length > 0 && <a href="#md-preparacion">{t.preparation}</a>}
-            {notesHtml && <a href="#md-notas">{t.notes}</a>}
-            {editorialHtml && <a href="#md-sobre">{t.aboutRecipe}</a>}
-          </nav>
+          {recipe.image_url && (
+            <figure className="md-recipe-hero-photo">
+              <Image
+                src={recipe.image_url}
+                alt={`${t.photoOf} ${recipe.title}`}
+                width={1200}
+                height={1000}
+                sizes="(max-width: 900px) 100vw, 560px"
+                priority
+              />
+            </figure>
+          )}
+        </header>
+        <div className="md-container md-recipe-wrap">
           <div className="md-recipe-body">
             {recipe.ingredients.length > 0 && <div className="md-recipe-side">
-              <RecipeIngredients recipeId={recipe.id} lang={recipe.language} ingredients={recipe.ingredients} />
+              <RecipeIngredients recipeId={recipe.id} lang={lang} ingredients={recipe.ingredients} />
               <AdSlot placement="after-ingredients" />
             </div>}
             {recipe.steps.length > 0 && (
@@ -83,19 +87,19 @@ export default function RecipeDocumentVisual({ recipe, relatedRecipes = [], edit
                 ))}</ol>
               </section>
             )}
-            {notesHtml && <section className="md-recipe-section md-notes" id="md-notas" aria-labelledby="md-notes-heading">
+            {notesHtml && <section className="md-notes" id="md-notas" aria-labelledby="md-notes-heading">
               <h2 className="md-title" id="md-notes-heading">{t.notes}</h2>
               <div className="md-rich" dangerouslySetInnerHTML={{ __html: notesHtml }} />
             </section>}
             {notesHtml && <AdSlot placement="after-notes" />}
-            {editorialHtml && <section className="md-recipe-section md-about" id="md-sobre" aria-labelledby="md-about-heading">
+            {editorialHtml && <section className="md-about" id="md-sobre" aria-labelledby="md-about-heading">
               <h2 className="md-title" id="md-about-heading">{t.aboutRecipe}</h2>
               <div className="md-rich" dangerouslySetInnerHTML={{ __html: editorialHtml }} />
             </section>}
           </div>
         </div>
       </article>
-      <RelatedRecipes lang={recipe.language} recipes={relatedRecipes} />
+      <RelatedRecipes lang={lang} recipes={relatedRecipes} />
     </>
   );
 }

@@ -58,6 +58,7 @@ const es = {
   notes: "Notas",
   keyPoint: "El punto clave",
   aboutRecipe: "Sobre esta receta",
+  toggleTheme: "Cambiar entre tema claro y oscuro",
   relatedRecipes: "También te puede gustar",
   totalTime: "Tiempo total",
   servings: "Porciones",
@@ -145,6 +146,7 @@ const en = {
   notes: "Notes",
   keyPoint: "The key point",
   aboutRecipe: "About this recipe",
+  toggleTheme: "Switch between light and dark theme",
   relatedRecipes: "You might also like",
   totalTime: "Total time",
   servings: "Servings",
@@ -232,6 +234,7 @@ const de = {
   notes: "Hinweise", // REVISAR
   keyPoint: "Das Wichtigste", // REVISAR
   aboutRecipe: "Über dieses Rezept", // REVISAR
+  toggleTheme: "Zwischen hellem und dunklem Design wechseln", // REVISAR
   relatedRecipes: "Das könnte dir auch gefallen", // REVISAR
   totalTime: "Gesamtzeit", // REVISAR
   servings: "Portionen", // REVISAR
@@ -319,6 +322,7 @@ const it = {
   notes: "Note", // REVISAR
   keyPoint: "Il punto chiave", // REVISAR
   aboutRecipe: "Su questa ricetta", // REVISAR
+  toggleTheme: "Passa dal tema chiaro a quello scuro", // REVISAR
   relatedRecipes: "Potrebbe piacerti anche", // REVISAR
   totalTime: "Tempo totale", // REVISAR
   servings: "Porzioni", // REVISAR
@@ -406,6 +410,7 @@ const fr = {
   notes: "Notes", // REVISAR
   keyPoint: "Le point clé", // REVISAR
   aboutRecipe: "À propos de cette recette", // REVISAR
+  toggleTheme: "Basculer entre thème clair et sombre", // REVISAR
   relatedRecipes: "Vous aimerez aussi", // REVISAR
   totalTime: "Temps total", // REVISAR
   servings: "Portions", // REVISAR
@@ -493,6 +498,7 @@ const ja = {
   notes: "メモ", // REVISAR
   keyPoint: "大切なポイント", // REVISAR
   aboutRecipe: "このレシピについて", // REVISAR
+  toggleTheme: "ライト／ダークテーマを切り替える", // REVISAR
   relatedRecipes: "こちらもおすすめ", // REVISAR
   totalTime: "合計時間", // REVISAR
   servings: "人数", // REVISAR

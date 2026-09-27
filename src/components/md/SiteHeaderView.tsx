@@ -2,6 +2,7 @@ import Link from 'next/link';
 import type { MdLanguage } from './md-types';
 import { getMdCopy } from '@/lib/copy';
 import LanguageSwitcher from './LanguageSwitcher';
+import ThemeToggle from './ThemeToggle';
 
 /** Vista síncrona (usable también desde componentes cliente). <details> da un menú móvil accesible por teclado. */
 export default function SiteHeaderView({ lang, alternates, available }: { lang: MdLanguage; alternates?: Partial<Record<MdLanguage, string>>; available: MdLanguage[] }) {
@@ -31,6 +32,7 @@ export default function SiteHeaderView({ lang, alternates, available }: { lang: 
               <button className="md-search-submit" type="submit">{t.searchButton}</button>
             </form>
             <LanguageSwitcher lang={lang} alternates={alternates} available={available} />
+            <ThemeToggle lang={lang} />
             <details className="md-menu">
               <summary className="md-menu-toggle">{t.openMenu}</summary>
               <div className="md-menu-panel">
