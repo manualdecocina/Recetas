@@ -8,6 +8,15 @@ export function isIndexingAllowed(): boolean {
   return process.env.NEXT_PUBLIC_ALLOW_INDEXING === 'true'
 }
 
+/** ID de publisher de Google AdSense (formato "ca-pub-XXXXXXXXXXXXXXXX"). Sin configurar
+ * (preview y cualquier entorno de prueba), el sitio no carga el script de AdSense — no hace
+ * falta ningún cambio de código para activarlo: basta con definir esta variable en el
+ * entorno de producción de Hostinger y volver a desplegar. */
+export function adsenseClientId(): string | undefined {
+  const id = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID?.trim()
+  return id ? id : undefined
+}
+
 export function normalizePublicPath(path: string): string {
   if (!path) return '/'
   const withSlash = path.startsWith('/') ? path : '/' + path

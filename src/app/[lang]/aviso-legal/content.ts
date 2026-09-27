@@ -17,7 +17,7 @@ export const AVISO_LEGAL_CONTENT: LegalPageContentMap = {
       },
       {
         heading: 'Publicidad',
-        html: '<p>El sitio prevé monetizarse mediante publicidad de Google AdSense. No se utiliza ni se prevé utilizar ningún otro servicio publicitario o de analítica. La publicidad no se considera activa hasta que exista una integración técnica efectiva y se hayan configurado sus requisitos de privacidad y consentimiento.</p><p>No se declara NIF/VAT porque no se dispone de ese dato confirmado.</p>',
+        html: '<p>El sitio se monetiza mediante publicidad de Google AdSense; no se utiliza ni se prevé utilizar ningún otro servicio publicitario o de analítica. El sitio ya está preparado técnicamente para mostrar los anuncios: se activarán en cuanto se configure el identificador de publisher de Google y el sitio quede aprobado por Google AdSense.</p><p>No se declara NIF/VAT porque no se dispone de ese dato confirmado.</p>',
       },
     ],
   },
@@ -37,7 +37,7 @@ export const AVISO_LEGAL_CONTENT: LegalPageContentMap = {
       },
       {
         heading: 'Advertising',
-        html: '<p>The site plans to monetize through Google AdSense advertising. No other advertising or analytics service is used or planned. Advertising is not considered active until an effective technical integration exists and its privacy and consent requirements have been configured.</p><p>No tax ID (NIF/VAT) is declared, as that data has not been confirmed.</p>',
+        html: '<p>The site is monetized through Google AdSense advertising; no other advertising or analytics service is used or planned. The site is already technically set up to show ads: they will switch on once the Google publisher ID is configured and the site is approved by Google AdSense.</p><p>No tax ID (NIF/VAT) is declared, as that data has not been confirmed.</p>',
       },
     ],
   },
@@ -57,7 +57,7 @@ export const AVISO_LEGAL_CONTENT: LegalPageContentMap = {
       },
       {
         heading: 'Werbung',
-        html: '<p>Die Website plant eine Monetarisierung über Werbung von Google AdSense. Es wird kein anderer Werbe- oder Analysedienst genutzt oder geplant. Die Werbung gilt erst als aktiv, sobald eine tatsächliche technische Integration besteht und die entsprechenden Datenschutz- und Einwilligungsanforderungen eingerichtet wurden.</p><p>Es wird keine Steuernummer (NIF/USt-IdNr.) angegeben, da diese Angabe nicht bestätigt vorliegt.</p>',
+        html: '<p>Die Website wird über Werbung von Google AdSense monetarisiert; es wird kein anderer Werbe- oder Analysedienst genutzt oder geplant. Die Website ist technisch bereits dafür vorbereitet: Die Anzeigen werden aktiv, sobald die Google-Publisher-ID eingerichtet ist und die Website von Google AdSense genehmigt wurde.</p><p>Es wird keine Steuernummer (NIF/USt-IdNr.) angegeben, da diese Angabe nicht bestätigt vorliegt.</p>',
       },
     ],
   },
@@ -77,7 +77,7 @@ export const AVISO_LEGAL_CONTENT: LegalPageContentMap = {
       },
       {
         heading: 'Publicité',
-        html: "<p>Le site prévoit de se monétiser via la publicité Google AdSense. Aucun autre service publicitaire ou d'analyse n'est utilisé ni prévu. La publicité n'est pas considérée comme active tant qu'une intégration technique effective n'existe pas et que ses exigences de confidentialité et de consentement n'ont pas été configurées.</p><p>Aucun numéro de TVA/NIF n'est déclaré, cette donnée n'étant pas confirmée.</p>",
+        html: "<p>Le site est monétisé via la publicité Google AdSense ; aucun autre service publicitaire ou d'analyse n'est utilisé ni prévu. Le site est déjà techniquement prêt pour afficher les annonces : elles s'activeront dès que l'identifiant d'éditeur Google sera configuré et que le site sera approuvé par Google AdSense.</p><p>Aucun numéro de TVA/NIF n'est déclaré, cette donnée n'étant pas confirmée.</p>",
       },
     ],
   },
@@ -97,7 +97,7 @@ export const AVISO_LEGAL_CONTENT: LegalPageContentMap = {
       },
       {
         heading: 'Pubblicità',
-        html: "<p>Il sito prevede di monetizzare tramite la pubblicità di Google AdSense. Non viene utilizzato né previsto alcun altro servizio pubblicitario o di analisi. La pubblicità non si considera attiva finché non esista un'integrazione tecnica effettiva e non siano stati configurati i relativi requisiti di privacy e consenso.</p><p>Non viene dichiarata partita IVA/NIF poiché tale dato non è confermato.</p>",
+        html: "<p>Il sito è monetizzato tramite la pubblicità di Google AdSense; non viene utilizzato né previsto alcun altro servizio pubblicitario o di analisi. Il sito è già tecnicamente pronto per mostrare gli annunci: si attiveranno non appena verrà configurato l'ID publisher di Google e il sito sarà approvato da Google AdSense.</p><p>Non viene dichiarata partita IVA/NIF poiché tale dato non è confermato.</p>",
       },
     ],
   },
@@ -117,7 +117,7 @@ export const AVISO_LEGAL_CONTENT: LegalPageContentMap = {
       },
       {
         heading: '広告',
-        html: '<p>当サイトはGoogle AdSenseによる広告での収益化を予定しています。ほかの広告サービスや解析サービスは使用しておらず、導入の予定もありません。実際の技術的な導入が完了し、プライバシーおよび同意に関する要件が整うまで、広告は稼働しているとはみなしません。</p><p>確定した情報がないため、納税者番号（NIF/VAT）は記載していません。</p>',
+        html: '<p>当サイトはGoogle AdSenseによる広告で収益化しています。ほかの広告サービスや解析サービスは使用しておらず、導入の予定もありません。サイト側の技術的な準備はすでに完了しており、GoogleのパブリッシャーIDを設定し、Google AdSenseの審査に通り次第、広告が有効になります。</p><p>確定した情報がないため、納税者番号（NIF/VAT）は記載していません。</p>',
       },
     ],
   },
@@ -137,7 +137,7 @@ export const AVISO_LEGAL_CONTENT: LegalPageContentMap = {
       },
       {
         heading: 'Publicidade',
-        html: '<p>O site prevê se monetizar por meio de publicidade do Google AdSense. Nenhum outro serviço de publicidade ou de análise é utilizado ou está previsto. A publicidade não é considerada ativa até que exista uma integração técnica efetiva e sejam configurados os requisitos de privacidade e consentimento correspondentes.</p><p>Não é declarado CNPJ/NIF por não haver esse dado confirmado.</p>',
+        html: '<p>O site é monetizado por meio de publicidade do Google AdSense; nenhum outro serviço de publicidade ou de análise é utilizado ou está previsto. O site já está tecnicamente pronto para exibir os anúncios: eles serão ativados assim que o ID de publisher do Google for configurado e o site for aprovado pelo Google AdSense.</p><p>Não é declarado CNPJ/NIF por não haver esse dado confirmado.</p>',
       },
     ],
   },
