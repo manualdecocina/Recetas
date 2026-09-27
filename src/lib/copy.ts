@@ -57,6 +57,7 @@ const es = {
   preparation: "Preparación",
   notes: "Notas",
   keyPoint: "El punto clave",
+  aboutRecipe: "Sobre esta receta",
   relatedRecipes: "También te puede gustar",
   totalTime: "Tiempo total",
   servings: "Porciones",
@@ -143,6 +144,7 @@ const en = {
   preparation: "Method",
   notes: "Notes",
   keyPoint: "The key point",
+  aboutRecipe: "About this recipe",
   relatedRecipes: "You might also like",
   totalTime: "Total time",
   servings: "Servings",
@@ -229,6 +231,7 @@ const de = {
   preparation: "Zubereitung", // REVISAR
   notes: "Hinweise", // REVISAR
   keyPoint: "Das Wichtigste", // REVISAR
+  aboutRecipe: "Über dieses Rezept", // REVISAR
   relatedRecipes: "Das könnte dir auch gefallen", // REVISAR
   totalTime: "Gesamtzeit", // REVISAR
   servings: "Portionen", // REVISAR
@@ -315,6 +318,7 @@ const it = {
   preparation: "Preparazione", // REVISAR
   notes: "Note", // REVISAR
   keyPoint: "Il punto chiave", // REVISAR
+  aboutRecipe: "Su questa ricetta", // REVISAR
   relatedRecipes: "Potrebbe piacerti anche", // REVISAR
   totalTime: "Tempo totale", // REVISAR
   servings: "Porzioni", // REVISAR
@@ -401,6 +405,7 @@ const fr = {
   preparation: "Préparation", // REVISAR
   notes: "Notes", // REVISAR
   keyPoint: "Le point clé", // REVISAR
+  aboutRecipe: "À propos de cette recette", // REVISAR
   relatedRecipes: "Vous aimerez aussi", // REVISAR
   totalTime: "Temps total", // REVISAR
   servings: "Portions", // REVISAR
@@ -487,6 +492,7 @@ const ja = {
   preparation: "作り方", // REVISAR
   notes: "メモ", // REVISAR
   keyPoint: "大切なポイント", // REVISAR
+  aboutRecipe: "このレシピについて", // REVISAR
   relatedRecipes: "こちらもおすすめ", // REVISAR
   totalTime: "合計時間", // REVISAR
   servings: "人数", // REVISAR

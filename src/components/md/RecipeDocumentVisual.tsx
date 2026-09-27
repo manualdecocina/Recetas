@@ -25,6 +25,7 @@ export default function RecipeDocumentVisual({ recipe, relatedRecipes = [], edit
       ? recipe.prep_time_minutes + recipe.cook_time_minutes : null
   );
   const facts = [
+    recipe.category ? { label: t.category, value: recipe.category } : null,
     computedTotal != null && computedTotal > 0 ? { label: t.totalTime, value: `${computedTotal} min` } : null,
     recipe.servings != null && recipe.servings > 0 ? { label: t.servings, value: String(recipe.servings) } : null,
     recipe.difficulty ? { label: t.difficulty, value: recipe.difficulty } : null,
@@ -37,7 +38,6 @@ export default function RecipeDocumentVisual({ recipe, relatedRecipes = [], edit
         <header className="md-reading md-article-head">
           {recipe.category && <p className="md-eyebrow">{recipe.category}</p>}
           <h1 className="md-display">{recipe.title}</h1>
-          {recipe.excerpt && <p className="md-lead">{recipe.excerpt}</p>}
         </header>
         {recipe.image_url && (
           <figure className="md-article-cover">
@@ -52,6 +52,7 @@ export default function RecipeDocumentVisual({ recipe, relatedRecipes = [], edit
           </figure>
         )}
         <div className="md-container md-recipe-wrap">
+          {recipe.excerpt && <p className="md-lead md-recipe-lead">{recipe.excerpt}</p>}
           {facts.length > 0 && <dl className="md-recipe-facts">{facts.map((fact) => (
             <div className="md-recipe-fact" key={fact.label}><dt>{fact.label}</dt><dd>{fact.value}</dd></div>
           ))}</dl>}
@@ -64,13 +65,8 @@ export default function RecipeDocumentVisual({ recipe, relatedRecipes = [], edit
             {recipe.ingredients.length > 0 && <a href="#md-ingredientes">{t.ingredients}</a>}
             {recipe.steps.length > 0 && <a href="#md-preparacion">{t.preparation}</a>}
             {notesHtml && <a href="#md-notas">{t.notes}</a>}
+            {editorialHtml && <a href="#md-sobre">{t.aboutRecipe}</a>}
           </nav>
-          {editorialHtml && (
-            <aside className="md-keypoint">
-              <h2 className="md-subtitle">{t.keyPoint}</h2>
-              <div className="md-rich" dangerouslySetInnerHTML={{ __html: editorialHtml }} />
-            </aside>
-          )}
           <div className="md-recipe-body">
             {recipe.ingredients.length > 0 && <div className="md-recipe-side">
               <RecipeIngredients recipeId={recipe.id} lang={recipe.language} ingredients={recipe.ingredients} />
@@ -92,6 +88,10 @@ export default function RecipeDocumentVisual({ recipe, relatedRecipes = [], edit
               <div className="md-rich" dangerouslySetInnerHTML={{ __html: notesHtml }} />
             </section>}
             {notesHtml && <AdSlot placement="after-notes" />}
+            {editorialHtml && <section className="md-recipe-section md-about" id="md-sobre" aria-labelledby="md-about-heading">
+              <h2 className="md-title" id="md-about-heading">{t.aboutRecipe}</h2>
+              <div className="md-rich" dangerouslySetInnerHTML={{ __html: editorialHtml }} />
+            </section>}
           </div>
         </div>
       </article>

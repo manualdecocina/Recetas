@@ -235,7 +235,7 @@
 @media (min-width: 900px) {
   .md-recipe-body { grid-template-columns: minmax(300px, 380px) 1fr; align-items: start; }
   .md-recipe-side { position: sticky; top: 16px; }
-  .md-recipe-body > .md-ad-slot, .md-recipe-body > .md-notes { grid-column: 1 / -1; }
+  .md-recipe-body > .md-ad-slot, .md-recipe-body > .md-notes, .md-recipe-body > .md-about { grid-column: 1 / -1; }
 }
 .md-lang { position: relative; }
 .md-lang-toggle { list-style: none; display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 8px 12px; border: 1px solid var(--md-line); border-radius: 999px; background: var(--md-white); font-size: .82rem; font-weight: 700; cursor: pointer; white-space: nowrap; }
@@ -245,6 +245,12 @@
 a.md-lang-item:hover { background: var(--md-sand); }
 .md-lang-item.is-current { font-weight: 800; color: var(--md-olive-dark); }
 .md-lang-item.is-off { color: #9a958b; cursor: not-allowed; }
+
+.md-recipe-lead { text-align: center; margin: 4px auto 22px; font-size: clamp(1.05rem, 1.8vw, 1.25rem); }
+.md-about { margin-top: 8px; }
+.md-about .md-rich { max-width: 760px; }
+.md-about .md-rich h3 { font-family: var(--md-serif); font-size: 1.5rem; line-height: 1.2; margin: 26px 0 10px; }
+.md-about .md-rich p, .md-about .md-rich li { color: #2b2925; line-height: 1.75; }
 
 @media print {
   @page { margin: 14mm; }

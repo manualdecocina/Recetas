@@ -7,6 +7,18 @@ import SiteHeader from '@/components/md/SiteHeader'
 import SiteFooter from '@/components/md/SiteFooter'
 import RecipeDocumentVisual from '@/components/md/RecipeDocumentVisual'
 
+/** HTML editorial heredado de WordPress: se normaliza para que todas las recetas se vean igual. */
+function cleanEditorialHtml(html: string): string {
+  return cleanHtml(html)
+    .replace(/<figure[\s\S]*?<\/figure>/gi, '')          // fotos sueltas: la foto principal ya está arriba
+    .replace(/<img[^>]*>/gi, '')
+    .replace(/<hr[^>]*>/gi, '')
+    .replace(/\s(class|id|style|width|height|data-[a-z-]+)=("[^"]*"|'[^']*')/gi, '')
+    .replace(/<h[1-2]([^>]*)>/gi, '<h3$1>').replace(/<\/h[1-2]>/gi, '</h3>')
+    .replace(/<p>(\s|&nbsp;|<br\s*\/?>)*<\/p>/gi, '')
+    .replace(/(<br\s*\/?>\s*){2,}/gi, '<br/>')
+}
+
 function cleanHtml(html: string): string {
   return html
     .replace(/<script[\s\S]*?<\/script>/gi, '')
@@ -25,7 +37,7 @@ export async function RecipeDocument({ recipe, relatedRecipes = [] }: { recipe: 
   const alternates = Object.fromEntries(
     translations.filter((t) => t.language !== recipe.language).map((t) => [t.language, normalizePublicPath(t.public_path)])
   )
-  const editorialHtml = recipe.content_html ? cleanHtml(recipe.content_html) : ''
+  const editorialHtml = recipe.content_html ? cleanEditorialHtml(recipe.content_html) : ''
   const notesHtml = recipe.notes ? cleanHtml(recipe.notes) : ''
   const totalMinutes = recipe.total_time_minutes ??
     ((recipe.prep_time_minutes != null && recipe.cook_time_minutes != null)
