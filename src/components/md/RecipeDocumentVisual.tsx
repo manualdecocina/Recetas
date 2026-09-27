@@ -12,12 +12,11 @@ import RelatedRecipes from './RelatedRecipes';
 /**
  * Capa visual de la receta. NO contiene JSON-LD, migas de pan, canonical ni hreflang:
  * eso vive en RecipeDocument.tsx, que monta este componente. Aquí hay un único <h1>.
- * `editorialHtml` y `notesHtml` llegan ya saneados (cleanHtml en RecipeDocument).
+ * `notesHtml` llega ya saneado (cleanHtml en RecipeDocument).
  */
-export default function RecipeDocumentVisual({ recipe, relatedRecipes = [], editorialHtml, notesHtml }: {
+export default function RecipeDocumentVisual({ recipe, relatedRecipes = [], notesHtml }: {
   recipe: MdRecipe;
   relatedRecipes?: MdRecipeCardData[];
-  editorialHtml?: string | null;
   notesHtml?: string | null;
 }) {
   const t = getMdCopy(recipe.language);
@@ -92,10 +91,6 @@ export default function RecipeDocumentVisual({ recipe, relatedRecipes = [], edit
               <div className="md-rich" dangerouslySetInnerHTML={{ __html: notesHtml }} />
             </section>}
             {notesHtml && <AdSlot placement="after-notes" />}
-            {editorialHtml && <section className="md-about" id="md-sobre" aria-labelledby="md-about-heading">
-              <h2 className="md-title" id="md-about-heading">{t.aboutRecipe}</h2>
-              <div className="md-rich" dangerouslySetInnerHTML={{ __html: editorialHtml }} />
-            </section>}
           </div>
         </div>
       </article>
