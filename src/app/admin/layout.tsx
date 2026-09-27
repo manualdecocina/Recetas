@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import '../globals.css'
 
 // Layout raíz del panel (separado del sitio público). Nunca indexable.
 export const metadata: Metadata = {

@@ -22,8 +22,8 @@
   --md-input-bg: #ffffff;
   --md-input-border: #8fb08a;
   --md-logo-bg: transparent;
-  --md-serif: var(--font-editorial-serif), 'Bricolage Grotesque', 'Noto Sans JP', 'Hiragino Sans', system-ui, sans-serif;
-  --md-sans: var(--font-ui-sans), Figtree, 'Hiragino Kaku Gothic ProN', 'Yu Gothic', system-ui, sans-serif;
+  --md-serif: var(--font-editorial-serif, 'Bricolage Grotesque'), 'Bricolage Grotesque', 'Noto Sans JP', 'Hiragino Sans', system-ui, sans-serif;
+  --md-sans: var(--font-ui-sans, Figtree), Figtree, 'Hiragino Kaku Gothic ProN', 'Yu Gothic', system-ui, sans-serif;
   --md-container: 1200px;
   --md-reading: 760px;
   --md-radius: 22px;
@@ -226,7 +226,8 @@
 .md-about .md-rich { max-width: 780px; }
 .md-about .md-rich h3 { font-family: var(--md-serif); font-size: 1.5rem; line-height: 1.2; font-weight: 800; margin: 26px 0 10px; color: var(--md-olive-dark); }
 .md-about .md-rich p, .md-about .md-rich li { line-height: 1.75; }
-.md-ad-slot { width: 100%; min-height: 250px; margin-block: 26px; background: transparent; border: 1px solid transparent; }
+.md-ad-slot { width: 100%; min-height: 0; margin: 0; background: transparent; }
+.md-ad-slot:empty { display: none; }
 /* Modo cocina */
 .md-cooking-overlay { position: fixed; inset: 0; z-index: 1000; overflow-y: auto; background: var(--md-paper); color: var(--md-ink); display: grid; grid-template-rows: auto 1fr auto; }
 .md-cooking-header { padding: 16px 18px; border-bottom: 2px solid var(--md-stone); display: flex; justify-content: space-between; align-items: center; gap: 16px; }
@@ -311,3 +312,5 @@ a.md-lang-item:hover { background: var(--md-sand); }
 .md-institutional-content :where(h3) { font-family: var(--md-serif); font-size: 1.5rem; line-height: 1.2; margin-top: 28px; }
 .md-empty-block { padding: 34px 22px; background: var(--md-white); border: 1px solid var(--md-line); text-align: center; margin-block: 26px; }
 .md-page-intro { margin-top: 8px; }
+
+:root[data-theme="dark"] body { background: var(--md-paper); }

@@ -1,4 +1,8 @@
 import type { Metadata } from 'next'
+import '../globals.css'
+import '../editorial.css'
+import '../site.css'
+import { editorialSerif, uiSans } from '../fonts'
 import { getSiteUrl, isIndexingAllowed } from '@/lib/site'
 import { DEFAULT_LANGUAGE, SUPPORTED_LANGUAGES } from '@/types/recipe'
 
@@ -36,7 +40,10 @@ export default async function LanguageRootLayout({
   const lang = (SUPPORTED_LANGUAGES as string[]).includes(rawLang) ? rawLang : DEFAULT_LANGUAGE
 
   return (
-    <html lang={lang}>
+    <html lang={lang} className={`${editorialSerif.variable} ${uiSans.variable}`} suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: "try{var t=localStorage.getItem('md-theme');if(t==='dark'||t==='light')document.documentElement.dataset.theme=t}catch(e){}" }} />
+      </head>
       <body>{children}</body>
     </html>
   )
