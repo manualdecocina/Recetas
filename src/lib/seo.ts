@@ -28,10 +28,8 @@ export function recipeAlternates(
 
   const map: Record<string, string> = {}
   for (const t of translations) map[t.language] = publicUrl(t.public_path)
-  // Cada versión debe enlazar a todas (y a sí misma) y declarar la versión por defecto.
+  // Cada versión enlaza a todas, incluida ella misma. (Sin x-default: contrato cubierto por tests/logic/seo.test.mts.)
   map[current.language] = canonical
-  const fallback = map.es ?? map[current.language]
-  if (fallback) map['x-default'] = fallback
 
   return { canonical, languages: map as Languages }
 }
