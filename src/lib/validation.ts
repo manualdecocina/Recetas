@@ -2,7 +2,7 @@ import { z } from 'zod'
 import { getAllowedImageHosts } from '@/lib/image-hosts'
 import type { RecipeIngredient, RecipeStep } from '@/types/recipe'
 
-export const languageSchema = z.enum(['es', 'de', 'ja', 'it', 'fr', 'en'])
+export const languageSchema = z.enum(['es', 'de', 'ja', 'it', 'fr', 'en', 'pt'])
 
 // Slug: minúsculas, números y guiones. Admite letras no latinas (japonés) porque el
 // sitio anterior ya tiene URLs indexadas en japonés que conviene conservar.

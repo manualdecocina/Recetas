@@ -44,10 +44,10 @@ check('traducciones sin versión es: hreflang sin x-default', () => {
   assert.equal('x-default' in a.languages, false)
 })
 
-check('home/listado: 6 idiomas, canonical propia', () => {
+check('home/listado: 7 idiomas, canonical propia', () => {
   const a: any = allLanguageAlternates('/ja/recetas', (l: string) => `/${l}/recetas`)
   assert.equal(a.canonical, 'https://manualdecocina.com/ja/recetas')
-  assert.deepEqual(Object.keys(a.languages).sort(), ['de', 'en', 'es', 'fr', 'it', 'ja'])
+  assert.deepEqual(Object.keys(a.languages).sort(), ['de', 'en', 'es', 'fr', 'it', 'ja', 'pt'])
 })
 
 process.env.NEXT_PUBLIC_ALLOW_INDEXING = 'false'

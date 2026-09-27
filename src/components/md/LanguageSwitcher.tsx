@@ -9,6 +9,7 @@ const LANGUAGES: Array<{ code: MdLanguage; label: string }> = [
   { code: 'it', label: 'Italiano' },
   { code: 'fr', label: 'Français' },
   { code: 'ja', label: '日本語' },
+  { code: 'pt', label: 'Português' },
 ];
 
 /**

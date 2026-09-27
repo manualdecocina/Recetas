@@ -12,7 +12,7 @@ export const dynamic = 'force-dynamic'
 export const metadata: Metadata = { title: 'Nueva receta', robots: { index: false, follow: false } }
 
 const LANGUAGE_LABELS: Record<string, string> = {
-  es: 'Español', de: 'Deutsch', ja: '日本語', it: 'Italiano', fr: 'Français', en: 'English',
+  es: 'Español', de: 'Deutsch', ja: '日本語', it: 'Italiano', fr: 'Français', en: 'English', pt: 'Português (Brasil)',
 }
 
 // Sin ?from → plato nuevo (create_recipe).

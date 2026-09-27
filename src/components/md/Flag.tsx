@@ -24,5 +24,7 @@ export default function Flag({ code, className = 'md-flag' }: { code: MdLanguage
       return <svg {...common}><rect width="24" height="16" fill="#fff" /><rect width="8" height="16" fill="#0055A4" /><rect x="16" width="8" height="16" fill="#EF4135" /></svg>;
     case 'ja':
       return <svg {...common}><rect width="24" height="16" fill="#fff" /><circle cx="12" cy="8" r="4.6" fill="#BC002D" /></svg>;
+    case 'pt':
+      return <svg {...common}><rect width="24" height="16" fill="#009C3B" /><path d="M12 1.6L22 8L12 14.4L2 8Z" fill="#FFDF00" /><circle cx="12" cy="8" r="3.4" fill="#002776" /></svg>;
   }
 }

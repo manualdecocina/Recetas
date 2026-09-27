@@ -73,6 +73,17 @@ export const UI_TEXT: Record<RecipeLanguage, UiText> = {
     home: 'Accueil',
     recipes: 'Recettes', preparation: 'Préparation',
   },
+  pt: {
+    homeTitle: 'Manual de Cocina — Receitas colombianas e internacionais',
+    homeDescription: 'Receitas passo a passo: culinária colombiana, latino-americana e internacional, com ingredientes e tempos claros.',
+    recipesTitle: 'Todas as receitas',
+    recipesDescription: 'O catálogo completo de receitas do Manual de Cocina, da mais recente à mais antiga.',
+    noRecipes: 'Ainda não há receitas publicadas neste idioma.',
+    previous: 'Anterior', next: 'Próxima', page: 'Página',
+    ingredients: 'Ingredientes',
+    home: 'Início',
+    recipes: 'Receitas', preparation: 'Modo de preparo',
+  },
   ja: {
     homeTitle: 'Manual de Cocina — コロンビア料理と世界のレシピ',
     homeDescription: 'コロンビア料理、中南米料理、世界の料理のレシピを、材料と時間つきで分かりやすく紹介します。',

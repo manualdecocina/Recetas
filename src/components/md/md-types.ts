@@ -1,5 +1,5 @@
 /** Contrato reproducido del encargo. No reemplazar los tipos internos existentes. */
-export type MdLanguage = 'es' | 'en' | 'de' | 'it' | 'fr' | 'ja';
+export type MdLanguage = 'es' | 'en' | 'de' | 'it' | 'fr' | 'ja' | 'pt';
 
 export interface MdIngredient {
   name: string;

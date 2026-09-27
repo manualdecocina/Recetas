@@ -1,4 +1,4 @@
-export type RecipeLanguage = 'es' | 'de' | 'ja' | 'it' | 'fr' | 'en'
+export type RecipeLanguage = 'es' | 'de' | 'ja' | 'it' | 'fr' | 'en' | 'pt'
 
 export interface RecipeIngredient {
   name: string
@@ -54,5 +54,5 @@ export interface Recipe {
   source_url?: string | null
 }
 
-export const SUPPORTED_LANGUAGES: RecipeLanguage[] = ['es', 'de', 'ja', 'it', 'fr', 'en']
+export const SUPPORTED_LANGUAGES: RecipeLanguage[] = ['es', 'de', 'ja', 'it', 'fr', 'en', 'pt']
 export const DEFAULT_LANGUAGE: RecipeLanguage = 'es'

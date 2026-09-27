@@ -13,7 +13,7 @@ import VideoFacade from './VideoFacade';
 import StepPhoto from './StepPhoto';
 import { RECIPE_AUTHOR, publicUrl } from '@/lib/site';
 
-const LOCALES: Record<string, string> = { es: 'es-ES', en: 'en-GB', de: 'de-DE', it: 'it-IT', fr: 'fr-FR', ja: 'ja-JP' };
+const LOCALES: Record<string, string> = { es: 'es-ES', en: 'en-GB', de: 'de-DE', it: 'it-IT', fr: 'fr-FR', ja: 'ja-JP', pt: 'pt-BR' };
 
 /**
  * Capa visual de la receta. NO contiene JSON-LD, migas de pan, canonical ni hreflang:
