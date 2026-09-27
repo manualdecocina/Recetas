@@ -199,6 +199,7 @@
 .md-recipe-wrap { padding-top: 40px; }
 .md-recipe-lead { display: none; }
 .md-recipe-body { display: grid; grid-template-columns: minmax(0,1fr); gap: 30px; }
+.md-recipe-after { display: grid; grid-template-columns: minmax(0, 1fr); gap: 30px; margin-top: 30px; }
 .md-recipe-section { scroll-margin-top: 96px; }
 .md-recipe-section .md-title { margin-bottom: 18px; }
 .md-recipe-side .md-recipe-section { background: var(--md-white); border: 2px solid var(--md-stone); border-radius: 26px; overflow: hidden; }
@@ -227,17 +228,29 @@
 .md-notes .md-rich li { line-height: 1.6; margin-bottom: 4px; }
 .md-notes .md-rich .md-sources { font-size: .9rem; margin-top: 14px; opacity: .85; }
 .md-notes .md-rich .md-sources a { text-decoration: underline; }
-.md-byline { margin: 14px 0 0; font-size: .95rem; color: var(--md-muted, var(--md-ink)); opacity: .85; }
+.md-byline { color: var(--md-muted, var(--md-ink)); opacity: .85; }
 .md-byline a { font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
 .md-ingredient-group { font-family: var(--md-serif); font-size: 1.05rem; font-weight: 800; margin: 18px 0 6px; color: var(--md-olive-dark); }
 .md-ingredient-has-group:first-child .md-ingredient-group { margin-top: 0; }
-.md-nutrition { margin-top: 22px; background: var(--md-white); border: 2px solid var(--md-stone); border-radius: 22px; padding: 20px 22px; }
-.md-nutrition .md-title { font-size: 1.35rem; margin-bottom: 2px; }
-.md-nutrition-serving { margin: 0 0 8px; font-size: .9rem; opacity: .8; }
-.md-nutrition table { width: 100%; border-collapse: collapse; }
-.md-nutrition th, .md-nutrition td { text-align: left; padding: 7px 0; border-bottom: 1px dotted var(--md-line); font-size: .98rem; font-weight: 500; }
-.md-nutrition td { text-align: right; font-weight: 700; }
-.md-nutrition-note { margin: 10px 0 0; font-size: .8rem; opacity: .75; }
+
+.md-byline { margin: 10px 0 18px; font-size: .84rem; line-height: 1.5; }
+.md-nutrition { color: #fff; background: linear-gradient(135deg, #8a2433 0%, #5e1420 100%); border-radius: 28px; padding: clamp(22px, 3.4vw, 34px); box-shadow: 0 14px 34px rgba(94, 20, 32, .28); }
+.md-nutrition-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 18px; margin-bottom: 18px; }
+.md-nutrition .md-title { margin: 0; color: #fff; font-size: 1.7rem; }
+.md-nutrition-serving { margin: 0; font-size: .95rem; opacity: .85; }
+.md-nutrition-body { display: grid; gap: 16px; align-items: stretch; }
+.md-nutrition-cal { display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 18px 26px; border-radius: 22px; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.22); text-align: center; }
+.md-nutrition-cal strong { font-family: var(--md-serif); font-size: clamp(2.8rem, 8vw, 3.8rem); line-height: 1; font-weight: 800; color: #ffd84d; }
+.md-nutrition-cal span { margin-top: 6px; font-size: .78rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; opacity: .9; }
+.md-nutrition-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 0; }
+.md-nutrition-grid > div { padding: 12px 16px; border-radius: 16px; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.18); }
+.md-nutrition-grid dt { font-size: .72rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; opacity: .85; }
+.md-nutrition-grid dd { margin: 2px 0 0; font-size: 1.25rem; font-weight: 800; }
+.md-nutrition-note { margin: 16px 0 0; font-size: .82rem; line-height: 1.5; opacity: .82; }
+@media (min-width: 700px) {
+  .md-nutrition-body { grid-template-columns: 210px minmax(0, 1fr); }
+  .md-nutrition-grid { grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); }
+}
 .md-video, .md-faq { padding-top: 6px; }
 .md-video-frame { position: relative; aspect-ratio: 16 / 9; border-radius: 22px; overflow: hidden; border: 2px solid var(--md-stone); background: #000; }
 .md-step-item.has-photo { grid-template-columns: 54px minmax(0, 1fr) 210px; }
@@ -333,7 +346,7 @@ a.md-lang-item:hover { background: var(--md-sand); }
   .md-recipe-body { grid-template-columns: minmax(0,1fr) 410px; align-items: start; gap: 32px; }
   #md-preparacion { grid-column: 1; grid-row: 1; }
   .md-recipe-side { grid-column: 2; grid-row: 1; position: sticky; top: 100px; }
-  .md-recipe-body > .md-ad-slot, .md-recipe-body > .md-notes, .md-recipe-body > .md-about, .md-recipe-body > .md-video, .md-recipe-body > .md-faq { grid-column: 1 / -1; }
+  .md-recipe-body > .md-ad-slot, .md-recipe-body > .md-notes, .md-recipe-body > .md-about, .md-recipe-body > .md-video, .md-recipe-body > .md-faq, .md-recipe-body > .md-nutrition { grid-column: 1 / -1; }
 }
 @media (max-width: 899px) {
   .md-recipe-side { order: -1; }
@@ -382,6 +395,7 @@ a.md-lang-item:hover { background: var(--md-sand); }
 
   .md-recipe-wrap { padding-top: 0 !important; }
   .md-recipe-body { display: block !important; }
+  .md-recipe-after { display: block !important; margin-top: 0 !important; }
   .md-recipe-side { position: static !important; order: 0 !important; margin-bottom: 5mm; }
   .md-recipe-side .md-recipe-section { background: #fff !important; border: .75pt solid #b9cdb2 !important; border-radius: 3mm !important; overflow: visible; }
   .md-recipe-side .md-title { padding: 2mm 4mm !important; background: #ffd84d !important; color: #16261a !important; font-size: 13pt !important; border-radius: 3mm 3mm 0 0; }
@@ -403,10 +417,16 @@ a.md-lang-item:hover { background: var(--md-sand); }
   .md-step-text h3 { font-size: 11pt !important; margin: 0 0 .8mm !important; }
   .md-step-text p { font-size: 10pt !important; line-height: 1.45 !important; opacity: 1 !important; }
 
-  .md-nutrition { margin: 4mm 0 0 !important; padding: 3mm 4mm !important; border: .75pt solid #b9cdb2 !important; border-radius: 3mm !important; break-inside: avoid; }
-  .md-nutrition .md-title { font-size: 11pt !important; }
-  .md-nutrition th, .md-nutrition td { font-size: 9pt; padding: .8mm 0 !important; }
-  .md-nutrition-note { font-size: 7pt; }
+  .md-nutrition { margin: 0 0 4mm !important; padding: 3mm 4mm !important; background: #fff !important; color: #16261a !important; border: .75pt solid #7a1f2b !important; border-radius: 3mm !important; break-inside: avoid; }
+  .md-nutrition .md-title { color: #7a1f2b !important; font-size: 11pt !important; }
+  .md-nutrition-head { margin-bottom: 2mm; }
+  .md-nutrition-body { grid-template-columns: 28mm minmax(0, 1fr) !important; gap: 4mm !important; }
+  .md-nutrition-cal { background: #fff !important; border: .5pt solid #b9cdb2 !important; padding: 2mm !important; }
+  .md-nutrition-cal strong { color: #7a1f2b !important; font-size: 20pt !important; }
+  .md-nutrition-grid { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; gap: 1.5mm !important; }
+  .md-nutrition-grid > div { background: #fff !important; border: .5pt solid #b9cdb2 !important; padding: 1.2mm 2mm !important; }
+  .md-nutrition-grid dd { font-size: 10pt !important; }
+  .md-nutrition-note { font-size: 7pt !important; opacity: 1 !important; }
 
   .md-notes { background: #fff !important; border: .75pt solid #b9cdb2 !important; border-radius: 3mm !important; padding: 3mm 5mm !important; margin: 0 0 4mm; break-inside: avoid; }
   .md-notes .md-title { font-size: 12pt !important; margin-bottom: 1mm !important; }

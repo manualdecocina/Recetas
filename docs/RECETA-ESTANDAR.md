@@ -23,13 +23,14 @@ Nunca se publica un idioma a medias: mismos bloques, mismos números, mismas fot
 
 1. Cabecera: categoría, título (H1), extracto, autor y fecha, datos (tiempo total, porciones, dificultad, cocina), acciones.
 2. Foto principal.
-3. Ingredientes (con casillas) y, si existe, información nutricional.
+3. Ingredientes (con casillas).
 4. Preparación (pasos numerados, con foto en el nivel Completa).
-5. Video (solo si es de esta misma receta).
-6. Sobre esta receta (resumen, nivel Completa).
-7. Notas: Consejos, Sustituciones, Conservación y Fuentes.
-8. Preguntas frecuentes (nivel Completa).
-9. Recetas relacionadas.
+5. Información nutricional: tarjeta rojo oscuro con texto blanco, después de los pasos, a todo el ancho.
+6. Video (solo si es de esta misma receta).
+7. Sobre esta receta (resumen, nivel Completa).
+8. Notas: Consejos, Sustituciones, Conservación y Fuentes.
+9. Preguntas frecuentes (nivel Completa).
+10. Recetas relacionadas.
 
 No se incluyen historia larga ni beneficios para la salud en las recetas del nivel Esencial.
 
@@ -43,6 +44,13 @@ No se incluyen historia larga ni beneficios para la salud en las recetas del niv
 - **Tiempos**: `prep + cook <= total`; el total incluye reposos y marinados.
 - **Notas** en HTML: `<h3>Consejos</h3><ul>…</ul><h3>Sustituciones</h3><ul>…</ul><h3>Conservación</h3><p>…</p><p class="md-sources">Fuentes: …</p>`.
 - **Firma**: Néstor Bastidas (la biografía vive en Quiénes somos, no en la receta).
+
+## Nutrición
+
+- Se calcula con USDA FoodData Central (SR Legacy): suma de ingredientes crudos dividida entre las porciones. Es una estimación y se declara como tal en la propia tarjeta (`nutrition.note`).
+- Campos: `calories`, `protein_g`, `carbs_g`, `fat_g`, `saturated_fat_g`, `fiber_g`, `serving_size`, `note`, `estimated`, `method`, `source`.
+- No se publica sodio ni azúcares si no se pueden calcular con datos de fuente.
+- Cifras redondeadas: kcal a la decena, gramos al entero.
 
 ## Imágenes
 

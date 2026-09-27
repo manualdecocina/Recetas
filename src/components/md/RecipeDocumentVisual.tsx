@@ -47,11 +47,13 @@ export default function RecipeDocumentVisual({ recipe, relatedRecipes = [], note
   const hasStepPhotos = recipe.steps.some((s) => s.image_url);
   const nutrition = (recipe.nutrition ?? {}) as Record<string, unknown>;
   const nv = (k: string) => (typeof nutrition[k] === 'number' ? (nutrition[k] as number) : null);
+  const calories = nv('calories');
   const nutritionRows = [
-    [t.calories, nv('calories'), 'kcal'], [t.fat, nv('fat_g'), 'g'], [t.saturatedFat, nv('saturated_fat_g'), 'g'],
-    [t.carbs, nv('carbs_g'), 'g'], [t.sugars, nv('sugar_g'), 'g'], [t.fiber, nv('fiber_g'), 'g'],
-    [t.protein, nv('protein_g'), 'g'], [t.sodium, nv('sodium_mg'), 'mg'],
+    [t.protein, nv('protein_g'), 'g'], [t.carbs, nv('carbs_g'), 'g'], [t.fat, nv('fat_g'), 'g'],
+    [t.saturatedFat, nv('saturated_fat_g'), 'g'], [t.fiber, nv('fiber_g'), 'g'], [t.sugars, nv('sugar_g'), 'g'],
+    [t.sodium, nv('sodium_mg'), 'mg'],
   ].filter((r): r is [string, number, string] => r[1] !== null);
+  const nutritionNote = typeof nutrition.note === 'string' ? nutrition.note : t.nutritionEstimated;
   const summaryParagraphs = (recipe.summary ?? '').split(/\n{2,}/).map((x) => x.trim()).filter(Boolean);
 
   return (
@@ -98,16 +100,6 @@ export default function RecipeDocumentVisual({ recipe, relatedRecipes = [], note
           <div className="md-recipe-body">
             {recipe.ingredients.length > 0 && <div className="md-recipe-side">
               <RecipeIngredients recipeId={recipe.id} lang={lang} ingredients={recipe.ingredients} />
-              {nutritionRows.length > 0 && (
-                <section className="md-nutrition" aria-labelledby="md-nutrition-heading">
-                  <h2 className="md-title" id="md-nutrition-heading">{t.nutritionTitle}</h2>
-                  <p className="md-nutrition-serving">{typeof nutrition.serving_size === 'string' ? nutrition.serving_size : t.perServing}</p>
-                  <table><tbody>{nutritionRows.map(([label, value, unit]) => (
-                    <tr key={label}><th scope="row">{label}</th><td>{value} {unit}</td></tr>
-                  ))}</tbody></table>
-                  <p className="md-nutrition-note">{t.nutritionEstimated}</p>
-                </section>
-              )}
               <AdSlot placement="after-ingredients" />
             </div>}
             {recipe.steps.length > 0 && (
@@ -121,6 +113,25 @@ export default function RecipeDocumentVisual({ recipe, relatedRecipes = [], note
                   </li>
                 ))}</ol>
                 {hasStepPhotos && <p className="md-step-photos-note">{t.stepPhotosNote}</p>}
+              </section>
+            )}
+          </div>
+          <div className="md-recipe-after">
+            {calories !== null && (
+              <section className="md-nutrition" id="md-nutricion" aria-labelledby="md-nutrition-heading">
+                <div className="md-nutrition-head">
+                  <h2 className="md-title" id="md-nutrition-heading">{t.nutritionTitle}</h2>
+                  <p className="md-nutrition-serving">{typeof nutrition.serving_size === 'string' ? nutrition.serving_size : t.perServing}</p>
+                </div>
+                <div className="md-nutrition-body">
+                  <div className="md-nutrition-cal"><strong>{calories}</strong><span>{t.calories} · kcal</span></div>
+                  <dl className="md-nutrition-grid">
+                    {nutritionRows.map(([label, value, unit]) => (
+                      <div key={label}><dt>{label}</dt><dd>{value} {unit}</dd></div>
+                    ))}
+                  </dl>
+                </div>
+                <p className="md-nutrition-note">{nutritionNote}</p>
               </section>
             )}
             {video && (
