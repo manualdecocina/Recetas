@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound, permanentRedirect } from 'next/navigation'
 import { getContentPageByPublicPath, getRecipeByPublicPath, getRecipeTranslations } from '@/lib/public-content'
-import { recipeAlternates } from '@/lib/seo'
+import { recipeAlternates, recipeMetaText } from '@/lib/seo'
 import { publicUrl, absoluteUrl } from '@/lib/site'
 import { SUPPORTED_LANGUAGES } from '@/types/recipe'
 import { RecipeDocument } from '@/components/RecipeDocument'
@@ -32,8 +32,8 @@ export async function legacyMetadata(path: string): Promise<Metadata> {
   if (recipe) {
     const translations = await getRecipeTranslations(recipe.recipe_group_id)
     return {
-      title: recipe.title,
-      description: recipe.excerpt ?? undefined,
+      title: recipeMetaText(recipe).title,
+      description: recipeMetaText(recipe).description,
       alternates: recipeAlternates(recipe, translations),
       openGraph: {
         type: 'article',

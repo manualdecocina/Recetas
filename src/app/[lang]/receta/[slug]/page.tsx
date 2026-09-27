@@ -2,7 +2,7 @@ import { notFound, permanentRedirect } from 'next/navigation'
 import { cache } from 'react'
 import type { Metadata } from 'next'
 import { supabase } from '@/lib/supabase/public'
-import { recipeAlternates } from '@/lib/seo'
+import { recipeAlternates, recipeMetaText } from '@/lib/seo'
 import { normalizePublicPath, recipePath, publicUrl, absoluteUrl } from '@/lib/site'
 import { RecipeDocument } from '@/components/RecipeDocument'
 import type { RecipeIngredient } from '@/types/recipe'
@@ -72,8 +72,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const translations = await getTranslations(recipe.recipe_group_id)
 
   return {
-    title: recipe.title,
-    description: recipe.excerpt ?? undefined,
+    title: recipeMetaText(recipe).title,
+    description: recipeMetaText(recipe).description,
     alternates: recipeAlternates(recipe, translations),
     openGraph: {
       type: 'article',

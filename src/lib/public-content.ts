@@ -18,28 +18,37 @@ export interface ContentPage {
   updated_at: string
 }
 
+/** Variantes equivalentes de una ruta: con/sin barra final y con/sin codificación (%E3…). */
+export function pathCandidates(path: string): string[] {
+  const base = normalizePublicPath(path)
+  const variants = new Set<string>()
+  const add = (p: string) => { variants.add(p); variants.add(p + '/') }
+  add(base)
+  try { add(normalizePublicPath(decodeURI(base))) } catch { /* ruta mal codificada: se ignora */ }
+  try { add(normalizePublicPath(encodeURI(decodeURI(base)))) } catch { /* idem */ }
+  return Array.from(variants)
+}
+
 export const getRecipeByPublicPath = cache(async (path: string): Promise<Recipe | null> => {
-  const publicPath = normalizePublicPath(path)
   const { data, error } = await supabase
     .from('recipes')
     .select('*')
-    .eq('public_path', publicPath)
+    .in('public_path', pathCandidates(path))
     .eq('published', true)
-    .maybeSingle()
+    .limit(1)
   if (error) throw new Error(`No se pudo cargar la receta pública: ${error.message}`)
-  return data as Recipe | null
+  return ((data ?? [])[0] ?? null) as Recipe | null
 })
 
 export const getContentPageByPublicPath = cache(async (path: string): Promise<ContentPage | null> => {
-  const publicPath = normalizePublicPath(path)
   const { data, error } = await supabase
     .from('content_pages')
     .select('*')
-    .eq('public_path', publicPath)
+    .in('public_path', pathCandidates(path))
     .eq('published', true)
-    .maybeSingle()
+    .limit(1)
   if (error) throw new Error(`No se pudo cargar la página pública: ${error.message}`)
-  return data as ContentPage | null
+  return ((data ?? [])[0] ?? null) as ContentPage | null
 })
 
 export const getRecipeTranslations = cache(async (recipeGroupId: string) => {

@@ -28,6 +28,18 @@ export function recipeAlternates(
 
   const map: Record<string, string> = {}
   for (const t of translations) map[t.language] = publicUrl(t.public_path)
+  // Cada versión debe enlazar a todas (y a sí misma) y declarar la versión por defecto.
+  map[current.language] = canonical
+  const fallback = map.es ?? map[current.language]
+  if (fallback) map['x-default'] = fallback
 
   return { canonical, languages: map as Languages }
+}
+
+/** Título y descripción para buscadores: usa `seo.title` / `seo.description` si existen. */
+export function recipeMetaText(recipe: { title: string; excerpt: string | null; seo?: Record<string, unknown> | null }): { title: string; description: string | undefined } {
+  const seo = recipe.seo ?? {}
+  const title = typeof seo.title === 'string' && seo.title.trim() ? seo.title.trim() : recipe.title
+  const description = typeof seo.description === 'string' && seo.description.trim() ? seo.description.trim() : (recipe.excerpt ?? undefined)
+  return { title, description }
 }
