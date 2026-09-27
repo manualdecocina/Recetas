@@ -61,9 +61,14 @@ pasan por el cliente público etiquetado.
 
 - Cambiar un slug deja la URL vieja en 404. No hay redirección automática slug→slug
   (candidato a la tabla de redirecciones legacy, ver docs/importacion-historica.md).
-- Si en el futuro se escribe en la BD fuera del panel (SQL Editor, scripts de
-  importación), la web no se entera: se actualiza con el respaldo de 1 hora o
-  llamando a una ruta de revalidación protegida (pendiente, no implementada).
+- Si se escribe en la BD fuera del panel (SQL Editor, scripts de importación), la web
+  no se entera automáticamente: la propia página nueva ya sale fresca en su primera
+  visita (caché MISS), pero home/listado/sitemap siguen sirviendo la versión vieja
+  hasta el respaldo de 1 hora. Para forzarlo al instante existe
+  `POST /api/revalidate` (o `GET`), protegida con el secreto `REVALIDATE_SECRET`
+  (header `x-revalidate-secret` o query `?secret=`) — ver
+  `src/app/api/revalidate/route.ts`. Requiere configurar `REVALIDATE_SECRET` en
+  Hostinger (preview y producción); sin esa variable la ruta responde 500.
 
 ## Cómo verificarlo (pendiente de ejecutar)
 
