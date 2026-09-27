@@ -284,16 +284,16 @@
 /* Selector de idioma */
 .md-lang { position: relative; }
 .md-lang-toggle { list-style: none; display: inline-flex; align-items: center; gap: 8px; min-height: 46px; padding: 8px 16px; border: 2px solid var(--md-stone); border-radius: 14px; background: var(--md-white); font-size: .9rem; font-weight: 700; cursor: pointer; white-space: nowrap; }
-.md-lang-code { display: none; font-weight: 800; letter-spacing: .04em; }
+.md-flag { display: block; flex: none; width: 24px; height: 16px; border-radius: 3px; box-shadow: 0 0 0 1px rgba(0,0,0,.22); }
+.md-lang-item { display: flex !important; align-items: center; gap: 10px; }
 .md-menu-toggle { padding: 0; }
 .md-menu-icon { display: block; }
 @media (max-width: 599px) {
   .md-header-inner { min-height: 64px; gap: 8px; }
   .md-brand-image { height: 36px; }
   .md-header-actions { gap: 6px; }
-  .md-lang-toggle { min-height: 42px; padding: 6px 10px; gap: 5px; }
+  .md-lang-toggle { min-height: 42px; min-width: 42px; padding: 0; justify-content: center; }
   .md-lang-label { display: none; }
-  .md-lang-code { display: inline; }
   .md-theme-toggle, .md-menu-toggle { width: 42px; height: 42px; min-width: 42px; min-height: 42px; }
   .md-lang { position: static; }
   .md-lang-panel { right: 12px; top: 100%; }
@@ -301,7 +301,6 @@
 }
 @media (max-width: 380px) {
   .md-brand-image { height: 30px; }
-  .md-lang-toggle > span[aria-hidden="true"]:first-child { display: none; }
 }
 .md-lang-toggle::-webkit-details-marker { display: none; }
 .md-lang-toggle:hover { border-color: var(--md-olive); }

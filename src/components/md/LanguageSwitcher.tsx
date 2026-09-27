@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import type { MdLanguage } from './md-types';
+import Flag from './Flag';
 
 const LANGUAGES: Array<{ code: MdLanguage; label: string }> = [
   { code: 'es', label: 'Español' },
@@ -22,16 +23,16 @@ export default function LanguageSwitcher({ lang, alternates = {}, available }: {
 }) {
   const current = LANGUAGES.find((item) => item.code === lang) ?? LANGUAGES[0];
   return (
-    <details className="md-lang">
+    <details className="md-lang" {...{ name: 'md-header-popover' }}>
       <summary className="md-lang-toggle" aria-label="Idioma / Language">
-        <span aria-hidden="true">🌐</span> <span className="md-lang-code" aria-hidden="true">{current.code.toUpperCase()}</span><span className="md-lang-label">{current.label}</span>
+        <Flag code={current.code} /><span className="md-lang-label">{current.label}</span>
       </summary>
       <ul className="md-lang-panel">
         {LANGUAGES.map((item) => {
           const href = item.code === lang ? null : alternates[item.code] ?? (available.includes(item.code) ? `/${item.code}` : null);
-          if (item.code === lang) return <li key={item.code}><span className="md-lang-item is-current" aria-current="true">{item.label}</span></li>;
-          if (!href) return <li key={item.code}><span className="md-lang-item is-off" aria-disabled="true">{item.label}</span></li>;
-          return <li key={item.code}><Link className="md-lang-item" href={href} hrefLang={item.code} lang={item.code}>{item.label}</Link></li>;
+          if (item.code === lang) return <li key={item.code}><span className="md-lang-item is-current" aria-current="true"><Flag code={item.code} />{item.label}</span></li>;
+          if (!href) return <li key={item.code}><span className="md-lang-item is-off" aria-disabled="true"><Flag code={item.code} />{item.label}</span></li>;
+          return <li key={item.code}><Link className="md-lang-item" href={href} hrefLang={item.code} lang={item.code}><Flag code={item.code} />{item.label}</Link></li>;
         })}
       </ul>
     </details>
