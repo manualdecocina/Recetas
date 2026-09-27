@@ -5,6 +5,7 @@ import { recipeAlternates } from '@/lib/seo'
 import { publicUrl } from '@/lib/site'
 import { SUPPORTED_LANGUAGES } from '@/types/recipe'
 import { RecipeDocument } from '@/components/RecipeDocument'
+import { InstitutionalPage } from '@/components/InstitutionalPage'
 
 type LangRestParams = { lang: string; rest: string[] }
 
@@ -76,13 +77,9 @@ export default async function PublicLanguageRoute({ params }: Props) {
   const page = await getContentPageByPublicPath(path)
   if (page) {
     return (
-      <main>
-        <article>
-          <h1>{page.title}</h1>
-          {page.excerpt && <p>{page.excerpt}</p>}
-          {page.content_html && <div dangerouslySetInnerHTML={{ __html: cleanHtml(page.content_html) }} />}
-        </article>
-      </main>
+      <InstitutionalPage lang={resolvedParams.lang} title={page.title} intro={page.excerpt ?? undefined}>
+        {page.content_html && <div className="md-rich" dangerouslySetInnerHTML={{ __html: cleanHtml(page.content_html) }} />}
+      </InstitutionalPage>
     )
   }
 

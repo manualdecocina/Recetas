@@ -1,9 +1,8 @@
-import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import { supabase } from '@/lib/supabase/public'
-import { SiteHeader } from '@/components/SiteHeader'
-import { RecipeCard } from '@/components/RecipeCard'
+import { IngredientDetailView } from '@/components/md/IngredientViews'
+import type { MdRecipeCardData } from '@/components/md/md-types'
 import { SUPPORTED_LANGUAGES, type RecipeLanguage } from '@/types/recipe'
 import { publicUrl } from '@/lib/site'
 
@@ -79,35 +78,12 @@ export default async function IngredientPage({ params }: { params: Promise<{ lan
 
   return (
     <>
-      <SiteHeader lang={lang} />
-      <main className="ingredient-page">
-        {itemListLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListLd).replace(/</g, '\\u003c') }} />}
-        <header className="ingredient-page__hero">
-          <Link href={`/${lang}/ingredientes`} className="eyebrow">← Ingredientes</Link>
-          <p className="eyebrow">Ingrediente</p>
-          <h1>{ingredient.name}</h1>
-          {ingredient.description && <p>{ingredient.description}</p>}
-        </header>
-
-        <section className="ingredient-page__recipes" aria-labelledby="ingredient-recipes-title">
-          <div className="section-heading">
-            <div>
-              <p className="eyebrow">Descubrir</p>
-              <h2 id="ingredient-recipes-title">Recetas con {ingredient.name.toLowerCase()}</h2>
-            </div>
-            <span>{recipes.length} {recipes.length === 1 ? 'receta' : 'recetas'}</span>
-          </div>
-          {recipes.length ? (
-            <div className="recipe-grid catalog-grid">
-              {recipes.map((recipe, index) => <RecipeCard key={recipe.id} recipe={recipe} priority={index < 4} />)}
-            </div>
-          ) : (
-            <div className="catalog-empty">
-              <p>Aún no hay recetas publicadas con este ingrediente.</p>
-            </div>
-          )}
-        </section>
-      </main>
+      {itemListLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListLd).replace(/</g, '\\u003c') }} />}
+      <IngredientDetailView
+        ingredient={{ slug: ingredient.slug, name: ingredient.name }}
+        description={ingredient.description}
+        recipes={recipes as MdRecipeCardData[]}
+      />
     </>
   )
 }

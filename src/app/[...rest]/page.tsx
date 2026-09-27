@@ -3,6 +3,7 @@ import { getContentPageByPublicPath, getRecipeByPublicPath, getRecipeTranslation
 import { recipeAlternates } from '@/lib/seo'
 import { publicUrl } from '@/lib/site'
 import { RecipeDocument } from '@/components/RecipeDocument'
+import { InstitutionalPage } from '@/components/InstitutionalPage'
 
 type RestParams = { rest: string[] }
 
@@ -63,13 +64,9 @@ export default async function LegacyPublicRoute({ params }: Props) {
       .replace(/javascript:/gi, '')
 
     return (
-      <main>
-        <article>
-          <h1>{page.title}</h1>
-          {page.excerpt && <p>{page.excerpt}</p>}
-          {html && <div dangerouslySetInnerHTML={{ __html: html }} />}
-        </article>
-      </main>
+      <InstitutionalPage lang="es" title={page.title} intro={page.excerpt ?? undefined}>
+        {html && <div className="md-rich" dangerouslySetInnerHTML={{ __html: html }} />}
+      </InstitutionalPage>
     )
   }
 
