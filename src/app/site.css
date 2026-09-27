@@ -231,8 +231,6 @@
 .md-byline a { font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
 .md-ingredient-group { font-family: var(--md-serif); font-size: 1.05rem; font-weight: 800; margin: 18px 0 6px; color: var(--md-olive-dark); }
 .md-ingredient-has-group:first-child .md-ingredient-group { margin-top: 0; }
-.md-step-photo { margin: 14px 0 0; border-radius: 18px; overflow: hidden; border: 2px solid var(--md-sand); }
-.md-step-photo img { display: block; width: 100%; height: auto; }
 .md-nutrition { margin-top: 22px; background: var(--md-white); border: 2px solid var(--md-stone); border-radius: 22px; padding: 20px 22px; }
 .md-nutrition .md-title { font-size: 1.35rem; margin-bottom: 2px; }
 .md-nutrition-serving { margin: 0 0 8px; font-size: .9rem; opacity: .8; }
@@ -242,6 +240,22 @@
 .md-nutrition-note { margin: 10px 0 0; font-size: .8rem; opacity: .75; }
 .md-video, .md-faq { padding-top: 6px; }
 .md-video-frame { position: relative; aspect-ratio: 16 / 9; border-radius: 22px; overflow: hidden; border: 2px solid var(--md-stone); background: #000; }
+.md-step-item.has-photo { grid-template-columns: 54px minmax(0, 1fr) 210px; }
+.md-step-photo { position: relative; align-self: start; padding: 0; border: 2px solid var(--md-sand); border-radius: 16px; overflow: hidden; background: var(--md-sand); cursor: zoom-in; aspect-ratio: 3 / 2; transition: transform .2s ease, box-shadow .2s ease; }
+.md-step-photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.md-step-photo:hover { transform: translateY(-2px) rotate(-.6deg); box-shadow: 0 10px 24px rgba(0,0,0,.16); }
+.md-step-photo:focus-visible { outline: 3px solid var(--md-accent); outline-offset: 2px; }
+.md-step-photo-zoom { position: absolute; right: 8px; bottom: 8px; display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: rgba(0,0,0,.55); color: #fff; }
+.md-step-photos-note { margin: 14px 0 0; font-size: .85rem; opacity: .7; }
+.md-lightbox { border: 0; padding: 14px 14px 10px; border-radius: 22px; max-width: min(96vw, 1120px); background: var(--md-white); color: var(--md-ink); }
+.md-lightbox::backdrop { background: rgba(10,12,8,.78); }
+.md-lightbox img { display: block; width: 100%; height: auto; border-radius: 14px; }
+.md-lightbox p { margin: 10px 4px 0; font-size: .95rem; }
+.md-lightbox-close { position: absolute; top: 8px; right: 10px; width: 36px; height: 36px; border-radius: 50%; border: 0; background: rgba(0,0,0,.6); color: #fff; font-size: 1.5rem; line-height: 1; cursor: pointer; z-index: 1; }
+.md-video-play { position: absolute; inset: 0; width: 100%; height: 100%; padding: 0; border: 0; background: #000; cursor: pointer; }
+.md-video-play img { object-fit: cover; opacity: .92; transition: transform .35s ease, opacity .2s; }
+.md-video-play:hover img { transform: scale(1.03); opacity: 1; }
+.md-video-play-icon { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: grid; place-items: center; width: 76px; height: 76px; border-radius: 50%; background: var(--md-btn-bg); color: var(--md-btn-fg); box-shadow: 0 8px 28px rgba(0,0,0,.4); }
 .md-video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 .md-faq details { background: var(--md-white); border: 2px solid var(--md-stone); border-radius: 18px; padding: 14px 20px; margin-bottom: 10px; }
 .md-faq summary { cursor: pointer; font-weight: 700; }
@@ -309,10 +323,14 @@ a.md-lang-item:hover { background: var(--md-sand); }
 @media (prefers-reduced-motion: reduce) {
   .md-site *, .md-site *::before, .md-site *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
+@media (max-width: 700px) {
+  .md-step-item.has-photo { grid-template-columns: 54px minmax(0, 1fr); }
+  .md-step-item.has-photo .md-step-photo { grid-column: 1 / -1; max-width: 420px; }
+}
 @media print {
   @page { margin: 14mm; }
   .md-site { color: black; background: white; font: 11pt/1.4 Georgia,serif; }
-  .md-header,.md-footer,.md-article-actions,.md-article-toc,.md-ad-slot,.md-cooking-overlay,.md-related,.md-skip { display: none !important; }
+  .md-header,.md-footer,.md-article-actions,.md-article-toc,.md-ad-slot,.md-cooking-overlay,.md-related,.md-skip,.md-step-photo,.md-lightbox,.md-video { display: none !important; }
   .md-container,.md-reading { width: 100%; max-width: none; margin: 0; }
   .md-article-head { padding: 0 0 10px; }
   .md-article-head .md-display { font-size: 25pt; line-height: 1.1; }

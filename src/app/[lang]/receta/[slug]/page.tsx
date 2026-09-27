@@ -3,7 +3,7 @@ import { cache } from 'react'
 import type { Metadata } from 'next'
 import { supabase } from '@/lib/supabase/public'
 import { recipeAlternates } from '@/lib/seo'
-import { normalizePublicPath, recipePath, publicUrl } from '@/lib/site'
+import { normalizePublicPath, recipePath, publicUrl, absoluteUrl } from '@/lib/site'
 import { RecipeDocument } from '@/components/RecipeDocument'
 import type { RecipeIngredient } from '@/types/recipe'
 import { SUPPORTED_LANGUAGES, type Recipe, type RecipeLanguage } from '@/types/recipe'
@@ -80,7 +80,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: recipe.title,
       description: recipe.excerpt ?? undefined,
       url: publicUrl(recipe.public_path),
-      images: recipe.image_url ? [recipe.image_url] : undefined,
+      images: recipe.image_url ? [absoluteUrl(recipe.image_url)] : undefined,
     },
   }
 }

@@ -1,6 +1,6 @@
 import type { Recipe } from '@/types/recipe'
-import { youtubeId } from '@/lib/video'
-import { publicUrl, getSiteUrl, RECIPE_AUTHOR, authorUrl } from '@/lib/site'
+import { parseVideo, isoDuration } from '@/lib/video'
+import { publicUrl, absoluteUrl, getSiteUrl, RECIPE_AUTHOR, authorUrl } from '@/lib/site'
 import { UI_TEXT } from '@/lib/i18n'
 import { getRecipeTranslations } from '@/lib/public-content'
 import { normalizePublicPath } from '@/lib/site'
@@ -39,7 +39,7 @@ export async function RecipeDocument({ recipe, relatedRecipes = [] }: { recipe: 
   ] }
 
   const galleryImages = [recipe.image_url, ...(Array.isArray(recipe.gallery) ? recipe.gallery.map((g) => (typeof g?.url === 'string' ? g.url : null)) : [])]
-    .filter((u): u is string => Boolean(u))
+    .filter((u): u is string => Boolean(u)).map(absoluteUrl)
   const n = (recipe.nutrition ?? {}) as Record<string, unknown>
   const num = (k: string) => (typeof n[k] === 'number' ? (n[k] as number) : null)
   const nutritionLd = num('calories') != null ? {
@@ -55,15 +55,15 @@ export async function RecipeDocument({ recipe, relatedRecipes = [] }: { recipe: 
     sodiumContent: num('sodium_mg') != null ? `${num('sodium_mg')} mg` : undefined,
   } : undefined
   const seoMeta = (recipe.seo ?? {}) as Record<string, unknown>
-  const videoId = youtubeId(recipe.video_urls?.[0])
-  const videoLd = videoId && typeof seoMeta.video_upload_date === 'string' ? {
+  const video = parseVideo(recipe.video_urls?.[0])
+  const videoLd = video && typeof seoMeta.video_upload_date === 'string' ? {
     '@type': 'VideoObject',
     name: typeof seoMeta.video_name === 'string' ? seoMeta.video_name : recipe.title,
-    description: recipe.excerpt ?? recipe.title,
-    thumbnailUrl: [`https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`],
+    description: typeof seoMeta.video_description === 'string' ? seoMeta.video_description : (recipe.excerpt ?? recipe.title),
+    thumbnailUrl: [absoluteUrl(typeof seoMeta.video_poster === 'string' ? seoMeta.video_poster : (recipe.image_url ?? ''))],
     uploadDate: seoMeta.video_upload_date,
-    embedUrl: `https://www.youtube-nocookie.com/embed/${videoId}`,
-    contentUrl: `https://www.youtube.com/watch?v=${videoId}`,
+    duration: typeof seoMeta.video_duration_seconds === 'number' ? isoDuration(seoMeta.video_duration_seconds) : undefined,
+    embedUrl: video.embedUrl.replace('&dnt=1', '').replace('?dnt=1', ''),
   } : undefined
 
   const jsonLd = {
@@ -82,7 +82,7 @@ export async function RecipeDocument({ recipe, relatedRecipes = [] }: { recipe: 
     datePublished: recipe.published_at ?? undefined,
     dateModified: recipe.updated_at,
     recipeIngredient: recipe.ingredients.map((i) => [i.amount, i.unit, i.name].filter(Boolean).join(' ')),
-    recipeInstructions: recipe.steps.map((s, i) => ({ '@type': 'HowToStep', position: i + 1, name: s.title || undefined, text: s.content, image: s.image_url ? s.image_url : undefined, url: `${publicUrl(recipe.public_path)}#paso-${i + 1}` })),
+    recipeInstructions: recipe.steps.map((s, i) => ({ '@type': 'HowToStep', position: i + 1, name: s.title || undefined, text: s.content, image: s.image_url ? absoluteUrl(s.image_url) : undefined, url: `${publicUrl(recipe.public_path)}#paso-${i + 1}` })),
     prepTime: recipe.prep_time_minutes != null ? `PT${recipe.prep_time_minutes}M` : undefined,
     cookTime: recipe.cook_time_minutes != null ? `PT${recipe.cook_time_minutes}M` : undefined,
     totalTime: totalMinutes != null && totalMinutes > 0 ? `PT${totalMinutes}M` : undefined,

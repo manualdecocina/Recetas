@@ -8,7 +8,9 @@ import FavoriteButton from './FavoriteButton';
 import SharePrintActions from './SharePrintActions';
 import AdSlot from './AdSlot';
 import RelatedRecipes from './RelatedRecipes';
-import { youtubeId } from '@/lib/video';
+import { parseVideo } from '@/lib/video';
+import VideoFacade from './VideoFacade';
+import StepPhoto from './StepPhoto';
 import { RECIPE_AUTHOR } from '@/lib/site';
 
 const LOCALES: Record<string, string> = { es: 'es-ES', en: 'en-GB', de: 'de-DE', it: 'it-IT', fr: 'fr-FR', ja: 'ja-JP' };
@@ -40,7 +42,9 @@ export default function RecipeDocumentVisual({ recipe, relatedRecipes = [], note
   const updated = new Intl.DateTimeFormat(LOCALES[lang] ?? 'es-ES', { dateStyle: 'long', timeZone: 'UTC' }).format(new Date(recipe.updated_at));
   const seo = (recipe.seo ?? {}) as Record<string, unknown>;
   const faq = Array.isArray(seo.faq) ? (seo.faq as Array<{ q?: string; a?: string }>).filter((f) => f?.q && f?.a) : [];
-  const videoId = youtubeId(recipe.video_urls?.[0]);
+  const video = parseVideo(recipe.video_urls?.[0]);
+  const videoPoster = typeof seo.video_poster === 'string' ? seo.video_poster : recipe.image_url;
+  const hasStepPhotos = recipe.steps.some((s) => s.image_url);
   const nutrition = (recipe.nutrition ?? {}) as Record<string, unknown>;
   const nv = (k: string) => (typeof nutrition[k] === 'number' ? (nutrition[k] as number) : null);
   const nutritionRows = [
@@ -106,21 +110,19 @@ export default function RecipeDocumentVisual({ recipe, relatedRecipes = [], note
               <section className="md-recipe-section" id="md-preparacion" aria-labelledby="md-preparation-heading">
                 <h2 className="md-title" id="md-preparation-heading">{t.preparation}</h2>
                 <ol className="md-step-list">{recipe.steps.map((step, index) => (
-                  <li className="md-step-item" id={`paso-${index + 1}`} key={`${recipe.id}-step-${index}`}>
+                  <li className={`md-step-item${step.image_url ? ' has-photo' : ''}`} id={`paso-${index + 1}`} key={`${recipe.id}-step-${index}`}>
                     <span className="md-step-count" aria-hidden="true">{index + 1}</span>
-                    <div className="md-step-text"><h3>{step.title || `${t.step} ${index + 1}`}</h3><p>{step.content}</p>
-                      {step.image_url && <figure className="md-step-photo"><Image src={step.image_url} alt={step.image_alt || step.title || `${t.step} ${index + 1}`} width={1200} height={800} sizes="(max-width: 900px) 100vw, 640px" loading="lazy" /></figure>}
-                    </div>
+                    <div className="md-step-text"><h3>{step.title || `${t.step} ${index + 1}`}</h3><p>{step.content}</p></div>
+                    {step.image_url && <StepPhoto src={step.image_url} alt={step.image_alt || step.title || `${t.step} ${index + 1}`} closeLabel={t.close} />}
                   </li>
                 ))}</ol>
+                {hasStepPhotos && <p className="md-step-photos-note">{t.stepPhotosNote}</p>}
               </section>
             )}
-            {videoId && (
+            {video && (
               <section className="md-video" id="md-video" aria-labelledby="md-video-heading">
                 <h2 className="md-title" id="md-video-heading">{t.videoTitle}</h2>
-                <div className="md-video-frame">
-                  <iframe src={`https://www.youtube-nocookie.com/embed/${videoId}`} title={`${t.videoTitle}: ${recipe.title}`} loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowFullScreen referrerPolicy="strict-origin-when-cross-origin" />
-                </div>
+                <VideoFacade embedUrl={video.embedUrl} title={`${t.videoTitle}: ${recipe.title}`} posterUrl={videoPoster} playLabel={t.playVideo} />
               </section>
             )}
             {summaryParagraphs.length > 0 && (

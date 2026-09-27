@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { notFound, permanentRedirect } from 'next/navigation'
 import { getContentPageByPublicPath, getRecipeByPublicPath, getRecipeTranslations } from '@/lib/public-content'
 import { recipeAlternates } from '@/lib/seo'
-import { publicUrl } from '@/lib/site'
+import { publicUrl, absoluteUrl } from '@/lib/site'
 import { SUPPORTED_LANGUAGES } from '@/types/recipe'
 import { RecipeDocument } from '@/components/RecipeDocument'
 import { InstitutionalPage } from '@/components/InstitutionalPage'
@@ -40,7 +40,7 @@ export async function legacyMetadata(path: string): Promise<Metadata> {
         title: recipe.title,
         description: recipe.excerpt ?? undefined,
         url: publicUrl(recipe.public_path),
-        images: recipe.image_url ? [recipe.image_url] : undefined,
+        images: recipe.image_url ? [absoluteUrl(recipe.image_url)] : undefined,
       },
     }
   }

@@ -75,6 +75,9 @@ const es = {
   videoTitle: "Video de la receta",
   faqTitle: "Preguntas frecuentes",
   sourcesTitle: "Fuentes",
+  close: "Cerrar",
+  playVideo: "Reproducir video",
+  stepPhotosNote: "Las fotos de los pasos son ilustrativas.",
   relatedRecipes: "También te puede gustar",
   totalTime: "Tiempo total",
   servings: "Porciones",
@@ -179,6 +182,9 @@ const en = {
   videoTitle: "Recipe video",
   faqTitle: "Frequently asked questions",
   sourcesTitle: "Sources",
+  close: "Close",
+  playVideo: "Play video",
+  stepPhotosNote: "The step photos are illustrative.",
   relatedRecipes: "You might also like",
   totalTime: "Total time",
   servings: "Servings",
@@ -283,6 +289,9 @@ const de = {
   videoTitle: "Rezeptvideo", // REVISAR
   faqTitle: "Häufige Fragen", // REVISAR
   sourcesTitle: "Quellen", // REVISAR
+  close: "Schließen", // REVISAR
+  playVideo: "Video abspielen", // REVISAR
+  stepPhotosNote: "Die Schrittfotos sind Illustrationen.", // REVISAR
   relatedRecipes: "Das könnte dir auch gefallen", // REVISAR
   totalTime: "Gesamtzeit", // REVISAR
   servings: "Portionen", // REVISAR
@@ -387,6 +396,9 @@ const it = {
   videoTitle: "Video della ricetta", // REVISAR
   faqTitle: "Domande frequenti", // REVISAR
   sourcesTitle: "Fonti", // REVISAR
+  close: "Chiudi", // REVISAR
+  playVideo: "Riproduci il video", // REVISAR
+  stepPhotosNote: "Le foto dei passaggi sono illustrative.", // REVISAR
   relatedRecipes: "Potrebbe piacerti anche", // REVISAR
   totalTime: "Tempo totale", // REVISAR
   servings: "Porzioni", // REVISAR
@@ -491,6 +503,9 @@ const fr = {
   videoTitle: "Vidéo de la recette", // REVISAR
   faqTitle: "Questions fréquentes", // REVISAR
   sourcesTitle: "Sources", // REVISAR
+  close: "Fermer", // REVISAR
+  playVideo: "Lire la vidéo", // REVISAR
+  stepPhotosNote: "Les photos des étapes sont illustratives.", // REVISAR
   relatedRecipes: "Vous aimerez aussi", // REVISAR
   totalTime: "Temps total", // REVISAR
   servings: "Portions", // REVISAR
@@ -595,6 +610,9 @@ const ja = {
   videoTitle: "レシピ動画", // REVISAR
   faqTitle: "よくある質問", // REVISAR
   sourcesTitle: "出典", // REVISAR
+  close: "閉じる", // REVISAR
+  playVideo: "動画を再生", // REVISAR
+  stepPhotosNote: "手順の写真はイメージです。", // REVISAR
   relatedRecipes: "こちらもおすすめ", // REVISAR
   totalTime: "合計時間", // REVISAR
   servings: "人数", // REVISAR

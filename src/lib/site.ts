@@ -33,3 +33,8 @@ export const RECIPE_AUTHOR = { name: 'Néstor Bastidas', aboutPath: 'quienes-som
 export function authorUrl(language: string): string {
   return `${getSiteUrl()}/${language}/${RECIPE_AUTHOR.aboutPath}`
 }
+
+/** URL absoluta para imágenes: acepta rutas locales (/recetas/...) o URLs completas. */
+export function absoluteUrl(pathOrUrl: string): string {
+  return /^https?:\/\//i.test(pathOrUrl) ? pathOrUrl : `${getSiteUrl()}${pathOrUrl.startsWith('/') ? '' : '/'}${pathOrUrl}`
+}
