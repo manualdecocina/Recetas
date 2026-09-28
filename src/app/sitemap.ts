@@ -1,7 +1,8 @@
 import type { MetadataRoute } from 'next'
 import { supabase } from '@/lib/supabase/public'
 import { getSiteUrl, isIndexingAllowed, normalizePublicPath, publicUrl } from '@/lib/site'
-import { SUPPORTED_LANGUAGES } from '@/types/recipe'
+import { SUPPORTED_LANGUAGES, type RecipeLanguage } from '@/types/recipe'
+import { categorySlugFromLabel } from '@/lib/categories'
 
 export const revalidate = 3600
 
@@ -81,6 +82,25 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   for (const l of SUPPORTED_LANGUAGES) {
     entries.push({ url: `${site}/${l}`, alternates: staticAlternates((x) => `/${x}`) })
     entries.push({ url: `${site}/${l}/recetas`, alternates: staticAlternates((x) => `/${x}/recetas`) })
+    entries.push({ url: `${site}/${l}/categorias` })
+  }
+  // Herramienta real (gratuita) sin página propia en el sitemap hasta ahora.
+  entries.push({ url: `${site}/es/que-puedo-cocinar`, lastModified: new Date().toISOString() })
+
+  const { data: categoryRows, error: categoryError } = await supabase
+    .from('recipes')
+    .select('language, category')
+    .eq('published', true)
+    .not('category', 'is', null)
+  if (categoryError) throw new Error(`Sitemap categorias: ${categoryError.message}`)
+  const seenCategories = new Set<string>()
+  for (const row of (categoryRows ?? []) as { language: string; category: string }[]) {
+    const slug = categorySlugFromLabel(row.language as RecipeLanguage, row.category)
+    if (!slug) continue
+    const key = `${row.language}/${slug}`
+    if (seenCategories.has(key)) continue
+    seenCategories.add(key)
+    entries.push({ url: `${site}/${row.language}/categorias/${slug}` })
   }
 
   const { data: ingredients, error: ingredientError } = await supabase
