@@ -54,6 +54,17 @@ export async function RecipeDocument({ recipe, relatedRecipes = [] }: { recipe: 
     sugarContent: num('sugar_g') != null ? `${num('sugar_g')} g` : undefined,
     sodiumContent: num('sodium_mg') != null ? `${num('sodium_mg')} mg` : undefined,
   } : undefined
+  // aggregateRating: solo con votos reales acumulados vía rate_recipe(); nunca un número
+  // inventado. Sin votos, se omite el campo por completo (Google penaliza el rating falso).
+  const ratingCount = recipe.rating_count ?? 0
+  const ratingSum = recipe.rating_sum ?? 0
+  const aggregateRatingLd = ratingCount > 0 ? {
+    '@type': 'AggregateRating',
+    ratingValue: (ratingSum / ratingCount).toFixed(1),
+    ratingCount,
+    bestRating: '5',
+    worstRating: '1',
+  } : undefined
   const seoMeta = (recipe.seo ?? {}) as Record<string, unknown>
   const video = parseVideo(recipe.video_urls?.[0])
   const videoLd = video && typeof seoMeta.video_upload_date === 'string' ? {
@@ -75,6 +86,7 @@ export async function RecipeDocument({ recipe, relatedRecipes = [] }: { recipe: 
     author: { '@type': 'Person', name: RECIPE_AUTHOR.name, url: authorUrl(recipe.language) },
     publisher: { '@type': 'Organization', name: 'Manual de Cocina', url: getSiteUrl() },
     mainEntityOfPage: publicUrl(recipe.public_path),
+    aggregateRating: aggregateRatingLd,
     nutrition: nutritionLd,
     video: videoLd,
     inLanguage: recipe.language,

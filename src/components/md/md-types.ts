@@ -46,6 +46,9 @@ export interface MdRecipe {
   seo?: Record<string, unknown> | null;
   published_at: string | null;
   updated_at: string;
+  /** Votos reales (1-5 cada uno); nunca inventados. Ver RatingWidget y rate_recipe(). */
+  rating_count?: number;
+  rating_sum?: number;
 }
 
 /** Solo estos campos pueden utilizarse para renderizar una tarjeta. */

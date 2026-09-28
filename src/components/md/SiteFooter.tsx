@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import type { MdLanguage } from './md-types';
 import { getMdCopy } from '@/lib/copy';
+import CookiePreferencesButton from './CookiePreferencesButton';
 
 export default function SiteFooter({ lang }: { lang: MdLanguage }) {
   const t = getMdCopy(lang);
@@ -36,7 +37,10 @@ export default function SiteFooter({ lang }: { lang: MdLanguage }) {
             {legal.map((item) => <Link key={item.slug} href={`${base}/${item.slug}`}>{item.label}</Link>)}
           </nav>
         </div>
-        <div className="md-footer-bottom">© {new Date().getFullYear()} Manual de Cocina</div>
+        <div className="md-footer-bottom">
+          <span>© {new Date().getFullYear()} Manual de Cocina</span>
+          <CookiePreferencesButton lang={lang} />
+        </div>
       </div>
     </footer>
   );

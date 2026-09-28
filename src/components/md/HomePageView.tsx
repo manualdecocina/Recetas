@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import type { MdLanguage, MdRecipeCardData } from './md-types';
 import type { MdCategorySummary } from './CategoryViews';
 import type { MdIngredientSummary } from './IngredientViews';
@@ -37,8 +38,9 @@ export default function HomePageView({ lang, data }: { lang: MdLanguage; data: M
           {data.featured && (
             <figure className="md-home-hero-figure">
               <Link href={normalizePublicPath(data.featured.public_path)} tabIndex={-1}>
-                {data.featured.image_url ? <img className="md-home-hero-photo" src={data.featured.image_url}
-                  alt={`${t.photoOf} ${data.featured.title}`} width="900" height="675" loading="eager" fetchPriority="high" /> : (
+                {data.featured.image_url ? <Image className="md-home-hero-photo" src={data.featured.image_url}
+                  alt={`${t.photoOf} ${data.featured.title}`} width={900} height={675} priority
+                  sizes="(max-width: 899px) 100vw, 55vw" /> : (
                   <span className="md-home-hero-fallback"><img src="/brand/mark.png" alt="" width="75" height="75" /></span>
                 )}
               </Link>

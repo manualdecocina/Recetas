@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import type { MdLanguage, MdRecipeCardData } from './md-types';
 import { getMdCopy } from '@/lib/copy';
 import SiteHeader from './SiteHeader';
@@ -30,7 +31,8 @@ export function CategoryGrid({ lang, categories }: {
       {categories.filter((item) => item.count > 0).map((item) => (
         <Link className="md-category-card" key={item.slug} href={`/${lang}/categorias/${item.slug}`}>
           {item.image_url ? (
-            <img className="md-category-photo" src={item.image_url} alt="" width="360" height="270" loading="lazy" />
+            <Image className="md-category-photo" src={item.image_url} alt="" width={360} height={270} loading="lazy"
+              sizes="(max-width: 599px) 50vw, (max-width: 899px) 33vw, 20vw" />
           ) : (
             <span className="md-category-fallback" aria-hidden="true">
               <img src="/brand/mark.png" alt="" width="42" height="42" />

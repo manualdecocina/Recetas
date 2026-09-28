@@ -110,6 +110,18 @@ const es = {
   skipToContent: "Saltar al contenido",
   emptyTitle: "Este contenido todavía está creciendo",
   emptyBody: "Mientras tanto, puedes explorar todas las recetas.",
+  cookieBannerText: "Usamos almacenamiento local para tus favoritas y tu tema, y muy pronto también Google AdSense para publicidad. Antes de mostrar anuncios, necesitamos tu consentimiento.",
+  cookieBannerAccept: "Aceptar anuncios",
+  cookieBannerReject: "Rechazar",
+  cookieBannerLearnMore: "Más información",
+  cookiePreferencesLink: "Preferencias de cookies",
+  ratingHeading: "Valora esta receta",
+  ratingYourVote: "Tu valoración",
+  ratingThanks: "¡Gracias por tu voto!",
+  ratingAverageOf5: "de 5",
+  ratingVotesSuffix: "votos",
+  ratingNoVotesYet: "Sé la primera persona en valorarla",
+  ratingStarLabel: "estrellas",
 } as const;
 
 const en = {
@@ -217,6 +229,18 @@ const en = {
   skipToContent: "Skip to content",
   emptyTitle: "This section is still growing",
   emptyBody: "In the meantime, browse all recipes.",
+  cookieBannerText: "We use local storage for your favorites and theme, and soon Google AdSense for advertising too. Before showing ads, we need your consent.",
+  cookieBannerAccept: "Accept ads",
+  cookieBannerReject: "Reject",
+  cookieBannerLearnMore: "Learn more",
+  cookiePreferencesLink: "Cookie preferences",
+  ratingHeading: "Rate this recipe",
+  ratingYourVote: "Your rating",
+  ratingThanks: "Thanks for your vote!",
+  ratingAverageOf5: "out of 5",
+  ratingVotesSuffix: "votes",
+  ratingNoVotesYet: "Be the first to rate it",
+  ratingStarLabel: "stars",
 };
 
 const de = {
@@ -324,6 +348,18 @@ const de = {
   skipToContent: "Zum Inhalt springen", // REVISAR
   emptyTitle: "Dieser Bereich wächst noch", // REVISAR
   emptyBody: "Stöbere in der Zwischenzeit in allen Rezepten.", // REVISAR
+  cookieBannerText: "Wir nutzen lokalen Speicher für deine Favoriten und dein Design, und bald auch Google AdSense für Werbung. Bevor wir Anzeigen zeigen, brauchen wir deine Einwilligung.",
+  cookieBannerAccept: "Anzeigen akzeptieren",
+  cookieBannerReject: "Ablehnen",
+  cookieBannerLearnMore: "Mehr erfahren",
+  cookiePreferencesLink: "Cookie-Einstellungen",
+  ratingHeading: "Bewerte dieses Rezept",
+  ratingYourVote: "Deine Bewertung",
+  ratingThanks: "Danke für deine Bewertung!",
+  ratingAverageOf5: "von 5",
+  ratingVotesSuffix: "Bewertungen",
+  ratingNoVotesYet: "Sei die erste Person, die bewertet",
+  ratingStarLabel: "Sterne",
 };
 
 const it = {
@@ -431,6 +467,18 @@ const it = {
   skipToContent: "Vai al contenuto", // REVISAR
   emptyTitle: "Questa sezione è ancora in crescita", // REVISAR
   emptyBody: "Nel frattempo, sfoglia tutte le ricette.", // REVISAR
+  cookieBannerText: "Usiamo l'archiviazione locale per i tuoi preferiti e il tuo tema, e presto anche Google AdSense per la pubblicità. Prima di mostrare annunci, ci serve il tuo consenso.",
+  cookieBannerAccept: "Accetta annunci",
+  cookieBannerReject: "Rifiuta",
+  cookieBannerLearnMore: "Scopri di più",
+  cookiePreferencesLink: "Preferenze cookie",
+  ratingHeading: "Valuta questa ricetta",
+  ratingYourVote: "La tua valutazione",
+  ratingThanks: "Grazie per il tuo voto!",
+  ratingAverageOf5: "su 5",
+  ratingVotesSuffix: "voti",
+  ratingNoVotesYet: "Sii il primo a valutarla",
+  ratingStarLabel: "stelle",
 };
 
 const fr = {
@@ -538,6 +586,18 @@ const fr = {
   skipToContent: "Aller au contenu", // REVISAR
   emptyTitle: "Cette section est encore en construction", // REVISAR
   emptyBody: "En attendant, parcourez toutes les recettes.", // REVISAR
+  cookieBannerText: "Nous utilisons le stockage local pour tes favoris et ton thème, et bientôt aussi Google AdSense pour la publicité. Avant d'afficher des annonces, nous avons besoin de ton consentement.",
+  cookieBannerAccept: "Accepter les annonces",
+  cookieBannerReject: "Refuser",
+  cookieBannerLearnMore: "En savoir plus",
+  cookiePreferencesLink: "Préférences de cookies",
+  ratingHeading: "Note cette recette",
+  ratingYourVote: "Ta note",
+  ratingThanks: "Merci pour ton vote !",
+  ratingAverageOf5: "sur 5",
+  ratingVotesSuffix: "votes",
+  ratingNoVotesYet: "Sois la première personne à la noter",
+  ratingStarLabel: "étoiles",
 };
 
 const ja = {
@@ -645,6 +705,18 @@ const ja = {
   skipToContent: "本文へ移動", // REVISAR
   emptyTitle: "このセクションは準備中です", // REVISAR
   emptyBody: "その間、すべてのレシピをご覧ください。", // REVISAR
+  cookieBannerText: "お気に入りとテーマの記憶にはローカルストレージを使用しており、近日中にGoogle AdSenseによる広告も導入予定です。広告を表示する前に、お客様の同意が必要です。",
+  cookieBannerAccept: "広告に同意する",
+  cookieBannerReject: "拒否する",
+  cookieBannerLearnMore: "詳細を見る",
+  cookiePreferencesLink: "クッキー設定",
+  ratingHeading: "このレシピを評価する",
+  ratingYourVote: "あなたの評価",
+  ratingThanks: "評価ありがとうございます！",
+  ratingAverageOf5: "/ 5",
+  ratingVotesSuffix: "件の評価",
+  ratingNoVotesYet: "最初に評価してみましょう",
+  ratingStarLabel: "つ星",
 };
 
 export type MdCopy = Record<keyof typeof es, string>;
@@ -753,6 +825,18 @@ const pt = {
   skipToContent: "Pular para o conteúdo",
   emptyTitle: "Este conteúdo ainda está crescendo",
   emptyBody: "Enquanto isso, você pode explorar todas as receitas.",
+  cookieBannerText: "Usamos armazenamento local para seus favoritos e tema, e em breve também o Google AdSense para publicidade. Antes de exibir anúncios, precisamos do seu consentimento.",
+  cookieBannerAccept: "Aceitar anúncios",
+  cookieBannerReject: "Recusar",
+  cookieBannerLearnMore: "Saiba mais",
+  cookiePreferencesLink: "Preferências de cookies",
+  ratingHeading: "Avalie esta receita",
+  ratingYourVote: "Sua avaliação",
+  ratingThanks: "Obrigado pelo seu voto!",
+  ratingAverageOf5: "de 5",
+  ratingVotesSuffix: "votos",
+  ratingNoVotesYet: "Seja a primeira pessoa a avaliar",
+  ratingStarLabel: "estrelas",
 } as const; // REVISAR: revisão por falante nativo antes de divulgar
 
 export const mdCopy: Record<MdLanguage, MdCopy> = { es, en, de, it, fr, ja, pt };

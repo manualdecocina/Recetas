@@ -6,6 +6,7 @@ import { getMdCopy } from '@/lib/copy';
 import RecipeIngredients from './RecipeIngredients';
 import RecipeCookingMode from './RecipeCookingMode';
 import FavoriteButton from './FavoriteButton';
+import RatingWidget from './RatingWidget';
 import SharePrintActions from './SharePrintActions';
 import AdSlot from './AdSlot';
 import RelatedRecipes from './RelatedRecipes';
@@ -80,6 +81,7 @@ export default function RecipeDocumentVisual({ recipe, relatedRecipes = [], note
             {facts.length > 0 && <dl className="md-recipe-facts">{facts.map((fact) => (
               <div className="md-recipe-fact" key={fact.label}><dt>{fact.label}</dt><dd>{fact.value}</dd></div>
             ))}</dl>}
+            <RatingWidget recipeId={recipe.id} lang={lang} ratingCount={recipe.rating_count ?? 0} ratingSum={recipe.rating_sum ?? 0} />
             <div className="md-article-actions">
               <RecipeCookingMode lang={lang} steps={recipe.steps} />
               <FavoriteButton recipeId={recipe.id} lang={lang} />

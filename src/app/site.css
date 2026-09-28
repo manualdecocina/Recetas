@@ -123,7 +123,24 @@
 .md-footer-links { display: grid; gap: 10px; }
 .md-footer-links a { width: fit-content; color: var(--md-footer-fg); font-size: .92rem; text-decoration: none; }
 .md-footer-links a:hover { color: var(--md-accent); text-decoration: underline; }
-.md-footer-bottom { border-top: 1px solid rgb(255 255 255 / 18%); color: var(--md-footer-fg); opacity: .8; font-size: .82rem; padding-top: 19px; margin-top: 40px; }
+.md-footer-bottom { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 16px; border-top: 1px solid rgb(255 255 255 / 18%); color: var(--md-footer-fg); opacity: .8; font-size: .82rem; padding-top: 19px; margin-top: 40px; }
+.md-footer-cookie-btn { background: none; border: none; padding: 0; margin: 0; color: inherit; font: inherit; text-decoration: underline; text-underline-offset: 2px; cursor: pointer; opacity: .9; }
+.md-footer-cookie-btn:hover { color: var(--md-accent); opacity: 1; }
+
+/* Banner de consentimiento de cookies */
+.md-cookie-banner { position: fixed; inset-inline: 0; bottom: 0; z-index: 90; display: flex; justify-content: center; padding: 14px; pointer-events: none; }
+.md-cookie-banner-card { pointer-events: auto; width: min(100%, 880px); background: var(--md-white); color: var(--md-ink); border: 2px solid var(--md-stone); border-top: 6px solid var(--md-accent); border-radius: var(--md-radius); box-shadow: 0 18px 44px rgb(0 0 0 / 24%); padding: 20px 22px; display: grid; gap: 16px; }
+.md-cookie-banner-text { margin: 0; font-size: .93rem; line-height: 1.55; color: var(--md-muted); }
+.md-cookie-banner-text a { color: var(--md-olive-dark); font-weight: 700; text-decoration: underline; text-underline-offset: 2px; }
+.md-cookie-banner-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.md-cookie-banner-actions .md-button, .md-cookie-banner-actions .md-button-secondary { flex: 1 1 auto; justify-content: center; text-align: center; }
+@media (min-width: 640px) {
+  .md-cookie-banner { padding: 20px; }
+  .md-cookie-banner-card { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+  .md-cookie-banner-text { flex: 1 1 auto; }
+  .md-cookie-banner-actions { flex: 0 0 auto; }
+  .md-cookie-banner-actions .md-button, .md-cookie-banner-actions .md-button-secondary { flex: 0 0 auto; }
+}
 /* Portada */
 .md-home-hero { display: grid; grid-template-columns: 1fr; background: var(--md-paper); overflow: hidden; }
 .md-home-hero-copy { padding: clamp(30px, 5.6vw, 78px) max(18px, calc((100vw - var(--md-container)) / 2)); align-self: center; }
@@ -195,6 +212,15 @@
 .md-recipe-fact dt { font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; color: var(--md-muted); font-weight: 700; }
 .md-recipe-fact dd { margin: 0; font-weight: 800; font-size: 1rem; }
 .md-article-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+
+.md-rating-widget { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; margin: 0 0 18px; }
+.md-rating-heading { font-size: .78rem; letter-spacing: .04em; font-weight: 700; color: var(--md-muted); }
+.md-rating-stars { display: inline-flex; gap: 2px; }
+.md-rating-star { background: none; border: none; padding: 2px; margin: 0; font-size: 1.4rem; line-height: 1; color: var(--md-accent); cursor: pointer; transition: transform .12s ease; }
+.md-rating-star:hover:not(:disabled) { transform: scale(1.12); }
+.md-rating-star:disabled { cursor: default; }
+.md-rating-summary { font-size: .86rem; font-weight: 700; color: var(--md-ink); }
+.md-rating-thanks { font-size: .82rem; color: var(--md-olive-dark); font-weight: 700; }
 .md-article-toc { display: none; }
 .md-recipe-wrap { padding-top: 40px; }
 .md-recipe-lead { display: none; }
@@ -384,7 +410,8 @@ a.md-lang-item:hover { background: var(--md-sand); }
   .md-site { font-family: var(--md-sans); font-size: 10.5pt; line-height: 1.45; min-height: 0; }
   * { box-shadow: none !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .md-header, .md-footer, .md-article-actions, .md-article-toc, .md-ad-slot, .md-cooking-overlay, .md-related, .md-skip,
-  .md-step-photo, .md-lightbox, .md-video, .md-faq, .md-about, .md-crumbs, .md-step-photos-note { display: none !important; }
+  .md-step-photo, .md-lightbox, .md-video, .md-faq, .md-about, .md-crumbs, .md-step-photos-note,
+  .md-rating-widget, .md-cookie-banner { display: none !important; }
   .md-container, .md-reading { width: 100% !important; max-width: none !important; margin: 0 !important; padding-inline: 0 !important; }
 
   .md-print-brand { display: flex !important; align-items: center; justify-content: space-between; gap: 12mm; padding-bottom: 3mm; margin-bottom: 5mm; border-bottom: 1.5pt solid #1f6b2e; }
