@@ -23,6 +23,9 @@ const es = {
   browseIngredients: "Empieza por un ingrediente",
   editorialTitle: "Recetas para volver a cocinar",
   editorialBody: "Manual de Cocina reúne recetas de distintas cocinas para consultar, preparar y compartir, con instrucciones claras y una navegación sencilla.",
+  editorialPoint1: "Instrucciones claras, paso a paso, con fotos reales del proceso.",
+  editorialPoint2: "Notas de conservación, sustituciones y preguntas frecuentes en cada receta.",
+  editorialPoint3: "Sin datos inventados: fotos, valoraciones y fuentes citadas son reales.",
   editorialAuthorRole: "Chef · responsable editorial",
   editorialAuthorBlurb: "Más de 15 años de experiencia en cocina profesional en Latinoamérica, Estados Unidos y España.",
   editorialAuthorCta: "Conócenos",
@@ -165,6 +168,9 @@ const en = {
   browseIngredients: "Start with an ingredient",
   editorialTitle: "Recipes worth cooking again",
   editorialBody: "Manual de Cocina brings together recipes from different cuisines with clear instructions and easy navigation.",
+  editorialPoint1: "Clear, step-by-step instructions with real process photos.",
+  editorialPoint2: "Storage tips, substitutions and FAQs on every recipe.",
+  editorialPoint3: "No invented data: photos, ratings and cited sources are real.",
   editorialAuthorRole: "Chef · Editorial lead",
   editorialAuthorBlurb: "Over 15 years of professional cooking experience in Latin America, the United States and Spain.",
   editorialAuthorCta: "About us",
@@ -307,6 +313,9 @@ const de = {
   browseIngredients: "Mit einer Zutat beginnen", // REVISAR
   editorialTitle: "Rezepte, die man gerne wieder kocht", // REVISAR
   editorialBody: "Manual de Cocina vereint Rezepte verschiedener Küchen mit klaren Anleitungen und einfacher Navigation.", // REVISAR
+  editorialPoint1: "Klare Schritt-für-Schritt-Anleitungen mit echten Fotos.", // REVISAR
+  editorialPoint2: "Aufbewahrungstipps, Alternativen und FAQ bei jedem Rezept.", // REVISAR
+  editorialPoint3: "Keine erfundenen Daten: Fotos, Bewertungen und Quellen sind echt.", // REVISAR
   editorialAuthorRole: "Koch · Redaktionsleiter", // REVISAR
   editorialAuthorBlurb: "Über 15 Jahre Berufserfahrung in der professionellen Küche in Lateinamerika, den USA und Spanien.", // REVISAR
   editorialAuthorCta: "Über uns", // REVISAR
@@ -449,6 +458,9 @@ const it = {
   browseIngredients: "Parti da un ingrediente", // REVISAR
   editorialTitle: "Ricette da cucinare ancora", // REVISAR
   editorialBody: "Manual de Cocina raccoglie ricette di cucine diverse con istruzioni chiare e una navigazione semplice.", // REVISAR
+  editorialPoint1: "Istruzioni chiare, passo dopo passo, con foto reali.", // REVISAR
+  editorialPoint2: "Consigli di conservazione, sostituzioni e FAQ in ogni ricetta.", // REVISAR
+  editorialPoint3: "Nessun dato inventato: foto, valutazioni e fonti sono reali.", // REVISAR
   editorialAuthorRole: "Chef · responsabile editoriale", // REVISAR
   editorialAuthorBlurb: "Oltre 15 anni di esperienza in cucina professionale in America Latina, Stati Uniti e Spagna.", // REVISAR
   editorialAuthorCta: "Chi siamo", // REVISAR
@@ -591,6 +603,9 @@ const fr = {
   browseIngredients: "Partir d’un ingrédient", // REVISAR
   editorialTitle: "Des recettes à refaire", // REVISAR
   editorialBody: "Manual de Cocina rassemble des recettes de différentes cuisines, avec des instructions claires et une navigation simple.", // REVISAR
+  editorialPoint1: "Instructions claires, étape par étape, avec de vraies photos.", // REVISAR
+  editorialPoint2: "Conseils de conservation, substitutions et FAQ pour chaque recette.", // REVISAR
+  editorialPoint3: "Aucune donnée inventée : photos, avis et sources sont réels.", // REVISAR
   editorialAuthorRole: "Chef · responsable éditorial", // REVISAR
   editorialAuthorBlurb: "Plus de 15 ans d'expérience en cuisine professionnelle en Amérique latine, aux États-Unis et en Espagne.", // REVISAR
   editorialAuthorCta: "Qui sommes-nous", // REVISAR
@@ -733,6 +748,9 @@ const ja = {
   browseIngredients: "食材から探す", // REVISAR
   editorialTitle: "何度も作りたくなるレシピ", // REVISAR
   editorialBody: "Manual de Cocina は、さまざまな国のレシピをわかりやすい手順と使いやすい構成で紹介します。", // REVISAR
+  editorialPoint1: "実際の写真付きで、わかりやすい手順を紹介。", // REVISAR
+  editorialPoint2: "保存方法、代用品、よくある質問を各レシピに掲載。", // REVISAR
+  editorialPoint3: "架空のデータはなし。写真、評価、出典はすべて本物。", // REVISAR
   editorialAuthorRole: "シェフ・編集責任者", // REVISAR
   editorialAuthorBlurb: "ラテンアメリカ、アメリカ、スペインで15年以上のプロの料理経験。", // REVISAR
   editorialAuthorCta: "私たちについて", // REVISAR
@@ -876,6 +894,9 @@ const pt = {
   browseIngredients: "Comece por um ingrediente",
   editorialTitle: "Receitas para voltar a cozinhar",
   editorialBody: "O Manual de Cocina reúne receitas de diferentes cozinhas para consultar, preparar e compartilhar, com instruções claras e navegação simples.",
+  editorialPoint1: "Instruções claras, passo a passo, com fotos reais do processo.",
+  editorialPoint2: "Dicas de conservação, substituições e perguntas frequentes em cada receita.",
+  editorialPoint3: "Sem dados inventados: fotos, avaliações e fontes citadas são reais.",
   editorialAuthorRole: "Chef · responsável editorial",
   editorialAuthorBlurb: "Mais de 15 anos de experiência em cozinha profissional na América Latina, Estados Unidos e Espanha.",
   editorialAuthorCta: "Quem somos",

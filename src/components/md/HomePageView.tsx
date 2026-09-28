@@ -81,9 +81,14 @@ export default function HomePageView({ lang, data }: { lang: MdLanguage; data: M
               <p className="md-eyebrow">Manual de Cocina</p>
               <h2 className="md-title">{t.editorialTitle}</h2>
               <p className="md-lead">{t.editorialBody}</p>
+              <ul className="md-editorial-points">
+                <li>{t.editorialPoint1}</li>
+                <li>{t.editorialPoint2}</li>
+                <li>{t.editorialPoint3}</li>
+              </ul>
             </div>
             <Link className="md-editorial-box md-editorial-author" href={`/${lang}/quienes-somos`}>
-              <Image className="md-editorial-author-photo" src="/autor/nestor-bastidas.webp" alt="" width={480} height={640}
+              <Image className="md-editorial-author-photo" src="/autor/nestor-bastidas.webp" alt="" width={480} height={360}
                 sizes="(max-width: 780px) 100vw, 460px" />
               <div className="md-editorial-author-text">
                 <strong>Néstor Bastidas</strong>
