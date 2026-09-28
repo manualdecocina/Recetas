@@ -26,6 +26,7 @@ const es = {
   editorialPoint1: "Instrucciones claras, paso a paso, con fotos reales del proceso.",
   editorialPoint2: "Notas de conservación, sustituciones y preguntas frecuentes en cada receta.",
   editorialPoint3: "Sin datos inventados: fotos, valoraciones y fuentes citadas son reales.",
+  editorialPoint4: "Guarda tus recetas favoritas y compártelas fácilmente.",
   editorialAuthorRole: "Chef · responsable editorial",
   editorialAuthorBlurb: "Más de 15 años de experiencia en cocina profesional en Latinoamérica, Estados Unidos y España.",
   editorialAuthorCta: "Conócenos",
@@ -171,6 +172,7 @@ const en = {
   editorialPoint1: "Clear, step-by-step instructions with real process photos.",
   editorialPoint2: "Storage tips, substitutions and FAQs on every recipe.",
   editorialPoint3: "No invented data: photos, ratings and cited sources are real.",
+  editorialPoint4: "Save your favorite recipes and share them easily.",
   editorialAuthorRole: "Chef · Editorial lead",
   editorialAuthorBlurb: "Over 15 years of professional cooking experience in Latin America, the United States and Spain.",
   editorialAuthorCta: "About us",
@@ -316,6 +318,7 @@ const de = {
   editorialPoint1: "Klare Schritt-für-Schritt-Anleitungen mit echten Fotos.", // REVISAR
   editorialPoint2: "Aufbewahrungstipps, Alternativen und FAQ bei jedem Rezept.", // REVISAR
   editorialPoint3: "Keine erfundenen Daten: Fotos, Bewertungen und Quellen sind echt.", // REVISAR
+  editorialPoint4: "Speichere deine Lieblingsrezepte und teile sie einfach.", // REVISAR
   editorialAuthorRole: "Koch · Redaktionsleiter", // REVISAR
   editorialAuthorBlurb: "Über 15 Jahre Berufserfahrung in der professionellen Küche in Lateinamerika, den USA und Spanien.", // REVISAR
   editorialAuthorCta: "Über uns", // REVISAR
@@ -461,6 +464,7 @@ const it = {
   editorialPoint1: "Istruzioni chiare, passo dopo passo, con foto reali.", // REVISAR
   editorialPoint2: "Consigli di conservazione, sostituzioni e FAQ in ogni ricetta.", // REVISAR
   editorialPoint3: "Nessun dato inventato: foto, valutazioni e fonti sono reali.", // REVISAR
+  editorialPoint4: "Salva le tue ricette preferite e condividile facilmente.", // REVISAR
   editorialAuthorRole: "Chef · responsabile editoriale", // REVISAR
   editorialAuthorBlurb: "Oltre 15 anni di esperienza in cucina professionale in America Latina, Stati Uniti e Spagna.", // REVISAR
   editorialAuthorCta: "Chi siamo", // REVISAR
@@ -606,6 +610,7 @@ const fr = {
   editorialPoint1: "Instructions claires, étape par étape, avec de vraies photos.", // REVISAR
   editorialPoint2: "Conseils de conservation, substitutions et FAQ pour chaque recette.", // REVISAR
   editorialPoint3: "Aucune donnée inventée : photos, avis et sources sont réels.", // REVISAR
+  editorialPoint4: "Enregistrez vos recettes préférées et partagez-les facilement.", // REVISAR
   editorialAuthorRole: "Chef · responsable éditorial", // REVISAR
   editorialAuthorBlurb: "Plus de 15 ans d'expérience en cuisine professionnelle en Amérique latine, aux États-Unis et en Espagne.", // REVISAR
   editorialAuthorCta: "Qui sommes-nous", // REVISAR
@@ -751,6 +756,7 @@ const ja = {
   editorialPoint1: "実際の写真付きで、わかりやすい手順を紹介。", // REVISAR
   editorialPoint2: "保存方法、代用品、よくある質問を各レシピに掲載。", // REVISAR
   editorialPoint3: "架空のデータはなし。写真、評価、出典はすべて本物。", // REVISAR
+  editorialPoint4: "お気に入りのレシピを保存して、簡単に共有できます。", // REVISAR
   editorialAuthorRole: "シェフ・編集責任者", // REVISAR
   editorialAuthorBlurb: "ラテンアメリカ、アメリカ、スペインで15年以上のプロの料理経験。", // REVISAR
   editorialAuthorCta: "私たちについて", // REVISAR
@@ -897,6 +903,7 @@ const pt = {
   editorialPoint1: "Instruções claras, passo a passo, com fotos reais do processo.",
   editorialPoint2: "Dicas de conservação, substituições e perguntas frequentes em cada receita.",
   editorialPoint3: "Sem dados inventados: fotos, avaliações e fontes citadas são reais.",
+  editorialPoint4: "Salve suas receitas favoritas e compartilhe facilmente.",
   editorialAuthorRole: "Chef · responsável editorial",
   editorialAuthorBlurb: "Mais de 15 anos de experiência em cozinha profissional na América Latina, Estados Unidos e Espanha.",
   editorialAuthorCta: "Quem somos",

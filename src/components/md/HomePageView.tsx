@@ -85,6 +85,7 @@ export default function HomePageView({ lang, data }: { lang: MdLanguage; data: M
                 <li>{t.editorialPoint1}</li>
                 <li>{t.editorialPoint2}</li>
                 <li>{t.editorialPoint3}</li>
+                <li>{t.editorialPoint4}</li>
               </ul>
             </div>
             <Link className="md-editorial-box md-editorial-author" href={`/${lang}/quienes-somos`}>
