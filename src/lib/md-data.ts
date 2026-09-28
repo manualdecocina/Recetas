@@ -35,18 +35,61 @@ export async function getCategorySummaries(lang: RecipeLanguage): Promise<MdCate
   })
 }
 
-/** Ingredientes canónicos indexables (los mismos que lista /es/ingredientes). */
+/**
+ * Ingredientes canónicos indexables (los mismos que lista /es/ingredientes), con conteo
+ * real de recetas publicadas y una foto real de una de esas recetas (nunca inventada;
+ * mismo criterio que getCategorySummaries). Sin recetas asociadas, count queda en 0 y el
+ * llamador decide si lo muestra o no (la página lo filtra, igual que categorías).
+ */
 export async function getIngredientSummaries(limit?: number): Promise<MdIngredientSummary[]> {
   let query = supabase
     .from('ingredients')
-    .select('slug, name')
+    .select('id, slug, name')
     .eq('status', 'canonical')
     .eq('indexable', true)
     .order('name', { ascending: true })
   if (limit) query = query.limit(limit)
-  const { data, error } = await query
+  const { data: ingredientRows, error } = await query
   if (error) throw new Error(`No se pudieron cargar los ingredientes: ${error.message}`)
-  return (data ?? []) as MdIngredientSummary[]
+  const ingredients = (ingredientRows ?? []) as Array<{ id: string; slug: string; name: string }>
+  if (!ingredients.length) return []
+
+  const { data: linkRowsRaw, error: linksError } = await supabase
+    .from('recipe_ingredients')
+    .select('ingredient_id, recipe_id')
+    .in('ingredient_id', ingredients.map((i) => i.id))
+  if (linksError) throw new Error(`No se pudieron cargar las relaciones de ingredientes: ${linksError.message}`)
+  const linkRows = (linkRowsRaw ?? []) as Array<{ ingredient_id: string; recipe_id: string }>
+
+  const recipeIds = [...new Set(linkRows.map((row) => row.recipe_id))]
+  let recipeRows: Array<{ id: string; image_url: string | null }> = []
+  if (recipeIds.length) {
+    const { data, error: recipesError } = await supabase
+      .from('recipes')
+      .select('id, image_url')
+      .eq('language', 'es')
+      .eq('published', true)
+      .in('id', recipeIds)
+    if (recipesError) throw new Error(`No se pudieron cargar las recetas de los ingredientes: ${recipesError.message}`)
+    recipeRows = (data ?? []) as Array<{ id: string; image_url: string | null }>
+  }
+
+  const imageByRecipeId = new Map(recipeRows.map((r) => [r.id, r.image_url]))
+  const statsByIngredient = new Map<string, { count: number; image_url: string | null }>()
+  for (const row of linkRows) {
+    if (!imageByRecipeId.has(row.recipe_id)) continue
+    const current = statsByIngredient.get(row.ingredient_id) ?? { count: 0, image_url: null }
+    current.count += 1
+    if (!current.image_url) current.image_url = imageByRecipeId.get(row.recipe_id) ?? null
+    statsByIngredient.set(row.ingredient_id, current)
+  }
+
+  return ingredients.map((ingredient) => ({
+    slug: ingredient.slug,
+    name: ingredient.name,
+    count: statsByIngredient.get(ingredient.id)?.count ?? 0,
+    image_url: statsByIngredient.get(ingredient.id)?.image_url ?? null,
+  }))
 }
 
 export async function getHomeData(lang: RecipeLanguage): Promise<MdHomeData> {

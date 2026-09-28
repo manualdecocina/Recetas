@@ -191,6 +191,8 @@
 .md-pantry-banner .md-eyebrow, .md-pantry-banner .md-title { color: var(--md-white); }
 .md-pantry-banner .md-lead { color: var(--md-white); opacity: .92; margin-top: 8px; margin-bottom: 0; }
 .md-pantry-banner .md-button { background: var(--md-accent); color: var(--md-olive-dark); border-color: var(--md-accent); flex: 0 0 auto; }
+/* Misma banda, pero como tarjeta dentro de una página de listado (ingredientes, etc.) en vez de a todo el ancho. */
+.md-pantry-banner-card { border-radius: var(--md-radius); margin-block: 22px 8px; }
 /* Herramienta "¿Qué puedo cocinar?" */
 .md-pantry-picker-section { padding-top: 0; }
 .md-pantry-picker-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 16px; }

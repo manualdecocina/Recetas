@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import type { MdRecipeCardData } from './md-types';
 import { getMdCopy } from '@/lib/copy';
 import SiteHeader from './SiteHeader';
@@ -9,20 +10,52 @@ import RecipeCard from './RecipeCard';
 export interface MdIngredientSummary {
   slug: string;
   name: string;
+  /** Conteo real de recetas publicadas que lo usan (recipe_ingredients). */
   count?: number;
+  /** Foto real de una de esas recetas; nunca inventada. Null si aún no hay ninguna. */
+  image_url?: string | null;
 }
 
 export function IngredientsIndexView({ ingredients }: { ingredients: MdIngredientSummary[] }) {
   const t = getMdCopy('es');
+  const withRecipes = ingredients.filter((item) => (item.count ?? 0) > 0);
   return (
     <div className="md-site" lang="es">
       <SiteHeader lang="es" />
       <main className="md-container" id="md-main">
-        <header className="md-page-head"><h1 className="md-display">{t.ingredientCatalog}</h1></header>
-        {ingredients.length > 0 ? (
-          <nav className="md-ingredient-list md-section" aria-label={t.ingredientCatalog}>
-            {ingredients.map((item) => <Link className="md-ingredient-link" href={`/es/ingredientes/${item.slug}`} key={item.slug}>{item.name}</Link>)}
-          </nav>
+        <header className="md-page-head">
+          <h1 className="md-display">{t.ingredientCatalog}</h1>
+          <p className="md-lead md-page-intro">{t.ingredientCatalogIntro}</p>
+        </header>
+        <section className="md-pantry-banner md-pantry-banner-card" aria-labelledby="md-ingredient-pantry-cta">
+          <div className="md-pantry-banner-inner">
+            <div className="md-pantry-banner-copy">
+              <p className="md-eyebrow">{t.pantryEyebrow}</p>
+              <h2 className="md-title" id="md-ingredient-pantry-cta">{t.pantryBannerTitle}</h2>
+              <p className="md-lead">{t.pantryBannerBody}</p>
+            </div>
+            <Link className="md-button" href="/es/que-puedo-cocinar">{t.pantryBannerCta}</Link>
+          </div>
+        </section>
+        {withRecipes.length > 0 ? (
+          <div className="md-category-grid md-section">
+            {withRecipes.map((item) => (
+              <Link className="md-category-card" href={`/es/ingredientes/${item.slug}`} key={item.slug}>
+                {item.image_url ? (
+                  <Image className="md-category-photo" src={item.image_url} alt="" width={360} height={270} loading="lazy"
+                    sizes="(max-width: 599px) 50vw, (max-width: 899px) 33vw, 20vw" />
+                ) : (
+                  <span className="md-category-fallback" aria-hidden="true">
+                    <img src="/brand/mark.png" alt="" width="42" height="42" />
+                  </span>
+                )}
+                <span className="md-category-body">
+                  <strong className="md-category-name">{item.name}</strong>
+                  <span className="md-category-count">{item.count} {t.ingredientRecipeCountSuffix}</span>
+                </span>
+              </Link>
+            ))}
+          </div>
         ) : (
           <div className="md-empty-block">
             <h2 className="md-subtitle">{t.emptyTitle}</h2><p>{t.emptyBody}</p>
