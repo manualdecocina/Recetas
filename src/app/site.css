@@ -184,6 +184,26 @@
 .md-ingredient-link:hover { border-color: var(--md-olive); background: var(--md-sand); }
 .md-editorial { background: var(--md-sand); }
 .md-editorial-inner { max-width: 790px; }
+/* Banner "¿Qué puedo cocinar?" en la home */
+.md-pantry-banner { background: var(--md-olive); color: var(--md-white); }
+.md-pantry-banner-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 22px; padding-block: clamp(28px,4.5vw,44px); }
+.md-pantry-banner-copy { max-width: 620px; }
+.md-pantry-banner .md-eyebrow, .md-pantry-banner .md-title { color: var(--md-white); }
+.md-pantry-banner .md-lead { color: var(--md-white); opacity: .92; margin-top: 8px; margin-bottom: 0; }
+.md-pantry-banner .md-button { background: var(--md-accent); color: var(--md-olive-dark); border-color: var(--md-accent); flex: 0 0 auto; }
+/* Herramienta "¿Qué puedo cocinar?" */
+.md-pantry-picker-section { padding-top: 0; }
+.md-pantry-picker-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 16px; }
+.md-pantry-filter { width: 100%; margin-bottom: 16px; }
+.md-pantry-chips { display: flex; flex-wrap: wrap; gap: 10px; }
+.md-pantry-chip { min-height: 44px; padding: 8px 16px; border: 2px solid var(--md-stone); border-radius: 14px; background: var(--md-white); font-weight: 700; font-size: .92rem; cursor: pointer; transition: transform .12s ease, border-color .12s ease, background .12s ease; }
+.md-pantry-chip:hover { border-color: var(--md-olive); }
+.md-pantry-chip-selected { background: var(--md-olive); border-color: var(--md-olive); color: var(--md-white); transform: translateY(-1px); }
+.md-pantry-no-ingredients { color: var(--md-muted); }
+.md-pantry-result { position: relative; }
+.md-pantry-badge { position: absolute; top: 12px; left: 12px; z-index: 1; padding: 5px 12px; border-radius: 999px; background: var(--md-stone); color: var(--md-ink); font-size: .78rem; font-weight: 800; letter-spacing: .01em; }
+.md-pantry-badge-complete { background: var(--md-accent); color: var(--md-olive-dark); }
+.md-pantry-missing-list { margin: 8px 2px 0; color: var(--md-muted); font-size: .86rem; line-height: 1.4; }
 /* Listados */
 .md-page-head { padding-block: clamp(26px,5vw,62px) 25px; }
 .md-page-head .md-title { margin: 12px 0; }

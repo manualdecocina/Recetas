@@ -10,6 +10,7 @@ export default function SiteHeaderView({ lang, alternates, available }: { lang: 
   const base = `/${lang}`;
   const nav = [
     { href: `${base}/recetas`, label: t.navRecipes },
+    ...(lang === 'es' ? [{ href: `${base}/que-puedo-cocinar`, label: t.navPantryTool }] : []),
     { href: `${base}/categorias`, label: t.navCategories },
     ...(lang === 'es' ? [{ href: `${base}/ingredientes`, label: t.navIngredients }] : []),
   ];

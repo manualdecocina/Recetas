@@ -51,6 +51,18 @@ export default function HomePageView({ lang, data }: { lang: MdLanguage; data: M
             </figure>
           )}
         </section>
+        {lang === 'es' && (
+          <section className="md-pantry-banner" aria-labelledby="md-pantry-banner-heading">
+            <div className="md-container md-pantry-banner-inner">
+              <div className="md-pantry-banner-copy">
+                <p className="md-eyebrow">{t.pantryEyebrow}</p>
+                <h2 className="md-title" id="md-pantry-banner-heading">{t.pantryBannerTitle}</h2>
+                <p className="md-lead">{t.pantryBannerBody}</p>
+              </div>
+              <Link className="md-button" href="/es/que-puedo-cocinar">{t.pantryBannerCta}</Link>
+            </div>
+          </section>
+        )}
         {data.latest.length > 0 && <section className="md-section" aria-labelledby="md-latest-heading">
           <div className="md-container">
             <div className="md-section-head"><div><p className="md-eyebrow">{t.navRecipes}</p>

@@ -85,6 +85,70 @@ export async function getHomeData(lang: RecipeLanguage): Promise<MdHomeData> {
   return { featured, latest, categories, ingredients }
 }
 
+export interface MdPantryIngredient {
+  id: string;
+  slug: string;
+  name: string;
+}
+
+export interface MdPantryRecipe extends MdRecipeCardData {
+  /** ids canónicos reales de recipe_ingredients; nunca inventados. */
+  ingredientIds: string[];
+  /** total de ingredientes de esa receta que sí están canonicalizados (puede ser menor al total real de la receta). */
+  totalCanonicalIngredients: number;
+}
+
+/**
+ * Datos para "¿Qué puedo cocinar?" (/es/que-puedo-cocinar): solo ingredientes canónicos
+ * buscables y recetas publicadas en español que ya tienen al menos un ingrediente
+ * canonicalizado en recipe_ingredients (hoy 110 de 135). El emparejamiento real (qué
+ * receta calza con qué ingredientes elegidos) se calcula en el cliente sobre estos datos;
+ * aquí solo se leen datos reales, sin inventar coincidencias ni recetas.
+ */
+export async function getPantryMatchData(): Promise<{ ingredients: MdPantryIngredient[]; recipes: MdPantryRecipe[] }> {
+  const { data: ingredientRows, error: ingredientsError } = await supabase
+    .from('ingredients')
+    .select('id, slug, name')
+    .eq('status', 'canonical')
+    .eq('searchable', true)
+    .order('name', { ascending: true })
+  if (ingredientsError) throw new Error(`No se pudieron cargar los ingredientes: ${ingredientsError.message}`)
+
+  const { data: recipeRows, error: recipesError } = await supabase
+    .from('recipes')
+    .select(CARD_FIELDS)
+    .eq('language', 'es')
+    .eq('published', true)
+  if (recipesError) throw new Error(`No se pudieron cargar las recetas: ${recipesError.message}`)
+
+  const recipes = (recipeRows ?? []) as MdRecipeCardData[]
+  if (!recipes.length) return { ingredients: (ingredientRows ?? []) as MdPantryIngredient[], recipes: [] }
+
+  const recipeIds = recipes.map((r) => r.id)
+  const { data: linkRows, error: linksError } = await supabase
+    .from('recipe_ingredients')
+    .select('recipe_id, ingredient_id')
+    .in('recipe_id', recipeIds)
+  if (linksError) throw new Error(`No se pudieron cargar los ingredientes de las recetas: ${linksError.message}`)
+
+  const idsByRecipe = new Map<string, string[]>()
+  for (const row of (linkRows ?? []) as Array<{ recipe_id: string; ingredient_id: string }>) {
+    const list = idsByRecipe.get(row.recipe_id)
+    if (list) list.push(row.ingredient_id)
+    else idsByRecipe.set(row.recipe_id, [row.ingredient_id])
+  }
+
+  const pantryRecipes: MdPantryRecipe[] = recipes
+    .map((recipe) => ({
+      ...recipe,
+      ingredientIds: idsByRecipe.get(recipe.id) ?? [],
+      totalCanonicalIngredients: (idsByRecipe.get(recipe.id) ?? []).length,
+    }))
+    .filter((recipe) => recipe.totalCanonicalIngredients > 0)
+
+  return { ingredients: (ingredientRows ?? []) as MdPantryIngredient[], recipes: pantryRecipes }
+}
+
 /** Idiomas que tienen al menos una receta publicada (los demás se muestran deshabilitados en el selector). */
 export async function getAvailableLanguages(): Promise<RecipeLanguage[]> {
   const { data, error } = await supabase

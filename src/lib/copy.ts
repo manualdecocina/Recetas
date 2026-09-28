@@ -32,6 +32,24 @@ const es = {
   resultCount: "Recetas encontradas",
   recipesInCategory: "Recetas de esta categoría",
   recipesWithIngredient: "Recetas con este ingrediente",
+  navPantryTool: "¿Qué cocino?",
+  pantryEyebrow: "Herramienta gratuita",
+  pantryBannerTitle: "¿Qué puedo cocinar con lo que tengo?",
+  pantryBannerBody: "Elige los ingredientes de tu cocina y te mostramos qué recetas puedes preparar ahora mismo, sin ir a comprar nada.",
+  pantryBannerCta: "Probar la herramienta",
+  pantryToolHeading: "¿Qué puedo cocinar con lo que tengo?",
+  pantryToolIntro: "Marca los ingredientes que tienes a mano y te mostramos las recetas que puedes preparar, ordenadas según cuántos ingredientes te faltan.",
+  pantryMetaDescription: "Elige los ingredientes que tienes en casa y descubre qué recetas de Manual de Cocina puedes preparar ahora mismo.",
+  pantryPickerHeading: "¿Qué tienes en tu cocina?",
+  pantrySearchPlaceholder: "Busca un ingrediente (ajo, limón, arroz...)",
+  pantryClearSelection: "Limpiar selección",
+  pantryNoIngredientsFound: "No encontramos ningún ingrediente con ese nombre.",
+  pantryResultsHeading: "Recetas que puedes preparar",
+  pantryEmptyNoSelection: "Elige al menos un ingrediente para ver qué puedes cocinar.",
+  pantryEmptyNoMatches: "Todavía no tenemos ninguna receta con esta combinación exacta. Prueba quitando algún ingrediente.",
+  pantryComplete: "¡Lo tienes todo!",
+  pantryMissingPrefix: "Te faltan:",
+  pantryMissingSuffix: "ingredientes por conseguir",
   filterHeading: "Encuentra tu receta",
   category: "Categoría",
   cuisine: "Cocina",
@@ -151,6 +169,24 @@ const en = {
   resultCount: "Recipes found",
   recipesInCategory: "Recipes in this category",
   recipesWithIngredient: "Recipes with this ingredient",
+  navPantryTool: "What can I cook?",
+  pantryEyebrow: "Free tool",
+  pantryBannerTitle: "What can I cook with what I have?",
+  pantryBannerBody: "Pick the ingredients in your kitchen and we'll show you which recipes you can make right now, no shopping trip needed.",
+  pantryBannerCta: "Try the tool",
+  pantryToolHeading: "What can I cook with what I have?",
+  pantryToolIntro: "Check off the ingredients you already have and we'll show you which recipes you can make, sorted by how many ingredients you're missing.",
+  pantryMetaDescription: "Pick the ingredients you have at home and discover which Manual de Cocina recipes you can make right now.",
+  pantryPickerHeading: "What's in your kitchen?",
+  pantrySearchPlaceholder: "Search an ingredient (garlic, lemon, rice...)",
+  pantryClearSelection: "Clear selection",
+  pantryNoIngredientsFound: "We couldn't find any ingredient with that name.",
+  pantryResultsHeading: "Recipes you can make",
+  pantryEmptyNoSelection: "Pick at least one ingredient to see what you can cook.",
+  pantryEmptyNoMatches: "We don't have a recipe with this exact combination yet. Try removing an ingredient.",
+  pantryComplete: "You have it all!",
+  pantryMissingPrefix: "Missing:",
+  pantryMissingSuffix: "ingredients to get",
   filterHeading: "Find your recipe",
   category: "Category",
   cuisine: "Cuisine",
@@ -270,6 +306,24 @@ const de = {
   resultCount: "Gefundene Rezepte", // REVISAR
   recipesInCategory: "Rezepte dieser Kategorie", // REVISAR
   recipesWithIngredient: "Rezepte mit dieser Zutat", // REVISAR
+  navPantryTool: "Was koche ich?", // REVISAR
+  pantryEyebrow: "Kostenloses Tool", // REVISAR
+  pantryBannerTitle: "Was kann ich mit dem kochen, was ich habe?", // REVISAR
+  pantryBannerBody: "Wähle die Zutaten aus, die du in der Küche hast, und wir zeigen dir, welche Rezepte du sofort zubereiten kannst.", // REVISAR
+  pantryBannerCta: "Tool ausprobieren", // REVISAR
+  pantryToolHeading: "Was kann ich mit dem kochen, was ich habe?", // REVISAR
+  pantryToolIntro: "Markiere die Zutaten, die du schon hast, und wir zeigen dir die Rezepte, die du zubereiten kannst.", // REVISAR
+  pantryMetaDescription: "Wähle die Zutaten, die du zu Hause hast, und entdecke, welche Rezepte von Manual de Cocina du sofort zubereiten kannst.", // REVISAR
+  pantryPickerHeading: "Was hast du in deiner Küche?", // REVISAR
+  pantrySearchPlaceholder: "Zutat suchen (Knoblauch, Zitrone, Reis...)", // REVISAR
+  pantryClearSelection: "Auswahl löschen", // REVISAR
+  pantryNoIngredientsFound: "Keine Zutat mit diesem Namen gefunden.", // REVISAR
+  pantryResultsHeading: "Rezepte, die du zubereiten kannst", // REVISAR
+  pantryEmptyNoSelection: "Wähle mindestens eine Zutat aus, um zu sehen, was du kochen kannst.", // REVISAR
+  pantryEmptyNoMatches: "Wir haben noch kein Rezept mit genau dieser Kombination. Entferne eine Zutat.", // REVISAR
+  pantryComplete: "Du hast alles!", // REVISAR
+  pantryMissingPrefix: "Es fehlt:", // REVISAR
+  pantryMissingSuffix: "fehlende Zutaten", // REVISAR
   filterHeading: "Finde dein Rezept", // REVISAR
   category: "Kategorie", // REVISAR
   cuisine: "Landesküche", // REVISAR
@@ -389,6 +443,24 @@ const it = {
   resultCount: "Ricette trovate", // REVISAR
   recipesInCategory: "Ricette di questa categoria", // REVISAR
   recipesWithIngredient: "Ricette con questo ingrediente", // REVISAR
+  navPantryTool: "Cosa cucino?", // REVISAR
+  pantryEyebrow: "Strumento gratuito", // REVISAR
+  pantryBannerTitle: "Cosa posso cucinare con quello che ho?", // REVISAR
+  pantryBannerBody: "Scegli gli ingredienti che hai in cucina e ti mostriamo quali ricette puoi preparare subito.", // REVISAR
+  pantryBannerCta: "Prova lo strumento", // REVISAR
+  pantryToolHeading: "Cosa posso cucinare con quello che ho?", // REVISAR
+  pantryToolIntro: "Seleziona gli ingredienti che hai già e ti mostriamo le ricette che puoi preparare.", // REVISAR
+  pantryMetaDescription: "Scegli gli ingredienti che hai in casa e scopri quali ricette di Manual de Cocina puoi preparare subito.", // REVISAR
+  pantryPickerHeading: "Cosa hai in cucina?", // REVISAR
+  pantrySearchPlaceholder: "Cerca un ingrediente (aglio, limone, riso...)", // REVISAR
+  pantryClearSelection: "Cancella selezione", // REVISAR
+  pantryNoIngredientsFound: "Nessun ingrediente trovato con questo nome.", // REVISAR
+  pantryResultsHeading: "Ricette che puoi preparare", // REVISAR
+  pantryEmptyNoSelection: "Scegli almeno un ingrediente per vedere cosa puoi cucinare.", // REVISAR
+  pantryEmptyNoMatches: "Non abbiamo ancora una ricetta con questa combinazione esatta. Prova a togliere un ingrediente.", // REVISAR
+  pantryComplete: "Hai tutto!", // REVISAR
+  pantryMissingPrefix: "Manca:", // REVISAR
+  pantryMissingSuffix: "ingredienti mancanti", // REVISAR
   filterHeading: "Trova la tua ricetta", // REVISAR
   category: "Categoria", // REVISAR
   cuisine: "Cucina", // REVISAR
@@ -508,6 +580,24 @@ const fr = {
   resultCount: "Recettes trouvées", // REVISAR
   recipesInCategory: "Recettes de cette catégorie", // REVISAR
   recipesWithIngredient: "Recettes avec cet ingrédient", // REVISAR
+  navPantryTool: "Que cuisiner ?", // REVISAR
+  pantryEyebrow: "Outil gratuit", // REVISAR
+  pantryBannerTitle: "Que puis-je cuisiner avec ce que j'ai ?", // REVISAR
+  pantryBannerBody: "Choisissez les ingrédients que vous avez dans votre cuisine et nous vous montrons les recettes que vous pouvez préparer maintenant.", // REVISAR
+  pantryBannerCta: "Essayer l'outil", // REVISAR
+  pantryToolHeading: "Que puis-je cuisiner avec ce que j'ai ?", // REVISAR
+  pantryToolIntro: "Sélectionnez les ingrédients que vous avez déjà et nous vous montrons les recettes que vous pouvez préparer.", // REVISAR
+  pantryMetaDescription: "Choisissez les ingrédients que vous avez chez vous et découvrez quelles recettes de Manual de Cocina vous pouvez préparer.", // REVISAR
+  pantryPickerHeading: "Qu'avez-vous dans votre cuisine ?", // REVISAR
+  pantrySearchPlaceholder: "Cherchez un ingrédient (ail, citron, riz...)", // REVISAR
+  pantryClearSelection: "Effacer la sélection", // REVISAR
+  pantryNoIngredientsFound: "Aucun ingrédient trouvé avec ce nom.", // REVISAR
+  pantryResultsHeading: "Recettes que vous pouvez préparer", // REVISAR
+  pantryEmptyNoSelection: "Choisissez au moins un ingrédient pour voir ce que vous pouvez cuisiner.", // REVISAR
+  pantryEmptyNoMatches: "Nous n'avons pas encore de recette avec cette combinaison exacte. Essayez de retirer un ingrédient.", // REVISAR
+  pantryComplete: "Vous avez tout !", // REVISAR
+  pantryMissingPrefix: "Il manque :", // REVISAR
+  pantryMissingSuffix: "ingrédients manquants", // REVISAR
   filterHeading: "Trouvez votre recette", // REVISAR
   category: "Catégorie", // REVISAR
   cuisine: "Cuisine", // REVISAR
@@ -627,6 +717,24 @@ const ja = {
   resultCount: "検索結果", // REVISAR
   recipesInCategory: "このカテゴリーのレシピ", // REVISAR
   recipesWithIngredient: "この食材を使うレシピ", // REVISAR
+  navPantryTool: "何を作る?", // REVISAR
+  pantryEyebrow: "無料ツール", // REVISAR
+  pantryBannerTitle: "今ある材料で何が作れる?", // REVISAR
+  pantryBannerBody: "キッチンにある材料を選ぶと、今すぐ作れるレシピを表示します。", // REVISAR
+  pantryBannerCta: "ツールを試す", // REVISAR
+  pantryToolHeading: "今ある材料で何が作れる?", // REVISAR
+  pantryToolIntro: "持っている材料を選ぶと、作れるレシピを表示します。", // REVISAR
+  pantryMetaDescription: "家にある材料を選んで、Manual de Cocinaで今すぐ作れるレシピを見つけましょう。", // REVISAR
+  pantryPickerHeading: "キッチンに何がありますか?", // REVISAR
+  pantrySearchPlaceholder: "材料を検索(にんにく、レモン、米など)", // REVISAR
+  pantryClearSelection: "選択をクリア", // REVISAR
+  pantryNoIngredientsFound: "その名前の材料は見つかりませんでした。", // REVISAR
+  pantryResultsHeading: "作れるレシピ", // REVISAR
+  pantryEmptyNoSelection: "材料を1つ以上選んでください。", // REVISAR
+  pantryEmptyNoMatches: "この組み合わせのレシピはまだありません。材料を減らしてみてください。", // REVISAR
+  pantryComplete: "すべて揃っています!", // REVISAR
+  pantryMissingPrefix: "不足:", // REVISAR
+  pantryMissingSuffix: "個の材料が不足", // REVISAR
   filterHeading: "レシピを探す", // REVISAR
   category: "カテゴリー", // REVISAR
   cuisine: "料理の種類", // REVISAR
@@ -747,6 +855,24 @@ const pt = {
   resultCount: "Receitas encontradas",
   recipesInCategory: "Receitas desta categoria",
   recipesWithIngredient: "Receitas com este ingrediente",
+  navPantryTool: "O que eu cozinho?",
+  pantryEyebrow: "Ferramenta gratuita",
+  pantryBannerTitle: "O que posso cozinhar com o que tenho?",
+  pantryBannerBody: "Escolha os ingredientes que você tem na cozinha e mostramos quais receitas você pode preparar agora, sem precisar comprar nada.",
+  pantryBannerCta: "Experimentar a ferramenta",
+  pantryToolHeading: "O que posso cozinhar com o que tenho?",
+  pantryToolIntro: "Marque os ingredientes que você já tem e mostramos as receitas que você pode preparar, ordenadas por quantos ingredientes faltam.",
+  pantryMetaDescription: "Escolha os ingredientes que você tem em casa e descubra quais receitas do Manual de Cocina você pode preparar agora.",
+  pantryPickerHeading: "O que você tem na sua cozinha?",
+  pantrySearchPlaceholder: "Busque um ingrediente (alho, limão, arroz...)",
+  pantryClearSelection: "Limpar seleção",
+  pantryNoIngredientsFound: "Não encontramos nenhum ingrediente com esse nome.",
+  pantryResultsHeading: "Receitas que você pode preparar",
+  pantryEmptyNoSelection: "Escolha pelo menos um ingrediente para ver o que pode cozinhar.",
+  pantryEmptyNoMatches: "Ainda não temos nenhuma receita com essa combinação exata. Tente remover algum ingrediente.",
+  pantryComplete: "Você tem tudo!",
+  pantryMissingPrefix: "Faltam:",
+  pantryMissingSuffix: "ingredientes para conseguir",
   filterHeading: "Encontre sua receita",
   category: "Categoria",
   cuisine: "Cozinha",
