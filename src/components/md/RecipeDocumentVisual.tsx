@@ -13,6 +13,7 @@ import RelatedRecipes from './RelatedRecipes';
 import { parseVideo } from '@/lib/video';
 import VideoFacade from './VideoFacade';
 import StepPhoto from './StepPhoto';
+import PantryBanner from './PantryBanner';
 import { RECIPE_AUTHOR, publicUrl } from '@/lib/site';
 
 const LOCALES: Record<string, string> = { es: 'es-ES', en: 'en-GB', de: 'de-DE', it: 'it-IT', fr: 'fr-FR', ja: 'ja-JP', pt: 'pt-BR' };
@@ -163,18 +164,7 @@ export default function RecipeDocumentVisual({ recipe, relatedRecipes = [], note
                 {faq.map((item, i) => <details key={i}><summary>{item.q}</summary><p>{item.a}</p></details>)}
               </section>
             )}
-            {lang === 'es' && (
-              <section className="md-pantry-banner md-pantry-banner-card" aria-labelledby="md-recipe-pantry-cta">
-                <div className="md-pantry-banner-inner">
-                  <div className="md-pantry-banner-copy">
-                    <p className="md-eyebrow">{t.pantryEyebrow}</p>
-                    <h2 className="md-title" id="md-recipe-pantry-cta">{t.pantryBannerTitle}</h2>
-                    <p className="md-lead">{t.pantryBannerBody}</p>
-                  </div>
-                  <Link className="md-button" href="/es/que-puedo-cocinar">{t.pantryBannerCta}</Link>
-                </div>
-              </section>
-            )}
+            {lang === 'es' && <PantryBanner lang="es" headingId="md-recipe-pantry-cta" card />}
             {notesHtml && <AdSlot placement="after-notes" />}
           </div>
         </div>

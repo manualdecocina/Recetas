@@ -5,6 +5,7 @@ import { getMdCopy } from '@/lib/copy';
 import SiteHeader from './SiteHeader';
 import SiteFooter from './SiteFooter';
 import RecipeCard from './RecipeCard';
+import PantryBanner from './PantryBanner';
 
 /** Both ingredient routes exist only in Spanish per the supplied contract. */
 export interface MdIngredientSummary {
@@ -27,16 +28,7 @@ export function IngredientsIndexView({ ingredients }: { ingredients: MdIngredien
           <h1 className="md-display">{t.ingredientCatalog}</h1>
           <p className="md-lead md-page-intro">{t.ingredientCatalogIntro}</p>
         </header>
-        <section className="md-pantry-banner md-pantry-banner-card" aria-labelledby="md-ingredient-pantry-cta">
-          <div className="md-pantry-banner-inner">
-            <div className="md-pantry-banner-copy">
-              <p className="md-eyebrow">{t.pantryEyebrow}</p>
-              <h2 className="md-title" id="md-ingredient-pantry-cta">{t.pantryBannerTitle}</h2>
-              <p className="md-lead">{t.pantryBannerBody}</p>
-            </div>
-            <Link className="md-button" href="/es/que-puedo-cocinar">{t.pantryBannerCta}</Link>
-          </div>
-        </section>
+        <PantryBanner lang="es" headingId="md-ingredient-pantry-cta" card />
         {withRecipes.length > 0 ? (
           <div className="md-category-grid md-section">
             {withRecipes.map((item) => (

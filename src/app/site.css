@@ -16,6 +16,12 @@
   --md-btn-bg: #1f6b2e;
   --md-btn-fg: #ffffff;
   --md-btn-hover: #124a1e;
+  /* Fondo dedicado del banner "¿Qué puedo cocinar?": NO reutiliza --md-olive/--md-white
+     (esos dos se invierten en modo oscuro para servir de color de texto/acento, y usarlos
+     como relleno grande daba un verde neón o un contraste roto en el botón). */
+  --md-banner-from: #1f6b2e;
+  --md-banner-to: #0f3d1a;
+  --md-banner-fg: #ffffff;
   --md-header-bg: #ffffff;
   --md-footer-bg: #0e3b18;
   --md-footer-fg: #ddefd5;
@@ -46,6 +52,9 @@
   --md-btn-bg: #ffd84d;
   --md-btn-fg: #16261a;
   --md-btn-hover: #ffe47f;
+  --md-banner-from: #163c22;
+  --md-banner-to: #0a1d10;
+  --md-banner-fg: #eaf5e6;
   --md-header-bg: #101f15;
   --md-footer-bg: #08110b;
   --md-footer-fg: #cfe3c6;
@@ -187,22 +196,34 @@
 .md-editorial-box { background: var(--md-white); border: 2px solid var(--md-stone); border-radius: var(--md-radius); padding: 26px 28px; }
 .md-editorial-copy .md-title { margin: 10px 0 14px; }
 .md-editorial-copy .md-lead { margin: 0; }
-.md-editorial-author { display: flex; gap: 16px; align-items: center; text-decoration: none; color: inherit; transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease; }
+.md-editorial-author { display: flex; flex-direction: column; padding: 0; overflow: hidden; text-decoration: none; color: inherit; transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease; }
 .md-editorial-author:hover { transform: translateY(-3px); box-shadow: 0 14px 28px rgb(0 0 0 / 10%); border-color: var(--md-olive); }
-.md-editorial-author-photo { width: 100px; height: 132px; object-fit: cover; border-radius: 16px; flex: 0 0 auto; }
-.md-editorial-author-text { display: grid; gap: 4px; min-width: 0; }
-.md-editorial-author-text strong { font-family: var(--md-serif); font-size: 1.2rem; }
+.md-editorial-author-photo { width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; object-position: top center; display: block; }
+.md-editorial-author-text { display: grid; gap: 4px; min-width: 0; padding: 20px 24px 24px; }
+.md-editorial-author-text strong { font-family: var(--md-serif); font-size: 1.3rem; }
 .md-editorial-author-role { color: var(--md-olive-dark); font-weight: 700; font-size: .82rem; }
 .md-editorial-author-text p { margin: 4px 0 6px; color: var(--md-muted); font-size: .9rem; line-height: 1.4; }
-/* Banner "¿Qué puedo cocinar?" en la home */
-.md-pantry-banner { background: var(--md-olive); color: var(--md-white); }
-.md-pantry-banner-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 22px; padding-block: clamp(28px,4.5vw,44px); }
-.md-pantry-banner-copy { max-width: 620px; }
-.md-pantry-banner .md-eyebrow, .md-pantry-banner .md-title { color: var(--md-white); }
-.md-pantry-banner .md-lead { color: var(--md-white); opacity: .92; margin-top: 8px; margin-bottom: 0; }
-.md-pantry-banner .md-button { background: var(--md-accent); color: var(--md-olive-dark); border-color: var(--md-accent); flex: 0 0 auto; }
-/* Misma banda, pero como tarjeta dentro de una página de listado (ingredientes, etc.) en vez de a todo el ancho. */
+/* Banner "¿Qué puedo cocinar?" (home a todo el ancho, y tarjeta en listados/recetas).
+   Usa tokens propios (--md-banner-*), NO --md-olive/--md-white: esos se invierten en modo
+   oscuro para servir de acento de texto, y como relleno grande daban un verde neón; y el
+   botón/insignia amarillos deben llevar SIEMPRE --md-on-accent (texto oscuro fijo en los
+   dos temas), nunca --md-olive-dark, que en modo oscuro se vuelve claro y queda ilegible. */
+.md-pantry-banner { position: relative; overflow: hidden; background: linear-gradient(135deg, var(--md-banner-from), var(--md-banner-to)); color: var(--md-banner-fg); }
+.md-pantry-banner::after { content: ''; position: absolute; inset: -55% -10% auto auto; width: 260px; height: 260px; border-radius: 50%; background: radial-gradient(circle, rgb(255 216 77 / 18%), transparent 72%); pointer-events: none; }
+.md-pantry-banner-inner { position: relative; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px; padding: clamp(28px,4.5vw,44px) clamp(22px,4vw,40px); }
+.md-pantry-banner-copy { display: flex; gap: 18px; align-items: flex-start; max-width: 640px; }
+.md-pantry-icon { flex: 0 0 auto; width: 56px; height: 56px; border-radius: 16px; background: var(--md-accent); color: var(--md-on-accent); display: grid; place-items: center; box-shadow: 0 6px 14px rgb(0 0 0 / 20%); }
+.md-pantry-icon svg { width: 30px; height: 30px; }
+.md-pantry-banner-text { min-width: 0; }
+.md-pantry-banner .md-title { color: var(--md-banner-fg); margin: 8px 0 0; }
+.md-pantry-banner .md-lead { color: var(--md-banner-fg); opacity: .92; margin-top: 8px; margin-bottom: 0; }
+.md-pantry-banner .md-button { background: var(--md-accent); color: var(--md-on-accent); border-color: var(--md-accent); flex: 0 0 auto; }
+.md-pantry-banner .md-button:hover { filter: brightness(.94); }
+/* Misma banda, pero como tarjeta dentro de una página de listado (ingredientes, etc.) o de una receta, en vez de a todo el ancho. */
 .md-pantry-banner-card { border-radius: var(--md-radius); margin-block: 22px 8px; }
+@media (max-width: 599px) {
+  .md-pantry-banner-copy { flex-direction: column; gap: 12px; }
+}
 /* Herramienta "¿Qué puedo cocinar?" */
 .md-pantry-picker-section { padding-top: 0; }
 .md-pantry-picker-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 16px; }
@@ -214,7 +235,7 @@
 .md-pantry-no-ingredients { color: var(--md-muted); }
 .md-pantry-result { position: relative; }
 .md-pantry-badge { position: absolute; top: 12px; left: 12px; z-index: 1; padding: 5px 12px; border-radius: 999px; background: var(--md-stone); color: var(--md-ink); font-size: .78rem; font-weight: 800; letter-spacing: .01em; }
-.md-pantry-badge-complete { background: var(--md-accent); color: var(--md-olive-dark); }
+.md-pantry-badge-complete { background: var(--md-accent); color: var(--md-on-accent); }
 .md-pantry-missing-list { margin: 8px 2px 0; color: var(--md-muted); font-size: .86rem; line-height: 1.4; }
 /* Listados */
 .md-page-head { padding-block: clamp(26px,5vw,62px) 25px; }

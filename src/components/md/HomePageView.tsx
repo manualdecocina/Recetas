@@ -9,6 +9,7 @@ import SiteHeader from './SiteHeader';
 import SiteFooter from './SiteFooter';
 import RecipeCard from './RecipeCard';
 import { CategoryGrid } from './CategoryViews';
+import PantryBanner from './PantryBanner';
 
 export interface MdHomeData {
   /** Use only an actual published recipe of the requested language. */
@@ -51,18 +52,7 @@ export default function HomePageView({ lang, data }: { lang: MdLanguage; data: M
             </figure>
           )}
         </section>
-        {lang === 'es' && (
-          <section className="md-pantry-banner" aria-labelledby="md-pantry-banner-heading">
-            <div className="md-container md-pantry-banner-inner">
-              <div className="md-pantry-banner-copy">
-                <p className="md-eyebrow">{t.pantryEyebrow}</p>
-                <h2 className="md-title" id="md-pantry-banner-heading">{t.pantryBannerTitle}</h2>
-                <p className="md-lead">{t.pantryBannerBody}</p>
-              </div>
-              <Link className="md-button" href="/es/que-puedo-cocinar">{t.pantryBannerCta}</Link>
-            </div>
-          </section>
-        )}
+        {lang === 'es' && <PantryBanner lang={lang} headingId="md-pantry-banner-heading" container />}
         {data.latest.length > 0 && <section className="md-section" aria-labelledby="md-latest-heading">
           <div className="md-container">
             <div className="md-section-head"><div><p className="md-eyebrow">{t.navRecipes}</p>
@@ -93,8 +83,8 @@ export default function HomePageView({ lang, data }: { lang: MdLanguage; data: M
               <p className="md-lead">{t.editorialBody}</p>
             </div>
             <Link className="md-editorial-box md-editorial-author" href={`/${lang}/quienes-somos`}>
-              <Image className="md-editorial-author-photo" src="/autor/nestor-bastidas.webp" alt="" width={240} height={320}
-                sizes="(max-width: 780px) 30vw, 140px" />
+              <Image className="md-editorial-author-photo" src="/autor/nestor-bastidas.webp" alt="" width={480} height={640}
+                sizes="(max-width: 780px) 100vw, 460px" />
               <div className="md-editorial-author-text">
                 <strong>Néstor Bastidas</strong>
                 <span className="md-editorial-author-role">{t.editorialAuthorRole}</span>
