@@ -22,7 +22,7 @@ export const COOKIES_CONTENT: LegalPageContentMap = {
       },
       {
         heading: '4. Gestión del consentimiento',
-        html: "<p>Antes de mostrar anuncios a personas que visitan el sitio desde la Unión Europea, el Reino Unido o Suiza, añadiremos un aviso de consentimiento de cookies que te permitirá aceptarlas o rechazarlas antes de que se carguen. Para el resto de visitantes, la carga de AdSense empezará junto con el lanzamiento de esta versión.</p><p>Mientras tanto, puedes gestionar de forma anticipada la personalización de anuncios de Google desde <a href='https://adssettings.google.com' target='_blank' rel='noopener noreferrer'>adssettings.google.com</a>.</p>",
+        html: "<p>Antes de cargar cualquier anuncio, el sitio muestra un banner de cookies con dos opciones: <strong>personalizar anuncios</strong> según tu navegación, o ver <strong>solo anuncios básicos</strong>, sin personalizar. En ambos casos verás publicidad de Google AdSense; lo único que cambia es cuánto se usa tu actividad de navegación para elegirla. Puedes cambiar tu elección cuando quieras desde «Preferencias de cookies», en el pie de página.</p><p>También puedes gestionar la personalización de anuncios de Google de forma general desde <a href='https://adssettings.google.com' target='_blank' rel='noopener noreferrer'>adssettings.google.com</a>.</p>",
       },
       {
         heading: '5. Cómo borrar cookies y almacenamiento local desde tu navegador',
@@ -51,7 +51,7 @@ export const COOKIES_CONTENT: LegalPageContentMap = {
       },
       {
         heading: '4. Managing consent',
-        html: "<p>Before showing ads to visitors from the EU, UK or Switzerland, we'll add a cookie-consent notice so you can accept or reject them before they load. For other visitors, AdSense will start loading alongside the launch of this version.</p><p>In the meantime, you can manage Google ad personalization in advance at <a href='https://adssettings.google.com' target='_blank' rel='noopener noreferrer'>adssettings.google.com</a>.</p>",
+        html: "<p>Before loading any ad, the site shows a cookie banner with two choices: <strong>personalize ads</strong> based on your browsing, or see <strong>basic ads only</strong>, without personalization. Either way you'll see Google AdSense advertising; the only difference is how much your browsing activity is used to choose it. You can change your choice anytime from \"Cookie preferences\" in the footer.</p><p>You can also manage Google ad personalization in general at <a href='https://adssettings.google.com' target='_blank' rel='noopener noreferrer'>adssettings.google.com</a>.</p>",
       },
       {
         heading: '5. How to clear cookies and local storage from your browser',
@@ -80,7 +80,7 @@ export const COOKIES_CONTENT: LegalPageContentMap = {
       },
       {
         heading: '4. Einwilligungsverwaltung',
-        html: "<p>Bevor wir Besucherinnen und Besuchern aus der EU, Großbritannien oder der Schweiz Anzeigen zeigen, fügen wir einen Cookie-Einwilligungshinweis hinzu, mit dem du sie vor dem Laden akzeptieren oder ablehnen kannst. Für andere Besucher startet AdSense zusammen mit dem Start dieser Version.</p><p>In der Zwischenzeit kannst du die Personalisierung von Google-Anzeigen bereits jetzt unter <a href='https://adssettings.google.com' target='_blank' rel='noopener noreferrer'>adssettings.google.com</a> verwalten.</p>",
+        html: "<p>Bevor eine Anzeige geladen wird, zeigt die Website einen Cookie-Banner mit zwei Optionen: <strong>Anzeigen personalisieren</strong> anhand deines Surfverhaltens, oder nur <strong>einfache Anzeigen</strong> ohne Personalisierung sehen. In beiden Fällen siehst du Werbung von Google AdSense; es ändert sich nur, wie stark dein Surfverhalten für die Auswahl genutzt wird. Du kannst deine Wahl jederzeit über „Cookie-Einstellungen“ im Footer ändern.</p><p>Die Personalisierung von Google-Anzeigen kannst du außerdem allgemein unter <a href='https://adssettings.google.com' target='_blank' rel='noopener noreferrer'>adssettings.google.com</a> verwalten.</p>",
       },
       {
         heading: '5. Cookies und lokalen Speicher im Browser löschen',
@@ -109,7 +109,7 @@ export const COOKIES_CONTENT: LegalPageContentMap = {
       },
       {
         heading: '4. Gestion du consentement',
-        html: "<p>Avant d'afficher des annonces aux visiteurs de l'UE, du Royaume-Uni ou de la Suisse, nous ajouterons un bandeau de consentement aux cookies te permettant de les accepter ou de les refuser avant leur chargement. Pour les autres visiteurs, le chargement d'AdSense démarrera avec la mise en ligne de cette version.</p><p>En attendant, tu peux déjà gérer la personnalisation des annonces Google sur <a href='https://adssettings.google.com' target='_blank' rel='noopener noreferrer'>adssettings.google.com</a>.</p>",
+        html: "<p>Avant de charger la moindre annonce, le site affiche un bandeau de cookies avec deux choix : <strong>personnaliser les annonces</strong> selon ta navigation, ou voir uniquement des <strong>annonces basiques</strong>, non personnalisées. Dans les deux cas, tu verras de la publicité Google AdSense ; seule change la part de ton activité de navigation utilisée pour la choisir. Tu peux modifier ton choix à tout moment depuis « Préférences de cookies », dans le pied de page.</p><p>Tu peux aussi gérer la personnalisation des annonces Google de façon générale sur <a href='https://adssettings.google.com' target='_blank' rel='noopener noreferrer'>adssettings.google.com</a>.</p>",
       },
       {
         heading: '5. Comment effacer les cookies et le stockage local depuis ton navigateur',
@@ -138,7 +138,7 @@ export const COOKIES_CONTENT: LegalPageContentMap = {
       },
       {
         heading: '4. Gestione del consenso',
-        html: "<p>Prima di mostrare annunci ai visitatori dell'UE, del Regno Unito o della Svizzera, aggiungeremo un avviso di consenso ai cookie che ti permetterà di accettarli o rifiutarli prima del loro caricamento. Per gli altri visitatori, il caricamento di AdSense inizierà insieme al lancio di questa versione.</p><p>Nel frattempo, puoi già gestire la personalizzazione degli annunci Google su <a href='https://adssettings.google.com' target='_blank' rel='noopener noreferrer'>adssettings.google.com</a>.</p>",
+        html: "<p>Prima di caricare qualsiasi annuncio, il sito mostra un banner cookie con due opzioni: <strong>personalizzare gli annunci</strong> in base alla tua navigazione, oppure vedere solo <strong>annunci di base</strong>, senza personalizzazione. In entrambi i casi vedrai pubblicità di Google AdSense; cambia solo quanto viene usata la tua attività di navigazione per sceglierla. Puoi modificare la tua scelta in qualsiasi momento da «Preferenze cookie», nel footer.</p><p>Puoi anche gestire la personalizzazione degli annunci Google in generale su <a href='https://adssettings.google.com' target='_blank' rel='noopener noreferrer'>adssettings.google.com</a>.</p>",
       },
       {
         heading: '5. Come cancellare cookie e archiviazione locale dal browser',
@@ -167,7 +167,7 @@ export const COOKIES_CONTENT: LegalPageContentMap = {
       },
       {
         heading: '4. 同意の管理',
-        html: "<p>EU、英国、スイスからの訪問者に広告を表示する前に、クッキーの読み込み前に承諾または拒否を選べる同意バナーをサイトに追加します。それ以外の訪問者については、本バージョンの公開とともにAdSenseの読み込みが始まります。</p><p>それまでの間、Google広告のパーソナライズは<a href='https://adssettings.google.com' target='_blank' rel='noopener noreferrer'>adssettings.google.com</a>から事前に管理できます。</p>",
+        html: "<p>広告を読み込む前に、サイトはクッキーバナーを表示し、閲覧履歴に基づいて<strong>広告をパーソナライズする</strong>か、パーソナライズしない<strong>基本的な広告のみ</strong>を表示するかをお選びいただけます。どちらを選んでもGoogle AdSenseの広告が表示され、違いは閲覧履歴をどの程度利用するかだけです。選択はフッターの「クッキー設定」からいつでも変更できます。</p><p>Google広告のパーソナライズ設定全般は<a href='https://adssettings.google.com' target='_blank' rel='noopener noreferrer'>adssettings.google.com</a>からも管理できます。</p>",
       },
       {
         heading: '5. ブラウザでクッキーとローカルストレージを削除する方法',
@@ -196,7 +196,7 @@ export const COOKIES_CONTENT: LegalPageContentMap = {
       },
       {
         heading: '4. Gerenciamento de consentimento',
-        html: "<p>Antes de exibir anúncios a visitantes da UE, do Reino Unido ou da Suíça, adicionaremos um aviso de consentimento de cookies para que você possa aceitá-los ou recusá-los antes de serem carregados. Para os demais visitantes, o carregamento do AdSense começará junto com o lançamento desta versão.</p><p>Enquanto isso, você já pode gerenciar a personalização de anúncios do Google em <a href='https://adssettings.google.com' target='_blank' rel='noopener noreferrer'>adssettings.google.com</a>.</p>",
+        html: "<p>Antes de carregar qualquer anúncio, o site mostra um banner de cookies com duas opções: <strong>personalizar anúncios</strong> com base na sua navegação, ou ver apenas <strong>anúncios básicos</strong>, sem personalização. Em ambos os casos você verá publicidade do Google AdSense; o que muda é apenas o quanto sua atividade de navegação é usada para escolhê-la. Você pode mudar sua escolha a qualquer momento em \"Preferências de cookies\", no rodapé.</p><p>Você também pode gerenciar a personalização de anúncios do Google de forma geral em <a href='https://adssettings.google.com' target='_blank' rel='noopener noreferrer'>adssettings.google.com</a>.</p>",
       },
       {
         heading: '5. Como apagar cookies e armazenamento local no seu navegador',

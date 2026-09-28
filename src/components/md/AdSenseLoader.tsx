@@ -4,17 +4,38 @@ import { useEffect } from 'react';
 const CONSENT_KEY = 'manualdecocina:cookie-consent';
 const SCRIPT_ID = 'md-adsense-script';
 
-function hasAcceptedConsent(): boolean {
+type ConsentStatus = 'personalized' | 'basic';
+
+function readConsent(): ConsentStatus | null {
   try {
     const raw = localStorage.getItem(CONSENT_KEY);
-    if (!raw) return false;
+    if (!raw) return null;
     const parsed: unknown = JSON.parse(raw);
-    return (parsed as { status?: unknown })?.status === 'accepted';
-  } catch { return false; }
+    const status = (parsed as { status?: unknown })?.status;
+    return status === 'personalized' || status === 'basic' ? status : null;
+  } catch { return null; }
 }
 
-function loadAdsense(clientId: string) {
+declare global {
+  interface Window {
+    adsbygoogle?: unknown[] & { requestNonPersonalizedAds?: number };
+  }
+}
+
+/**
+ * Carga Google AdSense según lo que la persona eligió en el banner de cookies:
+ * - "personalized": anuncios normales, personalización con Google incluida.
+ * - "basic": mismos anuncios, pero con requestNonPersonalizedAds=1 (Restricted Data
+ *   Processing de Google) — sin personalizar según su navegación. Nunca "sin anuncios":
+ *   quitarle los anuncios a quien elige "básico" no da ningún motivo para elegir el otro
+ *   botón, así que ambas opciones muestran anuncios y solo cambia cuánto se usa su dato.
+ * Sin decisión guardada, no se carga nada. Sin NEXT_PUBLIC_ADSENSE_CLIENT_ID (preview y
+ * entornos de prueba) este componente no hace nada, igual que antes.
+ */
+function loadAdsense(clientId: string, status: ConsentStatus) {
   if (document.getElementById(SCRIPT_ID)) return;
+  window.adsbygoogle = window.adsbygoogle || [];
+  if (status === 'basic') window.adsbygoogle.requestNonPersonalizedAds = 1;
   const script = document.createElement('script');
   script.id = SCRIPT_ID;
   script.async = true;
@@ -23,20 +44,17 @@ function loadAdsense(clientId: string) {
   document.head.appendChild(script);
 }
 
-/**
- * Carga el script de Google AdSense solo si el visitante ya aceptó el banner de cookies
- * (ver CookieConsentBanner). Sin NEXT_PUBLIC_ADSENSE_CLIENT_ID (preview y entornos de
- * prueba) este componente no hace nada, igual que antes. Si el visitante rechaza o no ha
- * decidido, el script nunca se inserta.
- */
 export default function AdSenseLoader({ clientId }: { clientId?: string }) {
   useEffect(() => {
     if (!clientId) return;
     const id = clientId;
-    if (hasAcceptedConsent()) loadAdsense(id);
+    const current = readConsent();
+    if (current) loadAdsense(id, current);
     function onConsentChange(event: Event) {
       const detail = (event as CustomEvent<{ status?: string }>).detail;
-      if (detail?.status === 'accepted') loadAdsense(id);
+      if (detail?.status === 'personalized' || detail?.status === 'basic') {
+        loadAdsense(id, detail.status);
+      }
     }
     window.addEventListener('manualdecocina:cookie-consent-changed', onConsentChange);
     return () => window.removeEventListener('manualdecocina:cookie-consent-changed', onConsentChange);

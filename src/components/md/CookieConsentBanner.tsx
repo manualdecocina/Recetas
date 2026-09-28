@@ -6,7 +6,7 @@ import { getMdCopy } from '@/lib/copy';
 
 const CONSENT_KEY = 'manualdecocina:cookie-consent';
 
-type ConsentStatus = 'accepted' | 'rejected';
+type ConsentStatus = 'personalized' | 'basic';
 
 /** Lee la decisión guardada; null si el visitante todavía no ha elegido. */
 function readConsent(): ConsentStatus | null {
@@ -15,7 +15,7 @@ function readConsent(): ConsentStatus | null {
     if (!raw) return null;
     const parsed: unknown = JSON.parse(raw);
     const status = (parsed as { status?: unknown })?.status;
-    return status === 'accepted' || status === 'rejected' ? status : null;
+    return status === 'personalized' || status === 'basic' ? status : null;
   } catch { return null; }
 }
 
@@ -27,10 +27,12 @@ function writeConsent(status: ConsentStatus) {
 }
 
 /**
- * Banner de consentimiento de cookies. No carga AdSense por sí mismo: solo guarda la
- * decisión y avisa mediante un evento; quien realmente carga el script es AdSenseLoader,
- * que escucha ese mismo evento. Se puede reabrir desde el pie de página (evento
- * "manualdecocina:open-cookie-preferences"), por ejemplo para cambiar de opinión.
+ * Banner de consentimiento de cookies. Ofrece dos opciones que SIEMPRE muestran anuncios
+ * ("personalizados" o "básicos"), nunca "sin anuncios": elegir "básico" no le quita nada
+ * al visitante, así que no hay incentivo para evitar la elección real (personalización).
+ * No carga AdSense por sí mismo: guarda la decisión y avisa mediante un evento; quien
+ * realmente carga el script es AdSenseLoader, que escucha ese mismo evento. Se puede
+ * reabrir desde el pie de página (evento "manualdecocina:open-cookie-preferences").
  */
 export default function CookieConsentBanner({ lang }: { lang: MdLanguage }) {
   const t = getMdCopy(lang);
@@ -58,11 +60,11 @@ export default function CookieConsentBanner({ lang }: { lang: MdLanguage }) {
           <Link href={`/${lang}/cookies`}>{t.cookieBannerLearnMore}</Link>
         </p>
         <div className="md-cookie-banner-actions">
-          <button type="button" className="md-button-secondary" onClick={() => choose('rejected')}>
-            {t.cookieBannerReject}
+          <button type="button" className="md-button-secondary" onClick={() => choose('basic')}>
+            {t.cookieBannerBasic}
           </button>
-          <button type="button" className="md-button" onClick={() => choose('accepted')}>
-            {t.cookieBannerAccept}
+          <button type="button" className="md-button" onClick={() => choose('personalized')}>
+            {t.cookieBannerPersonalized}
           </button>
         </div>
       </div>
