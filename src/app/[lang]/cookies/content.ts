@@ -2,121 +2,205 @@ import type { LegalPageContentMap } from '@/lib/legal-content'
 
 export const COOKIES_CONTENT: LegalPageContentMap = {
   es: {
-    metaTitle: 'Cookies | Manual de Cocina',
-    metaDescription: 'Qué almacenamiento y cookies utiliza Manual de Cocina.',
+    metaTitle: 'Política de cookies | Manual de Cocina',
+    metaDescription: 'Qué cookies y almacenamiento local utiliza Manual de Cocina, con qué finalidad y cómo puedes gestionarlas.',
     eyebrow: 'Cookies y almacenamiento',
-    title: 'Cookies',
-    intro: 'No declaramos servicios o cookies que no estén realmente instalados.',
+    title: 'Política de cookies',
+    intro: 'No declaramos cookies o servicios que no estén realmente instalados: esta página se actualiza cada vez que cambia lo que el sitio usa de verdad.',
     sections: [
       {
-        heading: 'Estado actual',
-        html: "<p>La función de favoritas utiliza almacenamiento local del navegador (localStorage), no una cuenta de usuario ni una cookie.</p><p>No utilizamos Google Analytics ni ningún otro servicio de analítica o seguimiento.</p><p>La única publicidad del sitio será Google AdSense; no se utilizará ningún otro servicio publicitario. El sitio ya está preparado técnicamente para mostrar anuncios de AdSense: se activarán automáticamente en cuanto se configure el identificador de publisher de Google y el sitio quede aprobado por Google AdSense.</p>",
+        heading: '1. Qué es una cookie',
+        html: '<p>Una cookie es un pequeño archivo que un sitio web guarda en tu navegador para recordar información entre visitas. El almacenamiento local del navegador (localStorage) cumple una función parecida, pero permanece únicamente en tu dispositivo y no viaja con cada solicitud al servidor como sí ocurre con las cookies.</p>',
       },
       {
-        heading: 'Preferencias',
-        html: '<p>Cuando los anuncios de AdSense se activen, esta página se actualizará con el detalle real de sus cookies, y el sitio incorporará un mecanismo para gestionar las preferencias de consentimiento antes de mostrarlos.</p>',
+        heading: '2. Lo que usamos hoy: almacenamiento local, no cookies',
+        html: '<p>Actualmente Manual de Cocina no instala ninguna cookie propia. Usamos únicamente almacenamiento local del navegador (localStorage) para dos funciones:</p><ul><li><strong>Recetas favoritas:</strong> guarda en tu dispositivo los identificadores de las recetas que marcas, para mostrártelas en tu lista de favoritas.</li><li><strong>Preferencia de tema (claro/oscuro):</strong> recuerda tu elección visual del sitio.</li></ul><p>Esta información no sale de tu navegador: no la recibimos, no la almacenamos en nuestros servidores y no la compartimos con nadie.</p>',
+      },
+      {
+        heading: '3. Cookies de terceros: Google AdSense',
+        html: "<p>La única publicidad del sitio es Google AdSense; no usamos ni tenemos previsto usar ningún otro servicio publicitario ni de analítica. El dominio manualdecocina.com ya está aprobado por Google AdSense y muestra anuncios en la versión actualmente en producción; en esta versión reconstruida, los anuncios se activarán automáticamente en cuanto se despliegue a producción con el identificador de publisher configurado.</p><p>Cuando los anuncios de AdSense estén activos aquí, Google y sus socios publicitarios podrán instalar cookies para: mostrar anuncios relevantes, medir su rendimiento, prevenir fraude y, si aceptas la personalización, adaptar los anuncios a tu actividad de navegación. Entre las cookies más habituales de Google en este contexto están <code>_gcl_au</code>, <code>NID</code> e <code>IDE</code>, aunque el listado exacto puede variar y lo controla Google. Puedes ver el detalle completo en la <a href='https://policies.google.com/technologies/cookies' target='_blank' rel='noopener noreferrer'>política de cookies de Google</a>.</p>",
+      },
+      {
+        heading: '4. Gestión del consentimiento',
+        html: "<p>Antes de mostrar anuncios a personas que visitan el sitio desde la Unión Europea, el Reino Unido o Suiza, añadiremos un aviso de consentimiento de cookies que te permitirá aceptarlas o rechazarlas antes de que se carguen. Para el resto de visitantes, la carga de AdSense empezará junto con el lanzamiento de esta versión.</p><p>Mientras tanto, puedes gestionar de forma anticipada la personalización de anuncios de Google desde <a href='https://adssettings.google.com' target='_blank' rel='noopener noreferrer'>adssettings.google.com</a>.</p>",
+      },
+      {
+        heading: '5. Cómo borrar cookies y almacenamiento local desde tu navegador',
+        html: '<p>Puedes borrar las cookies y el almacenamiento local en cualquier momento desde la configuración de privacidad de tu navegador (Chrome, Safari, Firefox, Edge, etc.). Ten en cuenta que borrar el almacenamiento local eliminará tus recetas favoritas guardadas en ese dispositivo.</p>',
       },
     ],
   },
   en: {
-    metaTitle: 'Cookies | Manual de Cocina',
-    metaDescription: 'What storage and cookies Manual de Cocina uses.',
+    metaTitle: 'Cookie Policy | Manual de Cocina',
+    metaDescription: 'What cookies and local storage Manual de Cocina uses, for what purpose, and how you can manage them.',
     eyebrow: 'Cookies and storage',
-    title: 'Cookies',
-    intro: "We don't declare services or cookies that aren't actually installed.",
+    title: 'Cookie Policy',
+    intro: "We don't declare cookies or services that aren't actually installed: this page is updated whenever what the site really uses changes.",
     sections: [
       {
-        heading: 'Current status',
-        html: "<p>The favorites feature uses local browser storage (localStorage), not a user account or a cookie.</p><p>We don't use Google Analytics or any other analytics or tracking service.</p><p>The site's only advertising will be Google AdSense; no other advertising service will be used. The site is already technically set up to show AdSense ads: they will switch on automatically once the Google publisher ID is configured and the site is approved by Google AdSense.</p>",
+        heading: '1. What a cookie is',
+        html: "<p>A cookie is a small file a website stores in your browser to remember information between visits. Your browser's local storage (localStorage) serves a similar purpose, but it stays only on your device and isn't sent with every request to the server the way cookies are.</p>",
       },
       {
-        heading: 'Preferences',
-        html: '<p>Once AdSense ads are active, this page will be updated with the real details of its cookies, and the site will include a way to manage consent preferences before showing them.</p>',
+        heading: '2. What we use today: local storage, not cookies',
+        html: "<p>Manual de Cocina currently doesn't install any cookie of its own. We only use your browser's local storage (localStorage) for two features:</p><ul><li><strong>Favorite recipes:</strong> stores on your device the IDs of the recipes you bookmark, to show them in your favorites list.</li><li><strong>Theme preference (light/dark):</strong> remembers your visual choice for the site.</li></ul><p>This information never leaves your browser: we don't receive it, store it on our servers, or share it with anyone.</p>",
+      },
+      {
+        heading: '3. Third-party cookies: Google AdSense',
+        html: "<p>The site's only advertising is Google AdSense; we don't use, and have no plans to use, any other advertising or analytics service. The domain manualdecocina.com is already approved by Google AdSense and shows ads on the version currently in production; on this rebuilt version, ads will switch on automatically once it's deployed to production with the publisher ID configured.</p><p>Once AdSense ads are active here, Google and its advertising partners may set cookies to: show relevant ads, measure their performance, prevent fraud and, if you accept personalization, tailor ads to your browsing activity. Common Google cookies in this context include <code>_gcl_au</code>, <code>NID</code> and <code>IDE</code>, though the exact list can vary and is controlled by Google. See the full detail in <a href='https://policies.google.com/technologies/cookies' target='_blank' rel='noopener noreferrer'>Google's cookie policy</a>.</p>",
+      },
+      {
+        heading: '4. Managing consent',
+        html: "<p>Before showing ads to visitors from the EU, UK or Switzerland, we'll add a cookie-consent notice so you can accept or reject them before they load. For other visitors, AdSense will start loading alongside the launch of this version.</p><p>In the meantime, you can manage Google ad personalization in advance at <a href='https://adssettings.google.com' target='_blank' rel='noopener noreferrer'>adssettings.google.com</a>.</p>",
+      },
+      {
+        heading: '5. How to clear cookies and local storage from your browser',
+        html: "<p>You can clear cookies and local storage at any time from your browser's privacy settings (Chrome, Safari, Firefox, Edge, etc.). Note that clearing local storage will remove the favorite recipes saved on that device.</p>",
       },
     ],
   },
   de: {
-    metaTitle: 'Cookies | Manual de Cocina',
-    metaDescription: 'Welche Speicherung und Cookies Manual de Cocina verwendet.',
+    metaTitle: 'Cookie-Richtlinie | Manual de Cocina',
+    metaDescription: 'Welche Cookies und lokalen Speicher Manual de Cocina verwendet, zu welchem Zweck und wie du sie verwalten kannst.',
     eyebrow: 'Cookies und Speicherung',
-    title: 'Cookies',
-    intro: 'Wir geben keine Dienste oder Cookies an, die nicht tatsächlich installiert sind.',
+    title: 'Cookie-Richtlinie',
+    intro: 'Wir geben keine Cookies oder Dienste an, die nicht tatsächlich installiert sind: Diese Seite wird aktualisiert, sobald sich das tatsächlich Genutzte ändert.',
     sections: [
       {
-        heading: 'Aktueller Stand',
-        html: '<p>Die Favoriten-Funktion nutzt den lokalen Speicher des Browsers (localStorage), kein Benutzerkonto und kein Cookie.</p><p>Wir verwenden weder Google Analytics noch einen anderen Analyse- oder Tracking-Dienst.</p><p>Die einzige Werbung der Website wird Google AdSense sein; es wird kein anderer Werbedienst genutzt. Die Website ist technisch bereits dafür vorbereitet: Die AdSense-Anzeigen werden automatisch aktiv, sobald die Google-Publisher-ID eingerichtet ist und die Website von Google AdSense genehmigt wurde.</p>',
+        heading: '1. Was ist ein Cookie',
+        html: '<p>Ein Cookie ist eine kleine Datei, die eine Website in deinem Browser speichert, um Informationen zwischen Besuchen zu behalten. Der lokale Speicher deines Browsers (localStorage) erfüllt einen ähnlichen Zweck, verbleibt jedoch nur auf deinem Gerät und wird nicht wie Cookies bei jeder Anfrage an den Server gesendet.</p>',
       },
       {
-        heading: 'Einstellungen',
-        html: '<p>Sobald die AdSense-Anzeigen aktiv sind, wird diese Seite mit den tatsächlichen Cookie-Details aktualisiert, und die Website erhält eine Möglichkeit, die Einwilligungseinstellungen zu verwalten, bevor sie angezeigt werden.</p>',
+        heading: '2. Was wir heute nutzen: lokaler Speicher, keine Cookies',
+        html: '<p>Manual de Cocina installiert derzeit keine eigenen Cookies. Wir nutzen ausschließlich den lokalen Speicher deines Browsers (localStorage) für zwei Funktionen:</p><ul><li><strong>Favorisierte Rezepte:</strong> speichert auf deinem Gerät die IDs der von dir markierten Rezepte, um sie in deiner Favoritenliste anzuzeigen.</li><li><strong>Design-Einstellung (hell/dunkel):</strong> merkt sich deine visuelle Wahl für die Website.</li></ul><p>Diese Informationen verlassen deinen Browser nie: Wir erhalten sie nicht, speichern sie nicht auf unseren Servern und geben sie an niemanden weiter.</p>',
+      },
+      {
+        heading: '3. Cookies von Dritten: Google AdSense',
+        html: "<p>Die einzige Werbung der Website ist Google AdSense; wir nutzen keinen anderen Werbe- oder Analysedienst und planen dies auch nicht. Die Domain manualdecocina.com ist bereits von Google AdSense genehmigt und zeigt Anzeigen auf der aktuell produktiven Version; auf dieser neu aufgebauten Version werden die Anzeigen automatisch aktiv, sobald sie mit konfigurierter Publisher-ID live geschaltet wird.</p><p>Sobald AdSense-Anzeigen hier aktiv sind, können Google und seine Werbepartner Cookies setzen, um: relevante Anzeigen zu zeigen, deren Leistung zu messen, Betrug zu verhindern und – falls du der Personalisierung zustimmst – Anzeigen an dein Surfverhalten anzupassen. Zu den in diesem Zusammenhang gängigen Google-Cookies zählen <code>_gcl_au</code>, <code>NID</code> und <code>IDE</code>, wobei die genaue Liste variieren kann und von Google kontrolliert wird. Details findest du in der <a href='https://policies.google.com/technologies/cookies' target='_blank' rel='noopener noreferrer'>Cookie-Richtlinie von Google</a>.</p>",
+      },
+      {
+        heading: '4. Einwilligungsverwaltung',
+        html: "<p>Bevor wir Besucherinnen und Besuchern aus der EU, Großbritannien oder der Schweiz Anzeigen zeigen, fügen wir einen Cookie-Einwilligungshinweis hinzu, mit dem du sie vor dem Laden akzeptieren oder ablehnen kannst. Für andere Besucher startet AdSense zusammen mit dem Start dieser Version.</p><p>In der Zwischenzeit kannst du die Personalisierung von Google-Anzeigen bereits jetzt unter <a href='https://adssettings.google.com' target='_blank' rel='noopener noreferrer'>adssettings.google.com</a> verwalten.</p>",
+      },
+      {
+        heading: '5. Cookies und lokalen Speicher im Browser löschen',
+        html: '<p>Du kannst Cookies und lokalen Speicher jederzeit über die Datenschutzeinstellungen deines Browsers löschen (Chrome, Safari, Firefox, Edge usw.). Beachte, dass das Löschen des lokalen Speichers die auf diesem Gerät gespeicherten Favoriten entfernt.</p>',
       },
     ],
   },
   fr: {
-    metaTitle: 'Cookies | Manual de Cocina',
-    metaDescription: 'Quel stockage et quels cookies utilise Manual de Cocina.',
+    metaTitle: 'Politique de cookies | Manual de Cocina',
+    metaDescription: 'Quels cookies et stockage local utilise Manual de Cocina, dans quel but et comment tu peux les gérer.',
     eyebrow: 'Cookies et stockage',
-    title: 'Cookies',
-    intro: 'Nous ne déclarons pas de services ou de cookies qui ne sont pas réellement installés.',
+    title: 'Politique de cookies',
+    intro: "Nous ne déclarons pas de cookies ou de services qui ne sont pas réellement installés : cette page est mise à jour à chaque changement de ce que le site utilise vraiment.",
     sections: [
       {
-        heading: 'État actuel',
-        html: "<p>La fonction de favoris utilise le stockage local du navigateur (localStorage), et non un compte utilisateur ni un cookie.</p><p>Nous n'utilisons ni Google Analytics ni aucun autre service d'analyse ou de suivi.</p><p>La seule publicité du site sera Google AdSense ; aucun autre service publicitaire ne sera utilisé. Le site est déjà techniquement prêt pour afficher les annonces AdSense : elles s'activeront automatiquement dès que l'identifiant d'éditeur Google sera configuré et que le site sera approuvé par Google AdSense.</p>",
+        heading: "1. Qu'est-ce qu'un cookie",
+        html: "<p>Un cookie est un petit fichier qu'un site web enregistre dans ton navigateur pour mémoriser des informations entre les visites. Le stockage local de ton navigateur (localStorage) remplit une fonction similaire, mais reste uniquement sur ton appareil et n'est pas envoyé au serveur à chaque requête comme le sont les cookies.</p>",
       },
       {
-        heading: 'Préférences',
-        html: "<p>Une fois les annonces AdSense actives, cette page sera mise à jour avec le détail réel de ses cookies, et le site intégrera un moyen de gérer les préférences de consentement avant de les afficher.</p>",
+        heading: "2. Ce que nous utilisons aujourd'hui : stockage local, pas de cookies",
+        html: "<p>Manual de Cocina n'installe actuellement aucun cookie propre. Nous utilisons uniquement le stockage local de ton navigateur (localStorage) pour deux fonctions :</p><ul><li><strong>Recettes favorites :</strong> enregistre sur ton appareil les identifiants des recettes que tu marques, pour les afficher dans ta liste de favoris.</li><li><strong>Préférence de thème (clair/sombre) :</strong> mémorise ton choix visuel pour le site.</li></ul><p>Cette information ne quitte jamais ton navigateur : nous ne la recevons pas, ne la stockons pas sur nos serveurs et ne la partageons avec personne.</p>",
+      },
+      {
+        heading: '3. Cookies tiers : Google AdSense',
+        html: "<p>La seule publicité du site est Google AdSense ; nous n'utilisons et ne prévoyons d'utiliser aucun autre service publicitaire ou d'analyse. Le domaine manualdecocina.com est déjà approuvé par Google AdSense et affiche des annonces sur la version actuellement en production ; sur cette version reconstruite, les annonces s'activeront automatiquement dès son déploiement en production avec l'identifiant éditeur configuré.</p><p>Une fois les annonces AdSense actives ici, Google et ses partenaires publicitaires pourront déposer des cookies afin de : diffuser des annonces pertinentes, mesurer leur performance, prévenir la fraude et, si tu acceptes la personnalisation, adapter les annonces à ton activité de navigation. Parmi les cookies Google courants dans ce contexte figurent <code>_gcl_au</code>, <code>NID</code> et <code>IDE</code>, bien que la liste exacte puisse varier et soit contrôlée par Google. Retrouve tous les détails dans la <a href='https://policies.google.com/technologies/cookies' target='_blank' rel='noopener noreferrer'>politique de cookies de Google</a>.</p>",
+      },
+      {
+        heading: '4. Gestion du consentement',
+        html: "<p>Avant d'afficher des annonces aux visiteurs de l'UE, du Royaume-Uni ou de la Suisse, nous ajouterons un bandeau de consentement aux cookies te permettant de les accepter ou de les refuser avant leur chargement. Pour les autres visiteurs, le chargement d'AdSense démarrera avec la mise en ligne de cette version.</p><p>En attendant, tu peux déjà gérer la personnalisation des annonces Google sur <a href='https://adssettings.google.com' target='_blank' rel='noopener noreferrer'>adssettings.google.com</a>.</p>",
+      },
+      {
+        heading: '5. Comment effacer les cookies et le stockage local depuis ton navigateur',
+        html: "<p>Tu peux effacer les cookies et le stockage local à tout moment depuis les paramètres de confidentialité de ton navigateur (Chrome, Safari, Firefox, Edge, etc.). Notez que l'effacement du stockage local supprimera les recettes favorites enregistrées sur cet appareil.</p>",
       },
     ],
   },
   it: {
-    metaTitle: 'Cookie | Manual de Cocina',
-    metaDescription: 'Quale archiviazione e quali cookie utilizza Manual de Cocina.',
+    metaTitle: 'Informativa sui cookie | Manual de Cocina',
+    metaDescription: 'Quali cookie e archiviazione locale utilizza Manual de Cocina, con quale finalità e come puoi gestirli.',
     eyebrow: 'Cookie e archiviazione',
-    title: 'Cookie',
-    intro: 'Non dichiariamo servizi o cookie che non siano realmente installati.',
+    title: 'Informativa sui cookie',
+    intro: 'Non dichiariamo cookie o servizi che non siano realmente installati: questa pagina viene aggiornata ogni volta che cambia ciò che il sito usa davvero.',
     sections: [
       {
-        heading: 'Stato attuale',
-        html: "<p>La funzione dei preferiti utilizza l'archiviazione locale del browser (localStorage), non un account utente né un cookie.</p><p>Non utilizziamo Google Analytics né alcun altro servizio di analisi o tracciamento.</p><p>L'unica pubblicità del sito sarà Google AdSense; non verrà utilizzato alcun altro servizio pubblicitario. Il sito è già tecnicamente pronto per mostrare gli annunci AdSense: si attiveranno automaticamente non appena verrà configurato l'ID publisher di Google e il sito sarà approvato da Google AdSense.</p>",
+        heading: "1. Cos'è un cookie",
+        html: "<p>Un cookie è un piccolo file che un sito web salva nel tuo browser per ricordare informazioni tra una visita e l'altra. L'archiviazione locale del browser (localStorage) svolge una funzione simile, ma rimane solo sul tuo dispositivo e non viene inviata al server a ogni richiesta come invece accade con i cookie.</p>",
       },
       {
-        heading: 'Preferenze',
-        html: '<p>Quando gli annunci AdSense saranno attivi, questa pagina verrà aggiornata con i dettagli reali dei suoi cookie, e il sito includerà uno strumento per gestire le preferenze di consenso prima di mostrarli.</p>',
+        heading: '2. Cosa usiamo oggi: archiviazione locale, non cookie',
+        html: "<p>Manual de Cocina attualmente non installa alcun cookie proprio. Utilizziamo solo l'archiviazione locale del browser (localStorage) per due funzioni:</p><ul><li><strong>Ricette preferite:</strong> salva sul tuo dispositivo gli identificativi delle ricette che contrassegni, per mostrarle nella tua lista dei preferiti.</li><li><strong>Preferenza del tema (chiaro/scuro):</strong> ricorda la tua scelta visiva per il sito.</li></ul><p>Questa informazione non esce mai dal tuo browser: non la riceviamo, non la archiviamo sui nostri server e non la condividiamo con nessuno.</p>",
+      },
+      {
+        heading: '3. Cookie di terze parti: Google AdSense',
+        html: "<p>L'unica pubblicità del sito è Google AdSense; non utilizziamo né prevediamo di utilizzare alcun altro servizio pubblicitario o di analisi. Il dominio manualdecocina.com è già approvato da Google AdSense e mostra annunci nella versione attualmente in produzione; in questa versione ricostruita, gli annunci si attiveranno automaticamente non appena verrà messa in produzione con l'ID publisher configurato.</p><p>Quando gli annunci AdSense saranno attivi qui, Google e i suoi partner pubblicitari potranno installare cookie per: mostrare annunci pertinenti, misurarne le prestazioni, prevenire le frodi e, se accetti la personalizzazione, adattare gli annunci alla tua attività di navigazione. Tra i cookie Google più comuni in questo contesto figurano <code>_gcl_au</code>, <code>NID</code> e <code>IDE</code>, anche se l'elenco esatto può variare ed è controllato da Google. Trovi tutti i dettagli nella <a href='https://policies.google.com/technologies/cookies' target='_blank' rel='noopener noreferrer'>informativa sui cookie di Google</a>.</p>",
+      },
+      {
+        heading: '4. Gestione del consenso',
+        html: "<p>Prima di mostrare annunci ai visitatori dell'UE, del Regno Unito o della Svizzera, aggiungeremo un avviso di consenso ai cookie che ti permetterà di accettarli o rifiutarli prima del loro caricamento. Per gli altri visitatori, il caricamento di AdSense inizierà insieme al lancio di questa versione.</p><p>Nel frattempo, puoi già gestire la personalizzazione degli annunci Google su <a href='https://adssettings.google.com' target='_blank' rel='noopener noreferrer'>adssettings.google.com</a>.</p>",
+      },
+      {
+        heading: '5. Come cancellare cookie e archiviazione locale dal browser',
+        html: "<p>Puoi cancellare cookie e archiviazione locale in qualsiasi momento dalle impostazioni sulla privacy del tuo browser (Chrome, Safari, Firefox, Edge, ecc.). Tieni presente che la cancellazione dell'archiviazione locale eliminerà le ricette preferite salvate su quel dispositivo.</p>",
       },
     ],
   },
   ja: {
-    metaTitle: 'クッキー | Manual de Cocina',
-    metaDescription: 'Manual de Cocinaが使用する保存データとクッキーについて。',
+    metaTitle: 'クッキーポリシー | Manual de Cocina',
+    metaDescription: 'Manual de Cocinaが使用するクッキーおよびローカルストレージの内容、目的、管理方法について。',
     eyebrow: 'クッキーと保存データ',
-    title: 'クッキー',
-    intro: '実際に導入していないサービスやクッキーを表記することはありません。',
+    title: 'クッキーポリシー',
+    intro: '実際に導入していないクッキーやサービスを表記することはありません。このページは、サイトが実際に使用する内容が変わるたびに更新されます。',
     sections: [
       {
-        heading: '現在の状況',
-        html: '<p>お気に入り機能はブラウザのローカルストレージ（localStorage）を使用しており、ユーザーアカウントやクッキーではありません。</p><p>Google Analyticsやその他の解析・トラッキングサービスは使用していません。</p><p>当サイトの広告はGoogle AdSenseのみで、ほかの広告サービスは使用しません。サイト側の技術的な準備はすでに完了しており、GoogleのパブリッシャーIDを設定し、Google AdSenseの審査に通り次第、自動的に広告が表示されるようになります。</p>',
+        heading: '1. クッキーとは',
+        html: '<p>クッキーとは、訪問間で情報を記憶するためにウェブサイトがブラウザに保存する小さなファイルです。ブラウザのローカルストレージ（localStorage）も同様の役割を果たしますが、お使いの端末内にのみ保存され、クッキーのようにリクエストのたびにサーバーへ送信されることはありません。</p>',
       },
       {
-        heading: '設定',
-        html: '<p>AdSenseの広告が有効になった際には、実際のクッキーの詳細を反映するようこのページを更新し、広告を表示する前に同意設定を管理できる仕組みをサイトに追加します。</p>',
+        heading: '2. 現在使用しているもの：クッキーではなくローカルストレージ',
+        html: '<p>Manual de Cocinaは現在、独自のクッキーを一切導入していません。以下の2つの機能にのみ、ブラウザのローカルストレージ（localStorage）を使用しています。</p><ul><li><strong>お気に入りレシピ：</strong>マークしたレシピのIDを端末内に保存し、お気に入りリストに表示します。</li><li><strong>テーマ設定（ライト/ダーク）：</strong>サイトの表示に関するお客様の選択を記憶します。</li></ul><p>この情報がブラウザの外に出ることはありません。当社がこれを受け取ったり、サーバーに保存したり、第三者と共有したりすることはありません。</p>',
+      },
+      {
+        heading: '3. 第三者のクッキー：Google AdSense',
+        html: "<p>当サイトの広告はGoogle AdSenseのみで、ほかの広告・解析サービスは使用しておらず、導入の予定もありません。ドメインmanualdecocina.comはすでにGoogle AdSenseの承認を受けており、現在の本番バージョンで広告を表示しています。このリニューアル版では、パブリッシャーIDを設定して本番環境に公開され次第、自動的に広告が有効になります。</p><p>ここでAdSense広告が有効になると、Googleおよびその広告パートナーは、関連性の高い広告の表示、効果測定、不正防止、そして（パーソナライズに同意いただいた場合は）閲覧履歴に基づく広告の最適化のためにクッキーを設置することがあります。この文脈でよく使われるGoogleのクッキーには<code>_gcl_au</code>、<code>NID</code>、<code>IDE</code>などがありますが、正確な一覧は変動する場合があり、Googleが管理しています。詳細は<a href='https://policies.google.com/technologies/cookies' target='_blank' rel='noopener noreferrer'>Googleのクッキーに関するポリシー</a>をご覧ください。</p>",
+      },
+      {
+        heading: '4. 同意の管理',
+        html: "<p>EU、英国、スイスからの訪問者に広告を表示する前に、クッキーの読み込み前に承諾または拒否を選べる同意バナーをサイトに追加します。それ以外の訪問者については、本バージョンの公開とともにAdSenseの読み込みが始まります。</p><p>それまでの間、Google広告のパーソナライズは<a href='https://adssettings.google.com' target='_blank' rel='noopener noreferrer'>adssettings.google.com</a>から事前に管理できます。</p>",
+      },
+      {
+        heading: '5. ブラウザでクッキーとローカルストレージを削除する方法',
+        html: '<p>クッキーとローカルストレージは、お使いのブラウザ（Chrome、Safari、Firefox、Edgeなど）のプライバシー設定からいつでも削除できます。ローカルストレージを削除すると、その端末に保存されたお気に入りレシピが失われますのでご注意ください。</p>',
       },
     ],
   },
   pt: {
-    metaTitle: 'Cookies | Manual de Cocina',
-    metaDescription: 'Quais armazenamentos e cookies o Manual de Cocina utiliza.',
+    metaTitle: 'Política de cookies | Manual de Cocina',
+    metaDescription: 'Quais cookies e armazenamento local o Manual de Cocina utiliza, com que finalidade e como você pode gerenciá-los.',
     eyebrow: 'Cookies e armazenamento',
-    title: 'Cookies',
-    intro: 'Não declaramos serviços ou cookies que não estejam realmente instalados.',
+    title: 'Política de cookies',
+    intro: 'Não declaramos cookies ou serviços que não estejam realmente instalados: esta página é atualizada sempre que muda o que o site realmente usa.',
     sections: [
       {
-        heading: 'Situação atual',
-        html: '<p>A função de favoritos utiliza armazenamento local do navegador (localStorage), não uma conta de usuário nem um cookie.</p><p>Não utilizamos o Google Analytics nem nenhum outro serviço de análise ou rastreamento.</p><p>A única publicidade do site será o Google AdSense; nenhum outro serviço de publicidade será utilizado. O site já está tecnicamente pronto para exibir os anúncios do AdSense: eles serão ativados automaticamente assim que o ID de publisher do Google for configurado e o site for aprovado pelo Google AdSense.</p>',
+        heading: '1. O que é um cookie',
+        html: '<p>Um cookie é um pequeno arquivo que um site guarda no seu navegador para lembrar informações entre visitas. O armazenamento local do navegador (localStorage) cumpre função parecida, mas permanece apenas no seu dispositivo e não é enviado ao servidor a cada solicitação, como ocorre com os cookies.</p>',
       },
       {
-        heading: 'Preferências',
-        html: '<p>Quando os anúncios do AdSense estiverem ativos, esta página será atualizada com os detalhes reais de seus cookies, e o site incluirá um mecanismo para gerenciar as preferências de consentimento antes de exibi-los.</p>',
+        heading: '2. O que usamos hoje: armazenamento local, não cookies',
+        html: '<p>Atualmente o Manual de Cocina não instala nenhum cookie próprio. Usamos apenas o armazenamento local do navegador (localStorage) para duas funções:</p><ul><li><strong>Receitas favoritas:</strong> guarda no seu dispositivo os identificadores das receitas que você marca, para exibi-las na sua lista de favoritos.</li><li><strong>Preferência de tema (claro/escuro):</strong> lembra sua escolha visual para o site.</li></ul><p>Essa informação nunca sai do seu navegador: não a recebemos, não a armazenamos em nossos servidores e não a compartilhamos com ninguém.</p>',
+      },
+      {
+        heading: '3. Cookies de terceiros: Google AdSense',
+        html: "<p>A única publicidade do site é o Google AdSense; não usamos nem temos planos de usar nenhum outro serviço de publicidade ou análise. O domínio manualdecocina.com já está aprovado pelo Google AdSense e exibe anúncios na versão atualmente em produção; nesta versão reconstruída, os anúncios serão ativados automaticamente assim que ela for publicada em produção com o ID de publisher configurado.</p><p>Quando os anúncios do AdSense estiverem ativos aqui, o Google e seus parceiros de publicidade poderão instalar cookies para: exibir anúncios relevantes, medir seu desempenho, prevenir fraudes e, caso você aceite a personalização, adaptar os anúncios à sua atividade de navegação. Entre os cookies do Google mais comuns nesse contexto estão <code>_gcl_au</code>, <code>NID</code> e <code>IDE</code>, embora a lista exata possa variar e seja controlada pelo Google. Veja todos os detalhes na <a href='https://policies.google.com/technologies/cookies' target='_blank' rel='noopener noreferrer'>política de cookies do Google</a>.</p>",
+      },
+      {
+        heading: '4. Gerenciamento de consentimento',
+        html: "<p>Antes de exibir anúncios a visitantes da UE, do Reino Unido ou da Suíça, adicionaremos um aviso de consentimento de cookies para que você possa aceitá-los ou recusá-los antes de serem carregados. Para os demais visitantes, o carregamento do AdSense começará junto com o lançamento desta versão.</p><p>Enquanto isso, você já pode gerenciar a personalização de anúncios do Google em <a href='https://adssettings.google.com' target='_blank' rel='noopener noreferrer'>adssettings.google.com</a>.</p>",
+      },
+      {
+        heading: '5. Como apagar cookies e armazenamento local no seu navegador',
+        html: '<p>Você pode apagar cookies e armazenamento local a qualquer momento nas configurações de privacidade do seu navegador (Chrome, Safari, Firefox, Edge, etc.). Note que apagar o armazenamento local removerá as receitas favoritas salvas nesse dispositivo.</p>',
       },
     ],
   },

@@ -45,9 +45,10 @@ export default async function LanguageRootLayout({
     <html lang={lang} className={`${editorialSerif.variable} ${uiSans.variable}`} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: "try{var t=localStorage.getItem('md-theme');if(t==='dark'||t==='light')document.documentElement.dataset.theme=t}catch(e){}" }} />
-        {/* Google AdSense: sin NEXT_PUBLIC_ADSENSE_CLIENT_ID (preview y entornos de prueba) no
-            se imprime nada. En cuanto se configure esa variable en producción y el sitio esté
-            aprobado por Google AdSense, este script empieza a servir anuncios sin tocar código. */}
+        {/* Google AdSense: el dominio ya está aprobado por Google (pub-2592990699767586); no hay
+            aprobación pendiente. Sin NEXT_PUBLIC_ADSENSE_CLIENT_ID (preview y entornos de prueba)
+            no se imprime nada. En cuanto se configure esa variable en el entorno de producción de
+            Hostinger y se despliegue, este script empieza a servir anuncios sin tocar código. */}
         {adsenseClient && (
           <script
             async
