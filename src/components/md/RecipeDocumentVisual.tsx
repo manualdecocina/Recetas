@@ -122,6 +122,12 @@ export default function RecipeDocumentVisual({ recipe, relatedRecipes = [], note
             )}
           </div>
           <div className="md-recipe-after">
+            {/* Orden fijo pedido: notas justo tras la preparación, luego nutrición, video,
+                "sobre esta receta" (E-E-A-T) y al final las preguntas frecuentes. */}
+            {notesHtml && <section className="md-notes" id="md-notas" aria-labelledby="md-notes-heading">
+              <h2 className="md-title" id="md-notes-heading">{t.notes}</h2>
+              <div className="md-rich" dangerouslySetInnerHTML={{ __html: notesHtml }} />
+            </section>}
             {calories !== null && (
               <section className="md-nutrition" id="md-nutricion" aria-labelledby="md-nutrition-heading">
                 <div className="md-nutrition-head">
@@ -151,14 +157,22 @@ export default function RecipeDocumentVisual({ recipe, relatedRecipes = [], note
                 {summaryParagraphs.map((paragraph, i) => <p key={i}>{paragraph}</p>)}
               </section>
             )}
-            {notesHtml && <section className="md-notes" id="md-notas" aria-labelledby="md-notes-heading">
-              <h2 className="md-title" id="md-notes-heading">{t.notes}</h2>
-              <div className="md-rich" dangerouslySetInnerHTML={{ __html: notesHtml }} />
-            </section>}
             {faq.length > 0 && (
               <section className="md-faq" id="md-faq" aria-labelledby="md-faq-heading">
                 <h2 className="md-title" id="md-faq-heading">{t.faqTitle}</h2>
                 {faq.map((item, i) => <details key={i}><summary>{item.q}</summary><p>{item.a}</p></details>)}
+              </section>
+            )}
+            {lang === 'es' && (
+              <section className="md-pantry-banner md-pantry-banner-card" aria-labelledby="md-recipe-pantry-cta">
+                <div className="md-pantry-banner-inner">
+                  <div className="md-pantry-banner-copy">
+                    <p className="md-eyebrow">{t.pantryEyebrow}</p>
+                    <h2 className="md-title" id="md-recipe-pantry-cta">{t.pantryBannerTitle}</h2>
+                    <p className="md-lead">{t.pantryBannerBody}</p>
+                  </div>
+                  <Link className="md-button" href="/es/que-puedo-cocinar">{t.pantryBannerCta}</Link>
+                </div>
               </section>
             )}
             {notesHtml && <AdSlot placement="after-notes" />}

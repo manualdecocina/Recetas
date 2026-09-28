@@ -85,10 +85,25 @@ export default function HomePageView({ lang, data }: { lang: MdLanguage; data: M
             </nav>
           </div>
         </section>}
-        <aside className="md-section md-editorial"><div className="md-container md-editorial-inner">
-          <p className="md-eyebrow">Manual de Cocina</p><h2 className="md-title">{t.editorialTitle}</h2>
-          <p className="md-lead">{t.editorialBody}</p>
-        </div></aside>
+        <aside className="md-section md-editorial">
+          <div className="md-container md-editorial-grid">
+            <div className="md-editorial-box md-editorial-copy">
+              <p className="md-eyebrow">Manual de Cocina</p>
+              <h2 className="md-title">{t.editorialTitle}</h2>
+              <p className="md-lead">{t.editorialBody}</p>
+            </div>
+            <Link className="md-editorial-box md-editorial-author" href={`/${lang}/quienes-somos`}>
+              <Image className="md-editorial-author-photo" src="/autor/nestor-bastidas.webp" alt="" width={240} height={320}
+                sizes="(max-width: 780px) 30vw, 140px" />
+              <div className="md-editorial-author-text">
+                <strong>Néstor Bastidas</strong>
+                <span className="md-editorial-author-role">{t.editorialAuthorRole}</span>
+                <p>{t.editorialAuthorBlurb}</p>
+                <span className="md-link">{t.editorialAuthorCta}</span>
+              </div>
+            </Link>
+          </div>
+        </aside>
       </main>
       <SiteFooter lang={lang} />
     </div>

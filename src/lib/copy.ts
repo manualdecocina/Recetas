@@ -23,6 +23,9 @@ const es = {
   browseIngredients: "Empieza por un ingrediente",
   editorialTitle: "Recetas para volver a cocinar",
   editorialBody: "Manual de Cocina reúne recetas de distintas cocinas para consultar, preparar y compartir, con instrucciones claras y una navegación sencilla.",
+  editorialAuthorRole: "Chef · responsable editorial",
+  editorialAuthorBlurb: "Más de 15 años de experiencia en cocina profesional en Latinoamérica, Estados Unidos y España.",
+  editorialAuthorCta: "Conócenos",
   seeAllRecipes: "Ver todas las recetas",
   seeAllCategories: "Ver todas las categorías",
   seeAllIngredients: "Ver ingredientes",
@@ -162,6 +165,9 @@ const en = {
   browseIngredients: "Start with an ingredient",
   editorialTitle: "Recipes worth cooking again",
   editorialBody: "Manual de Cocina brings together recipes from different cuisines with clear instructions and easy navigation.",
+  editorialAuthorRole: "Chef · Editorial lead",
+  editorialAuthorBlurb: "Over 15 years of professional cooking experience in Latin America, the United States and Spain.",
+  editorialAuthorCta: "About us",
   seeAllRecipes: "Browse all recipes",
   seeAllCategories: "Browse all categories",
   seeAllIngredients: "Browse ingredients",
@@ -301,6 +307,9 @@ const de = {
   browseIngredients: "Mit einer Zutat beginnen", // REVISAR
   editorialTitle: "Rezepte, die man gerne wieder kocht", // REVISAR
   editorialBody: "Manual de Cocina vereint Rezepte verschiedener Küchen mit klaren Anleitungen und einfacher Navigation.", // REVISAR
+  editorialAuthorRole: "Koch · Redaktionsleiter", // REVISAR
+  editorialAuthorBlurb: "Über 15 Jahre Berufserfahrung in der professionellen Küche in Lateinamerika, den USA und Spanien.", // REVISAR
+  editorialAuthorCta: "Über uns", // REVISAR
   seeAllRecipes: "Alle Rezepte ansehen", // REVISAR
   seeAllCategories: "Alle Kategorien ansehen", // REVISAR
   seeAllIngredients: "Zutaten entdecken", // REVISAR
@@ -440,6 +449,9 @@ const it = {
   browseIngredients: "Parti da un ingrediente", // REVISAR
   editorialTitle: "Ricette da cucinare ancora", // REVISAR
   editorialBody: "Manual de Cocina raccoglie ricette di cucine diverse con istruzioni chiare e una navigazione semplice.", // REVISAR
+  editorialAuthorRole: "Chef · responsabile editoriale", // REVISAR
+  editorialAuthorBlurb: "Oltre 15 anni di esperienza in cucina professionale in America Latina, Stati Uniti e Spagna.", // REVISAR
+  editorialAuthorCta: "Chi siamo", // REVISAR
   seeAllRecipes: "Vedi tutte le ricette", // REVISAR
   seeAllCategories: "Vedi tutte le categorie", // REVISAR
   seeAllIngredients: "Esplora gli ingredienti", // REVISAR
@@ -579,6 +591,9 @@ const fr = {
   browseIngredients: "Partir d’un ingrédient", // REVISAR
   editorialTitle: "Des recettes à refaire", // REVISAR
   editorialBody: "Manual de Cocina rassemble des recettes de différentes cuisines, avec des instructions claires et une navigation simple.", // REVISAR
+  editorialAuthorRole: "Chef · responsable éditorial", // REVISAR
+  editorialAuthorBlurb: "Plus de 15 ans d'expérience en cuisine professionnelle en Amérique latine, aux États-Unis et en Espagne.", // REVISAR
+  editorialAuthorCta: "Qui sommes-nous", // REVISAR
   seeAllRecipes: "Voir toutes les recettes", // REVISAR
   seeAllCategories: "Voir toutes les catégories", // REVISAR
   seeAllIngredients: "Explorer les ingrédients", // REVISAR
@@ -718,6 +733,9 @@ const ja = {
   browseIngredients: "食材から探す", // REVISAR
   editorialTitle: "何度も作りたくなるレシピ", // REVISAR
   editorialBody: "Manual de Cocina は、さまざまな国のレシピをわかりやすい手順と使いやすい構成で紹介します。", // REVISAR
+  editorialAuthorRole: "シェフ・編集責任者", // REVISAR
+  editorialAuthorBlurb: "ラテンアメリカ、アメリカ、スペインで15年以上のプロの料理経験。", // REVISAR
+  editorialAuthorCta: "私たちについて", // REVISAR
   seeAllRecipes: "すべてのレシピ", // REVISAR
   seeAllCategories: "すべてのカテゴリー", // REVISAR
   seeAllIngredients: "食材一覧", // REVISAR
@@ -858,6 +876,9 @@ const pt = {
   browseIngredients: "Comece por um ingrediente",
   editorialTitle: "Receitas para voltar a cozinhar",
   editorialBody: "O Manual de Cocina reúne receitas de diferentes cozinhas para consultar, preparar e compartilhar, com instruções claras e navegação simples.",
+  editorialAuthorRole: "Chef · responsável editorial",
+  editorialAuthorBlurb: "Mais de 15 anos de experiência em cozinha profissional na América Latina, Estados Unidos e Espanha.",
+  editorialAuthorCta: "Quem somos",
   seeAllRecipes: "Ver todas as receitas",
   seeAllCategories: "Ver todas as categorias",
   seeAllIngredients: "Ver ingredientes",

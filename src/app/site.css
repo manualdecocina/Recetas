@@ -183,7 +183,17 @@
 .md-ingredient-link { display: inline-flex; align-items: center; min-height: 46px; padding: 8px 18px; border: 2px solid var(--md-stone); border-radius: 14px; background: var(--md-white); font-weight: 700; font-size: .95rem; text-decoration: none; overflow-wrap: anywhere; }
 .md-ingredient-link:hover { border-color: var(--md-olive); background: var(--md-sand); }
 .md-editorial { background: var(--md-sand); }
-.md-editorial-inner { max-width: 790px; }
+.md-editorial-grid { display: grid; grid-template-columns: minmax(0,1fr); gap: 18px; }
+.md-editorial-box { background: var(--md-white); border: 2px solid var(--md-stone); border-radius: var(--md-radius); padding: 26px 28px; }
+.md-editorial-copy .md-title { margin: 10px 0 14px; }
+.md-editorial-copy .md-lead { margin: 0; }
+.md-editorial-author { display: flex; gap: 16px; align-items: center; text-decoration: none; color: inherit; transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease; }
+.md-editorial-author:hover { transform: translateY(-3px); box-shadow: 0 14px 28px rgb(0 0 0 / 10%); border-color: var(--md-olive); }
+.md-editorial-author-photo { width: 100px; height: 132px; object-fit: cover; border-radius: 16px; flex: 0 0 auto; }
+.md-editorial-author-text { display: grid; gap: 4px; min-width: 0; }
+.md-editorial-author-text strong { font-family: var(--md-serif); font-size: 1.2rem; }
+.md-editorial-author-role { color: var(--md-olive-dark); font-weight: 700; font-size: .82rem; }
+.md-editorial-author-text p { margin: 4px 0 6px; color: var(--md-muted); font-size: .9rem; line-height: 1.4; }
 /* Banner "¿Qué puedo cocinar?" en la home */
 .md-pantry-banner { background: var(--md-olive); color: var(--md-white); }
 .md-pantry-banner-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 22px; padding-block: clamp(28px,4.5vw,44px); }
@@ -388,6 +398,7 @@ a.md-lang-item:hover { background: var(--md-sand); }
   .md-category-grid { grid-template-columns: repeat(3,minmax(0,1fr)); }
   .md-filter-fields { grid-template-columns: repeat(2,minmax(0,1fr)); }
   .md-footer-grid { grid-template-columns: 1.4fr 1fr 1fr; }
+  .md-editorial-grid { grid-template-columns: 1.3fr 1fr; align-items: stretch; }
 }
 @media (min-width: 900px) {
   .md-home-hero { grid-template-columns: minmax(0,1fr) minmax(0,1.05fr); align-items: center; }
