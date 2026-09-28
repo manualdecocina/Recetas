@@ -1,6 +1,8 @@
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import PantryMatchView from '@/components/md/PantryMatchView'
+import SiteHeader from '@/components/md/SiteHeader'
+import SiteFooter from '@/components/md/SiteFooter'
 import { getPantryMatchData } from '@/lib/md-data'
 import { SUPPORTED_LANGUAGES, type RecipeLanguage } from '@/types/recipe'
 import { getMdCopy } from '@/lib/copy'
@@ -21,12 +23,22 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   }
 }
 
-/** Herramienta solo en español por ahora, igual que /es/ingredientes. */
+/**
+ * Herramienta solo en español por ahora, igual que /es/ingredientes. SiteHeader/SiteFooter
+ * se pintan aquí (servidor); PantryMatchView es cliente solo para la parte interactiva
+ * (elegir ingredientes). Nunca renderizar SiteHeader dentro de un componente 'use client'.
+ */
 export default async function PantryMatchPage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang: rawLang } = await params
   const lang = parseLang(rawLang)
   if (!lang || lang !== 'es') notFound()
 
   const { ingredients, recipes } = await getPantryMatchData()
-  return <PantryMatchView ingredients={ingredients} recipes={recipes} />
+  return (
+    <div className="md-site" lang="es">
+      <SiteHeader lang="es" />
+      <PantryMatchView ingredients={ingredients} recipes={recipes} />
+      <SiteFooter lang="es" />
+    </div>
+  )
 }
