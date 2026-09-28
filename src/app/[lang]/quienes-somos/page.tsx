@@ -210,7 +210,7 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
             alt={t.photoAlt}
             width={900}
             height={1200}
-            sizes="(max-width: 780px) 60vw, 300px"
+            sizes="(max-width: 780px) 90vw, 340px"
             priority
           />
         </figure>

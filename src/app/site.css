@@ -376,7 +376,7 @@
 .md-institutional-content h2 { font-family: var(--md-serif); font-size: 2rem; line-height: 1.16; font-weight: 800; margin-top: 38px; }
 .md-institutional-content a { color: var(--md-olive-dark); }
 .md-author { display: grid; grid-template-columns: minmax(0,1fr); gap: 22px; margin: 28px 0 34px; }
-.md-author-photo { margin: 0 auto; max-width: 260px; border-radius: 28px 90px 28px 28px; overflow: hidden; background: var(--md-sand); box-shadow: 8px 8px 0 var(--md-accent); }
+.md-author-photo { margin: 0 auto; max-width: 360px; width: 100%; border-radius: var(--md-radius); overflow: hidden; background: var(--md-sand); box-shadow: 8px 8px 0 var(--md-accent); }
 .md-author-photo img { width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; display: block; }
 .md-author-bio h2 { font-family: var(--md-serif); font-size: 1.7rem; line-height: 1.2; font-weight: 800; margin: 0 0 4px; }
 .md-author-role { margin: 0 0 14px; color: var(--md-muted); font-weight: 700; }
@@ -384,7 +384,7 @@
 .md-author-credentials li { position: relative; padding-left: 26px; }
 .md-author-credentials li::before { content: '✓'; position: absolute; left: 0; top: 0; color: var(--md-olive); font-weight: 800; }
 @media (min-width: 780px) {
-  .md-author { grid-template-columns: minmax(0,220px) minmax(0,1fr); gap: 40px; align-items: start; }
+  .md-author { grid-template-columns: minmax(0,340px) minmax(0,1fr); gap: 40px; align-items: start; }
   .md-author-photo { margin: 0; max-width: none; box-shadow: 10px 10px 0 var(--md-accent); }
 }
 .md-404 { text-align: center; padding-block: clamp(80px,12vw,170px); }
