@@ -2,9 +2,14 @@ import type { Metadata } from 'next'
 import HomePageView from '@/components/md/HomePageView'
 import { getHomeData } from '@/lib/md-data'
 import { UI_TEXT } from '@/lib/i18n'
-import { allLanguageAlternates } from '@/lib/seo'
+import { allLanguageAlternates, SITE_NAME } from '@/lib/seo'
 import { SUPPORTED_LANGUAGES, type RecipeLanguage } from '@/types/recipe'
 import { legacyMetadata, LegacyPublicPage } from '@/lib/legacy-route'
+import { absoluteUrl, getSiteUrl } from '@/lib/site'
+
+// Sin foto propia de portada para el home; se usa el logo real de la marca como
+// respaldo en vez de inventar una imagen que no existe.
+const HOME_FALLBACK_IMAGE = absoluteUrl('/brand/logo-manual-de-cocina.png')
 
 export const revalidate = 3600
 
@@ -22,10 +27,25 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   // Un solo segmento que no es idioma: URL histórica en la raíz (p. ej. /receta-bondiola-de-cerdo).
   if (!lang) return legacyMetadata('/' + rawLang)
   const text = UI_TEXT[lang]
+  const url = `${getSiteUrl()}/${lang}`
+  const images = [{ url: HOME_FALLBACK_IMAGE, alt: SITE_NAME, width: 640, height: 188 }]
   return {
     title: text.homeTitle,
     description: text.homeDescription,
     alternates: allLanguageAlternates('/' + lang, (l) => '/' + l),
+    openGraph: {
+      type: 'website',
+      title: text.homeTitle,
+      description: text.homeDescription,
+      url,
+      images,
+    },
+    twitter: {
+      card: 'summary',
+      title: text.homeTitle,
+      description: text.homeDescription,
+      images,
+    },
   }
 }
 

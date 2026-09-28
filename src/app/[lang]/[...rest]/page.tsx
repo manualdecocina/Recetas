@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound, permanentRedirect } from 'next/navigation'
 import { getContentPageByPublicPath, getRecipeByPublicPath, getRecipeTranslations } from '@/lib/public-content'
-import { recipeAlternates, recipeMetaText } from '@/lib/seo'
+import { recipeAlternates, recipeMetaText, withSiteName } from '@/lib/seo'
 import { publicUrl, absoluteUrl } from '@/lib/site'
 import { SUPPORTED_LANGUAGES } from '@/types/recipe'
 import { RecipeDocument } from '@/components/RecipeDocument'
@@ -37,16 +37,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const recipe = await getRecipeByPublicPath(path)
   if (recipe) {
     const translations = await getRecipeTranslations(recipe.recipe_group_id)
+    const meta = recipeMetaText(recipe)
+    const images = recipe.image_url ? [{ url: absoluteUrl(recipe.image_url), alt: recipe.title }] : undefined
     return {
-      title: recipeMetaText(recipe).title,
-      description: recipeMetaText(recipe).description,
+      title: meta.title,
+      description: meta.description,
       alternates: recipeAlternates(recipe, translations),
       openGraph: {
         type: 'article',
-        title: recipe.title,
-        description: recipe.excerpt ?? undefined,
+        title: meta.title,
+        description: meta.description,
         url: publicUrl(recipe.public_path),
-        images: recipe.image_url ? [absoluteUrl(recipe.image_url)] : undefined,
+        images,
+      },
+      twitter: {
+        card: images ? 'summary_large_image' : 'summary',
+        title: meta.title,
+        description: meta.description,
+        images,
       },
     }
   }
@@ -54,16 +62,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const page = await getContentPageByPublicPath(path)
   if (!page) return {}
 
+  const pageTitle = withSiteName(page.title)
+  const pageImages = page.featured_image_url ? [{ url: absoluteUrl(page.featured_image_url), alt: page.title }] : undefined
   return {
-    title: page.title,
+    title: pageTitle,
     description: page.excerpt ?? undefined,
     alternates: { canonical: publicUrl(page.public_path) },
     openGraph: {
       type: 'article',
-      title: page.title,
+      title: pageTitle,
       description: page.excerpt ?? undefined,
       url: publicUrl(page.public_path),
-      images: page.featured_image_url ? [page.featured_image_url] : undefined,
+      images: pageImages,
+    },
+    twitter: {
+      card: pageImages ? 'summary_large_image' : 'summary',
+      title: pageTitle,
+      description: page.excerpt ?? undefined,
+      images: pageImages,
     },
   }
 }

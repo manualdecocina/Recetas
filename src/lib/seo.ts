@@ -2,6 +2,15 @@ import type { Metadata } from 'next'
 import { SUPPORTED_LANGUAGES } from '@/types/recipe'
 import { getSiteUrl, normalizePublicPath, publicUrl } from '@/lib/site'
 
+export const SITE_NAME = 'Manual de Cocina'
+const TITLE_SUFFIX = ` | ${SITE_NAME}`
+
+/** Añade " | Manual de Cocina" una única vez, aunque el título ya lo traiga (SQL manual, etc.). */
+export function withSiteName(title: string): string {
+  const base = title.endsWith(TITLE_SUFFIX) ? title.slice(0, -TITLE_SUFFIX.length) : title
+  return `${base}${TITLE_SUFFIX}`
+}
+
 type Languages = NonNullable<NonNullable<Metadata['alternates']>['languages']>
 
 export function allLanguageAlternates(
@@ -37,7 +46,7 @@ export function recipeAlternates(
 /** Título y descripción para buscadores: usa `seo.title` / `seo.description` si existen. */
 export function recipeMetaText(recipe: { title: string; excerpt: string | null; seo?: Record<string, unknown> | null }): { title: string; description: string | undefined } {
   const seo = recipe.seo ?? {}
-  const title = typeof seo.title === 'string' && seo.title.trim() ? seo.title.trim() : recipe.title
+  const rawTitle = typeof seo.title === 'string' && seo.title.trim() ? seo.title.trim() : recipe.title
   const description = typeof seo.description === 'string' && seo.description.trim() ? seo.description.trim() : (recipe.excerpt ?? undefined)
-  return { title, description }
+  return { title: withSiteName(rawTitle), description }
 }

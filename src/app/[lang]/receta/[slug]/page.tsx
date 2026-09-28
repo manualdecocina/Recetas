@@ -70,17 +70,25 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const recipe = await getRecipe(lang, slug)
   if (!recipe) return {}
   const translations = await getTranslations(recipe.recipe_group_id)
+  const meta = recipeMetaText(recipe)
+  const images = recipe.image_url ? [{ url: absoluteUrl(recipe.image_url), alt: recipe.title }] : undefined
 
   return {
-    title: recipeMetaText(recipe).title,
-    description: recipeMetaText(recipe).description,
+    title: meta.title,
+    description: meta.description,
     alternates: recipeAlternates(recipe, translations),
     openGraph: {
       type: 'article',
-      title: recipe.title,
-      description: recipe.excerpt ?? undefined,
+      title: meta.title,
+      description: meta.description,
       url: publicUrl(recipe.public_path),
-      images: recipe.image_url ? [absoluteUrl(recipe.image_url)] : undefined,
+      images,
+    },
+    twitter: {
+      card: images ? 'summary_large_image' : 'summary',
+      title: meta.title,
+      description: meta.description,
+      images,
     },
   }
 }
