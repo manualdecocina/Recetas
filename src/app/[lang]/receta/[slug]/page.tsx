@@ -3,8 +3,8 @@ import { cache } from 'react'
 import type { Metadata } from 'next'
 import { supabase } from '@/lib/supabase/public'
 import { getRelatedRecipes } from '@/lib/public-content'
-import { recipeAlternates, recipeMetaText } from '@/lib/seo'
-import { normalizePublicPath, recipePath, publicUrl, absoluteUrl } from '@/lib/site'
+import { recipeAlternates, recipeMetaText, recipeSocialImages } from '@/lib/seo'
+import { normalizePublicPath, recipePath, publicUrl } from '@/lib/site'
 import { RecipeDocument } from '@/components/RecipeDocument'
 import type { RecipeIngredient } from '@/types/recipe'
 import { SUPPORTED_LANGUAGES, type Recipe, type RecipeLanguage } from '@/types/recipe'
@@ -72,7 +72,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!recipe) return {}
   const translations = await getTranslations(recipe.recipe_group_id)
   const meta = recipeMetaText(recipe)
-  const images = recipe.image_url ? [{ url: absoluteUrl(recipe.image_url), alt: recipe.title }] : undefined
+  const images = recipeSocialImages(recipe)
 
   return {
     title: meta.title,
