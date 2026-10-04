@@ -71,6 +71,9 @@ Estas reglas aplican a toda receta nueva y a toda receta histórica que se recon
   - FAQ solo cuando las preguntas y respuestas sean útiles, reales y también visibles en la página. Google retiró el rich result de FAQ en 2026: mantener la sección por utilidad editorial, pero no crear ni depender de `FAQPage` para SEO.
   - `aggregateRating` únicamente con votos reales; nunca inventar valoraciones.
 - **Imágenes:** portada y fotos de pasos deben usar rutas públicas estables y persistentes. No publicar una receta que apunte a archivos temporales de un deploy.
+  - Para recetas nuevas/reconstruidas, preparar variantes de portada 1:1, 4:3 y 16:9 cuando exista material suficiente.
+  - Guardar sus rutas en `seo.image_variants` usando el objeto `seo` ya existente; no se añade ninguna columna nueva.
+  - `Recipe.image` consume esas variantes y después la portada principal/galería, eliminando duplicados.
 - **Control de calidad antes de publicar:** verificar que portada, pasos, nutrición, SEO, FAQ, traducciones, canonical/hreflang y URL histórica estén completos. Si falta uno de los campos obligatorios, la receta permanece en borrador/`ready`.
 
 ## Estado de verificación v0.3
