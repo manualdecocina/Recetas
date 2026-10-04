@@ -107,3 +107,16 @@ Las funciones de sincronización viven en el esquema interno `private`, usan `SE
 - las 20 recetas ES publicadas fueron reconciliadas;
 - quedan pendientes únicamente expresiones realmente ambiguas o ingredientes todavía no aprobados;
 - el Security Advisor no reporta las funciones internas como expuestas.
+
+
+### Regla específica para aceites — 2026-10-04
+
+El catálogo no usa un canonical genérico `aceite`.
+
+Por ahora solo existen como canónicos:
+- `Aceite de oliva`
+- `Aceite vegetal`
+
+Si una receta indica únicamente `aceite`, se considera una expresión ambigua y queda en `recipe_ingredient_pending` hasta precisar el tipo.
+
+Otros aceites (por ejemplo, aceite de coco) solo se crean como canonical cuando una receta realmente los use de forma explícita.
