@@ -1,0 +1,19 @@
+/* Reset mínimo exclusivo del sitio público.
+ * El panel /admin conserva globals.css; el frontend nuevo usa únicamente clases md-* de site.css. */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  background: var(--md-paper);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--md-paper);
+  color: var(--md-ink);
+  font-family: var(--md-sans);
+}
+
+a { color: inherit; }
+button, input, select, textarea { font: inherit; }
