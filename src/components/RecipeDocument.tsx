@@ -38,8 +38,18 @@ export async function RecipeDocument({ recipe, relatedRecipes = [] }: { recipe: 
     { '@type': 'ListItem', position: 3, name: recipe.title, item: publicUrl(recipe.public_path) },
   ] }
 
-  const galleryImages = [recipe.image_url, ...(Array.isArray(recipe.gallery) ? recipe.gallery.map((g) => (typeof g?.url === 'string' ? g.url : null)) : [])]
-    .filter((u): u is string => Boolean(u)).map(absoluteUrl)
+  const seoMeta = (recipe.seo ?? {}) as Record<string, unknown>
+  const imageVariants = Array.isArray(seoMeta.image_variants)
+    ? seoMeta.image_variants.filter((u): u is string => typeof u === 'string' && u.trim().length > 0)
+    : []
+  const galleryImages = [
+    ...imageVariants,
+    recipe.image_url,
+    ...(Array.isArray(recipe.gallery) ? recipe.gallery.map((g) => (typeof g?.url === 'string' ? g.url : null)) : []),
+  ]
+    .filter((u): u is string => Boolean(u))
+    .map(absoluteUrl)
+    .filter((url, index, all) => all.indexOf(url) === index)
   const n = (recipe.nutrition ?? {}) as Record<string, unknown>
   const num = (k: string) => (typeof n[k] === 'number' ? (n[k] as number) : null)
   const nutritionLd = num('calories') != null ? {
@@ -65,7 +75,6 @@ export async function RecipeDocument({ recipe, relatedRecipes = [] }: { recipe: 
     bestRating: '5',
     worstRating: '1',
   } : undefined
-  const seoMeta = (recipe.seo ?? {}) as Record<string, unknown>
   const video = parseVideo(recipe.video_urls?.[0])
   const videoLd = video && typeof seoMeta.video_upload_date === 'string' ? {
     '@type': 'VideoObject',
