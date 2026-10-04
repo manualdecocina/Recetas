@@ -179,3 +179,14 @@ Si aparece una necesidad que la arquitectura actual no contempla, primero se reg
 **D-066:** la receta nueva debe seguir el modelo de producto vigente; no se permiten excepciones silenciosas.
 
 **D-067:** la publicación diaria seguirá este procedimiento como regla permanente del proyecto.
+
+
+## Fuentes externas, nutrición y límites profesionales
+
+- No añadir enlaces salientes por cantidad ni como truco SEO. Añadirlos solo cuando aporten contexto o respalden una afirmación verificable.
+- Priorizar fuentes primarias o de alta autoridad: organismos públicos, universidades, documentación oficial, bases de datos alimentarias y fuentes culturales/históricas fiables.
+- Cuando una receta incluya estimaciones nutricionales, indicar de forma visible que son **estimaciones informativas** y pueden variar por marcas, porciones y método de preparación.
+- El autor de Manual de Cocina no debe presentarse como nutricionista, médico ni profesional sanitario si no posee esas credenciales.
+- En contenido de salud, nutrición clínica, cáncer, dietas terapéuticas, alergias o seguridad alimentaria, añadir una aclaración proporcional al riesgo: el contenido no sustituye consejo médico o nutricional profesional.
+- Un descargo de responsabilidad no convierte una afirmación médica débil en aceptable: las afirmaciones sensibles deben estar respaldadas por fuentes adecuadas o eliminarse.
+- Las fuentes externas deben ser editoriales y contextuales; no insertar enlaces irrelevantes únicamente para “tener enlaces salientes”.
