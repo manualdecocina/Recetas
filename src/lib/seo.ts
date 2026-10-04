@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { SUPPORTED_LANGUAGES } from '@/types/recipe'
-import { getSiteUrl, normalizePublicPath, publicUrl } from '@/lib/site'
+import { getSiteUrl, normalizePublicPath, publicUrl, absoluteUrl } from '@/lib/site'
 
 export const SITE_NAME = 'Manual de Cocina'
 const TITLE_SUFFIX = ` | ${SITE_NAME}`
@@ -49,4 +49,25 @@ export function recipeMetaText(recipe: { title: string; excerpt: string | null; 
   const rawTitle = typeof seo.title === 'string' && seo.title.trim() ? seo.title.trim() : recipe.title
   const description = typeof seo.description === 'string' && seo.description.trim() ? seo.description.trim() : (recipe.excerpt ?? undefined)
   return { title: withSiteName(rawTitle), description }
+}
+
+
+/** Imágenes sociales de una receta. Si seo.image_variants contiene las variantes
+ * 1:1/4:3/16:9, se publican antes de la portada principal. Sin variantes mantiene
+ * el comportamiento histórico de una sola portada. */
+export function recipeSocialImages(recipe: {
+  title: string
+  image_url: string | null
+  seo?: Record<string, unknown> | null
+}): Array<{ url: string; alt: string }> | undefined {
+  const seo = recipe.seo ?? {}
+  const variants = Array.isArray(seo.image_variants)
+    ? seo.image_variants.filter((value): value is string => typeof value === 'string' && value.trim().length > 0)
+    : []
+  const urls = [...variants, recipe.image_url]
+    .filter((value): value is string => Boolean(value))
+    .map(absoluteUrl)
+    .filter((url, index, all) => all.indexOf(url) === index)
+
+  return urls.length ? urls.map((url) => ({ url, alt: recipe.title })) : undefined
 }
