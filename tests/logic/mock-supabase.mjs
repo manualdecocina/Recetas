@@ -9,6 +9,7 @@ function query(kind) {
   const q = {
     select() { return q },
     eq() { return q },
+    not() { return q },
     order() { return q },
     range(a, b) { from = a; to = b; return q },
     then(res) { res({ data: source.slice(from, to + 1), error: null }) },
