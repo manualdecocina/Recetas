@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
-    "test:logic": "node --experimental-strip-types --no-warnings --import ./tests/logic/register.mjs tests/logic/seo.test.mts && node --experimental-strip-types --no-warnings --import ./tests/logic/register.mjs tests/logic/sitemap.test.mts"
+    "test:logic": "node --experimental-strip-types --no-warnings --import ./tests/logic/register.mjs tests/logic/seo.test.mts && node --experimental-strip-types --no-warnings --import ./tests/logic/register.mjs tests/logic/sitemap.test.mts && node --experimental-strip-types --no-warnings --import ./tests/logic/register.mjs tests/logic/recipe-schema.test.mts"
   },
   "dependencies": {
     "@supabase/ssr": "^0.5.2",
