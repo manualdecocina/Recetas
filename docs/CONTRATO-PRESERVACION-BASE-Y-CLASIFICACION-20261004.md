@@ -46,9 +46,11 @@ No se usan para invalidar o rehacer la clasificación editorial histórica ya co
 
 ## Producción de las recetas pendientes
 
-La base de datos y el inventario histórico sirven para identificar y preservar las URL públicas (incluido `public_path`) y los idiomas asociados. Search Console aporta las URL afectadas y la prioridad de recuperación. Antes de publicar cada página, comprobar que su ruta resuelve correctamente y que el contenido corresponde al idioma esperado; registrar y corregir por separado los errores 403 observados.
+Solo los **20 grupos de recetas publicados** tienen contenido y localizaciones válidas para la web nueva. Las demás filas, páginas o traducciones heredadas no equivalen a recetas nuevas terminadas.
 
-Las 20 recetas ya publicadas son el avance editorial actual. Para las otras URL seleccionadas, crear recetas y textos **nuevos** conforme al modelo vigente y a la clasificación aprobada. El contenido antiguo o en borrador puede orientar la identificación de la URL, pero no debe traducirse ni publicarse en lote como si fuera contenido nuevo. Revisar y publicar cada idioma de forma editorial, respetando las rutas históricas.
+Para cada receta pendiente, el sitemap anterior y el URL Master aportan únicamente la URL histórica, el idioma y la decisión URL-by-URL ya aprobada (KEEP / REBUILD, MIGRATE / MERGE, REVIEW u OUT). Search Console ayuda a priorizar y proteger esas rutas. No se reutilizan ni traducen textos, ingredientes, pasos, metadatos editoriales o traducciones de TranslatePress/WordPress; los borradores heredados tampoco son una fuente de publicación. Crear contenido original que responda a la intención de búsqueda de cada URL con el contrato editorial del README, revisar la receta y sus localizaciones y publicar solo tras superar el gate.
+
+Conservar los datos heredados hasta completar el inventario y respaldo técnico; **descartar como fuente editorial no significa borrar tablas o registros**. Antes de mover el dominio principal, verificar que ninguna `content_page` heredada se sirva o indexe como sustituto de una receta pendiente, y resolver cada URL histórica según su decisión aprobada. Comprobar HTTP, canonical, hreflang y sitemap. Un 403 es una incidencia de acceso que se diagnostica aparte; una URL aún sin contenido aprobado no se convierte en una página vacía indexable para evitarlo.
 
 ## Principio de limpieza
 
