@@ -60,6 +60,8 @@ export default function RecipeDocumentVisual({ recipe, relatedRecipes = [], note
     [t.sodium, nv('sodium_mg'), 'mg'],
   ].filter((r): r is [string, number, string] => r[1] !== null);
   const nutritionNote = typeof nutrition.note === 'string' ? nutrition.note : t.nutritionEstimated;
+  const nutritionSource = typeof nutrition.source === 'string' ? nutrition.source : null;
+  const nutritionSourceUrl = nutritionSource?.includes('USDA FoodData Central') ? 'https://fdc.nal.usda.gov/' : null;
   const summaryParagraphs = (recipe.summary ?? '').split(/\n{2,}/).map((x) => x.trim()).filter(Boolean);
 
   return (
@@ -147,6 +149,15 @@ export default function RecipeDocumentVisual({ recipe, relatedRecipes = [], note
                   </dl>
                 </div>
                 <p className="md-nutrition-note">{nutritionNote}</p>
+                {nutritionSource && (
+                  <p className="md-nutrition-source">
+                    <strong>{t.nutritionSourceLabel}:</strong>{' '}
+                    {nutritionSourceUrl ? (
+                      <a href={nutritionSourceUrl} target="_blank" rel="noopener noreferrer">{nutritionSource}</a>
+                    ) : nutritionSource}
+                  </p>
+                )}
+                <p className="md-nutrition-disclaimer">{t.nutritionDisclaimer}</p>
               </section>
             )}
             {video && (
