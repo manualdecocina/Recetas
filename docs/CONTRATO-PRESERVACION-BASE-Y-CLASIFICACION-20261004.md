@@ -31,6 +31,8 @@ Idiomas soportados actualmente:
 
 Portugués permanece técnicamente como `pt`. No migrar a `pt-BR` sin una decisión explícita de arquitectura y análisis de impacto SEO.
 
+En la interfaz, identificarlo como **Português (Brasil)**, coherente con la bandera brasileña. Mantener `pt` en las rutas y el modelo actual.
+
 ## Search Console
 
 Los datos históricos de Search Console se usan para:
@@ -41,6 +43,12 @@ Los datos históricos de Search Console se usan para:
 - orientar enlazado y snippets.
 
 No se usan para invalidar o rehacer la clasificación editorial histórica ya consolidada.
+
+## Producción de las recetas pendientes
+
+La base de datos y el inventario histórico sirven para identificar y preservar las URL públicas (incluido `public_path`) y los idiomas asociados. Search Console aporta las URL afectadas y la prioridad de recuperación. Antes de publicar cada página, comprobar que su ruta resuelve correctamente y que el contenido corresponde al idioma esperado; registrar y corregir por separado los errores 403 observados.
+
+Las 20 recetas ya publicadas son el avance editorial actual. Para las otras URL seleccionadas, crear recetas y textos **nuevos** conforme al modelo vigente y a la clasificación aprobada. El contenido antiguo o en borrador puede orientar la identificación de la URL, pero no debe traducirse ni publicarse en lote como si fuera contenido nuevo. Revisar y publicar cada idioma de forma editorial, respetando las rutas históricas.
 
 ## Principio de limpieza
 
