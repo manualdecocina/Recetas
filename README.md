@@ -68,7 +68,7 @@ Estas reglas aplican a toda receta nueva y a toda receta histórica que se recon
   - Canonical basado en `public_path`; si existe URL histórica recuperable, se conserva.
   - Hreflang entre las versiones del mismo `recipe_group_id`.
   - `Recipe` JSON-LD con nombre, descripción, imagen rastreable, ingredientes, instrucciones, tiempos, rendimiento/porciones, categoría, cocina, palabras clave y nutrición cuando exista.
-  - FAQ solo cuando las preguntas y respuestas sean útiles, reales y también visibles en la página. No crear FAQ solo para schema.
+  - FAQ solo cuando las preguntas y respuestas sean útiles, reales y también visibles en la página. Google retiró el rich result de FAQ en 2026: mantener la sección por utilidad editorial, pero no crear ni depender de `FAQPage` para SEO.
   - `aggregateRating` únicamente con votos reales; nunca inventar valoraciones.
 - **Imágenes:** portada y fotos de pasos deben usar rutas públicas estables y persistentes. No publicar una receta que apunte a archivos temporales de un deploy.
 - **Control de calidad antes de publicar:** verificar que portada, pasos, nutrición, SEO, FAQ, traducciones, canonical/hreflang y URL histórica estén completos. Si falta uno de los campos obligatorios, la receta permanece en borrador/`ready`.
