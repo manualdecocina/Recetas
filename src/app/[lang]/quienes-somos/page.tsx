@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import { InstitutionalPage } from '@/components/InstitutionalPage'
-import { getSiteUrl, normalizePublicPath } from '@/lib/site'
+import { absoluteUrl, getSiteUrl, normalizePublicPath } from '@/lib/site'
 import { SUPPORTED_LANGUAGES, type RecipeLanguage } from '@/types/recipe'
 
 interface QuienesSomosContent {
@@ -201,8 +201,20 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
   const { lang } = await params
   const language = resolveLanguage(lang)
   const t = CONTENT[language]
+  const personLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    '@id': `${getSiteUrl()}/${language}/quienes-somos/#person`,
+    name: 'Néstor Bastidas',
+    url: `${getSiteUrl()}/${language}/quienes-somos`,
+    image: absoluteUrl('/autor/nestor-bastidas.webp'),
+    jobTitle: t.role,
+    description: t.metaDescription,
+    worksFor: { '@id': `${getSiteUrl()}/#organization` },
+  }
   return (
     <InstitutionalPage lang={lang} slug="quienes-somos" eyebrow={t.eyebrow} title={t.title} intro={t.intro}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personLd).replace(/</g, '\\u003c') }} />
       <div className="md-author">
         <figure className="md-author-photo">
           <Image
