@@ -65,34 +65,5 @@ export default async function LanguageHome({ params }: { params: Promise<{ lang:
   if (!lang) return <LegacyPublicPage path={'/' + rawLang} />
 
   const data = await getHomeData(lang)
-  const siteUrl = getSiteUrl()
-  const graph = {
-    '@context': 'https://schema.org',
-    '@graph': [
-      {
-        '@type': 'Organization',
-        '@id': `${siteUrl}/#organization`,
-        name: SITE_NAME,
-        url: siteUrl,
-        logo: {
-          '@type': 'ImageObject',
-          url: absoluteUrl('/brand/logo-manual-de-cocina.png'),
-        },
-      },
-      {
-        '@type': 'WebSite',
-        '@id': `${siteUrl}/#website`,
-        name: SITE_NAME,
-        url: siteUrl,
-        inLanguage: SUPPORTED_LANGUAGES,
-        publisher: { '@id': `${siteUrl}/#organization` },
-      },
-    ],
-  }
-  return (
-    <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(graph).replace(/</g, '\\u003c') }} />
-      <HomePageView lang={lang} data={data} />
-    </>
-  )
+  return <HomePageView lang={lang} data={data} />
 }
