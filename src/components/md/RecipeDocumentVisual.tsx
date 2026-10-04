@@ -29,6 +29,7 @@ export default function RecipeDocumentVisual({ recipe, relatedRecipes = [], note
   notesHtml?: string | null;
 }) {
   const t = getMdCopy(recipe.language);
+  const ratingsEnabled = process.env.NEXT_PUBLIC_RATINGS_ENABLED === 'true';
   const computedTotal = recipe.total_time_minutes ?? (
     recipe.prep_time_minutes != null && recipe.cook_time_minutes != null
       ? recipe.prep_time_minutes + recipe.cook_time_minutes : null
@@ -82,7 +83,7 @@ export default function RecipeDocumentVisual({ recipe, relatedRecipes = [], note
             {facts.length > 0 && <dl className="md-recipe-facts">{facts.map((fact) => (
               <div className="md-recipe-fact" key={fact.label}><dt>{fact.label}</dt><dd>{fact.value}</dd></div>
             ))}</dl>}
-            <RatingWidget recipeId={recipe.id} lang={lang} ratingCount={recipe.rating_count ?? 0} ratingSum={recipe.rating_sum ?? 0} />
+            {ratingsEnabled && <RatingWidget recipeId={recipe.id} lang={lang} ratingCount={recipe.rating_count ?? 0} ratingSum={recipe.rating_sum ?? 0} />}
             <div className="md-article-actions">
               <RecipeCookingMode lang={lang} steps={recipe.steps} />
               <FavoriteButton recipeId={recipe.id} lang={lang} />
