@@ -1,5 +1,5 @@
 'use client';
-import { useMemo, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import Link from 'next/link';
 import RecipeCard from './RecipeCard';
 import { getMdCopy } from '@/lib/copy';
@@ -13,6 +13,7 @@ import type { MdPantryIngredient, MdPantryRecipe } from '@/lib/md-data';
  */
 
 const MAX_RESULTS = 30;
+const PANTRY_STORAGE_KEY = 'manualdecocina:pantry:selectedSlugs';
 
 interface Match {
   recipe: MdPantryRecipe;
@@ -65,6 +66,18 @@ export default function PantryMatchView({ ingredients, recipes }: { ingredients:
   const resultsHeadingRef = useRef<HTMLHeadingElement>(null);
 
   const ingredientNameById = useMemo(() => new Map(ingredients.map((i) => [i.id, i.name])), [ingredients]);
+  const ingredientById = useMemo(() => new Map(ingredients.map((i) => [i.id, i])), [ingredients]);
+
+  useEffect(() => {
+    try {
+      const raw = localStorage.getItem(PANTRY_STORAGE_KEY);
+      const storedSlugs: unknown = raw ? JSON.parse(raw) : [];
+      if (!Array.isArray(storedSlugs) || storedSlugs.length === 0) return;
+      const slugs = new Set(storedSlugs.filter((value): value is string => typeof value === 'string'));
+      const restored = ingredients.filter((ingredient) => slugs.has(ingredient.slug)).map((ingredient) => ingredient.id);
+      if (restored.length) setSelected(new Set(restored));
+    } catch { /* La herramienta funciona aunque localStorage no esté disponible. */ }
+  }, [ingredients]);
   const filteredIngredients = useMemo(() => {
     const q = filter.trim().toLocaleLowerCase('es');
     if (!q) return ingredients;
@@ -72,11 +85,21 @@ export default function PantryMatchView({ ingredients, recipes }: { ingredients:
   }, [ingredients, filter]);
   const matches = useMemo(() => computeMatches(recipes, selected, ingredientNameById), [recipes, selected, ingredientNameById]);
 
+  function persistSelection(next: Set<string>) {
+    try {
+      const slugs = Array.from(next)
+        .map((id) => ingredientById.get(id)?.slug)
+        .filter((slug): slug is string => Boolean(slug));
+      localStorage.setItem(PANTRY_STORAGE_KEY, JSON.stringify(slugs));
+    } catch { /* Sin persistencia: la selección actual sigue funcionando. */ }
+  }
+
   function toggle(id: string) {
     setSelected((prev) => {
       const next = new Set(prev);
       if (next.has(id)) next.delete(id);
       else next.add(id);
+      persistSelection(next);
       return next;
     });
   }
@@ -91,7 +114,9 @@ export default function PantryMatchView({ ingredients, recipes }: { ingredients:
   }
 
   function clearSelection() {
-    setSelected(new Set());
+    const next = new Set<string>();
+    setSelected(next);
+    persistSelection(next);
     setHasViewedResults(false);
   }
 
@@ -190,8 +215,10 @@ export default function PantryMatchView({ ingredients, recipes }: { ingredients:
                 </span>
                 <RecipeCard recipe={recipe} />
                 {checklist.length > 0 && (
-                  <div className="md-pantry-checklist">
-                    <strong>Tu lista para esta receta</strong>
+                  <details className="md-pantry-checklist">
+                    <summary>
+                      {isComplete ? 'Ver ingredientes' : `Ver ingredientes · ${effectiveMissingCount} ${effectiveMissingCount === 1 ? 'faltante' : 'faltantes'}`}
+                    </summary>
                     <ul>
                       {checklist.map((item) => (
                         <li key={item.id} className={item.owned ? 'md-pantry-check-owned' : 'md-pantry-check-missing'}>
@@ -200,7 +227,7 @@ export default function PantryMatchView({ ingredients, recipes }: { ingredients:
                         </li>
                       ))}
                     </ul>
-                  </div>
+                  </details>
                 )}
                 {missing.length > 0 && (
                   <p className="md-pantry-missing-list"><strong>{t.pantryMissingPrefix}</strong> {missing.join(', ')}</p>
