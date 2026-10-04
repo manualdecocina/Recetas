@@ -74,7 +74,7 @@ export default async function LanguageHome({ params }: { params: Promise<{ lang:
         '@id': `${siteUrl}/#website`,
         name: SITE_NAME,
         url: siteUrl,
-        inLanguage: lang,
+        inLanguage: SUPPORTED_LANGUAGES,
         publisher: { '@id': `${siteUrl}/#organization` },
       },
     ],
