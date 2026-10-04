@@ -133,23 +133,7 @@
 .md-footer-links a { width: fit-content; color: var(--md-footer-fg); font-size: .92rem; text-decoration: none; }
 .md-footer-links a:hover { color: var(--md-accent); text-decoration: underline; }
 .md-footer-bottom { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 16px; border-top: 1px solid rgb(255 255 255 / 18%); color: var(--md-footer-fg); opacity: .8; font-size: .82rem; padding-top: 19px; margin-top: 40px; }
-.md-footer-cookie-btn { background: none; border: none; padding: 0; margin: 0; color: inherit; font: inherit; text-decoration: underline; text-underline-offset: 2px; cursor: pointer; opacity: .9; }
-.md-footer-cookie-btn:hover { color: var(--md-accent); opacity: 1; }
 
-/* Banner de consentimiento de cookies */
-.md-cookie-banner { position: fixed; inset-inline: 0; bottom: 0; z-index: 90; display: flex; justify-content: center; padding: 14px; pointer-events: none; }
-.md-cookie-banner-card { pointer-events: auto; width: min(100%, 880px); background: var(--md-white); color: var(--md-ink); border: 2px solid var(--md-stone); border-top: 6px solid var(--md-accent); border-radius: var(--md-radius); box-shadow: 0 18px 44px rgb(0 0 0 / 24%); padding: 20px 22px; display: grid; gap: 16px; }
-.md-cookie-banner-text { margin: 0; font-size: .93rem; line-height: 1.55; color: var(--md-muted); }
-.md-cookie-banner-text a { color: var(--md-olive-dark); font-weight: 700; text-decoration: underline; text-underline-offset: 2px; }
-.md-cookie-banner-actions { display: flex; flex-wrap: wrap; gap: 10px; }
-.md-cookie-banner-actions .md-button, .md-cookie-banner-actions .md-button-secondary { flex: 1 1 auto; justify-content: center; text-align: center; }
-@media (min-width: 640px) {
-  .md-cookie-banner { padding: 20px; }
-  .md-cookie-banner-card { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-  .md-cookie-banner-text { flex: 1 1 auto; }
-  .md-cookie-banner-actions { flex: 0 0 auto; }
-  .md-cookie-banner-actions .md-button, .md-cookie-banner-actions .md-button-secondary { flex: 0 0 auto; }
-}
 /* Portada */
 .md-home-hero { display: grid; grid-template-columns: 1fr; background: var(--md-paper); overflow: hidden; }
 .md-home-hero-copy { padding: clamp(30px, 5.6vw, 78px) max(18px, calc((100vw - var(--md-container)) / 2)); align-self: center; }
