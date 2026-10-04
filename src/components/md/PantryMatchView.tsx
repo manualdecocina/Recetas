@@ -1,5 +1,5 @@
 'use client';
-import { useMemo, useState } from 'react';
+import { useMemo, useRef, useState } from 'react';
 import Link from 'next/link';
 import RecipeCard from './RecipeCard';
 import { getMdCopy } from '@/lib/copy';
@@ -56,6 +56,8 @@ export default function PantryMatchView({ ingredients, recipes }: { ingredients:
   const t = getMdCopy('es');
   const [selected, setSelected] = useState<Set<string>>(new Set());
   const [filter, setFilter] = useState('');
+  const [hasViewedResults, setHasViewedResults] = useState(false);
+  const resultsHeadingRef = useRef<HTMLHeadingElement>(null);
 
   const ingredientNameById = useMemo(() => new Map(ingredients.map((i) => [i.id, i.name])), [ingredients]);
   const filteredIngredients = useMemo(() => {
@@ -74,19 +76,41 @@ export default function PantryMatchView({ ingredients, recipes }: { ingredients:
     });
   }
 
+  function viewResults() {
+    if (selected.size === 0) return;
+    setHasViewedResults(true);
+    window.requestAnimationFrame(() => {
+      resultsHeadingRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      window.setTimeout(() => resultsHeadingRef.current?.focus({ preventScroll: true }), 450);
+    });
+  }
+
+  function clearSelection() {
+    setSelected(new Set());
+    setHasViewedResults(false);
+  }
+
   return (
     <main className="md-container" id="md-main">
       <header className="md-page-head">
         <p className="md-eyebrow">{t.pantryEyebrow}</p>
         <h1 className="md-display">{t.pantryToolHeading}</h1>
         <p className="md-lead md-page-intro">{t.pantryToolIntro}</p>
+        <div className="md-pantry-how" aria-label="Cómo funciona">
+          <strong>Así funciona</strong>
+          <ol>
+            <li><span>1</span> Marca los ingredientes que tienes.</li>
+            <li><span>2</span> Pulsa <b>Ver qué puedo cocinar</b>.</li>
+            <li><span>3</span> Te mostramos primero las recetas para las que te falta menos.</li>
+          </ol>
+        </div>
       </header>
 
       <section className="md-pantry-picker-section md-section" aria-labelledby="md-pantry-picker-heading">
         <div className="md-pantry-picker-head">
           <h2 className="md-title" id="md-pantry-picker-heading">{t.pantryPickerHeading}</h2>
           {selected.size > 0 && (
-            <button type="button" className="md-button-quiet" onClick={() => setSelected(new Set())}>
+            <button type="button" className="md-button-quiet" onClick={clearSelection}>
               {t.pantryClearSelection}
             </button>
           )}
@@ -117,11 +141,28 @@ export default function PantryMatchView({ ingredients, recipes }: { ingredients:
           })}
           {filteredIngredients.length === 0 && <p className="md-pantry-no-ingredients">{t.pantryNoIngredientsFound}</p>}
         </div>
+
+        <div className="md-pantry-action" aria-live="polite">
+          <p>
+            {selected.size === 0
+              ? 'Marca uno o varios ingredientes para empezar.'
+              : `${selected.size} ${selected.size === 1 ? 'ingrediente seleccionado' : 'ingredientes seleccionados'}.`}
+          </p>
+          <button
+            type="button"
+            className="md-button md-pantry-view-results"
+            disabled={selected.size === 0}
+            onClick={viewResults}
+          >
+            {hasViewedResults ? 'Actualizar recetas' : 'Ver qué puedo cocinar'}
+            {selected.size > 0 && <span aria-hidden="true"> ↓</span>}
+          </button>
+        </div>
       </section>
 
-      <section className="md-section" aria-labelledby="md-pantry-results-heading">
+      <section className={`md-section md-pantry-results${hasViewedResults ? ' md-pantry-results-viewed' : ''}`} aria-labelledby="md-pantry-results-heading">
         <div className="md-section-head">
-          <h2 className="md-title" id="md-pantry-results-heading">{t.pantryResultsHeading}</h2>
+          <h2 className="md-title" id="md-pantry-results-heading" ref={resultsHeadingRef} tabIndex={-1}>{t.pantryResultsHeading}</h2>
         </div>
         {selected.size === 0 && (
           <div className="md-empty-block">
