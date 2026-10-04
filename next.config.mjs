@@ -15,6 +15,17 @@ for (const host of ['manualdecocina.com', 'www.manualdecocina.com']) hosts.add(h
 const nextConfig = {
   images: {
     remotePatterns: Array.from(hosts).map((hostname) => ({ protocol: 'https', hostname })),
+    // Las fotos del recetario cambian con poca frecuencia; un día reduce trabajo del
+    // optimizador y transferencias repetidas sin impedir correcciones editoriales rápidas.
+    minimumCacheTTL: 86400,
+  },
+  async headers() {
+    const assetCache = 'public, max-age=86400, stale-while-revalidate=604800'
+    return [
+      { source: '/recetas/:path*', headers: [{ key: 'Cache-Control', value: assetCache }] },
+      { source: '/brand/:path*', headers: [{ key: 'Cache-Control', value: assetCache }] },
+      { source: '/autor/:path*', headers: [{ key: 'Cache-Control', value: assetCache }] },
+    ]
   },
 }
 
