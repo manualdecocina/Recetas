@@ -14,6 +14,7 @@ for (const host of ['manualdecocina.com', 'www.manualdecocina.com']) hosts.add(h
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
+    qualities: [65, 70, 75],
     remotePatterns: Array.from(hosts).map((hostname) => ({ protocol: 'https', hostname })),
     // Las fotos del recetario cambian con poca frecuencia; un día reduce trabajo del
     // optimizador y transferencias repetidas sin impedir correcciones editoriales rápidas.
