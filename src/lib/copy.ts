@@ -89,6 +89,8 @@ const es = {
   nutritionTitle: "Información nutricional",
   perServing: "por porción",
   nutritionEstimated: "Valores estimados a partir de los ingredientes; pueden variar según marcas y porciones.",
+  nutritionSourceLabel: "Fuente de referencia",
+  nutritionDisclaimer: "Información orientativa; no sustituye el consejo de un profesional de la salud o de la nutrición.",
   calories: "Calorías",
   protein: "Proteínas",
   carbs: "Carbohidratos",
@@ -230,6 +232,8 @@ const en = {
   nutritionTitle: "Nutrition facts",
   perServing: "per serving",
   nutritionEstimated: "Estimated values calculated from the ingredients; they may vary by brand and portion size.",
+  nutritionSourceLabel: "Reference source",
+  nutritionDisclaimer: "For general information only; it does not replace advice from a qualified health or nutrition professional.",
   calories: "Calories",
   protein: "Protein",
   carbs: "Carbohydrates",
@@ -371,6 +375,8 @@ const de = {
   nutritionTitle: "Nährwerte", // REVISAR
   perServing: "pro Portion", // REVISAR
   nutritionEstimated: "Geschätzte Werte auf Basis der Zutaten; sie können je nach Marke und Portion abweichen.", // REVISAR
+  nutritionSourceLabel: "Referenzquelle", // REVISAR
+  nutritionDisclaimer: "Nur zur allgemeinen Information; ersetzt keine Beratung durch qualifiziertes Gesundheits- oder Ernährungspersonal.", // REVISAR
   calories: "Kalorien", // REVISAR
   protein: "Eiweiß", // REVISAR
   carbs: "Kohlenhydrate", // REVISAR
@@ -512,6 +518,8 @@ const it = {
   nutritionTitle: "Valori nutrizionali", // REVISAR
   perServing: "per porzione", // REVISAR
   nutritionEstimated: "Valori stimati in base agli ingredienti; possono variare in base a marca e porzione.", // REVISAR
+  nutritionSourceLabel: "Fonte di riferimento", // REVISAR
+  nutritionDisclaimer: "Informazioni generali; non sostituiscono il parere di un professionista sanitario o della nutrizione qualificato.", // REVISAR
   calories: "Calorie", // REVISAR
   protein: "Proteine", // REVISAR
   carbs: "Carboidrati", // REVISAR
@@ -653,6 +661,8 @@ const fr = {
   nutritionTitle: "Valeurs nutritionnelles", // REVISAR
   perServing: "par portion", // REVISAR
   nutritionEstimated: "Valeurs estimées à partir des ingrédients ; elles peuvent varier selon les marques et les portions.", // REVISAR
+  nutritionSourceLabel: "Source de référence", // REVISAR
+  nutritionDisclaimer: "Informations générales uniquement ; elles ne remplacent pas l’avis d’un professionnel de santé ou de la nutrition qualifié.", // REVISAR
   calories: "Calories", // REVISAR
   protein: "Protéines", // REVISAR
   carbs: "Glucides", // REVISAR
@@ -794,6 +804,8 @@ const ja = {
   nutritionTitle: "栄養成分", // REVISAR
   perServing: "1人分", // REVISAR
   nutritionEstimated: "材料から算出した推定値です。ブランドや分量により異なる場合があります。", // REVISAR
+  nutritionSourceLabel: "参考情報源", // REVISAR
+  nutritionDisclaimer: "一般的な情報を目的としており、資格を持つ医療・栄養専門家の助言に代わるものではありません。", // REVISAR
   calories: "カロリー", // REVISAR
   protein: "たんぱく質", // REVISAR
   carbs: "炭水化物", // REVISAR
@@ -936,6 +948,8 @@ const pt = {
   nutritionTitle: "Informação nutricional",
   perServing: "por porção",
   nutritionEstimated: "Valores estimados a partir dos ingredientes; podem variar conforme marcas e porções.",
+  nutritionSourceLabel: "Fonte de referência",
+  nutritionDisclaimer: "Informação geral; não substitui a orientação de um profissional qualificado de saúde ou nutrição.",
   calories: "Calorias",
   protein: "Proteínas",
   carbs: "Carboidratos",
