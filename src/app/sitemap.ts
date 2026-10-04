@@ -11,6 +11,17 @@ type SitemapLanguages = NonNullable<NonNullable<Entry['alternates']>['languages'
 
 const BATCH = 1000
 
+const INSTITUTIONAL_SLUGS = [
+  'quienes-somos',
+  'contacto',
+  'politica-editorial',
+  'privacidad',
+  'cookies',
+  'terminos',
+  'aviso-legal',
+  'propiedad-intelectual',
+] as const
+
 interface Row {
   recipe_group_id: string
   language: string
@@ -82,7 +93,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   for (const l of SUPPORTED_LANGUAGES) {
     entries.push({ url: `${site}/${l}`, alternates: staticAlternates((x) => `/${x}`) })
     entries.push({ url: `${site}/${l}/recetas`, alternates: staticAlternates((x) => `/${x}/recetas`) })
-    entries.push({ url: `${site}/${l}/categorias` })
+    entries.push({ url: `${site}/${l}/categorias`, alternates: staticAlternates((x) => `/${x}/categorias`) })
+    for (const slug of INSTITUTIONAL_SLUGS) {
+      entries.push({
+        url: `${site}/${l}/${slug}`,
+        alternates: staticAlternates((x) => `/${x}/${slug}`),
+      })
+    }
   }
   // Herramienta real (gratuita) sin página propia en el sitemap hasta ahora.
   entries.push({ url: `${site}/es/que-puedo-cocinar` })
