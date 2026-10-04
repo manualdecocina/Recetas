@@ -256,9 +256,10 @@
 .md-pantry-badge { position: absolute; top: 12px; left: 12px; z-index: 1; padding: 5px 12px; border-radius: 999px; background: var(--md-stone); color: var(--md-ink); font-size: .78rem; font-weight: 800; letter-spacing: .01em; }
 .md-pantry-badge-complete { background: var(--md-accent); color: var(--md-on-accent); }
 .md-pantry-missing-list { margin: 8px 2px 0; color: var(--md-muted); font-size: .86rem; line-height: 1.4; }
-.md-pantry-checklist { margin-top: 12px; padding: 12px 14px; background: var(--md-white); border: 2px solid var(--md-stone); border-radius: 14px; }
-.md-pantry-checklist > strong { display: block; margin-bottom: 8px; font-size: .88rem; }
-.md-pantry-checklist ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; }
+.md-pantry-checklist { margin-top: 10px; background: var(--md-white); border: 2px solid var(--md-stone); border-radius: 14px; overflow: hidden; }
+.md-pantry-checklist summary { cursor: pointer; padding: 10px 13px; font-size: .86rem; font-weight: 800; color: var(--md-olive-dark); list-style-position: inside; }
+.md-pantry-checklist[open] summary { border-bottom: 1px solid var(--md-stone); }
+.md-pantry-checklist ul { margin: 0; padding: 11px 13px; list-style: none; display: grid; gap: 6px; }
 .md-pantry-checklist li { display: flex; align-items: flex-start; gap: 8px; font-size: .86rem; line-height: 1.35; }
 .md-pantry-checklist li > span:first-child { flex: 0 0 18px; width: 18px; font-weight: 900; text-align: center; }
 .md-pantry-check-owned { color: var(--md-muted); }
