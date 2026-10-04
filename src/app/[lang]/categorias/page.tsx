@@ -1,10 +1,23 @@
 import { notFound } from 'next/navigation'
+import type { Metadata } from 'next'
 import { CategoriesIndexView } from '@/components/md/CategoryViews'
 import { getCategorySummaries } from '@/lib/md-data'
 import { SUPPORTED_LANGUAGES, type RecipeLanguage } from '@/types/recipe'
+import { allLanguageAlternates, withSiteName } from '@/lib/seo'
 
 function parseLang(value: string): RecipeLanguage | null {
   return (SUPPORTED_LANGUAGES as string[]).includes(value) ? value as RecipeLanguage : null
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang: rawLang } = await params
+  const lang = parseLang(rawLang)
+  if (!lang) return {}
+  return {
+    title: withSiteName('Categorías'),
+    description: 'Explora las categorías de recetas de Manual de Cocina.',
+    alternates: allLanguageAlternates(`/${lang}/categorias`, (l) => `/${l}/categorias`),
+  }
 }
 
 export default async function CategoriesPage({ params }: { params: Promise<{ lang: string }> }) {
