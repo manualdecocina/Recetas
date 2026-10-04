@@ -20,7 +20,7 @@ export async function getCategorySummaries(lang: RecipeLanguage): Promise<MdCate
     .select('category, image_url')
     .eq('language', lang)
     .eq('published', true)
-    .order('updated_at', { ascending: false, nullsFirst: false })
+    .order('ready_at', { ascending: false, nullsFirst: false })
   if (error) throw new Error(`No se pudieron cargar las categorías: ${error.message}`)
   const rows = (data ?? []) as Array<{ category: string | null; image_url: string | null }>
   return CATEGORY_TAXONOMY.map(({ slug, labels }) => {
@@ -101,7 +101,7 @@ export async function getHomeData(lang: RecipeLanguage): Promise<MdHomeData> {
       .eq('language', lang)
       .eq('published', true)
       .not('image_url', 'is', null)
-      .order('updated_at', { ascending: false, nullsFirst: false })
+      .order('ready_at', { ascending: false, nullsFirst: false })
       .limit(1)
       .maybeSingle(),
     supabase
@@ -109,7 +109,7 @@ export async function getHomeData(lang: RecipeLanguage): Promise<MdHomeData> {
       .select(CARD_FIELDS)
       .eq('language', lang)
       .eq('published', true)
-      .order('updated_at', { ascending: false, nullsFirst: false })
+      .order('ready_at', { ascending: false, nullsFirst: false })
       .limit(10),
     getCategorySummaries(lang),
     lang === 'es' ? getIngredientSummaries(12) : Promise.resolve([] as MdIngredientSummary[]),
