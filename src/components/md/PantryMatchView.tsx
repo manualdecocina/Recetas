@@ -18,7 +18,6 @@ const PANTRY_STORAGE_KEY = 'manualdecocina:pantry:selectedSlugs';
 interface Match {
   recipe: MdPantryRecipe;
   matched: number;
-  missing: string[];
   checklist: Array<{ id: string; name: string; owned: boolean }>;
   effectiveMissingCount: number;
   isComplete: boolean;
@@ -36,15 +35,13 @@ function computeMatches(recipes: MdPantryRecipe[], selected: Set<string>, ingred
     const matched = recipe.ingredientIds.filter((id) => selected.has(id));
     if (matched.length === 0) continue;
     const missingIds = recipe.ingredientIds.filter((id) => !selected.has(id));
-    const missing = missingIds.map((id) => ingredientNameById.get(id) ?? '').filter(Boolean);
     const checklist = recipe.ingredientIds
       .map((id) => ({ id, name: ingredientNameById.get(id) ?? '', owned: selected.has(id) }))
       .filter((item) => Boolean(item.name));
-    const effectiveMissingCount = missing.length + recipe.uncanonicalizedCount;
+    const effectiveMissingCount = missingIds.length + recipe.uncanonicalizedCount;
     results.push({
       recipe,
       matched: matched.length,
-      missing,
       checklist,
       effectiveMissingCount,
       isComplete: effectiveMissingCount === 0,
@@ -208,7 +205,7 @@ export default function PantryMatchView({ ingredients, recipes }: { ingredients:
         )}
         {matches.length > 0 && (
           <div className="md-card-grid">
-            {matches.map(({ recipe, missing, checklist, effectiveMissingCount, isComplete }) => (
+            {matches.map(({ recipe, checklist, effectiveMissingCount, isComplete }) => (
               <div className="md-pantry-result" key={recipe.id}>
                 <span className={`md-pantry-badge${isComplete ? ' md-pantry-badge-complete' : ''}`}>
                   {isComplete ? t.pantryComplete : `${effectiveMissingCount} ${t.pantryMissingSuffix}`}
