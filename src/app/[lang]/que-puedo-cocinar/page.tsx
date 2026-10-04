@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   return {
     title,
     description: t.pantryMetaDescription,
-    robots: { index: true, follow: true },
+    robots: { index: isIndexingAllowed(), follow: isIndexingAllowed() },
     alternates: { canonical: publicUrl(PANTRY_PATH) },
     openGraph: {
       type: 'website',
