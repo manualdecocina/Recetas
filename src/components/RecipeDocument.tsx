@@ -64,7 +64,7 @@ export async function RecipeDocument({ recipe, relatedRecipes = [] }: { recipe: 
     sugarContent: num('sugar_g') != null ? `${num('sugar_g')} g` : undefined,
     sodiumContent: num('sodium_mg') != null ? `${num('sodium_mg')} mg` : undefined,
   } : undefined
-  // aggregateRating: solo con votos reales acumulados vía rate_recipe(); nunca un número
+  // aggregateRating: solo con votos reales acumulados vía rate_recipe_once(); nunca un número
   // inventado. Sin votos, se omite el campo por completo (Google penaliza el rating falso).
   const ratingsEnabled = process.env.NEXT_PUBLIC_RATINGS_ENABLED === 'true'
   const ratingCount = recipe.rating_count ?? 0
