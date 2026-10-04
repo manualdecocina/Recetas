@@ -37,7 +37,7 @@ async function getIngredient(lang: RecipeLanguage, slug: string) {
     .in('id', ids)
     .eq('language', lang)
     .eq('published', true)
-    .order('updated_at', { ascending: false, nullsFirst: false })
+    .order('ready_at', { ascending: false, nullsFirst: false })
 
   if (recipesError) throw new Error('No se pudieron cargar las recetas del ingrediente')
   return { ingredient: data, recipes: recipes ?? [] }
