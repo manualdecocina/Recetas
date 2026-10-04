@@ -143,10 +143,10 @@ export interface MdPantryRecipe extends MdRecipeCardData {
 
 /**
  * Datos para "¿Qué puedo cocinar?" (/es/que-puedo-cocinar): solo ingredientes canónicos
- * buscables y recetas publicadas en español que ya tienen al menos un ingrediente
- * canonicalizado en recipe_ingredients (hoy 110 de 135). El emparejamiento real (qué
- * receta calza con qué ingredientes elegidos) se calcula en el cliente sobre estos datos;
- * aquí solo se leen datos reales, sin inventar coincidencias ni recetas.
+ * buscables que realmente estén relacionados con al menos una receta ES publicada, y
+ * recetas publicadas que ya tengan ingredientes canonicalizados. El emparejamiento real
+ * (qué receta calza con qué ingredientes elegidos) se calcula en el cliente sobre estos
+ * datos; aquí solo se leen datos reales, sin inventar coincidencias ni opciones huérfanas.
  */
 export async function getPantryMatchData(): Promise<{ ingredients: MdPantryIngredient[]; recipes: MdPantryRecipe[] }> {
   const { data: ingredientRows, error: ingredientsError } = await supabase
@@ -189,7 +189,11 @@ export async function getPantryMatchData(): Promise<{ ingredients: MdPantryIngre
     }))
     .filter((recipe) => recipe.totalCanonicalIngredients > 0)
 
-  return { ingredients: (ingredientRows ?? []) as MdPantryIngredient[], recipes: pantryRecipes }
+  const usedIngredientIds = new Set((linkRows ?? []).map((row: { ingredient_id: string }) => row.ingredient_id))
+  const pantryIngredients = ((ingredientRows ?? []) as MdPantryIngredient[])
+    .filter((ingredient) => usedIngredientIds.has(ingredient.id))
+
+  return { ingredients: pantryIngredients, recipes: pantryRecipes }
 }
 
 /** Idiomas que tienen al menos una receta publicada (los demás se muestran deshabilitados en el selector). */
