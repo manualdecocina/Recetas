@@ -5,7 +5,7 @@ import { getMdCopy } from '@/lib/copy';
 import { normalizePublicPath } from '@/lib/site';
 
 /** Sizes reales de md-card-grid (site.css): 1 col (<600px), 2 col (600-899px), 3 col (>=900px). */
-const CARD_SIZES = '(max-width: 599px) 100vw, (max-width: 899px) 50vw, 33vw';
+const CARD_SIZES = '(max-width: 599px) calc(100vw - 36px), (max-width: 899px) calc(50vw - 28px), min(33vw, 380px)';
 
 /** Deliberately uses only the eight fields authorized for a recipe card. */
 export default function RecipeCard({ recipe, priority = false }: {
