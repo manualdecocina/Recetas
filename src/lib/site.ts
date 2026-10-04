@@ -19,6 +19,12 @@ export function adsenseClientId(): string | undefined {
   return id ? id : undefined
 }
 
+/** AdSense queda fail-closed hasta que el nuevo sitio tenga una CMP certificada/TCF
+ * configurada. Evita activar monetización personalizada solo con el banner casero. */
+export function adsenseCmpReady(): boolean {
+  return process.env.NEXT_PUBLIC_GOOGLE_CMP_READY === 'true'
+}
+
 export function normalizePublicPath(path: string): string {
   if (!path) return '/'
   const withSlash = path.startsWith('/') ? path : '/' + path
