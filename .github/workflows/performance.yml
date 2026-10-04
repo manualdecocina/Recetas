@@ -55,6 +55,14 @@ jobs:
           TOOL_URL: http://127.0.0.1:3000/es/que-puedo-cocinar
         run: |
           set -euo pipefail
+          # Primera pasada: calienta el optimizador de imágenes y las rutas ISR igual que
+          # ocurriría en producción tras las primeras visitas. Se descarta para evitar medir
+          # el coste excepcional de una caché completamente fría en cada runner efímero.
+          npm exec --yes --package=lighthouse@13.5.0 -- lighthouse "$HOME_URL" --quiet --chrome-flags="--headless --no-sandbox" --only-categories=performance --form-factor=mobile --output=json --output-path=/tmp/home-warm.json
+          npm exec --yes --package=lighthouse@13.5.0 -- lighthouse "$RECIPE_URL" --quiet --chrome-flags="--headless --no-sandbox" --only-categories=performance --form-factor=mobile --output=json --output-path=/tmp/recipe-warm.json
+          npm exec --yes --package=lighthouse@13.5.0 -- lighthouse "$TOOL_URL" --quiet --chrome-flags="--headless --no-sandbox" --only-categories=performance --form-factor=mobile --output=json --output-path=/tmp/tool-warm.json
+
+          # Segunda pasada: medición comparable con caché del servidor ya caliente.
           npm exec --yes --package=lighthouse@13.5.0 -- lighthouse "$HOME_URL" --quiet --chrome-flags="--headless --no-sandbox" --only-categories=performance --form-factor=mobile --output=json --output-path=home.json
           npm exec --yes --package=lighthouse@13.5.0 -- lighthouse "$RECIPE_URL" --quiet --chrome-flags="--headless --no-sandbox" --only-categories=performance --form-factor=mobile --output=json --output-path=recipe.json
           npm exec --yes --package=lighthouse@13.5.0 -- lighthouse "$TOOL_URL" --quiet --chrome-flags="--headless --no-sandbox" --only-categories=performance --form-factor=mobile --output=json --output-path=tool.json
