@@ -19,7 +19,8 @@ export default function RecipeCard({ recipe, priority = false }: {
       <Link className="md-card-photo-link" href={href} tabIndex={-1}>
         {recipe.image_url ? (
           <Image className="md-card-photo" src={recipe.image_url} alt={`${t.photoOf} ${recipe.title}`} width={640} height={480}
-            sizes={CARD_SIZES} priority={priority} loading={priority ? undefined : 'lazy'} />
+            sizes={CARD_SIZES} priority={priority} loading={priority ? undefined : 'lazy'}
+            fetchPriority={priority ? 'high' : 'low'} quality={65} />
         ) : (
           <div className="md-card-photo-placeholder">
             <img src="/brand/mark.png" width="52" height="52" alt="" />
