@@ -7,7 +7,7 @@ import { getPantryMatchData } from '@/lib/md-data'
 import { SUPPORTED_LANGUAGES, type RecipeLanguage } from '@/types/recipe'
 import { getMdCopy } from '@/lib/copy'
 import { withSiteName, SITE_NAME } from '@/lib/seo'
-import { absoluteUrl, publicUrl } from '@/lib/site'
+import { absoluteUrl, publicUrl, isIndexingAllowed } from '@/lib/site'
 
 function parseLang(value: string): RecipeLanguage | null {
   return (SUPPORTED_LANGUAGES as string[]).includes(value) ? value as RecipeLanguage : null
