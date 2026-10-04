@@ -68,3 +68,42 @@ Los ingredientes pendientes permanecen registrados para futuras normalizaciones.
 **D-087:** la normalización de ingredientes puede continuar después de publicar.
 
 **D-088:** ningún pendiente puede destruir o sustituir el texto editorial original.
+
+
+## Implementación automática aplicada — 2026-10-04
+
+El flujo de ingredientes quedó automatizado sin modificar el esquema consolidado de `public.recipes`.
+
+### Al crear o cambiar una receta ES
+
+Un trigger interno:
+
+1. conserva intacto el texto editorial de `recipes.ingredients`;
+2. intenta resolver cada nombre contra `ingredients` + `ingredient_aliases`;
+3. si hay una coincidencia canónica inequívoca, crea/actualiza `recipe_ingredients`;
+4. si la expresión contiene alternativas o combinaciones evidentes, la registra en `recipe_ingredient_pending` con `reason = ambiguous_expression`;
+5. si no existe ninguna coincidencia y parece un ingrediente individual nuevo, crea un registro no indexable con `ingredients.status = pending` y registra el pendiente;
+6. nunca convierte automáticamente un ingrediente pendiente en página SEO.
+
+La automatización se aplica solo a la receta fuente en español, porque la herramienta pública `/es/que-puedo-cocinar` usa la taxonomía canónica en español.
+
+### Reconciliación automática
+
+Cuando se añade un alias o un ingrediente pendiente se convierte en `canonical`, el sistema vuelve a revisar automáticamente las recetas pendientes que coincidan con ese nombre. Si la coincidencia ya es inequívoca, el pendiente desaparece y se crea `recipe_ingredients`.
+
+### Publicación
+
+Se mantiene **D-087**: una receta válida puede publicarse aunque queden expresiones ambiguas en `recipe_ingredient_pending`. La herramienta nunca debe declarar “¡Lo tienes todo!” mientras exista un ingrediente editorial sin relación canónica.
+
+### Seguridad
+
+Las funciones de sincronización viven en el esquema interno `private`, usan `SECURITY DEFINER` con `search_path = ''` y no tienen permiso de ejecución para `PUBLIC`, `anon` ni `authenticated`.
+
+### Verificación 2026-10-04
+
+- prueba transaccional: ingrediente canónico conocido → relación automática;
+- prueba transaccional: ingrediente desconocido → `ingredients.status=pending` + pendiente;
+- prueba transaccional: pendiente promovido a `canonical` → reconciliación automática y creación de relación;
+- las 20 recetas ES publicadas fueron reconciliadas;
+- quedan pendientes únicamente expresiones realmente ambiguas o ingredientes todavía no aprobados;
+- el Security Advisor no reporta las funciones internas como expuestas.
