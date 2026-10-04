@@ -5,7 +5,7 @@ import { editorialSerif, uiSans } from '../fonts'
 import ThemeSync from '@/components/md/ThemeSync'
 import CookieConsentBanner from '@/components/md/CookieConsentBanner'
 import AdSenseLoader from '@/components/md/AdSenseLoader'
-import { getSiteUrl, isIndexingAllowed, adsenseClientId, adsenseCmpReady } from '@/lib/site'
+import { getSiteUrl, isIndexingAllowed, adsenseClientId, adsenseCmpReady, absoluteUrl } from '@/lib/site'
 import { DEFAULT_LANGUAGE, SUPPORTED_LANGUAGES } from '@/types/recipe'
 import type { MdLanguage } from '@/components/md/md-types'
 
@@ -21,7 +21,20 @@ const allowIndexing = isIndexingAllowed()
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteUrl()),
   title: 'Manual de Cocina',
-  robots: { index: allowIndexing, follow: allowIndexing },
+  robots: {
+    index: allowIndexing,
+    follow: allowIndexing,
+    googleBot: allowIndexing ? {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    } : {
+      index: false,
+      follow: false,
+    },
+  },
 }
 
 export function generateStaticParams() {
@@ -43,6 +56,30 @@ export default async function LanguageRootLayout({
   const lang = (SUPPORTED_LANGUAGES as string[]).includes(rawLang) ? rawLang : DEFAULT_LANGUAGE
   const adsenseClient = adsenseClientId()
   const cmpReady = adsenseCmpReady()
+  const siteUrl = getSiteUrl()
+  const entityGraph = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Organization',
+        '@id': `${siteUrl}/#organization`,
+        name: 'Manual de Cocina',
+        url: siteUrl,
+        logo: {
+          '@type': 'ImageObject',
+          url: absoluteUrl('/brand/logo-manual-de-cocina.png'),
+        },
+      },
+      {
+        '@type': 'WebSite',
+        '@id': `${siteUrl}/#website`,
+        name: 'Manual de Cocina',
+        url: siteUrl,
+        inLanguage: SUPPORTED_LANGUAGES,
+        publisher: { '@id': `${siteUrl}/#organization` },
+      },
+    ],
+  }
 
   return (
     <html lang={lang} className={`${editorialSerif.variable} ${uiSans.variable}`} suppressHydrationWarning>
@@ -53,6 +90,7 @@ export default async function LanguageRootLayout({
           NEXT_PUBLIC_GOOGLE_CMP_READY="true" solo después de configurar una CMP certificada/TCF.
           El banner interno sigue sirviendo para preferencias locales, pero no sustituye esa CMP. */}
       <body>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(entityGraph).replace(/</g, '\\u003c') }} />
         <ThemeSync />
         {children}
         {adsenseClient && cmpReady && (
