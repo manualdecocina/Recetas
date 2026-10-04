@@ -32,12 +32,34 @@ export function pathCandidates(path: string): string[] {
 export const getRecipeByPublicPath = cache(async (path: string): Promise<Recipe | null> => {
   const { data, error } = await supabase
     .from('recipes')
-    .select('*')
+    .select('*, recipe_ingredients(position, ingredients(name, slug, indexable))')
     .in('public_path', pathCandidates(path))
     .eq('published', true)
     .limit(1)
   if (error) throw new Error(`No se pudo cargar la receta pública: ${error.message}`)
-  return ((data ?? [])[0] ?? null) as Recipe | null
+
+  const row = ((data ?? [])[0] ?? null) as (Recipe & {
+    recipe_ingredients?: Array<{
+      position: number
+      ingredients: { name: string; slug: string; indexable: boolean } | null
+    }>
+  }) | null
+  if (!row) return null
+
+  // Las URLs históricas también necesitan la relación canónica para sincronizar
+  // las casillas con el inventario. Las cantidades y textos editoriales siguen
+  // viniendo del JSON de la receta.
+  const canonicalByPosition = new Map(
+    (row.recipe_ingredients ?? []).map((link) => [Number(link.position), link.ingredients]),
+  )
+  const ingredients = row.ingredients.map((ingredient, index) => {
+    const canonical = canonicalByPosition.get(index)
+    return canonical?.indexable && canonical.slug
+      ? { ...ingredient, canonicalIngredientSlug: canonical.slug, canonicalIngredientName: canonical.name }
+      : ingredient
+  })
+  const { recipe_ingredients: _links, ...recipeRow } = row
+  return { ...recipeRow, ingredients } as Recipe
 })
 
 export const getContentPageByPublicPath = cache(async (path: string): Promise<ContentPage | null> => {
