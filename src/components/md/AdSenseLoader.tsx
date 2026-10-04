@@ -44,9 +44,9 @@ function loadAdsense(clientId: string, status: ConsentStatus) {
   document.head.appendChild(script);
 }
 
-export default function AdSenseLoader({ clientId }: { clientId?: string }) {
+export default function AdSenseLoader({ clientId, cmpReady }: { clientId?: string; cmpReady: boolean }) {
   useEffect(() => {
-    if (!clientId) return;
+    if (!clientId || !cmpReady) return;
     const id = clientId;
     const current = readConsent();
     if (current) loadAdsense(id, current);
@@ -58,7 +58,7 @@ export default function AdSenseLoader({ clientId }: { clientId?: string }) {
     }
     window.addEventListener('manualdecocina:cookie-consent-changed', onConsentChange);
     return () => window.removeEventListener('manualdecocina:cookie-consent-changed', onConsentChange);
-  }, [clientId]);
+  }, [clientId, cmpReady]);
 
   return null;
 }
