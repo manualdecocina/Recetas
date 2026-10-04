@@ -20,7 +20,7 @@ export async function getCategorySummaries(lang: RecipeLanguage): Promise<MdCate
     .select('category, image_url')
     .eq('language', lang)
     .eq('published', true)
-    .order('published_at', { ascending: false, nullsFirst: false })
+    .order('updated_at', { ascending: false, nullsFirst: false })
   if (error) throw new Error(`No se pudieron cargar las categorías: ${error.message}`)
   const rows = (data ?? []) as Array<{ category: string | null; image_url: string | null }>
   return CATEGORY_TAXONOMY.map(({ slug, labels }) => {
@@ -94,14 +94,14 @@ export async function getIngredientSummaries(limit?: number): Promise<MdIngredie
 
 export async function getHomeData(lang: RecipeLanguage): Promise<MdHomeData> {
   const [featuredResult, latestResult, categories, ingredients] = await Promise.all([
-    // Destacada: la receta publicada más reciente que tenga foto real.
+    // Destacada: la receta publicada actualizada más recientemente que tenga foto real.
     supabase
       .from('recipes')
       .select(CARD_FIELDS)
       .eq('language', lang)
       .eq('published', true)
       .not('image_url', 'is', null)
-      .order('published_at', { ascending: false, nullsFirst: false })
+      .order('updated_at', { ascending: false, nullsFirst: false })
       .limit(1)
       .maybeSingle(),
     supabase
@@ -109,7 +109,7 @@ export async function getHomeData(lang: RecipeLanguage): Promise<MdHomeData> {
       .select(CARD_FIELDS)
       .eq('language', lang)
       .eq('published', true)
-      .order('published_at', { ascending: false, nullsFirst: false })
+      .order('updated_at', { ascending: false, nullsFirst: false })
       .limit(10),
     getCategorySummaries(lang),
     lang === 'es' ? getIngredientSummaries(12) : Promise.resolve([] as MdIngredientSummary[]),
