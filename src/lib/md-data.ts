@@ -137,8 +137,12 @@ export interface MdPantryIngredient {
 export interface MdPantryRecipe extends MdRecipeCardData {
   /** ids canónicos reales de recipe_ingredients; nunca inventados. */
   ingredientIds: string[];
-  /** total de ingredientes de esa receta que sí están canonicalizados (puede ser menor al total real de la receta). */
+  /** total de ingredientes editoriales reales de la receta. */
+  totalIngredients: number;
+  /** total de ingredientes de esa receta que sí están canonicalizados. */
   totalCanonicalIngredients: number;
+  /** ingredientes editoriales que todavía no tienen relación canónica segura. */
+  uncanonicalizedCount: number;
 }
 
 /**
@@ -159,12 +163,13 @@ export async function getPantryMatchData(): Promise<{ ingredients: MdPantryIngre
 
   const { data: recipeRows, error: recipesError } = await supabase
     .from('recipes')
-    .select(CARD_FIELDS)
+    .select(`${CARD_FIELDS}, ingredients`)
     .eq('language', 'es')
     .eq('published', true)
   if (recipesError) throw new Error(`No se pudieron cargar las recetas: ${recipesError.message}`)
 
-  const recipes = (recipeRows ?? []) as MdRecipeCardData[]
+  const recipeRowsTyped = (recipeRows ?? []) as Array<MdRecipeCardData & { ingredients?: unknown[] | null }>
+  const recipes = recipeRowsTyped.map(({ ingredients: _ingredients, ...recipe }) => recipe as MdRecipeCardData)
   if (!recipes.length) return { ingredients: (ingredientRows ?? []) as MdPantryIngredient[], recipes: [] }
 
   const recipeIds = recipes.map((r) => r.id)
@@ -181,12 +186,22 @@ export async function getPantryMatchData(): Promise<{ ingredients: MdPantryIngre
     else idsByRecipe.set(row.recipe_id, [row.ingredient_id])
   }
 
+  const totalIngredientsByRecipe = new Map(
+    recipeRowsTyped.map((row) => [row.id, Array.isArray(row.ingredients) ? row.ingredients.length : 0]),
+  )
+
   const pantryRecipes: MdPantryRecipe[] = recipes
-    .map((recipe) => ({
-      ...recipe,
-      ingredientIds: idsByRecipe.get(recipe.id) ?? [],
-      totalCanonicalIngredients: (idsByRecipe.get(recipe.id) ?? []).length,
-    }))
+    .map((recipe) => {
+      const ingredientIds = idsByRecipe.get(recipe.id) ?? []
+      const totalIngredients = totalIngredientsByRecipe.get(recipe.id) ?? 0
+      return {
+        ...recipe,
+        ingredientIds,
+        totalIngredients,
+        totalCanonicalIngredients: ingredientIds.length,
+        uncanonicalizedCount: Math.max(0, totalIngredients - ingredientIds.length),
+      }
+    })
     .filter((recipe) => recipe.totalCanonicalIngredients > 0)
 
   const usedIngredientIds = new Set((linkRows ?? []).map((row: { ingredient_id: string }) => row.ingredient_id))
