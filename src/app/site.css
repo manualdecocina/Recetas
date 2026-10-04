@@ -256,6 +256,17 @@
 .md-pantry-badge { position: absolute; top: 12px; left: 12px; z-index: 1; padding: 5px 12px; border-radius: 999px; background: var(--md-stone); color: var(--md-ink); font-size: .78rem; font-weight: 800; letter-spacing: .01em; }
 .md-pantry-badge-complete { background: var(--md-accent); color: var(--md-on-accent); }
 .md-pantry-missing-list { margin: 8px 2px 0; color: var(--md-muted); font-size: .86rem; line-height: 1.4; }
+.md-pantry-checklist { margin-top: 12px; padding: 12px 14px; background: var(--md-white); border: 2px solid var(--md-stone); border-radius: 14px; }
+.md-pantry-checklist > strong { display: block; margin-bottom: 8px; font-size: .88rem; }
+.md-pantry-checklist ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; }
+.md-pantry-checklist li { display: flex; align-items: flex-start; gap: 8px; font-size: .86rem; line-height: 1.35; }
+.md-pantry-checklist li > span:first-child { flex: 0 0 18px; width: 18px; font-weight: 900; text-align: center; }
+.md-pantry-check-owned { color: var(--md-muted); }
+.md-pantry-check-owned > span:last-child { text-decoration: line-through; text-decoration-thickness: 2px; opacity: .7; }
+.md-pantry-check-owned > span:first-child { color: var(--md-olive-dark); }
+.md-pantry-check-missing { color: var(--md-ink); font-weight: 700; }
+.md-pantry-check-missing > span:first-child { color: var(--md-accent); }
+
 /* Listados */
 .md-page-head { padding-block: clamp(26px,5vw,62px) 25px; }
 .md-page-head .md-title { margin: 12px 0; }
