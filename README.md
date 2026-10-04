@@ -44,6 +44,35 @@ leer borradores ni escribir (lo impide la RLS, no solo la interfaz).
 - `public_path` define la URL pública/canónica. Si existe una URL histórica recuperable, esa URL se conserva.
 - Las nuevas traducciones pueden introducir una URL histórica en `public_path`; si se omite, la BD genera `/idioma/receta/slug`.
 
+## Contrato editorial para recetas nuevas o reconstruidas (obligatorio)
+
+Estas reglas aplican a toda receta nueva y a toda receta histórica que se reconstruya editorialmente.
+
+- **No reutilizar el texto editorial antiguo de WordPress.** Solo se conserva la identidad técnica/histórica necesaria para mantener URL y SEO (`recipe_group_id`, `public_path`, `source_url`/identidad de origen). Título, resumen, ingredientes, pasos, notas, FAQ y demás contenido se redactan de nuevo.
+- **Publicar el grupo completo en los 7 idiomas soportados:** `es`, `de`, `en`, `fr`, `it`, `ja`, `pt`. Las traducciones deben ser reales y localizadas, no placeholders.
+- **Nutrición obligatoria antes de publicar.** El campo `nutrition` no puede quedar `null` ni vacío. Como mínimo debe incluir:
+  - `calories`
+  - `protein_g`
+  - `carbs_g`
+  - `fat_g`
+  - `serving_size`
+  - `estimated: true` cuando sea una estimación
+  - `source`, `method` y una `note` que explique el carácter estimado y cualquier exclusión relevante.
+  - Añadir `saturated_fat_g`, `fiber_g`, `sugar_g` y `sodium_mg` cuando se puedan estimar de forma razonable.
+  - Los valores numéricos deben ser coherentes entre idiomas; `serving_size` y `note` se localizan por idioma.
+  - La tabla nutricional visible y el `NutritionInformation` del JSON-LD deben salir de ese mismo objeto; no mantener dos fuentes distintas.
+- **SEO mínimo obligatorio antes de publicar:**
+  - `seo.title` único y localizado.
+  - `seo.description` útil, natural y localizada.
+  - `robots: index,follow` en producción.
+  - Canonical basado en `public_path`; si existe URL histórica recuperable, se conserva.
+  - Hreflang entre las versiones del mismo `recipe_group_id`.
+  - `Recipe` JSON-LD con nombre, descripción, imagen rastreable, ingredientes, instrucciones, tiempos, rendimiento/porciones, categoría, cocina, palabras clave y nutrición cuando exista.
+  - FAQ solo cuando las preguntas y respuestas sean útiles, reales y también visibles en la página. No crear FAQ solo para schema.
+  - `aggregateRating` únicamente con votos reales; nunca inventar valoraciones.
+- **Imágenes:** portada y fotos de pasos deben usar rutas públicas estables y persistentes. No publicar una receta que apunte a archivos temporales de un deploy.
+- **Control de calidad antes de publicar:** verificar que portada, pasos, nutrición, SEO, FAQ, traducciones, canonical/hreflang y URL histórica estén completos. Si falta uno de los campos obligatorios, la receta permanece en borrador/`ready`.
+
 ## Estado de verificación v0.3
 
 | Qué | Resultado | Dónde |
