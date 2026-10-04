@@ -453,6 +453,10 @@ a.md-lang-item:hover { background: var(--md-sand); }
   .md-editorial-grid { grid-template-columns: 1.3fr 1fr; align-items: start; }
 }
 @media (min-width: 900px) {
+  /* En escritorio todas las filas del listado de ingredientes reservan altura para dos líneas.
+   * Así un ingrediente largo no desplaza visualmente las casillas de las filas vecinas. */
+  .md-recipe-side .md-ingredient-checkbox { min-height: 66px; align-items: center; }
+  .md-recipe-side .md-ingredient-checkbox input { margin-top: 0; }
   .md-home-hero { grid-template-columns: minmax(0,1fr) minmax(0,1.05fr); align-items: center; }
   .md-home-hero-copy { padding-inline: max(36px,calc((100vw - var(--md-container)) / 2)) 24px; }
   .md-home-hero-figure { padding: 40px max(36px, calc((100vw - var(--md-container)) / 2)) 40px 24px; }
