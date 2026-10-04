@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { notFound, permanentRedirect } from 'next/navigation'
-import { getContentPageByPublicPath, getRecipeByPublicPath, getRecipeTranslations, getRelatedRecipes } from '@/lib/public-content'
+import { getContentPageByPublicPath, getRecipeByPublicPath, getRecipeTranslations, getRelatedRecipes, getPublishedPublicPaths } from '@/lib/public-content'
 import { recipeAlternates, recipeMetaText, withSiteName } from '@/lib/seo'
 import { publicUrl, absoluteUrl } from '@/lib/site'
 import { SUPPORTED_LANGUAGES } from '@/types/recipe'
@@ -11,6 +11,16 @@ import { legacyMetadata, LegacyPublicPage } from '@/lib/legacy-route'
 type LangRestParams = { lang: string; rest: string[] }
 
 interface Props { params: Promise<LangRestParams> }
+
+export const revalidate = 3600
+
+export async function generateStaticParams() {
+  const paths = await getPublishedPublicPaths()
+  return paths
+    .map((path) => path.split('/').filter(Boolean))
+    .filter((segments) => segments.length >= 2)
+    .map(([lang, ...rest]) => ({ lang, rest }))
+}
 
 function isLang(value: string): boolean {
   return (SUPPORTED_LANGUAGES as string[]).includes(value)
