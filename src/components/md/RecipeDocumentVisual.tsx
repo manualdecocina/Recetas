@@ -97,8 +97,10 @@ export default function RecipeDocumentVisual({ recipe, relatedRecipes = [], note
                 alt={`${t.photoOf} ${recipe.title}`}
                 width={1200}
                 height={1000}
-                sizes="(max-width: 900px) 100vw, 560px"
-                priority
+                sizes="(max-width: 900px) calc(100vw - 36px), 560px"
+                fetchPriority="high"
+                loading="eager"
+                quality={70}
               />
             </figure>
           )}
