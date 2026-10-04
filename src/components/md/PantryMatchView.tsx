@@ -18,6 +18,8 @@ interface Match {
   recipe: MdPantryRecipe;
   matched: number;
   missing: string[];
+  effectiveMissingCount: number;
+  isComplete: boolean;
 }
 
 /**
@@ -32,14 +34,18 @@ function computeMatches(recipes: MdPantryRecipe[], selected: Set<string>, ingred
     const matched = recipe.ingredientIds.filter((id) => selected.has(id));
     if (matched.length === 0) continue;
     const missingIds = recipe.ingredientIds.filter((id) => !selected.has(id));
+    const missing = missingIds.map((id) => ingredientNameById.get(id) ?? '').filter(Boolean);
+    const effectiveMissingCount = missing.length + recipe.uncanonicalizedCount;
     results.push({
       recipe,
       matched: matched.length,
-      missing: missingIds.map((id) => ingredientNameById.get(id) ?? '').filter(Boolean),
+      missing,
+      effectiveMissingCount,
+      isComplete: effectiveMissingCount === 0,
     });
   }
   results.sort((a, b) => {
-    if (a.missing.length !== b.missing.length) return a.missing.length - b.missing.length;
+    if (a.effectiveMissingCount !== b.effectiveMissingCount) return a.effectiveMissingCount - b.effectiveMissingCount;
     if (b.matched !== a.matched) return b.matched - a.matched;
     return a.recipe.title.localeCompare(b.recipe.title, 'es');
   });
@@ -131,14 +137,19 @@ export default function PantryMatchView({ ingredients, recipes }: { ingredients:
         )}
         {matches.length > 0 && (
           <div className="md-card-grid">
-            {matches.map(({ recipe, missing }) => (
+            {matches.map(({ recipe, missing, effectiveMissingCount, isComplete }) => (
               <div className="md-pantry-result" key={recipe.id}>
-                <span className={`md-pantry-badge${missing.length === 0 ? ' md-pantry-badge-complete' : ''}`}>
-                  {missing.length === 0 ? t.pantryComplete : `${missing.length} ${t.pantryMissingSuffix}`}
+                <span className={`md-pantry-badge${isComplete ? ' md-pantry-badge-complete' : ''}`}>
+                  {isComplete ? t.pantryComplete : `${effectiveMissingCount} ${t.pantryMissingSuffix}`}
                 </span>
                 <RecipeCard recipe={recipe} />
                 {missing.length > 0 && (
                   <p className="md-pantry-missing-list">{t.pantryMissingPrefix} {missing.join(', ')}</p>
+                )}
+                {recipe.uncanonicalizedCount > 0 && (
+                  <p className="md-pantry-missing-list">
+                    Además, {recipe.uncanonicalizedCount} {recipe.uncanonicalizedCount === 1 ? 'ingrediente de esta receta todavía está' : 'ingredientes de esta receta todavía están'} en proceso de catalogación.
+                  </p>
                 )}
               </div>
             ))}
