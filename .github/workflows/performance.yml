@@ -6,6 +6,12 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/performance.yml'
+      - 'next.config.mjs'
+      - 'src/app/site.css'
+      - 'src/app/public-base.css'
+      - 'src/app/fonts.ts'
+      - 'src/components/md/**'
+      - 'src/lib/md-data.ts'
 
 permissions:
   contents: read
