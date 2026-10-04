@@ -228,6 +228,22 @@
   .md-pantry-banner-copy { flex-direction: column; gap: 12px; }
 }
 /* Herramienta "¿Qué puedo cocinar?" */
+.md-pantry-how { margin-top: 24px; max-width: 760px; padding: 18px 20px; background: var(--md-white); border: 2px solid var(--md-stone); border-radius: 18px; }
+.md-pantry-how > strong { display: block; margin-bottom: 10px; font-family: var(--md-serif); font-size: 1.15rem; }
+.md-pantry-how ol { margin: 0; padding: 0; list-style: none; display: grid; gap: 9px; }
+.md-pantry-how li { display: flex; align-items: flex-start; gap: 10px; color: var(--md-muted); font-weight: 600; line-height: 1.45; }
+.md-pantry-how li span { flex: 0 0 28px; width: 28px; height: 28px; display: inline-grid; place-items: center; border-radius: 999px; background: var(--md-accent); color: var(--md-on-accent); font-size: .8rem; font-weight: 800; }
+.md-pantry-how li b { color: var(--md-ink); }
+.md-pantry-action { margin-top: 22px; padding: 16px; background: var(--md-accent-soft); border: 2px solid var(--md-accent); border-radius: 18px; display: flex; align-items: center; justify-content: space-between; gap: 14px; }
+.md-pantry-action p { margin: 0; font-weight: 700; color: var(--md-ink); }
+.md-pantry-view-results:disabled { opacity: .5; cursor: not-allowed; transform: none; }
+.md-pantry-results { scroll-margin-top: 96px; }
+.md-pantry-results-viewed { animation: md-pantry-results-pulse .7s ease-out; }
+@keyframes md-pantry-results-pulse {
+  0% { background: var(--md-accent-soft); }
+  100% { background: transparent; }
+}
+
 .md-pantry-picker-section { padding-top: 0; }
 .md-pantry-picker-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 16px; }
 .md-pantry-filter { width: 100%; margin-bottom: 16px; }
@@ -548,3 +564,16 @@ a.md-lang-item:hover { background: var(--md-sand); }
 .md-page-intro { margin-top: 8px; }
 
 :root[data-theme="dark"] body { background: var(--md-paper); }
+
+@media (max-width: 599px) {
+  .md-pantry-action {
+    position: sticky;
+    bottom: 10px;
+    z-index: 20;
+    flex-direction: column;
+    align-items: stretch;
+    box-shadow: 0 10px 26px rgb(0 0 0 / 16%);
+  }
+  .md-pantry-action p { text-align: center; font-size: .88rem; }
+  .md-pantry-view-results { width: 100%; }
+}
