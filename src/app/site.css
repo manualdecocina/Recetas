@@ -167,7 +167,7 @@
 .md-recipe-card { min-width: 0; background: var(--md-white); border: 2px solid var(--md-stone); border-radius: var(--md-radius); overflow: hidden; transition: transform .18s ease, box-shadow .18s ease; }
 .md-recipe-card:hover { transform: translateY(-4px); box-shadow: 0 14px 28px rgb(0 0 0 / 12%); }
 .md-card-photo-link { position: relative; display: block; background: var(--md-sand); overflow: hidden; }
-.md-card-photo { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; transition: transform .25s ease; }
+.md-card-photo { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; transition: transform .25s ease; }
 .md-card-photo-link:hover .md-card-photo { transform: scale(1.04); }
 .md-card-photo-placeholder { aspect-ratio: 4 / 3; padding: 14px; display: grid; place-content: center; justify-items: center; gap: 12px; color: var(--md-muted); text-align: center; }
 .md-card-photo-placeholder img { width: 52px; height: 52px; opacity: .5; }
@@ -576,4 +576,12 @@ a.md-lang-item:hover { background: var(--md-sand); }
   }
   .md-pantry-action p { text-align: center; font-size: .88rem; }
   .md-pantry-view-results { width: 100%; }
+}
+
+/* La home contiene varias parrillas largas por debajo del primer viewport.
+ * El navegador puede posponer su render sin ocultarlas del DOM ni cambiar el HTML SEO. */
+.md-home-hero ~ .md-section,
+.md-home-hero ~ .md-editorial {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 900px;
 }
