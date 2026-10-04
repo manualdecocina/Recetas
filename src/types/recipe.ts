@@ -52,7 +52,7 @@ export interface Recipe {
   seo?: Record<string, unknown> | null
   source_post_id?: number | null
   source_url?: string | null
-  /** Votos reales de personas visitantes (1-5 cada uno); nunca se inventan. Ver rate_recipe(). */
+  /** Votos reales de personas visitantes (1-5 cada uno); nunca se inventan. Ver rate_recipe_once(). */
   rating_count?: number
   rating_sum?: number
 }
