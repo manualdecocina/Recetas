@@ -84,6 +84,26 @@ function revalidatePublicRecipes() {
 
 const NOT_ADMIN: FormState = { ok: false, message: 'Tu usuario no tiene permisos de administrador.' }
 
+function draftOnlyMessage(): FormState {
+  return {
+    ok: false,
+    message: 'Este formulario básico no puede publicar una receta nueva o una traducción directamente. Créala como borrador y completa primero summary, course, cuisine, difficulty, nutrition, SEO, imágenes y demás campos editoriales obligatorios.',
+  }
+}
+
+function publicationGaps(row: Record<string, any>): string[] {
+  const gaps: string[] = []
+  const requiredText = ['excerpt', 'summary', 'category', 'difficulty', 'course', 'cuisine', 'image_url', 'public_path']
+  for (const key of requiredText) if (!String(row[key] ?? '').trim()) gaps.push(key)
+  if (!Array.isArray(row.ingredients) || row.ingredients.length === 0) gaps.push('ingredients')
+  if (!Array.isArray(row.steps) || row.steps.length === 0) gaps.push('steps')
+  if (!row.nutrition || typeof row.nutrition !== 'object' || Object.keys(row.nutrition).length === 0) gaps.push('nutrition')
+  if (!row.seo || typeof row.seo !== 'object' || !String(row.seo.title ?? '').trim() || !String(row.seo.description ?? '').trim()) gaps.push('seo')
+  if (!Number.isFinite(row.total_time_minutes) || row.total_time_minutes < 0) gaps.push('total_time_minutes')
+  if (!Number.isFinite(row.servings) || row.servings <= 0) gaps.push('servings')
+  return gaps
+}
+
 // ---------- Crear plato nuevo (genera recipe_group_id en la base de datos) ----------
 
 export async function createRecipeAction(_prev: FormState, formData: FormData): Promise<FormState> {
@@ -95,6 +115,7 @@ export async function createRecipeAction(_prev: FormState, formData: FormData): 
 
   const fields = readRecipeForm(formData)
   if (!fields.success) return { ok: false, fieldErrors: fields.error.flatten().fieldErrors }
+  if (fields.data.published) return draftOnlyMessage()
 
   const { error } = await supabase.rpc('create_recipe', {
     p_language: language.data,
@@ -123,6 +144,7 @@ export async function createTranslationAction(_prev: FormState, formData: FormDa
 
   const fields = readRecipeForm(formData)
   if (!fields.success) return { ok: false, fieldErrors: fields.error.flatten().fieldErrors }
+  if (fields.data.published) return draftOnlyMessage()
 
   const { error } = await supabase.rpc('create_recipe_translation', {
     p_source_recipe_id: sourceId.data,
@@ -146,6 +168,32 @@ export async function updateRecipeAction(_prev: FormState, formData: FormData): 
 
   const fields = readRecipeForm(formData)
   if (!fields.success) return { ok: false, fieldErrors: fields.error.flatten().fieldErrors }
+
+  if (fields.data.published) {
+    const { data: current, error: currentError } = await supabase
+      .from('recipes')
+      .select('excerpt, summary, category, difficulty, course, cuisine, image_url, public_path, ingredients, steps, nutrition, seo, total_time_minutes, servings')
+      .eq('id', id.data)
+      .maybeSingle()
+    if (currentError || !current) return { ok: false, message: 'No se pudo validar el gate editorial antes de publicar.' }
+
+    const candidate = {
+      ...current,
+      excerpt: fields.data.excerpt ?? current.excerpt,
+      category: fields.data.category ?? current.category,
+      image_url: fields.data.image_url ?? current.image_url,
+      ingredients: fields.data.ingredients,
+      steps: fields.data.steps,
+      servings: fields.data.servings ?? current.servings,
+    }
+    const gaps = publicationGaps(candidate)
+    if (gaps.length) {
+      return {
+        ok: false,
+        message: `No se puede publicar todavía. Faltan campos editoriales obligatorios: ${gaps.join(', ')}.`,
+      }
+    }
+  }
 
   const updateParams = toRpcParams(fields.data)
   delete (updateParams as Record<string, unknown>).p_public_path
