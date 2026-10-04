@@ -22,9 +22,28 @@ export default function RecipeIngredients({ recipeId, lang, ingredients }: {
     try {
       const raw = localStorage.getItem(storageKey);
       const value: unknown = raw ? JSON.parse(raw) : {};
-      if (value && typeof value === 'object' && !Array.isArray(value)) setChecked(value as Record<number, boolean>);
+      const saved = value && typeof value === 'object' && !Array.isArray(value)
+        ? value as Record<number, boolean>
+        : {};
+
+      const pantryRaw = localStorage.getItem('manualdecocina:pantry:selectedSlugs');
+      const pantryValue: unknown = pantryRaw ? JSON.parse(pantryRaw) : [];
+      const pantrySlugs = new Set(
+        Array.isArray(pantryValue)
+          ? pantryValue.filter((item): item is string => typeof item === 'string')
+          : [],
+      );
+
+      const merged = { ...saved };
+      ingredients.forEach((item, index) => {
+        if (item.canonicalIngredientSlug && pantrySlugs.has(item.canonicalIngredientSlug)) {
+          merged[index] = true;
+        }
+      });
+      setChecked(merged);
+      localStorage.setItem(storageKey, JSON.stringify(merged));
     } catch { /* Las casillas siguen funcionando sin almacenamiento persistente. */ }
-  }, [storageKey]);
+  }, [storageKey, ingredients]);
 
   function toggle(index: number) {
     setChecked((previous) => {
