@@ -63,23 +63,39 @@ export const getRecipeTranslations = cache(async (recipeGroupId: string) => {
 })
 
 
-export const getRelatedRecipes = cache(async (recipe: Pick<Recipe, 'id' | 'language' | 'category' | 'cuisine'>) => {
-  if (!recipe.category && !recipe.cuisine) return []
-  let query = supabase.from('recipes')
-    .select('id, language, slug, public_path, title, excerpt, category, image_url')
-    .eq('language', recipe.language)
-    .eq('published', true)
-    .neq('id', recipe.id)
-    .order('published_at', { ascending: false, nullsFirst: false })
-    .order('title', { ascending: true })
-    .limit(4)
-  if (recipe.category) query = query.eq('category', recipe.category)
-  else if (recipe.cuisine) query = query.eq('cuisine', recipe.cuisine)
-  const { data, error } = await query
-  if (error) throw new Error(`No se pudieron cargar recetas relacionadas: ${error.message}`)
-  return data ?? []
-})
+type RelatedRecipeCard = Pick<Recipe, 'id' | 'language' | 'slug' | 'public_path' | 'title' | 'excerpt' | 'category' | 'image_url'>
 
+export const getRelatedRecipes = cache(async (recipe: Pick<Recipe, 'id' | 'language' | 'category' | 'cuisine'>): Promise<RelatedRecipeCard[]> => {
+  const selected: RelatedRecipeCard[] = []
+  const seen = new Set<string>()
+
+  // Una categoría puede tener una sola receta publicada. Completar con la misma cocina
+  // y luego con recetas recientes evita dejar sin enlaces las URLs históricas.
+  async function collect(filter?: { column: 'category' | 'cuisine'; value: string }) {
+    let query = supabase.from('recipes')
+      .select('id, language, slug, public_path, title, excerpt, category, image_url')
+      .eq('language', recipe.language)
+      .eq('published', true)
+      .neq('id', recipe.id)
+      .order('published_at', { ascending: false, nullsFirst: false })
+      .order('title', { ascending: true })
+      .order('id', { ascending: true })
+    if (filter) query = query.eq(filter.column, filter.value)
+    const { data, error } = await query.limit(filter ? 4 : 8)
+    if (error) throw new Error(`No se pudieron cargar recetas relacionadas: ${error.message}`)
+    for (const row of data ?? []) {
+      if (selected.length === 4) break
+      if (seen.has(row.id)) continue
+      selected.push(row as RelatedRecipeCard)
+      seen.add(row.id)
+    }
+  }
+
+  if (recipe.category) await collect({ column: 'category', value: recipe.category })
+  if (selected.length < 4 && recipe.cuisine) await collect({ column: 'cuisine', value: recipe.cuisine })
+  if (selected.length < 4) await collect()
+  return selected
+})
 
 /** Rutas públicas publicadas para prerenderizar las URLs históricas/localizadas conocidas.
  *  No cambia public_path ni inventa rutas; solo convierte las rutas ya publicadas en params
