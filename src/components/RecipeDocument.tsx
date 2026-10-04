@@ -66,9 +66,10 @@ export async function RecipeDocument({ recipe, relatedRecipes = [] }: { recipe: 
   } : undefined
   // aggregateRating: solo con votos reales acumulados vía rate_recipe(); nunca un número
   // inventado. Sin votos, se omite el campo por completo (Google penaliza el rating falso).
+  const ratingsEnabled = process.env.NEXT_PUBLIC_RATINGS_ENABLED === 'true'
   const ratingCount = recipe.rating_count ?? 0
   const ratingSum = recipe.rating_sum ?? 0
-  const aggregateRatingLd = ratingCount > 0 ? {
+  const aggregateRatingLd = ratingsEnabled && ratingCount > 0 ? {
     '@type': 'AggregateRating',
     ratingValue: (ratingSum / ratingCount).toFixed(1),
     ratingCount,
