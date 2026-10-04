@@ -227,15 +227,12 @@ export default function PantryMatchView({ ingredients, recipes }: { ingredients:
                         </li>
                       ))}
                     </ul>
+                    {recipe.uncanonicalizedCount > 0 && (
+                      <p className="md-pantry-missing-list">
+                        Además, {recipe.uncanonicalizedCount} {recipe.uncanonicalizedCount === 1 ? 'ingrediente adicional de esta receta está' : 'ingredientes adicionales de esta receta están'} en proceso de catalogación.
+                      </p>
+                    )}
                   </details>
-                )}
-                {missing.length > 0 && (
-                  <p className="md-pantry-missing-list"><strong>{t.pantryMissingPrefix}</strong> {missing.join(', ')}</p>
-                )}
-                {recipe.uncanonicalizedCount > 0 && (
-                  <p className="md-pantry-missing-list">
-                    Además, {recipe.uncanonicalizedCount} {recipe.uncanonicalizedCount === 1 ? 'ingrediente adicional de esta receta está' : 'ingredientes adicionales de esta receta están'} en proceso de catalogación.
-                  </p>
                 )}
               </div>
             ))}
