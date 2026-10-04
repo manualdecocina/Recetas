@@ -38,22 +38,6 @@ export async function RecipeDocument({ recipe, relatedRecipes = [] }: { recipe: 
     { '@type': 'ListItem', position: 3, name: recipe.title, item: publicUrl(recipe.public_path) },
   ] }
 
-  // FAQPage: mismas preguntas reales que ya se muestran en la sección "Preguntas frecuentes"
-  // (RecipeDocumentVisual). Antes no había ningún schema de FAQ pese a que 73 recetas ya
-  // tienen contenido real de FAQ en seo.faq — Google no podía mostrar el rich snippet.
-  const faqItems = Array.isArray((recipe.seo as Record<string, unknown> | null)?.faq)
-    ? ((recipe.seo as Record<string, unknown>).faq as Array<{ q?: string; a?: string }>).filter((f) => f?.q && f?.a)
-    : []
-  const faqLd = faqItems.length > 0 ? {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: faqItems.map((item) => ({
-      '@type': 'Question',
-      name: item.q,
-      acceptedAnswer: { '@type': 'Answer', text: item.a },
-    })),
-  } : undefined
-
   const galleryImages = [recipe.image_url, ...(Array.isArray(recipe.gallery) ? recipe.gallery.map((g) => (typeof g?.url === 'string' ? g.url : null)) : [])]
     .filter((u): u is string => Boolean(u)).map(absoluteUrl)
   const n = (recipe.nutrition ?? {}) as Record<string, unknown>
@@ -126,7 +110,6 @@ export async function RecipeDocument({ recipe, relatedRecipes = [] }: { recipe: 
       <main id="md-main">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd).replace(/</g, '\\u003c') }} />
-        {faqLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd).replace(/</g, '\\u003c') }} />}
         <RecipeDocumentVisual
           recipe={recipe}
           relatedRecipes={relatedRecipes}
