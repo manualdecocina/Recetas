@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
-import '../globals.css'
-import '../editorial.css'
+import '../public-base.css'
 import '../site.css'
 import { editorialSerif, uiSans } from '../fonts'
 import ThemeSync from '@/components/md/ThemeSync'
