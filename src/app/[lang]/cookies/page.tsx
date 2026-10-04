@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { LegalPageView } from '@/components/LegalPageView'
 import { resolveLegalLanguage } from '@/lib/legal-content'
-import { getSiteUrl, normalizePublicPath } from '@/lib/site'
+import { allLanguageAlternates } from '@/lib/seo'
 import { COOKIES_CONTENT } from './content'
 
 const SLUG = 'cookies'
@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   return {
     title: t.metaTitle,
     description: t.metaDescription,
-    alternates: { canonical: `${getSiteUrl()}${normalizePublicPath(`/${lang}/${SLUG}`)}` },
+    alternates: allLanguageAlternates(`/${lang}/${SLUG}`, (language) => `/${language}/${SLUG}`),
   }
 }
 
