@@ -138,9 +138,11 @@ export default async function RecipesListPage({ params, searchParams }: Props) {
   if (tiempo === '61-120') query = query.gte('total_time_minutes', 61).lte('total_time_minutes', 120)
   if (tiempo === '121+') query = query.gte('total_time_minutes', 121)
 
-  query = query
-    .order('published_at', { ascending: ordenar === 'antiguas', nullsFirst: false })
-    .range(from, from + PAGE_SIZE - 1)
+  query = ordenar === 'antiguas'
+    ? query.order('published_at', { ascending: true, nullsFirst: false })
+    : query.order('updated_at', { ascending: false, nullsFirst: false })
+
+  query = query.range(from, from + PAGE_SIZE - 1)
 
   const { data: recipes, count, error } = await query
   if (error) throw new Error(`No se pudieron cargar las recetas: ${error.message}`)
