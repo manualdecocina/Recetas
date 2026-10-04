@@ -5,6 +5,7 @@ import { UI_TEXT } from '@/lib/i18n'
 import { allLanguageAlternates, SITE_NAME } from '@/lib/seo'
 import { SUPPORTED_LANGUAGES, type RecipeLanguage } from '@/types/recipe'
 import { legacyMetadata, LegacyPublicPage } from '@/lib/legacy-route'
+import { getPublishedPublicPaths } from '@/lib/public-content'
 import { absoluteUrl, getSiteUrl } from '@/lib/site'
 
 // Sin foto propia de portada para el home; se usa el logo real de la marca como
@@ -18,7 +19,16 @@ function parseLang(value: string): RecipeLanguage | null {
 }
 
 export async function generateStaticParams() {
-  return SUPPORTED_LANGUAGES.map((lang) => ({ lang }))
+  const historicalRootSegments = (await getPublishedPublicPaths())
+    .map((path) => path.split('/').filter(Boolean))
+    .filter((segments) => segments.length === 1)
+    .map(([lang]) => ({ lang }))
+
+  const params = [
+    ...SUPPORTED_LANGUAGES.map((lang) => ({ lang })),
+    ...historicalRootSegments,
+  ]
+  return Array.from(new Map(params.map((item) => [item.lang, item])).values())
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
