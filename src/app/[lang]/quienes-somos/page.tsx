@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import { InstitutionalPage } from '@/components/InstitutionalPage'
-import { absoluteUrl, getSiteUrl, normalizePublicPath } from '@/lib/site'
+import { absoluteUrl, getSiteUrl } from '@/lib/site'
 import { SUPPORTED_LANGUAGES, type RecipeLanguage } from '@/types/recipe'
+import { allLanguageAlternates } from '@/lib/seo'
 
 interface QuienesSomosContent {
   metaTitle: string
@@ -193,7 +194,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   return {
     title: t.metaTitle,
     description: t.metaDescription,
-    alternates: { canonical: `${getSiteUrl()}${normalizePublicPath(`/${lang}/quienes-somos`)}` },
+    alternates: allLanguageAlternates(`/${language}/quienes-somos`, (l) => `/${l}/quienes-somos`),
   }
 }
 
