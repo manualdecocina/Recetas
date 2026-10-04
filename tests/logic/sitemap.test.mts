@@ -28,11 +28,16 @@ process.env.NEXT_PUBLIC_ALLOW_INDEXING = 'true'
 const s: any[] = await sitemap()
 const urls = s.map((e) => e.url)
 
-assert.equal(s.length, 7 * 3 + 3 + 1 + 1 + 1 + 2)
+// 7 idiomas × (home, listado, categorías) + 8 institucionales × 7 idiomas
+// + 3 recetas publicadas del mock + herramienta + índice ingredientes + 2 ingredientes + content page.
+assert.equal(s.length, 7 * 3 + 8 * 7 + 3 + 1 + 1 + 2 + 1)
 assert.ok(!urls.some((url) => url.includes('/recipe-cards/')), 'recipe-cards no deben entrar en sitemap')
 assert.ok(urls.includes('https://manualdecocina.com/es/ingredientes'))
 assert.ok(urls.includes('https://manualdecocina.com/es/ingredientes/ajo'))
-console.log('OK home/listado + herramienta + recetas + ingredientes + contenido')
+assert.ok(urls.includes('https://manualdecocina.com/es/quienes-somos'))
+const aboutEs = s.find((e) => e.url === 'https://manualdecocina.com/es/quienes-somos')
+assert.deepEqual(Object.keys(aboutEs.alternates.languages).sort(), ['de', 'en', 'es', 'fr', 'it', 'ja', 'pt'])
+console.log('OK home/listado + institucionales + herramienta + recetas + ingredientes + contenido')
 
 assert.ok(urls.includes('https://manualdecocina.com/ja/recetas'))
 const es = s.find((e) => e.url === 'https://manualdecocina.com/receta-de-lechona-colombiana')
