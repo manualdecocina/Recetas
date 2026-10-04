@@ -1,0 +1,60 @@
+name: Performance audit
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/performance.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check Chrome
+        run: google-chrome --version || chromium-browser --version || chromium --version
+
+      - name: Audit critical mobile pages
+        env:
+          HOME_URL: https://preview.manualdecocina.com/es
+          RECIPE_URL: https://preview.manualdecocina.com/canelones-de-carne-molida-con-pina
+          TOOL_URL: https://preview.manualdecocina.com/es/que-puedo-cocinar
+        run: |
+          set -euo pipefail
+          npm exec --yes --package=lighthouse@13.5.0 -- lighthouse "$HOME_URL" --quiet --chrome-flags="--headless --no-sandbox" --only-categories=performance --preset=perf --form-factor=mobile --output=json --output-path=home.json
+          npm exec --yes --package=lighthouse@13.5.0 -- lighthouse "$RECIPE_URL" --quiet --chrome-flags="--headless --no-sandbox" --only-categories=performance --preset=perf --form-factor=mobile --output=json --output-path=recipe.json
+          npm exec --yes --package=lighthouse@13.5.0 -- lighthouse "$TOOL_URL" --quiet --chrome-flags="--headless --no-sandbox" --only-categories=performance --preset=perf --form-factor=mobile --output=json --output-path=tool.json
+
+      - name: Print performance summary
+        run: |
+          node <<'NODE'
+          const fs = require('fs')
+          for (const [label, file] of [['HOME','home.json'],['RECIPE','recipe.json'],['TOOL','tool.json']]) {
+            const r = JSON.parse(fs.readFileSync(file, 'utf8'))
+            const a = r.audits
+            const score = Math.round((r.categories.performance.score || 0) * 100)
+            const row = {
+              score,
+              FCP: a['first-contentful-paint']?.displayValue,
+              LCP: a['largest-contentful-paint']?.displayValue,
+              TBT: a['total-blocking-time']?.displayValue,
+              CLS: a['cumulative-layout-shift']?.displayValue,
+              SI: a['speed-index']?.displayValue,
+            }
+            console.log(label, JSON.stringify(row))
+          }
+          NODE
+
+      - name: Upload Lighthouse JSON
+        uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse-mobile-critical-pages
+          path: |
+            home.json
+            recipe.json
+            tool.json
+          retention-days: 14
