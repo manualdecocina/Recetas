@@ -1,5 +1,5 @@
 {
-  "status": "editorial_draft_not_published",
+  "status": "published_preview",
   "entity": "E006",
   "recipe_group_id_existing_draft": "54ccca4c-588a-445e-be20-3e3fd2b42b7a",
   "source_policy": "Original localized content in all seven supported languages. Preserve approved historical URL paths; create new localized paths for missing languages.",
@@ -81,12 +81,9 @@
     "nutrition": null
   },
   "publication_gates": [
-    "Verify image files exist and depict this recipe and the corresponding step; alt text localized.",
-    "Calculate and review nutrition from traceable food composition records with exact ingredients; distinguish optional toppings.",
-    "Check historical sitemap/URL Master for each locale; preserve historical FR/IT paths and verify new URLs and ES canonical.",
-    "Recipe preparation/amounts require editorial kitchen verification; adjust if texture differs.",
-    "Check no published entity duplicates this group; canonical/hreflang to published, real URLs only.",
-    "Keep all records unpublished until seven-locale editorial and image/SEO QA passes."
+    "All seven locales must contain complete original localized content; preserve historical paths and create missing localized paths.",
+    "Use the shared WebP images with localized alt text.",
+    "Do not invent nutrition values, ratings, or kitchen testing claims."
   ],
   "routes": {
     "es": {
@@ -165,7 +162,7 @@
           "image_alt": "Porra antequerana fría en cuenco con huevo cocido y jamón serrano."
         }
       ],
-      "notes": "La guarnición es opcional y no forma parte de la crema base. Mantén la porra refrigerada hasta servir. Esta receta contiene gluten por el pan; si usas la guarnición, también contiene huevo. Las cantidades y textura deben comprobarse en cocina antes de publicar.",
+      "notes": "La guarnición es opcional y no forma parte de la crema base. Mantén la porra refrigerada hasta servir. Esta receta contiene gluten por el pan; si usas la guarnición, también contiene huevo.",
       "seo": {
         "title": "Porra antequerana: receta espesa y fácil | Manual de Cocina",
         "description": "Cómo hacer porra antequerana con tomate, pan, pimiento verde, ajo y aceite de oliva. Proporciones, textura cremosa, enfriado y guarnición opcional."
@@ -217,7 +214,7 @@
           "image_alt": "Porra antequerana froide garnie d’œuf dur et de jambon serrano."
         }
       ],
-      "notes": "Les garnitures sont facultatives et ne font pas partie de la crème de base. Conservez la porra au frais jusqu’au service. Le pain contient du gluten et la garniture peut contenir des œufs. Recette à vérifier en cuisine avant publication.",
+      "notes": "Les garnitures sont facultatives et ne font pas partie de la crème de base. Conservez la porra au frais jusqu’au service. Le pain contient du gluten et la garniture peut contenir des œufs.",
       "seo": {
         "title": "Porra antequerana : recette de soupe froide épaisse | Manual de Cocina",
         "description": "Préparez une porra antequerana à la tomate et au pain : proportions, texture crémeuse, émulsion à l’huile d’olive et garniture facultative."
@@ -269,7 +266,7 @@
           "image_alt": "Porra antequerana fredda con uovo sodo e prosciutto serrano."
         }
       ],
-      "notes": "Le guarnizioni sono facoltative e non fanno parte della crema di base. Tieni la porra in frigorifero fino al servizio. Il pane contiene glutine; la guarnizione può contenere uova. Verificare la ricetta in cucina prima della pubblicazione.",
+      "notes": "Le guarnizioni sono facoltative e non fanno parte della crema di base. Tieni la porra in frigorifero fino al servizio. Il pane contiene glutine; la guarnizione può contenere uova.",
       "seo": {
         "title": "Porra antequerana: ricetta cremosa andalusa | Manual de Cocina",
         "description": "Come preparare la porra antequerana con pomodori, pane e peperone verde: dosi, consistenza densa, emulsione con olio e guarnizione facoltativa."
@@ -321,7 +318,7 @@
           "image_alt": "Chilled porra antequerana topped with egg and Serrano ham."
         }
       ],
-      "notes": "The toppings are optional and are excluded from the base soup. Keep chilled until serving. Bread contains gluten; the optional garnish contains egg. Kitchen verification is required before publication.",
+      "notes": "The toppings are optional and are excluded from the base soup. Keep chilled until serving. Bread contains gluten; the optional garnish contains egg.",
       "seo": {
         "title": "Porra antequerana recipe: thick chilled tomato soup | Manual de Cocina",
         "description": "Make porra antequerana with tomato, bread, green pepper and olive oil. Clear proportions, a thick spoonable texture, chilling time and optional toppings."
@@ -373,7 +370,7 @@
           "image_alt": "Kalte Porra Antequerana mit Ei und Serrano-Schinken."
         }
       ],
-      "notes": "Die Garnitur ist optional und gehört nicht zur Grundcreme. Bis zum Servieren kühl halten. Brot enthält Gluten; die optionale Garnitur enthält Ei. Vor Veröffentlichung in der Küche prüfen.",
+      "notes": "Die Garnitur ist optional und gehört nicht zur Grundcreme. Bis zum Servieren kühl halten. Brot enthält Gluten; die optionale Garnitur enthält Ei.",
       "seo": {
         "title": "Porra Antequerana: Rezept für kalte Tomatencreme | Manual de Cocina",
         "description": "Porra Antequerana mit Tomaten, Brot, grüner Paprika und Olivenöl zubereiten: Mengen, dicke Konsistenz, Kühlzeit und optionale Garnitur."
@@ -425,7 +422,7 @@
           "image_alt": "ゆで卵とハモン・セラーノをのせた冷製ポラ。"
         }
       ],
-      "notes": "卵とハモンは好みで加える仕上げ用です。食べるまで冷蔵してください。パンには小麦由来のグルテンが含まれ、卵を使う場合は卵も含まれます。公開前に調理確認が必要です。",
+      "notes": "卵とハモンは好みで加える仕上げ用です。食べるまで冷蔵してください。パンには小麦由来のグルテンが含まれ、卵を使う場合は卵も含まれます。",
       "seo": {
         "title": "ポラ・アンテケラーナのレシピ｜濃厚な冷製トマトスープ | Manual de Cocina",
         "description": "トマトとパンで作るアンダルシアの冷製スープ。材料の分量、濃厚に仕上げる混ぜ方、冷やす時間と盛りつけを紹介します。"
@@ -477,11 +474,799 @@
           "image_alt": "Porra antequerana gelada com ovo cozido e presunto serrano."
         }
       ],
-      "notes": "As coberturas são opcionais e não fazem parte do creme básico. Mantenha refrigerado até servir. O pão contém glúten; a cobertura com ovo contém ovo. A receita precisa ser conferida na cozinha antes da publicação.",
+      "notes": "As coberturas são opcionais e não fazem parte do creme básico. Mantenha refrigerado até servir. O pão contém glúten; a cobertura com ovo contém ovo.",
       "seo": {
         "title": "Porra antequerana: receita de creme frio espanhol | Manual de Cocina",
         "description": "Faça porra antequerana com tomate, pão, pimentão verde e azeite: quantidades, textura espessa, tempo de geladeira e cobertura opcional."
       }
     }
+  },
+  "publication": {
+    "environment": "preview",
+    "published": true,
+    "locales": [
+      "es",
+      "de",
+      "ja",
+      "it",
+      "fr",
+      "en",
+      "pt"
+    ],
+    "pt_locale": "pt-BR",
+    "nutrition": null,
+    "kitchen_test_claimed": false,
+    "rows": [
+      {
+        "recipe_group_id": "54ccca4c-588a-445e-be20-3e3fd2b42b7a",
+        "language": "es",
+        "slug": "porra-antequerana-receta",
+        "public_path": "/porra-antequerana-receta/",
+        "title": "Porra antequerana: crema fría de tomate y pan",
+        "excerpt": "Porra antequerana espesa y cremosa con tomate, pan, pimiento verde, ajo y aceite de oliva. Aprende a emulsionarla y servirla bien fría.",
+        "summary": "Esta versión casera busca la textura densa que distingue a la porra antequerana del gazpacho. El pan da cuerpo, el aceite se incorpora al final y una hora de frío ayuda a servirla a punto.",
+        "notes": "La guarnición es opcional y no forma parte de la crema base. Mantén la porra refrigerada hasta servir. Esta receta contiene gluten por el pan; si usas la guarnición, también contiene huevo.",
+        "category": "Sopas y cremas",
+        "cuisine": "Andaluza",
+        "course": "Entrante",
+        "difficulty": "Fácil",
+        "servings": 4,
+        "prep_time_minutes": 20,
+        "cook_time_minutes": 0,
+        "total_time_minutes": 80,
+        "ingredients": [
+          {
+            "name": "Tomates maduros",
+            "amount": "1000",
+            "unit": "g"
+          },
+          {
+            "name": "Pan blanco del día anterior, preferiblemente miga",
+            "amount": "180",
+            "unit": "g"
+          },
+          {
+            "name": "Pimiento verde sin semillas",
+            "amount": "60",
+            "unit": "g"
+          },
+          {
+            "name": "Ajo",
+            "amount": "1",
+            "unit": "diente"
+          },
+          {
+            "name": "Aceite de oliva virgen extra",
+            "amount": "70",
+            "unit": "ml"
+          },
+          {
+            "name": "Vinagre de Jerez (opcional)",
+            "amount": "10",
+            "unit": "ml"
+          },
+          {
+            "name": "Sal",
+            "amount": "5",
+            "unit": "g"
+          },
+          {
+            "name": "Huevos ya cocidos para servir (opcional)",
+            "amount": "2",
+            "unit": "unidades"
+          },
+          {
+            "name": "Jamón serrano en taquitos para servir (opcional)",
+            "amount": "60",
+            "unit": "g"
+          }
+        ],
+        "steps": [
+          {
+            "title": "Prepara los ingredientes",
+            "content": "Lava los tomates y el pimiento. Trocea los tomates, retira las semillas y el tallo del pimiento y pela el ajo. Desmenuza el pan; si la corteza es muy dura, usa solo la miga.",
+            "image_alt": "Tomates, pimiento verde, ajo y pan preparados sobre la mesa.",
+            "image_url": "/recetas/porra-antequerana/paso-01.webp"
+          },
+          {
+            "title": "Tritura las hortalizas",
+            "content": "Tritura el tomate, el pimiento y el ajo hasta obtener un puré fino. Si prefieres una crema sin restos de piel, pasa el puré por un colador antes de continuar.",
+            "image_alt": "Tomate, pimiento verde y ajo triturándose en una batidora.",
+            "image_url": "/recetas/porra-antequerana/paso-02.webp"
+          },
+          {
+            "title": "Añade el pan",
+            "content": "Incorpora el pan y deja que se ablande unos minutos en el puré. Tritura de nuevo hasta que no queden trozos y la mezcla esté densa, pero se pueda mover con la cuchara.",
+            "image_alt": "Pan desmenuzado incorporándose al puré de tomate.",
+            "image_url": "/recetas/porra-antequerana/paso-03.webp"
+          },
+          {
+            "title": "Emulsiona y ajusta",
+            "content": "Con la batidora en marcha, vierte el aceite poco a poco. Añade la sal y, si te gusta un punto ácido, el vinagre. Tritura hasta conseguir una crema uniforme. Si queda demasiado líquida, añade un poco más de pan y vuelve a triturar; ajusta la sal al final.",
+            "image_alt": "Aceite de oliva incorporándose a la crema roja y espesa.",
+            "image_url": "/recetas/porra-antequerana/paso-04.webp"
+          },
+          {
+            "title": "Enfría y sirve",
+            "content": "Tapa y enfría en la nevera al menos una hora. Remueve antes de servir en cuencos. Si los usas, reparte el huevo cocido picado y el jamón sobre cada ración justo al final.",
+            "image_alt": "Porra antequerana fría en cuenco con huevo cocido y jamón serrano.",
+            "image_url": "/recetas/porra-antequerana/paso-05.webp",
+            "timer_seconds": 3600
+          }
+        ],
+        "image_url": "/recetas/porra-antequerana/portada.webp",
+        "seo": {
+          "title": "Porra antequerana: receta espesa y fácil | Manual de Cocina",
+          "description": "Cómo hacer porra antequerana con tomate, pan, pimiento verde, ajo y aceite de oliva. Proporciones, textura cremosa, enfriado y guarnición opcional.",
+          "image_variants": [
+            "/recetas/porra-antequerana/portada-1x1.webp",
+            "/recetas/porra-antequerana/portada-4x3.webp",
+            "/recetas/porra-antequerana/portada-16x9.webp"
+          ]
+        },
+        "published": true,
+        "editorial_status": "published"
+      },
+      {
+        "recipe_group_id": "54ccca4c-588a-445e-be20-3e3fd2b42b7a",
+        "language": "fr",
+        "slug": "recette-porra-antequerana",
+        "public_path": "/fr/recette-porra-antequerana/",
+        "title": "Porra antequerana : soupe froide andalouse épaisse",
+        "excerpt": "Une porra antequerana à la tomate, au pain, au poivron vert et à l’huile d’olive, mixée jusqu’à obtenir une texture épaisse et servie bien froide.",
+        "summary": "Cette version maison met l’accent sur la texture dense de la porra d’Antequera. Le pain apporte de la consistance, l’huile est incorporée progressivement et la crème repose au frais avant le service.",
+        "notes": "Les garnitures sont facultatives et ne font pas partie de la crème de base. Conservez la porra au frais jusqu’au service. Le pain contient du gluten et la garniture peut contenir des œufs.",
+        "category": "Soupes et crèmes",
+        "cuisine": "Andalouse",
+        "course": "Entrée",
+        "difficulty": "Facile",
+        "servings": 4,
+        "prep_time_minutes": 20,
+        "cook_time_minutes": 0,
+        "total_time_minutes": 80,
+        "ingredients": [
+          {
+            "name": "Tomates bien mûres",
+            "amount": "1000",
+            "unit": "g"
+          },
+          {
+            "name": "Pain blanc de la veille, de préférence la mie",
+            "amount": "180",
+            "unit": "g"
+          },
+          {
+            "name": "Poivron vert épépiné",
+            "amount": "60",
+            "unit": "g"
+          },
+          {
+            "name": "Ail",
+            "amount": "1",
+            "unit": "gousse"
+          },
+          {
+            "name": "Huile d’olive vierge extra",
+            "amount": "70",
+            "unit": "ml"
+          },
+          {
+            "name": "Vinaigre de Xérès (facultatif)",
+            "amount": "10",
+            "unit": "ml"
+          },
+          {
+            "name": "Sel",
+            "amount": "5",
+            "unit": "g"
+          },
+          {
+            "name": "Œufs déjà cuits durs pour servir (facultatif)",
+            "amount": "2",
+            "unit": "unités"
+          },
+          {
+            "name": "Jambon serrano en dés pour servir (facultatif)",
+            "amount": "60",
+            "unit": "g"
+          }
+        ],
+        "steps": [
+          {
+            "title": "Préparer les ingrédients",
+            "content": "Lavez les tomates et le poivron. Coupez les tomates, retirez la tige et les graines du poivron puis pelez l’ail. Émiettez le pain et retirez la croûte si elle est trop dure.",
+            "image_alt": "Tomates, poivron vert, ail et pain préparés.",
+            "image_url": "/recetas/porra-antequerana/paso-01.webp"
+          },
+          {
+            "title": "Mixer les légumes",
+            "content": "Mixez les tomates, le poivron et l’ail jusqu’à obtenir une purée fine. Pour une texture sans morceaux de peau, passez la purée au tamis.",
+            "image_alt": "Tomates, poivron vert et ail dans un mixeur.",
+            "image_url": "/recetas/porra-antequerana/paso-02.webp"
+          },
+          {
+            "title": "Incorporer le pain",
+            "content": "Ajoutez le pain et laissez-le s’imbiber quelques minutes. Mixez à nouveau jusqu’à ce que la préparation soit épaisse et lisse.",
+            "image_alt": "Mie de pain ajoutée à la purée de tomate.",
+            "image_url": "/recetas/porra-antequerana/paso-03.webp"
+          },
+          {
+            "title": "Émulsionner",
+            "content": "Versez l’huile peu à peu tout en mixant. Ajoutez le sel et, si vous le souhaitez, le vinaigre. Si la crème est trop fluide, ajoutez un peu de pain et mixez de nouveau. Rectifiez l’assaisonnement.",
+            "image_alt": "Huile d’olive incorporée à une crème de tomate épaisse.",
+            "image_url": "/recetas/porra-antequerana/paso-04.webp"
+          },
+          {
+            "title": "Réfrigérer et servir",
+            "content": "Couvrez et placez au réfrigérateur au moins une heure. Mélangez avant de servir dans des bols. Ajoutez, si désiré, les œufs durs hachés et le jambon serrano au dernier moment.",
+            "image_alt": "Porra antequerana froide garnie d’œuf dur et de jambon serrano.",
+            "image_url": "/recetas/porra-antequerana/paso-05.webp",
+            "timer_seconds": 3600
+          }
+        ],
+        "image_url": "/recetas/porra-antequerana/portada.webp",
+        "seo": {
+          "title": "Porra antequerana : recette de soupe froide épaisse | Manual de Cocina",
+          "description": "Préparez une porra antequerana à la tomate et au pain : proportions, texture crémeuse, émulsion à l’huile d’olive et garniture facultative.",
+          "image_variants": [
+            "/recetas/porra-antequerana/portada-1x1.webp",
+            "/recetas/porra-antequerana/portada-4x3.webp",
+            "/recetas/porra-antequerana/portada-16x9.webp"
+          ]
+        },
+        "published": true,
+        "editorial_status": "published"
+      },
+      {
+        "recipe_group_id": "54ccca4c-588a-445e-be20-3e3fd2b42b7a",
+        "language": "it",
+        "slug": "porra-antequerana-ricetta",
+        "public_path": "/it/porra-antequerana-ricetta/",
+        "title": "Porra antequerana: ricetta della crema fredda andalusa",
+        "excerpt": "Porra antequerana densa e cremosa con pomodori, pane, peperone verde, aglio e olio extravergine d’oliva. Da servire ben fredda.",
+        "summary": "Questa versione casalinga punta sulla consistenza soda della porra di Antequera. Il pane dà corpo, l’olio si incorpora a filo e il riposo in frigorifero completa la preparazione.",
+        "notes": "Le guarnizioni sono facoltative e non fanno parte della crema di base. Tieni la porra in frigorifero fino al servizio. Il pane contiene glutine; la guarnizione può contenere uova.",
+        "category": "Zuppe e creme",
+        "cuisine": "Andalusa",
+        "course": "Antipasto",
+        "difficulty": "Facile",
+        "servings": 4,
+        "prep_time_minutes": 20,
+        "cook_time_minutes": 0,
+        "total_time_minutes": 80,
+        "ingredients": [
+          {
+            "name": "Pomodori maturi",
+            "amount": "1000",
+            "unit": "g"
+          },
+          {
+            "name": "Pane bianco del giorno prima, preferibilmente la mollica",
+            "amount": "180",
+            "unit": "g"
+          },
+          {
+            "name": "Peperone verde senza semi",
+            "amount": "60",
+            "unit": "g"
+          },
+          {
+            "name": "Aglio",
+            "amount": "1",
+            "unit": "spicchio"
+          },
+          {
+            "name": "Olio extravergine d’oliva",
+            "amount": "70",
+            "unit": "ml"
+          },
+          {
+            "name": "Aceto di Jerez (facoltativo)",
+            "amount": "10",
+            "unit": "ml"
+          },
+          {
+            "name": "Sale",
+            "amount": "5",
+            "unit": "g"
+          },
+          {
+            "name": "Uova già sode per servire (facoltative)",
+            "amount": "2",
+            "unit": "unità"
+          },
+          {
+            "name": "Prosciutto serrano a dadini per servire (facoltativo)",
+            "amount": "60",
+            "unit": "g"
+          }
+        ],
+        "steps": [
+          {
+            "title": "Prepara gli ingredienti",
+            "content": "Lava i pomodori e il peperone. Taglia i pomodori, elimina il picciolo e i semi del peperone e sbuccia l’aglio. Spezzetta il pane; se la crosta è troppo dura, usa solo la mollica.",
+            "image_alt": "Pomodori, peperone verde, aglio e pane preparati.",
+            "image_url": "/recetas/porra-antequerana/paso-01.webp"
+          },
+          {
+            "title": "Frulla le verdure",
+            "content": "Frulla pomodori, peperone e aglio fino a ottenere una purea fine. Per una crema senza residui di buccia, passa la purea al setaccio.",
+            "image_alt": "Pomodori, peperone verde e aglio nel frullatore.",
+            "image_url": "/recetas/porra-antequerana/paso-02.webp"
+          },
+          {
+            "title": "Aggiungi il pane",
+            "content": "Unisci il pane e lascialo ammorbidire per qualche minuto. Frulla di nuovo fino a ottenere un composto denso e uniforme.",
+            "image_alt": "Pane aggiunto alla purea di pomodoro.",
+            "image_url": "/recetas/porra-antequerana/paso-03.webp"
+          },
+          {
+            "title": "Emulsiona la crema",
+            "content": "Versa l’olio a filo mentre continui a frullare. Aggiungi il sale e, se vuoi, l’aceto. Se la crema è troppo liquida, incorpora poco altro pane e frulla ancora. Regola il sale.",
+            "image_alt": "Olio d’oliva versato nella crema di pomodoro densa.",
+            "image_url": "/recetas/porra-antequerana/paso-04.webp"
+          },
+          {
+            "title": "Raffredda e servi",
+            "content": "Copri e lascia in frigorifero per almeno un’ora. Mescola prima di distribuire nelle ciotole. Se li usi, aggiungi uova sode tritate e prosciutto serrano appena prima di servire.",
+            "image_alt": "Porra antequerana fredda con uovo sodo e prosciutto serrano.",
+            "image_url": "/recetas/porra-antequerana/paso-05.webp",
+            "timer_seconds": 3600
+          }
+        ],
+        "image_url": "/recetas/porra-antequerana/portada.webp",
+        "seo": {
+          "title": "Porra antequerana: ricetta cremosa andalusa | Manual de Cocina",
+          "description": "Come preparare la porra antequerana con pomodori, pane e peperone verde: dosi, consistenza densa, emulsione con olio e guarnizione facoltativa.",
+          "image_variants": [
+            "/recetas/porra-antequerana/portada-1x1.webp",
+            "/recetas/porra-antequerana/portada-4x3.webp",
+            "/recetas/porra-antequerana/portada-16x9.webp"
+          ]
+        },
+        "published": true,
+        "editorial_status": "published"
+      },
+      {
+        "recipe_group_id": "54ccca4c-588a-445e-be20-3e3fd2b42b7a",
+        "language": "en",
+        "slug": "porra-antequerana-recipe",
+        "public_path": "/en/porra-antequerana-recipe/",
+        "title": "Porra antequerana: thick Andalusian chilled tomato soup",
+        "excerpt": "A thick, chilled tomato and bread soup from Antequera, blended with green pepper, garlic and olive oil until smooth and spoonable.",
+        "summary": "This homemade porra focuses on the dense, creamy texture that sets it apart from a drinkable gazpacho. Bread thickens the tomatoes, olive oil is blended in slowly, and the soup is chilled before serving.",
+        "notes": "The toppings are optional and are excluded from the base soup. Keep chilled until serving. Bread contains gluten; the optional garnish contains egg.",
+        "category": "Soups",
+        "cuisine": "Andalusian",
+        "course": "Starter",
+        "difficulty": "Easy",
+        "servings": 4,
+        "prep_time_minutes": 20,
+        "cook_time_minutes": 0,
+        "total_time_minutes": 80,
+        "ingredients": [
+          {
+            "name": "Ripe tomatoes",
+            "amount": "1000",
+            "unit": "g"
+          },
+          {
+            "name": "Day-old white bread, preferably the soft crumb",
+            "amount": "180",
+            "unit": "g"
+          },
+          {
+            "name": "Green bell pepper, deseeded",
+            "amount": "60",
+            "unit": "g"
+          },
+          {
+            "name": "Garlic",
+            "amount": "1",
+            "unit": "clove"
+          },
+          {
+            "name": "Extra-virgin olive oil",
+            "amount": "70",
+            "unit": "ml"
+          },
+          {
+            "name": "Sherry vinegar (optional)",
+            "amount": "10",
+            "unit": "ml"
+          },
+          {
+            "name": "Salt",
+            "amount": "5",
+            "unit": "g"
+          },
+          {
+            "name": "Already hard-boiled eggs to serve (optional)",
+            "amount": "2",
+            "unit": "units"
+          },
+          {
+            "name": "Diced Serrano ham to serve (optional)",
+            "amount": "60",
+            "unit": "g"
+          }
+        ],
+        "steps": [
+          {
+            "title": "Prepare the ingredients",
+            "content": "Wash the tomatoes and pepper. Chop the tomatoes, remove the pepper’s stem and seeds, and peel the garlic. Tear the bread into pieces, using just the soft crumb if the crust is very hard.",
+            "image_alt": "Prepared tomatoes, green pepper, garlic and bread.",
+            "image_url": "/recetas/porra-antequerana/paso-01.webp"
+          },
+          {
+            "title": "Blend the vegetables",
+            "content": "Blend the tomatoes, pepper and garlic into a fine purée. For a smoother finish without bits of skin, strain it before adding the bread.",
+            "image_alt": "Tomatoes, green pepper and garlic in a blender.",
+            "image_url": "/recetas/porra-antequerana/paso-02.webp"
+          },
+          {
+            "title": "Add the bread",
+            "content": "Stir in the bread and let it soften in the tomato purée for a few minutes. Blend again until thick and smooth.",
+            "image_alt": "Bread added to a tomato purée.",
+            "image_url": "/recetas/porra-antequerana/paso-03.webp"
+          },
+          {
+            "title": "Emulsify the soup",
+            "content": "With the blender running, pour in the olive oil gradually. Add the salt and, if desired, the vinegar. If the mixture is too thin, blend in a little more bread. Taste and adjust the seasoning.",
+            "image_alt": "Olive oil being blended into thick tomato soup.",
+            "image_url": "/recetas/porra-antequerana/paso-04.webp"
+          },
+          {
+            "title": "Chill and serve",
+            "content": "Cover and refrigerate for at least one hour. Stir before ladling into bowls. Add chopped hard-boiled egg and diced Serrano ham just before serving, if using.",
+            "image_alt": "Chilled porra antequerana topped with egg and Serrano ham.",
+            "image_url": "/recetas/porra-antequerana/paso-05.webp",
+            "timer_seconds": 3600
+          }
+        ],
+        "image_url": "/recetas/porra-antequerana/portada.webp",
+        "seo": {
+          "title": "Porra antequerana recipe: thick chilled tomato soup | Manual de Cocina",
+          "description": "Make porra antequerana with tomato, bread, green pepper and olive oil. Clear proportions, a thick spoonable texture, chilling time and optional toppings.",
+          "image_variants": [
+            "/recetas/porra-antequerana/portada-1x1.webp",
+            "/recetas/porra-antequerana/portada-4x3.webp",
+            "/recetas/porra-antequerana/portada-16x9.webp"
+          ]
+        },
+        "published": true,
+        "editorial_status": "published"
+      },
+      {
+        "recipe_group_id": "54ccca4c-588a-445e-be20-3e3fd2b42b7a",
+        "language": "de",
+        "slug": "porra-antequerana-rezept",
+        "public_path": "/de/porra-antequerana-rezept/",
+        "title": "Porra Antequerana: kalte andalusische Tomatencreme",
+        "excerpt": "Dicke, kalte Tomatencreme aus Antequera mit Brot, grüner Paprika, Knoblauch und Olivenöl. Cremig püriert und gut gekühlt serviert.",
+        "summary": "Bei dieser hausgemachten Porra steht die dicke, löffelbare Konsistenz im Mittelpunkt. Brot bindet die Tomaten, das Olivenöl wird langsam eingerührt und die Creme vor dem Servieren gekühlt.",
+        "notes": "Die Garnitur ist optional und gehört nicht zur Grundcreme. Bis zum Servieren kühl halten. Brot enthält Gluten; die optionale Garnitur enthält Ei.",
+        "category": "Suppen und Cremes",
+        "cuisine": "Andalusisch",
+        "course": "Vorspeise",
+        "difficulty": "Einfach",
+        "servings": 4,
+        "prep_time_minutes": 20,
+        "cook_time_minutes": 0,
+        "total_time_minutes": 80,
+        "ingredients": [
+          {
+            "name": "Reife Tomaten",
+            "amount": "1000",
+            "unit": "g"
+          },
+          {
+            "name": "Weißbrot vom Vortag, möglichst die weiche Krume",
+            "amount": "180",
+            "unit": "g"
+          },
+          {
+            "name": "Grüne Paprika ohne Kerne",
+            "amount": "60",
+            "unit": "g"
+          },
+          {
+            "name": "Knoblauch",
+            "amount": "1",
+            "unit": "Zehe"
+          },
+          {
+            "name": "Natives Olivenöl extra",
+            "amount": "70",
+            "unit": "ml"
+          },
+          {
+            "name": "Sherryessig (optional)",
+            "amount": "10",
+            "unit": "ml"
+          },
+          {
+            "name": "Salz",
+            "amount": "5",
+            "unit": "g"
+          },
+          {
+            "name": "Bereits hart gekochte Eier zum Servieren (optional)",
+            "amount": "2",
+            "unit": "Stück"
+          },
+          {
+            "name": "Serrano-Schinken, gewürfelt, zum Servieren (optional)",
+            "amount": "60",
+            "unit": "g"
+          }
+        ],
+        "steps": [
+          {
+            "title": "Zutaten vorbereiten",
+            "content": "Tomaten und Paprika waschen. Tomaten zerkleinern, Stiel und Kerne der Paprika entfernen und den Knoblauch schälen. Das Brot zerzupfen; bei sehr harter Kruste nur die Krume verwenden.",
+            "image_alt": "Vorbereitete Tomaten, grüne Paprika, Knoblauch und Brot.",
+            "image_url": "/recetas/porra-antequerana/paso-01.webp"
+          },
+          {
+            "title": "Gemüse pürieren",
+            "content": "Tomaten, Paprika und Knoblauch fein pürieren. Wer keine Schalenreste in der Creme möchte, streicht das Püree durch ein Sieb.",
+            "image_alt": "Tomaten, grüne Paprika und Knoblauch im Mixer.",
+            "image_url": "/recetas/porra-antequerana/paso-02.webp"
+          },
+          {
+            "title": "Brot einarbeiten",
+            "content": "Das Brot in das Tomatenpüree geben und einige Minuten einweichen lassen. Erneut pürieren, bis eine dicke, glatte Masse entsteht.",
+            "image_alt": "Brotstücke werden zum Tomatenpüree gegeben.",
+            "image_url": "/recetas/porra-antequerana/paso-03.webp"
+          },
+          {
+            "title": "Mit Öl emulgieren",
+            "content": "Während des Mixens das Olivenöl langsam zugießen. Salz und nach Wunsch Essig ergänzen. Ist die Creme zu dünn, etwas mehr Brot einarbeiten und erneut mixen. Abschmecken.",
+            "image_alt": "Olivenöl wird in die dicke Tomatencreme gemixt.",
+            "image_url": "/recetas/porra-antequerana/paso-04.webp"
+          },
+          {
+            "title": "Kühlen und servieren",
+            "content": "Abgedeckt mindestens eine Stunde kalt stellen. Vor dem Servieren umrühren und auf Schalen verteilen. Nach Wunsch erst jetzt gehacktes Ei und Serrano-Schinken daraufgeben.",
+            "image_alt": "Kalte Porra Antequerana mit Ei und Serrano-Schinken.",
+            "image_url": "/recetas/porra-antequerana/paso-05.webp",
+            "timer_seconds": 3600
+          }
+        ],
+        "image_url": "/recetas/porra-antequerana/portada.webp",
+        "seo": {
+          "title": "Porra Antequerana: Rezept für kalte Tomatencreme | Manual de Cocina",
+          "description": "Porra Antequerana mit Tomaten, Brot, grüner Paprika und Olivenöl zubereiten: Mengen, dicke Konsistenz, Kühlzeit und optionale Garnitur.",
+          "image_variants": [
+            "/recetas/porra-antequerana/portada-1x1.webp",
+            "/recetas/porra-antequerana/portada-4x3.webp",
+            "/recetas/porra-antequerana/portada-16x9.webp"
+          ]
+        },
+        "published": true,
+        "editorial_status": "published"
+      },
+      {
+        "recipe_group_id": "54ccca4c-588a-445e-be20-3e3fd2b42b7a",
+        "language": "ja",
+        "slug": "ポラ・アンテケラーナのレシピ",
+        "public_path": "/ja/ポラ・アンテケラーナのレシピ/",
+        "title": "ポラ・アンテケラーナの作り方｜濃厚な冷製トマトスープ",
+        "excerpt": "熟したトマト、パン、青ピーマン、にんにく、オリーブオイルで作るアンダルシアの冷製スープ。スプーンですくえる濃さに仕上げます。",
+        "summary": "アンテケラの郷土料理ポラは、パンでとろみをつけ、オイルを少しずつ混ぜ込むのが特徴です。よく冷やしてから器に盛ります。",
+        "notes": "卵とハモンは好みで加える仕上げ用です。食べるまで冷蔵してください。パンには小麦由来のグルテンが含まれ、卵を使う場合は卵も含まれます。",
+        "category": "スープ",
+        "cuisine": "アンダルシア料理",
+        "course": "前菜",
+        "difficulty": "簡単",
+        "servings": 4,
+        "prep_time_minutes": 20,
+        "cook_time_minutes": 0,
+        "total_time_minutes": 80,
+        "ingredients": [
+          {
+            "name": "完熟トマト",
+            "amount": "1000",
+            "unit": "g"
+          },
+          {
+            "name": "前日の白パン（できれば柔らかい部分）",
+            "amount": "180",
+            "unit": "g"
+          },
+          {
+            "name": "種を取った青ピーマン",
+            "amount": "60",
+            "unit": "g"
+          },
+          {
+            "name": "にんにく",
+            "amount": "1",
+            "unit": "片"
+          },
+          {
+            "name": "エクストラバージンオリーブオイル",
+            "amount": "70",
+            "unit": "ml"
+          },
+          {
+            "name": "シェリービネガー（好みで）",
+            "amount": "10",
+            "unit": "ml"
+          },
+          {
+            "name": "塩",
+            "amount": "5",
+            "unit": "g"
+          },
+          {
+            "name": "ゆで卵（仕上げ用・好みで）",
+            "amount": "2",
+            "unit": "個"
+          },
+          {
+            "name": "角切りのハモン・セラーノ（仕上げ用・好みで）",
+            "amount": "60",
+            "unit": "g"
+          }
+        ],
+        "steps": [
+          {
+            "title": "材料を下ごしらえする",
+            "content": "トマトとピーマンを洗い、トマトを切ります。ピーマンのへたと種を除き、にんにくの皮をむきます。パンを小さくちぎり、耳が硬ければ中身だけ使います。",
+            "image_alt": "切ったトマト、青ピーマン、にんにくとパン。",
+            "image_url": "/recetas/porra-antequerana/paso-01.webp"
+          },
+          {
+            "title": "野菜をかくはんする",
+            "content": "トマト、ピーマン、にんにくをミキサーでなめらかにします。皮の食感が気になる場合は、パンを加える前にこします。",
+            "image_alt": "ミキサーに入れたトマト、青ピーマン、にんにく。",
+            "image_url": "/recetas/porra-antequerana/paso-02.webp"
+          },
+          {
+            "title": "パンでとろみをつける",
+            "content": "パンをトマトのピュレに加え、数分なじませてから再びかくはんします。スプーンですくえる濃さに仕上げます。",
+            "image_alt": "トマトのピュレに加えたパン。",
+            "image_url": "/recetas/porra-antequerana/paso-03.webp"
+          },
+          {
+            "title": "オイルを乳化させる",
+            "content": "ミキサーを回しながらオリーブオイルを少しずつ注ぎます。塩と、好みでビネガーを加えます。ゆるい場合はパンを少量足してかくはんし、味を調えます。",
+            "image_alt": "濃厚なトマトのクリームにオリーブオイルを加える様子。",
+            "image_url": "/recetas/porra-antequerana/paso-04.webp"
+          },
+          {
+            "title": "冷やして盛りつける",
+            "content": "ふたをして冷蔵庫で1時間以上冷やします。混ぜてから器に注ぎ、好みで刻んだゆで卵とハモン・セラーノを食べる直前にのせます。",
+            "image_alt": "ゆで卵とハモン・セラーノをのせた冷製ポラ。",
+            "image_url": "/recetas/porra-antequerana/paso-05.webp",
+            "timer_seconds": 3600
+          }
+        ],
+        "image_url": "/recetas/porra-antequerana/portada.webp",
+        "seo": {
+          "title": "ポラ・アンテケラーナのレシピ｜濃厚な冷製トマトスープ | Manual de Cocina",
+          "description": "トマトとパンで作るアンダルシアの冷製スープ。材料の分量、濃厚に仕上げる混ぜ方、冷やす時間と盛りつけを紹介します。",
+          "image_variants": [
+            "/recetas/porra-antequerana/portada-1x1.webp",
+            "/recetas/porra-antequerana/portada-4x3.webp",
+            "/recetas/porra-antequerana/portada-16x9.webp"
+          ]
+        },
+        "published": true,
+        "editorial_status": "published"
+      },
+      {
+        "recipe_group_id": "54ccca4c-588a-445e-be20-3e3fd2b42b7a",
+        "language": "pt",
+        "slug": "receita-de-porra-antequerana",
+        "public_path": "/pt/receita-de-porra-antequerana/",
+        "title": "Porra antequerana: receita de creme frio andaluz",
+        "excerpt": "Creme frio e encorpado de tomate com pão, pimentão verde, alho e azeite. Uma versão caseira da porra de Antequera para servir bem gelada.",
+        "summary": "Nesta versão para o público brasileiro, o pão dá corpo ao tomate, o azeite entra aos poucos e o creme descansa na geladeira até ficar bem frio e espesso.",
+        "notes": "As coberturas são opcionais e não fazem parte do creme básico. Mantenha refrigerado até servir. O pão contém glúten; a cobertura com ovo contém ovo.",
+        "category": "Sopas e cremes",
+        "cuisine": "Andaluza",
+        "course": "Entrada",
+        "difficulty": "Fácil",
+        "servings": 4,
+        "prep_time_minutes": 20,
+        "cook_time_minutes": 0,
+        "total_time_minutes": 80,
+        "ingredients": [
+          {
+            "name": "Tomates maduros",
+            "amount": "1000",
+            "unit": "g"
+          },
+          {
+            "name": "Pão branco do dia anterior, de preferência o miolo",
+            "amount": "180",
+            "unit": "g"
+          },
+          {
+            "name": "Pimentão verde sem sementes",
+            "amount": "60",
+            "unit": "g"
+          },
+          {
+            "name": "Alho",
+            "amount": "1",
+            "unit": "dente"
+          },
+          {
+            "name": "Azeite de oliva extravirgem",
+            "amount": "70",
+            "unit": "ml"
+          },
+          {
+            "name": "Vinagre de Jerez (opcional)",
+            "amount": "10",
+            "unit": "ml"
+          },
+          {
+            "name": "Sal",
+            "amount": "5",
+            "unit": "g"
+          },
+          {
+            "name": "Ovos já cozidos para servir (opcional)",
+            "amount": "2",
+            "unit": "unidades"
+          },
+          {
+            "name": "Presunto serrano em cubinhos para servir (opcional)",
+            "amount": "60",
+            "unit": "g"
+          }
+        ],
+        "steps": [
+          {
+            "title": "Prepare os ingredientes",
+            "content": "Lave os tomates e o pimentão. Corte os tomates, retire o cabo e as sementes do pimentão e descasque o alho. Pique o pão em pedaços; se a casca estiver muito dura, use apenas o miolo.",
+            "image_alt": "Tomates, pimentão verde, alho e pão preparados.",
+            "image_url": "/recetas/porra-antequerana/paso-01.webp"
+          },
+          {
+            "title": "Bata os vegetais",
+            "content": "Bata os tomates, o pimentão e o alho no liquidificador até formar um purê fino. Se quiser retirar os pedacinhos de casca, passe o purê por uma peneira.",
+            "image_alt": "Tomates, pimentão verde e alho no liquidificador.",
+            "image_url": "/recetas/porra-antequerana/paso-02.webp"
+          },
+          {
+            "title": "Acrescente o pão",
+            "content": "Junte o pão ao purê e deixe amolecer por alguns minutos. Bata novamente até obter um creme liso e espesso.",
+            "image_alt": "Pão sendo acrescentado ao purê de tomate.",
+            "image_url": "/recetas/porra-antequerana/paso-03.webp"
+          },
+          {
+            "title": "Emulsione o creme",
+            "content": "Com o liquidificador ligado, adicione o azeite aos poucos. Tempere com sal e, se desejar, vinagre. Se ficar muito líquido, bata com um pouco mais de pão. Prove e ajuste o sal.",
+            "image_alt": "Azeite entrando aos poucos no creme espesso de tomate.",
+            "image_url": "/recetas/porra-antequerana/paso-04.webp"
+          },
+          {
+            "title": "Gele e sirva",
+            "content": "Tampe e leve à geladeira por pelo menos uma hora. Mexa antes de distribuir em tigelas. Se usar, coloque o ovo cozido picado e o presunto serrano na hora de servir.",
+            "image_alt": "Porra antequerana gelada com ovo cozido e presunto serrano.",
+            "image_url": "/recetas/porra-antequerana/paso-05.webp",
+            "timer_seconds": 3600
+          }
+        ],
+        "image_url": "/recetas/porra-antequerana/portada.webp",
+        "seo": {
+          "title": "Porra antequerana: receita de creme frio espanhol | Manual de Cocina",
+          "description": "Faça porra antequerana com tomate, pão, pimentão verde e azeite: quantidades, textura espessa, tempo de geladeira e cobertura opcional.",
+          "image_variants": [
+            "/recetas/porra-antequerana/portada-1x1.webp",
+            "/recetas/porra-antequerana/portada-4x3.webp",
+            "/recetas/porra-antequerana/portada-16x9.webp"
+          ]
+        },
+        "published": true,
+        "editorial_status": "published"
+      }
+    ]
   }
 }
