@@ -85,7 +85,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     entries.push({ url: `${site}/${l}/categorias` })
   }
   // Herramienta real (gratuita) sin página propia en el sitemap hasta ahora.
-  entries.push({ url: `${site}/es/que-puedo-cocinar`, lastModified: new Date().toISOString() })
+  entries.push({ url: `${site}/es/que-puedo-cocinar` })
 
   const { data: categoryRows, error: categoryError } = await supabase
     .from('recipes')
@@ -111,7 +111,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     .order('name', { ascending: true })
   if (ingredientError) throw new Error(`Sitemap ingredients: ${ingredientError.message}`)
 
-  entries.push({ url: `${site}/es/ingredientes`, lastModified: new Date().toISOString() })
+  entries.push({ url: `${site}/es/ingredientes` })
   for (const ingredient of (ingredients ?? []) as IngredientRow[]) {
     entries.push({ url: `${site}/es/ingredientes/${ingredient.slug}`, lastModified: ingredient.updated_at })
   }
