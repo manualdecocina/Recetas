@@ -79,3 +79,22 @@ export const getRelatedRecipes = cache(async (recipe: Pick<Recipe, 'id' | 'langu
   if (error) throw new Error(`No se pudieron cargar recetas relacionadas: ${error.message}`)
   return data ?? []
 })
+
+
+/** Rutas públicas publicadas para prerenderizar las URLs históricas/localizadas conocidas.
+ *  No cambia public_path ni inventa rutas; solo convierte las rutas ya publicadas en params
+ *  estáticos de Next para reducir TTFB en el primer acceso. */
+export const getPublishedPublicPaths = cache(async (): Promise<string[]> => {
+  const [{ data: recipes, error: recipesError }, { data: pages, error: pagesError }] = await Promise.all([
+    supabase.from('recipes').select('public_path').eq('published', true).not('public_path', 'is', null),
+    supabase.from('content_pages').select('public_path').eq('published', true).not('public_path', 'is', null),
+  ])
+  if (recipesError) throw new Error(`No se pudieron cargar rutas públicas de recetas: ${recipesError.message}`)
+  if (pagesError) throw new Error(`No se pudieron cargar rutas públicas de contenido: ${pagesError.message}`)
+
+  const paths = [...(recipes ?? []), ...(pages ?? [])]
+    .map((row) => normalizePublicPath(row.public_path as string))
+    .filter((path) => path !== '/')
+
+  return Array.from(new Set(paths)).sort()
+})
