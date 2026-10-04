@@ -137,11 +137,6 @@ const es = {
   skipToContent: "Saltar al contenido",
   emptyTitle: "Este contenido todavía está creciendo",
   emptyBody: "Mientras tanto, puedes explorar todas las recetas.",
-  cookieBannerText: "Este sitio se mantiene gratis gracias a la publicidad de Google AdSense. Puedes elegir que los anuncios se personalicen según tu navegación, o ver solo anuncios básicos sin personalizar.",
-  cookieBannerPersonalized: "Personalizar anuncios",
-  cookieBannerBasic: "Solo anuncios básicos",
-  cookieBannerLearnMore: "Más información",
-  cookiePreferencesLink: "Preferencias de cookies",
   ratingHeading: "Valora esta receta",
   ratingYourVote: "Tu valoración",
   ratingThanks: "¡Gracias por tu voto!",
@@ -283,11 +278,6 @@ const en = {
   skipToContent: "Skip to content",
   emptyTitle: "This section is still growing",
   emptyBody: "In the meantime, browse all recipes.",
-  cookieBannerText: "This site stays free thanks to Google AdSense advertising. You can choose to have ads personalized based on your browsing, or see only basic, non-personalized ads.",
-  cookieBannerPersonalized: "Personalize ads",
-  cookieBannerBasic: "Basic ads only",
-  cookieBannerLearnMore: "Learn more",
-  cookiePreferencesLink: "Cookie preferences",
   ratingHeading: "Rate this recipe",
   ratingYourVote: "Your rating",
   ratingThanks: "Thanks for your vote!",
@@ -429,11 +419,6 @@ const de = {
   skipToContent: "Zum Inhalt springen", // REVISAR
   emptyTitle: "Dieser Bereich wächst noch", // REVISAR
   emptyBody: "Stöbere in der Zwischenzeit in allen Rezepten.", // REVISAR
-  cookieBannerText: "Diese Website bleibt dank Werbung von Google AdSense kostenlos. Du kannst wählen, ob Anzeigen anhand deines Surfverhaltens personalisiert werden, oder nur einfache, nicht personalisierte Anzeigen sehen.",
-  cookieBannerPersonalized: "Anzeigen personalisieren",
-  cookieBannerBasic: "Nur einfache Anzeigen",
-  cookieBannerLearnMore: "Mehr erfahren",
-  cookiePreferencesLink: "Cookie-Einstellungen",
   ratingHeading: "Bewerte dieses Rezept",
   ratingYourVote: "Deine Bewertung",
   ratingThanks: "Danke für deine Bewertung!",
@@ -575,11 +560,6 @@ const it = {
   skipToContent: "Vai al contenuto", // REVISAR
   emptyTitle: "Questa sezione è ancora in crescita", // REVISAR
   emptyBody: "Nel frattempo, sfoglia tutte le ricette.", // REVISAR
-  cookieBannerText: "Questo sito rimane gratuito grazie alla pubblicità di Google AdSense. Puoi scegliere di personalizzare gli annunci in base alla tua navigazione, oppure vedere solo annunci di base non personalizzati.",
-  cookieBannerPersonalized: "Personalizza annunci",
-  cookieBannerBasic: "Solo annunci di base",
-  cookieBannerLearnMore: "Scopri di più",
-  cookiePreferencesLink: "Preferenze cookie",
   ratingHeading: "Valuta questa ricetta",
   ratingYourVote: "La tua valutazione",
   ratingThanks: "Grazie per il tuo voto!",
@@ -721,11 +701,6 @@ const fr = {
   skipToContent: "Aller au contenu", // REVISAR
   emptyTitle: "Cette section est encore en construction", // REVISAR
   emptyBody: "En attendant, parcourez toutes les recettes.", // REVISAR
-  cookieBannerText: "Ce site reste gratuit grâce à la publicité Google AdSense. Tu peux choisir de personnaliser les annonces selon ta navigation, ou de voir uniquement des annonces basiques non personnalisées.",
-  cookieBannerPersonalized: "Personnaliser les annonces",
-  cookieBannerBasic: "Annonces basiques uniquement",
-  cookieBannerLearnMore: "En savoir plus",
-  cookiePreferencesLink: "Préférences de cookies",
   ratingHeading: "Note cette recette",
   ratingYourVote: "Ta note",
   ratingThanks: "Merci pour ton vote !",
@@ -867,11 +842,6 @@ const ja = {
   skipToContent: "本文へ移動", // REVISAR
   emptyTitle: "このセクションは準備中です", // REVISAR
   emptyBody: "その間、すべてのレシピをご覧ください。", // REVISAR
-  cookieBannerText: "当サイトはGoogle AdSenseの広告のおかげで無料でご利用いただけます。閲覧履歴に基づいて広告をパーソナライズするか、パーソナライズしない基本的な広告のみを表示するかをお選びいただけます。",
-  cookieBannerPersonalized: "広告をパーソナライズする",
-  cookieBannerBasic: "基本的な広告のみ",
-  cookieBannerLearnMore: "詳細を見る",
-  cookiePreferencesLink: "クッキー設定",
   ratingHeading: "このレシピを評価する",
   ratingYourVote: "あなたの評価",
   ratingThanks: "評価ありがとうございます！",
@@ -1014,11 +984,6 @@ const pt = {
   skipToContent: "Pular para o conteúdo",
   emptyTitle: "Este conteúdo ainda está crescendo",
   emptyBody: "Enquanto isso, você pode explorar todas as receitas.",
-  cookieBannerText: "Este site se mantém gratuito graças à publicidade do Google AdSense. Você pode escolher personalizar os anúncios com base na sua navegação, ou ver apenas anúncios básicos, sem personalização.",
-  cookieBannerPersonalized: "Personalizar anúncios",
-  cookieBannerBasic: "Somente anúncios básicos",
-  cookieBannerLearnMore: "Saiba mais",
-  cookiePreferencesLink: "Preferências de cookies",
   ratingHeading: "Avalie esta receita",
   ratingYourVote: "Sua avaliação",
   ratingThanks: "Obrigado pelo seu voto!",
