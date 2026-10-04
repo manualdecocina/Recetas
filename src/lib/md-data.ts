@@ -119,11 +119,10 @@ export async function getHomeData(lang: RecipeLanguage): Promise<MdHomeData> {
 
   const featured = (featuredResult.data ?? null) as MdRecipeCardData | null
   const latestRaw = (latestResult.data ?? []) as MdRecipeCardData[]
-  const withoutFeatured = latestRaw.filter((recipe) => recipe.id !== featured?.id)
-  // Si al quitar la destacada no queda nada (idioma con una sola receta publicada, como
-  // hoy de/en/fr/it/ja/pt con solo la lechona), se muestra igual esa receta en "últimas":
-  // si no, la sección entera desaparece de la home en vez de mostrar la única receta que hay.
-  const latest = (withoutFeatured.length > 0 ? withoutFeatured : latestRaw).slice(0, 9)
+  // "Recién publicadas" representa literalmente el orden editorial más reciente.
+  // La receta destacada puede repetirse aquí: ocultarla hacía que la receta más nueva
+  // desapareciera precisamente del listado que promete mostrar las últimas publicaciones.
+  const latest = latestRaw.slice(0, 9)
 
   return { featured, latest, categories, ingredients }
 }
