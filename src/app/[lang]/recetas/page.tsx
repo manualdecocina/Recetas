@@ -140,7 +140,7 @@ export default async function RecipesListPage({ params, searchParams }: Props) {
 
   query = ordenar === 'antiguas'
     ? query.order('published_at', { ascending: true, nullsFirst: false })
-    : query.order('updated_at', { ascending: false, nullsFirst: false })
+    : query.order('ready_at', { ascending: false, nullsFirst: false })
 
   query = query.range(from, from + PAGE_SIZE - 1)
 
