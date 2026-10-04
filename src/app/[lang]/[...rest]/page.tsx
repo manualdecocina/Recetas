@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound, permanentRedirect } from 'next/navigation'
 import { getContentPageByPublicPath, getRecipeByPublicPath, getRecipeTranslations, getRelatedRecipes, getPublishedPublicPaths } from '@/lib/public-content'
-import { recipeAlternates, recipeMetaText, withSiteName } from '@/lib/seo'
+import { recipeAlternates, recipeMetaText, recipeSocialImages, withSiteName } from '@/lib/seo'
 import { publicUrl, absoluteUrl } from '@/lib/site'
 import { SUPPORTED_LANGUAGES } from '@/types/recipe'
 import { RecipeDocument } from '@/components/RecipeDocument'
@@ -48,7 +48,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (recipe) {
     const translations = await getRecipeTranslations(recipe.recipe_group_id)
     const meta = recipeMetaText(recipe)
-    const images = recipe.image_url ? [{ url: absoluteUrl(recipe.image_url), alt: recipe.title }] : undefined
+    const images = recipeSocialImages(recipe)
     return {
       title: meta.title,
       description: meta.description,
