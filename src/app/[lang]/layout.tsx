@@ -56,8 +56,12 @@ export default async function LanguageRootLayout({
       <body>
         <ThemeSync />
         {children}
-        <CookieConsentBanner lang={lang as MdLanguage} />
-        <AdSenseLoader clientId={adsenseClient} cmpReady={cmpReady} />
+        {adsenseClient && cmpReady && (
+          <>
+            <CookieConsentBanner lang={lang as MdLanguage} />
+            <AdSenseLoader clientId={adsenseClient} cmpReady />
+          </>
+        )}
       </body>
     </html>
   )
