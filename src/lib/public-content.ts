@@ -61,3 +61,21 @@ export const getRecipeTranslations = cache(async (recipeGroupId: string) => {
   if (error) throw new Error(`No se pudieron cargar las traducciones: ${error.message}`)
   return data ?? []
 })
+
+
+export const getRelatedRecipes = cache(async (recipe: Pick<Recipe, 'id' | 'language' | 'category' | 'cuisine'>) => {
+  if (!recipe.category && !recipe.cuisine) return []
+  let query = supabase.from('recipes')
+    .select('id, language, slug, public_path, title, excerpt, category, image_url')
+    .eq('language', recipe.language)
+    .eq('published', true)
+    .neq('id', recipe.id)
+    .order('published_at', { ascending: false, nullsFirst: false })
+    .order('title', { ascending: true })
+    .limit(4)
+  if (recipe.category) query = query.eq('category', recipe.category)
+  else if (recipe.cuisine) query = query.eq('cuisine', recipe.cuisine)
+  const { data, error } = await query
+  if (error) throw new Error(`No se pudieron cargar recetas relacionadas: ${error.message}`)
+  return data ?? []
+})
