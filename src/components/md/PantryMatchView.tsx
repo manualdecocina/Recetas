@@ -18,6 +18,7 @@ interface Match {
   recipe: MdPantryRecipe;
   matched: number;
   missing: string[];
+  checklist: Array<{ id: string; name: string; owned: boolean }>;
   effectiveMissingCount: number;
   isComplete: boolean;
 }
@@ -35,11 +36,15 @@ function computeMatches(recipes: MdPantryRecipe[], selected: Set<string>, ingred
     if (matched.length === 0) continue;
     const missingIds = recipe.ingredientIds.filter((id) => !selected.has(id));
     const missing = missingIds.map((id) => ingredientNameById.get(id) ?? '').filter(Boolean);
+    const checklist = recipe.ingredientIds
+      .map((id) => ({ id, name: ingredientNameById.get(id) ?? '', owned: selected.has(id) }))
+      .filter((item) => Boolean(item.name));
     const effectiveMissingCount = missing.length + recipe.uncanonicalizedCount;
     results.push({
       recipe,
       matched: matched.length,
       missing,
+      checklist,
       effectiveMissingCount,
       isComplete: effectiveMissingCount === 0,
     });
@@ -178,18 +183,31 @@ export default function PantryMatchView({ ingredients, recipes }: { ingredients:
         )}
         {matches.length > 0 && (
           <div className="md-card-grid">
-            {matches.map(({ recipe, missing, effectiveMissingCount, isComplete }) => (
+            {matches.map(({ recipe, missing, checklist, effectiveMissingCount, isComplete }) => (
               <div className="md-pantry-result" key={recipe.id}>
                 <span className={`md-pantry-badge${isComplete ? ' md-pantry-badge-complete' : ''}`}>
                   {isComplete ? t.pantryComplete : `${effectiveMissingCount} ${t.pantryMissingSuffix}`}
                 </span>
                 <RecipeCard recipe={recipe} />
+                {checklist.length > 0 && (
+                  <div className="md-pantry-checklist">
+                    <strong>Tu lista para esta receta</strong>
+                    <ul>
+                      {checklist.map((item) => (
+                        <li key={item.id} className={item.owned ? 'md-pantry-check-owned' : 'md-pantry-check-missing'}>
+                          <span aria-hidden="true">{item.owned ? '✓' : '○'}</span>
+                          <span>{item.name}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
                 {missing.length > 0 && (
-                  <p className="md-pantry-missing-list">{t.pantryMissingPrefix} {missing.join(', ')}</p>
+                  <p className="md-pantry-missing-list"><strong>{t.pantryMissingPrefix}</strong> {missing.join(', ')}</p>
                 )}
                 {recipe.uncanonicalizedCount > 0 && (
                   <p className="md-pantry-missing-list">
-                    Además, {recipe.uncanonicalizedCount} {recipe.uncanonicalizedCount === 1 ? 'ingrediente de esta receta todavía está' : 'ingredientes de esta receta todavía están'} en proceso de catalogación.
+                    Además, {recipe.uncanonicalizedCount} {recipe.uncanonicalizedCount === 1 ? 'ingrediente adicional de esta receta está' : 'ingredientes adicionales de esta receta están'} en proceso de catalogación.
                   </p>
                 )}
               </div>
