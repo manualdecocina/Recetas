@@ -1,6 +1,6 @@
 # Manual de Cocina — v0.3 (cierre de infraestructura)
 
-Next.js 14 (App Router) + TypeScript + Supabase. Multilingüe: es, de, ja, it, fr, en.
+Next.js 16 (App Router) + TypeScript + Supabase. Multilingüe: es, de, ja, it, fr, en, pt.
 Esta fase cierra la infraestructura pública, el contrato SEO/routing, seguridad de base y el
 modelo de recuperación de URLs históricas. El contenido editorial multilingüe se reconstruye
 por etapas y se guarda como datos nuevos, no como copia ciega del WordPress antiguo.
