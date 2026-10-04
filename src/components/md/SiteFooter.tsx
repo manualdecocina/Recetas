@@ -2,14 +2,10 @@ import Link from 'next/link';
 import Image from 'next/image';
 import type { MdLanguage } from './md-types';
 import { getMdCopy } from '@/lib/copy';
-import CookiePreferencesButton from './CookiePreferencesButton';
 
 export default function SiteFooter({ lang }: { lang: MdLanguage }) {
   const t = getMdCopy(lang);
   const base = `/${lang}`;
-  const showCookiePreferences =
-    process.env.NEXT_PUBLIC_GOOGLE_CMP_READY === 'true' &&
-    Boolean(process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID);
   const institutional = [
     { slug: 'quienes-somos', label: t.about },
     { slug: 'contacto', label: t.contact },
@@ -43,7 +39,6 @@ export default function SiteFooter({ lang }: { lang: MdLanguage }) {
         </div>
         <div className="md-footer-bottom">
           <span>© {new Date().getFullYear()} Manual de Cocina</span>
-          {showCookiePreferences && <CookiePreferencesButton lang={lang} />}
         </div>
       </div>
     </footer>
