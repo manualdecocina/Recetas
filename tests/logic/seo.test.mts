@@ -10,6 +10,16 @@ const check = (name: string, fn: () => void) => { fn(); n++; console.log('OK', n
 check('getSiteUrl quita la barra final', () => assert.equal(site.getSiteUrl(), 'https://manualdecocina.com'))
 check('normalizePublicPath normaliza rutas históricas con barra final', () => assert.equal(site.normalizePublicPath('/receta-bondiola-de-cerdo/'), '/receta-bondiola-de-cerdo'))
 
+process.env.NEXT_PUBLIC_ALLOW_INDEXING = 'false'
+process.env.NEXT_PUBLIC_PREVIEW_SITE_URL = 'https://preview.manualdecocina.com/'
+check('preview: absoluteUrl usa el host desplegado para imágenes sociales', () => {
+  assert.equal(site.absoluteUrl('/recetas/canelones-carne-pina/portada.webp'), 'https://preview.manualdecocina.com/recetas/canelones-carne-pina/portada.webp')
+})
+process.env.NEXT_PUBLIC_ALLOW_INDEXING = 'true'
+check('producción: absoluteUrl vuelve al dominio canónico', () => {
+  assert.equal(site.absoluteUrl('/recetas/canelones-carne-pina/portada.webp'), 'https://manualdecocina.com/recetas/canelones-carne-pina/portada.webp')
+})
+
 check('receta sin traducciones: solo canonical', () => {
   const a = recipeAlternates(
     { language: 'de', public_path: '/de/kolumbianisches-lechona-rezept' },
