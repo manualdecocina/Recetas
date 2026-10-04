@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { notFound, permanentRedirect } from 'next/navigation'
-import { getContentPageByPublicPath, getRecipeByPublicPath, getRecipeTranslations } from '@/lib/public-content'
+import { getContentPageByPublicPath, getRecipeByPublicPath, getRecipeTranslations, getRelatedRecipes } from '@/lib/public-content'
 import { recipeAlternates, recipeMetaText, withSiteName } from '@/lib/seo'
 import { publicUrl, absoluteUrl } from '@/lib/site'
 import { SUPPORTED_LANGUAGES } from '@/types/recipe'
@@ -90,7 +90,10 @@ export default async function PublicLanguageRoute({ params }: Props) {
   if (!isLang(resolvedParams.lang)) return <LegacyPublicPage path={path} />
 
   const recipe = await getRecipeByPublicPath(path)
-  if (recipe) return <RecipeDocument recipe={recipe} />
+  if (recipe) {
+    const relatedRecipes = await getRelatedRecipes(recipe)
+    return <RecipeDocument recipe={recipe} relatedRecipes={relatedRecipes} />
+  }
 
   const page = await getContentPageByPublicPath(path)
   if (page) {
