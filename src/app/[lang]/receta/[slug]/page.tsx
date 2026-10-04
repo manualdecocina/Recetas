@@ -2,6 +2,7 @@ import { notFound, permanentRedirect } from 'next/navigation'
 import { cache } from 'react'
 import type { Metadata } from 'next'
 import { supabase } from '@/lib/supabase/public'
+import { getRelatedRecipes } from '@/lib/public-content'
 import { recipeAlternates, recipeMetaText } from '@/lib/seo'
 import { normalizePublicPath, recipePath, publicUrl, absoluteUrl } from '@/lib/site'
 import { RecipeDocument } from '@/components/RecipeDocument'
@@ -91,20 +92,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       images,
     },
   }
-}
-
-async function getRelatedRecipes(recipe: Recipe) {
-  if (!recipe.category && !recipe.cuisine) return []
-  let query = supabase.from('recipes')
-    .select('id, language, slug, public_path, title, excerpt, category, image_url')
-    .eq('language', recipe.language)
-    .eq('published', true)
-    .neq('id', recipe.id)
-    .limit(4)
-  if (recipe.category) query = query.eq('category', recipe.category)
-  else if (recipe.cuisine) query = query.eq('cuisine', recipe.cuisine)
-  const { data } = await query
-  return data ?? []
 }
 
 export default async function RecipeDetailPage({ params }: Props) {
