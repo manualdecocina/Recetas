@@ -32,7 +32,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ lang:
   const { data: recipes, error } = await supabase.from('recipes')
     .select('id, language, slug, public_path, title, excerpt, category, image_url')
     .eq('language', lang).eq('published', true).eq('category', label)
-    .order('updated_at', { ascending: false, nullsFirst: false })
+    .order('ready_at', { ascending: false, nullsFirst: false })
 
   if (error) throw new Error('No se pudieron cargar las recetas de la categoría')
 
