@@ -47,8 +47,27 @@ export default function RecipeIngredients({ recipeId, lang, ingredients }: {
 
   function toggle(index: number) {
     setChecked((previous) => {
-      const next = { ...previous, [index]: !previous[index] };
-      try { localStorage.setItem(storageKey, JSON.stringify(next)); } catch { /* Sin persistencia. */ }
+      const nextValue = !previous[index];
+      const next = { ...previous, [index]: nextValue };
+      try {
+        localStorage.setItem(storageKey, JSON.stringify(next));
+
+        // Si el ingrediente tiene canonical slug, la casilla de la receta también actualiza
+        // el inventario global de "¿Qué puedo cocinar?". Así herramienta y receta no se contradicen.
+        const slug = ingredients[index]?.canonicalIngredientSlug;
+        if (slug) {
+          const pantryRaw = localStorage.getItem('manualdecocina:pantry:selectedSlugs');
+          const pantryValue: unknown = pantryRaw ? JSON.parse(pantryRaw) : [];
+          const pantrySlugs = new Set(
+            Array.isArray(pantryValue)
+              ? pantryValue.filter((item): item is string => typeof item === 'string')
+              : [],
+          );
+          if (nextValue) pantrySlugs.add(slug);
+          else pantrySlugs.delete(slug);
+          localStorage.setItem('manualdecocina:pantry:selectedSlugs', JSON.stringify(Array.from(pantrySlugs)));
+        }
+      } catch { /* Sin persistencia: la casilla actual sigue funcionando. */ }
       return next;
     });
   }
