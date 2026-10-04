@@ -3,11 +3,9 @@ import '../public-base.css'
 import '../site.css'
 import { editorialSerif, uiSans } from '../fonts'
 import ThemeSync from '@/components/md/ThemeSync'
-import CookieConsentBanner from '@/components/md/CookieConsentBanner'
 import AdSenseLoader from '@/components/md/AdSenseLoader'
 import { getSiteUrl, isIndexingAllowed, adsenseClientId, adsenseCmpReady, absoluteUrl } from '@/lib/site'
 import { DEFAULT_LANGUAGE, SUPPORTED_LANGUAGES } from '@/types/recipe'
-import type { MdLanguage } from '@/components/md/md-types'
 
 // Layout RAÍZ del sitio público (patrón i18n oficial de Next.js App Router).
 // Cada idioma produce su propio <html lang>: /es → lang="es", /de → lang="de", etc.
@@ -88,17 +86,12 @@ export default async function LanguageRootLayout({
       </head>
       {/* AdSense queda desactivado por defecto. Además del client ID, producción debe declarar
           NEXT_PUBLIC_GOOGLE_CMP_READY="true" solo después de configurar una CMP certificada/TCF.
-          El banner interno sigue sirviendo para preferencias locales, pero no sustituye esa CMP. */}
+          La CMP certificada es la única fuente de verdad para consentimiento publicitario. */}
       <body>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(entityGraph).replace(/</g, '\\u003c') }} />
         <ThemeSync />
         {children}
-        {adsenseClient && cmpReady && (
-          <>
-            <CookieConsentBanner lang={lang as MdLanguage} />
-            <AdSenseLoader clientId={adsenseClient} cmpReady />
-          </>
-        )}
+        {adsenseClient && cmpReady && <AdSenseLoader clientId={adsenseClient} cmpReady />}
       </body>
     </html>
   )
