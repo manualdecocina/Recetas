@@ -4,7 +4,8 @@ import { supabase } from '@/lib/supabase/public'
 import { IngredientDetailView } from '@/components/md/IngredientViews'
 import type { MdRecipeCardData } from '@/components/md/md-types'
 import { SUPPORTED_LANGUAGES, type RecipeLanguage } from '@/types/recipe'
-import { publicUrl } from '@/lib/site'
+import { publicUrl, absoluteUrl } from '@/lib/site'
+import { withSiteName } from '@/lib/seo'
 
 function parseLang(value: string): RecipeLanguage | null {
   return (SUPPORTED_LANGUAGES as string[]).includes(value) ? value as RecipeLanguage : null
@@ -49,10 +50,30 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   if (!lang || lang !== 'es') return {}
   const result = await getIngredient(lang, slug)
   if (!result) return {}
+  const title = withSiteName(result.ingredient.name)
+  const description = result.ingredient.description ?? `Recetas con ${result.ingredient.name} en Manual de Cocina.`
+  const url = publicUrl(`/es/ingredientes/${result.ingredient.slug}`)
+  const images = result.ingredient.image_url
+    ? [{ url: absoluteUrl(result.ingredient.image_url), alt: result.ingredient.name }]
+    : undefined
   return {
-    title: result.ingredient.name,
-    description: result.ingredient.description ?? `Recetas con ${result.ingredient.name} en Manual de Cocina.`,
+    title,
+    description,
     robots: { index: true, follow: true },
+    alternates: { canonical: url },
+    openGraph: {
+      type: 'website',
+      title,
+      description,
+      url,
+      images,
+    },
+    twitter: {
+      card: images ? 'summary_large_image' : 'summary',
+      title,
+      description,
+      images,
+    },
   }
 }
 
