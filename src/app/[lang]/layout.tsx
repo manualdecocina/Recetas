@@ -4,7 +4,7 @@ import '../site.css'
 import { editorialSerif, uiSans } from '../fonts'
 import ThemeSync from '@/components/md/ThemeSync'
 import AdSenseLoader from '@/components/md/AdSenseLoader'
-import { getSiteUrl, isIndexingAllowed, adsenseClientId, adsenseCmpReady, absoluteUrl } from '@/lib/site'
+import { getSiteUrl, isIndexingAllowed, adsenseClientId, adsenseCmpReady, absoluteUrl, languageTag } from '@/lib/site'
 import { DEFAULT_LANGUAGE, SUPPORTED_LANGUAGES } from '@/types/recipe'
 
 // Layout RAÍZ del sitio público (patrón i18n oficial de Next.js App Router).
@@ -73,14 +73,14 @@ export default async function LanguageRootLayout({
         '@id': `${siteUrl}/#website`,
         name: 'Manual de Cocina',
         url: siteUrl,
-        inLanguage: SUPPORTED_LANGUAGES,
+        inLanguage: SUPPORTED_LANGUAGES.map(languageTag),
         publisher: { '@id': `${siteUrl}/#organization` },
       },
     ],
   }
 
   return (
-    <html lang={lang} className={`${editorialSerif.variable} ${uiSans.variable}`} suppressHydrationWarning>
+    <html lang={languageTag(lang)} className={`${editorialSerif.variable} ${uiSans.variable}`} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: "try{var t=localStorage.getItem('md-theme');if(t==='dark'||t==='light')document.documentElement.dataset.theme=t}catch(e){}" }} />
       </head>
