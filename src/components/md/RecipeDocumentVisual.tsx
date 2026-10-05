@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { recipeImageSrc } from '@/lib/recipe-media';
 import Link from 'next/link';
 import type { MdRecipe, MdRecipeCardData } from './md-types';
 import { categorySlugFromLabel } from '@/lib/categories';
@@ -95,7 +96,7 @@ export default function RecipeDocumentVisual({ recipe, relatedRecipes = [], note
           {recipe.image_url && (
             <figure className="md-recipe-hero-photo">
               <Image
-                src={recipe.image_url}
+                src={recipeImageSrc(recipe.image_url)}
                 alt={`${t.photoOf} ${recipe.title}`}
                 width={1200}
                 height={1000}

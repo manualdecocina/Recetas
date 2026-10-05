@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { recipeImageSrc } from '@/lib/recipe-media';
 import type { MdRecipeCardData } from './md-types';
 import { getMdCopy } from '@/lib/copy';
 import SiteHeader from './SiteHeader';
@@ -34,7 +35,7 @@ export function IngredientsIndexView({ ingredients }: { ingredients: MdIngredien
             {withRecipes.map((item) => (
               <Link className="md-category-card" href={`/es/ingredientes/${item.slug}`} key={item.slug}>
                 {item.image_url ? (
-                  <Image className="md-category-photo" src={item.image_url} alt="" width={360} height={270} loading="lazy"
+                  <Image className="md-category-photo" src={recipeImageSrc(item.image_url)} alt="" width={360} height={270} loading="lazy"
                     sizes="(max-width: 599px) 50vw, (max-width: 899px) 33vw, 20vw" />
                 ) : (
                   <span className="md-category-fallback" aria-hidden="true">
