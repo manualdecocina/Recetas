@@ -3,7 +3,7 @@
 Acuerdo editorial del 5 de octubre de 2026. Completar una receta antes de empezar la siguiente.
 
 1. Consultar la cola editorial y conservar grupo y URLs históricas. Crear un único archivo JSON por receta como fuente del contenido y de sus siete versiones.
-2. Cerrar primero la receta española: cantidades, rendimiento, tiempos (incluido reposo), pasos necesarios, consejos, FAQ útil y nutrición estimada con cálculo trazable. No afirmar pruebas de cocina que no se hayan realizado.
+2. Cerrar primero la receta española: cantidades, rendimiento, tiempos (incluido reposo), tantos pasos como necesite la receta (sin fijar cinco), consejos, FAQ útil y nutrición estimada con cálculo trazable. No afirmar pruebas de cocina que no se hayan realizado.
 3. Crear una foto por acción que necesite ilustración. La foto del plato terminado puede servir de portada y último paso. Reutilizar las mismas fotos en todos los idiomas. Las variantes de portada son recortes del mismo original, no generaciones adicionales.
 4. Traducir el contenido aprobado a de, en, fr, it, ja y pt. Mantener cantidades y nutrición comunes; localizar texto, unidades, títulos, descripciones y alt.
 5. Preparar las siete versiones con portada, pasos, nutrición, SEO y enlaces entre idiomas. Usar la ficha de receta existente del sitio y sus estilos. Preservar las URLs históricas.
@@ -13,4 +13,4 @@ Acuerdo editorial del 5 de octubre de 2026. Completar una receta antes de empeza
 
 Evitar auditorías generales, pruebas repetidas, reescrituras sin motivo y creación simultánea de varias recetas incompletas. Si una comprobación falla, revisar solamente ese fallo.
 
-Cola actual: pimpirrana murciana (receta ES pendiente). E017 ceviche de pescado, E018 chorizo santarrosano y E019 lomo de cerdo en salsa de menta se publicaron juntos en preview. E015 empanada peruana de pollo y E016 lomo de cerdo relleno se publicaron en el lote anterior; E014 ajiaco ya existía.
+Última completada: E020 pimpirrana murciana, publicada con fotos, nutrición, SEO y siete idiomas en preview. Próxima receta: seleccionar el siguiente grupo histórico pendiente, sin duplicar publicaciones existentes. E017 ceviche de pescado, E018 chorizo santarrosano y E019 lomo de cerdo en salsa de menta se publicaron juntos en preview. E015 empanada peruana de pollo y E016 lomo de cerdo relleno se publicaron en el lote anterior; E014 ajiaco ya existía.
