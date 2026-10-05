@@ -6,6 +6,6 @@ const PHOTO_REVISION = 'f55c7e1';
 export function recipeImageSrc(src: string): string {
   if (!CORRECTED_RECIPE_PHOTO.test(src)) return src;
   const url = new URL(src, 'https://manualdecocina.com');
-  url.searchParams.set('v', PHOTO_REVISION);
+  url.pathname = url.pathname.replace(/\.webp$/, `.${PHOTO_REVISION}.webp`);
   return url.pathname + url.search + url.hash;
 }
