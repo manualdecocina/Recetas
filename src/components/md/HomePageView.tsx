@@ -15,7 +15,7 @@ import PantryBanner from './PantryBanner';
 export interface MdHomeData {
   /** Use only an actual published recipe of the requested language. */
   featured: MdRecipeCardData | null;
-  /** Actual publication date DESC, e.g. eight rows; exclude featured if desired. */
+  /** Latest publications in editorial order, excluding the featured recipe. */
   latest: MdRecipeCardData[];
   /** Actual category count and a real representative recipe image, nullable. */
   categories: MdCategorySummary[];
