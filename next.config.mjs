@@ -13,6 +13,8 @@ for (const host of ['manualdecocina.com', 'www.manualdecocina.com']) hosts.add(h
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Historical KEEP URLs must respond directly, including their original slash.
+  skipTrailingSlashRedirect: true,
   images: {
     qualities: [65, 70, 75],
     remotePatterns: Array.from(hosts).map((hostname) => ({ protocol: 'https', hostname })),

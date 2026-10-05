@@ -42,7 +42,7 @@ assert.ok(urls.includes('https://manualdecocina.com/es/ingredientes'))
 assert.ok(urls.includes('https://manualdecocina.com/es/ingredientes/ajo'))
 assert.ok(urls.includes('https://manualdecocina.com/es/quienes-somos'))
 const aboutEs = s.find((e) => e.url === 'https://manualdecocina.com/es/quienes-somos')
-assert.deepEqual(Object.keys(aboutEs.alternates.languages).sort(), ['de', 'en', 'es', 'fr', 'it', 'ja', 'pt'])
+assert.deepEqual(Object.keys(aboutEs.alternates.languages).sort(), ['de', 'en', 'es', 'fr', 'it', 'ja', 'pt-BR'])
 console.log('OK home/listado + institucionales + herramienta + recetas + ingredientes + contenido')
 
 assert.ok(urls.includes('https://manualdecocina.com/ja/recetas'))
@@ -58,3 +58,14 @@ console.log('OK receta sin traducciones: sin alternates')
 const page = s.find((e) => e.url === 'https://manualdecocina.com/about-manual-de-cocina')
 assert.ok(page)
 console.log('OK content page pública incluida')
+
+;(globalThis as any).__ROWS__ = [
+  { recipe_group_id: 'br', language: 'es', public_path: '/receta-pan-de-avena/', updated_at: '2026-10-05T00:00:00Z' },
+  { recipe_group_id: 'br', language: 'pt', public_path: '/pt/pao-de-aveia-caseiro/', updated_at: '2026-10-05T00:00:00Z' },
+]
+const brazil: any[] = await sitemap()
+const pt = brazil.find((e) => e.url === 'https://manualdecocina.com/pt/pao-de-aveia-caseiro/')
+assert.ok(pt, 'sitemap conserva la barra final del public_path')
+assert.equal(pt.alternates.languages['pt-BR'], pt.url)
+assert.equal(pt.alternates.languages.es, 'https://manualdecocina.com/receta-pan-de-avena/')
+console.log('OK sitemap: ruta exacta y hreflang de Brasil')

@@ -128,3 +128,82 @@ QA: docs/QA-BLOQUE-URLMASTER-20260925-42.md.
 Se cerraron las 19 URLs restantes del inventario P3/P4: /receta-de-wrap-de-pollo-con-vegetales/ queda CATALOG CANDIDATE; 8 URLs de productos/equipamiento quedan OUT del catálogo; 2 URLs técnicas WPRM quedan OUT técnico; 8 URLs de salud, colecciones y veganismo permanecen REVIEW. No se crean redirects, no se ejecutan borrados y no se publica contenido.
 
 QA: docs/QA-BLOQUE-URLMASTER-20260925-44.md.
+
+## Restauración de nueve grupos + Brasil — 2026-10-05
+
+Autorización operativa: solicitud del usuario de corregir las URLs históricas del preview y posterior instrucción: «Los que no existen crearlos y crear Brasil nuevo ya que ese no existía».
+
+Quedan documentadas **50 rutas KEEP / REBUILD** (41 traducciones copiadas literalmente de la matriz GSC y 9 URLs ES verificadas en GSC/source_url) y **13 rutas NEW**, incluidas 9 de portugués de Brasil. La clasificación anterior SIN MAPEO describe el estado previo; no era una decisión KEEP existente. La presente resolución vincula las rutas a las recetas terminadas por equivalencia editorial y orden de reconstrucción del usuario. No se afirma recuperación documental de cuerpos TranslatePress.
+
+La conciliación añade las filas GSC 127 (tres leches IT), 294 (cheesecake IT), 573 (pechuga DE), 952 (cheesecake FR), omitidas en el informe de 37 rutas. Ningún slug histórico se genera por traducción ni inferencia; todos se copian de GSC. Las rutas NEW son nuevas deliberadamente y no se presentan como históricas. Brasil se representa con `hreflang=pt-BR` y prefijo existente `/pt/`.
+
+Fuente GSC: https://docs.google.com/spreadsheets/d/1NlPii18f5lBVYu57E7bNpre7wzX57M05RSx9I05HI8g/edit (Matriz_GSC, 1.000 filas).
+Registro máquina y control de preservación: [URL-MASTER-NINE-RECIPES-20261005.json](URL-MASTER-NINE-RECIPES-20261005.json).
+
+Cada ruta KEEP sirve Recipe directamente con su barra final histórica. Las rutas genéricas anteriores `/{idioma}/receta/{slug}` de este lote quedan MIGRATE al public_path exacto de su propia traducción mediante el resolver existente; ninguna URL histórica KEEP redirige a ellas. No se crean reglas en content_redirects ni se fusionan recetas. Los campos editoriales se conservan byte a byte en la base.
+
+| Grupo (slug ES) | Idioma | URL histórica | Decisión | public_path definitivo |
+|---|---|---|---|---|
+| receta-cheesecake-de-agraz | de | https://manualdecocina.com/de/agraz-kasekuchen-rezept/ | KEEP / REBUILD | /de/agraz-kasekuchen-rezept/ |
+| receta-cheesecake-de-agraz | en | https://manualdecocina.com/en/agraz-cheesecake-recipe/ | KEEP / REBUILD | /en/agraz-cheesecake-recipe/ |
+| receta-cheesecake-de-agraz | es | https://manualdecocina.com/receta-cheesecake-de-agraz/ | KEEP / REBUILD | /receta-cheesecake-de-agraz/ |
+| receta-cheesecake-de-agraz | fr | https://manualdecocina.com/fr/recette-de-cheesecake-doux-amer/ | KEEP / REBUILD | /fr/recette-de-cheesecake-doux-amer/ |
+| receta-cheesecake-de-agraz | it | https://manualdecocina.com/it/ricetta-cheesecake-agrodolce/ | KEEP / REBUILD | /it/ricetta-cheesecake-agrodolce/ |
+| receta-cheesecake-de-agraz | ja | https://manualdecocina.com/ja/アグラーツチーズケーキのレシピ/ | KEEP / REBUILD | /ja/アグラーツチーズケーキのレシピ/ |
+| receta-cheesecake-de-agraz | pt-BR | — (nueva) | NEW | /pt/cheesecake-de-agraz-assado/ |
+| receta-de-pechuga-de-pollo-rellena | de | https://manualdecocina.com/de/rezept-fur-gefullte-hahnchenbrust/ | KEEP / REBUILD | /de/rezept-fur-gefullte-hahnchenbrust/ |
+| receta-de-pechuga-de-pollo-rellena | en | — (nueva) | NEW | /en/chicken-breast-stuffed-with-ham-and-cheese/ |
+| receta-de-pechuga-de-pollo-rellena | es | https://manualdecocina.com/receta-de-pechuga-de-pollo-rellena/ | KEEP / REBUILD | /receta-de-pechuga-de-pollo-rellena/ |
+| receta-de-pechuga-de-pollo-rellena | fr | https://manualdecocina.com/fr/recette-poitrine-de-poulet-farcie/ | KEEP / REBUILD | /fr/recette-poitrine-de-poulet-farcie/ |
+| receta-de-pechuga-de-pollo-rellena | it | https://manualdecocina.com/it/ricetta-petto-di-pollo-ripieno/ | KEEP / REBUILD | /it/ricetta-petto-di-pollo-ripieno/ |
+| receta-de-pechuga-de-pollo-rellena | ja | https://manualdecocina.com/ja/鶏の胸肉詰めのレシピ/ | KEEP / REBUILD | /ja/鶏の胸肉詰めのレシピ/ |
+| receta-de-pechuga-de-pollo-rellena | pt-BR | — (nueva) | NEW | /pt/peito-de-frango-recheado/ |
+| receta-de-wrap-de-pollo-con-champinones | de | https://manualdecocina.com/de/huhnchen-wrap-mit-pilzen-rezept/ | KEEP / REBUILD | /de/huhnchen-wrap-mit-pilzen-rezept/ |
+| receta-de-wrap-de-pollo-con-champinones | en | https://manualdecocina.com/en/chicken-wrap-with-mushrooms-recipe/ | KEEP / REBUILD | /en/chicken-wrap-with-mushrooms-recipe/ |
+| receta-de-wrap-de-pollo-con-champinones | es | https://manualdecocina.com/receta-de-wrap-de-pollo-con-champinones/ | KEEP / REBUILD | /receta-de-wrap-de-pollo-con-champinones/ |
+| receta-de-wrap-de-pollo-con-champinones | fr | https://manualdecocina.com/fr/recette-de-wrap-au-poulet-aux-champignons/ | KEEP / REBUILD | /fr/recette-de-wrap-au-poulet-aux-champignons/ |
+| receta-de-wrap-de-pollo-con-champinones | it | https://manualdecocina.com/it/ricetta-del-wrap-di-pollo-con-funghi/ | KEEP / REBUILD | /it/ricetta-del-wrap-di-pollo-con-funghi/ |
+| receta-de-wrap-de-pollo-con-champinones | ja | https://manualdecocina.com/ja/キノコ入りチキンラップのレシピ/ | KEEP / REBUILD | /ja/キノコ入りチキンラップのレシピ/ |
+| receta-de-wrap-de-pollo-con-champinones | pt-BR | — (nueva) | NEW | /pt/wrap-de-frango-com-cogumelos/ |
+| receta-envuelto-de-choclo | de | https://manualdecocina.com/de/rezept-im-maismantel/ | KEEP / REBUILD | /de/rezept-im-maismantel/ |
+| receta-envuelto-de-choclo | en | https://manualdecocina.com/en/corn-wrapped-recipe/ | KEEP / REBUILD | /en/corn-wrapped-recipe/ |
+| receta-envuelto-de-choclo | es | https://manualdecocina.com/receta-envuelto-de-choclo/ | KEEP / REBUILD | /receta-envuelto-de-choclo/ |
+| receta-envuelto-de-choclo | fr | https://manualdecocina.com/fr/recette-enveloppee-de-mais/ | KEEP / REBUILD | /fr/recette-enveloppee-de-mais/ |
+| receta-envuelto-de-choclo | it | https://manualdecocina.com/it/ricetta-con-il-mais-avvolto/ | KEEP / REBUILD | /it/ricetta-con-il-mais-avvolto/ |
+| receta-envuelto-de-choclo | ja | https://manualdecocina.com/ja/とうもろこし包みのレシピ/ | KEEP / REBUILD | /ja/とうもろこし包みのレシピ/ |
+| receta-envuelto-de-choclo | pt-BR | — (nueva) | NEW | /pt/enrolado-colombiano-de-milho-verde-com-queijo/ |
+| receta-guacamole | de | — (nueva) | NEW | /de/guacamole-mit-tomate-und-koriander/ |
+| receta-guacamole | en | — (nueva) | NEW | /en/homemade-guacamole/ |
+| receta-guacamole | es | https://manualdecocina.com/receta-guacamole/ | KEEP / REBUILD | /receta-guacamole/ |
+| receta-guacamole | fr | https://manualdecocina.com/fr/recette-guacamole/ | KEEP / REBUILD | /fr/recette-guacamole/ |
+| receta-guacamole | it | https://manualdecocina.com/it/ricetta-guacamole/ | KEEP / REBUILD | /it/ricetta-guacamole/ |
+| receta-guacamole | ja | https://manualdecocina.com/ja/レシピ-ワカモレ/ | KEEP / REBUILD | /ja/レシピ-ワカモレ/ |
+| receta-guacamole | pt-BR | — (nueva) | NEW | /pt/guacamole-caseiro/ |
+| receta-pan-de-avena | de | https://manualdecocina.com/de/haferflockenbrot-rezept/ | KEEP / REBUILD | /de/haferflockenbrot-rezept/ |
+| receta-pan-de-avena | en | https://manualdecocina.com/en/oatmeal-bread-recipe/ | KEEP / REBUILD | /en/oatmeal-bread-recipe/ |
+| receta-pan-de-avena | es | https://manualdecocina.com/receta-pan-de-avena/ | KEEP / REBUILD | /receta-pan-de-avena/ |
+| receta-pan-de-avena | fr | https://manualdecocina.com/fr/recette-de-pain-aux-flocons-davoine/ | KEEP / REBUILD | /fr/recette-de-pain-aux-flocons-davoine/ |
+| receta-pan-de-avena | it | https://manualdecocina.com/it/ricetta-del-pane-davena/ | KEEP / REBUILD | /it/ricetta-del-pane-davena/ |
+| receta-pan-de-avena | ja | https://manualdecocina.com/ja/オートミールパンのレシピ/ | KEEP / REBUILD | /ja/オートミールパンのレシピ/ |
+| receta-pan-de-avena | pt-BR | — (nueva) | NEW | /pt/pao-de-aveia-caseiro/ |
+| receta-sushi-de-salmon | de | https://manualdecocina.com/de/lachs-sushi-rezept/ | KEEP / REBUILD | /de/lachs-sushi-rezept/ |
+| receta-sushi-de-salmon | en | https://manualdecocina.com/en/salmon-sushi-recipe/ | KEEP / REBUILD | /en/salmon-sushi-recipe/ |
+| receta-sushi-de-salmon | es | https://manualdecocina.com/receta-sushi-de-salmon/ | KEEP / REBUILD | /receta-sushi-de-salmon/ |
+| receta-sushi-de-salmon | fr | https://manualdecocina.com/fr/recette-de-sushi-au-saumon/ | KEEP / REBUILD | /fr/recette-de-sushi-au-saumon/ |
+| receta-sushi-de-salmon | it | https://manualdecocina.com/it/ricetta-sushi-al-salmone/ | KEEP / REBUILD | /it/ricetta-sushi-al-salmone/ |
+| receta-sushi-de-salmon | ja | https://manualdecocina.com/ja/サーモン寿司のレシピ/ | KEEP / REBUILD | /ja/サーモン寿司のレシピ/ |
+| receta-sushi-de-salmon | pt-BR | — (nueva) | NEW | /pt/sushi-de-salmao-e-abacate/ |
+| torta-de-tres-leches | de | https://manualdecocina.com/de/drei-milchkuchen/ | KEEP / REBUILD | /de/drei-milchkuchen/ |
+| torta-de-tres-leches | en | https://manualdecocina.com/en/three-milk-cake/ | KEEP / REBUILD | /en/three-milk-cake/ |
+| torta-de-tres-leches | es | https://manualdecocina.com/torta-de-tres-leches/ | KEEP / REBUILD | /torta-de-tres-leches/ |
+| torta-de-tres-leches | fr | https://manualdecocina.com/fr/gateau-aux-trois-laits/ | KEEP / REBUILD | /fr/gateau-aux-trois-laits/ |
+| torta-de-tres-leches | it | https://manualdecocina.com/it/tre-torta-al-latte/ | KEEP / REBUILD | /it/tre-torta-al-latte/ |
+| torta-de-tres-leches | ja | https://manualdecocina.com/ja/ミルクケーキ3個/ | KEEP / REBUILD | /ja/ミルクケーキ3個/ |
+| torta-de-tres-leches | pt-BR | — (nueva) | NEW | /pt/bolo-de-tres-leites/ |
+| zanahorias-glaseadas | de | https://manualdecocina.com/de/glasierte-karotten/ | KEEP / REBUILD | /de/glasierte-karotten/ |
+| zanahorias-glaseadas | en | — (nueva) | NEW | /en/honey-ginger-glazed-carrots/ |
+| zanahorias-glaseadas | es | https://manualdecocina.com/zanahorias-glaseadas/ | KEEP / REBUILD | /zanahorias-glaseadas/ |
+| zanahorias-glaseadas | fr | https://manualdecocina.com/fr/carottes-glacees/ | KEEP / REBUILD | /fr/carottes-glacees/ |
+| zanahorias-glaseadas | it | https://manualdecocina.com/it/carote-glassate/ | KEEP / REBUILD | /it/carote-glassate/ |
+| zanahorias-glaseadas | ja | https://manualdecocina.com/ja/グレーズドニンジン/ | KEEP / REBUILD | /ja/グレーズドニンジン/ |
+| zanahorias-glaseadas | pt-BR | — (nueva) | NEW | /pt/cenouras-glaceadas/ |

@@ -1,9 +1,9 @@
 import type { Recipe } from '@/types/recipe'
 import { parseVideo, isoDuration } from '@/lib/video'
-import { publicUrl, absoluteUrl, getSiteUrl, RECIPE_AUTHOR, authorUrl } from '@/lib/site'
+import { publicUrl, absoluteUrl, getSiteUrl, RECIPE_AUTHOR, authorUrl, languageTag } from '@/lib/site'
 import { UI_TEXT } from '@/lib/i18n'
 import { getRecipeTranslations } from '@/lib/public-content'
-import { normalizePublicPath } from '@/lib/site'
+import { publicPathHref } from '@/lib/site'
 import SiteHeader from '@/components/md/SiteHeader'
 import SiteFooter from '@/components/md/SiteFooter'
 import RecipeDocumentVisual from '@/components/md/RecipeDocumentVisual'
@@ -24,7 +24,7 @@ export async function RecipeDocument({ recipe, relatedRecipes = [] }: { recipe: 
   const text = UI_TEXT[recipe.language]
   const translations = recipe.recipe_group_id ? await getRecipeTranslations(recipe.recipe_group_id) : []
   const alternates = Object.fromEntries(
-    translations.filter((t) => t.language !== recipe.language).map((t) => [t.language, normalizePublicPath(t.public_path)])
+    translations.filter((t) => t.language !== recipe.language).map((t) => [t.language, publicPathHref(t.public_path)])
   )
   const notesHtml = recipe.notes ? cleanHtml(recipe.notes) : ''
   const totalMinutes = recipe.total_time_minutes ??
@@ -99,7 +99,7 @@ export async function RecipeDocument({ recipe, relatedRecipes = [] }: { recipe: 
     aggregateRating: aggregateRatingLd,
     nutrition: nutritionLd,
     video: videoLd,
-    inLanguage: recipe.language,
+    inLanguage: languageTag(recipe.language),
     url: publicUrl(recipe.public_path),
     datePublished: recipe.published_at ?? undefined,
     dateModified: recipe.updated_at,
@@ -115,7 +115,7 @@ export async function RecipeDocument({ recipe, relatedRecipes = [] }: { recipe: 
   }
 
   return (
-    <div className="md-site" lang={recipe.language}>
+    <div className="md-site" lang={languageTag(recipe.language)}>
       <SiteHeader lang={recipe.language} alternates={alternates} />
       <main id="md-main">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }} />

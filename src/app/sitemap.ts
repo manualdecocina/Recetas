@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next'
 import { supabase } from '@/lib/supabase/public'
-import { getSiteUrl, normalizePublicPath, publicUrl } from '@/lib/site'
+import { getSiteUrl, normalizePublicPath, publicUrl, languageTag } from '@/lib/site'
 import { SUPPORTED_LANGUAGES, type RecipeLanguage } from '@/types/recipe'
 import { categorySlugFromLabel } from '@/lib/categories'
 
@@ -86,7 +86,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const staticAlternates = (path: (l: string) => string) => {
     const map: Record<string, string> = {}
-    for (const l of SUPPORTED_LANGUAGES) map[l] = `${site}${normalizePublicPath(path(l))}`
+    for (const l of SUPPORTED_LANGUAGES) map[languageTag(l)] = `${site}${normalizePublicPath(path(l))}`
     return { languages: map as SitemapLanguages }
   }
 
@@ -142,7 +142,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     if (siblings.length > 1) {
       const map: Record<string, string> = {}
-      for (const s of siblings) map[s.language] = publicUrl(s.public_path)
+      for (const s of siblings) map[languageTag(s.language)] = publicUrl(s.public_path)
       entry.alternates = { languages: map as SitemapLanguages }
     }
 

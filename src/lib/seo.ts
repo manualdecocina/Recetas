@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { SUPPORTED_LANGUAGES } from '@/types/recipe'
-import { getSiteUrl, normalizePublicPath, publicUrl, absoluteUrl } from '@/lib/site'
+import { getSiteUrl, normalizePublicPath, publicUrl, absoluteUrl, languageTag } from '@/lib/site'
 
 export const SITE_NAME = 'Manual de Cocina'
 const TITLE_SUFFIX = ` | ${SITE_NAME}`
@@ -19,7 +19,7 @@ export function allLanguageAlternates(
 ): Metadata['alternates'] {
   const site = getSiteUrl()
   const map: Record<string, string> = {}
-  for (const l of SUPPORTED_LANGUAGES) map[l] = `${site}${normalizePublicPath(path(l))}`
+  for (const l of SUPPORTED_LANGUAGES) map[languageTag(l)] = `${site}${normalizePublicPath(path(l))}`
   return { canonical: `${site}${normalizePublicPath(currentPath)}`, languages: map as Languages }
 }
 
@@ -36,9 +36,9 @@ export function recipeAlternates(
   if (translations.length <= 1) return { canonical }
 
   const map: Record<string, string> = {}
-  for (const t of translations) map[t.language] = publicUrl(t.public_path)
+  for (const t of translations) map[languageTag(t.language)] = publicUrl(t.public_path)
   // Cada versión enlaza a todas, incluida ella misma. (Sin x-default: contrato cubierto por tests/logic/seo.test.mts.)
-  map[current.language] = canonical
+  map[languageTag(current.language)] = canonical
 
   return { canonical, languages: map as Languages }
 }

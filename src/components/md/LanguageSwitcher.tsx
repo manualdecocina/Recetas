@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import type { MdLanguage } from './md-types';
 import Flag from './Flag';
+import { languageTag } from '@/lib/site';
 
 const LANGUAGES: Array<{ code: MdLanguage; label: string }> = [
   { code: 'es', label: 'Español' },
@@ -33,7 +34,7 @@ export default function LanguageSwitcher({ lang, alternates = {}, available }: {
           const href = item.code === lang ? null : alternates[item.code] ?? (available.includes(item.code) ? `/${item.code}` : null);
           if (item.code === lang) return <li key={item.code}><span className="md-lang-item is-current" aria-current="true"><Flag code={item.code} />{item.label}</span></li>;
           if (!href) return <li key={item.code}><span className="md-lang-item is-off" aria-disabled="true"><Flag code={item.code} />{item.label}</span></li>;
-          return <li key={item.code}><Link className="md-lang-item" href={href} hrefLang={item.code} lang={item.code}><Flag code={item.code} />{item.label}</Link></li>;
+          return <li key={item.code}><Link className="md-lang-item" href={href} hrefLang={languageTag(item.code)} lang={languageTag(item.code)}><Flag code={item.code} />{item.label}</Link></li>;
         })}
       </ul>
     </details>

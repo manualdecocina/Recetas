@@ -10,6 +10,19 @@ const check = (name: string, fn: () => void) => { fn(); n++; console.log('OK', n
 
 check('getSiteUrl quita la barra final', () => assert.equal(site.getSiteUrl(), 'https://manualdecocina.com'))
 check('normalizePublicPath normaliza rutas históricas con barra final', () => assert.equal(site.normalizePublicPath('/receta-bondiola-de-cerdo/'), '/receta-bondiola-de-cerdo'))
+check('canonical conserva la barra histórica y la ruta japonesa exactas', () => {
+  const path = '/ja/アグラーツチーズケーキのレシピ/'
+  assert.equal(site.publicUrl(path), 'https://manualdecocina.com' + path)
+  assert.equal(site.publicPathHref(path), path)
+})
+check('Brasil usa pt-BR y enlaza la ruta localizada autorreferente', () => {
+  const current = { language: 'pt', public_path: '/pt/pao-de-aveia-caseiro/' }
+  const a: any = recipeAlternates(current, [current, { language: 'es', public_path: '/receta-pan-de-avena/' }])
+  assert.equal(a.languages['pt-BR'], a.canonical)
+  assert.equal(a.canonical, 'https://manualdecocina.com/pt/pao-de-aveia-caseiro/')
+  assert.equal(a.languages.pt, undefined)
+  assert.equal(a.languages.es, 'https://manualdecocina.com/receta-pan-de-avena/')
+})
 
 process.env.NEXT_PUBLIC_ALLOW_INDEXING = 'false'
 process.env.NEXT_PUBLIC_PREVIEW_SITE_URL = 'https://preview.manualdecocina.com/'
@@ -67,7 +80,7 @@ check('traducciones sin versión es: hreflang sin x-default', () => {
 check('home/listado: 7 idiomas, canonical propia', () => {
   const a: any = allLanguageAlternates('/ja/recetas', (l: string) => `/${l}/recetas`)
   assert.equal(a.canonical, 'https://manualdecocina.com/ja/recetas')
-  assert.deepEqual(Object.keys(a.languages).sort(), ['de', 'en', 'es', 'fr', 'it', 'ja', 'pt'])
+  assert.deepEqual(Object.keys(a.languages).sort(), ['de', 'en', 'es', 'fr', 'it', 'ja', 'pt-BR'])
 })
 
 process.env.NEXT_PUBLIC_ALLOW_INDEXING = 'false'
