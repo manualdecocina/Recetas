@@ -1,0 +1,20 @@
+name: restored-preview-audit
+on:
+  pull_request:
+    paths:
+      - 'scripts/audit-restored-preview.py'
+      - '.github/workflows/restored-preview-audit.yml'
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/audit-restored-preview.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: restored-preview-audit
+          path: restored-preview-audit.json
