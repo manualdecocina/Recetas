@@ -4,7 +4,7 @@ import { recipeImageSrc } from '@/lib/recipe-media';
 import type { MdRecipeCardData } from './md-types';
 import { getMdCopy } from '@/lib/copy';
 import { canonicalCategoryLabel, categorySlugFromLabel } from '@/lib/categories';
-import { normalizePublicPath } from '@/lib/site';
+import { publicPathHref } from '@/lib/site';
 
 /** Sizes reales de md-card-grid (site.css): 1 col (<600px), 2 col (600-899px), 3 col (>=900px). */
 const CARD_SIZES = '(max-width: 599px) calc(100vw - 36px), (max-width: 899px) calc(50vw - 28px), min(33vw, 380px)';
@@ -17,7 +17,7 @@ export default function RecipeCard({ recipe, priority = false }: {
   const t = getMdCopy(recipe.language);
   const category = canonicalCategoryLabel(recipe.language, recipe.category);
   const categorySlug = categorySlugFromLabel(recipe.language, category);
-  const href = normalizePublicPath(recipe.public_path);
+  const href = publicPathHref(recipe.public_path);
   return (
     <article className="md-recipe-card">
       <Link className="md-card-photo-link" href={href} tabIndex={-1}>
