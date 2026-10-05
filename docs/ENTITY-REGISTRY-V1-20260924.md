@@ -21,6 +21,7 @@ Stable entity registry for the editorial reconstruction. This registry separates
 | E013 | Pulpo a la Gallega | Recipe | DE | CORE / REBUILD |
 | E014 | Ajiaco colombiano | Recipe | IT | CORE / REBUILD |
 | E015 | Empanada peruana de pollo | Recipe | ES/IT | CORE / REBUILD |
+| E016 | Lomo de cerdo relleno | Recipe | ES | CORE / REBUILD; published in seven languages on preview |
 | E101 | Bondiola de cerdo | Recipe | ES | CORE / REBUILD |
 | E102 | Pie de maracuyá | Recipe | ES | CORE / REBUILD |
 | E103 | Salsa de ajo | Recipe | ES | CORE / REBUILD |

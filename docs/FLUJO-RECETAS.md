@@ -13,4 +13,4 @@ Acuerdo editorial del 5 de octubre de 2026. Completar una receta antes de empeza
 
 Evitar auditorías generales, pruebas repetidas, reescrituras sin motivo y creación simultánea de varias recetas incompletas. Si una comprobación falla, revisar solamente ese fallo.
 
-Cola actual: E014 ajiaco, según la matriz editorial. E009 pie de limón, E011 horchata de arroz, E012 pollo Alfredo y E013 pulpo a la gallega están publicados en preview.
+Cola actual: ceviche de pescado (receta ES pendiente). El ajiaco E014 ya existía publicado; E015 empanada peruana de pollo y E016 lomo de cerdo relleno se publicaron juntos en preview, después de E013 pulpo a la gallega.
