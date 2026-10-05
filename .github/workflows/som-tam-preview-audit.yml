@@ -5,12 +5,20 @@ on:
       - 'editorial/receta-ensalada-tailandesa-20261005.json'
       - 'scripts/audit-som-tam-preview.py'
       - '.github/workflows/som-tam-preview-audit.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'editorial/receta-ensalada-tailandesa-20261005.json'
+      - 'scripts/audit-som-tam-preview.py'
+      - '.github/workflows/som-tam-preview-audit.yml'
 permissions:
   contents: read
 jobs:
   audit:
     runs-on: ubuntu-24.04
     timeout-minutes: 10
+    env:
+      STRICT_SITEMAP: ${{ github.event_name == 'push' }}
     steps:
       - uses: actions/checkout@v4
       - run: python3 scripts/audit-som-tam-preview.py
