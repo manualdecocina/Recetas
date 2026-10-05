@@ -1,7 +1,7 @@
 {
   "version": 1,
   "scope": "preview.manualdecocina.com only",
-  "state": "PUBLISHED_PENDING_FINAL_VERIFICATION",
+  "state": "PUBLISHED",
   "records": [
     {
       "id": "85a2d374-bd50-48a5-951f-ba52967464bc",
@@ -255,7 +255,6 @@
       "content_html": "<p>Tarta cremosa de queso con agraz en el relleno y cobertura de frutos oscuros, base de galleta y reposo en frío. Diez porciones.</p>",
       "ready_at": "2026-10-05T09:09:00Z",
       "reviewed_at": "2026-10-05T09:09:00Z",
-      "reviewed_by": "editorial",
       "course": "Postre"
     },
     {
@@ -505,7 +504,6 @@
       "content_html": "<p>Cremiger Käsekuchen mit dunklen Andenbeeren im Inneren und als Belag, Keksboden und ausreichend Kühlzeit. Zehn Stücke.</p>",
       "ready_at": "2026-10-05T09:09:00Z",
       "reviewed_at": "2026-10-05T09:09:00Z",
-      "reviewed_by": "editorial",
       "course": "Dessert"
     },
     {
@@ -755,7 +753,6 @@
       "content_html": "<p>Creamy baked cheesecake with dark Andean agraz berries in the filling and topping, biscuit crust and a thorough chill. Ten slices.</p>",
       "ready_at": "2026-10-05T09:09:00Z",
       "reviewed_at": "2026-10-05T09:09:00Z",
-      "reviewed_by": "editorial",
       "course": "Dessert"
     },
     {
@@ -1005,7 +1002,6 @@
       "content_html": "<p>Gâteau au fromage crémeux avec baies andines foncées dans l&#x27;appareil et en nappage, fond de biscuits et repos au froid. Dix parts.</p>",
       "ready_at": "2026-10-05T09:09:00Z",
       "reviewed_at": "2026-10-05T09:09:00Z",
-      "reviewed_by": "editorial",
       "course": "Dessert"
     },
     {
@@ -1255,7 +1251,6 @@
       "content_html": "<p>Cheesecake cremoso con bacche andine scure nel ripieno e nella copertura, base di biscotti e lungo riposo in frigorifero. Dieci fette.</p>",
       "ready_at": "2026-10-05T09:09:00Z",
       "reviewed_at": "2026-10-05T09:09:00Z",
-      "reviewed_by": "editorial",
       "course": "Dolce"
     },
     {
@@ -1505,7 +1500,6 @@
       "content_html": "<p>アンデス産の濃い色のアグラスを生地とソースに使う、クッキー土台のベイクドチーズケーキ。冷やして10切れに。</p>",
       "ready_at": "2026-10-05T09:09:00Z",
       "reviewed_at": "2026-10-05T09:09:00Z",
-      "reviewed_by": "editorial",
       "course": "デザート"
     },
     {
@@ -1755,7 +1749,6 @@
       "content_html": "<p>Torta cremosa de queijo com frutas andinas escuras no recheio e na cobertura, base de biscoito e descanso na geladeira. Dez fatias.</p>",
       "ready_at": "2026-10-05T09:09:00Z",
       "reviewed_at": "2026-10-05T09:09:00Z",
-      "reviewed_by": "editorial",
       "course": "Sobremesa"
     }
   ],
@@ -1822,9 +1815,13 @@
   "photography": "Eight generated recipe-specific images; final cover reused for final step. Agraz depicted as dark Andean berry, not red cranberry.",
   "verification": {
     "local_webp_count": 12,
-    "route_status": "pending",
-    "image_status": "pending",
+    "route_status": "All seven language routes loaded; eight steps, eight step photos, nutrition and seven hreflang alternates on each.",
+    "image_status": "Spanish page: cover and all eight step images decoded successfully.",
     "media_cache_revision": "Versioned filenames; query suffix removed to comply with Next image localPatterns.",
-    "build_fix": "Removed image query strings after CI identified localPatterns rejection."
+    "build_fix": "Removed image query strings after CI identified localPatterns rejection.",
+    "home_status": "Featured on /es, excluded from recent cards; envuelto is first recent.",
+    "listing_status": "Visible on first page of /es/recetas.",
+    "build_status": "GitHub quality run 37289762732 passed including build.",
+    "seo_cover_variants": "1x1, 4x3 and 16x9 decoded successfully on preview."
   }
 }
