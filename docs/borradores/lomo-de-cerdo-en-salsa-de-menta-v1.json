@@ -1,0 +1,1127 @@
+{
+  "entity": "E019",
+  "status": "ready_for_preview",
+  "recipe_group_id": "f3a403ee-c95c-436c-8b93-3005ea45dca8",
+  "source_policy": "Rebuild of existing unpublished pork loin in mint sauce entity; original wine/broth/onion/mint formulation retained, quantities clarified and thermometer endpoint added. No historical body text reused.",
+  "kitchen_test_claimed": false,
+  "sources": [
+    {
+      "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures",
+      "purpose": "Whole pork roast 63 °C / 145 °F plus at least three minutes rest."
+    }
+  ],
+  "nutrition_calculation": {
+    "dataset": "USDA FoodData Central, SR Legacy April 2018",
+    "dataset_sha256": "b80817294b8850530aaedf2e515c02593b1824f763a0ff356e5c2081643e6fd0",
+    "method": "sum(per_100g × grams / 100) / 6 servings; added salt 5 g × 0.393 sodium fraction / 6",
+    "inputs": [
+      {
+        "fdc_id": "167818",
+        "description": "Pork, fresh, loin, whole, separable lean and fat, raw",
+        "grams": 1000,
+        "per_100g": {
+          "sugar_g": 0.0,
+          "fat_g": 12.58,
+          "carbs_g": 0.0,
+          "calories": 198.0,
+          "fiber_g": 0.0,
+          "sodium_mg": 50.0,
+          "protein_g": 19.74,
+          "saturated_fat_g": 4.36
+        }
+      },
+      {
+        "fdc_id": "170000",
+        "description": "Onions, raw",
+        "grams": 150,
+        "per_100g": {
+          "sugar_g": 4.24,
+          "fat_g": 0.1,
+          "carbs_g": 9.34,
+          "calories": 40.0,
+          "saturated_fat_g": 0.042,
+          "protein_g": 1.1,
+          "fiber_g": 1.7,
+          "sodium_mg": 4.0
+        }
+      },
+      {
+        "fdc_id": "169230",
+        "description": "Garlic, raw",
+        "grams": 6,
+        "per_100g": {
+          "carbs_g": 33.06,
+          "calories": 149.0,
+          "sugar_g": 1.0,
+          "saturated_fat_g": 0.089,
+          "fiber_g": 2.1,
+          "sodium_mg": 17.0,
+          "protein_g": 6.36,
+          "fat_g": 0.5
+        }
+      },
+      {
+        "fdc_id": "171413",
+        "description": "Oil, olive, salad or cooking",
+        "grams": 14,
+        "per_100g": {
+          "fat_g": 100.0,
+          "carbs_g": 0.0,
+          "calories": 884.0,
+          "sodium_mg": 2.0,
+          "protein_g": 0.0,
+          "saturated_fat_g": 13.808,
+          "fiber_g": 0.0,
+          "sugar_g": 0.0
+        }
+      },
+      {
+        "fdc_id": "174536",
+        "description": "Soup, chicken broth, ready-to-serve",
+        "grams": 240,
+        "per_100g": {
+          "protein_g": 0.64,
+          "fiber_g": 0.0,
+          "sodium_mg": 371.0,
+          "fat_g": 0.21,
+          "carbs_g": 0.44,
+          "calories": 6.0,
+          "sugar_g": 0.43,
+          "saturated_fat_g": 0.013
+        }
+      },
+      {
+        "fdc_id": "173195",
+        "description": "Alcoholic beverage, wine, table, white, Chenin Blanc",
+        "grams": 240,
+        "per_100g": {
+          "fat_g": 0.0,
+          "carbs_g": 3.31,
+          "protein_g": 0.07,
+          "calories": 80.0
+        }
+      },
+      {
+        "fdc_id": "173475",
+        "description": "Spearmint, fresh",
+        "grams": 8,
+        "per_100g": {
+          "fat_g": 0.73,
+          "carbs_g": 8.41,
+          "calories": 44.0,
+          "protein_g": 3.29,
+          "fiber_g": 6.8,
+          "sodium_mg": 30.0,
+          "saturated_fat_g": 0.191
+        }
+      }
+    ],
+    "assumptions": "1 kg pork loin, 150 g onion, 240 ml ready-to-serve chicken broth. 240 ml wine used but only 120 g raw wine modeled as retained proxy after reduction; actual alcohol/energy retention uncertain. 5 g salt."
+  },
+  "images": {
+    "method": "built-in image_gen",
+    "cover_reused_for_final_step": true,
+    "directory": "public/recetas/lomo-de-cerdo-en-salsa-de-menta",
+    "version": "v1"
+  },
+  "publication": {
+    "environment": "preview",
+    "state": "prepared",
+    "rows": [
+      {
+        "title": "Lomo de cerdo en salsa de menta",
+        "summary": "Lomo de cerdo dorado y asado con salsa de cebolla, vino blanco y menta fresca. Reposa antes de cortarlo para conservar sus jugos.",
+        "notes": "La temperatura manda más que el reloj: el centro del lomo entero debe alcanzar 63 °C y reposar al menos 3 minutos. Esta receta lo deja reposar 10. La salsa contiene vino; usa caldo adicional si prefieres omitirlo.",
+        "cuisine": "Casera",
+        "course": "Plato principal",
+        "difficulty": "Intermedia",
+        "excerpt": "Lomo de cerdo dorado y asado con salsa de cebolla, vino blanco y menta fresca. Reposa antes de cortarlo para conservar sus jugos.",
+        "recipe_group_id": "f3a403ee-c95c-436c-8b93-3005ea45dca8",
+        "language": "es",
+        "public_path": "/lomo-de-cerdo-en-salsa-de-menta",
+        "slug": "lomo-de-cerdo-en-salsa-de-menta",
+        "category": "Platos principales",
+        "servings": 6,
+        "prep_time_minutes": 20,
+        "cook_time_minutes": 60,
+        "total_time_minutes": 90,
+        "ingredients": [
+          {
+            "name": "Lomo de cerdo entero sin hueso",
+            "amount": "1000",
+            "unit": "g"
+          },
+          {
+            "name": "Cebolla picada",
+            "amount": "150",
+            "unit": "g"
+          },
+          {
+            "name": "Ajo picado",
+            "amount": "6",
+            "unit": "g"
+          },
+          {
+            "name": "Aceite de oliva",
+            "amount": "14",
+            "unit": "g"
+          },
+          {
+            "name": "Caldo de pollo",
+            "amount": "240",
+            "unit": "ml"
+          },
+          {
+            "name": "Vino blanco seco",
+            "amount": "240",
+            "unit": "ml"
+          },
+          {
+            "name": "Menta fresca picada",
+            "amount": "8",
+            "unit": "g"
+          },
+          {
+            "name": "Sal fina",
+            "amount": "5",
+            "unit": "g"
+          },
+          {
+            "name": "Pimienta negra",
+            "amount": "2",
+            "unit": "g"
+          }
+        ],
+        "steps": [
+          {
+            "title": "Prepara el lomo",
+            "content": "Calienta el horno a 180 °C. Seca el lomo, sazónalo con sal y pimienta y pica cebolla, ajo y menta por separado.",
+            "image_alt": "Lomo crudo sazonado con menta e ingredientes.",
+            "image_url": "/recetas/lomo-de-cerdo-en-salsa-de-menta/paso-01-v1.webp"
+          },
+          {
+            "title": "Dora por todos lados",
+            "content": "Calienta aceite en una sartén apta para horno o usa una que permita trasladarlo a una fuente. Dora el lomo 2–3 minutos por lado; retíralo sin cocinarlo aún por dentro.",
+            "image_alt": "Lomo de cerdo dorándose en sartén.",
+            "image_url": "/recetas/lomo-de-cerdo-en-salsa-de-menta/paso-02-v1.webp"
+          },
+          {
+            "title": "Haz la base de la salsa",
+            "content": "En la misma sartén cocina cebolla 4 minutos y ajo 30 segundos. Añade vino y caldo; raspa el fondo y reduce 5 minutos. Incorpora la menta al final.",
+            "image_alt": "Cebolla y ajo con vino, caldo y menta.",
+            "image_url": "/recetas/lomo-de-cerdo-en-salsa-de-menta/paso-03-v1.webp"
+          },
+          {
+            "title": "Asa y mide",
+            "content": "Devuelve el lomo a la salsa y hornea unos 45–60 minutos según el grosor. Mide en la parte más gruesa: retira al llegar a 63 °C. Si la salsa se seca, agrega un poco de caldo.",
+            "image_alt": "Lomo asado en salsa de menta con termómetro.",
+            "image_url": "/recetas/lomo-de-cerdo-en-salsa-de-menta/paso-04-v1.webp"
+          },
+          {
+            "title": "Reposa y sirve",
+            "content": "Deja reposar 10 minutos fuera del horno. Corta en seis porciones y sirve con la salsa; reduce la salsa unos minutos en la sartén si está muy líquida.",
+            "image_alt": "Lomo de cerdo en rodajas con salsa de menta.",
+            "image_url": "/recetas/lomo-de-cerdo-en-salsa-de-menta/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/lomo-de-cerdo-en-salsa-de-menta/portada-v1.webp",
+        "seo": {
+          "title": "Lomo de cerdo en salsa de menta | Manual de Cocina",
+          "description": "Lomo de cerdo dorado y asado con salsa de cebolla, vino blanco y menta fresca. Reposa antes de cortarlo para conservar sus jugos.",
+          "faq": [
+            {
+              "q": "¿Cuándo está listo el lomo?",
+              "a": "Cuando el centro marca 63 °C y luego reposa al menos 3 minutos; aquí reposa 10."
+            },
+            {
+              "q": "¿Puedo evitar el vino?",
+              "a": "Sí. Sustitúyelo por la misma cantidad de caldo y ajusta la acidez con unas gotas de limón al final."
+            }
+          ],
+          "image_variants": [
+            "/recetas/lomo-de-cerdo-en-salsa-de-menta/portada-1x1-v1.webp",
+            "/recetas/lomo-de-cerdo-en-salsa-de-menta/portada-4x3-v1.webp",
+            "/recetas/lomo-de-cerdo-en-salsa-de-menta/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 397,
+          "protein_g": 33.6,
+          "carbs_g": 4.3,
+          "fat_g": 23.4,
+          "saturated_fat_g": 7.6,
+          "fiber_g": 0.5,
+          "sugar_g": 1.2,
+          "sodium_mg": 561,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g × grams / 100) / 6 servings; added salt 5 g × 0.393 sodium fraction / 6",
+          "serving_size": "1/6 de la receta",
+          "note": "Estimación por porción; se modela la mitad del vino antes de reducción, por lo que el valor real puede variar."
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>Lomo de cerdo dorado y asado con salsa de cebolla, vino blanco y menta fresca. Reposa antes de cortarlo para conservar sus jugos.</p>",
+        "keywords": [
+          "Lomo de cerdo en salsa de menta",
+          "Platos principales",
+          "Casera"
+        ],
+        "gallery": [],
+        "video_urls": []
+      },
+      {
+        "title": "Roast pork loin with fresh mint sauce",
+        "summary": "Seared and roasted pork loin with onion, white wine and fresh mint sauce, rested before slicing.",
+        "notes": "Temperature matters more than the clock: whole pork loin reaches 63°C (145°F) then rests at least 3 minutes; here it rests 10. Sauce contains wine; use more broth to omit it.",
+        "cuisine": "Home-style",
+        "course": "Main course",
+        "difficulty": "Intermediate",
+        "excerpt": "Seared and roasted pork loin with onion, white wine and fresh mint sauce, rested before slicing.",
+        "recipe_group_id": "f3a403ee-c95c-436c-8b93-3005ea45dca8",
+        "language": "en",
+        "public_path": "/en/roast-pork-loin-mint-sauce/",
+        "slug": "roast-pork-loin-mint-sauce",
+        "category": "Main dishes",
+        "servings": 6,
+        "prep_time_minutes": 20,
+        "cook_time_minutes": 60,
+        "total_time_minutes": 90,
+        "ingredients": [
+          {
+            "name": "Whole boneless pork loin",
+            "amount": "1000",
+            "unit": "g"
+          },
+          {
+            "name": "Chopped onion",
+            "amount": "150",
+            "unit": "g"
+          },
+          {
+            "name": "Minced garlic",
+            "amount": "6",
+            "unit": "g"
+          },
+          {
+            "name": "Olive oil",
+            "amount": "14",
+            "unit": "g"
+          },
+          {
+            "name": "Chicken broth",
+            "amount": "240",
+            "unit": "ml"
+          },
+          {
+            "name": "Dry white wine",
+            "amount": "240",
+            "unit": "ml"
+          },
+          {
+            "name": "Chopped fresh mint",
+            "amount": "8",
+            "unit": "g"
+          },
+          {
+            "name": "Fine salt",
+            "amount": "5",
+            "unit": "g"
+          },
+          {
+            "name": "Black pepper",
+            "amount": "2",
+            "unit": "g"
+          }
+        ],
+        "steps": [
+          {
+            "title": "Prepare the pork",
+            "content": "Heat oven to 180°C (350°F). Pat pork dry, season with salt and pepper, and chop onion, garlic and mint separately.",
+            "image_alt": "Raw pork loin seasoned with mint ingredients.",
+            "image_url": "/recetas/lomo-de-cerdo-en-salsa-de-menta/paso-01-v1.webp"
+          },
+          {
+            "title": "Sear all sides",
+            "content": "Heat oil in an ovenproof skillet or transfer to a roasting pan later. Sear pork 2–3 minutes per side, then remove; the center is not yet cooked.",
+            "image_alt": "Pork loin browning in a skillet.",
+            "image_url": "/recetas/lomo-de-cerdo-en-salsa-de-menta/paso-02-v1.webp"
+          },
+          {
+            "title": "Build the sauce",
+            "content": "Cook onion in pan 4 minutes and garlic 30 seconds. Add wine and broth, scrape browned bits and reduce 5 minutes. Stir in mint at the end.",
+            "image_alt": "Onion, garlic, wine, broth and mint sauce.",
+            "image_url": "/recetas/lomo-de-cerdo-en-salsa-de-menta/paso-03-v1.webp"
+          },
+          {
+            "title": "Roast and measure",
+            "content": "Return pork to sauce and roast about 45–60 minutes depending on thickness. Check thickest center and remove at 63°C (145°F). Add broth if pan dries.",
+            "image_alt": "Roasted pork in mint sauce with thermometer.",
+            "image_url": "/recetas/lomo-de-cerdo-en-salsa-de-menta/paso-04-v1.webp"
+          },
+          {
+            "title": "Rest and serve",
+            "content": "Rest outside oven 10 minutes. Slice into six portions with sauce; reduce sauce briefly if too thin.",
+            "image_alt": "Sliced pork loin with mint sauce.",
+            "image_url": "/recetas/lomo-de-cerdo-en-salsa-de-menta/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/lomo-de-cerdo-en-salsa-de-menta/portada-v1.webp",
+        "seo": {
+          "title": "Roast pork loin with fresh mint sauce | Manual de Cocina",
+          "description": "Seared and roasted pork loin with onion, white wine and fresh mint sauce, rested before slicing.",
+          "faq": [
+            {
+              "q": "When is pork loin done?",
+              "a": "When the center reaches 63°C (145°F), followed by at least 3 minutes of rest; this recipe rests 10."
+            },
+            {
+              "q": "Can I omit wine?",
+              "a": "Yes. Replace it with equal broth and add a few drops of lemon at the end."
+            }
+          ],
+          "image_variants": [
+            "/recetas/lomo-de-cerdo-en-salsa-de-menta/portada-1x1-v1.webp",
+            "/recetas/lomo-de-cerdo-en-salsa-de-menta/portada-4x3-v1.webp",
+            "/recetas/lomo-de-cerdo-en-salsa-de-menta/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 397,
+          "protein_g": 33.6,
+          "carbs_g": 4.3,
+          "fat_g": 23.4,
+          "saturated_fat_g": 7.6,
+          "fiber_g": 0.5,
+          "sugar_g": 1.2,
+          "sodium_mg": 561,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g × grams / 100) / 6 servings; added salt 5 g × 0.393 sodium fraction / 6",
+          "serving_size": "1 serving",
+          "note": "Estimate per serving; half the wine is modeled before reduction, so actual values vary."
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>Seared and roasted pork loin with onion, white wine and fresh mint sauce, rested before slicing.</p>",
+        "keywords": [
+          "Roast pork loin with fresh mint sauce",
+          "Main dishes",
+          "Home-style"
+        ],
+        "gallery": [],
+        "video_urls": []
+      },
+      {
+        "title": "Schweinelende mit frischer Minzsauce",
+        "summary": "Gebratene Schweinelende mit Zwiebel, Weißwein und frischer Minzsauce, vor dem Anschneiden ruhen gelassen.",
+        "notes": "Kerntemperatur zählt mehr als Zeit: ganzes Schweinefilet auf 63 °C erhitzen und mindestens 3 Minuten ruhen lassen; hier 10 Minuten. Die Sauce enthält Wein; bei Bedarf durch Brühe ersetzen.",
+        "cuisine": "Hausmannskost",
+        "course": "Hauptgericht",
+        "difficulty": "Mittel",
+        "excerpt": "Gebratene Schweinelende mit Zwiebel, Weißwein und frischer Minzsauce, vor dem Anschneiden ruhen gelassen.",
+        "recipe_group_id": "f3a403ee-c95c-436c-8b93-3005ea45dca8",
+        "language": "de",
+        "public_path": "/de/schweinelende-mit-minzsauce/",
+        "slug": "schweinelende-mit-minzsauce",
+        "category": "Hauptgerichte",
+        "servings": 6,
+        "prep_time_minutes": 20,
+        "cook_time_minutes": 60,
+        "total_time_minutes": 90,
+        "ingredients": [
+          {
+            "name": "Schweinelende ohne Knochen",
+            "amount": "1000",
+            "unit": "g"
+          },
+          {
+            "name": "Gehackte Zwiebel",
+            "amount": "150",
+            "unit": "g"
+          },
+          {
+            "name": "Gehackter Knoblauch",
+            "amount": "6",
+            "unit": "g"
+          },
+          {
+            "name": "Olivenöl",
+            "amount": "14",
+            "unit": "g"
+          },
+          {
+            "name": "Hühnerbrühe",
+            "amount": "240",
+            "unit": "ml"
+          },
+          {
+            "name": "Trockener Weißwein",
+            "amount": "240",
+            "unit": "ml"
+          },
+          {
+            "name": "Gehackte frische Minze",
+            "amount": "8",
+            "unit": "g"
+          },
+          {
+            "name": "Feines Salz",
+            "amount": "5",
+            "unit": "g"
+          },
+          {
+            "name": "Schwarzer Pfeffer",
+            "amount": "2",
+            "unit": "g"
+          }
+        ],
+        "steps": [
+          {
+            "title": "Fleisch vorbereiten",
+            "content": "Backofen auf 180 °C vorheizen. Fleisch trocknen, salzen und pfeffern; Zwiebel, Knoblauch und Minze getrennt hacken.",
+            "image_alt": "Rohe Schweinelende mit Minze und Zutaten.",
+            "image_url": "/recetas/lomo-de-cerdo-en-salsa-de-menta/paso-01-v1.webp"
+          },
+          {
+            "title": "Rundum anbraten",
+            "content": "Öl in einer Pfanne erhitzen, die für den Ofen geeignet ist, oder später umfüllen. Fleisch je Seite 2–3 Minuten anbraten und herausnehmen; innen ist es noch roh.",
+            "image_alt": "Schweinelende bräunt in der Pfanne.",
+            "image_url": "/recetas/lomo-de-cerdo-en-salsa-de-menta/paso-02-v1.webp"
+          },
+          {
+            "title": "Sauce ansetzen",
+            "content": "Zwiebel 4 Minuten und Knoblauch 30 Sekunden im Bratfett garen. Wein und Brühe zugeben, Bratensatz lösen, 5 Minuten reduzieren. Zuletzt Minze einrühren.",
+            "image_alt": "Zwiebel-Knoblauch-Sauce mit Wein und Minze.",
+            "image_url": "/recetas/lomo-de-cerdo-en-salsa-de-menta/paso-03-v1.webp"
+          },
+          {
+            "title": "Braten und messen",
+            "content": "Fleisch in die Sauce legen und je nach Dicke 45–60 Minuten braten. An der dicksten Stelle bei 63 °C herausnehmen. Bei Bedarf Brühe nachgießen.",
+            "image_alt": "Braten in Minzsauce mit Thermometer.",
+            "image_url": "/recetas/lomo-de-cerdo-en-salsa-de-menta/paso-04-v1.webp"
+          },
+          {
+            "title": "Ruhen und servieren",
+            "content": "Außerhalb des Ofens 10 Minuten ruhen lassen. In sechs Portionen schneiden und mit Sauce servieren; dünne Sauce kurz einkochen.",
+            "image_alt": "Schweinelende in Scheiben mit Minzsauce.",
+            "image_url": "/recetas/lomo-de-cerdo-en-salsa-de-menta/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/lomo-de-cerdo-en-salsa-de-menta/portada-v1.webp",
+        "seo": {
+          "title": "Schweinelende mit frischer Minzsauce | Manual de Cocina",
+          "description": "Gebratene Schweinelende mit Zwiebel, Weißwein und frischer Minzsauce, vor dem Anschneiden ruhen gelassen.",
+          "faq": [
+            {
+              "q": "Wann ist die Lende fertig?",
+              "a": "Bei 63 °C in der Mitte plus mindestens 3 Minuten Ruhezeit; hier sind es 10 Minuten."
+            },
+            {
+              "q": "Ohne Wein möglich?",
+              "a": "Ja. Durch dieselbe Menge Brühe ersetzen und zuletzt einige Tropfen Zitrone zugeben."
+            }
+          ],
+          "image_variants": [
+            "/recetas/lomo-de-cerdo-en-salsa-de-menta/portada-1x1-v1.webp",
+            "/recetas/lomo-de-cerdo-en-salsa-de-menta/portada-4x3-v1.webp",
+            "/recetas/lomo-de-cerdo-en-salsa-de-menta/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 397,
+          "protein_g": 33.6,
+          "carbs_g": 4.3,
+          "fat_g": 23.4,
+          "saturated_fat_g": 7.6,
+          "fiber_g": 0.5,
+          "sugar_g": 1.2,
+          "sodium_mg": 561,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g × grams / 100) / 6 servings; added salt 5 g × 0.393 sodium fraction / 6",
+          "serving_size": "1 serving",
+          "note": "Schätzwert pro Portion; die Hälfte des Weins wird vor dem Einkochen modelliert."
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>Gebratene Schweinelende mit Zwiebel, Weißwein und frischer Minzsauce, vor dem Anschneiden ruhen gelassen.</p>",
+        "keywords": [
+          "Schweinelende mit frischer Minzsauce",
+          "Hauptgerichte",
+          "Hausmannskost"
+        ],
+        "gallery": [],
+        "video_urls": []
+      },
+      {
+        "title": "Longe de porc rôtie sauce à la menthe",
+        "summary": "Longe de porc dorée puis rôtie avec une sauce à l’oignon, au vin blanc et à la menthe fraîche.",
+        "notes": "La température compte plus que la durée: cuire la longe entière à 63 °C à cœur puis laisser reposer au moins 3 minutes; ici 10. La sauce contient du vin, remplaçable par du bouillon.",
+        "cuisine": "Familiale",
+        "course": "Plat principal",
+        "difficulty": "Intermédiaire",
+        "excerpt": "Longe de porc dorée puis rôtie avec une sauce à l’oignon, au vin blanc et à la menthe fraîche.",
+        "recipe_group_id": "f3a403ee-c95c-436c-8b93-3005ea45dca8",
+        "language": "fr",
+        "public_path": "/fr/longe-de-porc-sauce-menthe/",
+        "slug": "longe-de-porc-sauce-menthe",
+        "category": "Plats principaux",
+        "servings": 6,
+        "prep_time_minutes": 20,
+        "cook_time_minutes": 60,
+        "total_time_minutes": 90,
+        "ingredients": [
+          {
+            "name": "Longe de porc désossée entière",
+            "amount": "1000",
+            "unit": "g"
+          },
+          {
+            "name": "Oignon haché",
+            "amount": "150",
+            "unit": "g"
+          },
+          {
+            "name": "Ail haché",
+            "amount": "6",
+            "unit": "g"
+          },
+          {
+            "name": "Huile d’olive",
+            "amount": "14",
+            "unit": "g"
+          },
+          {
+            "name": "Bouillon de poulet",
+            "amount": "240",
+            "unit": "ml"
+          },
+          {
+            "name": "Vin blanc sec",
+            "amount": "240",
+            "unit": "ml"
+          },
+          {
+            "name": "Menthe fraîche hachée",
+            "amount": "8",
+            "unit": "g"
+          },
+          {
+            "name": "Sel fin",
+            "amount": "5",
+            "unit": "g"
+          },
+          {
+            "name": "Poivre noir",
+            "amount": "2",
+            "unit": "g"
+          }
+        ],
+        "steps": [
+          {
+            "title": "Préparer la longe",
+            "content": "Préchauffer à 180 °C. Éponger la viande, saler et poivrer; hacher séparément oignon, ail et menthe.",
+            "image_alt": "Longe crue avec menthe et ingrédients.",
+            "image_url": "/recetas/lomo-de-cerdo-en-salsa-de-menta/paso-01-v1.webp"
+          },
+          {
+            "title": "Dorer de tous côtés",
+            "content": "Chauffer l’huile dans une poêle allant au four, ou transvaser ensuite. Dorer la viande 2 à 3 minutes par face puis retirer; le centre reste cru.",
+            "image_alt": "Longe de porc dorée à la poêle.",
+            "image_url": "/recetas/lomo-de-cerdo-en-salsa-de-menta/paso-02-v1.webp"
+          },
+          {
+            "title": "Faire la sauce",
+            "content": "Cuire l’oignon 4 minutes et l’ail 30 secondes dans la poêle. Verser vin et bouillon, décoller les sucs et réduire 5 minutes. Ajouter la menthe à la fin.",
+            "image_alt": "Sauce oignon, ail, vin et menthe.",
+            "image_url": "/recetas/lomo-de-cerdo-en-salsa-de-menta/paso-03-v1.webp"
+          },
+          {
+            "title": "Rôtir et mesurer",
+            "content": "Remettre la viande dans la sauce et rôtir 45 à 60 minutes selon l’épaisseur. Retirer à 63 °C au cœur de la partie la plus épaisse. Ajouter du bouillon si besoin.",
+            "image_alt": "Porc rôti en sauce avec thermomètre.",
+            "image_url": "/recetas/lomo-de-cerdo-en-salsa-de-menta/paso-04-v1.webp"
+          },
+          {
+            "title": "Reposer et servir",
+            "content": "Laisser reposer 10 minutes hors du four. Couper en six parts et servir avec la sauce, réduite si elle est trop liquide.",
+            "image_alt": "Tranches de porc sauce à la menthe.",
+            "image_url": "/recetas/lomo-de-cerdo-en-salsa-de-menta/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/lomo-de-cerdo-en-salsa-de-menta/portada-v1.webp",
+        "seo": {
+          "title": "Longe de porc rôtie sauce à la menthe | Manual de Cocina",
+          "description": "Longe de porc dorée puis rôtie avec une sauce à l’oignon, au vin blanc et à la menthe fraîche.",
+          "faq": [
+            {
+              "q": "Quand la longe est-elle cuite ?",
+              "a": "À 63 °C à cœur suivis d’au moins 3 minutes de repos; ici 10 minutes."
+            },
+            {
+              "q": "Peut-on supprimer le vin ?",
+              "a": "Oui, le remplacer par autant de bouillon et finir avec quelques gouttes de citron."
+            }
+          ],
+          "image_variants": [
+            "/recetas/lomo-de-cerdo-en-salsa-de-menta/portada-1x1-v1.webp",
+            "/recetas/lomo-de-cerdo-en-salsa-de-menta/portada-4x3-v1.webp",
+            "/recetas/lomo-de-cerdo-en-salsa-de-menta/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 397,
+          "protein_g": 33.6,
+          "carbs_g": 4.3,
+          "fat_g": 23.4,
+          "saturated_fat_g": 7.6,
+          "fiber_g": 0.5,
+          "sugar_g": 1.2,
+          "sodium_mg": 561,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g × grams / 100) / 6 servings; added salt 5 g × 0.393 sodium fraction / 6",
+          "serving_size": "1 serving",
+          "note": "Estimation par part; la moitié du vin est modélisée avant réduction."
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>Longe de porc dorée puis rôtie avec une sauce à l’oignon, au vin blanc et à la menthe fraîche.</p>",
+        "keywords": [
+          "Longe de porc rôtie sauce à la menthe",
+          "Plats principaux",
+          "Familiale"
+        ],
+        "gallery": [],
+        "video_urls": []
+      },
+      {
+        "title": "Lonza di maiale con salsa alla menta",
+        "summary": "Lonza rosolata e arrostita con salsa di cipolla, vino bianco e menta fresca, riposata prima di affettare.",
+        "notes": "Conta la temperatura: lonza intera a 63 °C al cuore e riposo di almeno 3 minuti; qui 10. La salsa contiene vino, sostituibile con brodo.",
+        "cuisine": "Casalinga",
+        "course": "Piatto principale",
+        "difficulty": "Media",
+        "excerpt": "Lonza rosolata e arrostita con salsa di cipolla, vino bianco e menta fresca, riposata prima di affettare.",
+        "recipe_group_id": "f3a403ee-c95c-436c-8b93-3005ea45dca8",
+        "language": "it",
+        "public_path": "/it/lonza-di-maiale-salsa-menta/",
+        "slug": "lonza-di-maiale-salsa-menta",
+        "category": "Secondi piatti",
+        "servings": 6,
+        "prep_time_minutes": 20,
+        "cook_time_minutes": 60,
+        "total_time_minutes": 90,
+        "ingredients": [
+          {
+            "name": "Lonza di maiale intera disossata",
+            "amount": "1000",
+            "unit": "g"
+          },
+          {
+            "name": "Cipolla tritata",
+            "amount": "150",
+            "unit": "g"
+          },
+          {
+            "name": "Aglio tritato",
+            "amount": "6",
+            "unit": "g"
+          },
+          {
+            "name": "Olio d’oliva",
+            "amount": "14",
+            "unit": "g"
+          },
+          {
+            "name": "Brodo di pollo",
+            "amount": "240",
+            "unit": "ml"
+          },
+          {
+            "name": "Vino bianco secco",
+            "amount": "240",
+            "unit": "ml"
+          },
+          {
+            "name": "Menta fresca tritata",
+            "amount": "8",
+            "unit": "g"
+          },
+          {
+            "name": "Sale fino",
+            "amount": "5",
+            "unit": "g"
+          },
+          {
+            "name": "Pepe nero",
+            "amount": "2",
+            "unit": "g"
+          }
+        ],
+        "steps": [
+          {
+            "title": "Prepara la lonza",
+            "content": "Preriscalda a 180 °C. Asciuga la carne, sala e pepa; trita separatamente cipolla, aglio e menta.",
+            "image_alt": "Lonza cruda con menta e ingredienti.",
+            "image_url": "/recetas/lomo-de-cerdo-en-salsa-de-menta/paso-01-v1.webp"
+          },
+          {
+            "title": "Rosola ogni lato",
+            "content": "Scalda olio in padella adatta al forno o trasferisci poi. Rosola 2–3 minuti per lato e togli; il centro è ancora crudo.",
+            "image_alt": "Lonza rosolata in padella.",
+            "image_url": "/recetas/lomo-de-cerdo-en-salsa-de-menta/paso-02-v1.webp"
+          },
+          {
+            "title": "Crea la salsa",
+            "content": "Cuoci cipolla 4 minuti e aglio 30 secondi nel fondo. Versa vino e brodo, raschia il fondo e riduci 5 minuti. Incorpora la menta alla fine.",
+            "image_alt": "Salsa con cipolla, aglio, vino e menta.",
+            "image_url": "/recetas/lomo-de-cerdo-en-salsa-de-menta/paso-03-v1.webp"
+          },
+          {
+            "title": "Arrostisci e misura",
+            "content": "Rimetti la lonza nella salsa e cuoci 45–60 minuti secondo lo spessore. Togli quando il centro più spesso raggiunge 63 °C. Aggiungi brodo se asciuga.",
+            "image_alt": "Arrosto in salsa di menta con termometro.",
+            "image_url": "/recetas/lomo-de-cerdo-en-salsa-de-menta/paso-04-v1.webp"
+          },
+          {
+            "title": "Riposa e servi",
+            "content": "Riposa 10 minuti fuori forno. Affetta in sei porzioni con salsa; riducila se troppo liquida.",
+            "image_alt": "Fette di lonza con salsa alla menta.",
+            "image_url": "/recetas/lomo-de-cerdo-en-salsa-de-menta/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/lomo-de-cerdo-en-salsa-de-menta/portada-v1.webp",
+        "seo": {
+          "title": "Lonza di maiale con salsa alla menta | Manual de Cocina",
+          "description": "Lonza rosolata e arrostita con salsa di cipolla, vino bianco e menta fresca, riposata prima di affettare.",
+          "faq": [
+            {
+              "q": "Quando è cotta la lonza?",
+              "a": "A 63 °C al cuore seguiti da almeno 3 minuti di riposo; qui ne fa 10."
+            },
+            {
+              "q": "Posso omettere il vino?",
+              "a": "Sì, sostituisci con pari brodo e qualche goccia di limone alla fine."
+            }
+          ],
+          "image_variants": [
+            "/recetas/lomo-de-cerdo-en-salsa-de-menta/portada-1x1-v1.webp",
+            "/recetas/lomo-de-cerdo-en-salsa-de-menta/portada-4x3-v1.webp",
+            "/recetas/lomo-de-cerdo-en-salsa-de-menta/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 397,
+          "protein_g": 33.6,
+          "carbs_g": 4.3,
+          "fat_g": 23.4,
+          "saturated_fat_g": 7.6,
+          "fiber_g": 0.5,
+          "sugar_g": 1.2,
+          "sodium_mg": 561,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g × grams / 100) / 6 servings; added salt 5 g × 0.393 sodium fraction / 6",
+          "serving_size": "1 serving",
+          "note": "Stima per porzione; metà del vino è modellata prima della riduzione."
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>Lonza rosolata e arrostita con salsa di cipolla, vino bianco e menta fresca, riposata prima di affettare.</p>",
+        "keywords": [
+          "Lonza di maiale con salsa alla menta",
+          "Secondi piatti",
+          "Casalinga"
+        ],
+        "gallery": [],
+        "video_urls": []
+      },
+      {
+        "title": "豚ロースのミントソース焼き",
+        "summary": "豚ロースを焼き付け、玉ねぎ、白ワイン、フレッシュミントのソースとともにローストし、休ませてから切る。",
+        "notes": "時間より中心温度を優先。豚ロースの中心を63℃にし最低3分休ませる。ここでは10分。ソースのワインは同量のスープに代えられます。",
+        "cuisine": "家庭料理",
+        "course": "主菜",
+        "difficulty": "中級",
+        "excerpt": "豚ロースを焼き付け、玉ねぎ、白ワイン、フレッシュミントのソースとともにローストし、休ませてから切る。",
+        "recipe_group_id": "f3a403ee-c95c-436c-8b93-3005ea45dca8",
+        "language": "ja",
+        "public_path": "/ja/豚ロースのミントソース焼き/",
+        "slug": "豚ロースのミントソース焼き",
+        "category": "主菜",
+        "servings": 6,
+        "prep_time_minutes": 20,
+        "cook_time_minutes": 60,
+        "total_time_minutes": 90,
+        "ingredients": [
+          {
+            "name": "骨なし豚ロースのかたまり",
+            "amount": "1000",
+            "unit": "g"
+          },
+          {
+            "name": "刻んだ玉ねぎ",
+            "amount": "150",
+            "unit": "g"
+          },
+          {
+            "name": "刻んだにんにく",
+            "amount": "6",
+            "unit": "g"
+          },
+          {
+            "name": "オリーブオイル",
+            "amount": "14",
+            "unit": "g"
+          },
+          {
+            "name": "チキンスープ",
+            "amount": "240",
+            "unit": "ml"
+          },
+          {
+            "name": "辛口白ワイン",
+            "amount": "240",
+            "unit": "ml"
+          },
+          {
+            "name": "刻んだフレッシュミント",
+            "amount": "8",
+            "unit": "g"
+          },
+          {
+            "name": "塩",
+            "amount": "5",
+            "unit": "g"
+          },
+          {
+            "name": "黒こしょう",
+            "amount": "2",
+            "unit": "g"
+          }
+        ],
+        "steps": [
+          {
+            "title": "豚肉を準備",
+            "content": "オーブンを180℃に予熱。肉の水気を拭き、塩こしょうを振る。玉ねぎ、にんにく、ミントを別々に刻む。",
+            "image_alt": "生の豚ロースとミントなどの材料。",
+            "image_url": "/recetas/lomo-de-cerdo-en-salsa-de-menta/paso-01-v1.webp"
+          },
+          {
+            "title": "全面を焼く",
+            "content": "耐熱のフライパンで油を熱し、肉の各面を2〜3分焼いて取り出す。中心はまだ生の状態でよい。",
+            "image_alt": "フライパンで焼き色を付ける豚ロース。",
+            "image_url": "/recetas/lomo-de-cerdo-en-salsa-de-menta/paso-02-v1.webp"
+          },
+          {
+            "title": "ソースを作る",
+            "content": "同じ鍋で玉ねぎを4分、にんにくを30秒炒める。ワインとスープを加えて鍋底をこそげ、5分煮詰める。最後にミントを加える。",
+            "image_alt": "玉ねぎ、にんにく、ワイン、ミントのソース。",
+            "image_url": "/recetas/lomo-de-cerdo-en-salsa-de-menta/paso-03-v1.webp"
+          },
+          {
+            "title": "焼いて測る",
+            "content": "肉をソースに戻し、厚みに応じて45〜60分焼く。最も厚い中心が63℃になったら取り出す。乾けばスープを足す。",
+            "image_alt": "温度計で測るミントソースの豚肉。",
+            "image_url": "/recetas/lomo-de-cerdo-en-salsa-de-menta/paso-04-v1.webp"
+          },
+          {
+            "title": "休ませて盛る",
+            "content": "オーブンから出して10分休ませ、6人分に切る。ソースが薄ければ少し煮詰めてかける。",
+            "image_alt": "豚ロースの薄切りとミントソース。",
+            "image_url": "/recetas/lomo-de-cerdo-en-salsa-de-menta/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/lomo-de-cerdo-en-salsa-de-menta/portada-v1.webp",
+        "seo": {
+          "title": "豚ロースのミントソース焼き | Manual de Cocina",
+          "description": "豚ロースを焼き付け、玉ねぎ、白ワイン、フレッシュミントのソースとともにローストし、休ませてから切る。",
+          "faq": [
+            {
+              "q": "いつ焼き上がりですか？",
+              "a": "中心が63℃になり最低3分休ませたら。ここでは10分休ませます。"
+            },
+            {
+              "q": "ワインを使わなくてもよい？",
+              "a": "はい。同量のスープに替え、最後にレモンを少量加えます。"
+            }
+          ],
+          "image_variants": [
+            "/recetas/lomo-de-cerdo-en-salsa-de-menta/portada-1x1-v1.webp",
+            "/recetas/lomo-de-cerdo-en-salsa-de-menta/portada-4x3-v1.webp",
+            "/recetas/lomo-de-cerdo-en-salsa-de-menta/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 397,
+          "protein_g": 33.6,
+          "carbs_g": 4.3,
+          "fat_g": 23.4,
+          "saturated_fat_g": 7.6,
+          "fiber_g": 0.5,
+          "sugar_g": 1.2,
+          "sodium_mg": 561,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g × grams / 100) / 6 servings; added salt 5 g × 0.393 sodium fraction / 6",
+          "serving_size": "1 serving",
+          "note": "1人分の概算。ワインは煮詰める前の半量で計算しています。"
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>豚ロースを焼き付け、玉ねぎ、白ワイン、フレッシュミントのソースとともにローストし、休ませてから切る。</p>",
+        "keywords": [
+          "豚ロースのミントソース焼き",
+          "主菜",
+          "家庭料理"
+        ],
+        "gallery": [],
+        "video_urls": []
+      },
+      {
+        "title": "Lombo de porco com molho de hortelã",
+        "summary": "Lombo dourado e assado com cebola, vinho branco e hortelã fresca, repousado antes de fatiar.",
+        "notes": "A temperatura importa mais do que o tempo: o centro do lombo inteiro deve atingir 63 °C e repousar pelo menos 3 minutos; aqui 10. O vinho pode ser substituído por caldo.",
+        "cuisine": "Caseira",
+        "course": "Prato principal",
+        "difficulty": "Intermédia",
+        "excerpt": "Lombo dourado e assado com cebola, vinho branco e hortelã fresca, repousado antes de fatiar.",
+        "recipe_group_id": "f3a403ee-c95c-436c-8b93-3005ea45dca8",
+        "language": "pt",
+        "public_path": "/pt/lombo-de-porco-molho-hortela/",
+        "slug": "lombo-de-porco-molho-hortela",
+        "category": "Pratos principais",
+        "servings": 6,
+        "prep_time_minutes": 20,
+        "cook_time_minutes": 60,
+        "total_time_minutes": 90,
+        "ingredients": [
+          {
+            "name": "Lombo de porco inteiro desossado",
+            "amount": "1000",
+            "unit": "g"
+          },
+          {
+            "name": "Cebola picada",
+            "amount": "150",
+            "unit": "g"
+          },
+          {
+            "name": "Alho picado",
+            "amount": "6",
+            "unit": "g"
+          },
+          {
+            "name": "Azeite",
+            "amount": "14",
+            "unit": "g"
+          },
+          {
+            "name": "Caldo de galinha",
+            "amount": "240",
+            "unit": "ml"
+          },
+          {
+            "name": "Vinho branco seco",
+            "amount": "240",
+            "unit": "ml"
+          },
+          {
+            "name": "Hortelã fresca picada",
+            "amount": "8",
+            "unit": "g"
+          },
+          {
+            "name": "Sal fino",
+            "amount": "5",
+            "unit": "g"
+          },
+          {
+            "name": "Pimenta-preta",
+            "amount": "2",
+            "unit": "g"
+          }
+        ],
+        "steps": [
+          {
+            "title": "Prepare o lombo",
+            "content": "Aqueça o forno a 180 °C. Seque a carne, tempere com sal e pimenta e pique separadamente cebola, alho e hortelã.",
+            "image_alt": "Lombo cru com hortelã e ingredientes.",
+            "image_url": "/recetas/lomo-de-cerdo-en-salsa-de-menta/paso-01-v1.webp"
+          },
+          {
+            "title": "Doure todos os lados",
+            "content": "Aqueça o azeite numa frigideira própria para forno ou transfira depois. Doure 2–3 minutos por lado e retire; o centro ainda está cru.",
+            "image_alt": "Lombo de porco a dourar na frigideira.",
+            "image_url": "/recetas/lomo-de-cerdo-en-salsa-de-menta/paso-02-v1.webp"
+          },
+          {
+            "title": "Faça o molho",
+            "content": "Cozinhe cebola 4 minutos e alho 30 segundos na mesma frigideira. Junte vinho e caldo, solte o fundo e reduza 5 minutos. Adicione a hortelã no fim.",
+            "image_alt": "Molho de cebola, alho, vinho e hortelã.",
+            "image_url": "/recetas/lomo-de-cerdo-en-salsa-de-menta/paso-03-v1.webp"
+          },
+          {
+            "title": "Asse e meça",
+            "content": "Volte a pôr o lombo no molho e asse 45–60 minutos conforme espessura. Retire quando a parte mais grossa atingir 63 °C. Junte caldo se secar.",
+            "image_alt": "Lombo assado em molho com termómetro.",
+            "image_url": "/recetas/lomo-de-cerdo-en-salsa-de-menta/paso-04-v1.webp"
+          },
+          {
+            "title": "Repouse e sirva",
+            "content": "Repouse 10 minutos fora do forno. Corte em seis doses e sirva com molho, reduzindo-o se estiver líquido.",
+            "image_alt": "Fatias de lombo com molho de hortelã.",
+            "image_url": "/recetas/lomo-de-cerdo-en-salsa-de-menta/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/lomo-de-cerdo-en-salsa-de-menta/portada-v1.webp",
+        "seo": {
+          "title": "Lombo de porco com molho de hortelã | Manual de Cocina",
+          "description": "Lombo dourado e assado com cebola, vinho branco e hortelã fresca, repousado antes de fatiar.",
+          "faq": [
+            {
+              "q": "Quando está pronto?",
+              "a": "Quando o centro atingir 63 °C e repousar pelo menos 3 minutos; aqui repousa 10."
+            },
+            {
+              "q": "Posso omitir o vinho?",
+              "a": "Sim. Substitua por igual quantidade de caldo e umas gotas de limão no fim."
+            }
+          ],
+          "image_variants": [
+            "/recetas/lomo-de-cerdo-en-salsa-de-menta/portada-1x1-v1.webp",
+            "/recetas/lomo-de-cerdo-en-salsa-de-menta/portada-4x3-v1.webp",
+            "/recetas/lomo-de-cerdo-en-salsa-de-menta/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 397,
+          "protein_g": 33.6,
+          "carbs_g": 4.3,
+          "fat_g": 23.4,
+          "saturated_fat_g": 7.6,
+          "fiber_g": 0.5,
+          "sugar_g": 1.2,
+          "sodium_mg": 561,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g × grams / 100) / 6 servings; added salt 5 g × 0.393 sodium fraction / 6",
+          "serving_size": "1 serving",
+          "note": "Estimativa por dose; metade do vinho é modelada antes da redução."
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>Lombo dourado e assado com cebola, vinho branco e hortelã fresca, repousado antes de fatiar.</p>",
+        "keywords": [
+          "Lombo de porco com molho de hortelã",
+          "Pratos principais",
+          "Caseira"
+        ],
+        "gallery": [],
+        "video_urls": []
+      }
+    ]
+  }
+}

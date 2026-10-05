@@ -1,0 +1,1082 @@
+{
+  "entity": "E017",
+  "status": "ready_for_preview",
+  "recipe_group_id": "92fcdc86-429a-47dd-a7ed-377f104fb38c",
+  "source_policy": "Rebuild of unpublished historical Spanish ceviche entity. Raw seafood instructions added for sourcing, parasite control and cold service; citrus is explicitly not presented as a food safety kill step. No old body prose reused.",
+  "kitchen_test_claimed": false,
+  "sources": [
+    {
+      "url": "https://www.fda.gov/food/buy-store-serve-safe-food/selecting-and-serving-fresh-and-frozen-seafood-safely",
+      "purpose": "Raw seafood and ceviche risk; freezing parasite considerations."
+    }
+  ],
+  "nutrition_calculation": {
+    "dataset": "USDA FoodData Central, SR Legacy April 2018",
+    "dataset_sha256": "b80817294b8850530aaedf2e515c02593b1824f763a0ff356e5c2081643e6fd0",
+    "method": "sum(per_100g × grams / 100) / 4 servings; added salt 4 g × 0.393 sodium fraction / 4",
+    "inputs": [
+      {
+        "fdc_id": "171955",
+        "description": "Fish, cod, Atlantic, raw",
+        "grams": 600,
+        "per_100g": {
+          "sugar_g": 0.0,
+          "calories": 82.0,
+          "fiber_g": 0.0,
+          "sodium_mg": 54.0,
+          "protein_g": 17.81,
+          "saturated_fat_g": 0.131,
+          "fat_g": 0.67,
+          "carbs_g": 0.0
+        }
+      },
+      {
+        "fdc_id": "168156",
+        "description": "Lime juice, raw",
+        "grams": 120,
+        "per_100g": {
+          "protein_g": 0.42,
+          "fiber_g": 0.4,
+          "sodium_mg": 2.0,
+          "fat_g": 0.07,
+          "sugar_g": 1.69,
+          "saturated_fat_g": 0.008,
+          "carbs_g": 8.42,
+          "calories": 25.0
+        }
+      },
+      {
+        "fdc_id": "170000",
+        "description": "Onions, raw",
+        "grams": 80,
+        "per_100g": {
+          "sugar_g": 4.24,
+          "fat_g": 0.1,
+          "carbs_g": 9.34,
+          "calories": 40.0,
+          "saturated_fat_g": 0.042,
+          "protein_g": 1.1,
+          "fiber_g": 1.7,
+          "sodium_mg": 4.0
+        }
+      },
+      {
+        "fdc_id": "169997",
+        "description": "Coriander (cilantro) leaves, raw",
+        "grams": 15,
+        "per_100g": {
+          "protein_g": 2.13,
+          "carbs_g": 3.67,
+          "calories": 23.0,
+          "saturated_fat_g": 0.014,
+          "fiber_g": 2.8,
+          "sodium_mg": 46.0,
+          "fat_g": 0.52,
+          "sugar_g": 0.87
+        }
+      },
+      {
+        "fdc_id": "170457",
+        "description": "Tomatoes, red, ripe, raw, year round average",
+        "grams": 150,
+        "per_100g": {
+          "sugar_g": 2.63,
+          "carbs_g": 3.89,
+          "calories": 18.0,
+          "saturated_fat_g": 0.028,
+          "fat_g": 0.2,
+          "fiber_g": 1.2,
+          "sodium_mg": 5.0,
+          "protein_g": 0.88
+        }
+      },
+      {
+        "fdc_id": "168576",
+        "description": "Peppers, jalapeno, raw",
+        "grams": 15,
+        "per_100g": {
+          "saturated_fat_g": 0.092,
+          "fiber_g": 2.8,
+          "sodium_mg": 3.0,
+          "protein_g": 0.91,
+          "sugar_g": 4.12,
+          "fat_g": 0.37,
+          "carbs_g": 6.5,
+          "calories": 29.0
+        }
+      }
+    ],
+    "assumptions": "600 g raw marine white fish represented by USDA raw Atlantic cod. 120 ml lime≈120 g; 4 g salt. Marinade absorption and optional tostadas excluded."
+  },
+  "images": {
+    "method": "built-in image_gen",
+    "cover_reused_for_final_step": true,
+    "directory": "public/recetas/ceviche-de-pescado",
+    "version": "v1"
+  },
+  "publication": {
+    "environment": "preview",
+    "state": "prepared",
+    "rows": [
+      {
+        "title": "Ceviche de pescado con lima y cilantro",
+        "summary": "Cubos de pescado blanco con lima, cebolla roja, tomate y cilantro, preparados y servidos bien fríos.",
+        "notes": "Usa pescado marino de un proveedor que confirme su aptitud para consumo crudo y su congelación de control de parásitos. Mantenlo a 4 °C o menos y sirve al momento. La lima cambia la textura, pero no sustituye la cocción ni elimina todos los riesgos; para personas vulnerables, usa pescado cocido y enfriado.",
+        "cuisine": "Latinoamericana",
+        "course": "Plato principal",
+        "difficulty": "Fácil",
+        "excerpt": "Cubos de pescado blanco con lima, cebolla roja, tomate y cilantro, preparados y servidos bien fríos.",
+        "recipe_group_id": "92fcdc86-429a-47dd-a7ed-377f104fb38c",
+        "language": "es",
+        "public_path": "/ceviche-de-pescado",
+        "slug": "ceviche-de-pescado",
+        "category": "Platos principales",
+        "servings": 4,
+        "prep_time_minutes": 20,
+        "cook_time_minutes": 0,
+        "total_time_minutes": 35,
+        "ingredients": [
+          {
+            "name": "Pescado blanco marino apto para consumo crudo",
+            "amount": "600",
+            "unit": "g"
+          },
+          {
+            "name": "Jugo de lima recién exprimido",
+            "amount": "120",
+            "unit": "ml"
+          },
+          {
+            "name": "Cebolla roja",
+            "amount": "80",
+            "unit": "g"
+          },
+          {
+            "name": "Cilantro fresco",
+            "amount": "15",
+            "unit": "g"
+          },
+          {
+            "name": "Tomate",
+            "amount": "150",
+            "unit": "g"
+          },
+          {
+            "name": "Jalapeño sin semillas",
+            "amount": "15",
+            "unit": "g"
+          },
+          {
+            "name": "Sal fina",
+            "amount": "4",
+            "unit": "g"
+          },
+          {
+            "name": "Pimienta negra",
+            "amount": "1",
+            "unit": "g"
+          }
+        ],
+        "steps": [
+          {
+            "title": "Prepara el pescado",
+            "content": "Usa pescado descongelado en la nevera y mantenido muy frío, confirmado por el proveedor para consumo crudo. Sécalo y córtalo en cubos de 1,5 cm sobre una tabla limpia.",
+            "image_alt": "Pescado blanco frío cortado en cubos.",
+            "image_url": "/recetas/ceviche-de-pescado/paso-01-v1.webp"
+          },
+          {
+            "title": "Añade la lima",
+            "content": "Exprime las limas y mezcla el pescado con el jugo en un recipiente frío. Tapa y refrigera 15 minutos; el ácido no equivale a cocerlo.",
+            "image_alt": "Lima exprimida sobre pescado frío.",
+            "image_url": "/recetas/ceviche-de-pescado/paso-02-v1.webp"
+          },
+          {
+            "title": "Prepara las verduras",
+            "content": "Corta la cebolla en plumas finas, el tomate en cubos y el jalapeño sin semillas. Pica el cilantro; mantenlo todo refrigerado.",
+            "image_alt": "Cebolla, tomate, chile y cilantro preparados.",
+            "image_url": "/recetas/ceviche-de-pescado/paso-03-v1.webp"
+          },
+          {
+            "title": "Mezcla y sazona",
+            "content": "Incorpora las verduras al pescado y su jugo. Añade sal y pimienta, mezcla suavemente y prueba la acidez.",
+            "image_alt": "Ceviche mezclado en recipiente frío.",
+            "image_url": "/recetas/ceviche-de-pescado/paso-04-v1.webp"
+          },
+          {
+            "title": "Sirve frío",
+            "content": "Reparte de inmediato en cuatro platos fríos con un poco del jugo. No lo dejes a temperatura ambiente; acompaña con tostadas si deseas.",
+            "image_alt": "Ceviche de pescado servido con lima.",
+            "image_url": "/recetas/ceviche-de-pescado/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/ceviche-de-pescado/portada-v1.webp",
+        "seo": {
+          "title": "Ceviche de pescado con lima y cilantro | Manual de Cocina",
+          "description": "Cubos de pescado blanco con lima, cebolla roja, tomate y cilantro, preparados y servidos bien fríos.",
+          "faq": [
+            {
+              "q": "¿La lima cocina el pescado de forma segura?",
+              "a": "No. Cambia el aspecto y la textura, pero no sustituye el calor ni garantiza eliminar patógenos."
+            },
+            {
+              "q": "¿Puedo usar pescado cocido?",
+              "a": "Sí. Enfríalo por completo y mézclalo con lima y verduras justo antes de servir; es la opción para evitar pescado crudo."
+            }
+          ],
+          "image_variants": [
+            "/recetas/ceviche-de-pescado/portada-1x1-v1.webp",
+            "/recetas/ceviche-de-pescado/portada-4x3-v1.webp",
+            "/recetas/ceviche-de-pescado/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 147,
+          "protein_g": 27.5,
+          "carbs_g": 6.2,
+          "fat_g": 1.2,
+          "saturated_fat_g": 0.2,
+          "fiber_g": 1.1,
+          "sugar_g": 2.5,
+          "sodium_mg": 479,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g × grams / 100) / 4 servings; added salt 4 g × 0.393 sodium fraction / 4",
+          "serving_size": "1/4 de la receta",
+          "note": "Estimación por ración sin tostadas; especie de pescado y líquido consumido cambian los valores."
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>Cubos de pescado blanco con lima, cebolla roja, tomate y cilantro, preparados y servidos bien fríos.</p>",
+        "keywords": [
+          "Ceviche de pescado con lima y cilantro",
+          "Platos principales",
+          "Latinoamericana"
+        ],
+        "gallery": [],
+        "video_urls": []
+      },
+      {
+        "title": "White fish ceviche with lime and cilantro",
+        "summary": "Chilled cubes of white fish with lime, red onion, tomato and cilantro, mixed and served fresh.",
+        "notes": "Choose marine fish from a supplier who confirms suitability for raw service and appropriate parasite-control freezing. Keep at or below 4°C (40°F) and serve promptly. Lime changes texture but does not make raw fish risk-free; use cooked chilled fish for vulnerable diners.",
+        "cuisine": "Latin American",
+        "course": "Main course",
+        "difficulty": "Easy",
+        "excerpt": "Chilled cubes of white fish with lime, red onion, tomato and cilantro, mixed and served fresh.",
+        "recipe_group_id": "92fcdc86-429a-47dd-a7ed-377f104fb38c",
+        "language": "en",
+        "public_path": "/en/white-fish-ceviche/",
+        "slug": "white-fish-ceviche",
+        "category": "Main dishes",
+        "servings": 4,
+        "prep_time_minutes": 20,
+        "cook_time_minutes": 0,
+        "total_time_minutes": 35,
+        "ingredients": [
+          {
+            "name": "Marine white fish suitable for raw service",
+            "amount": "600",
+            "unit": "g"
+          },
+          {
+            "name": "Fresh lime juice",
+            "amount": "120",
+            "unit": "ml"
+          },
+          {
+            "name": "Red onion",
+            "amount": "80",
+            "unit": "g"
+          },
+          {
+            "name": "Fresh cilantro",
+            "amount": "15",
+            "unit": "g"
+          },
+          {
+            "name": "Tomato",
+            "amount": "150",
+            "unit": "g"
+          },
+          {
+            "name": "Deseeded jalapeño",
+            "amount": "15",
+            "unit": "g"
+          },
+          {
+            "name": "Fine salt",
+            "amount": "4",
+            "unit": "g"
+          },
+          {
+            "name": "Black pepper",
+            "amount": "1",
+            "unit": "g"
+          }
+        ],
+        "steps": [
+          {
+            "title": "Prepare the fish",
+            "content": "Use refrigerator-thawed fish approved by the supplier for raw service and keep it cold. Pat dry and cut into 1.5 cm cubes on a clean board.",
+            "image_alt": "Chilled white fish cut into cubes.",
+            "image_url": "/recetas/ceviche-de-pescado/paso-01-v1.webp"
+          },
+          {
+            "title": "Add lime",
+            "content": "Squeeze limes and combine juice with fish in a cold bowl. Cover and refrigerate 15 minutes; acid is not heat cooking.",
+            "image_alt": "Lime squeezed over cold fish.",
+            "image_url": "/recetas/ceviche-de-pescado/paso-02-v1.webp"
+          },
+          {
+            "title": "Cut vegetables",
+            "content": "Thinly slice onion, dice tomato and deseeded jalapeño, and chop cilantro. Keep everything chilled.",
+            "image_alt": "Onion, tomato, chili and cilantro ready.",
+            "image_url": "/recetas/ceviche-de-pescado/paso-03-v1.webp"
+          },
+          {
+            "title": "Mix and season",
+            "content": "Fold vegetables into fish and juice. Add salt and pepper and taste for acidity.",
+            "image_alt": "Fish ceviche mixed in chilled bowl.",
+            "image_url": "/recetas/ceviche-de-pescado/paso-04-v1.webp"
+          },
+          {
+            "title": "Serve cold",
+            "content": "Portion into four cold dishes with some juice and serve immediately. Do not leave at room temperature; add tostadas if desired.",
+            "image_alt": "White fish ceviche with lime.",
+            "image_url": "/recetas/ceviche-de-pescado/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/ceviche-de-pescado/portada-v1.webp",
+        "seo": {
+          "title": "White fish ceviche with lime and cilantro | Manual de Cocina",
+          "description": "Chilled cubes of white fish with lime, red onion, tomato and cilantro, mixed and served fresh.",
+          "faq": [
+            {
+              "q": "Does lime safely cook fish?",
+              "a": "No. It changes appearance and texture but does not replace heat or eliminate all pathogens."
+            },
+            {
+              "q": "Can I use cooked fish?",
+              "a": "Yes. Chill it completely and mix with lime and vegetables just before serving to avoid raw fish."
+            }
+          ],
+          "image_variants": [
+            "/recetas/ceviche-de-pescado/portada-1x1-v1.webp",
+            "/recetas/ceviche-de-pescado/portada-4x3-v1.webp",
+            "/recetas/ceviche-de-pescado/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 147,
+          "protein_g": 27.5,
+          "carbs_g": 6.2,
+          "fat_g": 1.2,
+          "saturated_fat_g": 0.2,
+          "fiber_g": 1.1,
+          "sugar_g": 2.5,
+          "sodium_mg": 479,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g × grams / 100) / 4 servings; added salt 4 g × 0.393 sodium fraction / 4",
+          "serving_size": "1 serving",
+          "note": "Estimate per serving without tostadas; fish species and liquid consumed affect values."
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>Chilled cubes of white fish with lime, red onion, tomato and cilantro, mixed and served fresh.</p>",
+        "keywords": [
+          "White fish ceviche with lime and cilantro",
+          "Main dishes",
+          "Latin American"
+        ],
+        "gallery": [],
+        "video_urls": []
+      },
+      {
+        "title": "Fisch-Ceviche mit Limette und Koriander",
+        "summary": "Kalter weißer Fisch mit Limette, roter Zwiebel, Tomate und Koriander, frisch gemischt und sofort serviert.",
+        "notes": "Meeresfisch nur von einem Anbieter verwenden, der Rohverzehr und geeignete Parasiten-Kontrollfrostung bestätigt. Bei höchstens 4 °C halten und sofort servieren. Limette verändert die Textur, beseitigt aber nicht alle Risiken; für gefährdete Personen gegarten, gekühlten Fisch verwenden.",
+        "cuisine": "Lateinamerikanisch",
+        "course": "Hauptgericht",
+        "difficulty": "Einfach",
+        "excerpt": "Kalter weißer Fisch mit Limette, roter Zwiebel, Tomate und Koriander, frisch gemischt und sofort serviert.",
+        "recipe_group_id": "92fcdc86-429a-47dd-a7ed-377f104fb38c",
+        "language": "de",
+        "public_path": "/de/fisch-ceviche-limette-koriander/",
+        "slug": "fisch-ceviche-limette-koriander",
+        "category": "Hauptgerichte",
+        "servings": 4,
+        "prep_time_minutes": 20,
+        "cook_time_minutes": 0,
+        "total_time_minutes": 35,
+        "ingredients": [
+          {
+            "name": "Weißer Meeresfisch für Rohverzehr",
+            "amount": "600",
+            "unit": "g"
+          },
+          {
+            "name": "Frischer Limettensaft",
+            "amount": "120",
+            "unit": "ml"
+          },
+          {
+            "name": "Rote Zwiebel",
+            "amount": "80",
+            "unit": "g"
+          },
+          {
+            "name": "Frischer Koriander",
+            "amount": "15",
+            "unit": "g"
+          },
+          {
+            "name": "Tomate",
+            "amount": "150",
+            "unit": "g"
+          },
+          {
+            "name": "Entkernte Jalapeño",
+            "amount": "15",
+            "unit": "g"
+          },
+          {
+            "name": "Feines Salz",
+            "amount": "4",
+            "unit": "g"
+          },
+          {
+            "name": "Schwarzer Pfeffer",
+            "amount": "1",
+            "unit": "g"
+          }
+        ],
+        "steps": [
+          {
+            "title": "Fisch vorbereiten",
+            "content": "Im Kühlschrank aufgetauten, für Rohverzehr geeigneten Fisch kalt halten. Trocken tupfen und auf sauberem Brett in 1,5 cm große Würfel schneiden.",
+            "image_alt": "Kalter weißer Fisch in Würfeln.",
+            "image_url": "/recetas/ceviche-de-pescado/paso-01-v1.webp"
+          },
+          {
+            "title": "Limette zugeben",
+            "content": "Limetten auspressen und Saft mit Fisch in einer kalten Schüssel mischen. Abdecken und 15 Minuten kühlen; Säure ersetzt das Garen nicht.",
+            "image_alt": "Limettensaft über kaltem Fisch.",
+            "image_url": "/recetas/ceviche-de-pescado/paso-02-v1.webp"
+          },
+          {
+            "title": "Gemüse schneiden",
+            "content": "Zwiebel fein schneiden, Tomate und entkernte Jalapeño würfeln, Koriander hacken. Alles kühl halten.",
+            "image_alt": "Zwiebel, Tomate, Chili und Koriander.",
+            "image_url": "/recetas/ceviche-de-pescado/paso-03-v1.webp"
+          },
+          {
+            "title": "Mischen und würzen",
+            "content": "Gemüse vorsichtig mit Fisch und Saft vermengen. Salz und Pfeffer zugeben und Säure abschmecken.",
+            "image_alt": "Ceviche in gekühlter Schüssel.",
+            "image_url": "/recetas/ceviche-de-pescado/paso-04-v1.webp"
+          },
+          {
+            "title": "Kalt servieren",
+            "content": "Auf vier kalte Teller verteilen und sofort servieren. Nicht bei Raumtemperatur stehen lassen; nach Wunsch mit Tostadas.",
+            "image_alt": "Fisch-Ceviche mit Limette angerichtet.",
+            "image_url": "/recetas/ceviche-de-pescado/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/ceviche-de-pescado/portada-v1.webp",
+        "seo": {
+          "title": "Fisch-Ceviche mit Limette und Koriander | Manual de Cocina",
+          "description": "Kalter weißer Fisch mit Limette, roter Zwiebel, Tomate und Koriander, frisch gemischt und sofort serviert.",
+          "faq": [
+            {
+              "q": "Gart Limettensaft den Fisch sicher?",
+              "a": "Nein. Er verändert Farbe und Textur, ersetzt aber kein Erhitzen und beseitigt nicht alle Krankheitserreger."
+            },
+            {
+              "q": "Kann ich gegarten Fisch verwenden?",
+              "a": "Ja. Vollständig kühlen und kurz vor dem Servieren mit Limette und Gemüse mischen."
+            }
+          ],
+          "image_variants": [
+            "/recetas/ceviche-de-pescado/portada-1x1-v1.webp",
+            "/recetas/ceviche-de-pescado/portada-4x3-v1.webp",
+            "/recetas/ceviche-de-pescado/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 147,
+          "protein_g": 27.5,
+          "carbs_g": 6.2,
+          "fat_g": 1.2,
+          "saturated_fat_g": 0.2,
+          "fiber_g": 1.1,
+          "sugar_g": 2.5,
+          "sodium_mg": 479,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g × grams / 100) / 4 servings; added salt 4 g × 0.393 sodium fraction / 4",
+          "serving_size": "1 serving",
+          "note": "Schätzwert ohne Tostadas; Fischart und verzehrter Saft variieren."
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>Kalter weißer Fisch mit Limette, roter Zwiebel, Tomate und Koriander, frisch gemischt und sofort serviert.</p>",
+        "keywords": [
+          "Fisch-Ceviche mit Limette und Koriander",
+          "Hauptgerichte",
+          "Lateinamerikanisch"
+        ],
+        "gallery": [],
+        "video_urls": []
+      },
+      {
+        "title": "Ceviche de poisson au citron vert et coriandre",
+        "summary": "Des dés de poisson blanc bien frais avec citron vert, oignon rouge, tomate et coriandre, à servir froids.",
+        "notes": "Choisir un poisson marin dont le fournisseur confirme l’aptitude à être mangé cru et la congélation adaptée contre les parasites. Garder à 4 °C maximum et servir aussitôt. Le citron change la texture sans supprimer tous les risques; préférer du poisson cuit puis refroidi pour les personnes vulnérables.",
+        "cuisine": "Latino-américaine",
+        "course": "Plat principal",
+        "difficulty": "Facile",
+        "excerpt": "Des dés de poisson blanc bien frais avec citron vert, oignon rouge, tomate et coriandre, à servir froids.",
+        "recipe_group_id": "92fcdc86-429a-47dd-a7ed-377f104fb38c",
+        "language": "fr",
+        "public_path": "/fr/ceviche-de-poisson-citron-vert/",
+        "slug": "ceviche-de-poisson-citron-vert",
+        "category": "Plats principaux",
+        "servings": 4,
+        "prep_time_minutes": 20,
+        "cook_time_minutes": 0,
+        "total_time_minutes": 35,
+        "ingredients": [
+          {
+            "name": "Poisson marin blanc adapté à la consommation crue",
+            "amount": "600",
+            "unit": "g"
+          },
+          {
+            "name": "Jus de citron vert frais",
+            "amount": "120",
+            "unit": "ml"
+          },
+          {
+            "name": "Oignon rouge",
+            "amount": "80",
+            "unit": "g"
+          },
+          {
+            "name": "Coriandre fraîche",
+            "amount": "15",
+            "unit": "g"
+          },
+          {
+            "name": "Tomate",
+            "amount": "150",
+            "unit": "g"
+          },
+          {
+            "name": "Jalapeño épépiné",
+            "amount": "15",
+            "unit": "g"
+          },
+          {
+            "name": "Sel fin",
+            "amount": "4",
+            "unit": "g"
+          },
+          {
+            "name": "Poivre noir",
+            "amount": "1",
+            "unit": "g"
+          }
+        ],
+        "steps": [
+          {
+            "title": "Préparer le poisson",
+            "content": "Utiliser du poisson décongelé au réfrigérateur, validé pour être mangé cru, et le garder froid. Essuyer et couper en dés de 1,5 cm sur une planche propre.",
+            "image_alt": "Poisson blanc froid coupé en dés.",
+            "image_url": "/recetas/ceviche-de-pescado/paso-01-v1.webp"
+          },
+          {
+            "title": "Ajouter le citron",
+            "content": "Presser les citrons verts et mélanger le jus au poisson dans un bol froid. Couvrir et réfrigérer 15 minutes; l’acide ne remplace pas la cuisson.",
+            "image_alt": "Citron vert pressé sur le poisson froid.",
+            "image_url": "/recetas/ceviche-de-pescado/paso-02-v1.webp"
+          },
+          {
+            "title": "Tailler les légumes",
+            "content": "Émincer l’oignon, couper la tomate et le jalapeño épépiné en dés, hacher la coriandre. Garder au frais.",
+            "image_alt": "Oignon, tomate, piment et coriandre.",
+            "image_url": "/recetas/ceviche-de-pescado/paso-03-v1.webp"
+          },
+          {
+            "title": "Mélanger et assaisonner",
+            "content": "Incorporer délicatement les légumes au poisson et au jus. Saler, poivrer et goûter l’acidité.",
+            "image_alt": "Ceviche mélangé dans un bol froid.",
+            "image_url": "/recetas/ceviche-de-pescado/paso-04-v1.webp"
+          },
+          {
+            "title": "Servir frais",
+            "content": "Répartir dans quatre assiettes froides avec un peu de jus et servir aussitôt. Ne pas laisser à température ambiante.",
+            "image_alt": "Ceviche de poisson au citron vert.",
+            "image_url": "/recetas/ceviche-de-pescado/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/ceviche-de-pescado/portada-v1.webp",
+        "seo": {
+          "title": "Ceviche de poisson au citron vert et coriandre | Manual de Cocina",
+          "description": "Des dés de poisson blanc bien frais avec citron vert, oignon rouge, tomate et coriandre, à servir froids.",
+          "faq": [
+            {
+              "q": "Le citron vert cuit-il le poisson sans risque ?",
+              "a": "Non. Il modifie sa texture mais ne remplace pas la chaleur et ne supprime pas tous les agents pathogènes."
+            },
+            {
+              "q": "Puis-je prendre du poisson cuit ?",
+              "a": "Oui. Le refroidir complètement puis mélanger avec les légumes et le citron juste avant de servir."
+            }
+          ],
+          "image_variants": [
+            "/recetas/ceviche-de-pescado/portada-1x1-v1.webp",
+            "/recetas/ceviche-de-pescado/portada-4x3-v1.webp",
+            "/recetas/ceviche-de-pescado/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 147,
+          "protein_g": 27.5,
+          "carbs_g": 6.2,
+          "fat_g": 1.2,
+          "saturated_fat_g": 0.2,
+          "fiber_g": 1.1,
+          "sugar_g": 2.5,
+          "sodium_mg": 479,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g × grams / 100) / 4 servings; added salt 4 g × 0.393 sodium fraction / 4",
+          "serving_size": "1 serving",
+          "note": "Estimation sans tostadas; l’espèce de poisson et le jus consommé varient."
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>Des dés de poisson blanc bien frais avec citron vert, oignon rouge, tomate et coriandre, à servir froids.</p>",
+        "keywords": [
+          "Ceviche de poisson au citron vert et coriandre",
+          "Plats principaux",
+          "Latino-américaine"
+        ],
+        "gallery": [],
+        "video_urls": []
+      },
+      {
+        "title": "Ceviche di pesce con lime e coriandolo",
+        "summary": "Pesce bianco freddo a cubetti con lime, cipolla rossa, pomodoro e coriandolo, mescolato e servito fresco.",
+        "notes": "Scegli pesce marino da un fornitore che confermi idoneità al consumo crudo e congelamento adeguato contro i parassiti. Conserva a non oltre 4 °C e servi subito. Il lime cambia la consistenza ma non elimina tutti i rischi; per persone vulnerabili usa pesce cotto e raffreddato.",
+        "cuisine": "Latinoamericana",
+        "course": "Piatto principale",
+        "difficulty": "Facile",
+        "excerpt": "Pesce bianco freddo a cubetti con lime, cipolla rossa, pomodoro e coriandolo, mescolato e servito fresco.",
+        "recipe_group_id": "92fcdc86-429a-47dd-a7ed-377f104fb38c",
+        "language": "it",
+        "public_path": "/it/ceviche-di-pesce-lime/",
+        "slug": "ceviche-di-pesce-lime",
+        "category": "Secondi piatti",
+        "servings": 4,
+        "prep_time_minutes": 20,
+        "cook_time_minutes": 0,
+        "total_time_minutes": 35,
+        "ingredients": [
+          {
+            "name": "Pesce bianco marino idoneo al consumo crudo",
+            "amount": "600",
+            "unit": "g"
+          },
+          {
+            "name": "Succo di lime fresco",
+            "amount": "120",
+            "unit": "ml"
+          },
+          {
+            "name": "Cipolla rossa",
+            "amount": "80",
+            "unit": "g"
+          },
+          {
+            "name": "Coriandolo fresco",
+            "amount": "15",
+            "unit": "g"
+          },
+          {
+            "name": "Pomodoro",
+            "amount": "150",
+            "unit": "g"
+          },
+          {
+            "name": "Jalapeño senza semi",
+            "amount": "15",
+            "unit": "g"
+          },
+          {
+            "name": "Sale fino",
+            "amount": "4",
+            "unit": "g"
+          },
+          {
+            "name": "Pepe nero",
+            "amount": "1",
+            "unit": "g"
+          }
+        ],
+        "steps": [
+          {
+            "title": "Prepara il pesce",
+            "content": "Usa pesce scongelato in frigorifero, confermato per consumo crudo, e tienilo freddo. Asciuga e taglia a cubetti di 1,5 cm su tagliere pulito.",
+            "image_alt": "Pesce bianco freddo tagliato a cubetti.",
+            "image_url": "/recetas/ceviche-de-pescado/paso-01-v1.webp"
+          },
+          {
+            "title": "Aggiungi il lime",
+            "content": "Spremi il lime e mescola il succo al pesce in una ciotola fredda. Copri e refrigera 15 minuti; l’acido non sostituisce la cottura.",
+            "image_alt": "Lime spremuto sul pesce freddo.",
+            "image_url": "/recetas/ceviche-de-pescado/paso-02-v1.webp"
+          },
+          {
+            "title": "Taglia le verdure",
+            "content": "Affetta sottile la cipolla, taglia pomodoro e jalapeño privato dei semi, trita il coriandolo. Tieni tutto freddo.",
+            "image_alt": "Cipolla, pomodoro, peperoncino e coriandolo.",
+            "image_url": "/recetas/ceviche-de-pescado/paso-03-v1.webp"
+          },
+          {
+            "title": "Mescola e condisci",
+            "content": "Unisci delicatamente verdure, pesce e succo. Aggiungi sale e pepe e assaggia l’acidità.",
+            "image_alt": "Ceviche mescolato in ciotola fredda.",
+            "image_url": "/recetas/ceviche-de-pescado/paso-04-v1.webp"
+          },
+          {
+            "title": "Servi freddo",
+            "content": "Dividi in quattro piatti freddi con un po’ di succo e servi subito. Non lasciare a temperatura ambiente.",
+            "image_alt": "Ceviche di pesce con lime.",
+            "image_url": "/recetas/ceviche-de-pescado/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/ceviche-de-pescado/portada-v1.webp",
+        "seo": {
+          "title": "Ceviche di pesce con lime e coriandolo | Manual de Cocina",
+          "description": "Pesce bianco freddo a cubetti con lime, cipolla rossa, pomodoro e coriandolo, mescolato e servito fresco.",
+          "faq": [
+            {
+              "q": "Il lime cuoce in sicurezza il pesce?",
+              "a": "No. Cambia aspetto e consistenza, ma non sostituisce il calore né elimina tutti i patogeni."
+            },
+            {
+              "q": "Posso usare pesce cotto?",
+              "a": "Sì. Raffreddalo del tutto e mescolalo con lime e verdure solo al momento."
+            }
+          ],
+          "image_variants": [
+            "/recetas/ceviche-de-pescado/portada-1x1-v1.webp",
+            "/recetas/ceviche-de-pescado/portada-4x3-v1.webp",
+            "/recetas/ceviche-de-pescado/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 147,
+          "protein_g": 27.5,
+          "carbs_g": 6.2,
+          "fat_g": 1.2,
+          "saturated_fat_g": 0.2,
+          "fiber_g": 1.1,
+          "sugar_g": 2.5,
+          "sodium_mg": 479,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g × grams / 100) / 4 servings; added salt 4 g × 0.393 sodium fraction / 4",
+          "serving_size": "1 serving",
+          "note": "Stima senza tostadas; specie di pesce e succo consumato variano."
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>Pesce bianco freddo a cubetti con lime, cipolla rossa, pomodoro e coriandolo, mescolato e servito fresco.</p>",
+        "keywords": [
+          "Ceviche di pesce con lime e coriandolo",
+          "Secondi piatti",
+          "Latinoamericana"
+        ],
+        "gallery": [],
+        "video_urls": []
+      },
+      {
+        "title": "白身魚のライムセビーチェ",
+        "summary": "冷たい白身魚にライム、赤玉ねぎ、トマト、パクチーを合わせてすぐに食べるセビーチェ。",
+        "notes": "生食に適し寄生虫対策の冷凍処理が確認できる海水魚を販売店から選ぶ。4℃以下で保ちすぐに食べる。ライムでは安全な加熱の代わりにならない。リスクが高い人には加熱して冷やした魚を使う。",
+        "cuisine": "中南米風",
+        "course": "主菜",
+        "difficulty": "簡単",
+        "excerpt": "冷たい白身魚にライム、赤玉ねぎ、トマト、パクチーを合わせてすぐに食べるセビーチェ。",
+        "recipe_group_id": "92fcdc86-429a-47dd-a7ed-377f104fb38c",
+        "language": "ja",
+        "public_path": "/ja/白身魚のライムセビーチェ/",
+        "slug": "白身魚のライムセビーチェ",
+        "category": "主菜",
+        "servings": 4,
+        "prep_time_minutes": 20,
+        "cook_time_minutes": 0,
+        "total_time_minutes": 35,
+        "ingredients": [
+          {
+            "name": "生食に適した海水の白身魚",
+            "amount": "600",
+            "unit": "g"
+          },
+          {
+            "name": "搾りたてのライム汁",
+            "amount": "120",
+            "unit": "ml"
+          },
+          {
+            "name": "赤玉ねぎ",
+            "amount": "80",
+            "unit": "g"
+          },
+          {
+            "name": "パクチー",
+            "amount": "15",
+            "unit": "g"
+          },
+          {
+            "name": "トマト",
+            "amount": "150",
+            "unit": "g"
+          },
+          {
+            "name": "種を除いたハラペーニョ",
+            "amount": "15",
+            "unit": "g"
+          },
+          {
+            "name": "塩",
+            "amount": "4",
+            "unit": "g"
+          },
+          {
+            "name": "黒こしょう",
+            "amount": "1",
+            "unit": "g"
+          }
+        ],
+        "steps": [
+          {
+            "title": "魚を切る",
+            "content": "冷蔵庫で解凍した生食用の魚を冷たく保ち、清潔なまな板で1.5 cm角に切る。",
+            "image_alt": "冷たい白身魚を角切りにする。",
+            "image_url": "/recetas/ceviche-de-pescado/paso-01-v1.webp"
+          },
+          {
+            "title": "ライムを加える",
+            "content": "ライムを搾り、冷たいボウルで魚と和える。ふたをして15分冷蔵する。酸は加熱の代わりにならない。",
+            "image_alt": "冷たい魚にライムを搾る。",
+            "image_url": "/recetas/ceviche-de-pescado/paso-02-v1.webp"
+          },
+          {
+            "title": "野菜を切る",
+            "content": "赤玉ねぎを薄切り、トマトと種を除いたハラペーニョを角切り、パクチーを刻む。冷蔵しておく。",
+            "image_alt": "玉ねぎ、トマト、唐辛子、パクチー。",
+            "image_url": "/recetas/ceviche-de-pescado/paso-03-v1.webp"
+          },
+          {
+            "title": "混ぜて味をつける",
+            "content": "魚と汁に野菜を優しく混ぜ、塩、こしょうで味を整える。",
+            "image_alt": "冷たいボウルでセビーチェを混ぜる。",
+            "image_url": "/recetas/ceviche-de-pescado/paso-04-v1.webp"
+          },
+          {
+            "title": "冷たく盛る",
+            "content": "冷たい器4つに汁ごと分け、すぐに食べる。室温で放置しない。",
+            "image_alt": "白身魚のセビーチェとライム。",
+            "image_url": "/recetas/ceviche-de-pescado/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/ceviche-de-pescado/portada-v1.webp",
+        "seo": {
+          "title": "白身魚のライムセビーチェ | Manual de Cocina",
+          "description": "冷たい白身魚にライム、赤玉ねぎ、トマト、パクチーを合わせてすぐに食べるセビーチェ。",
+          "faq": [
+            {
+              "q": "ライムで魚は安全に火が通りますか？",
+              "a": "いいえ。見た目と食感は変わりますが、加熱の代わりにはなりません。"
+            },
+            {
+              "q": "加熱した魚でも作れますか？",
+              "a": "はい。完全に冷やし、食べる直前に野菜とライムを混ぜてください。"
+            }
+          ],
+          "image_variants": [
+            "/recetas/ceviche-de-pescado/portada-1x1-v1.webp",
+            "/recetas/ceviche-de-pescado/portada-4x3-v1.webp",
+            "/recetas/ceviche-de-pescado/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 147,
+          "protein_g": 27.5,
+          "carbs_g": 6.2,
+          "fat_g": 1.2,
+          "saturated_fat_g": 0.2,
+          "fiber_g": 1.1,
+          "sugar_g": 2.5,
+          "sodium_mg": 479,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g × grams / 100) / 4 servings; added salt 4 g × 0.393 sodium fraction / 4",
+          "serving_size": "1 serving",
+          "note": "トスターダを含まない1人分の概算。魚の種類や飲む汁で変わります。"
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>冷たい白身魚にライム、赤玉ねぎ、トマト、パクチーを合わせてすぐに食べるセビーチェ。</p>",
+        "keywords": [
+          "白身魚のライムセビーチェ",
+          "主菜",
+          "中南米風"
+        ],
+        "gallery": [],
+        "video_urls": []
+      },
+      {
+        "title": "Ceviche de peixe com lima e coentros",
+        "summary": "Cubos frios de peixe branco com lima, cebola roxa, tomate e coentros, misturados e servidos na hora.",
+        "notes": "Escolha peixe marinho cujo fornecedor confirme aptidão para consumo cru e congelação adequada contra parasitas. Mantenha a 4 °C ou menos e sirva logo. A lima altera a textura mas não elimina todos os riscos; para pessoas vulneráveis use peixe cozido e arrefecido.",
+        "cuisine": "Latino-americana",
+        "course": "Prato principal",
+        "difficulty": "Fácil",
+        "excerpt": "Cubos frios de peixe branco com lima, cebola roxa, tomate e coentros, misturados e servidos na hora.",
+        "recipe_group_id": "92fcdc86-429a-47dd-a7ed-377f104fb38c",
+        "language": "pt",
+        "public_path": "/pt/ceviche-de-peixe-lima/",
+        "slug": "ceviche-de-peixe-lima",
+        "category": "Pratos principais",
+        "servings": 4,
+        "prep_time_minutes": 20,
+        "cook_time_minutes": 0,
+        "total_time_minutes": 35,
+        "ingredients": [
+          {
+            "name": "Peixe branco marinho apto para consumo cru",
+            "amount": "600",
+            "unit": "g"
+          },
+          {
+            "name": "Sumo fresco de lima",
+            "amount": "120",
+            "unit": "ml"
+          },
+          {
+            "name": "Cebola roxa",
+            "amount": "80",
+            "unit": "g"
+          },
+          {
+            "name": "Coentros frescos",
+            "amount": "15",
+            "unit": "g"
+          },
+          {
+            "name": "Tomate",
+            "amount": "150",
+            "unit": "g"
+          },
+          {
+            "name": "Jalapeño sem sementes",
+            "amount": "15",
+            "unit": "g"
+          },
+          {
+            "name": "Sal fino",
+            "amount": "4",
+            "unit": "g"
+          },
+          {
+            "name": "Pimenta-preta",
+            "amount": "1",
+            "unit": "g"
+          }
+        ],
+        "steps": [
+          {
+            "title": "Prepare o peixe",
+            "content": "Use peixe descongelado no frigorífico e confirmado para consumo cru; mantenha frio. Seque e corte em cubos de 1,5 cm numa tábua limpa.",
+            "image_alt": "Peixe branco frio cortado em cubos.",
+            "image_url": "/recetas/ceviche-de-pescado/paso-01-v1.webp"
+          },
+          {
+            "title": "Junte a lima",
+            "content": "Esprema as limas e misture o sumo ao peixe numa taça fria. Tape e refrigere 15 minutos; o ácido não substitui a cozedura.",
+            "image_alt": "Lima espremida sobre peixe frio.",
+            "image_url": "/recetas/ceviche-de-pescado/paso-02-v1.webp"
+          },
+          {
+            "title": "Corte os vegetais",
+            "content": "Fatie a cebola, corte tomate e jalapeño sem sementes e pique os coentros. Conserve tudo frio.",
+            "image_alt": "Cebola, tomate, malagueta e coentros.",
+            "image_url": "/recetas/ceviche-de-pescado/paso-03-v1.webp"
+          },
+          {
+            "title": "Misture e tempere",
+            "content": "Envolva suavemente os vegetais no peixe e no sumo. Tempere com sal e pimenta e prove a acidez.",
+            "image_alt": "Ceviche misturado numa taça fria.",
+            "image_url": "/recetas/ceviche-de-pescado/paso-04-v1.webp"
+          },
+          {
+            "title": "Sirva frio",
+            "content": "Distribua por quatro pratos frios com algum sumo e sirva de imediato. Não deixe à temperatura ambiente.",
+            "image_alt": "Ceviche de peixe com lima.",
+            "image_url": "/recetas/ceviche-de-pescado/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/ceviche-de-pescado/portada-v1.webp",
+        "seo": {
+          "title": "Ceviche de peixe com lima e coentros | Manual de Cocina",
+          "description": "Cubos frios de peixe branco com lima, cebola roxa, tomate e coentros, misturados e servidos na hora.",
+          "faq": [
+            {
+              "q": "A lima cozinha o peixe com segurança?",
+              "a": "Não. Altera a textura, mas não substitui o calor nem elimina todos os agentes patogénicos."
+            },
+            {
+              "q": "Posso usar peixe cozido?",
+              "a": "Sim. Arrefeça por completo e misture com a lima e os vegetais apenas ao servir."
+            }
+          ],
+          "image_variants": [
+            "/recetas/ceviche-de-pescado/portada-1x1-v1.webp",
+            "/recetas/ceviche-de-pescado/portada-4x3-v1.webp",
+            "/recetas/ceviche-de-pescado/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 147,
+          "protein_g": 27.5,
+          "carbs_g": 6.2,
+          "fat_g": 1.2,
+          "saturated_fat_g": 0.2,
+          "fiber_g": 1.1,
+          "sugar_g": 2.5,
+          "sodium_mg": 479,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g × grams / 100) / 4 servings; added salt 4 g × 0.393 sodium fraction / 4",
+          "serving_size": "1 serving",
+          "note": "Estimativa sem tostadas; espécie de peixe e sumo consumido variam."
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>Cubos frios de peixe branco com lima, cebola roxa, tomate e coentros, misturados e servidos na hora.</p>",
+        "keywords": [
+          "Ceviche de peixe com lima e coentros",
+          "Pratos principais",
+          "Latino-americana"
+        ],
+        "gallery": [],
+        "video_urls": []
+      }
+    ]
+  }
+}
