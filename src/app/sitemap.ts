@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next'
 import { supabase } from '@/lib/supabase/public'
-import { getSiteUrl, isIndexingAllowed, normalizePublicPath, publicUrl } from '@/lib/site'
+import { getSiteUrl, normalizePublicPath, publicUrl } from '@/lib/site'
 import { SUPPORTED_LANGUAGES, type RecipeLanguage } from '@/types/recipe'
 import { categorySlugFromLabel } from '@/lib/categories'
 
@@ -58,8 +58,8 @@ async function fetchAllPublished(): Promise<Row[]> {
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  if (!isIndexingAllowed()) return []
-
+  // Preview needs the same URL graph for QA. robots.txt and page noindex keep
+  // indexing disabled independently of whether a sitemap can be inspected.
   const site = getSiteUrl()
   const entries: MetadataRoute.Sitemap = []
   const rows = await fetchAllPublished()
