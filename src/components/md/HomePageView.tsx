@@ -5,7 +5,7 @@ import type { MdLanguage, MdRecipeCardData } from './md-types';
 import type { MdCategorySummary } from './CategoryViews';
 import type { MdIngredientSummary } from './IngredientViews';
 import { getMdCopy } from '@/lib/copy';
-import { normalizePublicPath } from '@/lib/site';
+import { publicPathHref } from '@/lib/site';
 import SiteHeader from './SiteHeader';
 import SiteFooter from './SiteFooter';
 import RecipeCard from './RecipeCard';
@@ -39,7 +39,7 @@ export default function HomePageView({ lang, data }: { lang: MdLanguage; data: M
           </div>
           {data.featured && (
             <figure className="md-home-hero-figure">
-              <Link href={normalizePublicPath(data.featured.public_path)} tabIndex={-1}>
+              <Link href={publicPathHref(data.featured.public_path)} tabIndex={-1}>
                 {data.featured.image_url ? <Image className="md-home-hero-photo" src={recipeImageSrc(data.featured.image_url)}
                   alt={`${t.photoOf} ${data.featured.title}`} width={900} height={675}
                   fetchPriority="high" loading="eager" quality={70}
@@ -49,7 +49,7 @@ export default function HomePageView({ lang, data }: { lang: MdLanguage; data: M
               </Link>
               <figcaption className="md-home-hero-caption">
                 <span className="md-eyebrow">{t.featured}</span>
-                <Link href={normalizePublicPath(data.featured.public_path)}>{data.featured.title}</Link>
+                <Link href={publicPathHref(data.featured.public_path)}>{data.featured.title}</Link>
               </figcaption>
             </figure>
           )}
