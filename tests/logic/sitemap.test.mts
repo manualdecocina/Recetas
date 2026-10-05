@@ -21,8 +21,14 @@ process.env.NEXT_PUBLIC_SITE_URL = 'https://manualdecocina.com'
 const sitemap = (await import('@/app/sitemap')).default
 
 process.env.NEXT_PUBLIC_ALLOW_INDEXING = 'false'
-assert.deepEqual(await sitemap(), [])
-console.log('OK sitemap vacío si no se permite indexar')
+process.env.NEXT_PUBLIC_PREVIEW_SITE_URL = 'https://preview.manualdecocina.com/'
+const preview: any[] = await sitemap()
+assert.ok(preview.length > 0, 'preview debe permitir auditar el sitemap')
+assert.ok(preview.every((entry) => entry.url.startsWith('https://preview.manualdecocina.com/')))
+const previewRecipe = preview.find((entry) => entry.url === 'https://preview.manualdecocina.com/receta-de-lechona-colombiana')
+assert.equal(previewRecipe.alternates.languages.ja, 'https://preview.manualdecocina.com/ja/コロンビアのレチョナレシピ')
+assert.equal(process.env.NEXT_PUBLIC_ALLOW_INDEXING, 'false')
+console.log('OK sitemap de preview: rutas históricas e hreflang en el propio entorno, sin habilitar indexación')
 
 process.env.NEXT_PUBLIC_ALLOW_INDEXING = 'true'
 const s: any[] = await sitemap()

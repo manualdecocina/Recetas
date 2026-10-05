@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict'
 
 process.env.NEXT_PUBLIC_SITE_URL = 'https://manualdecocina.com/'
+process.env.NEXT_PUBLIC_ALLOW_INDEXING = 'true'
 const { recipeAlternates, allLanguageAlternates } = await import('@/lib/seo')
 const site = await import('@/lib/site')
 
@@ -12,6 +13,15 @@ check('normalizePublicPath normaliza rutas históricas con barra final', () => a
 
 process.env.NEXT_PUBLIC_ALLOW_INDEXING = 'false'
 process.env.NEXT_PUBLIC_PREVIEW_SITE_URL = 'https://preview.manualdecocina.com/'
+check('preview: canonical y hreflang permanecen en preview y conservan public_path', () => {
+  const current = { language: 'es', public_path: '/receta-de-lechona-colombiana' }
+  const translations = [current, { language: 'ja', public_path: '/ja/コロンビアのレチョナレシピ' }]
+  const a: any = recipeAlternates(current, translations)
+  assert.equal(a.canonical, 'https://preview.manualdecocina.com/receta-de-lechona-colombiana')
+  assert.equal(a.languages.es, a.canonical)
+  assert.equal(a.languages.ja, 'https://preview.manualdecocina.com/ja/コロンビアのレチョナレシピ')
+  assert.equal(site.isIndexingAllowed(), false)
+})
 check('preview: absoluteUrl usa el host desplegado para imágenes sociales', () => {
   assert.equal(site.absoluteUrl('/recetas/canelones-carne-pina/portada.webp'), 'https://preview.manualdecocina.com/recetas/canelones-carne-pina/portada.webp')
 })
