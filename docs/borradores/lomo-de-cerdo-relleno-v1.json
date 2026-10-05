@@ -1,0 +1,1132 @@
+{
+  "entity": "E016",
+  "status": "ready_for_preview",
+  "recipe_group_id": "03e17fac-979a-4162-a516-2321cdbf2da2",
+  "source_policy": "Original rebuild of incomplete unpublished ES pork loin recipe, preserving its existing URL and recipe group. Mustard nutrition uses USDA prepared yellow mustard proxy for Dijon; no historical body copy reused.",
+  "kitchen_test_claimed": false,
+  "sources": [
+    {
+      "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures",
+      "purpose": "74 °C food safety threshold for chicken filling and stuffed roll center."
+    }
+  ],
+  "nutrition_calculation": {
+    "dataset": "USDA FoodData Central, SR Legacy April 2018",
+    "dataset_sha256": "b80817294b8850530aaedf2e515c02593b1824f763a0ff356e5c2081643e6fd0",
+    "method": "sum(per_100g × grams / 100) / 8 servings; 6 g salt × 0.393 sodium fraction / 8",
+    "inputs": [
+      {
+        "fdc_id": "167818",
+        "description": "Pork, fresh, loin, whole, separable lean and fat, raw",
+        "grams": 1500,
+        "per_100g": {
+          "sugar_g": 0.0,
+          "fat_g": 12.58,
+          "carbs_g": 0.0,
+          "calories": 198.0,
+          "fiber_g": 0.0,
+          "sodium_mg": 50.0,
+          "protein_g": 19.74,
+          "saturated_fat_g": 4.36
+        }
+      },
+      {
+        "fdc_id": "168462",
+        "description": "Spinach, raw",
+        "grams": 100,
+        "per_100g": {
+          "protein_g": 2.86,
+          "sodium_mg": 79.0,
+          "fiber_g": 2.2,
+          "sugar_g": 0.42,
+          "fat_g": 0.39,
+          "carbs_g": 3.63,
+          "calories": 23.0,
+          "saturated_fat_g": 0.063
+        }
+      },
+      {
+        "fdc_id": "170848",
+        "description": "Cheese, parmesan, hard",
+        "grams": 80,
+        "per_100g": {
+          "sodium_mg": 1175.0,
+          "saturated_fat_g": 14.85,
+          "sugar_g": 0.11,
+          "fat_g": 25.0,
+          "fiber_g": 0.0,
+          "protein_g": 35.75,
+          "carbs_g": 3.22,
+          "calories": 392.0
+        }
+      },
+      {
+        "fdc_id": "170187",
+        "description": "Nuts, walnuts, english",
+        "grams": 60,
+        "per_100g": {
+          "carbs_g": 13.71,
+          "calories": 654.0,
+          "saturated_fat_g": 6.126,
+          "sugar_g": 2.61,
+          "protein_g": 15.23,
+          "fiber_g": 6.7,
+          "sodium_mg": 2.0,
+          "fat_g": 65.21
+        }
+      },
+      {
+        "fdc_id": "171413",
+        "description": "Oil, olive, salad or cooking",
+        "grams": 27,
+        "per_100g": {
+          "fat_g": 100.0,
+          "carbs_g": 0.0,
+          "calories": 884.0,
+          "sodium_mg": 2.0,
+          "protein_g": 0.0,
+          "saturated_fat_g": 13.808,
+          "fiber_g": 0.0,
+          "sugar_g": 0.0
+        }
+      },
+      {
+        "fdc_id": "172234",
+        "description": "Mustard, prepared, yellow",
+        "grams": 30,
+        "per_100g": {
+          "protein_g": 3.74,
+          "fiber_g": 4.0,
+          "sodium_mg": 1104.0,
+          "saturated_fat_g": 0.214,
+          "fat_g": 3.34,
+          "carbs_g": 5.83,
+          "calories": 60.0,
+          "sugar_g": 0.92
+        }
+      },
+      {
+        "fdc_id": "169230",
+        "description": "Garlic, raw",
+        "grams": 12,
+        "per_100g": {
+          "carbs_g": 33.06,
+          "calories": 149.0,
+          "sugar_g": 1.0,
+          "saturated_fat_g": 0.089,
+          "fiber_g": 2.1,
+          "sodium_mg": 17.0,
+          "protein_g": 6.36,
+          "fat_g": 0.5
+        }
+      }
+    ],
+    "assumptions": "Original recipe quantities; ingredients absent from dataset use a documented proxy. Actual retained egg wash, fat and cooking loss may vary."
+  },
+  "images": {
+    "method": "built-in image_gen",
+    "cover_reused_for_final_step": true,
+    "directory": "public/recetas/lomo-de-cerdo-relleno",
+    "version": "v1"
+  },
+  "publication": {
+    "environment": "preview",
+    "state": "prepared",
+    "rows": [
+      {
+        "title": "Lomo de cerdo relleno de espinacas y nueces",
+        "summary": "Lomo de cerdo abierto, relleno de espinacas, parmesano y nueces, atado y asado hasta quedar jugoso. Se corta en rodajas después de reposar.",
+        "notes": "Usa hilo de cocina y mide la temperatura en la parte más fría del centro del rollo. El tiempo de horno varía según el grosor. Retira el hilo antes de cortar; refrigera las sobras hasta 3 días.",
+        "cuisine": "Casera",
+        "course": "Plato principal",
+        "difficulty": "Intermedia",
+        "excerpt": "Lomo de cerdo abierto, relleno de espinacas, parmesano y nueces, atado y asado hasta quedar jugoso. Se corta en rodajas después de reposar.",
+        "recipe_group_id": "03e17fac-979a-4162-a516-2321cdbf2da2",
+        "language": "es",
+        "public_path": "/lomo-de-cerdo-relleno",
+        "slug": "lomo-de-cerdo-relleno",
+        "category": "Platos principales",
+        "servings": 8,
+        "prep_time_minutes": 25,
+        "cook_time_minutes": 85,
+        "total_time_minutes": 125,
+        "ingredients": [
+          {
+            "name": "Lomo de cerdo deshuesado",
+            "amount": "1500",
+            "unit": "g"
+          },
+          {
+            "name": "Espinacas frescas",
+            "amount": "100",
+            "unit": "g"
+          },
+          {
+            "name": "Parmesano rallado",
+            "amount": "80",
+            "unit": "g"
+          },
+          {
+            "name": "Nueces picadas",
+            "amount": "60",
+            "unit": "g"
+          },
+          {
+            "name": "Aceite de oliva",
+            "amount": "30",
+            "unit": "ml"
+          },
+          {
+            "name": "Mostaza Dijon",
+            "amount": "30",
+            "unit": "g"
+          },
+          {
+            "name": "Ajo picado",
+            "amount": "12",
+            "unit": "g"
+          },
+          {
+            "name": "Sal fina",
+            "amount": "6",
+            "unit": "g"
+          },
+          {
+            "name": "Pimienta negra",
+            "amount": "2",
+            "unit": "g"
+          }
+        ],
+        "steps": [
+          {
+            "title": "Abre el lomo",
+            "content": "Precalienta el horno a 180 °C. Seca el lomo y ábrelo a lo largo como un libro, sin atravesarlo, hasta formar una lámina uniforme. Salpimienta el interior.",
+            "image_alt": "Lomo de cerdo abierto con ingredientes de relleno.",
+            "image_url": "/recetas/lomo-de-cerdo-relleno/paso-01-v1.webp"
+          },
+          {
+            "title": "Haz el relleno",
+            "content": "Tritura espinacas, parmesano, nueces, mostaza, ajo y la mitad del aceite hasta obtener una pasta gruesa. No añadas agua.",
+            "image_alt": "Relleno verde de espinacas, queso y nueces.",
+            "image_url": "/recetas/lomo-de-cerdo-relleno/paso-02-v1.webp"
+          },
+          {
+            "title": "Enrolla y ata",
+            "content": "Extiende la pasta sobre el cerdo dejando 2 cm libres en los bordes. Enrolla desde el lado largo y ata con hilo de cocina cada 4 cm. Unta el exterior con el aceite restante y salpimienta.",
+            "image_alt": "Lomo relleno enrollado y atado.",
+            "image_url": "/recetas/lomo-de-cerdo-relleno/paso-03-v1.webp"
+          },
+          {
+            "title": "Asa y comprueba",
+            "content": "Coloca el rollo en una fuente. Hornea unos 75–90 minutos, según el grosor, hasta que un termómetro en el centro del relleno marque 74 °C. Si la superficie dora demasiado, cúbrela holgadamente con aluminio.",
+            "image_alt": "Lomo relleno asado con termómetro.",
+            "image_url": "/recetas/lomo-de-cerdo-relleno/paso-04-v1.webp"
+          },
+          {
+            "title": "Reposa y sirve",
+            "content": "Deja reposar 15 minutos, retira el hilo y corta en 8 porciones. Sirve con los jugos de la fuente, sin añadir agua al relleno.",
+            "image_alt": "Rodajas de lomo relleno con espinacas.",
+            "image_url": "/recetas/lomo-de-cerdo-relleno/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/lomo-de-cerdo-relleno/portada-v1.webp",
+        "seo": {
+          "title": "Lomo de cerdo relleno de espinacas y nueces | Manual de Cocina",
+          "description": "Lomo de cerdo abierto, relleno de espinacas, parmesano y nueces, atado y asado hasta quedar jugoso. Se corta en rodajas después de reposar.",
+          "faq": [
+            {
+              "q": "¿Cómo evito que se salga el relleno?",
+              "a": "Deja un margen sin relleno, enrolla firme y ata el lomo a intervalos regulares."
+            },
+            {
+              "q": "¿Cómo sé si está listo?",
+              "a": "Comprueba el centro del relleno con termómetro: 74 °C; el tiempo depende del grosor."
+            }
+          ],
+          "image_variants": [
+            "/recetas/lomo-de-cerdo-relleno/portada-1x1-v1.webp",
+            "/recetas/lomo-de-cerdo-relleno/portada-4x3-v1.webp",
+            "/recetas/lomo-de-cerdo-relleno/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 497,
+          "protein_g": 42.3,
+          "carbs_g": 2.5,
+          "fat_g": 34.5,
+          "saturated_fat_g": 10.6,
+          "fiber_g": 1.0,
+          "sugar_g": 0.3,
+          "sodium_mg": 558,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g × grams / 100) / 8 servings; 6 g salt × 0.393 sodium fraction / 8",
+          "serving_size": "1/8 de la receta",
+          "note": "Estimación por porción; el corte del cerdo y la grasa que queda en la fuente modifican los valores."
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>Lomo de cerdo abierto, relleno de espinacas, parmesano y nueces, atado y asado hasta quedar jugoso. Se corta en rodajas después de reposar.</p>",
+        "keywords": [
+          "Lomo de cerdo relleno de espinacas y nueces",
+          "Platos principales",
+          "Casera"
+        ],
+        "gallery": [],
+        "video_urls": []
+      },
+      {
+        "title": "Spinach and walnut stuffed pork loin",
+        "summary": "Butterflied pork loin rolled with spinach, Parmesan and walnuts, tied and roasted. Rest before slicing for tidy spirals.",
+        "notes": "Use kitchen twine and check the coolest center of the roll with a thermometer. Oven time varies with thickness. Remove string before carving; refrigerate leftovers up to 3 days.",
+        "cuisine": "Home-style",
+        "course": "Main course",
+        "difficulty": "Intermediate",
+        "excerpt": "Butterflied pork loin rolled with spinach, Parmesan and walnuts, tied and roasted. Rest before slicing for tidy spirals.",
+        "recipe_group_id": "03e17fac-979a-4162-a516-2321cdbf2da2",
+        "language": "en",
+        "public_path": "/en/spinach-walnut-stuffed-pork-loin/",
+        "slug": "spinach-walnut-stuffed-pork-loin",
+        "category": "Main dishes",
+        "servings": 8,
+        "prep_time_minutes": 25,
+        "cook_time_minutes": 85,
+        "total_time_minutes": 125,
+        "ingredients": [
+          {
+            "name": "Boneless pork loin",
+            "amount": "1500",
+            "unit": "g"
+          },
+          {
+            "name": "Fresh spinach",
+            "amount": "100",
+            "unit": "g"
+          },
+          {
+            "name": "Grated Parmesan",
+            "amount": "80",
+            "unit": "g"
+          },
+          {
+            "name": "Chopped walnuts",
+            "amount": "60",
+            "unit": "g"
+          },
+          {
+            "name": "Olive oil",
+            "amount": "30",
+            "unit": "ml"
+          },
+          {
+            "name": "Dijon mustard",
+            "amount": "30",
+            "unit": "g"
+          },
+          {
+            "name": "Minced garlic",
+            "amount": "12",
+            "unit": "g"
+          },
+          {
+            "name": "Fine salt",
+            "amount": "6",
+            "unit": "g"
+          },
+          {
+            "name": "Black pepper",
+            "amount": "2",
+            "unit": "g"
+          }
+        ],
+        "steps": [
+          {
+            "title": "Butterfly the pork",
+            "content": "Heat oven to 180°C (350°F). Pat pork dry and cut lengthwise like a book without cutting through, opening into an even sheet. Season inside.",
+            "image_alt": "Butterflied pork loin and filling ingredients.",
+            "image_url": "/recetas/lomo-de-cerdo-relleno/paso-01-v1.webp"
+          },
+          {
+            "title": "Make the filling",
+            "content": "Pulse spinach, Parmesan, walnuts, mustard, garlic and half the oil into a coarse paste. Do not add water.",
+            "image_alt": "Coarse spinach, cheese and walnut filling.",
+            "image_url": "/recetas/lomo-de-cerdo-relleno/paso-02-v1.webp"
+          },
+          {
+            "title": "Roll and tie",
+            "content": "Spread filling over pork, leaving a 2 cm border. Roll from the long side and tie with twine every 4 cm. Rub outside with remaining oil, salt and pepper.",
+            "image_alt": "Stuffed pork rolled and tied.",
+            "image_url": "/recetas/lomo-de-cerdo-relleno/paso-03-v1.webp"
+          },
+          {
+            "title": "Roast and check",
+            "content": "Set in a roasting pan and cook about 75–90 minutes depending on thickness, until a thermometer in the center of the stuffing reads 74°C (165°F). Tent with foil if browning too quickly.",
+            "image_alt": "Roasted stuffed pork and thermometer.",
+            "image_url": "/recetas/lomo-de-cerdo-relleno/paso-04-v1.webp"
+          },
+          {
+            "title": "Rest and serve",
+            "content": "Rest 15 minutes, remove twine and cut into eight portions. Spoon over the pan juices.",
+            "image_alt": "Slices of spinach-stuffed pork loin.",
+            "image_url": "/recetas/lomo-de-cerdo-relleno/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/lomo-de-cerdo-relleno/portada-v1.webp",
+        "seo": {
+          "title": "Spinach and walnut stuffed pork loin | Manual de Cocina",
+          "description": "Butterflied pork loin rolled with spinach, Parmesan and walnuts, tied and roasted. Rest before slicing for tidy spirals.",
+          "faq": [
+            {
+              "q": "How can I keep the filling inside?",
+              "a": "Leave a border, roll tightly and tie at regular intervals."
+            },
+            {
+              "q": "How do I know it is ready?",
+              "a": "Check the center of the filling with a thermometer for 74°C; time varies by thickness."
+            }
+          ],
+          "image_variants": [
+            "/recetas/lomo-de-cerdo-relleno/portada-1x1-v1.webp",
+            "/recetas/lomo-de-cerdo-relleno/portada-4x3-v1.webp",
+            "/recetas/lomo-de-cerdo-relleno/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 497,
+          "protein_g": 42.3,
+          "carbs_g": 2.5,
+          "fat_g": 34.5,
+          "saturated_fat_g": 10.6,
+          "fiber_g": 1.0,
+          "sugar_g": 0.3,
+          "sodium_mg": 558,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g × grams / 100) / 8 servings; 6 g salt × 0.393 sodium fraction / 8",
+          "serving_size": "1 serving",
+          "note": "Estimate per serving; pork trim and fat left in the pan affect values."
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>Butterflied pork loin rolled with spinach, Parmesan and walnuts, tied and roasted. Rest before slicing for tidy spirals.</p>",
+        "keywords": [
+          "Spinach and walnut stuffed pork loin",
+          "Main dishes",
+          "Home-style"
+        ],
+        "gallery": [],
+        "video_urls": []
+      },
+      {
+        "title": "Schweinelende mit Spinat und Walnüssen gefüllt",
+        "summary": "Aufgeschnittene Schweinelende mit Spinat, Parmesan und Walnüssen gefüllt, gebunden und im Ofen gebraten.",
+        "notes": "Mit Küchengarn binden und die kälteste Mitte mit Thermometer prüfen. Die Garzeit hängt von der Dicke ab. Vor dem Schneiden Garn entfernen; Reste bis zu 3 Tage kühlen.",
+        "cuisine": "Hausmannskost",
+        "course": "Hauptgericht",
+        "difficulty": "Mittel",
+        "excerpt": "Aufgeschnittene Schweinelende mit Spinat, Parmesan und Walnüssen gefüllt, gebunden und im Ofen gebraten.",
+        "recipe_group_id": "03e17fac-979a-4162-a516-2321cdbf2da2",
+        "language": "de",
+        "public_path": "/de/gefuellte-schweinelende-spinat-walnuesse/",
+        "slug": "gefuellte-schweinelende-spinat-walnuesse",
+        "category": "Hauptgerichte",
+        "servings": 8,
+        "prep_time_minutes": 25,
+        "cook_time_minutes": 85,
+        "total_time_minutes": 125,
+        "ingredients": [
+          {
+            "name": "Schweinelende ohne Knochen",
+            "amount": "1500",
+            "unit": "g"
+          },
+          {
+            "name": "Frischer Spinat",
+            "amount": "100",
+            "unit": "g"
+          },
+          {
+            "name": "Geriebener Parmesan",
+            "amount": "80",
+            "unit": "g"
+          },
+          {
+            "name": "Gehackte Walnüsse",
+            "amount": "60",
+            "unit": "g"
+          },
+          {
+            "name": "Olivenöl",
+            "amount": "30",
+            "unit": "ml"
+          },
+          {
+            "name": "Dijon-Senf",
+            "amount": "30",
+            "unit": "g"
+          },
+          {
+            "name": "Gehackter Knoblauch",
+            "amount": "12",
+            "unit": "g"
+          },
+          {
+            "name": "Feines Salz",
+            "amount": "6",
+            "unit": "g"
+          },
+          {
+            "name": "Schwarzer Pfeffer",
+            "amount": "2",
+            "unit": "g"
+          }
+        ],
+        "steps": [
+          {
+            "title": "Lende aufklappen",
+            "content": "Backofen auf 180 °C vorheizen. Fleisch trocken tupfen und längs wie ein Buch aufschneiden, ohne es zu durchtrennen. Gleichmäßig aufklappen und innen würzen.",
+            "image_alt": "Aufgeklappte Schweinelende und Zutaten.",
+            "image_url": "/recetas/lomo-de-cerdo-relleno/paso-01-v1.webp"
+          },
+          {
+            "title": "Füllung zubereiten",
+            "content": "Spinat, Parmesan, Walnüsse, Senf, Knoblauch und die Hälfte des Öls zu einer groben Paste mixen. Kein Wasser zugeben.",
+            "image_alt": "Grobe Spinat-Käse-Walnuss-Füllung.",
+            "image_url": "/recetas/lomo-de-cerdo-relleno/paso-02-v1.webp"
+          },
+          {
+            "title": "Rollen und binden",
+            "content": "Füllung verteilen und rundum 2 cm Rand lassen. Von der langen Seite aufrollen und alle 4 cm mit Küchengarn binden. Außen mit restlichem Öl, Salz und Pfeffer einreiben.",
+            "image_alt": "Gefüllte Schweinelende gerollt und gebunden.",
+            "image_url": "/recetas/lomo-de-cerdo-relleno/paso-03-v1.webp"
+          },
+          {
+            "title": "Braten und messen",
+            "content": "In einer Form etwa 75–90 Minuten braten, je nach Dicke, bis die Mitte der Füllung 74 °C erreicht. Bei starker Bräunung locker mit Folie abdecken.",
+            "image_alt": "Gefüllter Braten mit Thermometer.",
+            "image_url": "/recetas/lomo-de-cerdo-relleno/paso-04-v1.webp"
+          },
+          {
+            "title": "Ruhen lassen",
+            "content": "15 Minuten ruhen lassen, Garn entfernen und in acht Portionen schneiden. Mit Bratensaft servieren.",
+            "image_alt": "Scheiben der gefüllten Schweinelende.",
+            "image_url": "/recetas/lomo-de-cerdo-relleno/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/lomo-de-cerdo-relleno/portada-v1.webp",
+        "seo": {
+          "title": "Schweinelende mit Spinat und Walnüssen gefüllt | Manual de Cocina",
+          "description": "Aufgeschnittene Schweinelende mit Spinat, Parmesan und Walnüssen gefüllt, gebunden und im Ofen gebraten.",
+          "faq": [
+            {
+              "q": "Wie bleibt die Füllung im Fleisch?",
+              "a": "Am Rand Platz lassen, fest rollen und regelmäßig binden."
+            },
+            {
+              "q": "Wann ist der Braten fertig?",
+              "a": "Die Mitte der Füllung muss 74 °C erreichen; die Garzeit hängt von der Dicke ab."
+            }
+          ],
+          "image_variants": [
+            "/recetas/lomo-de-cerdo-relleno/portada-1x1-v1.webp",
+            "/recetas/lomo-de-cerdo-relleno/portada-4x3-v1.webp",
+            "/recetas/lomo-de-cerdo-relleno/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 497,
+          "protein_g": 42.3,
+          "carbs_g": 2.5,
+          "fat_g": 34.5,
+          "saturated_fat_g": 10.6,
+          "fiber_g": 1.0,
+          "sugar_g": 0.3,
+          "sodium_mg": 558,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g × grams / 100) / 8 servings; 6 g salt × 0.393 sodium fraction / 8",
+          "serving_size": "1 serving",
+          "note": "Schätzwert pro Portion; Fleischzuschnitt und verbleibendes Fett verändern die Werte."
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>Aufgeschnittene Schweinelende mit Spinat, Parmesan und Walnüssen gefüllt, gebunden und im Ofen gebraten.</p>",
+        "keywords": [
+          "Schweinelende mit Spinat und Walnüssen gefüllt",
+          "Hauptgerichte",
+          "Hausmannskost"
+        ],
+        "gallery": [],
+        "video_urls": []
+      },
+      {
+        "title": "Rôti de porc farci aux épinards et aux noix",
+        "summary": "Un rôti de longe de porc ouvert et garni d’épinards, parmesan et noix, ficelé puis cuit au four avant de trancher.",
+        "notes": "Ficeler avec de la ficelle alimentaire et mesurer au centre le plus froid. La durée varie selon l’épaisseur. Retirer la ficelle avant de couper; garder les restes au frais jusqu’à 3 jours.",
+        "cuisine": "Familiale",
+        "course": "Plat principal",
+        "difficulty": "Intermédiaire",
+        "excerpt": "Un rôti de longe de porc ouvert et garni d’épinards, parmesan et noix, ficelé puis cuit au four avant de trancher.",
+        "recipe_group_id": "03e17fac-979a-4162-a516-2321cdbf2da2",
+        "language": "fr",
+        "public_path": "/fr/roti-de-porc-farci-epinards-noix/",
+        "slug": "roti-de-porc-farci-epinards-noix",
+        "category": "Plats principaux",
+        "servings": 8,
+        "prep_time_minutes": 25,
+        "cook_time_minutes": 85,
+        "total_time_minutes": 125,
+        "ingredients": [
+          {
+            "name": "Longe de porc désossée",
+            "amount": "1500",
+            "unit": "g"
+          },
+          {
+            "name": "Épinards frais",
+            "amount": "100",
+            "unit": "g"
+          },
+          {
+            "name": "Parmesan râpé",
+            "amount": "80",
+            "unit": "g"
+          },
+          {
+            "name": "Noix hachées",
+            "amount": "60",
+            "unit": "g"
+          },
+          {
+            "name": "Huile d’olive",
+            "amount": "30",
+            "unit": "ml"
+          },
+          {
+            "name": "Moutarde de Dijon",
+            "amount": "30",
+            "unit": "g"
+          },
+          {
+            "name": "Ail haché",
+            "amount": "12",
+            "unit": "g"
+          },
+          {
+            "name": "Sel fin",
+            "amount": "6",
+            "unit": "g"
+          },
+          {
+            "name": "Poivre noir",
+            "amount": "2",
+            "unit": "g"
+          }
+        ],
+        "steps": [
+          {
+            "title": "Ouvrir la longe",
+            "content": "Préchauffer à 180 °C. Sécher la viande et l’ouvrir dans la longueur comme un livre sans la traverser, en couche régulière. Assaisonner l’intérieur.",
+            "image_alt": "Longe de porc ouverte et ingrédients.",
+            "image_url": "/recetas/lomo-de-cerdo-relleno/paso-01-v1.webp"
+          },
+          {
+            "title": "Préparer la farce",
+            "content": "Mixer grossièrement épinards, parmesan, noix, moutarde, ail et la moitié de l’huile. Ne pas ajouter d’eau.",
+            "image_alt": "Farce grossière épinards, fromage et noix.",
+            "image_url": "/recetas/lomo-de-cerdo-relleno/paso-02-v1.webp"
+          },
+          {
+            "title": "Rouler et ficeler",
+            "content": "Étaler la farce en laissant 2 cm libres sur les bords. Rouler par le grand côté et ficeler tous les 4 cm. Badigeonner du reste d’huile, saler et poivrer.",
+            "image_alt": "Porc farci roulé et ficelé.",
+            "image_url": "/recetas/lomo-de-cerdo-relleno/paso-03-v1.webp"
+          },
+          {
+            "title": "Rôtir et vérifier",
+            "content": "Rôtir dans un plat environ 75 à 90 minutes selon l’épaisseur, jusqu’à 74 °C au centre de la farce. Couvrir lâchement d’aluminium si la surface dore trop.",
+            "image_alt": "Rôti farci avec thermomètre.",
+            "image_url": "/recetas/lomo-de-cerdo-relleno/paso-04-v1.webp"
+          },
+          {
+            "title": "Laisser reposer",
+            "content": "Laisser reposer 15 minutes, ôter la ficelle et couper en huit parts. Servir avec le jus du plat.",
+            "image_alt": "Tranches de rôti de porc farci.",
+            "image_url": "/recetas/lomo-de-cerdo-relleno/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/lomo-de-cerdo-relleno/portada-v1.webp",
+        "seo": {
+          "title": "Rôti de porc farci aux épinards et aux noix | Manual de Cocina",
+          "description": "Un rôti de longe de porc ouvert et garni d’épinards, parmesan et noix, ficelé puis cuit au four avant de trancher.",
+          "faq": [
+            {
+              "q": "Comment retenir la farce ?",
+              "a": "Laisser une bordure libre, rouler serré et ficeler régulièrement."
+            },
+            {
+              "q": "Comment vérifier la cuisson ?",
+              "a": "Mesurer 74 °C au centre de la farce; la durée varie avec l’épaisseur."
+            }
+          ],
+          "image_variants": [
+            "/recetas/lomo-de-cerdo-relleno/portada-1x1-v1.webp",
+            "/recetas/lomo-de-cerdo-relleno/portada-4x3-v1.webp",
+            "/recetas/lomo-de-cerdo-relleno/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 497,
+          "protein_g": 42.3,
+          "carbs_g": 2.5,
+          "fat_g": 34.5,
+          "saturated_fat_g": 10.6,
+          "fiber_g": 1.0,
+          "sugar_g": 0.3,
+          "sodium_mg": 558,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g × grams / 100) / 8 servings; 6 g salt × 0.393 sodium fraction / 8",
+          "serving_size": "1 serving",
+          "note": "Estimation par part; le parage du porc et la graisse laissée dans le plat varient."
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>Un rôti de longe de porc ouvert et garni d’épinards, parmesan et noix, ficelé puis cuit au four avant de trancher.</p>",
+        "keywords": [
+          "Rôti de porc farci aux épinards et aux noix",
+          "Plats principaux",
+          "Familiale"
+        ],
+        "gallery": [],
+        "video_urls": []
+      },
+      {
+        "title": "Lonza di maiale ripiena di spinaci e noci",
+        "summary": "Lonza aperta a libro, farcita con spinaci, Parmigiano e noci, legata e arrostita. Si affetta dopo il riposo.",
+        "notes": "Lega con spago da cucina e misura il centro più freddo. Il tempo varia secondo lo spessore. Togli lo spago prima del taglio; conserva gli avanzi in frigo fino a 3 giorni.",
+        "cuisine": "Casalinga",
+        "course": "Piatto principale",
+        "difficulty": "Media",
+        "excerpt": "Lonza aperta a libro, farcita con spinaci, Parmigiano e noci, legata e arrostita. Si affetta dopo il riposo.",
+        "recipe_group_id": "03e17fac-979a-4162-a516-2321cdbf2da2",
+        "language": "it",
+        "public_path": "/it/lonza-di-maiale-ripiena-spinaci-noci/",
+        "slug": "lonza-di-maiale-ripiena-spinaci-noci",
+        "category": "Secondi piatti",
+        "servings": 8,
+        "prep_time_minutes": 25,
+        "cook_time_minutes": 85,
+        "total_time_minutes": 125,
+        "ingredients": [
+          {
+            "name": "Lonza di maiale disossata",
+            "amount": "1500",
+            "unit": "g"
+          },
+          {
+            "name": "Spinaci freschi",
+            "amount": "100",
+            "unit": "g"
+          },
+          {
+            "name": "Parmigiano grattugiato",
+            "amount": "80",
+            "unit": "g"
+          },
+          {
+            "name": "Noci tritate",
+            "amount": "60",
+            "unit": "g"
+          },
+          {
+            "name": "Olio d’oliva",
+            "amount": "30",
+            "unit": "ml"
+          },
+          {
+            "name": "Senape di Digione",
+            "amount": "30",
+            "unit": "g"
+          },
+          {
+            "name": "Aglio tritato",
+            "amount": "12",
+            "unit": "g"
+          },
+          {
+            "name": "Sale fino",
+            "amount": "6",
+            "unit": "g"
+          },
+          {
+            "name": "Pepe nero",
+            "amount": "2",
+            "unit": "g"
+          }
+        ],
+        "steps": [
+          {
+            "title": "Apri la lonza",
+            "content": "Preriscalda il forno a 180 °C. Asciuga la carne e aprila per il lungo a libro senza tagliarla del tutto, in uno strato uniforme. Condisci l’interno.",
+            "image_alt": "Lonza aperta e ingredienti della farcia.",
+            "image_url": "/recetas/lomo-de-cerdo-relleno/paso-01-v1.webp"
+          },
+          {
+            "title": "Prepara la farcia",
+            "content": "Trita grossolanamente spinaci, Parmigiano, noci, senape, aglio e metà dell’olio fino a una pasta. Non aggiungere acqua.",
+            "image_alt": "Farcia di spinaci, formaggio e noci.",
+            "image_url": "/recetas/lomo-de-cerdo-relleno/paso-02-v1.webp"
+          },
+          {
+            "title": "Arrotola e lega",
+            "content": "Distribuisci la farcia lasciando 2 cm di bordo. Arrotola dal lato lungo e lega con spago ogni 4 cm. Spalma fuori l’olio rimasto, sale e pepe.",
+            "image_alt": "Lonza ripiena arrotolata e legata.",
+            "image_url": "/recetas/lomo-de-cerdo-relleno/paso-03-v1.webp"
+          },
+          {
+            "title": "Arrostisci e controlla",
+            "content": "Cuoci in teglia circa 75–90 minuti secondo lo spessore, finché il centro della farcia raggiunge 74 °C. Copri morbidamente con alluminio se scurisce troppo.",
+            "image_alt": "Arrosto ripieno con termometro.",
+            "image_url": "/recetas/lomo-de-cerdo-relleno/paso-04-v1.webp"
+          },
+          {
+            "title": "Riposa e servi",
+            "content": "Lascia riposare 15 minuti, togli lo spago e taglia in otto porzioni. Servi con il fondo di cottura.",
+            "image_alt": "Fette di lonza ripiena di spinaci.",
+            "image_url": "/recetas/lomo-de-cerdo-relleno/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/lomo-de-cerdo-relleno/portada-v1.webp",
+        "seo": {
+          "title": "Lonza di maiale ripiena di spinaci e noci | Manual de Cocina",
+          "description": "Lonza aperta a libro, farcita con spinaci, Parmigiano e noci, legata e arrostita. Si affetta dopo il riposo.",
+          "faq": [
+            {
+              "q": "Come evitare che la farcia esca?",
+              "a": "Lascia un bordo libero, arrotola stretto e lega a intervalli regolari."
+            },
+            {
+              "q": "Quando è pronto?",
+              "a": "Controlla 74 °C al centro della farcia; il tempo varia con lo spessore."
+            }
+          ],
+          "image_variants": [
+            "/recetas/lomo-de-cerdo-relleno/portada-1x1-v1.webp",
+            "/recetas/lomo-de-cerdo-relleno/portada-4x3-v1.webp",
+            "/recetas/lomo-de-cerdo-relleno/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 497,
+          "protein_g": 42.3,
+          "carbs_g": 2.5,
+          "fat_g": 34.5,
+          "saturated_fat_g": 10.6,
+          "fiber_g": 1.0,
+          "sugar_g": 0.3,
+          "sodium_mg": 558,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g × grams / 100) / 8 servings; 6 g salt × 0.393 sodium fraction / 8",
+          "serving_size": "1 serving",
+          "note": "Stima per porzione; taglio della carne e grasso lasciato in teglia variano."
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>Lonza aperta a libro, farcita con spinaci, Parmigiano e noci, legata e arrostita. Si affetta dopo il riposo.</p>",
+        "keywords": [
+          "Lonza di maiale ripiena di spinaci e noci",
+          "Secondi piatti",
+          "Casalinga"
+        ],
+        "gallery": [],
+        "video_urls": []
+      },
+      {
+        "title": "ほうれん草とクルミの豚ロース巻き",
+        "summary": "豚ロースを開き、ほうれん草、パルメザン、クルミを巻いてオーブンで焼く料理。休ませてから切り分けます。",
+        "notes": "料理用たこ糸でしばり、中心部を温度計で確認します。焼き時間は厚みによって変わります。切る前に糸を外し、残りは冷蔵で3日以内に。",
+        "cuisine": "家庭料理",
+        "course": "主菜",
+        "difficulty": "中級",
+        "excerpt": "豚ロースを開き、ほうれん草、パルメザン、クルミを巻いてオーブンで焼く料理。休ませてから切り分けます。",
+        "recipe_group_id": "03e17fac-979a-4162-a516-2321cdbf2da2",
+        "language": "ja",
+        "public_path": "/ja/ほうれん草とクルミの豚ロース巻き/",
+        "slug": "ほうれん草とクルミの豚ロース巻き",
+        "category": "主菜",
+        "servings": 8,
+        "prep_time_minutes": 25,
+        "cook_time_minutes": 85,
+        "total_time_minutes": 125,
+        "ingredients": [
+          {
+            "name": "骨なし豚ロース",
+            "amount": "1500",
+            "unit": "g"
+          },
+          {
+            "name": "生ほうれん草",
+            "amount": "100",
+            "unit": "g"
+          },
+          {
+            "name": "すりおろしたパルメザン",
+            "amount": "80",
+            "unit": "g"
+          },
+          {
+            "name": "刻んだクルミ",
+            "amount": "60",
+            "unit": "g"
+          },
+          {
+            "name": "オリーブオイル",
+            "amount": "30",
+            "unit": "ml"
+          },
+          {
+            "name": "ディジョンマスタード",
+            "amount": "30",
+            "unit": "g"
+          },
+          {
+            "name": "刻んだにんにく",
+            "amount": "12",
+            "unit": "g"
+          },
+          {
+            "name": "塩",
+            "amount": "6",
+            "unit": "g"
+          },
+          {
+            "name": "黒こしょう",
+            "amount": "2",
+            "unit": "g"
+          }
+        ],
+        "steps": [
+          {
+            "title": "豚肉を開く",
+            "content": "オーブンを180℃に予熱。豚肉の水気を拭き、切り離さずに縦に包丁を入れ、本のように均一に開く。内側に塩こしょうを振る。",
+            "image_alt": "開いた豚ロースと具の材料。",
+            "image_url": "/recetas/lomo-de-cerdo-relleno/paso-01-v1.webp"
+          },
+          {
+            "title": "具を作る",
+            "content": "ほうれん草、パルメザン、クルミ、マスタード、にんにく、油の半量を粗いペーストにする。水は加えない。",
+            "image_alt": "ほうれん草、チーズ、クルミの具。",
+            "image_url": "/recetas/lomo-de-cerdo-relleno/paso-02-v1.webp"
+          },
+          {
+            "title": "巻いて縛る",
+            "content": "肉の縁を2 cm残して具を広げ、長い辺からきつく巻く。約4 cmおきにたこ糸で縛り、外側に残りの油、塩こしょうを塗る。",
+            "image_alt": "具を巻いて縛った豚肉。",
+            "image_url": "/recetas/lomo-de-cerdo-relleno/paso-03-v1.webp"
+          },
+          {
+            "title": "焼いて温度を測る",
+            "content": "耐熱皿に入れ、厚みに応じて約75〜90分焼く。具の中心が74℃になるまで焼き、焼き色が強ければアルミ箔をふんわりかぶせる。",
+            "image_alt": "温度計で測る焼いた豚肉巻き。",
+            "image_url": "/recetas/lomo-de-cerdo-relleno/paso-04-v1.webp"
+          },
+          {
+            "title": "休ませて切る",
+            "content": "15分休ませ、糸を外して8人分に切る。皿に残った肉汁をかけて盛る。",
+            "image_alt": "ほうれん草入り豚肉巻きの断面。",
+            "image_url": "/recetas/lomo-de-cerdo-relleno/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/lomo-de-cerdo-relleno/portada-v1.webp",
+        "seo": {
+          "title": "ほうれん草とクルミの豚ロース巻き | Manual de Cocina",
+          "description": "豚ロースを開き、ほうれん草、パルメザン、クルミを巻いてオーブンで焼く料理。休ませてから切り分けます。",
+          "faq": [
+            {
+              "q": "具がこぼれないコツは？",
+              "a": "縁を空けてきつく巻き、等間隔に縛ります。"
+            },
+            {
+              "q": "焼き上がりはどう確認する？",
+              "a": "具の中心温度が74℃になったら取り出します。時間は厚みで変わります。"
+            }
+          ],
+          "image_variants": [
+            "/recetas/lomo-de-cerdo-relleno/portada-1x1-v1.webp",
+            "/recetas/lomo-de-cerdo-relleno/portada-4x3-v1.webp",
+            "/recetas/lomo-de-cerdo-relleno/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 497,
+          "protein_g": 42.3,
+          "carbs_g": 2.5,
+          "fat_g": 34.5,
+          "saturated_fat_g": 10.6,
+          "fiber_g": 1.0,
+          "sugar_g": 0.3,
+          "sodium_mg": 558,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g × grams / 100) / 8 servings; 6 g salt × 0.393 sodium fraction / 8",
+          "serving_size": "1 serving",
+          "note": "1人分の概算。豚肉の脂身や皿に残る脂で変わります。"
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>豚ロースを開き、ほうれん草、パルメザン、クルミを巻いてオーブンで焼く料理。休ませてから切り分けます。</p>",
+        "keywords": [
+          "ほうれん草とクルミの豚ロース巻き",
+          "主菜",
+          "家庭料理"
+        ],
+        "gallery": [],
+        "video_urls": []
+      },
+      {
+        "title": "Lombo de porco recheado com espinafres e nozes",
+        "summary": "Lombo aberto e recheado de espinafres, parmesão e nozes, atado e assado antes de fatiar.",
+        "notes": "Ate com fio de cozinha e meça o centro mais frio. O tempo varia com a espessura. Retire o fio antes de cortar; refrigere sobras até 3 dias.",
+        "cuisine": "Caseira",
+        "course": "Prato principal",
+        "difficulty": "Intermédia",
+        "excerpt": "Lombo aberto e recheado de espinafres, parmesão e nozes, atado e assado antes de fatiar.",
+        "recipe_group_id": "03e17fac-979a-4162-a516-2321cdbf2da2",
+        "language": "pt",
+        "public_path": "/pt/lombo-de-porco-recheado-espinafres-nozes/",
+        "slug": "lombo-de-porco-recheado-espinafres-nozes",
+        "category": "Pratos principais",
+        "servings": 8,
+        "prep_time_minutes": 25,
+        "cook_time_minutes": 85,
+        "total_time_minutes": 125,
+        "ingredients": [
+          {
+            "name": "Lombo de porco desossado",
+            "amount": "1500",
+            "unit": "g"
+          },
+          {
+            "name": "Espinafres frescos",
+            "amount": "100",
+            "unit": "g"
+          },
+          {
+            "name": "Parmesão ralado",
+            "amount": "80",
+            "unit": "g"
+          },
+          {
+            "name": "Nozes picadas",
+            "amount": "60",
+            "unit": "g"
+          },
+          {
+            "name": "Azeite",
+            "amount": "30",
+            "unit": "ml"
+          },
+          {
+            "name": "Mostarda Dijon",
+            "amount": "30",
+            "unit": "g"
+          },
+          {
+            "name": "Alho picado",
+            "amount": "12",
+            "unit": "g"
+          },
+          {
+            "name": "Sal fino",
+            "amount": "6",
+            "unit": "g"
+          },
+          {
+            "name": "Pimenta-preta",
+            "amount": "2",
+            "unit": "g"
+          }
+        ],
+        "steps": [
+          {
+            "title": "Abra o lombo",
+            "content": "Aqueça o forno a 180 °C. Seque a carne e abra no sentido do comprimento como um livro, sem cortar até ao fim. Tempere o interior.",
+            "image_alt": "Lombo aberto com ingredientes do recheio.",
+            "image_url": "/recetas/lomo-de-cerdo-relleno/paso-01-v1.webp"
+          },
+          {
+            "title": "Faça o recheio",
+            "content": "Triture grosseiramente espinafres, parmesão, nozes, mostarda, alho e metade do azeite até formar uma pasta. Não junte água.",
+            "image_alt": "Recheio de espinafres, queijo e nozes.",
+            "image_url": "/recetas/lomo-de-cerdo-relleno/paso-02-v1.webp"
+          },
+          {
+            "title": "Enrole e ate",
+            "content": "Espalhe a pasta, deixando 2 cm livres nas bordas. Enrole pelo lado comprido e ate com fio a cada 4 cm. Barre por fora com o azeite restante, sal e pimenta.",
+            "image_alt": "Lombo recheado enrolado e atado.",
+            "image_url": "/recetas/lomo-de-cerdo-relleno/paso-03-v1.webp"
+          },
+          {
+            "title": "Asse e confira",
+            "content": "Asse numa travessa cerca de 75–90 minutos conforme a espessura, até o centro do recheio atingir 74 °C. Cubra levemente com alumínio se dourar depressa.",
+            "image_alt": "Lombo assado com termómetro.",
+            "image_url": "/recetas/lomo-de-cerdo-relleno/paso-04-v1.webp"
+          },
+          {
+            "title": "Repouse e sirva",
+            "content": "Repouse 15 minutos, retire o fio e corte em oito porções. Sirva com os sucos da travessa.",
+            "image_alt": "Fatias de lombo recheado de espinafres.",
+            "image_url": "/recetas/lomo-de-cerdo-relleno/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/lomo-de-cerdo-relleno/portada-v1.webp",
+        "seo": {
+          "title": "Lombo de porco recheado com espinafres e nozes | Manual de Cocina",
+          "description": "Lombo aberto e recheado de espinafres, parmesão e nozes, atado e assado antes de fatiar.",
+          "faq": [
+            {
+              "q": "Como evitar que saia o recheio?",
+              "a": "Deixe uma margem livre, enrole firme e ate regularmente."
+            },
+            {
+              "q": "Como saber se está pronto?",
+              "a": "Meça 74 °C no centro do recheio; o tempo varia com a espessura."
+            }
+          ],
+          "image_variants": [
+            "/recetas/lomo-de-cerdo-relleno/portada-1x1-v1.webp",
+            "/recetas/lomo-de-cerdo-relleno/portada-4x3-v1.webp",
+            "/recetas/lomo-de-cerdo-relleno/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 497,
+          "protein_g": 42.3,
+          "carbs_g": 2.5,
+          "fat_g": 34.5,
+          "saturated_fat_g": 10.6,
+          "fiber_g": 1.0,
+          "sugar_g": 0.3,
+          "sodium_mg": 558,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g × grams / 100) / 8 servings; 6 g salt × 0.393 sodium fraction / 8",
+          "serving_size": "1 serving",
+          "note": "Estimativa por dose; o corte do porco e a gordura na travessa alteram os valores."
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>Lombo aberto e recheado de espinafres, parmesão e nozes, atado e assado antes de fatiar.</p>",
+        "keywords": [
+          "Lombo de porco recheado com espinafres e nozes",
+          "Pratos principais",
+          "Caseira"
+        ],
+        "gallery": [],
+        "video_urls": []
+      }
+    ]
+  }
+}

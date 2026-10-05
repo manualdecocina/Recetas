@@ -1,0 +1,1352 @@
+{
+  "entity": "E015",
+  "status": "ready_for_preview",
+  "recipe_group_id": "d52d1197-1a2d-4d43-a5da-d24048ad23b6",
+  "source_policy": "Original reconstructed Peruvian baked chicken empanadas. Historical ES and IT routes and recipe group retained. Existing staged formulation normalized to 12 pieces with 30 min dough chill and 5 min rest; WordPress body copy not reused. Ají amarillo represented by a raw chili nutrient proxy.",
+  "kitchen_test_claimed": false,
+  "sources": [
+    {
+      "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures",
+      "purpose": "74 °C food safety threshold for chicken filling and stuffed roll center."
+    }
+  ],
+  "nutrition_calculation": {
+    "dataset": "USDA FoodData Central, SR Legacy April 2018",
+    "dataset_sha256": "b80817294b8850530aaedf2e515c02593b1824f763a0ff356e5c2081643e6fd0",
+    "method": "sum(per_100g × grams / 100) / 12 servings; 5 g salt × 0.393 sodium fraction / 12",
+    "inputs": [
+      {
+        "fdc_id": "169761",
+        "description": "Wheat flour, white, all-purpose, unenriched",
+        "grams": 500,
+        "per_100g": {
+          "fat_g": 0.98,
+          "carbs_g": 76.31,
+          "calories": 364.0,
+          "fiber_g": 2.7,
+          "sodium_mg": 2.0,
+          "protein_g": 10.33,
+          "saturated_fat_g": 0.155,
+          "sugar_g": 0.27
+        }
+      },
+      {
+        "fdc_id": "173430",
+        "description": "Butter, without salt",
+        "grams": 100,
+        "per_100g": {
+          "sugar_g": 0.06,
+          "calories": 717.0,
+          "saturated_fat_g": 50.489,
+          "fat_g": 81.11,
+          "carbs_g": 0.06,
+          "protein_g": 0.85,
+          "fiber_g": 0.0,
+          "sodium_mg": 11.0
+        }
+      },
+      {
+        "fdc_id": "171287",
+        "description": "Egg, whole, raw, fresh",
+        "grams": 175,
+        "per_100g": {
+          "calories": 143.0,
+          "saturated_fat_g": 3.126,
+          "protein_g": 12.56,
+          "sodium_mg": 142.0,
+          "sugar_g": 0.37,
+          "fat_g": 9.51,
+          "carbs_g": 0.72,
+          "fiber_g": 0.0
+        }
+      },
+      {
+        "fdc_id": "171477",
+        "description": "Chicken, broilers or fryers, breast, meat only, cooked, roasted",
+        "grams": 500,
+        "per_100g": {
+          "fat_g": 3.57,
+          "carbs_g": 0.0,
+          "calories": 165.0,
+          "protein_g": 31.02,
+          "fiber_g": 0.0,
+          "sodium_mg": 74.0,
+          "saturated_fat_g": 1.01,
+          "sugar_g": 0.0
+        }
+      },
+      {
+        "fdc_id": "170000",
+        "description": "Onions, raw",
+        "grams": 150,
+        "per_100g": {
+          "sugar_g": 4.24,
+          "fat_g": 0.1,
+          "carbs_g": 9.34,
+          "calories": 40.0,
+          "saturated_fat_g": 0.042,
+          "protein_g": 1.1,
+          "fiber_g": 1.7,
+          "sodium_mg": 4.0
+        }
+      },
+      {
+        "fdc_id": "169230",
+        "description": "Garlic, raw",
+        "grams": 6,
+        "per_100g": {
+          "carbs_g": 33.06,
+          "calories": 149.0,
+          "sugar_g": 1.0,
+          "saturated_fat_g": 0.089,
+          "fiber_g": 2.1,
+          "sodium_mg": 17.0,
+          "protein_g": 6.36,
+          "fat_g": 0.5
+        }
+      },
+      {
+        "fdc_id": "170106",
+        "description": "Peppers, hot chili, red, raw",
+        "grams": 30,
+        "per_100g": {
+          "sugar_g": 5.3,
+          "fiber_g": 1.5,
+          "sodium_mg": 9.0,
+          "fat_g": 0.44,
+          "carbs_g": 8.81,
+          "calories": 40.0,
+          "protein_g": 1.87,
+          "saturated_fat_g": 0.042
+        }
+      },
+      {
+        "fdc_id": "168165",
+        "description": "Raisins, dark, seedless (Includes foods for USDA's Food Distribution Program)",
+        "grams": 40,
+        "per_100g": {
+          "saturated_fat_g": 0.094,
+          "fiber_g": 4.5,
+          "sodium_mg": 26.0,
+          "protein_g": 3.3,
+          "fat_g": 0.25,
+          "carbs_g": 79.32,
+          "sugar_g": 65.18,
+          "calories": 299.0
+        }
+      },
+      {
+        "fdc_id": "169094",
+        "description": "Olives, ripe, canned (small-extra large)",
+        "grams": 60,
+        "per_100g": {
+          "sodium_mg": 735.0,
+          "sugar_g": 0.0,
+          "protein_g": 0.84,
+          "saturated_fat_g": 2.279,
+          "fiber_g": 1.6,
+          "fat_g": 10.9,
+          "carbs_g": 6.04,
+          "calories": 116.0
+        }
+      },
+      {
+        "fdc_id": "172370",
+        "description": "Oil, vegetable, soybean, refined",
+        "grams": 14,
+        "per_100g": {
+          "protein_g": 0.0,
+          "fiber_g": 0.0,
+          "sodium_mg": 0.0,
+          "saturated_fat_g": 15.251,
+          "fat_g": 100.0,
+          "carbs_g": 0.0,
+          "calories": 884.0,
+          "sugar_g": 0.0
+        }
+      }
+    ],
+    "assumptions": "Original recipe quantities; ingredients absent from dataset use a documented proxy. Actual retained egg wash, fat and cooking loss may vary."
+  },
+  "images": {
+    "method": "built-in image_gen",
+    "cover_reused_for_final_step": true,
+    "directory": "public/recetas/empanada-peruana-de-pollo",
+    "version": "v1"
+  },
+  "publication": {
+    "environment": "preview",
+    "state": "prepared",
+    "rows": [
+      {
+        "title": "Empanadas peruanas de pollo al horno",
+        "summary": "Empanadas de masa casera con pollo, ají amarillo, aceitunas, huevo y pasas. Horneadas hasta dorar, con relleno jugoso y cierre firme.",
+        "notes": "Rinde 12 empanadas medianas. El relleno debe enfriarse antes de armar; la masa reposa 30 minutos en frío. Usa pollo ya cocido y enfría las sobras dentro de 2 horas.",
+        "cuisine": "Peruana",
+        "course": "Plato principal",
+        "difficulty": "Intermedia",
+        "excerpt": "Empanadas de masa casera con pollo, ají amarillo, aceitunas, huevo y pasas. Horneadas hasta dorar, con relleno jugoso y cierre firme.",
+        "recipe_group_id": "d52d1197-1a2d-4d43-a5da-d24048ad23b6",
+        "language": "es",
+        "public_path": "/empanada-peruana-de-pollo",
+        "slug": "empanada-peruana-de-pollo",
+        "category": "Platos principales",
+        "servings": 12,
+        "prep_time_minutes": 45,
+        "cook_time_minutes": 25,
+        "total_time_minutes": 105,
+        "ingredients": [
+          {
+            "name": "Harina de trigo",
+            "amount": "500",
+            "unit": "g"
+          },
+          {
+            "name": "Mantequilla fría",
+            "amount": "100",
+            "unit": "g"
+          },
+          {
+            "name": "Huevo para la masa",
+            "amount": "1",
+            "unit": ""
+          },
+          {
+            "name": "Agua fría",
+            "amount": "120",
+            "unit": "ml"
+          },
+          {
+            "name": "Sal fina",
+            "amount": "5",
+            "unit": "g"
+          },
+          {
+            "name": "Pollo cocido y desmenuzado",
+            "amount": "500",
+            "unit": "g"
+          },
+          {
+            "name": "Cebolla roja picada",
+            "amount": "150",
+            "unit": "g"
+          },
+          {
+            "name": "Ajo picado",
+            "amount": "6",
+            "unit": "g"
+          },
+          {
+            "name": "Pasta de ají amarillo",
+            "amount": "30",
+            "unit": "g"
+          },
+          {
+            "name": "Huevos duros picados",
+            "amount": "2",
+            "unit": ""
+          },
+          {
+            "name": "Pasas",
+            "amount": "40",
+            "unit": "g"
+          },
+          {
+            "name": "Aceitunas negras picadas",
+            "amount": "60",
+            "unit": "g"
+          },
+          {
+            "name": "Aceite vegetal",
+            "amount": "14",
+            "unit": "g"
+          },
+          {
+            "name": "Huevo batido para barnizar",
+            "amount": "1",
+            "unit": ""
+          }
+        ],
+        "steps": [
+          {
+            "title": "Haz la masa",
+            "content": "Mezcla harina y sal; frota con la mantequilla fría hasta obtener migas. Incorpora un huevo y añade el agua poco a poco, solo hasta unir. Forma un disco y refrigera 30 minutos.",
+            "image_alt": "Masa de empanada con mantequilla y harina.",
+            "image_url": "/recetas/empanada-peruana-de-pollo/paso-01-v1.webp"
+          },
+          {
+            "title": "Cocina el relleno",
+            "content": "Sofríe cebolla en el aceite 5 minutos. Añade ajo y ají amarillo 1 minuto; incorpora el pollo cocido y mezcla 3–4 minutos. Apaga el fuego, agrega huevo duro, pasas y aceitunas; enfría por completo.",
+            "image_alt": "Relleno de pollo y ají amarillo en sartén.",
+            "image_url": "/recetas/empanada-peruana-de-pollo/paso-02-v1.webp"
+          },
+          {
+            "title": "Estira y corta",
+            "content": "Precalienta el horno a 190 °C. Estira la masa a 2–3 mm y corta 12 discos de unos 13 cm, reuniendo los recortes una sola vez. Mantén el relleno frío.",
+            "image_alt": "Discos de masa cortados para empanadas.",
+            "image_url": "/recetas/empanada-peruana-de-pollo/paso-03-v1.webp"
+          },
+          {
+            "title": "Rellena y sella",
+            "content": "Reparte el relleno sin sobrecargar. Humedece los bordes, dobla cada disco en media luna y sella con tenedor. Coloca en bandeja con papel y pinta con huevo batido.",
+            "image_alt": "Empanadas de pollo cerradas en una bandeja.",
+            "image_url": "/recetas/empanada-peruana-de-pollo/paso-04-v1.webp"
+          },
+          {
+            "title": "Hornea y sirve",
+            "content": "Hornea 20–25 minutos hasta que la masa esté cocida y dorada y el centro del relleno alcance 74 °C. Deja reposar 5 minutos antes de servir.",
+            "image_alt": "Empanadas peruanas horneadas y una abierta.",
+            "image_url": "/recetas/empanada-peruana-de-pollo/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/empanada-peruana-de-pollo/portada-v1.webp",
+        "seo": {
+          "title": "Empanadas peruanas de pollo al horno | Manual de Cocina",
+          "description": "Empanadas de masa casera con pollo, ají amarillo, aceitunas, huevo y pasas. Horneadas hasta dorar, con relleno jugoso y cierre firme.",
+          "faq": [
+            {
+              "q": "¿Puedo preparar el relleno antes?",
+              "a": "Sí. Enfríalo y guárdalo tapado en la nevera; rellena siempre con la mezcla fría."
+            },
+            {
+              "q": "¿Por qué se abren las empanadas?",
+              "a": "El exceso de relleno o un borde húmedo sin sellar puede abrir la masa; presiona bien antes de hornear."
+            }
+          ],
+          "image_variants": [
+            "/recetas/empanada-peruana-de-pollo/portada-1x1-v1.webp",
+            "/recetas/empanada-peruana-de-pollo/portada-4x3-v1.webp",
+            "/recetas/empanada-peruana-de-pollo/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 334,
+          "protein_g": 19.5,
+          "carbs_g": 36.4,
+          "fat_g": 11.8,
+          "saturated_fat_g": 5.5,
+          "fiber_g": 1.6,
+          "sugar_g": 3.0,
+          "sodium_mg": 255,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g × grams / 100) / 12 servings; 5 g salt × 0.393 sodium fraction / 12",
+          "serving_size": "1 empanada",
+          "note": "Estimación por empanada; el huevo de barnizado retenido y la marca de ají varían."
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>Empanadas de masa casera con pollo, ají amarillo, aceitunas, huevo y pasas. Horneadas hasta dorar, con relleno jugoso y cierre firme.</p>",
+        "keywords": [
+          "Empanadas peruanas de pollo al horno",
+          "Platos principales",
+          "Peruana"
+        ],
+        "gallery": [],
+        "video_urls": []
+      },
+      {
+        "title": "Peruvian chicken empanadas",
+        "summary": "Homemade baked empanadas filled with chicken, ají amarillo, olives, egg and raisins, with a crisp golden pastry.",
+        "notes": "Makes 12 medium empanadas. Chill dough for 30 minutes and cool the filling before assembly. Use fully cooked chicken; refrigerate leftovers within 2 hours.",
+        "cuisine": "Peruvian",
+        "course": "Main course",
+        "difficulty": "Intermediate",
+        "excerpt": "Homemade baked empanadas filled with chicken, ají amarillo, olives, egg and raisins, with a crisp golden pastry.",
+        "recipe_group_id": "d52d1197-1a2d-4d43-a5da-d24048ad23b6",
+        "language": "en",
+        "public_path": "/en/peruvian-chicken-empanadas/",
+        "slug": "peruvian-chicken-empanadas",
+        "category": "Main dishes",
+        "servings": 12,
+        "prep_time_minutes": 45,
+        "cook_time_minutes": 25,
+        "total_time_minutes": 105,
+        "ingredients": [
+          {
+            "name": "All-purpose flour",
+            "amount": "500",
+            "unit": "g"
+          },
+          {
+            "name": "Cold butter",
+            "amount": "100",
+            "unit": "g"
+          },
+          {
+            "name": "Egg for dough",
+            "amount": "1",
+            "unit": ""
+          },
+          {
+            "name": "Cold water",
+            "amount": "120",
+            "unit": "ml"
+          },
+          {
+            "name": "Fine salt",
+            "amount": "5",
+            "unit": "g"
+          },
+          {
+            "name": "Cooked shredded chicken",
+            "amount": "500",
+            "unit": "g"
+          },
+          {
+            "name": "Chopped red onion",
+            "amount": "150",
+            "unit": "g"
+          },
+          {
+            "name": "Minced garlic",
+            "amount": "6",
+            "unit": "g"
+          },
+          {
+            "name": "Ají amarillo paste",
+            "amount": "30",
+            "unit": "g"
+          },
+          {
+            "name": "Chopped hard-boiled eggs",
+            "amount": "2",
+            "unit": ""
+          },
+          {
+            "name": "Raisins",
+            "amount": "40",
+            "unit": "g"
+          },
+          {
+            "name": "Chopped black olives",
+            "amount": "60",
+            "unit": "g"
+          },
+          {
+            "name": "Vegetable oil",
+            "amount": "14",
+            "unit": "g"
+          },
+          {
+            "name": "Beaten egg for glaze",
+            "amount": "1",
+            "unit": ""
+          }
+        ],
+        "steps": [
+          {
+            "title": "Make the dough",
+            "content": "Rub cold butter into flour and salt until crumbly. Add an egg and enough cold water to bring together. Shape into a disk and chill 30 minutes.",
+            "image_alt": "Empanada dough with butter and flour.",
+            "image_url": "/recetas/empanada-peruana-de-pollo/paso-01-v1.webp"
+          },
+          {
+            "title": "Cook the filling",
+            "content": "Sauté onion in oil for 5 minutes. Add garlic and ají for 1 minute, then cooked chicken for 3–4 minutes. Turn off heat, mix in chopped eggs, raisins and olives; cool completely.",
+            "image_alt": "Chicken and ají filling in a skillet.",
+            "image_url": "/recetas/empanada-peruana-de-pollo/paso-02-v1.webp"
+          },
+          {
+            "title": "Roll and cut",
+            "content": "Heat oven to 190°C (375°F). Roll dough to 2–3 mm and cut twelve 13 cm rounds, rerolling scraps once. Keep filling cool.",
+            "image_alt": "Pastry circles cut for empanadas.",
+            "image_url": "/recetas/empanada-peruana-de-pollo/paso-03-v1.webp"
+          },
+          {
+            "title": "Fill and seal",
+            "content": "Divide filling without overloading. Moisten edges, fold into half-moons and crimp with a fork. Set on a lined tray and brush with beaten egg.",
+            "image_alt": "Sealed chicken empanadas on baking tray.",
+            "image_url": "/recetas/empanada-peruana-de-pollo/paso-04-v1.webp"
+          },
+          {
+            "title": "Bake and serve",
+            "content": "Bake 20–25 minutes until golden and cooked through, with filling center at 74°C (165°F). Rest 5 minutes before serving.",
+            "image_alt": "Baked Peruvian chicken empanadas.",
+            "image_url": "/recetas/empanada-peruana-de-pollo/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/empanada-peruana-de-pollo/portada-v1.webp",
+        "seo": {
+          "title": "Peruvian chicken empanadas | Manual de Cocina",
+          "description": "Homemade baked empanadas filled with chicken, ají amarillo, olives, egg and raisins, with a crisp golden pastry.",
+          "faq": [
+            {
+              "q": "Can I make the filling ahead?",
+              "a": "Yes; cool and refrigerate covered, then assemble with cold filling."
+            },
+            {
+              "q": "Why do empanadas open in the oven?",
+              "a": "Overfilling or weak seals can split the pastry; press edges firmly."
+            }
+          ],
+          "image_variants": [
+            "/recetas/empanada-peruana-de-pollo/portada-1x1-v1.webp",
+            "/recetas/empanada-peruana-de-pollo/portada-4x3-v1.webp",
+            "/recetas/empanada-peruana-de-pollo/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 334,
+          "protein_g": 19.5,
+          "carbs_g": 36.4,
+          "fat_g": 11.8,
+          "saturated_fat_g": 5.5,
+          "fiber_g": 1.6,
+          "sugar_g": 3.0,
+          "sodium_mg": 255,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g × grams / 100) / 12 servings; 5 g salt × 0.393 sodium fraction / 12",
+          "serving_size": "1 serving",
+          "note": "Estimate per empanada; egg wash retained and ají brands vary."
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>Homemade baked empanadas filled with chicken, ají amarillo, olives, egg and raisins, with a crisp golden pastry.</p>",
+        "keywords": [
+          "Peruvian chicken empanadas",
+          "Main dishes",
+          "Peruvian"
+        ],
+        "gallery": [],
+        "video_urls": []
+      },
+      {
+        "title": "Peruanische Hähnchen-Empanadas aus dem Ofen",
+        "summary": "Selbst gemachte Teigtaschen mit Hähnchen, Ají amarillo, Oliven, Ei und Rosinen, im Ofen goldbraun gebacken.",
+        "notes": "Ergibt 12 mittelgroße Empanadas. Teig 30 Minuten kühlen und Füllung vor dem Formen ganz abkühlen lassen. Gegartes Hähnchen verwenden und Reste innerhalb von 2 Stunden kühlen.",
+        "cuisine": "Peruanisch",
+        "course": "Hauptgericht",
+        "difficulty": "Mittel",
+        "excerpt": "Selbst gemachte Teigtaschen mit Hähnchen, Ají amarillo, Oliven, Ei und Rosinen, im Ofen goldbraun gebacken.",
+        "recipe_group_id": "d52d1197-1a2d-4d43-a5da-d24048ad23b6",
+        "language": "de",
+        "public_path": "/de/peruanische-haehnchen-empanadas/",
+        "slug": "peruanische-haehnchen-empanadas",
+        "category": "Hauptgerichte",
+        "servings": 12,
+        "prep_time_minutes": 45,
+        "cook_time_minutes": 25,
+        "total_time_minutes": 105,
+        "ingredients": [
+          {
+            "name": "Weizenmehl",
+            "amount": "500",
+            "unit": "g"
+          },
+          {
+            "name": "Kalte Butter",
+            "amount": "100",
+            "unit": "g"
+          },
+          {
+            "name": "Ei für den Teig",
+            "amount": "1",
+            "unit": ""
+          },
+          {
+            "name": "Kaltes Wasser",
+            "amount": "120",
+            "unit": "ml"
+          },
+          {
+            "name": "Feines Salz",
+            "amount": "5",
+            "unit": "g"
+          },
+          {
+            "name": "Gegartes gezupftes Hähnchen",
+            "amount": "500",
+            "unit": "g"
+          },
+          {
+            "name": "Gehackte rote Zwiebel",
+            "amount": "150",
+            "unit": "g"
+          },
+          {
+            "name": "Gehackter Knoblauch",
+            "amount": "6",
+            "unit": "g"
+          },
+          {
+            "name": "Ají-amarillo-Paste",
+            "amount": "30",
+            "unit": "g"
+          },
+          {
+            "name": "Gehackte hartgekochte Eier",
+            "amount": "2",
+            "unit": ""
+          },
+          {
+            "name": "Rosinen",
+            "amount": "40",
+            "unit": "g"
+          },
+          {
+            "name": "Gehackte schwarze Oliven",
+            "amount": "60",
+            "unit": "g"
+          },
+          {
+            "name": "Pflanzenöl",
+            "amount": "14",
+            "unit": "g"
+          },
+          {
+            "name": "Verquirltes Ei zum Bestreichen",
+            "amount": "1",
+            "unit": ""
+          }
+        ],
+        "steps": [
+          {
+            "title": "Teig machen",
+            "content": "Kalte Butter mit Mehl und Salz zu Streuseln verreiben. Ein Ei und nur so viel kaltes Wasser zugeben, bis der Teig zusammenhält. Als Scheibe 30 Minuten kühlen.",
+            "image_alt": "Empanada-Teig mit Butter und Mehl.",
+            "image_url": "/recetas/empanada-peruana-de-pollo/paso-01-v1.webp"
+          },
+          {
+            "title": "Füllung kochen",
+            "content": "Zwiebel in Öl 5 Minuten anschwitzen. Knoblauch und Ají 1 Minute, dann gegartes Hähnchen 3–4 Minuten mitgaren. Herd ausschalten, Eier, Rosinen und Oliven unterheben; vollständig abkühlen lassen.",
+            "image_alt": "Hähnchenfüllung mit Ají in der Pfanne.",
+            "image_url": "/recetas/empanada-peruana-de-pollo/paso-02-v1.webp"
+          },
+          {
+            "title": "Ausrollen und ausstechen",
+            "content": "Backofen auf 190 °C vorheizen. Teig 2–3 mm dünn ausrollen und zwölf Kreise von etwa 13 cm ausstechen; Reste einmal ausrollen. Füllung kühl halten.",
+            "image_alt": "Teigkreise für Empanadas.",
+            "image_url": "/recetas/empanada-peruana-de-pollo/paso-03-v1.webp"
+          },
+          {
+            "title": "Füllen und verschließen",
+            "content": "Füllung verteilen, ohne zu überfüllen. Ränder leicht anfeuchten, zu Halbmonden falten und mit einer Gabel festdrücken. Auf Backpapier legen und mit Ei bestreichen.",
+            "image_alt": "Verschlossene Empanadas auf dem Blech.",
+            "image_url": "/recetas/empanada-peruana-de-pollo/paso-04-v1.webp"
+          },
+          {
+            "title": "Backen und servieren",
+            "content": "20–25 Minuten goldbraun backen, bis der Teig gar ist und die Füllung in der Mitte 74 °C erreicht. Vor dem Servieren 5 Minuten ruhen lassen.",
+            "image_alt": "Gebackene peruanische Hähnchen-Empanadas.",
+            "image_url": "/recetas/empanada-peruana-de-pollo/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/empanada-peruana-de-pollo/portada-v1.webp",
+        "seo": {
+          "title": "Peruanische Hähnchen-Empanadas aus dem Ofen | Manual de Cocina",
+          "description": "Selbst gemachte Teigtaschen mit Hähnchen, Ají amarillo, Oliven, Ei und Rosinen, im Ofen goldbraun gebacken.",
+          "faq": [
+            {
+              "q": "Kann ich die Füllung vorbereiten?",
+              "a": "Ja, abkühlen und abgedeckt kühlen; mit kalter Füllung formen."
+            },
+            {
+              "q": "Warum platzen Empanadas auf?",
+              "a": "Zu viel Füllung oder schlecht verschlossene Ränder lassen den Teig aufreißen."
+            }
+          ],
+          "image_variants": [
+            "/recetas/empanada-peruana-de-pollo/portada-1x1-v1.webp",
+            "/recetas/empanada-peruana-de-pollo/portada-4x3-v1.webp",
+            "/recetas/empanada-peruana-de-pollo/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 334,
+          "protein_g": 19.5,
+          "carbs_g": 36.4,
+          "fat_g": 11.8,
+          "saturated_fat_g": 5.5,
+          "fiber_g": 1.6,
+          "sugar_g": 3.0,
+          "sodium_mg": 255,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g × grams / 100) / 12 servings; 5 g salt × 0.393 sodium fraction / 12",
+          "serving_size": "1 serving",
+          "note": "Schätzwert pro Empanada; tatsächlich verbleibendes Ei und Ají-Produkte variieren."
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>Selbst gemachte Teigtaschen mit Hähnchen, Ají amarillo, Oliven, Ei und Rosinen, im Ofen goldbraun gebacken.</p>",
+        "keywords": [
+          "Peruanische Hähnchen-Empanadas aus dem Ofen",
+          "Hauptgerichte",
+          "Peruanisch"
+        ],
+        "gallery": [],
+        "video_urls": []
+      },
+      {
+        "title": "Empanadas péruviennes au poulet",
+        "summary": "Des chaussons maison au poulet, ají amarillo, olives, œuf et raisins, cuits au four jusqu’à belle coloration.",
+        "notes": "Pour 12 empanadas moyennes. Réfrigérer la pâte 30 minutes et refroidir complètement la farce avant de façonner. Utiliser du poulet déjà cuit et réfrigérer les restes sous 2 heures.",
+        "cuisine": "Péruvienne",
+        "course": "Plat principal",
+        "difficulty": "Intermédiaire",
+        "excerpt": "Des chaussons maison au poulet, ají amarillo, olives, œuf et raisins, cuits au four jusqu’à belle coloration.",
+        "recipe_group_id": "d52d1197-1a2d-4d43-a5da-d24048ad23b6",
+        "language": "fr",
+        "public_path": "/fr/empanadas-peruviennes-au-poulet/",
+        "slug": "empanadas-peruviennes-au-poulet",
+        "category": "Plats principaux",
+        "servings": 12,
+        "prep_time_minutes": 45,
+        "cook_time_minutes": 25,
+        "total_time_minutes": 105,
+        "ingredients": [
+          {
+            "name": "Farine de blé",
+            "amount": "500",
+            "unit": "g"
+          },
+          {
+            "name": "Beurre froid",
+            "amount": "100",
+            "unit": "g"
+          },
+          {
+            "name": "Œuf pour la pâte",
+            "amount": "1",
+            "unit": ""
+          },
+          {
+            "name": "Eau froide",
+            "amount": "120",
+            "unit": "ml"
+          },
+          {
+            "name": "Sel fin",
+            "amount": "5",
+            "unit": "g"
+          },
+          {
+            "name": "Poulet cuit effiloché",
+            "amount": "500",
+            "unit": "g"
+          },
+          {
+            "name": "Oignon rouge haché",
+            "amount": "150",
+            "unit": "g"
+          },
+          {
+            "name": "Ail haché",
+            "amount": "6",
+            "unit": "g"
+          },
+          {
+            "name": "Pâte de piment ají amarillo",
+            "amount": "30",
+            "unit": "g"
+          },
+          {
+            "name": "Œufs durs hachés",
+            "amount": "2",
+            "unit": ""
+          },
+          {
+            "name": "Raisins secs",
+            "amount": "40",
+            "unit": "g"
+          },
+          {
+            "name": "Olives noires hachées",
+            "amount": "60",
+            "unit": "g"
+          },
+          {
+            "name": "Huile végétale",
+            "amount": "14",
+            "unit": "g"
+          },
+          {
+            "name": "Œuf battu pour dorer",
+            "amount": "1",
+            "unit": ""
+          }
+        ],
+        "steps": [
+          {
+            "title": "Préparer la pâte",
+            "content": "Sabler farine, sel et beurre froid. Incorporer un œuf puis juste assez d’eau froide pour rassembler la pâte. Former un disque et réfrigérer 30 minutes.",
+            "image_alt": "Pâte à empanadas avec beurre et farine.",
+            "image_url": "/recetas/empanada-peruana-de-pollo/paso-01-v1.webp"
+          },
+          {
+            "title": "Cuire la farce",
+            "content": "Faire revenir l’oignon dans l’huile 5 minutes. Ajouter ail et ají 1 minute, puis le poulet cuit 3 à 4 minutes. Hors du feu, incorporer œufs durs, raisins et olives; laisser refroidir complètement.",
+            "image_alt": "Farce au poulet et ají dans une poêle.",
+            "image_url": "/recetas/empanada-peruana-de-pollo/paso-02-v1.webp"
+          },
+          {
+            "title": "Étaler et découper",
+            "content": "Préchauffer à 190 °C. Étaler à 2–3 mm et découper douze disques d’environ 13 cm, en réétalant les chutes une fois. Garder la farce froide.",
+            "image_alt": "Disques de pâte découpés.",
+            "image_url": "/recetas/empanada-peruana-de-pollo/paso-03-v1.webp"
+          },
+          {
+            "title": "Garnir et fermer",
+            "content": "Répartir la farce sans excès. Humecter les bords, plier en demi-lunes et sceller à la fourchette. Déposer sur une plaque chemisée et dorer à l’œuf.",
+            "image_alt": "Empanadas fermées sur une plaque.",
+            "image_url": "/recetas/empanada-peruana-de-pollo/paso-04-v1.webp"
+          },
+          {
+            "title": "Cuire et servir",
+            "content": "Cuire 20 à 25 minutes jusqu’à ce que la pâte soit dorée et cuite, et que le centre de la farce atteigne 74 °C. Reposer 5 minutes.",
+            "image_alt": "Empanadas péruviennes au poulet dorées.",
+            "image_url": "/recetas/empanada-peruana-de-pollo/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/empanada-peruana-de-pollo/portada-v1.webp",
+        "seo": {
+          "title": "Empanadas péruviennes au poulet | Manual de Cocina",
+          "description": "Des chaussons maison au poulet, ají amarillo, olives, œuf et raisins, cuits au four jusqu’à belle coloration.",
+          "faq": [
+            {
+              "q": "Peut-on préparer la farce la veille ?",
+              "a": "Oui, la refroidir et la garder couverte au réfrigérateur; façonner avec la farce froide."
+            },
+            {
+              "q": "Pourquoi les empanadas s’ouvrent-elles ?",
+              "a": "Une farce trop abondante ou des bords mal soudés peuvent fendre la pâte."
+            }
+          ],
+          "image_variants": [
+            "/recetas/empanada-peruana-de-pollo/portada-1x1-v1.webp",
+            "/recetas/empanada-peruana-de-pollo/portada-4x3-v1.webp",
+            "/recetas/empanada-peruana-de-pollo/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 334,
+          "protein_g": 19.5,
+          "carbs_g": 36.4,
+          "fat_g": 11.8,
+          "saturated_fat_g": 5.5,
+          "fiber_g": 1.6,
+          "sugar_g": 3.0,
+          "sodium_mg": 255,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g × grams / 100) / 12 servings; 5 g salt × 0.393 sodium fraction / 12",
+          "serving_size": "1 serving",
+          "note": "Estimation par empanada; la dorure retenue et les marques de piment varient."
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>Des chaussons maison au poulet, ají amarillo, olives, œuf et raisins, cuits au four jusqu’à belle coloration.</p>",
+        "keywords": [
+          "Empanadas péruviennes au poulet",
+          "Plats principaux",
+          "Péruvienne"
+        ],
+        "gallery": [],
+        "video_urls": []
+      },
+      {
+        "title": "Empanada peruviana di pollo al forno",
+        "summary": "Empanadas di pasta fatta in casa con pollo, ají amarillo, olive, uovo e uvetta, cotte al forno fino a doratura.",
+        "notes": "Per 12 empanadas medie. Raffredda la pasta 30 minuti e il ripieno completamente prima di formare. Usa pollo già cotto; refrigera gli avanzi entro 2 ore.",
+        "cuisine": "Peruviana",
+        "course": "Piatto principale",
+        "difficulty": "Media",
+        "excerpt": "Empanadas di pasta fatta in casa con pollo, ají amarillo, olive, uovo e uvetta, cotte al forno fino a doratura.",
+        "recipe_group_id": "d52d1197-1a2d-4d43-a5da-d24048ad23b6",
+        "language": "it",
+        "public_path": "/it/empanada-pollo-peruviana/",
+        "slug": "empanada-pollo-peruviana",
+        "category": "Secondi piatti",
+        "servings": 12,
+        "prep_time_minutes": 45,
+        "cook_time_minutes": 25,
+        "total_time_minutes": 105,
+        "ingredients": [
+          {
+            "name": "Farina di grano",
+            "amount": "500",
+            "unit": "g"
+          },
+          {
+            "name": "Burro freddo",
+            "amount": "100",
+            "unit": "g"
+          },
+          {
+            "name": "Uovo per l’impasto",
+            "amount": "1",
+            "unit": ""
+          },
+          {
+            "name": "Acqua fredda",
+            "amount": "120",
+            "unit": "ml"
+          },
+          {
+            "name": "Sale fino",
+            "amount": "5",
+            "unit": "g"
+          },
+          {
+            "name": "Pollo cotto sfilacciato",
+            "amount": "500",
+            "unit": "g"
+          },
+          {
+            "name": "Cipolla rossa tritata",
+            "amount": "150",
+            "unit": "g"
+          },
+          {
+            "name": "Aglio tritato",
+            "amount": "6",
+            "unit": "g"
+          },
+          {
+            "name": "Pasta di ají amarillo",
+            "amount": "30",
+            "unit": "g"
+          },
+          {
+            "name": "Uova sode tritate",
+            "amount": "2",
+            "unit": ""
+          },
+          {
+            "name": "Uvetta",
+            "amount": "40",
+            "unit": "g"
+          },
+          {
+            "name": "Olive nere tritate",
+            "amount": "60",
+            "unit": "g"
+          },
+          {
+            "name": "Olio vegetale",
+            "amount": "14",
+            "unit": "g"
+          },
+          {
+            "name": "Uovo sbattuto per spennellare",
+            "amount": "1",
+            "unit": ""
+          }
+        ],
+        "steps": [
+          {
+            "title": "Prepara la pasta",
+            "content": "Lavora farina, sale e burro freddo fino a ottenere briciole. Aggiungi un uovo e poca acqua fredda, quanto basta per unire. Forma un disco e raffredda 30 minuti.",
+            "image_alt": "Impasto per empanadas con burro e farina.",
+            "image_url": "/recetas/empanada-peruana-de-pollo/paso-01-v1.webp"
+          },
+          {
+            "title": "Cuoci il ripieno",
+            "content": "Soffriggi la cipolla nell’olio per 5 minuti. Aggiungi aglio e ají per 1 minuto e poi il pollo cotto per 3–4 minuti. Spegni, unisci uova sode, uvetta e olive; fai raffreddare completamente.",
+            "image_alt": "Ripieno di pollo e ají in padella.",
+            "image_url": "/recetas/empanada-peruana-de-pollo/paso-02-v1.webp"
+          },
+          {
+            "title": "Stendi e taglia",
+            "content": "Preriscalda il forno a 190 °C. Stendi la pasta a 2–3 mm e ricava dodici dischi da circa 13 cm; stendi i ritagli una sola volta. Tieni il ripieno freddo.",
+            "image_alt": "Dischi di pasta per empanadas.",
+            "image_url": "/recetas/empanada-peruana-de-pollo/paso-03-v1.webp"
+          },
+          {
+            "title": "Farcisci e sigilla",
+            "content": "Distribuisci il ripieno senza esagerare. Bagna i bordi, piega a mezzaluna e sigilla con la forchetta. Metti sulla teglia rivestita e spennella con uovo.",
+            "image_alt": "Empanadas chiuse sulla teglia.",
+            "image_url": "/recetas/empanada-peruana-de-pollo/paso-04-v1.webp"
+          },
+          {
+            "title": "Cuoci e servi",
+            "content": "Cuoci 20–25 minuti finché la pasta è dorata e cotta e il centro del ripieno arriva a 74 °C. Lascia riposare 5 minuti.",
+            "image_alt": "Empanadas peruviane al pollo cotte.",
+            "image_url": "/recetas/empanada-peruana-de-pollo/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/empanada-peruana-de-pollo/portada-v1.webp",
+        "seo": {
+          "title": "Empanada peruviana di pollo al forno | Manual de Cocina",
+          "description": "Empanadas di pasta fatta in casa con pollo, ají amarillo, olive, uovo e uvetta, cotte al forno fino a doratura.",
+          "faq": [
+            {
+              "q": "Posso preparare il ripieno prima?",
+              "a": "Sì, raffreddalo e conservalo coperto in frigorifero; usalo freddo."
+            },
+            {
+              "q": "Perché si aprono in forno?",
+              "a": "Troppo ripieno o bordi non ben sigillati possono far rompere la pasta."
+            }
+          ],
+          "image_variants": [
+            "/recetas/empanada-peruana-de-pollo/portada-1x1-v1.webp",
+            "/recetas/empanada-peruana-de-pollo/portada-4x3-v1.webp",
+            "/recetas/empanada-peruana-de-pollo/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 334,
+          "protein_g": 19.5,
+          "carbs_g": 36.4,
+          "fat_g": 11.8,
+          "saturated_fat_g": 5.5,
+          "fiber_g": 1.6,
+          "sugar_g": 3.0,
+          "sodium_mg": 255,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g × grams / 100) / 12 servings; 5 g salt × 0.393 sodium fraction / 12",
+          "serving_size": "1 serving",
+          "note": "Stima per empanada; la doratura rimasta e il tipo di ají variano."
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>Empanadas di pasta fatta in casa con pollo, ají amarillo, olive, uovo e uvetta, cotte al forno fino a doratura.</p>",
+        "keywords": [
+          "Empanada peruviana di pollo al forno",
+          "Secondi piatti",
+          "Peruviana"
+        ],
+        "gallery": [],
+        "video_urls": []
+      },
+      {
+        "title": "ペルー風チキンエンパナーダ",
+        "summary": "鶏肉、アヒ・アマリージョ、オリーブ、卵、レーズンを手作り生地で包み、こんがり焼くペルー風のエンパナーダ。",
+        "notes": "中サイズ12個分。生地を30分冷やし、具は完全に冷ましてから包む。加熱済みの鶏肉を使用し、残りは2時間以内に冷蔵する。",
+        "cuisine": "ペルー風",
+        "course": "主菜",
+        "difficulty": "中級",
+        "excerpt": "鶏肉、アヒ・アマリージョ、オリーブ、卵、レーズンを手作り生地で包み、こんがり焼くペルー風のエンパナーダ。",
+        "recipe_group_id": "d52d1197-1a2d-4d43-a5da-d24048ad23b6",
+        "language": "ja",
+        "public_path": "/ja/ペルー風チキンエンパナーダ/",
+        "slug": "ペルー風チキンエンパナーダ",
+        "category": "主菜",
+        "servings": 12,
+        "prep_time_minutes": 45,
+        "cook_time_minutes": 25,
+        "total_time_minutes": 105,
+        "ingredients": [
+          {
+            "name": "小麦粉",
+            "amount": "500",
+            "unit": "g"
+          },
+          {
+            "name": "冷たいバター",
+            "amount": "100",
+            "unit": "g"
+          },
+          {
+            "name": "生地用の卵",
+            "amount": "1",
+            "unit": ""
+          },
+          {
+            "name": "冷水",
+            "amount": "120",
+            "unit": "ml"
+          },
+          {
+            "name": "細塩",
+            "amount": "5",
+            "unit": "g"
+          },
+          {
+            "name": "加熱済みのほぐした鶏肉",
+            "amount": "500",
+            "unit": "g"
+          },
+          {
+            "name": "刻んだ赤玉ねぎ",
+            "amount": "150",
+            "unit": "g"
+          },
+          {
+            "name": "刻んだにんにく",
+            "amount": "6",
+            "unit": "g"
+          },
+          {
+            "name": "アヒ・アマリージョのペースト",
+            "amount": "30",
+            "unit": "g"
+          },
+          {
+            "name": "刻んだゆで卵",
+            "amount": "2",
+            "unit": ""
+          },
+          {
+            "name": "レーズン",
+            "amount": "40",
+            "unit": "g"
+          },
+          {
+            "name": "刻んだ黒オリーブ",
+            "amount": "60",
+            "unit": "g"
+          },
+          {
+            "name": "植物油",
+            "amount": "14",
+            "unit": "g"
+          },
+          {
+            "name": "つや出し用の溶き卵",
+            "amount": "1",
+            "unit": ""
+          }
+        ],
+        "steps": [
+          {
+            "title": "生地を作る",
+            "content": "小麦粉、塩、冷たいバターをそぼろ状に混ぜる。卵を加え、冷水を少しずつ加えてまとめる。円盤状にして30分冷蔵する。",
+            "image_alt": "バターと小麦粉で生地を作る。",
+            "image_url": "/recetas/empanada-peruana-de-pollo/paso-01-v1.webp"
+          },
+          {
+            "title": "具を炒める",
+            "content": "玉ねぎを油で5分炒め、にんにくとアヒを1分、加熱済み鶏肉を3〜4分炒める。火を止めてゆで卵、レーズン、オリーブを混ぜ、完全に冷ます。",
+            "image_alt": "フライパンの鶏肉とアヒの具。",
+            "image_url": "/recetas/empanada-peruana-de-pollo/paso-02-v1.webp"
+          },
+          {
+            "title": "生地を伸ばす",
+            "content": "オーブンを190℃に予熱。生地を2〜3 mmに伸ばし、直径約13 cmの円を12枚抜く。端切れは一度だけ伸ばし直す。具は冷たく保つ。",
+            "image_alt": "エンパナーダ用の丸い生地。",
+            "image_url": "/recetas/empanada-peruana-de-pollo/paso-03-v1.webp"
+          },
+          {
+            "title": "包んで閉じる",
+            "content": "具を入れすぎないよう分け、縁を湿らせて半月に折り、フォークでしっかり閉じる。天板に並べて溶き卵を塗る。",
+            "image_alt": "天板に並んだ閉じたエンパナーダ。",
+            "image_url": "/recetas/empanada-peruana-de-pollo/paso-04-v1.webp"
+          },
+          {
+            "title": "焼いて盛る",
+            "content": "20〜25分、生地がきつね色に焼け、具の中心が74℃になるまで焼く。5分休ませてから食べる。",
+            "image_alt": "焼き上がったペルー風チキンエンパナーダ。",
+            "image_url": "/recetas/empanada-peruana-de-pollo/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/empanada-peruana-de-pollo/portada-v1.webp",
+        "seo": {
+          "title": "ペルー風チキンエンパナーダ | Manual de Cocina",
+          "description": "鶏肉、アヒ・アマリージョ、オリーブ、卵、レーズンを手作り生地で包み、こんがり焼くペルー風のエンパナーダ。",
+          "faq": [
+            {
+              "q": "具を前日に作れますか？",
+              "a": "はい。冷ましてふたをして冷蔵し、冷たいまま包みます。"
+            },
+            {
+              "q": "焼くと開くのはなぜ？",
+              "a": "具を入れすぎたり縁の接着が弱かったりすると開きます。"
+            }
+          ],
+          "image_variants": [
+            "/recetas/empanada-peruana-de-pollo/portada-1x1-v1.webp",
+            "/recetas/empanada-peruana-de-pollo/portada-4x3-v1.webp",
+            "/recetas/empanada-peruana-de-pollo/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 334,
+          "protein_g": 19.5,
+          "carbs_g": 36.4,
+          "fat_g": 11.8,
+          "saturated_fat_g": 5.5,
+          "fiber_g": 1.6,
+          "sugar_g": 3.0,
+          "sodium_mg": 255,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g × grams / 100) / 12 servings; 5 g salt × 0.393 sodium fraction / 12",
+          "serving_size": "1 serving",
+          "note": "1個分の概算。表面に残る卵とアヒの製品により変わります。"
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>鶏肉、アヒ・アマリージョ、オリーブ、卵、レーズンを手作り生地で包み、こんがり焼くペルー風のエンパナーダ。</p>",
+        "keywords": [
+          "ペルー風チキンエンパナーダ",
+          "主菜",
+          "ペルー風"
+        ],
+        "gallery": [],
+        "video_urls": []
+      },
+      {
+        "title": "Empanadas peruanas de frango",
+        "summary": "Empanadas de massa caseira com frango, ají amarillo, azeitonas, ovo e passas, assadas até dourar.",
+        "notes": "Rende 12 unidades médias. Refrigere a massa 30 minutos e arrefeça o recheio antes de montar. Use frango já cozinhado e refrigere sobras em 2 horas.",
+        "cuisine": "Peruana",
+        "course": "Prato principal",
+        "difficulty": "Intermédia",
+        "excerpt": "Empanadas de massa caseira com frango, ají amarillo, azeitonas, ovo e passas, assadas até dourar.",
+        "recipe_group_id": "d52d1197-1a2d-4d43-a5da-d24048ad23b6",
+        "language": "pt",
+        "public_path": "/pt/empanadas-peruanas-de-frango/",
+        "slug": "empanadas-peruanas-de-frango",
+        "category": "Pratos principais",
+        "servings": 12,
+        "prep_time_minutes": 45,
+        "cook_time_minutes": 25,
+        "total_time_minutes": 105,
+        "ingredients": [
+          {
+            "name": "Farinha de trigo",
+            "amount": "500",
+            "unit": "g"
+          },
+          {
+            "name": "Manteiga fria",
+            "amount": "100",
+            "unit": "g"
+          },
+          {
+            "name": "Ovo para a massa",
+            "amount": "1",
+            "unit": ""
+          },
+          {
+            "name": "Água fria",
+            "amount": "120",
+            "unit": "ml"
+          },
+          {
+            "name": "Sal fino",
+            "amount": "5",
+            "unit": "g"
+          },
+          {
+            "name": "Frango cozido desfiado",
+            "amount": "500",
+            "unit": "g"
+          },
+          {
+            "name": "Cebola roxa picada",
+            "amount": "150",
+            "unit": "g"
+          },
+          {
+            "name": "Alho picado",
+            "amount": "6",
+            "unit": "g"
+          },
+          {
+            "name": "Pasta de ají amarillo",
+            "amount": "30",
+            "unit": "g"
+          },
+          {
+            "name": "Ovos cozidos picados",
+            "amount": "2",
+            "unit": ""
+          },
+          {
+            "name": "Passas",
+            "amount": "40",
+            "unit": "g"
+          },
+          {
+            "name": "Azeitonas pretas picadas",
+            "amount": "60",
+            "unit": "g"
+          },
+          {
+            "name": "Óleo vegetal",
+            "amount": "14",
+            "unit": "g"
+          },
+          {
+            "name": "Ovo batido para pincelar",
+            "amount": "1",
+            "unit": ""
+          }
+        ],
+        "steps": [
+          {
+            "title": "Faça a massa",
+            "content": "Misture farinha e sal com manteiga fria até formar migalhas. Junte um ovo e água fria aos poucos até unir. Faça um disco e refrigere 30 minutos.",
+            "image_alt": "Massa de empanada com manteiga e farinha.",
+            "image_url": "/recetas/empanada-peruana-de-pollo/paso-01-v1.webp"
+          },
+          {
+            "title": "Cozinhe o recheio",
+            "content": "Refogue a cebola no óleo 5 minutos. Junte alho e ají 1 minuto e o frango cozido 3–4 minutos. Desligue, misture ovos cozidos, passas e azeitonas; arrefeça totalmente.",
+            "image_alt": "Recheio de frango e ají na frigideira.",
+            "image_url": "/recetas/empanada-peruana-de-pollo/paso-02-v1.webp"
+          },
+          {
+            "title": "Estenda e corte",
+            "content": "Aqueça o forno a 190 °C. Estenda a massa a 2–3 mm e corte doze discos de 13 cm; volte a estender sobras uma vez. Mantenha o recheio frio.",
+            "image_alt": "Discos de massa para empanadas.",
+            "image_url": "/recetas/empanada-peruana-de-pollo/paso-03-v1.webp"
+          },
+          {
+            "title": "Recheie e feche",
+            "content": "Distribua o recheio sem exagerar. Humedeça as bordas, dobre em meia-lua e feche com um garfo. Ponha num tabuleiro forrado e pincele com ovo.",
+            "image_alt": "Empanadas fechadas no tabuleiro.",
+            "image_url": "/recetas/empanada-peruana-de-pollo/paso-04-v1.webp"
+          },
+          {
+            "title": "Asse e sirva",
+            "content": "Asse 20–25 minutos até a massa ficar dourada e cozida e o centro do recheio atingir 74 °C. Repouse 5 minutos.",
+            "image_alt": "Empanadas peruanas de frango assadas.",
+            "image_url": "/recetas/empanada-peruana-de-pollo/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/empanada-peruana-de-pollo/portada-v1.webp",
+        "seo": {
+          "title": "Empanadas peruanas de frango | Manual de Cocina",
+          "description": "Empanadas de massa caseira com frango, ají amarillo, azeitonas, ovo e passas, assadas até dourar.",
+          "faq": [
+            {
+              "q": "Posso fazer o recheio antes?",
+              "a": "Sim. Arrefeça e refrigere tapado; monte com recheio frio."
+            },
+            {
+              "q": "Porque abrem no forno?",
+              "a": "Recheio excessivo ou bordas mal fechadas podem abrir a massa."
+            }
+          ],
+          "image_variants": [
+            "/recetas/empanada-peruana-de-pollo/portada-1x1-v1.webp",
+            "/recetas/empanada-peruana-de-pollo/portada-4x3-v1.webp",
+            "/recetas/empanada-peruana-de-pollo/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 334,
+          "protein_g": 19.5,
+          "carbs_g": 36.4,
+          "fat_g": 11.8,
+          "saturated_fat_g": 5.5,
+          "fiber_g": 1.6,
+          "sugar_g": 3.0,
+          "sodium_mg": 255,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g × grams / 100) / 12 servings; 5 g salt × 0.393 sodium fraction / 12",
+          "serving_size": "1 serving",
+          "note": "Estimativa por empanada; o ovo retido e a marca de ají podem variar."
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>Empanadas de massa caseira com frango, ají amarillo, azeitonas, ovo e passas, assadas até dourar.</p>",
+        "keywords": [
+          "Empanadas peruanas de frango",
+          "Pratos principais",
+          "Peruana"
+        ],
+        "gallery": [],
+        "video_urls": []
+      }
+    ]
+  }
+}
