@@ -24,6 +24,8 @@ function form(category:string, published=false) {
   if(published) f.set('published','on')
   return f
 }
+const edit = form('Sopas y cremas'); edit.delete('public_path')
+assert.equal(readRecipeForm(edit,'es').success,true)
 assert.equal(readRecipeForm(form('Sopas'),'es').success,false)
 assert.equal(readRecipeForm(form('Soups & creams'),'es').success,false)
 assert.equal(readRecipeForm(form(''),'es').success,true)

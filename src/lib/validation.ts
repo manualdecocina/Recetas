@@ -127,7 +127,7 @@ export function stepsToText(steps: RecipeStep[]): string {
 export function readRecipeForm(formData: FormData, language: RecipeLanguage) {
   const parsed = recipeFieldsSchema.safeParse({
     slug: formData.get('slug'),
-    public_path: formData.get('public_path'),
+    public_path: formData.get('public_path') ?? '',
     title: formData.get('title'),
     excerpt: formData.get('excerpt'),
     category: formData.get('category'),
