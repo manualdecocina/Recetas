@@ -30,7 +30,7 @@ Once categorías cerradas, derivadas de una sola fuente en src/lib/categories.ts
 
 ## Integridad y prevención
 
-29 etiquetas abreviadas/variantes se normalizan en registros publicados. No se cambia published, published_at, ready_at, URL, grupo, texto editorial, imágenes ni ingredientes. El snapshot público antes del cambio y el detalle de las 29 correcciones están en CATEGORIAS-RECONCILIACION-20261005-BEFORE.json.
+Se detectaron 43 versiones publicadas sin correspondencia con la taxonomía previa: 29 etiquetas abreviadas/variantes y 14 versiones de las dos recetas de Pastas. Las 29 etiquetas se normalizan; las 14 versiones de Pastas quedan integradas al incorporar explícitamente esa categoría. No se cambia published, published_at, ready_at, URL, grupo, texto editorial, imágenes ni ingredientes. El snapshot público antes del cambio y el detalle de las 29 correcciones están en CATEGORIAS-RECONCILIACION-20261005-BEFORE.json.
 
 El índice y la home muestran todas las categorías previstas, incluso cuando estén vacías. Las tarjetas usan nombres exactos de la fuente canónica y enlazan a su categoría. Una categoría de filtro desconocida devuelve 404; antes ignoraba el filtro y mostraba todo el catálogo.
 
@@ -45,4 +45,12 @@ Se conservaron los 166 borradores sin publicarlos. Sus etiquetas históricas pen
 - Prueba real en base de datos de rechazos de categoría desconocida, nula y de otro idioma: PASS; las escrituras fallidas se revierten por subtransacción.
 - Total publicado después de la migración: 301.
 - Advisories: ningún nuevo aviso de esquema/RLS. Advertencia previa de protección de contraseñas filtradas sin cambios, fuera de este alcance.
-- Verificación HTTP integral sobre preview: pendiente de despliegue; no se declara el cierre hasta completar esta comprobación.
+- Verificación HTTP integral sobre preview: PASS — 490/490 comprobaciones, cero errores. Se recorrieron las 301 páginas de recetas, 77 páginas de categoría, 77 filtros, siete homes, siete índices de categoría, catorce páginas de catálogo y siete pruebas de filtro inválido.
+- Las 301 fichas coinciden con su categoría/breadcrumb y Recipe JSON-LD; todas las tarjetas, incluidas relacionadas, muestran y enlazan el nombre canónico.
+- Los listados contienen exactamente las 43 recetas por idioma, sin duplicados ni omisiones. Las 77 categorías y sus 77 filtros contienen exactamente las recetas correspondientes, con conteos reales.
+- Pastas y Desayunos y brunch aparecen en índices/home en los siete idiomas. Lentejas, Espagueti, Canelones, Tostadas y Lumpias verificadas específicamente.
+- CI de la implementación 5cfb0baea4c62546b4c24dc83a15f80e102efb00: quality PASS (typecheck, tests y build); implementación inicial 82df2c3: quality y lighthouse PASS.
+- Base de datos final: 301 versiones publicadas, 166 borradores, cero altas o bajas de publicación. La corrección no ejecuta el siguiente lote de recetas.
+- Evidencia por ruta: CATEGORIAS-RECONCILIACION-20261005-HTTP-QA.json.
+
+Estado: COMPLETADO Y VERIFICADO EN PREVIEW.
