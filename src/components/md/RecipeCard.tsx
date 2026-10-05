@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { recipeImageSrc } from '@/lib/recipe-media';
 import type { MdRecipeCardData } from './md-types';
 import { getMdCopy } from '@/lib/copy';
 import { normalizePublicPath } from '@/lib/site';
@@ -18,7 +19,7 @@ export default function RecipeCard({ recipe, priority = false }: {
     <article className="md-recipe-card">
       <Link className="md-card-photo-link" href={href} tabIndex={-1}>
         {recipe.image_url ? (
-          <Image className="md-card-photo" src={recipe.image_url} alt={`${t.photoOf} ${recipe.title}`} width={640} height={480}
+          <Image className="md-card-photo" src={recipeImageSrc(recipe.image_url)} alt={`${t.photoOf} ${recipe.title}`} width={640} height={480}
             sizes={CARD_SIZES} priority={priority} loading={priority ? undefined : 'lazy'}
             fetchPriority={priority ? 'high' : 'low'} quality={65} />
         ) : (

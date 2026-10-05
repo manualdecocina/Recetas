@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { recipeImageSrc } from '@/lib/recipe-media';
 import type { MdLanguage, MdRecipeCardData } from './md-types';
 import type { MdCategorySummary } from './CategoryViews';
 import type { MdIngredientSummary } from './IngredientViews';
@@ -39,7 +40,7 @@ export default function HomePageView({ lang, data }: { lang: MdLanguage; data: M
           {data.featured && (
             <figure className="md-home-hero-figure">
               <Link href={normalizePublicPath(data.featured.public_path)} tabIndex={-1}>
-                {data.featured.image_url ? <Image className="md-home-hero-photo" src={data.featured.image_url}
+                {data.featured.image_url ? <Image className="md-home-hero-photo" src={recipeImageSrc(data.featured.image_url)}
                   alt={`${t.photoOf} ${data.featured.title}`} width={900} height={675}
                   fetchPriority="high" loading="eager" quality={70}
                   sizes="(max-width: 899px) calc(100vw - 36px), 55vw" /> : (
