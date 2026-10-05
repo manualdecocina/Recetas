@@ -1,0 +1,958 @@
+{
+  "entity": "E011",
+  "status": "ready_for_preview",
+  "recipe_group_id": "feb86ff3-2fd8-4a3f-8877-0ecc975fc816",
+  "source_policy": "Original rice horchata recipe and localized prose; the Spanish source supplies historical identity only. TranslatePress _trp_automatically_translated_slug_* mapping on source post 8839 ties the DE/EN/FR/IT/JA URL variants to the same Spanish rice preparation. PT is a new localized URL. No original WordPress body text reused.",
+  "kitchen_test_claimed": false,
+  "sources": [
+    {
+      "url": "https://manualdecocina.com/receta-de-horchata/",
+      "purpose": "Verify rice-based historical entity, not a source of reused prose."
+    },
+    {
+      "url": "https://www.foodsafety.gov/blog/game-day-food-safety-tips",
+      "purpose": "Refrigeration at 4 °C or below and cold holding."
+    }
+  ],
+  "nutrition_calculation": {
+    "dataset": "USDA FoodData Central, SR Legacy April 2018",
+    "dataset_sha256": "b80817294b8850530aaedf2e515c02593b1824f763a0ff356e5c2081643e6fd0",
+    "method": "sum(per_100g * grams_retained / 100) / 6 servings",
+    "inputs": [
+      {
+        "fdc_id": "169756",
+        "description": "Rice, white, long-grain, regular, raw, unenriched",
+        "grams_used_in_estimate": 50,
+        "per_100g": {
+          "sugar_g": 0.12,
+          "saturated_fat_g": 0.18,
+          "protein_g": 7.13,
+          "fiber_g": 1.3,
+          "sodium_mg": 5.0,
+          "fat_g": 0.66,
+          "carbs_g": 79.95,
+          "calories": 365.0
+        }
+      },
+      {
+        "fdc_id": "169655",
+        "description": "Sugars, granulated",
+        "grams_used_in_estimate": 80,
+        "per_100g": {
+          "protein_g": 0.0,
+          "sodium_mg": 1.0,
+          "fat_g": 0.0,
+          "calories": 387.0,
+          "saturated_fat_g": 0.0,
+          "sugar_g": 99.8,
+          "carbs_g": 99.98,
+          "fiber_g": 0.0
+        }
+      },
+      {
+        "fdc_id": "173471",
+        "description": "Vanilla extract",
+        "grams_used_in_estimate": 5,
+        "per_100g": {
+          "fat_g": 0.06,
+          "carbs_g": 12.65,
+          "calories": 288.0,
+          "protein_g": 0.06,
+          "fiber_g": 0.0,
+          "sodium_mg": 9.0,
+          "saturated_fat_g": 0.01,
+          "sugar_g": 12.65
+        }
+      }
+    ],
+    "assumptions": "200 g dry rice used; model assumes 25% of the dry rice solids (50 g) enters the drink after fine straining, 80 g sugar and 5 g vanilla retained. This is not a measured extraction yield; actual drink nutrition may differ substantially. Cinnamon and ice excluded."
+  },
+  "images": {
+    "method": "built-in image_gen",
+    "cover_reused_for_final_step": true,
+    "prompts": [
+      {
+        "name": "paso-01",
+        "prompt": "Use case: photorealistic-natural. Asset type: one coherent step photo for a rice horchata recipe website. Same bright home kitchen, pale stone worktop, soft daylight from left, natural cream and warm cinnamon tones. Mexican-style rice horchata made with white rice, water, a cinnamon stick, sugar and vanilla, no dairy, no chufa/tiger nuts, no nuts. Landscape 4:3 with generous framing; editorial food photography, realistic textures. No text, logos, watermark, collage, multiple panels, labels, extra ingredients. A close overhead scene of rinsed uncooked white rice submerged in clear water in a wide transparent glass bowl, one whole cinnamon stick soaking with it. A small hand gently submerging the rice; realistic grain scale; no cream or milk."
+      },
+      {
+        "name": "paso-02",
+        "prompt": "Use case: photorealistic-natural. Asset type: one coherent step photo for a rice horchata recipe website. Same bright home kitchen, pale stone worktop, soft daylight from left, natural cream and warm cinnamon tones. Mexican-style rice horchata made with white rice, water, a cinnamon stick, sugar and vanilla, no dairy, no chufa/tiger nuts, no nuts. Landscape 4:3 with generous framing; editorial food photography, realistic textures. No text, logos, watermark, collage, multiple panels, labels, extra ingredients. A clear glass blender jar on a base blending soaked white rice and water into an opaque off-white liquid. A few rice grains visible through glass near the bottom. The cinnamon stick has been removed and rests separately on a small dish; no dairy."
+      },
+      {
+        "name": "paso-03",
+        "prompt": "Use case: photorealistic-natural. Asset type: one coherent step photo for a rice horchata recipe website. Same bright home kitchen, pale stone worktop, soft daylight from left, natural cream and warm cinnamon tones. Mexican-style rice horchata made with white rice, water, a cinnamon stick, sugar and vanilla, no dairy, no chufa/tiger nuts, no nuts. Landscape 4:3 with generous framing; editorial food photography, realistic textures. No text, logos, watermark, collage, multiple panels, labels, extra ingredients. A very fine mesh strainer over a large transparent glass pitcher; cloudy rice liquid being poured from a blender jar through it, fine damp rice pulp collecting in mesh. Realistic filtering action, no milk."
+      },
+      {
+        "name": "paso-04",
+        "prompt": "Use case: photorealistic-natural. Asset type: one coherent step photo for a rice horchata recipe website. Same bright home kitchen, pale stone worktop, soft daylight from left, natural cream and warm cinnamon tones. Mexican-style rice horchata made with white rice, water, a cinnamon stick, sugar and vanilla, no dairy, no chufa/tiger nuts, no nuts. Landscape 4:3 with generous framing; editorial food photography, realistic textures. No text, logos, watermark, collage, multiple panels, labels, extra ingredients. A transparent glass pitcher full of strained pale ivory rice horchata on pale stone. A spoon stirring white sugar into the pitcher, a small glass with measured sugar beside it and a tiny bottle of vanilla extract closed in background. No dairy and no additional garnish."
+      },
+      {
+        "name": "portada",
+        "prompt": "Use case: photorealistic-natural. Asset type: one coherent step photo for a rice horchata recipe website. Same bright home kitchen, pale stone worktop, soft daylight from left, natural cream and warm cinnamon tones. Mexican-style rice horchata made with white rice, water, a cinnamon stick, sugar and vanilla, no dairy, no chufa/tiger nuts, no nuts. Landscape 4:3 with generous framing; editorial food photography, realistic textures. No text, logos, watermark, collage, multiple panels, labels, extra ingredients. Two simple clear glasses of chilled ivory rice horchata with a few visible ice cubes in each, large transparent pitcher of the same drink behind. A small bowl of uncooked white rice and one cinnamon stick beside pitcher to show ingredients, no milk cartons, no chufa/tiger nuts. No visible cinnamon powder. Hero food photo, entire glasses and pitcher in central region with room to crop square or wide."
+      }
+    ],
+    "directory": "public/recetas/horchata-de-arroz",
+    "version": "v1"
+  },
+  "publication": {
+    "environment": "preview",
+    "state": "prepared",
+    "rows": [
+      {
+        "title": "Horchata de arroz casera con canela",
+        "summary": "Una horchata de arroz fresca y sin lácteos: remoja el arroz en frío, licúa, cuela bien y endulza con vainilla. Se sirve con hielo después de enfriarla. La receta rinde seis vasos.",
+        "notes": "Mantén el arroz en remojo dentro de la nevera, a 4 °C o menos, y prepara la bebida con utensilios limpios y agua potable. No licúes la rama de canela; retírala primero. Remueve o agita antes de servir, pues el sedimento puede asentarse. Consume en 24 horas y mantén fría la bebida. El tiempo mínimo incluye 4 horas de remojo y 1 hora de enfriado. La nutrición del arroz colado es una estimación, no una medición.",
+        "cuisine": "Mexicana, horchata de arroz",
+        "course": "Bebida fría",
+        "difficulty": "Fácil",
+        "excerpt": "Una horchata de arroz fresca y sin lácteos: remoja el arroz en frío, licúa, cuela bien y endulza con vainilla. Se sirve con hielo después de enfriarla. La receta rinde seis vasos.",
+        "recipe_group_id": "feb86ff3-2fd8-4a3f-8877-0ecc975fc816",
+        "language": "es",
+        "public_path": "/receta-de-horchata",
+        "slug": "receta-de-horchata",
+        "category": "Bebidas",
+        "servings": 6,
+        "prep_time_minutes": 20,
+        "cook_time_minutes": 0,
+        "total_time_minutes": 320,
+        "ingredients": [
+          {
+            "name": "Arroz blanco crudo",
+            "amount": "200",
+            "unit": "g"
+          },
+          {
+            "name": "Agua potable fría",
+            "amount": "1500",
+            "unit": "ml"
+          },
+          {
+            "name": "Rama de canela",
+            "amount": "1",
+            "unit": "rama"
+          },
+          {
+            "name": "Azúcar",
+            "amount": "80",
+            "unit": "g"
+          },
+          {
+            "name": "Extracto de vainilla",
+            "amount": "5",
+            "unit": "ml"
+          }
+        ],
+        "steps": [
+          {
+            "title": "Enjuaga y remoja",
+            "content": "Enjuaga 200 g de arroz blanco. Ponlo en un recipiente con 500 ml del agua y una rama de canela. Tapa y deja en remojo 4 horas en la nevera a 4 °C o menos.",
+            "image_alt": "Arroz blanco y una rama de canela en remojo en un recipiente de vidrio.",
+            "image_url": "/recetas/horchata-de-arroz/paso-01-v1.webp"
+          },
+          {
+            "title": "Licúa el arroz",
+            "content": "Retira la rama de canela. Licúa el arroz con su agua de remojo y los 1000 ml de agua restantes durante unos 2 minutos hasta que el líquido se vea lechoso. Trabaja en tandas si tu licuadora es pequeña.",
+            "image_alt": "Arroz remojado y agua licuándose hasta formar un líquido blanquecino.",
+            "image_url": "/recetas/horchata-de-arroz/paso-02-v1.webp"
+          },
+          {
+            "title": "Cuela la mezcla",
+            "content": "Pasa la mezcla por una tela limpia o un colador fino colocado sobre una jarra. Presiona suavemente los sólidos para extraer el líquido. Para una textura más fina, vuelve a colar; desecha el bagazo.",
+            "image_alt": "Líquido de arroz filtrándose a través de un colador fino sobre una jarra.",
+            "image_url": "/recetas/horchata-de-arroz/paso-03-v1.webp"
+          },
+          {
+            "title": "Endulza y aromatiza",
+            "content": "Añade 80 g de azúcar y 5 ml de extracto de vainilla al líquido colado. Remueve hasta que el azúcar se disuelva. Prueba antes de servir; si ajustas el dulzor, la nutrición estimada cambiará.",
+            "image_alt": "Azúcar incorporándose a una jarra de horchata de arroz colada.",
+            "image_url": "/recetas/horchata-de-arroz/paso-04-v1.webp"
+          },
+          {
+            "title": "Enfría y sirve",
+            "content": "Refrigera la jarra durante al menos 1 hora. Remueve de nuevo y reparte en seis vasos con hielo. Mantén fría la horchata y consúmela en 24 horas.",
+            "image_alt": "Vasos de horchata de arroz fría con hielo junto a una jarra.",
+            "image_url": "/recetas/horchata-de-arroz/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/horchata-de-arroz/portada-v1.webp",
+        "seo": {
+          "title": "Horchata de arroz casera con canela | Manual de Cocina",
+          "description": "Haz horchata de arroz con canela en cinco pasos ilustrados: remojo frío, licuado, colado y enfriado. Cantidades para seis vasos y consejos de conservación.",
+          "faq": [
+            {
+              "q": "¿Se hace con leche?",
+              "a": "Esta versión es de arroz y agua, sin leche. Algunas recetas usan lácteos; esta no los necesita."
+            },
+            {
+              "q": "¿Por qué queda sedimento en la jarra?",
+              "a": "Parte del arroz molido pasa por el filtro y se asienta. Cuela de nuevo para una textura más fina y remueve antes de servir."
+            }
+          ],
+          "image_variants": [
+            "/recetas/horchata-de-arroz/portada-1x1-v1.webp",
+            "/recetas/horchata-de-arroz/portada-4x3-v1.webp",
+            "/recetas/horchata-de-arroz/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 84.0,
+          "protein_g": 0.6,
+          "carbs_g": 20.1,
+          "fat_g": 0.1,
+          "saturated_fat_g": 0.0,
+          "fiber_g": 0.1,
+          "sugar_g": 13.4,
+          "sodium_mg": 1.0,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g * grams_retained / 100) / 6 servings",
+          "serving_size": "1 vaso (⅙ de la receta)",
+          "note": "Estimación por vaso con 80 g de azúcar y una retención supuesta del 25 % de los 200 g de arroz tras colar. La extracción real no está medida y puede cambiar mucho los valores. Hielo y canela excluidos."
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>Una horchata de arroz fresca y sin lácteos: remoja el arroz en frío, licúa, cuela bien y endulza con vainilla. Se sirve con hielo después de enfriarla. La receta rinde seis vasos.</p>",
+        "keywords": [
+          "Horchata de arroz casera con canela",
+          "Bebidas",
+          "Mexicana, horchata de arroz"
+        ],
+        "gallery": [],
+        "video_urls": []
+      },
+      {
+        "title": "Homemade rice horchata with cinnamon",
+        "summary": "A chilled, dairy-free rice horchata: soak the rice cold, blend, strain thoroughly and sweeten with vanilla. Serve over ice after chilling. This recipe makes six glasses.",
+        "notes": "Soak the rice in the refrigerator at 4 °C (40 °F) or below. Use clean utensils and drinking water. Remove the cinnamon stick before blending. Stir or shake before serving because fine sediment can settle. Keep cold and consume within 24 hours. Minimum total time includes 4 hours of soaking and 1 hour of chilling. Rice nutrients after straining are estimated, not measured.",
+        "cuisine": "Mexican-style rice horchata",
+        "course": "Cold drink",
+        "difficulty": "Easy",
+        "excerpt": "A chilled, dairy-free rice horchata: soak the rice cold, blend, strain thoroughly and sweeten with vanilla. Serve over ice after chilling. This recipe makes six glasses.",
+        "recipe_group_id": "feb86ff3-2fd8-4a3f-8877-0ecc975fc816",
+        "language": "en",
+        "public_path": "/en/horchata-recipe/",
+        "slug": "horchata-recipe",
+        "category": "Drinks",
+        "servings": 6,
+        "prep_time_minutes": 20,
+        "cook_time_minutes": 0,
+        "total_time_minutes": 320,
+        "ingredients": [
+          {
+            "name": "Uncooked white rice",
+            "amount": "200",
+            "unit": "g"
+          },
+          {
+            "name": "Cold drinking water",
+            "amount": "1500",
+            "unit": "ml"
+          },
+          {
+            "name": "Cinnamon stick",
+            "amount": "1",
+            "unit": "stick"
+          },
+          {
+            "name": "Granulated sugar",
+            "amount": "80",
+            "unit": "g"
+          },
+          {
+            "name": "Vanilla extract",
+            "amount": "5",
+            "unit": "ml"
+          }
+        ],
+        "steps": [
+          {
+            "title": "Rinse and soak",
+            "content": "Rinse 200 g white rice. Put it in a bowl with 500 ml of the water and one cinnamon stick. Cover and soak for 4 hours in the refrigerator at 4 °C (40 °F) or below.",
+            "image_alt": "White rice and a cinnamon stick soaking in a clear glass bowl.",
+            "image_url": "/recetas/horchata-de-arroz/paso-01-v1.webp"
+          },
+          {
+            "title": "Blend the rice",
+            "content": "Remove the cinnamon stick. Blend the rice with its soaking water and the remaining 1000 ml water for about 2 minutes, until milky. Work in batches if your blender is small.",
+            "image_alt": "Soaked rice and water blending into an opaque pale drink.",
+            "image_url": "/recetas/horchata-de-arroz/paso-02-v1.webp"
+          },
+          {
+            "title": "Strain well",
+            "content": "Pour through clean cloth or a fine-mesh strainer over a pitcher. Press the solids gently to extract the liquid. Strain again for a smoother drink and discard the pulp.",
+            "image_alt": "Milky rice drink passing through a fine strainer into a pitcher.",
+            "image_url": "/recetas/horchata-de-arroz/paso-03-v1.webp"
+          },
+          {
+            "title": "Sweeten and flavour",
+            "content": "Add 80 g sugar and 5 ml vanilla extract to the strained liquid. Stir until the sugar dissolves. Taste before serving; changing the sugar amount also changes the nutrition estimate.",
+            "image_alt": "Sugar being stirred into a pitcher of strained rice horchata.",
+            "image_url": "/recetas/horchata-de-arroz/paso-04-v1.webp"
+          },
+          {
+            "title": "Chill and serve",
+            "content": "Refrigerate the pitcher for at least 1 hour. Stir again and pour into six glasses over ice. Keep chilled and drink within 24 hours.",
+            "image_alt": "Glasses of cold rice horchata over ice beside a pitcher.",
+            "image_url": "/recetas/horchata-de-arroz/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/horchata-de-arroz/portada-v1.webp",
+        "seo": {
+          "title": "Homemade rice horchata with cinnamon | Manual de Cocina",
+          "description": "Make rice horchata in five illustrated steps, from refrigerated soaking to blending, straining and chilling. Serves six; includes storage tips.",
+          "faq": [
+            {
+              "q": "Does this horchata contain milk?",
+              "a": "This version uses rice and water, without milk. Other versions may include dairy, but this one does not need it."
+            },
+            {
+              "q": "Why is there sediment at the bottom?",
+              "a": "Some fine rice particles pass through the strainer and settle. Strain again for a smoother texture and stir before serving."
+            }
+          ],
+          "image_variants": [
+            "/recetas/horchata-de-arroz/portada-1x1-v1.webp",
+            "/recetas/horchata-de-arroz/portada-4x3-v1.webp",
+            "/recetas/horchata-de-arroz/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 84.0,
+          "protein_g": 0.6,
+          "carbs_g": 20.1,
+          "fat_g": 0.1,
+          "saturated_fat_g": 0.0,
+          "fiber_g": 0.1,
+          "sugar_g": 13.4,
+          "sodium_mg": 1.0,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g * grams_retained / 100) / 6 servings",
+          "serving_size": "1 glass (⅙ of the recipe)",
+          "note": "Estimate per glass with 80 g sugar and an assumed 25% retention of the 200 g rice after straining. Actual extraction was not measured and may substantially change the values. Ice and cinnamon excluded."
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>A chilled, dairy-free rice horchata: soak the rice cold, blend, strain thoroughly and sweeten with vanilla. Serve over ice after chilling. This recipe makes six glasses.</p>",
+        "keywords": [
+          "Homemade rice horchata with cinnamon",
+          "Drinks",
+          "Mexican-style rice horchata"
+        ],
+        "gallery": [],
+        "video_urls": []
+      },
+      {
+        "title": "Horchata aus Reis mit Zimt selbst machen",
+        "summary": "Diese milchfreie Horchata aus Reis wird kalt eingeweicht, püriert und gründlich gefiltert. Zucker und Vanille geben Geschmack; nach dem Kühlen wird sie mit Eis serviert. Ergibt sechs Gläser.",
+        "notes": "Den Reis bei höchstens 4 °C im Kühlschrank einweichen. Saubere Geräte und Trinkwasser verwenden. Die Zimtstange vor dem Mixen herausnehmen. Vor dem Servieren umrühren, da sich feine Partikel absetzen. Kalt halten und innerhalb von 24 Stunden trinken. Die Mindestzeit enthält 4 Stunden Einweichen und 1 Stunde Kühlen. Die Nährwerte des gefilterten Reises sind geschätzt, nicht gemessen.",
+        "cuisine": "Mexikanische Reis-Horchata",
+        "course": "Kaltgetränk",
+        "difficulty": "Einfach",
+        "excerpt": "Diese milchfreie Horchata aus Reis wird kalt eingeweicht, püriert und gründlich gefiltert. Zucker und Vanille geben Geschmack; nach dem Kühlen wird sie mit Eis serviert. Ergibt sechs Gläser.",
+        "recipe_group_id": "feb86ff3-2fd8-4a3f-8877-0ecc975fc816",
+        "language": "de",
+        "public_path": "/de/horchata-rezept/",
+        "slug": "horchata-rezept",
+        "category": "Getränke",
+        "servings": 6,
+        "prep_time_minutes": 20,
+        "cook_time_minutes": 0,
+        "total_time_minutes": 320,
+        "ingredients": [
+          {
+            "name": "Roher weißer Reis",
+            "amount": "200",
+            "unit": "g"
+          },
+          {
+            "name": "Kaltes Trinkwasser",
+            "amount": "1500",
+            "unit": "ml"
+          },
+          {
+            "name": "Zimtstange",
+            "amount": "1",
+            "unit": "Stange"
+          },
+          {
+            "name": "Zucker",
+            "amount": "80",
+            "unit": "g"
+          },
+          {
+            "name": "Vanilleextrakt",
+            "amount": "5",
+            "unit": "ml"
+          }
+        ],
+        "steps": [
+          {
+            "title": "Reis waschen und einweichen",
+            "content": "200 g weißen Reis abspülen. Mit 500 ml Wasser und einer Zimtstange in eine Schüssel geben. Abdecken und 4 Stunden bei höchstens 4 °C im Kühlschrank einweichen.",
+            "image_alt": "Weißer Reis und eine Zimtstange weichen in einer Glasschüssel ein.",
+            "image_url": "/recetas/horchata-de-arroz/paso-01-v1.webp"
+          },
+          {
+            "title": "Reis mixen",
+            "content": "Zimtstange herausnehmen. Reis samt Einweichwasser mit den übrigen 1000 ml Wasser etwa 2 Minuten mixen, bis die Mischung milchig aussieht. Bei einem kleinen Mixer portionsweise arbeiten.",
+            "image_alt": "Eingeweichter Reis und Wasser werden zu einem hellen Getränk gemixt.",
+            "image_url": "/recetas/horchata-de-arroz/paso-02-v1.webp"
+          },
+          {
+            "title": "Gründlich filtern",
+            "content": "Durch ein sauberes Tuch oder ein feines Sieb in einen Krug gießen. Den Rückstand vorsichtig ausdrücken. Für eine feinere Konsistenz ein zweites Mal filtern und den Trester entsorgen.",
+            "image_alt": "Trübe Reismischung fließt durch ein feines Sieb in einen Krug.",
+            "image_url": "/recetas/horchata-de-arroz/paso-03-v1.webp"
+          },
+          {
+            "title": "Süßen und aromatisieren",
+            "content": "80 g Zucker und 5 ml Vanilleextrakt in die gefilterte Flüssigkeit rühren, bis sich der Zucker löst. Vor dem Servieren probieren; eine andere Zuckermenge verändert auch die Nährwertschätzung.",
+            "image_alt": "Zucker wird in einen Krug gefilterter Reis-Horchata eingerührt.",
+            "image_url": "/recetas/horchata-de-arroz/paso-04-v1.webp"
+          },
+          {
+            "title": "Kühlen und servieren",
+            "content": "Den Krug mindestens 1 Stunde kühlen. Nochmals umrühren und auf sechs Gläser mit Eis verteilen. Kühl halten und innerhalb von 24 Stunden trinken.",
+            "image_alt": "Kalte Reis-Horchata mit Eis in Gläsern neben einem Krug.",
+            "image_url": "/recetas/horchata-de-arroz/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/horchata-de-arroz/portada-v1.webp",
+        "seo": {
+          "title": "Horchata aus Reis mit Zimt | Manual de Cocina",
+          "description": "Horchata aus Reis in fünf bebilderten Schritten zubereiten: kalt einweichen, mixen, filtern und kühlen. Sechs Gläser mit Aufbewahrungstipps.",
+          "faq": [
+            {
+              "q": "Enthält diese Horchata Milch?",
+              "a": "Diese Variante besteht aus Reis und Wasser, ohne Milch. Andere Varianten enthalten Milchprodukte; hier sind sie nicht nötig."
+            },
+            {
+              "q": "Warum bildet sich Bodensatz?",
+              "a": "Feine Reispartikel gelangen durch das Sieb und setzen sich ab. Für eine glattere Konsistenz nochmals filtern und vor dem Servieren umrühren."
+            }
+          ],
+          "image_variants": [
+            "/recetas/horchata-de-arroz/portada-1x1-v1.webp",
+            "/recetas/horchata-de-arroz/portada-4x3-v1.webp",
+            "/recetas/horchata-de-arroz/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 84.0,
+          "protein_g": 0.6,
+          "carbs_g": 20.1,
+          "fat_g": 0.1,
+          "saturated_fat_g": 0.0,
+          "fiber_g": 0.1,
+          "sugar_g": 13.4,
+          "sodium_mg": 1.0,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g * grams_retained / 100) / 6 servings",
+          "serving_size": "1 Glas (⅙ des Rezepts)",
+          "note": "Schätzung pro Glas mit 80 g Zucker und angenommener Aufnahme von 25 % der 200 g Reis nach dem Filtern. Die tatsächliche Extraktion wurde nicht gemessen und kann die Werte deutlich verändern. Eis und Zimt nicht enthalten."
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>Diese milchfreie Horchata aus Reis wird kalt eingeweicht, püriert und gründlich gefiltert. Zucker und Vanille geben Geschmack; nach dem Kühlen wird sie mit Eis serviert. Ergibt sechs Gläser.</p>",
+        "keywords": [
+          "Horchata aus Reis mit Zimt selbst machen",
+          "Getränke",
+          "Mexikanische Reis-Horchata"
+        ],
+        "gallery": [],
+        "video_urls": []
+      },
+      {
+        "title": "Horchata de riz à la cannelle maison",
+        "summary": "Cette horchata de riz sans lait se prépare par trempage à froid, mixage et filtration. On y ajoute du sucre et de la vanille avant de la servir bien fraîche sur des glaçons. Pour six verres.",
+        "notes": "Faites tremper le riz au réfrigérateur à 4 °C maximum, avec des ustensiles propres et de l’eau potable. Retirez le bâton de cannelle avant de mixer. Remuez avant de servir, car un dépôt fin peut se former. Gardez au froid et consommez dans les 24 heures. Le temps minimum inclut 4 heures de trempage et 1 heure de réfrigération. La nutrition du riz filtré est estimée, pas mesurée.",
+        "cuisine": "Horchata de riz à la mexicaine",
+        "course": "Boisson fraîche",
+        "difficulty": "Facile",
+        "excerpt": "Cette horchata de riz sans lait se prépare par trempage à froid, mixage et filtration. On y ajoute du sucre et de la vanille avant de la servir bien fraîche sur des glaçons. Pour six verres.",
+        "recipe_group_id": "feb86ff3-2fd8-4a3f-8877-0ecc975fc816",
+        "language": "fr",
+        "public_path": "/fr/recette-dhorchata/",
+        "slug": "recette-dhorchata",
+        "category": "Boissons",
+        "servings": 6,
+        "prep_time_minutes": 20,
+        "cook_time_minutes": 0,
+        "total_time_minutes": 320,
+        "ingredients": [
+          {
+            "name": "Riz blanc cru",
+            "amount": "200",
+            "unit": "g"
+          },
+          {
+            "name": "Eau potable froide",
+            "amount": "1500",
+            "unit": "ml"
+          },
+          {
+            "name": "Bâton de cannelle",
+            "amount": "1",
+            "unit": "bâton"
+          },
+          {
+            "name": "Sucre",
+            "amount": "80",
+            "unit": "g"
+          },
+          {
+            "name": "Extrait de vanille",
+            "amount": "5",
+            "unit": "ml"
+          }
+        ],
+        "steps": [
+          {
+            "title": "Rincez et faites tremper",
+            "content": "Rincez 200 g de riz blanc. Mettez-le dans un bol avec 500 ml d’eau et un bâton de cannelle. Couvrez et laissez tremper 4 heures au réfrigérateur à 4 °C maximum.",
+            "image_alt": "Riz blanc et bâton de cannelle dans l’eau d’un bol en verre.",
+            "image_url": "/recetas/horchata-de-arroz/paso-01-v1.webp"
+          },
+          {
+            "title": "Mixez le riz",
+            "content": "Retirez le bâton de cannelle. Mixez le riz avec son eau de trempage et les 1000 ml d’eau restants pendant environ 2 minutes, jusqu’à obtenir un liquide laiteux. Procédez en plusieurs fois si le mixeur est petit.",
+            "image_alt": "Riz trempé et eau mixés en une boisson blanche opaque.",
+            "image_url": "/recetas/horchata-de-arroz/paso-02-v1.webp"
+          },
+          {
+            "title": "Filtrez soigneusement",
+            "content": "Versez à travers une étamine propre ou une passoire très fine au-dessus d’une carafe. Pressez doucement les résidus pour récupérer le liquide. Filtrez à nouveau pour une texture plus lisse et jetez la pulpe.",
+            "image_alt": "Boisson de riz traversant une passoire fine au-dessus d’une carafe.",
+            "image_url": "/recetas/horchata-de-arroz/paso-03-v1.webp"
+          },
+          {
+            "title": "Sucrez et parfumez",
+            "content": "Ajoutez 80 g de sucre et 5 ml d’extrait de vanille au liquide filtré. Remuez jusqu’à dissolution du sucre. Goûtez avant de servir ; modifier la quantité de sucre change aussi l’estimation nutritionnelle.",
+            "image_alt": "Sucre incorporé à une carafe d’horchata de riz filtrée.",
+            "image_url": "/recetas/horchata-de-arroz/paso-04-v1.webp"
+          },
+          {
+            "title": "Réfrigérez et servez",
+            "content": "Réfrigérez la carafe au moins 1 heure. Remuez à nouveau et versez dans six verres sur des glaçons. Gardez au froid et consommez dans les 24 heures.",
+            "image_alt": "Verres d’horchata de riz froide avec glaçons près d’une carafe.",
+            "image_url": "/recetas/horchata-de-arroz/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/horchata-de-arroz/portada-v1.webp",
+        "seo": {
+          "title": "Horchata de riz à la cannelle | Manual de Cocina",
+          "description": "Préparez l’horchata de riz en cinq étapes illustrées : trempage au froid, mixage, filtration et repos au frais. Pour six verres, avec conseils de conservation.",
+          "faq": [
+            {
+              "q": "Y a-t-il du lait dans cette horchata ?",
+              "a": "Cette version contient du riz et de l’eau, sans lait. Certaines variantes ajoutent du lait, mais ce n’est pas nécessaire ici."
+            },
+            {
+              "q": "Pourquoi y a-t-il un dépôt au fond ?",
+              "a": "De fines particules de riz passent à travers le filtre et se déposent. Filtrez une seconde fois et remuez avant de servir."
+            }
+          ],
+          "image_variants": [
+            "/recetas/horchata-de-arroz/portada-1x1-v1.webp",
+            "/recetas/horchata-de-arroz/portada-4x3-v1.webp",
+            "/recetas/horchata-de-arroz/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 84.0,
+          "protein_g": 0.6,
+          "carbs_g": 20.1,
+          "fat_g": 0.1,
+          "saturated_fat_g": 0.0,
+          "fiber_g": 0.1,
+          "sugar_g": 13.4,
+          "sodium_mg": 1.0,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g * grams_retained / 100) / 6 servings",
+          "serving_size": "1 verre (⅙ de la recette)",
+          "note": "Estimation par verre avec 80 g de sucre et 25 % supposés des 200 g de riz restant après filtration. L’extraction réelle n’a pas été mesurée et peut changer nettement les valeurs. Glaçons et cannelle exclus."
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>Cette horchata de riz sans lait se prépare par trempage à froid, mixage et filtration. On y ajoute du sucre et de la vanille avant de la servir bien fraîche sur des glaçons. Pour six verres.</p>",
+        "keywords": [
+          "Horchata de riz à la cannelle maison",
+          "Boissons",
+          "Horchata de riz à la mexicaine"
+        ],
+        "gallery": [],
+        "video_urls": []
+      },
+      {
+        "title": "Horchata di riso alla cannella fatta in casa",
+        "summary": "Questa horchata di riso senza latte si prepara con ammollo a freddo, frullatura e filtraggio accurato. Aggiungi zucchero e vaniglia, poi servila fredda con ghiaccio. Dosi per sei bicchieri.",
+        "notes": "Metti il riso in ammollo in frigorifero a 4 °C o meno. Usa utensili puliti e acqua potabile. Togli la stecca di cannella prima di frullare. Mescola prima di servire, perché un leggero deposito può formarsi sul fondo. Conserva al freddo e consuma entro 24 ore. Il tempo minimo include 4 ore di ammollo e 1 ora di raffreddamento. I nutrienti del riso dopo il filtraggio sono stimati, non misurati.",
+        "cuisine": "Horchata di riso messicana",
+        "course": "Bevanda fredda",
+        "difficulty": "Facile",
+        "excerpt": "Questa horchata di riso senza latte si prepara con ammollo a freddo, frullatura e filtraggio accurato. Aggiungi zucchero e vaniglia, poi servila fredda con ghiaccio. Dosi per sei bicchieri.",
+        "recipe_group_id": "feb86ff3-2fd8-4a3f-8877-0ecc975fc816",
+        "language": "it",
+        "public_path": "/it/ricetta-horchata/",
+        "slug": "ricetta-horchata",
+        "category": "Bevande",
+        "servings": 6,
+        "prep_time_minutes": 20,
+        "cook_time_minutes": 0,
+        "total_time_minutes": 320,
+        "ingredients": [
+          {
+            "name": "Riso bianco crudo",
+            "amount": "200",
+            "unit": "g"
+          },
+          {
+            "name": "Acqua potabile fredda",
+            "amount": "1500",
+            "unit": "ml"
+          },
+          {
+            "name": "Stecca di cannella",
+            "amount": "1",
+            "unit": "stecca"
+          },
+          {
+            "name": "Zucchero",
+            "amount": "80",
+            "unit": "g"
+          },
+          {
+            "name": "Estratto di vaniglia",
+            "amount": "5",
+            "unit": "ml"
+          }
+        ],
+        "steps": [
+          {
+            "title": "Sciacqua e metti in ammollo",
+            "content": "Sciacqua 200 g di riso bianco. Mettilo in una ciotola con 500 ml di acqua e una stecca di cannella. Copri e lascia in ammollo 4 ore in frigorifero a 4 °C o meno.",
+            "image_alt": "Riso bianco e una stecca di cannella in ammollo in una ciotola di vetro.",
+            "image_url": "/recetas/horchata-de-arroz/paso-01-v1.webp"
+          },
+          {
+            "title": "Frulla il riso",
+            "content": "Togli la stecca di cannella. Frulla il riso con la sua acqua di ammollo e i restanti 1000 ml di acqua per circa 2 minuti, finché il liquido diventa lattiginoso. Procedi in più volte se il frullatore è piccolo.",
+            "image_alt": "Riso ammollato e acqua frullati in un liquido bianco opaco.",
+            "image_url": "/recetas/horchata-de-arroz/paso-02-v1.webp"
+          },
+          {
+            "title": "Filtra con cura",
+            "content": "Versa attraverso un telo pulito o un colino a maglie fini sopra una caraffa. Premi delicatamente i solidi per estrarre il liquido. Filtra ancora per una consistenza più liscia e scarta il residuo.",
+            "image_alt": "Liquido di riso che attraversa un colino fine sopra una caraffa.",
+            "image_url": "/recetas/horchata-de-arroz/paso-03-v1.webp"
+          },
+          {
+            "title": "Dolcifica e aromatizza",
+            "content": "Aggiungi 80 g di zucchero e 5 ml di estratto di vaniglia al liquido filtrato. Mescola finché lo zucchero si scioglie. Assaggia prima di servire; cambiando la dose di zucchero cambia anche la stima nutrizionale.",
+            "image_alt": "Zucchero mescolato in una caraffa di horchata di riso filtrata.",
+            "image_url": "/recetas/horchata-de-arroz/paso-04-v1.webp"
+          },
+          {
+            "title": "Raffredda e servi",
+            "content": "Metti la caraffa in frigorifero per almeno 1 ora. Mescola di nuovo e versa in sei bicchieri con ghiaccio. Conserva al freddo e consuma entro 24 ore.",
+            "image_alt": "Bicchieri di horchata di riso fredda con ghiaccio accanto a una caraffa.",
+            "image_url": "/recetas/horchata-de-arroz/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/horchata-de-arroz/portada-v1.webp",
+        "seo": {
+          "title": "Horchata di riso alla cannella | Manual de Cocina",
+          "description": "Horchata di riso in cinque passaggi con foto: ammollo al freddo, frullatura, filtraggio e riposo in frigorifero. Sei bicchieri e consigli di conservazione.",
+          "faq": [
+            {
+              "q": "Questa horchata contiene latte?",
+              "a": "Questa versione usa riso e acqua, senza latte. Alcune varianti lo prevedono, ma qui non serve."
+            },
+            {
+              "q": "Perché si forma un deposito sul fondo?",
+              "a": "Piccole particelle di riso passano il filtro e si depositano. Filtra di nuovo per una consistenza più fine e mescola prima di servire."
+            }
+          ],
+          "image_variants": [
+            "/recetas/horchata-de-arroz/portada-1x1-v1.webp",
+            "/recetas/horchata-de-arroz/portada-4x3-v1.webp",
+            "/recetas/horchata-de-arroz/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 84.0,
+          "protein_g": 0.6,
+          "carbs_g": 20.1,
+          "fat_g": 0.1,
+          "saturated_fat_g": 0.0,
+          "fiber_g": 0.1,
+          "sugar_g": 13.4,
+          "sodium_mg": 1.0,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g * grams_retained / 100) / 6 servings",
+          "serving_size": "1 bicchiere (⅙ della ricetta)",
+          "note": "Stima per bicchiere con 80 g di zucchero e una ritenzione ipotizzata del 25% dei 200 g di riso dopo il filtraggio. L’estrazione non è stata misurata e può cambiare molto i valori. Ghiaccio e cannella esclusi."
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>Questa horchata di riso senza latte si prepara con ammollo a freddo, frullatura e filtraggio accurato. Aggiungi zucchero e vaniglia, poi servila fredda con ghiaccio. Dosi per sei bicchieri.</p>",
+        "keywords": [
+          "Horchata di riso alla cannella fatta in casa",
+          "Bevande",
+          "Horchata di riso messicana"
+        ],
+        "gallery": [],
+        "video_urls": []
+      },
+      {
+        "title": "お米とシナモンで作るオルチャータ",
+        "summary": "乳製品を使わないお米のオルチャータです。冷蔵庫で米を浸水させ、ミキサーにかけて丁寧にこし、砂糖とバニラで仕上げます。よく冷やして氷と一緒に。6杯分です。",
+        "notes": "米は4 °C以下の冷蔵庫で浸水させ、清潔な器具と飲用水を使います。シナモンスティックはミキサーにかける前に取り出してください。細かい沈殿ができるため、飲む前に混ぜます。冷やして保存し、24時間以内に飲み切ってください。最短の所要時間には4時間の浸水と1時間の冷蔵を含みます。こした後に残る米の栄養は実測ではなく推定です。",
+        "cuisine": "メキシコ風ライスオルチャータ",
+        "course": "冷たい飲み物",
+        "difficulty": "簡単",
+        "excerpt": "乳製品を使わないお米のオルチャータです。冷蔵庫で米を浸水させ、ミキサーにかけて丁寧にこし、砂糖とバニラで仕上げます。よく冷やして氷と一緒に。6杯分です。",
+        "recipe_group_id": "feb86ff3-2fd8-4a3f-8877-0ecc975fc816",
+        "language": "ja",
+        "public_path": "/ja/オルチャータのレシピ/",
+        "slug": "オルチャータのレシピ",
+        "category": "飲み物",
+        "servings": 6,
+        "prep_time_minutes": 20,
+        "cook_time_minutes": 0,
+        "total_time_minutes": 320,
+        "ingredients": [
+          {
+            "name": "生の白米",
+            "amount": "200",
+            "unit": "g"
+          },
+          {
+            "name": "冷たい飲用水",
+            "amount": "1500",
+            "unit": "ml"
+          },
+          {
+            "name": "シナモンスティック",
+            "amount": "1",
+            "unit": "本"
+          },
+          {
+            "name": "砂糖",
+            "amount": "80",
+            "unit": "g"
+          },
+          {
+            "name": "バニラエクストラクト",
+            "amount": "5",
+            "unit": "ml"
+          }
+        ],
+        "steps": [
+          {
+            "title": "米を洗って浸す",
+            "content": "白米200 gを洗います。容器に米、水500 ml、シナモンスティック1本を入れてふたをし、4 °C以下の冷蔵庫で4時間浸します。",
+            "image_alt": "ガラスのボウルで白米とシナモンスティックを水に浸している様子。",
+            "image_url": "/recetas/horchata-de-arroz/paso-01-v1.webp"
+          },
+          {
+            "title": "米をミキサーにかける",
+            "content": "シナモンスティックを取り出します。米と浸水に使った水、残りの水1000 mlを約2分ミキサーにかけ、白く濁った状態にします。容量が小さければ数回に分けます。",
+            "image_alt": "浸水した米と水をミキサーにかけて白い飲み物にする様子。",
+            "image_url": "/recetas/horchata-de-arroz/paso-02-v1.webp"
+          },
+          {
+            "title": "丁寧にこす",
+            "content": "清潔な布か目の細かいこし器をピッチャーに重ね、液体を注ぎます。残った米をやさしく押して水分を取ります。なめらかにしたい場合は再度こし、搾りかすは捨てます。",
+            "image_alt": "米の液体を細かいこし器でピッチャーにこす様子。",
+            "image_url": "/recetas/horchata-de-arroz/paso-03-v1.webp"
+          },
+          {
+            "title": "砂糖とバニラを加える",
+            "content": "こした液体に砂糖80 gとバニラエクストラクト5 mlを加え、砂糖が溶けるまで混ぜます。味見してから提供します。砂糖の量を変えると栄養の推定値も変わります。",
+            "image_alt": "こした米のオルチャータを入れたピッチャーに砂糖を混ぜる様子。",
+            "image_url": "/recetas/horchata-de-arroz/paso-04-v1.webp"
+          },
+          {
+            "title": "冷やして注ぐ",
+            "content": "ピッチャーを冷蔵庫で最低1時間冷やします。もう一度混ぜ、氷を入れた6つのグラスに注ぎます。冷たく保ち、24時間以内に飲み切ってください。",
+            "image_alt": "氷入りの冷たいライスオルチャータを注いだグラスとピッチャー。",
+            "image_url": "/recetas/horchata-de-arroz/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/horchata-de-arroz/portada-v1.webp",
+        "seo": {
+          "title": "お米とシナモンのオルチャータの作り方 | Manual de Cocina",
+          "description": "お米を冷蔵庫で浸し、ミキサーにかけてこすオルチャータ。写真付きの5工程と6杯分の材料、保存の目安を紹介します。",
+          "faq": [
+            {
+              "q": "牛乳は入りますか？",
+              "a": "このレシピは米と水を使うため、牛乳は入れません。乳製品を加える別の作り方もあります。"
+            },
+            {
+              "q": "底に沈殿ができるのはなぜですか？",
+              "a": "細かい米の粒子がこし器を通って沈みます。よりなめらかにしたい場合は再度こし、飲む前に混ぜてください。"
+            }
+          ],
+          "image_variants": [
+            "/recetas/horchata-de-arroz/portada-1x1-v1.webp",
+            "/recetas/horchata-de-arroz/portada-4x3-v1.webp",
+            "/recetas/horchata-de-arroz/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 84.0,
+          "protein_g": 0.6,
+          "carbs_g": 20.1,
+          "fat_g": 0.1,
+          "saturated_fat_g": 0.0,
+          "fiber_g": 0.1,
+          "sugar_g": 13.4,
+          "sodium_mg": 1.0,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g * grams_retained / 100) / 6 servings",
+          "serving_size": "1杯（全量の⅙）",
+          "note": "砂糖80 gを使い、米200 gのうち25%がこした飲み物に残ると仮定した1杯分の推定値です。実際の抽出量は測定しておらず、数値は大きく変わり得ます。氷とシナモンは含みません。"
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>乳製品を使わないお米のオルチャータです。冷蔵庫で米を浸水させ、ミキサーにかけて丁寧にこし、砂糖とバニラで仕上げます。よく冷やして氷と一緒に。6杯分です。</p>",
+        "keywords": [
+          "お米とシナモンで作るオルチャータ",
+          "飲み物",
+          "メキシコ風ライスオルチャータ"
+        ],
+        "gallery": [],
+        "video_urls": []
+      },
+      {
+        "title": "Horchata de arroz caseira com canela",
+        "summary": "Uma horchata de arroz sem leite: deixe o arroz de molho na geladeira, bata, coe bem e adoce com baunilha. Sirva com gelo depois de esfriar. Rende seis copos.",
+        "notes": "Deixe o arroz de molho na geladeira a 4 °C ou menos. Use utensílios limpos e água potável. Retire o pau de canela antes de bater. Mexa antes de servir, pois partículas finas podem se depositar. Mantenha gelada e consuma em 24 horas. O tempo mínimo inclui 4 horas de molho e 1 hora de refrigeração. Os nutrientes do arroz após coar são estimados, não medidos.",
+        "cuisine": "Horchata mexicana de arroz",
+        "course": "Bebida gelada",
+        "difficulty": "Fácil",
+        "excerpt": "Uma horchata de arroz sem leite: deixe o arroz de molho na geladeira, bata, coe bem e adoce com baunilha. Sirva com gelo depois de esfriar. Rende seis copos.",
+        "recipe_group_id": "feb86ff3-2fd8-4a3f-8877-0ecc975fc816",
+        "language": "pt",
+        "public_path": "/pt/horchata-de-arroz-caseira/",
+        "slug": "horchata-de-arroz-caseira",
+        "category": "Bebidas",
+        "servings": 6,
+        "prep_time_minutes": 20,
+        "cook_time_minutes": 0,
+        "total_time_minutes": 320,
+        "ingredients": [
+          {
+            "name": "Arroz branco cru",
+            "amount": "200",
+            "unit": "g"
+          },
+          {
+            "name": "Água potável fria",
+            "amount": "1500",
+            "unit": "ml"
+          },
+          {
+            "name": "Pau de canela",
+            "amount": "1",
+            "unit": "pau"
+          },
+          {
+            "name": "Açúcar",
+            "amount": "80",
+            "unit": "g"
+          },
+          {
+            "name": "Extrato de baunilha",
+            "amount": "5",
+            "unit": "ml"
+          }
+        ],
+        "steps": [
+          {
+            "title": "Lave e deixe de molho",
+            "content": "Lave 200 g de arroz branco. Coloque em uma tigela com 500 ml da água e um pau de canela. Tampe e deixe de molho por 4 horas na geladeira a 4 °C ou menos.",
+            "image_alt": "Arroz branco e um pau de canela de molho numa tigela de vidro.",
+            "image_url": "/recetas/horchata-de-arroz/paso-01-v1.webp"
+          },
+          {
+            "title": "Bata o arroz",
+            "content": "Retire o pau de canela. Bata o arroz com sua água do molho e os 1000 ml de água restantes por cerca de 2 minutos, até ficar esbranquiçado. Divida em levas se o liquidificador for pequeno.",
+            "image_alt": "Arroz de molho e água batidos até formar um líquido branco opaco.",
+            "image_url": "/recetas/horchata-de-arroz/paso-02-v1.webp"
+          },
+          {
+            "title": "Coe bem",
+            "content": "Passe por um pano limpo ou uma peneira fina sobre uma jarra. Pressione os sólidos delicadamente para extrair o líquido. Coe novamente para uma textura mais lisa e descarte o bagaço.",
+            "image_alt": "Líquido de arroz passando por uma peneira fina para uma jarra.",
+            "image_url": "/recetas/horchata-de-arroz/paso-03-v1.webp"
+          },
+          {
+            "title": "Adoce e aromatize",
+            "content": "Junte 80 g de açúcar e 5 ml de extrato de baunilha ao líquido coado. Mexa até o açúcar dissolver. Prove antes de servir; alterar o açúcar também muda a estimativa nutricional.",
+            "image_alt": "Açúcar sendo misturado numa jarra de horchata de arroz coada.",
+            "image_url": "/recetas/horchata-de-arroz/paso-04-v1.webp"
+          },
+          {
+            "title": "Gele e sirva",
+            "content": "Leve a jarra à geladeira por pelo menos 1 hora. Mexa novamente e distribua em seis copos com gelo. Mantenha gelada e consuma em até 24 horas.",
+            "image_alt": "Copos de horchata de arroz fria com gelo ao lado de uma jarra.",
+            "image_url": "/recetas/horchata-de-arroz/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/horchata-de-arroz/portada-v1.webp",
+        "seo": {
+          "title": "Horchata de arroz com canela | Manual de Cocina",
+          "description": "Prepare horchata de arroz em cinco etapas com fotos: molho na geladeira, liquidificador, coar e esfriar. Rende seis copos, com dicas de conservação.",
+          "faq": [
+            {
+              "q": "Esta horchata leva leite?",
+              "a": "Esta versão usa arroz e água, sem leite. Algumas versões incluem laticínios, mas eles não são necessários aqui."
+            },
+            {
+              "q": "Por que há sedimento no fundo?",
+              "a": "Partículas finas de arroz passam pelo filtro e se depositam. Coe mais uma vez para ficar mais lisa e mexa antes de servir."
+            }
+          ],
+          "image_variants": [
+            "/recetas/horchata-de-arroz/portada-1x1-v1.webp",
+            "/recetas/horchata-de-arroz/portada-4x3-v1.webp",
+            "/recetas/horchata-de-arroz/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 84.0,
+          "protein_g": 0.6,
+          "carbs_g": 20.1,
+          "fat_g": 0.1,
+          "saturated_fat_g": 0.0,
+          "fiber_g": 0.1,
+          "sugar_g": 13.4,
+          "sodium_mg": 1.0,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g * grams_retained / 100) / 6 servings",
+          "serving_size": "1 copo (⅙ da receita)",
+          "note": "Estimativa por copo com 80 g de açúcar e retenção presumida de 25% dos 200 g de arroz após coar. A extração real não foi medida e pode alterar bastante os valores. Gelo e canela excluídos."
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>Uma horchata de arroz sem leite: deixe o arroz de molho na geladeira, bata, coe bem e adoce com baunilha. Sirva com gelo depois de esfriar. Rende seis copos.</p>",
+        "keywords": [
+          "Horchata de arroz caseira com canela",
+          "Bebidas",
+          "Horchata mexicana de arroz"
+        ],
+        "gallery": [],
+        "video_urls": []
+      }
+    ]
+  }
+}
