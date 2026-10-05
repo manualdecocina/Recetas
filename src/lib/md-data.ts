@@ -119,10 +119,8 @@ export async function getHomeData(lang: RecipeLanguage): Promise<MdHomeData> {
 
   const featured = (featuredResult.data ?? null) as MdRecipeCardData | null
   const latestRaw = (latestResult.data ?? []) as MdRecipeCardData[]
-  // "Recién publicadas" representa literalmente el orden editorial más reciente.
-  // La receta destacada puede repetirse aquí: ocultarla hacía que la receta más nueva
-  // desapareciera precisamente del listado que promete mostrar las últimas publicaciones.
-  const latest = latestRaw.slice(0, 9)
+  // La destacada ya se muestra en el hero; las otras nueve conservan su orden editorial.
+  const latest = latestRaw.filter((recipe) => recipe.id !== featured?.id).slice(0, 9)
 
   return { featured, latest, categories, ingredients }
 }
