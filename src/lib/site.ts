@@ -1,6 +1,11 @@
 import type { RecipeLanguage } from '@/types/recipe'
 
 export function getSiteUrl(): string {
+  // Preview is independently testable: canonical, hreflang and sitemap stay on
+  // its deployed origin. Indexing remains controlled by robots and page metadata.
+  if (!isIndexingAllowed()) {
+    return (process.env.NEXT_PUBLIC_PREVIEW_SITE_URL ?? 'https://preview.manualdecocina.com').replace(/\/$/, '')
+  }
   return (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://manualdecocina.com').replace(/\/$/, '')
 }
 
@@ -9,8 +14,7 @@ export function isIndexingAllowed(): boolean {
 }
 
 /** Origen desde el que los bots sociales deben cargar assets locales.
- * En preview el canonical sigue apuntando a producción, pero la imagen OG/Twitter
- * debe existir en el host que realmente está desplegando esos assets. */
+ * Las imágenes OG/Twitter deben existir en el host que despliega los assets. */
 export function getAssetBaseUrl(): string {
   const explicit = process.env.NEXT_PUBLIC_ASSET_BASE_URL?.trim()
   if (explicit) return explicit.replace(/\/$/, '')
