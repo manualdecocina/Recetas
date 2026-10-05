@@ -113,7 +113,7 @@ export async function createRecipeAction(_prev: FormState, formData: FormData): 
   const language = languageSchema.safeParse(formData.get('language'))
   if (!language.success) return { ok: false, fieldErrors: { language: ['Idioma no válido'] } }
 
-  const fields = readRecipeForm(formData)
+  const fields = readRecipeForm(formData, language.data)
   if (!fields.success) return { ok: false, fieldErrors: fields.error.flatten().fieldErrors }
   if (fields.data.published) return draftOnlyMessage()
 
@@ -142,7 +142,7 @@ export async function createTranslationAction(_prev: FormState, formData: FormDa
   const language = languageSchema.safeParse(formData.get('language'))
   if (!language.success) return { ok: false, fieldErrors: { language: ['Idioma no válido'] } }
 
-  const fields = readRecipeForm(formData)
+  const fields = readRecipeForm(formData, language.data)
   if (!fields.success) return { ok: false, fieldErrors: fields.error.flatten().fieldErrors }
   if (fields.data.published) return draftOnlyMessage()
 
@@ -166,7 +166,10 @@ export async function updateRecipeAction(_prev: FormState, formData: FormData): 
   const id = uuidSchema.safeParse(formData.get('id'))
   if (!id.success) return { ok: false, message: 'Receta no válida.' }
 
-  const fields = readRecipeForm(formData)
+  const { data: identity } = await supabase.from('recipes').select('language').eq('id', id.data).maybeSingle()
+  const language = languageSchema.safeParse(identity?.language)
+  if (!language.success) return { ok: false, message: 'No se pudo comprobar el idioma de la receta.' }
+  const fields = readRecipeForm(formData, language.data)
   if (!fields.success) return { ok: false, fieldErrors: fields.error.flatten().fieldErrors }
 
   if (fields.data.published) {

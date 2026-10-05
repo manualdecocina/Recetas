@@ -29,7 +29,7 @@ export function CategoryGrid({ lang, categories }: {
 }) {
   return (
     <div className="md-category-grid">
-      {categories.filter((item) => item.count > 0).map((item) => (
+      {categories.map((item) => (
         <Link className="md-category-card" key={item.slug} href={`/${lang}/categorias/${item.slug}`}>
           {item.image_url ? (
             <Image className="md-category-photo" src={recipeImageSrc(item.image_url)} alt="" width={360} height={270} loading="lazy"
@@ -58,7 +58,7 @@ export function CategoriesIndexView({ lang, categories }: {
       <main className="md-container" id="md-main">
         <header className="md-page-head"><h1 className="md-display">{t.categoryCatalog}</h1></header>
         <section className="md-section">
-          {categories.some((item) => item.count > 0)
+          {categories.length > 0
             ? <CategoryGrid lang={lang} categories={categories} />
             : <div className="md-empty-block"><h2 className="md-subtitle">{t.emptyTitle}</h2><p>{t.emptyBody}</p></div>}
         </section>

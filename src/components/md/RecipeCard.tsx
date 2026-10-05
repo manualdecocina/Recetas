@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { recipeImageSrc } from '@/lib/recipe-media';
 import type { MdRecipeCardData } from './md-types';
 import { getMdCopy } from '@/lib/copy';
+import { canonicalCategoryLabel, categorySlugFromLabel } from '@/lib/categories';
 import { normalizePublicPath } from '@/lib/site';
 
 /** Sizes reales de md-card-grid (site.css): 1 col (<600px), 2 col (600-899px), 3 col (>=900px). */
@@ -14,6 +15,8 @@ export default function RecipeCard({ recipe, priority = false }: {
   priority?: boolean;
 }) {
   const t = getMdCopy(recipe.language);
+  const category = canonicalCategoryLabel(recipe.language, recipe.category);
+  const categorySlug = categorySlugFromLabel(recipe.language, category);
   const href = normalizePublicPath(recipe.public_path);
   return (
     <article className="md-recipe-card">
@@ -30,7 +33,7 @@ export default function RecipeCard({ recipe, priority = false }: {
         )}
       </Link>
       <div className="md-card-content">
-        {recipe.category && <span className="md-card-category">{recipe.category}</span>}
+        {category && categorySlug && <Link className="md-card-category" href={`/${recipe.language}/categorias/${categorySlug}`}>{category}</Link>}
         <h3 className="md-card-title"><Link href={href}>{recipe.title}</Link></h3>
         {recipe.excerpt && <p className="md-card-excerpt">{recipe.excerpt}</p>}
       </div>

@@ -1,24 +1,6 @@
-import { MD_CATEGORIES } from '@/components/md/md-types'
 import type { RecipeLanguage } from '@/types/recipe'
 
-/**
- * El campo `recipes.category` se guarda como texto libre TRADUCIDO en cada idioma
- * (p. ej. "Platos principales" en es, "Hauptgerichte" en de, "主菜" en ja).
- * `MD_CATEGORIES` (en md-types.ts) solo tiene las 10 etiquetas en español.
- * Sin este mapa, cualquier consulta que compare `category` contra esas etiquetas
- * en español (home, /categorias, /categorias/[slug], /recetas, la ficha de receta)
- * nunca encuentra nada para de/en/fr/it/ja/pt: 0 en cada categoría, aunque la
- * receta esté publicada y sí tenga categoría. Este mapa traduce por slug para que
- * la comparación se haga en el idioma correcto.
- *
- * Importante: para que una receta cuente en su categoría, `category` en la base de
- * datos debe coincidir EXACTO (case-sensitive) con la etiqueta de aquí para su
- * idioma. Si en el futuro se escribe la categoría a mano con otra redacción
- * (p. ej. "Platos fuertes" en vez de "Platos principales"), esa receta queda fuera
- * del conteo aunque esté publicada — no es un bug de este mapa, es el motivo por
- * el que `category` como texto libre por idioma es frágil (ver README, "Pendiente
- * de decisión: Modelo de categorías").
- */
+// Taxonomía cerrada: nombres traducidos y slugs de navegación comparten una sola fuente.
 const CATEGORY_LABELS: Record<string, Record<RecipeLanguage, string>> = {
   'platos-principales': {
     es: 'Platos principales',
@@ -28,6 +10,10 @@ const CATEGORY_LABELS: Record<string, Record<RecipeLanguage, string>> = {
     it: 'Secondi piatti',
     ja: '主菜',
     pt: 'Pratos principais',
+  },
+  pastas: {
+    es: 'Pastas', en: 'Pasta', de: 'Pasta', fr: 'Pâtes',
+    it: 'Pasta', ja: 'パスタ', pt: 'Massas',
   },
   'entrantes-y-aperitivos': {
     es: 'Entrantes y aperitivos',
@@ -112,20 +98,14 @@ const CATEGORY_LABELS: Record<string, Record<RecipeLanguage, string>> = {
   },
 }
 
-/** Mismo orden y slugs que MD_CATEGORIES; valida en tiempo de import que no falte ninguno. */
-for (const { slug } of MD_CATEGORIES) {
-  if (!CATEGORY_LABELS[slug]) throw new Error(`Falta la traducción de categoría para el slug "${slug}"`)
-}
-
 export interface CategoryTaxonomyEntry {
   slug: string
   labels: Record<RecipeLanguage, string>
 }
 
-export const CATEGORY_TAXONOMY: CategoryTaxonomyEntry[] = MD_CATEGORIES.map(({ slug }) => ({
-  slug,
-  labels: CATEGORY_LABELS[slug],
-}))
+export const CATEGORY_TAXONOMY: CategoryTaxonomyEntry[] = Object.entries(CATEGORY_LABELS).map(([slug, labels]) => ({ slug, labels }))
+
+export const MD_CATEGORIES = CATEGORY_TAXONOMY.map(({ slug, labels }) => ({ slug, label: labels.es }))
 
 /** Etiqueta de una categoría en el idioma dado, a partir de su slug (idioma-neutral). */
 export function categoryLabel(lang: RecipeLanguage, slug: string): string | undefined {
@@ -137,4 +117,10 @@ export function categoryLabel(lang: RecipeLanguage, slug: string): string | unde
 export function categorySlugFromLabel(lang: RecipeLanguage, label: string | null | undefined): string | undefined {
   if (!label) return undefined
   return CATEGORY_TAXONOMY.find((entry) => entry.labels[lang] === label)?.slug
+}
+
+/** Devuelve solo etiquetas exactas de la taxonomía aprobada; nunca crea categorías. */
+export function canonicalCategoryLabel(lang: RecipeLanguage, label: string | null | undefined): string | undefined {
+  const slug = categorySlugFromLabel(lang, label)
+  return slug ? categoryLabel(lang, slug) : undefined
 }

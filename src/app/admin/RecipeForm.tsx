@@ -1,5 +1,8 @@
 'use client'
 
+import { useState } from 'react'
+import { CATEGORY_TAXONOMY } from '@/lib/categories'
+import type { RecipeLanguage } from '@/types/recipe'
 import { useFormState, useFormStatus } from 'react-dom'
 import { initialFormState, type FormState } from './form-state'
 
@@ -29,6 +32,7 @@ interface Props {
   // Nunca recipe_group_id.
   hidden?: { name: 'id' | 'source_id'; value: string }
   defaults?: Defaults
+  fixedLanguage?: RecipeLanguage
   showPublicPath?: boolean
 }
 
@@ -45,8 +49,10 @@ function FieldError({ errors }: { errors?: string[] }) {
   return errors?.length ? <p role="alert">{errors[0]}</p> : null
 }
 
-export function RecipeForm({ action, submitLabel, languageOptions, hidden, defaults = {}, showPublicPath = false }: Props) {
+export function RecipeForm({ action, submitLabel, languageOptions, hidden, defaults = {}, fixedLanguage = 'es', showPublicPath = false }: Props) {
   const [state, formAction] = useFormState(action, initialFormState)
+  const [language, setLanguage] = useState<RecipeLanguage>((languageOptions?.[0]?.value as RecipeLanguage) ?? fixedLanguage)
+  const [category, setCategory] = useState(defaults.category ?? '')
   const e = state.fieldErrors ?? {}
 
   return (
@@ -56,7 +62,7 @@ export function RecipeForm({ action, submitLabel, languageOptions, hidden, defau
       {languageOptions && (
         <label>
           Idioma
-          <select name="language" required defaultValue={languageOptions[0]?.value}>
+          <select name="language" required value={language} onChange={(event) => { setLanguage(event.target.value as RecipeLanguage); setCategory(''); }}>
             {languageOptions.map((o) => (
               <option key={o.value} value={o.value}>{o.label}</option>
             ))}
@@ -97,7 +103,10 @@ export function RecipeForm({ action, submitLabel, languageOptions, hidden, defau
 
       <label>
         Categoría
-        <input name="category" defaultValue={defaults.category ?? ''} />
+        <select name="category" value={category} onChange={(event) => setCategory(event.target.value)}>
+          <option value="">Pendiente de clasificación</option>
+          {CATEGORY_TAXONOMY.map(({ slug, labels }) => <option key={slug} value={labels[language]}>{labels[language]}</option>)}
+        </select>
         <FieldError errors={e.category} />
       </label>
 

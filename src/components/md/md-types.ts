@@ -57,15 +57,4 @@ export type MdRecipeCardData = Pick<
   'id' | 'language' | 'slug' | 'public_path' | 'title' | 'excerpt' | 'category' | 'image_url'
 >;
 
-export const MD_CATEGORIES = [
-  { label: 'Platos principales', slug: 'platos-principales' },
-  { label: 'Entrantes y aperitivos', slug: 'entrantes-y-aperitivos' },
-  { label: 'Sopas y cremas', slug: 'sopas-y-cremas' },
-  { label: 'Ensaladas', slug: 'ensaladas' },
-  { label: 'Guarniciones', slug: 'guarniciones' },
-  { label: 'Salsas y aderezos', slug: 'salsas-y-aderezos' },
-  { label: 'Panes y masas', slug: 'panes-y-masas' },
-  { label: 'Postres', slug: 'postres' },
-  { label: 'Desayunos y brunch', slug: 'desayunos-y-brunch' },
-  { label: 'Bebidas', slug: 'bebidas' },
-] as const;
+export { MD_CATEGORIES } from '@/lib/categories';

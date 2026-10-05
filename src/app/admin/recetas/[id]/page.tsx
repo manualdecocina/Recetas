@@ -33,6 +33,7 @@ export default async function EditRecipePage({ params }: { params: Promise<{ id:
           : 'Nunca publicada.'}
       </p>
       <RecipeForm
+        fixedLanguage={recipe.language}
         action={updateRecipeAction}
         submitLabel="Guardar cambios"
         hidden={{ name: 'id', value: recipe.id }}

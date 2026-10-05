@@ -1,4 +1,6 @@
 import { z } from 'zod'
+import { CATEGORY_TAXONOMY, categorySlugFromLabel } from '@/lib/categories'
+import type { RecipeLanguage } from '@/types/recipe'
 import { getAllowedImageHosts } from '@/lib/image-hosts'
 import type { RecipeIngredient, RecipeStep } from '@/types/recipe'
 
@@ -70,7 +72,7 @@ export const recipeFieldsSchema = z.object({
   public_path: publicPathSchema,
   title: z.string().trim().min(3, 'Mínimo 3 caracteres').max(120, 'Máximo 120 caracteres'),
   excerpt: optionalText(300),
-  category: optionalText(60),
+  category: optionalText(60).refine((label) => !label || CATEGORY_TAXONOMY.some((entry) => Object.values(entry.labels).includes(label)), 'Elige una categoría canónica; no se admiten etiquetas libres.'),
   prep_time_minutes: optionalInt(1440),
   cook_time_minutes: optionalInt(2880),
   servings: optionalInt(500),
@@ -122,8 +124,8 @@ export function stepsToText(steps: RecipeStep[]): string {
   return steps.map((s) => `${s.title}\n${s.content}`).join('\n\n')
 }
 
-export function readRecipeForm(formData: FormData) {
-  return recipeFieldsSchema.safeParse({
+export function readRecipeForm(formData: FormData, language: RecipeLanguage) {
+  const parsed = recipeFieldsSchema.safeParse({
     slug: formData.get('slug'),
     public_path: formData.get('public_path'),
     title: formData.get('title'),
@@ -137,6 +139,10 @@ export function readRecipeForm(formData: FormData) {
     ingredients: parseIngredients(String(formData.get('ingredients') ?? '')),
     steps: parseSteps(String(formData.get('steps') ?? '')),
   })
+  if (parsed.success && ((parsed.data.category && !categorySlugFromLabel(language, parsed.data.category)) || (parsed.data.published && !parsed.data.category))) {
+    return { success: false as const, error: new z.ZodError([{ code: 'custom', path: ['category'], message: 'Selecciona una categoría canónica en el idioma de esta receta.' }]) }
+  }
+  return parsed
 }
 
 export const uuidSchema = z.string().uuid()

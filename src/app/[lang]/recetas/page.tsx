@@ -92,7 +92,8 @@ export default async function RecipesListPage({ params, searchParams }: Props) {
     // etiqueta de ESTE idioma (antes comparaba siempre con la española y el filtro
     // no devolvía nada fuera de /es).
     const label = categoryLabel(lang, categoria)
-    if (label) query = query.eq('category', label)
+    if (!label) notFound()
+    query = query.eq('category', label)
   }
   if (cocina) {
     const { data: cuisine } = await supabase
