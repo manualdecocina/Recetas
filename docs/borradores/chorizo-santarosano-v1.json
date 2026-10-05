@@ -1,0 +1,1236 @@
+{
+  "entity": "E018",
+  "status": "ready_for_preview",
+  "recipe_group_id": "c27c68b3-375b-441e-83d3-0d87d44b3f44",
+  "source_policy": "Fresh Santarrosano-inspired Colombian sausage under existing Spanish identity. Replaces unsafe ambient day-long drying instruction from old staged row with cold handling and full cooking. Casings optional when forming patties; no old body prose reused.",
+  "kitchen_test_claimed": false,
+  "sources": [
+    {
+      "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures",
+      "purpose": "Ground pork 71 °C / 160 °F."
+    },
+    {
+      "url": "https://chorizosantarrosano.co/tradicion/",
+      "purpose": "Regional provenance of Santarrosano chorizo."
+    }
+  ],
+  "nutrition_calculation": {
+    "dataset": "USDA FoodData Central, SR Legacy April 2018",
+    "dataset_sha256": "b80817294b8850530aaedf2e515c02593b1824f763a0ff356e5c2081643e6fd0",
+    "method": "sum(per_100g × grams / 100) / 8 servings; added salt 12 g × 0.393 sodium fraction / 8",
+    "inputs": [
+      {
+        "fdc_id": "167843",
+        "description": "Pork, fresh, shoulder, whole, separable lean and fat, raw",
+        "grams": 800,
+        "per_100g": {
+          "sugar_g": 0.0,
+          "fat_g": 17.99,
+          "carbs_g": 0.0,
+          "calories": 236.0,
+          "saturated_fat_g": 6.24,
+          "fiber_g": 0.0,
+          "sodium_mg": 65.0,
+          "protein_g": 17.18
+        }
+      },
+      {
+        "fdc_id": "167813",
+        "description": "Pork, fresh, separable fat, raw",
+        "grams": 200,
+        "per_100g": {
+          "sugar_g": 0.0,
+          "calories": 632.0,
+          "fat_g": 65.7,
+          "saturated_fat_g": 21.979,
+          "sodium_mg": 47.0,
+          "protein_g": 9.25,
+          "fiber_g": 0.0,
+          "carbs_g": 0.0
+        }
+      },
+      {
+        "fdc_id": "173469",
+        "description": "Vinegar, cider",
+        "grams": 30,
+        "per_100g": {
+          "saturated_fat_g": 0.0,
+          "fiber_g": 0.0,
+          "fat_g": 0.0,
+          "protein_g": 0.0,
+          "carbs_g": 0.93,
+          "calories": 21.0,
+          "sugar_g": 0.4,
+          "sodium_mg": 5.0
+        }
+      },
+      {
+        "fdc_id": "170005",
+        "description": "Onions, spring or scallions (includes tops and bulb), raw",
+        "grams": 100,
+        "per_100g": {
+          "sugar_g": 2.33,
+          "calories": 32.0,
+          "fat_g": 0.19,
+          "protein_g": 1.83,
+          "fiber_g": 2.6,
+          "sodium_mg": 16.0,
+          "saturated_fat_g": 0.032,
+          "carbs_g": 7.34
+        }
+      },
+      {
+        "fdc_id": "169230",
+        "description": "Garlic, raw",
+        "grams": 12,
+        "per_100g": {
+          "carbs_g": 33.06,
+          "calories": 149.0,
+          "sugar_g": 1.0,
+          "saturated_fat_g": 0.089,
+          "fiber_g": 2.1,
+          "sodium_mg": 17.0,
+          "protein_g": 6.36,
+          "fat_g": 0.5
+        }
+      },
+      {
+        "fdc_id": "170923",
+        "description": "Spices, cumin seed",
+        "grams": 3,
+        "per_100g": {
+          "protein_g": 17.81,
+          "fiber_g": 10.5,
+          "sodium_mg": 168.0,
+          "fat_g": 22.27,
+          "carbs_g": 44.24,
+          "calories": 375.0,
+          "saturated_fat_g": 1.535,
+          "sugar_g": 2.25
+        }
+      },
+      {
+        "fdc_id": "171325",
+        "description": "Spices, garlic powder",
+        "grams": 2,
+        "per_100g": {
+          "fiber_g": 9.0,
+          "sodium_mg": 60.0,
+          "protein_g": 16.55,
+          "saturated_fat_g": 0.249,
+          "sugar_g": 2.43,
+          "fat_g": 0.73,
+          "carbs_g": 72.73,
+          "calories": 331.0
+        }
+      },
+      {
+        "fdc_id": "171328",
+        "description": "Spices, oregano, dried",
+        "grams": 2,
+        "per_100g": {
+          "sugar_g": 4.09,
+          "fat_g": 4.28,
+          "carbs_g": 68.92,
+          "calories": 265.0,
+          "fiber_g": 42.5,
+          "sodium_mg": 25.0,
+          "saturated_fat_g": 1.551,
+          "protein_g": 9.0
+        }
+      },
+      {
+        "fdc_id": "170931",
+        "description": "Spices, pepper, black",
+        "grams": 2,
+        "per_100g": {
+          "fat_g": 3.26,
+          "sugar_g": 0.64,
+          "carbs_g": 63.95,
+          "calories": 251.0,
+          "protein_g": 10.39,
+          "fiber_g": 25.3,
+          "sodium_mg": 20.0,
+          "saturated_fat_g": 1.392
+        }
+      }
+    ],
+    "assumptions": "800 g pork shoulder and 200 g pork fat; 30 ml cider vinegar≈30 g. Casings excluded; pan fat loss unmeasured. 12 g fine salt added."
+  },
+  "images": {
+    "method": "built-in image_gen",
+    "cover_reused_for_final_step": true,
+    "directory": "public/recetas/chorizo-santarosano",
+    "version": "v1"
+  },
+  "publication": {
+    "environment": "preview",
+    "state": "prepared",
+    "rows": [
+      {
+        "title": "Chorizo santarrosano casero y fresco",
+        "summary": "Chorizo fresco inspirado en Santa Rosa de Cabal: cerdo de picado grueso, cebolla larga, ajo y comino, embutido y cocinado al momento.",
+        "notes": "No seques la carne al aire libre. Mantén la mezcla y los chorizos crudos refrigerados, trabaja con utensilios fríos y cocina el centro a 71 °C. Esta es una versión casera fresca, no curada.",
+        "cuisine": "Colombiana, Santa Rosa de Cabal",
+        "course": "Plato principal",
+        "difficulty": "Intermedia",
+        "excerpt": "Chorizo fresco inspirado en Santa Rosa de Cabal: cerdo de picado grueso, cebolla larga, ajo y comino, embutido y cocinado al momento.",
+        "recipe_group_id": "c27c68b3-375b-441e-83d3-0d87d44b3f44",
+        "language": "es",
+        "public_path": "/chorizo-santarosano",
+        "slug": "chorizo-santarosano",
+        "category": "Platos principales",
+        "servings": 8,
+        "prep_time_minutes": 45,
+        "cook_time_minutes": 20,
+        "total_time_minutes": 125,
+        "ingredients": [
+          {
+            "name": "Paleta de cerdo molida gruesa",
+            "amount": "800",
+            "unit": "g"
+          },
+          {
+            "name": "Grasa de cerdo picada",
+            "amount": "200",
+            "unit": "g"
+          },
+          {
+            "name": "Cebolla larga picada",
+            "amount": "100",
+            "unit": "g"
+          },
+          {
+            "name": "Ajo fresco",
+            "amount": "12",
+            "unit": "g"
+          },
+          {
+            "name": "Vinagre de manzana",
+            "amount": "30",
+            "unit": "ml"
+          },
+          {
+            "name": "Sal fina",
+            "amount": "12",
+            "unit": "g"
+          },
+          {
+            "name": "Comino molido",
+            "amount": "3",
+            "unit": "g"
+          },
+          {
+            "name": "Pimienta negra",
+            "amount": "2",
+            "unit": "g"
+          },
+          {
+            "name": "Orégano seco",
+            "amount": "2",
+            "unit": "g"
+          },
+          {
+            "name": "Ajo en polvo",
+            "amount": "2",
+            "unit": "g"
+          },
+          {
+            "name": "Tripa natural de cerdo limpia",
+            "amount": "2",
+            "unit": "m"
+          }
+        ],
+        "steps": [
+          {
+            "title": "Enfría y prepara",
+            "content": "Mantén la carne y la grasa bien frías. Pícalas gruesas y corta la cebolla larga y el ajo; enjuaga y remoja la tripa según sus instrucciones.",
+            "image_alt": "Cerdo frío con cebolla y condimentos.",
+            "image_url": "/recetas/chorizo-santarosano/paso-01-v1.webp"
+          },
+          {
+            "title": "Mezcla y refrigera",
+            "content": "Mezcla cerdo, grasa, cebolla, ajo, vinagre, sal, comino, pimienta, orégano y ajo en polvo hasta integrar. Tapa y refrigera 60 minutos, sin dejar la mezcla a temperatura ambiente.",
+            "image_alt": "Mezcla fresca de chorizo en un cuenco.",
+            "image_url": "/recetas/chorizo-santarosano/paso-02-v1.webp"
+          },
+          {
+            "title": "Embute los chorizos",
+            "content": "Rellena la tripa sin apretar demasiado, expulsa bolsas de aire y retuerce en ocho porciones. Si no tienes embutidora, forma ocho tortitas y cocínalas igual.",
+            "image_alt": "Chorizos frescos embutidos y enlazados.",
+            "image_url": "/recetas/chorizo-santarosano/paso-03-v1.webp"
+          },
+          {
+            "title": "Cocina por completo",
+            "content": "En sartén a fuego medio bajo, cocina 15–20 minutos, girando, hasta dorar. Comprueba 71 °C en el centro de cada chorizo; evita pincharlo durante la cocción.",
+            "image_alt": "Chorizos dorándose en sartén con termómetro.",
+            "image_url": "/recetas/chorizo-santarosano/paso-04-v1.webp"
+          },
+          {
+            "title": "Sirve caliente",
+            "content": "Deja reposar 3 minutos y sirve los ocho chorizos calientes, por ejemplo con arepa. Refrigera pronto las porciones sobrantes.",
+            "image_alt": "Chorizo santarrosano cocido con arepa.",
+            "image_url": "/recetas/chorizo-santarosano/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/chorizo-santarosano/portada-v1.webp",
+        "seo": {
+          "title": "Chorizo santarrosano casero y fresco | Manual de Cocina",
+          "description": "Chorizo fresco inspirado en Santa Rosa de Cabal: cerdo de picado grueso, cebolla larga, ajo y comino, embutido y cocinado al momento.",
+          "faq": [
+            {
+              "q": "¿Hay que secarlos un día?",
+              "a": "No. Esta receta es de chorizo fresco: refrigera la mezcla y cocina el mismo día o congela las piezas crudas."
+            },
+            {
+              "q": "¿Y si no tengo tripa?",
+              "a": "Forma tortitas de la misma mezcla y cocina hasta 71 °C en el centro."
+            }
+          ],
+          "image_variants": [
+            "/recetas/chorizo-santarosano/portada-1x1-v1.webp",
+            "/recetas/chorizo-santarosano/portada-4x3-v1.webp",
+            "/recetas/chorizo-santarosano/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 405,
+          "protein_g": 20.0,
+          "carbs_g": 2.1,
+          "fat_g": 34.6,
+          "saturated_fat_g": 11.8,
+          "fiber_g": 0.6,
+          "sugar_g": 0.3,
+          "sodium_mg": 670,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g × grams / 100) / 8 servings; added salt 12 g × 0.393 sodium fraction / 8",
+          "serving_size": "1 chorizo",
+          "note": "Estimación por chorizo, sin arepa; la grasa que queda en sartén y tamaño de cada pieza varían."
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>Chorizo fresco inspirado en Santa Rosa de Cabal: cerdo de picado grueso, cebolla larga, ajo y comino, embutido y cocinado al momento.</p>",
+        "keywords": [
+          "Chorizo santarrosano casero y fresco",
+          "Platos principales",
+          "Colombiana, Santa Rosa de Cabal"
+        ],
+        "gallery": [],
+        "video_urls": []
+      },
+      {
+        "title": "Fresh Colombian Santarrosano chorizo",
+        "summary": "Fresh Santa Rosa de Cabal inspired pork sausage with spring onion, garlic and cumin, stuffed and cooked through.",
+        "notes": "Do not air-dry raw meat. Keep mixture and links chilled, use cold tools and cook centers to 71°C (160°F). This is a fresh, uncured home adaptation.",
+        "cuisine": "Colombian, Santa Rosa de Cabal",
+        "course": "Main course",
+        "difficulty": "Intermediate",
+        "excerpt": "Fresh Santa Rosa de Cabal inspired pork sausage with spring onion, garlic and cumin, stuffed and cooked through.",
+        "recipe_group_id": "c27c68b3-375b-441e-83d3-0d87d44b3f44",
+        "language": "en",
+        "public_path": "/en/fresh-santarrosano-chorizo/",
+        "slug": "fresh-santarrosano-chorizo",
+        "category": "Main dishes",
+        "servings": 8,
+        "prep_time_minutes": 45,
+        "cook_time_minutes": 20,
+        "total_time_minutes": 125,
+        "ingredients": [
+          {
+            "name": "Coarsely ground pork shoulder",
+            "amount": "800",
+            "unit": "g"
+          },
+          {
+            "name": "Chopped pork fat",
+            "amount": "200",
+            "unit": "g"
+          },
+          {
+            "name": "Chopped spring onion",
+            "amount": "100",
+            "unit": "g"
+          },
+          {
+            "name": "Fresh garlic",
+            "amount": "12",
+            "unit": "g"
+          },
+          {
+            "name": "Cider vinegar",
+            "amount": "30",
+            "unit": "ml"
+          },
+          {
+            "name": "Fine salt",
+            "amount": "12",
+            "unit": "g"
+          },
+          {
+            "name": "Ground cumin",
+            "amount": "3",
+            "unit": "g"
+          },
+          {
+            "name": "Black pepper",
+            "amount": "2",
+            "unit": "g"
+          },
+          {
+            "name": "Dried oregano",
+            "amount": "2",
+            "unit": "g"
+          },
+          {
+            "name": "Garlic powder",
+            "amount": "2",
+            "unit": "g"
+          },
+          {
+            "name": "Cleaned natural pork casing",
+            "amount": "2",
+            "unit": "m"
+          }
+        ],
+        "steps": [
+          {
+            "title": "Chill and prep",
+            "content": "Keep pork and fat very cold. Chop coarsely with spring onion and garlic; rinse and soak casing according to its directions.",
+            "image_alt": "Chilled pork with onion and seasonings.",
+            "image_url": "/recetas/chorizo-santarosano/paso-01-v1.webp"
+          },
+          {
+            "title": "Mix and chill",
+            "content": "Mix meat, fat, onion, garlic, vinegar, salt, cumin, pepper, oregano and garlic powder. Cover and chill 60 minutes; do not leave at room temperature.",
+            "image_alt": "Fresh sausage mixture in a bowl.",
+            "image_url": "/recetas/chorizo-santarosano/paso-02-v1.webp"
+          },
+          {
+            "title": "Stuff the links",
+            "content": "Fill casing gently, push out air pockets and twist into eight links. Without a stuffer, form eight patties and cook the same way.",
+            "image_alt": "Fresh sausages being stuffed.",
+            "image_url": "/recetas/chorizo-santarosano/paso-03-v1.webp"
+          },
+          {
+            "title": "Cook thoroughly",
+            "content": "Cook in a skillet over medium-low heat 15–20 minutes, turning, until browned. Check 71°C (160°F) at each center; avoid piercing while cooking.",
+            "image_alt": "Sausages browning with thermometer.",
+            "image_url": "/recetas/chorizo-santarosano/paso-04-v1.webp"
+          },
+          {
+            "title": "Serve hot",
+            "content": "Rest 3 minutes and serve eight hot links, perhaps with arepa. Refrigerate leftovers promptly.",
+            "image_alt": "Cooked Santarrosano chorizo with arepa.",
+            "image_url": "/recetas/chorizo-santarosano/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/chorizo-santarosano/portada-v1.webp",
+        "seo": {
+          "title": "Fresh Colombian Santarrosano chorizo | Manual de Cocina",
+          "description": "Fresh Santa Rosa de Cabal inspired pork sausage with spring onion, garlic and cumin, stuffed and cooked through.",
+          "faq": [
+            {
+              "q": "Should the sausages dry for a day?",
+              "a": "No. These are fresh sausages: refrigerate and cook the same day or freeze raw links."
+            },
+            {
+              "q": "What if I have no casing?",
+              "a": "Shape patties from the same mix and cook centers to 71°C."
+            }
+          ],
+          "image_variants": [
+            "/recetas/chorizo-santarosano/portada-1x1-v1.webp",
+            "/recetas/chorizo-santarosano/portada-4x3-v1.webp",
+            "/recetas/chorizo-santarosano/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 405,
+          "protein_g": 20.0,
+          "carbs_g": 2.1,
+          "fat_g": 34.6,
+          "saturated_fat_g": 11.8,
+          "fiber_g": 0.6,
+          "sugar_g": 0.3,
+          "sodium_mg": 670,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g × grams / 100) / 8 servings; added salt 12 g × 0.393 sodium fraction / 8",
+          "serving_size": "1 serving",
+          "note": "Estimate per link without arepa; pan drippings and link size vary."
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>Fresh Santa Rosa de Cabal inspired pork sausage with spring onion, garlic and cumin, stuffed and cooked through.</p>",
+        "keywords": [
+          "Fresh Colombian Santarrosano chorizo",
+          "Main dishes",
+          "Colombian, Santa Rosa de Cabal"
+        ],
+        "gallery": [],
+        "video_urls": []
+      },
+      {
+        "title": "Frische kolumbianische Santarrosano-Chorizo",
+        "summary": "Frische Schweinewurst nach Art von Santa Rosa de Cabal mit Frühlingszwiebel, Knoblauch und Kreuzkümmel.",
+        "notes": "Rohes Fleisch nicht an der Luft trocknen. Masse und Würste kühl halten und innen auf 71 °C garen. Dies ist eine frische, nicht gereifte Hausversion.",
+        "cuisine": "Kolumbianisch, Santa Rosa de Cabal",
+        "course": "Hauptgericht",
+        "difficulty": "Mittel",
+        "excerpt": "Frische Schweinewurst nach Art von Santa Rosa de Cabal mit Frühlingszwiebel, Knoblauch und Kreuzkümmel.",
+        "recipe_group_id": "c27c68b3-375b-441e-83d3-0d87d44b3f44",
+        "language": "de",
+        "public_path": "/de/frische-santarrosano-chorizo/",
+        "slug": "frische-santarrosano-chorizo",
+        "category": "Hauptgerichte",
+        "servings": 8,
+        "prep_time_minutes": 45,
+        "cook_time_minutes": 20,
+        "total_time_minutes": 125,
+        "ingredients": [
+          {
+            "name": "Grob gehackte Schweineschulter",
+            "amount": "800",
+            "unit": "g"
+          },
+          {
+            "name": "Gehacktes Schweinefett",
+            "amount": "200",
+            "unit": "g"
+          },
+          {
+            "name": "Frühlingszwiebel",
+            "amount": "100",
+            "unit": "g"
+          },
+          {
+            "name": "Frischer Knoblauch",
+            "amount": "12",
+            "unit": "g"
+          },
+          {
+            "name": "Apfelessig",
+            "amount": "30",
+            "unit": "ml"
+          },
+          {
+            "name": "Feines Salz",
+            "amount": "12",
+            "unit": "g"
+          },
+          {
+            "name": "Gemahlener Kreuzkümmel",
+            "amount": "3",
+            "unit": "g"
+          },
+          {
+            "name": "Schwarzer Pfeffer",
+            "amount": "2",
+            "unit": "g"
+          },
+          {
+            "name": "Getrockneter Oregano",
+            "amount": "2",
+            "unit": "g"
+          },
+          {
+            "name": "Knoblauchpulver",
+            "amount": "2",
+            "unit": "g"
+          },
+          {
+            "name": "Gereinigter Naturdarm vom Schwein",
+            "amount": "2",
+            "unit": "m"
+          }
+        ],
+        "steps": [
+          {
+            "title": "Kühlen und vorbereiten",
+            "content": "Fleisch und Fett sehr kalt halten und grob hacken. Frühlingszwiebel und Knoblauch schneiden; Darm nach Packungsangabe spülen und einweichen.",
+            "image_alt": "Kaltes Schweinefleisch mit Gewürzen.",
+            "image_url": "/recetas/chorizo-santarosano/paso-01-v1.webp"
+          },
+          {
+            "title": "Mischen und kühlen",
+            "content": "Fleisch, Fett, Zwiebel, Knoblauch, Essig, Salz und Gewürze vermengen. Abdecken und 60 Minuten kühlen, nicht bei Raumtemperatur stehen lassen.",
+            "image_alt": "Frische Wurstmasse in einer Schüssel.",
+            "image_url": "/recetas/chorizo-santarosano/paso-02-v1.webp"
+          },
+          {
+            "title": "Würste füllen",
+            "content": "Darm locker füllen, Luft entfernen und acht Würste abdrehen. Ohne Wurstfüller acht Frikadellen formen und genauso garen.",
+            "image_alt": "Frische Chorizo-Würste beim Füllen.",
+            "image_url": "/recetas/chorizo-santarosano/paso-03-v1.webp"
+          },
+          {
+            "title": "Durchgaren",
+            "content": "Bei mittlerer bis niedriger Hitze 15–20 Minuten unter Wenden bräunen. Jede Wurst in der Mitte auf 71 °C prüfen; beim Garen nicht anstechen.",
+            "image_alt": "Würste braten mit Thermometer.",
+            "image_url": "/recetas/chorizo-santarosano/paso-04-v1.webp"
+          },
+          {
+            "title": "Heiß servieren",
+            "content": "3 Minuten ruhen lassen und heiß, nach Wunsch mit Arepa, servieren. Reste rasch kühlen.",
+            "image_alt": "Gegarte Santarrosano-Chorizo mit Arepa.",
+            "image_url": "/recetas/chorizo-santarosano/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/chorizo-santarosano/portada-v1.webp",
+        "seo": {
+          "title": "Frische kolumbianische Santarrosano-Chorizo | Manual de Cocina",
+          "description": "Frische Schweinewurst nach Art von Santa Rosa de Cabal mit Frühlingszwiebel, Knoblauch und Kreuzkümmel.",
+          "faq": [
+            {
+              "q": "Müssen sie einen Tag trocknen?",
+              "a": "Nein. Frische Würste kühlen und am selben Tag garen oder roh einfrieren."
+            },
+            {
+              "q": "Ohne Darm möglich?",
+              "a": "Ja, als Frikadellen formen und bis 71 °C Kerntemperatur garen."
+            }
+          ],
+          "image_variants": [
+            "/recetas/chorizo-santarosano/portada-1x1-v1.webp",
+            "/recetas/chorizo-santarosano/portada-4x3-v1.webp",
+            "/recetas/chorizo-santarosano/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 405,
+          "protein_g": 20.0,
+          "carbs_g": 2.1,
+          "fat_g": 34.6,
+          "saturated_fat_g": 11.8,
+          "fiber_g": 0.6,
+          "sugar_g": 0.3,
+          "sodium_mg": 670,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g × grams / 100) / 8 servings; added salt 12 g × 0.393 sodium fraction / 8",
+          "serving_size": "1 serving",
+          "note": "Schätzwert pro Wurst ohne Arepa; austretendes Fett und Größe variieren."
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>Frische Schweinewurst nach Art von Santa Rosa de Cabal mit Frühlingszwiebel, Knoblauch und Kreuzkümmel.</p>",
+        "keywords": [
+          "Frische kolumbianische Santarrosano-Chorizo",
+          "Hauptgerichte",
+          "Kolumbianisch, Santa Rosa de Cabal"
+        ],
+        "gallery": [],
+        "video_urls": []
+      },
+      {
+        "title": "Chorizo santarrosano frais de Colombie",
+        "summary": "Saucisse fraîche inspirée de Santa Rosa de Cabal, au porc haché gros, cébette, ail et cumin.",
+        "notes": "Ne pas sécher la viande crue à l’air libre. Garder farce et saucisses froides, et cuire le cœur à 71 °C. Version maison fraîche, non séchée.",
+        "cuisine": "Colombienne, Santa Rosa de Cabal",
+        "course": "Plat principal",
+        "difficulty": "Intermédiaire",
+        "excerpt": "Saucisse fraîche inspirée de Santa Rosa de Cabal, au porc haché gros, cébette, ail et cumin.",
+        "recipe_group_id": "c27c68b3-375b-441e-83d3-0d87d44b3f44",
+        "language": "fr",
+        "public_path": "/fr/chorizo-santarrosano-frais/",
+        "slug": "chorizo-santarrosano-frais",
+        "category": "Plats principaux",
+        "servings": 8,
+        "prep_time_minutes": 45,
+        "cook_time_minutes": 20,
+        "total_time_minutes": 125,
+        "ingredients": [
+          {
+            "name": "Épaule de porc hachée gros",
+            "amount": "800",
+            "unit": "g"
+          },
+          {
+            "name": "Gras de porc haché",
+            "amount": "200",
+            "unit": "g"
+          },
+          {
+            "name": "Cébette hachée",
+            "amount": "100",
+            "unit": "g"
+          },
+          {
+            "name": "Ail frais",
+            "amount": "12",
+            "unit": "g"
+          },
+          {
+            "name": "Vinaigre de cidre",
+            "amount": "30",
+            "unit": "ml"
+          },
+          {
+            "name": "Sel fin",
+            "amount": "12",
+            "unit": "g"
+          },
+          {
+            "name": "Cumin moulu",
+            "amount": "3",
+            "unit": "g"
+          },
+          {
+            "name": "Poivre noir",
+            "amount": "2",
+            "unit": "g"
+          },
+          {
+            "name": "Origan séché",
+            "amount": "2",
+            "unit": "g"
+          },
+          {
+            "name": "Ail en poudre",
+            "amount": "2",
+            "unit": "g"
+          },
+          {
+            "name": "Boyau naturel de porc nettoyé",
+            "amount": "2",
+            "unit": "m"
+          }
+        ],
+        "steps": [
+          {
+            "title": "Refroidir et préparer",
+            "content": "Garder viande et gras très froids, les hacher gros. Couper cébette et ail; rincer et tremper le boyau selon ses instructions.",
+            "image_alt": "Porc froid, cébette et épices.",
+            "image_url": "/recetas/chorizo-santarosano/paso-01-v1.webp"
+          },
+          {
+            "title": "Mélanger et réfrigérer",
+            "content": "Mélanger viande, gras, cébette, ail, vinaigre, sel et épices. Couvrir et réfrigérer 60 minutes, jamais à température ambiante.",
+            "image_alt": "Farce fraîche à saucisse dans un bol.",
+            "image_url": "/recetas/chorizo-santarosano/paso-02-v1.webp"
+          },
+          {
+            "title": "Embosser",
+            "content": "Remplir le boyau sans trop serrer, chasser l’air et former huit saucisses. Sans poussoir, faire huit galettes à cuire de la même façon.",
+            "image_alt": "Saucisses fraîches en boyaux.",
+            "image_url": "/recetas/chorizo-santarosano/paso-03-v1.webp"
+          },
+          {
+            "title": "Bien cuire",
+            "content": "Cuire à feu moyen-doux 15 à 20 minutes en tournant. Vérifier 71 °C au cœur de chaque saucisse; éviter de piquer pendant la cuisson.",
+            "image_alt": "Saucisses dorées avec thermomètre.",
+            "image_url": "/recetas/chorizo-santarosano/paso-04-v1.webp"
+          },
+          {
+            "title": "Servir chaud",
+            "content": "Laisser reposer 3 minutes et servir chaud, avec une arepa si désiré. Réfrigérer vite les restes.",
+            "image_alt": "Chorizo santarrosano cuit avec arepa.",
+            "image_url": "/recetas/chorizo-santarosano/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/chorizo-santarosano/portada-v1.webp",
+        "seo": {
+          "title": "Chorizo santarrosano frais de Colombie | Manual de Cocina",
+          "description": "Saucisse fraîche inspirée de Santa Rosa de Cabal, au porc haché gros, cébette, ail et cumin.",
+          "faq": [
+            {
+              "q": "Faut-il les sécher un jour ?",
+              "a": "Non. Ce sont des saucisses fraîches à garder au froid, cuire le jour même ou congeler crues."
+            },
+            {
+              "q": "Sans boyau ?",
+              "a": "Former des galettes et cuire jusqu’à 71 °C au centre."
+            }
+          ],
+          "image_variants": [
+            "/recetas/chorizo-santarosano/portada-1x1-v1.webp",
+            "/recetas/chorizo-santarosano/portada-4x3-v1.webp",
+            "/recetas/chorizo-santarosano/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 405,
+          "protein_g": 20.0,
+          "carbs_g": 2.1,
+          "fat_g": 34.6,
+          "saturated_fat_g": 11.8,
+          "fiber_g": 0.6,
+          "sugar_g": 0.3,
+          "sodium_mg": 670,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g × grams / 100) / 8 servings; added salt 12 g × 0.393 sodium fraction / 8",
+          "serving_size": "1 serving",
+          "note": "Estimation par saucisse sans arepa; gras rendu et taille varient."
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>Saucisse fraîche inspirée de Santa Rosa de Cabal, au porc haché gros, cébette, ail et cumin.</p>",
+        "keywords": [
+          "Chorizo santarrosano frais de Colombie",
+          "Plats principaux",
+          "Colombienne, Santa Rosa de Cabal"
+        ],
+        "gallery": [],
+        "video_urls": []
+      },
+      {
+        "title": "Chorizo santarrosano colombiano fresco",
+        "summary": "Salsiccia fresca ispirata a Santa Rosa de Cabal con maiale macinato grosso, cipollotto, aglio e cumino.",
+        "notes": "Non essiccare carne cruda all’aria. Tieni impasto e salsicce in frigo e cuoci il centro a 71 °C. Versione casalinga fresca, non stagionata.",
+        "cuisine": "Colombiana, Santa Rosa de Cabal",
+        "course": "Piatto principale",
+        "difficulty": "Media",
+        "excerpt": "Salsiccia fresca ispirata a Santa Rosa de Cabal con maiale macinato grosso, cipollotto, aglio e cumino.",
+        "recipe_group_id": "c27c68b3-375b-441e-83d3-0d87d44b3f44",
+        "language": "it",
+        "public_path": "/it/chorizo-santarrosano-fresco/",
+        "slug": "chorizo-santarrosano-fresco",
+        "category": "Secondi piatti",
+        "servings": 8,
+        "prep_time_minutes": 45,
+        "cook_time_minutes": 20,
+        "total_time_minutes": 125,
+        "ingredients": [
+          {
+            "name": "Spalla di maiale macinata grossa",
+            "amount": "800",
+            "unit": "g"
+          },
+          {
+            "name": "Grasso di maiale tritato",
+            "amount": "200",
+            "unit": "g"
+          },
+          {
+            "name": "Cipollotto tritato",
+            "amount": "100",
+            "unit": "g"
+          },
+          {
+            "name": "Aglio fresco",
+            "amount": "12",
+            "unit": "g"
+          },
+          {
+            "name": "Aceto di mele",
+            "amount": "30",
+            "unit": "ml"
+          },
+          {
+            "name": "Sale fino",
+            "amount": "12",
+            "unit": "g"
+          },
+          {
+            "name": "Cumino macinato",
+            "amount": "3",
+            "unit": "g"
+          },
+          {
+            "name": "Pepe nero",
+            "amount": "2",
+            "unit": "g"
+          },
+          {
+            "name": "Origano secco",
+            "amount": "2",
+            "unit": "g"
+          },
+          {
+            "name": "Aglio in polvere",
+            "amount": "2",
+            "unit": "g"
+          },
+          {
+            "name": "Budello naturale di maiale pulito",
+            "amount": "2",
+            "unit": "m"
+          }
+        ],
+        "steps": [
+          {
+            "title": "Raffredda e prepara",
+            "content": "Tieni carne e grasso molto freddi e tritali grossi. Taglia cipollotto e aglio; sciacqua e ammolla il budello come indicato.",
+            "image_alt": "Maiale freddo con cipollotto e spezie.",
+            "image_url": "/recetas/chorizo-santarosano/paso-01-v1.webp"
+          },
+          {
+            "title": "Mescola e refrigera",
+            "content": "Unisci carne, grasso, cipollotto, aglio, aceto, sale e spezie. Copri e refrigera 60 minuti, senza lasciare a temperatura ambiente.",
+            "image_alt": "Impasto fresco di salsiccia in ciotola.",
+            "image_url": "/recetas/chorizo-santarosano/paso-02-v1.webp"
+          },
+          {
+            "title": "Insacca",
+            "content": "Riempi il budello senza comprimere, elimina l’aria e forma otto salsicce. Senza insaccatrice forma otto polpette schiacciate.",
+            "image_alt": "Salsicce fresche insaccate.",
+            "image_url": "/recetas/chorizo-santarosano/paso-03-v1.webp"
+          },
+          {
+            "title": "Cuoci bene",
+            "content": "Cuoci in padella a fuoco medio-basso 15–20 minuti girando. Verifica 71 °C al centro di ogni pezzo, senza forarlo durante la cottura.",
+            "image_alt": "Salsicce in padella con termometro.",
+            "image_url": "/recetas/chorizo-santarosano/paso-04-v1.webp"
+          },
+          {
+            "title": "Servi caldo",
+            "content": "Riposa 3 minuti e servi caldo, anche con arepa. Refrigera presto gli avanzi.",
+            "image_alt": "Chorizo santarrosano cotto con arepa.",
+            "image_url": "/recetas/chorizo-santarosano/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/chorizo-santarosano/portada-v1.webp",
+        "seo": {
+          "title": "Chorizo santarrosano colombiano fresco | Manual de Cocina",
+          "description": "Salsiccia fresca ispirata a Santa Rosa de Cabal con maiale macinato grosso, cipollotto, aglio e cumino.",
+          "faq": [
+            {
+              "q": "Devono asciugare un giorno?",
+              "a": "No. Sono salsicce fresche: refrigera e cuoci il giorno stesso o congela crude."
+            },
+            {
+              "q": "Senza budello?",
+              "a": "Forma polpette schiacciate e cuoci fino a 71 °C al centro."
+            }
+          ],
+          "image_variants": [
+            "/recetas/chorizo-santarosano/portada-1x1-v1.webp",
+            "/recetas/chorizo-santarosano/portada-4x3-v1.webp",
+            "/recetas/chorizo-santarosano/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 405,
+          "protein_g": 20.0,
+          "carbs_g": 2.1,
+          "fat_g": 34.6,
+          "saturated_fat_g": 11.8,
+          "fiber_g": 0.6,
+          "sugar_g": 0.3,
+          "sodium_mg": 670,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g × grams / 100) / 8 servings; added salt 12 g × 0.393 sodium fraction / 8",
+          "serving_size": "1 serving",
+          "note": "Stima per salsiccia senza arepa; grasso perso e dimensione variano."
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>Salsiccia fresca ispirata a Santa Rosa de Cabal con maiale macinato grosso, cipollotto, aglio e cumino.</p>",
+        "keywords": [
+          "Chorizo santarrosano colombiano fresco",
+          "Secondi piatti",
+          "Colombiana, Santa Rosa de Cabal"
+        ],
+        "gallery": [],
+        "video_urls": []
+      },
+      {
+        "title": "コロンビア風サンタロサノ生チョリソ",
+        "summary": "サンタ・ロサ・デ・カバル風の粗びき豚肉、青ねぎ、にんにく、クミンを使った生チョリソ。",
+        "notes": "生の肉を室温で干さない。具と腸詰めを冷蔵で保ち、中心温度71℃まで焼く。これは熟成させない家庭向けの生ソーセージ。",
+        "cuisine": "コロンビア風",
+        "course": "主菜",
+        "difficulty": "中級",
+        "excerpt": "サンタ・ロサ・デ・カバル風の粗びき豚肉、青ねぎ、にんにく、クミンを使った生チョリソ。",
+        "recipe_group_id": "c27c68b3-375b-441e-83d3-0d87d44b3f44",
+        "language": "ja",
+        "public_path": "/ja/コロンビア風サンタロサノ生チョリソ/",
+        "slug": "コロンビア風サンタロサノ生チョリソ",
+        "category": "主菜",
+        "servings": 8,
+        "prep_time_minutes": 45,
+        "cook_time_minutes": 20,
+        "total_time_minutes": 125,
+        "ingredients": [
+          {
+            "name": "粗びき豚肩肉",
+            "amount": "800",
+            "unit": "g"
+          },
+          {
+            "name": "刻んだ豚脂",
+            "amount": "200",
+            "unit": "g"
+          },
+          {
+            "name": "刻んだ青ねぎ",
+            "amount": "100",
+            "unit": "g"
+          },
+          {
+            "name": "生にんにく",
+            "amount": "12",
+            "unit": "g"
+          },
+          {
+            "name": "りんご酢",
+            "amount": "30",
+            "unit": "ml"
+          },
+          {
+            "name": "塩",
+            "amount": "12",
+            "unit": "g"
+          },
+          {
+            "name": "粉末クミン",
+            "amount": "3",
+            "unit": "g"
+          },
+          {
+            "name": "黒こしょう",
+            "amount": "2",
+            "unit": "g"
+          },
+          {
+            "name": "乾燥オレガノ",
+            "amount": "2",
+            "unit": "g"
+          },
+          {
+            "name": "ガーリックパウダー",
+            "amount": "2",
+            "unit": "g"
+          },
+          {
+            "name": "洗浄済み豚の天然ケーシング",
+            "amount": "2",
+            "unit": "m"
+          }
+        ],
+        "steps": [
+          {
+            "title": "冷やして準備",
+            "content": "肉と脂をよく冷やして粗く刻む。青ねぎとにんにくを切り、ケーシングは表示どおり洗って戻す。",
+            "image_alt": "冷たい豚肉と香味野菜。",
+            "image_url": "/recetas/chorizo-santarosano/paso-01-v1.webp"
+          },
+          {
+            "title": "混ぜて冷やす",
+            "content": "肉、脂、ねぎ、にんにく、酢、塩、香辛料を混ぜる。ふたをして60分冷蔵し、室温に放置しない。",
+            "image_alt": "ボウルの生ソーセージの具。",
+            "image_url": "/recetas/chorizo-santarosano/paso-02-v1.webp"
+          },
+          {
+            "title": "腸詰めにする",
+            "content": "腸に詰めすぎず、空気を抜いて8本にねじる。詰め器がなければ8個の平たいパティにする。",
+            "image_alt": "生チョリソの腸詰め。",
+            "image_url": "/recetas/chorizo-santarosano/paso-03-v1.webp"
+          },
+          {
+            "title": "中まで焼く",
+            "content": "弱めの中火で返しながら15〜20分焼く。各本の中心が71℃に達したことを確認し、焼いている間は穴を開けない。",
+            "image_alt": "温度計で確認する焼きチョリソ。",
+            "image_url": "/recetas/chorizo-santarosano/paso-04-v1.webp"
+          },
+          {
+            "title": "温かく出す",
+            "content": "3分休ませて温かいうちに出す。アレパを添えてもよい。残りは速やかに冷蔵する。",
+            "image_alt": "焼いたサンタロサノ・チョリソ。",
+            "image_url": "/recetas/chorizo-santarosano/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/chorizo-santarosano/portada-v1.webp",
+        "seo": {
+          "title": "コロンビア風サンタロサノ生チョリソ | Manual de Cocina",
+          "description": "サンタ・ロサ・デ・カバル風の粗びき豚肉、青ねぎ、にんにく、クミンを使った生チョリソ。",
+          "faq": [
+            {
+              "q": "一日干す必要がありますか？",
+              "a": "いいえ。生ソーセージなので冷蔵し、その日のうちに焼くか生のまま冷凍します。"
+            },
+            {
+              "q": "腸がない場合は？",
+              "a": "平たいパティにし、中心71℃まで焼きます。"
+            }
+          ],
+          "image_variants": [
+            "/recetas/chorizo-santarosano/portada-1x1-v1.webp",
+            "/recetas/chorizo-santarosano/portada-4x3-v1.webp",
+            "/recetas/chorizo-santarosano/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 405,
+          "protein_g": 20.0,
+          "carbs_g": 2.1,
+          "fat_g": 34.6,
+          "saturated_fat_g": 11.8,
+          "fiber_g": 0.6,
+          "sugar_g": 0.3,
+          "sodium_mg": 670,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g × grams / 100) / 8 servings; added salt 12 g × 0.393 sodium fraction / 8",
+          "serving_size": "1 serving",
+          "note": "アレパを含まない1本分の概算。流出する脂と大きさで変わります。"
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>サンタ・ロサ・デ・カバル風の粗びき豚肉、青ねぎ、にんにく、クミンを使った生チョリソ。</p>",
+        "keywords": [
+          "コロンビア風サンタロサノ生チョリソ",
+          "主菜",
+          "コロンビア風"
+        ],
+        "gallery": [],
+        "video_urls": []
+      },
+      {
+        "title": "Chouriço santarrosano colombiano fresco",
+        "summary": "Enchido fresco inspirado em Santa Rosa de Cabal, de porco picado grosso, cebolinho, alho e cominhos.",
+        "notes": "Não seque carne crua ao ar. Mantenha a mistura e os enchidos refrigerados e cozinhe o centro a 71 °C. Versão caseira fresca, não curada.",
+        "cuisine": "Colombiana, Santa Rosa de Cabal",
+        "course": "Prato principal",
+        "difficulty": "Intermédia",
+        "excerpt": "Enchido fresco inspirado em Santa Rosa de Cabal, de porco picado grosso, cebolinho, alho e cominhos.",
+        "recipe_group_id": "c27c68b3-375b-441e-83d3-0d87d44b3f44",
+        "language": "pt",
+        "public_path": "/pt/chourico-santarrosano-fresco/",
+        "slug": "chourico-santarrosano-fresco",
+        "category": "Pratos principais",
+        "servings": 8,
+        "prep_time_minutes": 45,
+        "cook_time_minutes": 20,
+        "total_time_minutes": 125,
+        "ingredients": [
+          {
+            "name": "Pá de porco picada grossa",
+            "amount": "800",
+            "unit": "g"
+          },
+          {
+            "name": "Gordura de porco picada",
+            "amount": "200",
+            "unit": "g"
+          },
+          {
+            "name": "Cebolinho picado",
+            "amount": "100",
+            "unit": "g"
+          },
+          {
+            "name": "Alho fresco",
+            "amount": "12",
+            "unit": "g"
+          },
+          {
+            "name": "Vinagre de maçã",
+            "amount": "30",
+            "unit": "ml"
+          },
+          {
+            "name": "Sal fino",
+            "amount": "12",
+            "unit": "g"
+          },
+          {
+            "name": "Cominhos moídos",
+            "amount": "3",
+            "unit": "g"
+          },
+          {
+            "name": "Pimenta-preta",
+            "amount": "2",
+            "unit": "g"
+          },
+          {
+            "name": "Orégãos secos",
+            "amount": "2",
+            "unit": "g"
+          },
+          {
+            "name": "Alho em pó",
+            "amount": "2",
+            "unit": "g"
+          },
+          {
+            "name": "Tripa natural de porco limpa",
+            "amount": "2",
+            "unit": "m"
+          }
+        ],
+        "steps": [
+          {
+            "title": "Arrefeça e prepare",
+            "content": "Mantenha carne e gordura bem frias e pique grosso. Corte cebolinho e alho; lave e demolhe a tripa conforme instruções.",
+            "image_alt": "Porco frio com cebolinho e temperos.",
+            "image_url": "/recetas/chorizo-santarosano/paso-01-v1.webp"
+          },
+          {
+            "title": "Misture e refrigere",
+            "content": "Misture carne, gordura, cebolinho, alho, vinagre, sal e especiarias. Tape e refrigere 60 minutos, sem deixar à temperatura ambiente.",
+            "image_alt": "Mistura fresca de enchido numa taça.",
+            "image_url": "/recetas/chorizo-santarosano/paso-02-v1.webp"
+          },
+          {
+            "title": "Encha a tripa",
+            "content": "Encha sem apertar, retire bolhas de ar e forme oito chouriços. Sem máquina, faça oito hambúrgueres e cozinhe da mesma forma.",
+            "image_alt": "Chouriços frescos a encher.",
+            "image_url": "/recetas/chorizo-santarosano/paso-03-v1.webp"
+          },
+          {
+            "title": "Cozinhe bem",
+            "content": "Cozinhe na frigideira em lume médio-baixo 15–20 minutos, virando. Confirme 71 °C no centro de cada peça; evite picar durante a cozedura.",
+            "image_alt": "Chouriços a dourar com termómetro.",
+            "image_url": "/recetas/chorizo-santarosano/paso-04-v1.webp"
+          },
+          {
+            "title": "Sirva quente",
+            "content": "Repouse 3 minutos e sirva quente, talvez com arepa. Refrigere rapidamente as sobras.",
+            "image_alt": "Chouriço santarrosano cozinhado com arepa.",
+            "image_url": "/recetas/chorizo-santarosano/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/chorizo-santarosano/portada-v1.webp",
+        "seo": {
+          "title": "Chouriço santarrosano colombiano fresco | Manual de Cocina",
+          "description": "Enchido fresco inspirado em Santa Rosa de Cabal, de porco picado grosso, cebolinho, alho e cominhos.",
+          "faq": [
+            {
+              "q": "Devem secar um dia?",
+              "a": "Não. São enchidos frescos: refrigere e cozinhe no próprio dia ou congele crus."
+            },
+            {
+              "q": "Sem tripa?",
+              "a": "Faça hambúrgueres e cozinhe até 71 °C no centro."
+            }
+          ],
+          "image_variants": [
+            "/recetas/chorizo-santarosano/portada-1x1-v1.webp",
+            "/recetas/chorizo-santarosano/portada-4x3-v1.webp",
+            "/recetas/chorizo-santarosano/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 405,
+          "protein_g": 20.0,
+          "carbs_g": 2.1,
+          "fat_g": 34.6,
+          "saturated_fat_g": 11.8,
+          "fiber_g": 0.6,
+          "sugar_g": 0.3,
+          "sodium_mg": 670,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g × grams / 100) / 8 servings; added salt 12 g × 0.393 sodium fraction / 8",
+          "serving_size": "1 serving",
+          "note": "Estimativa por chouriço sem arepa; gordura libertada e tamanho variam."
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>Enchido fresco inspirado em Santa Rosa de Cabal, de porco picado grosso, cebolinho, alho e cominhos.</p>",
+        "keywords": [
+          "Chouriço santarrosano colombiano fresco",
+          "Pratos principais",
+          "Colombiana, Santa Rosa de Cabal"
+        ],
+        "gallery": [],
+        "video_urls": []
+      }
+    ]
+  }
+}
