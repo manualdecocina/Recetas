@@ -1,0 +1,20 @@
+name: preview-url-audit
+on:
+  pull_request:
+    paths:
+      - 'docs/audits/preview-url-evidence-20261005.json'
+      - 'scripts/audit-preview-urls.py'
+      - '.github/workflows/preview-url-audit.yml'
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/audit-preview-urls.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: preview-url-http-audit
+          path: preview-url-http-audit.json
