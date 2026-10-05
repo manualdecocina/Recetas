@@ -52,12 +52,22 @@ export function recipePath(language: RecipeLanguage | string, slug: string): str
   return `/${language}/receta/${slug}`
 }
 
+/** Stored public paths are authoritative, including historical trailing slashes. */
+export function publicPathHref(path: string): string {
+  return path ? (path.startsWith('/') ? path : '/' + path) : '/'
+}
+
+/** The existing Portuguese catalog is Brazilian Portuguese; /pt remains its route key. */
+export function languageTag(language: string): string {
+  return language === 'pt' ? 'pt-BR' : language
+}
+
 export function recipeUrl(language: RecipeLanguage | string, slug: string): string {
   return `${getSiteUrl()}${recipePath(language, slug)}`
 }
 
 export function publicUrl(publicPath: string): string {
-  return `${getSiteUrl()}${normalizePublicPath(publicPath)}`
+  return `${getSiteUrl()}${publicPathHref(publicPath)}`
 }
 
 /** Autor editorial de las recetas. La biografía completa vive en la página "Quiénes somos". */
