@@ -13,4 +13,4 @@ Acuerdo editorial del 5 de octubre de 2026. Completar una receta antes de empeza
 
 Evitar auditorías generales, pruebas repetidas, reescrituras sin motivo y creación simultánea de varias recetas incompletas. Si una comprobación falla, revisar solamente ese fallo.
 
-Cola actual: E012 pollo Alfredo, según la matriz editorial. E009 pie de limón y E011 horchata de arroz están publicados en preview.
+Cola actual: E013 pulpo a la gallega, según la matriz editorial. E009 pie de limón, E011 horchata de arroz y E012 pollo Alfredo están publicados en preview.
