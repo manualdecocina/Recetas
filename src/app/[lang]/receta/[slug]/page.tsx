@@ -4,7 +4,7 @@ import type { Metadata } from 'next'
 import { supabase } from '@/lib/supabase/public'
 import { getRelatedRecipes } from '@/lib/public-content'
 import { recipeAlternates, recipeMetaText, recipeSocialImages } from '@/lib/seo'
-import { normalizePublicPath, recipePath, publicUrl } from '@/lib/site'
+import { normalizePublicPath, recipePath, publicUrl, publicPathHref } from '@/lib/site'
 import { RecipeDocument } from '@/components/RecipeDocument'
 import type { RecipeIngredient } from '@/types/recipe'
 import { SUPPORTED_LANGUAGES, type Recipe, type RecipeLanguage } from '@/types/recipe'
@@ -102,7 +102,7 @@ export default async function RecipeDetailPage({ params }: Props) {
 
   const routePath = normalizePublicPath(recipePath(lang, recipe.slug))
   const publicPath = normalizePublicPath(recipe.public_path)
-  if (routePath !== publicPath) permanentRedirect(publicPath)
+  if (routePath !== publicPath) permanentRedirect(publicPathHref(recipe.public_path))
 
   const relatedRecipes = await getRelatedRecipes(recipe)
   return <RecipeDocument recipe={recipe} relatedRecipes={relatedRecipes} />
