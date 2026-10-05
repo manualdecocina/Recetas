@@ -1,0 +1,1217 @@
+{
+  "entity": "E012",
+  "status": "ready_for_preview",
+  "recipe_group_id": "10f7083a-a795-4acf-8b44-22c543e8bd2d",
+  "source_policy": "Original reconstructed formulation; historical ES and JA paths and recipe group preserved. No WordPress body copy reused. The legacy ContentPage was already absent at publication time.",
+  "kitchen_test_claimed": false,
+  "sources": [
+    {
+      "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures",
+      "purpose": "Chicken center must reach 74 °C / 165 °F."
+    }
+  ],
+  "nutrition_calculation": {
+    "dataset": "USDA FoodData Central, SR Legacy April 2018",
+    "dataset_sha256": "b80817294b8850530aaedf2e515c02593b1824f763a0ff356e5c2081643e6fd0",
+    "method": "sum(per_100g * grams_used / 100) / 4 servings; sodium adds 3 g table salt × 0.393 / 4",
+    "inputs": [
+      {
+        "fdc_id": "171077",
+        "description": "Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw",
+        "grams": 500,
+        "per_100g": {
+          "fat_g": 2.62,
+          "calories": 120.0,
+          "saturated_fat_g": 0.563,
+          "sodium_mg": 45.0,
+          "protein_g": 22.5,
+          "sugar_g": 0.0,
+          "carbs_g": 0.0,
+          "fiber_g": 0.0
+        }
+      },
+      {
+        "fdc_id": "168927",
+        "description": "Pasta, dry, unenriched",
+        "grams": 350,
+        "per_100g": {
+          "protein_g": 13.04,
+          "fiber_g": 3.2,
+          "fat_g": 1.51,
+          "saturated_fat_g": 0.277,
+          "sodium_mg": 6.0,
+          "carbs_g": 74.67,
+          "calories": 371.0,
+          "sugar_g": 2.67
+        }
+      },
+      {
+        "fdc_id": "168462",
+        "description": "Spinach, raw",
+        "grams": 60,
+        "per_100g": {
+          "protein_g": 2.86,
+          "sodium_mg": 79.0,
+          "fiber_g": 2.2,
+          "sugar_g": 0.42,
+          "fat_g": 0.39,
+          "carbs_g": 3.63,
+          "calories": 23.0,
+          "saturated_fat_g": 0.063
+        }
+      },
+      {
+        "fdc_id": "173430",
+        "description": "Butter, without salt",
+        "grams": 28,
+        "per_100g": {
+          "sugar_g": 0.06,
+          "calories": 717.0,
+          "saturated_fat_g": 50.489,
+          "fat_g": 81.11,
+          "carbs_g": 0.06,
+          "protein_g": 0.85,
+          "fiber_g": 0.0,
+          "sodium_mg": 11.0
+        }
+      },
+      {
+        "fdc_id": "171413",
+        "description": "Oil, olive, salad or cooking",
+        "grams": 14,
+        "per_100g": {
+          "fat_g": 100.0,
+          "carbs_g": 0.0,
+          "calories": 884.0,
+          "sodium_mg": 2.0,
+          "protein_g": 0.0,
+          "saturated_fat_g": 13.808,
+          "fiber_g": 0.0,
+          "sugar_g": 0.0
+        }
+      },
+      {
+        "fdc_id": "169230",
+        "description": "Garlic, raw",
+        "grams": 6,
+        "per_100g": {
+          "carbs_g": 33.06,
+          "calories": 149.0,
+          "sugar_g": 1.0,
+          "saturated_fat_g": 0.089,
+          "fiber_g": 2.1,
+          "sodium_mg": 17.0,
+          "protein_g": 6.36,
+          "fat_g": 0.5
+        }
+      },
+      {
+        "fdc_id": "170859",
+        "description": "Cream, fluid, heavy whipping",
+        "grams": 240,
+        "per_100g": {
+          "fat_g": 36.08,
+          "calories": 340.0,
+          "sugar_g": 2.92,
+          "sodium_mg": 27.0,
+          "protein_g": 2.84,
+          "saturated_fat_g": 23.032,
+          "fiber_g": 0.0,
+          "carbs_g": 2.84
+        }
+      },
+      {
+        "fdc_id": "170848",
+        "description": "Cheese, parmesan, hard",
+        "grams": 60,
+        "per_100g": {
+          "sodium_mg": 1175.0,
+          "saturated_fat_g": 14.85,
+          "sugar_g": 0.11,
+          "fat_g": 25.0,
+          "fiber_g": 0.0,
+          "protein_g": 35.75,
+          "carbs_g": 3.22,
+          "calories": 392.0
+        }
+      }
+    ],
+    "assumptions": "Cream 240 ml≈240 g, spinach 2 cups≈60 g, olive oil 1 tbsp≈14 g, butter 2 tbsp≈28 g, garlic 2 cloves≈6 g, 1/2 tsp salt≈3 g. Unmeasured salted pasta water and optional garnish excluded. Nutrition is an estimate."
+  },
+  "images": {
+    "method": "built-in image_gen",
+    "cover_reused_for_final_step": true,
+    "directory": "public/recetas/pollo-alfredo-a-la-florentina",
+    "version": "v1"
+  },
+  "publication": {
+    "environment": "preview",
+    "state": "prepared",
+    "rows": [
+      {
+        "title": "Pollo Alfredo a la Florentina",
+        "summary": "Fettuccine cremosos con pollo dorado, espinacas y parmesano. El agua de cocción liga una salsa suave que se prepara en la misma sartén.",
+        "notes": "Sirve de inmediato: la salsa espesa al enfriarse. Si se seca, añade un poco de agua de cocción caliente. Refrigera las sobras hasta 3 días y recalienta suavemente.",
+        "cuisine": "Italiana inspirada",
+        "course": "Plato principal",
+        "difficulty": "Intermedia",
+        "excerpt": "Fettuccine cremosos con pollo dorado, espinacas y parmesano. El agua de cocción liga una salsa suave que se prepara en la misma sartén.",
+        "recipe_group_id": "10f7083a-a795-4acf-8b44-22c543e8bd2d",
+        "language": "es",
+        "public_path": "/pollo-alfredo-a-la-florentina",
+        "slug": "pollo-alfredo-a-la-florentina",
+        "category": "Platos principales",
+        "servings": 4,
+        "prep_time_minutes": 15,
+        "cook_time_minutes": 30,
+        "total_time_minutes": 45,
+        "ingredients": [
+          {
+            "name": "Pechuga de pollo sin piel",
+            "amount": "500",
+            "unit": "g"
+          },
+          {
+            "name": "Fettuccine secos",
+            "amount": "350",
+            "unit": "g"
+          },
+          {
+            "name": "Espinacas frescas",
+            "amount": "60",
+            "unit": "g"
+          },
+          {
+            "name": "Mantequilla sin sal",
+            "amount": "28",
+            "unit": "g"
+          },
+          {
+            "name": "Aceite de oliva",
+            "amount": "14",
+            "unit": "g"
+          },
+          {
+            "name": "Ajo",
+            "amount": "6",
+            "unit": "g"
+          },
+          {
+            "name": "Nata para cocinar o crema de leche",
+            "amount": "240",
+            "unit": "ml"
+          },
+          {
+            "name": "Queso parmesano rallado",
+            "amount": "60",
+            "unit": "g"
+          },
+          {
+            "name": "Agua de cocción de la pasta",
+            "amount": "120",
+            "unit": "ml"
+          },
+          {
+            "name": "Sal fina",
+            "amount": "3",
+            "unit": "g"
+          },
+          {
+            "name": "Pimienta negra",
+            "amount": "1",
+            "unit": "g"
+          }
+        ],
+        "steps": [
+          {
+            "title": "Cocina la pasta",
+            "content": "Hierve los fettuccine en agua salada hasta que estén al dente. Reserva 120 ml del agua de cocción y escurre la pasta.",
+            "image_alt": "Fettuccine cociéndose en una olla.",
+            "image_url": "/recetas/pollo-alfredo-a-la-florentina/paso-01-v1.webp"
+          },
+          {
+            "title": "Dora el pollo",
+            "content": "Sazona el pollo con parte de la sal y pimienta. Calienta el aceite y la mitad de la mantequilla en una sartén; dóralo por ambos lados hasta que el centro alcance 74 °C. Reposa 5 minutos y corta en tiras.",
+            "image_alt": "Pechuga de pollo dorándose en sartén.",
+            "image_url": "/recetas/pollo-alfredo-a-la-florentina/paso-02-v1.webp"
+          },
+          {
+            "title": "Prepara la salsa",
+            "content": "En la misma sartén, funde la mantequilla restante y cocina el ajo 30 segundos. Añade la nata y 60 ml de agua de cocción; mantén un hervor suave 3–5 minutos. Baja el fuego e incorpora el parmesano poco a poco, removiendo.",
+            "image_alt": "Salsa cremosa de ajo y parmesano en sartén.",
+            "image_url": "/recetas/pollo-alfredo-a-la-florentina/paso-03-v1.webp"
+          },
+          {
+            "title": "Une pasta y espinacas",
+            "content": "Agrega las espinacas y cocina 1–2 minutos hasta que se ablanden. Añade los fettuccine y el pollo en tiras; mezcla hasta cubrir. Ajusta la textura con el agua reservada y prueba la sazón.",
+            "image_alt": "Espinacas, pasta y pollo mezclados en la salsa.",
+            "image_url": "/recetas/pollo-alfredo-a-la-florentina/paso-04-v1.webp"
+          },
+          {
+            "title": "Sirve caliente",
+            "content": "Reparte en cuatro platos y termina con parmesano adicional si deseas. Sirve enseguida, con la salsa aún sedosa.",
+            "image_alt": "Plato terminado de pollo Alfredo con espinacas.",
+            "image_url": "/recetas/pollo-alfredo-a-la-florentina/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/pollo-alfredo-a-la-florentina/portada-v1.webp",
+        "seo": {
+          "title": "Pollo Alfredo a la Florentina | Manual de Cocina",
+          "description": "Fettuccine cremosos con pollo dorado, espinacas y parmesano. El agua de cocción liga una salsa suave que se prepara en la misma sartén.",
+          "faq": [
+            {
+              "q": "¿Qué significa «a la Florentina»?",
+              "a": "En esta receta indica la incorporación de espinacas al pollo y la pasta."
+            },
+            {
+              "q": "¿Cómo evito que se corte la salsa?",
+              "a": "Mantén el fuego suave, añade el parmesano de forma gradual y afina con agua de cocción caliente."
+            }
+          ],
+          "image_variants": [
+            "/recetas/pollo-alfredo-a-la-florentina/portada-1x1-v1.webp",
+            "/recetas/pollo-alfredo-a-la-florentina/portada-4x3-v1.webp",
+            "/recetas/pollo-alfredo-a-la-florentina/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 824,
+          "protein_g": 47.2,
+          "carbs_g": 68.6,
+          "fat_g": 39.2,
+          "saturated_fat_g": 21.0,
+          "fiber_g": 3.2,
+          "sugar_g": 4.2,
+          "sodium_mg": 562,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g * grams_used / 100) / 4 servings; sodium adds 3 g table salt × 0.393 / 4",
+          "serving_size": "1/4 de la receta",
+          "note": "Estimación por ración; puede variar con la nata, el queso y la sal del agua."
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>Fettuccine cremosos con pollo dorado, espinacas y parmesano. El agua de cocción liga una salsa suave que se prepara en la misma sartén.</p>",
+        "keywords": [
+          "Pollo Alfredo a la Florentina",
+          "Platos principales",
+          "Italiana inspirada"
+        ],
+        "gallery": [],
+        "video_urls": []
+      },
+      {
+        "title": "Chicken Alfredo Florentine",
+        "summary": "Creamy fettuccine with golden chicken, spinach and Parmesan. Starchy pasta water brings the skillet sauce together.",
+        "notes": "Serve immediately. Loosen thickened sauce with warm pasta water. Refrigerate leftovers up to 3 days and reheat gently.",
+        "cuisine": "Italian inspired",
+        "course": "Main course",
+        "difficulty": "Intermediate",
+        "excerpt": "Creamy fettuccine with golden chicken, spinach and Parmesan. Starchy pasta water brings the skillet sauce together.",
+        "recipe_group_id": "10f7083a-a795-4acf-8b44-22c543e8bd2d",
+        "language": "en",
+        "public_path": "/en/chicken-alfredo-florentine/",
+        "slug": "chicken-alfredo-florentine",
+        "category": "Main dishes",
+        "servings": 4,
+        "prep_time_minutes": 15,
+        "cook_time_minutes": 30,
+        "total_time_minutes": 45,
+        "ingredients": [
+          {
+            "name": "Skinless chicken breast",
+            "amount": "500",
+            "unit": "g"
+          },
+          {
+            "name": "Dry fettuccine",
+            "amount": "350",
+            "unit": "g"
+          },
+          {
+            "name": "Fresh spinach",
+            "amount": "60",
+            "unit": "g"
+          },
+          {
+            "name": "Unsalted butter",
+            "amount": "28",
+            "unit": "g"
+          },
+          {
+            "name": "Olive oil",
+            "amount": "14",
+            "unit": "g"
+          },
+          {
+            "name": "Garlic",
+            "amount": "6",
+            "unit": "g"
+          },
+          {
+            "name": "Heavy cream",
+            "amount": "240",
+            "unit": "ml"
+          },
+          {
+            "name": "Grated Parmesan",
+            "amount": "60",
+            "unit": "g"
+          },
+          {
+            "name": "Reserved pasta cooking water",
+            "amount": "120",
+            "unit": "ml"
+          },
+          {
+            "name": "Fine salt",
+            "amount": "3",
+            "unit": "g"
+          },
+          {
+            "name": "Black pepper",
+            "amount": "1",
+            "unit": "g"
+          }
+        ],
+        "steps": [
+          {
+            "title": "Cook the pasta",
+            "content": "Boil fettuccine in salted water until al dente. Reserve 120 ml of the cooking water and drain.",
+            "image_alt": "Fettuccine boiling in a pot.",
+            "image_url": "/recetas/pollo-alfredo-a-la-florentina/paso-01-v1.webp"
+          },
+          {
+            "title": "Sear the chicken",
+            "content": "Season chicken with some salt and pepper. Heat oil and half the butter in a skillet; brown both sides until the center reaches 74°C (165°F). Rest 5 minutes, then slice.",
+            "image_alt": "Chicken breast browning in a skillet.",
+            "image_url": "/recetas/pollo-alfredo-a-la-florentina/paso-02-v1.webp"
+          },
+          {
+            "title": "Make the sauce",
+            "content": "Melt remaining butter in the skillet and cook garlic for 30 seconds. Add cream and 60 ml pasta water; simmer gently for 3–5 minutes. Lower heat and stir in Parmesan gradually.",
+            "image_alt": "Creamy garlic and Parmesan sauce in skillet.",
+            "image_url": "/recetas/pollo-alfredo-a-la-florentina/paso-03-v1.webp"
+          },
+          {
+            "title": "Add spinach and pasta",
+            "content": "Wilt spinach in the sauce for 1–2 minutes. Add fettuccine and sliced chicken, tossing to coat. Thin with reserved pasta water and adjust seasoning.",
+            "image_alt": "Spinach, pasta and chicken coated with sauce.",
+            "image_url": "/recetas/pollo-alfredo-a-la-florentina/paso-04-v1.webp"
+          },
+          {
+            "title": "Serve warm",
+            "content": "Divide among four plates, add extra Parmesan if desired, and serve while the sauce is silky.",
+            "image_alt": "Finished chicken Alfredo with spinach.",
+            "image_url": "/recetas/pollo-alfredo-a-la-florentina/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/pollo-alfredo-a-la-florentina/portada-v1.webp",
+        "seo": {
+          "title": "Chicken Alfredo Florentine | Manual de Cocina",
+          "description": "Creamy fettuccine with golden chicken, spinach and Parmesan. Starchy pasta water brings the skillet sauce together.",
+          "faq": [
+            {
+              "q": "What does Florentine mean here?",
+              "a": "The dish includes spinach with the chicken and pasta."
+            },
+            {
+              "q": "How do I keep the sauce smooth?",
+              "a": "Use gentle heat, add Parmesan gradually and loosen with warm pasta water."
+            }
+          ],
+          "image_variants": [
+            "/recetas/pollo-alfredo-a-la-florentina/portada-1x1-v1.webp",
+            "/recetas/pollo-alfredo-a-la-florentina/portada-4x3-v1.webp",
+            "/recetas/pollo-alfredo-a-la-florentina/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 824,
+          "protein_g": 47.2,
+          "carbs_g": 68.6,
+          "fat_g": 39.2,
+          "saturated_fat_g": 21.0,
+          "fiber_g": 3.2,
+          "sugar_g": 4.2,
+          "sodium_mg": 562,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g * grams_used / 100) / 4 servings; sodium adds 3 g table salt × 0.393 / 4",
+          "serving_size": "1 of 4 servings",
+          "note": "Estimate per serving; cream, cheese and pasta-water salt change the values."
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>Creamy fettuccine with golden chicken, spinach and Parmesan. Starchy pasta water brings the skillet sauce together.</p>",
+        "keywords": [
+          "Chicken Alfredo Florentine",
+          "Main dishes",
+          "Italian inspired"
+        ],
+        "gallery": [],
+        "video_urls": []
+      },
+      {
+        "title": "Hähnchen Alfredo nach Florentiner Art",
+        "summary": "Cremige Fettuccine mit gebratenem Hähnchen, Spinat und Parmesan. Nudelwasser verbindet die Sauce in der Pfanne.",
+        "notes": "Sofort servieren. Eine zu dicke Sauce mit warmem Nudelwasser lockern. Reste bis zu 3 Tage kühlen und schonend erwärmen.",
+        "cuisine": "Italienisch inspiriert",
+        "course": "Hauptgericht",
+        "difficulty": "Mittel",
+        "excerpt": "Cremige Fettuccine mit gebratenem Hähnchen, Spinat und Parmesan. Nudelwasser verbindet die Sauce in der Pfanne.",
+        "recipe_group_id": "10f7083a-a795-4acf-8b44-22c543e8bd2d",
+        "language": "de",
+        "public_path": "/de/haehnchen-alfredo-florentiner-art/",
+        "slug": "haehnchen-alfredo-florentiner-art",
+        "category": "Hauptgerichte",
+        "servings": 4,
+        "prep_time_minutes": 15,
+        "cook_time_minutes": 30,
+        "total_time_minutes": 45,
+        "ingredients": [
+          {
+            "name": "Hähnchenbrust ohne Haut",
+            "amount": "500",
+            "unit": "g"
+          },
+          {
+            "name": "Fettuccine, trocken",
+            "amount": "350",
+            "unit": "g"
+          },
+          {
+            "name": "Frischer Spinat",
+            "amount": "60",
+            "unit": "g"
+          },
+          {
+            "name": "Ungesalzene Butter",
+            "amount": "28",
+            "unit": "g"
+          },
+          {
+            "name": "Olivenöl",
+            "amount": "14",
+            "unit": "g"
+          },
+          {
+            "name": "Knoblauch",
+            "amount": "6",
+            "unit": "g"
+          },
+          {
+            "name": "Schlagsahne",
+            "amount": "240",
+            "unit": "ml"
+          },
+          {
+            "name": "Geriebener Parmesan",
+            "amount": "60",
+            "unit": "g"
+          },
+          {
+            "name": "Aufgefangenes Nudelwasser",
+            "amount": "120",
+            "unit": "ml"
+          },
+          {
+            "name": "Feines Salz",
+            "amount": "3",
+            "unit": "g"
+          },
+          {
+            "name": "Schwarzer Pfeffer",
+            "amount": "1",
+            "unit": "g"
+          }
+        ],
+        "steps": [
+          {
+            "title": "Nudeln kochen",
+            "content": "Fettuccine in Salzwasser bissfest kochen. 120 ml Kochwasser auffangen und Nudeln abgießen.",
+            "image_alt": "Fettuccine im kochenden Wasser.",
+            "image_url": "/recetas/pollo-alfredo-a-la-florentina/paso-01-v1.webp"
+          },
+          {
+            "title": "Hähnchen braten",
+            "content": "Hähnchen mit etwas Salz und Pfeffer würzen. Öl und die Hälfte der Butter erhitzen; beidseitig bräunen, bis die Kerntemperatur 74 °C erreicht. 5 Minuten ruhen lassen und aufschneiden.",
+            "image_alt": "Gebräunte Hähnchenbrust in der Pfanne.",
+            "image_url": "/recetas/pollo-alfredo-a-la-florentina/paso-02-v1.webp"
+          },
+          {
+            "title": "Sauce zubereiten",
+            "content": "Restliche Butter schmelzen, Knoblauch 30 Sekunden anschwitzen. Sahne und 60 ml Nudelwasser zugeben und 3–5 Minuten sanft köcheln. Hitze reduzieren und Parmesan nach und nach einrühren.",
+            "image_alt": "Cremige Knoblauch-Parmesan-Sauce.",
+            "image_url": "/recetas/pollo-alfredo-a-la-florentina/paso-03-v1.webp"
+          },
+          {
+            "title": "Spinat und Nudeln mischen",
+            "content": "Spinat 1–2 Minuten in der Sauce zusammenfallen lassen. Fettuccine und Hähnchen zugeben und schwenken. Mit Nudelwasser verdünnen und abschmecken.",
+            "image_alt": "Spinat, Nudeln und Hähnchen in Sauce.",
+            "image_url": "/recetas/pollo-alfredo-a-la-florentina/paso-04-v1.webp"
+          },
+          {
+            "title": "Warm servieren",
+            "content": "Auf vier Teller verteilen, nach Wunsch mit Parmesan bestreuen und sofort servieren.",
+            "image_alt": "Fertiges Hähnchen Alfredo mit Spinat.",
+            "image_url": "/recetas/pollo-alfredo-a-la-florentina/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/pollo-alfredo-a-la-florentina/portada-v1.webp",
+        "seo": {
+          "title": "Hähnchen Alfredo nach Florentiner Art | Manual de Cocina",
+          "description": "Cremige Fettuccine mit gebratenem Hähnchen, Spinat und Parmesan. Nudelwasser verbindet die Sauce in der Pfanne.",
+          "faq": [
+            {
+              "q": "Was bedeutet Florentiner Art?",
+              "a": "Hier steht es für die Zugabe von Spinat."
+            },
+            {
+              "q": "Wie bleibt die Sauce glatt?",
+              "a": "Bei milder Hitze arbeiten, Parmesan langsam zugeben und mit warmem Nudelwasser lockern."
+            }
+          ],
+          "image_variants": [
+            "/recetas/pollo-alfredo-a-la-florentina/portada-1x1-v1.webp",
+            "/recetas/pollo-alfredo-a-la-florentina/portada-4x3-v1.webp",
+            "/recetas/pollo-alfredo-a-la-florentina/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 824,
+          "protein_g": 47.2,
+          "carbs_g": 68.6,
+          "fat_g": 39.2,
+          "saturated_fat_g": 21.0,
+          "fiber_g": 3.2,
+          "sugar_g": 4.2,
+          "sodium_mg": 562,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g * grams_used / 100) / 4 servings; sodium adds 3 g table salt × 0.393 / 4",
+          "serving_size": "1/4",
+          "note": "Schätzwert pro Portion; Sahne, Käse und Nudelwasser beeinflussen die Werte."
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>Cremige Fettuccine mit gebratenem Hähnchen, Spinat und Parmesan. Nudelwasser verbindet die Sauce in der Pfanne.</p>",
+        "keywords": [
+          "Hähnchen Alfredo nach Florentiner Art",
+          "Hauptgerichte",
+          "Italienisch inspiriert"
+        ],
+        "gallery": [],
+        "video_urls": []
+      },
+      {
+        "title": "Poulet Alfredo à la florentine",
+        "summary": "Des fettuccine crémeuses au poulet doré, aux épinards et au parmesan, liées par un peu d’eau de cuisson.",
+        "notes": "Servir aussitôt. Détendre la sauce avec de l’eau de cuisson chaude. Garder les restes au frais jusqu’à 3 jours et réchauffer doucement.",
+        "cuisine": "Inspiration italienne",
+        "course": "Plat principal",
+        "difficulty": "Intermédiaire",
+        "excerpt": "Des fettuccine crémeuses au poulet doré, aux épinards et au parmesan, liées par un peu d’eau de cuisson.",
+        "recipe_group_id": "10f7083a-a795-4acf-8b44-22c543e8bd2d",
+        "language": "fr",
+        "public_path": "/fr/poulet-alfredo-a-la-florentine/",
+        "slug": "poulet-alfredo-a-la-florentine",
+        "category": "Plats principaux",
+        "servings": 4,
+        "prep_time_minutes": 15,
+        "cook_time_minutes": 30,
+        "total_time_minutes": 45,
+        "ingredients": [
+          {
+            "name": "Blanc de poulet sans peau",
+            "amount": "500",
+            "unit": "g"
+          },
+          {
+            "name": "Fettuccine sèches",
+            "amount": "350",
+            "unit": "g"
+          },
+          {
+            "name": "Épinards frais",
+            "amount": "60",
+            "unit": "g"
+          },
+          {
+            "name": "Beurre doux",
+            "amount": "28",
+            "unit": "g"
+          },
+          {
+            "name": "Huile d’olive",
+            "amount": "14",
+            "unit": "g"
+          },
+          {
+            "name": "Ail",
+            "amount": "6",
+            "unit": "g"
+          },
+          {
+            "name": "Crème entière liquide",
+            "amount": "240",
+            "unit": "ml"
+          },
+          {
+            "name": "Parmesan râpé",
+            "amount": "60",
+            "unit": "g"
+          },
+          {
+            "name": "Eau de cuisson des pâtes réservée",
+            "amount": "120",
+            "unit": "ml"
+          },
+          {
+            "name": "Sel fin",
+            "amount": "3",
+            "unit": "g"
+          },
+          {
+            "name": "Poivre noir",
+            "amount": "1",
+            "unit": "g"
+          }
+        ],
+        "steps": [
+          {
+            "title": "Cuire les pâtes",
+            "content": "Cuire les fettuccine dans l’eau salée jusqu’à ce qu’elles soient al dente. Réserver 120 ml d’eau de cuisson puis égoutter.",
+            "image_alt": "Fettuccine dans une casserole.",
+            "image_url": "/recetas/pollo-alfredo-a-la-florentina/paso-01-v1.webp"
+          },
+          {
+            "title": "Dorer le poulet",
+            "content": "Saler et poivrer le poulet. Chauffer l’huile et la moitié du beurre; dorer des deux côtés jusqu’à 74 °C à cœur. Laisser reposer 5 minutes puis émincer.",
+            "image_alt": "Blanc de poulet doré à la poêle.",
+            "image_url": "/recetas/pollo-alfredo-a-la-florentina/paso-02-v1.webp"
+          },
+          {
+            "title": "Faire la sauce",
+            "content": "Faire fondre le reste du beurre et cuire l’ail 30 secondes. Ajouter la crème et 60 ml d’eau de cuisson; frémir doucement 3 à 5 minutes. Baisser le feu et incorporer progressivement le parmesan.",
+            "image_alt": "Sauce crémeuse à l’ail et au parmesan.",
+            "image_url": "/recetas/pollo-alfredo-a-la-florentina/paso-03-v1.webp"
+          },
+          {
+            "title": "Ajouter les épinards",
+            "content": "Faire tomber les épinards 1 à 2 minutes dans la sauce. Ajouter les pâtes et le poulet émincé; mélanger. Détendre avec l’eau réservée et rectifier l’assaisonnement.",
+            "image_alt": "Épinards, pâtes et poulet en sauce.",
+            "image_url": "/recetas/pollo-alfredo-a-la-florentina/paso-04-v1.webp"
+          },
+          {
+            "title": "Servir chaud",
+            "content": "Répartir dans quatre assiettes, ajouter du parmesan si souhaité et servir sans attendre.",
+            "image_alt": "Poulet Alfredo aux épinards prêt à servir.",
+            "image_url": "/recetas/pollo-alfredo-a-la-florentina/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/pollo-alfredo-a-la-florentina/portada-v1.webp",
+        "seo": {
+          "title": "Poulet Alfredo à la florentine | Manual de Cocina",
+          "description": "Des fettuccine crémeuses au poulet doré, aux épinards et au parmesan, liées par un peu d’eau de cuisson.",
+          "faq": [
+            {
+              "q": "Que signifie « à la florentine » ?",
+              "a": "Ici, cela désigne l’ajout d’épinards."
+            },
+            {
+              "q": "Comment garder une sauce lisse ?",
+              "a": "Chauffer doucement, incorporer le parmesan petit à petit et ajouter de l’eau de cuisson chaude."
+            }
+          ],
+          "image_variants": [
+            "/recetas/pollo-alfredo-a-la-florentina/portada-1x1-v1.webp",
+            "/recetas/pollo-alfredo-a-la-florentina/portada-4x3-v1.webp",
+            "/recetas/pollo-alfredo-a-la-florentina/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 824,
+          "protein_g": 47.2,
+          "carbs_g": 68.6,
+          "fat_g": 39.2,
+          "saturated_fat_g": 21.0,
+          "fiber_g": 3.2,
+          "sugar_g": 4.2,
+          "sodium_mg": 562,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g * grams_used / 100) / 4 servings; sodium adds 3 g table salt × 0.393 / 4",
+          "serving_size": "1/4",
+          "note": "Estimation par portion, variable selon la crème, le fromage et le sel de cuisson."
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>Des fettuccine crémeuses au poulet doré, aux épinards et au parmesan, liées par un peu d’eau de cuisson.</p>",
+        "keywords": [
+          "Poulet Alfredo à la florentine",
+          "Plats principaux",
+          "Inspiration italienne"
+        ],
+        "gallery": [],
+        "video_urls": []
+      },
+      {
+        "title": "Pollo Alfredo alla fiorentina",
+        "summary": "Fettuccine cremose con pollo rosolato, spinaci e Parmigiano. L’acqua di cottura lega la salsa in padella.",
+        "notes": "Servi subito. Se la salsa si addensa, aggiungi acqua di cottura calda. Conserva gli avanzi in frigorifero fino a 3 giorni e riscalda dolcemente.",
+        "cuisine": "Ispirazione italiana",
+        "course": "Piatto principale",
+        "difficulty": "Media",
+        "excerpt": "Fettuccine cremose con pollo rosolato, spinaci e Parmigiano. L’acqua di cottura lega la salsa in padella.",
+        "recipe_group_id": "10f7083a-a795-4acf-8b44-22c543e8bd2d",
+        "language": "it",
+        "public_path": "/it/pollo-alfredo-alla-fiorentina/",
+        "slug": "pollo-alfredo-alla-fiorentina",
+        "category": "Secondi piatti",
+        "servings": 4,
+        "prep_time_minutes": 15,
+        "cook_time_minutes": 30,
+        "total_time_minutes": 45,
+        "ingredients": [
+          {
+            "name": "Petto di pollo senza pelle",
+            "amount": "500",
+            "unit": "g"
+          },
+          {
+            "name": "Fettuccine secche",
+            "amount": "350",
+            "unit": "g"
+          },
+          {
+            "name": "Spinaci freschi",
+            "amount": "60",
+            "unit": "g"
+          },
+          {
+            "name": "Burro non salato",
+            "amount": "28",
+            "unit": "g"
+          },
+          {
+            "name": "Olio extravergine d’oliva",
+            "amount": "14",
+            "unit": "g"
+          },
+          {
+            "name": "Aglio",
+            "amount": "6",
+            "unit": "g"
+          },
+          {
+            "name": "Panna fresca liquida",
+            "amount": "240",
+            "unit": "ml"
+          },
+          {
+            "name": "Parmigiano grattugiato",
+            "amount": "60",
+            "unit": "g"
+          },
+          {
+            "name": "Acqua di cottura della pasta",
+            "amount": "120",
+            "unit": "ml"
+          },
+          {
+            "name": "Sale fino",
+            "amount": "3",
+            "unit": "g"
+          },
+          {
+            "name": "Pepe nero",
+            "amount": "1",
+            "unit": "g"
+          }
+        ],
+        "steps": [
+          {
+            "title": "Cuoci la pasta",
+            "content": "Cuoci le fettuccine in acqua salata al dente. Conserva 120 ml d’acqua di cottura e scola.",
+            "image_alt": "Fettuccine in acqua bollente.",
+            "image_url": "/recetas/pollo-alfredo-a-la-florentina/paso-01-v1.webp"
+          },
+          {
+            "title": "Rosola il pollo",
+            "content": "Condisci il pollo con parte del sale e del pepe. Scalda olio e metà del burro; rosola entrambi i lati fino a 74 °C al cuore. Lascia riposare 5 minuti e affetta.",
+            "image_alt": "Petto di pollo rosolato in padella.",
+            "image_url": "/recetas/pollo-alfredo-a-la-florentina/paso-02-v1.webp"
+          },
+          {
+            "title": "Prepara la salsa",
+            "content": "Sciogli il burro rimasto e cuoci l’aglio per 30 secondi. Aggiungi panna e 60 ml d’acqua di cottura; fai sobbollire 3–5 minuti. Abbassa il fuoco e incorpora il Parmigiano poco per volta.",
+            "image_alt": "Salsa cremosa all’aglio e Parmigiano.",
+            "image_url": "/recetas/pollo-alfredo-a-la-florentina/paso-03-v1.webp"
+          },
+          {
+            "title": "Unisci spinaci e pasta",
+            "content": "Fai appassire gli spinaci nella salsa per 1–2 minuti. Aggiungi pasta e pollo affettato, mescolando. Regola la consistenza con l’acqua conservata e assaggia.",
+            "image_alt": "Spinaci, pasta e pollo nella salsa.",
+            "image_url": "/recetas/pollo-alfredo-a-la-florentina/paso-04-v1.webp"
+          },
+          {
+            "title": "Servi caldo",
+            "content": "Dividi in quattro piatti, completa con altro Parmigiano a piacere e servi subito.",
+            "image_alt": "Pollo Alfredo con spinaci pronto.",
+            "image_url": "/recetas/pollo-alfredo-a-la-florentina/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/pollo-alfredo-a-la-florentina/portada-v1.webp",
+        "seo": {
+          "title": "Pollo Alfredo alla fiorentina | Manual de Cocina",
+          "description": "Fettuccine cremose con pollo rosolato, spinaci e Parmigiano. L’acqua di cottura lega la salsa in padella.",
+          "faq": [
+            {
+              "q": "Che cosa significa alla fiorentina?",
+              "a": "Qui indica la presenza degli spinaci."
+            },
+            {
+              "q": "Come mantengo la salsa cremosa?",
+              "a": "Usa fuoco dolce, aggiungi il Parmigiano gradualmente e allunga con acqua di cottura calda."
+            }
+          ],
+          "image_variants": [
+            "/recetas/pollo-alfredo-a-la-florentina/portada-1x1-v1.webp",
+            "/recetas/pollo-alfredo-a-la-florentina/portada-4x3-v1.webp",
+            "/recetas/pollo-alfredo-a-la-florentina/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 824,
+          "protein_g": 47.2,
+          "carbs_g": 68.6,
+          "fat_g": 39.2,
+          "saturated_fat_g": 21.0,
+          "fiber_g": 3.2,
+          "sugar_g": 4.2,
+          "sodium_mg": 562,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g * grams_used / 100) / 4 servings; sodium adds 3 g table salt × 0.393 / 4",
+          "serving_size": "1/4",
+          "note": "Stima per porzione; panna, formaggio e sale dell’acqua possono variare."
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>Fettuccine cremose con pollo rosolato, spinaci e Parmigiano. L’acqua di cottura lega la salsa in padella.</p>",
+        "keywords": [
+          "Pollo Alfredo alla fiorentina",
+          "Secondi piatti",
+          "Ispirazione italiana"
+        ],
+        "gallery": [],
+        "video_urls": []
+      },
+      {
+        "title": "フィレンツェ風チキンアルフレッド",
+        "summary": "こんがり焼いた鶏むね肉とほうれん草を、パルメザンのクリームソースでフェットチーネに絡める一皿。ゆで汁でなめらかに仕上げます。",
+        "notes": "ソースが固くなる前にすぐ食卓へ。残りは冷蔵で3日以内に保存し、少量の水を加えて弱火で温め直します。",
+        "cuisine": "イタリア風",
+        "course": "主菜",
+        "difficulty": "中級",
+        "excerpt": "こんがり焼いた鶏むね肉とほうれん草を、パルメザンのクリームソースでフェットチーネに絡める一皿。ゆで汁でなめらかに仕上げます。",
+        "recipe_group_id": "10f7083a-a795-4acf-8b44-22c543e8bd2d",
+        "language": "ja",
+        "public_path": "/ja/フィレンツェ風チキンアルフレッド/",
+        "slug": "フィレンツェ風チキンアルフレッド",
+        "category": "主菜",
+        "servings": 4,
+        "prep_time_minutes": 15,
+        "cook_time_minutes": 30,
+        "total_time_minutes": 45,
+        "ingredients": [
+          {
+            "name": "皮なし鶏むね肉",
+            "amount": "500",
+            "unit": "g"
+          },
+          {
+            "name": "乾燥フェットチーネ",
+            "amount": "350",
+            "unit": "g"
+          },
+          {
+            "name": "生ほうれん草",
+            "amount": "60",
+            "unit": "g"
+          },
+          {
+            "name": "無塩バター",
+            "amount": "28",
+            "unit": "g"
+          },
+          {
+            "name": "オリーブオイル",
+            "amount": "14",
+            "unit": "g"
+          },
+          {
+            "name": "にんにく",
+            "amount": "6",
+            "unit": "g"
+          },
+          {
+            "name": "生クリーム",
+            "amount": "240",
+            "unit": "ml"
+          },
+          {
+            "name": "すりおろしたパルメザンチーズ",
+            "amount": "60",
+            "unit": "g"
+          },
+          {
+            "name": "取り分けたパスタのゆで汁",
+            "amount": "120",
+            "unit": "ml"
+          },
+          {
+            "name": "塩",
+            "amount": "3",
+            "unit": "g"
+          },
+          {
+            "name": "黒こしょう",
+            "amount": "1",
+            "unit": "g"
+          }
+        ],
+        "steps": [
+          {
+            "title": "パスタをゆでる",
+            "content": "塩を入れた湯でフェットチーネをアルデンテにゆでる。ゆで汁を120 ml取り分け、湯を切る。",
+            "image_alt": "鍋でゆでているフェットチーネ。",
+            "image_url": "/recetas/pollo-alfredo-a-la-florentina/paso-01-v1.webp"
+          },
+          {
+            "title": "鶏肉を焼く",
+            "content": "鶏肉に塩とこしょうを振る。フライパンで油とバターの半量を熱し、両面を焼く。中心温度が74℃に達したら5分休ませ、薄切りにする。",
+            "image_alt": "フライパンで焼く鶏むね肉。",
+            "image_url": "/recetas/pollo-alfredo-a-la-florentina/paso-02-v1.webp"
+          },
+          {
+            "title": "ソースを作る",
+            "content": "同じフライパンで残りのバターを溶かし、にんにくを30秒炒める。生クリームとゆで汁60 mlを加えて弱く3〜5分煮る。火を弱め、パルメザンを少しずつ混ぜる。",
+            "image_alt": "にんにくとチーズのクリームソース。",
+            "image_url": "/recetas/pollo-alfredo-a-la-florentina/paso-03-v1.webp"
+          },
+          {
+            "title": "ほうれん草と合わせる",
+            "content": "ほうれん草を加えて1〜2分しんなりさせる。パスタと切った鶏肉を混ぜ、残りのゆで汁で濃さを調整して味を整える。",
+            "image_alt": "ほうれん草、パスタ、鶏肉をソースに絡める。",
+            "image_url": "/recetas/pollo-alfredo-a-la-florentina/paso-04-v1.webp"
+          },
+          {
+            "title": "温かいうちに盛る",
+            "content": "4皿に盛り、好みでチーズを追加して、ソースがなめらかなうちに食べる。",
+            "image_alt": "完成したほうれん草入りチキンアルフレッド。",
+            "image_url": "/recetas/pollo-alfredo-a-la-florentina/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/pollo-alfredo-a-la-florentina/portada-v1.webp",
+        "seo": {
+          "title": "フィレンツェ風チキンアルフレッド | Manual de Cocina",
+          "description": "こんがり焼いた鶏むね肉とほうれん草を、パルメザンのクリームソースでフェットチーネに絡める一皿。ゆで汁でなめらかに仕上げます。",
+          "faq": [
+            {
+              "q": "フィレンツェ風とは？",
+              "a": "このレシピではほうれん草を加えることを指します。"
+            },
+            {
+              "q": "ソースを分離させないコツは？",
+              "a": "弱火でチーズを少しずつ混ぜ、温かいゆで汁で濃さを調整します。"
+            }
+          ],
+          "image_variants": [
+            "/recetas/pollo-alfredo-a-la-florentina/portada-1x1-v1.webp",
+            "/recetas/pollo-alfredo-a-la-florentina/portada-4x3-v1.webp",
+            "/recetas/pollo-alfredo-a-la-florentina/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 824,
+          "protein_g": 47.2,
+          "carbs_g": 68.6,
+          "fat_g": 39.2,
+          "saturated_fat_g": 21.0,
+          "fiber_g": 3.2,
+          "sugar_g": 4.2,
+          "sodium_mg": 562,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g * grams_used / 100) / 4 servings; sodium adds 3 g table salt × 0.393 / 4",
+          "serving_size": "1/4",
+          "note": "1人分の概算。クリームやチーズ、ゆで汁の塩分により変わります。"
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>こんがり焼いた鶏むね肉とほうれん草を、パルメザンのクリームソースでフェットチーネに絡める一皿。ゆで汁でなめらかに仕上げます。</p>",
+        "keywords": [
+          "フィレンツェ風チキンアルフレッド",
+          "主菜",
+          "イタリア風"
+        ],
+        "gallery": [],
+        "video_urls": []
+      },
+      {
+        "title": "Frango Alfredo à Florentina",
+        "summary": "Fettuccine cremoso com frango dourado, espinafres e parmesão. A água da massa ajuda a ligar o molho na frigideira.",
+        "notes": "Sirva imediatamente. Se o molho engrossar, junte água da massa quente. Refrigere sobras até 3 dias e aqueça em lume brando.",
+        "cuisine": "Inspiração italiana",
+        "course": "Prato principal",
+        "difficulty": "Intermédia",
+        "excerpt": "Fettuccine cremoso com frango dourado, espinafres e parmesão. A água da massa ajuda a ligar o molho na frigideira.",
+        "recipe_group_id": "10f7083a-a795-4acf-8b44-22c543e8bd2d",
+        "language": "pt",
+        "public_path": "/pt/frango-alfredo-a-florentina/",
+        "slug": "frango-alfredo-a-florentina",
+        "category": "Pratos principais",
+        "servings": 4,
+        "prep_time_minutes": 15,
+        "cook_time_minutes": 30,
+        "total_time_minutes": 45,
+        "ingredients": [
+          {
+            "name": "Peito de frango sem pele",
+            "amount": "500",
+            "unit": "g"
+          },
+          {
+            "name": "Fettuccine seco",
+            "amount": "350",
+            "unit": "g"
+          },
+          {
+            "name": "Espinafres frescos",
+            "amount": "60",
+            "unit": "g"
+          },
+          {
+            "name": "Manteiga sem sal",
+            "amount": "28",
+            "unit": "g"
+          },
+          {
+            "name": "Azeite",
+            "amount": "14",
+            "unit": "g"
+          },
+          {
+            "name": "Alho",
+            "amount": "6",
+            "unit": "g"
+          },
+          {
+            "name": "Natas para culinária",
+            "amount": "240",
+            "unit": "ml"
+          },
+          {
+            "name": "Parmesão ralado",
+            "amount": "60",
+            "unit": "g"
+          },
+          {
+            "name": "Água da cozedura da massa",
+            "amount": "120",
+            "unit": "ml"
+          },
+          {
+            "name": "Sal fino",
+            "amount": "3",
+            "unit": "g"
+          },
+          {
+            "name": "Pimenta-preta",
+            "amount": "1",
+            "unit": "g"
+          }
+        ],
+        "steps": [
+          {
+            "title": "Coza a massa",
+            "content": "Coza o fettuccine em água salgada até ficar al dente. Reserve 120 ml da água e escorra.",
+            "image_alt": "Fettuccine a cozer numa panela.",
+            "image_url": "/recetas/pollo-alfredo-a-la-florentina/paso-01-v1.webp"
+          },
+          {
+            "title": "Doure o frango",
+            "content": "Tempere com parte do sal e da pimenta. Aqueça o azeite e metade da manteiga; doure dos dois lados até atingir 74 °C no centro. Deixe repousar 5 minutos e fatie.",
+            "image_alt": "Peito de frango a dourar na frigideira.",
+            "image_url": "/recetas/pollo-alfredo-a-la-florentina/paso-02-v1.webp"
+          },
+          {
+            "title": "Faça o molho",
+            "content": "Derreta a manteiga restante e cozinhe o alho 30 segundos. Junte as natas e 60 ml da água da massa; deixe fervilhar suavemente 3–5 minutos. Reduza o lume e incorpore o parmesão aos poucos.",
+            "image_alt": "Molho cremoso de alho e parmesão.",
+            "image_url": "/recetas/pollo-alfredo-a-la-florentina/paso-03-v1.webp"
+          },
+          {
+            "title": "Junte espinafres e massa",
+            "content": "Deixe os espinafres murchar no molho durante 1–2 minutos. Envolva a massa e o frango fatiado. Ajuste a textura com a água reservada e retifique o tempero.",
+            "image_alt": "Espinafres, massa e frango no molho.",
+            "image_url": "/recetas/pollo-alfredo-a-la-florentina/paso-04-v1.webp"
+          },
+          {
+            "title": "Sirva quente",
+            "content": "Divida por quatro pratos, acrescente parmesão a gosto e sirva enquanto o molho está sedoso.",
+            "image_alt": "Frango Alfredo com espinafres pronto.",
+            "image_url": "/recetas/pollo-alfredo-a-la-florentina/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/pollo-alfredo-a-la-florentina/portada-v1.webp",
+        "seo": {
+          "title": "Frango Alfredo à Florentina | Manual de Cocina",
+          "description": "Fettuccine cremoso com frango dourado, espinafres e parmesão. A água da massa ajuda a ligar o molho na frigideira.",
+          "faq": [
+            {
+              "q": "O que significa à Florentina?",
+              "a": "Nesta receita, refere-se à adição de espinafres."
+            },
+            {
+              "q": "Como manter o molho liso?",
+              "a": "Use lume brando, adicione o parmesão gradualmente e junte água da massa quente."
+            }
+          ],
+          "image_variants": [
+            "/recetas/pollo-alfredo-a-la-florentina/portada-1x1-v1.webp",
+            "/recetas/pollo-alfredo-a-la-florentina/portada-4x3-v1.webp",
+            "/recetas/pollo-alfredo-a-la-florentina/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 824,
+          "protein_g": 47.2,
+          "carbs_g": 68.6,
+          "fat_g": 39.2,
+          "saturated_fat_g": 21.0,
+          "fiber_g": 3.2,
+          "sugar_g": 4.2,
+          "sodium_mg": 562,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g * grams_used / 100) / 4 servings; sodium adds 3 g table salt × 0.393 / 4",
+          "serving_size": "1/4",
+          "note": "Estimativa por dose; natas, queijo e sal da água alteram os valores."
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>Fettuccine cremoso com frango dourado, espinafres e parmesão. A água da massa ajuda a ligar o molho na frigideira.</p>",
+        "keywords": [
+          "Frango Alfredo à Florentina",
+          "Pratos principais",
+          "Inspiração italiana"
+        ],
+        "gallery": [],
+        "video_urls": []
+      }
+    ]
+  }
+}
