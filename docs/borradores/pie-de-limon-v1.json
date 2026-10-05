@@ -1,0 +1,994 @@
+{
+  "entity": "E009",
+  "status": "ready_for_preview",
+  "recipe_group_id": "ae18f891-ce44-4a46-a6a5-4c1857917648",
+  "source_policy": "Original culinary text; historical records supply identity and URLs only. Existing group and historical ES/JA routes preserved.",
+  "kitchen_test_claimed": false,
+  "sources": [
+    {
+      "url": "https://www.carnation.co.uk/recipes/lemon-tart-recipe",
+      "purpose": "Reference for baked sweetened-condensed-milk and egg-yolk lemon filling; no copied prose."
+    },
+    {
+      "url": "https://ask.fsis.usda.gov/article/Como-puedo-saber-cuando-son-inocuas-las-recetas-que-contienen-huevo",
+      "purpose": "Egg mixture centre temperature 71 °C / 160 °F."
+    },
+    {
+      "url": "https://www.foodsafety.gov/food-safety-charts/cold-food-storage-charts",
+      "purpose": "Refrigeration guidance; recipe uses a conservative three-day limit."
+    }
+  ],
+  "nutrition_calculation": {
+    "dataset": "USDA FoodData Central, SR Legacy April 2018",
+    "dataset_url": "https://fdc.nal.usda.gov/download-datasets/",
+    "dataset_sha256": "b80817294b8850530aaedf2e515c02593b1824f763a0ff356e5c2081643e6fd0",
+    "ingredients": [
+      {
+        "fdc_id": "174957",
+        "description": "Cookies, graham crackers, plain or honey (includes cinnamon)",
+        "grams_used": 200,
+        "per_100g": {
+          "fat_g": 10.6,
+          "carbs_g": 77.66,
+          "calories": 430.0,
+          "sugar_g": 24.85,
+          "protein_g": 6.69,
+          "fiber_g": 3.4,
+          "saturated_fat_g": 1.633,
+          "sodium_mg": 516.0
+        }
+      },
+      {
+        "fdc_id": "173430",
+        "description": "Butter, without salt",
+        "grams_used": 80,
+        "per_100g": {
+          "sugar_g": 0.06,
+          "calories": 717.0,
+          "saturated_fat_g": 50.489,
+          "fat_g": 81.11,
+          "carbs_g": 0.06,
+          "protein_g": 0.85,
+          "fiber_g": 0.0,
+          "sodium_mg": 11.0
+        }
+      },
+      {
+        "fdc_id": "171275",
+        "description": "Milk, canned, condensed, sweetened",
+        "grams_used": 397,
+        "per_100g": {
+          "calories": 321.0,
+          "sugar_g": 54.4,
+          "fat_g": 8.7,
+          "carbs_g": 54.4,
+          "protein_g": 7.91,
+          "fiber_g": 0.0,
+          "sodium_mg": 127.0,
+          "saturated_fat_g": 5.486
+        }
+      },
+      {
+        "fdc_id": "172184",
+        "description": "Egg, yolk, raw, fresh",
+        "grams_used": 54,
+        "per_100g": {
+          "sugar_g": 0.56,
+          "fat_g": 26.54,
+          "protein_g": 15.86,
+          "sodium_mg": 48.0,
+          "carbs_g": 3.59,
+          "calories": 322.0,
+          "saturated_fat_g": 9.551,
+          "fiber_g": 0.0
+        }
+      },
+      {
+        "fdc_id": "167747",
+        "description": "Lemon juice, raw",
+        "grams_used": 120,
+        "per_100g": {
+          "protein_g": 0.35,
+          "saturated_fat_g": 0.04,
+          "fiber_g": 0.3,
+          "sodium_mg": 1.0,
+          "sugar_g": 2.52,
+          "fat_g": 0.24,
+          "carbs_g": 6.9,
+          "calories": 22.0
+        }
+      }
+    ],
+    "servings": 8,
+    "formula": "sum(per_100g * grams_used / 100) / servings",
+    "assumptions": "Plain graham crackers approximate Maria/digestive biscuits. Three yolks assumed 54 g edible weight; 120 ml lemon juice approximated as 120 g. No topping. Nutrients retained; cooking changes weight, not per-slice allocation."
+  },
+  "images": {
+    "method": "built-in image_gen",
+    "cover_reused_for_final_step": true,
+    "prompts": [
+      {
+        "name": "paso-01",
+        "prompt": "Photorealistic natural food editorial photograph for Manual de Cocina cooking tutorial. Landscape 4:3, high resolution. Consistent bright home kitchen: warm pale stone worktop, gentle daylight from left, plain white 22 cm round ceramic pie dish when present. Realistic textures, restrained styling, no text, no collage, no labels, no watermark, no logos. Recipe is BAKED lemon condensed-milk pie with biscuit crumb crust, NO meringue, NO whipped cream, NO flour dough. Close overhead view of a clear glass mixing bowl of finely crushed plain golden tea biscuits moistened with melted butter, a spoon combining them to a uniform damp-sand texture. Some plain biscuits visible beside bowl. No eggs or filling yet."
+      },
+      {
+        "name": "paso-02",
+        "prompt": "Photorealistic natural food editorial photograph for Manual de Cocina cooking tutorial. Landscape 4:3, high resolution. Consistent bright home kitchen: warm pale stone worktop, gentle daylight from left, plain white 22 cm round ceramic pie dish when present. Realistic textures, restrained styling, no text, no collage, no labels, no watermark, no logos. Recipe is BAKED lemon condensed-milk pie with biscuit crumb crust, NO meringue, NO whipped cream, NO flour dough. Three-quarter overhead close-up: hands use the flat bottom of a small drinking glass to press golden biscuit-and-butter crumbs firmly into base and 2 cm sides of a white 22 cm ceramic round pie dish. Even thin crumb shell, no filling yet, no pastry dough."
+      },
+      {
+        "name": "paso-03",
+        "prompt": "Photorealistic natural food editorial photograph for Manual de Cocina cooking tutorial. Landscape 4:3, high resolution. Consistent bright home kitchen: warm pale stone worktop, gentle daylight from left, plain white 22 cm round ceramic pie dish when present. Realistic textures, restrained styling, no text, no collage, no labels, no watermark, no logos. Recipe is BAKED lemon condensed-milk pie with biscuit crumb crust, NO meringue, NO whipped cream, NO flour dough. A metal whisk gently stirring a glossy pale yellow mixture in a clear glass bowl: sweetened condensed milk, three egg yolks, lemon juice. A cut yellow lemon and small glass lemon-juice jug nearby. Smooth custard mixture without whipped foam, no egg shells in the mixture."
+      },
+      {
+        "name": "paso-04",
+        "prompt": "Photorealistic natural food editorial photograph for Manual de Cocina cooking tutorial. Landscape 4:3, high resolution. Consistent bright home kitchen: warm pale stone worktop, gentle daylight from left, plain white 22 cm round ceramic pie dish when present. Realistic textures, restrained styling, no text, no collage, no labels, no watermark, no logos. Recipe is BAKED lemon condensed-milk pie with biscuit crumb crust, NO meringue, NO whipped cream, NO flour dough. White 22 cm ceramic pie dish containing an intact freshly baked lemon custard pie, on a wire cooling rack by an oven. Golden crumb crust visible around rim, smooth pale yellow filling lightly set and level, no browning of filling, no garnish, no cream, no meringue. Intact pie, not yet sliced."
+      },
+      {
+        "name": "portada",
+        "prompt": "Photorealistic natural food editorial photograph for Manual de Cocina cooking tutorial. Landscape 4:3, high resolution. Consistent bright home kitchen: warm pale stone worktop, gentle daylight from left, plain white 22 cm round ceramic pie dish when present. Realistic textures, restrained styling, no text, no collage, no labels, no watermark, no logos. Recipe is BAKED lemon condensed-milk pie with biscuit crumb crust, NO meringue, NO whipped cream, NO flour dough. Beautiful finished chilled lemon custard pie in white 22 cm ceramic pie dish, one clean wedge removed and served on a small plain plate in front. Modest custard layer about 1.5 cm thick, firm pale yellow creamy interior and thin golden biscuit crumb base and sides; realistic eight-serving pie. Unadorned smooth surface, no meringue or cream, no decorations on pie. One whole yellow lemon beside dish. Three-quarter view showing cut slice texture. Entire dish and plate within middle of composition with generous margins for square and widescreen crops."
+      }
+    ],
+    "directory": "public/recetas/pie-de-limon",
+    "version": "v1"
+  },
+  "publication": {
+    "environment": "preview",
+    "state": "prepared",
+    "rows": [
+      {
+        "title": "Pie de limón al horno con base de galletas",
+        "excerpt": "Pie de limón cremoso con leche condensada, base de galletas y cinco pasos con fotos. Incluye el enfriado necesario para cortar porciones limpias.",
+        "summary": "Una base crujiente y un relleno suave de limón: este pie se hornea sin merengue y termina de adquirir firmeza en la nevera. Usa un molde de 22 cm y prepáralo con tiempo; el reposo forma parte de la receta.",
+        "notes": "Usa leche condensada azucarada, no leche evaporada. Las galletas María y digestive absorben la mantequilla de forma distinta: presiónalas hasta formar una base compacta. Contiene trigo, leche y huevo; comprueba también los alérgenos de las galletas. Conserva el pie tapado en la nevera, a 4 °C o menos, hasta 3 días. Los tiempos incluyen 1 hora de enfriado y al menos 4 horas de refrigeración. El horneado puede variar según el horno y el molde.",
+        "cuisine": "Repostería casera",
+        "course": "Postre",
+        "difficulty": "Fácil",
+        "recipe_group_id": "ae18f891-ce44-4a46-a6a5-4c1857917648",
+        "language": "es",
+        "public_path": "/receta-pie-de-limon",
+        "slug": "receta-pie-de-limon",
+        "category": "Postres",
+        "servings": 8,
+        "prep_time_minutes": 20,
+        "cook_time_minutes": 35,
+        "total_time_minutes": 355,
+        "ingredients": [
+          {
+            "name": "Galletas sencillas tipo María o digestive",
+            "amount": "200",
+            "unit": "g"
+          },
+          {
+            "name": "Mantequilla sin sal, derretida",
+            "amount": "80",
+            "unit": "g"
+          },
+          {
+            "name": "Leche condensada azucarada",
+            "amount": "397",
+            "unit": "g"
+          },
+          {
+            "name": "Yemas de huevo grandes",
+            "amount": "3",
+            "unit": "unidades"
+          },
+          {
+            "name": "Zumo de limón recién exprimido y colado",
+            "amount": "120",
+            "unit": "ml"
+          }
+        ],
+        "steps": [
+          {
+            "title": "Tritura las galletas",
+            "content": "Precalienta el horno a 180 °C, con calor arriba y abajo. Tritura los 200 g de galletas hasta obtener migas finas y mézclalas con los 80 g de mantequilla derretida. Deben parecer arena húmeda que se mantiene unida al presionarla.",
+            "image_alt": "Migas finas de galleta mezcladas con mantequilla en un bol.",
+            "image_url": "/recetas/pie-de-limon/paso-01-v1.webp"
+          },
+          {
+            "title": "Forma y hornea la base",
+            "content": "Reparte la mezcla en un molde de 22 cm. Presiona el fondo y forma un borde de unos 2 cm con la base de un vaso. Hornea durante 10 minutos y retira. Baja el horno a 160 °C mientras preparas el relleno.",
+            "image_alt": "Base de galletas compactada con un vaso en un molde blanco.",
+            "image_url": "/recetas/pie-de-limon/paso-02-v1.webp"
+          },
+          {
+            "title": "Mezcla el relleno de limón",
+            "content": "Mezcla la leche condensada con las 3 yemas usando unas varillas, sin montar ni incorporar demasiado aire. Añade los 120 ml de zumo de limón poco a poco y remueve hasta conseguir una crema lisa y uniforme.",
+            "image_alt": "Crema de leche condensada, yemas y limón mezclada con varillas.",
+            "image_url": "/recetas/pie-de-limon/paso-03-v1.webp"
+          },
+          {
+            "title": "Hornea hasta que cuaje",
+            "content": "Vierte el relleno sobre la base y alisa la superficie. Hornea a 160 °C unos 20–25 minutos: los bordes deben estar firmes y el centro temblar suavemente, sin verse líquido. Comprueba con un termómetro que el centro llegue a 71 °C; si no, continúa unos minutos. Evita dorar o agrietar el relleno.",
+            "image_alt": "Pie recién horneado, con relleno de limón liso, sobre una rejilla.",
+            "image_url": "/recetas/pie-de-limon/paso-04-v1.webp"
+          },
+          {
+            "title": "Enfría y corta",
+            "content": "Deja el molde sobre una rejilla alrededor de 1 hora y pásalo a la nevera; no lo dejes fuera más de 2 horas. Refrigera al menos 4 horas. Corta 8 porciones con un cuchillo limpio, calentado con agua y bien seco. Sirve frío.",
+            "image_alt": "Pie de limón frío con una porción cortada que muestra la base de galletas.",
+            "image_url": "/recetas/pie-de-limon/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/pie-de-limon/portada-v1.webp",
+        "seo": {
+          "title": "Pie de limón al horno con galletas | Manual de Cocina",
+          "description": "Prepara un pie de limón con leche condensada y base de galletas en cinco pasos con fotos. Cantidades para 8 porciones, horneado y enfriado explicados.",
+          "faq": [
+            {
+              "q": "¿Se puede hacer sin horno?",
+              "a": "Esta fórmula lleva yemas y necesita horneado. El limón espesa la mezcla, pero no sustituye la cocción del huevo."
+            },
+            {
+              "q": "¿Por qué queda blando al cortarlo?",
+              "a": "Puede faltar cocción o refrigeración. Comprueba la temperatura del centro al hornear y deja al menos 4 horas en la nevera; cortarlo todavía tibio impide obtener porciones firmes."
+            }
+          ],
+          "image_variants": [
+            "/recetas/pie-de-limon/portada-1x1-v1.webp",
+            "/recetas/pie-de-limon/portada-4x3-v1.webp",
+            "/recetas/pie-de-limon/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 364.0,
+          "protein_g": 6.8,
+          "carbs_g": 47.7,
+          "fat_g": 16.9,
+          "saturated_fat_g": 8.8,
+          "fiber_g": 0.9,
+          "sugar_g": 33.6,
+          "sodium_mg": 197.0,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g * grams_used / 100) / servings",
+          "serving_size": "1 porción (⅛ del pie)",
+          "note": "Estimación por porción, sin cobertura, usando galletas graham como aproximación de María o digestive y 54 g de yemas. La marca de galletas y leche condensada cambia los valores."
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>Una base crujiente y un relleno suave de limón: este pie se hornea sin merengue y termina de adquirir firmeza en la nevera. Usa un molde de 22 cm y prepáralo con tiempo; el reposo forma parte de la receta.</p>",
+        "keywords": [
+          "Pie de limón al horno con base de galletas",
+          "Postres",
+          "Repostería casera"
+        ],
+        "gallery": [],
+        "video_urls": []
+      },
+      {
+        "title": "Baked lemon pie with a biscuit crust",
+        "excerpt": "Creamy condensed-milk lemon pie with a crisp biscuit crust and five illustrated steps. Includes the chilling time needed for clean slices.",
+        "summary": "A crisp crumb shell holds a smooth lemon filling in this baked pie without meringue. It finishes setting in the refrigerator. Use a 22 cm (9-inch) pie dish and plan ahead: cooling and chilling are part of the recipe.",
+        "notes": "Use sweetened condensed milk, not evaporated milk. Maria-style biscuits and digestives absorb butter differently; press the crumbs into a firm shell. Contains wheat, milk and egg; check the biscuit label for other allergens. Refrigerate covered at 4 °C (40 °F) or below for up to 3 days. The total time includes 1 hour of cooling and at least 4 hours of chilling. Baking time varies with the oven and dish.",
+        "cuisine": "Home baking",
+        "course": "Dessert",
+        "difficulty": "Easy",
+        "recipe_group_id": "ae18f891-ce44-4a46-a6a5-4c1857917648",
+        "language": "en",
+        "public_path": "/en/baked-lemon-pie/",
+        "slug": "baked-lemon-pie",
+        "category": "Desserts",
+        "servings": 8,
+        "prep_time_minutes": 20,
+        "cook_time_minutes": 35,
+        "total_time_minutes": 355,
+        "ingredients": [
+          {
+            "name": "Plain Maria-style biscuits or digestives",
+            "amount": "200",
+            "unit": "g"
+          },
+          {
+            "name": "Unsalted butter, melted",
+            "amount": "80",
+            "unit": "g"
+          },
+          {
+            "name": "Sweetened condensed milk",
+            "amount": "397",
+            "unit": "g"
+          },
+          {
+            "name": "Large egg yolks",
+            "amount": "3",
+            "unit": "yolks"
+          },
+          {
+            "name": "Fresh lemon juice, strained",
+            "amount": "120",
+            "unit": "ml"
+          }
+        ],
+        "steps": [
+          {
+            "title": "Crush the biscuits",
+            "content": "Heat a conventional oven to 180 °C (350 °F). Crush the 200 g biscuits into fine crumbs and mix with the 80 g melted butter. The crumbs should resemble damp sand and hold together when pressed.",
+            "image_alt": "Fine biscuit crumbs mixed with melted butter in a bowl.",
+            "image_url": "/recetas/pie-de-limon/paso-01-v1.webp"
+          },
+          {
+            "title": "Shape and bake the crust",
+            "content": "Tip into a 22 cm (9-inch) pie dish. Use the bottom of a glass to press the crumbs evenly across the base and about 2 cm up the sides. Bake for 10 minutes, then remove. Reduce the oven to 160 °C (325 °F) while making the filling.",
+            "image_alt": "A drinking glass pressing biscuit crumbs into a white pie dish.",
+            "image_url": "/recetas/pie-de-limon/paso-02-v1.webp"
+          },
+          {
+            "title": "Mix the lemon filling",
+            "content": "Gently whisk the condensed milk with the 3 yolks without whipping in excess air. Gradually add the 120 ml lemon juice and stir until smooth and evenly combined.",
+            "image_alt": "Condensed milk, yolks and lemon juice being whisked into a smooth filling.",
+            "image_url": "/recetas/pie-de-limon/paso-03-v1.webp"
+          },
+          {
+            "title": "Bake until set",
+            "content": "Pour into the crust and smooth the top. Bake at 160 °C (325 °F) for about 20–25 minutes. The edges should be firm and the centre should wobble gently, without looking liquid. Check that the centre reaches 71 °C (160 °F) with a food thermometer; bake a little longer if needed. Avoid browning or cracking the filling.",
+            "image_alt": "A freshly baked lemon pie with a smooth filling on a cooling rack.",
+            "image_url": "/recetas/pie-de-limon/paso-04-v1.webp"
+          },
+          {
+            "title": "Chill and slice",
+            "content": "Cool the dish on a rack for about 1 hour, then refrigerate; do not leave it out for more than 2 hours. Chill for at least 4 hours. Cut into 8 slices with a clean knife warmed in water and dried thoroughly. Serve cold.",
+            "image_alt": "Chilled lemon pie with a cut slice showing the biscuit crust.",
+            "image_url": "/recetas/pie-de-limon/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/pie-de-limon/portada-v1.webp",
+        "seo": {
+          "title": "Baked lemon pie with biscuit crust | Manual de Cocina",
+          "description": "Make creamy lemon pie with condensed milk and a biscuit crust in five illustrated steps. Includes quantities for 8 slices, baking and chilling times.",
+          "faq": [
+            {
+              "q": "Can I make this without baking?",
+              "a": "This recipe contains yolks and must be baked. Lemon juice thickens the mixture but does not replace cooking the egg."
+            },
+            {
+              "q": "Why are the slices too soft?",
+              "a": "The filling may be underbaked or insufficiently chilled. Check its centre temperature during baking and refrigerate for at least 4 hours. A warm pie will not slice firmly."
+            }
+          ],
+          "image_variants": [
+            "/recetas/pie-de-limon/portada-1x1-v1.webp",
+            "/recetas/pie-de-limon/portada-4x3-v1.webp",
+            "/recetas/pie-de-limon/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 364.0,
+          "protein_g": 6.8,
+          "carbs_g": 47.7,
+          "fat_g": 16.9,
+          "saturated_fat_g": 8.8,
+          "fiber_g": 0.9,
+          "sugar_g": 33.6,
+          "sodium_mg": 197.0,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g * grams_used / 100) / servings",
+          "serving_size": "1 slice (⅛ of the pie)",
+          "note": "Estimated per slice without topping, using plain graham crackers as a proxy for Maria-style biscuits or digestives and 54 g of yolks. Biscuit and condensed-milk brands affect the values."
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>A crisp crumb shell holds a smooth lemon filling in this baked pie without meringue. It finishes setting in the refrigerator. Use a 22 cm (9-inch) pie dish and plan ahead: cooling and chilling are part of the recipe.</p>",
+        "keywords": [
+          "Baked lemon pie with a biscuit crust",
+          "Desserts",
+          "Home baking"
+        ],
+        "gallery": [],
+        "video_urls": []
+      },
+      {
+        "title": "Zitronenpie mit Keksboden und Kondensmilch",
+        "excerpt": "Cremiger Zitronenpie mit gezuckerter Kondensmilch und knusprigem Keksboden. Fünf bebilderte Schritte mit Back- und Kühlzeit.",
+        "summary": "Dieser Zitronenpie wird ohne Baiser gebacken: Auf einen knusprigen Keksboden kommt eine glatte Zitronencreme, die im Kühlschrank schnittfest wird. Verwende eine Form mit 22 cm Durchmesser und plane die Kühlzeit ein.",
+        "notes": "Gezuckerte Kondensmilch verwenden, keine ungesüßte Kondensmilch. Maria-Kekse und Digestive-Kekse nehmen Butter unterschiedlich auf; die Krümel fest andrücken. Enthält Weizen, Milch und Ei; weitere Allergene auf der Kekspackung prüfen. Abgedeckt bei höchstens 4 °C bis zu 3 Tage im Kühlschrank aufbewahren. Die Gesamtzeit umfasst 1 Stunde Abkühlen und mindestens 4 Stunden Kühlen. Die Backzeit hängt von Ofen und Form ab.",
+        "cuisine": "Hausgemachtes Gebäck",
+        "course": "Dessert",
+        "difficulty": "Einfach",
+        "recipe_group_id": "ae18f891-ce44-4a46-a6a5-4c1857917648",
+        "language": "de",
+        "public_path": "/de/zitronenpie-mit-keksboden/",
+        "slug": "zitronenpie-mit-keksboden",
+        "category": "Desserts",
+        "servings": 8,
+        "prep_time_minutes": 20,
+        "cook_time_minutes": 35,
+        "total_time_minutes": 355,
+        "ingredients": [
+          {
+            "name": "Einfache Maria- oder Digestive-Kekse",
+            "amount": "200",
+            "unit": "g"
+          },
+          {
+            "name": "Ungesalzene Butter, geschmolzen",
+            "amount": "80",
+            "unit": "g"
+          },
+          {
+            "name": "Gezuckerte Kondensmilch",
+            "amount": "397",
+            "unit": "g"
+          },
+          {
+            "name": "Eigelb von großen Eiern",
+            "amount": "3",
+            "unit": "Stück"
+          },
+          {
+            "name": "Frisch gepresster Zitronensaft, durchgesiebt",
+            "amount": "120",
+            "unit": "ml"
+          }
+        ],
+        "steps": [
+          {
+            "title": "Kekse zerbröseln",
+            "content": "Den Backofen auf 180 °C Ober-/Unterhitze vorheizen. Die 200 g Kekse fein zerbröseln und mit 80 g geschmolzener Butter vermischen. Die Masse soll feuchtem Sand ähneln und beim Zusammendrücken zusammenhalten.",
+            "image_alt": "Feine Kekskrümel mit geschmolzener Butter in einer Schüssel.",
+            "image_url": "/recetas/pie-de-limon/paso-01-v1.webp"
+          },
+          {
+            "title": "Boden formen und vorbacken",
+            "content": "Die Masse in einer Form mit 22 cm Durchmesser verteilen. Mit einem Glasboden festdrücken und einen etwa 2 cm hohen Rand formen. 10 Minuten backen und herausnehmen. Die Ofentemperatur für die Füllung auf 160 °C reduzieren.",
+            "image_alt": "Ein Glas drückt Kekskrümel in einer weißen Backform fest.",
+            "image_url": "/recetas/pie-de-limon/paso-02-v1.webp"
+          },
+          {
+            "title": "Zitronenfüllung anrühren",
+            "content": "Die Kondensmilch mit den 3 Eigelben mit einem Schneebesen glatt rühren, ohne viel Luft einzuarbeiten. Die 120 ml Zitronensaft nach und nach dazugeben und gleichmäßig unterrühren.",
+            "image_alt": "Kondensmilch, Eigelb und Zitronensaft werden zu einer glatten Creme verrührt.",
+            "image_url": "/recetas/pie-de-limon/paso-03-v1.webp"
+          },
+          {
+            "title": "Füllung backen",
+            "content": "Die Creme auf den Boden geben und glatt streichen. Bei 160 °C etwa 20–25 Minuten backen. Der Rand soll fest sein, die Mitte noch sanft wackeln, aber nicht flüssig aussehen. Mit einem Küchenthermometer prüfen, ob die Mitte 71 °C erreicht; andernfalls einige Minuten weiterbacken. Die Füllung soll nicht bräunen oder reißen.",
+            "image_alt": "Frisch gebackener Zitronenpie mit glatter Füllung auf einem Kuchengitter.",
+            "image_url": "/recetas/pie-de-limon/paso-04-v1.webp"
+          },
+          {
+            "title": "Kühlen und anschneiden",
+            "content": "Die Form etwa 1 Stunde auf einem Gitter abkühlen lassen, dann in den Kühlschrank stellen; nicht länger als 2 Stunden ungekühlt lassen. Mindestens 4 Stunden kühlen. Mit einem sauberen, in warmem Wasser erwärmten und abgetrockneten Messer in 8 Stücke schneiden. Kalt servieren.",
+            "image_alt": "Gekühlter Zitronenpie mit einem Stück, an dem der Keksboden sichtbar ist.",
+            "image_url": "/recetas/pie-de-limon/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/pie-de-limon/portada-v1.webp",
+        "seo": {
+          "title": "Zitronenpie mit Keksboden backen | Manual de Cocina",
+          "description": "Zitronenpie mit gezuckerter Kondensmilch in fünf bebilderten Schritten backen. Mengen für 8 Stücke, Keksboden, Backzeit und Kühlzeit verständlich erklärt.",
+          "faq": [
+            {
+              "q": "Geht dieses Rezept auch ohne Backen?",
+              "a": "Diese Füllung enthält Eigelb und muss gebacken werden. Zitronensaft dickt die Creme an, ersetzt aber nicht das Erhitzen des Eis."
+            },
+            {
+              "q": "Warum ist der Pie beim Schneiden zu weich?",
+              "a": "Er wurde möglicherweise zu kurz gebacken oder gekühlt. Die Temperatur in der Mitte prüfen und mindestens 4 Stunden kühlen. Ein noch warmer Pie ist nicht schnittfest."
+            }
+          ],
+          "image_variants": [
+            "/recetas/pie-de-limon/portada-1x1-v1.webp",
+            "/recetas/pie-de-limon/portada-4x3-v1.webp",
+            "/recetas/pie-de-limon/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 364.0,
+          "protein_g": 6.8,
+          "carbs_g": 47.7,
+          "fat_g": 16.9,
+          "saturated_fat_g": 8.8,
+          "fiber_g": 0.9,
+          "sugar_g": 33.6,
+          "sodium_mg": 197.0,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g * grams_used / 100) / servings",
+          "serving_size": "1 Stück (⅛ des Pies)",
+          "note": "Geschätzte Werte pro Stück ohne Belag, mit Graham-Keksen als Näherung für Maria- oder Digestive-Kekse und 54 g Eigelb. Je nach Keks- und Kondensmilchmarke ändern sich die Werte."
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>Dieser Zitronenpie wird ohne Baiser gebacken: Auf einen knusprigen Keksboden kommt eine glatte Zitronencreme, die im Kühlschrank schnittfest wird. Verwende eine Form mit 22 cm Durchmesser und plane die Kühlzeit ein.</p>",
+        "keywords": [
+          "Zitronenpie mit Keksboden und Kondensmilch",
+          "Desserts",
+          "Hausgemachtes Gebäck"
+        ],
+        "gallery": [],
+        "video_urls": []
+      },
+      {
+        "title": "Tarte au citron et au lait concentré, fond biscuité",
+        "excerpt": "Une tarte au citron crémeuse sur un fond de biscuits, expliquée en cinq étapes illustrées, avec le temps de cuisson et de refroidissement.",
+        "summary": "Cette tarte sans meringue associe une base croustillante à une crème au citron cuite au four. Le passage au réfrigérateur permet ensuite de découper des parts nettes. Prévoyez un moule de 22 cm et suffisamment de temps de repos.",
+        "notes": "Utilisez du lait concentré sucré, et non du lait concentré non sucré. Les biscuits Maria et digestives absorbent le beurre différemment : tassez bien le fond. Contient du blé, du lait et de l’œuf ; vérifiez aussi les allergènes des biscuits. Conservez la tarte couverte au réfrigérateur, à 4 °C maximum, jusqu’à 3 jours. Le temps total comprend 1 heure de refroidissement et au moins 4 heures au réfrigérateur. La cuisson varie selon le four et le moule.",
+        "cuisine": "Pâtisserie maison",
+        "course": "Dessert",
+        "difficulty": "Facile",
+        "recipe_group_id": "ae18f891-ce44-4a46-a6a5-4c1857917648",
+        "language": "fr",
+        "public_path": "/fr/tarte-citron-lait-concentre/",
+        "slug": "tarte-citron-lait-concentre",
+        "category": "Desserts",
+        "servings": 8,
+        "prep_time_minutes": 20,
+        "cook_time_minutes": 35,
+        "total_time_minutes": 355,
+        "ingredients": [
+          {
+            "name": "Biscuits nature de type Maria ou digestive",
+            "amount": "200",
+            "unit": "g"
+          },
+          {
+            "name": "Beurre doux fondu",
+            "amount": "80",
+            "unit": "g"
+          },
+          {
+            "name": "Lait concentré sucré",
+            "amount": "397",
+            "unit": "g"
+          },
+          {
+            "name": "Jaunes de gros œufs",
+            "amount": "3",
+            "unit": "jaunes"
+          },
+          {
+            "name": "Jus de citron fraîchement pressé et filtré",
+            "amount": "120",
+            "unit": "ml"
+          }
+        ],
+        "steps": [
+          {
+            "title": "Réduisez les biscuits en miettes",
+            "content": "Préchauffez le four à 180 °C en chaleur traditionnelle. Réduisez les 200 g de biscuits en miettes fines et mélangez-les avec les 80 g de beurre fondu. La texture doit rappeler du sable humide et tenir lorsqu’on la presse.",
+            "image_alt": "Miettes fines de biscuits mélangées à du beurre fondu dans un bol.",
+            "image_url": "/recetas/pie-de-limon/paso-01-v1.webp"
+          },
+          {
+            "title": "Formez et précuisez le fond",
+            "content": "Répartissez le mélange dans un moule de 22 cm. Tassez avec le fond d’un verre en formant un rebord d’environ 2 cm. Faites cuire 10 minutes, puis sortez le moule. Baissez le four à 160 °C pendant la préparation de la crème.",
+            "image_alt": "Un verre tasse les miettes de biscuits dans un moule blanc.",
+            "image_url": "/recetas/pie-de-limon/paso-02-v1.webp"
+          },
+          {
+            "title": "Préparez la crème au citron",
+            "content": "Mélangez doucement au fouet le lait concentré et les 3 jaunes, sans faire mousser. Ajoutez progressivement les 120 ml de jus de citron et remuez jusqu’à obtenir une crème lisse et homogène.",
+            "image_alt": "Lait concentré, jaunes et jus de citron mélangés au fouet.",
+            "image_url": "/recetas/pie-de-limon/paso-03-v1.webp"
+          },
+          {
+            "title": "Faites prendre la crème au four",
+            "content": "Versez la crème sur le fond et lissez la surface. Faites cuire à 160 °C pendant environ 20 à 25 minutes. Les bords doivent être pris et le centre légèrement tremblotant, sans aspect liquide. Vérifiez au thermomètre que le centre atteint 71 °C ; prolongez de quelques minutes si nécessaire. Évitez de faire dorer ou fissurer la crème.",
+            "image_alt": "Tarte au citron fraîchement cuite, à la surface lisse, sur une grille.",
+            "image_url": "/recetas/pie-de-limon/paso-04-v1.webp"
+          },
+          {
+            "title": "Réfrigérez puis découpez",
+            "content": "Laissez le moule refroidir sur une grille environ 1 heure, puis placez-le au réfrigérateur ; ne le laissez pas dehors plus de 2 heures. Réfrigérez au moins 4 heures. Découpez 8 parts avec un couteau propre, réchauffé dans l’eau puis bien séché. Servez froid.",
+            "image_alt": "Tarte au citron froide avec une part découpée montrant le fond biscuité.",
+            "image_url": "/recetas/pie-de-limon/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/pie-de-limon/portada-v1.webp",
+        "seo": {
+          "title": "Tarte au citron et lait concentré | Manual de Cocina",
+          "description": "Préparez une tarte au citron sur fond biscuité en cinq étapes illustrées. Quantités pour 8 parts, lait concentré, cuisson et refroidissement détaillés.",
+          "faq": [
+            {
+              "q": "Peut-on réaliser cette tarte sans cuisson ?",
+              "a": "Cette recette contient des jaunes et doit être cuite. Le citron épaissit le mélange, mais ne remplace pas la cuisson de l’œuf."
+            },
+            {
+              "q": "Pourquoi les parts restent-elles molles ?",
+              "a": "La cuisson ou le refroidissement peut être insuffisant. Vérifiez la température à cœur et laissez au moins 4 heures au réfrigérateur. Une tarte encore tiède ne se découpe pas nettement."
+            }
+          ],
+          "image_variants": [
+            "/recetas/pie-de-limon/portada-1x1-v1.webp",
+            "/recetas/pie-de-limon/portada-4x3-v1.webp",
+            "/recetas/pie-de-limon/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 364.0,
+          "protein_g": 6.8,
+          "carbs_g": 47.7,
+          "fat_g": 16.9,
+          "saturated_fat_g": 8.8,
+          "fiber_g": 0.9,
+          "sugar_g": 33.6,
+          "sodium_mg": 197.0,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g * grams_used / 100) / servings",
+          "serving_size": "1 part (⅛ de la tarte)",
+          "note": "Estimation par part sans garniture, avec des biscuits graham comme approximation des biscuits Maria ou digestives et 54 g de jaunes. Les marques de biscuits et de lait concentré modifient les valeurs."
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>Cette tarte sans meringue associe une base croustillante à une crème au citron cuite au four. Le passage au réfrigérateur permet ensuite de découper des parts nettes. Prévoyez un moule de 22 cm et suffisamment de temps de repos.</p>",
+        "keywords": [
+          "Tarte au citron et au lait concentré, fond biscuité",
+          "Desserts",
+          "Pâtisserie maison"
+        ],
+        "gallery": [],
+        "video_urls": []
+      },
+      {
+        "title": "Torta al limone con latte condensato e base di biscotti",
+        "excerpt": "Una torta al limone cremosa con base croccante di biscotti, in cinque passaggi illustrati. Con tempi di cottura e riposo per ottenere fette compatte.",
+        "summary": "Questa torta senza meringa si cuoce in forno e acquista consistenza in frigorifero. Il ripieno al limone resta cremoso sopra la base di biscotti. Usa uno stampo da 22 cm e organizzati in anticipo: il riposo fa parte della preparazione.",
+        "notes": "Usa latte condensato zuccherato, non latte evaporato. I biscotti Maria e digestive assorbono il burro in modo diverso: compatta bene la base. Contiene frumento, latte e uova; controlla anche gli allergeni dei biscotti. Conserva coperta in frigorifero a 4 °C o meno per un massimo di 3 giorni. Il tempo totale comprende 1 ora di raffreddamento e almeno 4 ore in frigorifero. La cottura varia secondo forno e stampo.",
+        "cuisine": "Pasticceria casalinga",
+        "course": "Dessert",
+        "difficulty": "Facile",
+        "recipe_group_id": "ae18f891-ce44-4a46-a6a5-4c1857917648",
+        "language": "it",
+        "public_path": "/it/torta-limone-latte-condensato/",
+        "slug": "torta-limone-latte-condensato",
+        "category": "Dolci",
+        "servings": 8,
+        "prep_time_minutes": 20,
+        "cook_time_minutes": 35,
+        "total_time_minutes": 355,
+        "ingredients": [
+          {
+            "name": "Biscotti semplici tipo Maria o digestive",
+            "amount": "200",
+            "unit": "g"
+          },
+          {
+            "name": "Burro non salato, fuso",
+            "amount": "80",
+            "unit": "g"
+          },
+          {
+            "name": "Latte condensato zuccherato",
+            "amount": "397",
+            "unit": "g"
+          },
+          {
+            "name": "Tuorli di uova grandi",
+            "amount": "3",
+            "unit": "tuorli"
+          },
+          {
+            "name": "Succo di limone fresco e filtrato",
+            "amount": "120",
+            "unit": "ml"
+          }
+        ],
+        "steps": [
+          {
+            "title": "Trita i biscotti",
+            "content": "Scalda il forno statico a 180 °C. Trita finemente i 200 g di biscotti e mescolali con gli 80 g di burro fuso. Il composto deve sembrare sabbia umida e restare unito quando viene premuto.",
+            "image_alt": "Biscotti tritati mescolati con burro fuso in una ciotola.",
+            "image_url": "/recetas/pie-de-limon/paso-01-v1.webp"
+          },
+          {
+            "title": "Forma e precuoci la base",
+            "content": "Distribuisci il composto in uno stampo da 22 cm. Premi con il fondo di un bicchiere e crea un bordo alto circa 2 cm. Cuoci per 10 minuti, poi sforna. Abbassa il forno a 160 °C mentre prepari il ripieno.",
+            "image_alt": "Un bicchiere compatta la base di biscotti in uno stampo bianco.",
+            "image_url": "/recetas/pie-de-limon/paso-02-v1.webp"
+          },
+          {
+            "title": "Mescola la crema al limone",
+            "content": "Lavora delicatamente il latte condensato con i 3 tuorli usando una frusta, senza montare. Aggiungi poco alla volta i 120 ml di succo di limone e mescola fino a ottenere una crema liscia e uniforme.",
+            "image_alt": "Latte condensato, tuorli e succo di limone mescolati con una frusta.",
+            "image_url": "/recetas/pie-de-limon/paso-03-v1.webp"
+          },
+          {
+            "title": "Cuoci il ripieno",
+            "content": "Versa la crema sulla base e livella. Cuoci a 160 °C per circa 20–25 minuti. I bordi devono essere fermi e il centro oscillare appena, senza apparire liquido. Verifica con un termometro che al centro raggiunga 71 °C; altrimenti continua per qualche minuto. Evita che la crema scurisca o si crepi.",
+            "image_alt": "Torta al limone appena cotta con superficie liscia su una gratella.",
+            "image_url": "/recetas/pie-de-limon/paso-04-v1.webp"
+          },
+          {
+            "title": "Raffredda e taglia",
+            "content": "Lascia lo stampo su una gratella per circa 1 ora, poi mettilo in frigorifero; non lasciarlo fuori per più di 2 ore. Fai riposare al freddo almeno 4 ore. Taglia 8 fette con un coltello pulito, scaldato in acqua e asciugato bene. Servi fredda.",
+            "image_alt": "Torta al limone fredda con una fetta tagliata che mostra la base di biscotti.",
+            "image_url": "/recetas/pie-de-limon/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/pie-de-limon/portada-v1.webp",
+        "seo": {
+          "title": "Torta al limone con base di biscotti | Manual de Cocina",
+          "description": "Torta al limone e latte condensato in cinque passaggi con foto. Dosi per 8 fette, base di biscotti, tempi di cottura e riposo spiegati passo dopo passo.",
+          "faq": [
+            {
+              "q": "Si può preparare senza forno?",
+              "a": "Questa versione contiene tuorli e richiede la cottura. Il limone addensa la crema, ma non sostituisce la cottura dell’uovo."
+            },
+            {
+              "q": "Perché le fette rimangono troppo morbide?",
+              "a": "La torta potrebbe essere poco cotta o non abbastanza fredda. Controlla la temperatura al centro durante la cottura e lasciala in frigorifero almeno 4 ore. Da tiepida non si taglia in fette compatte."
+            }
+          ],
+          "image_variants": [
+            "/recetas/pie-de-limon/portada-1x1-v1.webp",
+            "/recetas/pie-de-limon/portada-4x3-v1.webp",
+            "/recetas/pie-de-limon/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 364.0,
+          "protein_g": 6.8,
+          "carbs_g": 47.7,
+          "fat_g": 16.9,
+          "saturated_fat_g": 8.8,
+          "fiber_g": 0.9,
+          "sugar_g": 33.6,
+          "sodium_mg": 197.0,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g * grams_used / 100) / servings",
+          "serving_size": "1 fetta (⅛ della torta)",
+          "note": "Stima per fetta senza copertura, con biscotti graham come riferimento per Maria o digestive e 54 g di tuorli. Le marche dei biscotti e del latte condensato cambiano i valori."
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>Questa torta senza meringa si cuoce in forno e acquista consistenza in frigorifero. Il ripieno al limone resta cremoso sopra la base di biscotti. Usa uno stampo da 22 cm e organizzati in anticipo: il riposo fa parte della preparazione.</p>",
+        "keywords": [
+          "Torta al limone con latte condensato e base di biscotti",
+          "Dolci",
+          "Pasticceria casalinga"
+        ],
+        "gallery": [],
+        "video_urls": []
+      },
+      {
+        "title": "練乳で作るレモンパイ：ビスケットの土台で簡単に",
+        "excerpt": "ビスケットの土台に、練乳とレモンのなめらかなフィリング。写真付きの5工程で、焼き方から冷やして切るまで紹介します。",
+        "summary": "メレンゲをのせずに焼く、やさしい酸味のレモンパイです。焼いたあとに冷蔵庫でしっかり冷やすと、きれいに切り分けられます。直径22 cmの型を使い、冷ます時間も含めて余裕をもって作りましょう。",
+        "notes": "無糖のエバミルクではなく、加糖練乳を使います。マリービスケットとダイジェスティブビスケットではバターの吸い方が違うため、土台をしっかり押し固めてください。小麦・乳・卵を含みます。ビスケットのアレルゲン表示も確認してください。覆いをして4 °C以下で冷蔵し、3日以内を目安に食べ切ります。所要時間には約1時間の放冷と最低4時間の冷蔵を含みます。焼き時間はオーブンや型によって変わります。",
+        "cuisine": "家庭のお菓子",
+        "course": "デザート",
+        "difficulty": "簡単",
+        "recipe_group_id": "ae18f891-ce44-4a46-a6a5-4c1857917648",
+        "language": "ja",
+        "public_path": "/ja/レモンパイのレシピ/",
+        "slug": "レモンパイのレシピ",
+        "category": "デザート",
+        "servings": 8,
+        "prep_time_minutes": 20,
+        "cook_time_minutes": 35,
+        "total_time_minutes": 355,
+        "ingredients": [
+          {
+            "name": "プレーンビスケット（マリーまたはダイジェスティブ）",
+            "amount": "200",
+            "unit": "g"
+          },
+          {
+            "name": "無塩バター（溶かす）",
+            "amount": "80",
+            "unit": "g"
+          },
+          {
+            "name": "加糖練乳",
+            "amount": "397",
+            "unit": "g"
+          },
+          {
+            "name": "大きめの卵の卵黄",
+            "amount": "3",
+            "unit": "個分"
+          },
+          {
+            "name": "レモン果汁（搾ってこす）",
+            "amount": "120",
+            "unit": "ml"
+          }
+        ],
+        "steps": [
+          {
+            "title": "ビスケットを砕く",
+            "content": "オーブンを180 °Cに予熱します（上下加熱、ファンなし）。ビスケット200 gを細かく砕き、溶かしたバター80 gを混ぜます。湿った砂のようになり、押すとまとまる状態にします。",
+            "image_alt": "ボウルの中で細かいビスケットと溶かしバターを混ぜた状態。",
+            "image_url": "/recetas/pie-de-limon/paso-01-v1.webp"
+          },
+          {
+            "title": "土台を作って下焼きする",
+            "content": "直径22 cmの型に入れ、コップの底で平らに押し固めます。側面にも約2 cmの高さまで広げます。10分焼いて取り出し、フィリングを作る間にオーブンを160 °Cに下げます。",
+            "image_alt": "白い型の中でビスケットの土台をコップで押し固める様子。",
+            "image_url": "/recetas/pie-de-limon/paso-02-v1.webp"
+          },
+          {
+            "title": "レモンのフィリングを混ぜる",
+            "content": "練乳と卵黄3個分を泡立て器で静かに混ぜます。泡立てすぎないようにし、レモン果汁120 mlを少しずつ加え、なめらかで均一になるまで混ぜます。",
+            "image_alt": "練乳、卵黄、レモン果汁を泡立て器で混ぜたクリーム。",
+            "image_url": "/recetas/pie-de-limon/paso-03-v1.webp"
+          },
+          {
+            "title": "フィリングを焼く",
+            "content": "土台に流して表面をならし、160 °Cで約20〜25分焼きます。縁が固まり、中心は液状ではなく、軽く揺れる程度が目安です。食品用温度計で中心が71 °Cに達したことを確認し、足りなければ数分追加します。表面を焦がしたり、ひび割れさせたりしないようにします。",
+            "image_alt": "焼き上がった表面のなめらかなレモンパイを網にのせた様子。",
+            "image_url": "/recetas/pie-de-limon/paso-04-v1.webp"
+          },
+          {
+            "title": "冷やして切り分ける",
+            "content": "型ごと網にのせて約1時間冷まし、冷蔵庫へ移します。室温に2時間以上置かないでください。最低4時間冷やしたら、温水で温めて水気を拭いた清潔な包丁で8等分します。冷たい状態でどうぞ。",
+            "image_alt": "冷えたレモンパイと、ビスケットの土台が見える一切れ。",
+            "image_url": "/recetas/pie-de-limon/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/pie-de-limon/portada-v1.webp",
+        "seo": {
+          "title": "練乳で作るレモンパイのレシピ | Manual de Cocina",
+          "description": "ビスケットを土台にしたレモンパイを写真付きの5工程で紹介。8切れ分の材料、練乳フィリングの焼き方、冷やす時間までわかります。",
+          "faq": [
+            {
+              "q": "焼かずに作れますか？",
+              "a": "この配合は卵黄を使うため、焼く必要があります。レモンでとろみがついても、卵に火を通したことにはなりません。"
+            },
+            {
+              "q": "切ると崩れるのはなぜですか？",
+              "a": "焼き時間や冷蔵時間が足りない可能性があります。焼くときに中心温度を確認し、最低4時間冷蔵してください。まだ温かいうちは、きれいに切り分けられません。"
+            }
+          ],
+          "image_variants": [
+            "/recetas/pie-de-limon/portada-1x1-v1.webp",
+            "/recetas/pie-de-limon/portada-4x3-v1.webp",
+            "/recetas/pie-de-limon/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 364.0,
+          "protein_g": 6.8,
+          "carbs_g": 47.7,
+          "fat_g": 16.9,
+          "saturated_fat_g": 8.8,
+          "fiber_g": 0.9,
+          "sugar_g": 33.6,
+          "sodium_mg": 197.0,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g * grams_used / 100) / servings",
+          "serving_size": "1切れ（全量の⅛）",
+          "note": "トッピングなしの1切れ分の推定値です。ビスケットはグラハムクラッカーの成分値で代用し、卵黄は54 gとして計算しています。ビスケットや練乳の銘柄により数値は変わります。"
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>メレンゲをのせずに焼く、やさしい酸味のレモンパイです。焼いたあとに冷蔵庫でしっかり冷やすと、きれいに切り分けられます。直径22 cmの型を使い、冷ます時間も含めて余裕をもって作りましょう。</p>",
+        "keywords": [
+          "練乳で作るレモンパイ：ビスケットの土台で簡単に",
+          "デザート",
+          "家庭のお菓子"
+        ],
+        "gallery": [],
+        "video_urls": []
+      },
+      {
+        "title": "Torta de limão-siciliano com leite condensado e biscoitos",
+        "excerpt": "Torta cremosa de limão-siciliano com base crocante de biscoitos, em cinco etapas com fotos. Inclui o tempo de forno e de geladeira para cortar bem.",
+        "summary": "Esta torta sem merengue vai ao forno e termina de firmar na geladeira. O recheio de limão-siciliano fica cremoso sobre a base de biscoitos. Use uma forma de 22 cm e prepare com antecedência: o tempo de descanso faz parte da receita.",
+        "notes": "Use leite condensado adoçado, não leite evaporado. Biscoitos Maria e digestivos absorvem a manteiga de maneiras diferentes; compacte bem a base. Contém trigo, leite e ovo; confira também os alérgenos dos biscoitos. Guarde coberta na geladeira, a 4 °C ou menos, por até 3 dias. O tempo total inclui 1 hora de resfriamento e pelo menos 4 horas de geladeira. O tempo de forno varia conforme o equipamento e a forma.",
+        "cuisine": "Confeitaria caseira",
+        "course": "Sobremesa",
+        "difficulty": "Fácil",
+        "recipe_group_id": "ae18f891-ce44-4a46-a6a5-4c1857917648",
+        "language": "pt",
+        "public_path": "/pt/torta-limao-leite-condensado/",
+        "slug": "torta-limao-leite-condensado",
+        "category": "Sobremesas",
+        "servings": 8,
+        "prep_time_minutes": 20,
+        "cook_time_minutes": 35,
+        "total_time_minutes": 355,
+        "ingredients": [
+          {
+            "name": "Biscoitos simples tipo Maria ou digestivos",
+            "amount": "200",
+            "unit": "g"
+          },
+          {
+            "name": "Manteiga sem sal, derretida",
+            "amount": "80",
+            "unit": "g"
+          },
+          {
+            "name": "Leite condensado adoçado",
+            "amount": "397",
+            "unit": "g"
+          },
+          {
+            "name": "Gemas de ovos grandes",
+            "amount": "3",
+            "unit": "gemas"
+          },
+          {
+            "name": "Suco de limão-siciliano fresco e coado",
+            "amount": "120",
+            "unit": "ml"
+          }
+        ],
+        "steps": [
+          {
+            "title": "Triture os biscoitos",
+            "content": "Preaqueça o forno convencional, sem ventilação, a 180 °C. Triture os 200 g de biscoitos até obter uma farofa fina e misture com os 80 g de manteiga derretida. A textura deve lembrar areia úmida e ficar unida quando apertada.",
+            "image_alt": "Farofa fina de biscoitos misturada com manteiga derretida numa tigela.",
+            "image_url": "/recetas/pie-de-limon/paso-01-v1.webp"
+          },
+          {
+            "title": "Modele e asse a base",
+            "content": "Distribua numa forma de 22 cm. Pressione com o fundo de um copo, cobrindo o fundo e formando uma borda de cerca de 2 cm. Asse por 10 minutos e retire. Reduza o forno para 160 °C enquanto prepara o recheio.",
+            "image_alt": "Um copo compacta a base de biscoitos numa forma branca.",
+            "image_url": "/recetas/pie-de-limon/paso-02-v1.webp"
+          },
+          {
+            "title": "Misture o recheio de limão",
+            "content": "Misture delicadamente o leite condensado com as 3 gemas usando um batedor, sem incorporar muito ar. Acrescente aos poucos os 120 ml de suco de limão-siciliano e mexa até obter um creme liso e uniforme.",
+            "image_alt": "Leite condensado, gemas e suco de limão misturados com um batedor.",
+            "image_url": "/recetas/pie-de-limon/paso-03-v1.webp"
+          },
+          {
+            "title": "Asse até firmar",
+            "content": "Despeje sobre a base e alise. Asse a 160 °C por cerca de 20–25 minutos. As bordas devem estar firmes e o centro balançar levemente, sem parecer líquido. Confira com um termômetro culinário se o centro chegou a 71 °C; se necessário, asse por mais alguns minutos. Evite dourar ou rachar o recheio.",
+            "image_alt": "Torta de limão recém-assada, com recheio liso, sobre uma grade.",
+            "image_url": "/recetas/pie-de-limon/paso-04-v1.webp"
+          },
+          {
+            "title": "Gele e corte",
+            "content": "Deixe a forma sobre uma grade por cerca de 1 hora e leve à geladeira; não deixe fora por mais de 2 horas. Gele por pelo menos 4 horas. Corte 8 fatias com uma faca limpa, aquecida em água e bem seca. Sirva fria.",
+            "image_alt": "Torta de limão fria com uma fatia cortada mostrando a base de biscoitos.",
+            "image_url": "/recetas/pie-de-limon/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/pie-de-limon/portada-v1.webp",
+        "seo": {
+          "title": "Torta de limão-siciliano com biscoitos | Manual de Cocina",
+          "description": "Prepare torta de limão-siciliano com leite condensado em cinco etapas com fotos. Quantidades para 8 fatias, base de biscoitos, forno e geladeira explicados.",
+          "faq": [
+            {
+              "q": "Dá para fazer sem forno?",
+              "a": "Esta receita leva gemas e precisa ser assada. O limão engrossa o creme, mas não substitui o cozimento do ovo."
+            },
+            {
+              "q": "Por que as fatias ficam moles?",
+              "a": "Pode faltar tempo de forno ou de geladeira. Confira a temperatura do centro ao assar e refrigere por pelo menos 4 horas. A torta ainda morna não corta em fatias firmes."
+            }
+          ],
+          "image_variants": [
+            "/recetas/pie-de-limon/portada-1x1-v1.webp",
+            "/recetas/pie-de-limon/portada-4x3-v1.webp",
+            "/recetas/pie-de-limon/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 364.0,
+          "protein_g": 6.8,
+          "carbs_g": 47.7,
+          "fat_g": 16.9,
+          "saturated_fat_g": 8.8,
+          "fiber_g": 0.9,
+          "sugar_g": 33.6,
+          "sodium_mg": 197.0,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g * grams_used / 100) / servings",
+          "serving_size": "1 fatia (⅛ da torta)",
+          "note": "Estimativa por fatia sem cobertura, com biscoitos graham como aproximação dos Maria ou digestivos e 54 g de gemas. As marcas dos biscoitos e do leite condensado alteram os valores."
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>Esta torta sem merengue vai ao forno e termina de firmar na geladeira. O recheio de limão-siciliano fica cremoso sobre a base de biscoitos. Use uma forma de 22 cm e prepare com antecedência: o tempo de descanso faz parte da receita.</p>",
+        "keywords": [
+          "Torta de limão-siciliano com leite condensado e biscoitos",
+          "Sobremesas",
+          "Confeitaria caseira"
+        ],
+        "gallery": [],
+        "video_urls": []
+      }
+    ]
+  }
+}
