@@ -1,0 +1,1017 @@
+{
+  "entity": "E013",
+  "status": "ready_for_preview",
+  "recipe_group_id": "e1346490-827e-44f7-bb1a-eb6d784285da",
+  "source_policy": "Original step-by-step formulation; historical ES and DE paths and recipe group preserved. No WordPress body copy reused.",
+  "kitchen_test_claimed": false,
+  "sources": [
+    {
+      "url": "https://www.spain.info/es/top/escapadas-gastronomicas-por-espana/",
+      "purpose": "Culinary reference for pulpo á feira with potatoes, paprika and olive oil."
+    }
+  ],
+  "nutrition_calculation": {
+    "dataset": "USDA FoodData Central, SR Legacy April 2018",
+    "dataset_sha256": "b80817294b8850530aaedf2e515c02593b1824f763a0ff356e5c2081643e6fd0",
+    "method": "sum(per_100g × ingredient grams / 100) / 4; salt 4 g × 0.393 sodium fraction / 4",
+    "inputs": [
+      {
+        "fdc_id": "174218",
+        "description": "Mollusks, octopus, common, raw",
+        "grams": 1000,
+        "per_100g": {
+          "sugar_g": 0.0,
+          "fat_g": 1.04,
+          "carbs_g": 2.2,
+          "calories": 82.0,
+          "fiber_g": 0.0,
+          "sodium_mg": 230.0,
+          "protein_g": 14.91,
+          "saturated_fat_g": 0.227
+        }
+      },
+      {
+        "fdc_id": "170026",
+        "description": "Potatoes, flesh and skin, raw",
+        "grams": 1000,
+        "per_100g": {
+          "fat_g": 0.09,
+          "calories": 77.0,
+          "sodium_mg": 6.0,
+          "saturated_fat_g": 0.025,
+          "protein_g": 2.05,
+          "fiber_g": 2.1,
+          "carbs_g": 17.49,
+          "sugar_g": 0.82
+        }
+      },
+      {
+        "fdc_id": "171413",
+        "description": "Oil, olive, salad or cooking",
+        "grams": 54,
+        "per_100g": {
+          "fat_g": 100.0,
+          "carbs_g": 0.0,
+          "calories": 884.0,
+          "sodium_mg": 2.0,
+          "protein_g": 0.0,
+          "saturated_fat_g": 13.808,
+          "fiber_g": 0.0,
+          "sugar_g": 0.0
+        }
+      },
+      {
+        "fdc_id": "171329",
+        "description": "Spices, paprika",
+        "grams": 8,
+        "per_100g": {
+          "sugar_g": 10.34,
+          "fiber_g": 34.9,
+          "sodium_mg": 68.0,
+          "protein_g": 14.14,
+          "fat_g": 12.89,
+          "carbs_g": 53.99,
+          "calories": 282.0,
+          "saturated_fat_g": 2.14
+        }
+      }
+    ],
+    "assumptions": "1 kg raw cleaned octopus, 1 kg potato, 60 ml olive oil≈54 g, 8 g sweet paprika, 4 g coarse salt. Bay leaf and optional hot paprika excluded. Cooking losses and retained moisture not measured."
+  },
+  "images": {
+    "method": "built-in image_gen",
+    "cover_reused_for_final_step": true,
+    "directory": "public/recetas/receta-de-pulpo-a-la-gallega",
+    "version": "v1"
+  },
+  "publication": {
+    "environment": "preview",
+    "state": "prepared",
+    "rows": [
+      {
+        "title": "Pulpo a la gallega con cachelos",
+        "summary": "Pulpo tierno sobre cachelos con pimentón, sal gruesa y aceite de oliva. Cinco pasos para controlar la cocción y servirlo templado.",
+        "notes": "El tiempo del pulpo es orientativo: pincha la parte gruesa de un tentáculo; debe estar tierna. Descongela en la nevera antes de empezar; ese tiempo no se incluye. Refrigera las sobras hasta 2 días.",
+        "cuisine": "Gallega, España",
+        "course": "Plato principal",
+        "difficulty": "Intermedia",
+        "excerpt": "Pulpo tierno sobre cachelos con pimentón, sal gruesa y aceite de oliva. Cinco pasos para controlar la cocción y servirlo templado.",
+        "recipe_group_id": "e1346490-827e-44f7-bb1a-eb6d784285da",
+        "language": "es",
+        "public_path": "/receta-de-pulpo-a-la-gallega",
+        "slug": "receta-de-pulpo-a-la-gallega",
+        "category": "Platos principales",
+        "servings": 4,
+        "prep_time_minutes": 15,
+        "cook_time_minutes": 60,
+        "total_time_minutes": 80,
+        "ingredients": [
+          {
+            "name": "Pulpo limpio y descongelado",
+            "amount": "1000",
+            "unit": "g"
+          },
+          {
+            "name": "Patatas para cocer",
+            "amount": "1000",
+            "unit": "g"
+          },
+          {
+            "name": "Aceite de oliva virgen extra",
+            "amount": "60",
+            "unit": "ml"
+          },
+          {
+            "name": "Pimentón dulce",
+            "amount": "8",
+            "unit": "g"
+          },
+          {
+            "name": "Sal gruesa",
+            "amount": "4",
+            "unit": "g"
+          },
+          {
+            "name": "Hoja de laurel",
+            "amount": "1",
+            "unit": "hoja"
+          },
+          {
+            "name": "Pimentón picante (opcional)",
+            "amount": "2",
+            "unit": "g"
+          }
+        ],
+        "steps": [
+          {
+            "title": "Prepara el pulpo",
+            "content": "Usa pulpo completamente descongelado en la nevera y limpio. Lava las patatas y prepara una olla amplia con agua; ten listos el pimentón, la sal y el aceite.",
+            "image_alt": "Pulpo limpio con patatas e ingredientes.",
+            "image_url": "/recetas/receta-de-pulpo-a-la-gallega/paso-01-v1.webp"
+          },
+          {
+            "title": "Cuece hasta que esté tierno",
+            "content": "Lleva el agua a ebullición. Sujeta el pulpo por la cabeza, sumerge y retira los tentáculos tres veces y luego introdúcelo por completo con el laurel. Cuece a hervor suave 40–60 minutos; comprueba con una brocheta que la parte gruesa ceda con facilidad.",
+            "image_alt": "Pulpo entrando en una olla de agua caliente.",
+            "image_url": "/recetas/receta-de-pulpo-a-la-gallega/paso-02-v1.webp"
+          },
+          {
+            "title": "Cuece los cachelos",
+            "content": "Mientras se hace el pulpo, corta las patatas en trozos o rodajas gruesas y cuécelas en otra olla con agua y parte de la sal durante 20–25 minutos, hasta que estén tiernas sin deshacerse. Escúrrelas.",
+            "image_alt": "Patatas cociéndose hasta quedar tiernas.",
+            "image_url": "/recetas/receta-de-pulpo-a-la-gallega/paso-03-v1.webp"
+          },
+          {
+            "title": "Reposa y corta",
+            "content": "Deja reposar el pulpo 5 minutos fuera del agua. Con tijeras, corta los tentáculos en rodajas de unos 1 cm y la cabeza en bocados. Coloca las patatas calientes en una fuente.",
+            "image_alt": "Pulpo cocido cortado con tijeras.",
+            "image_url": "/recetas/receta-de-pulpo-a-la-gallega/paso-04-v1.webp"
+          },
+          {
+            "title": "Aliña y sirve",
+            "content": "Distribuye el pulpo sobre las patatas. Espolvorea pimentón dulce y sal gruesa; añade pimentón picante si quieres. Riega con el aceite de oliva y sirve templado.",
+            "image_alt": "Pulpo a la gallega terminado sobre patatas.",
+            "image_url": "/recetas/receta-de-pulpo-a-la-gallega/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/receta-de-pulpo-a-la-gallega/portada-v1.webp",
+        "seo": {
+          "title": "Pulpo a la gallega con cachelos | Manual de Cocina",
+          "description": "Pulpo tierno sobre cachelos con pimentón, sal gruesa y aceite de oliva. Cinco pasos para controlar la cocción y servirlo templado.",
+          "faq": [
+            {
+              "q": "¿Cuándo está tierno el pulpo?",
+              "a": "Cuando una brocheta entra con poca resistencia en la parte más gruesa de un tentáculo; el tiempo varía con el tamaño."
+            },
+            {
+              "q": "¿Puedo cocer las patatas en el agua del pulpo?",
+              "a": "Sí; retira el pulpo y cuece allí las patatas hasta que estén tiernas. En esta versión se hacen en paralelo para ahorrar tiempo."
+            }
+          ],
+          "image_variants": [
+            "/recetas/receta-de-pulpo-a-la-gallega/portada-1x1-v1.webp",
+            "/recetas/receta-de-pulpo-a-la-gallega/portada-4x3-v1.webp",
+            "/recetas/receta-de-pulpo-a-la-gallega/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 522,
+          "protein_g": 42.7,
+          "carbs_g": 50.3,
+          "fat_g": 16.6,
+          "saturated_fat_g": 2.5,
+          "fiber_g": 5.9,
+          "sugar_g": 2.3,
+          "sodium_mg": 985,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g × ingredient grams / 100) / 4; salt 4 g × 0.393 sodium fraction / 4",
+          "serving_size": "1/4 de la receta",
+          "note": "Estimación por ración; la cocción y el aceite realmente consumido pueden variar."
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>Pulpo tierno sobre cachelos con pimentón, sal gruesa y aceite de oliva. Cinco pasos para controlar la cocción y servirlo templado.</p>",
+        "keywords": [
+          "Pulpo a la gallega con cachelos",
+          "Platos principales",
+          "Gallega, España"
+        ],
+        "gallery": [],
+        "video_urls": []
+      },
+      {
+        "title": "Galician-style octopus with potatoes",
+        "summary": "Tender octopus over potatoes with paprika, coarse salt and olive oil. Five clear steps to control the simmer and serve warm.",
+        "notes": "Cooking time is a guide: a skewer should enter the thickest tentacle easily. Thaw in the refrigerator beforehand; thawing time is excluded. Refrigerate leftovers up to 2 days.",
+        "cuisine": "Galician, Spanish",
+        "course": "Main course",
+        "difficulty": "Intermediate",
+        "excerpt": "Tender octopus over potatoes with paprika, coarse salt and olive oil. Five clear steps to control the simmer and serve warm.",
+        "recipe_group_id": "e1346490-827e-44f7-bb1a-eb6d784285da",
+        "language": "en",
+        "public_path": "/en/galician-style-octopus/",
+        "slug": "galician-style-octopus",
+        "category": "Main dishes",
+        "servings": 4,
+        "prep_time_minutes": 15,
+        "cook_time_minutes": 60,
+        "total_time_minutes": 80,
+        "ingredients": [
+          {
+            "name": "Cleaned, thawed octopus",
+            "amount": "1000",
+            "unit": "g"
+          },
+          {
+            "name": "Potatoes for boiling",
+            "amount": "1000",
+            "unit": "g"
+          },
+          {
+            "name": "Extra virgin olive oil",
+            "amount": "60",
+            "unit": "ml"
+          },
+          {
+            "name": "Sweet paprika",
+            "amount": "8",
+            "unit": "g"
+          },
+          {
+            "name": "Coarse salt",
+            "amount": "4",
+            "unit": "g"
+          },
+          {
+            "name": "Bay leaf",
+            "amount": "1",
+            "unit": "leaf"
+          },
+          {
+            "name": "Hot paprika (optional)",
+            "amount": "2",
+            "unit": "g"
+          }
+        ],
+        "steps": [
+          {
+            "title": "Prepare the octopus",
+            "content": "Use fully thawed, cleaned octopus. Wash the potatoes and fill a large pot with water; have paprika, salt and oil ready.",
+            "image_alt": "Clean octopus with potatoes and seasonings.",
+            "image_url": "/recetas/receta-de-pulpo-a-la-gallega/paso-01-v1.webp"
+          },
+          {
+            "title": "Simmer until tender",
+            "content": "Bring water to a boil. Holding the head, dip the tentacles in and out three times, then submerge with the bay leaf. Simmer gently for 40–60 minutes, until a skewer enters the thickest tentacle easily.",
+            "image_alt": "Octopus lowered into hot water.",
+            "image_url": "/recetas/receta-de-pulpo-a-la-gallega/paso-02-v1.webp"
+          },
+          {
+            "title": "Cook the potatoes",
+            "content": "While the octopus cooks, cut potatoes into thick pieces and boil separately with some salt for 20–25 minutes until tender but intact. Drain.",
+            "image_alt": "Potatoes simmering until tender.",
+            "image_url": "/recetas/receta-de-pulpo-a-la-gallega/paso-03-v1.webp"
+          },
+          {
+            "title": "Rest and slice",
+            "content": "Rest octopus out of the water for 5 minutes. Cut tentacles into roughly 1 cm rounds with scissors and slice the head into bites. Arrange warm potatoes on a platter.",
+            "image_alt": "Cooked octopus cut with scissors.",
+            "image_url": "/recetas/receta-de-pulpo-a-la-gallega/paso-04-v1.webp"
+          },
+          {
+            "title": "Season and serve",
+            "content": "Place octopus on the potatoes. Scatter sweet paprika and coarse salt, plus hot paprika if desired. Drizzle with olive oil and serve warm.",
+            "image_alt": "Finished Galician octopus over potatoes.",
+            "image_url": "/recetas/receta-de-pulpo-a-la-gallega/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/receta-de-pulpo-a-la-gallega/portada-v1.webp",
+        "seo": {
+          "title": "Galician-style octopus with potatoes | Manual de Cocina",
+          "description": "Tender octopus over potatoes with paprika, coarse salt and olive oil. Five clear steps to control the simmer and serve warm.",
+          "faq": [
+            {
+              "q": "How do I know when octopus is tender?",
+              "a": "A skewer should enter the thickest tentacle with little resistance; timing depends on size."
+            },
+            {
+              "q": "Can I cook potatoes in the octopus water?",
+              "a": "Yes. Cook them after removing the octopus; this version boils them in parallel to save time."
+            }
+          ],
+          "image_variants": [
+            "/recetas/receta-de-pulpo-a-la-gallega/portada-1x1-v1.webp",
+            "/recetas/receta-de-pulpo-a-la-gallega/portada-4x3-v1.webp",
+            "/recetas/receta-de-pulpo-a-la-gallega/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 522,
+          "protein_g": 42.7,
+          "carbs_g": 50.3,
+          "fat_g": 16.6,
+          "saturated_fat_g": 2.5,
+          "fiber_g": 5.9,
+          "sugar_g": 2.3,
+          "sodium_mg": 985,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g × ingredient grams / 100) / 4; salt 4 g × 0.393 sodium fraction / 4",
+          "serving_size": "1 of 4 servings",
+          "note": "Estimate per serving; cooking and the amount of oil consumed affect values."
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>Tender octopus over potatoes with paprika, coarse salt and olive oil. Five clear steps to control the simmer and serve warm.</p>",
+        "keywords": [
+          "Galician-style octopus with potatoes",
+          "Main dishes",
+          "Galician, Spanish"
+        ],
+        "gallery": [],
+        "video_urls": []
+      },
+      {
+        "title": "Oktopus nach galizischer Art mit Kartoffeln",
+        "summary": "Zarter Oktopus auf Kartoffeln mit Paprikapulver, grobem Salz und Olivenöl. Fünf Schritte für sanftes Garen und warmes Servieren.",
+        "notes": "Die Garzeit ist ein Richtwert: Ein Spieß sollte leicht in den dicksten Arm gleiten. Vorher im Kühlschrank auftauen; Auftauzeit ist nicht eingerechnet. Reste bis zu 2 Tage kühlen.",
+        "cuisine": "Galicisch, spanisch",
+        "course": "Hauptgericht",
+        "difficulty": "Mittel",
+        "excerpt": "Zarter Oktopus auf Kartoffeln mit Paprikapulver, grobem Salz und Olivenöl. Fünf Schritte für sanftes Garen und warmes Servieren.",
+        "recipe_group_id": "e1346490-827e-44f7-bb1a-eb6d784285da",
+        "language": "de",
+        "public_path": "/de/oktopus-rezept-nach-galizischer-art/",
+        "slug": "oktopus-rezept-nach-galizischer-art",
+        "category": "Hauptgerichte",
+        "servings": 4,
+        "prep_time_minutes": 15,
+        "cook_time_minutes": 60,
+        "total_time_minutes": 80,
+        "ingredients": [
+          {
+            "name": "Geputzter, aufgetauter Oktopus",
+            "amount": "1000",
+            "unit": "g"
+          },
+          {
+            "name": "Festkochende Kartoffeln",
+            "amount": "1000",
+            "unit": "g"
+          },
+          {
+            "name": "Natives Olivenöl extra",
+            "amount": "60",
+            "unit": "ml"
+          },
+          {
+            "name": "Edelsüßes Paprikapulver",
+            "amount": "8",
+            "unit": "g"
+          },
+          {
+            "name": "Grobes Salz",
+            "amount": "4",
+            "unit": "g"
+          },
+          {
+            "name": "Lorbeerblatt",
+            "amount": "1",
+            "unit": "Blatt"
+          },
+          {
+            "name": "Scharfes Paprikapulver (optional)",
+            "amount": "2",
+            "unit": "g"
+          }
+        ],
+        "steps": [
+          {
+            "title": "Oktopus vorbereiten",
+            "content": "Vollständig im Kühlschrank aufgetauten und geputzten Oktopus verwenden. Kartoffeln waschen und einen großen Topf mit Wasser füllen.",
+            "image_alt": "Geputzter Oktopus mit Kartoffeln und Gewürzen.",
+            "image_url": "/recetas/receta-de-pulpo-a-la-gallega/paso-01-v1.webp"
+          },
+          {
+            "title": "Sanft garen",
+            "content": "Wasser aufkochen. Den Oktopus am Kopf halten, die Arme dreimal eintauchen und herausheben, dann mit Lorbeer ganz ins Wasser geben. 40–60 Minuten sanft köcheln, bis ein Spieß leicht in den dicksten Arm gleitet.",
+            "image_alt": "Oktopus wird in heißes Wasser getaucht.",
+            "image_url": "/recetas/receta-de-pulpo-a-la-gallega/paso-02-v1.webp"
+          },
+          {
+            "title": "Kartoffeln kochen",
+            "content": "Kartoffeln in dicke Stücke schneiden und währenddessen in einem zweiten Topf mit etwas Salz 20–25 Minuten garen, bis sie weich sind und ihre Form behalten. Abgießen.",
+            "image_alt": "Kartoffeln köcheln bis sie weich sind.",
+            "image_url": "/recetas/receta-de-pulpo-a-la-gallega/paso-03-v1.webp"
+          },
+          {
+            "title": "Ruhen lassen und schneiden",
+            "content": "Oktopus 5 Minuten außerhalb des Wassers ruhen lassen. Arme mit einer Schere in etwa 1 cm dicke Scheiben schneiden, den Kopf in Stücke. Warme Kartoffeln anrichten.",
+            "image_alt": "Gegarter Oktopus wird mit der Schere geschnitten.",
+            "image_url": "/recetas/receta-de-pulpo-a-la-gallega/paso-04-v1.webp"
+          },
+          {
+            "title": "Würzen und servieren",
+            "content": "Oktopus auf die Kartoffeln legen. Mit edelsüßem Paprikapulver und grobem Salz bestreuen, nach Wunsch mit scharfem Paprika. Olivenöl darübergeben und warm servieren.",
+            "image_alt": "Fertiger galicischer Oktopus auf Kartoffeln.",
+            "image_url": "/recetas/receta-de-pulpo-a-la-gallega/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/receta-de-pulpo-a-la-gallega/portada-v1.webp",
+        "seo": {
+          "title": "Oktopus nach galizischer Art mit Kartoffeln | Manual de Cocina",
+          "description": "Zarter Oktopus auf Kartoffeln mit Paprikapulver, grobem Salz und Olivenöl. Fünf Schritte für sanftes Garen und warmes Servieren.",
+          "faq": [
+            {
+              "q": "Woran erkennt man zarten Oktopus?",
+              "a": "Ein Spieß lässt sich ohne großen Widerstand in den dicksten Arm stechen; die Garzeit hängt von der Größe ab."
+            },
+            {
+              "q": "Kann ich die Kartoffeln im Oktopuswasser kochen?",
+              "a": "Ja, nachdem der Oktopus herausgenommen wurde. Hier garen sie parallel, um Zeit zu sparen."
+            }
+          ],
+          "image_variants": [
+            "/recetas/receta-de-pulpo-a-la-gallega/portada-1x1-v1.webp",
+            "/recetas/receta-de-pulpo-a-la-gallega/portada-4x3-v1.webp",
+            "/recetas/receta-de-pulpo-a-la-gallega/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 522,
+          "protein_g": 42.7,
+          "carbs_g": 50.3,
+          "fat_g": 16.6,
+          "saturated_fat_g": 2.5,
+          "fiber_g": 5.9,
+          "sugar_g": 2.3,
+          "sodium_mg": 985,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g × ingredient grams / 100) / 4; salt 4 g × 0.393 sodium fraction / 4",
+          "serving_size": "1/4",
+          "note": "Schätzwert pro Portion; Garverlust und tatsächlich verzehrtes Öl verändern die Werte."
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>Zarter Oktopus auf Kartoffeln mit Paprikapulver, grobem Salz und Olivenöl. Fünf Schritte für sanftes Garen und warmes Servieren.</p>",
+        "keywords": [
+          "Oktopus nach galizischer Art mit Kartoffeln",
+          "Hauptgerichte",
+          "Galicisch, spanisch"
+        ],
+        "gallery": [],
+        "video_urls": []
+      },
+      {
+        "title": "Poulpe à la galicienne et pommes de terre",
+        "summary": "Du poulpe tendre sur des pommes de terre, relevé de paprika, gros sel et huile d’olive. Cinq étapes pour une cuisson douce.",
+        "notes": "Le temps de cuisson est indicatif : une brochette doit entrer facilement dans la partie épaisse. Décongeler au réfrigérateur avant de commencer; ce temps est exclu. Garder les restes au frais jusqu’à 2 jours.",
+        "cuisine": "Galicienne, espagnole",
+        "course": "Plat principal",
+        "difficulty": "Intermédiaire",
+        "excerpt": "Du poulpe tendre sur des pommes de terre, relevé de paprika, gros sel et huile d’olive. Cinq étapes pour une cuisson douce.",
+        "recipe_group_id": "e1346490-827e-44f7-bb1a-eb6d784285da",
+        "language": "fr",
+        "public_path": "/fr/poulpe-a-la-galicienne/",
+        "slug": "poulpe-a-la-galicienne",
+        "category": "Plats principaux",
+        "servings": 4,
+        "prep_time_minutes": 15,
+        "cook_time_minutes": 60,
+        "total_time_minutes": 80,
+        "ingredients": [
+          {
+            "name": "Poulpe nettoyé et décongelé",
+            "amount": "1000",
+            "unit": "g"
+          },
+          {
+            "name": "Pommes de terre à cuire",
+            "amount": "1000",
+            "unit": "g"
+          },
+          {
+            "name": "Huile d’olive vierge extra",
+            "amount": "60",
+            "unit": "ml"
+          },
+          {
+            "name": "Paprika doux",
+            "amount": "8",
+            "unit": "g"
+          },
+          {
+            "name": "Gros sel",
+            "amount": "4",
+            "unit": "g"
+          },
+          {
+            "name": "Feuille de laurier",
+            "amount": "1",
+            "unit": "feuille"
+          },
+          {
+            "name": "Paprika fort (facultatif)",
+            "amount": "2",
+            "unit": "g"
+          }
+        ],
+        "steps": [
+          {
+            "title": "Préparer le poulpe",
+            "content": "Utiliser un poulpe nettoyé et entièrement décongelé. Laver les pommes de terre et remplir une grande marmite d’eau.",
+            "image_alt": "Poulpe nettoyé avec pommes de terre et épices.",
+            "image_url": "/recetas/receta-de-pulpo-a-la-gallega/paso-01-v1.webp"
+          },
+          {
+            "title": "Cuire doucement",
+            "content": "Porter l’eau à ébullition. Tenir le poulpe par la tête et tremper les tentacules trois fois avant de le plonger entièrement avec le laurier. Frémir 40 à 60 minutes jusqu’à ce qu’une brochette pénètre facilement la partie épaisse.",
+            "image_alt": "Poulpe plongé dans l’eau chaude.",
+            "image_url": "/recetas/receta-de-pulpo-a-la-gallega/paso-02-v1.webp"
+          },
+          {
+            "title": "Cuire les pommes de terre",
+            "content": "Pendant ce temps, couper les pommes de terre en gros morceaux. Les cuire dans une autre casserole avec un peu de sel 20 à 25 minutes, jusqu’à ce qu’elles soient tendres mais entières. Égoutter.",
+            "image_alt": "Pommes de terre cuites jusqu’à tendreté.",
+            "image_url": "/recetas/receta-de-pulpo-a-la-gallega/paso-03-v1.webp"
+          },
+          {
+            "title": "Laisser reposer et couper",
+            "content": "Laisser reposer le poulpe 5 minutes hors de l’eau. Couper les tentacules en rondelles d’environ 1 cm aux ciseaux et détailler la tête. Disposer les pommes de terre chaudes.",
+            "image_alt": "Poulpe cuit coupé aux ciseaux.",
+            "image_url": "/recetas/receta-de-pulpo-a-la-gallega/paso-04-v1.webp"
+          },
+          {
+            "title": "Assaisonner et servir",
+            "content": "Poser le poulpe sur les pommes de terre. Parsemer de paprika doux et de gros sel, ajouter du paprika fort au goût. Arroser d’huile d’olive et servir tiède.",
+            "image_alt": "Poulpe à la galicienne sur pommes de terre.",
+            "image_url": "/recetas/receta-de-pulpo-a-la-gallega/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/receta-de-pulpo-a-la-gallega/portada-v1.webp",
+        "seo": {
+          "title": "Poulpe à la galicienne et pommes de terre | Manual de Cocina",
+          "description": "Du poulpe tendre sur des pommes de terre, relevé de paprika, gros sel et huile d’olive. Cinq étapes pour une cuisson douce.",
+          "faq": [
+            {
+              "q": "Comment reconnaître un poulpe tendre ?",
+              "a": "Une brochette entre facilement dans la partie épaisse d’un tentacule; la durée dépend de sa taille."
+            },
+            {
+              "q": "Puis-je cuire les pommes de terre dans son eau ?",
+              "a": "Oui, après avoir retiré le poulpe. Ici elles cuisent en parallèle pour gagner du temps."
+            }
+          ],
+          "image_variants": [
+            "/recetas/receta-de-pulpo-a-la-gallega/portada-1x1-v1.webp",
+            "/recetas/receta-de-pulpo-a-la-gallega/portada-4x3-v1.webp",
+            "/recetas/receta-de-pulpo-a-la-gallega/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 522,
+          "protein_g": 42.7,
+          "carbs_g": 50.3,
+          "fat_g": 16.6,
+          "saturated_fat_g": 2.5,
+          "fiber_g": 5.9,
+          "sugar_g": 2.3,
+          "sodium_mg": 985,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g × ingredient grams / 100) / 4; salt 4 g × 0.393 sodium fraction / 4",
+          "serving_size": "1/4",
+          "note": "Estimation par portion; la cuisson et la quantité d’huile consommée varient."
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>Du poulpe tendre sur des pommes de terre, relevé de paprika, gros sel et huile d’olive. Cinq étapes pour une cuisson douce.</p>",
+        "keywords": [
+          "Poulpe à la galicienne et pommes de terre",
+          "Plats principaux",
+          "Galicienne, espagnole"
+        ],
+        "gallery": [],
+        "video_urls": []
+      },
+      {
+        "title": "Polpo alla galiziana con patate",
+        "summary": "Polpo tenero su patate con paprika, sale grosso e olio d’oliva. Cinque passaggi per una cottura delicata e un servizio tiepido.",
+        "notes": "Il tempo è indicativo: uno spiedino deve entrare facilmente nel tentacolo più spesso. Scongela in frigorifero prima di iniziare; il tempo di scongelamento è escluso. Conserva gli avanzi in frigo fino a 2 giorni.",
+        "cuisine": "Galiziana, spagnola",
+        "course": "Piatto principale",
+        "difficulty": "Media",
+        "excerpt": "Polpo tenero su patate con paprika, sale grosso e olio d’oliva. Cinque passaggi per una cottura delicata e un servizio tiepido.",
+        "recipe_group_id": "e1346490-827e-44f7-bb1a-eb6d784285da",
+        "language": "it",
+        "public_path": "/it/polpo-alla-galiziana/",
+        "slug": "polpo-alla-galiziana",
+        "category": "Secondi piatti",
+        "servings": 4,
+        "prep_time_minutes": 15,
+        "cook_time_minutes": 60,
+        "total_time_minutes": 80,
+        "ingredients": [
+          {
+            "name": "Polpo pulito e scongelato",
+            "amount": "1000",
+            "unit": "g"
+          },
+          {
+            "name": "Patate da lessare",
+            "amount": "1000",
+            "unit": "g"
+          },
+          {
+            "name": "Olio extravergine d’oliva",
+            "amount": "60",
+            "unit": "ml"
+          },
+          {
+            "name": "Paprika dolce",
+            "amount": "8",
+            "unit": "g"
+          },
+          {
+            "name": "Sale grosso",
+            "amount": "4",
+            "unit": "g"
+          },
+          {
+            "name": "Foglia di alloro",
+            "amount": "1",
+            "unit": "foglia"
+          },
+          {
+            "name": "Paprika piccante (facoltativa)",
+            "amount": "2",
+            "unit": "g"
+          }
+        ],
+        "steps": [
+          {
+            "title": "Prepara il polpo",
+            "content": "Usa polpo pulito e completamente scongelato. Lava le patate e riempi d’acqua una pentola capiente.",
+            "image_alt": "Polpo pulito con patate e condimenti.",
+            "image_url": "/recetas/receta-de-pulpo-a-la-gallega/paso-01-v1.webp"
+          },
+          {
+            "title": "Cuoci finché è tenero",
+            "content": "Porta l’acqua a bollore. Tieni il polpo dalla testa, immergi e solleva i tentacoli tre volte, poi immergilo tutto con l’alloro. Cuoci a leggero bollore 40–60 minuti finché uno stecchino entra facilmente nel tentacolo più spesso.",
+            "image_alt": "Polpo immerso nell’acqua calda.",
+            "image_url": "/recetas/receta-de-pulpo-a-la-gallega/paso-02-v1.webp"
+          },
+          {
+            "title": "Lessa le patate",
+            "content": "Nel frattempo taglia le patate a pezzi spessi e lessale in un’altra pentola con poco sale per 20–25 minuti, finché sono tenere ma integre. Scola.",
+            "image_alt": "Patate lessate fino a tenerezza.",
+            "image_url": "/recetas/receta-de-pulpo-a-la-gallega/paso-03-v1.webp"
+          },
+          {
+            "title": "Riposa e taglia",
+            "content": "Lascia riposare il polpo 5 minuti fuori dall’acqua. Taglia i tentacoli a rondelle di circa 1 cm con le forbici e la testa a bocconi. Disponi le patate calde.",
+            "image_alt": "Polpo cotto tagliato con forbici.",
+            "image_url": "/recetas/receta-de-pulpo-a-la-gallega/paso-04-v1.webp"
+          },
+          {
+            "title": "Condisci e servi",
+            "content": "Disponi il polpo sulle patate. Aggiungi paprika dolce e sale grosso, paprika piccante a piacere. Versa l’olio d’oliva e servi tiepido.",
+            "image_alt": "Polpo alla galiziana finito sulle patate.",
+            "image_url": "/recetas/receta-de-pulpo-a-la-gallega/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/receta-de-pulpo-a-la-gallega/portada-v1.webp",
+        "seo": {
+          "title": "Polpo alla galiziana con patate | Manual de Cocina",
+          "description": "Polpo tenero su patate con paprika, sale grosso e olio d’oliva. Cinque passaggi per una cottura delicata e un servizio tiepido.",
+          "faq": [
+            {
+              "q": "Come capire se il polpo è tenero?",
+              "a": "Uno stecchino entra senza grande resistenza nel tentacolo più spesso; i tempi variano in base alla dimensione."
+            },
+            {
+              "q": "Posso lessare le patate nell’acqua del polpo?",
+              "a": "Sì, dopo aver tolto il polpo. Qui cuociono in parallelo per risparmiare tempo."
+            }
+          ],
+          "image_variants": [
+            "/recetas/receta-de-pulpo-a-la-gallega/portada-1x1-v1.webp",
+            "/recetas/receta-de-pulpo-a-la-gallega/portada-4x3-v1.webp",
+            "/recetas/receta-de-pulpo-a-la-gallega/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 522,
+          "protein_g": 42.7,
+          "carbs_g": 50.3,
+          "fat_g": 16.6,
+          "saturated_fat_g": 2.5,
+          "fiber_g": 5.9,
+          "sugar_g": 2.3,
+          "sodium_mg": 985,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g × ingredient grams / 100) / 4; salt 4 g × 0.393 sodium fraction / 4",
+          "serving_size": "1/4",
+          "note": "Stima per porzione; cottura e olio effettivamente consumato variano."
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>Polpo tenero su patate con paprika, sale grosso e olio d’oliva. Cinque passaggi per una cottura delicata e un servizio tiepido.</p>",
+        "keywords": [
+          "Polpo alla galiziana con patate",
+          "Secondi piatti",
+          "Galiziana, spagnola"
+        ],
+        "gallery": [],
+        "video_urls": []
+      },
+      {
+        "title": "ガリシア風タコとじゃがいも",
+        "summary": "やわらかく煮たタコをじゃがいもにのせ、パプリカ、粗塩、オリーブオイルで仕上げるガリシア風の一皿。",
+        "notes": "煮時間は目安。太い足に串がすっと入れば火が通っています。解凍は冷蔵庫で事前に行い、所要時間には含めません。残りは冷蔵で2日以内に。",
+        "cuisine": "スペイン・ガリシア風",
+        "course": "主菜",
+        "difficulty": "中級",
+        "excerpt": "やわらかく煮たタコをじゃがいもにのせ、パプリカ、粗塩、オリーブオイルで仕上げるガリシア風の一皿。",
+        "recipe_group_id": "e1346490-827e-44f7-bb1a-eb6d784285da",
+        "language": "ja",
+        "public_path": "/ja/ガリシア風タコとじゃがいも/",
+        "slug": "ガリシア風タコとじゃがいも",
+        "category": "主菜",
+        "servings": 4,
+        "prep_time_minutes": 15,
+        "cook_time_minutes": 60,
+        "total_time_minutes": 80,
+        "ingredients": [
+          {
+            "name": "下処理して解凍したタコ",
+            "amount": "1000",
+            "unit": "g"
+          },
+          {
+            "name": "ゆでるためのじゃがいも",
+            "amount": "1000",
+            "unit": "g"
+          },
+          {
+            "name": "エクストラバージンオリーブオイル",
+            "amount": "60",
+            "unit": "ml"
+          },
+          {
+            "name": "甘口パプリカパウダー",
+            "amount": "8",
+            "unit": "g"
+          },
+          {
+            "name": "粗塩",
+            "amount": "4",
+            "unit": "g"
+          },
+          {
+            "name": "ローリエ",
+            "amount": "1",
+            "unit": "枚"
+          },
+          {
+            "name": "辛口パプリカ（好みで）",
+            "amount": "2",
+            "unit": "g"
+          }
+        ],
+        "steps": [
+          {
+            "title": "タコを準備する",
+            "content": "冷蔵庫で完全に解凍し、下処理したタコを使う。じゃがいもを洗い、大鍋に水を張る。",
+            "image_alt": "下処理したタコとじゃがいも。",
+            "image_url": "/recetas/receta-de-pulpo-a-la-gallega/paso-01-v1.webp"
+          },
+          {
+            "title": "やわらかく煮る",
+            "content": "湯を沸かし、タコの頭を持って足を3回出し入れしてからローリエとともに全体を沈める。弱い沸騰で40〜60分煮て、太い足に串が楽に入るまで火を通す。",
+            "image_alt": "タコを熱い湯に入れる。",
+            "image_url": "/recetas/receta-de-pulpo-a-la-gallega/paso-02-v1.webp"
+          },
+          {
+            "title": "じゃがいもをゆでる",
+            "content": "タコを煮ている間にじゃがいもを厚めに切る。別鍋で塩少々とともに20〜25分、形を保ってやわらかくなるまでゆで、水気を切る。",
+            "image_alt": "やわらかくゆでたじゃがいも。",
+            "image_url": "/recetas/receta-de-pulpo-a-la-gallega/paso-03-v1.webp"
+          },
+          {
+            "title": "休ませて切る",
+            "content": "タコを湯から出して5分休ませる。足はキッチンばさみで約1 cm幅に、頭も食べやすく切る。温かいじゃがいもを皿に並べる。",
+            "image_alt": "ゆでたタコをはさみで切る。",
+            "image_url": "/recetas/receta-de-pulpo-a-la-gallega/paso-04-v1.webp"
+          },
+          {
+            "title": "味つけして盛る",
+            "content": "じゃがいもの上にタコをのせ、甘口パプリカと粗塩を振る。好みで辛口も加え、オリーブオイルを回しかけて温かいうちに出す。",
+            "image_alt": "じゃがいもの上に盛ったガリシア風タコ。",
+            "image_url": "/recetas/receta-de-pulpo-a-la-gallega/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/receta-de-pulpo-a-la-gallega/portada-v1.webp",
+        "seo": {
+          "title": "ガリシア風タコとじゃがいも | Manual de Cocina",
+          "description": "やわらかく煮たタコをじゃがいもにのせ、パプリカ、粗塩、オリーブオイルで仕上げるガリシア風の一皿。",
+          "faq": [
+            {
+              "q": "タコのやわらかさはどう確認する？",
+              "a": "太い足に串がほとんど抵抗なく入れば目安になります。大きさで煮時間は変わります。"
+            },
+            {
+              "q": "タコの煮汁でじゃがいもをゆでられる？",
+              "a": "はい。タコを取り出してから煮汁でゆでられます。この方法では同時進行で時間を短縮します。"
+            }
+          ],
+          "image_variants": [
+            "/recetas/receta-de-pulpo-a-la-gallega/portada-1x1-v1.webp",
+            "/recetas/receta-de-pulpo-a-la-gallega/portada-4x3-v1.webp",
+            "/recetas/receta-de-pulpo-a-la-gallega/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 522,
+          "protein_g": 42.7,
+          "carbs_g": 50.3,
+          "fat_g": 16.6,
+          "saturated_fat_g": 2.5,
+          "fiber_g": 5.9,
+          "sugar_g": 2.3,
+          "sodium_mg": 985,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g × ingredient grams / 100) / 4; salt 4 g × 0.393 sodium fraction / 4",
+          "serving_size": "1/4",
+          "note": "1人分の概算。加熱による変化と実際に食べる油の量で異なります。"
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>やわらかく煮たタコをじゃがいもにのせ、パプリカ、粗塩、オリーブオイルで仕上げるガリシア風の一皿。</p>",
+        "keywords": [
+          "ガリシア風タコとじゃがいも",
+          "主菜",
+          "スペイン・ガリシア風"
+        ],
+        "gallery": [],
+        "video_urls": []
+      },
+      {
+        "title": "Polvo à galega com batatas",
+        "summary": "Polvo tenro sobre batatas com pimentão, sal grosso e azeite. Cinco passos para cozer suavemente e servir morno.",
+        "notes": "O tempo de cozedura é orientador: um espeto deve entrar facilmente na parte mais grossa. Descongele no frigorífico antes de começar; esse tempo não está incluído. Refrigere sobras até 2 dias.",
+        "cuisine": "Galega, espanhola",
+        "course": "Prato principal",
+        "difficulty": "Intermédia",
+        "excerpt": "Polvo tenro sobre batatas com pimentão, sal grosso e azeite. Cinco passos para cozer suavemente e servir morno.",
+        "recipe_group_id": "e1346490-827e-44f7-bb1a-eb6d784285da",
+        "language": "pt",
+        "public_path": "/pt/polvo-a-galega/",
+        "slug": "polvo-a-galega",
+        "category": "Pratos principais",
+        "servings": 4,
+        "prep_time_minutes": 15,
+        "cook_time_minutes": 60,
+        "total_time_minutes": 80,
+        "ingredients": [
+          {
+            "name": "Polvo limpo e descongelado",
+            "amount": "1000",
+            "unit": "g"
+          },
+          {
+            "name": "Batatas para cozer",
+            "amount": "1000",
+            "unit": "g"
+          },
+          {
+            "name": "Azeite virgem extra",
+            "amount": "60",
+            "unit": "ml"
+          },
+          {
+            "name": "Pimentão-doce",
+            "amount": "8",
+            "unit": "g"
+          },
+          {
+            "name": "Sal grosso",
+            "amount": "4",
+            "unit": "g"
+          },
+          {
+            "name": "Folha de louro",
+            "amount": "1",
+            "unit": "folha"
+          },
+          {
+            "name": "Pimentão picante (opcional)",
+            "amount": "2",
+            "unit": "g"
+          }
+        ],
+        "steps": [
+          {
+            "title": "Prepare o polvo",
+            "content": "Use polvo limpo e completamente descongelado. Lave as batatas e encha uma panela grande com água.",
+            "image_alt": "Polvo limpo com batatas e temperos.",
+            "image_url": "/recetas/receta-de-pulpo-a-la-gallega/paso-01-v1.webp"
+          },
+          {
+            "title": "Coza até ficar tenro",
+            "content": "Ferva a água. Segure o polvo pela cabeça e mergulhe os tentáculos três vezes antes de o submergir com o louro. Coza em lume brando 40–60 minutos, até um espeto entrar facilmente na parte grossa.",
+            "image_alt": "Polvo a entrar na água quente.",
+            "image_url": "/recetas/receta-de-pulpo-a-la-gallega/paso-02-v1.webp"
+          },
+          {
+            "title": "Coza as batatas",
+            "content": "Enquanto o polvo coze, corte as batatas em pedaços grossos e coza noutra panela com algum sal durante 20–25 minutos, até ficarem macias sem se desfazerem. Escorra.",
+            "image_alt": "Batatas cozidas até ficarem macias.",
+            "image_url": "/recetas/receta-de-pulpo-a-la-gallega/paso-03-v1.webp"
+          },
+          {
+            "title": "Repouse e corte",
+            "content": "Retire o polvo e deixe repousar 5 minutos. Corte os tentáculos em rodelas de cerca de 1 cm com tesoura e a cabeça em pedaços. Disponha as batatas quentes numa travessa.",
+            "image_alt": "Polvo cozido cortado com tesoura.",
+            "image_url": "/recetas/receta-de-pulpo-a-la-gallega/paso-04-v1.webp"
+          },
+          {
+            "title": "Tempere e sirva",
+            "content": "Coloque o polvo sobre as batatas. Polvilhe com pimentão-doce e sal grosso, e pimentão picante a gosto. Regue com azeite e sirva morno.",
+            "image_alt": "Polvo à galega acabado sobre batatas.",
+            "image_url": "/recetas/receta-de-pulpo-a-la-gallega/portada-v1.webp"
+          }
+        ],
+        "image_url": "/recetas/receta-de-pulpo-a-la-gallega/portada-v1.webp",
+        "seo": {
+          "title": "Polvo à galega com batatas | Manual de Cocina",
+          "description": "Polvo tenro sobre batatas com pimentão, sal grosso e azeite. Cinco passos para cozer suavemente e servir morno.",
+          "faq": [
+            {
+              "q": "Como saber se o polvo está tenro?",
+              "a": "Um espeto entra sem muita resistência na parte mais grossa do tentáculo; o tempo depende do tamanho."
+            },
+            {
+              "q": "Posso cozer batatas na água do polvo?",
+              "a": "Sim, depois de retirar o polvo. Nesta versão cozem em paralelo para poupar tempo."
+            }
+          ],
+          "image_variants": [
+            "/recetas/receta-de-pulpo-a-la-gallega/portada-1x1-v1.webp",
+            "/recetas/receta-de-pulpo-a-la-gallega/portada-4x3-v1.webp",
+            "/recetas/receta-de-pulpo-a-la-gallega/portada-16x9-v1.webp"
+          ]
+        },
+        "nutrition": {
+          "calories": 522,
+          "protein_g": 42.7,
+          "carbs_g": 50.3,
+          "fat_g": 16.6,
+          "saturated_fat_g": 2.5,
+          "fiber_g": 5.9,
+          "sugar_g": 2.3,
+          "sodium_mg": 985,
+          "estimated": true,
+          "source": "USDA FoodData Central, SR Legacy April 2018",
+          "method": "sum(per_100g × ingredient grams / 100) / 4; salt 4 g × 0.393 sodium fraction / 4",
+          "serving_size": "1/4",
+          "note": "Estimativa por dose; a cozedura e o azeite efetivamente consumido variam."
+        },
+        "published": true,
+        "editorial_status": "published",
+        "content_html": "<p>Polvo tenro sobre batatas com pimentão, sal grosso e azeite. Cinco passos para cozer suavemente e servir morno.</p>",
+        "keywords": [
+          "Polvo à galega com batatas",
+          "Pratos principais",
+          "Galega, espanhola"
+        ],
+        "gallery": [],
+        "video_urls": []
+      }
+    ]
+  }
+}
