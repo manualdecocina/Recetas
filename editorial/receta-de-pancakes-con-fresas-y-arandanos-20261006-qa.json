@@ -1,0 +1,67 @@
+{
+  "scope": "receta-de-pancakes-con-fresas-y-arandanos only; preview.manualdecocina.com",
+  "checked_at": "2026-10-06",
+  "result": "PASS",
+  "provenance": {
+    "legacy_text_used": false,
+    "legacy_recipe_fields_used": false,
+    "legacy_media_used": false,
+    "legacy_translation_used": false,
+    "allowed_historical_inputs": [
+      "recipe_group_id",
+      "Spanish historical URL",
+      "source URL as technical identity",
+      "Search Console/URL Master priority evidence"
+    ],
+    "forbidden_inputs": [
+      "legacy title",
+      "legacy excerpt",
+      "legacy ingredients",
+      "legacy steps",
+      "legacy notes",
+      "legacy nutrition",
+      "legacy FAQ",
+      "legacy translated copy",
+      "legacy recipe images"
+    ]
+  },
+  "checks": {
+    "records": 7,
+    "languages": [
+      "de",
+      "en",
+      "es",
+      "fr",
+      "it",
+      "ja",
+      "pt"
+    ],
+    "ingredients_per_language": 10,
+    "steps_per_language": 8,
+    "faq_per_language": 3,
+    "unique_public_paths": 7,
+    "unique_slugs": 7,
+    "shared_measured_amount_sequence": true,
+    "shared_numeric_recipe_facts": true,
+    "nutrition_fields": [
+      "calories",
+      "protein_g",
+      "carbs_g",
+      "fat_g",
+      "saturated_fat_g",
+      "fiber_g",
+      "sugar_g",
+      "sodium_mg",
+      "serving_size",
+      "estimated",
+      "source",
+      "method",
+      "note"
+    ],
+    "category_labels": "validated against src/lib/categories.ts",
+    "database_route_collisions": "Only the existing Spanish technical row; six proposed localized routes unused.",
+    "schema_contract": "RecipeDocument consumes ingredients, steps, images, times, yield, category, cuisine, keywords and the same nutrition object into Recipe JSON-LD."
+  },
+  "errors": [],
+  "publication_gate": "BLOCKED: new authorized media must exist first; then insert/update seven draft rows, mark READY only after QA, publish in a separate atomic gate."
+}

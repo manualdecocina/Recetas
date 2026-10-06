@@ -1,0 +1,2559 @@
+{
+  "scope": "receta-de-pancakes-con-fresas-y-arandanos only; preview.manualdecocina.com",
+  "state": "REVIEW_MEDIA_PENDING",
+  "reconstruction_policy": {
+    "rule": "Legacy recipe content is excluded. Only approved historical URL/technical identity is carried forward.",
+    "historical_content_used": false,
+    "historical_media_used": false,
+    "historical_translation_used": false,
+    "preserved_evidence": {
+      "recipe_group_id": "bf8c875f-0372-4866-9be5-088c07d19cbe",
+      "spanish_public_path": "/receta-de-pancakes-con-fresas-y-arandanos/",
+      "source_url_identity": "https://manualdecocina.com/receta-de-pancakes-con-fresas-y-arandanos/"
+    }
+  },
+  "research_sources": [
+    {
+      "kind": "technique",
+      "title": "Simply Perfect Pancakes — King Arthur Baking",
+      "url": "https://www.kingarthurbaking.com/recipes/simply-perfect-pancakes-recipe",
+      "used_for": [
+        "general pancake ratios",
+        "brief batter rest",
+        "medium-heat griddle cues",
+        "single flip"
+      ]
+    },
+    {
+      "kind": "technique",
+      "title": "Blueberry Pancakes — King Arthur Baking",
+      "url": "https://www.kingarthurbaking.com/recipes/blueberry-pancakes-recipe",
+      "used_for": [
+        "adding berries to individual pancakes",
+        "visual doneness cues",
+        "fresh/frozen berry handling"
+      ]
+    },
+    {
+      "kind": "technique",
+      "title": "Our Most Popular Breakfast Recipe — Serious Eats",
+      "url": "https://www.seriouseats.com/our-most-popular-breakfast-recipe-12128606",
+      "used_for": [
+        "under-mixing batter",
+        "short rest before cooking"
+      ]
+    },
+    {
+      "kind": "food_safety",
+      "title": "Handling Flour Safely — FDA",
+      "url": "https://www.fda.gov/food/buy-store-serve-safe-food/handling-flour-safely-what-you-need-know",
+      "used_for": [
+        "do not taste raw batter",
+        "cook flour-and-egg batter thoroughly",
+        "clean flour-contact surfaces"
+      ]
+    },
+    {
+      "kind": "food_safety",
+      "title": "Cold Food Storage Chart — FoodSafety.gov",
+      "url": "https://www.foodsafety.gov/food-safety-charts/cold-food-storage-charts",
+      "used_for": [
+        "conservative refrigerated-leftover guidance"
+      ]
+    },
+    {
+      "kind": "nutrition",
+      "title": "USDA FoodData Central",
+      "url": "https://fdc.nal.usda.gov/",
+      "used_for": [
+        "ingredient-level nutrient estimation"
+      ]
+    }
+  ],
+  "formulation": {
+    "status": "new_recipe_formulation",
+    "rationale": [
+      "180 g flour / 240 ml milk / 2 eggs gives a spoonable American-style pancake batter with enough structure for fresh berries.",
+      "10-minute rest follows current test-kitchen guidance to hydrate flour without turning the workflow into an overnight batter.",
+      "Berries are placed on individual pancakes after portioning for controlled distribution; one third is held back for serving.",
+      "No syrup, cream, powdered sugar, or other optional topping is part of the base recipe or nutrition."
+    ]
+  },
+  "records": [
+    {
+      "id": "896571ed-65f4-4dde-9e56-c9af01706a21",
+      "recipe_group_id": "bf8c875f-0372-4866-9be5-088c07d19cbe",
+      "language": "es",
+      "slug": "receta-de-pancakes-con-fresas-y-arandanos",
+      "public_path": "/receta-de-pancakes-con-fresas-y-arandanos/",
+      "title": "Pancakes esponjosos con fresas y arándanos",
+      "excerpt": "Pancakes suaves y dorados con fresas y arándanos frescos, una masa de vainilla reposada brevemente y señales claras para cocinarlos sin dejarlos crudos.",
+      "summary": "Una receta nueva de pancakes de fruta pensada para que la masa quede ligera y los frutos rojos se repartan sin volverla aguada. La harina, el impulsor y la sal se mezclan por separado; los líquidos se baten aparte; después se unen con movimientos mínimos y la masa reposa 10 minutos antes de cocinarse.\n\nParte de las fresas y los arándanos se añade sobre cada pancake ya en la sartén y el resto se reserva para servir. La receta rinde unos 12 pancakes medianos, equivalentes a 6 porciones de 2 unidades.",
+      "category": "Desayunos y brunch",
+      "difficulty": "Fácil",
+      "course": "Desayuno",
+      "cuisine": "Estilo estadounidense",
+      "prep_time_minutes": 15,
+      "cook_time_minutes": 25,
+      "total_time_minutes": 50,
+      "servings": 6,
+      "ingredients": [
+        {
+          "name": "Harina de trigo todo uso",
+          "amount": "180",
+          "unit": "g"
+        },
+        {
+          "name": "Azúcar",
+          "amount": "24",
+          "unit": "g"
+        },
+        {
+          "name": "Polvo de hornear",
+          "amount": "8",
+          "unit": "g"
+        },
+        {
+          "name": "Sal fina",
+          "amount": "3",
+          "unit": "g"
+        },
+        {
+          "name": "Huevos grandes, sin cáscara",
+          "amount": "2",
+          "unit": "unidades (aprox. 100 g)"
+        },
+        {
+          "name": "Leche entera",
+          "amount": "240",
+          "unit": "ml"
+        },
+        {
+          "name": "Mantequilla sin sal",
+          "amount": "35",
+          "unit": "g"
+        },
+        {
+          "name": "Extracto de vainilla",
+          "amount": "5",
+          "unit": "ml"
+        },
+        {
+          "name": "Fresas frescas",
+          "amount": "140",
+          "unit": "g"
+        },
+        {
+          "name": "Arándanos frescos",
+          "amount": "100",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Preparar fruta y mantequilla",
+          "content": "Lava las fresas y los arándanos bajo agua corriente y sécalos bien. Retira el cáliz de las fresas y córtalas en láminas finas. Derrite los 35 g de mantequilla; reserva unos 5 g para la sartén y deja templar el resto.",
+          "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/paso-01.webp",
+          "image_alt": "Pancakes esponjosos con fresas y arándanos: Preparar fruta y mantequilla"
+        },
+        {
+          "title": "Mezclar los ingredientes secos",
+          "content": "En un bol grande mezcla 180 g de harina, 24 g de azúcar, 8 g de polvo de hornear y 3 g de sal. Remueve con unas varillas para repartir bien el impulsor.",
+          "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/paso-02.webp",
+          "image_alt": "Pancakes esponjosos con fresas y arándanos: Mezclar los ingredientes secos"
+        },
+        {
+          "title": "Batir los ingredientes líquidos",
+          "content": "En otro bol bate los 2 huevos con 240 ml de leche y 5 ml de vainilla durante 30–45 segundos. Incorpora 30 g de mantequilla derretida ya templada.",
+          "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/paso-03.webp",
+          "image_alt": "Pancakes esponjosos con fresas y arándanos: Batir los ingredientes líquidos"
+        },
+        {
+          "title": "Formar la masa y reposar",
+          "content": "Vierte los líquidos sobre los secos. Mezcla con una espátula solo hasta que no queden zonas de harina seca; unos grumos pequeños son correctos. Deja reposar 10 minutos sin volver a batir.",
+          "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/paso-04.webp",
+          "image_alt": "Pancakes esponjosos con fresas y arándanos: Formar la masa y reposar"
+        },
+        {
+          "title": "Calentar la sartén",
+          "content": "Calienta una sartén antiadherente o plancha a fuego medio. Unta una capa muy fina con parte de los 5 g de mantequilla reservados. La grasa debe chisporrotear suavemente, no humear.",
+          "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/paso-05.webp",
+          "image_alt": "Pancakes esponjosos con fresas y arándanos: Calentar la sartén"
+        },
+        {
+          "title": "Cocinar la primera cara",
+          "content": "Vierte porciones de unos 60 ml de masa. Reparte sobre cada una algunas láminas de fresa y arándanos, reservando aproximadamente un tercio de la fruta para servir. Cocina unos 2 minutos, hasta que aparezcan burbujas y los bordes pierdan el brillo húmedo.",
+          "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/paso-06.webp",
+          "image_alt": "Pancakes esponjosos con fresas y arándanos: Cocinar la primera cara"
+        },
+        {
+          "title": "Dar la vuelta una sola vez",
+          "content": "Pasa una espátula por debajo y gira cada pancake una vez. Cocina 1½–2 minutos más, hasta que la segunda cara esté dorada y el centro se vea cuajado, sin masa húmeda al abrir uno de prueba.",
+          "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/paso-07.webp",
+          "image_alt": "Pancakes esponjosos con fresas y arándanos: Dar la vuelta una sola vez"
+        },
+        {
+          "title": "Servir",
+          "content": "Continúa con el resto de la masa, engrasando la sartén solo si hace falta. Sirve 2 pancakes por persona con las fresas y arándanos reservados. Mantén los acompañamientos opcionales fuera de la receta base para que la nutrición siga siendo trazable.",
+          "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/paso-08.webp",
+          "image_alt": "Pancakes esponjosos con fresas y arándanos: Servir"
+        }
+      ],
+      "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/portada.webp",
+          "alt": "Pancakes esponjosos con fresas y arándanos"
+        }
+      ],
+      "nutrition": {
+        "calories": 240,
+        "protein_g": 7,
+        "carbs_g": 34,
+        "fat_g": 8,
+        "saturated_fat_g": 4,
+        "fiber_g": 2,
+        "sugar_g": 9,
+        "sodium_mg": 380,
+        "serving_size": "2 pancakes (1/6 de la receta)",
+        "estimated": true,
+        "source": "USDA FoodData Central",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Estimación por ingrediente a partir de valores de USDA FoodData Central; suma del lote dividida entre 6 porciones.",
+        "note": "Valores aproximados por 2 pancakes. Incluyen toda la fruta y los 35 g de mantequilla indicados; no incluyen sirope, crema ni otros acompañamientos.",
+        "inputs": [
+          {
+            "ndb": "20081",
+            "description": "Flour, wheat, all-purpose, enriched, bleached",
+            "grams": 180,
+            "per100": {
+              "calories": 364,
+              "protein_g": 10.33,
+              "carbs_g": 76.31,
+              "fat_g": 0.98,
+              "saturated_fat_g": 0.155,
+              "fiber_g": 2.7,
+              "sugar_g": 0.27,
+              "sodium_mg": 2
+            }
+          },
+          {
+            "description": "Sugars, granulated",
+            "grams": 24,
+            "per100": {
+              "calories": 387,
+              "protein_g": 0,
+              "carbs_g": 99.98,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sugar_g": 99.8,
+              "sodium_mg": 1
+            }
+          },
+          {
+            "description": "Baking powder, double-acting",
+            "grams": 8,
+            "per100": {
+              "calories": 53,
+              "protein_g": 0,
+              "carbs_g": 27.7,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0.2,
+              "sugar_g": 0,
+              "sodium_mg": 10600
+            }
+          },
+          {
+            "description": "Salt, table",
+            "grams": 3,
+            "per100": {
+              "calories": 0,
+              "protein_g": 0,
+              "carbs_g": 0,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sugar_g": 0,
+              "sodium_mg": 38758
+            }
+          },
+          {
+            "ndb": "1123",
+            "description": "Eggs, Grade A, Large, egg whole",
+            "grams": 100,
+            "per100": {
+              "calories": 143,
+              "protein_g": 12.56,
+              "carbs_g": 0.72,
+              "fat_g": 9.51,
+              "saturated_fat_g": 3.126,
+              "fiber_g": 0,
+              "sugar_g": 0.37,
+              "sodium_mg": 142
+            }
+          },
+          {
+            "ndb": "1077",
+            "description": "Milk, whole, 3.25% milkfat, with added vitamin D",
+            "grams": 244,
+            "per100": {
+              "calories": 61,
+              "protein_g": 3.15,
+              "carbs_g": 4.8,
+              "fat_g": 3.25,
+              "saturated_fat_g": 1.865,
+              "fiber_g": 0,
+              "sugar_g": 5.05,
+              "sodium_mg": 43
+            }
+          },
+          {
+            "ndb": "1145",
+            "description": "Butter, stick, unsalted",
+            "grams": 35,
+            "per100": {
+              "calories": 717,
+              "protein_g": 0.85,
+              "carbs_g": 0.06,
+              "fat_g": 81.11,
+              "saturated_fat_g": 51.368,
+              "fiber_g": 0,
+              "sugar_g": 0.06,
+              "sodium_mg": 11
+            }
+          },
+          {
+            "description": "Vanilla extract",
+            "grams": 5,
+            "per100": {
+              "calories": 288,
+              "protein_g": 0.06,
+              "carbs_g": 12.65,
+              "fat_g": 0.06,
+              "saturated_fat_g": 0.01,
+              "fiber_g": 0,
+              "sugar_g": 12.65,
+              "sodium_mg": 9
+            }
+          },
+          {
+            "description": "Strawberries, raw",
+            "grams": 140,
+            "per100": {
+              "calories": 32,
+              "protein_g": 0.67,
+              "carbs_g": 7.68,
+              "fat_g": 0.3,
+              "saturated_fat_g": 0.015,
+              "fiber_g": 2,
+              "sugar_g": 4.89,
+              "sodium_mg": 1
+            }
+          },
+          {
+            "description": "Blueberries, raw",
+            "grams": 100,
+            "per100": {
+              "calories": 57,
+              "protein_g": 0.74,
+              "carbs_g": 14.49,
+              "fat_g": 0.33,
+              "saturated_fat_g": 0.028,
+              "fiber_g": 2.4,
+              "sugar_g": 9.96,
+              "sodium_mg": 1
+            }
+          }
+        ]
+      },
+      "notes": "<h3>Claves de textura</h3><ul><li>No busques una masa completamente lisa: mezclar de más desarrolla el gluten y resta ternura.</li><li>El reposo corto permite que la harina absorba líquido y que la masa gane cuerpo antes de llegar a la sartén.</li></ul><h3>Seguridad</h3><ul><li>No pruebes la masa cruda. La FDA recuerda que tanto la harina como el huevo deben cocinarse antes de comerlos.</li><li>Lava manos, boles, utensilios y superficies que hayan estado en contacto con harina o masa cruda.</li></ul><h3>Conservación</h3><p>Enfría los pancakes cocidos sin dejarlos a temperatura ambiente durante periodos prolongados, guárdalos refrigerados en un recipiente cerrado y consúmelos preferentemente en 3 días. Recalienta hasta que estén bien calientes.</p>",
+      "keywords": [
+        "pancakes con fresas y arándanos",
+        "pancakes de frutos rojos",
+        "pancakes esponjosos",
+        "desayuno con fresas"
+      ],
+      "seo": {
+        "title": "Pancakes con fresas y arándanos: esponjosos y fáciles",
+        "description": "Haz pancakes esponjosos con fresas y arándanos: masa de vainilla, reposo corto, cantidades en gramos y señales claras para saber cuándo darles la vuelta.",
+        "faq": [
+          {
+            "q": "¿Por qué se deja reposar la masa?",
+            "a": "Un reposo corto permite que la harina se hidrate y que la masa espese ligeramente. Diez minutos son suficientes para esta fórmula."
+          },
+          {
+            "q": "¿Puedo usar frutos rojos congelados?",
+            "a": "Sí. No hace falta descongelarlos: colócalos directamente sobre cada pancake ya en la sartén y cocina un poco más si el centro lo necesita."
+          },
+          {
+            "q": "¿Cómo evito que los pancakes queden duros?",
+            "a": "Mezcla solo hasta que desaparezca la harina seca y gira cada pancake una sola vez. Un exceso de batido o de cocción endurece la miga."
+          }
+        ],
+        "image_variants": [
+          "/recetas/receta-de-pancakes-con-fresas-y-arandanos/portada-1x1.webp",
+          "/recetas/receta-de-pancakes-con-fresas-y-arandanos/portada-4x3.webp",
+          "/recetas/receta-de-pancakes-con-fresas-y-arandanos/portada-16x9.webp"
+        ]
+      },
+      "content_html": "",
+      "video_urls": [],
+      "published": false,
+      "editorial_status": "draft",
+      "ready_at": null,
+      "source_post_id": null,
+      "source_url": "https://manualdecocina.com/receta-de-pancakes-con-fresas-y-arandanos/"
+    },
+    {
+      "id": null,
+      "recipe_group_id": "bf8c875f-0372-4866-9be5-088c07d19cbe",
+      "language": "en",
+      "slug": "strawberry-blueberry-pancakes",
+      "public_path": "/en/strawberry-blueberry-pancakes",
+      "title": "Fluffy Strawberry and Blueberry Pancakes",
+      "excerpt": "Golden, tender pancakes with fresh strawberries and blueberries, a briefly rested vanilla batter, and clear doneness cues for a fully cooked center.",
+      "summary": "This new fruit-pancake recipe is designed to keep the batter light while distributing the berries without making it watery. Dry ingredients are combined separately, liquids are whisked in another bowl, and the two mixtures are joined with minimal stirring before a 10-minute rest.\n\nSome of the berries are scattered onto each pancake in the pan and the rest are reserved for serving. The batch makes about 12 medium pancakes, or 6 servings of 2.",
+      "category": "Breakfast & brunch",
+      "difficulty": "Easy",
+      "course": "Breakfast",
+      "cuisine": "American-style",
+      "prep_time_minutes": 15,
+      "cook_time_minutes": 25,
+      "total_time_minutes": 50,
+      "servings": 6,
+      "ingredients": [
+        {
+          "name": "All-purpose wheat flour",
+          "amount": "180",
+          "unit": "g"
+        },
+        {
+          "name": "Granulated sugar",
+          "amount": "24",
+          "unit": "g"
+        },
+        {
+          "name": "Baking powder",
+          "amount": "8",
+          "unit": "g"
+        },
+        {
+          "name": "Fine salt",
+          "amount": "3",
+          "unit": "g"
+        },
+        {
+          "name": "Large eggs, out of shell",
+          "amount": "2",
+          "unit": "eggs (about 100 g)"
+        },
+        {
+          "name": "Whole milk",
+          "amount": "240",
+          "unit": "ml"
+        },
+        {
+          "name": "Unsalted butter",
+          "amount": "35",
+          "unit": "g"
+        },
+        {
+          "name": "Vanilla extract",
+          "amount": "5",
+          "unit": "ml"
+        },
+        {
+          "name": "Fresh strawberries",
+          "amount": "140",
+          "unit": "g"
+        },
+        {
+          "name": "Fresh blueberries",
+          "amount": "100",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepare the fruit and butter",
+          "content": "Rinse the strawberries and blueberries under running water and dry them well. Hull and thinly slice the strawberries. Melt 35 g butter; reserve about 5 g for the pan and let the rest cool slightly.",
+          "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/paso-01.webp",
+          "image_alt": "Fluffy Strawberry and Blueberry Pancakes: Prepare the fruit and butter"
+        },
+        {
+          "title": "Mix the dry ingredients",
+          "content": "Whisk 180 g flour, 24 g sugar, 8 g baking powder, and 3 g salt in a large bowl so the leavening is evenly distributed.",
+          "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/paso-02.webp",
+          "image_alt": "Fluffy Strawberry and Blueberry Pancakes: Mix the dry ingredients"
+        },
+        {
+          "title": "Whisk the wet ingredients",
+          "content": "In a second bowl, whisk the 2 eggs with 240 ml milk and 5 ml vanilla for 30–45 seconds. Whisk in 30 g of the slightly cooled melted butter.",
+          "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/paso-03.webp",
+          "image_alt": "Fluffy Strawberry and Blueberry Pancakes: Whisk the wet ingredients"
+        },
+        {
+          "title": "Make and rest the batter",
+          "content": "Pour the wet mixture over the dry ingredients. Fold only until no dry flour remains; a few small lumps are desirable. Rest for 10 minutes without stirring again.",
+          "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/paso-04.webp",
+          "image_alt": "Fluffy Strawberry and Blueberry Pancakes: Make and rest the batter"
+        },
+        {
+          "title": "Heat the pan",
+          "content": "Heat a nonstick skillet or griddle over medium heat. Brush with a very thin layer of the reserved 5 g butter. The butter should sizzle gently, not smoke.",
+          "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/paso-05.webp",
+          "image_alt": "Fluffy Strawberry and Blueberry Pancakes: Heat the pan"
+        },
+        {
+          "title": "Cook the first side",
+          "content": "Pour about 60 ml batter per pancake. Scatter a few strawberry slices and blueberries on each, reserving roughly one third of the fruit for serving. Cook for about 2 minutes, until bubbles appear and the edges lose their wet sheen.",
+          "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/paso-06.webp",
+          "image_alt": "Fluffy Strawberry and Blueberry Pancakes: Cook the first side"
+        },
+        {
+          "title": "Flip once and finish",
+          "content": "Slide a spatula underneath and flip each pancake once. Cook for another 1½–2 minutes, until the second side is golden and a test pancake shows no wet batter in the center.",
+          "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/paso-07.webp",
+          "image_alt": "Fluffy Strawberry and Blueberry Pancakes: Flip once and finish"
+        },
+        {
+          "title": "Serve",
+          "content": "Repeat with the remaining batter, greasing only as needed. Serve 2 pancakes per person with the reserved strawberries and blueberries. Keep optional toppings separate so the base nutrition remains traceable.",
+          "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/paso-08.webp",
+          "image_alt": "Fluffy Strawberry and Blueberry Pancakes: Serve"
+        }
+      ],
+      "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/portada.webp",
+          "alt": "Fluffy Strawberry and Blueberry Pancakes"
+        }
+      ],
+      "nutrition": {
+        "calories": 240,
+        "protein_g": 7,
+        "carbs_g": 34,
+        "fat_g": 8,
+        "saturated_fat_g": 4,
+        "fiber_g": 2,
+        "sugar_g": 9,
+        "sodium_mg": 380,
+        "serving_size": "2 pancakes (1/6 batch)",
+        "estimated": true,
+        "source": "USDA FoodData Central",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Ingredient-level estimate using USDA FoodData Central values; full batch divided into 6 servings.",
+        "note": "Approximate values for 2 pancakes. Includes all fruit and the listed 35 g butter; excludes syrup, cream, and other toppings.",
+        "inputs": [
+          {
+            "ndb": "20081",
+            "description": "Flour, wheat, all-purpose, enriched, bleached",
+            "grams": 180,
+            "per100": {
+              "calories": 364,
+              "protein_g": 10.33,
+              "carbs_g": 76.31,
+              "fat_g": 0.98,
+              "saturated_fat_g": 0.155,
+              "fiber_g": 2.7,
+              "sugar_g": 0.27,
+              "sodium_mg": 2
+            }
+          },
+          {
+            "description": "Sugars, granulated",
+            "grams": 24,
+            "per100": {
+              "calories": 387,
+              "protein_g": 0,
+              "carbs_g": 99.98,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sugar_g": 99.8,
+              "sodium_mg": 1
+            }
+          },
+          {
+            "description": "Baking powder, double-acting",
+            "grams": 8,
+            "per100": {
+              "calories": 53,
+              "protein_g": 0,
+              "carbs_g": 27.7,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0.2,
+              "sugar_g": 0,
+              "sodium_mg": 10600
+            }
+          },
+          {
+            "description": "Salt, table",
+            "grams": 3,
+            "per100": {
+              "calories": 0,
+              "protein_g": 0,
+              "carbs_g": 0,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sugar_g": 0,
+              "sodium_mg": 38758
+            }
+          },
+          {
+            "ndb": "1123",
+            "description": "Eggs, Grade A, Large, egg whole",
+            "grams": 100,
+            "per100": {
+              "calories": 143,
+              "protein_g": 12.56,
+              "carbs_g": 0.72,
+              "fat_g": 9.51,
+              "saturated_fat_g": 3.126,
+              "fiber_g": 0,
+              "sugar_g": 0.37,
+              "sodium_mg": 142
+            }
+          },
+          {
+            "ndb": "1077",
+            "description": "Milk, whole, 3.25% milkfat, with added vitamin D",
+            "grams": 244,
+            "per100": {
+              "calories": 61,
+              "protein_g": 3.15,
+              "carbs_g": 4.8,
+              "fat_g": 3.25,
+              "saturated_fat_g": 1.865,
+              "fiber_g": 0,
+              "sugar_g": 5.05,
+              "sodium_mg": 43
+            }
+          },
+          {
+            "ndb": "1145",
+            "description": "Butter, stick, unsalted",
+            "grams": 35,
+            "per100": {
+              "calories": 717,
+              "protein_g": 0.85,
+              "carbs_g": 0.06,
+              "fat_g": 81.11,
+              "saturated_fat_g": 51.368,
+              "fiber_g": 0,
+              "sugar_g": 0.06,
+              "sodium_mg": 11
+            }
+          },
+          {
+            "description": "Vanilla extract",
+            "grams": 5,
+            "per100": {
+              "calories": 288,
+              "protein_g": 0.06,
+              "carbs_g": 12.65,
+              "fat_g": 0.06,
+              "saturated_fat_g": 0.01,
+              "fiber_g": 0,
+              "sugar_g": 12.65,
+              "sodium_mg": 9
+            }
+          },
+          {
+            "description": "Strawberries, raw",
+            "grams": 140,
+            "per100": {
+              "calories": 32,
+              "protein_g": 0.67,
+              "carbs_g": 7.68,
+              "fat_g": 0.3,
+              "saturated_fat_g": 0.015,
+              "fiber_g": 2,
+              "sugar_g": 4.89,
+              "sodium_mg": 1
+            }
+          },
+          {
+            "description": "Blueberries, raw",
+            "grams": 100,
+            "per100": {
+              "calories": 57,
+              "protein_g": 0.74,
+              "carbs_g": 14.49,
+              "fat_g": 0.33,
+              "saturated_fat_g": 0.028,
+              "fiber_g": 2.4,
+              "sugar_g": 9.96,
+              "sodium_mg": 1
+            }
+          }
+        ]
+      },
+      "notes": "<h3>Texture</h3><ul><li>Do not chase a perfectly smooth batter: overmixing develops gluten and makes pancakes tougher.</li><li>A short rest lets the flour hydrate and the batter gain body before cooking.</li></ul><h3>Safety</h3><ul><li>Do not taste raw batter. FDA guidance notes that flour and eggs need cooking before they are eaten.</li><li>Wash hands, bowls, utensils, and counters after contact with raw flour or batter.</li></ul><h3>Storage</h3><p>Cool cooked pancakes promptly, refrigerate in a covered container, and use preferably within 3 days. Reheat until hot throughout.</p>",
+      "keywords": [
+        "strawberry blueberry pancakes",
+        "berry pancakes",
+        "fluffy pancakes",
+        "fruit pancakes"
+      ],
+      "seo": {
+        "title": "Fluffy Strawberry Blueberry Pancakes | Easy Recipe",
+        "description": "Make fluffy strawberry blueberry pancakes with weighed ingredients, a short batter rest, and clear cues for when to flip and finish cooking.",
+        "faq": [
+          {
+            "q": "Why rest pancake batter?",
+            "a": "A short rest lets the flour hydrate and the batter thicken slightly. Ten minutes is enough for this formula."
+          },
+          {
+            "q": "Can I use frozen berries?",
+            "a": "Yes. Add them straight from frozen onto each pancake in the pan and allow a little extra cooking time if the center needs it."
+          },
+          {
+            "q": "How do I keep pancakes tender?",
+            "a": "Mix only until the dry flour disappears and flip each pancake once. Excess mixing or cooking makes the crumb firmer."
+          }
+        ],
+        "image_variants": [
+          "/recetas/receta-de-pancakes-con-fresas-y-arandanos/portada-1x1.webp",
+          "/recetas/receta-de-pancakes-con-fresas-y-arandanos/portada-4x3.webp",
+          "/recetas/receta-de-pancakes-con-fresas-y-arandanos/portada-16x9.webp"
+        ]
+      },
+      "content_html": "",
+      "video_urls": [],
+      "published": false,
+      "editorial_status": "draft",
+      "ready_at": null,
+      "source_post_id": null,
+      "source_url": null
+    },
+    {
+      "id": null,
+      "recipe_group_id": "bf8c875f-0372-4866-9be5-088c07d19cbe",
+      "language": "de",
+      "slug": "pancakes-mit-erdbeeren-und-blaubeeren",
+      "public_path": "/de/pancakes-mit-erdbeeren-und-blaubeeren",
+      "title": "Fluffige Pancakes mit Erdbeeren und Blaubeeren",
+      "excerpt": "Goldbraune, lockere Pancakes mit frischen Erdbeeren und Blaubeeren, kurz ruhendem Vanilleteig und klaren Zeichen für den richtigen Garpunkt.",
+      "summary": "Dieses neu entwickelte Rezept hält den Teig locker und verteilt die Beeren, ohne ihn unnötig wässrig zu machen. Trockene und flüssige Zutaten werden getrennt gemischt, anschließend nur kurz verbunden und der Teig ruht 10 Minuten.\n\nEin Teil der Früchte kommt direkt auf die Pancakes in der Pfanne, der Rest wird zum Servieren zurückbehalten. Die Menge ergibt etwa 12 mittelgroße Pancakes bzw. 6 Portionen zu je 2 Stück.",
+      "category": "Frühstück und Brunch",
+      "difficulty": "Einfach",
+      "course": "Frühstück",
+      "cuisine": "Amerikanischer Stil",
+      "prep_time_minutes": 15,
+      "cook_time_minutes": 25,
+      "total_time_minutes": 50,
+      "servings": 6,
+      "ingredients": [
+        {
+          "name": "Weizenmehl Type 405 oder Allzweckmehl",
+          "amount": "180",
+          "unit": "g"
+        },
+        {
+          "name": "Zucker",
+          "amount": "24",
+          "unit": "g"
+        },
+        {
+          "name": "Backpulver",
+          "amount": "8",
+          "unit": "g"
+        },
+        {
+          "name": "Feines Salz",
+          "amount": "3",
+          "unit": "g"
+        },
+        {
+          "name": "Große Eier, ohne Schale",
+          "amount": "2",
+          "unit": "Stück (ca. 100 g)"
+        },
+        {
+          "name": "Vollmilch",
+          "amount": "240",
+          "unit": "ml"
+        },
+        {
+          "name": "Ungesalzene Butter",
+          "amount": "35",
+          "unit": "g"
+        },
+        {
+          "name": "Vanilleextrakt",
+          "amount": "5",
+          "unit": "ml"
+        },
+        {
+          "name": "Frische Erdbeeren",
+          "amount": "140",
+          "unit": "g"
+        },
+        {
+          "name": "Frische Blaubeeren",
+          "amount": "100",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Obst und Butter vorbereiten",
+          "content": "Erdbeeren und Blaubeeren unter fließendem Wasser abspülen und gut trocknen. Erdbeeren putzen und dünn schneiden. 35 g Butter schmelzen; etwa 5 g für die Pfanne zurückbehalten und den Rest leicht abkühlen lassen.",
+          "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/paso-01.webp",
+          "image_alt": "Fluffige Pancakes mit Erdbeeren und Blaubeeren: Obst und Butter vorbereiten"
+        },
+        {
+          "title": "Trockene Zutaten mischen",
+          "content": "180 g Mehl, 24 g Zucker, 8 g Backpulver und 3 g Salz in einer großen Schüssel mit dem Schneebesen vermischen.",
+          "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/paso-02.webp",
+          "image_alt": "Fluffige Pancakes mit Erdbeeren und Blaubeeren: Trockene Zutaten mischen"
+        },
+        {
+          "title": "Flüssige Zutaten verquirlen",
+          "content": "2 Eier mit 240 ml Milch und 5 ml Vanille 30–45 Sekunden verquirlen. 30 g der leicht abgekühlten Butter einrühren.",
+          "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/paso-03.webp",
+          "image_alt": "Fluffige Pancakes mit Erdbeeren und Blaubeeren: Flüssige Zutaten verquirlen"
+        },
+        {
+          "title": "Teig mischen und ruhen lassen",
+          "content": "Flüssige Mischung zu den trockenen Zutaten geben und nur so lange mischen, bis kein trockenes Mehl mehr sichtbar ist. Kleine Klümpchen sind erwünscht. 10 Minuten ruhen lassen.",
+          "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/paso-04.webp",
+          "image_alt": "Fluffige Pancakes mit Erdbeeren und Blaubeeren: Teig mischen und ruhen lassen"
+        },
+        {
+          "title": "Pfanne erhitzen",
+          "content": "Eine beschichtete Pfanne oder Grillplatte bei mittlerer Hitze erwärmen und hauchdünn mit der zurückbehaltenen Butter einfetten. Die Butter soll leicht zischen, nicht rauchen.",
+          "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/paso-05.webp",
+          "image_alt": "Fluffige Pancakes mit Erdbeeren und Blaubeeren: Pfanne erhitzen"
+        },
+        {
+          "title": "Erste Seite backen",
+          "content": "Pro Pancake etwa 60 ml Teig in die Pfanne geben. Erdbeerscheiben und Blaubeeren darauf verteilen; etwa ein Drittel des Obstes zum Servieren zurückbehalten. Rund 2 Minuten backen, bis Bläschen entstehen und die Ränder nicht mehr glänzend-feucht wirken.",
+          "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/paso-06.webp",
+          "image_alt": "Fluffige Pancakes mit Erdbeeren und Blaubeeren: Erste Seite backen"
+        },
+        {
+          "title": "Einmal wenden und fertig backen",
+          "content": "Jeden Pancake einmal wenden und weitere 1½–2 Minuten backen, bis die zweite Seite goldbraun und beim Probe-Pancake in der Mitte kein feuchter Teig mehr sichtbar ist.",
+          "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/paso-07.webp",
+          "image_alt": "Fluffige Pancakes mit Erdbeeren und Blaubeeren: Einmal wenden und fertig backen"
+        },
+        {
+          "title": "Servieren",
+          "content": "Restlichen Teig ebenso backen und nur bei Bedarf nachfetten. Pro Person 2 Pancakes mit dem zurückbehaltenen Obst servieren. Optionale Toppings separat halten, damit die Nährwerte der Grundrezeptur nachvollziehbar bleiben.",
+          "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/paso-08.webp",
+          "image_alt": "Fluffige Pancakes mit Erdbeeren und Blaubeeren: Servieren"
+        }
+      ],
+      "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/portada.webp",
+          "alt": "Fluffige Pancakes mit Erdbeeren und Blaubeeren"
+        }
+      ],
+      "nutrition": {
+        "calories": 240,
+        "protein_g": 7,
+        "carbs_g": 34,
+        "fat_g": 8,
+        "saturated_fat_g": 4,
+        "fiber_g": 2,
+        "sugar_g": 9,
+        "sodium_mg": 380,
+        "serving_size": "2 Pancakes (1/6 der Rezeptmenge)",
+        "estimated": true,
+        "source": "USDA FoodData Central",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Zutatenbasierte Schätzung mit USDA-FoodData-Central-Werten; Gesamtmenge durch 6 Portionen geteilt.",
+        "note": "Näherungswerte für 2 Pancakes. Enthalten die gesamte Obstmenge und 35 g Butter; Sirup, Sahne und weitere Toppings sind nicht enthalten.",
+        "inputs": [
+          {
+            "ndb": "20081",
+            "description": "Flour, wheat, all-purpose, enriched, bleached",
+            "grams": 180,
+            "per100": {
+              "calories": 364,
+              "protein_g": 10.33,
+              "carbs_g": 76.31,
+              "fat_g": 0.98,
+              "saturated_fat_g": 0.155,
+              "fiber_g": 2.7,
+              "sugar_g": 0.27,
+              "sodium_mg": 2
+            }
+          },
+          {
+            "description": "Sugars, granulated",
+            "grams": 24,
+            "per100": {
+              "calories": 387,
+              "protein_g": 0,
+              "carbs_g": 99.98,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sugar_g": 99.8,
+              "sodium_mg": 1
+            }
+          },
+          {
+            "description": "Baking powder, double-acting",
+            "grams": 8,
+            "per100": {
+              "calories": 53,
+              "protein_g": 0,
+              "carbs_g": 27.7,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0.2,
+              "sugar_g": 0,
+              "sodium_mg": 10600
+            }
+          },
+          {
+            "description": "Salt, table",
+            "grams": 3,
+            "per100": {
+              "calories": 0,
+              "protein_g": 0,
+              "carbs_g": 0,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sugar_g": 0,
+              "sodium_mg": 38758
+            }
+          },
+          {
+            "ndb": "1123",
+            "description": "Eggs, Grade A, Large, egg whole",
+            "grams": 100,
+            "per100": {
+              "calories": 143,
+              "protein_g": 12.56,
+              "carbs_g": 0.72,
+              "fat_g": 9.51,
+              "saturated_fat_g": 3.126,
+              "fiber_g": 0,
+              "sugar_g": 0.37,
+              "sodium_mg": 142
+            }
+          },
+          {
+            "ndb": "1077",
+            "description": "Milk, whole, 3.25% milkfat, with added vitamin D",
+            "grams": 244,
+            "per100": {
+              "calories": 61,
+              "protein_g": 3.15,
+              "carbs_g": 4.8,
+              "fat_g": 3.25,
+              "saturated_fat_g": 1.865,
+              "fiber_g": 0,
+              "sugar_g": 5.05,
+              "sodium_mg": 43
+            }
+          },
+          {
+            "ndb": "1145",
+            "description": "Butter, stick, unsalted",
+            "grams": 35,
+            "per100": {
+              "calories": 717,
+              "protein_g": 0.85,
+              "carbs_g": 0.06,
+              "fat_g": 81.11,
+              "saturated_fat_g": 51.368,
+              "fiber_g": 0,
+              "sugar_g": 0.06,
+              "sodium_mg": 11
+            }
+          },
+          {
+            "description": "Vanilla extract",
+            "grams": 5,
+            "per100": {
+              "calories": 288,
+              "protein_g": 0.06,
+              "carbs_g": 12.65,
+              "fat_g": 0.06,
+              "saturated_fat_g": 0.01,
+              "fiber_g": 0,
+              "sugar_g": 12.65,
+              "sodium_mg": 9
+            }
+          },
+          {
+            "description": "Strawberries, raw",
+            "grams": 140,
+            "per100": {
+              "calories": 32,
+              "protein_g": 0.67,
+              "carbs_g": 7.68,
+              "fat_g": 0.3,
+              "saturated_fat_g": 0.015,
+              "fiber_g": 2,
+              "sugar_g": 4.89,
+              "sodium_mg": 1
+            }
+          },
+          {
+            "description": "Blueberries, raw",
+            "grams": 100,
+            "per100": {
+              "calories": 57,
+              "protein_g": 0.74,
+              "carbs_g": 14.49,
+              "fat_g": 0.33,
+              "saturated_fat_g": 0.028,
+              "fiber_g": 2.4,
+              "sugar_g": 9.96,
+              "sodium_mg": 1
+            }
+          }
+        ]
+      },
+      "notes": "<h3>Textur</h3><ul><li>Der Teig muss nicht vollkommen glatt sein; zu langes Rühren entwickelt Gluten und macht Pancakes fester.</li><li>Die kurze Ruhezeit gibt dem Mehl Zeit, Flüssigkeit aufzunehmen.</li></ul><h3>Sicherheit</h3><ul><li>Rohen Teig nicht probieren. Laut FDA müssen Mehl und Eier vor dem Verzehr gegart werden.</li><li>Hände, Schüsseln, Geräte und Arbeitsflächen nach Kontakt mit rohem Mehl oder Teig reinigen.</li></ul><h3>Aufbewahrung</h3><p>Gegarte Pancakes zügig abkühlen, abgedeckt kühlen und vorzugsweise innerhalb von 3 Tagen verbrauchen. Vor dem Essen vollständig erhitzen.</p>",
+      "keywords": [
+        "Pancakes mit Erdbeeren und Blaubeeren",
+        "Beeren Pancakes",
+        "fluffige Pancakes",
+        "Frühstück mit Beeren"
+      ],
+      "seo": {
+        "title": "Pancakes mit Erdbeeren und Blaubeeren | Fluffig",
+        "description": "Fluffige Pancakes mit Erdbeeren und Blaubeeren: abgewogene Zutaten, kurze Teigruhe und klare Zeichen für Wenden und vollständiges Garen.",
+        "faq": [
+          {
+            "q": "Warum soll der Pancake-Teig ruhen?",
+            "a": "Die kurze Ruhezeit lässt das Mehl Flüssigkeit aufnehmen und den Teig leicht eindicken. Zehn Minuten reichen für diese Rezeptur."
+          },
+          {
+            "q": "Kann ich tiefgekühlte Beeren verwenden?",
+            "a": "Ja. Direkt gefroren auf die Pancakes in der Pfanne geben und bei Bedarf etwas länger garen."
+          },
+          {
+            "q": "Wie bleiben Pancakes zart?",
+            "a": "Nur mischen, bis das trockene Mehl verschwunden ist, und jeden Pancake einmal wenden. Zu langes Rühren oder Garen macht die Krume fester."
+          }
+        ],
+        "image_variants": [
+          "/recetas/receta-de-pancakes-con-fresas-y-arandanos/portada-1x1.webp",
+          "/recetas/receta-de-pancakes-con-fresas-y-arandanos/portada-4x3.webp",
+          "/recetas/receta-de-pancakes-con-fresas-y-arandanos/portada-16x9.webp"
+        ]
+      },
+      "content_html": "",
+      "video_urls": [],
+      "published": false,
+      "editorial_status": "draft",
+      "ready_at": null,
+      "source_post_id": null,
+      "source_url": null
+    },
+    {
+      "id": null,
+      "recipe_group_id": "bf8c875f-0372-4866-9be5-088c07d19cbe",
+      "language": "fr",
+      "slug": "pancakes-fraises-myrtilles",
+      "public_path": "/fr/pancakes-fraises-myrtilles",
+      "title": "Pancakes moelleux aux fraises et myrtilles",
+      "excerpt": "Pancakes dorés et moelleux aux fraises et myrtilles fraîches, pâte vanillée brièvement reposée et repères précis pour une cuisson complète.",
+      "summary": "Cette nouvelle recette est conçue pour garder une pâte légère tout en répartissant les fruits sans la détremper. Les ingrédients secs et liquides sont mélangés séparément, réunis avec un minimum de gestes, puis la pâte repose 10 minutes.\n\nUne partie des fruits est déposée sur chaque pancake dans la poêle et le reste est réservé au service. La recette donne environ 12 pancakes moyens, soit 6 portions de 2.",
+      "category": "Petit-déjeuner et brunch",
+      "difficulty": "Facile",
+      "course": "Petit-déjeuner",
+      "cuisine": "Style américain",
+      "prep_time_minutes": 15,
+      "cook_time_minutes": 25,
+      "total_time_minutes": 50,
+      "servings": 6,
+      "ingredients": [
+        {
+          "name": "Farine de blé tout usage",
+          "amount": "180",
+          "unit": "g"
+        },
+        {
+          "name": "Sucre en poudre",
+          "amount": "24",
+          "unit": "g"
+        },
+        {
+          "name": "Levure chimique",
+          "amount": "8",
+          "unit": "g"
+        },
+        {
+          "name": "Sel fin",
+          "amount": "3",
+          "unit": "g"
+        },
+        {
+          "name": "Gros œufs, sans coquille",
+          "amount": "2",
+          "unit": "œufs (env. 100 g)"
+        },
+        {
+          "name": "Lait entier",
+          "amount": "240",
+          "unit": "ml"
+        },
+        {
+          "name": "Beurre doux",
+          "amount": "35",
+          "unit": "g"
+        },
+        {
+          "name": "Extrait de vanille",
+          "amount": "5",
+          "unit": "ml"
+        },
+        {
+          "name": "Fraises fraîches",
+          "amount": "140",
+          "unit": "g"
+        },
+        {
+          "name": "Myrtilles fraîches",
+          "amount": "100",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Préparer les fruits et le beurre",
+          "content": "Rincez fraises et myrtilles sous l’eau courante puis séchez-les bien. Équeutez les fraises et coupez-les en fines lamelles. Faites fondre 35 g de beurre; réservez environ 5 g pour la poêle et laissez tiédir le reste.",
+          "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/paso-01.webp",
+          "image_alt": "Pancakes moelleux aux fraises et myrtilles: Préparer les fruits et le beurre"
+        },
+        {
+          "title": "Mélanger les ingrédients secs",
+          "content": "Fouettez 180 g de farine, 24 g de sucre, 8 g de levure chimique et 3 g de sel dans un grand saladier.",
+          "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/paso-02.webp",
+          "image_alt": "Pancakes moelleux aux fraises et myrtilles: Mélanger les ingrédients secs"
+        },
+        {
+          "title": "Fouetter les ingrédients liquides",
+          "content": "Dans un autre bol, fouettez 2 œufs avec 240 ml de lait et 5 ml de vanille pendant 30–45 secondes. Incorporez 30 g de beurre fondu tiédi.",
+          "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/paso-03.webp",
+          "image_alt": "Pancakes moelleux aux fraises et myrtilles: Fouetter les ingrédients liquides"
+        },
+        {
+          "title": "Former et laisser reposer la pâte",
+          "content": "Versez les liquides sur les ingrédients secs. Mélangez juste jusqu’à disparition de la farine sèche; de petits grumeaux sont souhaitables. Laissez reposer 10 minutes sans remélanger.",
+          "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/paso-04.webp",
+          "image_alt": "Pancakes moelleux aux fraises et myrtilles: Former et laisser reposer la pâte"
+        },
+        {
+          "title": "Chauffer la poêle",
+          "content": "Chauffez une poêle antiadhésive ou une plaque à feu moyen et graissez-la très légèrement avec le beurre réservé. Le beurre doit grésiller doucement, sans fumer.",
+          "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/paso-05.webp",
+          "image_alt": "Pancakes moelleux aux fraises et myrtilles: Chauffer la poêle"
+        },
+        {
+          "title": "Cuire la première face",
+          "content": "Versez environ 60 ml de pâte par pancake. Répartissez des lamelles de fraise et des myrtilles sur chacun, en gardant environ un tiers des fruits pour servir. Cuisez environ 2 minutes, jusqu’à l’apparition de bulles et la prise des bords.",
+          "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/paso-06.webp",
+          "image_alt": "Pancakes moelleux aux fraises et myrtilles: Cuire la première face"
+        },
+        {
+          "title": "Retourner une seule fois",
+          "content": "Retournez chaque pancake une fois et cuisez encore 1½–2 minutes, jusqu’à ce que la seconde face soit dorée et qu’un pancake test ne présente plus de pâte humide au centre.",
+          "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/paso-07.webp",
+          "image_alt": "Pancakes moelleux aux fraises et myrtilles: Retourner une seule fois"
+        },
+        {
+          "title": "Servir",
+          "content": "Poursuivez avec le reste de la pâte, en graissant seulement si nécessaire. Servez 2 pancakes par personne avec les fruits réservés. Gardez les garnitures facultatives séparées pour conserver une nutrition traçable.",
+          "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/paso-08.webp",
+          "image_alt": "Pancakes moelleux aux fraises et myrtilles: Servir"
+        }
+      ],
+      "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/portada.webp",
+          "alt": "Pancakes moelleux aux fraises et myrtilles"
+        }
+      ],
+      "nutrition": {
+        "calories": 240,
+        "protein_g": 7,
+        "carbs_g": 34,
+        "fat_g": 8,
+        "saturated_fat_g": 4,
+        "fiber_g": 2,
+        "sugar_g": 9,
+        "sodium_mg": 380,
+        "serving_size": "2 pancakes (1/6 de la recette)",
+        "estimated": true,
+        "source": "USDA FoodData Central",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Estimation ingrédient par ingrédient avec les valeurs USDA FoodData Central; recette divisée en 6 portions.",
+        "note": "Valeurs approximatives pour 2 pancakes. Elles incluent tous les fruits et les 35 g de beurre; sirop, crème et autres garnitures exclus.",
+        "inputs": [
+          {
+            "ndb": "20081",
+            "description": "Flour, wheat, all-purpose, enriched, bleached",
+            "grams": 180,
+            "per100": {
+              "calories": 364,
+              "protein_g": 10.33,
+              "carbs_g": 76.31,
+              "fat_g": 0.98,
+              "saturated_fat_g": 0.155,
+              "fiber_g": 2.7,
+              "sugar_g": 0.27,
+              "sodium_mg": 2
+            }
+          },
+          {
+            "description": "Sugars, granulated",
+            "grams": 24,
+            "per100": {
+              "calories": 387,
+              "protein_g": 0,
+              "carbs_g": 99.98,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sugar_g": 99.8,
+              "sodium_mg": 1
+            }
+          },
+          {
+            "description": "Baking powder, double-acting",
+            "grams": 8,
+            "per100": {
+              "calories": 53,
+              "protein_g": 0,
+              "carbs_g": 27.7,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0.2,
+              "sugar_g": 0,
+              "sodium_mg": 10600
+            }
+          },
+          {
+            "description": "Salt, table",
+            "grams": 3,
+            "per100": {
+              "calories": 0,
+              "protein_g": 0,
+              "carbs_g": 0,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sugar_g": 0,
+              "sodium_mg": 38758
+            }
+          },
+          {
+            "ndb": "1123",
+            "description": "Eggs, Grade A, Large, egg whole",
+            "grams": 100,
+            "per100": {
+              "calories": 143,
+              "protein_g": 12.56,
+              "carbs_g": 0.72,
+              "fat_g": 9.51,
+              "saturated_fat_g": 3.126,
+              "fiber_g": 0,
+              "sugar_g": 0.37,
+              "sodium_mg": 142
+            }
+          },
+          {
+            "ndb": "1077",
+            "description": "Milk, whole, 3.25% milkfat, with added vitamin D",
+            "grams": 244,
+            "per100": {
+              "calories": 61,
+              "protein_g": 3.15,
+              "carbs_g": 4.8,
+              "fat_g": 3.25,
+              "saturated_fat_g": 1.865,
+              "fiber_g": 0,
+              "sugar_g": 5.05,
+              "sodium_mg": 43
+            }
+          },
+          {
+            "ndb": "1145",
+            "description": "Butter, stick, unsalted",
+            "grams": 35,
+            "per100": {
+              "calories": 717,
+              "protein_g": 0.85,
+              "carbs_g": 0.06,
+              "fat_g": 81.11,
+              "saturated_fat_g": 51.368,
+              "fiber_g": 0,
+              "sugar_g": 0.06,
+              "sodium_mg": 11
+            }
+          },
+          {
+            "description": "Vanilla extract",
+            "grams": 5,
+            "per100": {
+              "calories": 288,
+              "protein_g": 0.06,
+              "carbs_g": 12.65,
+              "fat_g": 0.06,
+              "saturated_fat_g": 0.01,
+              "fiber_g": 0,
+              "sugar_g": 12.65,
+              "sodium_mg": 9
+            }
+          },
+          {
+            "description": "Strawberries, raw",
+            "grams": 140,
+            "per100": {
+              "calories": 32,
+              "protein_g": 0.67,
+              "carbs_g": 7.68,
+              "fat_g": 0.3,
+              "saturated_fat_g": 0.015,
+              "fiber_g": 2,
+              "sugar_g": 4.89,
+              "sodium_mg": 1
+            }
+          },
+          {
+            "description": "Blueberries, raw",
+            "grams": 100,
+            "per100": {
+              "calories": 57,
+              "protein_g": 0.74,
+              "carbs_g": 14.49,
+              "fat_g": 0.33,
+              "saturated_fat_g": 0.028,
+              "fiber_g": 2.4,
+              "sugar_g": 9.96,
+              "sodium_mg": 1
+            }
+          }
+        ]
+      },
+      "notes": "<h3>Texture</h3><ul><li>Ne cherchez pas une pâte parfaitement lisse: trop mélanger développe le gluten et raffermit les pancakes.</li><li>Le repos court permet à la farine de s’hydrater.</li></ul><h3>Sécurité</h3><ul><li>Ne goûtez pas la pâte crue. La FDA rappelle que la farine et les œufs doivent être cuits avant consommation.</li><li>Lavez mains, bols, ustensiles et surfaces après contact avec farine ou pâte crue.</li></ul><h3>Conservation</h3><p>Refroidissez rapidement les pancakes cuits, conservez-les couverts au réfrigérateur et consommez-les de préférence sous 3 jours. Réchauffez-les à cœur.</p>",
+      "keywords": [
+        "pancakes fraises myrtilles",
+        "pancakes aux fruits rouges",
+        "pancakes moelleux",
+        "petit-déjeuner aux fruits"
+      ],
+      "seo": {
+        "title": "Pancakes aux fraises et myrtilles | Recette moelleuse",
+        "description": "Pancakes moelleux aux fraises et myrtilles: ingrédients pesés, court repos de la pâte et repères simples pour les retourner et les cuire à cœur.",
+        "faq": [
+          {
+            "q": "Pourquoi laisser reposer la pâte?",
+            "a": "Un repos court permet à la farine de s’hydrater et à la pâte d’épaissir légèrement. Dix minutes suffisent ici."
+          },
+          {
+            "q": "Puis-je utiliser des fruits surgelés?",
+            "a": "Oui. Déposez-les encore congelés sur chaque pancake dans la poêle et prolongez légèrement la cuisson si nécessaire."
+          },
+          {
+            "q": "Comment garder des pancakes moelleux?",
+            "a": "Mélangez juste jusqu’à disparition de la farine sèche et ne retournez chaque pancake qu’une fois. Un excès de mélange ou de cuisson raffermit la mie."
+          }
+        ],
+        "image_variants": [
+          "/recetas/receta-de-pancakes-con-fresas-y-arandanos/portada-1x1.webp",
+          "/recetas/receta-de-pancakes-con-fresas-y-arandanos/portada-4x3.webp",
+          "/recetas/receta-de-pancakes-con-fresas-y-arandanos/portada-16x9.webp"
+        ]
+      },
+      "content_html": "",
+      "video_urls": [],
+      "published": false,
+      "editorial_status": "draft",
+      "ready_at": null,
+      "source_post_id": null,
+      "source_url": null
+    },
+    {
+      "id": null,
+      "recipe_group_id": "bf8c875f-0372-4866-9be5-088c07d19cbe",
+      "language": "it",
+      "slug": "pancake-fragole-mirtilli",
+      "public_path": "/it/pancake-fragole-mirtilli",
+      "title": "Pancake soffici con fragole e mirtilli",
+      "excerpt": "Pancake dorati e soffici con fragole e mirtilli freschi, impasto alla vaniglia con breve riposo e segnali chiari per una cottura completa.",
+      "summary": "Questa nuova ricetta è pensata per mantenere l’impasto leggero e distribuire la frutta senza renderlo acquoso. Ingredienti secchi e liquidi si lavorano separatamente, poi si uniscono con pochi movimenti e l’impasto riposa 10 minuti.\n\nUna parte della frutta viene aggiunta su ogni pancake in padella e il resto si conserva per il servizio. La dose produce circa 12 pancake medi, cioè 6 porzioni da 2.",
+      "category": "Colazione e brunch",
+      "difficulty": "Facile",
+      "course": "Colazione",
+      "cuisine": "Stile americano",
+      "prep_time_minutes": 15,
+      "cook_time_minutes": 25,
+      "total_time_minutes": 50,
+      "servings": 6,
+      "ingredients": [
+        {
+          "name": "Farina di frumento per tutti gli usi",
+          "amount": "180",
+          "unit": "g"
+        },
+        {
+          "name": "Zucchero semolato",
+          "amount": "24",
+          "unit": "g"
+        },
+        {
+          "name": "Lievito per dolci",
+          "amount": "8",
+          "unit": "g"
+        },
+        {
+          "name": "Sale fino",
+          "amount": "3",
+          "unit": "g"
+        },
+        {
+          "name": "Uova grandi, senza guscio",
+          "amount": "2",
+          "unit": "uova (circa 100 g)"
+        },
+        {
+          "name": "Latte intero",
+          "amount": "240",
+          "unit": "ml"
+        },
+        {
+          "name": "Burro non salato",
+          "amount": "35",
+          "unit": "g"
+        },
+        {
+          "name": "Estratto di vaniglia",
+          "amount": "5",
+          "unit": "ml"
+        },
+        {
+          "name": "Fragole fresche",
+          "amount": "140",
+          "unit": "g"
+        },
+        {
+          "name": "Mirtilli freschi",
+          "amount": "100",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Preparare frutta e burro",
+          "content": "Sciacqua fragole e mirtilli sotto acqua corrente e asciugali bene. Elimina il picciolo delle fragole e tagliale a fettine sottili. Sciogli 35 g di burro; tienine circa 5 g per la padella e lascia intiepidire il resto.",
+          "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/paso-01.webp",
+          "image_alt": "Pancake soffici con fragole e mirtilli: Preparare frutta e burro"
+        },
+        {
+          "title": "Mescolare gli ingredienti secchi",
+          "content": "Mescola con una frusta 180 g di farina, 24 g di zucchero, 8 g di lievito e 3 g di sale in una ciotola capiente.",
+          "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/paso-02.webp",
+          "image_alt": "Pancake soffici con fragole e mirtilli: Mescolare gli ingredienti secchi"
+        },
+        {
+          "title": "Sbattere gli ingredienti liquidi",
+          "content": "In un’altra ciotola sbatti 2 uova con 240 ml di latte e 5 ml di vaniglia per 30–45 secondi. Incorpora 30 g di burro fuso tiepido.",
+          "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/paso-03.webp",
+          "image_alt": "Pancake soffici con fragole e mirtilli: Sbattere gli ingredienti liquidi"
+        },
+        {
+          "title": "Formare e far riposare l’impasto",
+          "content": "Versa i liquidi sui secchi. Mescola solo finché non rimane farina asciutta; qualche piccolo grumo è corretto. Lascia riposare 10 minuti senza mescolare di nuovo.",
+          "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/paso-04.webp",
+          "image_alt": "Pancake soffici con fragole e mirtilli: Formare e far riposare l’impasto"
+        },
+        {
+          "title": "Scaldare la padella",
+          "content": "Scalda una padella antiaderente o piastra a fuoco medio e ungila con uno strato sottilissimo del burro riservato. Il burro deve sfrigolare appena, non fumare.",
+          "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/paso-05.webp",
+          "image_alt": "Pancake soffici con fragole e mirtilli: Scaldare la padella"
+        },
+        {
+          "title": "Cuocere il primo lato",
+          "content": "Versa circa 60 ml di impasto per pancake. Distribuisci fragole e mirtilli sulla superficie, tenendo da parte circa un terzo della frutta. Cuoci circa 2 minuti, finché compaiono bolle e i bordi perdono l’aspetto umido.",
+          "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/paso-06.webp",
+          "image_alt": "Pancake soffici con fragole e mirtilli: Cuocere il primo lato"
+        },
+        {
+          "title": "Girare una sola volta",
+          "content": "Gira ogni pancake una volta e cuoci ancora 1½–2 minuti, finché il secondo lato è dorato e, aprendo un pancake di prova, al centro non resta impasto bagnato.",
+          "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/paso-07.webp",
+          "image_alt": "Pancake soffici con fragole e mirtilli: Girare una sola volta"
+        },
+        {
+          "title": "Servire",
+          "content": "Continua con il resto dell’impasto, ungendo solo se necessario. Servi 2 pancake a persona con la frutta tenuta da parte. Lascia eventuali topping separati per mantenere tracciabili i valori nutrizionali.",
+          "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/paso-08.webp",
+          "image_alt": "Pancake soffici con fragole e mirtilli: Servire"
+        }
+      ],
+      "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/portada.webp",
+          "alt": "Pancake soffici con fragole e mirtilli"
+        }
+      ],
+      "nutrition": {
+        "calories": 240,
+        "protein_g": 7,
+        "carbs_g": 34,
+        "fat_g": 8,
+        "saturated_fat_g": 4,
+        "fiber_g": 2,
+        "sugar_g": 9,
+        "sodium_mg": 380,
+        "serving_size": "2 pancake (1/6 della ricetta)",
+        "estimated": true,
+        "source": "USDA FoodData Central",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Stima per ingrediente con valori USDA FoodData Central; lotto completo diviso in 6 porzioni.",
+        "note": "Valori approssimativi per 2 pancake. Comprendono tutta la frutta e 35 g di burro; sciroppi, creme e altri topping esclusi.",
+        "inputs": [
+          {
+            "ndb": "20081",
+            "description": "Flour, wheat, all-purpose, enriched, bleached",
+            "grams": 180,
+            "per100": {
+              "calories": 364,
+              "protein_g": 10.33,
+              "carbs_g": 76.31,
+              "fat_g": 0.98,
+              "saturated_fat_g": 0.155,
+              "fiber_g": 2.7,
+              "sugar_g": 0.27,
+              "sodium_mg": 2
+            }
+          },
+          {
+            "description": "Sugars, granulated",
+            "grams": 24,
+            "per100": {
+              "calories": 387,
+              "protein_g": 0,
+              "carbs_g": 99.98,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sugar_g": 99.8,
+              "sodium_mg": 1
+            }
+          },
+          {
+            "description": "Baking powder, double-acting",
+            "grams": 8,
+            "per100": {
+              "calories": 53,
+              "protein_g": 0,
+              "carbs_g": 27.7,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0.2,
+              "sugar_g": 0,
+              "sodium_mg": 10600
+            }
+          },
+          {
+            "description": "Salt, table",
+            "grams": 3,
+            "per100": {
+              "calories": 0,
+              "protein_g": 0,
+              "carbs_g": 0,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sugar_g": 0,
+              "sodium_mg": 38758
+            }
+          },
+          {
+            "ndb": "1123",
+            "description": "Eggs, Grade A, Large, egg whole",
+            "grams": 100,
+            "per100": {
+              "calories": 143,
+              "protein_g": 12.56,
+              "carbs_g": 0.72,
+              "fat_g": 9.51,
+              "saturated_fat_g": 3.126,
+              "fiber_g": 0,
+              "sugar_g": 0.37,
+              "sodium_mg": 142
+            }
+          },
+          {
+            "ndb": "1077",
+            "description": "Milk, whole, 3.25% milkfat, with added vitamin D",
+            "grams": 244,
+            "per100": {
+              "calories": 61,
+              "protein_g": 3.15,
+              "carbs_g": 4.8,
+              "fat_g": 3.25,
+              "saturated_fat_g": 1.865,
+              "fiber_g": 0,
+              "sugar_g": 5.05,
+              "sodium_mg": 43
+            }
+          },
+          {
+            "ndb": "1145",
+            "description": "Butter, stick, unsalted",
+            "grams": 35,
+            "per100": {
+              "calories": 717,
+              "protein_g": 0.85,
+              "carbs_g": 0.06,
+              "fat_g": 81.11,
+              "saturated_fat_g": 51.368,
+              "fiber_g": 0,
+              "sugar_g": 0.06,
+              "sodium_mg": 11
+            }
+          },
+          {
+            "description": "Vanilla extract",
+            "grams": 5,
+            "per100": {
+              "calories": 288,
+              "protein_g": 0.06,
+              "carbs_g": 12.65,
+              "fat_g": 0.06,
+              "saturated_fat_g": 0.01,
+              "fiber_g": 0,
+              "sugar_g": 12.65,
+              "sodium_mg": 9
+            }
+          },
+          {
+            "description": "Strawberries, raw",
+            "grams": 140,
+            "per100": {
+              "calories": 32,
+              "protein_g": 0.67,
+              "carbs_g": 7.68,
+              "fat_g": 0.3,
+              "saturated_fat_g": 0.015,
+              "fiber_g": 2,
+              "sugar_g": 4.89,
+              "sodium_mg": 1
+            }
+          },
+          {
+            "description": "Blueberries, raw",
+            "grams": 100,
+            "per100": {
+              "calories": 57,
+              "protein_g": 0.74,
+              "carbs_g": 14.49,
+              "fat_g": 0.33,
+              "saturated_fat_g": 0.028,
+              "fiber_g": 2.4,
+              "sugar_g": 9.96,
+              "sodium_mg": 1
+            }
+          }
+        ]
+      },
+      "notes": "<h3>Consistenza</h3><ul><li>L’impasto non deve essere perfettamente liscio: lavorarlo troppo sviluppa il glutine e rende i pancake più tenaci.</li><li>Il breve riposo permette alla farina di idratarsi.</li></ul><h3>Sicurezza</h3><ul><li>Non assaggiare l’impasto crudo. La FDA ricorda che farina e uova devono essere cotte prima del consumo.</li><li>Lava mani, ciotole, utensili e superfici dopo il contatto con farina o impasto crudo.</li></ul><h3>Conservazione</h3><p>Raffredda rapidamente i pancake cotti, conservali coperti in frigorifero e consumali preferibilmente entro 3 giorni. Riscaldali bene prima di servirli.</p>",
+      "keywords": [
+        "pancake fragole mirtilli",
+        "pancake ai frutti di bosco",
+        "pancake soffici",
+        "colazione con frutta"
+      ],
+      "seo": {
+        "title": "Pancake con fragole e mirtilli | Soffici e facili",
+        "description": "Pancake soffici con fragole e mirtilli: ingredienti pesati, breve riposo dell’impasto e segnali chiari per girarli e cuocerli bene al centro.",
+        "faq": [
+          {
+            "q": "Perché far riposare l’impasto?",
+            "a": "Un breve riposo permette alla farina di idratarsi e all’impasto di addensarsi leggermente. Dieci minuti sono sufficienti."
+          },
+          {
+            "q": "Posso usare frutti di bosco surgelati?",
+            "a": "Sì. Aggiungili ancora congelati su ogni pancake in padella e prolunga leggermente la cottura se il centro ne ha bisogno."
+          },
+          {
+            "q": "Come mantenere i pancake soffici?",
+            "a": "Mescola solo fino a eliminare la farina asciutta e gira ogni pancake una volta. Troppo impasto o troppa cottura rende la mollica più compatta."
+          }
+        ],
+        "image_variants": [
+          "/recetas/receta-de-pancakes-con-fresas-y-arandanos/portada-1x1.webp",
+          "/recetas/receta-de-pancakes-con-fresas-y-arandanos/portada-4x3.webp",
+          "/recetas/receta-de-pancakes-con-fresas-y-arandanos/portada-16x9.webp"
+        ]
+      },
+      "content_html": "",
+      "video_urls": [],
+      "published": false,
+      "editorial_status": "draft",
+      "ready_at": null,
+      "source_post_id": null,
+      "source_url": null
+    },
+    {
+      "id": null,
+      "recipe_group_id": "bf8c875f-0372-4866-9be5-088c07d19cbe",
+      "language": "ja",
+      "slug": "いちごとブルーベリーのパンケーキ",
+      "public_path": "/ja/いちごとブルーベリーのパンケーキ",
+      "title": "いちごとブルーベリーのふわふわパンケーキ",
+      "excerpt": "いちごとブルーベリーを使ったふんわり焼き色のよいパンケーキ。短い休ませ時間と、返すタイミング・焼き上がりの目安を明確にします。",
+      "summary": "新しく組み立てたフルーツパンケーキのレシピです。生地を重くしすぎず果物を均一に使えるよう、粉類と液体を別々に混ぜ、合わせた後は最小限だけ混ぜて10分休ませます。\n\n果物の一部はフライパン上の生地にのせ、残りは盛り付け用に取っておきます。中くらいのパンケーキ約12枚、2枚ずつ6人分です。",
+      "category": "朝食・ブランチ",
+      "difficulty": "簡単",
+      "course": "朝食",
+      "cuisine": "アメリカ風",
+      "prep_time_minutes": 15,
+      "cook_time_minutes": 25,
+      "total_time_minutes": 50,
+      "servings": 6,
+      "ingredients": [
+        {
+          "name": "薄力粉または中力粉",
+          "amount": "180",
+          "unit": "g"
+        },
+        {
+          "name": "グラニュー糖",
+          "amount": "24",
+          "unit": "g"
+        },
+        {
+          "name": "ベーキングパウダー",
+          "amount": "8",
+          "unit": "g"
+        },
+        {
+          "name": "細塩",
+          "amount": "3",
+          "unit": "g"
+        },
+        {
+          "name": "大きめの卵（殻を除く）",
+          "amount": "2",
+          "unit": "個（約100 g）"
+        },
+        {
+          "name": "全乳",
+          "amount": "240",
+          "unit": "ml"
+        },
+        {
+          "name": "無塩バター",
+          "amount": "35",
+          "unit": "g"
+        },
+        {
+          "name": "バニラエクストラクト",
+          "amount": "5",
+          "unit": "ml"
+        },
+        {
+          "name": "いちご",
+          "amount": "140",
+          "unit": "g"
+        },
+        {
+          "name": "ブルーベリー",
+          "amount": "100",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "果物とバターを準備する",
+          "content": "いちごとブルーベリーを流水で洗い、よく水気を拭きます。いちごはへたを取り薄切りにします。バター35 gを溶かし、約5 gをフライパン用に残して、残りは少し冷まします。",
+          "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/paso-01.webp",
+          "image_alt": "いちごとブルーベリーのふわふわパンケーキ: 果物とバターを準備する"
+        },
+        {
+          "title": "粉類を混ぜる",
+          "content": "大きなボウルで薄力粉180 g、砂糖24 g、ベーキングパウダー8 g、塩3 gを泡立て器で均一に混ぜます。",
+          "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/paso-02.webp",
+          "image_alt": "いちごとブルーベリーのふわふわパンケーキ: 粉類を混ぜる"
+        },
+        {
+          "title": "液体材料を混ぜる",
+          "content": "別のボウルで卵2個、牛乳240 ml、バニラ5 mlを30〜45秒混ぜます。少し冷ました溶かしバター30 gを加えます。",
+          "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/paso-03.webp",
+          "image_alt": "いちごとブルーベリーのふわふわパンケーキ: 液体材料を混ぜる"
+        },
+        {
+          "title": "生地を合わせて休ませる",
+          "content": "液体を粉類に加え、乾いた粉が見えなくなるまで最小限に混ぜます。小さなだまは残っていて構いません。そのまま10分休ませ、再び強く混ぜないでください。",
+          "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/paso-04.webp",
+          "image_alt": "いちごとブルーベリーのふわふわパンケーキ: 生地を合わせて休ませる"
+        },
+        {
+          "title": "フライパンを温める",
+          "content": "フライパンまたは鉄板を中火で温め、残しておいたバターを薄く塗ります。バターが軽く音を立てる程度にし、煙が出るほど熱くしません。",
+          "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/paso-05.webp",
+          "image_alt": "いちごとブルーベリーのふわふわパンケーキ: フライパンを温める"
+        },
+        {
+          "title": "片面を焼く",
+          "content": "1枚につき約60 mlの生地を流します。いちごとブルーベリーを表面にのせ、全体の約3分の1は盛り付け用に残します。泡が出て縁の濡れた光沢が消えるまで約2分焼きます。",
+          "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/paso-06.webp",
+          "image_alt": "いちごとブルーベリーのふわふわパンケーキ: 片面を焼く"
+        },
+        {
+          "title": "一度だけ返して焼き上げる",
+          "content": "へらで一度だけ返し、さらに1分30秒〜2分焼きます。裏面がきつね色になり、試しに1枚切ったとき中心に生の生地が残っていないことを確認します。",
+          "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/paso-07.webp",
+          "image_alt": "いちごとブルーベリーのふわふわパンケーキ: 一度だけ返して焼き上げる"
+        },
+        {
+          "title": "盛り付ける",
+          "content": "残りの生地も同様に焼き、必要なときだけ薄くバターを足します。1人2枚を目安に、取っておいた果物を添えます。栄養値を追跡できるよう、追加トッピングは基本レシピに含めません。",
+          "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/paso-08.webp",
+          "image_alt": "いちごとブルーベリーのふわふわパンケーキ: 盛り付ける"
+        }
+      ],
+      "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/portada.webp",
+          "alt": "いちごとブルーベリーのふわふわパンケーキ"
+        }
+      ],
+      "nutrition": {
+        "calories": 240,
+        "protein_g": 7,
+        "carbs_g": 34,
+        "fat_g": 8,
+        "saturated_fat_g": 4,
+        "fiber_g": 2,
+        "sugar_g": 9,
+        "sodium_mg": 380,
+        "serving_size": "パンケーキ2枚（全量の1/6）",
+        "estimated": true,
+        "source": "USDA FoodData Central",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "USDA FoodData Central の食材別データから全量を計算し、6等分した推定値です。",
+        "note": "パンケーキ2枚分の概算です。果物全量とバター35 gを含み、シロップやクリームなどの追加トッピングは含みません。",
+        "inputs": [
+          {
+            "ndb": "20081",
+            "description": "Flour, wheat, all-purpose, enriched, bleached",
+            "grams": 180,
+            "per100": {
+              "calories": 364,
+              "protein_g": 10.33,
+              "carbs_g": 76.31,
+              "fat_g": 0.98,
+              "saturated_fat_g": 0.155,
+              "fiber_g": 2.7,
+              "sugar_g": 0.27,
+              "sodium_mg": 2
+            }
+          },
+          {
+            "description": "Sugars, granulated",
+            "grams": 24,
+            "per100": {
+              "calories": 387,
+              "protein_g": 0,
+              "carbs_g": 99.98,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sugar_g": 99.8,
+              "sodium_mg": 1
+            }
+          },
+          {
+            "description": "Baking powder, double-acting",
+            "grams": 8,
+            "per100": {
+              "calories": 53,
+              "protein_g": 0,
+              "carbs_g": 27.7,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0.2,
+              "sugar_g": 0,
+              "sodium_mg": 10600
+            }
+          },
+          {
+            "description": "Salt, table",
+            "grams": 3,
+            "per100": {
+              "calories": 0,
+              "protein_g": 0,
+              "carbs_g": 0,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sugar_g": 0,
+              "sodium_mg": 38758
+            }
+          },
+          {
+            "ndb": "1123",
+            "description": "Eggs, Grade A, Large, egg whole",
+            "grams": 100,
+            "per100": {
+              "calories": 143,
+              "protein_g": 12.56,
+              "carbs_g": 0.72,
+              "fat_g": 9.51,
+              "saturated_fat_g": 3.126,
+              "fiber_g": 0,
+              "sugar_g": 0.37,
+              "sodium_mg": 142
+            }
+          },
+          {
+            "ndb": "1077",
+            "description": "Milk, whole, 3.25% milkfat, with added vitamin D",
+            "grams": 244,
+            "per100": {
+              "calories": 61,
+              "protein_g": 3.15,
+              "carbs_g": 4.8,
+              "fat_g": 3.25,
+              "saturated_fat_g": 1.865,
+              "fiber_g": 0,
+              "sugar_g": 5.05,
+              "sodium_mg": 43
+            }
+          },
+          {
+            "ndb": "1145",
+            "description": "Butter, stick, unsalted",
+            "grams": 35,
+            "per100": {
+              "calories": 717,
+              "protein_g": 0.85,
+              "carbs_g": 0.06,
+              "fat_g": 81.11,
+              "saturated_fat_g": 51.368,
+              "fiber_g": 0,
+              "sugar_g": 0.06,
+              "sodium_mg": 11
+            }
+          },
+          {
+            "description": "Vanilla extract",
+            "grams": 5,
+            "per100": {
+              "calories": 288,
+              "protein_g": 0.06,
+              "carbs_g": 12.65,
+              "fat_g": 0.06,
+              "saturated_fat_g": 0.01,
+              "fiber_g": 0,
+              "sugar_g": 12.65,
+              "sodium_mg": 9
+            }
+          },
+          {
+            "description": "Strawberries, raw",
+            "grams": 140,
+            "per100": {
+              "calories": 32,
+              "protein_g": 0.67,
+              "carbs_g": 7.68,
+              "fat_g": 0.3,
+              "saturated_fat_g": 0.015,
+              "fiber_g": 2,
+              "sugar_g": 4.89,
+              "sodium_mg": 1
+            }
+          },
+          {
+            "description": "Blueberries, raw",
+            "grams": 100,
+            "per100": {
+              "calories": 57,
+              "protein_g": 0.74,
+              "carbs_g": 14.49,
+              "fat_g": 0.33,
+              "saturated_fat_g": 0.028,
+              "fiber_g": 2.4,
+              "sugar_g": 9.96,
+              "sodium_mg": 1
+            }
+          }
+        ]
+      },
+      "notes": "<h3>食感のポイント</h3><ul><li>生地を完全になめらかにする必要はありません。混ぜすぎるとグルテンが発達し、硬くなりやすくなります。</li><li>短く休ませることで粉が水分を吸い、生地に適度な厚みが出ます。</li></ul><h3>安全</h3><ul><li>生の生地は味見しないでください。FDA は小麦粉と卵を加熱してから食べるよう案内しています。</li><li>生の小麦粉や生地に触れた手、ボウル、器具、作業台は洗浄します。</li></ul><h3>保存</h3><p>焼いたパンケーキは速やかに冷まし、ふた付き容器で冷蔵し、できれば3日以内に食べます。食べる前に十分温め直してください。</p>",
+      "keywords": [
+        "いちごとブルーベリーのパンケーキ",
+        "ベリーパンケーキ",
+        "ふわふわパンケーキ",
+        "フルーツ朝食"
+      ],
+      "seo": {
+        "title": "いちごとブルーベリーのパンケーキ｜ふわふわ簡単",
+        "description": "いちごとブルーベリーのふわふわパンケーキ。重量でそろえた材料、10分の休ませ時間、返すタイミングと焼き上がりの目安を紹介。",
+        "faq": [
+          {
+            "q": "なぜ生地を休ませるのですか？",
+            "a": "短く休ませると粉が水分を吸い、生地が少し濃くなります。この配合では10分で十分です。"
+          },
+          {
+            "q": "冷凍ベリーでも作れますか？",
+            "a": "はい。解凍せず、フライパンに流した生地の上にのせます。中心の火通りを見ながら必要なら少し長く焼きます。"
+          },
+          {
+            "q": "パンケーキをふんわり仕上げるコツは？",
+            "a": "乾いた粉が見えなくなったら混ぜるのを止め、返すのは一度だけにします。混ぜすぎや焼きすぎは硬さにつながります。"
+          }
+        ],
+        "image_variants": [
+          "/recetas/receta-de-pancakes-con-fresas-y-arandanos/portada-1x1.webp",
+          "/recetas/receta-de-pancakes-con-fresas-y-arandanos/portada-4x3.webp",
+          "/recetas/receta-de-pancakes-con-fresas-y-arandanos/portada-16x9.webp"
+        ]
+      },
+      "content_html": "",
+      "video_urls": [],
+      "published": false,
+      "editorial_status": "draft",
+      "ready_at": null,
+      "source_post_id": null,
+      "source_url": null
+    },
+    {
+      "id": null,
+      "recipe_group_id": "bf8c875f-0372-4866-9be5-088c07d19cbe",
+      "language": "pt",
+      "slug": "panquecas-com-morango-e-mirtilo",
+      "public_path": "/pt/panquecas-com-morango-e-mirtilo",
+      "title": "Panquecas fofinhas com morango e mirtilo",
+      "excerpt": "Panquecas douradas e macias com morango e mirtilo frescos, massa de baunilha com breve descanso e sinais claros para cozinhar bem o centro.",
+      "summary": "Esta é uma receita nova de panquecas com frutas, pensada para manter a massa leve e distribuir as frutas sem deixá-la aguada. Ingredientes secos e líquidos são misturados separadamente, unidos com poucos movimentos e a massa descansa por 10 minutos.\n\nParte das frutas vai sobre cada panqueca na frigideira e o restante fica reservado para servir. A receita rende cerca de 12 panquecas médias, ou 6 porções de 2.",
+      "category": "Café da manhã e brunch",
+      "difficulty": "Fácil",
+      "course": "Café da manhã",
+      "cuisine": "Estilo americano",
+      "prep_time_minutes": 15,
+      "cook_time_minutes": 25,
+      "total_time_minutes": 50,
+      "servings": 6,
+      "ingredients": [
+        {
+          "name": "Farinha de trigo para uso geral",
+          "amount": "180",
+          "unit": "g"
+        },
+        {
+          "name": "Açúcar",
+          "amount": "24",
+          "unit": "g"
+        },
+        {
+          "name": "Fermento químico em pó",
+          "amount": "8",
+          "unit": "g"
+        },
+        {
+          "name": "Sal fino",
+          "amount": "3",
+          "unit": "g"
+        },
+        {
+          "name": "Ovos grandes, sem casca",
+          "amount": "2",
+          "unit": "unidades (cerca de 100 g)"
+        },
+        {
+          "name": "Leite integral",
+          "amount": "240",
+          "unit": "ml"
+        },
+        {
+          "name": "Manteiga sem sal",
+          "amount": "35",
+          "unit": "g"
+        },
+        {
+          "name": "Extrato de baunilha",
+          "amount": "5",
+          "unit": "ml"
+        },
+        {
+          "name": "Morangos frescos",
+          "amount": "140",
+          "unit": "g"
+        },
+        {
+          "name": "Mirtilos frescos",
+          "amount": "100",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Preparar as frutas e a manteiga",
+          "content": "Lave morangos e mirtilos em água corrente e seque bem. Retire os cabinhos dos morangos e corte-os em fatias finas. Derreta 35 g de manteiga; reserve cerca de 5 g para a frigideira e deixe o restante amornar.",
+          "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/paso-01.webp",
+          "image_alt": "Panquecas fofinhas com morango e mirtilo: Preparar as frutas e a manteiga"
+        },
+        {
+          "title": "Misturar os ingredientes secos",
+          "content": "Em uma tigela grande, misture com um batedor 180 g de farinha, 24 g de açúcar, 8 g de fermento e 3 g de sal.",
+          "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/paso-02.webp",
+          "image_alt": "Panquecas fofinhas com morango e mirtilo: Misturar os ingredientes secos"
+        },
+        {
+          "title": "Bater os ingredientes líquidos",
+          "content": "Em outra tigela, bata 2 ovos com 240 ml de leite e 5 ml de baunilha por 30–45 segundos. Junte 30 g da manteiga derretida já morna.",
+          "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/paso-03.webp",
+          "image_alt": "Panquecas fofinhas com morango e mirtilo: Bater os ingredientes líquidos"
+        },
+        {
+          "title": "Formar e descansar a massa",
+          "content": "Despeje os líquidos sobre os ingredientes secos. Misture apenas até não haver farinha seca; pequenos grumos são desejáveis. Deixe descansar por 10 minutos sem bater novamente.",
+          "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/paso-04.webp",
+          "image_alt": "Panquecas fofinhas com morango e mirtilo: Formar e descansar a massa"
+        },
+        {
+          "title": "Aquecer a frigideira",
+          "content": "Aqueça uma frigideira antiaderente ou chapa em fogo médio e unte com uma camada bem fina da manteiga reservada. A manteiga deve chiar levemente, sem soltar fumaça.",
+          "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/paso-05.webp",
+          "image_alt": "Panquecas fofinhas com morango e mirtilo: Aquecer a frigideira"
+        },
+        {
+          "title": "Cozinhar o primeiro lado",
+          "content": "Coloque cerca de 60 ml de massa por panqueca. Distribua morangos e mirtilos sobre cada uma, reservando aproximadamente um terço das frutas para servir. Cozinhe por cerca de 2 minutos, até surgirem bolhas e as bordas perderem o brilho úmido.",
+          "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/paso-06.webp",
+          "image_alt": "Panquecas fofinhas com morango e mirtilo: Cozinhar o primeiro lado"
+        },
+        {
+          "title": "Virar uma única vez",
+          "content": "Vire cada panqueca uma vez e cozinhe por mais 1½–2 minutos, até o segundo lado dourar e uma panqueca de teste não mostrar massa crua no centro.",
+          "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/paso-07.webp",
+          "image_alt": "Panquecas fofinhas com morango e mirtilo: Virar uma única vez"
+        },
+        {
+          "title": "Servir",
+          "content": "Repita com a massa restante, untando apenas se necessário. Sirva 2 panquecas por pessoa com as frutas reservadas. Mantenha coberturas opcionais separadas para preservar a rastreabilidade nutricional.",
+          "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/paso-08.webp",
+          "image_alt": "Panquecas fofinhas com morango e mirtilo: Servir"
+        }
+      ],
+      "image_url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/receta-de-pancakes-con-fresas-y-arandanos/portada.webp",
+          "alt": "Panquecas fofinhas com morango e mirtilo"
+        }
+      ],
+      "nutrition": {
+        "calories": 240,
+        "protein_g": 7,
+        "carbs_g": 34,
+        "fat_g": 8,
+        "saturated_fat_g": 4,
+        "fiber_g": 2,
+        "sugar_g": 9,
+        "sodium_mg": 380,
+        "serving_size": "2 panquecas (1/6 da receita)",
+        "estimated": true,
+        "source": "USDA FoodData Central",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Estimativa por ingrediente com valores do USDA FoodData Central; receita completa dividida em 6 porções.",
+        "note": "Valores aproximados para 2 panquecas. Incluem todas as frutas e 35 g de manteiga; não incluem xaropes, creme ou outras coberturas.",
+        "inputs": [
+          {
+            "ndb": "20081",
+            "description": "Flour, wheat, all-purpose, enriched, bleached",
+            "grams": 180,
+            "per100": {
+              "calories": 364,
+              "protein_g": 10.33,
+              "carbs_g": 76.31,
+              "fat_g": 0.98,
+              "saturated_fat_g": 0.155,
+              "fiber_g": 2.7,
+              "sugar_g": 0.27,
+              "sodium_mg": 2
+            }
+          },
+          {
+            "description": "Sugars, granulated",
+            "grams": 24,
+            "per100": {
+              "calories": 387,
+              "protein_g": 0,
+              "carbs_g": 99.98,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sugar_g": 99.8,
+              "sodium_mg": 1
+            }
+          },
+          {
+            "description": "Baking powder, double-acting",
+            "grams": 8,
+            "per100": {
+              "calories": 53,
+              "protein_g": 0,
+              "carbs_g": 27.7,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0.2,
+              "sugar_g": 0,
+              "sodium_mg": 10600
+            }
+          },
+          {
+            "description": "Salt, table",
+            "grams": 3,
+            "per100": {
+              "calories": 0,
+              "protein_g": 0,
+              "carbs_g": 0,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sugar_g": 0,
+              "sodium_mg": 38758
+            }
+          },
+          {
+            "ndb": "1123",
+            "description": "Eggs, Grade A, Large, egg whole",
+            "grams": 100,
+            "per100": {
+              "calories": 143,
+              "protein_g": 12.56,
+              "carbs_g": 0.72,
+              "fat_g": 9.51,
+              "saturated_fat_g": 3.126,
+              "fiber_g": 0,
+              "sugar_g": 0.37,
+              "sodium_mg": 142
+            }
+          },
+          {
+            "ndb": "1077",
+            "description": "Milk, whole, 3.25% milkfat, with added vitamin D",
+            "grams": 244,
+            "per100": {
+              "calories": 61,
+              "protein_g": 3.15,
+              "carbs_g": 4.8,
+              "fat_g": 3.25,
+              "saturated_fat_g": 1.865,
+              "fiber_g": 0,
+              "sugar_g": 5.05,
+              "sodium_mg": 43
+            }
+          },
+          {
+            "ndb": "1145",
+            "description": "Butter, stick, unsalted",
+            "grams": 35,
+            "per100": {
+              "calories": 717,
+              "protein_g": 0.85,
+              "carbs_g": 0.06,
+              "fat_g": 81.11,
+              "saturated_fat_g": 51.368,
+              "fiber_g": 0,
+              "sugar_g": 0.06,
+              "sodium_mg": 11
+            }
+          },
+          {
+            "description": "Vanilla extract",
+            "grams": 5,
+            "per100": {
+              "calories": 288,
+              "protein_g": 0.06,
+              "carbs_g": 12.65,
+              "fat_g": 0.06,
+              "saturated_fat_g": 0.01,
+              "fiber_g": 0,
+              "sugar_g": 12.65,
+              "sodium_mg": 9
+            }
+          },
+          {
+            "description": "Strawberries, raw",
+            "grams": 140,
+            "per100": {
+              "calories": 32,
+              "protein_g": 0.67,
+              "carbs_g": 7.68,
+              "fat_g": 0.3,
+              "saturated_fat_g": 0.015,
+              "fiber_g": 2,
+              "sugar_g": 4.89,
+              "sodium_mg": 1
+            }
+          },
+          {
+            "description": "Blueberries, raw",
+            "grams": 100,
+            "per100": {
+              "calories": 57,
+              "protein_g": 0.74,
+              "carbs_g": 14.49,
+              "fat_g": 0.33,
+              "saturated_fat_g": 0.028,
+              "fiber_g": 2.4,
+              "sugar_g": 9.96,
+              "sodium_mg": 1
+            }
+          }
+        ]
+      },
+      "notes": "<h3>Textura</h3><ul><li>A massa não precisa ficar totalmente lisa; misturar demais desenvolve glúten e deixa as panquecas mais firmes.</li><li>O descanso curto permite que a farinha absorva líquido.</li></ul><h3>Segurança</h3><ul><li>Não prove a massa crua. A FDA orienta que farinha e ovos sejam cozidos antes do consumo.</li><li>Lave mãos, tigelas, utensílios e superfícies após contato com farinha ou massa crua.</li></ul><h3>Conservação</h3><p>Resfrie as panquecas cozidas sem demora, guarde-as tampadas na geladeira e consuma preferencialmente em até 3 dias. Reaqueça bem antes de servir.</p>",
+      "keywords": [
+        "panquecas com morango e mirtilo",
+        "panquecas de frutas vermelhas",
+        "panquecas fofinhas",
+        "café da manhã com frutas"
+      ],
+      "seo": {
+        "title": "Panquecas com morango e mirtilo | Fofinhas e fáceis",
+        "description": "Panquecas fofinhas com morango e mirtilo: ingredientes pesados, descanso curto da massa e sinais claros para virar e cozinhar bem o centro.",
+        "faq": [
+          {
+            "q": "Por que descansar a massa?",
+            "a": "Um descanso curto permite que a farinha absorva líquido e a massa engrosse levemente. Dez minutos bastam para esta fórmula."
+          },
+          {
+            "q": "Posso usar frutas congeladas?",
+            "a": "Sim. Coloque-as ainda congeladas sobre cada panqueca na frigideira e aumente um pouco o tempo se o centro precisar."
+          },
+          {
+            "q": "Como manter as panquecas macias?",
+            "a": "Misture apenas até a farinha seca desaparecer e vire cada panqueca uma vez. Misturar ou cozinhar em excesso deixa o miolo mais firme."
+          }
+        ],
+        "image_variants": [
+          "/recetas/receta-de-pancakes-con-fresas-y-arandanos/portada-1x1.webp",
+          "/recetas/receta-de-pancakes-con-fresas-y-arandanos/portada-4x3.webp",
+          "/recetas/receta-de-pancakes-con-fresas-y-arandanos/portada-16x9.webp"
+        ]
+      },
+      "content_html": "",
+      "video_urls": [],
+      "published": false,
+      "editorial_status": "draft",
+      "ready_at": null,
+      "source_post_id": null,
+      "source_url": null
+    }
+  ],
+  "nutrition_calculation": {
+    "source": "USDA FoodData Central",
+    "source_url": "https://fdc.nal.usda.gov/",
+    "inputs": [
+      {
+        "ndb": "20081",
+        "description": "Flour, wheat, all-purpose, enriched, bleached",
+        "grams": 180,
+        "per100": {
+          "calories": 364,
+          "protein_g": 10.33,
+          "carbs_g": 76.31,
+          "fat_g": 0.98,
+          "saturated_fat_g": 0.155,
+          "fiber_g": 2.7,
+          "sugar_g": 0.27,
+          "sodium_mg": 2
+        }
+      },
+      {
+        "description": "Sugars, granulated",
+        "grams": 24,
+        "per100": {
+          "calories": 387,
+          "protein_g": 0,
+          "carbs_g": 99.98,
+          "fat_g": 0,
+          "saturated_fat_g": 0,
+          "fiber_g": 0,
+          "sugar_g": 99.8,
+          "sodium_mg": 1
+        }
+      },
+      {
+        "description": "Baking powder, double-acting",
+        "grams": 8,
+        "per100": {
+          "calories": 53,
+          "protein_g": 0,
+          "carbs_g": 27.7,
+          "fat_g": 0,
+          "saturated_fat_g": 0,
+          "fiber_g": 0.2,
+          "sugar_g": 0,
+          "sodium_mg": 10600
+        }
+      },
+      {
+        "description": "Salt, table",
+        "grams": 3,
+        "per100": {
+          "calories": 0,
+          "protein_g": 0,
+          "carbs_g": 0,
+          "fat_g": 0,
+          "saturated_fat_g": 0,
+          "fiber_g": 0,
+          "sugar_g": 0,
+          "sodium_mg": 38758
+        }
+      },
+      {
+        "ndb": "1123",
+        "description": "Eggs, Grade A, Large, egg whole",
+        "grams": 100,
+        "per100": {
+          "calories": 143,
+          "protein_g": 12.56,
+          "carbs_g": 0.72,
+          "fat_g": 9.51,
+          "saturated_fat_g": 3.126,
+          "fiber_g": 0,
+          "sugar_g": 0.37,
+          "sodium_mg": 142
+        }
+      },
+      {
+        "ndb": "1077",
+        "description": "Milk, whole, 3.25% milkfat, with added vitamin D",
+        "grams": 244,
+        "per100": {
+          "calories": 61,
+          "protein_g": 3.15,
+          "carbs_g": 4.8,
+          "fat_g": 3.25,
+          "saturated_fat_g": 1.865,
+          "fiber_g": 0,
+          "sugar_g": 5.05,
+          "sodium_mg": 43
+        }
+      },
+      {
+        "ndb": "1145",
+        "description": "Butter, stick, unsalted",
+        "grams": 35,
+        "per100": {
+          "calories": 717,
+          "protein_g": 0.85,
+          "carbs_g": 0.06,
+          "fat_g": 81.11,
+          "saturated_fat_g": 51.368,
+          "fiber_g": 0,
+          "sugar_g": 0.06,
+          "sodium_mg": 11
+        }
+      },
+      {
+        "description": "Vanilla extract",
+        "grams": 5,
+        "per100": {
+          "calories": 288,
+          "protein_g": 0.06,
+          "carbs_g": 12.65,
+          "fat_g": 0.06,
+          "saturated_fat_g": 0.01,
+          "fiber_g": 0,
+          "sugar_g": 12.65,
+          "sodium_mg": 9
+        }
+      },
+      {
+        "description": "Strawberries, raw",
+        "grams": 140,
+        "per100": {
+          "calories": 32,
+          "protein_g": 0.67,
+          "carbs_g": 7.68,
+          "fat_g": 0.3,
+          "saturated_fat_g": 0.015,
+          "fiber_g": 2,
+          "sugar_g": 4.89,
+          "sodium_mg": 1
+        }
+      },
+      {
+        "description": "Blueberries, raw",
+        "grams": 100,
+        "per100": {
+          "calories": 57,
+          "protein_g": 0.74,
+          "carbs_g": 14.49,
+          "fat_g": 0.33,
+          "saturated_fat_g": 0.028,
+          "fiber_g": 2.4,
+          "sugar_g": 9.96,
+          "sodium_mg": 1
+        }
+      }
+    ],
+    "portions": 6,
+    "unrounded_per_portion": {
+      "calories": 235.2183333333,
+      "protein_g": 6.8030833333,
+      "carbs_g": 33.64945,
+      "fat_g": 8.0575833333,
+      "saturated_fat_g": 4.33065,
+      "fiber_g": 1.6793333333,
+      "sugar_g": 9.0982499999,
+      "sodium_mg": 378.0333333333
+    },
+    "rounded_per_portion": {
+      "calories": 240,
+      "protein_g": 7,
+      "carbs_g": 34,
+      "fat_g": 8,
+      "saturated_fat_g": 4,
+      "fiber_g": 2,
+      "sugar_g": 9,
+      "sodium_mg": 380
+    },
+    "assumptions": [
+      "240 ml whole milk approximated as 244 g for nutrient calculation.",
+      "5 ml vanilla extract approximated as 5 g.",
+      "All 35 g unsalted butter, including the pan-greasing allowance, are included.",
+      "No optional toppings are included."
+    ]
+  },
+  "url_master_check": {
+    "checked_at": "2026-10-06",
+    "sources": [
+      "docs/URL-MASTER-URL-ROWS-20260924.md",
+      "docs/URL-MASTER.md",
+      "Supabase route collision check"
+    ],
+    "result": "Spanish historical URL is KEEP / REBUILD and is the only legacy content carried forward. The six localized routes are new candidates and do not claim historical status."
+  },
+  "verification": {
+    "recipe_cookability_review": "PASS_BY_DESK_REVIEW",
+    "human_chef_taste_test": false,
+    "independent_native_review": false,
+    "translation_consistency": "same formulation, quantities, timings, media plan, and numeric nutrition across all seven languages",
+    "publication_gate": "BLOCKED_PENDING_NEW_MEDIA_AND_FINAL_PREVIEW_QA"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "recipe": "receta-de-pancakes-con-fresas-y-arandanos",
+  "status": "NEW_MEDIA_REQUIRED",
+  "provenance_rule": "Do not reuse WordPress/legacy recipe images. All media for this reconstruction must be newly created or separately authorized.",
+  "visual_direction": "Natural editorial food photography, warm daylight, realistic home-kitchen surfaces, believable texture, no text, no logos, no watermarks, no branded packaging.",
+  "continuity": {
+    "recipe_facts": "12 medium American-style pancakes total; strawberries sliced; blueberries whole; no syrup, powdered sugar, whipped cream, bananas, chocolate, mint, or unrelated garnish.",
+    "pan": "Same neutral nonstick skillet/griddle visual language across cooking steps.",
+    "doneness": "Golden brown, never burnt; interiors fully cooked and fluffy.",
+    "fruit_distribution": "About two thirds used on pancakes during cooking, one third reserved for serving."
+  },
+  "files": [
+    {
+      "file": "portada.webp",
+      "aspect_ratio": "4:3",
+      "shot": "Finished stack of 3 golden pancakes with visible strawberry slices and blueberries, plus reserved fresh berries around the plate; no syrup or extra toppings."
+    },
+    {
+      "file": "portada-1x1.webp",
+      "aspect_ratio": "1:1",
+      "shot": "Square crop derived from the new hero image with full stack visible and safe margins."
+    },
+    {
+      "file": "portada-4x3.webp",
+      "aspect_ratio": "4:3",
+      "shot": "4:3 structured-data version derived from the new hero."
+    },
+    {
+      "file": "portada-16x9.webp",
+      "aspect_ratio": "16:9",
+      "shot": "Wide structured-data crop derived from the new hero, retaining pancakes and both fruits."
+    },
+    {
+      "file": "paso-01.webp",
+      "aspect_ratio": "4:3",
+      "shot": "Fresh strawberries being hulled and sliced beside rinsed blueberries; melted butter in a small bowl."
+    },
+    {
+      "file": "paso-02.webp",
+      "aspect_ratio": "4:3",
+      "shot": "Bowl with flour, sugar, baking powder and salt being whisked; clearly dry mixture."
+    },
+    {
+      "file": "paso-03.webp",
+      "aspect_ratio": "4:3",
+      "shot": "Second bowl with eggs, whole milk and vanilla being whisked; melted butter being incorporated."
+    },
+    {
+      "file": "paso-04.webp",
+      "aspect_ratio": "4:3",
+      "shot": "Wet and dry mixtures just combined with a spatula; thick batter with a few small lumps; no berries in the bowl."
+    },
+    {
+      "file": "paso-05.webp",
+      "aspect_ratio": "4:3",
+      "shot": "Nonstick skillet over medium heat with only a very thin sheen of butter, no smoke."
+    },
+    {
+      "file": "paso-06.webp",
+      "aspect_ratio": "4:3",
+      "shot": "Pancakes cooking first side; strawberry slices and whole blueberries placed on wet tops; bubbles visible and edges starting to set."
+    },
+    {
+      "file": "paso-07.webp",
+      "aspect_ratio": "4:3",
+      "shot": "Pancakes after a single flip, second side turning golden; spatula visible; no raw batter."
+    },
+    {
+      "file": "paso-08.webp",
+      "aspect_ratio": "4:3",
+      "shot": "Two finished pancakes plated with reserved fresh strawberries and blueberries only, matching the base recipe."
+    }
+  ],
+  "reject_if": [
+    "legacy/manualdecocina WordPress image is reused",
+    "syrup, powdered sugar, whipped cream, banana, chocolate, mint or other unlisted topping appears",
+    "pancakes look raw, burnt, plastic or implausibly perfect",
+    "fruit quantities are inconsistent between steps",
+    "text, logo, watermark or branded packaging appears",
+    "step image depicts a different stage than the documented method"
+  ],
+  "production_rule": "Complete and visually inspect all 12 stable assets before changing REVIEW_MEDIA_PENDING to READY."
+}
