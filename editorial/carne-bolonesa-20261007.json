@@ -1,0 +1,2824 @@
+{
+  "scope": "carne-bolonesa-a-la-italiana only; preview.manualdecocina.com",
+  "state": "ES_AND_6_TRANSLATIONS_CLOSED_IMAGES_FINAL_AWAITING_DB_PUBLISH",
+  "historical_path": "/carne-bolonesa-a-la-italiana",
+  "provenance": "Reconstrucción nueva (2026-10-07): pasos, cantidades y tiempos redactados desde cero (4 raciones, 15 ingredientes, 8 pasos, 20 min de preparación, 115 min de cocción, 135 min en total). De la fila legada de Supabase (WordPress) solo se conserva la identidad técnica: recipe_group_id y public_path; no se leyó ni reutiliza ningún texto ni traducción antigua. Los 8 pasos congelados se entregaron antes de generar las imágenes; aquí solo se concretan cantidades (300 g de res y 200 g de cerdo, 1 cucharadita de sal) y los tiempos de las dos tandas de leche (a los 30 y 60 minutos). Nutrición USDA SR Legacy: los FDC ids se contrastaron con una fuente espejo (getfoodfacts.com); los valores por 100 g de res 85/15, cebolla, zanahoria, apio, vino, tomate triturado, concentrado y parmesano se completaron a partir de los datos por ración publicados y de memoria, a contrastar con FDC; aceite de oliva, leche y pasta seca como en recetas anteriores. Proxy declarado: pasta seca enriquecida para el tagliatelle; se cuenta toda la grasa, el vino y la leche; la sal del agua de la pasta no se cuenta. Categoría canónica platos-principales. Imágenes: ZIP de ChatGPT, 12 WEBP en las dimensiones del contrato; coinciden 1:1 con los 8 pasos. Slugs: la ruta ES histórica se conserva; las imágenes viven en /recetas/carne-bolonesa/. No existe fila legada en content_pages para ninguna de las 7 rutas.",
+  "localization_plan": {
+    "category_slug": "platos-principales",
+    "category_labels": {
+      "es": "Platos principales",
+      "de": "Hauptgerichte",
+      "en": "Main dishes",
+      "fr": "Plats principaux",
+      "it": "Secondi piatti",
+      "ja": "主菜",
+      "pt": "Pratos principais"
+    },
+    "proposed_public_paths": {
+      "es": "/carne-bolonesa-a-la-italiana",
+      "de": "/de/bolognese-selber-machen",
+      "en": "/en/bolognese-sauce",
+      "fr": "/fr/sauce-bolognaise",
+      "it": "/it/ragu-alla-bolognese",
+      "ja": "/ja/ボロネーゼ",
+      "pt": "/pt/molho-a-bolonhesa"
+    },
+    "path_convention": "Sin barra final; public_path almacenado es la fuente de verdad. Ruta ES histórica conservada.",
+    "hreflang_note": "/pt usa hreflang pt-BR"
+  },
+  "records": [
+    {
+      "id": "43d1dd86-b791-4ccd-bc99-eeed5ec7dc96",
+      "recipe_group_id": "e1683a12-69a4-4087-ad41-f85a13cc985c",
+      "language": "es",
+      "slug": "carne-bolonesa-a-la-italiana",
+      "public_path": "/carne-bolonesa-a-la-italiana",
+      "source_url": null,
+      "title": "Carne boloñesa",
+      "excerpt": "Carne boloñesa casera con sofrito, carne de res y cerdo, vino blanco, tomate y un chorrito de leche, cocida despacio y servida con tagliatelle. Para 4 personas, lista en 2 horas y 15 minutos.",
+      "summary": "La carne boloñesa es un ragú que se hace con un sofrito de cebolla, zanahoria y apio, carne de res y cerdo molida, vino blanco, tomate y leche. Se cuece muy despacio, con la tapa entreabierta, hasta que la salsa queda espesa y brillante.\n\nCuece 1 hora y 30 minutos a fuego mínimo, y la pasta se hierve al final. Se mezcla con tagliatelle y se sirve con parmesano rallado. Rinde 4 porciones.",
+      "category": "Platos principales",
+      "category_slug": "platos-principales",
+      "difficulty": "Fácil",
+      "course": "Plato principal",
+      "cuisine": "Italiana",
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 115,
+      "total_time_minutes": 135,
+      "servings": 4,
+      "keywords": [
+        "carne boloñesa",
+        "salsa boloñesa",
+        "receta de carne boloñesa",
+        "cómo hacer boloñesa",
+        "ragú a la boloñesa",
+        "boloñesa casera",
+        "tagliatelle a la boloñesa"
+      ],
+      "ingredients": [
+        {
+          "name": "cebolla",
+          "amount": "1",
+          "unit": "",
+          "group": "Para el ragú"
+        },
+        {
+          "name": "zanahoria",
+          "amount": "1",
+          "unit": "",
+          "group": "Para el ragú"
+        },
+        {
+          "name": "rama de apio",
+          "amount": "1",
+          "unit": "",
+          "group": "Para el ragú"
+        },
+        {
+          "name": "aceite de oliva",
+          "amount": "30",
+          "unit": "ml",
+          "group": "Para el ragú"
+        },
+        {
+          "name": "carne de res molida",
+          "amount": "300",
+          "unit": "g",
+          "group": "Para el ragú"
+        },
+        {
+          "name": "carne de cerdo molida",
+          "amount": "200",
+          "unit": "g",
+          "group": "Para el ragú"
+        },
+        {
+          "name": "sal",
+          "amount": "1",
+          "unit": "cucharadita",
+          "group": "Para el ragú"
+        },
+        {
+          "name": "vino blanco seco",
+          "amount": "100",
+          "unit": "ml",
+          "group": "Para el ragú"
+        },
+        {
+          "name": "concentrado de tomate",
+          "amount": "2",
+          "unit": "cucharada",
+          "group": "Para el ragú"
+        },
+        {
+          "name": "tomate triturado",
+          "amount": "400",
+          "unit": "g",
+          "group": "Para el ragú"
+        },
+        {
+          "name": "leche entera",
+          "amount": "200",
+          "unit": "ml",
+          "group": "Para el ragú"
+        },
+        {
+          "name": "tagliatelle",
+          "amount": "320",
+          "unit": "g",
+          "group": "Para la pasta"
+        },
+        {
+          "name": "agua",
+          "amount": "3",
+          "unit": "l",
+          "group": "Para la pasta"
+        },
+        {
+          "name": "sal gruesa",
+          "amount": "30",
+          "unit": "g",
+          "group": "Para la pasta"
+        },
+        {
+          "name": "parmesano rallado",
+          "amount": "40",
+          "unit": "g",
+          "group": "Para servir"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepara el sofrito",
+          "content": "Pela y pica muy fino 1 cebolla, 1 zanahoria y 1 rama de apio.",
+          "image_url": "/recetas/carne-bolonesa/paso-01.webp",
+          "image_alt": "Carne boloñesa: Prepara el sofrito"
+        },
+        {
+          "title": "Sofríe las verduras",
+          "content": "Calienta 30 ml de aceite de oliva en una sartén ancha a fuego medio y sofríe las verduras 10 minutos, removiendo, hasta que estén blandas.",
+          "image_url": "/recetas/carne-bolonesa/paso-02.webp",
+          "image_alt": "Carne boloñesa: Sofríe las verduras"
+        },
+        {
+          "title": "Dora la carne",
+          "content": "Sube el fuego, añade 500 g de carne molida (300 g de res y 200 g de cerdo) y 1 cucharadita de sal, y dórala 8–10 minutos desmenuzándola con una cuchara.",
+          "image_url": "/recetas/carne-bolonesa/paso-03.webp",
+          "image_alt": "Carne boloñesa: Dora la carne"
+        },
+        {
+          "title": "Añade el vino",
+          "content": "Vierte 100 ml de vino blanco seco y deja evaporar 3 minutos.",
+          "image_url": "/recetas/carne-bolonesa/paso-04.webp",
+          "image_alt": "Carne boloñesa: Añade el vino"
+        },
+        {
+          "title": "Añade el tomate",
+          "content": "Agrega 2 cucharadas de concentrado de tomate y 400 g de tomate triturado, y mezcla bien.",
+          "image_url": "/recetas/carne-bolonesa/paso-05.webp",
+          "image_alt": "Carne boloñesa: Añade el tomate"
+        },
+        {
+          "title": "Cuece a fuego mínimo",
+          "content": "Pasa el ragú a una olla, baja el fuego al mínimo y cuece 1 hora y 30 minutos con la tapa entreabierta, removiendo de vez en cuando. Añade 200 ml de leche entera en dos tandas: la mitad a los 30 minutos y la otra mitad a los 60.",
+          "image_url": "/recetas/carne-bolonesa/paso-06.webp",
+          "image_alt": "Carne boloñesa: Cuece a fuego mínimo"
+        },
+        {
+          "title": "Cuece la pasta",
+          "content": "Cuando falten unos 15 minutos para terminar el ragú, hierve 3 litros de agua con 30 g de sal gruesa y cuece 320 g de tagliatelle según el paquete. Escúrrelos.",
+          "image_url": "/recetas/carne-bolonesa/paso-07.webp",
+          "image_alt": "Carne boloñesa: Cuece la pasta"
+        },
+        {
+          "title": "Mezcla y sirve",
+          "content": "Mezcla la pasta con el ragú, reparte en platos y sirve con 40 g de parmesano rallado.",
+          "image_url": "/recetas/carne-bolonesa/paso-08.webp",
+          "image_alt": "Carne boloñesa: Mezcla y sirve"
+        }
+      ],
+      "image_url": "/recetas/carne-bolonesa/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/carne-bolonesa/portada.webp",
+          "alt": "Carne boloñesa"
+        }
+      ],
+      "notes": "La leche suaviza la acidez del tomate y deja la carne más tierna. Cuanto más despacio cuece, mejor queda: no dejes que hierva fuerte. Si se seca, añade un chorrito de agua caliente. El ragú se conserva en la nevera hasta 4 días y se congela hasta 3 meses; mejora al día siguiente. Con tagliatelle o con pasta fresca al huevo queda mejor que con espaguetis.",
+      "nutrition": {
+        "calories": 810,
+        "protein_g": 40.0,
+        "carbs_g": 79,
+        "fat_g": 34.8,
+        "sodium_mg": 897,
+        "serving_size": "1 porción (1/4 de la receta, con pasta)",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Suma de nutrientes por 100 g multiplicados por los pesos de los ingredientes y divididos entre 4 porciones. Se usan 300 g de res molida, 200 g de cerdo molida, 150 g de cebolla, 100 g de zanahoria, 50 g de apio, 27,5 g de aceite de oliva, 99 g de vino blanco, 32 g de concentrado de tomate, 400 g de tomate triturado, 206 g de leche entera, 320 g de pasta seca, 40 g de parmesano y 4 g de sal del ragú. La sal del agua de la pasta no se cuenta.",
+        "note": "Estimación por porción. El tagliatelle se calcula con pasta seca enriquecida como valor de referencia. Se cuentan toda la grasa, el vino y la leche, aunque parte del alcohol y de la grasa se pierde al cocinar, por lo que el valor es aproximado.",
+        "inputs": [
+          {
+            "fdc_id": "171796",
+            "description": "Beef, ground, 85% lean meat / 15% fat, raw (300 g)",
+            "grams": 300,
+            "per100": {
+              "calories": 215,
+              "protein_g": 18.59,
+              "carbs_g": 0,
+              "fat_g": 15,
+              "saturated_fat_g": 5.9,
+              "fiber_g": 0,
+              "sodium_mg": 66
+            }
+          },
+          {
+            "fdc_id": "167902",
+            "description": "Pork, fresh, ground, raw (200 g)",
+            "grams": 200,
+            "per100": {
+              "calories": 263,
+              "protein_g": 16.88,
+              "carbs_g": 0,
+              "fat_g": 21.19,
+              "saturated_fat_g": 7.87,
+              "fiber_g": 0,
+              "sodium_mg": 56
+            }
+          },
+          {
+            "fdc_id": "170000",
+            "description": "Onions, raw (1 cebolla ≈ 150 g)",
+            "grams": 150,
+            "per100": {
+              "calories": 40,
+              "protein_g": 1.1,
+              "carbs_g": 9.34,
+              "fat_g": 0.1,
+              "saturated_fat_g": 0.042,
+              "fiber_g": 1.7,
+              "sodium_mg": 4
+            }
+          },
+          {
+            "fdc_id": "170393",
+            "description": "Carrots, raw (1 zanahoria ≈ 100 g)",
+            "grams": 100,
+            "per100": {
+              "calories": 41,
+              "protein_g": 0.93,
+              "carbs_g": 9.58,
+              "fat_g": 0.24,
+              "saturated_fat_g": 0.037,
+              "fiber_g": 2.8,
+              "sodium_mg": 69
+            }
+          },
+          {
+            "fdc_id": "169988",
+            "description": "Celery, raw (1 rama ≈ 50 g)",
+            "grams": 50,
+            "per100": {
+              "calories": 14,
+              "protein_g": 0.69,
+              "carbs_g": 2.97,
+              "fat_g": 0.17,
+              "saturated_fat_g": 0.042,
+              "fiber_g": 1.6,
+              "sodium_mg": 80
+            }
+          },
+          {
+            "fdc_id": "171413",
+            "description": "Oil, olive, salad or cooking (30 ml ≈ 27,5 g)",
+            "grams": 27.5,
+            "per100": {
+              "calories": 884,
+              "protein_g": 0,
+              "carbs_g": 0,
+              "fat_g": 100,
+              "saturated_fat_g": 13.81,
+              "fiber_g": 0,
+              "sodium_mg": 2
+            }
+          },
+          {
+            "fdc_id": "174837",
+            "description": "Alcoholic beverage, wine, table, white (100 ml ≈ 99 g)",
+            "grams": 99,
+            "per100": {
+              "calories": 82,
+              "protein_g": 0.07,
+              "carbs_g": 2.6,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 5
+            }
+          },
+          {
+            "fdc_id": "170459",
+            "description": "Tomato products, canned, paste, without salt added (2 cucharadas ≈ 32 g)",
+            "grams": 32,
+            "per100": {
+              "calories": 82,
+              "protein_g": 4.32,
+              "carbs_g": 18.91,
+              "fat_g": 0.47,
+              "saturated_fat_g": 0.066,
+              "fiber_g": 4.1,
+              "sodium_mg": 59
+            }
+          },
+          {
+            "fdc_id": "170501",
+            "description": "Tomatoes, crushed, canned (400 g)",
+            "grams": 400,
+            "per100": {
+              "calories": 32,
+              "protein_g": 1.65,
+              "carbs_g": 7.3,
+              "fat_g": 0.28,
+              "saturated_fat_g": 0.04,
+              "fiber_g": 1.9,
+              "sodium_mg": 190
+            }
+          },
+          {
+            "fdc_id": "171265",
+            "description": "Milk, whole, 3.25% milkfat, with added vitamin D (200 ml ≈ 206 g)",
+            "grams": 206,
+            "per100": {
+              "calories": 61,
+              "protein_g": 3.15,
+              "carbs_g": 4.8,
+              "fat_g": 3.25,
+              "saturated_fat_g": 1.865,
+              "fiber_g": 0,
+              "sodium_mg": 43
+            }
+          },
+          {
+            "fdc_id": "169736",
+            "description": "Pasta, dry, enriched (proxy de 320 g de tagliatelle secos)",
+            "grams": 320,
+            "per100": {
+              "calories": 371,
+              "protein_g": 13.04,
+              "carbs_g": 74.67,
+              "fat_g": 1.51,
+              "saturated_fat_g": 0.32,
+              "fiber_g": 3.2,
+              "sodium_mg": 6
+            }
+          },
+          {
+            "fdc_id": "171247",
+            "description": "Cheese, parmesan, grated (40 g)",
+            "grams": 40,
+            "per100": {
+              "calories": 420,
+              "protein_g": 28.4,
+              "carbs_g": 13.9,
+              "fat_g": 27.8,
+              "saturated_fat_g": 16.0,
+              "fiber_g": 0,
+              "sodium_mg": 1804
+            }
+          },
+          {
+            "fdc_id": "173468",
+            "description": "Salt, table (1 cucharadita ≈ 4 g, solo la del ragú)",
+            "grams": 4,
+            "per100": {
+              "calories": 0,
+              "protein_g": 0,
+              "carbs_g": 0,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 38758
+            }
+          }
+        ]
+      },
+      "seo": {
+        "title": "Carne boloñesa casera con tagliatelle | Manual de Cocina",
+        "description": "Carne boloñesa casera, cocida despacio con sofrito, vino blanco, tomate y leche. Para 4 personas con tagliatelle, lista en 2 h 15 min.",
+        "image_variants": [
+          "/recetas/carne-bolonesa/portada-1x1.webp",
+          "/recetas/carne-bolonesa/portada-4x3.webp",
+          "/recetas/carne-bolonesa/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "¿Por qué se añade leche a la boloñesa?",
+            "a": "La leche suaviza la acidez del tomate y ablanda la carne, y deja una salsa más redonda y cremosa."
+          },
+          {
+            "q": "¿Cuánto tiempo hay que cocer la boloñesa?",
+            "a": "Al menos 1 hora y 30 minutos a fuego mínimo y con la tapa entreabierta. Más tiempo mejora el sabor."
+          },
+          {
+            "q": "¿Se puede congelar la boloñesa?",
+            "a": "Sí, hasta 3 meses en un recipiente hermético. Descongela en la nevera y recalienta a fuego bajo."
+          }
+        ]
+      }
+    },
+    {
+      "id": "f5711a16-1a57-5bc5-a86a-e15dd7547c19",
+      "recipe_group_id": "e1683a12-69a4-4087-ad41-f85a13cc985c",
+      "language": "de",
+      "slug": "bolognese-selber-machen",
+      "public_path": "/de/bolognese-selber-machen",
+      "source_url": null,
+      "title": "Bolognese selber machen",
+      "excerpt": "Hausgemachte Bolognese mit Gemüse-Soffritto, Rind- und Schweinehack, Weißwein, Tomaten und etwas Milch, langsam geschmort und mit Tagliatelle serviert. Für 4 Personen, fertig in 2 Stunden und 15 Minuten.",
+      "summary": "Die Bolognese ist ein Ragù aus einem Soffritto von Zwiebel, Karotte und Sellerie, Rind- und Schweinehack, Weißwein, Tomaten und Milch. Sie gart sehr langsam bei leicht geöffnetem Deckel, bis die Sauce dick und glänzend ist.\n\nSie gart 1 Stunde und 30 Minuten bei kleinster Hitze, die Pasta wird zum Schluss gekocht. Mit Tagliatelle vermischen und mit geriebenem Parmesan servieren. Ergibt 4 Portionen.",
+      "category": "Hauptgerichte",
+      "category_slug": "platos-principales",
+      "difficulty": "Einfach",
+      "course": "Hauptgericht",
+      "cuisine": "Italienisch",
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 115,
+      "total_time_minutes": 135,
+      "servings": 4,
+      "keywords": [
+        "Bolognese selber machen",
+        "Bolognese Rezept",
+        "Bolognese Sauce",
+        "Ragù alla Bolognese",
+        "Spaghetti Bolognese",
+        "Tagliatelle Bolognese",
+        "carne boloñesa"
+      ],
+      "ingredients": [
+        {
+          "name": "Zwiebel",
+          "amount": "1",
+          "unit": "",
+          "group": "Für das Ragù"
+        },
+        {
+          "name": "Karotte",
+          "amount": "1",
+          "unit": "",
+          "group": "Für das Ragù"
+        },
+        {
+          "name": "Stange Staudensellerie",
+          "amount": "1",
+          "unit": "",
+          "group": "Für das Ragù"
+        },
+        {
+          "name": "Olivenöl",
+          "amount": "30",
+          "unit": "ml",
+          "group": "Für das Ragù"
+        },
+        {
+          "name": "Rinderhackfleisch",
+          "amount": "300",
+          "unit": "g",
+          "group": "Für das Ragù"
+        },
+        {
+          "name": "Schweinehackfleisch",
+          "amount": "200",
+          "unit": "g",
+          "group": "Für das Ragù"
+        },
+        {
+          "name": "Salz",
+          "amount": "1",
+          "unit": "Teelöffel",
+          "group": "Für das Ragù"
+        },
+        {
+          "name": "trockener Weißwein",
+          "amount": "100",
+          "unit": "ml",
+          "group": "Für das Ragù"
+        },
+        {
+          "name": "Tomatenmark",
+          "amount": "2",
+          "unit": "Esslöffel",
+          "group": "Für das Ragù"
+        },
+        {
+          "name": "passierte Tomaten",
+          "amount": "400",
+          "unit": "g",
+          "group": "Für das Ragù"
+        },
+        {
+          "name": "Vollmilch",
+          "amount": "200",
+          "unit": "ml",
+          "group": "Für das Ragù"
+        },
+        {
+          "name": "Tagliatelle",
+          "amount": "320",
+          "unit": "g",
+          "group": "Für die Pasta"
+        },
+        {
+          "name": "Wasser",
+          "amount": "3",
+          "unit": "l",
+          "group": "Für die Pasta"
+        },
+        {
+          "name": "grobes Salz",
+          "amount": "30",
+          "unit": "g",
+          "group": "Für die Pasta"
+        },
+        {
+          "name": "geriebener Parmesan",
+          "amount": "40",
+          "unit": "g",
+          "group": "Zum Servieren"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Soffritto vorbereiten",
+          "content": "1 Zwiebel, 1 Karotte und 1 Stange Sellerie schälen und sehr fein hacken.",
+          "image_url": "/recetas/carne-bolonesa/paso-01.webp",
+          "image_alt": "Bolognese selber machen: Soffritto vorbereiten"
+        },
+        {
+          "title": "Gemüse anbraten",
+          "content": "30 ml Olivenöl in einer großen Pfanne bei mittlerer Hitze erhitzen und das Gemüse 10 Minuten unter Rühren anbraten, bis es weich ist.",
+          "image_url": "/recetas/carne-bolonesa/paso-02.webp",
+          "image_alt": "Bolognese selber machen: Gemüse anbraten"
+        },
+        {
+          "title": "Fleisch anbraten",
+          "content": "Die Hitze erhöhen, 500 g Hackfleisch (300 g Rind und 200 g Schwein) und 1 Teelöffel Salz zugeben und 8–10 Minuten anbraten, dabei mit einem Löffel zerteilen.",
+          "image_url": "/recetas/carne-bolonesa/paso-03.webp",
+          "image_alt": "Bolognese selber machen: Fleisch anbraten"
+        },
+        {
+          "title": "Wein angießen",
+          "content": "100 ml trockenen Weißwein angießen und 3 Minuten verdampfen lassen.",
+          "image_url": "/recetas/carne-bolonesa/paso-04.webp",
+          "image_alt": "Bolognese selber machen: Wein angießen"
+        },
+        {
+          "title": "Tomaten zugeben",
+          "content": "2 Esslöffel Tomatenmark und 400 g passierte Tomaten zugeben und gut verrühren.",
+          "image_url": "/recetas/carne-bolonesa/paso-05.webp",
+          "image_alt": "Bolognese selber machen: Tomaten zugeben"
+        },
+        {
+          "title": "Bei kleinster Hitze garen",
+          "content": "Das Ragù in einen Topf umfüllen, die Hitze auf die kleinste Stufe stellen und 1 Stunde und 30 Minuten bei leicht geöffnetem Deckel garen, ab und zu umrühren. 200 ml Vollmilch in zwei Portionen zugeben: die Hälfte nach 30 Minuten, die andere nach 60 Minuten.",
+          "image_url": "/recetas/carne-bolonesa/paso-06.webp",
+          "image_alt": "Bolognese selber machen: Bei kleinster Hitze garen"
+        },
+        {
+          "title": "Pasta kochen",
+          "content": "Etwa 15 Minuten vor Ende der Garzeit 3 Liter Wasser mit 30 g grobem Salz aufkochen und 320 g Tagliatelle nach Packungsangabe kochen. Abgießen.",
+          "image_url": "/recetas/carne-bolonesa/paso-07.webp",
+          "image_alt": "Bolognese selber machen: Pasta kochen"
+        },
+        {
+          "title": "Mischen und servieren",
+          "content": "Die Pasta mit dem Ragù vermischen, auf Teller verteilen und mit 40 g geriebenem Parmesan servieren.",
+          "image_url": "/recetas/carne-bolonesa/paso-08.webp",
+          "image_alt": "Bolognese selber machen: Mischen und servieren"
+        }
+      ],
+      "image_url": "/recetas/carne-bolonesa/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/carne-bolonesa/portada.webp",
+          "alt": "Bolognese selber machen"
+        }
+      ],
+      "notes": "Die Milch mildert die Säure der Tomaten und macht das Fleisch zarter. Je langsamer es gart, desto besser: nicht stark kochen lassen. Wird es zu trocken, einen Schuss heißes Wasser zugeben. Das Ragù hält sich im Kühlschrank bis zu 4 Tage und lässt sich bis zu 3 Monate einfrieren; am nächsten Tag schmeckt es noch besser. Mit Tagliatelle oder frischer Eiernudel gelingt es besser als mit Spaghetti.",
+      "nutrition": {
+        "calories": 810,
+        "protein_g": 40.0,
+        "carbs_g": 79,
+        "fat_g": 34.8,
+        "sodium_mg": 897,
+        "serving_size": "1 Portion (1/4 des Rezepts, mit Pasta)",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Nährwerte je 100 g, multipliziert mit dem Gewicht der Zutaten und durch 4 Portionen geteilt. Verwendet werden 300 g Rinderhack, 200 g Schweinehack, 150 g Zwiebel, 100 g Karotte, 50 g Sellerie, 27,5 g Olivenöl, 99 g Weißwein, 32 g Tomatenmark, 400 g passierte Tomaten, 206 g Vollmilch, 320 g trockene Pasta, 40 g Parmesan und 4 g Salz für das Ragù. Das Salz im Kochwasser der Pasta wird nicht gezählt.",
+        "note": "Schätzung pro Portion. Tagliatelle werden mit trockener angereicherter Pasta als Referenzwert berechnet. Das gesamte Fett, der Wein und die Milch werden gezählt, obwohl beim Kochen ein Teil des Alkohols und des Fetts verloren geht; der Wert ist daher ungefähr.",
+        "inputs": [
+          {
+            "fdc_id": "171796",
+            "description": "Beef, ground, 85% lean meat / 15% fat, raw (300 g)",
+            "grams": 300,
+            "per100": {
+              "calories": 215,
+              "protein_g": 18.59,
+              "carbs_g": 0,
+              "fat_g": 15,
+              "saturated_fat_g": 5.9,
+              "fiber_g": 0,
+              "sodium_mg": 66
+            }
+          },
+          {
+            "fdc_id": "167902",
+            "description": "Pork, fresh, ground, raw (200 g)",
+            "grams": 200,
+            "per100": {
+              "calories": 263,
+              "protein_g": 16.88,
+              "carbs_g": 0,
+              "fat_g": 21.19,
+              "saturated_fat_g": 7.87,
+              "fiber_g": 0,
+              "sodium_mg": 56
+            }
+          },
+          {
+            "fdc_id": "170000",
+            "description": "Onions, raw (1 cebolla ≈ 150 g)",
+            "grams": 150,
+            "per100": {
+              "calories": 40,
+              "protein_g": 1.1,
+              "carbs_g": 9.34,
+              "fat_g": 0.1,
+              "saturated_fat_g": 0.042,
+              "fiber_g": 1.7,
+              "sodium_mg": 4
+            }
+          },
+          {
+            "fdc_id": "170393",
+            "description": "Carrots, raw (1 zanahoria ≈ 100 g)",
+            "grams": 100,
+            "per100": {
+              "calories": 41,
+              "protein_g": 0.93,
+              "carbs_g": 9.58,
+              "fat_g": 0.24,
+              "saturated_fat_g": 0.037,
+              "fiber_g": 2.8,
+              "sodium_mg": 69
+            }
+          },
+          {
+            "fdc_id": "169988",
+            "description": "Celery, raw (1 rama ≈ 50 g)",
+            "grams": 50,
+            "per100": {
+              "calories": 14,
+              "protein_g": 0.69,
+              "carbs_g": 2.97,
+              "fat_g": 0.17,
+              "saturated_fat_g": 0.042,
+              "fiber_g": 1.6,
+              "sodium_mg": 80
+            }
+          },
+          {
+            "fdc_id": "171413",
+            "description": "Oil, olive, salad or cooking (30 ml ≈ 27,5 g)",
+            "grams": 27.5,
+            "per100": {
+              "calories": 884,
+              "protein_g": 0,
+              "carbs_g": 0,
+              "fat_g": 100,
+              "saturated_fat_g": 13.81,
+              "fiber_g": 0,
+              "sodium_mg": 2
+            }
+          },
+          {
+            "fdc_id": "174837",
+            "description": "Alcoholic beverage, wine, table, white (100 ml ≈ 99 g)",
+            "grams": 99,
+            "per100": {
+              "calories": 82,
+              "protein_g": 0.07,
+              "carbs_g": 2.6,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 5
+            }
+          },
+          {
+            "fdc_id": "170459",
+            "description": "Tomato products, canned, paste, without salt added (2 cucharadas ≈ 32 g)",
+            "grams": 32,
+            "per100": {
+              "calories": 82,
+              "protein_g": 4.32,
+              "carbs_g": 18.91,
+              "fat_g": 0.47,
+              "saturated_fat_g": 0.066,
+              "fiber_g": 4.1,
+              "sodium_mg": 59
+            }
+          },
+          {
+            "fdc_id": "170501",
+            "description": "Tomatoes, crushed, canned (400 g)",
+            "grams": 400,
+            "per100": {
+              "calories": 32,
+              "protein_g": 1.65,
+              "carbs_g": 7.3,
+              "fat_g": 0.28,
+              "saturated_fat_g": 0.04,
+              "fiber_g": 1.9,
+              "sodium_mg": 190
+            }
+          },
+          {
+            "fdc_id": "171265",
+            "description": "Milk, whole, 3.25% milkfat, with added vitamin D (200 ml ≈ 206 g)",
+            "grams": 206,
+            "per100": {
+              "calories": 61,
+              "protein_g": 3.15,
+              "carbs_g": 4.8,
+              "fat_g": 3.25,
+              "saturated_fat_g": 1.865,
+              "fiber_g": 0,
+              "sodium_mg": 43
+            }
+          },
+          {
+            "fdc_id": "169736",
+            "description": "Pasta, dry, enriched (proxy de 320 g de tagliatelle secos)",
+            "grams": 320,
+            "per100": {
+              "calories": 371,
+              "protein_g": 13.04,
+              "carbs_g": 74.67,
+              "fat_g": 1.51,
+              "saturated_fat_g": 0.32,
+              "fiber_g": 3.2,
+              "sodium_mg": 6
+            }
+          },
+          {
+            "fdc_id": "171247",
+            "description": "Cheese, parmesan, grated (40 g)",
+            "grams": 40,
+            "per100": {
+              "calories": 420,
+              "protein_g": 28.4,
+              "carbs_g": 13.9,
+              "fat_g": 27.8,
+              "saturated_fat_g": 16.0,
+              "fiber_g": 0,
+              "sodium_mg": 1804
+            }
+          },
+          {
+            "fdc_id": "173468",
+            "description": "Salt, table (1 cucharadita ≈ 4 g, solo la del ragú)",
+            "grams": 4,
+            "per100": {
+              "calories": 0,
+              "protein_g": 0,
+              "carbs_g": 0,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 38758
+            }
+          }
+        ]
+      },
+      "seo": {
+        "title": "Bolognese selber machen mit Tagliatelle | Manual de Cocina",
+        "description": "Bolognese selber machen: langsam geschmort mit Soffritto, Weißwein, Tomaten und Milch. Für 4 Personen mit Tagliatelle, fertig in 2 Std. 15 Min.",
+        "image_variants": [
+          "/recetas/carne-bolonesa/portada-1x1.webp",
+          "/recetas/carne-bolonesa/portada-4x3.webp",
+          "/recetas/carne-bolonesa/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Warum kommt Milch in die Bolognese?",
+            "a": "Die Milch mildert die Säure der Tomaten, macht das Fleisch zarter und die Sauce runder und cremiger."
+          },
+          {
+            "q": "Wie lange muss die Bolognese kochen?",
+            "a": "Mindestens 1 Stunde und 30 Minuten bei kleinster Hitze und leicht geöffnetem Deckel. Länger verbessert den Geschmack."
+          },
+          {
+            "q": "Kann man Bolognese einfrieren?",
+            "a": "Ja, bis zu 3 Monate in einem luftdichten Behälter. Im Kühlschrank auftauen und bei niedriger Hitze erwärmen."
+          }
+        ]
+      }
+    },
+    {
+      "id": "5adeb428-1963-56da-99e6-3f2bbbc4df02",
+      "recipe_group_id": "e1683a12-69a4-4087-ad41-f85a13cc985c",
+      "language": "en",
+      "slug": "bolognese-sauce",
+      "public_path": "/en/bolognese-sauce",
+      "source_url": null,
+      "title": "Bolognese Sauce",
+      "excerpt": "Homemade Bolognese sauce with a vegetable soffritto, beef and pork, white wine, tomato and a splash of milk, simmered slowly and served with tagliatelle. Serves 4, ready in 2 hours 15 minutes.",
+      "summary": "Bolognese is a ragù made with a soffritto of onion, carrot and celery, ground beef and pork, white wine, tomato and milk. It simmers very slowly with the lid slightly open until the sauce is thick and glossy.\n\nIt simmers 1 hour 30 minutes on the lowest heat, and the pasta is boiled at the end. Toss it with tagliatelle and serve with grated Parmesan. It serves 4.",
+      "category": "Main dishes",
+      "category_slug": "platos-principales",
+      "difficulty": "Easy",
+      "course": "Main dish",
+      "cuisine": "Italian",
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 115,
+      "total_time_minutes": 135,
+      "servings": 4,
+      "keywords": [
+        "bolognese sauce",
+        "bolognese recipe",
+        "homemade bolognese",
+        "ragù alla bolognese",
+        "tagliatelle bolognese",
+        "spaghetti bolognese",
+        "carne boloñesa"
+      ],
+      "ingredients": [
+        {
+          "name": "onion",
+          "amount": "1",
+          "unit": "",
+          "group": "For the ragù"
+        },
+        {
+          "name": "carrot",
+          "amount": "1",
+          "unit": "",
+          "group": "For the ragù"
+        },
+        {
+          "name": "celery stalk",
+          "amount": "1",
+          "unit": "",
+          "group": "For the ragù"
+        },
+        {
+          "name": "olive oil",
+          "amount": "30",
+          "unit": "ml",
+          "group": "For the ragù"
+        },
+        {
+          "name": "ground beef",
+          "amount": "300",
+          "unit": "g",
+          "group": "For the ragù"
+        },
+        {
+          "name": "ground pork",
+          "amount": "200",
+          "unit": "g",
+          "group": "For the ragù"
+        },
+        {
+          "name": "salt",
+          "amount": "1",
+          "unit": "teaspoon",
+          "group": "For the ragù"
+        },
+        {
+          "name": "dry white wine",
+          "amount": "100",
+          "unit": "ml",
+          "group": "For the ragù"
+        },
+        {
+          "name": "tomato paste",
+          "amount": "2",
+          "unit": "tablespoon",
+          "group": "For the ragù"
+        },
+        {
+          "name": "crushed tomatoes",
+          "amount": "400",
+          "unit": "g",
+          "group": "For the ragù"
+        },
+        {
+          "name": "whole milk",
+          "amount": "200",
+          "unit": "ml",
+          "group": "For the ragù"
+        },
+        {
+          "name": "tagliatelle",
+          "amount": "320",
+          "unit": "g",
+          "group": "For the pasta"
+        },
+        {
+          "name": "water",
+          "amount": "3",
+          "unit": "l",
+          "group": "For the pasta"
+        },
+        {
+          "name": "coarse salt",
+          "amount": "30",
+          "unit": "g",
+          "group": "For the pasta"
+        },
+        {
+          "name": "grated Parmesan",
+          "amount": "40",
+          "unit": "g",
+          "group": "To serve"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepare the soffritto",
+          "content": "Peel and finely chop 1 onion, 1 carrot and 1 celery stalk.",
+          "image_url": "/recetas/carne-bolonesa/paso-01.webp",
+          "image_alt": "Bolognese Sauce: Prepare the soffritto"
+        },
+        {
+          "title": "Sauté the vegetables",
+          "content": "Heat 30 ml olive oil in a wide skillet over medium heat and sauté the vegetables for 10 minutes, stirring, until soft.",
+          "image_url": "/recetas/carne-bolonesa/paso-02.webp",
+          "image_alt": "Bolognese Sauce: Sauté the vegetables"
+        },
+        {
+          "title": "Brown the meat",
+          "content": "Raise the heat, add 500 g ground meat (300 g beef and 200 g pork) and 1 teaspoon salt, and brown for 8–10 minutes, breaking it up with a spoon.",
+          "image_url": "/recetas/carne-bolonesa/paso-03.webp",
+          "image_alt": "Bolognese Sauce: Brown the meat"
+        },
+        {
+          "title": "Add the wine",
+          "content": "Pour in 100 ml dry white wine and let it evaporate for 3 minutes.",
+          "image_url": "/recetas/carne-bolonesa/paso-04.webp",
+          "image_alt": "Bolognese Sauce: Add the wine"
+        },
+        {
+          "title": "Add the tomato",
+          "content": "Add 2 tablespoons tomato paste and 400 g crushed tomatoes, and mix well.",
+          "image_url": "/recetas/carne-bolonesa/paso-05.webp",
+          "image_alt": "Bolognese Sauce: Add the tomato"
+        },
+        {
+          "title": "Simmer on the lowest heat",
+          "content": "Transfer the ragù to a pot, lower the heat to the minimum and simmer for 1 hour 30 minutes with the lid slightly open, stirring now and then. Add 200 ml whole milk in two batches: half at 30 minutes and half at 60.",
+          "image_url": "/recetas/carne-bolonesa/paso-06.webp",
+          "image_alt": "Bolognese Sauce: Simmer on the lowest heat"
+        },
+        {
+          "title": "Cook the pasta",
+          "content": "About 15 minutes before the ragù is done, boil 3 liters of water with 30 g coarse salt and cook 320 g tagliatelle according to the package. Drain.",
+          "image_url": "/recetas/carne-bolonesa/paso-07.webp",
+          "image_alt": "Bolognese Sauce: Cook the pasta"
+        },
+        {
+          "title": "Toss and serve",
+          "content": "Toss the pasta with the ragù, divide among plates and serve with 40 g grated Parmesan.",
+          "image_url": "/recetas/carne-bolonesa/paso-08.webp",
+          "image_alt": "Bolognese Sauce: Toss and serve"
+        }
+      ],
+      "image_url": "/recetas/carne-bolonesa/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/carne-bolonesa/portada.webp",
+          "alt": "Bolognese Sauce"
+        }
+      ],
+      "notes": "The milk softens the acidity of the tomato and makes the meat more tender. The slower it cooks, the better: do not let it boil hard. If it dries out, add a splash of hot water. The ragù keeps in the fridge for up to 4 days and freezes for up to 3 months; it improves the next day. It works better with tagliatelle or fresh egg pasta than with spaghetti.",
+      "nutrition": {
+        "calories": 810,
+        "protein_g": 40.0,
+        "carbs_g": 79,
+        "fat_g": 34.8,
+        "sodium_mg": 897,
+        "serving_size": "1 serving (1/4 of the recipe, with pasta)",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Nutrients per 100 g multiplied by the weights of the ingredients and divided by 4 servings. It uses 300 g ground beef, 200 g ground pork, 150 g onion, 100 g carrot, 50 g celery, 27.5 g olive oil, 99 g white wine, 32 g tomato paste, 400 g crushed tomatoes, 206 g whole milk, 320 g dry pasta, 40 g Parmesan and 4 g salt for the ragù. The salt in the pasta water is not counted.",
+        "note": "Estimate per serving. Tagliatelle are calculated with dry enriched pasta as a reference value. All the fat, the wine and the milk are counted, although some alcohol and fat is lost in cooking, so the value is approximate.",
+        "inputs": [
+          {
+            "fdc_id": "171796",
+            "description": "Beef, ground, 85% lean meat / 15% fat, raw (300 g)",
+            "grams": 300,
+            "per100": {
+              "calories": 215,
+              "protein_g": 18.59,
+              "carbs_g": 0,
+              "fat_g": 15,
+              "saturated_fat_g": 5.9,
+              "fiber_g": 0,
+              "sodium_mg": 66
+            }
+          },
+          {
+            "fdc_id": "167902",
+            "description": "Pork, fresh, ground, raw (200 g)",
+            "grams": 200,
+            "per100": {
+              "calories": 263,
+              "protein_g": 16.88,
+              "carbs_g": 0,
+              "fat_g": 21.19,
+              "saturated_fat_g": 7.87,
+              "fiber_g": 0,
+              "sodium_mg": 56
+            }
+          },
+          {
+            "fdc_id": "170000",
+            "description": "Onions, raw (1 cebolla ≈ 150 g)",
+            "grams": 150,
+            "per100": {
+              "calories": 40,
+              "protein_g": 1.1,
+              "carbs_g": 9.34,
+              "fat_g": 0.1,
+              "saturated_fat_g": 0.042,
+              "fiber_g": 1.7,
+              "sodium_mg": 4
+            }
+          },
+          {
+            "fdc_id": "170393",
+            "description": "Carrots, raw (1 zanahoria ≈ 100 g)",
+            "grams": 100,
+            "per100": {
+              "calories": 41,
+              "protein_g": 0.93,
+              "carbs_g": 9.58,
+              "fat_g": 0.24,
+              "saturated_fat_g": 0.037,
+              "fiber_g": 2.8,
+              "sodium_mg": 69
+            }
+          },
+          {
+            "fdc_id": "169988",
+            "description": "Celery, raw (1 rama ≈ 50 g)",
+            "grams": 50,
+            "per100": {
+              "calories": 14,
+              "protein_g": 0.69,
+              "carbs_g": 2.97,
+              "fat_g": 0.17,
+              "saturated_fat_g": 0.042,
+              "fiber_g": 1.6,
+              "sodium_mg": 80
+            }
+          },
+          {
+            "fdc_id": "171413",
+            "description": "Oil, olive, salad or cooking (30 ml ≈ 27,5 g)",
+            "grams": 27.5,
+            "per100": {
+              "calories": 884,
+              "protein_g": 0,
+              "carbs_g": 0,
+              "fat_g": 100,
+              "saturated_fat_g": 13.81,
+              "fiber_g": 0,
+              "sodium_mg": 2
+            }
+          },
+          {
+            "fdc_id": "174837",
+            "description": "Alcoholic beverage, wine, table, white (100 ml ≈ 99 g)",
+            "grams": 99,
+            "per100": {
+              "calories": 82,
+              "protein_g": 0.07,
+              "carbs_g": 2.6,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 5
+            }
+          },
+          {
+            "fdc_id": "170459",
+            "description": "Tomato products, canned, paste, without salt added (2 cucharadas ≈ 32 g)",
+            "grams": 32,
+            "per100": {
+              "calories": 82,
+              "protein_g": 4.32,
+              "carbs_g": 18.91,
+              "fat_g": 0.47,
+              "saturated_fat_g": 0.066,
+              "fiber_g": 4.1,
+              "sodium_mg": 59
+            }
+          },
+          {
+            "fdc_id": "170501",
+            "description": "Tomatoes, crushed, canned (400 g)",
+            "grams": 400,
+            "per100": {
+              "calories": 32,
+              "protein_g": 1.65,
+              "carbs_g": 7.3,
+              "fat_g": 0.28,
+              "saturated_fat_g": 0.04,
+              "fiber_g": 1.9,
+              "sodium_mg": 190
+            }
+          },
+          {
+            "fdc_id": "171265",
+            "description": "Milk, whole, 3.25% milkfat, with added vitamin D (200 ml ≈ 206 g)",
+            "grams": 206,
+            "per100": {
+              "calories": 61,
+              "protein_g": 3.15,
+              "carbs_g": 4.8,
+              "fat_g": 3.25,
+              "saturated_fat_g": 1.865,
+              "fiber_g": 0,
+              "sodium_mg": 43
+            }
+          },
+          {
+            "fdc_id": "169736",
+            "description": "Pasta, dry, enriched (proxy de 320 g de tagliatelle secos)",
+            "grams": 320,
+            "per100": {
+              "calories": 371,
+              "protein_g": 13.04,
+              "carbs_g": 74.67,
+              "fat_g": 1.51,
+              "saturated_fat_g": 0.32,
+              "fiber_g": 3.2,
+              "sodium_mg": 6
+            }
+          },
+          {
+            "fdc_id": "171247",
+            "description": "Cheese, parmesan, grated (40 g)",
+            "grams": 40,
+            "per100": {
+              "calories": 420,
+              "protein_g": 28.4,
+              "carbs_g": 13.9,
+              "fat_g": 27.8,
+              "saturated_fat_g": 16.0,
+              "fiber_g": 0,
+              "sodium_mg": 1804
+            }
+          },
+          {
+            "fdc_id": "173468",
+            "description": "Salt, table (1 cucharadita ≈ 4 g, solo la del ragú)",
+            "grams": 4,
+            "per100": {
+              "calories": 0,
+              "protein_g": 0,
+              "carbs_g": 0,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 38758
+            }
+          }
+        ]
+      },
+      "seo": {
+        "title": "Homemade Bolognese Sauce with Tagliatelle | Manual de Cocina",
+        "description": "Homemade Bolognese sauce, simmered slowly with soffritto, white wine, tomato and milk. Serves 4 with tagliatelle, ready in 2 h 15 min.",
+        "image_variants": [
+          "/recetas/carne-bolonesa/portada-1x1.webp",
+          "/recetas/carne-bolonesa/portada-4x3.webp",
+          "/recetas/carne-bolonesa/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Why add milk to Bolognese sauce?",
+            "a": "Milk softens the acidity of the tomato, tenderizes the meat and gives a rounder, creamier sauce."
+          },
+          {
+            "q": "How long should Bolognese simmer?",
+            "a": "At least 1 hour 30 minutes on the lowest heat with the lid slightly open. Longer improves the flavor."
+          },
+          {
+            "q": "Can I freeze Bolognese sauce?",
+            "a": "Yes, for up to 3 months in an airtight container. Thaw in the fridge and reheat over low heat."
+          }
+        ]
+      }
+    },
+    {
+      "id": "683c2c61-3ee8-5655-9d03-4b89e1c26b16",
+      "recipe_group_id": "e1683a12-69a4-4087-ad41-f85a13cc985c",
+      "language": "fr",
+      "slug": "sauce-bolognaise",
+      "public_path": "/fr/sauce-bolognaise",
+      "source_url": null,
+      "title": "Sauce bolognaise",
+      "excerpt": "Sauce bolognaise maison avec soffritto de légumes, bœuf et porc, vin blanc, tomate et un peu de lait, mijotée lentement et servie avec des tagliatelles. Pour 4 personnes, prête en 2 heures 15.",
+      "summary": "La sauce bolognaise est un ragù préparé avec un soffritto d'oignon, carotte et céleri, du bœuf et du porc hachés, du vin blanc, de la tomate et du lait. Elle mijote très lentement, à couvercle entrouvert, jusqu'à ce que la sauce soit épaisse et brillante.\n\nElle cuit 1 heure 30 à feu minimum, et les pâtes sont cuites à la fin. On les mélange avec des tagliatelles et on sert avec du parmesan râpé. Pour 4 portions.",
+      "category": "Plats principaux",
+      "category_slug": "platos-principales",
+      "difficulty": "Facile",
+      "course": "Plat principal",
+      "cuisine": "Italienne",
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 115,
+      "total_time_minutes": 135,
+      "servings": 4,
+      "keywords": [
+        "sauce bolognaise",
+        "recette sauce bolognaise",
+        "bolognaise maison",
+        "ragù à la bolognaise",
+        "tagliatelles bolognaise",
+        "spaghetti bolognaise",
+        "carne boloñesa"
+      ],
+      "ingredients": [
+        {
+          "name": "oignon",
+          "amount": "1",
+          "unit": "",
+          "group": "Pour le ragù"
+        },
+        {
+          "name": "carotte",
+          "amount": "1",
+          "unit": "",
+          "group": "Pour le ragù"
+        },
+        {
+          "name": "branche de céleri",
+          "amount": "1",
+          "unit": "",
+          "group": "Pour le ragù"
+        },
+        {
+          "name": "huile d'olive",
+          "amount": "30",
+          "unit": "ml",
+          "group": "Pour le ragù"
+        },
+        {
+          "name": "bœuf haché",
+          "amount": "300",
+          "unit": "g",
+          "group": "Pour le ragù"
+        },
+        {
+          "name": "porc haché",
+          "amount": "200",
+          "unit": "g",
+          "group": "Pour le ragù"
+        },
+        {
+          "name": "sel",
+          "amount": "1",
+          "unit": "cuillère à café",
+          "group": "Pour le ragù"
+        },
+        {
+          "name": "vin blanc sec",
+          "amount": "100",
+          "unit": "ml",
+          "group": "Pour le ragù"
+        },
+        {
+          "name": "concentré de tomate",
+          "amount": "2",
+          "unit": "cuillère à soupe",
+          "group": "Pour le ragù"
+        },
+        {
+          "name": "tomates concassées",
+          "amount": "400",
+          "unit": "g",
+          "group": "Pour le ragù"
+        },
+        {
+          "name": "lait entier",
+          "amount": "200",
+          "unit": "ml",
+          "group": "Pour le ragù"
+        },
+        {
+          "name": "tagliatelles",
+          "amount": "320",
+          "unit": "g",
+          "group": "Pour les pâtes"
+        },
+        {
+          "name": "eau",
+          "amount": "3",
+          "unit": "l",
+          "group": "Pour les pâtes"
+        },
+        {
+          "name": "gros sel",
+          "amount": "30",
+          "unit": "g",
+          "group": "Pour les pâtes"
+        },
+        {
+          "name": "parmesan râpé",
+          "amount": "40",
+          "unit": "g",
+          "group": "Pour servir"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Préparer le soffritto",
+          "content": "Éplucher et hacher très finement 1 oignon, 1 carotte et 1 branche de céleri.",
+          "image_url": "/recetas/carne-bolonesa/paso-01.webp",
+          "image_alt": "Sauce bolognaise: Préparer le soffritto"
+        },
+        {
+          "title": "Faire revenir les légumes",
+          "content": "Chauffer 30 ml d'huile d'olive dans une grande poêle à feu moyen et faire revenir les légumes 10 minutes en remuant, jusqu'à ce qu'ils soient tendres.",
+          "image_url": "/recetas/carne-bolonesa/paso-02.webp",
+          "image_alt": "Sauce bolognaise: Faire revenir les légumes"
+        },
+        {
+          "title": "Dorer la viande",
+          "content": "Augmenter le feu, ajouter 500 g de viande hachée (300 g de bœuf et 200 g de porc) et 1 cuillère à café de sel, et la dorer 8 à 10 minutes en l'émiettant avec une cuillère.",
+          "image_url": "/recetas/carne-bolonesa/paso-03.webp",
+          "image_alt": "Sauce bolognaise: Dorer la viande"
+        },
+        {
+          "title": "Ajouter le vin",
+          "content": "Verser 100 ml de vin blanc sec et laisser évaporer 3 minutes.",
+          "image_url": "/recetas/carne-bolonesa/paso-04.webp",
+          "image_alt": "Sauce bolognaise: Ajouter le vin"
+        },
+        {
+          "title": "Ajouter la tomate",
+          "content": "Ajouter 2 cuillères à soupe de concentré de tomate et 400 g de tomates concassées, et bien mélanger.",
+          "image_url": "/recetas/carne-bolonesa/paso-05.webp",
+          "image_alt": "Sauce bolognaise: Ajouter la tomate"
+        },
+        {
+          "title": "Mijoter à feu minimum",
+          "content": "Transvaser le ragù dans une marmite, baisser le feu au minimum et laisser mijoter 1 heure 30 à couvercle entrouvert, en remuant de temps en temps. Ajouter 200 ml de lait entier en deux fois : la moitié à 30 minutes et l'autre moitié à 60.",
+          "image_url": "/recetas/carne-bolonesa/paso-06.webp",
+          "image_alt": "Sauce bolognaise: Mijoter à feu minimum"
+        },
+        {
+          "title": "Cuire les pâtes",
+          "content": "Environ 15 minutes avant la fin du ragù, porter à ébullition 3 litres d'eau avec 30 g de gros sel et cuire 320 g de tagliatelles selon les indications du paquet. Égoutter.",
+          "image_url": "/recetas/carne-bolonesa/paso-07.webp",
+          "image_alt": "Sauce bolognaise: Cuire les pâtes"
+        },
+        {
+          "title": "Mélanger et servir",
+          "content": "Mélanger les pâtes avec le ragù, répartir dans les assiettes et servir avec 40 g de parmesan râpé.",
+          "image_url": "/recetas/carne-bolonesa/paso-08.webp",
+          "image_alt": "Sauce bolognaise: Mélanger et servir"
+        }
+      ],
+      "image_url": "/recetas/carne-bolonesa/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/carne-bolonesa/portada.webp",
+          "alt": "Sauce bolognaise"
+        }
+      ],
+      "notes": "Le lait adoucit l'acidité de la tomate et attendrit la viande. Plus elle mijote lentement, meilleure elle est : ne la laissez pas bouillir fort. Si elle sèche, ajouter un peu d'eau chaude. Le ragù se conserve au réfrigérateur jusqu'à 4 jours et se congèle jusqu'à 3 mois ; il est meilleur le lendemain. Avec des tagliatelles ou des pâtes fraîches aux œufs, c'est meilleur qu'avec des spaghettis.",
+      "nutrition": {
+        "calories": 810,
+        "protein_g": 40.0,
+        "carbs_g": 79,
+        "fat_g": 34.8,
+        "sodium_mg": 897,
+        "serving_size": "1 portion (1/4 de la recette, avec les pâtes)",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Somme des nutriments pour 100 g multipliés par le poids des ingrédients et divisés par 4 portions. On utilise 300 g de bœuf haché, 200 g de porc haché, 150 g d'oignon, 100 g de carotte, 50 g de céleri, 27,5 g d'huile d'olive, 99 g de vin blanc, 32 g de concentré de tomate, 400 g de tomates concassées, 206 g de lait entier, 320 g de pâtes sèches, 40 g de parmesan et 4 g de sel pour le ragù. Le sel de l'eau des pâtes n'est pas compté.",
+        "note": "Estimation par portion. Les tagliatelles sont calculées avec des pâtes sèches enrichies comme valeur de référence. Toute la graisse, le vin et le lait sont comptés, bien qu'une partie de l'alcool et de la graisse se perde à la cuisson ; la valeur est donc approximative.",
+        "inputs": [
+          {
+            "fdc_id": "171796",
+            "description": "Beef, ground, 85% lean meat / 15% fat, raw (300 g)",
+            "grams": 300,
+            "per100": {
+              "calories": 215,
+              "protein_g": 18.59,
+              "carbs_g": 0,
+              "fat_g": 15,
+              "saturated_fat_g": 5.9,
+              "fiber_g": 0,
+              "sodium_mg": 66
+            }
+          },
+          {
+            "fdc_id": "167902",
+            "description": "Pork, fresh, ground, raw (200 g)",
+            "grams": 200,
+            "per100": {
+              "calories": 263,
+              "protein_g": 16.88,
+              "carbs_g": 0,
+              "fat_g": 21.19,
+              "saturated_fat_g": 7.87,
+              "fiber_g": 0,
+              "sodium_mg": 56
+            }
+          },
+          {
+            "fdc_id": "170000",
+            "description": "Onions, raw (1 cebolla ≈ 150 g)",
+            "grams": 150,
+            "per100": {
+              "calories": 40,
+              "protein_g": 1.1,
+              "carbs_g": 9.34,
+              "fat_g": 0.1,
+              "saturated_fat_g": 0.042,
+              "fiber_g": 1.7,
+              "sodium_mg": 4
+            }
+          },
+          {
+            "fdc_id": "170393",
+            "description": "Carrots, raw (1 zanahoria ≈ 100 g)",
+            "grams": 100,
+            "per100": {
+              "calories": 41,
+              "protein_g": 0.93,
+              "carbs_g": 9.58,
+              "fat_g": 0.24,
+              "saturated_fat_g": 0.037,
+              "fiber_g": 2.8,
+              "sodium_mg": 69
+            }
+          },
+          {
+            "fdc_id": "169988",
+            "description": "Celery, raw (1 rama ≈ 50 g)",
+            "grams": 50,
+            "per100": {
+              "calories": 14,
+              "protein_g": 0.69,
+              "carbs_g": 2.97,
+              "fat_g": 0.17,
+              "saturated_fat_g": 0.042,
+              "fiber_g": 1.6,
+              "sodium_mg": 80
+            }
+          },
+          {
+            "fdc_id": "171413",
+            "description": "Oil, olive, salad or cooking (30 ml ≈ 27,5 g)",
+            "grams": 27.5,
+            "per100": {
+              "calories": 884,
+              "protein_g": 0,
+              "carbs_g": 0,
+              "fat_g": 100,
+              "saturated_fat_g": 13.81,
+              "fiber_g": 0,
+              "sodium_mg": 2
+            }
+          },
+          {
+            "fdc_id": "174837",
+            "description": "Alcoholic beverage, wine, table, white (100 ml ≈ 99 g)",
+            "grams": 99,
+            "per100": {
+              "calories": 82,
+              "protein_g": 0.07,
+              "carbs_g": 2.6,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 5
+            }
+          },
+          {
+            "fdc_id": "170459",
+            "description": "Tomato products, canned, paste, without salt added (2 cucharadas ≈ 32 g)",
+            "grams": 32,
+            "per100": {
+              "calories": 82,
+              "protein_g": 4.32,
+              "carbs_g": 18.91,
+              "fat_g": 0.47,
+              "saturated_fat_g": 0.066,
+              "fiber_g": 4.1,
+              "sodium_mg": 59
+            }
+          },
+          {
+            "fdc_id": "170501",
+            "description": "Tomatoes, crushed, canned (400 g)",
+            "grams": 400,
+            "per100": {
+              "calories": 32,
+              "protein_g": 1.65,
+              "carbs_g": 7.3,
+              "fat_g": 0.28,
+              "saturated_fat_g": 0.04,
+              "fiber_g": 1.9,
+              "sodium_mg": 190
+            }
+          },
+          {
+            "fdc_id": "171265",
+            "description": "Milk, whole, 3.25% milkfat, with added vitamin D (200 ml ≈ 206 g)",
+            "grams": 206,
+            "per100": {
+              "calories": 61,
+              "protein_g": 3.15,
+              "carbs_g": 4.8,
+              "fat_g": 3.25,
+              "saturated_fat_g": 1.865,
+              "fiber_g": 0,
+              "sodium_mg": 43
+            }
+          },
+          {
+            "fdc_id": "169736",
+            "description": "Pasta, dry, enriched (proxy de 320 g de tagliatelle secos)",
+            "grams": 320,
+            "per100": {
+              "calories": 371,
+              "protein_g": 13.04,
+              "carbs_g": 74.67,
+              "fat_g": 1.51,
+              "saturated_fat_g": 0.32,
+              "fiber_g": 3.2,
+              "sodium_mg": 6
+            }
+          },
+          {
+            "fdc_id": "171247",
+            "description": "Cheese, parmesan, grated (40 g)",
+            "grams": 40,
+            "per100": {
+              "calories": 420,
+              "protein_g": 28.4,
+              "carbs_g": 13.9,
+              "fat_g": 27.8,
+              "saturated_fat_g": 16.0,
+              "fiber_g": 0,
+              "sodium_mg": 1804
+            }
+          },
+          {
+            "fdc_id": "173468",
+            "description": "Salt, table (1 cucharadita ≈ 4 g, solo la del ragú)",
+            "grams": 4,
+            "per100": {
+              "calories": 0,
+              "protein_g": 0,
+              "carbs_g": 0,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 38758
+            }
+          }
+        ]
+      },
+      "seo": {
+        "title": "Sauce bolognaise maison avec tagliatelles | Manual de Cocina",
+        "description": "Sauce bolognaise maison, mijotée lentement avec soffritto, vin blanc, tomate et lait. Pour 4 personnes avec tagliatelles, prête en 2 h 15.",
+        "image_variants": [
+          "/recetas/carne-bolonesa/portada-1x1.webp",
+          "/recetas/carne-bolonesa/portada-4x3.webp",
+          "/recetas/carne-bolonesa/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Pourquoi ajouter du lait à la bolognaise ?",
+            "a": "Le lait adoucit l'acidité de la tomate, attendrit la viande et donne une sauce plus ronde et plus crémeuse."
+          },
+          {
+            "q": "Combien de temps faut-il cuire la bolognaise ?",
+            "a": "Au moins 1 heure 30 à feu minimum et à couvercle entrouvert. Plus longtemps améliore le goût."
+          },
+          {
+            "q": "Peut-on congeler la sauce bolognaise ?",
+            "a": "Oui, jusqu'à 3 mois dans un récipient hermétique. Décongeler au réfrigérateur et réchauffer à feu doux."
+          }
+        ]
+      }
+    },
+    {
+      "id": "58f69739-4259-53dc-8583-026eb81971f7",
+      "recipe_group_id": "e1683a12-69a4-4087-ad41-f85a13cc985c",
+      "language": "it",
+      "slug": "ragu-alla-bolognese",
+      "public_path": "/it/ragu-alla-bolognese",
+      "source_url": null,
+      "title": "Ragù alla bolognese",
+      "excerpt": "Ragù alla bolognese fatto in casa con soffritto di verdure, manzo e maiale, vino bianco, pomodoro e un po' di latte, cotto lentamente e servito con le tagliatelle. Per 4 persone, pronto in 2 ore e 15 minuti.",
+      "summary": "Il ragù alla bolognese si prepara con un soffritto di cipolla, carota e sedano, carne macinata di manzo e maiale, vino bianco, pomodoro e latte. Cuoce molto lentamente, con il coperchio socchiuso, finché il sugo diventa denso e lucido.\n\nCuoce 1 ora e 30 minuti a fuoco minimo, e la pasta si lessa alla fine. Si condisce le tagliatelle e si serve con parmigiano grattugiato. Per 4 porzioni.",
+      "category": "Secondi piatti",
+      "category_slug": "platos-principales",
+      "difficulty": "Facile",
+      "course": "Piatto principale",
+      "cuisine": "Italiana",
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 115,
+      "total_time_minutes": 135,
+      "servings": 4,
+      "keywords": [
+        "ragù alla bolognese",
+        "ricetta ragù bolognese",
+        "ragù fatto in casa",
+        "tagliatelle al ragù",
+        "sugo alla bolognese",
+        "ragù di carne",
+        "carne boloñesa"
+      ],
+      "ingredients": [
+        {
+          "name": "cipolla",
+          "amount": "1",
+          "unit": "",
+          "group": "Per il ragù"
+        },
+        {
+          "name": "carota",
+          "amount": "1",
+          "unit": "",
+          "group": "Per il ragù"
+        },
+        {
+          "name": "costa di sedano",
+          "amount": "1",
+          "unit": "",
+          "group": "Per il ragù"
+        },
+        {
+          "name": "olio d'oliva",
+          "amount": "30",
+          "unit": "ml",
+          "group": "Per il ragù"
+        },
+        {
+          "name": "carne macinata di manzo",
+          "amount": "300",
+          "unit": "g",
+          "group": "Per il ragù"
+        },
+        {
+          "name": "carne macinata di maiale",
+          "amount": "200",
+          "unit": "g",
+          "group": "Per il ragù"
+        },
+        {
+          "name": "sale",
+          "amount": "1",
+          "unit": "cucchiaino",
+          "group": "Per il ragù"
+        },
+        {
+          "name": "vino bianco secco",
+          "amount": "100",
+          "unit": "ml",
+          "group": "Per il ragù"
+        },
+        {
+          "name": "concentrato di pomodoro",
+          "amount": "2",
+          "unit": "cucchiaio",
+          "group": "Per il ragù"
+        },
+        {
+          "name": "pomodori pelati a pezzi",
+          "amount": "400",
+          "unit": "g",
+          "group": "Per il ragù"
+        },
+        {
+          "name": "latte intero",
+          "amount": "200",
+          "unit": "ml",
+          "group": "Per il ragù"
+        },
+        {
+          "name": "tagliatelle",
+          "amount": "320",
+          "unit": "g",
+          "group": "Per la pasta"
+        },
+        {
+          "name": "acqua",
+          "amount": "3",
+          "unit": "l",
+          "group": "Per la pasta"
+        },
+        {
+          "name": "sale grosso",
+          "amount": "30",
+          "unit": "g",
+          "group": "Per la pasta"
+        },
+        {
+          "name": "parmigiano grattugiato",
+          "amount": "40",
+          "unit": "g",
+          "group": "Per servire"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepara il soffritto",
+          "content": "Sbuccia e trita molto fine 1 cipolla, 1 carota e 1 costa di sedano.",
+          "image_url": "/recetas/carne-bolonesa/paso-01.webp",
+          "image_alt": "Ragù alla bolognese: Prepara il soffritto"
+        },
+        {
+          "title": "Soffriggi le verdure",
+          "content": "Scalda 30 ml di olio d'oliva in una padella larga a fuoco medio e soffriggi le verdure per 10 minuti, mescolando, finché sono morbide.",
+          "image_url": "/recetas/carne-bolonesa/paso-02.webp",
+          "image_alt": "Ragù alla bolognese: Soffriggi le verdure"
+        },
+        {
+          "title": "Rosola la carne",
+          "content": "Alza il fuoco, aggiungi 500 g di carne macinata (300 g di manzo e 200 g di maiale) e 1 cucchiaino di sale, e rosolala per 8–10 minuti sgranandola con un cucchiaio.",
+          "image_url": "/recetas/carne-bolonesa/paso-03.webp",
+          "image_alt": "Ragù alla bolognese: Rosola la carne"
+        },
+        {
+          "title": "Sfuma con il vino",
+          "content": "Versa 100 ml di vino bianco secco e lascialo evaporare per 3 minuti.",
+          "image_url": "/recetas/carne-bolonesa/paso-04.webp",
+          "image_alt": "Ragù alla bolognese: Sfuma con il vino"
+        },
+        {
+          "title": "Aggiungi il pomodoro",
+          "content": "Unisci 2 cucchiai di concentrato di pomodoro e 400 g di pomodori pelati a pezzi, e mescola bene.",
+          "image_url": "/recetas/carne-bolonesa/paso-05.webp",
+          "image_alt": "Ragù alla bolognese: Aggiungi il pomodoro"
+        },
+        {
+          "title": "Cuoci a fuoco minimo",
+          "content": "Trasferisci il ragù in una pentola, abbassa il fuoco al minimo e cuoci per 1 ora e 30 minuti con il coperchio socchiuso, mescolando ogni tanto. Aggiungi 200 ml di latte intero in due volte: metà dopo 30 minuti e metà dopo 60.",
+          "image_url": "/recetas/carne-bolonesa/paso-06.webp",
+          "image_alt": "Ragù alla bolognese: Cuoci a fuoco minimo"
+        },
+        {
+          "title": "Cuoci la pasta",
+          "content": "Circa 15 minuti prima della fine del ragù, porta a bollore 3 litri di acqua con 30 g di sale grosso e cuoci 320 g di tagliatelle secondo la confezione. Scolale.",
+          "image_url": "/recetas/carne-bolonesa/paso-07.webp",
+          "image_alt": "Ragù alla bolognese: Cuoci la pasta"
+        },
+        {
+          "title": "Condisci e servi",
+          "content": "Condisci la pasta con il ragù, distribuiscila nei piatti e servi con 40 g di parmigiano grattugiato.",
+          "image_url": "/recetas/carne-bolonesa/paso-08.webp",
+          "image_alt": "Ragù alla bolognese: Condisci e servi"
+        }
+      ],
+      "image_url": "/recetas/carne-bolonesa/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/carne-bolonesa/portada.webp",
+          "alt": "Ragù alla bolognese"
+        }
+      ],
+      "notes": "Il latte stempera l'acidità del pomodoro e rende la carne più tenera. Più lentamente cuoce, meglio è: non lasciarlo bollire forte. Se si asciuga, aggiungi un goccio di acqua calda. Il ragù si conserva in frigorifero fino a 4 giorni e si congela fino a 3 mesi; il giorno dopo è ancora più buono. Con le tagliatelle o la pasta fresca all'uovo riesce meglio che con gli spaghetti.",
+      "nutrition": {
+        "calories": 810,
+        "protein_g": 40.0,
+        "carbs_g": 79,
+        "fat_g": 34.8,
+        "sodium_mg": 897,
+        "serving_size": "1 porzione (1/4 della ricetta, con la pasta)",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Somma dei nutrienti per 100 g moltiplicati per i pesi degli ingredienti e divisi per 4 porzioni. Si usano 300 g di manzo macinato, 200 g di maiale macinato, 150 g di cipolla, 100 g di carota, 50 g di sedano, 27,5 g di olio d'oliva, 99 g di vino bianco, 32 g di concentrato di pomodoro, 400 g di pomodori pelati, 206 g di latte intero, 320 g di pasta secca, 40 g di parmigiano e 4 g di sale per il ragù. Il sale dell'acqua della pasta non è conteggiato.",
+        "note": "Stima per porzione. Le tagliatelle sono calcolate con pasta secca arricchita come valore di riferimento. Si conteggiano tutto il grasso, il vino e il latte, anche se parte dell'alcol e del grasso si perde in cottura; il valore è quindi approssimativo.",
+        "inputs": [
+          {
+            "fdc_id": "171796",
+            "description": "Beef, ground, 85% lean meat / 15% fat, raw (300 g)",
+            "grams": 300,
+            "per100": {
+              "calories": 215,
+              "protein_g": 18.59,
+              "carbs_g": 0,
+              "fat_g": 15,
+              "saturated_fat_g": 5.9,
+              "fiber_g": 0,
+              "sodium_mg": 66
+            }
+          },
+          {
+            "fdc_id": "167902",
+            "description": "Pork, fresh, ground, raw (200 g)",
+            "grams": 200,
+            "per100": {
+              "calories": 263,
+              "protein_g": 16.88,
+              "carbs_g": 0,
+              "fat_g": 21.19,
+              "saturated_fat_g": 7.87,
+              "fiber_g": 0,
+              "sodium_mg": 56
+            }
+          },
+          {
+            "fdc_id": "170000",
+            "description": "Onions, raw (1 cebolla ≈ 150 g)",
+            "grams": 150,
+            "per100": {
+              "calories": 40,
+              "protein_g": 1.1,
+              "carbs_g": 9.34,
+              "fat_g": 0.1,
+              "saturated_fat_g": 0.042,
+              "fiber_g": 1.7,
+              "sodium_mg": 4
+            }
+          },
+          {
+            "fdc_id": "170393",
+            "description": "Carrots, raw (1 zanahoria ≈ 100 g)",
+            "grams": 100,
+            "per100": {
+              "calories": 41,
+              "protein_g": 0.93,
+              "carbs_g": 9.58,
+              "fat_g": 0.24,
+              "saturated_fat_g": 0.037,
+              "fiber_g": 2.8,
+              "sodium_mg": 69
+            }
+          },
+          {
+            "fdc_id": "169988",
+            "description": "Celery, raw (1 rama ≈ 50 g)",
+            "grams": 50,
+            "per100": {
+              "calories": 14,
+              "protein_g": 0.69,
+              "carbs_g": 2.97,
+              "fat_g": 0.17,
+              "saturated_fat_g": 0.042,
+              "fiber_g": 1.6,
+              "sodium_mg": 80
+            }
+          },
+          {
+            "fdc_id": "171413",
+            "description": "Oil, olive, salad or cooking (30 ml ≈ 27,5 g)",
+            "grams": 27.5,
+            "per100": {
+              "calories": 884,
+              "protein_g": 0,
+              "carbs_g": 0,
+              "fat_g": 100,
+              "saturated_fat_g": 13.81,
+              "fiber_g": 0,
+              "sodium_mg": 2
+            }
+          },
+          {
+            "fdc_id": "174837",
+            "description": "Alcoholic beverage, wine, table, white (100 ml ≈ 99 g)",
+            "grams": 99,
+            "per100": {
+              "calories": 82,
+              "protein_g": 0.07,
+              "carbs_g": 2.6,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 5
+            }
+          },
+          {
+            "fdc_id": "170459",
+            "description": "Tomato products, canned, paste, without salt added (2 cucharadas ≈ 32 g)",
+            "grams": 32,
+            "per100": {
+              "calories": 82,
+              "protein_g": 4.32,
+              "carbs_g": 18.91,
+              "fat_g": 0.47,
+              "saturated_fat_g": 0.066,
+              "fiber_g": 4.1,
+              "sodium_mg": 59
+            }
+          },
+          {
+            "fdc_id": "170501",
+            "description": "Tomatoes, crushed, canned (400 g)",
+            "grams": 400,
+            "per100": {
+              "calories": 32,
+              "protein_g": 1.65,
+              "carbs_g": 7.3,
+              "fat_g": 0.28,
+              "saturated_fat_g": 0.04,
+              "fiber_g": 1.9,
+              "sodium_mg": 190
+            }
+          },
+          {
+            "fdc_id": "171265",
+            "description": "Milk, whole, 3.25% milkfat, with added vitamin D (200 ml ≈ 206 g)",
+            "grams": 206,
+            "per100": {
+              "calories": 61,
+              "protein_g": 3.15,
+              "carbs_g": 4.8,
+              "fat_g": 3.25,
+              "saturated_fat_g": 1.865,
+              "fiber_g": 0,
+              "sodium_mg": 43
+            }
+          },
+          {
+            "fdc_id": "169736",
+            "description": "Pasta, dry, enriched (proxy de 320 g de tagliatelle secos)",
+            "grams": 320,
+            "per100": {
+              "calories": 371,
+              "protein_g": 13.04,
+              "carbs_g": 74.67,
+              "fat_g": 1.51,
+              "saturated_fat_g": 0.32,
+              "fiber_g": 3.2,
+              "sodium_mg": 6
+            }
+          },
+          {
+            "fdc_id": "171247",
+            "description": "Cheese, parmesan, grated (40 g)",
+            "grams": 40,
+            "per100": {
+              "calories": 420,
+              "protein_g": 28.4,
+              "carbs_g": 13.9,
+              "fat_g": 27.8,
+              "saturated_fat_g": 16.0,
+              "fiber_g": 0,
+              "sodium_mg": 1804
+            }
+          },
+          {
+            "fdc_id": "173468",
+            "description": "Salt, table (1 cucharadita ≈ 4 g, solo la del ragú)",
+            "grams": 4,
+            "per100": {
+              "calories": 0,
+              "protein_g": 0,
+              "carbs_g": 0,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 38758
+            }
+          }
+        ]
+      },
+      "seo": {
+        "title": "Ragù alla bolognese fatto in casa | Manual de Cocina",
+        "description": "Ragù alla bolognese fatto in casa, cotto lentamente con soffritto, vino bianco, pomodoro e latte. Per 4 persone con tagliatelle, pronto in 2 h 15.",
+        "image_variants": [
+          "/recetas/carne-bolonesa/portada-1x1.webp",
+          "/recetas/carne-bolonesa/portada-4x3.webp",
+          "/recetas/carne-bolonesa/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Perché si aggiunge il latte al ragù?",
+            "a": "Il latte stempera l'acidità del pomodoro, rende la carne più tenera e il sugo più rotondo e cremoso."
+          },
+          {
+            "q": "Quanto deve cuocere il ragù?",
+            "a": "Almeno 1 ora e 30 minuti a fuoco minimo con il coperchio socchiuso. Più a lungo migliora il sapore."
+          },
+          {
+            "q": "Si può congelare il ragù?",
+            "a": "Sì, fino a 3 mesi in un contenitore ermetico. Scongela in frigorifero e riscalda a fuoco basso."
+          }
+        ]
+      }
+    },
+    {
+      "id": "ae28599b-2113-5c4c-91da-2eedcfe88e2b",
+      "recipe_group_id": "e1683a12-69a4-4087-ad41-f85a13cc985c",
+      "language": "ja",
+      "slug": "ボロネーゼ",
+      "public_path": "/ja/ボロネーゼ",
+      "source_url": null,
+      "title": "ボロネーゼ",
+      "excerpt": "香味野菜のソフリット、牛肉と豚肉、白ワイン、トマト、少しの牛乳で作る手作りボロネーゼ。じっくり煮込んでタリアテッレと一緒に。4人分、2時間15分で完成。",
+      "summary": "ボロネーゼは、玉ねぎ、にんじん、セロリのソフリット、牛と豚のひき肉、白ワイン、トマト、牛乳で作るラグーです。ふたを少しずらして、とろりとつやが出るまでごく弱火でじっくり煮込みます。\n\nごく弱火で1時間30分煮込み、パスタは最後にゆでます。タリアテッレとあえ、粉チーズをかけて食べます。4人分です。",
+      "category": "主菜",
+      "category_slug": "platos-principales",
+      "difficulty": "簡単",
+      "course": "主菜",
+      "cuisine": "イタリア料理",
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 115,
+      "total_time_minutes": 135,
+      "servings": 4,
+      "keywords": [
+        "ボロネーゼ",
+        "ボロネーゼ 作り方",
+        "ミートソース ボロネーゼ",
+        "ラグー ボロネーゼ",
+        "タリアテッレ ボロネーゼ",
+        "手作り ボロネーゼ",
+        "カルネ・ボロニェーサ"
+      ],
+      "ingredients": [
+        {
+          "name": "玉ねぎ",
+          "amount": "1",
+          "unit": "",
+          "group": "ラグー用"
+        },
+        {
+          "name": "にんじん",
+          "amount": "1",
+          "unit": "",
+          "group": "ラグー用"
+        },
+        {
+          "name": "セロリ",
+          "amount": "1",
+          "unit": "",
+          "group": "ラグー用"
+        },
+        {
+          "name": "オリーブオイル",
+          "amount": "30",
+          "unit": "ml",
+          "group": "ラグー用"
+        },
+        {
+          "name": "牛ひき肉",
+          "amount": "300",
+          "unit": "g",
+          "group": "ラグー用"
+        },
+        {
+          "name": "豚ひき肉",
+          "amount": "200",
+          "unit": "g",
+          "group": "ラグー用"
+        },
+        {
+          "name": "塩",
+          "amount": "1",
+          "unit": "小さじ",
+          "group": "ラグー用"
+        },
+        {
+          "name": "辛口白ワイン",
+          "amount": "100",
+          "unit": "ml",
+          "group": "ラグー用"
+        },
+        {
+          "name": "トマトペースト",
+          "amount": "2",
+          "unit": "大さじ",
+          "group": "ラグー用"
+        },
+        {
+          "name": "カットトマト缶",
+          "amount": "400",
+          "unit": "g",
+          "group": "ラグー用"
+        },
+        {
+          "name": "全乳",
+          "amount": "200",
+          "unit": "ml",
+          "group": "ラグー用"
+        },
+        {
+          "name": "タリアテッレ",
+          "amount": "320",
+          "unit": "g",
+          "group": "パスタ用"
+        },
+        {
+          "name": "水",
+          "amount": "3",
+          "unit": "l",
+          "group": "パスタ用"
+        },
+        {
+          "name": "粗塩",
+          "amount": "30",
+          "unit": "g",
+          "group": "パスタ用"
+        },
+        {
+          "name": "粉チーズ（パルメザン）",
+          "amount": "40",
+          "unit": "g",
+          "group": "盛り付け用"
+        }
+      ],
+      "steps": [
+        {
+          "title": "ソフリットを準備する",
+          "content": "玉ねぎ1個、にんじん1本、セロリ1本の皮をむき、ごく細かくみじん切りにします。",
+          "image_url": "/recetas/carne-bolonesa/paso-01.webp",
+          "image_alt": "ボロネーゼ: ソフリットを準備する"
+        },
+        {
+          "title": "野菜を炒める",
+          "content": "広めのフライパンにオリーブオイル30mlを入れて中火で熱し、野菜を混ぜながら10分、やわらかくなるまで炒めます。",
+          "image_url": "/recetas/carne-bolonesa/paso-02.webp",
+          "image_alt": "ボロネーゼ: 野菜を炒める"
+        },
+        {
+          "title": "肉を焼きつける",
+          "content": "火を強め、ひき肉500g（牛300g、豚200g）と塩小さじ1を加え、スプーンでほぐしながら8〜10分焼きつけます。",
+          "image_url": "/recetas/carne-bolonesa/paso-03.webp",
+          "image_alt": "ボロネーゼ: 肉を焼きつける"
+        },
+        {
+          "title": "ワインを加える",
+          "content": "辛口白ワイン100mlを注ぎ、3分ほど煮立ててアルコールをとばします。",
+          "image_url": "/recetas/carne-bolonesa/paso-04.webp",
+          "image_alt": "ボロネーゼ: ワインを加える"
+        },
+        {
+          "title": "トマトを加える",
+          "content": "トマトペースト大さじ2とカットトマト400gを加え、よく混ぜます。",
+          "image_url": "/recetas/carne-bolonesa/paso-05.webp",
+          "image_alt": "ボロネーゼ: トマトを加える"
+        },
+        {
+          "title": "ごく弱火で煮込む",
+          "content": "ラグーを鍋に移し、ごく弱火にして、ふたを少しずらして1時間30分、ときどき混ぜながら煮込みます。全乳200mlを2回に分けて加えます。30分後に半量、60分後に残りの半量です。",
+          "image_url": "/recetas/carne-bolonesa/paso-06.webp",
+          "image_alt": "ボロネーゼ: ごく弱火で煮込む"
+        },
+        {
+          "title": "パスタをゆでる",
+          "content": "ラグーが仕上がる約15分前に、水3リットルと粗塩30gを沸かし、タリアテッレ320gを袋の表示どおりにゆでて湯をきります。",
+          "image_url": "/recetas/carne-bolonesa/paso-07.webp",
+          "image_alt": "ボロネーゼ: パスタをゆでる"
+        },
+        {
+          "title": "あえて盛り付ける",
+          "content": "パスタとラグーをあえ、皿に盛って粉チーズ40gをかけます。",
+          "image_url": "/recetas/carne-bolonesa/paso-08.webp",
+          "image_alt": "ボロネーゼ: あえて盛り付ける"
+        }
+      ],
+      "image_url": "/recetas/carne-bolonesa/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/carne-bolonesa/portada.webp",
+          "alt": "ボロネーゼ"
+        }
+      ],
+      "notes": "牛乳はトマトの酸味をやわらげ、肉をやわらかくします。ゆっくり煮るほどおいしくなるので、強く沸騰させないでください。水分が減りすぎたら、お湯を少し足します。ラグーは冷蔵庫で4日、冷凍で3か月まで保存でき、翌日にはさらに味がなじみます。スパゲッティよりも、タリアテッレや卵入りの生パスタのほうがよく合います。",
+      "nutrition": {
+        "calories": 810,
+        "protein_g": 40.0,
+        "carbs_g": 79,
+        "fat_g": 34.8,
+        "sodium_mg": 897,
+        "serving_size": "1人分（レシピの1/4、パスタ込み）",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "100gあたりの栄養素に材料の重量を掛け、4人分で割って合計しています。牛ひき肉300g、豚ひき肉200g、玉ねぎ150g、にんじん100g、セロリ50g、オリーブオイル27.5g、白ワイン99g、トマトペースト32g、カットトマト400g、全乳206g、乾燥パスタ320g、粉チーズ40g、ラグーの塩4gを使用しています。パスタをゆでる湯の塩は計算に含めていません。",
+        "note": "1人分の目安です。タリアテッレは強化された乾燥パスタを参考値として計算しています。加熱でアルコールや脂の一部が失われますが、脂、ワイン、牛乳はすべて計算しているため、概算値です。",
+        "inputs": [
+          {
+            "fdc_id": "171796",
+            "description": "Beef, ground, 85% lean meat / 15% fat, raw (300 g)",
+            "grams": 300,
+            "per100": {
+              "calories": 215,
+              "protein_g": 18.59,
+              "carbs_g": 0,
+              "fat_g": 15,
+              "saturated_fat_g": 5.9,
+              "fiber_g": 0,
+              "sodium_mg": 66
+            }
+          },
+          {
+            "fdc_id": "167902",
+            "description": "Pork, fresh, ground, raw (200 g)",
+            "grams": 200,
+            "per100": {
+              "calories": 263,
+              "protein_g": 16.88,
+              "carbs_g": 0,
+              "fat_g": 21.19,
+              "saturated_fat_g": 7.87,
+              "fiber_g": 0,
+              "sodium_mg": 56
+            }
+          },
+          {
+            "fdc_id": "170000",
+            "description": "Onions, raw (1 cebolla ≈ 150 g)",
+            "grams": 150,
+            "per100": {
+              "calories": 40,
+              "protein_g": 1.1,
+              "carbs_g": 9.34,
+              "fat_g": 0.1,
+              "saturated_fat_g": 0.042,
+              "fiber_g": 1.7,
+              "sodium_mg": 4
+            }
+          },
+          {
+            "fdc_id": "170393",
+            "description": "Carrots, raw (1 zanahoria ≈ 100 g)",
+            "grams": 100,
+            "per100": {
+              "calories": 41,
+              "protein_g": 0.93,
+              "carbs_g": 9.58,
+              "fat_g": 0.24,
+              "saturated_fat_g": 0.037,
+              "fiber_g": 2.8,
+              "sodium_mg": 69
+            }
+          },
+          {
+            "fdc_id": "169988",
+            "description": "Celery, raw (1 rama ≈ 50 g)",
+            "grams": 50,
+            "per100": {
+              "calories": 14,
+              "protein_g": 0.69,
+              "carbs_g": 2.97,
+              "fat_g": 0.17,
+              "saturated_fat_g": 0.042,
+              "fiber_g": 1.6,
+              "sodium_mg": 80
+            }
+          },
+          {
+            "fdc_id": "171413",
+            "description": "Oil, olive, salad or cooking (30 ml ≈ 27,5 g)",
+            "grams": 27.5,
+            "per100": {
+              "calories": 884,
+              "protein_g": 0,
+              "carbs_g": 0,
+              "fat_g": 100,
+              "saturated_fat_g": 13.81,
+              "fiber_g": 0,
+              "sodium_mg": 2
+            }
+          },
+          {
+            "fdc_id": "174837",
+            "description": "Alcoholic beverage, wine, table, white (100 ml ≈ 99 g)",
+            "grams": 99,
+            "per100": {
+              "calories": 82,
+              "protein_g": 0.07,
+              "carbs_g": 2.6,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 5
+            }
+          },
+          {
+            "fdc_id": "170459",
+            "description": "Tomato products, canned, paste, without salt added (2 cucharadas ≈ 32 g)",
+            "grams": 32,
+            "per100": {
+              "calories": 82,
+              "protein_g": 4.32,
+              "carbs_g": 18.91,
+              "fat_g": 0.47,
+              "saturated_fat_g": 0.066,
+              "fiber_g": 4.1,
+              "sodium_mg": 59
+            }
+          },
+          {
+            "fdc_id": "170501",
+            "description": "Tomatoes, crushed, canned (400 g)",
+            "grams": 400,
+            "per100": {
+              "calories": 32,
+              "protein_g": 1.65,
+              "carbs_g": 7.3,
+              "fat_g": 0.28,
+              "saturated_fat_g": 0.04,
+              "fiber_g": 1.9,
+              "sodium_mg": 190
+            }
+          },
+          {
+            "fdc_id": "171265",
+            "description": "Milk, whole, 3.25% milkfat, with added vitamin D (200 ml ≈ 206 g)",
+            "grams": 206,
+            "per100": {
+              "calories": 61,
+              "protein_g": 3.15,
+              "carbs_g": 4.8,
+              "fat_g": 3.25,
+              "saturated_fat_g": 1.865,
+              "fiber_g": 0,
+              "sodium_mg": 43
+            }
+          },
+          {
+            "fdc_id": "169736",
+            "description": "Pasta, dry, enriched (proxy de 320 g de tagliatelle secos)",
+            "grams": 320,
+            "per100": {
+              "calories": 371,
+              "protein_g": 13.04,
+              "carbs_g": 74.67,
+              "fat_g": 1.51,
+              "saturated_fat_g": 0.32,
+              "fiber_g": 3.2,
+              "sodium_mg": 6
+            }
+          },
+          {
+            "fdc_id": "171247",
+            "description": "Cheese, parmesan, grated (40 g)",
+            "grams": 40,
+            "per100": {
+              "calories": 420,
+              "protein_g": 28.4,
+              "carbs_g": 13.9,
+              "fat_g": 27.8,
+              "saturated_fat_g": 16.0,
+              "fiber_g": 0,
+              "sodium_mg": 1804
+            }
+          },
+          {
+            "fdc_id": "173468",
+            "description": "Salt, table (1 cucharadita ≈ 4 g, solo la del ragú)",
+            "grams": 4,
+            "per100": {
+              "calories": 0,
+              "protein_g": 0,
+              "carbs_g": 0,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 38758
+            }
+          }
+        ]
+      },
+      "seo": {
+        "title": "ボロネーゼの作り方｜手作りラグー | Manual de Cocina",
+        "description": "ソフリット、白ワイン、トマト、牛乳でじっくり煮込む手作りボロネーゼ。タリアテッレと一緒に4人分、2時間15分で完成。",
+        "image_variants": [
+          "/recetas/carne-bolonesa/portada-1x1.webp",
+          "/recetas/carne-bolonesa/portada-4x3.webp",
+          "/recetas/carne-bolonesa/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "なぜボロネーゼに牛乳を入れるのですか？",
+            "a": "牛乳がトマトの酸味をやわらげ、肉をやわらかくして、まろやかでコクのあるソースになります。"
+          },
+          {
+            "q": "ボロネーゼはどれくらい煮込みますか？",
+            "a": "ごく弱火で、ふたを少しずらして1時間30分以上です。長く煮るほど風味が増します。"
+          },
+          {
+            "q": "ボロネーゼは冷凍できますか？",
+            "a": "できます。密閉容器で3か月まで保存でき、冷蔵庫で解凍して弱火で温め直します。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ca3b777c-2808-589e-a526-3a946e51b82f",
+      "recipe_group_id": "e1683a12-69a4-4087-ad41-f85a13cc985c",
+      "language": "pt",
+      "slug": "molho-a-bolonhesa",
+      "public_path": "/pt/molho-a-bolonhesa",
+      "source_url": null,
+      "title": "Molho à bolonhesa",
+      "excerpt": "Molho à bolonhesa caseiro com refogado de legumes, carne bovina e suína, vinho branco, tomate e um pouco de leite, cozido lentamente e servido com tagliatelle. Para 4 pessoas, pronto em 2 horas e 15 minutos.",
+      "summary": "O molho à bolonhesa é um ragu feito com refogado de cebola, cenoura e aipo, carne moída bovina e suína, vinho branco, tomate e leite. Cozinha bem devagar, com a tampa entreaberta, até o molho ficar espesso e brilhante.\n\nCozinha 1 hora e 30 minutos em fogo mínimo, e a massa é cozida no final. Mistura-se com tagliatelle e serve-se com parmesão ralado. Rende 4 porções.",
+      "category": "Pratos principais",
+      "category_slug": "platos-principales",
+      "difficulty": "Fácil",
+      "course": "Prato principal",
+      "cuisine": "Italiana",
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 115,
+      "total_time_minutes": 135,
+      "servings": 4,
+      "keywords": [
+        "molho à bolonhesa",
+        "receita de molho à bolonhesa",
+        "bolonhesa caseira",
+        "como fazer molho bolonhesa",
+        "ragu à bolonhesa",
+        "tagliatelle à bolonhesa",
+        "carne boloñesa"
+      ],
+      "ingredients": [
+        {
+          "name": "cebola",
+          "amount": "1",
+          "unit": "",
+          "group": "Para o ragu"
+        },
+        {
+          "name": "cenoura",
+          "amount": "1",
+          "unit": "",
+          "group": "Para o ragu"
+        },
+        {
+          "name": "talo de aipo",
+          "amount": "1",
+          "unit": "",
+          "group": "Para o ragu"
+        },
+        {
+          "name": "azeite",
+          "amount": "30",
+          "unit": "ml",
+          "group": "Para o ragu"
+        },
+        {
+          "name": "carne bovina moída",
+          "amount": "300",
+          "unit": "g",
+          "group": "Para o ragu"
+        },
+        {
+          "name": "carne suína moída",
+          "amount": "200",
+          "unit": "g",
+          "group": "Para o ragu"
+        },
+        {
+          "name": "sal",
+          "amount": "1",
+          "unit": "colher de chá",
+          "group": "Para o ragu"
+        },
+        {
+          "name": "vinho branco seco",
+          "amount": "100",
+          "unit": "ml",
+          "group": "Para o ragu"
+        },
+        {
+          "name": "extrato de tomate",
+          "amount": "2",
+          "unit": "colher de sopa",
+          "group": "Para o ragu"
+        },
+        {
+          "name": "tomate triturado",
+          "amount": "400",
+          "unit": "g",
+          "group": "Para o ragu"
+        },
+        {
+          "name": "leite integral",
+          "amount": "200",
+          "unit": "ml",
+          "group": "Para o ragu"
+        },
+        {
+          "name": "tagliatelle",
+          "amount": "320",
+          "unit": "g",
+          "group": "Para a massa"
+        },
+        {
+          "name": "água",
+          "amount": "3",
+          "unit": "l",
+          "group": "Para a massa"
+        },
+        {
+          "name": "sal grosso",
+          "amount": "30",
+          "unit": "g",
+          "group": "Para a massa"
+        },
+        {
+          "name": "parmesão ralado",
+          "amount": "40",
+          "unit": "g",
+          "group": "Para servir"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepare o refogado",
+          "content": "Descasque e pique bem fino 1 cebola, 1 cenoura e 1 talo de aipo.",
+          "image_url": "/recetas/carne-bolonesa/paso-01.webp",
+          "image_alt": "Molho à bolonhesa: Prepare o refogado"
+        },
+        {
+          "title": "Refogue os legumes",
+          "content": "Aqueça 30 ml de azeite em uma frigideira larga em fogo médio e refogue os legumes por 10 minutos, mexendo, até ficarem macios.",
+          "image_url": "/recetas/carne-bolonesa/paso-02.webp",
+          "image_alt": "Molho à bolonhesa: Refogue os legumes"
+        },
+        {
+          "title": "Doure a carne",
+          "content": "Aumente o fogo, junte 500 g de carne moída (300 g bovina e 200 g suína) e 1 colher de chá de sal, e doure por 8–10 minutos, desmanchando com uma colher.",
+          "image_url": "/recetas/carne-bolonesa/paso-03.webp",
+          "image_alt": "Molho à bolonhesa: Doure a carne"
+        },
+        {
+          "title": "Junte o vinho",
+          "content": "Despeje 100 ml de vinho branco seco e deixe evaporar por 3 minutos.",
+          "image_url": "/recetas/carne-bolonesa/paso-04.webp",
+          "image_alt": "Molho à bolonhesa: Junte o vinho"
+        },
+        {
+          "title": "Junte o tomate",
+          "content": "Adicione 2 colheres de sopa de extrato de tomate e 400 g de tomate triturado, e misture bem.",
+          "image_url": "/recetas/carne-bolonesa/paso-05.webp",
+          "image_alt": "Molho à bolonhesa: Junte o tomate"
+        },
+        {
+          "title": "Cozinhe em fogo mínimo",
+          "content": "Passe o ragu para uma panela, baixe o fogo ao mínimo e cozinhe por 1 hora e 30 minutos com a tampa entreaberta, mexendo de vez em quando. Junte 200 ml de leite integral em duas vezes: metade aos 30 minutos e metade aos 60.",
+          "image_url": "/recetas/carne-bolonesa/paso-06.webp",
+          "image_alt": "Molho à bolonhesa: Cozinhe em fogo mínimo"
+        },
+        {
+          "title": "Cozinhe a massa",
+          "content": "Cerca de 15 minutos antes de o ragu ficar pronto, ferva 3 litros de água com 30 g de sal grosso e cozinhe 320 g de tagliatelle conforme a embalagem. Escorra.",
+          "image_url": "/recetas/carne-bolonesa/paso-07.webp",
+          "image_alt": "Molho à bolonhesa: Cozinhe a massa"
+        },
+        {
+          "title": "Misture e sirva",
+          "content": "Misture a massa com o ragu, distribua nos pratos e sirva com 40 g de parmesão ralado.",
+          "image_url": "/recetas/carne-bolonesa/paso-08.webp",
+          "image_alt": "Molho à bolonhesa: Misture e sirva"
+        }
+      ],
+      "image_url": "/recetas/carne-bolonesa/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/carne-bolonesa/portada.webp",
+          "alt": "Molho à bolonhesa"
+        }
+      ],
+      "notes": "O leite suaviza a acidez do tomate e deixa a carne mais macia. Quanto mais devagar cozinha, melhor: não deixe ferver forte. Se secar, junte um pouco de água quente. O ragu dura na geladeira até 4 dias e pode ser congelado por até 3 meses; no dia seguinte fica ainda melhor. Com tagliatelle ou massa fresca de ovos fica melhor do que com espaguete.",
+      "nutrition": {
+        "calories": 810,
+        "protein_g": 40.0,
+        "carbs_g": 79,
+        "fat_g": 34.8,
+        "sodium_mg": 897,
+        "serving_size": "1 porção (1/4 da receita, com a massa)",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Soma dos nutrientes por 100 g multiplicados pelo peso dos ingredientes e divididos por 4 porções. Usam-se 300 g de carne bovina moída, 200 g de carne suína moída, 150 g de cebola, 100 g de cenoura, 50 g de aipo, 27,5 g de azeite, 99 g de vinho branco, 32 g de extrato de tomate, 400 g de tomate triturado, 206 g de leite integral, 320 g de massa seca, 40 g de parmesão e 4 g de sal do ragu. O sal da água da massa não é contado.",
+        "note": "Estimativa por porção. O tagliatelle é calculado com massa seca enriquecida como valor de referência. Contam-se toda a gordura, o vinho e o leite, embora parte do álcool e da gordura se perca no cozimento; por isso o valor é aproximado.",
+        "inputs": [
+          {
+            "fdc_id": "171796",
+            "description": "Beef, ground, 85% lean meat / 15% fat, raw (300 g)",
+            "grams": 300,
+            "per100": {
+              "calories": 215,
+              "protein_g": 18.59,
+              "carbs_g": 0,
+              "fat_g": 15,
+              "saturated_fat_g": 5.9,
+              "fiber_g": 0,
+              "sodium_mg": 66
+            }
+          },
+          {
+            "fdc_id": "167902",
+            "description": "Pork, fresh, ground, raw (200 g)",
+            "grams": 200,
+            "per100": {
+              "calories": 263,
+              "protein_g": 16.88,
+              "carbs_g": 0,
+              "fat_g": 21.19,
+              "saturated_fat_g": 7.87,
+              "fiber_g": 0,
+              "sodium_mg": 56
+            }
+          },
+          {
+            "fdc_id": "170000",
+            "description": "Onions, raw (1 cebolla ≈ 150 g)",
+            "grams": 150,
+            "per100": {
+              "calories": 40,
+              "protein_g": 1.1,
+              "carbs_g": 9.34,
+              "fat_g": 0.1,
+              "saturated_fat_g": 0.042,
+              "fiber_g": 1.7,
+              "sodium_mg": 4
+            }
+          },
+          {
+            "fdc_id": "170393",
+            "description": "Carrots, raw (1 zanahoria ≈ 100 g)",
+            "grams": 100,
+            "per100": {
+              "calories": 41,
+              "protein_g": 0.93,
+              "carbs_g": 9.58,
+              "fat_g": 0.24,
+              "saturated_fat_g": 0.037,
+              "fiber_g": 2.8,
+              "sodium_mg": 69
+            }
+          },
+          {
+            "fdc_id": "169988",
+            "description": "Celery, raw (1 rama ≈ 50 g)",
+            "grams": 50,
+            "per100": {
+              "calories": 14,
+              "protein_g": 0.69,
+              "carbs_g": 2.97,
+              "fat_g": 0.17,
+              "saturated_fat_g": 0.042,
+              "fiber_g": 1.6,
+              "sodium_mg": 80
+            }
+          },
+          {
+            "fdc_id": "171413",
+            "description": "Oil, olive, salad or cooking (30 ml ≈ 27,5 g)",
+            "grams": 27.5,
+            "per100": {
+              "calories": 884,
+              "protein_g": 0,
+              "carbs_g": 0,
+              "fat_g": 100,
+              "saturated_fat_g": 13.81,
+              "fiber_g": 0,
+              "sodium_mg": 2
+            }
+          },
+          {
+            "fdc_id": "174837",
+            "description": "Alcoholic beverage, wine, table, white (100 ml ≈ 99 g)",
+            "grams": 99,
+            "per100": {
+              "calories": 82,
+              "protein_g": 0.07,
+              "carbs_g": 2.6,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 5
+            }
+          },
+          {
+            "fdc_id": "170459",
+            "description": "Tomato products, canned, paste, without salt added (2 cucharadas ≈ 32 g)",
+            "grams": 32,
+            "per100": {
+              "calories": 82,
+              "protein_g": 4.32,
+              "carbs_g": 18.91,
+              "fat_g": 0.47,
+              "saturated_fat_g": 0.066,
+              "fiber_g": 4.1,
+              "sodium_mg": 59
+            }
+          },
+          {
+            "fdc_id": "170501",
+            "description": "Tomatoes, crushed, canned (400 g)",
+            "grams": 400,
+            "per100": {
+              "calories": 32,
+              "protein_g": 1.65,
+              "carbs_g": 7.3,
+              "fat_g": 0.28,
+              "saturated_fat_g": 0.04,
+              "fiber_g": 1.9,
+              "sodium_mg": 190
+            }
+          },
+          {
+            "fdc_id": "171265",
+            "description": "Milk, whole, 3.25% milkfat, with added vitamin D (200 ml ≈ 206 g)",
+            "grams": 206,
+            "per100": {
+              "calories": 61,
+              "protein_g": 3.15,
+              "carbs_g": 4.8,
+              "fat_g": 3.25,
+              "saturated_fat_g": 1.865,
+              "fiber_g": 0,
+              "sodium_mg": 43
+            }
+          },
+          {
+            "fdc_id": "169736",
+            "description": "Pasta, dry, enriched (proxy de 320 g de tagliatelle secos)",
+            "grams": 320,
+            "per100": {
+              "calories": 371,
+              "protein_g": 13.04,
+              "carbs_g": 74.67,
+              "fat_g": 1.51,
+              "saturated_fat_g": 0.32,
+              "fiber_g": 3.2,
+              "sodium_mg": 6
+            }
+          },
+          {
+            "fdc_id": "171247",
+            "description": "Cheese, parmesan, grated (40 g)",
+            "grams": 40,
+            "per100": {
+              "calories": 420,
+              "protein_g": 28.4,
+              "carbs_g": 13.9,
+              "fat_g": 27.8,
+              "saturated_fat_g": 16.0,
+              "fiber_g": 0,
+              "sodium_mg": 1804
+            }
+          },
+          {
+            "fdc_id": "173468",
+            "description": "Salt, table (1 cucharadita ≈ 4 g, solo la del ragú)",
+            "grams": 4,
+            "per100": {
+              "calories": 0,
+              "protein_g": 0,
+              "carbs_g": 0,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 38758
+            }
+          }
+        ]
+      },
+      "seo": {
+        "title": "Molho à bolonhesa caseiro com tagliatelle | Manual de Cocina",
+        "description": "Molho à bolonhesa caseiro, cozido devagar com refogado, vinho branco, tomate e leite. Para 4 pessoas com tagliatelle, pronto em 2 h 15.",
+        "image_variants": [
+          "/recetas/carne-bolonesa/portada-1x1.webp",
+          "/recetas/carne-bolonesa/portada-4x3.webp",
+          "/recetas/carne-bolonesa/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Por que colocar leite no molho à bolonhesa?",
+            "a": "O leite suaviza a acidez do tomate, deixa a carne mais macia e o molho mais redondo e cremoso."
+          },
+          {
+            "q": "Quanto tempo deve cozinhar o molho à bolonhesa?",
+            "a": "Pelo menos 1 hora e 30 minutos em fogo mínimo e com a tampa entreaberta. Mais tempo melhora o sabor."
+          },
+          {
+            "q": "Posso congelar o molho à bolonhesa?",
+            "a": "Sim, por até 3 meses em recipiente hermético. Descongele na geladeira e reaqueça em fogo baixo."
+          }
+        ]
+      }
+    }
+  ]
+}
