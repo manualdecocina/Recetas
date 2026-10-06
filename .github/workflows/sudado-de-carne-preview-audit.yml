@@ -1,0 +1,29 @@
+name: sudado-de-carne-preview-audit
+on:
+  pull_request:
+    paths:
+      - 'editorial/sudado-de-carne-20261006.json'
+      - 'scripts/audit-sudado-de-carne-preview.py'
+      - '.github/workflows/sudado-de-carne-preview-audit.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'editorial/sudado-de-carne-20261006.json'
+      - 'scripts/audit-sudado-de-carne-preview.py'
+      - '.github/workflows/sudado-de-carne-preview-audit.yml'
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    env:
+      STRICT_SITEMAP: ${{ github.event_name == 'push' }}
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/audit-sudado-de-carne-preview.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: sudado-de-carne-preview-audit
+          path: sudado-de-carne-preview-audit.json
