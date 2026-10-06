@@ -1,0 +1,2222 @@
+{
+  "scope": "kimchi-coreano only; preview.manualdecocina.com",
+  "state": "ES_AND_6_TRANSLATIONS_CLOSED_IMAGES_FINAL_AWAITING_DB_PUBLISH",
+  "historical_path": "/receta-de-kimchi-coreano",
+  "provenance": "Reconstrucción nueva (2026-10-06): pasos, cantidades y tiempos redactados desde cero (20 porciones de media taza, un frasco de 2 litros, 10 ingredientes, 8 pasos, 150 min de preparación incluida la salmuera de 1 h 30, sin cocción; la fermentación de 1 a 5 días no se cuenta). De la fila legada de Supabase (WordPress) solo se conserva la identidad técnica: recipe_group_id, public_path y source_url; no se leyó ni reutiliza ningún texto ni traducción antigua. Cantidades fijadas editorialmente: col china 1,5 kg, sal gruesa 60 g en 1 litro de agua, gochugaru 30 g, ajo 4 dientes (12 g), jengibre 10 g, azúcar 1 cucharada (13 g), salsa de pescado 45 ml (54 g), cebolleta 4 (60 g), zanahoria 150 g. Valores USDA SR Legacy y FDC ids de memoria, a contrastar con FDC; el gochugaru usa como referencia el pimentón rojo picante (proxy declarado); se estima que la col retiene 15 g de los 60 g de sal de la salmuera. Conservación en nevera hasta 3 semanas (estimación editorial). Nota de imagen: paso-08 muestra el frasco y un bol con una porción servida.",
+  "localization_plan": {
+    "category_slug": "guarniciones",
+    "category_labels": {
+      "es": "Guarniciones",
+      "de": "Beilagen",
+      "en": "Side dishes",
+      "fr": "Accompagnements",
+      "it": "Contorni",
+      "ja": "付け合わせ",
+      "pt": "Acompanhamentos"
+    },
+    "proposed_public_paths": {
+      "es": "/receta-de-kimchi-coreano",
+      "de": "/de/kimchi-selber-machen",
+      "en": "/en/napa-cabbage-kimchi",
+      "fr": "/fr/kimchi-coreen-maison",
+      "it": "/it/kimchi-coreano-fatto-in-casa",
+      "ja": "/ja/白菜キムチ",
+      "pt": "/pt/kimchi-coreano-caseiro"
+    },
+    "path_convention": "Sin barra final; public_path almacenado es la fuente de verdad. Ruta ES histórica conservada.",
+    "hreflang_note": "/pt usa hreflang pt-BR"
+  },
+  "records": [
+    {
+      "id": "c34745f1-fe56-4072-bf96-9533bfad2fb5",
+      "recipe_group_id": "ed3b5b91-e195-46cd-b9fb-9e9eda65e88d",
+      "language": "es",
+      "slug": "kimchi-coreano",
+      "public_path": "/receta-de-kimchi-coreano",
+      "source_url": "https://manualdecocina.com/receta-de-kimchi-coreano/",
+      "title": "Kimchi coreano casero",
+      "excerpt": "Kimchi casero de col china con gochugaru, ajo y jengibre, fermentado en un frasco de 2 litros. Rinde 20 porciones de media taza y se conserva hasta 3 semanas en la nevera.",
+      "summary": "El kimchi casero se hace con col china salada en salmuera, una pasta de gochugaru, ajo, jengibre, azúcar y salsa de pescado, y un poco de cebolleta y zanahoria. La col reposa 1 hora y 30 minutos en la salmuera y se enjuaga 3 veces.\n\nSe envasa en un frasco de 2 litros y fermenta a temperatura ambiente de 1 a 5 días, hasta que esté ácido a tu gusto. Después se guarda en la nevera hasta 3 semanas. Rinde unos 1,4 kg, 20 porciones de media taza.",
+      "category": "Guarniciones",
+      "category_slug": "guarniciones",
+      "difficulty": "Fácil",
+      "course": "Guarnición",
+      "cuisine": "Coreana",
+      "prep_time_minutes": 150,
+      "cook_time_minutes": 0,
+      "total_time_minutes": 150,
+      "servings": 20,
+      "keywords": [
+        "kimchi",
+        "kimchi casero",
+        "receta de kimchi",
+        "kimchi coreano",
+        "kimchi de col china",
+        "gochugaru",
+        "fermentados caseros"
+      ],
+      "ingredients": [
+        {
+          "name": "col china, en trozos de 4 cm",
+          "amount": "1500",
+          "unit": "g",
+          "group": "Para la col y la salmuera"
+        },
+        {
+          "name": "sal gruesa",
+          "amount": "60",
+          "unit": "g",
+          "group": "Para la col y la salmuera"
+        },
+        {
+          "name": "agua",
+          "amount": "1000",
+          "unit": "ml",
+          "group": "Para la col y la salmuera"
+        },
+        {
+          "name": "gochugaru (chile coreano en escamas)",
+          "amount": "30",
+          "unit": "g",
+          "group": "Para la pasta"
+        },
+        {
+          "name": "ajo, picado",
+          "amount": "4",
+          "unit": "dientes",
+          "group": "Para la pasta"
+        },
+        {
+          "name": "jengibre fresco, rallado",
+          "amount": "10",
+          "unit": "g",
+          "group": "Para la pasta"
+        },
+        {
+          "name": "azúcar",
+          "amount": "1",
+          "unit": "cucharada",
+          "group": "Para la pasta"
+        },
+        {
+          "name": "salsa de pescado",
+          "amount": "45",
+          "unit": "ml",
+          "group": "Para la pasta"
+        },
+        {
+          "name": "cebolletas, en trozos de 3 cm",
+          "amount": "4",
+          "unit": "unidad",
+          "group": "Para mezclar"
+        },
+        {
+          "name": "zanahoria, en tiras finas",
+          "amount": "150",
+          "unit": "g",
+          "group": "Para mezclar"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Corta la col",
+          "content": "Corta 1,5 kg de col china en cuartos a lo largo y después en trozos de 4 cm.",
+          "image_url": "/recetas/kimchi-coreano/paso-01.webp",
+          "image_alt": "Kimchi coreano casero: Corta la col"
+        },
+        {
+          "title": "Prepara la salmuera",
+          "content": "Disuelve 60 g de sal gruesa en 1 litro de agua, sumerge la col y déjala reposar 1 hora y 30 minutos, dándole la vuelta a mitad de tiempo.",
+          "image_url": "/recetas/kimchi-coreano/paso-02.webp",
+          "image_alt": "Kimchi coreano casero: Prepara la salmuera"
+        },
+        {
+          "title": "Enjuaga y escurre",
+          "content": "Enjuaga la col 3 veces con agua fría y escúrrela bien durante 10 minutos.",
+          "image_url": "/recetas/kimchi-coreano/paso-03.webp",
+          "image_alt": "Kimchi coreano casero: Enjuaga y escurre"
+        },
+        {
+          "title": "Haz la pasta",
+          "content": "Mezcla 30 g de gochugaru, 4 dientes de ajo picados, 10 g de jengibre rallado, 1 cucharada de azúcar y 45 ml de salsa de pescado hasta formar una pasta espesa.",
+          "image_url": "/recetas/kimchi-coreano/paso-04.webp",
+          "image_alt": "Kimchi coreano casero: Haz la pasta"
+        },
+        {
+          "title": "Corta las verduras",
+          "content": "Corta 4 cebolletas en trozos de 3 cm y 150 g de zanahoria en tiras finas.",
+          "image_url": "/recetas/kimchi-coreano/paso-05.webp",
+          "image_alt": "Kimchi coreano casero: Corta las verduras"
+        },
+        {
+          "title": "Mezcla todo",
+          "content": "Con guantes, mezcla la col escurrida con la pasta, las cebolletas y la zanahoria hasta que todo quede cubierto.",
+          "image_url": "/recetas/kimchi-coreano/paso-06.webp",
+          "image_alt": "Kimchi coreano casero: Mezcla todo"
+        },
+        {
+          "title": "Llena el frasco",
+          "content": "Llena un frasco de 2 litros presionando bien para que no queden huecos y deja 3 cm libres arriba. Cierra la tapa sin apretar del todo.",
+          "image_url": "/recetas/kimchi-coreano/paso-07.webp",
+          "image_alt": "Kimchi coreano casero: Llena el frasco"
+        },
+        {
+          "title": "Fermenta y sirve",
+          "content": "Deja el frasco a temperatura ambiente de 1 a 5 días, abriéndolo una vez al día para liberar gases y probándolo. Cuando esté ácido a tu gusto, guárdalo en la nevera hasta 3 semanas. Sirve media taza por persona.",
+          "image_url": "/recetas/kimchi-coreano/paso-08.webp",
+          "image_alt": "Kimchi coreano casero: Fermenta y sirve"
+        }
+      ],
+      "image_url": "/recetas/kimchi-coreano/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/kimchi-coreano/portada.webp",
+          "alt": "Kimchi coreano casero"
+        }
+      ],
+      "notes": "El tiempo de preparación incluye 1 hora y 30 minutos de salmuera; la fermentación no está incluida. Usa guantes para manipular el gochugaru y evita tocarte los ojos. Si el frasco queda lleno, colócalo sobre un plato por si rebosa líquido. Para una versión vegetariana, sustituye la salsa de pescado por salsa de soja: el sabor cambia. Si aparece moho o huele mal, desecha el kimchi.",
+      "nutrition": {
+        "calories": 26,
+        "protein_g": 1.4,
+        "carbs_g": 5,
+        "fat_g": 0.4,
+        "sodium_mg": 516,
+        "serving_size": "½ taza (unos 70 g; 1/20 de la receta)",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Suma de nutrientes por 100 g multiplicados por los pesos de los ingredientes y divididos entre 20 porciones. Se usan 1,5 kg de col, 30 g de gochugaru (con pimentón rojo picante de referencia), 12 g de ajo, 10 g de jengibre, 13 g de azúcar, 54 g de salsa de pescado (45 ml), 60 g de cebolleta y 150 g de zanahoria.",
+        "note": "Estimación por porción. Se supone que la col retiene unos 15 g de los 60 g de sal de la salmuera tras el enjuague; el sodio real varía con el enjuague y la salsa de pescado. No se descuenta el agua perdida en la salmuera ni se contabiliza la fermentación.",
+        "inputs": [
+          {
+            "fdc_id": "169989",
+            "description": "Cabbage, chinese (pe-tsai), raw",
+            "grams": 1500,
+            "per100": {
+              "calories": 16,
+              "protein_g": 1.2,
+              "carbs_g": 3.23,
+              "fat_g": 0.2,
+              "saturated_fat_g": 0.03,
+              "fiber_g": 1.2,
+              "sodium_mg": 9
+            }
+          },
+          {
+            "fdc_id": "173468",
+            "description": "Salt, table (sal absorbida estimada: 15 g de los 60 g de la salmuera)",
+            "grams": 15,
+            "per100": {
+              "calories": 0,
+              "protein_g": 0,
+              "carbs_g": 0,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 38758
+            }
+          },
+          {
+            "fdc_id": "170932",
+            "description": "Spices, pepper, red or cayenne (proxy de gochugaru)",
+            "grams": 30,
+            "per100": {
+              "calories": 318,
+              "protein_g": 12,
+              "carbs_g": 56.63,
+              "fat_g": 17.27,
+              "saturated_fat_g": 3.26,
+              "fiber_g": 27.2,
+              "sodium_mg": 30
+            }
+          },
+          {
+            "fdc_id": "169230",
+            "description": "Garlic, raw",
+            "grams": 12,
+            "per100": {
+              "calories": 149,
+              "protein_g": 6.36,
+              "carbs_g": 33.06,
+              "fat_g": 0.5,
+              "saturated_fat_g": 0.09,
+              "fiber_g": 2.1,
+              "sodium_mg": 17
+            }
+          },
+          {
+            "fdc_id": "169231",
+            "description": "Ginger root, raw",
+            "grams": 10,
+            "per100": {
+              "calories": 80,
+              "protein_g": 1.82,
+              "carbs_g": 17.77,
+              "fat_g": 0.75,
+              "saturated_fat_g": 0.2,
+              "fiber_g": 2,
+              "sodium_mg": 13
+            }
+          },
+          {
+            "fdc_id": "169655",
+            "description": "Sugars, granulated",
+            "grams": 13,
+            "per100": {
+              "calories": 387,
+              "protein_g": 0,
+              "carbs_g": 99.98,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 1
+            }
+          },
+          {
+            "fdc_id": "174535",
+            "description": "Sauce, fish, ready-to-serve",
+            "grams": 54,
+            "per100": {
+              "calories": 35,
+              "protein_g": 5.06,
+              "carbs_g": 3.64,
+              "fat_g": 0.01,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 7851
+            }
+          },
+          {
+            "fdc_id": "170005",
+            "description": "Onions, spring or scallions (includes tops and bulb), raw",
+            "grams": 60,
+            "per100": {
+              "calories": 32,
+              "protein_g": 1.83,
+              "carbs_g": 7.34,
+              "fat_g": 0.19,
+              "saturated_fat_g": 0.03,
+              "fiber_g": 2.6,
+              "sodium_mg": 16
+            }
+          },
+          {
+            "fdc_id": "170393",
+            "description": "Carrots, raw",
+            "grams": 150,
+            "per100": {
+              "calories": 41,
+              "protein_g": 0.93,
+              "carbs_g": 9.58,
+              "fat_g": 0.24,
+              "saturated_fat_g": 0.04,
+              "fiber_g": 2.8,
+              "sodium_mg": 69
+            }
+          }
+        ]
+      },
+      "seo": {
+        "title": "Kimchi casero de col china, fácil y fermentado | Manual de Cocina",
+        "description": "Kimchi coreano casero de col china con gochugaru, ajo y jengibre. Se fermenta de 1 a 5 días en un frasco de 2 litros. Receta paso a paso.",
+        "image_variants": [
+          "/recetas/kimchi-coreano/portada-1x1.webp",
+          "/recetas/kimchi-coreano/portada-4x3.webp",
+          "/recetas/kimchi-coreano/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "¿Cuánto tiempo hay que fermentar el kimchi?",
+            "a": "De 1 a 5 días a temperatura ambiente. Pruébalo cada día y, cuando esté ácido a tu gusto, guárdalo en la nevera."
+          },
+          {
+            "q": "¿Cuánto dura el kimchi casero?",
+            "a": "Hasta 3 semanas en la nevera, en un frasco limpio y cerrado. Con el tiempo se vuelve más ácido."
+          },
+          {
+            "q": "¿Se puede hacer kimchi sin salsa de pescado?",
+            "a": "Sí. Puedes sustituirla por salsa de soja, aunque el sabor será distinto y no tendrá el toque marino habitual."
+          }
+        ]
+      }
+    },
+    {
+      "id": "29e36a09-62d2-52fd-b85d-fbb1ba7c93e7",
+      "recipe_group_id": "ed3b5b91-e195-46cd-b9fb-9e9eda65e88d",
+      "language": "de",
+      "slug": "kimchi-selber-machen",
+      "public_path": "/de/kimchi-selber-machen",
+      "source_url": null,
+      "title": "Kimchi selber machen",
+      "excerpt": "Hausgemachter Kimchi aus Chinakohl mit Gochugaru, Knoblauch und Ingwer, im 2-Liter-Glas fermentiert. Ergibt 20 Portionen zu je einer halben Tasse und hält sich bis zu 3 Wochen im Kühlschrank.",
+      "summary": "Hausgemachter Kimchi besteht aus Chinakohl in Salzlake, einer Paste aus Gochugaru, Knoblauch, Ingwer, Zucker und Fischsauce sowie etwas Frühlingszwiebel und Karotte. Der Kohl liegt 1 Stunde und 30 Minuten in der Lake und wird 3-mal abgespült.\n\nEr wird in ein 2-Liter-Glas gefüllt und fermentiert 1 bis 5 Tage bei Raumtemperatur, bis er so sauer ist, wie du ihn magst. Danach kommt er bis zu 3 Wochen in den Kühlschrank. Ergibt etwa 1,4 kg, 20 Portionen zu einer halben Tasse.",
+      "category": "Beilagen",
+      "category_slug": "guarniciones",
+      "difficulty": "Einfach",
+      "course": "Beilage",
+      "cuisine": "Koreanisch",
+      "prep_time_minutes": 150,
+      "cook_time_minutes": 0,
+      "total_time_minutes": 150,
+      "servings": 20,
+      "keywords": [
+        "Kimchi",
+        "Kimchi selber machen",
+        "Kimchi Rezept",
+        "koreanischer Kimchi",
+        "Chinakohl Kimchi",
+        "Gochugaru",
+        "Fermentieren"
+      ],
+      "ingredients": [
+        {
+          "name": "Chinakohl, in 4-cm-Stücken",
+          "amount": "1500",
+          "unit": "g",
+          "group": "Für den Kohl und die Lake"
+        },
+        {
+          "name": "grobes Salz",
+          "amount": "60",
+          "unit": "g",
+          "group": "Für den Kohl und die Lake"
+        },
+        {
+          "name": "Wasser",
+          "amount": "1000",
+          "unit": "ml",
+          "group": "Für den Kohl und die Lake"
+        },
+        {
+          "name": "Gochugaru (koreanische Chiliflocken)",
+          "amount": "30",
+          "unit": "g",
+          "group": "Für die Paste"
+        },
+        {
+          "name": "Knoblauch, gehackt",
+          "amount": "4",
+          "unit": "Zehen",
+          "group": "Für die Paste"
+        },
+        {
+          "name": "frischer Ingwer, gerieben",
+          "amount": "10",
+          "unit": "g",
+          "group": "Für die Paste"
+        },
+        {
+          "name": "Zucker",
+          "amount": "1",
+          "unit": "Esslöffel",
+          "group": "Für die Paste"
+        },
+        {
+          "name": "Fischsauce",
+          "amount": "45",
+          "unit": "ml",
+          "group": "Für die Paste"
+        },
+        {
+          "name": "Frühlingszwiebeln, in 3-cm-Stücken",
+          "amount": "4",
+          "unit": "Stück",
+          "group": "Zum Mischen"
+        },
+        {
+          "name": "Karotte, in feinen Streifen",
+          "amount": "150",
+          "unit": "g",
+          "group": "Zum Mischen"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Kohl schneiden",
+          "content": "1,5 kg Chinakohl der Länge nach vierteln und dann in 4-cm-Stücke schneiden.",
+          "image_url": "/recetas/kimchi-coreano/paso-01.webp",
+          "image_alt": "Kimchi selber machen: Kohl schneiden"
+        },
+        {
+          "title": "Salzlake ansetzen",
+          "content": "60 g grobes Salz in 1 Liter Wasser auflösen, den Kohl eintauchen und 1 Stunde und 30 Minuten ziehen lassen, nach der Hälfte der Zeit wenden.",
+          "image_url": "/recetas/kimchi-coreano/paso-02.webp",
+          "image_alt": "Kimchi selber machen: Salzlake ansetzen"
+        },
+        {
+          "title": "Abspülen und abtropfen lassen",
+          "content": "Den Kohl 3-mal mit kaltem Wasser abspülen und 10 Minuten gut abtropfen lassen.",
+          "image_url": "/recetas/kimchi-coreano/paso-03.webp",
+          "image_alt": "Kimchi selber machen: Abspülen und abtropfen lassen"
+        },
+        {
+          "title": "Paste anrühren",
+          "content": "30 g Gochugaru, 4 gehackte Knoblauchzehen, 10 g geriebenen Ingwer, 1 Esslöffel Zucker und 45 ml Fischsauce zu einer dicken Paste verrühren.",
+          "image_url": "/recetas/kimchi-coreano/paso-04.webp",
+          "image_alt": "Kimchi selber machen: Paste anrühren"
+        },
+        {
+          "title": "Gemüse schneiden",
+          "content": "4 Frühlingszwiebeln in 3-cm-Stücke und 150 g Karotte in feine Streifen schneiden.",
+          "image_url": "/recetas/kimchi-coreano/paso-05.webp",
+          "image_alt": "Kimchi selber machen: Gemüse schneiden"
+        },
+        {
+          "title": "Alles vermengen",
+          "content": "Mit Handschuhen den abgetropften Kohl mit der Paste, den Frühlingszwiebeln und der Karotte vermengen, bis alles bedeckt ist.",
+          "image_url": "/recetas/kimchi-coreano/paso-06.webp",
+          "image_alt": "Kimchi selber machen: Alles vermengen"
+        },
+        {
+          "title": "Glas füllen",
+          "content": "Ein 2-Liter-Glas fest füllen, sodass keine Hohlräume bleiben, und oben 3 cm frei lassen. Den Deckel nicht ganz fest zudrehen.",
+          "image_url": "/recetas/kimchi-coreano/paso-07.webp",
+          "image_alt": "Kimchi selber machen: Glas füllen"
+        },
+        {
+          "title": "Fermentieren und servieren",
+          "content": "Das Glas 1 bis 5 Tage bei Raumtemperatur stehen lassen, einmal täglich öffnen, um Gase entweichen zu lassen, und probieren. Wenn er so sauer ist, wie du ihn magst, bis zu 3 Wochen in den Kühlschrank stellen. Eine halbe Tasse pro Person servieren.",
+          "image_url": "/recetas/kimchi-coreano/paso-08.webp",
+          "image_alt": "Kimchi selber machen: Fermentieren und servieren"
+        }
+      ],
+      "image_url": "/recetas/kimchi-coreano/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/kimchi-coreano/portada.webp",
+          "alt": "Kimchi selber machen"
+        }
+      ],
+      "notes": "Die Zubereitungszeit enthält 1 Stunde und 30 Minuten Salzlake; die Fermentation ist nicht eingerechnet. Beim Umgang mit Gochugaru Handschuhe tragen und die Augen nicht berühren. Ist das Glas randvoll, stelle es auf einen Teller, falls Flüssigkeit überläuft. Für eine vegetarische Variante die Fischsauce durch Sojasauce ersetzen: der Geschmack ändert sich. Bei Schimmel oder üblem Geruch den Kimchi entsorgen.",
+      "nutrition": {
+        "calories": 26,
+        "protein_g": 1.4,
+        "carbs_g": 5,
+        "fat_g": 0.4,
+        "sodium_mg": 516,
+        "serving_size": "½ Tasse (etwa 70 g; 1/20 des Rezepts)",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Nährwerte je 100 g, multipliziert mit dem Gewicht der Zutaten und durch 20 Portionen geteilt. Verwendet werden 1,5 kg Kohl, 30 g Gochugaru (mit scharfem rotem Paprika als Referenz), 12 g Knoblauch, 10 g Ingwer, 13 g Zucker, 54 g Fischsauce (45 ml), 60 g Frühlingszwiebel und 150 g Karotte.",
+        "note": "Schätzung pro Portion. Angenommen wird, dass der Kohl nach dem Abspülen etwa 15 g der 60 g Salz aus der Lake behält; das tatsächliche Natrium hängt vom Abspülen und von der Fischsauce ab. Das Wasser, das in der Lake verloren geht, wird nicht abgezogen, die Fermentation nicht berücksichtigt.",
+        "inputs": [
+          {
+            "fdc_id": "169989",
+            "description": "Cabbage, chinese (pe-tsai), raw",
+            "grams": 1500,
+            "per100": {
+              "calories": 16,
+              "protein_g": 1.2,
+              "carbs_g": 3.23,
+              "fat_g": 0.2,
+              "saturated_fat_g": 0.03,
+              "fiber_g": 1.2,
+              "sodium_mg": 9
+            }
+          },
+          {
+            "fdc_id": "173468",
+            "description": "Salt, table (sal absorbida estimada: 15 g de los 60 g de la salmuera)",
+            "grams": 15,
+            "per100": {
+              "calories": 0,
+              "protein_g": 0,
+              "carbs_g": 0,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 38758
+            }
+          },
+          {
+            "fdc_id": "170932",
+            "description": "Spices, pepper, red or cayenne (proxy de gochugaru)",
+            "grams": 30,
+            "per100": {
+              "calories": 318,
+              "protein_g": 12,
+              "carbs_g": 56.63,
+              "fat_g": 17.27,
+              "saturated_fat_g": 3.26,
+              "fiber_g": 27.2,
+              "sodium_mg": 30
+            }
+          },
+          {
+            "fdc_id": "169230",
+            "description": "Garlic, raw",
+            "grams": 12,
+            "per100": {
+              "calories": 149,
+              "protein_g": 6.36,
+              "carbs_g": 33.06,
+              "fat_g": 0.5,
+              "saturated_fat_g": 0.09,
+              "fiber_g": 2.1,
+              "sodium_mg": 17
+            }
+          },
+          {
+            "fdc_id": "169231",
+            "description": "Ginger root, raw",
+            "grams": 10,
+            "per100": {
+              "calories": 80,
+              "protein_g": 1.82,
+              "carbs_g": 17.77,
+              "fat_g": 0.75,
+              "saturated_fat_g": 0.2,
+              "fiber_g": 2,
+              "sodium_mg": 13
+            }
+          },
+          {
+            "fdc_id": "169655",
+            "description": "Sugars, granulated",
+            "grams": 13,
+            "per100": {
+              "calories": 387,
+              "protein_g": 0,
+              "carbs_g": 99.98,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 1
+            }
+          },
+          {
+            "fdc_id": "174535",
+            "description": "Sauce, fish, ready-to-serve",
+            "grams": 54,
+            "per100": {
+              "calories": 35,
+              "protein_g": 5.06,
+              "carbs_g": 3.64,
+              "fat_g": 0.01,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 7851
+            }
+          },
+          {
+            "fdc_id": "170005",
+            "description": "Onions, spring or scallions (includes tops and bulb), raw",
+            "grams": 60,
+            "per100": {
+              "calories": 32,
+              "protein_g": 1.83,
+              "carbs_g": 7.34,
+              "fat_g": 0.19,
+              "saturated_fat_g": 0.03,
+              "fiber_g": 2.6,
+              "sodium_mg": 16
+            }
+          },
+          {
+            "fdc_id": "170393",
+            "description": "Carrots, raw",
+            "grams": 150,
+            "per100": {
+              "calories": 41,
+              "protein_g": 0.93,
+              "carbs_g": 9.58,
+              "fat_g": 0.24,
+              "saturated_fat_g": 0.04,
+              "fiber_g": 2.8,
+              "sodium_mg": 69
+            }
+          }
+        ]
+      },
+      "seo": {
+        "title": "Kimchi selber machen mit Chinakohl, einfach | Manual de Cocina",
+        "description": "Koreanischen Kimchi selber machen: Chinakohl mit Gochugaru, Knoblauch und Ingwer, 1 bis 5 Tage im 2-Liter-Glas fermentiert. Schritt für Schritt.",
+        "image_variants": [
+          "/recetas/kimchi-coreano/portada-1x1.webp",
+          "/recetas/kimchi-coreano/portada-4x3.webp",
+          "/recetas/kimchi-coreano/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Wie lange muss Kimchi fermentieren?",
+            "a": "1 bis 5 Tage bei Raumtemperatur. Jeden Tag probieren und in den Kühlschrank stellen, wenn er so sauer ist, wie du ihn magst."
+          },
+          {
+            "q": "Wie lange hält selbstgemachter Kimchi?",
+            "a": "Bis zu 3 Wochen im Kühlschrank, in einem sauberen, verschlossenen Glas. Mit der Zeit wird er saurer."
+          },
+          {
+            "q": "Kann man Kimchi ohne Fischsauce machen?",
+            "a": "Ja. Du kannst sie durch Sojasauce ersetzen, der Geschmack ist dann aber anders und ohne die typische Meeresnote."
+          }
+        ]
+      }
+    },
+    {
+      "id": "32727e57-504d-54b8-8a8b-f51cbefe4a87",
+      "recipe_group_id": "ed3b5b91-e195-46cd-b9fb-9e9eda65e88d",
+      "language": "en",
+      "slug": "napa-cabbage-kimchi",
+      "public_path": "/en/napa-cabbage-kimchi",
+      "source_url": null,
+      "title": "Napa Cabbage Kimchi",
+      "excerpt": "Homemade napa cabbage kimchi with gochugaru, garlic and ginger, fermented in a 2-liter jar. Makes 20 servings of half a cup and keeps up to 3 weeks in the refrigerator.",
+      "summary": "Homemade kimchi is made with napa cabbage salted in brine, a paste of gochugaru, garlic, ginger, sugar and fish sauce, and a little scallion and carrot. The cabbage sits 1 hour 30 minutes in the brine and is rinsed 3 times.\n\nIt is packed into a 2-liter jar and ferments at room temperature for 1 to 5 days, until it is as sour as you like. Then it goes into the refrigerator for up to 3 weeks. It makes about 1.4 kg, 20 servings of half a cup.",
+      "category": "Side dishes",
+      "category_slug": "guarniciones",
+      "difficulty": "Easy",
+      "course": "Side dish",
+      "cuisine": "Korean",
+      "prep_time_minutes": 150,
+      "cook_time_minutes": 0,
+      "total_time_minutes": 150,
+      "servings": 20,
+      "keywords": [
+        "kimchi",
+        "homemade kimchi",
+        "kimchi recipe",
+        "Korean kimchi",
+        "napa cabbage kimchi",
+        "gochugaru",
+        "fermented foods"
+      ],
+      "ingredients": [
+        {
+          "name": "napa cabbage, cut in 4 cm pieces",
+          "amount": "1500",
+          "unit": "g",
+          "group": "For the cabbage and brine"
+        },
+        {
+          "name": "coarse salt",
+          "amount": "60",
+          "unit": "g",
+          "group": "For the cabbage and brine"
+        },
+        {
+          "name": "water",
+          "amount": "1000",
+          "unit": "ml",
+          "group": "For the cabbage and brine"
+        },
+        {
+          "name": "gochugaru (Korean chili flakes)",
+          "amount": "30",
+          "unit": "g",
+          "group": "For the paste"
+        },
+        {
+          "name": "garlic, minced",
+          "amount": "4",
+          "unit": "cloves",
+          "group": "For the paste"
+        },
+        {
+          "name": "fresh ginger, grated",
+          "amount": "10",
+          "unit": "g",
+          "group": "For the paste"
+        },
+        {
+          "name": "sugar",
+          "amount": "1",
+          "unit": "tablespoon",
+          "group": "For the paste"
+        },
+        {
+          "name": "fish sauce",
+          "amount": "45",
+          "unit": "ml",
+          "group": "For the paste"
+        },
+        {
+          "name": "scallions, cut in 3 cm pieces",
+          "amount": "4",
+          "unit": "piece",
+          "group": "For mixing"
+        },
+        {
+          "name": "carrot, in thin strips",
+          "amount": "150",
+          "unit": "g",
+          "group": "For mixing"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Cut the cabbage",
+          "content": "Cut 1.5 kg napa cabbage into quarters lengthwise, then into 4 cm pieces.",
+          "image_url": "/recetas/kimchi-coreano/paso-01.webp",
+          "image_alt": "Napa Cabbage Kimchi: Cut the cabbage"
+        },
+        {
+          "title": "Make the brine",
+          "content": "Dissolve 60 g coarse salt in 1 liter water, submerge the cabbage and let it rest 1 hour 30 minutes, turning it halfway through.",
+          "image_url": "/recetas/kimchi-coreano/paso-02.webp",
+          "image_alt": "Napa Cabbage Kimchi: Make the brine"
+        },
+        {
+          "title": "Rinse and drain",
+          "content": "Rinse the cabbage 3 times with cold water and drain it well for 10 minutes.",
+          "image_url": "/recetas/kimchi-coreano/paso-03.webp",
+          "image_alt": "Napa Cabbage Kimchi: Rinse and drain"
+        },
+        {
+          "title": "Make the paste",
+          "content": "Mix 30 g gochugaru, 4 minced garlic cloves, 10 g grated ginger, 1 tablespoon sugar and 45 ml fish sauce into a thick paste.",
+          "image_url": "/recetas/kimchi-coreano/paso-04.webp",
+          "image_alt": "Napa Cabbage Kimchi: Make the paste"
+        },
+        {
+          "title": "Cut the vegetables",
+          "content": "Cut 4 scallions into 3 cm pieces and 150 g carrot into thin strips.",
+          "image_url": "/recetas/kimchi-coreano/paso-05.webp",
+          "image_alt": "Napa Cabbage Kimchi: Cut the vegetables"
+        },
+        {
+          "title": "Mix everything",
+          "content": "Wearing gloves, mix the drained cabbage with the paste, scallions and carrot until everything is coated.",
+          "image_url": "/recetas/kimchi-coreano/paso-06.webp",
+          "image_alt": "Napa Cabbage Kimchi: Mix everything"
+        },
+        {
+          "title": "Fill the jar",
+          "content": "Fill a 2-liter jar, pressing firmly so there are no gaps, and leave 3 cm of space at the top. Close the lid without tightening it fully.",
+          "image_url": "/recetas/kimchi-coreano/paso-07.webp",
+          "image_alt": "Napa Cabbage Kimchi: Fill the jar"
+        },
+        {
+          "title": "Ferment and serve",
+          "content": "Leave the jar at room temperature for 1 to 5 days, opening it once a day to release gas and tasting it. When it is as sour as you like, refrigerate it for up to 3 weeks. Serve half a cup per person.",
+          "image_url": "/recetas/kimchi-coreano/paso-08.webp",
+          "image_alt": "Napa Cabbage Kimchi: Ferment and serve"
+        }
+      ],
+      "image_url": "/recetas/kimchi-coreano/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/kimchi-coreano/portada.webp",
+          "alt": "Napa Cabbage Kimchi"
+        }
+      ],
+      "notes": "The preparation time includes 1 hour 30 minutes of brining; fermentation is not included. Wear gloves when handling gochugaru and avoid touching your eyes. If the jar is very full, set it on a plate in case liquid overflows. For a vegetarian version, replace the fish sauce with soy sauce: the flavor changes. If you see mold or it smells off, throw the kimchi away.",
+      "nutrition": {
+        "calories": 26,
+        "protein_g": 1.4,
+        "carbs_g": 5,
+        "fat_g": 0.4,
+        "sodium_mg": 516,
+        "serving_size": "½ cup (about 70 g; 1/20 of the recipe)",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Sum of nutrients per 100 g multiplied by the ingredient weights and divided by 20 servings. It uses 1.5 kg cabbage, 30 g gochugaru (with hot red pepper as the reference), 12 g garlic, 10 g ginger, 13 g sugar, 54 g fish sauce (45 ml), 60 g scallion and 150 g carrot.",
+        "note": "Estimate per serving. The cabbage is assumed to keep about 15 g of the 60 g of brine salt after rinsing; actual sodium varies with the rinse and the fish sauce. The water lost in the brine is not subtracted and fermentation is not accounted for.",
+        "inputs": [
+          {
+            "fdc_id": "169989",
+            "description": "Cabbage, chinese (pe-tsai), raw",
+            "grams": 1500,
+            "per100": {
+              "calories": 16,
+              "protein_g": 1.2,
+              "carbs_g": 3.23,
+              "fat_g": 0.2,
+              "saturated_fat_g": 0.03,
+              "fiber_g": 1.2,
+              "sodium_mg": 9
+            }
+          },
+          {
+            "fdc_id": "173468",
+            "description": "Salt, table (sal absorbida estimada: 15 g de los 60 g de la salmuera)",
+            "grams": 15,
+            "per100": {
+              "calories": 0,
+              "protein_g": 0,
+              "carbs_g": 0,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 38758
+            }
+          },
+          {
+            "fdc_id": "170932",
+            "description": "Spices, pepper, red or cayenne (proxy de gochugaru)",
+            "grams": 30,
+            "per100": {
+              "calories": 318,
+              "protein_g": 12,
+              "carbs_g": 56.63,
+              "fat_g": 17.27,
+              "saturated_fat_g": 3.26,
+              "fiber_g": 27.2,
+              "sodium_mg": 30
+            }
+          },
+          {
+            "fdc_id": "169230",
+            "description": "Garlic, raw",
+            "grams": 12,
+            "per100": {
+              "calories": 149,
+              "protein_g": 6.36,
+              "carbs_g": 33.06,
+              "fat_g": 0.5,
+              "saturated_fat_g": 0.09,
+              "fiber_g": 2.1,
+              "sodium_mg": 17
+            }
+          },
+          {
+            "fdc_id": "169231",
+            "description": "Ginger root, raw",
+            "grams": 10,
+            "per100": {
+              "calories": 80,
+              "protein_g": 1.82,
+              "carbs_g": 17.77,
+              "fat_g": 0.75,
+              "saturated_fat_g": 0.2,
+              "fiber_g": 2,
+              "sodium_mg": 13
+            }
+          },
+          {
+            "fdc_id": "169655",
+            "description": "Sugars, granulated",
+            "grams": 13,
+            "per100": {
+              "calories": 387,
+              "protein_g": 0,
+              "carbs_g": 99.98,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 1
+            }
+          },
+          {
+            "fdc_id": "174535",
+            "description": "Sauce, fish, ready-to-serve",
+            "grams": 54,
+            "per100": {
+              "calories": 35,
+              "protein_g": 5.06,
+              "carbs_g": 3.64,
+              "fat_g": 0.01,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 7851
+            }
+          },
+          {
+            "fdc_id": "170005",
+            "description": "Onions, spring or scallions (includes tops and bulb), raw",
+            "grams": 60,
+            "per100": {
+              "calories": 32,
+              "protein_g": 1.83,
+              "carbs_g": 7.34,
+              "fat_g": 0.19,
+              "saturated_fat_g": 0.03,
+              "fiber_g": 2.6,
+              "sodium_mg": 16
+            }
+          },
+          {
+            "fdc_id": "170393",
+            "description": "Carrots, raw",
+            "grams": 150,
+            "per100": {
+              "calories": 41,
+              "protein_g": 0.93,
+              "carbs_g": 9.58,
+              "fat_g": 0.24,
+              "saturated_fat_g": 0.04,
+              "fiber_g": 2.8,
+              "sodium_mg": 69
+            }
+          }
+        ]
+      },
+      "seo": {
+        "title": "Napa cabbage kimchi, easy homemade | Manual de Cocina",
+        "description": "Homemade Korean napa cabbage kimchi with gochugaru, garlic and ginger, fermented 1 to 5 days in a 2-liter jar. Step-by-step recipe.",
+        "image_variants": [
+          "/recetas/kimchi-coreano/portada-1x1.webp",
+          "/recetas/kimchi-coreano/portada-4x3.webp",
+          "/recetas/kimchi-coreano/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "How long should kimchi ferment?",
+            "a": "1 to 5 days at room temperature. Taste it every day and refrigerate it when it is as sour as you like."
+          },
+          {
+            "q": "How long does homemade kimchi last?",
+            "a": "Up to 3 weeks in the refrigerator, in a clean, closed jar. It gets more sour over time."
+          },
+          {
+            "q": "Can you make kimchi without fish sauce?",
+            "a": "Yes. You can replace it with soy sauce, although the flavor will be different and lack the usual savory sea note."
+          }
+        ]
+      }
+    },
+    {
+      "id": "f3508792-5751-53d4-97f8-16415e7ed565",
+      "recipe_group_id": "ed3b5b91-e195-46cd-b9fb-9e9eda65e88d",
+      "language": "fr",
+      "slug": "kimchi-coreen-maison",
+      "public_path": "/fr/kimchi-coreen-maison",
+      "source_url": null,
+      "title": "Kimchi coréen maison",
+      "excerpt": "Kimchi maison de chou chinois au gochugaru, à l’ail et au gingembre, fermenté dans un bocal de 2 litres. Donne 20 portions d’une demi-tasse et se conserve jusqu’à 3 semaines au réfrigérateur.",
+      "summary": "Le kimchi maison se prépare avec du chou chinois salé en saumure, une pâte de gochugaru, ail, gingembre, sucre et sauce de poisson, et un peu de ciboule et de carotte. Le chou repose 1 heure 30 dans la saumure et se rince 3 fois.\n\nOn le tasse dans un bocal de 2 litres et il fermente à température ambiante de 1 à 5 jours, jusqu’à l’acidité que vous aimez. Ensuite, il se garde au réfrigérateur jusqu’à 3 semaines. Il donne environ 1,4 kg, 20 portions d’une demi-tasse.",
+      "category": "Accompagnements",
+      "category_slug": "guarniciones",
+      "difficulty": "Facile",
+      "course": "Accompagnement",
+      "cuisine": "Coréenne",
+      "prep_time_minutes": 150,
+      "cook_time_minutes": 0,
+      "total_time_minutes": 150,
+      "servings": 20,
+      "keywords": [
+        "kimchi",
+        "kimchi maison",
+        "recette de kimchi",
+        "kimchi coréen",
+        "kimchi de chou chinois",
+        "gochugaru",
+        "fermentation maison"
+      ],
+      "ingredients": [
+        {
+          "name": "chou chinois, en morceaux de 4 cm",
+          "amount": "1500",
+          "unit": "g",
+          "group": "Pour le chou et la saumure"
+        },
+        {
+          "name": "gros sel",
+          "amount": "60",
+          "unit": "g",
+          "group": "Pour le chou et la saumure"
+        },
+        {
+          "name": "eau",
+          "amount": "1000",
+          "unit": "ml",
+          "group": "Pour le chou et la saumure"
+        },
+        {
+          "name": "gochugaru (piment coréen en flocons)",
+          "amount": "30",
+          "unit": "g",
+          "group": "Pour la pâte"
+        },
+        {
+          "name": "ail, haché",
+          "amount": "4",
+          "unit": "gousses",
+          "group": "Pour la pâte"
+        },
+        {
+          "name": "gingembre frais, râpé",
+          "amount": "10",
+          "unit": "g",
+          "group": "Pour la pâte"
+        },
+        {
+          "name": "sucre",
+          "amount": "1",
+          "unit": "cuillère à soupe",
+          "group": "Pour la pâte"
+        },
+        {
+          "name": "sauce de poisson",
+          "amount": "45",
+          "unit": "ml",
+          "group": "Pour la pâte"
+        },
+        {
+          "name": "ciboules, en tronçons de 3 cm",
+          "amount": "4",
+          "unit": "pièce",
+          "group": "Pour mélanger"
+        },
+        {
+          "name": "carotte, en fines lanières",
+          "amount": "150",
+          "unit": "g",
+          "group": "Pour mélanger"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Couper le chou",
+          "content": "Couper 1,5 kg de chou chinois en quartiers dans la longueur, puis en morceaux de 4 cm.",
+          "image_url": "/recetas/kimchi-coreano/paso-01.webp",
+          "image_alt": "Kimchi coréen maison: Couper le chou"
+        },
+        {
+          "title": "Préparer la saumure",
+          "content": "Dissoudre 60 g de gros sel dans 1 litre d’eau, plonger le chou et le laisser reposer 1 heure 30, en le retournant à mi-temps.",
+          "image_url": "/recetas/kimchi-coreano/paso-02.webp",
+          "image_alt": "Kimchi coréen maison: Préparer la saumure"
+        },
+        {
+          "title": "Rincer et égoutter",
+          "content": "Rincer le chou 3 fois à l’eau froide et l’égoutter bien pendant 10 minutes.",
+          "image_url": "/recetas/kimchi-coreano/paso-03.webp",
+          "image_alt": "Kimchi coréen maison: Rincer et égoutter"
+        },
+        {
+          "title": "Préparer la pâte",
+          "content": "Mélanger 30 g de gochugaru, 4 gousses d’ail hachées, 10 g de gingembre râpé, 1 cuillère à soupe de sucre et 45 ml de sauce de poisson jusqu’à obtenir une pâte épaisse.",
+          "image_url": "/recetas/kimchi-coreano/paso-04.webp",
+          "image_alt": "Kimchi coréen maison: Préparer la pâte"
+        },
+        {
+          "title": "Couper les légumes",
+          "content": "Couper 4 ciboules en tronçons de 3 cm et 150 g de carotte en fines lanières.",
+          "image_url": "/recetas/kimchi-coreano/paso-05.webp",
+          "image_alt": "Kimchi coréen maison: Couper les légumes"
+        },
+        {
+          "title": "Tout mélanger",
+          "content": "Avec des gants, mélanger le chou égoutté avec la pâte, les ciboules et la carotte jusqu’à ce que tout soit enrobé.",
+          "image_url": "/recetas/kimchi-coreano/paso-06.webp",
+          "image_alt": "Kimchi coréen maison: Tout mélanger"
+        },
+        {
+          "title": "Remplir le bocal",
+          "content": "Remplir un bocal de 2 litres en tassant bien pour ne laisser aucun vide, et laisser 3 cm libres en haut. Fermer le couvercle sans le serrer complètement.",
+          "image_url": "/recetas/kimchi-coreano/paso-07.webp",
+          "image_alt": "Kimchi coréen maison: Remplir le bocal"
+        },
+        {
+          "title": "Faire fermenter et servir",
+          "content": "Laisser le bocal 1 à 5 jours à température ambiante, en l’ouvrant une fois par jour pour libérer les gaz et en goûtant. Quand le kimchi est aussi acide que vous l’aimez, le mettre au réfrigérateur jusqu’à 3 semaines. Servir une demi-tasse par personne.",
+          "image_url": "/recetas/kimchi-coreano/paso-08.webp",
+          "image_alt": "Kimchi coréen maison: Faire fermenter et servir"
+        }
+      ],
+      "image_url": "/recetas/kimchi-coreano/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/kimchi-coreano/portada.webp",
+          "alt": "Kimchi coréen maison"
+        }
+      ],
+      "notes": "Le temps de préparation inclut 1 heure 30 de saumure ; la fermentation n’est pas comptée. Portez des gants pour manipuler le gochugaru et évitez de vous toucher les yeux. Si le bocal est très plein, posez-le sur une assiette au cas où du liquide déborde. Pour une version végétarienne, remplacez la sauce de poisson par de la sauce soja : le goût change. En cas de moisissure ou de mauvaise odeur, jetez le kimchi.",
+      "nutrition": {
+        "calories": 26,
+        "protein_g": 1.4,
+        "carbs_g": 5,
+        "fat_g": 0.4,
+        "sodium_mg": 516,
+        "serving_size": "½ tasse (environ 70 g ; 1/20 de la recette)",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Somme des nutriments pour 100 g multipliés par le poids des ingrédients et divisés par 20 portions. On utilise 1,5 kg de chou, 30 g de gochugaru (avec le piment rouge fort comme référence), 12 g d’ail, 10 g de gingembre, 13 g de sucre, 54 g de sauce de poisson (45 ml), 60 g de ciboule et 150 g de carotte.",
+        "note": "Estimation par portion. On suppose que le chou retient environ 15 g des 60 g de sel de la saumure après rinçage ; le sodium réel varie selon le rinçage et la sauce de poisson. L’eau perdue dans la saumure n’est pas déduite et la fermentation n’est pas prise en compte.",
+        "inputs": [
+          {
+            "fdc_id": "169989",
+            "description": "Cabbage, chinese (pe-tsai), raw",
+            "grams": 1500,
+            "per100": {
+              "calories": 16,
+              "protein_g": 1.2,
+              "carbs_g": 3.23,
+              "fat_g": 0.2,
+              "saturated_fat_g": 0.03,
+              "fiber_g": 1.2,
+              "sodium_mg": 9
+            }
+          },
+          {
+            "fdc_id": "173468",
+            "description": "Salt, table (sal absorbida estimada: 15 g de los 60 g de la salmuera)",
+            "grams": 15,
+            "per100": {
+              "calories": 0,
+              "protein_g": 0,
+              "carbs_g": 0,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 38758
+            }
+          },
+          {
+            "fdc_id": "170932",
+            "description": "Spices, pepper, red or cayenne (proxy de gochugaru)",
+            "grams": 30,
+            "per100": {
+              "calories": 318,
+              "protein_g": 12,
+              "carbs_g": 56.63,
+              "fat_g": 17.27,
+              "saturated_fat_g": 3.26,
+              "fiber_g": 27.2,
+              "sodium_mg": 30
+            }
+          },
+          {
+            "fdc_id": "169230",
+            "description": "Garlic, raw",
+            "grams": 12,
+            "per100": {
+              "calories": 149,
+              "protein_g": 6.36,
+              "carbs_g": 33.06,
+              "fat_g": 0.5,
+              "saturated_fat_g": 0.09,
+              "fiber_g": 2.1,
+              "sodium_mg": 17
+            }
+          },
+          {
+            "fdc_id": "169231",
+            "description": "Ginger root, raw",
+            "grams": 10,
+            "per100": {
+              "calories": 80,
+              "protein_g": 1.82,
+              "carbs_g": 17.77,
+              "fat_g": 0.75,
+              "saturated_fat_g": 0.2,
+              "fiber_g": 2,
+              "sodium_mg": 13
+            }
+          },
+          {
+            "fdc_id": "169655",
+            "description": "Sugars, granulated",
+            "grams": 13,
+            "per100": {
+              "calories": 387,
+              "protein_g": 0,
+              "carbs_g": 99.98,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 1
+            }
+          },
+          {
+            "fdc_id": "174535",
+            "description": "Sauce, fish, ready-to-serve",
+            "grams": 54,
+            "per100": {
+              "calories": 35,
+              "protein_g": 5.06,
+              "carbs_g": 3.64,
+              "fat_g": 0.01,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 7851
+            }
+          },
+          {
+            "fdc_id": "170005",
+            "description": "Onions, spring or scallions (includes tops and bulb), raw",
+            "grams": 60,
+            "per100": {
+              "calories": 32,
+              "protein_g": 1.83,
+              "carbs_g": 7.34,
+              "fat_g": 0.19,
+              "saturated_fat_g": 0.03,
+              "fiber_g": 2.6,
+              "sodium_mg": 16
+            }
+          },
+          {
+            "fdc_id": "170393",
+            "description": "Carrots, raw",
+            "grams": 150,
+            "per100": {
+              "calories": 41,
+              "protein_g": 0.93,
+              "carbs_g": 9.58,
+              "fat_g": 0.24,
+              "saturated_fat_g": 0.04,
+              "fiber_g": 2.8,
+              "sodium_mg": 69
+            }
+          }
+        ]
+      },
+      "seo": {
+        "title": "Kimchi coréen maison au chou chinois | Manual de Cocina",
+        "description": "Kimchi coréen maison au chou chinois, gochugaru, ail et gingembre, fermenté de 1 à 5 jours dans un bocal de 2 litres. Recette pas à pas.",
+        "image_variants": [
+          "/recetas/kimchi-coreano/portada-1x1.webp",
+          "/recetas/kimchi-coreano/portada-4x3.webp",
+          "/recetas/kimchi-coreano/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Combien de temps faut-il faire fermenter le kimchi ?",
+            "a": "De 1 à 5 jours à température ambiante. Goûtez-le chaque jour et mettez-le au réfrigérateur quand il est aussi acide que vous l’aimez."
+          },
+          {
+            "q": "Combien de temps se conserve le kimchi maison ?",
+            "a": "Jusqu’à 3 semaines au réfrigérateur, dans un bocal propre et fermé. Il devient plus acide avec le temps."
+          },
+          {
+            "q": "Peut-on faire du kimchi sans sauce de poisson ?",
+            "a": "Oui. Vous pouvez la remplacer par de la sauce soja, mais le goût sera différent, sans la note marine habituelle."
+          }
+        ]
+      }
+    },
+    {
+      "id": "95c70711-27b8-5d52-bf58-1f61a004920c",
+      "recipe_group_id": "ed3b5b91-e195-46cd-b9fb-9e9eda65e88d",
+      "language": "it",
+      "slug": "kimchi-coreano-fatto-in-casa",
+      "public_path": "/it/kimchi-coreano-fatto-in-casa",
+      "source_url": null,
+      "title": "Kimchi coreano fatto in casa",
+      "excerpt": "Kimchi fatto in casa con cavolo cinese, gochugaru, aglio e zenzero, fermentato in un barattolo da 2 litri. Per 20 porzioni da mezza tazza, si conserva fino a 3 settimane in frigorifero.",
+      "summary": "Il kimchi fatto in casa si prepara con cavolo cinese salato in salamoia, una pasta di gochugaru, aglio, zenzero, zucchero e salsa di pesce, e un po’ di cipollotto e carota. Il cavolo riposa 1 ora e 30 minuti in salamoia e si sciacqua 3 volte.\n\nSi mette in un barattolo da 2 litri e fermenta a temperatura ambiente da 1 a 5 giorni, finché è acido al punto che ti piace. Poi si conserva in frigorifero fino a 3 settimane. Per circa 1,4 kg, 20 porzioni da mezza tazza.",
+      "category": "Contorni",
+      "category_slug": "guarniciones",
+      "difficulty": "Facile",
+      "course": "Contorno",
+      "cuisine": "Coreana",
+      "prep_time_minutes": 150,
+      "cook_time_minutes": 0,
+      "total_time_minutes": 150,
+      "servings": 20,
+      "keywords": [
+        "kimchi",
+        "kimchi fatto in casa",
+        "ricetta kimchi",
+        "kimchi coreano",
+        "kimchi di cavolo cinese",
+        "gochugaru",
+        "fermentazione in casa"
+      ],
+      "ingredients": [
+        {
+          "name": "cavolo cinese, a pezzi da 4 cm",
+          "amount": "1500",
+          "unit": "g",
+          "group": "Per il cavolo e la salamoia"
+        },
+        {
+          "name": "sale grosso",
+          "amount": "60",
+          "unit": "g",
+          "group": "Per il cavolo e la salamoia"
+        },
+        {
+          "name": "acqua",
+          "amount": "1000",
+          "unit": "ml",
+          "group": "Per il cavolo e la salamoia"
+        },
+        {
+          "name": "gochugaru (peperoncino coreano in scaglie)",
+          "amount": "30",
+          "unit": "g",
+          "group": "Per la pasta"
+        },
+        {
+          "name": "aglio, tritato",
+          "amount": "4",
+          "unit": "spicchi",
+          "group": "Per la pasta"
+        },
+        {
+          "name": "zenzero fresco, grattugiato",
+          "amount": "10",
+          "unit": "g",
+          "group": "Per la pasta"
+        },
+        {
+          "name": "zucchero",
+          "amount": "1",
+          "unit": "cucchiaio",
+          "group": "Per la pasta"
+        },
+        {
+          "name": "salsa di pesce",
+          "amount": "45",
+          "unit": "ml",
+          "group": "Per la pasta"
+        },
+        {
+          "name": "cipollotti, a pezzi da 3 cm",
+          "amount": "4",
+          "unit": "unità",
+          "group": "Per mescolare"
+        },
+        {
+          "name": "carota, a listarelle sottili",
+          "amount": "150",
+          "unit": "g",
+          "group": "Per mescolare"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Taglia il cavolo",
+          "content": "Taglia 1,5 kg di cavolo cinese in quarti per il lungo, poi a pezzi da 4 cm.",
+          "image_url": "/recetas/kimchi-coreano/paso-01.webp",
+          "image_alt": "Kimchi coreano fatto in casa: Taglia il cavolo"
+        },
+        {
+          "title": "Prepara la salamoia",
+          "content": "Sciogli 60 g di sale grosso in 1 litro di acqua, immergi il cavolo e lascialo riposare 1 ora e 30 minuti, girandolo a metà tempo.",
+          "image_url": "/recetas/kimchi-coreano/paso-02.webp",
+          "image_alt": "Kimchi coreano fatto in casa: Prepara la salamoia"
+        },
+        {
+          "title": "Sciacqua e scola",
+          "content": "Sciacqua il cavolo 3 volte con acqua fredda e lascialo scolare bene per 10 minuti.",
+          "image_url": "/recetas/kimchi-coreano/paso-03.webp",
+          "image_alt": "Kimchi coreano fatto in casa: Sciacqua e scola"
+        },
+        {
+          "title": "Prepara la pasta",
+          "content": "Mescola 30 g di gochugaru, 4 spicchi d’aglio tritati, 10 g di zenzero grattugiato, 1 cucchiaio di zucchero e 45 ml di salsa di pesce fino a ottenere una pasta densa.",
+          "image_url": "/recetas/kimchi-coreano/paso-04.webp",
+          "image_alt": "Kimchi coreano fatto in casa: Prepara la pasta"
+        },
+        {
+          "title": "Taglia le verdure",
+          "content": "Taglia 4 cipollotti a pezzi da 3 cm e 150 g di carota a listarelle sottili.",
+          "image_url": "/recetas/kimchi-coreano/paso-05.webp",
+          "image_alt": "Kimchi coreano fatto in casa: Taglia le verdure"
+        },
+        {
+          "title": "Mescola tutto",
+          "content": "Con i guanti, mescola il cavolo scolato con la pasta, i cipollotti e la carota finché tutto è ricoperto.",
+          "image_url": "/recetas/kimchi-coreano/paso-06.webp",
+          "image_alt": "Kimchi coreano fatto in casa: Mescola tutto"
+        },
+        {
+          "title": "Riempi il barattolo",
+          "content": "Riempi un barattolo da 2 litri premendo bene per non lasciare spazi vuoti e lascia 3 cm liberi in alto. Chiudi il coperchio senza stringere del tutto.",
+          "image_url": "/recetas/kimchi-coreano/paso-07.webp",
+          "image_alt": "Kimchi coreano fatto in casa: Riempi il barattolo"
+        },
+        {
+          "title": "Fai fermentare e servi",
+          "content": "Lascia il barattolo a temperatura ambiente da 1 a 5 giorni, aprendolo una volta al giorno per far uscire i gas e assaggiandolo. Quando è acido al punto che ti piace, conservalo in frigorifero fino a 3 settimane. Servi mezza tazza a persona.",
+          "image_url": "/recetas/kimchi-coreano/paso-08.webp",
+          "image_alt": "Kimchi coreano fatto in casa: Fai fermentare e servi"
+        }
+      ],
+      "image_url": "/recetas/kimchi-coreano/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/kimchi-coreano/portada.webp",
+          "alt": "Kimchi coreano fatto in casa"
+        }
+      ],
+      "notes": "Il tempo di preparazione include 1 ora e 30 minuti di salamoia; la fermentazione non è inclusa. Usa i guanti per maneggiare il gochugaru ed evita di toccarti gli occhi. Se il barattolo è molto pieno, appoggialo su un piatto nel caso il liquido trabocchi. Per una versione vegetariana, sostituisci la salsa di pesce con salsa di soia: il sapore cambia. Se compare muffa o l’odore è sgradevole, butta il kimchi.",
+      "nutrition": {
+        "calories": 26,
+        "protein_g": 1.4,
+        "carbs_g": 5,
+        "fat_g": 0.4,
+        "sodium_mg": 516,
+        "serving_size": "½ tazza (circa 70 g; 1/20 della ricetta)",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Somma dei nutrienti per 100 g moltiplicati per il peso degli ingredienti e divisi per 20 porzioni. Si usano 1,5 kg di cavolo, 30 g di gochugaru (con peperoncino rosso piccante come riferimento), 12 g di aglio, 10 g di zenzero, 13 g di zucchero, 54 g di salsa di pesce (45 ml), 60 g di cipollotto e 150 g di carota.",
+        "note": "Stima per porzione. Si suppone che il cavolo trattenga circa 15 g dei 60 g di sale della salamoia dopo il risciacquo; il sodio reale varia con il risciacquo e con la salsa di pesce. L’acqua persa nella salamoia non viene sottratta e la fermentazione non è considerata.",
+        "inputs": [
+          {
+            "fdc_id": "169989",
+            "description": "Cabbage, chinese (pe-tsai), raw",
+            "grams": 1500,
+            "per100": {
+              "calories": 16,
+              "protein_g": 1.2,
+              "carbs_g": 3.23,
+              "fat_g": 0.2,
+              "saturated_fat_g": 0.03,
+              "fiber_g": 1.2,
+              "sodium_mg": 9
+            }
+          },
+          {
+            "fdc_id": "173468",
+            "description": "Salt, table (sal absorbida estimada: 15 g de los 60 g de la salmuera)",
+            "grams": 15,
+            "per100": {
+              "calories": 0,
+              "protein_g": 0,
+              "carbs_g": 0,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 38758
+            }
+          },
+          {
+            "fdc_id": "170932",
+            "description": "Spices, pepper, red or cayenne (proxy de gochugaru)",
+            "grams": 30,
+            "per100": {
+              "calories": 318,
+              "protein_g": 12,
+              "carbs_g": 56.63,
+              "fat_g": 17.27,
+              "saturated_fat_g": 3.26,
+              "fiber_g": 27.2,
+              "sodium_mg": 30
+            }
+          },
+          {
+            "fdc_id": "169230",
+            "description": "Garlic, raw",
+            "grams": 12,
+            "per100": {
+              "calories": 149,
+              "protein_g": 6.36,
+              "carbs_g": 33.06,
+              "fat_g": 0.5,
+              "saturated_fat_g": 0.09,
+              "fiber_g": 2.1,
+              "sodium_mg": 17
+            }
+          },
+          {
+            "fdc_id": "169231",
+            "description": "Ginger root, raw",
+            "grams": 10,
+            "per100": {
+              "calories": 80,
+              "protein_g": 1.82,
+              "carbs_g": 17.77,
+              "fat_g": 0.75,
+              "saturated_fat_g": 0.2,
+              "fiber_g": 2,
+              "sodium_mg": 13
+            }
+          },
+          {
+            "fdc_id": "169655",
+            "description": "Sugars, granulated",
+            "grams": 13,
+            "per100": {
+              "calories": 387,
+              "protein_g": 0,
+              "carbs_g": 99.98,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 1
+            }
+          },
+          {
+            "fdc_id": "174535",
+            "description": "Sauce, fish, ready-to-serve",
+            "grams": 54,
+            "per100": {
+              "calories": 35,
+              "protein_g": 5.06,
+              "carbs_g": 3.64,
+              "fat_g": 0.01,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 7851
+            }
+          },
+          {
+            "fdc_id": "170005",
+            "description": "Onions, spring or scallions (includes tops and bulb), raw",
+            "grams": 60,
+            "per100": {
+              "calories": 32,
+              "protein_g": 1.83,
+              "carbs_g": 7.34,
+              "fat_g": 0.19,
+              "saturated_fat_g": 0.03,
+              "fiber_g": 2.6,
+              "sodium_mg": 16
+            }
+          },
+          {
+            "fdc_id": "170393",
+            "description": "Carrots, raw",
+            "grams": 150,
+            "per100": {
+              "calories": 41,
+              "protein_g": 0.93,
+              "carbs_g": 9.58,
+              "fat_g": 0.24,
+              "saturated_fat_g": 0.04,
+              "fiber_g": 2.8,
+              "sodium_mg": 69
+            }
+          }
+        ]
+      },
+      "seo": {
+        "title": "Kimchi coreano fatto in casa con cavolo cinese | Manual de Cocina",
+        "description": "Kimchi coreano fatto in casa con cavolo cinese, gochugaru, aglio e zenzero, fermentato da 1 a 5 giorni in un barattolo da 2 litri. Passo passo.",
+        "image_variants": [
+          "/recetas/kimchi-coreano/portada-1x1.webp",
+          "/recetas/kimchi-coreano/portada-4x3.webp",
+          "/recetas/kimchi-coreano/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Quanto deve fermentare il kimchi?",
+            "a": "Da 1 a 5 giorni a temperatura ambiente. Assaggialo ogni giorno e mettilo in frigorifero quando è acido al punto che ti piace."
+          },
+          {
+            "q": "Quanto si conserva il kimchi fatto in casa?",
+            "a": "Fino a 3 settimane in frigorifero, in un barattolo pulito e chiuso. Con il tempo diventa più acido."
+          },
+          {
+            "q": "Si può fare il kimchi senza salsa di pesce?",
+            "a": "Sì. Puoi sostituirla con salsa di soia, ma il sapore sarà diverso e senza la solita nota di mare."
+          }
+        ]
+      }
+    },
+    {
+      "id": "dbc7294d-f986-548b-b98a-d17d25f36b04",
+      "recipe_group_id": "ed3b5b91-e195-46cd-b9fb-9e9eda65e88d",
+      "language": "ja",
+      "slug": "白菜キムチ",
+      "public_path": "/ja/白菜キムチ",
+      "source_url": null,
+      "title": "白菜キムチ",
+      "excerpt": "白菜、コチュカル、にんにく、しょうがで作る手作り白菜キムチ。2リットルの瓶で発酵させます。半カップずつ20人分、冷蔵庫で最長3週間保存できます。",
+      "summary": "手作りキムチは、塩水に漬けた白菜に、コチュカル、にんにく、しょうが、砂糖、魚醤で作ったペースト、少量のねぎとにんじんを合わせて作ります。白菜は塩水に1時間30分漬けて、3回すすぎます。\n\n2リットルの瓶に詰め、室温で1〜5日発酵させ、好みの酸味になったら冷蔵庫で最長3週間保存します。仕上がりは約1.4kg、半カップずつで20人分です。",
+      "category": "付け合わせ",
+      "category_slug": "guarniciones",
+      "difficulty": "簡単",
+      "course": "付け合わせ",
+      "cuisine": "韓国料理",
+      "prep_time_minutes": 150,
+      "cook_time_minutes": 0,
+      "total_time_minutes": 150,
+      "servings": 20,
+      "keywords": [
+        "キムチ",
+        "手作りキムチ",
+        "キムチ レシピ",
+        "白菜キムチ",
+        "韓国キムチ",
+        "コチュカル",
+        "発酵食品"
+      ],
+      "ingredients": [
+        {
+          "name": "白菜、4cm角に切る",
+          "amount": "1500",
+          "unit": "g",
+          "group": "白菜と塩水用"
+        },
+        {
+          "name": "粗塩",
+          "amount": "60",
+          "unit": "g",
+          "group": "白菜と塩水用"
+        },
+        {
+          "name": "水",
+          "amount": "1000",
+          "unit": "ml",
+          "group": "白菜と塩水用"
+        },
+        {
+          "name": "コチュカル（韓国産粉唐辛子）",
+          "amount": "30",
+          "unit": "g",
+          "group": "ペースト用"
+        },
+        {
+          "name": "にんにく、みじん切り",
+          "amount": "4",
+          "unit": "かけ",
+          "group": "ペースト用"
+        },
+        {
+          "name": "生姜、すりおろし",
+          "amount": "10",
+          "unit": "g",
+          "group": "ペースト用"
+        },
+        {
+          "name": "砂糖",
+          "amount": "1",
+          "unit": "大さじ",
+          "group": "ペースト用"
+        },
+        {
+          "name": "魚醤",
+          "amount": "45",
+          "unit": "ml",
+          "group": "ペースト用"
+        },
+        {
+          "name": "ねぎ、3cmに切る",
+          "amount": "4",
+          "unit": "本",
+          "group": "混ぜる材料"
+        },
+        {
+          "name": "にんじん、細切り",
+          "amount": "150",
+          "unit": "g",
+          "group": "混ぜる材料"
+        }
+      ],
+      "steps": [
+        {
+          "title": "白菜を切る",
+          "content": "白菜1.5kgを縦に4等分し、4cm角に切ります。",
+          "image_url": "/recetas/kimchi-coreano/paso-01.webp",
+          "image_alt": "白菜キムチ: 白菜を切る"
+        },
+        {
+          "title": "塩水を作る",
+          "content": "水1リットルに粗塩60gを溶かし、白菜を浸して1時間30分おきます。半分の時間で上下を返します。",
+          "image_url": "/recetas/kimchi-coreano/paso-02.webp",
+          "image_alt": "白菜キムチ: 塩水を作る"
+        },
+        {
+          "title": "すすいで水気を切る",
+          "content": "白菜を冷水で3回すすぎ、10分間しっかり水気を切ります。",
+          "image_url": "/recetas/kimchi-coreano/paso-03.webp",
+          "image_alt": "白菜キムチ: すすいで水気を切る"
+        },
+        {
+          "title": "ペーストを作る",
+          "content": "コチュカル30g、みじん切りのにんにく4かけ、すりおろした生姜10g、砂糖大さじ1、魚醤45mlを混ぜて、濃いペーストにします。",
+          "image_url": "/recetas/kimchi-coreano/paso-04.webp",
+          "image_alt": "白菜キムチ: ペーストを作る"
+        },
+        {
+          "title": "野菜を切る",
+          "content": "ねぎ4本を3cmに切り、にんじん150gを細切りにします。",
+          "image_url": "/recetas/kimchi-coreano/paso-05.webp",
+          "image_alt": "白菜キムチ: 野菜を切る"
+        },
+        {
+          "title": "全体を混ぜる",
+          "content": "手袋をして、水気を切った白菜にペースト、ねぎ、にんじんを加え、全体にからめます。",
+          "image_url": "/recetas/kimchi-coreano/paso-06.webp",
+          "image_alt": "白菜キムチ: 全体を混ぜる"
+        },
+        {
+          "title": "瓶に詰める",
+          "content": "2リットルの瓶に、すき間ができないようしっかり押しながら詰め、上3cmをあけます。ふたは固く閉めすぎないようにします。",
+          "image_url": "/recetas/kimchi-coreano/paso-07.webp",
+          "image_alt": "白菜キムチ: 瓶に詰める"
+        },
+        {
+          "title": "発酵させて食べる",
+          "content": "瓶を室温で1〜5日おき、1日1回ふたを開けてガスを抜き、味見をします。好みの酸味になったら、冷蔵庫で最長3週間保存します。1人半カップが目安です。",
+          "image_url": "/recetas/kimchi-coreano/paso-08.webp",
+          "image_alt": "白菜キムチ: 発酵させて食べる"
+        }
+      ],
+      "image_url": "/recetas/kimchi-coreano/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/kimchi-coreano/portada.webp",
+          "alt": "白菜キムチ"
+        }
+      ],
+      "notes": "調理時間には塩水に漬ける1時間30分を含み、発酵時間は含みません。コチュカルを扱うときは手袋をつけ、目をこすらないようにしてください。瓶がいっぱいのときは、汁があふれても困らないよう皿の上に置きます。ベジタリアン向けには魚醤をしょうゆに替えられますが、味が変わります。カビが生えたり、異臭がしたりしたら、キムチは処分してください。",
+      "nutrition": {
+        "calories": 26,
+        "protein_g": 1.4,
+        "carbs_g": 5,
+        "fat_g": 0.4,
+        "sodium_mg": 516,
+        "serving_size": "半カップ（約70g、レシピの1/20）",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "100gあたりの栄養素に材料の重量を掛け、20人分で割って合計しています。白菜1.5kg、コチュカル30g（辛い赤唐辛子の数値で代用）、にんにく12g、しょうが10g、砂糖13g、魚醤54g（45ml）、ねぎ60g、にんじん150gを使用しています。",
+        "note": "1人分の目安です。すすいだ後、白菜は塩水の塩60gのうち約15gを保持すると仮定しています。実際のナトリウム量はすすぎ方や魚醤によって変わります。塩水で失われる水分は差し引いておらず、発酵による変化も考慮していません。",
+        "inputs": [
+          {
+            "fdc_id": "169989",
+            "description": "Cabbage, chinese (pe-tsai), raw",
+            "grams": 1500,
+            "per100": {
+              "calories": 16,
+              "protein_g": 1.2,
+              "carbs_g": 3.23,
+              "fat_g": 0.2,
+              "saturated_fat_g": 0.03,
+              "fiber_g": 1.2,
+              "sodium_mg": 9
+            }
+          },
+          {
+            "fdc_id": "173468",
+            "description": "Salt, table (sal absorbida estimada: 15 g de los 60 g de la salmuera)",
+            "grams": 15,
+            "per100": {
+              "calories": 0,
+              "protein_g": 0,
+              "carbs_g": 0,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 38758
+            }
+          },
+          {
+            "fdc_id": "170932",
+            "description": "Spices, pepper, red or cayenne (proxy de gochugaru)",
+            "grams": 30,
+            "per100": {
+              "calories": 318,
+              "protein_g": 12,
+              "carbs_g": 56.63,
+              "fat_g": 17.27,
+              "saturated_fat_g": 3.26,
+              "fiber_g": 27.2,
+              "sodium_mg": 30
+            }
+          },
+          {
+            "fdc_id": "169230",
+            "description": "Garlic, raw",
+            "grams": 12,
+            "per100": {
+              "calories": 149,
+              "protein_g": 6.36,
+              "carbs_g": 33.06,
+              "fat_g": 0.5,
+              "saturated_fat_g": 0.09,
+              "fiber_g": 2.1,
+              "sodium_mg": 17
+            }
+          },
+          {
+            "fdc_id": "169231",
+            "description": "Ginger root, raw",
+            "grams": 10,
+            "per100": {
+              "calories": 80,
+              "protein_g": 1.82,
+              "carbs_g": 17.77,
+              "fat_g": 0.75,
+              "saturated_fat_g": 0.2,
+              "fiber_g": 2,
+              "sodium_mg": 13
+            }
+          },
+          {
+            "fdc_id": "169655",
+            "description": "Sugars, granulated",
+            "grams": 13,
+            "per100": {
+              "calories": 387,
+              "protein_g": 0,
+              "carbs_g": 99.98,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 1
+            }
+          },
+          {
+            "fdc_id": "174535",
+            "description": "Sauce, fish, ready-to-serve",
+            "grams": 54,
+            "per100": {
+              "calories": 35,
+              "protein_g": 5.06,
+              "carbs_g": 3.64,
+              "fat_g": 0.01,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 7851
+            }
+          },
+          {
+            "fdc_id": "170005",
+            "description": "Onions, spring or scallions (includes tops and bulb), raw",
+            "grams": 60,
+            "per100": {
+              "calories": 32,
+              "protein_g": 1.83,
+              "carbs_g": 7.34,
+              "fat_g": 0.19,
+              "saturated_fat_g": 0.03,
+              "fiber_g": 2.6,
+              "sodium_mg": 16
+            }
+          },
+          {
+            "fdc_id": "170393",
+            "description": "Carrots, raw",
+            "grams": 150,
+            "per100": {
+              "calories": 41,
+              "protein_g": 0.93,
+              "carbs_g": 9.58,
+              "fat_g": 0.24,
+              "saturated_fat_g": 0.04,
+              "fiber_g": 2.8,
+              "sodium_mg": 69
+            }
+          }
+        ]
+      },
+      "seo": {
+        "title": "白菜キムチの作り方｜手作り韓国キムチ | Manual de Cocina",
+        "description": "コチュカル、にんにく、しょうがで作る手作り白菜キムチ。2リットルの瓶で1〜5日発酵。手順を写真付きで解説します。",
+        "image_variants": [
+          "/recetas/kimchi-coreano/portada-1x1.webp",
+          "/recetas/kimchi-coreano/portada-4x3.webp",
+          "/recetas/kimchi-coreano/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "キムチはどれくらい発酵させればよいですか？",
+            "a": "室温で1〜5日です。毎日味見をして、好みの酸味になったら冷蔵庫に移します。"
+          },
+          {
+            "q": "手作りキムチはどれくらい保存できますか？",
+            "a": "清潔な瓶に入れてふたを閉め、冷蔵庫で最長3週間です。時間がたつほど酸味が強くなります。"
+          },
+          {
+            "q": "魚醤なしでキムチは作れますか？",
+            "a": "はい。しょうゆで代用できますが、風味が変わり、魚醤特有のうま味は出にくくなります。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "6f11c994-8b28-5418-b072-04f3acbf73e8",
+      "recipe_group_id": "ed3b5b91-e195-46cd-b9fb-9e9eda65e88d",
+      "language": "pt",
+      "slug": "kimchi-coreano-caseiro",
+      "public_path": "/pt/kimchi-coreano-caseiro",
+      "source_url": null,
+      "title": "Kimchi coreano caseiro",
+      "excerpt": "Kimchi caseiro de acelga chinesa com gochugaru, alho e gengibre, fermentado em um pote de 2 litros. Rende 20 porções de meia xícara e dura até 3 semanas na geladeira.",
+      "summary": "O kimchi caseiro é feito com acelga chinesa salgada em salmoura, uma pasta de gochugaru, alho, gengibre, açúcar e molho de peixe, e um pouco de cebolinha e cenoura. A acelga descansa 1 hora e 30 minutos na salmoura e é enxaguada 3 vezes.\n\nÉ colocado em um pote de 2 litros e fermenta em temperatura ambiente de 1 a 5 dias, até ficar azedo no ponto que você gosta. Depois vai para a geladeira por até 3 semanas. Rende cerca de 1,4 kg, 20 porções de meia xícara.",
+      "category": "Acompanhamentos",
+      "category_slug": "guarniciones",
+      "difficulty": "Fácil",
+      "course": "Acompanhamento",
+      "cuisine": "Coreana",
+      "prep_time_minutes": 150,
+      "cook_time_minutes": 0,
+      "total_time_minutes": 150,
+      "servings": 20,
+      "keywords": [
+        "kimchi",
+        "kimchi caseiro",
+        "receita de kimchi",
+        "kimchi coreano",
+        "kimchi de acelga chinesa",
+        "gochugaru",
+        "fermentados caseiros"
+      ],
+      "ingredients": [
+        {
+          "name": "acelga chinesa, em pedaços de 4 cm",
+          "amount": "1500",
+          "unit": "g",
+          "group": "Para a acelga e a salmoura"
+        },
+        {
+          "name": "sal grosso",
+          "amount": "60",
+          "unit": "g",
+          "group": "Para a acelga e a salmoura"
+        },
+        {
+          "name": "água",
+          "amount": "1000",
+          "unit": "ml",
+          "group": "Para a acelga e a salmoura"
+        },
+        {
+          "name": "gochugaru (pimenta coreana em flocos)",
+          "amount": "30",
+          "unit": "g",
+          "group": "Para a pasta"
+        },
+        {
+          "name": "alho, picado",
+          "amount": "4",
+          "unit": "dentes",
+          "group": "Para a pasta"
+        },
+        {
+          "name": "gengibre fresco, ralado",
+          "amount": "10",
+          "unit": "g",
+          "group": "Para a pasta"
+        },
+        {
+          "name": "açúcar",
+          "amount": "1",
+          "unit": "colher de sopa",
+          "group": "Para a pasta"
+        },
+        {
+          "name": "molho de peixe",
+          "amount": "45",
+          "unit": "ml",
+          "group": "Para a pasta"
+        },
+        {
+          "name": "cebolinhas, em pedaços de 3 cm",
+          "amount": "4",
+          "unit": "unidade",
+          "group": "Para misturar"
+        },
+        {
+          "name": "cenoura, em tiras finas",
+          "amount": "150",
+          "unit": "g",
+          "group": "Para misturar"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Corte a acelga",
+          "content": "Corte 1,5 kg de acelga chinesa em quartos no sentido do comprimento e depois em pedaços de 4 cm.",
+          "image_url": "/recetas/kimchi-coreano/paso-01.webp",
+          "image_alt": "Kimchi coreano caseiro: Corte a acelga"
+        },
+        {
+          "title": "Prepare a salmoura",
+          "content": "Dissolva 60 g de sal grosso em 1 litro de água, mergulhe a acelga e deixe descansar por 1 hora e 30 minutos, virando na metade do tempo.",
+          "image_url": "/recetas/kimchi-coreano/paso-02.webp",
+          "image_alt": "Kimchi coreano caseiro: Prepare a salmoura"
+        },
+        {
+          "title": "Enxágue e escorra",
+          "content": "Enxágue a acelga 3 vezes com água fria e deixe escorrer bem por 10 minutos.",
+          "image_url": "/recetas/kimchi-coreano/paso-03.webp",
+          "image_alt": "Kimchi coreano caseiro: Enxágue e escorra"
+        },
+        {
+          "title": "Faça a pasta",
+          "content": "Misture 30 g de gochugaru, 4 dentes de alho picados, 10 g de gengibre ralado, 1 colher de sopa de açúcar e 45 ml de molho de peixe até formar uma pasta grossa.",
+          "image_url": "/recetas/kimchi-coreano/paso-04.webp",
+          "image_alt": "Kimchi coreano caseiro: Faça a pasta"
+        },
+        {
+          "title": "Corte os legumes",
+          "content": "Corte 4 cebolinhas em pedaços de 3 cm e 150 g de cenoura em tiras finas.",
+          "image_url": "/recetas/kimchi-coreano/paso-05.webp",
+          "image_alt": "Kimchi coreano caseiro: Corte os legumes"
+        },
+        {
+          "title": "Misture tudo",
+          "content": "Com luvas, misture a acelga escorrida com a pasta, as cebolinhas e a cenoura até que tudo fique coberto.",
+          "image_url": "/recetas/kimchi-coreano/paso-06.webp",
+          "image_alt": "Kimchi coreano caseiro: Misture tudo"
+        },
+        {
+          "title": "Encha o pote",
+          "content": "Encha um pote de 2 litros pressionando bem para não sobrar espaços vazios e deixe 3 cm livres no topo. Feche a tampa sem apertar totalmente.",
+          "image_url": "/recetas/kimchi-coreano/paso-07.webp",
+          "image_alt": "Kimchi coreano caseiro: Encha o pote"
+        },
+        {
+          "title": "Fermente e sirva",
+          "content": "Deixe o pote em temperatura ambiente de 1 a 5 dias, abrindo uma vez por dia para liberar os gases e provando. Quando estiver azedo no ponto que você gosta, guarde na geladeira por até 3 semanas. Sirva meia xícara por pessoa.",
+          "image_url": "/recetas/kimchi-coreano/paso-08.webp",
+          "image_alt": "Kimchi coreano caseiro: Fermente e sirva"
+        }
+      ],
+      "image_url": "/recetas/kimchi-coreano/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/kimchi-coreano/portada.webp",
+          "alt": "Kimchi coreano caseiro"
+        }
+      ],
+      "notes": "O tempo de preparo inclui 1 hora e 30 minutos de salmoura; a fermentação não está incluída. Use luvas para manusear o gochugaru e evite tocar os olhos. Se o pote ficar muito cheio, coloque-o sobre um prato caso transborde líquido. Para uma versão vegetariana, troque o molho de peixe por shoyu: o sabor muda. Se aparecer mofo ou houver mau cheiro, descarte o kimchi.",
+      "nutrition": {
+        "calories": 26,
+        "protein_g": 1.4,
+        "carbs_g": 5,
+        "fat_g": 0.4,
+        "sodium_mg": 516,
+        "serving_size": "½ xícara (cerca de 70 g; 1/20 da receita)",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Nutrientes por 100 g multiplicados pelo peso dos ingredientes e divididos por 20 porções. Usa 1,5 kg de acelga, 30 g de gochugaru (com pimenta vermelha picante como referência), 12 g de alho, 10 g de gengibre, 13 g de açúcar, 54 g de molho de peixe (45 ml), 60 g de cebolinha e 150 g de cenoura.",
+        "note": "Estimativa por porção. Supõe-se que a acelga retenha cerca de 15 g dos 60 g de sal da salmoura depois do enxágue; o sódio real varia com o enxágue e com o molho de peixe. A água perdida na salmoura não é descontada e a fermentação não é considerada.",
+        "inputs": [
+          {
+            "fdc_id": "169989",
+            "description": "Cabbage, chinese (pe-tsai), raw",
+            "grams": 1500,
+            "per100": {
+              "calories": 16,
+              "protein_g": 1.2,
+              "carbs_g": 3.23,
+              "fat_g": 0.2,
+              "saturated_fat_g": 0.03,
+              "fiber_g": 1.2,
+              "sodium_mg": 9
+            }
+          },
+          {
+            "fdc_id": "173468",
+            "description": "Salt, table (sal absorbida estimada: 15 g de los 60 g de la salmuera)",
+            "grams": 15,
+            "per100": {
+              "calories": 0,
+              "protein_g": 0,
+              "carbs_g": 0,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 38758
+            }
+          },
+          {
+            "fdc_id": "170932",
+            "description": "Spices, pepper, red or cayenne (proxy de gochugaru)",
+            "grams": 30,
+            "per100": {
+              "calories": 318,
+              "protein_g": 12,
+              "carbs_g": 56.63,
+              "fat_g": 17.27,
+              "saturated_fat_g": 3.26,
+              "fiber_g": 27.2,
+              "sodium_mg": 30
+            }
+          },
+          {
+            "fdc_id": "169230",
+            "description": "Garlic, raw",
+            "grams": 12,
+            "per100": {
+              "calories": 149,
+              "protein_g": 6.36,
+              "carbs_g": 33.06,
+              "fat_g": 0.5,
+              "saturated_fat_g": 0.09,
+              "fiber_g": 2.1,
+              "sodium_mg": 17
+            }
+          },
+          {
+            "fdc_id": "169231",
+            "description": "Ginger root, raw",
+            "grams": 10,
+            "per100": {
+              "calories": 80,
+              "protein_g": 1.82,
+              "carbs_g": 17.77,
+              "fat_g": 0.75,
+              "saturated_fat_g": 0.2,
+              "fiber_g": 2,
+              "sodium_mg": 13
+            }
+          },
+          {
+            "fdc_id": "169655",
+            "description": "Sugars, granulated",
+            "grams": 13,
+            "per100": {
+              "calories": 387,
+              "protein_g": 0,
+              "carbs_g": 99.98,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 1
+            }
+          },
+          {
+            "fdc_id": "174535",
+            "description": "Sauce, fish, ready-to-serve",
+            "grams": 54,
+            "per100": {
+              "calories": 35,
+              "protein_g": 5.06,
+              "carbs_g": 3.64,
+              "fat_g": 0.01,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 7851
+            }
+          },
+          {
+            "fdc_id": "170005",
+            "description": "Onions, spring or scallions (includes tops and bulb), raw",
+            "grams": 60,
+            "per100": {
+              "calories": 32,
+              "protein_g": 1.83,
+              "carbs_g": 7.34,
+              "fat_g": 0.19,
+              "saturated_fat_g": 0.03,
+              "fiber_g": 2.6,
+              "sodium_mg": 16
+            }
+          },
+          {
+            "fdc_id": "170393",
+            "description": "Carrots, raw",
+            "grams": 150,
+            "per100": {
+              "calories": 41,
+              "protein_g": 0.93,
+              "carbs_g": 9.58,
+              "fat_g": 0.24,
+              "saturated_fat_g": 0.04,
+              "fiber_g": 2.8,
+              "sodium_mg": 69
+            }
+          }
+        ]
+      },
+      "seo": {
+        "title": "Kimchi coreano caseiro de acelga chinesa | Manual de Cocina",
+        "description": "Kimchi coreano caseiro de acelga chinesa com gochugaru, alho e gengibre, fermentado de 1 a 5 dias em um pote de 2 litros. Receita passo a passo.",
+        "image_variants": [
+          "/recetas/kimchi-coreano/portada-1x1.webp",
+          "/recetas/kimchi-coreano/portada-4x3.webp",
+          "/recetas/kimchi-coreano/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Quanto tempo o kimchi deve fermentar?",
+            "a": "De 1 a 5 dias em temperatura ambiente. Prove todos os dias e leve à geladeira quando estiver azedo no ponto que você gosta."
+          },
+          {
+            "q": "Quanto tempo dura o kimchi caseiro?",
+            "a": "Até 3 semanas na geladeira, em um pote limpo e fechado. Com o tempo fica mais azedo."
+          },
+          {
+            "q": "Dá para fazer kimchi sem molho de peixe?",
+            "a": "Dá. Você pode trocar por shoyu, mas o sabor será diferente e sem o toque marinho habitual."
+          }
+        ]
+      }
+    }
+  ]
+}
