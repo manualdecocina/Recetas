@@ -1,0 +1,2306 @@
+{
+  "scope": "paella-valenciana only; preview.manualdecocina.com",
+  "state": "ES_AND_6_TRANSLATIONS_CLOSED_IMAGES_FINAL_AWAITING_DB_PUBLISH",
+  "historical_path": "/paella-valenciana",
+  "provenance": "Reconstrucción nueva (2026-10-06): pasos, cantidades y tiempos redactados desde cero (6 raciones, 12 ingredientes, 8 pasos, 20 min de preparación, 65 min de cocción, 85 min en total). De la fila legada de Supabase (WordPress) solo se conserva la identidad técnica: recipe_group_id, public_path y source_url; no se leyó ni reutiliza ningún texto ni traducción antigua. Cantidades fijadas editorialmente: pollo troceado con hueso 600 g, conejo troceado con hueso 400 g, aceite de oliva 60 ml (55 g), judías verdes planas 250 g, garrofón 150 g, tomate rallado 200 g, pimentón dulce 1 cucharadita, agua 1,2 l, azafrán 1 pizca, sal 1½ cucharaditas (9 g), arroz bomba 400 g, romero 1 ramita. Valores USDA SR Legacy y FDC ids de memoria, a contrastar con FDC; pesos comestibles estimados (pollo 65 %, conejo 60 % de las piezas con hueso); proxies declarados: judía lima cocida para el garrofón y arroz blanco de grano corto para el arroz bomba; azafrán y romero no se contabilizan. Nota de imagen: tras una primera tanda con el arroz cocido de aspecto de maíz, ChatGPT rehízo portada (4 formatos) y pasos 02, 07 y 08; los pasos 01, 03, 04, 05 y 06 son de la primera tanda. El paso 08 muestra la paella reposando sin paño encima, por eso el texto no menciona el paño; el paso 01 no incluye el cuenco de tomate rallado.",
+  "localization_plan": {
+    "category_slug": "platos-principales",
+    "category_labels": {
+      "es": "Platos principales",
+      "de": "Hauptgerichte",
+      "en": "Main dishes",
+      "fr": "Plats principaux",
+      "it": "Secondi piatti",
+      "ja": "主菜",
+      "pt": "Pratos principais"
+    },
+    "proposed_public_paths": {
+      "es": "/paella-valenciana",
+      "de": "/de/paella-valenciana-rezept",
+      "en": "/en/valencian-paella",
+      "fr": "/fr/paella-valencienne",
+      "it": "/it/paella-valenciana",
+      "ja": "/ja/バレンシア風パエリア",
+      "pt": "/pt/paella-valenciana"
+    },
+    "path_convention": "Sin barra final; public_path almacenado es la fuente de verdad. Ruta ES histórica conservada.",
+    "hreflang_note": "/pt usa hreflang pt-BR"
+  },
+  "records": [
+    {
+      "id": "7e586e24-2ce5-41d2-81d0-6ca2c6a16e0d",
+      "recipe_group_id": "45c9cce8-9152-481d-b303-d2d9ede3cc07",
+      "language": "es",
+      "slug": "paella-valenciana",
+      "public_path": "/paella-valenciana",
+      "source_url": "https://manualdecocina.com/paella-valenciana/",
+      "title": "Paella valenciana",
+      "excerpt": "Paella valenciana con pollo, conejo, judías verdes planas, garrofón, tomate, pimentón y azafrán, cocida en paellera hasta formar el socarrat. Para 6 personas, lista en 85 minutos.",
+      "summary": "La paella valenciana es un arroz seco que se cuece en paellera con pollo, conejo, judías verdes planas, garrofón, tomate rallado, pimentón dulce y azafrán. Se dora la carne, se sofríe, se hace el caldo y al final se añade el arroz.\n\nEl arroz hierve fuerte 8 minutos y después cuece a fuego bajo de 8 a 10 minutos más, sin removerlo, hasta que se forma el socarrat en el fondo. Rinde 6 porciones.",
+      "category": "Platos principales",
+      "category_slug": "platos-principales",
+      "difficulty": "Media",
+      "course": "Plato principal",
+      "cuisine": "Española",
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 65,
+      "total_time_minutes": 85,
+      "servings": 6,
+      "keywords": [
+        "paella valenciana",
+        "receta de paella valenciana",
+        "paella de pollo y conejo",
+        "cómo hacer paella valenciana",
+        "paella tradicional",
+        "arroz de paella",
+        "socarrat"
+      ],
+      "ingredients": [
+        {
+          "name": "pollo troceado, con hueso",
+          "amount": "600",
+          "unit": "g",
+          "group": "Para el sofrito"
+        },
+        {
+          "name": "conejo troceado, con hueso",
+          "amount": "400",
+          "unit": "g",
+          "group": "Para el sofrito"
+        },
+        {
+          "name": "aceite de oliva",
+          "amount": "60",
+          "unit": "ml",
+          "group": "Para el sofrito"
+        },
+        {
+          "name": "judías verdes planas, cortadas",
+          "amount": "250",
+          "unit": "g",
+          "group": "Para el sofrito"
+        },
+        {
+          "name": "garrofón",
+          "amount": "150",
+          "unit": "g",
+          "group": "Para el sofrito"
+        },
+        {
+          "name": "tomate rallado",
+          "amount": "200",
+          "unit": "g",
+          "group": "Para el sofrito"
+        },
+        {
+          "name": "pimentón dulce",
+          "amount": "1",
+          "unit": "cucharadita",
+          "group": "Para el sofrito"
+        },
+        {
+          "name": "agua caliente",
+          "amount": "1.2",
+          "unit": "l",
+          "group": "Para el caldo y el arroz"
+        },
+        {
+          "name": "azafrán en hebras",
+          "amount": "1",
+          "unit": "pizca",
+          "group": "Para el caldo y el arroz"
+        },
+        {
+          "name": "sal",
+          "amount": "1.5",
+          "unit": "cucharadita",
+          "group": "Para el caldo y el arroz"
+        },
+        {
+          "name": "arroz bomba",
+          "amount": "400",
+          "unit": "g",
+          "group": "Para el caldo y el arroz"
+        },
+        {
+          "name": "romero",
+          "amount": "1",
+          "unit": "ramita",
+          "group": "Para el caldo y el arroz"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepara los ingredientes",
+          "content": "Sala 600 g de pollo y 400 g de conejo troceados. Ten a mano 250 g de judías verdes planas cortadas, 150 g de garrofón, 200 g de tomate rallado y 400 g de arroz bomba.",
+          "image_url": "/recetas/paella-valenciana/paso-01.webp",
+          "image_alt": "Paella valenciana: Prepara los ingredientes"
+        },
+        {
+          "title": "Dora la carne",
+          "content": "Calienta 60 ml de aceite de oliva en la paellera a fuego medio-alto y dora el pollo y el conejo por todos los lados, unos 10 minutos.",
+          "image_url": "/recetas/paella-valenciana/paso-02.webp",
+          "image_alt": "Paella valenciana: Dora la carne"
+        },
+        {
+          "title": "Añade las verduras",
+          "content": "Añade las judías verdes y el garrofón y rehógalos 5 minutos junto con la carne.",
+          "image_url": "/recetas/paella-valenciana/paso-03.webp",
+          "image_alt": "Paella valenciana: Añade las verduras"
+        },
+        {
+          "title": "Haz el sofrito",
+          "content": "Aparta la carne y las verduras hacia el borde. En el centro añade 200 g de tomate rallado y 1 cucharadita de pimentón dulce, y sofríe 2 minutos sin que se queme.",
+          "image_url": "/recetas/paella-valenciana/paso-04.webp",
+          "image_alt": "Paella valenciana: Haz el sofrito"
+        },
+        {
+          "title": "Prepara el caldo",
+          "content": "Vierte 1,2 litros de agua caliente, añade 1 pizca de azafrán y 1½ cucharaditas de sal, y hierve 30 minutos a fuego medio-alto. El caldo debe quedar dorado.",
+          "image_url": "/recetas/paella-valenciana/paso-05.webp",
+          "image_alt": "Paella valenciana: Prepara el caldo"
+        },
+        {
+          "title": "Echa el arroz",
+          "content": "Reparte 400 g de arroz bomba por toda la paellera, en forma de cruz, y coloca encima 1 ramita de romero. Hierve fuerte 8 minutos, sin remover.",
+          "image_url": "/recetas/paella-valenciana/paso-06.webp",
+          "image_alt": "Paella valenciana: Echa el arroz"
+        },
+        {
+          "title": "Termina la cocción",
+          "content": "Baja el fuego y cocina de 8 a 10 minutos más, sin remover, hasta que el arroz absorba el caldo y se forme el socarrat en el fondo.",
+          "image_url": "/recetas/paella-valenciana/paso-07.webp",
+          "image_alt": "Paella valenciana: Termina la cocción"
+        },
+        {
+          "title": "Reposa y sirve",
+          "content": "Retira la paellera del fuego y déjala reposar 5 minutos. Sirve directamente en la paellera.",
+          "image_url": "/recetas/paella-valenciana/paso-08.webp",
+          "image_alt": "Paella valenciana: Reposa y sirve"
+        }
+      ],
+      "image_url": "/recetas/paella-valenciana/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/paella-valenciana/portada.webp",
+          "alt": "Paella valenciana"
+        }
+      ],
+      "notes": "El arroz se echa una sola vez y no se remueve, para que se cueza de forma uniforme y se forme el socarrat. Usa una paellera de unos 40 cm para que el arroz quede en una capa fina. Si el caldo se consume antes de que el arroz esté tierno, añade un poco de agua caliente por el borde. El garrofón puede ser fresco o de bote, bien escurrido. Esta receta lleva solo pollo, conejo y verduras: no lleva chorizo, guisantes ni marisco.",
+      "nutrition": {
+        "calories": 563,
+        "protein_g": 27.5,
+        "carbs_g": 62,
+        "fat_g": 21.8,
+        "sodium_mg": 649,
+        "serving_size": "1 porción (1/6 de la receta)",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Suma de nutrientes por 100 g multiplicados por los pesos de los ingredientes y divididos entre 6 porciones. Se usan 390 g de pollo y 240 g de conejo comestibles (el 65 % y el 60 % de las piezas con hueso), 55 g de aceite (60 ml), 250 g de judías verdes, 150 g de garrofón cocido, 200 g de tomate, 2,5 g de pimentón, 9 g de sal y 400 g de arroz crudo. El azafrán y el romero no se cuentan.",
+        "note": "Estimación por porción. El garrofón se calcula con la judía lima cocida y el arroz bomba con arroz blanco de grano corto, como valores de referencia. El porcentaje comestible de la carne y la grasa que queda en la paellera son aproximados, y el sodio depende de la sal que se añada.",
+        "inputs": [
+          {
+            "fdc_id": "171116",
+            "description": "Chicken, broilers or fryers, meat and skin, raw (390 g comestibles de 600 g con hueso)",
+            "grams": 390,
+            "per100": {
+              "calories": 215,
+              "protein_g": 18.6,
+              "carbs_g": 0,
+              "fat_g": 15.06,
+              "saturated_fat_g": 4.31,
+              "fiber_g": 0,
+              "sodium_mg": 70
+            }
+          },
+          {
+            "fdc_id": "172665",
+            "description": "Rabbit, domesticated, composite of cuts, raw (240 g comestibles de 400 g con hueso)",
+            "grams": 240,
+            "per100": {
+              "calories": 136,
+              "protein_g": 20.05,
+              "carbs_g": 0,
+              "fat_g": 5.55,
+              "saturated_fat_g": 1.66,
+              "fiber_g": 0,
+              "sodium_mg": 41
+            }
+          },
+          {
+            "fdc_id": "171413",
+            "description": "Oil, olive, salad or cooking",
+            "grams": 55,
+            "per100": {
+              "calories": 884,
+              "protein_g": 0,
+              "carbs_g": 0,
+              "fat_g": 100,
+              "saturated_fat_g": 13.81,
+              "fiber_g": 0,
+              "sodium_mg": 2
+            }
+          },
+          {
+            "fdc_id": "169961",
+            "description": "Beans, snap, green, raw (proxy de la judía verde plana)",
+            "grams": 250,
+            "per100": {
+              "calories": 31,
+              "protein_g": 1.83,
+              "carbs_g": 6.97,
+              "fat_g": 0.22,
+              "saturated_fat_g": 0.05,
+              "fiber_g": 2.7,
+              "sodium_mg": 6
+            }
+          },
+          {
+            "fdc_id": "175193",
+            "description": "Lima beans, large, mature seeds, cooked, boiled, without salt (proxy del garrofón)",
+            "grams": 150,
+            "per100": {
+              "calories": 115,
+              "protein_g": 7.8,
+              "carbs_g": 20.88,
+              "fat_g": 0.38,
+              "saturated_fat_g": 0.1,
+              "fiber_g": 7,
+              "sodium_mg": 2
+            }
+          },
+          {
+            "fdc_id": "170457",
+            "description": "Tomatoes, red, ripe, raw",
+            "grams": 200,
+            "per100": {
+              "calories": 18,
+              "protein_g": 0.88,
+              "carbs_g": 3.92,
+              "fat_g": 0.2,
+              "saturated_fat_g": 0.03,
+              "fiber_g": 1.2,
+              "sodium_mg": 5
+            }
+          },
+          {
+            "fdc_id": "171329",
+            "description": "Spices, paprika",
+            "grams": 2.5,
+            "per100": {
+              "calories": 282,
+              "protein_g": 14.14,
+              "carbs_g": 53.99,
+              "fat_g": 12.89,
+              "saturated_fat_g": 2.14,
+              "fiber_g": 34.9,
+              "sodium_mg": 68
+            }
+          },
+          {
+            "fdc_id": "173468",
+            "description": "Salt, table",
+            "grams": 9,
+            "per100": {
+              "calories": 0,
+              "protein_g": 0,
+              "carbs_g": 0,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 38758
+            }
+          },
+          {
+            "fdc_id": "168880",
+            "description": "Rice, white, short-grain, raw (proxy del arroz bomba)",
+            "grams": 400,
+            "per100": {
+              "calories": 358,
+              "protein_g": 6.5,
+              "carbs_g": 79.15,
+              "fat_g": 0.52,
+              "saturated_fat_g": 0.14,
+              "fiber_g": 1.0,
+              "sodium_mg": 1
+            }
+          }
+        ]
+      },
+      "seo": {
+        "title": "Paella valenciana de pollo y conejo | Manual de Cocina",
+        "description": "Paella valenciana de pollo y conejo con judías verdes, garrofón, tomate y azafrán. Para 6 personas, lista en 85 minutos. Receta paso a paso.",
+        "image_variants": [
+          "/recetas/paella-valenciana/portada-1x1.webp",
+          "/recetas/paella-valenciana/portada-4x3.webp",
+          "/recetas/paella-valenciana/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "¿Qué lleva la paella valenciana?",
+            "a": "Pollo, conejo, judías verdes planas, garrofón, tomate rallado, pimentón dulce, azafrán, aceite de oliva, agua, sal y arroz bomba. Algunas versiones añaden una ramita de romero."
+          },
+          {
+            "q": "¿Por qué no se remueve el arroz?",
+            "a": "Porque al remover se suelta el almidón y el arroz queda pastoso. Sin removerlo, los granos se cuecen sueltos y se forma el socarrat en el fondo."
+          },
+          {
+            "q": "¿Qué es el socarrat?",
+            "a": "Es la capa de arroz tostado que se forma pegada al fondo de la paellera al final de la cocción. Debe quedar dorada y crujiente, sin llegar a quemarse."
+          }
+        ]
+      }
+    },
+    {
+      "id": "35179953-5b15-5f28-9b38-d0b5da474e65",
+      "recipe_group_id": "45c9cce8-9152-481d-b303-d2d9ede3cc07",
+      "language": "de",
+      "slug": "paella-valenciana-rezept",
+      "public_path": "/de/paella-valenciana-rezept",
+      "source_url": null,
+      "title": "Paella Valenciana",
+      "excerpt": "Paella Valenciana mit Huhn, Kaninchen, flachen grünen Bohnen, Garrofón, Tomate, Paprikapulver und Safran, in der Paellapfanne gegart, bis sich der Socarrat bildet. Für 6 Personen, fertig in 85 Minuten.",
+      "summary": "Die Paella Valenciana ist ein trockener Reis, der in der Paellapfanne mit Huhn, Kaninchen, flachen grünen Bohnen, Garrofón, geriebener Tomate, edelsüßem Paprikapulver und Safran gegart wird. Erst wird das Fleisch angebraten, dann kommt das Sofrito, dann die Brühe und zum Schluss der Reis.\n\nDer Reis kocht 8 Minuten stark und gart danach 8 bis 10 Minuten bei niedriger Hitze, ohne gerührt zu werden, bis sich am Boden der Socarrat bildet. Ergibt 6 Portionen.",
+      "category": "Hauptgerichte",
+      "category_slug": "platos-principales",
+      "difficulty": "Mittel",
+      "course": "Hauptgericht",
+      "cuisine": "Spanisch",
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 65,
+      "total_time_minutes": 85,
+      "servings": 6,
+      "keywords": [
+        "Paella Valenciana",
+        "Paella Valenciana Rezept",
+        "Paella mit Huhn und Kaninchen",
+        "Paella selber machen",
+        "traditionelle Paella",
+        "Paella Reis",
+        "Socarrat"
+      ],
+      "ingredients": [
+        {
+          "name": "Hähnchenteile mit Knochen",
+          "amount": "600",
+          "unit": "g",
+          "group": "Für das Sofrito"
+        },
+        {
+          "name": "Kaninchenteile mit Knochen",
+          "amount": "400",
+          "unit": "g",
+          "group": "Für das Sofrito"
+        },
+        {
+          "name": "Olivenöl",
+          "amount": "60",
+          "unit": "ml",
+          "group": "Für das Sofrito"
+        },
+        {
+          "name": "flache grüne Bohnen, geschnitten",
+          "amount": "250",
+          "unit": "g",
+          "group": "Für das Sofrito"
+        },
+        {
+          "name": "Garrofón",
+          "amount": "150",
+          "unit": "g",
+          "group": "Für das Sofrito"
+        },
+        {
+          "name": "geriebene Tomate",
+          "amount": "200",
+          "unit": "g",
+          "group": "Für das Sofrito"
+        },
+        {
+          "name": "edelsüßes Paprikapulver",
+          "amount": "1",
+          "unit": "Teelöffel",
+          "group": "Für das Sofrito"
+        },
+        {
+          "name": "heißes Wasser",
+          "amount": "1.2",
+          "unit": "l",
+          "group": "Für Brühe und Reis"
+        },
+        {
+          "name": "Safranfäden",
+          "amount": "1",
+          "unit": "Prise",
+          "group": "Für Brühe und Reis"
+        },
+        {
+          "name": "Salz",
+          "amount": "1.5",
+          "unit": "Teelöffel",
+          "group": "Für Brühe und Reis"
+        },
+        {
+          "name": "Bomba-Reis",
+          "amount": "400",
+          "unit": "g",
+          "group": "Für Brühe und Reis"
+        },
+        {
+          "name": "Rosmarin",
+          "amount": "1",
+          "unit": "Zweig",
+          "group": "Für Brühe und Reis"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Zutaten vorbereiten",
+          "content": "600 g Hähnchenteile und 400 g Kaninchenteile salzen. 250 g geschnittene flache grüne Bohnen, 150 g Garrofón, 200 g geriebene Tomate und 400 g Bomba-Reis bereitstellen.",
+          "image_url": "/recetas/paella-valenciana/paso-01.webp",
+          "image_alt": "Paella Valenciana: Zutaten vorbereiten"
+        },
+        {
+          "title": "Fleisch anbraten",
+          "content": "60 ml Olivenöl in der Paellapfanne bei mittlerer bis hoher Hitze erhitzen und Huhn und Kaninchen rundum etwa 10 Minuten goldbraun anbraten.",
+          "image_url": "/recetas/paella-valenciana/paso-02.webp",
+          "image_alt": "Paella Valenciana: Fleisch anbraten"
+        },
+        {
+          "title": "Gemüse zugeben",
+          "content": "Die grünen Bohnen und den Garrofón zugeben und 5 Minuten mit dem Fleisch anbraten.",
+          "image_url": "/recetas/paella-valenciana/paso-03.webp",
+          "image_alt": "Paella Valenciana: Gemüse zugeben"
+        },
+        {
+          "title": "Sofrito zubereiten",
+          "content": "Fleisch und Gemüse an den Rand schieben. In die Mitte 200 g geriebene Tomate und 1 Teelöffel edelsüßes Paprikapulver geben und 2 Minuten braten, ohne dass es verbrennt.",
+          "image_url": "/recetas/paella-valenciana/paso-04.webp",
+          "image_alt": "Paella Valenciana: Sofrito zubereiten"
+        },
+        {
+          "title": "Brühe zubereiten",
+          "content": "1,2 Liter heißes Wasser angießen, 1 Prise Safran und 1½ Teelöffel Salz zugeben und 30 Minuten bei mittlerer bis hoher Hitze kochen. Die Brühe soll goldfarben sein.",
+          "image_url": "/recetas/paella-valenciana/paso-05.webp",
+          "image_alt": "Paella Valenciana: Brühe zubereiten"
+        },
+        {
+          "title": "Reis zugeben",
+          "content": "400 g Bomba-Reis kreuzförmig in der ganzen Pfanne verteilen und 1 Rosmarinzweig darauflegen. 8 Minuten stark kochen, ohne zu rühren.",
+          "image_url": "/recetas/paella-valenciana/paso-06.webp",
+          "image_alt": "Paella Valenciana: Reis zugeben"
+        },
+        {
+          "title": "Fertig garen",
+          "content": "Die Hitze reduzieren und 8 bis 10 Minuten weitergaren, ohne zu rühren, bis der Reis die Brühe aufgenommen hat und sich am Boden der Socarrat bildet.",
+          "image_url": "/recetas/paella-valenciana/paso-07.webp",
+          "image_alt": "Paella Valenciana: Fertig garen"
+        },
+        {
+          "title": "Ruhen lassen und servieren",
+          "content": "Die Pfanne vom Herd nehmen und 5 Minuten ruhen lassen. Direkt in der Paellapfanne servieren.",
+          "image_url": "/recetas/paella-valenciana/paso-08.webp",
+          "image_alt": "Paella Valenciana: Ruhen lassen und servieren"
+        }
+      ],
+      "image_url": "/recetas/paella-valenciana/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/paella-valenciana/portada.webp",
+          "alt": "Paella Valenciana"
+        }
+      ],
+      "notes": "Der Reis wird nur einmal zugegeben und nicht gerührt, damit er gleichmäßig gart und sich der Socarrat bildet. Eine Paellapfanne mit etwa 40 cm Durchmesser verwenden, damit der Reis in einer dünnen Schicht liegt. Wenn die Brühe verbraucht ist, bevor der Reis zart ist, etwas heißes Wasser am Rand zugießen. Garrofón kann frisch oder aus dem Glas sein, gut abgetropft. Dieses Rezept enthält nur Huhn, Kaninchen und Gemüse: kein Chorizo, keine Erbsen, keine Meeresfrüchte.",
+      "nutrition": {
+        "calories": 563,
+        "protein_g": 27.5,
+        "carbs_g": 62,
+        "fat_g": 21.8,
+        "sodium_mg": 649,
+        "serving_size": "1 Portion (1/6 des Rezepts)",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Nährwerte je 100 g, multipliziert mit dem Gewicht der Zutaten und durch 6 Portionen geteilt. Verwendet werden 390 g essbares Huhn und 240 g essbares Kaninchen (65 % und 60 % der Teile mit Knochen), 55 g Öl (60 ml), 250 g grüne Bohnen, 150 g gekochter Garrofón, 200 g Tomate, 2,5 g Paprikapulver, 9 g Salz und 400 g roher Reis. Safran und Rosmarin werden nicht gezählt.",
+        "note": "Schätzung pro Portion. Garrofón wird mit gekochten Limabohnen und Bomba-Reis mit Rundkornreis als Referenzwerten berechnet. Der essbare Anteil des Fleisches und das in der Pfanne verbleibende Fett sind ungefähr, und das Natrium hängt vom zugegebenen Salz ab.",
+        "inputs": [
+          {
+            "fdc_id": "171116",
+            "description": "Chicken, broilers or fryers, meat and skin, raw (390 g comestibles de 600 g con hueso)",
+            "grams": 390,
+            "per100": {
+              "calories": 215,
+              "protein_g": 18.6,
+              "carbs_g": 0,
+              "fat_g": 15.06,
+              "saturated_fat_g": 4.31,
+              "fiber_g": 0,
+              "sodium_mg": 70
+            }
+          },
+          {
+            "fdc_id": "172665",
+            "description": "Rabbit, domesticated, composite of cuts, raw (240 g comestibles de 400 g con hueso)",
+            "grams": 240,
+            "per100": {
+              "calories": 136,
+              "protein_g": 20.05,
+              "carbs_g": 0,
+              "fat_g": 5.55,
+              "saturated_fat_g": 1.66,
+              "fiber_g": 0,
+              "sodium_mg": 41
+            }
+          },
+          {
+            "fdc_id": "171413",
+            "description": "Oil, olive, salad or cooking",
+            "grams": 55,
+            "per100": {
+              "calories": 884,
+              "protein_g": 0,
+              "carbs_g": 0,
+              "fat_g": 100,
+              "saturated_fat_g": 13.81,
+              "fiber_g": 0,
+              "sodium_mg": 2
+            }
+          },
+          {
+            "fdc_id": "169961",
+            "description": "Beans, snap, green, raw (proxy de la judía verde plana)",
+            "grams": 250,
+            "per100": {
+              "calories": 31,
+              "protein_g": 1.83,
+              "carbs_g": 6.97,
+              "fat_g": 0.22,
+              "saturated_fat_g": 0.05,
+              "fiber_g": 2.7,
+              "sodium_mg": 6
+            }
+          },
+          {
+            "fdc_id": "175193",
+            "description": "Lima beans, large, mature seeds, cooked, boiled, without salt (proxy del garrofón)",
+            "grams": 150,
+            "per100": {
+              "calories": 115,
+              "protein_g": 7.8,
+              "carbs_g": 20.88,
+              "fat_g": 0.38,
+              "saturated_fat_g": 0.1,
+              "fiber_g": 7,
+              "sodium_mg": 2
+            }
+          },
+          {
+            "fdc_id": "170457",
+            "description": "Tomatoes, red, ripe, raw",
+            "grams": 200,
+            "per100": {
+              "calories": 18,
+              "protein_g": 0.88,
+              "carbs_g": 3.92,
+              "fat_g": 0.2,
+              "saturated_fat_g": 0.03,
+              "fiber_g": 1.2,
+              "sodium_mg": 5
+            }
+          },
+          {
+            "fdc_id": "171329",
+            "description": "Spices, paprika",
+            "grams": 2.5,
+            "per100": {
+              "calories": 282,
+              "protein_g": 14.14,
+              "carbs_g": 53.99,
+              "fat_g": 12.89,
+              "saturated_fat_g": 2.14,
+              "fiber_g": 34.9,
+              "sodium_mg": 68
+            }
+          },
+          {
+            "fdc_id": "173468",
+            "description": "Salt, table",
+            "grams": 9,
+            "per100": {
+              "calories": 0,
+              "protein_g": 0,
+              "carbs_g": 0,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 38758
+            }
+          },
+          {
+            "fdc_id": "168880",
+            "description": "Rice, white, short-grain, raw (proxy del arroz bomba)",
+            "grams": 400,
+            "per100": {
+              "calories": 358,
+              "protein_g": 6.5,
+              "carbs_g": 79.15,
+              "fat_g": 0.52,
+              "saturated_fat_g": 0.14,
+              "fiber_g": 1.0,
+              "sodium_mg": 1
+            }
+          }
+        ]
+      },
+      "seo": {
+        "title": "Paella Valenciana mit Huhn und Kaninchen | Manual de Cocina",
+        "description": "Paella Valenciana mit Huhn und Kaninchen, grünen Bohnen, Garrofón, Tomate und Safran. Für 6 Personen, fertig in 85 Minuten. Rezept Schritt für Schritt.",
+        "image_variants": [
+          "/recetas/paella-valenciana/portada-1x1.webp",
+          "/recetas/paella-valenciana/portada-4x3.webp",
+          "/recetas/paella-valenciana/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Was kommt in die Paella Valenciana?",
+            "a": "Huhn, Kaninchen, flache grüne Bohnen, Garrofón, geriebene Tomate, edelsüßes Paprikapulver, Safran, Olivenöl, Wasser, Salz und Bomba-Reis. Manche Varianten enthalten einen Rosmarinzweig."
+          },
+          {
+            "q": "Warum wird der Reis nicht gerührt?",
+            "a": "Beim Rühren löst sich die Stärke und der Reis wird klebrig. Ohne Rühren garen die Körner locker und am Boden bildet sich der Socarrat."
+          },
+          {
+            "q": "Was ist der Socarrat?",
+            "a": "Die geröstete Reisschicht, die sich am Ende der Garzeit am Boden der Paellapfanne bildet. Sie soll goldbraun und knusprig sein, aber nicht verbrennen."
+          }
+        ]
+      }
+    },
+    {
+      "id": "090caebb-b573-5216-b295-a50ce10e76d1",
+      "recipe_group_id": "45c9cce8-9152-481d-b303-d2d9ede3cc07",
+      "language": "en",
+      "slug": "valencian-paella",
+      "public_path": "/en/valencian-paella",
+      "source_url": null,
+      "title": "Valencian Paella",
+      "excerpt": "Valencian paella with chicken, rabbit, flat green beans, garrofón, tomato, paprika and saffron, cooked in a paella pan until the socarrat forms. Serves 6, ready in 85 minutes.",
+      "summary": "Valencian paella is a dry rice dish cooked in a paella pan with chicken, rabbit, flat green beans, garrofón, grated tomato, sweet paprika and saffron. You brown the meat, make the sofrito, build the broth and add the rice at the end.\n\nThe rice boils hard for 8 minutes, then cooks over low heat for 8 to 10 more minutes without stirring, until the socarrat forms on the bottom. It serves 6.",
+      "category": "Main dishes",
+      "category_slug": "platos-principales",
+      "difficulty": "Medium",
+      "course": "Main dish",
+      "cuisine": "Spanish",
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 65,
+      "total_time_minutes": 85,
+      "servings": 6,
+      "keywords": [
+        "Valencian paella",
+        "Valencian paella recipe",
+        "chicken and rabbit paella",
+        "how to make paella",
+        "traditional paella",
+        "paella rice",
+        "socarrat"
+      ],
+      "ingredients": [
+        {
+          "name": "chicken pieces, bone-in",
+          "amount": "600",
+          "unit": "g",
+          "group": "For the sofrito"
+        },
+        {
+          "name": "rabbit pieces, bone-in",
+          "amount": "400",
+          "unit": "g",
+          "group": "For the sofrito"
+        },
+        {
+          "name": "olive oil",
+          "amount": "60",
+          "unit": "ml",
+          "group": "For the sofrito"
+        },
+        {
+          "name": "flat green beans, cut",
+          "amount": "250",
+          "unit": "g",
+          "group": "For the sofrito"
+        },
+        {
+          "name": "garrofón (large white beans)",
+          "amount": "150",
+          "unit": "g",
+          "group": "For the sofrito"
+        },
+        {
+          "name": "grated tomato",
+          "amount": "200",
+          "unit": "g",
+          "group": "For the sofrito"
+        },
+        {
+          "name": "sweet paprika",
+          "amount": "1",
+          "unit": "teaspoon",
+          "group": "For the sofrito"
+        },
+        {
+          "name": "hot water",
+          "amount": "1.2",
+          "unit": "l",
+          "group": "For the broth and rice"
+        },
+        {
+          "name": "saffron threads",
+          "amount": "1",
+          "unit": "pinch",
+          "group": "For the broth and rice"
+        },
+        {
+          "name": "salt",
+          "amount": "1.5",
+          "unit": "teaspoon",
+          "group": "For the broth and rice"
+        },
+        {
+          "name": "bomba rice",
+          "amount": "400",
+          "unit": "g",
+          "group": "For the broth and rice"
+        },
+        {
+          "name": "rosemary",
+          "amount": "1",
+          "unit": "sprig",
+          "group": "For the broth and rice"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepare the ingredients",
+          "content": "Salt 600 g chicken pieces and 400 g rabbit pieces. Have ready 250 g cut flat green beans, 150 g garrofón, 200 g grated tomato and 400 g bomba rice.",
+          "image_url": "/recetas/paella-valenciana/paso-01.webp",
+          "image_alt": "Valencian Paella: Prepare the ingredients"
+        },
+        {
+          "title": "Brown the meat",
+          "content": "Heat 60 ml olive oil in the paella pan over medium-high heat and brown the chicken and rabbit on all sides, about 10 minutes.",
+          "image_url": "/recetas/paella-valenciana/paso-02.webp",
+          "image_alt": "Valencian Paella: Brown the meat"
+        },
+        {
+          "title": "Add the vegetables",
+          "content": "Add the green beans and the garrofón and cook them for 5 minutes with the meat.",
+          "image_url": "/recetas/paella-valenciana/paso-03.webp",
+          "image_alt": "Valencian Paella: Add the vegetables"
+        },
+        {
+          "title": "Make the sofrito",
+          "content": "Push the meat and vegetables to the edge. In the center add 200 g grated tomato and 1 teaspoon sweet paprika, and cook for 2 minutes without letting it burn.",
+          "image_url": "/recetas/paella-valenciana/paso-04.webp",
+          "image_alt": "Valencian Paella: Make the sofrito"
+        },
+        {
+          "title": "Make the broth",
+          "content": "Pour in 1.2 liters hot water, add 1 pinch of saffron and 1½ teaspoons salt, and boil for 30 minutes over medium-high heat. The broth should turn golden.",
+          "image_url": "/recetas/paella-valenciana/paso-05.webp",
+          "image_alt": "Valencian Paella: Make the broth"
+        },
+        {
+          "title": "Add the rice",
+          "content": "Spread 400 g bomba rice across the whole pan in a cross shape and lay 1 sprig of rosemary on top. Boil hard for 8 minutes, without stirring.",
+          "image_url": "/recetas/paella-valenciana/paso-06.webp",
+          "image_alt": "Valencian Paella: Add the rice"
+        },
+        {
+          "title": "Finish cooking",
+          "content": "Lower the heat and cook 8 to 10 more minutes, without stirring, until the rice absorbs the broth and the socarrat forms on the bottom.",
+          "image_url": "/recetas/paella-valenciana/paso-07.webp",
+          "image_alt": "Valencian Paella: Finish cooking"
+        },
+        {
+          "title": "Rest and serve",
+          "content": "Take the pan off the heat and let it rest for 5 minutes. Serve straight from the paella pan.",
+          "image_url": "/recetas/paella-valenciana/paso-08.webp",
+          "image_alt": "Valencian Paella: Rest and serve"
+        }
+      ],
+      "image_url": "/recetas/paella-valenciana/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/paella-valenciana/portada.webp",
+          "alt": "Valencian Paella"
+        }
+      ],
+      "notes": "The rice goes in once and is not stirred, so it cooks evenly and the socarrat forms. Use a paella pan of about 40 cm so the rice sits in a thin layer. If the broth is used up before the rice is tender, add a little hot water around the edge. Garrofón can be fresh or from a jar, well drained. This recipe has only chicken, rabbit and vegetables: no chorizo, peas or seafood.",
+      "nutrition": {
+        "calories": 563,
+        "protein_g": 27.5,
+        "carbs_g": 62,
+        "fat_g": 21.8,
+        "sodium_mg": 649,
+        "serving_size": "1 serving (1/6 of the recipe)",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Sum of nutrients per 100 g multiplied by the ingredient weights and divided by 6 servings. It uses 390 g edible chicken and 240 g edible rabbit (65% and 60% of the bone-in pieces), 55 g oil (60 ml), 250 g green beans, 150 g cooked garrofón, 200 g tomato, 2.5 g paprika, 9 g salt and 400 g raw rice. Saffron and rosemary are not counted.",
+        "note": "Estimate per serving. Garrofón is calculated with cooked lima beans and bomba rice with short-grain white rice, as reference values. The edible share of the meat and the fat left in the pan are approximate, and sodium depends on the salt you add.",
+        "inputs": [
+          {
+            "fdc_id": "171116",
+            "description": "Chicken, broilers or fryers, meat and skin, raw (390 g comestibles de 600 g con hueso)",
+            "grams": 390,
+            "per100": {
+              "calories": 215,
+              "protein_g": 18.6,
+              "carbs_g": 0,
+              "fat_g": 15.06,
+              "saturated_fat_g": 4.31,
+              "fiber_g": 0,
+              "sodium_mg": 70
+            }
+          },
+          {
+            "fdc_id": "172665",
+            "description": "Rabbit, domesticated, composite of cuts, raw (240 g comestibles de 400 g con hueso)",
+            "grams": 240,
+            "per100": {
+              "calories": 136,
+              "protein_g": 20.05,
+              "carbs_g": 0,
+              "fat_g": 5.55,
+              "saturated_fat_g": 1.66,
+              "fiber_g": 0,
+              "sodium_mg": 41
+            }
+          },
+          {
+            "fdc_id": "171413",
+            "description": "Oil, olive, salad or cooking",
+            "grams": 55,
+            "per100": {
+              "calories": 884,
+              "protein_g": 0,
+              "carbs_g": 0,
+              "fat_g": 100,
+              "saturated_fat_g": 13.81,
+              "fiber_g": 0,
+              "sodium_mg": 2
+            }
+          },
+          {
+            "fdc_id": "169961",
+            "description": "Beans, snap, green, raw (proxy de la judía verde plana)",
+            "grams": 250,
+            "per100": {
+              "calories": 31,
+              "protein_g": 1.83,
+              "carbs_g": 6.97,
+              "fat_g": 0.22,
+              "saturated_fat_g": 0.05,
+              "fiber_g": 2.7,
+              "sodium_mg": 6
+            }
+          },
+          {
+            "fdc_id": "175193",
+            "description": "Lima beans, large, mature seeds, cooked, boiled, without salt (proxy del garrofón)",
+            "grams": 150,
+            "per100": {
+              "calories": 115,
+              "protein_g": 7.8,
+              "carbs_g": 20.88,
+              "fat_g": 0.38,
+              "saturated_fat_g": 0.1,
+              "fiber_g": 7,
+              "sodium_mg": 2
+            }
+          },
+          {
+            "fdc_id": "170457",
+            "description": "Tomatoes, red, ripe, raw",
+            "grams": 200,
+            "per100": {
+              "calories": 18,
+              "protein_g": 0.88,
+              "carbs_g": 3.92,
+              "fat_g": 0.2,
+              "saturated_fat_g": 0.03,
+              "fiber_g": 1.2,
+              "sodium_mg": 5
+            }
+          },
+          {
+            "fdc_id": "171329",
+            "description": "Spices, paprika",
+            "grams": 2.5,
+            "per100": {
+              "calories": 282,
+              "protein_g": 14.14,
+              "carbs_g": 53.99,
+              "fat_g": 12.89,
+              "saturated_fat_g": 2.14,
+              "fiber_g": 34.9,
+              "sodium_mg": 68
+            }
+          },
+          {
+            "fdc_id": "173468",
+            "description": "Salt, table",
+            "grams": 9,
+            "per100": {
+              "calories": 0,
+              "protein_g": 0,
+              "carbs_g": 0,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 38758
+            }
+          },
+          {
+            "fdc_id": "168880",
+            "description": "Rice, white, short-grain, raw (proxy del arroz bomba)",
+            "grams": 400,
+            "per100": {
+              "calories": 358,
+              "protein_g": 6.5,
+              "carbs_g": 79.15,
+              "fat_g": 0.52,
+              "saturated_fat_g": 0.14,
+              "fiber_g": 1.0,
+              "sodium_mg": 1
+            }
+          }
+        ]
+      },
+      "seo": {
+        "title": "Valencian paella with chicken and rabbit | Manual de Cocina",
+        "description": "Valencian paella with chicken and rabbit, green beans, garrofón, tomato and saffron. Serves 6, ready in 85 minutes. Step-by-step recipe.",
+        "image_variants": [
+          "/recetas/paella-valenciana/portada-1x1.webp",
+          "/recetas/paella-valenciana/portada-4x3.webp",
+          "/recetas/paella-valenciana/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "What goes into a Valencian paella?",
+            "a": "Chicken, rabbit, flat green beans, garrofón, grated tomato, sweet paprika, saffron, olive oil, water, salt and bomba rice. Some versions add a sprig of rosemary."
+          },
+          {
+            "q": "Why is the rice not stirred?",
+            "a": "Stirring releases starch and makes the rice gummy. Left alone, the grains cook separate and the socarrat forms on the bottom."
+          },
+          {
+            "q": "What is the socarrat?",
+            "a": "The toasted layer of rice that forms stuck to the bottom of the paella pan at the end of cooking. It should be golden and crisp, without burning."
+          }
+        ]
+      }
+    },
+    {
+      "id": "86157288-8358-5800-975f-f536d4c33ab6",
+      "recipe_group_id": "45c9cce8-9152-481d-b303-d2d9ede3cc07",
+      "language": "fr",
+      "slug": "paella-valencienne",
+      "public_path": "/fr/paella-valencienne",
+      "source_url": null,
+      "title": "Paella valencienne",
+      "excerpt": "Paella valencienne au poulet, au lapin, aux haricots verts plats, au garrofón, à la tomate, au paprika et au safran, cuite dans une paellera jusqu’à la formation du socarrat. Pour 6 personnes, prête en 85 minutes.",
+      "summary": "La paella valencienne est un riz sec cuit dans une paellera avec du poulet, du lapin, des haricots verts plats, du garrofón, de la tomate râpée, du paprika doux et du safran. On dore la viande, on prépare le sofrito, on fait le bouillon et on ajoute le riz à la fin.\n\nLe riz bout fort 8 minutes, puis cuit à feu doux de 8 à 10 minutes de plus, sans être remué, jusqu’à ce que le socarrat se forme au fond. Pour 6 personnes.",
+      "category": "Plats principaux",
+      "category_slug": "platos-principales",
+      "difficulty": "Moyenne",
+      "course": "Plat principal",
+      "cuisine": "Espagnole",
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 65,
+      "total_time_minutes": 85,
+      "servings": 6,
+      "keywords": [
+        "paella valencienne",
+        "recette de paella valencienne",
+        "paella au poulet et au lapin",
+        "comment faire une paella",
+        "paella traditionnelle",
+        "riz à paella",
+        "socarrat"
+      ],
+      "ingredients": [
+        {
+          "name": "poulet en morceaux, avec os",
+          "amount": "600",
+          "unit": "g",
+          "group": "Pour le sofrito"
+        },
+        {
+          "name": "lapin en morceaux, avec os",
+          "amount": "400",
+          "unit": "g",
+          "group": "Pour le sofrito"
+        },
+        {
+          "name": "huile d’olive",
+          "amount": "60",
+          "unit": "ml",
+          "group": "Pour le sofrito"
+        },
+        {
+          "name": "haricots verts plats, coupés",
+          "amount": "250",
+          "unit": "g",
+          "group": "Pour le sofrito"
+        },
+        {
+          "name": "garrofón (gros haricots blancs)",
+          "amount": "150",
+          "unit": "g",
+          "group": "Pour le sofrito"
+        },
+        {
+          "name": "tomate râpée",
+          "amount": "200",
+          "unit": "g",
+          "group": "Pour le sofrito"
+        },
+        {
+          "name": "paprika doux",
+          "amount": "1",
+          "unit": "cuillère à café",
+          "group": "Pour le sofrito"
+        },
+        {
+          "name": "eau chaude",
+          "amount": "1.2",
+          "unit": "l",
+          "group": "Pour le bouillon et le riz"
+        },
+        {
+          "name": "safran en filaments",
+          "amount": "1",
+          "unit": "pincée",
+          "group": "Pour le bouillon et le riz"
+        },
+        {
+          "name": "sel",
+          "amount": "1.5",
+          "unit": "cuillère à café",
+          "group": "Pour le bouillon et le riz"
+        },
+        {
+          "name": "riz bomba",
+          "amount": "400",
+          "unit": "g",
+          "group": "Pour le bouillon et le riz"
+        },
+        {
+          "name": "romarin",
+          "amount": "1",
+          "unit": "brin",
+          "group": "Pour le bouillon et le riz"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Préparer les ingrédients",
+          "content": "Saler 600 g de poulet et 400 g de lapin en morceaux. Préparer 250 g de haricots verts plats coupés, 150 g de garrofón, 200 g de tomate râpée et 400 g de riz bomba.",
+          "image_url": "/recetas/paella-valenciana/paso-01.webp",
+          "image_alt": "Paella valencienne: Préparer les ingrédients"
+        },
+        {
+          "title": "Dorer la viande",
+          "content": "Chauffer 60 ml d’huile d’olive dans la paellera à feu moyen-vif et dorer le poulet et le lapin de tous les côtés, environ 10 minutes.",
+          "image_url": "/recetas/paella-valenciana/paso-02.webp",
+          "image_alt": "Paella valencienne: Dorer la viande"
+        },
+        {
+          "title": "Ajouter les légumes",
+          "content": "Ajouter les haricots verts et le garrofón et les faire revenir 5 minutes avec la viande.",
+          "image_url": "/recetas/paella-valenciana/paso-03.webp",
+          "image_alt": "Paella valencienne: Ajouter les légumes"
+        },
+        {
+          "title": "Préparer le sofrito",
+          "content": "Pousser la viande et les légumes vers le bord. Au centre, ajouter 200 g de tomate râpée et 1 cuillère à café de paprika doux, et cuire 2 minutes sans laisser brûler.",
+          "image_url": "/recetas/paella-valenciana/paso-04.webp",
+          "image_alt": "Paella valencienne: Préparer le sofrito"
+        },
+        {
+          "title": "Préparer le bouillon",
+          "content": "Verser 1,2 litre d’eau chaude, ajouter 1 pincée de safran et 1½ cuillère à café de sel, et faire bouillir 30 minutes à feu moyen-vif. Le bouillon doit devenir doré.",
+          "image_url": "/recetas/paella-valenciana/paso-05.webp",
+          "image_alt": "Paella valencienne: Préparer le bouillon"
+        },
+        {
+          "title": "Ajouter le riz",
+          "content": "Répartir 400 g de riz bomba dans toute la paellera en forme de croix et poser dessus 1 brin de romarin. Faire bouillir fort 8 minutes, sans remuer.",
+          "image_url": "/recetas/paella-valenciana/paso-06.webp",
+          "image_alt": "Paella valencienne: Ajouter le riz"
+        },
+        {
+          "title": "Terminer la cuisson",
+          "content": "Baisser le feu et cuire de 8 à 10 minutes de plus, sans remuer, jusqu’à ce que le riz absorbe le bouillon et que le socarrat se forme au fond.",
+          "image_url": "/recetas/paella-valenciana/paso-07.webp",
+          "image_alt": "Paella valencienne: Terminer la cuisson"
+        },
+        {
+          "title": "Laisser reposer et servir",
+          "content": "Retirer la paellera du feu et la laisser reposer 5 minutes. Servir directement dans la paellera.",
+          "image_url": "/recetas/paella-valenciana/paso-08.webp",
+          "image_alt": "Paella valencienne: Laisser reposer et servir"
+        }
+      ],
+      "image_url": "/recetas/paella-valenciana/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/paella-valenciana/portada.webp",
+          "alt": "Paella valencienne"
+        }
+      ],
+      "notes": "Le riz est ajouté une seule fois et n’est pas remué, pour qu’il cuise de façon uniforme et que le socarrat se forme. Utiliser une paellera d’environ 40 cm pour que le riz forme une couche fine. Si le bouillon est absorbé avant que le riz soit tendre, ajouter un peu d’eau chaude sur le bord. Le garrofón peut être frais ou en bocal, bien égoutté. Cette recette contient seulement du poulet, du lapin et des légumes : pas de chorizo, de petits pois ni de fruits de mer.",
+      "nutrition": {
+        "calories": 563,
+        "protein_g": 27.5,
+        "carbs_g": 62,
+        "fat_g": 21.8,
+        "sodium_mg": 649,
+        "serving_size": "1 portion (1/6 de la recette)",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Somme des nutriments pour 100 g multipliés par le poids des ingrédients et divisés par 6 portions. On utilise 390 g de poulet et 240 g de lapin comestibles (65 % et 60 % des morceaux avec os), 55 g d’huile (60 ml), 250 g de haricots verts, 150 g de garrofón cuit, 200 g de tomate, 2,5 g de paprika, 9 g de sel et 400 g de riz cru. Le safran et le romarin ne sont pas comptés.",
+        "note": "Estimation par portion. Le garrofón est calculé avec des haricots de Lima cuits et le riz bomba avec du riz blanc à grains ronds, comme valeurs de référence. La part comestible de la viande et la graisse restant dans la paellera sont approximatives, et le sodium dépend du sel ajouté.",
+        "inputs": [
+          {
+            "fdc_id": "171116",
+            "description": "Chicken, broilers or fryers, meat and skin, raw (390 g comestibles de 600 g con hueso)",
+            "grams": 390,
+            "per100": {
+              "calories": 215,
+              "protein_g": 18.6,
+              "carbs_g": 0,
+              "fat_g": 15.06,
+              "saturated_fat_g": 4.31,
+              "fiber_g": 0,
+              "sodium_mg": 70
+            }
+          },
+          {
+            "fdc_id": "172665",
+            "description": "Rabbit, domesticated, composite of cuts, raw (240 g comestibles de 400 g con hueso)",
+            "grams": 240,
+            "per100": {
+              "calories": 136,
+              "protein_g": 20.05,
+              "carbs_g": 0,
+              "fat_g": 5.55,
+              "saturated_fat_g": 1.66,
+              "fiber_g": 0,
+              "sodium_mg": 41
+            }
+          },
+          {
+            "fdc_id": "171413",
+            "description": "Oil, olive, salad or cooking",
+            "grams": 55,
+            "per100": {
+              "calories": 884,
+              "protein_g": 0,
+              "carbs_g": 0,
+              "fat_g": 100,
+              "saturated_fat_g": 13.81,
+              "fiber_g": 0,
+              "sodium_mg": 2
+            }
+          },
+          {
+            "fdc_id": "169961",
+            "description": "Beans, snap, green, raw (proxy de la judía verde plana)",
+            "grams": 250,
+            "per100": {
+              "calories": 31,
+              "protein_g": 1.83,
+              "carbs_g": 6.97,
+              "fat_g": 0.22,
+              "saturated_fat_g": 0.05,
+              "fiber_g": 2.7,
+              "sodium_mg": 6
+            }
+          },
+          {
+            "fdc_id": "175193",
+            "description": "Lima beans, large, mature seeds, cooked, boiled, without salt (proxy del garrofón)",
+            "grams": 150,
+            "per100": {
+              "calories": 115,
+              "protein_g": 7.8,
+              "carbs_g": 20.88,
+              "fat_g": 0.38,
+              "saturated_fat_g": 0.1,
+              "fiber_g": 7,
+              "sodium_mg": 2
+            }
+          },
+          {
+            "fdc_id": "170457",
+            "description": "Tomatoes, red, ripe, raw",
+            "grams": 200,
+            "per100": {
+              "calories": 18,
+              "protein_g": 0.88,
+              "carbs_g": 3.92,
+              "fat_g": 0.2,
+              "saturated_fat_g": 0.03,
+              "fiber_g": 1.2,
+              "sodium_mg": 5
+            }
+          },
+          {
+            "fdc_id": "171329",
+            "description": "Spices, paprika",
+            "grams": 2.5,
+            "per100": {
+              "calories": 282,
+              "protein_g": 14.14,
+              "carbs_g": 53.99,
+              "fat_g": 12.89,
+              "saturated_fat_g": 2.14,
+              "fiber_g": 34.9,
+              "sodium_mg": 68
+            }
+          },
+          {
+            "fdc_id": "173468",
+            "description": "Salt, table",
+            "grams": 9,
+            "per100": {
+              "calories": 0,
+              "protein_g": 0,
+              "carbs_g": 0,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 38758
+            }
+          },
+          {
+            "fdc_id": "168880",
+            "description": "Rice, white, short-grain, raw (proxy del arroz bomba)",
+            "grams": 400,
+            "per100": {
+              "calories": 358,
+              "protein_g": 6.5,
+              "carbs_g": 79.15,
+              "fat_g": 0.52,
+              "saturated_fat_g": 0.14,
+              "fiber_g": 1.0,
+              "sodium_mg": 1
+            }
+          }
+        ]
+      },
+      "seo": {
+        "title": "Paella valencienne au poulet et au lapin | Manual de Cocina",
+        "description": "Paella valencienne au poulet et au lapin, haricots verts, garrofón, tomate et safran. Pour 6 personnes, prête en 85 minutes. Recette pas à pas.",
+        "image_variants": [
+          "/recetas/paella-valenciana/portada-1x1.webp",
+          "/recetas/paella-valenciana/portada-4x3.webp",
+          "/recetas/paella-valenciana/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Que met-on dans la paella valencienne ?",
+            "a": "Du poulet, du lapin, des haricots verts plats, du garrofón, de la tomate râpée, du paprika doux, du safran, de l’huile d’olive, de l’eau, du sel et du riz bomba. Certaines versions ajoutent un brin de romarin."
+          },
+          {
+            "q": "Pourquoi ne remue-t-on pas le riz ?",
+            "a": "Parce qu’en remuant on libère l’amidon et le riz devient pâteux. Sans y toucher, les grains cuisent bien séparés et le socarrat se forme au fond."
+          },
+          {
+            "q": "Qu’est-ce que le socarrat ?",
+            "a": "C’est la couche de riz grillé qui se forme collée au fond de la paellera en fin de cuisson. Elle doit être dorée et croustillante, sans brûler."
+          }
+        ]
+      }
+    },
+    {
+      "id": "78b42e7b-10d8-58cf-bac6-ff31c4e4049d",
+      "recipe_group_id": "45c9cce8-9152-481d-b303-d2d9ede3cc07",
+      "language": "it",
+      "slug": "paella-valenciana",
+      "public_path": "/it/paella-valenciana",
+      "source_url": null,
+      "title": "Paella valenciana",
+      "excerpt": "Paella valenciana con pollo, coniglio, fagiolini piatti, garrofón, pomodoro, paprika e zafferano, cotta nella paellera fino a formare il socarrat. Per 6 persone, pronta in 85 minuti.",
+      "summary": "La paella valenciana è un riso asciutto cotto nella paellera con pollo, coniglio, fagiolini piatti, garrofón, pomodoro grattugiato, paprika dolce e zafferano. Si rosola la carne, si prepara il soffritto, si fa il brodo e alla fine si aggiunge il riso.\n\nIl riso bolle forte per 8 minuti, poi cuoce a fuoco basso per altri 8–10 minuti, senza mescolare, finché sul fondo si forma il socarrat. Per 6 porzioni.",
+      "category": "Secondi piatti",
+      "category_slug": "platos-principales",
+      "difficulty": "Media",
+      "course": "Piatto principale",
+      "cuisine": "Spagnola",
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 65,
+      "total_time_minutes": 85,
+      "servings": 6,
+      "keywords": [
+        "paella valenciana",
+        "ricetta paella valenciana",
+        "paella con pollo e coniglio",
+        "come fare la paella",
+        "paella tradizionale",
+        "riso per paella",
+        "socarrat"
+      ],
+      "ingredients": [
+        {
+          "name": "pollo a pezzi, con l’osso",
+          "amount": "600",
+          "unit": "g",
+          "group": "Per il soffritto"
+        },
+        {
+          "name": "coniglio a pezzi, con l’osso",
+          "amount": "400",
+          "unit": "g",
+          "group": "Per il soffritto"
+        },
+        {
+          "name": "olio d’oliva",
+          "amount": "60",
+          "unit": "ml",
+          "group": "Per il soffritto"
+        },
+        {
+          "name": "fagiolini piatti, tagliati",
+          "amount": "250",
+          "unit": "g",
+          "group": "Per il soffritto"
+        },
+        {
+          "name": "garrofón (grossi fagioli bianchi)",
+          "amount": "150",
+          "unit": "g",
+          "group": "Per il soffritto"
+        },
+        {
+          "name": "pomodoro grattugiato",
+          "amount": "200",
+          "unit": "g",
+          "group": "Per il soffritto"
+        },
+        {
+          "name": "paprika dolce",
+          "amount": "1",
+          "unit": "cucchiaino",
+          "group": "Per il soffritto"
+        },
+        {
+          "name": "acqua calda",
+          "amount": "1.2",
+          "unit": "l",
+          "group": "Per il brodo e il riso"
+        },
+        {
+          "name": "zafferano in filamenti",
+          "amount": "1",
+          "unit": "pizzico",
+          "group": "Per il brodo e il riso"
+        },
+        {
+          "name": "sale",
+          "amount": "1.5",
+          "unit": "cucchiaino",
+          "group": "Per il brodo e il riso"
+        },
+        {
+          "name": "riso bomba",
+          "amount": "400",
+          "unit": "g",
+          "group": "Per il brodo e il riso"
+        },
+        {
+          "name": "rosmarino",
+          "amount": "1",
+          "unit": "rametto",
+          "group": "Per il brodo e il riso"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepara gli ingredienti",
+          "content": "Sala 600 g di pollo e 400 g di coniglio a pezzi. Tieni pronti 250 g di fagiolini piatti tagliati, 150 g di garrofón, 200 g di pomodoro grattugiato e 400 g di riso bomba.",
+          "image_url": "/recetas/paella-valenciana/paso-01.webp",
+          "image_alt": "Paella valenciana: Prepara gli ingredienti"
+        },
+        {
+          "title": "Rosola la carne",
+          "content": "Scalda 60 ml di olio d’oliva nella paellera a fuoco medio-alto e rosola il pollo e il coniglio da tutti i lati, per circa 10 minuti.",
+          "image_url": "/recetas/paella-valenciana/paso-02.webp",
+          "image_alt": "Paella valenciana: Rosola la carne"
+        },
+        {
+          "title": "Aggiungi le verdure",
+          "content": "Aggiungi i fagiolini e il garrofón e fai rosolare 5 minuti insieme alla carne.",
+          "image_url": "/recetas/paella-valenciana/paso-03.webp",
+          "image_alt": "Paella valenciana: Aggiungi le verdure"
+        },
+        {
+          "title": "Prepara il soffritto",
+          "content": "Sposta la carne e le verdure verso il bordo. Al centro aggiungi 200 g di pomodoro grattugiato e 1 cucchiaino di paprika dolce, e cuoci 2 minuti senza far bruciare.",
+          "image_url": "/recetas/paella-valenciana/paso-04.webp",
+          "image_alt": "Paella valenciana: Prepara il soffritto"
+        },
+        {
+          "title": "Prepara il brodo",
+          "content": "Versa 1,2 litri di acqua calda, aggiungi 1 pizzico di zafferano e 1½ cucchiaini di sale, e fai bollire 30 minuti a fuoco medio-alto. Il brodo deve diventare dorato.",
+          "image_url": "/recetas/paella-valenciana/paso-05.webp",
+          "image_alt": "Paella valenciana: Prepara il brodo"
+        },
+        {
+          "title": "Aggiungi il riso",
+          "content": "Distribuisci 400 g di riso bomba su tutta la paellera a forma di croce e posa sopra 1 rametto di rosmarino. Fai bollire forte per 8 minuti, senza mescolare.",
+          "image_url": "/recetas/paella-valenciana/paso-06.webp",
+          "image_alt": "Paella valenciana: Aggiungi il riso"
+        },
+        {
+          "title": "Termina la cottura",
+          "content": "Abbassa il fuoco e cuoci altri 8–10 minuti, senza mescolare, finché il riso assorbe il brodo e sul fondo si forma il socarrat.",
+          "image_url": "/recetas/paella-valenciana/paso-07.webp",
+          "image_alt": "Paella valenciana: Termina la cottura"
+        },
+        {
+          "title": "Fai riposare e servi",
+          "content": "Togli la paellera dal fuoco e lasciala riposare 5 minuti. Servi direttamente nella paellera.",
+          "image_url": "/recetas/paella-valenciana/paso-08.webp",
+          "image_alt": "Paella valenciana: Fai riposare e servi"
+        }
+      ],
+      "image_url": "/recetas/paella-valenciana/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/paella-valenciana/portada.webp",
+          "alt": "Paella valenciana"
+        }
+      ],
+      "notes": "Il riso si aggiunge una sola volta e non si mescola, perché cuocia in modo uniforme e si formi il socarrat. Usa una paellera di circa 40 cm perché il riso resti in uno strato sottile. Se il brodo si consuma prima che il riso sia tenero, aggiungi un po’ di acqua calda lungo il bordo. Il garrofón può essere fresco o in barattolo, ben scolato. Questa ricetta contiene solo pollo, coniglio e verdure: niente chorizo, piselli o frutti di mare.",
+      "nutrition": {
+        "calories": 563,
+        "protein_g": 27.5,
+        "carbs_g": 62,
+        "fat_g": 21.8,
+        "sodium_mg": 649,
+        "serving_size": "1 porzione (1/6 della ricetta)",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Somma dei nutrienti per 100 g moltiplicati per il peso degli ingredienti e divisi per 6 porzioni. Si usano 390 g di pollo e 240 g di coniglio commestibili (il 65 % e il 60 % dei pezzi con l’osso), 55 g di olio (60 ml), 250 g di fagiolini, 150 g di garrofón cotto, 200 g di pomodoro, 2,5 g di paprika, 9 g di sale e 400 g di riso crudo. Zafferano e rosmarino non sono conteggiati.",
+        "note": "Stima per porzione. Il garrofón è calcolato con i fagioli di Lima cotti e il riso bomba con riso bianco a chicco corto, come valori di riferimento. La parte commestibile della carne e il grasso che resta nella paellera sono approssimativi, e il sodio dipende dal sale aggiunto.",
+        "inputs": [
+          {
+            "fdc_id": "171116",
+            "description": "Chicken, broilers or fryers, meat and skin, raw (390 g comestibles de 600 g con hueso)",
+            "grams": 390,
+            "per100": {
+              "calories": 215,
+              "protein_g": 18.6,
+              "carbs_g": 0,
+              "fat_g": 15.06,
+              "saturated_fat_g": 4.31,
+              "fiber_g": 0,
+              "sodium_mg": 70
+            }
+          },
+          {
+            "fdc_id": "172665",
+            "description": "Rabbit, domesticated, composite of cuts, raw (240 g comestibles de 400 g con hueso)",
+            "grams": 240,
+            "per100": {
+              "calories": 136,
+              "protein_g": 20.05,
+              "carbs_g": 0,
+              "fat_g": 5.55,
+              "saturated_fat_g": 1.66,
+              "fiber_g": 0,
+              "sodium_mg": 41
+            }
+          },
+          {
+            "fdc_id": "171413",
+            "description": "Oil, olive, salad or cooking",
+            "grams": 55,
+            "per100": {
+              "calories": 884,
+              "protein_g": 0,
+              "carbs_g": 0,
+              "fat_g": 100,
+              "saturated_fat_g": 13.81,
+              "fiber_g": 0,
+              "sodium_mg": 2
+            }
+          },
+          {
+            "fdc_id": "169961",
+            "description": "Beans, snap, green, raw (proxy de la judía verde plana)",
+            "grams": 250,
+            "per100": {
+              "calories": 31,
+              "protein_g": 1.83,
+              "carbs_g": 6.97,
+              "fat_g": 0.22,
+              "saturated_fat_g": 0.05,
+              "fiber_g": 2.7,
+              "sodium_mg": 6
+            }
+          },
+          {
+            "fdc_id": "175193",
+            "description": "Lima beans, large, mature seeds, cooked, boiled, without salt (proxy del garrofón)",
+            "grams": 150,
+            "per100": {
+              "calories": 115,
+              "protein_g": 7.8,
+              "carbs_g": 20.88,
+              "fat_g": 0.38,
+              "saturated_fat_g": 0.1,
+              "fiber_g": 7,
+              "sodium_mg": 2
+            }
+          },
+          {
+            "fdc_id": "170457",
+            "description": "Tomatoes, red, ripe, raw",
+            "grams": 200,
+            "per100": {
+              "calories": 18,
+              "protein_g": 0.88,
+              "carbs_g": 3.92,
+              "fat_g": 0.2,
+              "saturated_fat_g": 0.03,
+              "fiber_g": 1.2,
+              "sodium_mg": 5
+            }
+          },
+          {
+            "fdc_id": "171329",
+            "description": "Spices, paprika",
+            "grams": 2.5,
+            "per100": {
+              "calories": 282,
+              "protein_g": 14.14,
+              "carbs_g": 53.99,
+              "fat_g": 12.89,
+              "saturated_fat_g": 2.14,
+              "fiber_g": 34.9,
+              "sodium_mg": 68
+            }
+          },
+          {
+            "fdc_id": "173468",
+            "description": "Salt, table",
+            "grams": 9,
+            "per100": {
+              "calories": 0,
+              "protein_g": 0,
+              "carbs_g": 0,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 38758
+            }
+          },
+          {
+            "fdc_id": "168880",
+            "description": "Rice, white, short-grain, raw (proxy del arroz bomba)",
+            "grams": 400,
+            "per100": {
+              "calories": 358,
+              "protein_g": 6.5,
+              "carbs_g": 79.15,
+              "fat_g": 0.52,
+              "saturated_fat_g": 0.14,
+              "fiber_g": 1.0,
+              "sodium_mg": 1
+            }
+          }
+        ]
+      },
+      "seo": {
+        "title": "Paella valenciana con pollo e coniglio | Manual de Cocina",
+        "description": "Paella valenciana con pollo e coniglio, fagiolini, garrofón, pomodoro e zafferano. Per 6 persone, pronta in 85 minuti. Ricetta passo passo.",
+        "image_variants": [
+          "/recetas/paella-valenciana/portada-1x1.webp",
+          "/recetas/paella-valenciana/portada-4x3.webp",
+          "/recetas/paella-valenciana/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Cosa contiene la paella valenciana?",
+            "a": "Pollo, coniglio, fagiolini piatti, garrofón, pomodoro grattugiato, paprika dolce, zafferano, olio d’oliva, acqua, sale e riso bomba. Alcune versioni aggiungono un rametto di rosmarino."
+          },
+          {
+            "q": "Perché non si mescola il riso?",
+            "a": "Perché mescolando si libera l’amido e il riso diventa colloso. Lasciandolo stare, i chicchi cuociono sgranati e sul fondo si forma il socarrat."
+          },
+          {
+            "q": "Che cos’è il socarrat?",
+            "a": "È lo strato di riso tostato che si forma attaccato al fondo della paellera a fine cottura. Deve essere dorato e croccante, senza bruciare."
+          }
+        ]
+      }
+    },
+    {
+      "id": "24daa3cf-09de-5789-9a57-624c23b77609",
+      "recipe_group_id": "45c9cce8-9152-481d-b303-d2d9ede3cc07",
+      "language": "ja",
+      "slug": "バレンシア風パエリア",
+      "public_path": "/ja/バレンシア風パエリア",
+      "source_url": null,
+      "title": "バレンシア風パエリア",
+      "excerpt": "鶏肉、うさぎ肉、平さやいんげん、ガローフォン、トマト、パプリカ、サフランで作るバレンシア風パエリア。パエリャ鍋でおこげができるまで炊きます。6人分、85分で完成。",
+      "summary": "バレンシア風パエリアは、鶏肉、うさぎ肉、平さやいんげん、ガローフォン、すりおろしトマト、甘口パプリカパウダー、サフランをパエリャ鍋で炊く、水分を飛ばした米料理です。肉を焼き、ソフリットを作り、スープを煮てから、最後に米を加えます。\n\n米は強火で8分沸騰させ、そのあと弱火で8〜10分、混ぜずに炊いて、底におこげ（ソカラット）を作ります。6人分です。",
+      "category": "主菜",
+      "category_slug": "platos-principales",
+      "difficulty": "普通",
+      "course": "主菜",
+      "cuisine": "スペイン料理",
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 65,
+      "total_time_minutes": 85,
+      "servings": 6,
+      "keywords": [
+        "バレンシア風パエリア",
+        "パエリア レシピ",
+        "鶏肉とうさぎ肉のパエリア",
+        "パエリア 作り方",
+        "本場のパエリア",
+        "パエリア 米",
+        "ソカラット"
+      ],
+      "ingredients": [
+        {
+          "name": "鶏肉（骨付き、ぶつ切り）",
+          "amount": "600",
+          "unit": "g",
+          "group": "ソフリット用"
+        },
+        {
+          "name": "うさぎ肉（骨付き、ぶつ切り）",
+          "amount": "400",
+          "unit": "g",
+          "group": "ソフリット用"
+        },
+        {
+          "name": "オリーブオイル",
+          "amount": "60",
+          "unit": "ml",
+          "group": "ソフリット用"
+        },
+        {
+          "name": "平さやいんげん、切る",
+          "amount": "250",
+          "unit": "g",
+          "group": "ソフリット用"
+        },
+        {
+          "name": "ガローフォン（大粒の白いんげん豆）",
+          "amount": "150",
+          "unit": "g",
+          "group": "ソフリット用"
+        },
+        {
+          "name": "すりおろしトマト",
+          "amount": "200",
+          "unit": "g",
+          "group": "ソフリット用"
+        },
+        {
+          "name": "パプリカパウダー（甘口）",
+          "amount": "1",
+          "unit": "小さじ",
+          "group": "ソフリット用"
+        },
+        {
+          "name": "お湯",
+          "amount": "1.2",
+          "unit": "l",
+          "group": "スープと米用"
+        },
+        {
+          "name": "サフラン（めしべ）",
+          "amount": "1",
+          "unit": "ひとつまみ",
+          "group": "スープと米用"
+        },
+        {
+          "name": "塩",
+          "amount": "1.5",
+          "unit": "小さじ",
+          "group": "スープと米用"
+        },
+        {
+          "name": "ボンバ米",
+          "amount": "400",
+          "unit": "g",
+          "group": "スープと米用"
+        },
+        {
+          "name": "ローズマリー",
+          "amount": "1",
+          "unit": "枝",
+          "group": "スープと米用"
+        }
+      ],
+      "steps": [
+        {
+          "title": "材料を準備する",
+          "content": "鶏肉600gとうさぎ肉400gのぶつ切りに塩をふります。切った平さやいんげん250g、ガローフォン150g、すりおろしトマト200g、ボンバ米400gを用意します。",
+          "image_url": "/recetas/paella-valenciana/paso-01.webp",
+          "image_alt": "バレンシア風パエリア: 材料を準備する"
+        },
+        {
+          "title": "肉を焼く",
+          "content": "パエリャ鍋にオリーブオイル60mlを入れて中強火で熱し、鶏肉とうさぎ肉を全体に焼き色がつくまで約10分焼きます。",
+          "image_url": "/recetas/paella-valenciana/paso-02.webp",
+          "image_alt": "バレンシア風パエリア: 肉を焼く"
+        },
+        {
+          "title": "野菜を加える",
+          "content": "平さやいんげんとガローフォンを加え、肉と一緒に5分炒めます。",
+          "image_url": "/recetas/paella-valenciana/paso-03.webp",
+          "image_alt": "バレンシア風パエリア: 野菜を加える"
+        },
+        {
+          "title": "ソフリットを作る",
+          "content": "肉と野菜を鍋の端に寄せます。中央にすりおろしトマト200gと甘口パプリカパウダー小さじ1を入れ、焦がさないように2分炒めます。",
+          "image_url": "/recetas/paella-valenciana/paso-04.webp",
+          "image_alt": "バレンシア風パエリア: ソフリットを作る"
+        },
+        {
+          "title": "スープを作る",
+          "content": "お湯1.2リットルを注ぎ、サフランひとつまみと塩小さじ1½を加えて、中強火で30分煮ます。スープが黄金色になります。",
+          "image_url": "/recetas/paella-valenciana/paso-05.webp",
+          "image_alt": "バレンシア風パエリア: スープを作る"
+        },
+        {
+          "title": "米を加える",
+          "content": "ボンバ米400gを十字を描くように鍋全体に広げ、ローズマリー1枝をのせます。混ぜずに強火で8分沸騰させます。",
+          "image_url": "/recetas/paella-valenciana/paso-06.webp",
+          "image_alt": "バレンシア風パエリア: 米を加える"
+        },
+        {
+          "title": "仕上げに炊く",
+          "content": "火を弱め、混ぜずにさらに8〜10分炊き、米がスープを吸って底におこげ（ソカラット）ができるまで待ちます。",
+          "image_url": "/recetas/paella-valenciana/paso-07.webp",
+          "image_alt": "バレンシア風パエリア: 仕上げに炊く"
+        },
+        {
+          "title": "休ませて盛り付ける",
+          "content": "鍋を火から下ろして5分休ませます。そのままパエリャ鍋で取り分けます。",
+          "image_url": "/recetas/paella-valenciana/paso-08.webp",
+          "image_alt": "バレンシア風パエリア: 休ませて盛り付ける"
+        }
+      ],
+      "image_url": "/recetas/paella-valenciana/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/paella-valenciana/portada.webp",
+          "alt": "バレンシア風パエリア"
+        }
+      ],
+      "notes": "米は一度だけ加えて混ぜません。均一に火が通り、おこげができます。米が薄く広がるよう、直径約40cmのパエリャ鍋を使ってください。米がやわらかくなる前にスープがなくなったら、鍋のふちから少量のお湯を足します。ガローフォンは生でも瓶詰めでもかまいません（瓶詰めはよく水気を切ります）。このレシピは鶏肉、うさぎ肉、野菜だけで、チョリソー、グリーンピース、魚介類は入れません。",
+      "nutrition": {
+        "calories": 563,
+        "protein_g": 27.5,
+        "carbs_g": 62,
+        "fat_g": 21.8,
+        "sodium_mg": 649,
+        "serving_size": "1人分（レシピの1/6）",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "100gあたりの栄養素に材料の重量を掛け、6人分で割って合計しています。可食部の鶏肉390gとうさぎ肉240g（骨付きの65%と60%）、油55g（60ml）、さやいんげん250g、ゆでたガローフォン150g、トマト200g、パプリカパウダー2.5g、塩9g、生の米400gを使用しています。サフランとローズマリーは計算に含めていません。",
+        "note": "1人分の目安です。ガローフォンはゆでたライマメ、ボンバ米は短粒の白米を参考値として計算しています。肉の可食部の割合と鍋に残る脂は概算で、ナトリウム量は加える塩の量によって変わります。",
+        "inputs": [
+          {
+            "fdc_id": "171116",
+            "description": "Chicken, broilers or fryers, meat and skin, raw (390 g comestibles de 600 g con hueso)",
+            "grams": 390,
+            "per100": {
+              "calories": 215,
+              "protein_g": 18.6,
+              "carbs_g": 0,
+              "fat_g": 15.06,
+              "saturated_fat_g": 4.31,
+              "fiber_g": 0,
+              "sodium_mg": 70
+            }
+          },
+          {
+            "fdc_id": "172665",
+            "description": "Rabbit, domesticated, composite of cuts, raw (240 g comestibles de 400 g con hueso)",
+            "grams": 240,
+            "per100": {
+              "calories": 136,
+              "protein_g": 20.05,
+              "carbs_g": 0,
+              "fat_g": 5.55,
+              "saturated_fat_g": 1.66,
+              "fiber_g": 0,
+              "sodium_mg": 41
+            }
+          },
+          {
+            "fdc_id": "171413",
+            "description": "Oil, olive, salad or cooking",
+            "grams": 55,
+            "per100": {
+              "calories": 884,
+              "protein_g": 0,
+              "carbs_g": 0,
+              "fat_g": 100,
+              "saturated_fat_g": 13.81,
+              "fiber_g": 0,
+              "sodium_mg": 2
+            }
+          },
+          {
+            "fdc_id": "169961",
+            "description": "Beans, snap, green, raw (proxy de la judía verde plana)",
+            "grams": 250,
+            "per100": {
+              "calories": 31,
+              "protein_g": 1.83,
+              "carbs_g": 6.97,
+              "fat_g": 0.22,
+              "saturated_fat_g": 0.05,
+              "fiber_g": 2.7,
+              "sodium_mg": 6
+            }
+          },
+          {
+            "fdc_id": "175193",
+            "description": "Lima beans, large, mature seeds, cooked, boiled, without salt (proxy del garrofón)",
+            "grams": 150,
+            "per100": {
+              "calories": 115,
+              "protein_g": 7.8,
+              "carbs_g": 20.88,
+              "fat_g": 0.38,
+              "saturated_fat_g": 0.1,
+              "fiber_g": 7,
+              "sodium_mg": 2
+            }
+          },
+          {
+            "fdc_id": "170457",
+            "description": "Tomatoes, red, ripe, raw",
+            "grams": 200,
+            "per100": {
+              "calories": 18,
+              "protein_g": 0.88,
+              "carbs_g": 3.92,
+              "fat_g": 0.2,
+              "saturated_fat_g": 0.03,
+              "fiber_g": 1.2,
+              "sodium_mg": 5
+            }
+          },
+          {
+            "fdc_id": "171329",
+            "description": "Spices, paprika",
+            "grams": 2.5,
+            "per100": {
+              "calories": 282,
+              "protein_g": 14.14,
+              "carbs_g": 53.99,
+              "fat_g": 12.89,
+              "saturated_fat_g": 2.14,
+              "fiber_g": 34.9,
+              "sodium_mg": 68
+            }
+          },
+          {
+            "fdc_id": "173468",
+            "description": "Salt, table",
+            "grams": 9,
+            "per100": {
+              "calories": 0,
+              "protein_g": 0,
+              "carbs_g": 0,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 38758
+            }
+          },
+          {
+            "fdc_id": "168880",
+            "description": "Rice, white, short-grain, raw (proxy del arroz bomba)",
+            "grams": 400,
+            "per100": {
+              "calories": 358,
+              "protein_g": 6.5,
+              "carbs_g": 79.15,
+              "fat_g": 0.52,
+              "saturated_fat_g": 0.14,
+              "fiber_g": 1.0,
+              "sodium_mg": 1
+            }
+          }
+        ]
+      },
+      "seo": {
+        "title": "バレンシア風パエリアの作り方｜鶏肉とうさぎ肉 | Manual de Cocina",
+        "description": "鶏肉とうさぎ肉、いんげん、ガローフォン、トマト、サフランで作るバレンシア風パエリア。6人分、85分で完成。手順を写真付きで解説します。",
+        "image_variants": [
+          "/recetas/paella-valenciana/portada-1x1.webp",
+          "/recetas/paella-valenciana/portada-4x3.webp",
+          "/recetas/paella-valenciana/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "バレンシア風パエリアには何が入りますか？",
+            "a": "鶏肉、うさぎ肉、平さやいんげん、ガローフォン、すりおろしトマト、甘口パプリカパウダー、サフラン、オリーブオイル、水、塩、ボンバ米です。ローズマリーを1枝加える作り方もあります。"
+          },
+          {
+            "q": "なぜ米を混ぜないのですか？",
+            "a": "混ぜるとでんぷんが出て、米がべたついてしまうからです。混ぜずに炊くと粒がばらけて炊き上がり、底におこげができます。"
+          },
+          {
+            "q": "ソカラットとは何ですか？",
+            "a": "炊き上がり際にパエリャ鍋の底に張りつく、香ばしく焼けた米の層のことです。焦げる手前の、黄金色でカリッとした状態がよいとされます。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "b53b305f-42e5-5dc2-a4de-201cc05edc5a",
+      "recipe_group_id": "45c9cce8-9152-481d-b303-d2d9ede3cc07",
+      "language": "pt",
+      "slug": "paella-valenciana",
+      "public_path": "/pt/paella-valenciana",
+      "source_url": null,
+      "title": "Paella valenciana",
+      "excerpt": "Paella valenciana com frango, coelho, vagem plana, garrofón, tomate, páprica e açafrão, cozida na paellera até formar o socarrat. Para 6 pessoas, pronta em 85 minutos.",
+      "summary": "A paella valenciana é um arroz seco cozido na paellera com frango, coelho, vagem plana, garrofón, tomate ralado, páprica doce e açafrão. Doura-se a carne, faz-se o refogado, prepara-se o caldo e, no fim, acrescenta-se o arroz.\n\nO arroz ferve forte por 8 minutos e depois cozinha em fogo baixo por mais 8 a 10 minutos, sem mexer, até se formar o socarrat no fundo. Rende 6 porções.",
+      "category": "Pratos principais",
+      "category_slug": "platos-principales",
+      "difficulty": "Média",
+      "course": "Prato principal",
+      "cuisine": "Espanhola",
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 65,
+      "total_time_minutes": 85,
+      "servings": 6,
+      "keywords": [
+        "paella valenciana",
+        "receita de paella valenciana",
+        "paella de frango e coelho",
+        "como fazer paella",
+        "paella tradicional",
+        "arroz de paella",
+        "socarrat"
+      ],
+      "ingredients": [
+        {
+          "name": "frango em pedaços, com osso",
+          "amount": "600",
+          "unit": "g",
+          "group": "Para o refogado"
+        },
+        {
+          "name": "coelho em pedaços, com osso",
+          "amount": "400",
+          "unit": "g",
+          "group": "Para o refogado"
+        },
+        {
+          "name": "azeite de oliva",
+          "amount": "60",
+          "unit": "ml",
+          "group": "Para o refogado"
+        },
+        {
+          "name": "vagem plana, cortada",
+          "amount": "250",
+          "unit": "g",
+          "group": "Para o refogado"
+        },
+        {
+          "name": "garrofón (feijão branco grande)",
+          "amount": "150",
+          "unit": "g",
+          "group": "Para o refogado"
+        },
+        {
+          "name": "tomate ralado",
+          "amount": "200",
+          "unit": "g",
+          "group": "Para o refogado"
+        },
+        {
+          "name": "páprica doce",
+          "amount": "1",
+          "unit": "colher de chá",
+          "group": "Para o refogado"
+        },
+        {
+          "name": "água quente",
+          "amount": "1.2",
+          "unit": "l",
+          "group": "Para o caldo e o arroz"
+        },
+        {
+          "name": "açafrão em fios",
+          "amount": "1",
+          "unit": "pitada",
+          "group": "Para o caldo e o arroz"
+        },
+        {
+          "name": "sal",
+          "amount": "1.5",
+          "unit": "colher de chá",
+          "group": "Para o caldo e o arroz"
+        },
+        {
+          "name": "arroz bomba",
+          "amount": "400",
+          "unit": "g",
+          "group": "Para o caldo e o arroz"
+        },
+        {
+          "name": "alecrim",
+          "amount": "1",
+          "unit": "ramo",
+          "group": "Para o caldo e o arroz"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepare os ingredientes",
+          "content": "Tempere com sal 600 g de frango e 400 g de coelho em pedaços. Deixe à mão 250 g de vagem plana cortada, 150 g de garrofón, 200 g de tomate ralado e 400 g de arroz bomba.",
+          "image_url": "/recetas/paella-valenciana/paso-01.webp",
+          "image_alt": "Paella valenciana: Prepare os ingredientes"
+        },
+        {
+          "title": "Doure a carne",
+          "content": "Aqueça 60 ml de azeite de oliva na paellera em fogo médio-alto e doure o frango e o coelho por todos os lados, por cerca de 10 minutos.",
+          "image_url": "/recetas/paella-valenciana/paso-02.webp",
+          "image_alt": "Paella valenciana: Doure a carne"
+        },
+        {
+          "title": "Acrescente as verduras",
+          "content": "Acrescente a vagem e o garrofón e refogue por 5 minutos junto com a carne.",
+          "image_url": "/recetas/paella-valenciana/paso-03.webp",
+          "image_alt": "Paella valenciana: Acrescente as verduras"
+        },
+        {
+          "title": "Faça o refogado",
+          "content": "Empurre a carne e as verduras para a borda. No centro, junte 200 g de tomate ralado e 1 colher de chá de páprica doce, e refogue por 2 minutos sem deixar queimar.",
+          "image_url": "/recetas/paella-valenciana/paso-04.webp",
+          "image_alt": "Paella valenciana: Faça o refogado"
+        },
+        {
+          "title": "Prepare o caldo",
+          "content": "Despeje 1,2 litro de água quente, junte 1 pitada de açafrão e 1½ colher de chá de sal, e deixe ferver por 30 minutos em fogo médio-alto. O caldo deve ficar dourado.",
+          "image_url": "/recetas/paella-valenciana/paso-05.webp",
+          "image_alt": "Paella valenciana: Prepare o caldo"
+        },
+        {
+          "title": "Coloque o arroz",
+          "content": "Distribua 400 g de arroz bomba por toda a paellera, em forma de cruz, e coloque por cima 1 ramo de alecrim. Deixe ferver forte por 8 minutos, sem mexer.",
+          "image_url": "/recetas/paella-valenciana/paso-06.webp",
+          "image_alt": "Paella valenciana: Coloque o arroz"
+        },
+        {
+          "title": "Termine o cozimento",
+          "content": "Baixe o fogo e cozinhe por mais 8 a 10 minutos, sem mexer, até o arroz absorver o caldo e se formar o socarrat no fundo.",
+          "image_url": "/recetas/paella-valenciana/paso-07.webp",
+          "image_alt": "Paella valenciana: Termine o cozimento"
+        },
+        {
+          "title": "Deixe descansar e sirva",
+          "content": "Retire a paellera do fogo e deixe descansar por 5 minutos. Sirva direto na paellera.",
+          "image_url": "/recetas/paella-valenciana/paso-08.webp",
+          "image_alt": "Paella valenciana: Deixe descansar e sirva"
+        }
+      ],
+      "image_url": "/recetas/paella-valenciana/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/paella-valenciana/portada.webp",
+          "alt": "Paella valenciana"
+        }
+      ],
+      "notes": "O arroz é colocado uma só vez e não se mexe, para cozinhar por igual e formar o socarrat. Use uma paellera de cerca de 40 cm para o arroz ficar em uma camada fina. Se o caldo acabar antes de o arroz ficar macio, acrescente um pouco de água quente pela borda. O garrofón pode ser fresco ou em conserva, bem escorrido. Esta receita leva só frango, coelho e verduras: sem chouriço, ervilha ou frutos do mar.",
+      "nutrition": {
+        "calories": 563,
+        "protein_g": 27.5,
+        "carbs_g": 62,
+        "fat_g": 21.8,
+        "sodium_mg": 649,
+        "serving_size": "1 porção (1/6 da receita)",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Soma dos nutrientes por 100 g multiplicados pelo peso dos ingredientes e divididos por 6 porções. Usa 390 g de frango e 240 g de coelho comestíveis (65 % e 60 % dos pedaços com osso), 55 g de óleo (60 ml), 250 g de vagem, 150 g de garrofón cozido, 200 g de tomate, 2,5 g de páprica, 9 g de sal e 400 g de arroz cru. O açafrão e o alecrim não são contados.",
+        "note": "Estimativa por porção. O garrofón é calculado com feijão-de-lima cozido e o arroz bomba com arroz branco de grão curto, como valores de referência. A parte comestível da carne e a gordura que fica na paellera são aproximadas, e o sódio depende do sal adicionado.",
+        "inputs": [
+          {
+            "fdc_id": "171116",
+            "description": "Chicken, broilers or fryers, meat and skin, raw (390 g comestibles de 600 g con hueso)",
+            "grams": 390,
+            "per100": {
+              "calories": 215,
+              "protein_g": 18.6,
+              "carbs_g": 0,
+              "fat_g": 15.06,
+              "saturated_fat_g": 4.31,
+              "fiber_g": 0,
+              "sodium_mg": 70
+            }
+          },
+          {
+            "fdc_id": "172665",
+            "description": "Rabbit, domesticated, composite of cuts, raw (240 g comestibles de 400 g con hueso)",
+            "grams": 240,
+            "per100": {
+              "calories": 136,
+              "protein_g": 20.05,
+              "carbs_g": 0,
+              "fat_g": 5.55,
+              "saturated_fat_g": 1.66,
+              "fiber_g": 0,
+              "sodium_mg": 41
+            }
+          },
+          {
+            "fdc_id": "171413",
+            "description": "Oil, olive, salad or cooking",
+            "grams": 55,
+            "per100": {
+              "calories": 884,
+              "protein_g": 0,
+              "carbs_g": 0,
+              "fat_g": 100,
+              "saturated_fat_g": 13.81,
+              "fiber_g": 0,
+              "sodium_mg": 2
+            }
+          },
+          {
+            "fdc_id": "169961",
+            "description": "Beans, snap, green, raw (proxy de la judía verde plana)",
+            "grams": 250,
+            "per100": {
+              "calories": 31,
+              "protein_g": 1.83,
+              "carbs_g": 6.97,
+              "fat_g": 0.22,
+              "saturated_fat_g": 0.05,
+              "fiber_g": 2.7,
+              "sodium_mg": 6
+            }
+          },
+          {
+            "fdc_id": "175193",
+            "description": "Lima beans, large, mature seeds, cooked, boiled, without salt (proxy del garrofón)",
+            "grams": 150,
+            "per100": {
+              "calories": 115,
+              "protein_g": 7.8,
+              "carbs_g": 20.88,
+              "fat_g": 0.38,
+              "saturated_fat_g": 0.1,
+              "fiber_g": 7,
+              "sodium_mg": 2
+            }
+          },
+          {
+            "fdc_id": "170457",
+            "description": "Tomatoes, red, ripe, raw",
+            "grams": 200,
+            "per100": {
+              "calories": 18,
+              "protein_g": 0.88,
+              "carbs_g": 3.92,
+              "fat_g": 0.2,
+              "saturated_fat_g": 0.03,
+              "fiber_g": 1.2,
+              "sodium_mg": 5
+            }
+          },
+          {
+            "fdc_id": "171329",
+            "description": "Spices, paprika",
+            "grams": 2.5,
+            "per100": {
+              "calories": 282,
+              "protein_g": 14.14,
+              "carbs_g": 53.99,
+              "fat_g": 12.89,
+              "saturated_fat_g": 2.14,
+              "fiber_g": 34.9,
+              "sodium_mg": 68
+            }
+          },
+          {
+            "fdc_id": "173468",
+            "description": "Salt, table",
+            "grams": 9,
+            "per100": {
+              "calories": 0,
+              "protein_g": 0,
+              "carbs_g": 0,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 38758
+            }
+          },
+          {
+            "fdc_id": "168880",
+            "description": "Rice, white, short-grain, raw (proxy del arroz bomba)",
+            "grams": 400,
+            "per100": {
+              "calories": 358,
+              "protein_g": 6.5,
+              "carbs_g": 79.15,
+              "fat_g": 0.52,
+              "saturated_fat_g": 0.14,
+              "fiber_g": 1.0,
+              "sodium_mg": 1
+            }
+          }
+        ]
+      },
+      "seo": {
+        "title": "Paella valenciana de frango e coelho | Manual de Cocina",
+        "description": "Paella valenciana de frango e coelho com vagem, garrofón, tomate e açafrão. Para 6 pessoas, pronta em 85 minutos. Receita passo a passo.",
+        "image_variants": [
+          "/recetas/paella-valenciana/portada-1x1.webp",
+          "/recetas/paella-valenciana/portada-4x3.webp",
+          "/recetas/paella-valenciana/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "O que leva a paella valenciana?",
+            "a": "Frango, coelho, vagem plana, garrofón, tomate ralado, páprica doce, açafrão, azeite de oliva, água, sal e arroz bomba. Algumas versões levam um ramo de alecrim."
+          },
+          {
+            "q": "Por que não se mexe o arroz?",
+            "a": "Porque ao mexer o amido se solta e o arroz fica empapado. Sem mexer, os grãos cozinham soltos e o socarrat se forma no fundo."
+          },
+          {
+            "q": "O que é o socarrat?",
+            "a": "É a camada de arroz tostado que se forma grudada no fundo da paellera no fim do cozimento. Deve ficar dourada e crocante, sem queimar."
+          }
+        ]
+      }
+    }
+  ]
+}
