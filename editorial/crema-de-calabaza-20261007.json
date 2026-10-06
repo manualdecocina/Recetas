@@ -1,0 +1,2306 @@
+{
+  "scope": "crema-de-calabaza only; preview.manualdecocina.com",
+  "state": "ES_AND_6_TRANSLATIONS_CLOSED_IMAGES_FINAL_AWAITING_DB_PUBLISH",
+  "historical_path": "/crema-de-calabaza",
+  "provenance": "Reconstrucción nueva (2026-10-07): pasos, cantidades y tiempos redactados desde cero (4 raciones, 12 ingredientes, 8 pasos, 20 min de preparación, 45 min de cocción, 65 min en total). De la fila legada de Supabase (WordPress) solo se conserva la identidad técnica: recipe_group_id y public_path; no se leyó ni reutiliza ningún texto ni traducción antigua. Los 8 pasos congelados se entregaron antes de generar las imágenes; aquí solo se concretan cantidades (1 kg de calabaza, 1 papa de 200 g, 800 ml de caldo) y tiempos (5, 3, 25 y 3 minutos). Nutrición USDA SR Legacy: los FDC ids se contrastaron parcialmente con una fuente espejo (getfoodfacts.com); los valores por 100 g de calabaza, papa, cebolla, ajo, aceite, caldo, sal, crema y semillas se completaron a partir de datos publicados y de memoria, a contrastar con FDC. Proxy declarado: calabaza cruda como referencia; el caldo comercial aporta sodio y varía por marca; se cuenta toda la crema (100 ml en la sopa + 15 ml para decorar). Categoría canónica sopas-y-cremas. Imágenes: ZIP de ChatGPT, 12 WEBP en las dimensiones del contrato; coinciden 1:1 con los 8 pasos. Slugs: la ruta ES histórica se conserva; las imágenes viven en /recetas/crema-de-calabaza/. Existe una fila legada en content_pages para la ruta ES (fe43854f-41c9-41f1-ab7a-23a9c2f8d9e8) que se retira (published=false, public_path=null) antes de publicar.",
+  "localization_plan": {
+    "category_slug": "sopas-y-cremas",
+    "category_labels": {
+      "es": "Platos principales",
+      "de": "Hauptgerichte",
+      "en": "Main dishes",
+      "fr": "Plats principaux",
+      "it": "Secondi piatti",
+      "ja": "主菜",
+      "pt": "Pratos principais"
+    },
+    "proposed_public_paths": {
+      "es": "/crema-de-calabaza",
+      "de": "/de/kuerbissuppe-selber-machen",
+      "en": "/en/pumpkin-soup",
+      "fr": "/fr/veloute-de-potiron",
+      "it": "/it/crema-di-zucca",
+      "ja": "/ja/かぼちゃのポタージュ",
+      "pt": "/pt/creme-de-abobora"
+    },
+    "path_convention": "Sin barra final; public_path almacenado es la fuente de verdad. Ruta ES histórica conservada.",
+    "hreflang_note": "/pt usa hreflang pt-BR"
+  },
+  "records": [
+    {
+      "id": "b6059573-680e-4026-a6ba-4fc8a23f1380",
+      "recipe_group_id": "fcedc6d2-5cec-4b68-8367-d2c66b4938b3",
+      "language": "es",
+      "slug": "crema-de-calabaza",
+      "public_path": "/crema-de-calabaza",
+      "source_url": null,
+      "title": "Crema de calabaza",
+      "excerpt": "Crema de calabaza casera, suave y sedosa, con papa, cebolla, caldo de verduras y un toque de nuez moscada. Para 4 personas, lista en 65 minutos.",
+      "summary": "La crema de calabaza se hace sofriendo cebolla y ajo, cociendo la calabaza con papa en caldo de verduras y triturando todo hasta lograr una textura lisa. La papa le da cuerpo y la crema de leche la deja sedosa.\n\nLas verduras cuecen 25 minutos, se trituran y se calientan 3 minutos con crema de leche y nuez moscada. Se sirve con un hilo de crema y semillas de calabaza tostadas. Rinde 4 porciones.",
+      "category": "Sopas y cremas",
+      "category_slug": "sopas-y-cremas",
+      "difficulty": "Fácil",
+      "course": "Entrante",
+      "cuisine": "Internacional",
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 45,
+      "total_time_minutes": 65,
+      "servings": 4,
+      "keywords": [
+        "crema de calabaza",
+        "receta de crema de calabaza",
+        "cómo hacer crema de calabaza",
+        "crema de calabaza casera",
+        "sopa de calabaza",
+        "crema de calabaza con papa",
+        "crema de calabaza fácil"
+      ],
+      "ingredients": [
+        {
+          "name": "calabaza pelada",
+          "amount": "1",
+          "unit": "kg",
+          "group": "Para la crema"
+        },
+        {
+          "name": "papa mediana",
+          "amount": "200",
+          "unit": "g",
+          "group": "Para la crema"
+        },
+        {
+          "name": "cebolla",
+          "amount": "1",
+          "unit": "",
+          "group": "Para la crema"
+        },
+        {
+          "name": "dientes de ajo",
+          "amount": "2",
+          "unit": "",
+          "group": "Para la crema"
+        },
+        {
+          "name": "aceite de oliva",
+          "amount": "30",
+          "unit": "ml",
+          "group": "Para la crema"
+        },
+        {
+          "name": "caldo de verduras caliente",
+          "amount": "800",
+          "unit": "ml",
+          "group": "Para la crema"
+        },
+        {
+          "name": "sal",
+          "amount": "1",
+          "unit": "cucharadita",
+          "group": "Para la crema"
+        },
+        {
+          "name": "pimienta negra molida",
+          "amount": "1",
+          "unit": "pizca",
+          "group": "Para la crema"
+        },
+        {
+          "name": "crema de leche",
+          "amount": "100",
+          "unit": "ml",
+          "group": "Para la crema"
+        },
+        {
+          "name": "nuez moscada",
+          "amount": "1",
+          "unit": "pizca",
+          "group": "Para la crema"
+        },
+        {
+          "name": "semillas de calabaza tostadas",
+          "amount": "2",
+          "unit": "cucharada",
+          "group": "Para servir"
+        },
+        {
+          "name": "crema de leche, para decorar",
+          "amount": "1",
+          "unit": "cucharada",
+          "group": "Para servir"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepara las verduras",
+          "content": "Pela 1 kg de calabaza y 1 papa mediana (200 g) y córtalas en cubos de 2 cm. Pica 1 cebolla y 2 dientes de ajo.",
+          "image_url": "/recetas/crema-de-calabaza/paso-01.webp",
+          "image_alt": "Crema de calabaza: Prepara las verduras"
+        },
+        {
+          "title": "Sofríe la cebolla y el ajo",
+          "content": "Calienta 30 ml de aceite de oliva en una olla ancha a fuego medio y sofríe la cebolla y el ajo 5 minutos, hasta que estén blandos.",
+          "image_url": "/recetas/crema-de-calabaza/paso-02.webp",
+          "image_alt": "Crema de calabaza: Sofríe la cebolla y el ajo"
+        },
+        {
+          "title": "Añade la calabaza y la papa",
+          "content": "Añade la calabaza y la papa y remueve 3 minutos.",
+          "image_url": "/recetas/crema-de-calabaza/paso-03.webp",
+          "image_alt": "Crema de calabaza: Añade la calabaza y la papa"
+        },
+        {
+          "title": "Vierte el caldo",
+          "content": "Vierte 800 ml de caldo de verduras caliente, añade 1 cucharadita de sal y 1 pizca de pimienta, y lleva a ebullición.",
+          "image_url": "/recetas/crema-de-calabaza/paso-04.webp",
+          "image_alt": "Crema de calabaza: Vierte el caldo"
+        },
+        {
+          "title": "Tapa y cuece",
+          "content": "Tapa la olla y cuece a fuego medio-bajo 25 minutos, hasta que las verduras estén tiernas.",
+          "image_url": "/recetas/crema-de-calabaza/paso-05.webp",
+          "image_alt": "Crema de calabaza: Tapa y cuece"
+        },
+        {
+          "title": "Tritura",
+          "content": "Tritura con la batidora de mano hasta lograr una crema lisa.",
+          "image_url": "/recetas/crema-de-calabaza/paso-06.webp",
+          "image_alt": "Crema de calabaza: Tritura"
+        },
+        {
+          "title": "Añade la crema y la nuez moscada",
+          "content": "Añade 100 ml de crema de leche y 1 pizca de nuez moscada, y calienta 3 minutos sin que hierva.",
+          "image_url": "/recetas/crema-de-calabaza/paso-07.webp",
+          "image_alt": "Crema de calabaza: Añade la crema y la nuez moscada"
+        },
+        {
+          "title": "Sirve",
+          "content": "Sirve en platos hondos con un hilo de crema de leche y 2 cucharadas de semillas de calabaza tostadas.",
+          "image_url": "/recetas/crema-de-calabaza/paso-08.webp",
+          "image_alt": "Crema de calabaza: Sirve"
+        }
+      ],
+      "image_url": "/recetas/crema-de-calabaza/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/crema-de-calabaza/portada.webp",
+          "alt": "Crema de calabaza"
+        }
+      ],
+      "notes": "La papa espesa la crema sin necesidad de harina. Si queda muy espesa, añade un poco de caldo caliente al triturar. Prueba antes de salar: el caldo ya lleva sal, y con caldo sin sal puedes usar la cucharadita completa. Para una versión sin lácteos, sustituye la crema de leche por leche de coco. Se conserva en la nevera hasta 4 días y se congela hasta 3 meses.",
+      "nutrition": {
+        "calories": 318,
+        "protein_g": 6.7,
+        "carbs_g": 32,
+        "fat_g": 20.0,
+        "sodium_mg": 1004,
+        "serving_size": "1 porción (1/4 de la receta)",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Suma de nutrientes por 100 g multiplicados por los pesos de los ingredientes y divididos entre 4 porciones. Se usan 1000 g de calabaza, 200 g de papa, 150 g de cebolla, 6 g de ajo, 27,5 g de aceite de oliva, 800 g de caldo de verduras, 4 g de sal, 115 g de crema de leche (100 ml en la crema y 15 ml para decorar) y 20 g de semillas de calabaza tostadas. La pimienta y la nuez moscada no se cuentan.",
+        "note": "Estimación por porción. La calabaza se calcula con calabaza cruda como valor de referencia. El sodio incluye la sal del caldo y la sal añadida, por lo que baja bastante si usas caldo sin sal.",
+        "inputs": [
+          {
+            "fdc_id": "168448",
+            "description": "Pumpkin, raw (1 kg de calabaza pelada)",
+            "grams": 1000,
+            "per100": {
+              "calories": 26,
+              "protein_g": 1.0,
+              "carbs_g": 6.5,
+              "fat_g": 0.1,
+              "saturated_fat_g": 0.052,
+              "fiber_g": 0.5,
+              "sodium_mg": 1
+            }
+          },
+          {
+            "fdc_id": "170026",
+            "description": "Potatoes, flesh and skin, raw (1 papa mediana ≈ 200 g)",
+            "grams": 200,
+            "per100": {
+              "calories": 77,
+              "protein_g": 2.05,
+              "carbs_g": 17.49,
+              "fat_g": 0.09,
+              "saturated_fat_g": 0.026,
+              "fiber_g": 2.1,
+              "sodium_mg": 6
+            }
+          },
+          {
+            "fdc_id": "170000",
+            "description": "Onions, raw (1 cebolla ≈ 150 g)",
+            "grams": 150,
+            "per100": {
+              "calories": 40,
+              "protein_g": 1.1,
+              "carbs_g": 9.34,
+              "fat_g": 0.1,
+              "saturated_fat_g": 0.042,
+              "fiber_g": 1.7,
+              "sodium_mg": 4
+            }
+          },
+          {
+            "fdc_id": "169230",
+            "description": "Garlic, raw (2 dientes ≈ 6 g)",
+            "grams": 6,
+            "per100": {
+              "calories": 149,
+              "protein_g": 6.36,
+              "carbs_g": 33.06,
+              "fat_g": 0.5,
+              "saturated_fat_g": 0.089,
+              "fiber_g": 2.1,
+              "sodium_mg": 17
+            }
+          },
+          {
+            "fdc_id": "171413",
+            "description": "Oil, olive, salad or cooking (30 ml ≈ 27,5 g)",
+            "grams": 27.5,
+            "per100": {
+              "calories": 884,
+              "protein_g": 0,
+              "carbs_g": 0,
+              "fat_g": 100,
+              "saturated_fat_g": 13.81,
+              "fiber_g": 0,
+              "sodium_mg": 2
+            }
+          },
+          {
+            "fdc_id": "171583",
+            "description": "Soup, vegetable broth, ready to serve (800 ml ≈ 800 g)",
+            "grams": 800,
+            "per100": {
+              "calories": 5,
+              "protein_g": 0.2,
+              "carbs_g": 0.9,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 294
+            }
+          },
+          {
+            "fdc_id": "173468",
+            "description": "Salt, table (1 cucharadita ≈ 4 g)",
+            "grams": 4,
+            "per100": {
+              "calories": 0,
+              "protein_g": 0,
+              "carbs_g": 0,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 38758
+            }
+          },
+          {
+            "fdc_id": "170859",
+            "description": "Cream, fluid, heavy whipping (100 ml en la crema + 15 ml para decorar ≈ 115 g)",
+            "grams": 115,
+            "per100": {
+              "calories": 340,
+              "protein_g": 2.84,
+              "carbs_g": 2.74,
+              "fat_g": 36.08,
+              "saturated_fat_g": 22.76,
+              "fiber_g": 0,
+              "sodium_mg": 27
+            }
+          },
+          {
+            "fdc_id": "170557",
+            "description": "Seeds, pumpkin and squash seed kernels, roasted, without salt (2 cucharadas ≈ 20 g)",
+            "grams": 20,
+            "per100": {
+              "calories": 574,
+              "protein_g": 29.84,
+              "carbs_g": 14.71,
+              "fat_g": 49.05,
+              "saturated_fat_g": 8.54,
+              "fiber_g": 6.0,
+              "sodium_mg": 256
+            }
+          }
+        ]
+      },
+      "seo": {
+        "title": "Crema de calabaza casera, suave y fácil | Manual de Cocina",
+        "description": "Crema de calabaza casera con papa, cebolla y caldo de verduras, suave y sedosa. Para 4 personas, lista en 65 minutos. Receta paso a paso.",
+        "image_variants": [
+          "/recetas/crema-de-calabaza/portada-1x1.webp",
+          "/recetas/crema-de-calabaza/portada-4x3.webp",
+          "/recetas/crema-de-calabaza/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "¿Qué calabaza es mejor para hacer crema?",
+            "a": "Una calabaza de pulpa naranja y dulce, como la calabaza común, la butternut o la de cacahuete: se deshace bien y da un color intenso."
+          },
+          {
+            "q": "¿Para qué sirve la papa en la crema de calabaza?",
+            "a": "Aporta cuerpo y una textura más cremosa, sin necesidad de añadir harina ni espesantes."
+          },
+          {
+            "q": "¿Cuánto dura la crema de calabaza?",
+            "a": "Hasta 4 días en la nevera en un recipiente cerrado, y hasta 3 meses en el congelador."
+          }
+        ]
+      }
+    },
+    {
+      "id": "3ea30d1e-f90d-5682-8ac9-b0b2ea432b3e",
+      "recipe_group_id": "fcedc6d2-5cec-4b68-8367-d2c66b4938b3",
+      "language": "de",
+      "slug": "kuerbissuppe-selber-machen",
+      "public_path": "/de/kuerbissuppe-selber-machen",
+      "source_url": null,
+      "title": "Kürbissuppe selber machen",
+      "excerpt": "Cremige Kürbissuppe mit Kartoffel, Zwiebel, Gemüsebrühe und einer Prise Muskat, fein püriert. Für 4 Personen, fertig in 65 Minuten.",
+      "summary": "Für die Kürbissuppe werden Zwiebel und Knoblauch angedünstet, Kürbis und Kartoffel in Gemüsebrühe gegart und alles fein püriert. Die Kartoffel gibt Körper, die Sahne macht die Suppe seidig.\n\nDas Gemüse gart 25 Minuten, wird püriert und mit Sahne und Muskat 3 Minuten erwärmt. Serviert wird mit einem Strahl Sahne und gerösteten Kürbiskernen. Ergibt 4 Portionen.",
+      "category": "Suppen und Cremesuppen",
+      "category_slug": "sopas-y-cremas",
+      "difficulty": "Einfach",
+      "course": "Vorspeise",
+      "cuisine": "International",
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 45,
+      "total_time_minutes": 65,
+      "servings": 4,
+      "keywords": [
+        "Kürbissuppe",
+        "Kürbissuppe Rezept",
+        "Kürbissuppe selber machen",
+        "cremige Kürbissuppe",
+        "Kürbissuppe mit Kartoffel",
+        "Kürbissuppe einfach",
+        "crema de calabaza"
+      ],
+      "ingredients": [
+        {
+          "name": "Kürbis, geschält",
+          "amount": "1",
+          "unit": "kg",
+          "group": "Für die Suppe"
+        },
+        {
+          "name": "mittelgroße Kartoffel",
+          "amount": "200",
+          "unit": "g",
+          "group": "Für die Suppe"
+        },
+        {
+          "name": "Zwiebel",
+          "amount": "1",
+          "unit": "",
+          "group": "Für die Suppe"
+        },
+        {
+          "name": "Knoblauchzehen",
+          "amount": "2",
+          "unit": "",
+          "group": "Für die Suppe"
+        },
+        {
+          "name": "Olivenöl",
+          "amount": "30",
+          "unit": "ml",
+          "group": "Für die Suppe"
+        },
+        {
+          "name": "heiße Gemüsebrühe",
+          "amount": "800",
+          "unit": "ml",
+          "group": "Für die Suppe"
+        },
+        {
+          "name": "Salz",
+          "amount": "1",
+          "unit": "Teelöffel",
+          "group": "Für die Suppe"
+        },
+        {
+          "name": "schwarzer Pfeffer, gemahlen",
+          "amount": "1",
+          "unit": "Prise",
+          "group": "Für die Suppe"
+        },
+        {
+          "name": "Sahne",
+          "amount": "100",
+          "unit": "ml",
+          "group": "Für die Suppe"
+        },
+        {
+          "name": "Muskatnuss",
+          "amount": "1",
+          "unit": "Prise",
+          "group": "Für die Suppe"
+        },
+        {
+          "name": "geröstete Kürbiskerne",
+          "amount": "2",
+          "unit": "Esslöffel",
+          "group": "Zum Servieren"
+        },
+        {
+          "name": "Sahne, zum Garnieren",
+          "amount": "1",
+          "unit": "Esslöffel",
+          "group": "Zum Servieren"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Gemüse vorbereiten",
+          "content": "1 kg Kürbis und 1 mittelgroße Kartoffel (200 g) schälen und in 2-cm-Würfel schneiden. 1 Zwiebel und 2 Knoblauchzehen hacken.",
+          "image_url": "/recetas/crema-de-calabaza/paso-01.webp",
+          "image_alt": "Kürbissuppe selber machen: Gemüse vorbereiten"
+        },
+        {
+          "title": "Zwiebel und Knoblauch andünsten",
+          "content": "30 ml Olivenöl in einem breiten Topf bei mittlerer Hitze erhitzen und Zwiebel und Knoblauch 5 Minuten andünsten, bis sie weich sind.",
+          "image_url": "/recetas/crema-de-calabaza/paso-02.webp",
+          "image_alt": "Kürbissuppe selber machen: Zwiebel und Knoblauch andünsten"
+        },
+        {
+          "title": "Kürbis und Kartoffel zugeben",
+          "content": "Kürbis und Kartoffel zugeben und 3 Minuten rühren.",
+          "image_url": "/recetas/crema-de-calabaza/paso-03.webp",
+          "image_alt": "Kürbissuppe selber machen: Kürbis und Kartoffel zugeben"
+        },
+        {
+          "title": "Brühe angießen",
+          "content": "800 ml heiße Gemüsebrühe angießen, 1 Teelöffel Salz und 1 Prise Pfeffer zugeben und aufkochen.",
+          "image_url": "/recetas/crema-de-calabaza/paso-04.webp",
+          "image_alt": "Kürbissuppe selber machen: Brühe angießen"
+        },
+        {
+          "title": "Zudecken und garen",
+          "content": "Den Topf zudecken und bei mittlerer bis niedriger Hitze 25 Minuten garen, bis das Gemüse weich ist.",
+          "image_url": "/recetas/crema-de-calabaza/paso-05.webp",
+          "image_alt": "Kürbissuppe selber machen: Zudecken und garen"
+        },
+        {
+          "title": "Pürieren",
+          "content": "Mit dem Stabmixer zu einer glatten Suppe pürieren.",
+          "image_url": "/recetas/crema-de-calabaza/paso-06.webp",
+          "image_alt": "Kürbissuppe selber machen: Pürieren"
+        },
+        {
+          "title": "Sahne und Muskat zugeben",
+          "content": "100 ml Sahne und 1 Prise Muskat zugeben und 3 Minuten erwärmen, ohne zu kochen.",
+          "image_url": "/recetas/crema-de-calabaza/paso-07.webp",
+          "image_alt": "Kürbissuppe selber machen: Sahne und Muskat zugeben"
+        },
+        {
+          "title": "Servieren",
+          "content": "In tiefen Tellern mit einem Strahl Sahne und 2 Esslöffeln gerösteten Kürbiskernen servieren.",
+          "image_url": "/recetas/crema-de-calabaza/paso-08.webp",
+          "image_alt": "Kürbissuppe selber machen: Servieren"
+        }
+      ],
+      "image_url": "/recetas/crema-de-calabaza/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/crema-de-calabaza/portada.webp",
+          "alt": "Kürbissuppe selber machen"
+        }
+      ],
+      "notes": "Die Kartoffel bindet die Suppe ohne Mehl. Ist sie zu dick, beim Pürieren etwas heiße Brühe zugeben. Vor dem Salzen abschmecken: Die Brühe enthält schon Salz, bei ungesalzener Brühe kann der ganze Teelöffel verwendet werden. Für eine milchfreie Version die Sahne durch Kokosmilch ersetzen. Im Kühlschrank bis zu 4 Tage haltbar, einfrierbar bis zu 3 Monate.",
+      "nutrition": {
+        "calories": 318,
+        "protein_g": 6.7,
+        "carbs_g": 32,
+        "fat_g": 20.0,
+        "sodium_mg": 1004,
+        "serving_size": "1 Portion (1/4 des Rezepts)",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Nährwerte je 100 g, multipliziert mit dem Gewicht der Zutaten und durch 4 Portionen geteilt. Verwendet werden 1000 g Kürbis, 200 g Kartoffel, 150 g Zwiebel, 6 g Knoblauch, 27,5 g Olivenöl, 800 g Gemüsebrühe, 4 g Salz, 115 g Sahne (100 ml in der Suppe und 15 ml zum Garnieren) und 20 g geröstete Kürbiskerne. Pfeffer und Muskat werden nicht gezählt.",
+        "note": "Schätzung pro Portion. Der Kürbis wird mit rohem Kürbis als Referenzwert berechnet. Das Natrium enthält das Salz der Brühe und das zugesetzte Salz; mit ungesalzener Brühe sinkt es deutlich.",
+        "inputs": [
+          {
+            "fdc_id": "168448",
+            "description": "Pumpkin, raw (1 kg de calabaza pelada)",
+            "grams": 1000,
+            "per100": {
+              "calories": 26,
+              "protein_g": 1.0,
+              "carbs_g": 6.5,
+              "fat_g": 0.1,
+              "saturated_fat_g": 0.052,
+              "fiber_g": 0.5,
+              "sodium_mg": 1
+            }
+          },
+          {
+            "fdc_id": "170026",
+            "description": "Potatoes, flesh and skin, raw (1 papa mediana ≈ 200 g)",
+            "grams": 200,
+            "per100": {
+              "calories": 77,
+              "protein_g": 2.05,
+              "carbs_g": 17.49,
+              "fat_g": 0.09,
+              "saturated_fat_g": 0.026,
+              "fiber_g": 2.1,
+              "sodium_mg": 6
+            }
+          },
+          {
+            "fdc_id": "170000",
+            "description": "Onions, raw (1 cebolla ≈ 150 g)",
+            "grams": 150,
+            "per100": {
+              "calories": 40,
+              "protein_g": 1.1,
+              "carbs_g": 9.34,
+              "fat_g": 0.1,
+              "saturated_fat_g": 0.042,
+              "fiber_g": 1.7,
+              "sodium_mg": 4
+            }
+          },
+          {
+            "fdc_id": "169230",
+            "description": "Garlic, raw (2 dientes ≈ 6 g)",
+            "grams": 6,
+            "per100": {
+              "calories": 149,
+              "protein_g": 6.36,
+              "carbs_g": 33.06,
+              "fat_g": 0.5,
+              "saturated_fat_g": 0.089,
+              "fiber_g": 2.1,
+              "sodium_mg": 17
+            }
+          },
+          {
+            "fdc_id": "171413",
+            "description": "Oil, olive, salad or cooking (30 ml ≈ 27,5 g)",
+            "grams": 27.5,
+            "per100": {
+              "calories": 884,
+              "protein_g": 0,
+              "carbs_g": 0,
+              "fat_g": 100,
+              "saturated_fat_g": 13.81,
+              "fiber_g": 0,
+              "sodium_mg": 2
+            }
+          },
+          {
+            "fdc_id": "171583",
+            "description": "Soup, vegetable broth, ready to serve (800 ml ≈ 800 g)",
+            "grams": 800,
+            "per100": {
+              "calories": 5,
+              "protein_g": 0.2,
+              "carbs_g": 0.9,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 294
+            }
+          },
+          {
+            "fdc_id": "173468",
+            "description": "Salt, table (1 cucharadita ≈ 4 g)",
+            "grams": 4,
+            "per100": {
+              "calories": 0,
+              "protein_g": 0,
+              "carbs_g": 0,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 38758
+            }
+          },
+          {
+            "fdc_id": "170859",
+            "description": "Cream, fluid, heavy whipping (100 ml en la crema + 15 ml para decorar ≈ 115 g)",
+            "grams": 115,
+            "per100": {
+              "calories": 340,
+              "protein_g": 2.84,
+              "carbs_g": 2.74,
+              "fat_g": 36.08,
+              "saturated_fat_g": 22.76,
+              "fiber_g": 0,
+              "sodium_mg": 27
+            }
+          },
+          {
+            "fdc_id": "170557",
+            "description": "Seeds, pumpkin and squash seed kernels, roasted, without salt (2 cucharadas ≈ 20 g)",
+            "grams": 20,
+            "per100": {
+              "calories": 574,
+              "protein_g": 29.84,
+              "carbs_g": 14.71,
+              "fat_g": 49.05,
+              "saturated_fat_g": 8.54,
+              "fiber_g": 6.0,
+              "sodium_mg": 256
+            }
+          }
+        ]
+      },
+      "seo": {
+        "title": "Kürbissuppe selber machen, cremig und einfach | Manual de Cocina",
+        "description": "Cremige Kürbissuppe selber machen mit Kartoffel, Zwiebel und Gemüsebrühe. Für 4 Personen, fertig in 65 Minuten. Rezept Schritt für Schritt.",
+        "image_variants": [
+          "/recetas/crema-de-calabaza/portada-1x1.webp",
+          "/recetas/crema-de-calabaza/portada-4x3.webp",
+          "/recetas/crema-de-calabaza/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Welcher Kürbis eignet sich am besten für Suppe?",
+            "a": "Ein süßer Kürbis mit orangem Fruchtfleisch wie Hokkaido, Butternut oder Muskatkürbis: Er wird weich und gibt eine kräftige Farbe."
+          },
+          {
+            "q": "Wozu dient die Kartoffel in der Kürbissuppe?",
+            "a": "Sie gibt Körper und macht die Suppe cremiger, ohne Mehl oder Bindemittel."
+          },
+          {
+            "q": "Wie lange hält sich Kürbissuppe?",
+            "a": "Bis zu 4 Tage im Kühlschrank in einem geschlossenen Behälter und bis zu 3 Monate im Gefrierfach."
+          }
+        ]
+      }
+    },
+    {
+      "id": "bbb8c2c5-e82c-5df5-9c67-1660cd4e875a",
+      "recipe_group_id": "fcedc6d2-5cec-4b68-8367-d2c66b4938b3",
+      "language": "en",
+      "slug": "pumpkin-soup",
+      "public_path": "/en/pumpkin-soup",
+      "source_url": null,
+      "title": "Pumpkin Soup",
+      "excerpt": "Creamy homemade pumpkin soup with potato, onion, vegetable broth and a pinch of nutmeg, blended smooth. Serves 4, ready in 65 minutes.",
+      "summary": "Pumpkin soup is made by sautéing onion and garlic, simmering pumpkin and potato in vegetable broth, and blending everything until smooth. The potato adds body and the cream makes it silky.\n\nThe vegetables simmer 25 minutes, are blended, and are warmed for 3 minutes with cream and nutmeg. Serve with a swirl of cream and toasted pumpkin seeds. It serves 4.",
+      "category": "Soups & creams",
+      "category_slug": "sopas-y-cremas",
+      "difficulty": "Easy",
+      "course": "Starter",
+      "cuisine": "International",
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 45,
+      "total_time_minutes": 65,
+      "servings": 4,
+      "keywords": [
+        "pumpkin soup",
+        "pumpkin soup recipe",
+        "how to make pumpkin soup",
+        "creamy pumpkin soup",
+        "homemade pumpkin soup",
+        "pumpkin and potato soup",
+        "crema de calabaza"
+      ],
+      "ingredients": [
+        {
+          "name": "peeled pumpkin",
+          "amount": "1",
+          "unit": "kg",
+          "group": "For the soup"
+        },
+        {
+          "name": "medium potato",
+          "amount": "200",
+          "unit": "g",
+          "group": "For the soup"
+        },
+        {
+          "name": "onion",
+          "amount": "1",
+          "unit": "",
+          "group": "For the soup"
+        },
+        {
+          "name": "garlic cloves",
+          "amount": "2",
+          "unit": "",
+          "group": "For the soup"
+        },
+        {
+          "name": "olive oil",
+          "amount": "30",
+          "unit": "ml",
+          "group": "For the soup"
+        },
+        {
+          "name": "hot vegetable broth",
+          "amount": "800",
+          "unit": "ml",
+          "group": "For the soup"
+        },
+        {
+          "name": "salt",
+          "amount": "1",
+          "unit": "teaspoon",
+          "group": "For the soup"
+        },
+        {
+          "name": "ground black pepper",
+          "amount": "1",
+          "unit": "pinch",
+          "group": "For the soup"
+        },
+        {
+          "name": "heavy cream",
+          "amount": "100",
+          "unit": "ml",
+          "group": "For the soup"
+        },
+        {
+          "name": "nutmeg",
+          "amount": "1",
+          "unit": "pinch",
+          "group": "For the soup"
+        },
+        {
+          "name": "toasted pumpkin seeds",
+          "amount": "2",
+          "unit": "tablespoon",
+          "group": "To serve"
+        },
+        {
+          "name": "heavy cream, to garnish",
+          "amount": "1",
+          "unit": "tablespoon",
+          "group": "To serve"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepare the vegetables",
+          "content": "Peel 1 kg pumpkin and 1 medium potato (200 g) and cut them into 2 cm cubes. Chop 1 onion and 2 garlic cloves.",
+          "image_url": "/recetas/crema-de-calabaza/paso-01.webp",
+          "image_alt": "Pumpkin Soup: Prepare the vegetables"
+        },
+        {
+          "title": "Sauté the onion and garlic",
+          "content": "Heat 30 ml olive oil in a wide pot over medium heat and sauté the onion and garlic for 5 minutes, until soft.",
+          "image_url": "/recetas/crema-de-calabaza/paso-02.webp",
+          "image_alt": "Pumpkin Soup: Sauté the onion and garlic"
+        },
+        {
+          "title": "Add the pumpkin and potato",
+          "content": "Add the pumpkin and potato and stir for 3 minutes.",
+          "image_url": "/recetas/crema-de-calabaza/paso-03.webp",
+          "image_alt": "Pumpkin Soup: Add the pumpkin and potato"
+        },
+        {
+          "title": "Pour in the broth",
+          "content": "Pour in 800 ml hot vegetable broth, add 1 teaspoon salt and 1 pinch of pepper, and bring to a boil.",
+          "image_url": "/recetas/crema-de-calabaza/paso-04.webp",
+          "image_alt": "Pumpkin Soup: Pour in the broth"
+        },
+        {
+          "title": "Cover and cook",
+          "content": "Cover the pot and cook over medium-low heat for 25 minutes, until the vegetables are tender.",
+          "image_url": "/recetas/crema-de-calabaza/paso-05.webp",
+          "image_alt": "Pumpkin Soup: Cover and cook"
+        },
+        {
+          "title": "Blend",
+          "content": "Blend with an immersion blender until smooth.",
+          "image_url": "/recetas/crema-de-calabaza/paso-06.webp",
+          "image_alt": "Pumpkin Soup: Blend"
+        },
+        {
+          "title": "Add the cream and nutmeg",
+          "content": "Add 100 ml heavy cream and 1 pinch of nutmeg, and warm for 3 minutes without boiling.",
+          "image_url": "/recetas/crema-de-calabaza/paso-07.webp",
+          "image_alt": "Pumpkin Soup: Add the cream and nutmeg"
+        },
+        {
+          "title": "Serve",
+          "content": "Serve in deep bowls with a swirl of cream and 2 tablespoons toasted pumpkin seeds.",
+          "image_url": "/recetas/crema-de-calabaza/paso-08.webp",
+          "image_alt": "Pumpkin Soup: Serve"
+        }
+      ],
+      "image_url": "/recetas/crema-de-calabaza/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/crema-de-calabaza/portada.webp",
+          "alt": "Pumpkin Soup"
+        }
+      ],
+      "notes": "The potato thickens the soup without flour. If it is too thick, add a little hot broth while blending. Taste before salting: the broth already contains salt, and with unsalted broth you can use the full teaspoon. For a dairy-free version, replace the cream with coconut milk. It keeps in the fridge for up to 4 days and freezes for up to 3 months.",
+      "nutrition": {
+        "calories": 318,
+        "protein_g": 6.7,
+        "carbs_g": 32,
+        "fat_g": 20.0,
+        "sodium_mg": 1004,
+        "serving_size": "1 serving (1/4 of the recipe)",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Nutrients per 100 g multiplied by the weights of the ingredients and divided by 4 servings. It uses 1000 g pumpkin, 200 g potato, 150 g onion, 6 g garlic, 27.5 g olive oil, 800 g vegetable broth, 4 g salt, 115 g heavy cream (100 ml in the soup and 15 ml to garnish) and 20 g toasted pumpkin seeds. Pepper and nutmeg are not counted.",
+        "note": "Estimate per serving. The pumpkin is calculated with raw pumpkin as a reference value. Sodium includes the salt in the broth and the added salt, so it drops a lot if you use unsalted broth.",
+        "inputs": [
+          {
+            "fdc_id": "168448",
+            "description": "Pumpkin, raw (1 kg de calabaza pelada)",
+            "grams": 1000,
+            "per100": {
+              "calories": 26,
+              "protein_g": 1.0,
+              "carbs_g": 6.5,
+              "fat_g": 0.1,
+              "saturated_fat_g": 0.052,
+              "fiber_g": 0.5,
+              "sodium_mg": 1
+            }
+          },
+          {
+            "fdc_id": "170026",
+            "description": "Potatoes, flesh and skin, raw (1 papa mediana ≈ 200 g)",
+            "grams": 200,
+            "per100": {
+              "calories": 77,
+              "protein_g": 2.05,
+              "carbs_g": 17.49,
+              "fat_g": 0.09,
+              "saturated_fat_g": 0.026,
+              "fiber_g": 2.1,
+              "sodium_mg": 6
+            }
+          },
+          {
+            "fdc_id": "170000",
+            "description": "Onions, raw (1 cebolla ≈ 150 g)",
+            "grams": 150,
+            "per100": {
+              "calories": 40,
+              "protein_g": 1.1,
+              "carbs_g": 9.34,
+              "fat_g": 0.1,
+              "saturated_fat_g": 0.042,
+              "fiber_g": 1.7,
+              "sodium_mg": 4
+            }
+          },
+          {
+            "fdc_id": "169230",
+            "description": "Garlic, raw (2 dientes ≈ 6 g)",
+            "grams": 6,
+            "per100": {
+              "calories": 149,
+              "protein_g": 6.36,
+              "carbs_g": 33.06,
+              "fat_g": 0.5,
+              "saturated_fat_g": 0.089,
+              "fiber_g": 2.1,
+              "sodium_mg": 17
+            }
+          },
+          {
+            "fdc_id": "171413",
+            "description": "Oil, olive, salad or cooking (30 ml ≈ 27,5 g)",
+            "grams": 27.5,
+            "per100": {
+              "calories": 884,
+              "protein_g": 0,
+              "carbs_g": 0,
+              "fat_g": 100,
+              "saturated_fat_g": 13.81,
+              "fiber_g": 0,
+              "sodium_mg": 2
+            }
+          },
+          {
+            "fdc_id": "171583",
+            "description": "Soup, vegetable broth, ready to serve (800 ml ≈ 800 g)",
+            "grams": 800,
+            "per100": {
+              "calories": 5,
+              "protein_g": 0.2,
+              "carbs_g": 0.9,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 294
+            }
+          },
+          {
+            "fdc_id": "173468",
+            "description": "Salt, table (1 cucharadita ≈ 4 g)",
+            "grams": 4,
+            "per100": {
+              "calories": 0,
+              "protein_g": 0,
+              "carbs_g": 0,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 38758
+            }
+          },
+          {
+            "fdc_id": "170859",
+            "description": "Cream, fluid, heavy whipping (100 ml en la crema + 15 ml para decorar ≈ 115 g)",
+            "grams": 115,
+            "per100": {
+              "calories": 340,
+              "protein_g": 2.84,
+              "carbs_g": 2.74,
+              "fat_g": 36.08,
+              "saturated_fat_g": 22.76,
+              "fiber_g": 0,
+              "sodium_mg": 27
+            }
+          },
+          {
+            "fdc_id": "170557",
+            "description": "Seeds, pumpkin and squash seed kernels, roasted, without salt (2 cucharadas ≈ 20 g)",
+            "grams": 20,
+            "per100": {
+              "calories": 574,
+              "protein_g": 29.84,
+              "carbs_g": 14.71,
+              "fat_g": 49.05,
+              "saturated_fat_g": 8.54,
+              "fiber_g": 6.0,
+              "sodium_mg": 256
+            }
+          }
+        ]
+      },
+      "seo": {
+        "title": "Creamy Homemade Pumpkin Soup, Easy | Manual de Cocina",
+        "description": "Creamy homemade pumpkin soup with potato, onion and vegetable broth, smooth and silky. Serves 4, ready in 65 minutes. Step-by-step recipe.",
+        "image_variants": [
+          "/recetas/crema-de-calabaza/portada-1x1.webp",
+          "/recetas/crema-de-calabaza/portada-4x3.webp",
+          "/recetas/crema-de-calabaza/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Which pumpkin is best for soup?",
+            "a": "A sweet, orange-fleshed pumpkin such as sugar pumpkin, butternut or kabocha: it softens well and gives an intense color."
+          },
+          {
+            "q": "What is the potato for in pumpkin soup?",
+            "a": "It adds body and a creamier texture, without flour or thickeners."
+          },
+          {
+            "q": "How long does pumpkin soup keep?",
+            "a": "Up to 4 days in the fridge in a closed container, and up to 3 months in the freezer."
+          }
+        ]
+      }
+    },
+    {
+      "id": "449c992f-df2c-541f-8b6d-9fe4d52419d6",
+      "recipe_group_id": "fcedc6d2-5cec-4b68-8367-d2c66b4938b3",
+      "language": "fr",
+      "slug": "veloute-de-potiron",
+      "public_path": "/fr/veloute-de-potiron",
+      "source_url": null,
+      "title": "Velouté de potiron",
+      "excerpt": "Velouté de potiron maison, onctueux, avec pomme de terre, oignon, bouillon de légumes et une pointe de muscade. Pour 4 personnes, prêt en 65 minutes.",
+      "summary": "Le velouté de potiron se prépare en faisant revenir l'oignon et l'ail, en cuisant le potiron et la pomme de terre dans du bouillon de légumes, puis en mixant le tout jusqu'à obtenir une texture lisse. La pomme de terre donne du corps et la crème le rend soyeux.\n\nLes légumes cuisent 25 minutes, sont mixés, puis chauffés 3 minutes avec la crème et la muscade. On sert avec un filet de crème et des graines de courge grillées. Pour 4 portions.",
+      "category": "Soupes et crèmes",
+      "category_slug": "sopas-y-cremas",
+      "difficulty": "Facile",
+      "course": "Entrée",
+      "cuisine": "Internationale",
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 45,
+      "total_time_minutes": 65,
+      "servings": 4,
+      "keywords": [
+        "velouté de potiron",
+        "recette velouté de potiron",
+        "soupe de potiron",
+        "velouté de potiron maison",
+        "velouté de potiron facile",
+        "soupe de potiron pomme de terre",
+        "crema de calabaza"
+      ],
+      "ingredients": [
+        {
+          "name": "potiron épluché",
+          "amount": "1",
+          "unit": "kg",
+          "group": "Pour le velouté"
+        },
+        {
+          "name": "pomme de terre moyenne",
+          "amount": "200",
+          "unit": "g",
+          "group": "Pour le velouté"
+        },
+        {
+          "name": "oignon",
+          "amount": "1",
+          "unit": "",
+          "group": "Pour le velouté"
+        },
+        {
+          "name": "gousses d'ail",
+          "amount": "2",
+          "unit": "",
+          "group": "Pour le velouté"
+        },
+        {
+          "name": "huile d'olive",
+          "amount": "30",
+          "unit": "ml",
+          "group": "Pour le velouté"
+        },
+        {
+          "name": "bouillon de légumes chaud",
+          "amount": "800",
+          "unit": "ml",
+          "group": "Pour le velouté"
+        },
+        {
+          "name": "sel",
+          "amount": "1",
+          "unit": "cuillère à café",
+          "group": "Pour le velouté"
+        },
+        {
+          "name": "poivre noir moulu",
+          "amount": "1",
+          "unit": "pincée",
+          "group": "Pour le velouté"
+        },
+        {
+          "name": "crème fraîche liquide",
+          "amount": "100",
+          "unit": "ml",
+          "group": "Pour le velouté"
+        },
+        {
+          "name": "noix de muscade",
+          "amount": "1",
+          "unit": "pincée",
+          "group": "Pour le velouté"
+        },
+        {
+          "name": "graines de courge grillées",
+          "amount": "2",
+          "unit": "cuillère à soupe",
+          "group": "Pour servir"
+        },
+        {
+          "name": "crème fraîche liquide, pour décorer",
+          "amount": "1",
+          "unit": "cuillère à soupe",
+          "group": "Pour servir"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Préparer les légumes",
+          "content": "Éplucher 1 kg de potiron et 1 pomme de terre moyenne (200 g) et les couper en cubes de 2 cm. Hacher 1 oignon et 2 gousses d'ail.",
+          "image_url": "/recetas/crema-de-calabaza/paso-01.webp",
+          "image_alt": "Velouté de potiron: Préparer les légumes"
+        },
+        {
+          "title": "Faire revenir l'oignon et l'ail",
+          "content": "Chauffer 30 ml d'huile d'olive dans une grande marmite à feu moyen et faire revenir l'oignon et l'ail 5 minutes, jusqu'à ce qu'ils soient tendres.",
+          "image_url": "/recetas/crema-de-calabaza/paso-02.webp",
+          "image_alt": "Velouté de potiron: Faire revenir l'oignon et l'ail"
+        },
+        {
+          "title": "Ajouter le potiron et la pomme de terre",
+          "content": "Ajouter le potiron et la pomme de terre et remuer 3 minutes.",
+          "image_url": "/recetas/crema-de-calabaza/paso-03.webp",
+          "image_alt": "Velouté de potiron: Ajouter le potiron et la pomme de terre"
+        },
+        {
+          "title": "Verser le bouillon",
+          "content": "Verser 800 ml de bouillon de légumes chaud, ajouter 1 cuillère à café de sel et 1 pincée de poivre, et porter à ébullition.",
+          "image_url": "/recetas/crema-de-calabaza/paso-04.webp",
+          "image_alt": "Velouté de potiron: Verser le bouillon"
+        },
+        {
+          "title": "Couvrir et cuire",
+          "content": "Couvrir la marmite et cuire à feu moyen-doux 25 minutes, jusqu'à ce que les légumes soient tendres.",
+          "image_url": "/recetas/crema-de-calabaza/paso-05.webp",
+          "image_alt": "Velouté de potiron: Couvrir et cuire"
+        },
+        {
+          "title": "Mixer",
+          "content": "Mixer avec un mixeur plongeant jusqu'à obtenir une texture lisse.",
+          "image_url": "/recetas/crema-de-calabaza/paso-06.webp",
+          "image_alt": "Velouté de potiron: Mixer"
+        },
+        {
+          "title": "Ajouter la crème et la muscade",
+          "content": "Ajouter 100 ml de crème et 1 pincée de muscade, et chauffer 3 minutes sans faire bouillir.",
+          "image_url": "/recetas/crema-de-calabaza/paso-07.webp",
+          "image_alt": "Velouté de potiron: Ajouter la crème et la muscade"
+        },
+        {
+          "title": "Servir",
+          "content": "Servir dans des assiettes creuses avec un filet de crème et 2 cuillères à soupe de graines de courge grillées.",
+          "image_url": "/recetas/crema-de-calabaza/paso-08.webp",
+          "image_alt": "Velouté de potiron: Servir"
+        }
+      ],
+      "image_url": "/recetas/crema-de-calabaza/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/crema-de-calabaza/portada.webp",
+          "alt": "Velouté de potiron"
+        }
+      ],
+      "notes": "La pomme de terre épaissit le velouté sans farine. S'il est trop épais, ajouter un peu de bouillon chaud en mixant. Goûter avant de saler : le bouillon contient déjà du sel, et avec un bouillon non salé on peut utiliser toute la cuillère. Pour une version sans produits laitiers, remplacer la crème par du lait de coco. Se conserve au réfrigérateur jusqu'à 4 jours et se congèle jusqu'à 3 mois.",
+      "nutrition": {
+        "calories": 318,
+        "protein_g": 6.7,
+        "carbs_g": 32,
+        "fat_g": 20.0,
+        "sodium_mg": 1004,
+        "serving_size": "1 portion (1/4 de la recette)",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Somme des nutriments pour 100 g multipliés par le poids des ingrédients et divisés par 4 portions. On utilise 1000 g de potiron, 200 g de pomme de terre, 150 g d'oignon, 6 g d'ail, 27,5 g d'huile d'olive, 800 g de bouillon de légumes, 4 g de sel, 115 g de crème (100 ml dans le velouté et 15 ml pour décorer) et 20 g de graines de courge grillées. Le poivre et la muscade ne sont pas comptés.",
+        "note": "Estimation par portion. Le potiron est calculé avec du potiron cru comme valeur de référence. Le sodium inclut le sel du bouillon et le sel ajouté ; il baisse beaucoup avec un bouillon non salé.",
+        "inputs": [
+          {
+            "fdc_id": "168448",
+            "description": "Pumpkin, raw (1 kg de calabaza pelada)",
+            "grams": 1000,
+            "per100": {
+              "calories": 26,
+              "protein_g": 1.0,
+              "carbs_g": 6.5,
+              "fat_g": 0.1,
+              "saturated_fat_g": 0.052,
+              "fiber_g": 0.5,
+              "sodium_mg": 1
+            }
+          },
+          {
+            "fdc_id": "170026",
+            "description": "Potatoes, flesh and skin, raw (1 papa mediana ≈ 200 g)",
+            "grams": 200,
+            "per100": {
+              "calories": 77,
+              "protein_g": 2.05,
+              "carbs_g": 17.49,
+              "fat_g": 0.09,
+              "saturated_fat_g": 0.026,
+              "fiber_g": 2.1,
+              "sodium_mg": 6
+            }
+          },
+          {
+            "fdc_id": "170000",
+            "description": "Onions, raw (1 cebolla ≈ 150 g)",
+            "grams": 150,
+            "per100": {
+              "calories": 40,
+              "protein_g": 1.1,
+              "carbs_g": 9.34,
+              "fat_g": 0.1,
+              "saturated_fat_g": 0.042,
+              "fiber_g": 1.7,
+              "sodium_mg": 4
+            }
+          },
+          {
+            "fdc_id": "169230",
+            "description": "Garlic, raw (2 dientes ≈ 6 g)",
+            "grams": 6,
+            "per100": {
+              "calories": 149,
+              "protein_g": 6.36,
+              "carbs_g": 33.06,
+              "fat_g": 0.5,
+              "saturated_fat_g": 0.089,
+              "fiber_g": 2.1,
+              "sodium_mg": 17
+            }
+          },
+          {
+            "fdc_id": "171413",
+            "description": "Oil, olive, salad or cooking (30 ml ≈ 27,5 g)",
+            "grams": 27.5,
+            "per100": {
+              "calories": 884,
+              "protein_g": 0,
+              "carbs_g": 0,
+              "fat_g": 100,
+              "saturated_fat_g": 13.81,
+              "fiber_g": 0,
+              "sodium_mg": 2
+            }
+          },
+          {
+            "fdc_id": "171583",
+            "description": "Soup, vegetable broth, ready to serve (800 ml ≈ 800 g)",
+            "grams": 800,
+            "per100": {
+              "calories": 5,
+              "protein_g": 0.2,
+              "carbs_g": 0.9,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 294
+            }
+          },
+          {
+            "fdc_id": "173468",
+            "description": "Salt, table (1 cucharadita ≈ 4 g)",
+            "grams": 4,
+            "per100": {
+              "calories": 0,
+              "protein_g": 0,
+              "carbs_g": 0,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 38758
+            }
+          },
+          {
+            "fdc_id": "170859",
+            "description": "Cream, fluid, heavy whipping (100 ml en la crema + 15 ml para decorar ≈ 115 g)",
+            "grams": 115,
+            "per100": {
+              "calories": 340,
+              "protein_g": 2.84,
+              "carbs_g": 2.74,
+              "fat_g": 36.08,
+              "saturated_fat_g": 22.76,
+              "fiber_g": 0,
+              "sodium_mg": 27
+            }
+          },
+          {
+            "fdc_id": "170557",
+            "description": "Seeds, pumpkin and squash seed kernels, roasted, without salt (2 cucharadas ≈ 20 g)",
+            "grams": 20,
+            "per100": {
+              "calories": 574,
+              "protein_g": 29.84,
+              "carbs_g": 14.71,
+              "fat_g": 49.05,
+              "saturated_fat_g": 8.54,
+              "fiber_g": 6.0,
+              "sodium_mg": 256
+            }
+          }
+        ]
+      },
+      "seo": {
+        "title": "Velouté de potiron maison, onctueux et facile | Manual de Cocina",
+        "description": "Velouté de potiron maison avec pomme de terre, oignon et bouillon de légumes, onctueux et soyeux. Pour 4 personnes, prêt en 65 minutes.",
+        "image_variants": [
+          "/recetas/crema-de-calabaza/portada-1x1.webp",
+          "/recetas/crema-de-calabaza/portada-4x3.webp",
+          "/recetas/crema-de-calabaza/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Quel potiron choisir pour un velouté ?",
+            "a": "Un potiron à chair orange et sucrée, comme le potimarron, la butternut ou le potiron commun : il fond bien et donne une belle couleur."
+          },
+          {
+            "q": "À quoi sert la pomme de terre dans le velouté de potiron ?",
+            "a": "Elle apporte du corps et une texture plus onctueuse, sans farine ni épaississant."
+          },
+          {
+            "q": "Combien de temps se conserve le velouté de potiron ?",
+            "a": "Jusqu'à 4 jours au réfrigérateur dans un récipient fermé, et jusqu'à 3 mois au congélateur."
+          }
+        ]
+      }
+    },
+    {
+      "id": "1a79561a-4f25-5da6-9ada-81b685fb781e",
+      "recipe_group_id": "fcedc6d2-5cec-4b68-8367-d2c66b4938b3",
+      "language": "it",
+      "slug": "crema-di-zucca",
+      "public_path": "/it/crema-di-zucca",
+      "source_url": null,
+      "title": "Crema di zucca",
+      "excerpt": "Crema di zucca fatta in casa, vellutata, con patata, cipolla, brodo vegetale e un pizzico di noce moscata. Per 4 persone, pronta in 65 minuti.",
+      "summary": "La crema di zucca si prepara soffriggendo cipolla e aglio, cuocendo la zucca con la patata nel brodo vegetale e frullando tutto fino a ottenere una consistenza liscia. La patata dà corpo e la panna la rende setosa.\n\nLe verdure cuociono 25 minuti, si frullano e si scaldano 3 minuti con panna e noce moscata. Si serve con un filo di panna e semi di zucca tostati. Per 4 porzioni.",
+      "category": "Zuppe e creme",
+      "category_slug": "sopas-y-cremas",
+      "difficulty": "Facile",
+      "course": "Antipasto",
+      "cuisine": "Internazionale",
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 45,
+      "total_time_minutes": 65,
+      "servings": 4,
+      "keywords": [
+        "crema di zucca",
+        "ricetta crema di zucca",
+        "come fare la crema di zucca",
+        "crema di zucca fatta in casa",
+        "vellutata di zucca",
+        "crema di zucca e patate",
+        "crema di zucca facile"
+      ],
+      "ingredients": [
+        {
+          "name": "zucca pulita",
+          "amount": "1",
+          "unit": "kg",
+          "group": "Per la crema"
+        },
+        {
+          "name": "patata media",
+          "amount": "200",
+          "unit": "g",
+          "group": "Per la crema"
+        },
+        {
+          "name": "cipolla",
+          "amount": "1",
+          "unit": "",
+          "group": "Per la crema"
+        },
+        {
+          "name": "spicchi d'aglio",
+          "amount": "2",
+          "unit": "",
+          "group": "Per la crema"
+        },
+        {
+          "name": "olio d'oliva",
+          "amount": "30",
+          "unit": "ml",
+          "group": "Per la crema"
+        },
+        {
+          "name": "brodo vegetale caldo",
+          "amount": "800",
+          "unit": "ml",
+          "group": "Per la crema"
+        },
+        {
+          "name": "sale",
+          "amount": "1",
+          "unit": "cucchiaino",
+          "group": "Per la crema"
+        },
+        {
+          "name": "pepe nero macinato",
+          "amount": "1",
+          "unit": "pizzico",
+          "group": "Per la crema"
+        },
+        {
+          "name": "panna fresca",
+          "amount": "100",
+          "unit": "ml",
+          "group": "Per la crema"
+        },
+        {
+          "name": "noce moscata",
+          "amount": "1",
+          "unit": "pizzico",
+          "group": "Per la crema"
+        },
+        {
+          "name": "semi di zucca tostati",
+          "amount": "2",
+          "unit": "cucchiaio",
+          "group": "Per servire"
+        },
+        {
+          "name": "panna fresca, per decorare",
+          "amount": "1",
+          "unit": "cucchiaio",
+          "group": "Per servire"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepara le verdure",
+          "content": "Sbuccia 1 kg di zucca e 1 patata media (200 g) e tagliale a cubetti di 2 cm. Trita 1 cipolla e 2 spicchi d'aglio.",
+          "image_url": "/recetas/crema-de-calabaza/paso-01.webp",
+          "image_alt": "Crema di zucca: Prepara le verdure"
+        },
+        {
+          "title": "Soffriggi cipolla e aglio",
+          "content": "Scalda 30 ml di olio d'oliva in una pentola larga a fuoco medio e soffriggi cipolla e aglio per 5 minuti, finché sono morbidi.",
+          "image_url": "/recetas/crema-de-calabaza/paso-02.webp",
+          "image_alt": "Crema di zucca: Soffriggi cipolla e aglio"
+        },
+        {
+          "title": "Aggiungi zucca e patata",
+          "content": "Aggiungi la zucca e la patata e mescola per 3 minuti.",
+          "image_url": "/recetas/crema-de-calabaza/paso-03.webp",
+          "image_alt": "Crema di zucca: Aggiungi zucca e patata"
+        },
+        {
+          "title": "Versa il brodo",
+          "content": "Versa 800 ml di brodo vegetale caldo, aggiungi 1 cucchiaino di sale e 1 pizzico di pepe, e porta a bollore.",
+          "image_url": "/recetas/crema-de-calabaza/paso-04.webp",
+          "image_alt": "Crema di zucca: Versa il brodo"
+        },
+        {
+          "title": "Copri e cuoci",
+          "content": "Copri la pentola e cuoci a fuoco medio-basso per 25 minuti, finché le verdure sono tenere.",
+          "image_url": "/recetas/crema-de-calabaza/paso-05.webp",
+          "image_alt": "Crema di zucca: Copri e cuoci"
+        },
+        {
+          "title": "Frulla",
+          "content": "Frulla con il frullatore a immersione fino a ottenere una crema liscia.",
+          "image_url": "/recetas/crema-de-calabaza/paso-06.webp",
+          "image_alt": "Crema di zucca: Frulla"
+        },
+        {
+          "title": "Aggiungi panna e noce moscata",
+          "content": "Aggiungi 100 ml di panna e 1 pizzico di noce moscata, e scalda per 3 minuti senza bollire.",
+          "image_url": "/recetas/crema-de-calabaza/paso-07.webp",
+          "image_alt": "Crema di zucca: Aggiungi panna e noce moscata"
+        },
+        {
+          "title": "Servi",
+          "content": "Servi in piatti fondi con un filo di panna e 2 cucchiai di semi di zucca tostati.",
+          "image_url": "/recetas/crema-de-calabaza/paso-08.webp",
+          "image_alt": "Crema di zucca: Servi"
+        }
+      ],
+      "image_url": "/recetas/crema-de-calabaza/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/crema-de-calabaza/portada.webp",
+          "alt": "Crema di zucca"
+        }
+      ],
+      "notes": "La patata addensa la crema senza farina. Se è troppo densa, aggiungi un po' di brodo caldo mentre frulli. Assaggia prima di salare: il brodo contiene già sale, e con brodo senza sale puoi usare tutto il cucchiaino. Per una versione senza latticini, sostituisci la panna con latte di cocco. Si conserva in frigorifero fino a 4 giorni e si congela fino a 3 mesi.",
+      "nutrition": {
+        "calories": 318,
+        "protein_g": 6.7,
+        "carbs_g": 32,
+        "fat_g": 20.0,
+        "sodium_mg": 1004,
+        "serving_size": "1 porzione (1/4 della ricetta)",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Somma dei nutrienti per 100 g moltiplicati per i pesi degli ingredienti e divisi per 4 porzioni. Si usano 1000 g di zucca, 200 g di patata, 150 g di cipolla, 6 g di aglio, 27,5 g di olio d'oliva, 800 g di brodo vegetale, 4 g di sale, 115 g di panna (100 ml nella crema e 15 ml per decorare) e 20 g di semi di zucca tostati. Pepe e noce moscata non sono conteggiati.",
+        "note": "Stima per porzione. La zucca è calcolata con zucca cruda come valore di riferimento. Il sodio comprende il sale del brodo e quello aggiunto; scende molto con brodo senza sale.",
+        "inputs": [
+          {
+            "fdc_id": "168448",
+            "description": "Pumpkin, raw (1 kg de calabaza pelada)",
+            "grams": 1000,
+            "per100": {
+              "calories": 26,
+              "protein_g": 1.0,
+              "carbs_g": 6.5,
+              "fat_g": 0.1,
+              "saturated_fat_g": 0.052,
+              "fiber_g": 0.5,
+              "sodium_mg": 1
+            }
+          },
+          {
+            "fdc_id": "170026",
+            "description": "Potatoes, flesh and skin, raw (1 papa mediana ≈ 200 g)",
+            "grams": 200,
+            "per100": {
+              "calories": 77,
+              "protein_g": 2.05,
+              "carbs_g": 17.49,
+              "fat_g": 0.09,
+              "saturated_fat_g": 0.026,
+              "fiber_g": 2.1,
+              "sodium_mg": 6
+            }
+          },
+          {
+            "fdc_id": "170000",
+            "description": "Onions, raw (1 cebolla ≈ 150 g)",
+            "grams": 150,
+            "per100": {
+              "calories": 40,
+              "protein_g": 1.1,
+              "carbs_g": 9.34,
+              "fat_g": 0.1,
+              "saturated_fat_g": 0.042,
+              "fiber_g": 1.7,
+              "sodium_mg": 4
+            }
+          },
+          {
+            "fdc_id": "169230",
+            "description": "Garlic, raw (2 dientes ≈ 6 g)",
+            "grams": 6,
+            "per100": {
+              "calories": 149,
+              "protein_g": 6.36,
+              "carbs_g": 33.06,
+              "fat_g": 0.5,
+              "saturated_fat_g": 0.089,
+              "fiber_g": 2.1,
+              "sodium_mg": 17
+            }
+          },
+          {
+            "fdc_id": "171413",
+            "description": "Oil, olive, salad or cooking (30 ml ≈ 27,5 g)",
+            "grams": 27.5,
+            "per100": {
+              "calories": 884,
+              "protein_g": 0,
+              "carbs_g": 0,
+              "fat_g": 100,
+              "saturated_fat_g": 13.81,
+              "fiber_g": 0,
+              "sodium_mg": 2
+            }
+          },
+          {
+            "fdc_id": "171583",
+            "description": "Soup, vegetable broth, ready to serve (800 ml ≈ 800 g)",
+            "grams": 800,
+            "per100": {
+              "calories": 5,
+              "protein_g": 0.2,
+              "carbs_g": 0.9,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 294
+            }
+          },
+          {
+            "fdc_id": "173468",
+            "description": "Salt, table (1 cucharadita ≈ 4 g)",
+            "grams": 4,
+            "per100": {
+              "calories": 0,
+              "protein_g": 0,
+              "carbs_g": 0,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 38758
+            }
+          },
+          {
+            "fdc_id": "170859",
+            "description": "Cream, fluid, heavy whipping (100 ml en la crema + 15 ml para decorar ≈ 115 g)",
+            "grams": 115,
+            "per100": {
+              "calories": 340,
+              "protein_g": 2.84,
+              "carbs_g": 2.74,
+              "fat_g": 36.08,
+              "saturated_fat_g": 22.76,
+              "fiber_g": 0,
+              "sodium_mg": 27
+            }
+          },
+          {
+            "fdc_id": "170557",
+            "description": "Seeds, pumpkin and squash seed kernels, roasted, without salt (2 cucharadas ≈ 20 g)",
+            "grams": 20,
+            "per100": {
+              "calories": 574,
+              "protein_g": 29.84,
+              "carbs_g": 14.71,
+              "fat_g": 49.05,
+              "saturated_fat_g": 8.54,
+              "fiber_g": 6.0,
+              "sodium_mg": 256
+            }
+          }
+        ]
+      },
+      "seo": {
+        "title": "Crema di zucca fatta in casa, facile e vellutata | Manual de Cocina",
+        "description": "Crema di zucca fatta in casa con patata, cipolla e brodo vegetale, liscia e vellutata. Per 4 persone, pronta in 65 minuti. Ricetta passo dopo passo.",
+        "image_variants": [
+          "/recetas/crema-de-calabaza/portada-1x1.webp",
+          "/recetas/crema-de-calabaza/portada-4x3.webp",
+          "/recetas/crema-de-calabaza/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Quale zucca è migliore per la crema?",
+            "a": "Una zucca dolce e dalla polpa arancione, come la zucca delica, la butternut o la mantovana: si scioglie bene e dà un colore intenso."
+          },
+          {
+            "q": "A cosa serve la patata nella crema di zucca?",
+            "a": "Dà corpo e una consistenza più cremosa, senza farina né addensanti."
+          },
+          {
+            "q": "Quanto si conserva la crema di zucca?",
+            "a": "Fino a 4 giorni in frigorifero in un contenitore chiuso e fino a 3 mesi in freezer."
+          }
+        ]
+      }
+    },
+    {
+      "id": "86ec1271-40b9-5971-a7c8-4e93438b229a",
+      "recipe_group_id": "fcedc6d2-5cec-4b68-8367-d2c66b4938b3",
+      "language": "ja",
+      "slug": "かぼちゃのポタージュ",
+      "public_path": "/ja/かぼちゃのポタージュ",
+      "source_url": null,
+      "title": "かぼちゃのポタージュ",
+      "excerpt": "じゃがいも、玉ねぎ、野菜のブイヨンとナツメグ少々で作る、なめらかな手作りかぼちゃのポタージュ。4人分、65分で完成。",
+      "summary": "かぼちゃのポタージュは、玉ねぎとにんにくを炒め、かぼちゃとじゃがいもを野菜のブイヨンで煮て、全体をなめらかになるまでミキサーにかけて作ります。じゃがいもがとろみを出し、生クリームで口当たりが絹のようになります。\n\n野菜を25分煮てから攪拌し、生クリームとナツメグを加えて3分温めます。生クリームを細くたらし、ローストしたかぼちゃの種を添えます。4人分です。",
+      "category": "スープ・ポタージュ",
+      "category_slug": "sopas-y-cremas",
+      "difficulty": "簡単",
+      "course": "前菜",
+      "cuisine": "国際料理",
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 45,
+      "total_time_minutes": 65,
+      "servings": 4,
+      "keywords": [
+        "かぼちゃのポタージュ",
+        "かぼちゃのポタージュ 作り方",
+        "かぼちゃスープ レシピ",
+        "かぼちゃ ポタージュ 簡単",
+        "手作り かぼちゃスープ",
+        "かぼちゃ じゃがいも スープ",
+        "クレマ・デ・カラバサ"
+      ],
+      "ingredients": [
+        {
+          "name": "かぼちゃ（皮をむいたもの）",
+          "amount": "1",
+          "unit": "kg",
+          "group": "ポタージュ用"
+        },
+        {
+          "name": "じゃがいも（中）",
+          "amount": "200",
+          "unit": "g",
+          "group": "ポタージュ用"
+        },
+        {
+          "name": "玉ねぎ",
+          "amount": "1",
+          "unit": "",
+          "group": "ポタージュ用"
+        },
+        {
+          "name": "にんにく",
+          "amount": "2",
+          "unit": "",
+          "group": "ポタージュ用"
+        },
+        {
+          "name": "オリーブオイル",
+          "amount": "30",
+          "unit": "ml",
+          "group": "ポタージュ用"
+        },
+        {
+          "name": "熱い野菜のブイヨン",
+          "amount": "800",
+          "unit": "ml",
+          "group": "ポタージュ用"
+        },
+        {
+          "name": "塩",
+          "amount": "1",
+          "unit": "小さじ",
+          "group": "ポタージュ用"
+        },
+        {
+          "name": "黒こしょう（挽いたもの）",
+          "amount": "1",
+          "unit": "ひとつまみ",
+          "group": "ポタージュ用"
+        },
+        {
+          "name": "生クリーム",
+          "amount": "100",
+          "unit": "ml",
+          "group": "ポタージュ用"
+        },
+        {
+          "name": "ナツメグ",
+          "amount": "1",
+          "unit": "ひとつまみ",
+          "group": "ポタージュ用"
+        },
+        {
+          "name": "ローストしたかぼちゃの種",
+          "amount": "2",
+          "unit": "大さじ",
+          "group": "盛り付け用"
+        },
+        {
+          "name": "生クリーム（飾り用）",
+          "amount": "1",
+          "unit": "大さじ",
+          "group": "盛り付け用"
+        }
+      ],
+      "steps": [
+        {
+          "title": "野菜を準備する",
+          "content": "かぼちゃ1kgとじゃがいも中1個（200g）の皮をむき、2cm角に切ります。玉ねぎ1個とにんにく2片をみじん切りにします。",
+          "image_url": "/recetas/crema-de-calabaza/paso-01.webp",
+          "image_alt": "かぼちゃのポタージュ: 野菜を準備する"
+        },
+        {
+          "title": "玉ねぎとにんにくを炒める",
+          "content": "広めの鍋にオリーブオイル30mlを入れて中火で熱し、玉ねぎとにんにくをやわらかくなるまで5分炒めます。",
+          "image_url": "/recetas/crema-de-calabaza/paso-02.webp",
+          "image_alt": "かぼちゃのポタージュ: 玉ねぎとにんにくを炒める"
+        },
+        {
+          "title": "かぼちゃとじゃがいもを加える",
+          "content": "かぼちゃとじゃがいもを加え、3分混ぜながら炒めます。",
+          "image_url": "/recetas/crema-de-calabaza/paso-03.webp",
+          "image_alt": "かぼちゃのポタージュ: かぼちゃとじゃがいもを加える"
+        },
+        {
+          "title": "ブイヨンを注ぐ",
+          "content": "熱い野菜のブイヨン800mlを注ぎ、塩小さじ1とこしょうひとつまみを加えて煮立てます。",
+          "image_url": "/recetas/crema-de-calabaza/paso-04.webp",
+          "image_alt": "かぼちゃのポタージュ: ブイヨンを注ぐ"
+        },
+        {
+          "title": "ふたをして煮る",
+          "content": "鍋にふたをし、中弱火で25分、野菜がやわらかくなるまで煮ます。",
+          "image_url": "/recetas/crema-de-calabaza/paso-05.webp",
+          "image_alt": "かぼちゃのポタージュ: ふたをして煮る"
+        },
+        {
+          "title": "攪拌する",
+          "content": "ハンドブレンダーで、なめらかになるまで攪拌します。",
+          "image_url": "/recetas/crema-de-calabaza/paso-06.webp",
+          "image_alt": "かぼちゃのポタージュ: 攪拌する"
+        },
+        {
+          "title": "生クリームとナツメグを加える",
+          "content": "生クリーム100mlとナツメグひとつまみを加え、沸騰させないように3分温めます。",
+          "image_url": "/recetas/crema-de-calabaza/paso-07.webp",
+          "image_alt": "かぼちゃのポタージュ: 生クリームとナツメグを加える"
+        },
+        {
+          "title": "盛り付ける",
+          "content": "深めの器に注ぎ、生クリームを細くたらして、ローストしたかぼちゃの種大さじ2をのせます。",
+          "image_url": "/recetas/crema-de-calabaza/paso-08.webp",
+          "image_alt": "かぼちゃのポタージュ: 盛り付ける"
+        }
+      ],
+      "image_url": "/recetas/crema-de-calabaza/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/crema-de-calabaza/portada.webp",
+          "alt": "かぼちゃのポタージュ"
+        }
+      ],
+      "notes": "じゃがいもが小麦粉なしでとろみをつけてくれます。濃すぎるときは、攪拌しながら熱いブイヨンを少し足してください。ブイヨンにすでに塩分があるので、味をみてから塩を加えます。無塩のブイヨンなら小さじ1をそのまま使えます。乳製品なしにするなら、生クリームをココナッツミルクに替えます。冷蔵庫で4日、冷凍で3か月まで保存できます。",
+      "nutrition": {
+        "calories": 318,
+        "protein_g": 6.7,
+        "carbs_g": 32,
+        "fat_g": 20.0,
+        "sodium_mg": 1004,
+        "serving_size": "1人分（レシピの1/4）",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "100gあたりの栄養素に材料の重量を掛け、4人分で割って合計しています。かぼちゃ1000g、じゃがいも200g、玉ねぎ150g、にんにく6g、オリーブオイル27.5g、野菜のブイヨン800g、塩4g、生クリーム115g（ポタージュ用100mlと飾り用15ml）、ローストしたかぼちゃの種20gを使用しています。こしょうとナツメグは計算に含めていません。",
+        "note": "1人分の目安です。かぼちゃは生のかぼちゃ（ペポかぼちゃ）を参考値として計算しています。ナトリウムにはブイヨンの塩分と加えた塩が含まれ、無塩のブイヨンを使うとかなり少なくなります。",
+        "inputs": [
+          {
+            "fdc_id": "168448",
+            "description": "Pumpkin, raw (1 kg de calabaza pelada)",
+            "grams": 1000,
+            "per100": {
+              "calories": 26,
+              "protein_g": 1.0,
+              "carbs_g": 6.5,
+              "fat_g": 0.1,
+              "saturated_fat_g": 0.052,
+              "fiber_g": 0.5,
+              "sodium_mg": 1
+            }
+          },
+          {
+            "fdc_id": "170026",
+            "description": "Potatoes, flesh and skin, raw (1 papa mediana ≈ 200 g)",
+            "grams": 200,
+            "per100": {
+              "calories": 77,
+              "protein_g": 2.05,
+              "carbs_g": 17.49,
+              "fat_g": 0.09,
+              "saturated_fat_g": 0.026,
+              "fiber_g": 2.1,
+              "sodium_mg": 6
+            }
+          },
+          {
+            "fdc_id": "170000",
+            "description": "Onions, raw (1 cebolla ≈ 150 g)",
+            "grams": 150,
+            "per100": {
+              "calories": 40,
+              "protein_g": 1.1,
+              "carbs_g": 9.34,
+              "fat_g": 0.1,
+              "saturated_fat_g": 0.042,
+              "fiber_g": 1.7,
+              "sodium_mg": 4
+            }
+          },
+          {
+            "fdc_id": "169230",
+            "description": "Garlic, raw (2 dientes ≈ 6 g)",
+            "grams": 6,
+            "per100": {
+              "calories": 149,
+              "protein_g": 6.36,
+              "carbs_g": 33.06,
+              "fat_g": 0.5,
+              "saturated_fat_g": 0.089,
+              "fiber_g": 2.1,
+              "sodium_mg": 17
+            }
+          },
+          {
+            "fdc_id": "171413",
+            "description": "Oil, olive, salad or cooking (30 ml ≈ 27,5 g)",
+            "grams": 27.5,
+            "per100": {
+              "calories": 884,
+              "protein_g": 0,
+              "carbs_g": 0,
+              "fat_g": 100,
+              "saturated_fat_g": 13.81,
+              "fiber_g": 0,
+              "sodium_mg": 2
+            }
+          },
+          {
+            "fdc_id": "171583",
+            "description": "Soup, vegetable broth, ready to serve (800 ml ≈ 800 g)",
+            "grams": 800,
+            "per100": {
+              "calories": 5,
+              "protein_g": 0.2,
+              "carbs_g": 0.9,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 294
+            }
+          },
+          {
+            "fdc_id": "173468",
+            "description": "Salt, table (1 cucharadita ≈ 4 g)",
+            "grams": 4,
+            "per100": {
+              "calories": 0,
+              "protein_g": 0,
+              "carbs_g": 0,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 38758
+            }
+          },
+          {
+            "fdc_id": "170859",
+            "description": "Cream, fluid, heavy whipping (100 ml en la crema + 15 ml para decorar ≈ 115 g)",
+            "grams": 115,
+            "per100": {
+              "calories": 340,
+              "protein_g": 2.84,
+              "carbs_g": 2.74,
+              "fat_g": 36.08,
+              "saturated_fat_g": 22.76,
+              "fiber_g": 0,
+              "sodium_mg": 27
+            }
+          },
+          {
+            "fdc_id": "170557",
+            "description": "Seeds, pumpkin and squash seed kernels, roasted, without salt (2 cucharadas ≈ 20 g)",
+            "grams": 20,
+            "per100": {
+              "calories": 574,
+              "protein_g": 29.84,
+              "carbs_g": 14.71,
+              "fat_g": 49.05,
+              "saturated_fat_g": 8.54,
+              "fiber_g": 6.0,
+              "sodium_mg": 256
+            }
+          }
+        ]
+      },
+      "seo": {
+        "title": "かぼちゃのポタージュの作り方｜なめらか簡単 | Manual de Cocina",
+        "description": "じゃがいも、玉ねぎ、野菜のブイヨンで作る、なめらかな手作りかぼちゃのポタージュ。4人分、65分で完成。手順を写真付きで解説します。",
+        "image_variants": [
+          "/recetas/crema-de-calabaza/portada-1x1.webp",
+          "/recetas/crema-de-calabaza/portada-4x3.webp",
+          "/recetas/crema-de-calabaza/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "ポタージュにはどんなかぼちゃが向いていますか？",
+            "a": "甘みがあり果肉がオレンジ色のかぼちゃ（バターナッツや栗かぼちゃなど）です。よく煮崩れて、色もきれいに出ます。"
+          },
+          {
+            "q": "なぜじゃがいもを入れるのですか？",
+            "a": "コクととろみが出て、小麦粉や増粘剤を使わずにクリーミーになります。"
+          },
+          {
+            "q": "かぼちゃのポタージュはどれくらい保存できますか？",
+            "a": "密閉容器に入れて冷蔵庫で4日、冷凍庫で3か月までです。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "a8afb67c-d240-56e6-91c3-28c1552ee869",
+      "recipe_group_id": "fcedc6d2-5cec-4b68-8367-d2c66b4938b3",
+      "language": "pt",
+      "slug": "creme-de-abobora",
+      "public_path": "/pt/creme-de-abobora",
+      "source_url": null,
+      "title": "Creme de abóbora",
+      "excerpt": "Creme de abóbora caseiro, sedoso, com batata, cebola, caldo de legumes e um toque de noz-moscada. Para 4 pessoas, pronto em 65 minutos.",
+      "summary": "O creme de abóbora é feito refogando cebola e alho, cozinhando a abóbora com batata no caldo de legumes e batendo tudo até ficar liso. A batata dá corpo e o creme de leite deixa a textura sedosa.\n\nOs legumes cozinham 25 minutos, são batidos e aquecidos por 3 minutos com creme de leite e noz-moscada. Serve-se com um fio de creme e sementes de abóbora torradas. Rende 4 porções.",
+      "category": "Sopas e cremes",
+      "category_slug": "sopas-y-cremas",
+      "difficulty": "Fácil",
+      "course": "Entrada",
+      "cuisine": "Internacional",
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 45,
+      "total_time_minutes": 65,
+      "servings": 4,
+      "keywords": [
+        "creme de abóbora",
+        "receita de creme de abóbora",
+        "como fazer creme de abóbora",
+        "creme de abóbora caseiro",
+        "sopa de abóbora",
+        "creme de abóbora com batata",
+        "creme de abóbora fácil"
+      ],
+      "ingredients": [
+        {
+          "name": "abóbora descascada",
+          "amount": "1",
+          "unit": "kg",
+          "group": "Para o creme"
+        },
+        {
+          "name": "batata média",
+          "amount": "200",
+          "unit": "g",
+          "group": "Para o creme"
+        },
+        {
+          "name": "cebola",
+          "amount": "1",
+          "unit": "",
+          "group": "Para o creme"
+        },
+        {
+          "name": "dentes de alho",
+          "amount": "2",
+          "unit": "",
+          "group": "Para o creme"
+        },
+        {
+          "name": "azeite",
+          "amount": "30",
+          "unit": "ml",
+          "group": "Para o creme"
+        },
+        {
+          "name": "caldo de legumes quente",
+          "amount": "800",
+          "unit": "ml",
+          "group": "Para o creme"
+        },
+        {
+          "name": "sal",
+          "amount": "1",
+          "unit": "colher de chá",
+          "group": "Para o creme"
+        },
+        {
+          "name": "pimenta-do-reino moída",
+          "amount": "1",
+          "unit": "pitada",
+          "group": "Para o creme"
+        },
+        {
+          "name": "creme de leite",
+          "amount": "100",
+          "unit": "ml",
+          "group": "Para o creme"
+        },
+        {
+          "name": "noz-moscada",
+          "amount": "1",
+          "unit": "pitada",
+          "group": "Para o creme"
+        },
+        {
+          "name": "sementes de abóbora torradas",
+          "amount": "2",
+          "unit": "colher de sopa",
+          "group": "Para servir"
+        },
+        {
+          "name": "creme de leite, para decorar",
+          "amount": "1",
+          "unit": "colher de sopa",
+          "group": "Para servir"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepare os legumes",
+          "content": "Descasque 1 kg de abóbora e 1 batata média (200 g) e corte em cubos de 2 cm. Pique 1 cebola e 2 dentes de alho.",
+          "image_url": "/recetas/crema-de-calabaza/paso-01.webp",
+          "image_alt": "Creme de abóbora: Prepare os legumes"
+        },
+        {
+          "title": "Refogue a cebola e o alho",
+          "content": "Aqueça 30 ml de azeite em uma panela larga em fogo médio e refogue a cebola e o alho por 5 minutos, até ficarem macios.",
+          "image_url": "/recetas/crema-de-calabaza/paso-02.webp",
+          "image_alt": "Creme de abóbora: Refogue a cebola e o alho"
+        },
+        {
+          "title": "Junte a abóbora e a batata",
+          "content": "Junte a abóbora e a batata e mexa por 3 minutos.",
+          "image_url": "/recetas/crema-de-calabaza/paso-03.webp",
+          "image_alt": "Creme de abóbora: Junte a abóbora e a batata"
+        },
+        {
+          "title": "Despeje o caldo",
+          "content": "Despeje 800 ml de caldo de legumes quente, junte 1 colher de chá de sal e 1 pitada de pimenta, e leve à fervura.",
+          "image_url": "/recetas/crema-de-calabaza/paso-04.webp",
+          "image_alt": "Creme de abóbora: Despeje o caldo"
+        },
+        {
+          "title": "Tampe e cozinhe",
+          "content": "Tampe a panela e cozinhe em fogo médio-baixo por 25 minutos, até os legumes ficarem macios.",
+          "image_url": "/recetas/crema-de-calabaza/paso-05.webp",
+          "image_alt": "Creme de abóbora: Tampe e cozinhe"
+        },
+        {
+          "title": "Bata",
+          "content": "Bata com o mixer até obter um creme liso.",
+          "image_url": "/recetas/crema-de-calabaza/paso-06.webp",
+          "image_alt": "Creme de abóbora: Bata"
+        },
+        {
+          "title": "Junte o creme de leite e a noz-moscada",
+          "content": "Junte 100 ml de creme de leite e 1 pitada de noz-moscada, e aqueça por 3 minutos sem deixar ferver.",
+          "image_url": "/recetas/crema-de-calabaza/paso-07.webp",
+          "image_alt": "Creme de abóbora: Junte o creme de leite e a noz-moscada"
+        },
+        {
+          "title": "Sirva",
+          "content": "Sirva em pratos fundos com um fio de creme de leite e 2 colheres de sopa de sementes de abóbora torradas.",
+          "image_url": "/recetas/crema-de-calabaza/paso-08.webp",
+          "image_alt": "Creme de abóbora: Sirva"
+        }
+      ],
+      "image_url": "/recetas/crema-de-calabaza/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/crema-de-calabaza/portada.webp",
+          "alt": "Creme de abóbora"
+        }
+      ],
+      "notes": "A batata engrossa o creme sem precisar de farinha. Se ficar muito grosso, junte um pouco de caldo quente ao bater. Prove antes de salgar: o caldo já tem sal, e com caldo sem sal pode usar a colher de chá inteira. Para uma versão sem lactose, troque o creme de leite por leite de coco. Dura na geladeira até 4 dias e pode ser congelado por até 3 meses.",
+      "nutrition": {
+        "calories": 318,
+        "protein_g": 6.7,
+        "carbs_g": 32,
+        "fat_g": 20.0,
+        "sodium_mg": 1004,
+        "serving_size": "1 porção (1/4 da receita)",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Soma dos nutrientes por 100 g multiplicados pelo peso dos ingredientes e divididos por 4 porções. Usam-se 1000 g de abóbora, 200 g de batata, 150 g de cebola, 6 g de alho, 27,5 g de azeite, 800 g de caldo de legumes, 4 g de sal, 115 g de creme de leite (100 ml no creme e 15 ml para decorar) e 20 g de sementes de abóbora torradas. Pimenta e noz-moscada não são contadas.",
+        "note": "Estimativa por porção. A abóbora é calculada com abóbora crua como valor de referência. O sódio inclui o sal do caldo e o sal adicionado; cai bastante se usar caldo sem sal.",
+        "inputs": [
+          {
+            "fdc_id": "168448",
+            "description": "Pumpkin, raw (1 kg de calabaza pelada)",
+            "grams": 1000,
+            "per100": {
+              "calories": 26,
+              "protein_g": 1.0,
+              "carbs_g": 6.5,
+              "fat_g": 0.1,
+              "saturated_fat_g": 0.052,
+              "fiber_g": 0.5,
+              "sodium_mg": 1
+            }
+          },
+          {
+            "fdc_id": "170026",
+            "description": "Potatoes, flesh and skin, raw (1 papa mediana ≈ 200 g)",
+            "grams": 200,
+            "per100": {
+              "calories": 77,
+              "protein_g": 2.05,
+              "carbs_g": 17.49,
+              "fat_g": 0.09,
+              "saturated_fat_g": 0.026,
+              "fiber_g": 2.1,
+              "sodium_mg": 6
+            }
+          },
+          {
+            "fdc_id": "170000",
+            "description": "Onions, raw (1 cebolla ≈ 150 g)",
+            "grams": 150,
+            "per100": {
+              "calories": 40,
+              "protein_g": 1.1,
+              "carbs_g": 9.34,
+              "fat_g": 0.1,
+              "saturated_fat_g": 0.042,
+              "fiber_g": 1.7,
+              "sodium_mg": 4
+            }
+          },
+          {
+            "fdc_id": "169230",
+            "description": "Garlic, raw (2 dientes ≈ 6 g)",
+            "grams": 6,
+            "per100": {
+              "calories": 149,
+              "protein_g": 6.36,
+              "carbs_g": 33.06,
+              "fat_g": 0.5,
+              "saturated_fat_g": 0.089,
+              "fiber_g": 2.1,
+              "sodium_mg": 17
+            }
+          },
+          {
+            "fdc_id": "171413",
+            "description": "Oil, olive, salad or cooking (30 ml ≈ 27,5 g)",
+            "grams": 27.5,
+            "per100": {
+              "calories": 884,
+              "protein_g": 0,
+              "carbs_g": 0,
+              "fat_g": 100,
+              "saturated_fat_g": 13.81,
+              "fiber_g": 0,
+              "sodium_mg": 2
+            }
+          },
+          {
+            "fdc_id": "171583",
+            "description": "Soup, vegetable broth, ready to serve (800 ml ≈ 800 g)",
+            "grams": 800,
+            "per100": {
+              "calories": 5,
+              "protein_g": 0.2,
+              "carbs_g": 0.9,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 294
+            }
+          },
+          {
+            "fdc_id": "173468",
+            "description": "Salt, table (1 cucharadita ≈ 4 g)",
+            "grams": 4,
+            "per100": {
+              "calories": 0,
+              "protein_g": 0,
+              "carbs_g": 0,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 38758
+            }
+          },
+          {
+            "fdc_id": "170859",
+            "description": "Cream, fluid, heavy whipping (100 ml en la crema + 15 ml para decorar ≈ 115 g)",
+            "grams": 115,
+            "per100": {
+              "calories": 340,
+              "protein_g": 2.84,
+              "carbs_g": 2.74,
+              "fat_g": 36.08,
+              "saturated_fat_g": 22.76,
+              "fiber_g": 0,
+              "sodium_mg": 27
+            }
+          },
+          {
+            "fdc_id": "170557",
+            "description": "Seeds, pumpkin and squash seed kernels, roasted, without salt (2 cucharadas ≈ 20 g)",
+            "grams": 20,
+            "per100": {
+              "calories": 574,
+              "protein_g": 29.84,
+              "carbs_g": 14.71,
+              "fat_g": 49.05,
+              "saturated_fat_g": 8.54,
+              "fiber_g": 6.0,
+              "sodium_mg": 256
+            }
+          }
+        ]
+      },
+      "seo": {
+        "title": "Creme de abóbora caseiro, sedoso e fácil | Manual de Cocina",
+        "description": "Creme de abóbora caseiro com batata, cebola e caldo de legumes, liso e sedoso. Para 4 pessoas, pronto em 65 minutos. Receita passo a passo.",
+        "image_variants": [
+          "/recetas/crema-de-calabaza/portada-1x1.webp",
+          "/recetas/crema-de-calabaza/portada-4x3.webp",
+          "/recetas/crema-de-calabaza/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Qual abóbora é melhor para fazer creme?",
+            "a": "Uma abóbora doce, de polpa alaranjada, como a abóbora-moranga, a cabotiá ou a butternut: desmancha bem e dá uma cor intensa."
+          },
+          {
+            "q": "Para que serve a batata no creme de abóbora?",
+            "a": "Dá corpo e uma textura mais cremosa, sem precisar de farinha nem espessantes."
+          },
+          {
+            "q": "Quanto tempo dura o creme de abóbora?",
+            "a": "Até 4 dias na geladeira em recipiente fechado, e até 3 meses no congelador."
+          }
+        ]
+      }
+    }
+  ]
+}
