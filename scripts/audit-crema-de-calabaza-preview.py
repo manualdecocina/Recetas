@@ -198,5 +198,5 @@ summary["images_passed"] = not extra["errors"]
 report = {"summary": summary, "results": results, "sitemap": sitemap, "extra": extra}
 with open("crema-de-calabaza-preview-audit.json", "w") as f:
     json.dump(report, f, ensure_ascii=False, indent=2)
-print("BOLO_QA " + json.dumps(report, ensure_ascii=False))
+print("CREMA_QA " + json.dumps(report, ensure_ascii=False))
 sys.exit(0 if summary["passed_routes"] == 7 and summary["images_passed"] and (summary["sitemap_passed"] or not strict_sitemap) else 1)
