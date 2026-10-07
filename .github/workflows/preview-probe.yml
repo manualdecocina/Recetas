@@ -11,9 +11,10 @@ jobs:
     steps:
       - name: Probe
         run: |
+          set +e
           H=preview.manualdecocina.com
           emit() { printf '%s' "$2" | tr '\n\r' '  ' | cut -c1-900 | sed "s/^/::notice title=$1::/"; echo; }
-          emit dns "$(getent hosts $H | tr '\n' ' ')"
+          emit dns "$(getent ahostsv4 $H | head -2 | tr '\n' ' ') / v6: $(getent ahostsv6 $H | head -1)"
           for p in / /robots.txt /sitemap.xml /flan-de-leche-condensada /tiramisu /es /arroz-mixto; do
             for ua in "curl" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36"; do
               out=$(curl -sS -m 25 -o /tmp/b -D - -A "$ua" "https://$H$p" 2>&1 | grep -iE '^(HTTP|server|location|x-powered|x-nextjs|cf-|x-vercel|via|x-hcdn|content-type|x-robots|retry-after|x-cache|platform)' | tr '\n\r' '  ')
