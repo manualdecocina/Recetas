@@ -27,6 +27,12 @@ jobs:
           r = json.load(open('site-preview-audit.json'))
           print('::notice title=summary::' + json.dumps(r['summary'], ensure_ascii=False))
           order = {'broken_link': 0, 'broken_image': 0, 'page_not_200': 0, 'redirect_loop': 0, 'canonical': 1, 'html_lang': 1, 'hreflang_not_reciprocal': 1, 'not_found_status': 1}
-          for e in sorted(r['errors'], key=lambda e: order.get(e['kind'], 2))[:45]:
+          kinds = {}
+          for e in r['errors']:
+              kinds.setdefault(e['kind'], []).append(e)
+          for kind, items in kinds.items():
+              lines = [json.dumps({'url': e['url'], 'detail': e['detail']}, ensure_ascii=False)[:300] for e in items[:25]]
+              print('::warning title=%s (%d)::%s' % (kind, len(items), ' | '.join(lines)[:3800]))
+          for e in []:
               print('::notice title=%s::%s' % (e['kind'], json.dumps(e, ensure_ascii=False)[:900]))
           PY

@@ -68,8 +68,9 @@ def expected_lang(path):
 
 
 class Page(HTMLParser):
-    def __init__(self):
+    def __init__(self, url=BASE + "/"):
         super().__init__()
+        self.url = url
         self.canonical, self.hreflang, self.links, self.images = [], {}, set(), set()
         self.html_lang, self.json_ld, self._buf = None, [], None
 
@@ -82,7 +83,7 @@ class Page(HTMLParser):
         elif tag == "link" and a.get("hreflang"):
             self.hreflang[a["hreflang"]] = norm(a.get("href", ""))
         elif tag == "a" and a.get("href"):
-            self.links.add(norm(a["href"]))
+            self.links.add(norm(urllib.parse.urljoin(self.url, a["href"])))
         elif tag in ("img", "source"):
             for key in ("src", "srcset"):
                 for part in (a.get(key) or "").split(","):
@@ -158,7 +159,7 @@ def audit_page(url):
     if status != 200:
         err("page_not_200", url, status)
         return out
-    p = Page()
+    p = Page(url)
     p.feed(html)
     out.update(links=p.links, images=p.images, hreflang=p.hreflang)
     if p.canonical != [url]:
