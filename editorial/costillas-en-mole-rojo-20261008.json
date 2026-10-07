@@ -1,0 +1,540 @@
+{
+  "category_slug": "platos-principales",
+  "cover": "Costillas con hueso cubiertas de mole rojo oscuro, sin arroz ni tortilla.",
+  "step_visuals": [
+    "Costillas crudas entrando en una olla con agua, sin mole terminado.",
+    "Costillas ya cocidas en caldo claro y cucharón reservando líquido.",
+    "Chiles anchos abiertos hidratándose en agua caliente, junto a sartén seca.",
+    "Tomate, cebolla y ajo con puntos dorados en sartén.",
+    "Salsa roja triturada en vaso con ingredientes tostados al lado.",
+    "Mole rojo cocinándose en cazuela mientras una espátula remueve.",
+    "Costillas incorporándose a mole rojo oscuro y chocolate ya disuelto.",
+    "Costillas tiernas cubiertas de mole rojo en plato, sin acompañamientos extra."
+  ],
+  "ai_owner_confirmation": {
+    "status": "pending",
+    "fields": [
+      "ingredients.amount",
+      "prep_time_minutes",
+      "cook_time_minutes",
+      "total_time_minutes",
+      "servings",
+      "nutrition"
+    ],
+    "reason": "Propuesta nueva creada por IA; no receta probada ni cifras confirmadas por el propietario."
+  },
+  "time_notes": "Total = preparación + cocción + 0 minutos de espera/enfriado/reposo.",
+  "steps_frozen": true,
+  "publication_blockers": [
+    "FULL_LOCALIZATION_PENDING",
+    "FINAL_IMAGES_PENDING",
+    "GLOBAL_QA_PENDING"
+  ],
+  "image_alts_by_language": {
+    "es": {
+      "title": "Costillas de cerdo en mole rojo casero",
+      "cover": "Costillas de cerdo en mole rojo casero: plato terminado",
+      "steps": [
+        "Costillas de cerdo en mole rojo casero: Prepara las costillas",
+        "Costillas de cerdo en mole rojo casero: Cuece hasta ablandar",
+        "Costillas de cerdo en mole rojo casero: Tuesta e hidrata los chiles",
+        "Costillas de cerdo en mole rojo casero: Asa los vegetales",
+        "Costillas de cerdo en mole rojo casero: Tuesta y tritura el mole",
+        "Costillas de cerdo en mole rojo casero: Cocina la salsa",
+        "Costillas de cerdo en mole rojo casero: Añade chocolate y carne",
+        "Costillas de cerdo en mole rojo casero: Sirve en cuatro porciones"
+      ]
+    },
+    "de": {
+      "title": "Schweinerippchen in roter Mole",
+      "cover": "Schweinerippchen in roter Mole: fertiges Gericht",
+      "steps": [
+        "Schweinerippchen in roter Mole: Rippchen vorbereiten",
+        "Schweinerippchen in roter Mole: Zart garen",
+        "Schweinerippchen in roter Mole: Chilis rösten und einweichen",
+        "Schweinerippchen in roter Mole: Gemüse rösten",
+        "Schweinerippchen in roter Mole: Mole rösten und pürieren",
+        "Schweinerippchen in roter Mole: Sauce kochen",
+        "Schweinerippchen in roter Mole: Schokolade und Fleisch hinzufügen",
+        "Schweinerippchen in roter Mole: In vier Portionen servieren"
+      ]
+    },
+    "en": {
+      "title": "Pork ribs in homemade red mole",
+      "cover": "Pork ribs in homemade red mole: finished dish",
+      "steps": [
+        "Pork ribs in homemade red mole: Prepare the ribs",
+        "Pork ribs in homemade red mole: Simmer until tender",
+        "Pork ribs in homemade red mole: Toast and soak the chillies",
+        "Pork ribs in homemade red mole: Roast the vegetables",
+        "Pork ribs in homemade red mole: Toast and blend the mole",
+        "Pork ribs in homemade red mole: Cook the sauce",
+        "Pork ribs in homemade red mole: Add chocolate and meat",
+        "Pork ribs in homemade red mole: Serve in four portions"
+      ]
+    },
+    "fr": {
+      "title": "Travers de porc au mole rouge maison",
+      "cover": "Travers de porc au mole rouge maison: plat terminé",
+      "steps": [
+        "Travers de porc au mole rouge maison: Préparer les travers",
+        "Travers de porc au mole rouge maison: Cuire jusqu’à tendreté",
+        "Travers de porc au mole rouge maison: Torréfier et réhydrater les piments",
+        "Travers de porc au mole rouge maison: Griller les légumes",
+        "Travers de porc au mole rouge maison: Torréfier et mixer le mole",
+        "Travers de porc au mole rouge maison: Cuire la sauce",
+        "Travers de porc au mole rouge maison: Ajouter chocolat et viande",
+        "Travers de porc au mole rouge maison: Servir en quatre portions"
+      ]
+    },
+    "it": {
+      "title": "Costine di maiale al mole rosso",
+      "cover": "Costine di maiale al mole rosso: piatto pronto",
+      "steps": [
+        "Costine di maiale al mole rosso: Preparare le costine",
+        "Costine di maiale al mole rosso: Cuocere finché tenere",
+        "Costine di maiale al mole rosso: Tostare e ammollare i peperoncini",
+        "Costine di maiale al mole rosso: Arrostire le verdure",
+        "Costine di maiale al mole rosso: Tostare e frullare il mole",
+        "Costine di maiale al mole rosso: Cuocere la salsa",
+        "Costine di maiale al mole rosso: Aggiungere cioccolato e carne",
+        "Costine di maiale al mole rosso: Servire in quattro porzioni"
+      ]
+    },
+    "ja": {
+      "title": "豚スペアリブの赤いモーレ煮",
+      "cover": "豚スペアリブの赤いモーレ煮: 完成した料理",
+      "steps": [
+        "豚スペアリブの赤いモーレ煮: スペアリブを用意する",
+        "豚スペアリブの赤いモーレ煮: 柔らかく煮る",
+        "豚スペアリブの赤いモーレ煮: 唐辛子を焼いて戻す",
+        "豚スペアリブの赤いモーレ煮: 野菜を焼く",
+        "豚スペアリブの赤いモーレ煮: モーレの材料を炒って撹拌する",
+        "豚スペアリブの赤いモーレ煮: ソースを煮る",
+        "豚スペアリブの赤いモーレ煮: チョコレートと肉を加える",
+        "豚スペアリブの赤いモーレ煮: 4人分に分ける"
+      ]
+    },
+    "pt": {
+      "title": "Costelinhas de porco com mole vermelho",
+      "cover": "Costelinhas de porco com mole vermelho: prato pronto",
+      "steps": [
+        "Costelinhas de porco com mole vermelho: Prepare as costelinhas",
+        "Costelinhas de porco com mole vermelho: Cozinhe até amaciar",
+        "Costelinhas de porco com mole vermelho: Toste e hidrate as pimentas",
+        "Costelinhas de porco com mole vermelho: Asse os vegetais",
+        "Costelinhas de porco com mole vermelho: Toste e bata o mole",
+        "Costelinhas de porco com mole vermelho: Cozinhe o molho",
+        "Costelinhas de porco com mole vermelho: Acrescente chocolate e carne",
+        "Costelinhas de porco com mole vermelho: Sirva em quatro porções"
+      ]
+    }
+  },
+  "scope": "preview.manualdecocina.com",
+  "state": "ES_PREPARED_FULL_LOCALIZATION_AND_IMAGES_PENDING",
+  "provenance": "Redacción original de IA a partir de identidad técnica y propósito culinario. No se leyó ni reutilizó cuerpo, ingredientes, fotos ni traducciones del registro WordPress. Nutrientes consultados en el archivo oficial SR Legacy descargado el 2026-10-08; no se inventan ids FDC. No existe prueba de cocina ejecutada ni aprobación de cantidades por el propietario.",
+  "records": [
+    {
+      "id": "da4135aa-a4e9-47d2-aadd-9de4828d8d43",
+      "recipe_group_id": "2ede9cae-1481-427b-b13d-3f5fc9a4b261",
+      "slug": "costillas-en-mole-rojo",
+      "public_path": "/costillas-en-mole-rojo",
+      "source_url": "https://manualdecocina.com/costillas-en-mole-rojo/",
+      "language": "es",
+      "title": "Costillas de cerdo en mole rojo casero",
+      "excerpt": "Costillas de cerdo en mole rojo casero con chile ancho, tomate, cacahuete y cacao. Cocción suave para obtener carne tierna y salsa espesa.",
+      "summary": "Un mole rojo casero simplificado con chile ancho, tomate, cacahuete y sésamo, terminado con chocolate negro. Se une a costillas cocidas lentamente hasta que la carne esté tierna.\n\nRinde 4 porciones sin arroz ni tortillas. Las costillas se pesan con hueso; para la nutrición se estima un 65 % de parte comestible. No se presenta como una fórmula regional única o tradicional.",
+      "category": "Platos principales",
+      "category_slug": "platos-principales",
+      "difficulty": "Media",
+      "course": "Plato principal",
+      "cuisine": "Mexicana",
+      "prep_time_minutes": 35,
+      "cook_time_minutes": 105,
+      "total_time_minutes": 140,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "costillas de cerdo con hueso, cortadas",
+          "amount": "1000",
+          "unit": "g",
+          "group": "Carne"
+        },
+        {
+          "name": "agua",
+          "amount": "1200",
+          "unit": "ml",
+          "group": "Cocción"
+        },
+        {
+          "name": "sal",
+          "amount": "6",
+          "unit": "g",
+          "group": "Cocción"
+        },
+        {
+          "name": "chiles anchos secos, sin tallo ni semillas",
+          "amount": "30",
+          "unit": "g",
+          "group": "Mole"
+        },
+        {
+          "name": "tomate",
+          "amount": "300",
+          "unit": "g",
+          "group": "Mole"
+        },
+        {
+          "name": "cebolla",
+          "amount": "150",
+          "unit": "g",
+          "group": "Mole"
+        },
+        {
+          "name": "ajo",
+          "amount": "12",
+          "unit": "g",
+          "group": "Mole"
+        },
+        {
+          "name": "cacahuetes tostados sin sal",
+          "amount": "30",
+          "unit": "g",
+          "group": "Mole"
+        },
+        {
+          "name": "semillas de sésamo",
+          "amount": "20",
+          "unit": "g",
+          "group": "Mole"
+        },
+        {
+          "name": "chocolate negro, 60–69 % cacao",
+          "amount": "25",
+          "unit": "g",
+          "group": "Mole"
+        },
+        {
+          "name": "aceite vegetal",
+          "amount": "20",
+          "unit": "g",
+          "group": "Mole"
+        },
+        {
+          "name": "canela molida",
+          "amount": "1",
+          "unit": "g",
+          "group": "Mole"
+        },
+        {
+          "name": "clavo molido",
+          "amount": "0.2",
+          "unit": "g",
+          "group": "Mole"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepara las costillas",
+          "content": "Pon 1 kg de costillas en una olla con 1,2 litros de agua y 6 g de sal. Lleva a un hervor suave y retira la espuma superficial con una cuchara. No laves la carne cruda.",
+          "image_url": "",
+          "image_alt": "Costillas de cerdo en mole rojo casero: Prepara las costillas"
+        },
+        {
+          "title": "Cuece hasta ablandar",
+          "content": "Tapa parcialmente y cocina a fuego bajo 75–90 minutos, hasta que la carne esté tierna. Añade agua caliente si se descubre demasiado. Reserva 500 ml del líquido y mantén las costillas calientes.",
+          "image_url": "",
+          "image_alt": "Costillas de cerdo en mole rojo casero: Cuece hasta ablandar"
+        },
+        {
+          "title": "Tuesta e hidrata los chiles",
+          "content": "Abre 30 g de chile ancho y elimina tallo y semillas. Tuesta en sartén seca unos 10 segundos por lado, sin ennegrecerlos. Cubre con agua caliente y deja hidratar 15 minutos; escurre y desecha esa agua.",
+          "image_url": "",
+          "image_alt": "Costillas de cerdo en mole rojo casero: Tuesta e hidrata los chiles"
+        },
+        {
+          "title": "Asa los vegetales",
+          "content": "Dora 300 g de tomate, 150 g de cebolla en gajos y 12 g de ajo en sartén seca, girándolos durante 10 minutos. Deben tener puntos tostados sin quedar carbonizados.",
+          "image_url": "",
+          "image_alt": "Costillas de cerdo en mole rojo casero: Asa los vegetales"
+        },
+        {
+          "title": "Tuesta y tritura el mole",
+          "content": "Tuesta 30 g de cacahuetes y 20 g de sésamo 1–2 minutos. Tritura con los chiles hidratados, vegetales asados, 1 g de canela, 0,2 g de clavo y 350 ml del líquido reservado hasta obtener una salsa lisa. Si el vaso no admite líquidos calientes, deja templar antes.",
+          "image_url": "",
+          "image_alt": "Costillas de cerdo en mole rojo casero: Tuesta y tritura el mole"
+        },
+        {
+          "title": "Cocina la salsa",
+          "content": "Calienta 20 g de aceite en una cazuela amplia. Añade el mole con cuidado de las salpicaduras y cocina 10 minutos a fuego bajo, removiendo el fondo. Incorpora hasta 150 ml más del líquido si queda demasiado espeso.",
+          "image_url": "",
+          "image_alt": "Costillas de cerdo en mole rojo casero: Cocina la salsa"
+        },
+        {
+          "title": "Añade chocolate y carne",
+          "content": "Disuelve 25 g de chocolate negro en el mole. Agrega las costillas cocidas y cocina 10 minutos a hervor suave para que se impregnen. La salsa debe cubrirlas sin formar un bloque; ajusta con agua caliente si hace falta.",
+          "image_url": "",
+          "image_alt": "Costillas de cerdo en mole rojo casero: Añade chocolate y carne"
+        },
+        {
+          "title": "Sirve en cuatro porciones",
+          "content": "Reparte las costillas y la salsa entre 4 platos. El arroz o las tortillas son opcionales y no están incluidos en ingredientes ni nutrición. Prueba la salsa antes de añadir sal adicional.",
+          "image_url": "",
+          "image_alt": "Costillas de cerdo en mole rojo casero: Sirve en cuatro porciones"
+        }
+      ],
+      "notes": "Contiene cacahuete y sésamo. Para una persona con alergia, prepara una receta distinta que no use esos ingredientes ni utensilios contaminados. Conserva refrigerado hasta 3 días y recalienta hasta 74 °C. Puede congelarse hasta 2 meses. La proporción comestible de las costillas y la grasa descartada cambian mucho la estimación nutricional.",
+      "nutrition": {
+        "calories": 515.0,
+        "protein_g": 36.7,
+        "carbs_g": 17.5,
+        "fat_g": 33.6,
+        "saturated_fat_g": 6.6,
+        "fiber_g": 5.1,
+        "sugar_g": 6.3,
+        "sodium_mg": 695.0,
+        "serving_size": "1 de 4 porciones",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (abril de 2018)",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "method": "Suma de valores por 100 g de las fichas FDC verificadas, multiplicados por los gramos comestibles de cada ingrediente, dividida entre 4 porciones. Se cuenta todo el aceite y toda la sal indicados; no se incluyen acompañamientos opcionales.",
+        "note": "Estimación informativa; varía con marcas, rendimiento y grasa o salsa que no se consuma. La carne se aproxima con costilla de lomo SR Legacy: 650 g comestibles por 1 kg con hueso. Se cuenta toda la salsa; el rendimiento real puede variar.",
+        "inputs": [
+          {
+            "ingredient": "costillas de cerdo con hueso, cortadas",
+            "edible_grams": 650,
+            "fdc_id": 167895,
+            "fdc_description": "Pork, fresh, loin, country-style ribs, separable lean and fat, raw",
+            "per_100g": {
+              "fat_g": 11.82,
+              "carbs_g": 0.0,
+              "calories": 189.0,
+              "sugar_g": 0.0,
+              "protein_g": 19.34,
+              "fiber_g": 0.0,
+              "sodium_mg": 63.0,
+              "saturated_fat_g": 2.37
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/167895/nutrients"
+          },
+          {
+            "ingredient": "sal",
+            "edible_grams": 6,
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "fiber_g": 0.0,
+              "sodium_mg": 38758.0,
+              "saturated_fat_g": 0.0,
+              "protein_g": 0.0,
+              "fat_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 0.0,
+              "sugar_g": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients"
+          },
+          {
+            "ingredient": "chiles anchos secos, sin tallo ni semillas",
+            "edible_grams": 30,
+            "fdc_id": 169396,
+            "fdc_description": "Peppers, ancho, dried",
+            "per_100g": {
+              "sodium_mg": 43.0,
+              "calories": 281.0,
+              "carbs_g": 51.42,
+              "protein_g": 11.86,
+              "fiber_g": 21.6,
+              "saturated_fat_g": 0.82,
+              "fat_g": 8.2
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169396/nutrients"
+          },
+          {
+            "ingredient": "tomate",
+            "edible_grams": 300,
+            "fdc_id": 170457,
+            "fdc_description": "Tomatoes, red, ripe, raw, year round average",
+            "per_100g": {
+              "sugar_g": 2.63,
+              "carbs_g": 3.89,
+              "calories": 18.0,
+              "saturated_fat_g": 0.028,
+              "fat_g": 0.2,
+              "fiber_g": 1.2,
+              "sodium_mg": 5.0,
+              "protein_g": 0.88
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170457/nutrients"
+          },
+          {
+            "ingredient": "cebolla",
+            "edible_grams": 150,
+            "fdc_id": 170000,
+            "fdc_description": "Onions, raw",
+            "per_100g": {
+              "sugar_g": 4.24,
+              "fat_g": 0.1,
+              "carbs_g": 9.34,
+              "calories": 40.0,
+              "saturated_fat_g": 0.042,
+              "protein_g": 1.1,
+              "fiber_g": 1.7,
+              "sodium_mg": 4.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170000/nutrients"
+          },
+          {
+            "ingredient": "ajo",
+            "edible_grams": 12,
+            "fdc_id": 169230,
+            "fdc_description": "Garlic, raw",
+            "per_100g": {
+              "carbs_g": 33.06,
+              "calories": 149.0,
+              "sugar_g": 1.0,
+              "saturated_fat_g": 0.089,
+              "fiber_g": 2.1,
+              "sodium_mg": 17.0,
+              "protein_g": 6.36,
+              "fat_g": 0.5
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169230/nutrients"
+          },
+          {
+            "ingredient": "cacahuetes tostados sin sal",
+            "edible_grams": 30,
+            "fdc_id": 173806,
+            "fdc_description": "Peanuts, all types, dry-roasted, without salt",
+            "per_100g": {
+              "fiber_g": 8.4,
+              "saturated_fat_g": 7.723,
+              "protein_g": 24.35,
+              "carbs_g": 21.26,
+              "calories": 587.0,
+              "sugar_g": 4.9,
+              "sodium_mg": 6.0,
+              "fat_g": 49.66
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173806/nutrients"
+          },
+          {
+            "ingredient": "semillas de sésamo",
+            "edible_grams": 20,
+            "fdc_id": 170150,
+            "fdc_description": "Seeds, sesame seeds, whole, dried",
+            "per_100g": {
+              "sugar_g": 0.3,
+              "protein_g": 17.73,
+              "fiber_g": 11.8,
+              "sodium_mg": 11.0,
+              "saturated_fat_g": 6.957,
+              "fat_g": 49.67,
+              "carbs_g": 23.45,
+              "calories": 573.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170150/nutrients"
+          },
+          {
+            "ingredient": "chocolate negro, 60–69 % cacao",
+            "edible_grams": 25,
+            "fdc_id": 170272,
+            "fdc_description": "Chocolate, dark, 60-69% cacao solids",
+            "per_100g": {
+              "fat_g": 38.31,
+              "carbs_g": 52.42,
+              "calories": 579.0,
+              "protein_g": 6.12,
+              "fiber_g": 8.0,
+              "sodium_mg": 10.0,
+              "saturated_fat_g": 22.031,
+              "sugar_g": 36.71
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170272/nutrients"
+          },
+          {
+            "ingredient": "aceite vegetal",
+            "edible_grams": 20,
+            "fdc_id": 172336,
+            "fdc_description": "Oil, canola",
+            "per_100g": {
+              "fat_g": 100.0,
+              "saturated_fat_g": 7.365,
+              "protein_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 884.0,
+              "fiber_g": 0.0,
+              "sodium_mg": 0.0,
+              "sugar_g": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/172336/nutrients"
+          },
+          {
+            "ingredient": "canela molida",
+            "edible_grams": 1,
+            "fdc_id": 171320,
+            "fdc_description": "Spices, cinnamon, ground",
+            "per_100g": {
+              "sugar_g": 2.17,
+              "fiber_g": 53.1,
+              "protein_g": 3.99,
+              "sodium_mg": 10.0,
+              "saturated_fat_g": 0.345,
+              "fat_g": 1.24,
+              "carbs_g": 80.59,
+              "calories": 247.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171320/nutrients"
+          },
+          {
+            "ingredient": "clavo molido",
+            "edible_grams": 0.2,
+            "fdc_id": 171321,
+            "fdc_description": "Spices, cloves, ground",
+            "per_100g": {
+              "sugar_g": 2.38,
+              "fat_g": 13.0,
+              "carbs_g": 65.53,
+              "calories": 274.0,
+              "fiber_g": 33.9,
+              "sodium_mg": 277.0,
+              "saturated_fat_g": 3.952,
+              "protein_g": 5.97
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171321/nutrients"
+          }
+        ]
+      },
+      "keywords": [
+        "costillas en mole rojo",
+        "mole rojo con chile ancho",
+        "costillas de cerdo guisadas"
+      ],
+      "image_url": null,
+      "gallery": [],
+      "seo": {
+        "title": "Costillas de cerdo en mole rojo casero | Manual de Cocina",
+        "description": "Costillas de cerdo en mole rojo casero con chile ancho, tomate, cacahuete y cacao. Cocción suave para obtener carne tierna y salsa espesa.",
+        "image_alt": "Costillas de cerdo en mole rojo casero: plato terminado",
+        "image_variants": [],
+        "faq": [
+          {
+            "q": "¿Por qué amarga el mole?",
+            "a": "Los chiles, el sésamo o el ajo quemados pueden amargarlo. Tuesta brevemente y evita partes negras; el chocolate no corrige un quemado intenso."
+          },
+          {
+            "q": "¿Puedo usar pasta de mole comercial?",
+            "a": "Sí, siguiendo su etiqueta, pero sería otra formulación y cambiarían cantidades, sal y nutrición."
+          },
+          {
+            "q": "¿Se pueden preparar con anticipación?",
+            "a": "Sí. Refrigera rápidamente en recipientes bajos y recalienta hasta 74 °C, añadiendo agua si la salsa espesó."
+          }
+        ]
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "content_html": "<p>Un mole rojo casero simplificado con chile ancho, tomate, cacahuete y sésamo, terminado con chocolate negro. Se une a costillas cocidas lentamente hasta que la carne esté tierna.</p><p>Rinde 4 porciones sin arroz ni tortillas. Las costillas se pesan con hueso; para la nutrición se estima un 65 % de parte comestible. No se presenta como una fórmula regional única o tradicional.</p>"
+    }
+  ]
+}
