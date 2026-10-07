@@ -20,6 +20,6 @@ jobs:
               out=$(curl -sS -m 25 -o /tmp/b -D - -A "$ua" "https://$H$p" 2>&1 | grep -iE '^(HTTP|server|location|x-powered|x-nextjs|cf-|x-vercel|via|x-hcdn|content-type|x-robots|retry-after|x-cache|platform)' | tr '\n\r' '  ')
               sz=$(wc -c </tmp/b 2>/dev/null)
               t=$(grep -o '<title>[^<]*' /tmp/b | head -1)
-              emit "p:${p}:${ua:0:4}" "$out | bytes=$sz | $t"
+              emit "p$(echo "$p" | tr -c "a-z0-9" _)_${ua:0:4}" "$out | bytes=$sz | $t"
             done
           done
