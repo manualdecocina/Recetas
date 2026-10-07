@@ -31,7 +31,7 @@ HREFLANG_TAGS = {"es", "de", "en", "fr", "it", "ja", "pt-BR", "x-default"}
 WP_MARKERS = re.compile(r"wp-content|wp-json|wp-includes|translatepress|trp-language", re.I)
 ISO_DURATION = re.compile(r"^P(T(\d+H)?(\d+M)?(\d+S)?)$")
 UA = {"User-Agent": "ManualDeCocina-Preview-QA/1.0", "Cache-Control": "no-cache"}
-EXPECTED_ES_RECIPES = int(os.environ.get("EXPECTED_ES_RECIPES", "91"))
+EXPECTED_ES_RECIPES = int(os.environ.get("EXPECTED_ES_RECIPES", "92"))
 EXPECTED_CATEGORIES = 11
 
 
