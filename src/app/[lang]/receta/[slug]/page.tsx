@@ -1,8 +1,8 @@
-import { notFound, permanentRedirect } from 'next/navigation'
+import { notFound, permanentRedirect, redirect } from 'next/navigation'
 import { cache } from 'react'
 import type { Metadata } from 'next'
 import { supabase } from '@/lib/supabase/public'
-import { getRelatedRecipes } from '@/lib/public-content'
+import { getContentRedirect, getRelatedRecipes } from '@/lib/public-content'
 import { recipeAlternates, recipeMetaText, recipeSocialImages } from '@/lib/seo'
 import { normalizePublicPath, recipePath, publicUrl, publicPathHref } from '@/lib/site'
 import { RecipeDocument } from '@/components/RecipeDocument'
@@ -98,7 +98,15 @@ export default async function RecipeDetailPage({ params }: Props) {
   const { lang, slug } = await params
   if (!isLang(lang)) notFound()
   const recipe = await getRecipe(lang, slug)
-  if (!recipe) notFound()
+  if (!recipe) {
+    // URL histórica /{lang}/receta/{slug} de una receta aún no publicada: redirección registrada.
+    const redirectTo = await getContentRedirect(recipePath(lang, slug))
+    if (redirectTo) {
+      if (redirectTo.permanent) permanentRedirect(redirectTo.target_path)
+      redirect(redirectTo.target_path)
+    }
+    notFound()
+  }
 
   const routePath = normalizePublicPath(recipePath(lang, recipe.slug))
   const publicPath = normalizePublicPath(recipe.public_path)
