@@ -1,0 +1,535 @@
+{
+  "category_slug": "ensaladas",
+  "cover": "Ensalada con tiras de pollo, lechuga, dados de pepino y tomate, zanahoria rallada y maíz, sin extras.",
+  "step_visuals": [
+    "Verduras lavadas y centrifugadora de lechuga; sin pollo crudo sobre la misma tabla.",
+    "Bol de verduras recién cortadas con maíz escurrido a un lado.",
+    "Filetes de pollo sazonados sobre una tabla exclusiva para carne.",
+    "Pollo cocinándose en sartén con termómetro colocado en el centro.",
+    "Pollo cocido cortado en tiras sobre tabla limpia.",
+    "Aliño amarillo pálido emulsionándose con una varilla en un cuenco.",
+    "Bol grande en el momento de mezclar verduras, pollo y aliño.",
+    "Cuatro platos con cantidades similares de pollo y verduras."
+  ],
+  "ai_owner_confirmation": {
+    "status": "pending",
+    "fields": [
+      "ingredients.amount",
+      "prep_time_minutes",
+      "cook_time_minutes",
+      "total_time_minutes",
+      "servings",
+      "nutrition"
+    ],
+    "reason": "Propuesta nueva creada por IA; no receta probada ni cifras confirmadas por el propietario."
+  },
+  "time_notes": "Total = preparación + cocción + 0 minutos de espera/enfriado/reposo.",
+  "steps_frozen": true,
+  "publication_blockers": [
+    "FULL_LOCALIZATION_PENDING",
+    "FINAL_IMAGES_PENDING",
+    "GLOBAL_QA_PENDING"
+  ],
+  "image_alts_by_language": {
+    "es": {
+      "title": "Ensalada primavera con pollo",
+      "cover": "Ensalada primavera con pollo: plato terminado",
+      "steps": [
+        "Ensalada primavera con pollo: Lava y seca las verduras",
+        "Ensalada primavera con pollo: Corta las verduras",
+        "Ensalada primavera con pollo: Prepara el pollo",
+        "Ensalada primavera con pollo: Cocina el pollo",
+        "Ensalada primavera con pollo: Deja templar y corta",
+        "Ensalada primavera con pollo: Emulsiona el aliño",
+        "Ensalada primavera con pollo: Mezcla la ensalada",
+        "Ensalada primavera con pollo: Reparte y sirve"
+      ]
+    },
+    "de": {
+      "title": "Frühlingssalat mit Hähnchen",
+      "cover": "Frühlingssalat mit Hähnchen: fertiges Gericht",
+      "steps": [
+        "Frühlingssalat mit Hähnchen: Gemüse waschen und trocknen",
+        "Frühlingssalat mit Hähnchen: Gemüse schneiden",
+        "Frühlingssalat mit Hähnchen: Hähnchen vorbereiten",
+        "Frühlingssalat mit Hähnchen: Hähnchen garen",
+        "Frühlingssalat mit Hähnchen: Abkühlen lassen und schneiden",
+        "Frühlingssalat mit Hähnchen: Dressing emulgieren",
+        "Frühlingssalat mit Hähnchen: Salat mischen",
+        "Frühlingssalat mit Hähnchen: Portionieren und servieren"
+      ]
+    },
+    "en": {
+      "title": "Spring chicken salad",
+      "cover": "Spring chicken salad: finished dish",
+      "steps": [
+        "Spring chicken salad: Wash and dry the vegetables",
+        "Spring chicken salad: Cut the vegetables",
+        "Spring chicken salad: Prepare the chicken",
+        "Spring chicken salad: Cook the chicken",
+        "Spring chicken salad: Let cool slightly and slice",
+        "Spring chicken salad: Emulsify the dressing",
+        "Spring chicken salad: Toss the salad",
+        "Spring chicken salad: Divide and serve"
+      ]
+    },
+    "fr": {
+      "title": "Salade printanière au poulet",
+      "cover": "Salade printanière au poulet: plat terminé",
+      "steps": [
+        "Salade printanière au poulet: Laver et sécher les légumes",
+        "Salade printanière au poulet: Couper les légumes",
+        "Salade printanière au poulet: Préparer le poulet",
+        "Salade printanière au poulet: Cuire le poulet",
+        "Salade printanière au poulet: Laisser tiédir et couper",
+        "Salade printanière au poulet: Émulsionner la vinaigrette",
+        "Salade printanière au poulet: Mélanger la salade",
+        "Salade printanière au poulet: Répartir et servir"
+      ]
+    },
+    "it": {
+      "title": "Insalata primaverile con pollo",
+      "cover": "Insalata primaverile con pollo: piatto pronto",
+      "steps": [
+        "Insalata primaverile con pollo: Lavare e asciugare le verdure",
+        "Insalata primaverile con pollo: Tagliare le verdure",
+        "Insalata primaverile con pollo: Preparare il pollo",
+        "Insalata primaverile con pollo: Cuocere il pollo",
+        "Insalata primaverile con pollo: Lasciare intiepidire e tagliare",
+        "Insalata primaverile con pollo: Emulsionare il condimento",
+        "Insalata primaverile con pollo: Mescolare l’insalata",
+        "Insalata primaverile con pollo: Dividere e servire"
+      ]
+    },
+    "ja": {
+      "title": "鶏肉入り春のサラダ",
+      "cover": "鶏肉入り春のサラダ: 完成した料理",
+      "steps": [
+        "鶏肉入り春のサラダ: 野菜を洗って水気を切る",
+        "鶏肉入り春のサラダ: 野菜を切る",
+        "鶏肉入り春のサラダ: 鶏肉を下ごしらえする",
+        "鶏肉入り春のサラダ: 鶏肉を加熱する",
+        "鶏肉入り春のサラダ: 粗熱を取り切る",
+        "鶏肉入り春のサラダ: ドレッシングを混ぜる",
+        "鶏肉入り春のサラダ: サラダを和える",
+        "鶏肉入り春のサラダ: 分けて盛り付ける"
+      ]
+    },
+    "pt": {
+      "title": "Salada primavera com frango",
+      "cover": "Salada primavera com frango: prato pronto",
+      "steps": [
+        "Salada primavera com frango: Lave e seque os vegetais",
+        "Salada primavera com frango: Corte os vegetais",
+        "Salada primavera com frango: Prepare o frango",
+        "Salada primavera com frango: Cozinhe o frango",
+        "Salada primavera com frango: Deixe amornar e corte",
+        "Salada primavera com frango: Emulsione o molho",
+        "Salada primavera com frango: Misture a salada",
+        "Salada primavera com frango: Divida e sirva"
+      ]
+    }
+  },
+  "scope": "preview.manualdecocina.com",
+  "state": "ES_PREPARED_FULL_LOCALIZATION_AND_IMAGES_PENDING",
+  "provenance": "Redacción original de IA a partir de identidad técnica y propósito culinario. No se leyó ni reutilizó cuerpo, ingredientes, fotos ni traducciones del registro WordPress. Nutrientes consultados en el archivo oficial SR Legacy descargado el 2026-10-08; no se inventan ids FDC. No existe prueba de cocina ejecutada ni aprobación de cantidades por el propietario.",
+  "records": [
+    {
+      "id": "7351cc9b-b440-49bd-b65f-9714bc405c9e",
+      "recipe_group_id": "a25bba5a-9659-40ee-bba9-92221a8d7c19",
+      "slug": "ensalada-primavera-pollo",
+      "public_path": "/ensalada-primavera-pollo",
+      "source_url": "https://manualdecocina.com/ensalada-primavera-pollo/",
+      "language": "es",
+      "title": "Ensalada primavera con pollo",
+      "excerpt": "Ensalada primavera con pollo, lechuga, pepino, tomate y maíz, aliñada con limón y mostaza. Cuatro porciones y cocción del pollo paso a paso.",
+      "summary": "Una ensalada de pollo en tiras con verduras crujientes y un aliño de limón, aceite y mostaza. El pollo se cocina por separado y se deja templar antes de añadirlo a la lechuga.\n\nRinde 4 porciones. Los 45 minutos incluyen 10 minutos de reposo y templado del pollo; la cocción se verifica con termómetro.",
+      "category": "Ensaladas",
+      "category_slug": "ensaladas",
+      "difficulty": "Fácil",
+      "course": "Plato principal",
+      "cuisine": "Internacional",
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 15,
+      "total_time_minutes": 45,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "pechuga de pollo sin piel",
+          "amount": "500",
+          "unit": "g",
+          "group": "Pollo"
+        },
+        {
+          "name": "aceite vegetal",
+          "amount": "10",
+          "unit": "g",
+          "group": "Pollo"
+        },
+        {
+          "name": "sal",
+          "amount": "3",
+          "unit": "g",
+          "group": "Pollo"
+        },
+        {
+          "name": "pimienta negra",
+          "amount": "0.5",
+          "unit": "g",
+          "group": "Pollo"
+        },
+        {
+          "name": "lechuga romana",
+          "amount": "200",
+          "unit": "g",
+          "group": "Ensalada"
+        },
+        {
+          "name": "pepino con piel",
+          "amount": "200",
+          "unit": "g",
+          "group": "Ensalada"
+        },
+        {
+          "name": "tomate",
+          "amount": "250",
+          "unit": "g",
+          "group": "Ensalada"
+        },
+        {
+          "name": "zanahoria",
+          "amount": "100",
+          "unit": "g",
+          "group": "Ensalada"
+        },
+        {
+          "name": "maíz cocido en conserva, escurrido",
+          "amount": "120",
+          "unit": "g",
+          "group": "Ensalada"
+        },
+        {
+          "name": "zumo de limón",
+          "amount": "30",
+          "unit": "g",
+          "group": "Aliño"
+        },
+        {
+          "name": "aceite vegetal",
+          "amount": "25",
+          "unit": "g",
+          "group": "Aliño"
+        },
+        {
+          "name": "mostaza preparada",
+          "amount": "10",
+          "unit": "g",
+          "group": "Aliño"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Lava y seca las verduras",
+          "content": "Lava 200 g de lechuga, 200 g de pepino, 250 g de tomate y 100 g de zanahoria bajo agua potable. Escurre y seca bien la lechuga. Mantén estas verduras separadas de la tabla y los utensilios del pollo crudo.",
+          "image_url": "",
+          "image_alt": "Ensalada primavera con pollo: Lava y seca las verduras"
+        },
+        {
+          "title": "Corta las verduras",
+          "content": "Trocea la lechuga, corta el pepino y el tomate en dados de 1,5 cm y ralla la zanahoria. Escurre 120 g de maíz. Guarda todo en un bol en la nevera mientras cocinas el pollo.",
+          "image_url": "",
+          "image_alt": "Ensalada primavera con pollo: Corta las verduras"
+        },
+        {
+          "title": "Prepara el pollo",
+          "content": "Divide 500 g de pechuga en filetes de grosor uniforme de unos 2 cm. Sazona con 3 g de sal y 0,5 g de pimienta. No laves el pollo crudo; limpia manos y superficie después de manipularlo.",
+          "image_url": "",
+          "image_alt": "Ensalada primavera con pollo: Prepara el pollo"
+        },
+        {
+          "title": "Cocina el pollo",
+          "content": "Calienta 10 g de aceite en sartén a fuego medio. Cocina los filetes unos 6–7 minutos por lado, hasta que el centro alcance 74 °C. Si se doran antes de llegar a esa temperatura, baja el fuego y tapa brevemente.",
+          "image_url": "",
+          "image_alt": "Ensalada primavera con pollo: Cocina el pollo"
+        },
+        {
+          "title": "Deja templar y corta",
+          "content": "Pasa el pollo cocido a una tabla limpia. Reposa 5 minutos y corta en tiras de 1 cm. Deja perder el calor intenso otros 5 minutos para no marchitar la lechuga.",
+          "image_url": "",
+          "image_alt": "Ensalada primavera con pollo: Deja templar y corta"
+        },
+        {
+          "title": "Emulsiona el aliño",
+          "content": "Bate 30 g de zumo de limón con 10 g de mostaza. Añade lentamente 25 g de aceite y mezcla 1 minuto hasta que se integre. No añadas sal sin probar antes, porque la mostaza ya la aporta.",
+          "image_url": "",
+          "image_alt": "Ensalada primavera con pollo: Emulsiona el aliño"
+        },
+        {
+          "title": "Mezcla la ensalada",
+          "content": "Añade las tiras de pollo templadas al bol con lechuga, pepino, tomate, zanahoria y maíz. Vierte el aliño y mezcla con dos cucharas justo antes de servir.",
+          "image_url": "",
+          "image_alt": "Ensalada primavera con pollo: Mezcla la ensalada"
+        },
+        {
+          "title": "Reparte y sirve",
+          "content": "Reparte en 4 platos procurando distribuir pollo y maíz por igual. Sirve inmediatamente. Si preparas para otro día, guarda pollo, verduras y aliño por separado y refrigera sin demora.",
+          "image_url": "",
+          "image_alt": "Ensalada primavera con pollo: Reparte y sirve"
+        }
+      ],
+      "notes": "Conserva el pollo cocido refrigerado hasta 3 días y las verduras lavadas, bien secas, hasta 2 días. Una ensalada ya aliñada pierde textura; consúmela el mismo día. Puedes cambiar el maíz por guisantes cocidos manteniendo la cantidad, pero la nutrición cambiará. No se incluye pan ni otros acompañamientos.",
+      "nutrition": {
+        "calories": 288.0,
+        "protein_g": 30.7,
+        "carbs_g": 13.3,
+        "fat_g": 12.9,
+        "saturated_fat_g": 1.5,
+        "fiber_g": 3.5,
+        "sugar_g": 5.8,
+        "sodium_mg": 462.0,
+        "serving_size": "1 de 4 porciones",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (abril de 2018)",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "method": "Suma de valores por 100 g de las fichas FDC verificadas, multiplicados por los gramos comestibles de cada ingrediente, dividida entre 4 porciones. Se cuenta todo el aceite y toda la sal indicados; no se incluyen acompañamientos opcionales.",
+        "note": "Estimación informativa; varía con marcas, rendimiento y grasa o salsa que no se consuma. ",
+        "inputs": [
+          {
+            "ingredient": "pechuga de pollo sin piel",
+            "edible_grams": 500,
+            "fdc_id": 171077,
+            "fdc_description": "Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw",
+            "per_100g": {
+              "fat_g": 2.62,
+              "calories": 120.0,
+              "saturated_fat_g": 0.563,
+              "sodium_mg": 45.0,
+              "protein_g": 22.5,
+              "sugar_g": 0.0,
+              "carbs_g": 0.0,
+              "fiber_g": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171077/nutrients"
+          },
+          {
+            "ingredient": "aceite vegetal",
+            "edible_grams": 10,
+            "fdc_id": 172336,
+            "fdc_description": "Oil, canola",
+            "per_100g": {
+              "fat_g": 100.0,
+              "saturated_fat_g": 7.365,
+              "protein_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 884.0,
+              "fiber_g": 0.0,
+              "sodium_mg": 0.0,
+              "sugar_g": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/172336/nutrients"
+          },
+          {
+            "ingredient": "sal",
+            "edible_grams": 3,
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "fiber_g": 0.0,
+              "sodium_mg": 38758.0,
+              "saturated_fat_g": 0.0,
+              "protein_g": 0.0,
+              "fat_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 0.0,
+              "sugar_g": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients"
+          },
+          {
+            "ingredient": "pimienta negra",
+            "edible_grams": 0.5,
+            "fdc_id": 170931,
+            "fdc_description": "Spices, pepper, black",
+            "per_100g": {
+              "fat_g": 3.26,
+              "sugar_g": 0.64,
+              "carbs_g": 63.95,
+              "calories": 251.0,
+              "protein_g": 10.39,
+              "fiber_g": 25.3,
+              "sodium_mg": 20.0,
+              "saturated_fat_g": 1.392
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170931/nutrients"
+          },
+          {
+            "ingredient": "lechuga romana",
+            "edible_grams": 200,
+            "fdc_id": 169247,
+            "fdc_description": "Lettuce, cos or romaine, raw",
+            "per_100g": {
+              "carbs_g": 3.29,
+              "calories": 17.0,
+              "saturated_fat_g": 0.039,
+              "sodium_mg": 8.0,
+              "fat_g": 0.3,
+              "sugar_g": 1.19,
+              "fiber_g": 2.1,
+              "protein_g": 1.23
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169247/nutrients"
+          },
+          {
+            "ingredient": "pepino con piel",
+            "edible_grams": 200,
+            "fdc_id": 168409,
+            "fdc_description": "Cucumber, with peel, raw",
+            "per_100g": {
+              "carbs_g": 3.63,
+              "calories": 15.0,
+              "sugar_g": 1.67,
+              "saturated_fat_g": 0.037,
+              "sodium_mg": 2.0,
+              "fat_g": 0.11,
+              "fiber_g": 0.5,
+              "protein_g": 0.65
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/168409/nutrients"
+          },
+          {
+            "ingredient": "tomate",
+            "edible_grams": 250,
+            "fdc_id": 170457,
+            "fdc_description": "Tomatoes, red, ripe, raw, year round average",
+            "per_100g": {
+              "sugar_g": 2.63,
+              "carbs_g": 3.89,
+              "calories": 18.0,
+              "saturated_fat_g": 0.028,
+              "fat_g": 0.2,
+              "fiber_g": 1.2,
+              "sodium_mg": 5.0,
+              "protein_g": 0.88
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170457/nutrients"
+          },
+          {
+            "ingredient": "zanahoria",
+            "edible_grams": 100,
+            "fdc_id": 170393,
+            "fdc_description": "Carrots, raw",
+            "per_100g": {
+              "saturated_fat_g": 0.032,
+              "sodium_mg": 69.0,
+              "protein_g": 0.93,
+              "fat_g": 0.24,
+              "sugar_g": 4.74,
+              "carbs_g": 9.58,
+              "calories": 41.0,
+              "fiber_g": 2.8
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170393/nutrients"
+          },
+          {
+            "ingredient": "maíz cocido en conserva, escurrido",
+            "edible_grams": 120,
+            "fdc_id": 169214,
+            "fdc_description": "Corn, sweet, yellow, canned, whole kernel, drained solids",
+            "per_100g": {
+              "fat_g": 1.22,
+              "carbs_g": 14.34,
+              "calories": 67.0,
+              "sugar_g": 4.44,
+              "saturated_fat_g": 0.245,
+              "fiber_g": 2.0,
+              "sodium_mg": 205.0,
+              "protein_g": 2.29
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169214/nutrients"
+          },
+          {
+            "ingredient": "zumo de limón",
+            "edible_grams": 30,
+            "fdc_id": 167747,
+            "fdc_description": "Lemon juice, raw",
+            "per_100g": {
+              "protein_g": 0.35,
+              "saturated_fat_g": 0.04,
+              "fiber_g": 0.3,
+              "sodium_mg": 1.0,
+              "sugar_g": 2.52,
+              "fat_g": 0.24,
+              "carbs_g": 6.9,
+              "calories": 22.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/167747/nutrients"
+          },
+          {
+            "ingredient": "aceite vegetal",
+            "edible_grams": 25,
+            "fdc_id": 172336,
+            "fdc_description": "Oil, canola",
+            "per_100g": {
+              "fat_g": 100.0,
+              "saturated_fat_g": 7.365,
+              "protein_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 884.0,
+              "fiber_g": 0.0,
+              "sodium_mg": 0.0,
+              "sugar_g": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/172336/nutrients"
+          },
+          {
+            "ingredient": "mostaza preparada",
+            "edible_grams": 10,
+            "fdc_id": 172234,
+            "fdc_description": "Mustard, prepared, yellow",
+            "per_100g": {
+              "protein_g": 3.74,
+              "fiber_g": 4.0,
+              "sodium_mg": 1104.0,
+              "saturated_fat_g": 0.214,
+              "fat_g": 3.34,
+              "carbs_g": 5.83,
+              "calories": 60.0,
+              "sugar_g": 0.92
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/172234/nutrients"
+          }
+        ]
+      },
+      "keywords": [
+        "ensalada primavera con pollo",
+        "ensalada pollo y verduras",
+        "aliño limón mostaza"
+      ],
+      "image_url": null,
+      "gallery": [],
+      "seo": {
+        "title": "Ensalada primavera con pollo | Manual de Cocina",
+        "description": "Ensalada primavera con pollo, lechuga, pepino, tomate y maíz, aliñada con limón y mostaza. Cuatro porciones y cocción del pollo paso a paso.",
+        "image_alt": "Ensalada primavera con pollo: plato terminado",
+        "image_variants": [],
+        "faq": [
+          {
+            "q": "¿Puedo usar pollo ya cocinado?",
+            "a": "Sí, utiliza 350–375 g de pollo cocido conservado correctamente. La nutrición de esta receta se calcula con 500 g de pechuga cruda."
+          },
+          {
+            "q": "¿Puedo prepararla el día anterior?",
+            "a": "Guarda por separado el pollo, las verduras secas y el aliño. Mezcla al servir para mantener la textura."
+          },
+          {
+            "q": "¿Cómo evito que la lechuga se marchite?",
+            "a": "Sécala bien, deja templar el pollo y añade el aliño justo antes de comer."
+          }
+        ]
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "content_html": "<p>Una ensalada de pollo en tiras con verduras crujientes y un aliño de limón, aceite y mostaza. El pollo se cocina por separado y se deja templar antes de añadirlo a la lechuga.</p><p>Rinde 4 porciones. Los 45 minutos incluyen 10 minutos de reposo y templado del pollo; la cocción se verifica con termómetro.</p>"
+    }
+  ]
+}
