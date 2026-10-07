@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import { notFound, permanentRedirect } from 'next/navigation'
-import { getContentPageByPublicPath, getRecipeByPublicPath, getRecipeTranslations, getRelatedRecipes, getPublishedPublicPaths } from '@/lib/public-content'
+import { notFound, permanentRedirect, redirect } from 'next/navigation'
+import { getContentRedirect, getContentPageByPublicPath, getRecipeByPublicPath, getRecipeTranslations, getRelatedRecipes, getPublishedPublicPaths } from '@/lib/public-content'
 import { recipeAlternates, recipeMetaText, recipeSocialImages, withSiteName } from '@/lib/seo'
 import { publicUrl, absoluteUrl } from '@/lib/site'
 import { SUPPORTED_LANGUAGES } from '@/types/recipe'
@@ -114,12 +114,11 @@ export default async function PublicLanguageRoute({ params }: Props) {
     )
   }
 
-  const normalized = path.replace(/\/+$/, '') || '/'
-  const candidates = [path, normalized, normalized + '/']
-  const { data } = await import('@/lib/supabase/public').then(({ supabase }) =>
-    supabase.from('content_redirects').select('target_path').in('source_path', candidates).limit(1).maybeSingle()
-  )
-  if (data?.target_path) permanentRedirect(data.target_path)
+  const redirectTo = await getContentRedirect(path)
+  if (redirectTo) {
+    if (redirectTo.permanent) permanentRedirect(redirectTo.target_path)
+    redirect(redirectTo.target_path)
+  }
 
   notFound()
 }

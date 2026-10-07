@@ -1,0 +1,32 @@
+name: site-preview-audit
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'scripts/audit-site-preview.py'
+      - 'scripts/data/legacy-redirects.json'
+      - '.github/workflows/site-preview-audit.yml'
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/audit-site-preview.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: site-preview-audit
+          path: site-preview-audit.json
+      - if: always()
+        run: |
+          python3 - <<'PY'
+          import json
+          r = json.load(open('site-preview-audit.json'))
+          print('::notice title=summary::' + json.dumps(r['summary'], ensure_ascii=False))
+          order = {'broken_link': 0, 'broken_image': 0, 'page_not_200': 0, 'redirect_loop': 0, 'canonical': 1, 'html_lang': 1, 'hreflang_not_reciprocal': 1, 'not_found_status': 1}
+          for e in sorted(r['errors'], key=lambda e: order.get(e['kind'], 2))[:45]:
+              print('::notice title=%s::%s' % (e['kind'], json.dumps(e, ensure_ascii=False)[:900]))
+          PY

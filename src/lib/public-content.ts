@@ -136,3 +136,18 @@ export const getPublishedPublicPaths = cache(async (): Promise<string[]> => {
 
   return Array.from(new Set(paths)).sort()
 })
+
+/** Redirección registrada para una ruta legada (tabla content_redirects).
+ *  status_code 301/308 = permanente; cualquier otro (302/307) = temporal, para URLs
+ *  históricas cuya receta aún se está reconstruyendo y volverá a servirse en la misma ruta. */
+export const getContentRedirect = cache(async (path: string): Promise<{ target_path: string; permanent: boolean } | null> => {
+  const { data, error } = await supabase
+    .from('content_redirects')
+    .select('target_path, status_code')
+    .in('source_path', pathCandidates(path))
+    .limit(1)
+  if (error) throw new Error(`No se pudo cargar la redirección: ${error.message}`)
+  const row = ((data ?? [])[0] ?? null) as { target_path: string; status_code: number | null } | null
+  if (!row?.target_path) return null
+  return { target_path: row.target_path, permanent: row.status_code === 301 || row.status_code === 308 || row.status_code == null }
+})
