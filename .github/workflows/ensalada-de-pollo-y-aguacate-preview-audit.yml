@@ -1,0 +1,40 @@
+name: ensalada-de-pollo-y-aguacate-preview-audit
+on:
+  pull_request:
+    paths:
+      - 'editorial/ensalada-de-pollo-y-aguacate-20261007.json'
+      - 'scripts/audit-ensalada-de-pollo-y-aguacate-preview.py'
+      - '.github/workflows/ensalada-de-pollo-y-aguacate-preview-audit.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'editorial/ensalada-de-pollo-y-aguacate-20261007.json'
+      - 'scripts/audit-ensalada-de-pollo-y-aguacate-preview.py'
+      - '.github/workflows/ensalada-de-pollo-y-aguacate-preview-audit.yml'
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    env:
+      STRICT_SITEMAP: ${{ github.event_name == 'push' }}
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/audit-ensalada-de-pollo-y-aguacate-preview.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ensalada-de-pollo-y-aguacate-preview-audit
+          path: ensalada-de-pollo-y-aguacate-preview-audit.json
+      - if: always()
+        run: |
+          python3 - <<'PY'
+          import json
+          r = json.load(open('ensalada-de-pollo-y-aguacate-preview-audit.json'))
+          print('::notice title=summary::' + json.dumps(r['summary']))
+          for x in r['results']:
+              print('::notice title=route-%s::' % x['language'] + json.dumps({k: x.get(k) for k in ('http','errors','html_lang','recipe_count','canonical','hreflang','missing_language_links')}, ensure_ascii=False))
+          print('::notice title=sitemap::' + json.dumps(r['sitemap'], ensure_ascii=False))
+          print('::notice title=extra::' + json.dumps(r['extra'], ensure_ascii=False))
+          PY
