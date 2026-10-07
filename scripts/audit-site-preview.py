@@ -32,7 +32,7 @@ WP_MARKERS = re.compile(r"wp-content|wp-json|wp-includes|translatepress|trp-lang
 ISO_DURATION = re.compile(r"^P(T(\d+H)?(\d+M)?(\d+S)?)$")
 UA = {"User-Agent": "ManualDeCocina-Preview-QA/1.0", "Cache-Control": "no-cache"}
 EXPECTED_ES_RECIPES = int(os.environ.get("EXPECTED_ES_RECIPES", "99"))
-EXPECTED_CATEGORIES = 11
+EXPECTED_CATEGORIES = 10
 
 
 class NoRedirect(urllib.request.HTTPRedirectHandler):
