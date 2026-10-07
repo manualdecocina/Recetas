@@ -22,6 +22,12 @@ const nextConfig = {
     // optimizador y transferencias repetidas sin impedir correcciones editoriales rápidas.
     minimumCacheTTL: 86400,
   },
+  async redirects() {
+    // La categoría "Desayunos y brunch" se eliminó (7 oct 2026): sus recetas pasaron a categorías canónicas.
+    return [
+      { source: '/:lang(es|de|en|fr|it|ja|pt)/categorias/desayunos-y-brunch', destination: '/:lang/categorias', permanent: true },
+    ]
+  },
   async headers() {
     const assetCache = 'public, max-age=86400, stale-while-revalidate=604800'
     return [

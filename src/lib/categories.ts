@@ -78,15 +78,6 @@ const CATEGORY_LABELS: Record<string, Record<RecipeLanguage, string>> = {
     ja: 'デザート',
     pt: 'Sobremesas',
   },
-  'desayunos-y-brunch': {
-    es: 'Desayunos y brunch',
-    en: 'Breakfast & brunch',
-    de: 'Frühstück und Brunch',
-    fr: 'Petit-déjeuner et brunch',
-    it: 'Colazione e brunch',
-    ja: '朝食・ブランチ',
-    pt: 'Café da manhã e brunch',
-  },
   bebidas: {
     es: 'Bebidas',
     en: 'Drinks',
