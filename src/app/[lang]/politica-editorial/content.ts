@@ -3,7 +3,7 @@ import type { LegalPageContentMap } from '@/lib/legal-content'
 export const POLITICA_EDITORIAL_CONTENT: LegalPageContentMap = {
   es: {
     metaTitle: 'Política editorial | Manual de Cocina',
-    metaDescription: 'Cómo trabajamos las recetas en Manual de Cocina: criterio de contenido, fotografía, fuentes, independencia y correcciones.',
+    metaDescription: 'Cómo trabajamos las recetas en Manual de Cocina: criterio de contenido, imágenes, fuentes, independencia y correcciones.',
     eyebrow: 'Criterio editorial',
     title: 'Política editorial',
     intro: 'Cocinar es el centro de todo lo que publicamos: la información debe ser clara, útil y honesta. Esta página explica cómo trabajamos el contenido.',
@@ -13,8 +13,8 @@ export const POLITICA_EDITORIAL_CONTENT: LegalPageContentMap = {
         html: '<p>Cada receta se redacta con ingredientes reconocibles, cantidades e instrucciones pensadas para poder cocinarse siguiendo el sitio desde el móvil o imprimiendo la receta. Cuando adaptamos una receta de otro país o cultura, procuramos respetar su versión auténtica en lugar de simplificarla.</p>',
       },
       {
-        heading: '2. Fotografía e imágenes',
-        html: '<p>Las fotografías que acompañan cada receta se preparan y se seleccionan específicamente para representar fielmente el aspecto y el resultado esperado del plato terminado, y se revisan una a una antes de publicarse. Algunas recetas incluyen además un vídeo de elaboración propio.</p>',
+        heading: '2. Imágenes',
+        html: '<p>Las imágenes que acompañan cada receta, tanto la principal como las de los pasos, son ilustrativas: se crean digitalmente para representar cada paso y el resultado esperado del plato, y se revisan una a una frente al texto de la receta antes de publicarse. No son fotografías tomadas durante la elaboración real. Algunas recetas incluyen además un vídeo de elaboración propio.</p>',
       },
       {
         heading: '3. Información nutricional y datos técnicos',
@@ -40,7 +40,7 @@ export const POLITICA_EDITORIAL_CONTENT: LegalPageContentMap = {
   },
   en: {
     metaTitle: 'Editorial Policy | Manual de Cocina',
-    metaDescription: 'How we work on recipes at Manual de Cocina: content criteria, photography, sources, independence and corrections.',
+    metaDescription: 'How we work on recipes at Manual de Cocina: content criteria, images, sources, independence and corrections.',
     eyebrow: 'Editorial approach',
     title: 'Editorial policy',
     intro: "Cooking is at the center of everything we publish: information must be clear, useful and honest. This page explains how we work on our content.",
@@ -50,8 +50,8 @@ export const POLITICA_EDITORIAL_CONTENT: LegalPageContentMap = {
         html: "<p>Every recipe is written with recognizable ingredients, quantities and instructions designed to be cooked while following the site on a phone or printing the recipe. When we adapt a recipe from another country or culture, we aim to respect its authentic version rather than simplify it.</p>",
       },
       {
-        heading: '2. Photography and images',
-        html: "<p>The photographs accompanying each recipe are prepared and selected specifically to faithfully represent the look and expected result of the finished dish, and each one is reviewed before publishing. Some recipes also include our own preparation video.</p>",
+        heading: '2. Images',
+        html: "<p>The images accompanying each recipe, both the main image and the step images, are illustrative: they are created digitally to represent each step and the expected result of the dish, and each one is checked against the recipe text before publishing. They are not photographs taken while actually cooking. Some recipes also include our own preparation video.</p>",
       },
       {
         heading: '3. Nutrition information and technical data',
@@ -77,7 +77,7 @@ export const POLITICA_EDITORIAL_CONTENT: LegalPageContentMap = {
   },
   de: {
     metaTitle: 'Redaktionelle Richtlinie | Manual de Cocina',
-    metaDescription: 'Wie wir bei Manual de Cocina an Rezepten arbeiten: Inhaltskriterien, Fotografie, Quellen, Unabhängigkeit und Korrekturen.',
+    metaDescription: 'Wie wir bei Manual de Cocina an Rezepten arbeiten: Inhaltskriterien, Bilder, Quellen, Unabhängigkeit und Korrekturen.',
     eyebrow: 'Redaktionelle Grundsätze',
     title: 'Redaktionelle Richtlinie',
     intro: 'Kochen steht im Mittelpunkt all unserer Veröffentlichungen: Informationen müssen klar, nützlich und ehrlich sein. Diese Seite erklärt, wie wir unsere Inhalte erarbeiten.',
@@ -87,8 +87,8 @@ export const POLITICA_EDITORIAL_CONTENT: LegalPageContentMap = {
         html: '<p>Jedes Rezept wird mit erkennbaren Zutaten, Mengenangaben und Anweisungen verfasst, die es ermöglichen, vom Smartphone aus zu kochen oder das Rezept auszudrucken. Wenn wir ein Rezept aus einem anderen Land oder einer anderen Kultur übernehmen, achten wir darauf, seine authentische Version zu respektieren, statt sie zu vereinfachen.</p>',
       },
       {
-        heading: '2. Fotografie und Bilder',
-        html: '<p>Die Fotografien zu jedem Rezept werden gezielt erstellt und ausgewählt, um das Aussehen und das erwartete Ergebnis des fertigen Gerichts originalgetreu darzustellen, und jedes Bild wird vor der Veröffentlichung geprüft. Einige Rezepte enthalten zusätzlich ein eigenes Zubereitungsvideo.</p>',
+        heading: '2. Bilder',
+        html: '<p>Die Bilder zu jedem Rezept – sowohl das Hauptbild als auch die Schrittbilder – sind Illustrationen: Sie werden digital erstellt, um jeden Schritt und das erwartete Ergebnis des Gerichts darzustellen, und jedes Bild wird vor der Veröffentlichung mit dem Rezepttext abgeglichen. Es sind keine Fotos, die beim tatsächlichen Kochen aufgenommen wurden. Einige Rezepte enthalten zusätzlich ein eigenes Zubereitungsvideo.</p>',
       },
       {
         heading: '3. Nährwertangaben und technische Daten',
@@ -114,7 +114,7 @@ export const POLITICA_EDITORIAL_CONTENT: LegalPageContentMap = {
   },
   fr: {
     metaTitle: 'Politique éditoriale | Manual de Cocina',
-    metaDescription: 'Comment nous travaillons les recettes chez Manual de Cocina : critères de contenu, photographie, sources, indépendance et corrections.',
+    metaDescription: 'Comment nous travaillons les recettes chez Manual de Cocina : critères de contenu, images, sources, indépendance et corrections.',
     eyebrow: 'Critère éditorial',
     title: 'Politique éditoriale',
     intro: "Cuisiner est au centre de tout ce que nous publions : l'information doit être claire, utile et honnête. Cette page explique comment nous travaillons nos contenus.",
@@ -124,8 +124,8 @@ export const POLITICA_EDITORIAL_CONTENT: LegalPageContentMap = {
         html: "<p>Chaque recette est rédigée avec des ingrédients reconnaissables, des quantités et des instructions pensées pour pouvoir cuisiner en suivant le site depuis un mobile ou en imprimant la recette. Lorsque nous adaptons une recette d'un autre pays ou d'une autre culture, nous veillons à respecter sa version authentique plutôt que de la simplifier.</p>",
       },
       {
-        heading: '2. Photographie et images',
-        html: "<p>Les photographies accompagnant chaque recette sont préparées et sélectionnées spécifiquement pour représenter fidèlement l'aspect et le résultat attendu du plat terminé, et chacune est vérifiée avant publication. Certaines recettes incluent en plus une vidéo de préparation qui nous appartient.</p>",
+        heading: '2. Images',
+        html: "<p>Les images accompagnant chaque recette, l'image principale comme celles des étapes, sont illustratives : elles sont créées numériquement pour représenter chaque étape et le résultat attendu du plat, et chacune est vérifiée par rapport au texte de la recette avant publication. Ce ne sont pas des photographies prises pendant une préparation réelle. Certaines recettes incluent en plus une vidéo de préparation qui nous appartient.</p>",
       },
       {
         heading: '3. Informations nutritionnelles et données techniques',
@@ -151,7 +151,7 @@ export const POLITICA_EDITORIAL_CONTENT: LegalPageContentMap = {
   },
   it: {
     metaTitle: 'Politica editoriale | Manual de Cocina',
-    metaDescription: 'Come lavoriamo le ricette su Manual de Cocina: criteri di contenuto, fotografia, fonti, indipendenza e correzioni.',
+    metaDescription: 'Come lavoriamo le ricette su Manual de Cocina: criteri di contenuto, immagini, fonti, indipendenza e correzioni.',
     eyebrow: 'Criterio editoriale',
     title: 'Politica editoriale',
     intro: 'Cucinare è al centro di tutto ciò che pubblichiamo: le informazioni devono essere chiare, utili e oneste. Questa pagina spiega come lavoriamo i contenuti.',
@@ -161,8 +161,8 @@ export const POLITICA_EDITORIAL_CONTENT: LegalPageContentMap = {
         html: "<p>Ogni ricetta viene scritta con ingredienti riconoscibili, quantità e istruzioni pensate per poter cucinare seguendo il sito dal cellulare o stampando la ricetta. Quando adattiamo una ricetta di un altro paese o cultura, cerchiamo di rispettarne la versione autentica invece di semplificarla.</p>",
       },
       {
-        heading: '2. Fotografia e immagini',
-        html: '<p>Le fotografie che accompagnano ogni ricetta vengono preparate e selezionate specificamente per rappresentare fedelmente l\'aspetto e il risultato atteso del piatto finito, e ciascuna viene rivista prima della pubblicazione. Alcune ricette includono inoltre un video di preparazione di nostra proprietà.</p>',
+        heading: '2. Immagini',
+        html: '<p>Le immagini che accompagnano ogni ricetta, sia quella principale sia quelle dei passaggi, sono illustrative: vengono create digitalmente per rappresentare ogni passaggio e il risultato atteso del piatto, e ciascuna viene confrontata con il testo della ricetta prima della pubblicazione. Non sono fotografie scattate durante una preparazione reale. Alcune ricette includono inoltre un video di preparazione di nostra proprietà.</p>',
       },
       {
         heading: '3. Informazioni nutrizionali e dati tecnici',
@@ -188,7 +188,7 @@ export const POLITICA_EDITORIAL_CONTENT: LegalPageContentMap = {
   },
   ja: {
     metaTitle: '編集ポリシー | Manual de Cocina',
-    metaDescription: 'Manual de Cocinaがレシピをどのように制作しているか：コンテンツの基準、写真、出典、独立性、訂正について。',
+    metaDescription: 'Manual de Cocinaがレシピをどのように制作しているか：コンテンツの基準、画像、出典、独立性、訂正について。',
     eyebrow: '編集方針',
     title: '編集ポリシー',
     intro: '料理そのものが、私たちが公開するすべての中心にあります。情報はわかりやすく、役に立ち、誠実であるべきです。このページでは、コンテンツの制作方法について説明します。',
@@ -198,8 +198,8 @@ export const POLITICA_EDITORIAL_CONTENT: LegalPageContentMap = {
         html: '<p>各レシピは、スマートフォンでサイトを見ながら、あるいは印刷して調理できるよう、身近な材料、分量、手順で作成しています。他の国や文化のレシピを取り入れる際は、簡略化するのではなく、その本来のバージョンを尊重するよう努めています。</p>',
       },
       {
-        heading: '2. 写真・画像について',
-        html: '<p>各レシピに添える写真は、完成した料理の見た目と期待される結果を忠実に表現するために特別に制作・選定しており、公開前に1枚ずつ確認しています。一部のレシピには、自社で制作した調理動画も掲載しています。</p>',
+        heading: '2. 画像について',
+        html: '<p>各レシピに添えるメイン画像と手順の画像は、イメージ画像です。各手順と完成した料理の仕上がりを表すためにデジタルで制作し、公開前に1枚ずつレシピの本文と照らし合わせて確認しています。実際の調理中に撮影した写真ではありません。一部のレシピには、自社で制作した調理動画も掲載しています。</p>',
       },
       {
         heading: '3. 栄養情報および技術データ',
@@ -225,7 +225,7 @@ export const POLITICA_EDITORIAL_CONTENT: LegalPageContentMap = {
   },
   pt: {
     metaTitle: 'Política editorial | Manual de Cocina',
-    metaDescription: 'Como trabalhamos as receitas no Manual de Cocina: critérios de conteúdo, fotografia, fontes, independência e correções.',
+    metaDescription: 'Como trabalhamos as receitas no Manual de Cocina: critérios de conteúdo, imagens, fontes, independência e correções.',
     eyebrow: 'Critério editorial',
     title: 'Política editorial',
     intro: 'Cozinhar é o centro de tudo o que publicamos: a informação deve ser clara, útil e honesta. Esta página explica como trabalhamos o conteúdo.',
@@ -235,8 +235,8 @@ export const POLITICA_EDITORIAL_CONTENT: LegalPageContentMap = {
         html: '<p>Cada receita é redigida com ingredientes reconhecíveis, quantidades e instruções pensadas para permitir cozinhar seguindo o site pelo celular ou imprimindo a receita. Quando adaptamos uma receita de outro país ou cultura, procuramos respeitar sua versão autêntica em vez de simplificá-la.</p>',
       },
       {
-        heading: '2. Fotografia e imagens',
-        html: '<p>As fotografias que acompanham cada receita são preparadas e selecionadas especificamente para representar fielmente a aparência e o resultado esperado do prato pronto, e cada uma é revisada antes da publicação. Algumas receitas incluem também um vídeo de preparo próprio.</p>',
+        heading: '2. Imagens',
+        html: '<p>As imagens que acompanham cada receita, tanto a principal quanto as dos passos, são ilustrativas: são criadas digitalmente para representar cada passo e o resultado esperado do prato, e cada uma é conferida com o texto da receita antes da publicação. Não são fotografias tiradas durante o preparo real. Algumas receitas incluem também um vídeo de preparo próprio.</p>',
       },
       {
         heading: '3. Informação nutricional e dados técnicos',

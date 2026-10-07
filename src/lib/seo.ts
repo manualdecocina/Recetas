@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { SUPPORTED_LANGUAGES } from '@/types/recipe'
-import { getSiteUrl, normalizePublicPath, publicUrl, absoluteUrl, languageTag } from '@/lib/site'
+import { getSiteUrl, normalizePublicPath, publicUrl, absoluteUrl, languageTag, isIndexingAllowed } from '@/lib/site'
 
 export const SITE_NAME = 'Manual de Cocina'
 const TITLE_SUFFIX = ` | ${SITE_NAME}`
@@ -9,6 +9,20 @@ const TITLE_SUFFIX = ` | ${SITE_NAME}`
 export function withSiteName(title: string): string {
   const base = title.endsWith(TITLE_SUFFIX) ? title.slice(0, -TITLE_SUFFIX.length) : title
   return `${base}${TITLE_SUFFIX}`
+}
+
+/** Robots único del sitio público. Sin NEXT_PUBLIC_ALLOW_INDEXING="true" (preview) devuelve
+ * noindex/nofollow también para googlebot. Las páginas que declaran `robots` propio deben usar
+ * esta función: un objeto robots en una página reemplaza el del layout y podía reabrir la indexación. */
+export function siteRobots(): NonNullable<Metadata['robots']> {
+  const allow = isIndexingAllowed()
+  return {
+    index: allow,
+    follow: allow,
+    googleBot: allow
+      ? { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 }
+      : { index: false, follow: false },
+  }
 }
 
 type Languages = NonNullable<NonNullable<Metadata['alternates']>['languages']>
@@ -20,7 +34,18 @@ export function allLanguageAlternates(
   const site = getSiteUrl()
   const map: Record<string, string> = {}
   for (const l of SUPPORTED_LANGUAGES) map[languageTag(l)] = `${site}${normalizePublicPath(path(l))}`
-  return { canonical: `${site}${normalizePublicPath(currentPath)}`, languages: map as Languages }
+  return { canonical: `${site}${normalizePublicPath(currentPath)}`, languages: withXDefault(map) as Languages }
+}
+
+/** Política única de x-default para todo el sitio: apunta a la versión en español
+ * (idioma por defecto del sitio) cuando esa versión existe; si no existe, se omite. */
+export const X_DEFAULT = 'x-default'
+export const X_DEFAULT_LANGUAGE = 'es'
+
+/** Añade x-default a un mapa hreflang → URL ya construido, según la política única. */
+export function withXDefault(map: Record<string, string>): Record<string, string> {
+  const target = map[languageTag(X_DEFAULT_LANGUAGE)]
+  return target ? { ...map, [X_DEFAULT]: target } : map
 }
 
 export interface RecipeSeoPath {
@@ -37,10 +62,10 @@ export function recipeAlternates(
 
   const map: Record<string, string> = {}
   for (const t of translations) map[languageTag(t.language)] = publicUrl(t.public_path)
-  // Cada versión enlaza a todas, incluida ella misma. (Sin x-default: contrato cubierto por tests/logic/seo.test.mts.)
+  // Cada versión enlaza a todas, incluida ella misma; x-default → versión española si existe.
   map[languageTag(current.language)] = canonical
 
-  return { canonical, languages: map as Languages }
+  return { canonical, languages: withXDefault(map) as Languages }
 }
 
 /** Título y descripción para buscadores: usa `seo.title` / `seo.description` si existen. */

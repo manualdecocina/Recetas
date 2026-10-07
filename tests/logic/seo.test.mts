@@ -2,7 +2,7 @@ import assert from 'node:assert/strict'
 
 process.env.NEXT_PUBLIC_SITE_URL = 'https://manualdecocina.com/'
 process.env.NEXT_PUBLIC_ALLOW_INDEXING = 'true'
-const { recipeAlternates, allLanguageAlternates } = await import('@/lib/seo')
+const { recipeAlternates, allLanguageAlternates, siteRobots } = await import('@/lib/seo')
 const site = await import('@/lib/site')
 
 let n = 0
@@ -62,8 +62,9 @@ check('receta localizada: hreflang usa las URL públicas históricas', () => {
     tr
   )
   assert.equal(a.canonical, 'https://manualdecocina.com/de/kolumbianisches-lechona-rezept')
-  assert.deepEqual(Object.keys(a.languages).sort(), ['de', 'es', 'ja'])
+  assert.deepEqual(Object.keys(a.languages).sort(), ['de', 'es', 'ja', 'x-default'])
   assert.equal(a.languages.es, 'https://manualdecocina.com/receta-de-lechona-colombiana')
+  assert.equal(a.languages['x-default'], a.languages.es, 'x-default apunta a la URL española real (raíz histórica)')
   assert.equal(a.languages.de, a.canonical)
 })
 
@@ -80,10 +81,17 @@ check('traducciones sin versión es: hreflang sin x-default', () => {
 check('home/listado: 7 idiomas, canonical propia', () => {
   const a: any = allLanguageAlternates('/ja/recetas', (l: string) => `/${l}/recetas`)
   assert.equal(a.canonical, 'https://manualdecocina.com/ja/recetas')
-  assert.deepEqual(Object.keys(a.languages).sort(), ['de', 'en', 'es', 'fr', 'it', 'ja', 'pt-BR'])
+  assert.deepEqual(Object.keys(a.languages).sort(), ['de', 'en', 'es', 'fr', 'it', 'ja', 'pt-BR', 'x-default'])
+  assert.equal(a.languages['x-default'], 'https://manualdecocina.com/es/recetas')
 })
 
 process.env.NEXT_PUBLIC_ALLOW_INDEXING = 'false'
+check('preview: siteRobots bloquea index/follow también para googlebot', () => {
+  const r: any = siteRobots()
+  assert.equal(r.index, false)
+  assert.equal(r.follow, false)
+  assert.deepEqual(r.googleBot, { index: false, follow: false })
+})
 const robots = (await import('@/app/robots')).default
 check('robots sin permiso: Disallow / y sin sitemap', () => {
   const r: any = robots()

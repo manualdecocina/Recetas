@@ -6,8 +6,8 @@ import SiteFooter from '@/components/md/SiteFooter'
 import { getPantryMatchData } from '@/lib/md-data'
 import { SUPPORTED_LANGUAGES, type RecipeLanguage } from '@/types/recipe'
 import { getMdCopy } from '@/lib/copy'
-import { withSiteName, SITE_NAME } from '@/lib/seo'
-import { absoluteUrl, publicUrl, isIndexingAllowed } from '@/lib/site'
+import { withSiteName, SITE_NAME, siteRobots } from '@/lib/seo'
+import { absoluteUrl, publicUrl } from '@/lib/site'
 
 function parseLang(value: string): RecipeLanguage | null {
   return (SUPPORTED_LANGUAGES as string[]).includes(value) ? value as RecipeLanguage : null
@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   return {
     title,
     description: t.pantryMetaDescription,
-    robots: { index: isIndexingAllowed(), follow: isIndexingAllowed() },
+    robots: siteRobots(),
     alternates: { canonical: publicUrl(PANTRY_PATH) },
     openGraph: {
       type: 'website',

@@ -41,7 +41,7 @@
       "category_slug": "postres",
       "difficulty": "Fácil",
       "course": "Postre",
-      "cuisine": "Postres fríos",
+      "cuisine": null,
       "prep_time_minutes": 25,
       "cook_time_minutes": 15,
       "total_time_minutes": 280,
@@ -261,7 +261,7 @@
       "category_slug": "postres",
       "difficulty": "Einfach",
       "course": "Dessert",
-      "cuisine": "Kalte Desserts",
+      "cuisine": null,
       "prep_time_minutes": 25,
       "cook_time_minutes": 15,
       "total_time_minutes": 280,
@@ -481,7 +481,7 @@
       "category_slug": "postres",
       "difficulty": "Easy",
       "course": "Dessert",
-      "cuisine": "Frozen desserts",
+      "cuisine": null,
       "prep_time_minutes": 25,
       "cook_time_minutes": 15,
       "total_time_minutes": 280,
@@ -701,7 +701,7 @@
       "category_slug": "postres",
       "difficulty": "Facile",
       "course": "Dessert",
-      "cuisine": "Desserts glacés",
+      "cuisine": null,
       "prep_time_minutes": 25,
       "cook_time_minutes": 15,
       "total_time_minutes": 280,
@@ -921,7 +921,7 @@
       "category_slug": "postres",
       "difficulty": "Facile",
       "course": "Dolce",
-      "cuisine": "Dolci freddi",
+      "cuisine": null,
       "prep_time_minutes": 25,
       "cook_time_minutes": 15,
       "total_time_minutes": 280,
@@ -1141,7 +1141,7 @@
       "category_slug": "postres",
       "difficulty": "簡単",
       "course": "デザート",
-      "cuisine": "冷たいデザート",
+      "cuisine": null,
       "prep_time_minutes": 25,
       "cook_time_minutes": 15,
       "total_time_minutes": 280,
@@ -1361,7 +1361,7 @@
       "category_slug": "postres",
       "difficulty": "Fácil",
       "course": "Sobremesa",
-      "cuisine": "Sobremesas geladas",
+      "cuisine": null,
       "prep_time_minutes": 25,
       "cook_time_minutes": 15,
       "total_time_minutes": 280,
@@ -1567,5 +1567,8 @@
         ]
       }
     }
+  ],
+  "taxonomy_changes": [
+    "2026-10-07: recipeCuisine normalizado (sin categorías de plato como cocina); aplicado en Supabase."
   ]
 }

@@ -5,7 +5,7 @@ import { IngredientDetailView } from '@/components/md/IngredientViews'
 import type { MdRecipeCardData } from '@/components/md/md-types'
 import { SUPPORTED_LANGUAGES, type RecipeLanguage } from '@/types/recipe'
 import { publicUrl, absoluteUrl } from '@/lib/site'
-import { withSiteName } from '@/lib/seo'
+import { withSiteName, siteRobots } from '@/lib/seo'
 
 function parseLang(value: string): RecipeLanguage | null {
   return (SUPPORTED_LANGUAGES as string[]).includes(value) ? value as RecipeLanguage : null
@@ -59,7 +59,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   return {
     title,
     description,
-    robots: { index: true, follow: true },
+    robots: siteRobots(),
     alternates: { canonical: url },
     openGraph: {
       type: 'website',

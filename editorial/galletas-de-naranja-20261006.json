@@ -41,7 +41,7 @@
       "category_slug": "postres",
       "difficulty": "Fácil",
       "course": "Postre",
-      "cuisine": "Repostería casera",
+      "cuisine": null,
       "prep_time_minutes": 20,
       "cook_time_minutes": 12,
       "total_time_minutes": 32,
@@ -347,7 +347,7 @@
       "category_slug": "postres",
       "difficulty": "Einfach",
       "course": "Dessert",
-      "cuisine": "Hausgebackenes",
+      "cuisine": null,
       "prep_time_minutes": 20,
       "cook_time_minutes": 12,
       "total_time_minutes": 32,
@@ -653,7 +653,7 @@
       "category_slug": "postres",
       "difficulty": "Easy",
       "course": "Dessert",
-      "cuisine": "Home baking",
+      "cuisine": null,
       "prep_time_minutes": 20,
       "cook_time_minutes": 12,
       "total_time_minutes": 32,
@@ -959,7 +959,7 @@
       "category_slug": "postres",
       "difficulty": "Facile",
       "course": "Dessert",
-      "cuisine": "Pâtisserie maison",
+      "cuisine": null,
       "prep_time_minutes": 20,
       "cook_time_minutes": 12,
       "total_time_minutes": 32,
@@ -1265,7 +1265,7 @@
       "category_slug": "postres",
       "difficulty": "Facile",
       "course": "Dolce",
-      "cuisine": "Pasticceria casalinga",
+      "cuisine": null,
       "prep_time_minutes": 20,
       "cook_time_minutes": 12,
       "total_time_minutes": 32,
@@ -1571,7 +1571,7 @@
       "category_slug": "postres",
       "difficulty": "簡単",
       "course": "デザート",
-      "cuisine": "手作りお菓子",
+      "cuisine": null,
       "prep_time_minutes": 20,
       "cook_time_minutes": 12,
       "total_time_minutes": 32,
@@ -1877,7 +1877,7 @@
       "category_slug": "postres",
       "difficulty": "Fácil",
       "course": "Sobremesa",
-      "cuisine": "Confeitaria caseira",
+      "cuisine": null,
       "prep_time_minutes": 20,
       "cook_time_minutes": 12,
       "total_time_minutes": 32,
@@ -2169,5 +2169,8 @@
         ]
       }
     }
+  ],
+  "taxonomy_changes": [
+    "2026-10-07: recipeCuisine normalizado (sin categorías de plato como cocina); aplicado en Supabase."
   ]
 }

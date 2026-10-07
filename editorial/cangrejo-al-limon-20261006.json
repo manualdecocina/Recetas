@@ -41,7 +41,7 @@
       "category_slug": "platos-principales",
       "difficulty": "Fácil",
       "course": "Plato principal",
-      "cuisine": "Mariscos",
+      "cuisine": null,
       "prep_time_minutes": 10,
       "cook_time_minutes": 10,
       "total_time_minutes": 20,
@@ -341,7 +341,7 @@
       "category_slug": "platos-principales",
       "difficulty": "Einfach",
       "course": "Hauptgericht",
-      "cuisine": "Meeresfrüchte",
+      "cuisine": null,
       "prep_time_minutes": 10,
       "cook_time_minutes": 10,
       "total_time_minutes": 20,
@@ -641,7 +641,7 @@
       "category_slug": "platos-principales",
       "difficulty": "Easy",
       "course": "Main course",
-      "cuisine": "Seafood",
+      "cuisine": null,
       "prep_time_minutes": 10,
       "cook_time_minutes": 10,
       "total_time_minutes": 20,
@@ -941,7 +941,7 @@
       "category_slug": "platos-principales",
       "difficulty": "Facile",
       "course": "Plat principal",
-      "cuisine": "Fruits de mer",
+      "cuisine": null,
       "prep_time_minutes": 10,
       "cook_time_minutes": 10,
       "total_time_minutes": 20,
@@ -1241,7 +1241,7 @@
       "category_slug": "platos-principales",
       "difficulty": "Facile",
       "course": "Secondo piatto",
-      "cuisine": "Pesce e frutti di mare",
+      "cuisine": null,
       "prep_time_minutes": 10,
       "cook_time_minutes": 10,
       "total_time_minutes": 20,
@@ -1541,7 +1541,7 @@
       "category_slug": "platos-principales",
       "difficulty": "簡単",
       "course": "主菜",
-      "cuisine": "シーフード",
+      "cuisine": null,
       "prep_time_minutes": 10,
       "cook_time_minutes": 10,
       "total_time_minutes": 20,
@@ -1841,7 +1841,7 @@
       "category_slug": "platos-principales",
       "difficulty": "Fácil",
       "course": "Prato principal",
-      "cuisine": "Frutos do mar",
+      "cuisine": null,
       "prep_time_minutes": 10,
       "cook_time_minutes": 10,
       "total_time_minutes": 20,
@@ -2127,5 +2127,8 @@
         ]
       }
     }
+  ],
+  "taxonomy_changes": [
+    "2026-10-07: recipeCuisine normalizado (sin categorías de plato como cocina); aplicado en Supabase."
   ]
 }

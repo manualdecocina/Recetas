@@ -7,6 +7,8 @@ import SiteHeader from './SiteHeader';
 import SiteFooter from './SiteFooter';
 import RecipeCard from './RecipeCard';
 import PantryBanner from './PantryBanner';
+import Breadcrumbs from './Breadcrumbs';
+import { countLabel } from '@/lib/plural';
 
 /** Both ingredient routes exist only in Spanish per the supplied contract. */
 export interface MdIngredientSummary {
@@ -44,7 +46,7 @@ export function IngredientsIndexView({ ingredients }: { ingredients: MdIngredien
                 )}
                 <span className="md-category-body">
                   <strong className="md-category-name">{item.name}</strong>
-                  <span className="md-category-count">{item.count} {t.ingredientRecipeCountSuffix}</span>
+                  <span className="md-category-count">{countLabel('es', item.count ?? 0, 'recipe')}</span>
                 </span>
               </Link>
             ))}
@@ -71,7 +73,13 @@ export function IngredientDetailView({ ingredient, description, recipes }: {
     <div className="md-site" lang="es">
       <SiteHeader lang="es" />
       <main className="md-container" id="md-main">
-        <header className="md-page-head"><p className="md-eyebrow">{t.recipesWithIngredient}</p><h1 className="md-display">{ingredient.name}</h1>
+        <header className="md-page-head">
+          <Breadcrumbs items={[
+            { name: 'Manual de Cocina', path: '/es' },
+            { name: t.navIngredients, path: '/es/ingredientes' },
+            { name: ingredient.name, path: `/es/ingredientes/${ingredient.slug}` },
+          ]} />
+          <p className="md-eyebrow">{t.recipesWithIngredient}</p><h1 className="md-display">{ingredient.name}</h1>
           {description && <p className="md-lead md-page-intro">{description}</p>}</header>
         {recipes.length > 0 ? (
           <div className="md-card-grid md-section">{recipes.map((recipe, index) => <RecipeCard key={recipe.id} recipe={recipe} priority={index === 0} />)}</div>

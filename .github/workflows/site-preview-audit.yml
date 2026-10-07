@@ -25,14 +25,30 @@ jobs:
           python3 - <<'PY'
           import json
           r = json.load(open('site-preview-audit.json'))
-          print('::notice title=summary::' + json.dumps(r['summary'], ensure_ascii=False))
-          order = {'broken_link': 0, 'broken_image': 0, 'page_not_200': 0, 'redirect_loop': 0, 'canonical': 1, 'html_lang': 1, 'hreflang_not_reciprocal': 1, 'not_found_status': 1}
-          kinds = {}
+          s = dict(r['summary'])
+          by_lang = s.pop('hreflang_by_language', {})
+          kinds = s.pop('errors_by_kind', {})
+          print('::notice title=summary::' + json.dumps(s, ensure_ascii=False))
+          print('::notice title=hreflang_by_language::' + json.dumps(by_lang, ensure_ascii=False))
+          print('::notice title=errors_by_kind::' + json.dumps(kinds, ensure_ascii=False))
+          samples = {}
+          for row in r['report']:
+              u = row['url']
+              for key, test in (('home_es', u.endswith('/es')), ('home_en', u.endswith('/en')), ('home_pt', u.endswith('/pt')),
+                                ('category', u.endswith('/es/categorias/pastas')), ('ingredient', '/es/ingredientes/' in u),
+                                ('legal', u.endswith('/es/aviso-legal')), ('recipe_es', u.endswith('/espagueti-con-salsa-de-tomate-y-albahaca'))):
+                  if test and key not in samples:
+                      samples[key] = {k: row.get(k) for k in ('url', 'status', 'lang', 'robots', 'googlebot', 'canonical', 'x_default', 'recipe_schema', 'recipe_valid', 'breadcrumb_schema', 'breadcrumb_valid', 'h1', 'inbound_links')}
+          for key, row in samples.items():
+              print('::notice title=sample-%s::%s' % (key, json.dumps(row, ensure_ascii=False)[:3800]))
+          es_recipe = next((row for row in r['report'] if row['url'].endswith('/espagueti-con-salsa-de-tomate-y-albahaca')), None)
+          if es_recipe:
+              fam = {row['url']: {k: row.get(k) for k in ('status', 'lang', 'recipe_valid', 'breadcrumb_valid', 'x_default')} for row in r['report'] if row['url'] in es_recipe['hreflang'].values()}
+              print('::notice title=sample-recipe-family::' + json.dumps({'hreflang': es_recipe['hreflang'], 'pages': fam}, ensure_ascii=False)[:3800])
+          groups = {}
           for e in r['errors']:
-              kinds.setdefault(e['kind'], []).append(e)
-          for kind, items in kinds.items():
+              groups.setdefault(e['kind'], []).append(e)
+          for kind, items in groups.items():
               lines = [json.dumps({'url': e['url'], 'detail': e['detail']}, ensure_ascii=False)[:300] for e in items[:25]]
               print('::warning title=%s (%d)::%s' % (kind, len(items), ' | '.join(lines)[:3800]))
-          for e in []:
-              print('::notice title=%s::%s' % (e['kind'], json.dumps(e, ensure_ascii=False)[:900]))
           PY

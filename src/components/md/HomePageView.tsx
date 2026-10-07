@@ -5,7 +5,7 @@ import type { MdLanguage, MdRecipeCardData } from './md-types';
 import type { MdCategorySummary } from './CategoryViews';
 import type { MdIngredientSummary } from './IngredientViews';
 import { getMdCopy } from '@/lib/copy';
-import { publicPathHref } from '@/lib/site';
+import { publicPathHref, languageTag } from '@/lib/site';
 import SiteHeader from './SiteHeader';
 import SiteFooter from './SiteFooter';
 import RecipeCard from './RecipeCard';
@@ -27,7 +27,7 @@ export interface MdHomeData {
 export default function HomePageView({ lang, data }: { lang: MdLanguage; data: MdHomeData }) {
   const t = getMdCopy(lang);
   return (
-    <div className="md-site" lang={lang}>
+    <div className="md-site" lang={languageTag(lang)}>
       <SiteHeader lang={lang} />
       <main id="md-main">
         <section className="md-home-hero" aria-labelledby="md-home-heading">

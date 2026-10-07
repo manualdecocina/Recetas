@@ -7,6 +7,8 @@ import SiteHeader from './SiteHeader';
 import SiteFooter from './SiteFooter';
 import RecipeCard from './RecipeCard';
 import { SUPPORTED_LANGUAGES } from '@/types/recipe';
+import { languageTag } from '@/lib/site';
+import Breadcrumbs from './Breadcrumbs';
 
 /** Alternates de una ruta con el mismo slug en los 7 idiomas (categorías: el slug es
  * neutro por idioma, solo cambia la etiqueta mostrada). Evita que el selector de idioma
@@ -53,7 +55,7 @@ export function CategoriesIndexView({ lang, categories }: {
   const t = getMdCopy(lang);
   const alternates = samePathAlternates((l) => `/${l}/categorias`);
   return (
-    <div className="md-site" lang={lang}>
+    <div className="md-site" lang={languageTag(lang)}>
       <SiteHeader lang={lang} alternates={alternates} />
       <main className="md-container" id="md-main">
         <header className="md-page-head"><h1 className="md-display">{t.categoryCatalog}</h1></header>
@@ -76,10 +78,16 @@ export function CategoryDetailView({ lang, category, recipes }: {
   const t = getMdCopy(lang);
   const alternates = samePathAlternates((l) => `/${l}/categorias/${category.slug}`);
   return (
-    <div className="md-site" lang={lang}>
+    <div className="md-site" lang={languageTag(lang)}>
       <SiteHeader lang={lang} alternates={alternates} />
       <main className="md-container" id="md-main">
-        <header className="md-page-head"><p className="md-eyebrow">{t.recipesInCategory}</p><h1 className="md-display">{category.label}</h1></header>
+        <header className="md-page-head">
+          <Breadcrumbs items={[
+            { name: 'Manual de Cocina', path: `/${lang}` },
+            { name: t.navCategories, path: `/${lang}/categorias` },
+            { name: category.label, path: `/${lang}/categorias/${category.slug}` },
+          ]} />
+          <p className="md-eyebrow">{t.recipesInCategory}</p><h1 className="md-display">{category.label}</h1></header>
         {recipes.length > 0 ? (
           <div className="md-card-grid md-section">{recipes.map((recipe, index) => <RecipeCard key={recipe.id} recipe={recipe} priority={index === 0} />)}</div>
         ) : (

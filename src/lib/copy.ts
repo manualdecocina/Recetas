@@ -23,9 +23,9 @@ const es = {
   browseIngredients: "Empieza por un ingrediente",
   editorialTitle: "Recetas para volver a cocinar",
   editorialBody: "Manual de Cocina reúne recetas de distintas cocinas para consultar, preparar y compartir, con instrucciones claras y una navegación sencilla.",
-  editorialPoint1: "Instrucciones claras, paso a paso, con fotos reales del proceso.",
+  editorialPoint1: "Instrucciones claras, paso a paso, con una imagen ilustrativa de cada paso.",
   editorialPoint2: "Notas de conservación, sustituciones y preguntas frecuentes en cada receta.",
-  editorialPoint3: "Sin datos inventados: fotos, valoraciones y fuentes citadas son reales.",
+  editorialPoint3: "Sin datos inventados: valoraciones solo de lectores reales y fuentes nutricionales citadas.",
   editorialPoint4: "Guarda tus recetas favoritas y compártelas fácilmente.",
   editorialAuthorRole: "Chef · responsable editorial",
   editorialAuthorBlurb: "Más de 15 años de experiencia en cocina profesional en Latinoamérica, Estados Unidos y España.",
@@ -121,7 +121,7 @@ const es = {
   finish: "Terminar",
   step: "Paso",
   of: "de",
-  photoOf: "Fotografía de",
+  photoOf: "Imagen de",
   about: "Quiénes somos",
   contact: "Contacto",
   editorialPolicy: "Política editorial",
@@ -166,9 +166,9 @@ const en = {
   browseIngredients: "Start with an ingredient",
   editorialTitle: "Recipes worth cooking again",
   editorialBody: "Manual de Cocina brings together recipes from different cuisines with clear instructions and easy navigation.",
-  editorialPoint1: "Clear, step-by-step instructions with real process photos.",
+  editorialPoint1: "Clear, step-by-step instructions with an illustrative image for each step.",
   editorialPoint2: "Storage tips, substitutions and FAQs on every recipe.",
-  editorialPoint3: "No invented data: photos, ratings and cited sources are real.",
+  editorialPoint3: "No invented data: ratings come only from real readers and nutrition sources are cited.",
   editorialPoint4: "Save your favorite recipes and share them easily.",
   editorialAuthorRole: "Chef · Editorial lead",
   editorialAuthorBlurb: "Over 15 years of professional cooking experience in Latin America, the United States and Spain.",
@@ -264,7 +264,7 @@ const en = {
   finish: "Finish",
   step: "Step",
   of: "of",
-  photoOf: "Photo of",
+  photoOf: "Image of",
   about: "About us",
   contact: "Contact",
   editorialPolicy: "Editorial policy",
@@ -309,9 +309,9 @@ const de = {
   browseIngredients: "Mit einer Zutat beginnen", // REVISAR
   editorialTitle: "Rezepte, die man gerne wieder kocht", // REVISAR
   editorialBody: "Manual de Cocina vereint Rezepte verschiedener Küchen mit klaren Anleitungen und einfacher Navigation.", // REVISAR
-  editorialPoint1: "Klare Schritt-für-Schritt-Anleitungen mit echten Fotos.", // REVISAR
+  editorialPoint1: "Klare Schritt-für-Schritt-Anleitungen mit einem illustrativen Bild zu jedem Schritt.",
   editorialPoint2: "Aufbewahrungstipps, Alternativen und FAQ bei jedem Rezept.", // REVISAR
-  editorialPoint3: "Keine erfundenen Daten: Fotos, Bewertungen und Quellen sind echt.", // REVISAR
+  editorialPoint3: "Keine erfundenen Daten: Bewertungen nur von echten Lesern, Nährwertquellen werden genannt.",
   editorialPoint4: "Speichere deine Lieblingsrezepte und teile sie einfach.", // REVISAR
   editorialAuthorRole: "Koch · Redaktionsleiter", // REVISAR
   editorialAuthorBlurb: "Über 15 Jahre Berufserfahrung in der professionellen Küche in Lateinamerika, den USA und Spanien.", // REVISAR
@@ -407,7 +407,7 @@ const de = {
   finish: "Fertig", // REVISAR
   step: "Schritt", // REVISAR
   of: "von", // REVISAR
-  photoOf: "Foto von", // REVISAR
+  photoOf: "Bild von",
   about: "Über uns", // REVISAR
   contact: "Kontakt", // REVISAR
   editorialPolicy: "Redaktionelle Richtlinien", // REVISAR
@@ -452,9 +452,9 @@ const it = {
   browseIngredients: "Parti da un ingrediente", // REVISAR
   editorialTitle: "Ricette da cucinare ancora", // REVISAR
   editorialBody: "Manual de Cocina raccoglie ricette di cucine diverse con istruzioni chiare e una navigazione semplice.", // REVISAR
-  editorialPoint1: "Istruzioni chiare, passo dopo passo, con foto reali.", // REVISAR
+  editorialPoint1: "Istruzioni chiare, passo dopo passo, con un'immagine illustrativa per ogni passaggio.",
   editorialPoint2: "Consigli di conservazione, sostituzioni e FAQ in ogni ricetta.", // REVISAR
-  editorialPoint3: "Nessun dato inventato: foto, valutazioni e fonti sono reali.", // REVISAR
+  editorialPoint3: "Nessun dato inventato: valutazioni solo da lettori reali e fonti nutrizionali citate.",
   editorialPoint4: "Salva le tue ricette preferite e condividile facilmente.", // REVISAR
   editorialAuthorRole: "Chef · responsabile editoriale", // REVISAR
   editorialAuthorBlurb: "Oltre 15 anni di esperienza in cucina professionale in America Latina, Stati Uniti e Spagna.", // REVISAR
@@ -550,7 +550,7 @@ const it = {
   finish: "Termina", // REVISAR
   step: "Passaggio", // REVISAR
   of: "di", // REVISAR
-  photoOf: "Foto di", // REVISAR
+  photoOf: "Immagine di",
   about: "Chi siamo", // REVISAR
   contact: "Contatti", // REVISAR
   editorialPolicy: "Politica editoriale", // REVISAR
@@ -595,9 +595,9 @@ const fr = {
   browseIngredients: "Partir d’un ingrédient", // REVISAR
   editorialTitle: "Des recettes à refaire", // REVISAR
   editorialBody: "Manual de Cocina rassemble des recettes de différentes cuisines, avec des instructions claires et une navigation simple.", // REVISAR
-  editorialPoint1: "Instructions claires, étape par étape, avec de vraies photos.", // REVISAR
+  editorialPoint1: "Instructions claires, étape par étape, avec une image illustrative pour chaque étape.",
   editorialPoint2: "Conseils de conservation, substitutions et FAQ pour chaque recette.", // REVISAR
-  editorialPoint3: "Aucune donnée inventée : photos, avis et sources sont réels.", // REVISAR
+  editorialPoint3: "Aucune donnée inventée : avis uniquement de vrais lecteurs et sources nutritionnelles citées.",
   editorialPoint4: "Enregistrez vos recettes préférées et partagez-les facilement.", // REVISAR
   editorialAuthorRole: "Chef · responsable éditorial", // REVISAR
   editorialAuthorBlurb: "Plus de 15 ans d'expérience en cuisine professionnelle en Amérique latine, aux États-Unis et en Espagne.", // REVISAR
@@ -693,7 +693,7 @@ const fr = {
   finish: "Terminer", // REVISAR
   step: "Étape", // REVISAR
   of: "sur", // REVISAR
-  photoOf: "Photo de", // REVISAR
+  photoOf: "Image de",
   about: "Qui sommes-nous", // REVISAR
   contact: "Contact", // REVISAR
   editorialPolicy: "Politique éditoriale", // REVISAR
@@ -738,9 +738,9 @@ const ja = {
   browseIngredients: "食材から探す", // REVISAR
   editorialTitle: "何度も作りたくなるレシピ", // REVISAR
   editorialBody: "Manual de Cocina は、さまざまな国のレシピをわかりやすい手順と使いやすい構成で紹介します。", // REVISAR
-  editorialPoint1: "実際の写真付きで、わかりやすい手順を紹介。", // REVISAR
+  editorialPoint1: "各手順にイメージ画像を添えて、わかりやすく紹介。",
   editorialPoint2: "保存方法、代用品、よくある質問を各レシピに掲載。", // REVISAR
-  editorialPoint3: "架空のデータはなし。写真、評価、出典はすべて本物。", // REVISAR
+  editorialPoint3: "架空のデータはなし。評価は実際の読者によるもの、栄養情報は出典を明記。",
   editorialPoint4: "お気に入りのレシピを保存して、簡単に共有できます。", // REVISAR
   editorialAuthorRole: "シェフ・編集責任者", // REVISAR
   editorialAuthorBlurb: "ラテンアメリカ、アメリカ、スペインで15年以上のプロの料理経験。", // REVISAR
@@ -836,7 +836,7 @@ const ja = {
   finish: "終了", // REVISAR
   step: "手順", // REVISAR
   of: "／", // REVISAR
-  photoOf: "写真：", // REVISAR
+  photoOf: "画像：",
   about: "私たちについて", // REVISAR
   contact: "お問い合わせ", // REVISAR
   editorialPolicy: "編集方針", // REVISAR
@@ -882,9 +882,9 @@ const pt = {
   browseIngredients: "Comece por um ingrediente",
   editorialTitle: "Receitas para voltar a cozinhar",
   editorialBody: "O Manual de Cocina reúne receitas de diferentes cozinhas para consultar, preparar e compartilhar, com instruções claras e navegação simples.",
-  editorialPoint1: "Instruções claras, passo a passo, com fotos reais do processo.",
+  editorialPoint1: "Instruções claras, passo a passo, com uma imagem ilustrativa de cada passo.",
   editorialPoint2: "Dicas de conservação, substituições e perguntas frequentes em cada receita.",
-  editorialPoint3: "Sem dados inventados: fotos, avaliações e fontes citadas são reais.",
+  editorialPoint3: "Sem dados inventados: avaliações só de leitores reais e fontes nutricionais citadas.",
   editorialPoint4: "Salve suas receitas favoritas e compartilhe facilmente.",
   editorialAuthorRole: "Chef · responsável editorial",
   editorialAuthorBlurb: "Mais de 15 anos de experiência em cozinha profissional na América Latina, Estados Unidos e Espanha.",
@@ -980,7 +980,7 @@ const pt = {
   finish: "Concluir",
   step: "Passo",
   of: "de",
-  photoOf: "Foto de",
+  photoOf: "Imagem de",
   about: "Quem somos",
   contact: "Contato",
   editorialPolicy: "Política editorial",

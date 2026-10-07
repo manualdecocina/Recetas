@@ -41,7 +41,7 @@
       "category_slug": "platos-principales",
       "difficulty": "Fácil",
       "course": "Plato principal",
-      "cuisine": "Pescados",
+      "cuisine": null,
       "prep_time_minutes": 10,
       "cook_time_minutes": 10,
       "total_time_minutes": 20,
@@ -321,7 +321,7 @@
       "category_slug": "platos-principales",
       "difficulty": "Einfach",
       "course": "Hauptgericht",
-      "cuisine": "Fisch",
+      "cuisine": null,
       "prep_time_minutes": 10,
       "cook_time_minutes": 10,
       "total_time_minutes": 20,
@@ -601,7 +601,7 @@
       "category_slug": "platos-principales",
       "difficulty": "Easy",
       "course": "Main course",
-      "cuisine": "Fish",
+      "cuisine": null,
       "prep_time_minutes": 10,
       "cook_time_minutes": 10,
       "total_time_minutes": 20,
@@ -881,7 +881,7 @@
       "category_slug": "platos-principales",
       "difficulty": "Facile",
       "course": "Plat principal",
-      "cuisine": "Poissons",
+      "cuisine": null,
       "prep_time_minutes": 10,
       "cook_time_minutes": 10,
       "total_time_minutes": 20,
@@ -1161,7 +1161,7 @@
       "category_slug": "platos-principales",
       "difficulty": "Facile",
       "course": "Secondo piatto",
-      "cuisine": "Pesce",
+      "cuisine": null,
       "prep_time_minutes": 10,
       "cook_time_minutes": 10,
       "total_time_minutes": 20,
@@ -1441,7 +1441,7 @@
       "category_slug": "platos-principales",
       "difficulty": "簡単",
       "course": "主菜",
-      "cuisine": "魚料理",
+      "cuisine": null,
       "prep_time_minutes": 10,
       "cook_time_minutes": 10,
       "total_time_minutes": 20,
@@ -1721,7 +1721,7 @@
       "category_slug": "platos-principales",
       "difficulty": "Fácil",
       "course": "Prato principal",
-      "cuisine": "Peixes",
+      "cuisine": null,
       "prep_time_minutes": 10,
       "cook_time_minutes": 10,
       "total_time_minutes": 20,
@@ -1987,5 +1987,8 @@
         ]
       }
     }
+  ],
+  "taxonomy_changes": [
+    "2026-10-07: recipeCuisine normalizado (sin categorías de plato como cocina); aplicado en Supabase."
   ]
 }
