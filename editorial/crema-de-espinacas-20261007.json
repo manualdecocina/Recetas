@@ -1,0 +1,2208 @@
+{
+  "scope": "crema-de-espinacas only; preview.manualdecocina.com",
+  "state": "ES_AND_6_TRANSLATIONS_CLOSED_IMAGES_FINAL_AWAITING_DB_PUBLISH",
+  "historical_path": "/crema-de-espinacas",
+  "provenance": "Reconstrucción nueva (2026-10-07): pasos, cantidades y tiempos redactados desde cero (4 raciones, 12 ingredientes, 8 pasos, 15 min de preparación, 25 min de cocción, 40 min en total). De la fila legada de Supabase (WordPress) solo se conserva la identidad técnica: recipe_group_id, public_path y source_url; no se leyó ni reutiliza ningún texto, foto ni traducción antigua. Los 8 pasos congelados se entregaron antes de generar las imágenes; aquí solo se concretan cantidades (1 cebolla, 2 dientes de ajo, 1 papa de 200 g, 400 g de espinacas, 30 g de mantequilla, 800 ml de caldo, 100 ml de crema de leche, 30 g de picatostes) y tiempos (5, 15, 3 y 2 min). Nutrición USDA SR Legacy: los FDC ids de espinacas (168462), papa (170026), cebolla (170000), ajo (169230), mantequilla con sal (173430), caldo de verduras (171583), crema de leche (170859) y pan blanco (172686) y sus valores por 100 g se completaron de memoria, a contrastar con FDC. Proxy declarado: los picatostes se calculan como pan blanco sin el aceite de tostado; la sal, la pimienta y la nuez moscada finales no se cuentan, y el sodio procede del caldo y la mantequilla. Categoría canónica sopas-y-cremas. Imágenes: ZIP de ChatGPT, 12 WEBP en las dimensiones del contrato; coinciden con los 8 pasos salvo que en la imagen del paso 3 ya aparecen hojas de espinaca junto a la papa. Existe una fila legada publicada en content_pages para la ruta ES (2a120f3e-27ca-45b0-91c0-268dfe0eb554) que se retira (published=false, public_path=null) antes de publicar y se elimina después.",
+  "localization_plan": {
+    "category_slug": "sopas-y-cremas",
+    "category_labels": {
+      "es": "Sopas y cremas",
+      "de": "Suppen und Cremesuppen",
+      "en": "Soups & creams",
+      "fr": "Soupes et crèmes",
+      "it": "Zuppe e creme",
+      "ja": "スープ・ポタージュ",
+      "pt": "Sopas e cremes"
+    },
+    "proposed_public_paths": {
+      "es": "/crema-de-espinacas",
+      "de": "/de/spinatsuppe-mit-sahne",
+      "en": "/en/creamy-spinach-soup",
+      "fr": "/fr/veloute-d-epinards",
+      "it": "/it/crema-di-spinaci",
+      "ja": "/ja/ほうれん草のポタージュ",
+      "pt": "/pt/creme-de-espinafre"
+    },
+    "path_convention": "Sin barra final; public_path almacenado es la fuente de verdad. Ruta ES histórica conservada.",
+    "hreflang_note": "/pt usa hreflang pt-BR"
+  },
+  "records": [
+    {
+      "id": "6e0f2d51-49a6-46b5-acd9-7660cc533223",
+      "recipe_group_id": "1b400f69-0ae4-4e49-8de5-462e3da63e71",
+      "language": "es",
+      "slug": "crema-de-espinacas",
+      "public_path": "/crema-de-espinacas",
+      "source_url": null,
+      "title": "Crema de espinacas",
+      "excerpt": "Crema de espinacas casera, suave y de color verde intenso, con papa, cebolla, caldo y un toque de nuez moscada. Para 4 personas, lista en 40 minutos.",
+      "summary": "La crema de espinacas se hace sofriendo cebolla y ajo en mantequilla, cociendo la papa en caldo, añadiendo las espinacas al final para que conserven el color y triturando todo hasta lograr una textura lisa. La papa le da cuerpo y la crema de leche la deja sedosa.\n\nLa papa cuece 15 minutos y las espinacas solo 3. Después se tritura y se calienta con crema de leche y nuez moscada. Se sirve con un hilo de crema y picatostes. Rinde 4 porciones.",
+      "category": "Sopas y cremas",
+      "category_slug": "sopas-y-cremas",
+      "difficulty": "Fácil",
+      "course": "Entrante",
+      "cuisine": "Internacional",
+      "prep_time_minutes": 15,
+      "cook_time_minutes": 25,
+      "total_time_minutes": 40,
+      "servings": 4,
+      "keywords": [
+        "crema de espinacas",
+        "receta de crema de espinacas",
+        "cómo hacer crema de espinacas",
+        "crema de espinacas casera",
+        "sopa de espinacas",
+        "crema de espinacas con papa",
+        "crema de espinacas fácil"
+      ],
+      "ingredients": [
+        {
+          "name": "espinacas frescas",
+          "amount": "400",
+          "unit": "g",
+          "group": "Para la crema"
+        },
+        {
+          "name": "papa mediana",
+          "amount": "200",
+          "unit": "g",
+          "group": "Para la crema"
+        },
+        {
+          "name": "cebolla",
+          "amount": "1",
+          "unit": "",
+          "group": "Para la crema"
+        },
+        {
+          "name": "dientes de ajo",
+          "amount": "2",
+          "unit": "",
+          "group": "Para la crema"
+        },
+        {
+          "name": "mantequilla",
+          "amount": "30",
+          "unit": "g",
+          "group": "Para la crema"
+        },
+        {
+          "name": "caldo de verduras caliente",
+          "amount": "800",
+          "unit": "ml",
+          "group": "Para la crema"
+        },
+        {
+          "name": "crema de leche",
+          "amount": "100",
+          "unit": "ml",
+          "group": "Para la crema"
+        },
+        {
+          "name": "nuez moscada",
+          "amount": "1",
+          "unit": "pizca",
+          "group": "Para la crema"
+        },
+        {
+          "name": "sal",
+          "amount": "1",
+          "unit": "pizca",
+          "group": "Para la crema"
+        },
+        {
+          "name": "pimienta negra molida",
+          "amount": "1",
+          "unit": "pizca",
+          "group": "Para la crema"
+        },
+        {
+          "name": "picatostes",
+          "amount": "30",
+          "unit": "g",
+          "group": "Para servir"
+        },
+        {
+          "name": "crema de leche, para decorar",
+          "amount": "1",
+          "unit": "cucharada",
+          "group": "Para servir"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepara los ingredientes",
+          "content": "Pica 1 cebolla y 2 dientes de ajo. Pela 1 papa mediana (200 g) y córtala en cubos de 2 cm. Lava 400 g de espinacas frescas y escúrrelas.",
+          "image_url": "/recetas/crema-de-espinacas/paso-01.webp",
+          "image_alt": "Crema de espinacas: Prepara los ingredientes"
+        },
+        {
+          "title": "Sofríe la cebolla y el ajo",
+          "content": "Derrite 30 g de mantequilla en una olla a fuego medio y sofríe la cebolla y el ajo 5 minutos, hasta que estén blandos.",
+          "image_url": "/recetas/crema-de-espinacas/paso-02.webp",
+          "image_alt": "Crema de espinacas: Sofríe la cebolla y el ajo"
+        },
+        {
+          "title": "Cuece la papa",
+          "content": "Añade la papa y 800 ml de caldo de verduras caliente, y cuece a fuego medio 15 minutos, hasta que la papa esté tierna.",
+          "image_url": "/recetas/crema-de-espinacas/paso-03.webp",
+          "image_alt": "Crema de espinacas: Cuece la papa"
+        },
+        {
+          "title": "Añade las espinacas",
+          "content": "Añade las espinacas y cuece 3 minutos, hasta que se ablanden y bajen de volumen.",
+          "image_url": "/recetas/crema-de-espinacas/paso-04.webp",
+          "image_alt": "Crema de espinacas: Añade las espinacas"
+        },
+        {
+          "title": "Tritura",
+          "content": "Tritura con la batidora de mano hasta lograr una crema lisa.",
+          "image_url": "/recetas/crema-de-espinacas/paso-05.webp",
+          "image_alt": "Crema de espinacas: Tritura"
+        },
+        {
+          "title": "Añade la crema y la nuez moscada",
+          "content": "Añade 100 ml de crema de leche y 1 pizca de nuez moscada, y calienta 2 minutos sin que hierva.",
+          "image_url": "/recetas/crema-de-espinacas/paso-06.webp",
+          "image_alt": "Crema de espinacas: Añade la crema y la nuez moscada"
+        },
+        {
+          "title": "Rectifica la sazón",
+          "content": "Prueba y rectifica con sal y pimienta; el caldo ya lleva sal, así que añade poca.",
+          "image_url": "/recetas/crema-de-espinacas/paso-07.webp",
+          "image_alt": "Crema de espinacas: Rectifica la sazón"
+        },
+        {
+          "title": "Sirve",
+          "content": "Sirve en platos hondos con un hilo de crema de leche y 30 g de picatostes por encima.",
+          "image_url": "/recetas/crema-de-espinacas/paso-08.webp",
+          "image_alt": "Crema de espinacas: Sirve"
+        }
+      ],
+      "image_url": "/recetas/crema-de-espinacas/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/crema-de-espinacas/portada.webp",
+          "alt": "Crema de espinacas"
+        }
+      ],
+      "notes": "Añade las espinacas al final para que conserven su color verde intenso y su sabor fresco; si se cuecen demasiado, la crema queda grisácea. La papa espesa la crema sin necesidad de harina. Si queda muy espesa, añade un poco de caldo caliente al triturar. Para una versión sin lácteos, sustituye la crema de leche por leche de coco y la mantequilla por aceite de oliva. Se conserva en la nevera hasta 3 días y se congela hasta 3 meses.",
+      "nutrition": {
+        "calories": 260,
+        "protein_g": 6.3,
+        "carbs_g": 23,
+        "fat_g": 17.2,
+        "sodium_mg": 765,
+        "serving_size": "1 porción (1/4 de la receta)",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Suma de nutrientes por 100 g multiplicados por los pesos de los ingredientes y divididos entre 4 porciones. Se usan 400 g de espinacas, 200 g de papa, 150 g de cebolla, 6 g de ajo, 30 g de mantequilla, 800 g de caldo de verduras, 115 g de crema de leche (100 ml en la crema y 15 ml para decorar) y 30 g de picatostes (calculados como pan blanco). La sal, la pimienta y la nuez moscada no se cuentan.",
+        "note": "Estimación por porción. Los picatostes se calculan como pan blanco, sin el aceite con que se tuestan. El sodio incluye la sal del caldo y de la mantequilla, y sube si añades sal al final.",
+        "inputs": [
+          {
+            "fdc_id": "168462",
+            "description": "Spinach, raw (400 g de espinacas frescas)",
+            "grams": 400,
+            "per100": {
+              "calories": 23,
+              "protein_g": 2.86,
+              "carbs_g": 3.63,
+              "fat_g": 0.39,
+              "saturated_fat_g": 0.063,
+              "fiber_g": 2.2,
+              "sodium_mg": 79
+            }
+          },
+          {
+            "fdc_id": "170026",
+            "description": "Potatoes, flesh and skin, raw (1 papa mediana ≈ 200 g)",
+            "grams": 200,
+            "per100": {
+              "calories": 77,
+              "protein_g": 2.05,
+              "carbs_g": 17.49,
+              "fat_g": 0.09,
+              "saturated_fat_g": 0.026,
+              "fiber_g": 2.1,
+              "sodium_mg": 6
+            }
+          },
+          {
+            "fdc_id": "170000",
+            "description": "Onions, raw (1 cebolla ≈ 150 g)",
+            "grams": 150,
+            "per100": {
+              "calories": 40,
+              "protein_g": 1.1,
+              "carbs_g": 9.34,
+              "fat_g": 0.1,
+              "saturated_fat_g": 0.042,
+              "fiber_g": 1.7,
+              "sodium_mg": 4
+            }
+          },
+          {
+            "fdc_id": "169230",
+            "description": "Garlic, raw (2 dientes ≈ 6 g)",
+            "grams": 6,
+            "per100": {
+              "calories": 149,
+              "protein_g": 6.36,
+              "carbs_g": 33.06,
+              "fat_g": 0.5,
+              "saturated_fat_g": 0.089,
+              "fiber_g": 2.1,
+              "sodium_mg": 17
+            }
+          },
+          {
+            "fdc_id": "173430",
+            "description": "Butter, salted (30 g)",
+            "grams": 30,
+            "per100": {
+              "calories": 717,
+              "protein_g": 0.85,
+              "carbs_g": 0.06,
+              "fat_g": 81.11,
+              "saturated_fat_g": 51.368,
+              "fiber_g": 0,
+              "sodium_mg": 643
+            }
+          },
+          {
+            "fdc_id": "171583",
+            "description": "Soup, vegetable broth, ready to serve (800 ml ≈ 800 g)",
+            "grams": 800,
+            "per100": {
+              "calories": 5,
+              "protein_g": 0.2,
+              "carbs_g": 0.9,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 294
+            }
+          },
+          {
+            "fdc_id": "170859",
+            "description": "Cream, fluid, heavy whipping (100 ml en la crema + 15 ml para decorar ≈ 115 g)",
+            "grams": 115,
+            "per100": {
+              "calories": 340,
+              "protein_g": 2.84,
+              "carbs_g": 2.74,
+              "fat_g": 36.08,
+              "saturated_fat_g": 22.76,
+              "fiber_g": 0,
+              "sodium_mg": 27
+            }
+          },
+          {
+            "fdc_id": "172686",
+            "description": "Bread, white, commercially prepared (30 g de picatostes, como pan blanco)",
+            "grams": 30,
+            "per100": {
+              "calories": 266,
+              "protein_g": 8.85,
+              "carbs_g": 49.42,
+              "fat_g": 3.33,
+              "saturated_fat_g": 0.759,
+              "fiber_g": 2.7,
+              "sodium_mg": 491
+            }
+          }
+        ]
+      },
+      "seo": {
+        "title": "Crema de espinacas casera, suave y fácil | Manual de Cocina",
+        "description": "Crema de espinacas casera con papa, cebolla y caldo, suave y de color verde intenso. Para 4 personas, lista en 40 minutos. Receta paso a paso.",
+        "image_variants": [
+          "/recetas/crema-de-espinacas/portada-1x1.webp",
+          "/recetas/crema-de-espinacas/portada-4x3.webp",
+          "/recetas/crema-de-espinacas/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "¿Cómo evitar que la crema de espinacas pierda el color?",
+            "a": "Añade las espinacas al final, solo 3 minutos, y tritura enseguida. Si se cuecen demasiado, la crema queda de un verde apagado."
+          },
+          {
+            "q": "¿Se puede hacer con espinacas congeladas?",
+            "a": "Sí. Usa unos 300 g de espinacas congeladas, descongeladas y bien escurridas, y añádelas igual que las frescas."
+          },
+          {
+            "q": "¿Cuánto dura la crema de espinacas?",
+            "a": "Hasta 3 días en la nevera en un recipiente cerrado, y hasta 3 meses en el congelador."
+          }
+        ]
+      }
+    },
+    {
+      "id": "2d57d66a-598d-5ac3-a016-b5ce7f326be8",
+      "recipe_group_id": "1b400f69-0ae4-4e49-8de5-462e3da63e71",
+      "language": "de",
+      "slug": "spinatsuppe-mit-sahne",
+      "public_path": "/de/spinatsuppe-mit-sahne",
+      "source_url": null,
+      "title": "Spinatsuppe mit Sahne",
+      "excerpt": "Cremige Spinatsuppe mit Kartoffel, Zwiebel, Gemüsebrühe und einer Prise Muskat, fein püriert. Für 4 Personen, fertig in 40 Minuten.",
+      "summary": "Für die Spinatsuppe werden Zwiebel und Knoblauch in Butter angedünstet, die Kartoffel in Brühe gegart, der Spinat erst zum Schluss zugegeben, damit er seine Farbe behält, und alles fein püriert. Die Kartoffel gibt Körper, die Sahne macht die Suppe seidig.\n\nDie Kartoffel gart 15 Minuten, der Spinat nur 3. Dann wird püriert und mit Sahne und Muskat erwärmt. Serviert wird mit einem Strahl Sahne und Croûtons. Ergibt 4 Portionen.",
+      "category": "Suppen und Cremesuppen",
+      "category_slug": "sopas-y-cremas",
+      "difficulty": "Einfach",
+      "course": "Vorspeise",
+      "cuisine": "International",
+      "prep_time_minutes": 15,
+      "cook_time_minutes": 25,
+      "total_time_minutes": 40,
+      "servings": 4,
+      "keywords": [
+        "Spinatsuppe",
+        "Spinatsuppe Rezept",
+        "Spinatsuppe selber machen",
+        "cremige Spinatsuppe",
+        "Spinatsuppe mit Kartoffel",
+        "Spinatsuppe einfach",
+        "crema de espinacas"
+      ],
+      "ingredients": [
+        {
+          "name": "frischer Spinat",
+          "amount": "400",
+          "unit": "g",
+          "group": "Für die Suppe"
+        },
+        {
+          "name": "mittelgroße Kartoffel",
+          "amount": "200",
+          "unit": "g",
+          "group": "Für die Suppe"
+        },
+        {
+          "name": "Zwiebel",
+          "amount": "1",
+          "unit": "",
+          "group": "Für die Suppe"
+        },
+        {
+          "name": "Knoblauchzehen",
+          "amount": "2",
+          "unit": "",
+          "group": "Für die Suppe"
+        },
+        {
+          "name": "Butter",
+          "amount": "30",
+          "unit": "g",
+          "group": "Für die Suppe"
+        },
+        {
+          "name": "heiße Gemüsebrühe",
+          "amount": "800",
+          "unit": "ml",
+          "group": "Für die Suppe"
+        },
+        {
+          "name": "Sahne",
+          "amount": "100",
+          "unit": "ml",
+          "group": "Für die Suppe"
+        },
+        {
+          "name": "Muskatnuss",
+          "amount": "1",
+          "unit": "Prise",
+          "group": "Für die Suppe"
+        },
+        {
+          "name": "Salz",
+          "amount": "1",
+          "unit": "Prise",
+          "group": "Für die Suppe"
+        },
+        {
+          "name": "schwarzer Pfeffer, gemahlen",
+          "amount": "1",
+          "unit": "Prise",
+          "group": "Für die Suppe"
+        },
+        {
+          "name": "Croûtons",
+          "amount": "30",
+          "unit": "g",
+          "group": "Zum Servieren"
+        },
+        {
+          "name": "Sahne, zum Garnieren",
+          "amount": "1",
+          "unit": "Esslöffel",
+          "group": "Zum Servieren"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Zutaten vorbereiten",
+          "content": "1 Zwiebel und 2 Knoblauchzehen hacken. 1 mittelgroße Kartoffel (200 g) schälen und in 2-cm-Würfel schneiden. 400 g frischen Spinat waschen und abtropfen lassen.",
+          "image_url": "/recetas/crema-de-espinacas/paso-01.webp",
+          "image_alt": "Spinatsuppe mit Sahne: Zutaten vorbereiten"
+        },
+        {
+          "title": "Zwiebel und Knoblauch andünsten",
+          "content": "30 g Butter in einem Topf bei mittlerer Hitze schmelzen und Zwiebel und Knoblauch 5 Minuten andünsten, bis sie weich sind.",
+          "image_url": "/recetas/crema-de-espinacas/paso-02.webp",
+          "image_alt": "Spinatsuppe mit Sahne: Zwiebel und Knoblauch andünsten"
+        },
+        {
+          "title": "Kartoffel garen",
+          "content": "Kartoffel und 800 ml heiße Gemüsebrühe zugeben und bei mittlerer Hitze 15 Minuten garen, bis die Kartoffel weich ist.",
+          "image_url": "/recetas/crema-de-espinacas/paso-03.webp",
+          "image_alt": "Spinatsuppe mit Sahne: Kartoffel garen"
+        },
+        {
+          "title": "Spinat zugeben",
+          "content": "Den Spinat zugeben und 3 Minuten garen, bis er zusammenfällt.",
+          "image_url": "/recetas/crema-de-espinacas/paso-04.webp",
+          "image_alt": "Spinatsuppe mit Sahne: Spinat zugeben"
+        },
+        {
+          "title": "Pürieren",
+          "content": "Mit dem Stabmixer zu einer glatten Suppe pürieren.",
+          "image_url": "/recetas/crema-de-espinacas/paso-05.webp",
+          "image_alt": "Spinatsuppe mit Sahne: Pürieren"
+        },
+        {
+          "title": "Sahne und Muskat zugeben",
+          "content": "100 ml Sahne und 1 Prise Muskat zugeben und 2 Minuten erwärmen, ohne zu kochen.",
+          "image_url": "/recetas/crema-de-espinacas/paso-06.webp",
+          "image_alt": "Spinatsuppe mit Sahne: Sahne und Muskat zugeben"
+        },
+        {
+          "title": "Abschmecken",
+          "content": "Abschmecken und mit Salz und Pfeffer nachwürzen; die Brühe ist schon gesalzen, daher nur wenig Salz verwenden.",
+          "image_url": "/recetas/crema-de-espinacas/paso-07.webp",
+          "image_alt": "Spinatsuppe mit Sahne: Abschmecken"
+        },
+        {
+          "title": "Servieren",
+          "content": "In tiefen Tellern mit einem Strahl Sahne und 30 g Croûtons obenauf servieren.",
+          "image_url": "/recetas/crema-de-espinacas/paso-08.webp",
+          "image_alt": "Spinatsuppe mit Sahne: Servieren"
+        }
+      ],
+      "image_url": "/recetas/crema-de-espinacas/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/crema-de-espinacas/portada.webp",
+          "alt": "Spinatsuppe mit Sahne"
+        }
+      ],
+      "notes": "Den Spinat erst am Schluss zugeben, damit er seine kräftig grüne Farbe und den frischen Geschmack behält; wird er zu lange gekocht, wird die Suppe graugrün. Die Kartoffel bindet die Suppe ohne Mehl. Ist sie zu dick, beim Pürieren etwas heiße Brühe zugeben. Für eine milchfreie Variante die Sahne durch Kokosmilch und die Butter durch Olivenöl ersetzen. Im Kühlschrank bis zu 3 Tage haltbar, einfrieren bis zu 3 Monate.",
+      "nutrition": {
+        "calories": 260,
+        "protein_g": 6.3,
+        "carbs_g": 23,
+        "fat_g": 17.2,
+        "sodium_mg": 765,
+        "serving_size": "1 Portion (1/4 des Rezepts)",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Nährwerte je 100 g, multipliziert mit dem Gewicht der Zutaten und durch 4 Portionen geteilt. Verwendet werden 400 g Spinat, 200 g Kartoffel, 150 g Zwiebel, 6 g Knoblauch, 30 g Butter, 800 g Gemüsebrühe, 115 g Sahne (100 ml in der Suppe und 15 ml zum Garnieren) und 30 g Croûtons (als Weißbrot berechnet). Salz, Pfeffer und Muskat werden nicht gezählt.",
+        "note": "Schätzung pro Portion. Die Croûtons werden als Weißbrot ohne das Öl zum Rösten berechnet. Das Natrium enthält das Salz aus Brühe und Butter und steigt, wenn am Ende Salz zugegeben wird.",
+        "inputs": [
+          {
+            "fdc_id": "168462",
+            "description": "Spinach, raw (400 g de espinacas frescas)",
+            "grams": 400,
+            "per100": {
+              "calories": 23,
+              "protein_g": 2.86,
+              "carbs_g": 3.63,
+              "fat_g": 0.39,
+              "saturated_fat_g": 0.063,
+              "fiber_g": 2.2,
+              "sodium_mg": 79
+            }
+          },
+          {
+            "fdc_id": "170026",
+            "description": "Potatoes, flesh and skin, raw (1 papa mediana ≈ 200 g)",
+            "grams": 200,
+            "per100": {
+              "calories": 77,
+              "protein_g": 2.05,
+              "carbs_g": 17.49,
+              "fat_g": 0.09,
+              "saturated_fat_g": 0.026,
+              "fiber_g": 2.1,
+              "sodium_mg": 6
+            }
+          },
+          {
+            "fdc_id": "170000",
+            "description": "Onions, raw (1 cebolla ≈ 150 g)",
+            "grams": 150,
+            "per100": {
+              "calories": 40,
+              "protein_g": 1.1,
+              "carbs_g": 9.34,
+              "fat_g": 0.1,
+              "saturated_fat_g": 0.042,
+              "fiber_g": 1.7,
+              "sodium_mg": 4
+            }
+          },
+          {
+            "fdc_id": "169230",
+            "description": "Garlic, raw (2 dientes ≈ 6 g)",
+            "grams": 6,
+            "per100": {
+              "calories": 149,
+              "protein_g": 6.36,
+              "carbs_g": 33.06,
+              "fat_g": 0.5,
+              "saturated_fat_g": 0.089,
+              "fiber_g": 2.1,
+              "sodium_mg": 17
+            }
+          },
+          {
+            "fdc_id": "173430",
+            "description": "Butter, salted (30 g)",
+            "grams": 30,
+            "per100": {
+              "calories": 717,
+              "protein_g": 0.85,
+              "carbs_g": 0.06,
+              "fat_g": 81.11,
+              "saturated_fat_g": 51.368,
+              "fiber_g": 0,
+              "sodium_mg": 643
+            }
+          },
+          {
+            "fdc_id": "171583",
+            "description": "Soup, vegetable broth, ready to serve (800 ml ≈ 800 g)",
+            "grams": 800,
+            "per100": {
+              "calories": 5,
+              "protein_g": 0.2,
+              "carbs_g": 0.9,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 294
+            }
+          },
+          {
+            "fdc_id": "170859",
+            "description": "Cream, fluid, heavy whipping (100 ml en la crema + 15 ml para decorar ≈ 115 g)",
+            "grams": 115,
+            "per100": {
+              "calories": 340,
+              "protein_g": 2.84,
+              "carbs_g": 2.74,
+              "fat_g": 36.08,
+              "saturated_fat_g": 22.76,
+              "fiber_g": 0,
+              "sodium_mg": 27
+            }
+          },
+          {
+            "fdc_id": "172686",
+            "description": "Bread, white, commercially prepared (30 g de picatostes, como pan blanco)",
+            "grams": 30,
+            "per100": {
+              "calories": 266,
+              "protein_g": 8.85,
+              "carbs_g": 49.42,
+              "fat_g": 3.33,
+              "saturated_fat_g": 0.759,
+              "fiber_g": 2.7,
+              "sodium_mg": 491
+            }
+          }
+        ]
+      },
+      "seo": {
+        "title": "Spinatsuppe mit Sahne, cremig und einfach | Manual de Cocina",
+        "description": "Cremige Spinatsuppe mit Kartoffel, Zwiebel und Gemüsebrühe, fein püriert und leuchtend grün. Für 4 Personen, fertig in 40 Minuten. Rezept Schritt für Schritt.",
+        "image_variants": [
+          "/recetas/crema-de-espinacas/portada-1x1.webp",
+          "/recetas/crema-de-espinacas/portada-4x3.webp",
+          "/recetas/crema-de-espinacas/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Wie behält die Spinatsuppe ihre grüne Farbe?",
+            "a": "Den Spinat erst am Schluss zugeben, nur 3 Minuten garen und sofort pürieren. Wird er zu lange gekocht, wird die Suppe stumpf grün."
+          },
+          {
+            "q": "Geht das auch mit Tiefkühlspinat?",
+            "a": "Ja. Etwa 300 g aufgetauten, gut ausgedrückten Tiefkühlspinat verwenden und wie frischen Spinat zugeben."
+          },
+          {
+            "q": "Wie lange hält sich Spinatsuppe?",
+            "a": "Bis zu 3 Tage im Kühlschrank in einem geschlossenen Behälter und bis zu 3 Monate im Gefrierfach."
+          }
+        ]
+      }
+    },
+    {
+      "id": "55814006-3205-5011-9fa4-70903abd9564",
+      "recipe_group_id": "1b400f69-0ae4-4e49-8de5-462e3da63e71",
+      "language": "en",
+      "slug": "creamy-spinach-soup",
+      "public_path": "/en/creamy-spinach-soup",
+      "source_url": null,
+      "title": "Creamy Spinach Soup",
+      "excerpt": "Creamy homemade spinach soup with potato, onion, vegetable stock and a pinch of nutmeg, blended smooth. Serves 4, ready in 40 minutes.",
+      "summary": "Spinach soup is made by softening onion and garlic in butter, cooking potato in stock, adding the spinach at the end so it keeps its colour, and blending everything smooth. The potato gives body and the cream makes it silky.\n\nThe potato cooks for 15 minutes and the spinach for just 3. Then it is blended and warmed with cream and nutmeg. Serve with a swirl of cream and croutons. It serves 4.",
+      "category": "Soups & creams",
+      "category_slug": "sopas-y-cremas",
+      "difficulty": "Easy",
+      "course": "Starter",
+      "cuisine": "International",
+      "prep_time_minutes": 15,
+      "cook_time_minutes": 25,
+      "total_time_minutes": 40,
+      "servings": 4,
+      "keywords": [
+        "spinach soup",
+        "creamy spinach soup recipe",
+        "how to make spinach soup",
+        "homemade spinach soup",
+        "spinach and potato soup",
+        "easy spinach soup",
+        "crema de espinacas"
+      ],
+      "ingredients": [
+        {
+          "name": "fresh spinach",
+          "amount": "400",
+          "unit": "g",
+          "group": "For the soup"
+        },
+        {
+          "name": "medium potato",
+          "amount": "200",
+          "unit": "g",
+          "group": "For the soup"
+        },
+        {
+          "name": "onion",
+          "amount": "1",
+          "unit": "",
+          "group": "For the soup"
+        },
+        {
+          "name": "garlic cloves",
+          "amount": "2",
+          "unit": "",
+          "group": "For the soup"
+        },
+        {
+          "name": "butter",
+          "amount": "30",
+          "unit": "g",
+          "group": "For the soup"
+        },
+        {
+          "name": "hot vegetable stock",
+          "amount": "800",
+          "unit": "ml",
+          "group": "For the soup"
+        },
+        {
+          "name": "heavy cream",
+          "amount": "100",
+          "unit": "ml",
+          "group": "For the soup"
+        },
+        {
+          "name": "nutmeg",
+          "amount": "1",
+          "unit": "pinch",
+          "group": "For the soup"
+        },
+        {
+          "name": "salt",
+          "amount": "1",
+          "unit": "pinch",
+          "group": "For the soup"
+        },
+        {
+          "name": "ground black pepper",
+          "amount": "1",
+          "unit": "pinch",
+          "group": "For the soup"
+        },
+        {
+          "name": "croutons",
+          "amount": "30",
+          "unit": "g",
+          "group": "To serve"
+        },
+        {
+          "name": "heavy cream, to garnish",
+          "amount": "1",
+          "unit": "tablespoon",
+          "group": "To serve"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepare the ingredients",
+          "content": "Chop 1 onion and 2 garlic cloves. Peel 1 medium potato (200 g) and cut it into 2 cm cubes. Wash 400 g fresh spinach and drain it.",
+          "image_url": "/recetas/crema-de-espinacas/paso-01.webp",
+          "image_alt": "Creamy Spinach Soup: Prepare the ingredients"
+        },
+        {
+          "title": "Soften the onion and garlic",
+          "content": "Melt 30 g butter in a pot over medium heat and cook the onion and garlic for 5 minutes, until soft.",
+          "image_url": "/recetas/crema-de-espinacas/paso-02.webp",
+          "image_alt": "Creamy Spinach Soup: Soften the onion and garlic"
+        },
+        {
+          "title": "Cook the potato",
+          "content": "Add the potato and 800 ml hot vegetable stock and simmer over medium heat for 15 minutes, until the potato is tender.",
+          "image_url": "/recetas/crema-de-espinacas/paso-03.webp",
+          "image_alt": "Creamy Spinach Soup: Cook the potato"
+        },
+        {
+          "title": "Add the spinach",
+          "content": "Add the spinach and cook for 3 minutes, until wilted.",
+          "image_url": "/recetas/crema-de-espinacas/paso-04.webp",
+          "image_alt": "Creamy Spinach Soup: Add the spinach"
+        },
+        {
+          "title": "Blend",
+          "content": "Blend with an immersion blender until smooth.",
+          "image_url": "/recetas/crema-de-espinacas/paso-05.webp",
+          "image_alt": "Creamy Spinach Soup: Blend"
+        },
+        {
+          "title": "Add the cream and nutmeg",
+          "content": "Stir in 100 ml heavy cream and 1 pinch nutmeg and warm for 2 minutes without boiling.",
+          "image_url": "/recetas/crema-de-espinacas/paso-06.webp",
+          "image_alt": "Creamy Spinach Soup: Add the cream and nutmeg"
+        },
+        {
+          "title": "Adjust the seasoning",
+          "content": "Taste and adjust with salt and pepper; the stock is already salted, so add only a little.",
+          "image_url": "/recetas/crema-de-espinacas/paso-07.webp",
+          "image_alt": "Creamy Spinach Soup: Adjust the seasoning"
+        },
+        {
+          "title": "Serve",
+          "content": "Serve in shallow bowls with a swirl of cream and 30 g croutons on top.",
+          "image_url": "/recetas/crema-de-espinacas/paso-08.webp",
+          "image_alt": "Creamy Spinach Soup: Serve"
+        }
+      ],
+      "image_url": "/recetas/crema-de-espinacas/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/crema-de-espinacas/portada.webp",
+          "alt": "Creamy Spinach Soup"
+        }
+      ],
+      "notes": "Add the spinach at the end so it keeps its bright green colour and fresh flavour; if it cooks too long, the soup turns greyish. The potato thickens the soup without flour. If it is too thick, add a little hot stock when blending. For a dairy-free version, replace the cream with coconut milk and the butter with olive oil. It keeps in the fridge for up to 3 days and freezes for up to 3 months.",
+      "nutrition": {
+        "calories": 260,
+        "protein_g": 6.3,
+        "carbs_g": 23,
+        "fat_g": 17.2,
+        "sodium_mg": 765,
+        "serving_size": "1 serving (1/4 of the recipe)",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Nutrients per 100 g multiplied by the weights of the ingredients and divided by 4 servings. It uses 400 g spinach, 200 g potato, 150 g onion, 6 g garlic, 30 g butter, 800 g vegetable stock, 115 g heavy cream (100 ml in the soup and 15 ml to garnish) and 30 g croutons (calculated as white bread). Salt, pepper and nutmeg are not counted.",
+        "note": "Estimate per serving. The croutons are calculated as white bread, without the oil used to toast them. Sodium includes the salt in the stock and the butter and rises if you add salt at the end.",
+        "inputs": [
+          {
+            "fdc_id": "168462",
+            "description": "Spinach, raw (400 g de espinacas frescas)",
+            "grams": 400,
+            "per100": {
+              "calories": 23,
+              "protein_g": 2.86,
+              "carbs_g": 3.63,
+              "fat_g": 0.39,
+              "saturated_fat_g": 0.063,
+              "fiber_g": 2.2,
+              "sodium_mg": 79
+            }
+          },
+          {
+            "fdc_id": "170026",
+            "description": "Potatoes, flesh and skin, raw (1 papa mediana ≈ 200 g)",
+            "grams": 200,
+            "per100": {
+              "calories": 77,
+              "protein_g": 2.05,
+              "carbs_g": 17.49,
+              "fat_g": 0.09,
+              "saturated_fat_g": 0.026,
+              "fiber_g": 2.1,
+              "sodium_mg": 6
+            }
+          },
+          {
+            "fdc_id": "170000",
+            "description": "Onions, raw (1 cebolla ≈ 150 g)",
+            "grams": 150,
+            "per100": {
+              "calories": 40,
+              "protein_g": 1.1,
+              "carbs_g": 9.34,
+              "fat_g": 0.1,
+              "saturated_fat_g": 0.042,
+              "fiber_g": 1.7,
+              "sodium_mg": 4
+            }
+          },
+          {
+            "fdc_id": "169230",
+            "description": "Garlic, raw (2 dientes ≈ 6 g)",
+            "grams": 6,
+            "per100": {
+              "calories": 149,
+              "protein_g": 6.36,
+              "carbs_g": 33.06,
+              "fat_g": 0.5,
+              "saturated_fat_g": 0.089,
+              "fiber_g": 2.1,
+              "sodium_mg": 17
+            }
+          },
+          {
+            "fdc_id": "173430",
+            "description": "Butter, salted (30 g)",
+            "grams": 30,
+            "per100": {
+              "calories": 717,
+              "protein_g": 0.85,
+              "carbs_g": 0.06,
+              "fat_g": 81.11,
+              "saturated_fat_g": 51.368,
+              "fiber_g": 0,
+              "sodium_mg": 643
+            }
+          },
+          {
+            "fdc_id": "171583",
+            "description": "Soup, vegetable broth, ready to serve (800 ml ≈ 800 g)",
+            "grams": 800,
+            "per100": {
+              "calories": 5,
+              "protein_g": 0.2,
+              "carbs_g": 0.9,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 294
+            }
+          },
+          {
+            "fdc_id": "170859",
+            "description": "Cream, fluid, heavy whipping (100 ml en la crema + 15 ml para decorar ≈ 115 g)",
+            "grams": 115,
+            "per100": {
+              "calories": 340,
+              "protein_g": 2.84,
+              "carbs_g": 2.74,
+              "fat_g": 36.08,
+              "saturated_fat_g": 22.76,
+              "fiber_g": 0,
+              "sodium_mg": 27
+            }
+          },
+          {
+            "fdc_id": "172686",
+            "description": "Bread, white, commercially prepared (30 g de picatostes, como pan blanco)",
+            "grams": 30,
+            "per100": {
+              "calories": 266,
+              "protein_g": 8.85,
+              "carbs_g": 49.42,
+              "fat_g": 3.33,
+              "saturated_fat_g": 0.759,
+              "fiber_g": 2.7,
+              "sodium_mg": 491
+            }
+          }
+        ]
+      },
+      "seo": {
+        "title": "Creamy Spinach Soup, Easy and Smooth | Manual de Cocina",
+        "description": "Creamy spinach soup with potato, onion and vegetable stock, blended smooth and bright green. Serves 4, ready in 40 minutes. Step-by-step recipe.",
+        "image_variants": [
+          "/recetas/crema-de-espinacas/portada-1x1.webp",
+          "/recetas/crema-de-espinacas/portada-4x3.webp",
+          "/recetas/crema-de-espinacas/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "How do you keep spinach soup bright green?",
+            "a": "Add the spinach at the end, cook it for only 3 minutes and blend right away. If it cooks too long, the soup turns dull green."
+          },
+          {
+            "q": "Can you use frozen spinach?",
+            "a": "Yes. Use about 300 g thawed, well-squeezed frozen spinach and add it the same way as fresh."
+          },
+          {
+            "q": "How long does spinach soup keep?",
+            "a": "Up to 3 days in the fridge in a closed container and up to 3 months in the freezer."
+          }
+        ]
+      }
+    },
+    {
+      "id": "ef371b2b-5c09-5a80-995a-23c35acf9686",
+      "recipe_group_id": "1b400f69-0ae4-4e49-8de5-462e3da63e71",
+      "language": "fr",
+      "slug": "veloute-d-epinards",
+      "public_path": "/fr/veloute-d-epinards",
+      "source_url": null,
+      "title": "Velouté d'épinards",
+      "excerpt": "Velouté d'épinards maison, onctueux, avec pomme de terre, oignon, bouillon de légumes et une pointe de muscade. Pour 4 personnes, prêt en 40 minutes.",
+      "summary": "Le velouté d'épinards se prépare en faisant revenir l'oignon et l'ail dans le beurre, en cuisant la pomme de terre dans le bouillon, en ajoutant les épinards à la fin pour qu'ils gardent leur couleur, puis en mixant le tout. La pomme de terre donne du corps et la crème rend le velouté soyeux.\n\nLa pomme de terre cuit 15 minutes et les épinards seulement 3. On mixe, puis on réchauffe avec la crème et la muscade. Servi avec un filet de crème et des croûtons. Pour 4 portions.",
+      "category": "Soupes et crèmes",
+      "category_slug": "sopas-y-cremas",
+      "difficulty": "Facile",
+      "course": "Entrée",
+      "cuisine": "Internationale",
+      "prep_time_minutes": 15,
+      "cook_time_minutes": 25,
+      "total_time_minutes": 40,
+      "servings": 4,
+      "keywords": [
+        "velouté d'épinards",
+        "recette velouté d'épinards",
+        "comment faire un velouté d'épinards",
+        "velouté d'épinards maison",
+        "soupe d'épinards",
+        "velouté d'épinards facile",
+        "crema de espinacas"
+      ],
+      "ingredients": [
+        {
+          "name": "épinards frais",
+          "amount": "400",
+          "unit": "g",
+          "group": "Pour le velouté"
+        },
+        {
+          "name": "pomme de terre moyenne",
+          "amount": "200",
+          "unit": "g",
+          "group": "Pour le velouté"
+        },
+        {
+          "name": "oignon",
+          "amount": "1",
+          "unit": "",
+          "group": "Pour le velouté"
+        },
+        {
+          "name": "gousses d'ail",
+          "amount": "2",
+          "unit": "",
+          "group": "Pour le velouté"
+        },
+        {
+          "name": "beurre",
+          "amount": "30",
+          "unit": "g",
+          "group": "Pour le velouté"
+        },
+        {
+          "name": "bouillon de légumes chaud",
+          "amount": "800",
+          "unit": "ml",
+          "group": "Pour le velouté"
+        },
+        {
+          "name": "crème liquide",
+          "amount": "100",
+          "unit": "ml",
+          "group": "Pour le velouté"
+        },
+        {
+          "name": "noix de muscade",
+          "amount": "1",
+          "unit": "pincée",
+          "group": "Pour le velouté"
+        },
+        {
+          "name": "sel",
+          "amount": "1",
+          "unit": "pincée",
+          "group": "Pour le velouté"
+        },
+        {
+          "name": "poivre noir moulu",
+          "amount": "1",
+          "unit": "pincée",
+          "group": "Pour le velouté"
+        },
+        {
+          "name": "croûtons",
+          "amount": "30",
+          "unit": "g",
+          "group": "Pour servir"
+        },
+        {
+          "name": "crème liquide, pour décorer",
+          "amount": "1",
+          "unit": "cuillère à soupe",
+          "group": "Pour servir"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Préparer les ingrédients",
+          "content": "Hacher 1 oignon et 2 gousses d'ail. Éplucher 1 pomme de terre moyenne (200 g) et la couper en cubes de 2 cm. Laver 400 g d'épinards frais et les égoutter.",
+          "image_url": "/recetas/crema-de-espinacas/paso-01.webp",
+          "image_alt": "Velouté d'épinards: Préparer les ingrédients"
+        },
+        {
+          "title": "Faire revenir l'oignon et l'ail",
+          "content": "Faire fondre 30 g de beurre dans une marmite à feu moyen et faire revenir l'oignon et l'ail 5 minutes, jusqu'à ce qu'ils soient tendres.",
+          "image_url": "/recetas/crema-de-espinacas/paso-02.webp",
+          "image_alt": "Velouté d'épinards: Faire revenir l'oignon et l'ail"
+        },
+        {
+          "title": "Cuire la pomme de terre",
+          "content": "Ajouter la pomme de terre et 800 ml de bouillon de légumes chaud et cuire à feu moyen 15 minutes, jusqu'à ce que la pomme de terre soit tendre.",
+          "image_url": "/recetas/crema-de-espinacas/paso-03.webp",
+          "image_alt": "Velouté d'épinards: Cuire la pomme de terre"
+        },
+        {
+          "title": "Ajouter les épinards",
+          "content": "Ajouter les épinards et cuire 3 minutes, jusqu'à ce qu'ils tombent.",
+          "image_url": "/recetas/crema-de-espinacas/paso-04.webp",
+          "image_alt": "Velouté d'épinards: Ajouter les épinards"
+        },
+        {
+          "title": "Mixer",
+          "content": "Mixer avec le mixeur plongeant jusqu'à obtenir un velouté lisse.",
+          "image_url": "/recetas/crema-de-espinacas/paso-05.webp",
+          "image_alt": "Velouté d'épinards: Mixer"
+        },
+        {
+          "title": "Ajouter la crème et la muscade",
+          "content": "Ajouter 100 ml de crème et 1 pincée de muscade et réchauffer 2 minutes sans laisser bouillir.",
+          "image_url": "/recetas/crema-de-espinacas/paso-06.webp",
+          "image_alt": "Velouté d'épinards: Ajouter la crème et la muscade"
+        },
+        {
+          "title": "Rectifier l'assaisonnement",
+          "content": "Goûter et rectifier avec du sel et du poivre ; le bouillon est déjà salé, n'en ajouter que très peu.",
+          "image_url": "/recetas/crema-de-espinacas/paso-07.webp",
+          "image_alt": "Velouté d'épinards: Rectifier l'assaisonnement"
+        },
+        {
+          "title": "Servir",
+          "content": "Servir dans des assiettes creuses avec un filet de crème et 30 g de croûtons par-dessus.",
+          "image_url": "/recetas/crema-de-espinacas/paso-08.webp",
+          "image_alt": "Velouté d'épinards: Servir"
+        }
+      ],
+      "image_url": "/recetas/crema-de-espinacas/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/crema-de-espinacas/portada.webp",
+          "alt": "Velouté d'épinards"
+        }
+      ],
+      "notes": "Ajoutez les épinards à la fin pour qu'ils gardent leur belle couleur verte et leur goût frais ; trop cuits, le velouté devient grisâtre. La pomme de terre épaissit sans farine. S'il est trop épais, ajoutez un peu de bouillon chaud en mixant. Pour une version sans produits laitiers, remplacez la crème par du lait de coco et le beurre par de l'huile d'olive. Se conserve au réfrigérateur jusqu'à 3 jours et se congèle jusqu'à 3 mois.",
+      "nutrition": {
+        "calories": 260,
+        "protein_g": 6.3,
+        "carbs_g": 23,
+        "fat_g": 17.2,
+        "sodium_mg": 765,
+        "serving_size": "1 portion (1/4 de la recette)",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Somme des nutriments pour 100 g multipliés par le poids des ingrédients et divisés par 4 portions. On utilise 400 g d'épinards, 200 g de pomme de terre, 150 g d'oignon, 6 g d'ail, 30 g de beurre, 800 g de bouillon de légumes, 115 g de crème (100 ml dans le velouté et 15 ml pour décorer) et 30 g de croûtons (calculés comme du pain blanc). Le sel, le poivre et la muscade ne sont pas comptés.",
+        "note": "Estimation par portion. Les croûtons sont calculés comme du pain blanc, sans l'huile de grillage. Le sodium inclut le sel du bouillon et du beurre et augmente si l'on sale à la fin.",
+        "inputs": [
+          {
+            "fdc_id": "168462",
+            "description": "Spinach, raw (400 g de espinacas frescas)",
+            "grams": 400,
+            "per100": {
+              "calories": 23,
+              "protein_g": 2.86,
+              "carbs_g": 3.63,
+              "fat_g": 0.39,
+              "saturated_fat_g": 0.063,
+              "fiber_g": 2.2,
+              "sodium_mg": 79
+            }
+          },
+          {
+            "fdc_id": "170026",
+            "description": "Potatoes, flesh and skin, raw (1 papa mediana ≈ 200 g)",
+            "grams": 200,
+            "per100": {
+              "calories": 77,
+              "protein_g": 2.05,
+              "carbs_g": 17.49,
+              "fat_g": 0.09,
+              "saturated_fat_g": 0.026,
+              "fiber_g": 2.1,
+              "sodium_mg": 6
+            }
+          },
+          {
+            "fdc_id": "170000",
+            "description": "Onions, raw (1 cebolla ≈ 150 g)",
+            "grams": 150,
+            "per100": {
+              "calories": 40,
+              "protein_g": 1.1,
+              "carbs_g": 9.34,
+              "fat_g": 0.1,
+              "saturated_fat_g": 0.042,
+              "fiber_g": 1.7,
+              "sodium_mg": 4
+            }
+          },
+          {
+            "fdc_id": "169230",
+            "description": "Garlic, raw (2 dientes ≈ 6 g)",
+            "grams": 6,
+            "per100": {
+              "calories": 149,
+              "protein_g": 6.36,
+              "carbs_g": 33.06,
+              "fat_g": 0.5,
+              "saturated_fat_g": 0.089,
+              "fiber_g": 2.1,
+              "sodium_mg": 17
+            }
+          },
+          {
+            "fdc_id": "173430",
+            "description": "Butter, salted (30 g)",
+            "grams": 30,
+            "per100": {
+              "calories": 717,
+              "protein_g": 0.85,
+              "carbs_g": 0.06,
+              "fat_g": 81.11,
+              "saturated_fat_g": 51.368,
+              "fiber_g": 0,
+              "sodium_mg": 643
+            }
+          },
+          {
+            "fdc_id": "171583",
+            "description": "Soup, vegetable broth, ready to serve (800 ml ≈ 800 g)",
+            "grams": 800,
+            "per100": {
+              "calories": 5,
+              "protein_g": 0.2,
+              "carbs_g": 0.9,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 294
+            }
+          },
+          {
+            "fdc_id": "170859",
+            "description": "Cream, fluid, heavy whipping (100 ml en la crema + 15 ml para decorar ≈ 115 g)",
+            "grams": 115,
+            "per100": {
+              "calories": 340,
+              "protein_g": 2.84,
+              "carbs_g": 2.74,
+              "fat_g": 36.08,
+              "saturated_fat_g": 22.76,
+              "fiber_g": 0,
+              "sodium_mg": 27
+            }
+          },
+          {
+            "fdc_id": "172686",
+            "description": "Bread, white, commercially prepared (30 g de picatostes, como pan blanco)",
+            "grams": 30,
+            "per100": {
+              "calories": 266,
+              "protein_g": 8.85,
+              "carbs_g": 49.42,
+              "fat_g": 3.33,
+              "saturated_fat_g": 0.759,
+              "fiber_g": 2.7,
+              "sodium_mg": 491
+            }
+          }
+        ]
+      },
+      "seo": {
+        "title": "Velouté d'épinards maison, onctueux et facile | Manual de Cocina",
+        "description": "Velouté d'épinards maison avec pomme de terre, oignon et bouillon de légumes, lisse et bien vert. Pour 4 personnes, prêt en 40 minutes. Recette pas à pas.",
+        "image_variants": [
+          "/recetas/crema-de-espinacas/portada-1x1.webp",
+          "/recetas/crema-de-espinacas/portada-4x3.webp",
+          "/recetas/crema-de-espinacas/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Comment garder la couleur verte du velouté d'épinards ?",
+            "a": "Ajouter les épinards à la fin, les cuire seulement 3 minutes et mixer aussitôt. Trop cuits, ils donnent un velouté d'un vert terne."
+          },
+          {
+            "q": "Peut-on utiliser des épinards surgelés ?",
+            "a": "Oui. Utiliser environ 300 g d'épinards surgelés décongelés et bien pressés, et les ajouter comme des épinards frais."
+          },
+          {
+            "q": "Combien de temps se conserve le velouté d'épinards ?",
+            "a": "Jusqu'à 3 jours au réfrigérateur dans un récipient fermé et jusqu'à 3 mois au congélateur."
+          }
+        ]
+      }
+    },
+    {
+      "id": "5a50437b-8a06-5ae5-9c10-128f7d3e1f49",
+      "recipe_group_id": "1b400f69-0ae4-4e49-8de5-462e3da63e71",
+      "language": "it",
+      "slug": "crema-di-spinaci",
+      "public_path": "/it/crema-di-spinaci",
+      "source_url": null,
+      "title": "Crema di spinaci",
+      "excerpt": "Crema di spinaci fatta in casa, vellutata, con patata, cipolla, brodo vegetale e un pizzico di noce moscata. Per 4 persone, pronta in 40 minuti.",
+      "summary": "La crema di spinaci si prepara facendo appassire cipolla e aglio nel burro, cuocendo la patata nel brodo, aggiungendo gli spinaci alla fine perché mantengano il colore e frullando tutto fino a ottenere una consistenza liscia. La patata dà corpo e la panna rende la crema setosa.\n\nLa patata cuoce 15 minuti e gli spinaci solo 3. Si frulla e si scalda con panna e noce moscata. Si serve con un filo di panna e crostini. Per 4 porzioni.",
+      "category": "Zuppe e creme",
+      "category_slug": "sopas-y-cremas",
+      "difficulty": "Facile",
+      "course": "Antipasto",
+      "cuisine": "Internazionale",
+      "prep_time_minutes": 15,
+      "cook_time_minutes": 25,
+      "total_time_minutes": 40,
+      "servings": 4,
+      "keywords": [
+        "crema di spinaci",
+        "ricetta crema di spinaci",
+        "come fare la crema di spinaci",
+        "crema di spinaci fatta in casa",
+        "zuppa di spinaci",
+        "crema di spinaci facile",
+        "crema de espinacas"
+      ],
+      "ingredients": [
+        {
+          "name": "spinaci freschi",
+          "amount": "400",
+          "unit": "g",
+          "group": "Per la crema"
+        },
+        {
+          "name": "patata media",
+          "amount": "200",
+          "unit": "g",
+          "group": "Per la crema"
+        },
+        {
+          "name": "cipolla",
+          "amount": "1",
+          "unit": "",
+          "group": "Per la crema"
+        },
+        {
+          "name": "spicchi d'aglio",
+          "amount": "2",
+          "unit": "",
+          "group": "Per la crema"
+        },
+        {
+          "name": "burro",
+          "amount": "30",
+          "unit": "g",
+          "group": "Per la crema"
+        },
+        {
+          "name": "brodo vegetale caldo",
+          "amount": "800",
+          "unit": "ml",
+          "group": "Per la crema"
+        },
+        {
+          "name": "panna fresca",
+          "amount": "100",
+          "unit": "ml",
+          "group": "Per la crema"
+        },
+        {
+          "name": "noce moscata",
+          "amount": "1",
+          "unit": "pizzico",
+          "group": "Per la crema"
+        },
+        {
+          "name": "sale",
+          "amount": "1",
+          "unit": "pizzico",
+          "group": "Per la crema"
+        },
+        {
+          "name": "pepe nero macinato",
+          "amount": "1",
+          "unit": "pizzico",
+          "group": "Per la crema"
+        },
+        {
+          "name": "crostini",
+          "amount": "30",
+          "unit": "g",
+          "group": "Per servire"
+        },
+        {
+          "name": "panna fresca, per decorare",
+          "amount": "1",
+          "unit": "cucchiaio",
+          "group": "Per servire"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepara gli ingredienti",
+          "content": "Trita 1 cipolla e 2 spicchi d'aglio. Sbuccia 1 patata media (200 g) e tagliala a cubetti di 2 cm. Lava 400 g di spinaci freschi e scolali.",
+          "image_url": "/recetas/crema-de-espinacas/paso-01.webp",
+          "image_alt": "Crema di spinaci: Prepara gli ingredienti"
+        },
+        {
+          "title": "Fai appassire cipolla e aglio",
+          "content": "Sciogli 30 g di burro in una pentola a fuoco medio e fai appassire la cipolla e l'aglio per 5 minuti, finché sono morbidi.",
+          "image_url": "/recetas/crema-de-espinacas/paso-02.webp",
+          "image_alt": "Crema di spinaci: Fai appassire cipolla e aglio"
+        },
+        {
+          "title": "Cuoci la patata",
+          "content": "Aggiungi la patata e 800 ml di brodo vegetale caldo e cuoci a fuoco medio per 15 minuti, finché la patata è tenera.",
+          "image_url": "/recetas/crema-de-espinacas/paso-03.webp",
+          "image_alt": "Crema di spinaci: Cuoci la patata"
+        },
+        {
+          "title": "Aggiungi gli spinaci",
+          "content": "Aggiungi gli spinaci e cuoci per 3 minuti, finché appassiscono.",
+          "image_url": "/recetas/crema-de-espinacas/paso-04.webp",
+          "image_alt": "Crema di spinaci: Aggiungi gli spinaci"
+        },
+        {
+          "title": "Frulla",
+          "content": "Frulla con il frullatore a immersione fino a ottenere una crema liscia.",
+          "image_url": "/recetas/crema-de-espinacas/paso-05.webp",
+          "image_alt": "Crema di spinaci: Frulla"
+        },
+        {
+          "title": "Aggiungi la panna e la noce moscata",
+          "content": "Aggiungi 100 ml di panna e 1 pizzico di noce moscata e scalda per 2 minuti senza far bollire.",
+          "image_url": "/recetas/crema-de-espinacas/paso-06.webp",
+          "image_alt": "Crema di spinaci: Aggiungi la panna e la noce moscata"
+        },
+        {
+          "title": "Aggiusta di sapore",
+          "content": "Assaggia e aggiusta con sale e pepe; il brodo è già salato, quindi aggiungine poco.",
+          "image_url": "/recetas/crema-de-espinacas/paso-07.webp",
+          "image_alt": "Crema di spinaci: Aggiusta di sapore"
+        },
+        {
+          "title": "Servi",
+          "content": "Servi in piatti fondi con un filo di panna e 30 g di crostini sopra.",
+          "image_url": "/recetas/crema-de-espinacas/paso-08.webp",
+          "image_alt": "Crema di spinaci: Servi"
+        }
+      ],
+      "image_url": "/recetas/crema-de-espinacas/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/crema-de-espinacas/portada.webp",
+          "alt": "Crema di spinaci"
+        }
+      ],
+      "notes": "Aggiungi gli spinaci alla fine perché mantengano il loro bel colore verde e il sapore fresco; se cuociono troppo, la crema diventa grigiastra. La patata addensa la crema senza farina. Se è troppo densa, aggiungi un po' di brodo caldo mentre frulli. Per una versione senza latticini, sostituisci la panna con latte di cocco e il burro con olio d'oliva. Si conserva in frigorifero fino a 3 giorni e si congela fino a 3 mesi.",
+      "nutrition": {
+        "calories": 260,
+        "protein_g": 6.3,
+        "carbs_g": 23,
+        "fat_g": 17.2,
+        "sodium_mg": 765,
+        "serving_size": "1 porzione (1/4 della ricetta)",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Somma dei nutrienti per 100 g moltiplicati per i pesi degli ingredienti e divisi per 4 porzioni. Si usano 400 g di spinaci, 200 g di patata, 150 g di cipolla, 6 g di aglio, 30 g di burro, 800 g di brodo vegetale, 115 g di panna (100 ml nella crema e 15 ml per decorare) e 30 g di crostini (calcolati come pane bianco). Sale, pepe e noce moscata non sono conteggiati.",
+        "note": "Stima per porzione. I crostini sono calcolati come pane bianco, senza l'olio per tostarli. Il sodio include il sale del brodo e del burro e aumenta se si aggiunge sale alla fine.",
+        "inputs": [
+          {
+            "fdc_id": "168462",
+            "description": "Spinach, raw (400 g de espinacas frescas)",
+            "grams": 400,
+            "per100": {
+              "calories": 23,
+              "protein_g": 2.86,
+              "carbs_g": 3.63,
+              "fat_g": 0.39,
+              "saturated_fat_g": 0.063,
+              "fiber_g": 2.2,
+              "sodium_mg": 79
+            }
+          },
+          {
+            "fdc_id": "170026",
+            "description": "Potatoes, flesh and skin, raw (1 papa mediana ≈ 200 g)",
+            "grams": 200,
+            "per100": {
+              "calories": 77,
+              "protein_g": 2.05,
+              "carbs_g": 17.49,
+              "fat_g": 0.09,
+              "saturated_fat_g": 0.026,
+              "fiber_g": 2.1,
+              "sodium_mg": 6
+            }
+          },
+          {
+            "fdc_id": "170000",
+            "description": "Onions, raw (1 cebolla ≈ 150 g)",
+            "grams": 150,
+            "per100": {
+              "calories": 40,
+              "protein_g": 1.1,
+              "carbs_g": 9.34,
+              "fat_g": 0.1,
+              "saturated_fat_g": 0.042,
+              "fiber_g": 1.7,
+              "sodium_mg": 4
+            }
+          },
+          {
+            "fdc_id": "169230",
+            "description": "Garlic, raw (2 dientes ≈ 6 g)",
+            "grams": 6,
+            "per100": {
+              "calories": 149,
+              "protein_g": 6.36,
+              "carbs_g": 33.06,
+              "fat_g": 0.5,
+              "saturated_fat_g": 0.089,
+              "fiber_g": 2.1,
+              "sodium_mg": 17
+            }
+          },
+          {
+            "fdc_id": "173430",
+            "description": "Butter, salted (30 g)",
+            "grams": 30,
+            "per100": {
+              "calories": 717,
+              "protein_g": 0.85,
+              "carbs_g": 0.06,
+              "fat_g": 81.11,
+              "saturated_fat_g": 51.368,
+              "fiber_g": 0,
+              "sodium_mg": 643
+            }
+          },
+          {
+            "fdc_id": "171583",
+            "description": "Soup, vegetable broth, ready to serve (800 ml ≈ 800 g)",
+            "grams": 800,
+            "per100": {
+              "calories": 5,
+              "protein_g": 0.2,
+              "carbs_g": 0.9,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 294
+            }
+          },
+          {
+            "fdc_id": "170859",
+            "description": "Cream, fluid, heavy whipping (100 ml en la crema + 15 ml para decorar ≈ 115 g)",
+            "grams": 115,
+            "per100": {
+              "calories": 340,
+              "protein_g": 2.84,
+              "carbs_g": 2.74,
+              "fat_g": 36.08,
+              "saturated_fat_g": 22.76,
+              "fiber_g": 0,
+              "sodium_mg": 27
+            }
+          },
+          {
+            "fdc_id": "172686",
+            "description": "Bread, white, commercially prepared (30 g de picatostes, como pan blanco)",
+            "grams": 30,
+            "per100": {
+              "calories": 266,
+              "protein_g": 8.85,
+              "carbs_g": 49.42,
+              "fat_g": 3.33,
+              "saturated_fat_g": 0.759,
+              "fiber_g": 2.7,
+              "sodium_mg": 491
+            }
+          }
+        ]
+      },
+      "seo": {
+        "title": "Crema di spinaci fatta in casa, facile e vellutata | Manual de Cocina",
+        "description": "Crema di spinaci con patata, cipolla e brodo vegetale, liscia e di un bel verde intenso. Per 4 persone, pronta in 40 minuti. Ricetta passo dopo passo.",
+        "image_variants": [
+          "/recetas/crema-de-espinacas/portada-1x1.webp",
+          "/recetas/crema-de-espinacas/portada-4x3.webp",
+          "/recetas/crema-de-espinacas/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Come mantenere il colore verde della crema di spinaci?",
+            "a": "Aggiungi gli spinaci alla fine, cuocili solo 3 minuti e frulla subito. Se cuociono troppo, la crema diventa di un verde spento."
+          },
+          {
+            "q": "Si possono usare spinaci surgelati?",
+            "a": "Sì. Usa circa 300 g di spinaci surgelati scongelati e ben strizzati e aggiungili come quelli freschi."
+          },
+          {
+            "q": "Quanto si conserva la crema di spinaci?",
+            "a": "Fino a 3 giorni in frigorifero in un contenitore chiuso e fino a 3 mesi in freezer."
+          }
+        ]
+      }
+    },
+    {
+      "id": "cc0db049-b390-5df4-ac40-3c3b54f887df",
+      "recipe_group_id": "1b400f69-0ae4-4e49-8de5-462e3da63e71",
+      "language": "ja",
+      "slug": "ほうれん草のポタージュ",
+      "public_path": "/ja/ほうれん草のポタージュ",
+      "source_url": null,
+      "title": "ほうれん草のポタージュ",
+      "excerpt": "じゃがいも、玉ねぎ、野菜のだし、ナツメグを使った、なめらかな自家製ほうれん草のポタージュ。4人分、40分で完成。",
+      "summary": "ほうれん草のポタージュは、玉ねぎとにんにくをバターで炒め、じゃがいもをスープで煮て、色が飛ばないようにほうれん草を最後に加え、全体をなめらかにミキサーにかけて作ります。じゃがいもがとろみを、生クリームがなめらかさを加えます。\n\nじゃがいもは15分、ほうれん草は3分だけ煮ます。ミキサーにかけたあと、生クリームとナツメグを加えて温めます。生クリームとクルトンを添えて、4人分です。",
+      "category": "スープ・ポタージュ",
+      "category_slug": "sopas-y-cremas",
+      "difficulty": "簡単",
+      "course": "前菜",
+      "cuisine": "国際料理",
+      "prep_time_minutes": 15,
+      "cook_time_minutes": 25,
+      "total_time_minutes": 40,
+      "servings": 4,
+      "keywords": [
+        "ほうれん草のポタージュ",
+        "ほうれん草 ポタージュ レシピ",
+        "ほうれん草 スープ 作り方",
+        "ほうれん草 ポタージュ じゃがいも",
+        "ほうれん草 クリームスープ",
+        "ほうれん草 ポタージュ 簡単",
+        "クレマ・デ・エスピナカス"
+      ],
+      "ingredients": [
+        {
+          "name": "ほうれん草",
+          "amount": "400",
+          "unit": "g",
+          "group": "ポタージュ用"
+        },
+        {
+          "name": "じゃがいも（中）",
+          "amount": "200",
+          "unit": "g",
+          "group": "ポタージュ用"
+        },
+        {
+          "name": "玉ねぎ",
+          "amount": "1",
+          "unit": "",
+          "group": "ポタージュ用"
+        },
+        {
+          "name": "にんにく",
+          "amount": "2",
+          "unit": "",
+          "group": "ポタージュ用"
+        },
+        {
+          "name": "バター",
+          "amount": "30",
+          "unit": "g",
+          "group": "ポタージュ用"
+        },
+        {
+          "name": "熱い野菜ブイヨン",
+          "amount": "800",
+          "unit": "ml",
+          "group": "ポタージュ用"
+        },
+        {
+          "name": "生クリーム",
+          "amount": "100",
+          "unit": "ml",
+          "group": "ポタージュ用"
+        },
+        {
+          "name": "ナツメグ",
+          "amount": "1",
+          "unit": "ひとつまみ",
+          "group": "ポタージュ用"
+        },
+        {
+          "name": "塩",
+          "amount": "1",
+          "unit": "ひとつまみ",
+          "group": "ポタージュ用"
+        },
+        {
+          "name": "黒こしょう（挽いたもの）",
+          "amount": "1",
+          "unit": "ひとつまみ",
+          "group": "ポタージュ用"
+        },
+        {
+          "name": "クルトン",
+          "amount": "30",
+          "unit": "g",
+          "group": "仕上げ用"
+        },
+        {
+          "name": "飾り用の生クリーム",
+          "amount": "1",
+          "unit": "大さじ",
+          "group": "仕上げ用"
+        }
+      ],
+      "steps": [
+        {
+          "title": "材料を準備する",
+          "content": "玉ねぎ1個とにんにく2片をみじん切りにします。じゃがいも1個（200g）の皮をむいて2cm角に切ります。生のほうれん草400gを洗って水気をきります。",
+          "image_url": "/recetas/crema-de-espinacas/paso-01.webp",
+          "image_alt": "ほうれん草のポタージュ: 材料を準備する"
+        },
+        {
+          "title": "玉ねぎとにんにくを炒める",
+          "content": "鍋にバター30gを入れて中火で溶かし、玉ねぎとにんにくを5分、やわらかくなるまで炒めます。",
+          "image_url": "/recetas/crema-de-espinacas/paso-02.webp",
+          "image_alt": "ほうれん草のポタージュ: 玉ねぎとにんにくを炒める"
+        },
+        {
+          "title": "じゃがいもを煮る",
+          "content": "じゃがいもと熱い野菜ブイヨン800mlを加え、中火で15分、じゃがいもがやわらかくなるまで煮ます。",
+          "image_url": "/recetas/crema-de-espinacas/paso-03.webp",
+          "image_alt": "ほうれん草のポタージュ: じゃがいもを煮る"
+        },
+        {
+          "title": "ほうれん草を加える",
+          "content": "ほうれん草を加えて、しんなりするまで3分煮ます。",
+          "image_url": "/recetas/crema-de-espinacas/paso-04.webp",
+          "image_alt": "ほうれん草のポタージュ: ほうれん草を加える"
+        },
+        {
+          "title": "ミキサーにかける",
+          "content": "ハンドブレンダーでなめらかになるまで撹拌します。",
+          "image_url": "/recetas/crema-de-espinacas/paso-05.webp",
+          "image_alt": "ほうれん草のポタージュ: ミキサーにかける"
+        },
+        {
+          "title": "生クリームとナツメグを加える",
+          "content": "生クリーム100mlとナツメグひとつまみを加え、沸騰させないように2分温めます。",
+          "image_url": "/recetas/crema-de-espinacas/paso-06.webp",
+          "image_alt": "ほうれん草のポタージュ: 生クリームとナツメグを加える"
+        },
+        {
+          "title": "味をととのえる",
+          "content": "味見をして、塩とこしょうでととのえます。ブイヨンに塩分があるので、塩は控えめに加えます。",
+          "image_url": "/recetas/crema-de-espinacas/paso-07.webp",
+          "image_alt": "ほうれん草のポタージュ: 味をととのえる"
+        },
+        {
+          "title": "盛り付ける",
+          "content": "深皿に盛り、生クリームを細く垂らして、クルトン30gをのせます。",
+          "image_url": "/recetas/crema-de-espinacas/paso-08.webp",
+          "image_alt": "ほうれん草のポタージュ: 盛り付ける"
+        }
+      ],
+      "image_url": "/recetas/crema-de-espinacas/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/crema-de-espinacas/portada.webp",
+          "alt": "ほうれん草のポタージュ"
+        }
+      ],
+      "notes": "ほうれん草は最後に加えると、鮮やかな緑色と新鮮な風味が保てます。煮すぎると灰色がかった色になります。じゃがいもが小麦粉なしでとろみをつけてくれます。濃すぎるときは、撹拌しながら熱いブイヨンを少し足してください。乳製品なしにしたい場合は、生クリームをココナッツミルクに、バターをオリーブオイルに替えます。冷蔵庫で3日まで、冷凍で3か月まで保存できます。",
+      "nutrition": {
+        "calories": 260,
+        "protein_g": 6.3,
+        "carbs_g": 23,
+        "fat_g": 17.2,
+        "sodium_mg": 765,
+        "serving_size": "1人分（レシピの1/4）",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "100gあたりの栄養素に材料の重量を掛け、4人分で割って合計しています。ほうれん草400g、じゃがいも200g、玉ねぎ150g、にんにく6g、バター30g、野菜ブイヨン800g、生クリーム115g（ポタージュに100ml、飾り用に15ml）、クルトン30g（食パンとして計算）を使用しています。塩、こしょう、ナツメグは計算に含めていません。",
+        "note": "1人分の目安です。クルトンは、焼くための油を除いた食パンとして計算しています。ナトリウムにはブイヨンとバターの塩分が含まれ、最後に塩を足すと増えます。",
+        "inputs": [
+          {
+            "fdc_id": "168462",
+            "description": "Spinach, raw (400 g de espinacas frescas)",
+            "grams": 400,
+            "per100": {
+              "calories": 23,
+              "protein_g": 2.86,
+              "carbs_g": 3.63,
+              "fat_g": 0.39,
+              "saturated_fat_g": 0.063,
+              "fiber_g": 2.2,
+              "sodium_mg": 79
+            }
+          },
+          {
+            "fdc_id": "170026",
+            "description": "Potatoes, flesh and skin, raw (1 papa mediana ≈ 200 g)",
+            "grams": 200,
+            "per100": {
+              "calories": 77,
+              "protein_g": 2.05,
+              "carbs_g": 17.49,
+              "fat_g": 0.09,
+              "saturated_fat_g": 0.026,
+              "fiber_g": 2.1,
+              "sodium_mg": 6
+            }
+          },
+          {
+            "fdc_id": "170000",
+            "description": "Onions, raw (1 cebolla ≈ 150 g)",
+            "grams": 150,
+            "per100": {
+              "calories": 40,
+              "protein_g": 1.1,
+              "carbs_g": 9.34,
+              "fat_g": 0.1,
+              "saturated_fat_g": 0.042,
+              "fiber_g": 1.7,
+              "sodium_mg": 4
+            }
+          },
+          {
+            "fdc_id": "169230",
+            "description": "Garlic, raw (2 dientes ≈ 6 g)",
+            "grams": 6,
+            "per100": {
+              "calories": 149,
+              "protein_g": 6.36,
+              "carbs_g": 33.06,
+              "fat_g": 0.5,
+              "saturated_fat_g": 0.089,
+              "fiber_g": 2.1,
+              "sodium_mg": 17
+            }
+          },
+          {
+            "fdc_id": "173430",
+            "description": "Butter, salted (30 g)",
+            "grams": 30,
+            "per100": {
+              "calories": 717,
+              "protein_g": 0.85,
+              "carbs_g": 0.06,
+              "fat_g": 81.11,
+              "saturated_fat_g": 51.368,
+              "fiber_g": 0,
+              "sodium_mg": 643
+            }
+          },
+          {
+            "fdc_id": "171583",
+            "description": "Soup, vegetable broth, ready to serve (800 ml ≈ 800 g)",
+            "grams": 800,
+            "per100": {
+              "calories": 5,
+              "protein_g": 0.2,
+              "carbs_g": 0.9,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 294
+            }
+          },
+          {
+            "fdc_id": "170859",
+            "description": "Cream, fluid, heavy whipping (100 ml en la crema + 15 ml para decorar ≈ 115 g)",
+            "grams": 115,
+            "per100": {
+              "calories": 340,
+              "protein_g": 2.84,
+              "carbs_g": 2.74,
+              "fat_g": 36.08,
+              "saturated_fat_g": 22.76,
+              "fiber_g": 0,
+              "sodium_mg": 27
+            }
+          },
+          {
+            "fdc_id": "172686",
+            "description": "Bread, white, commercially prepared (30 g de picatostes, como pan blanco)",
+            "grams": 30,
+            "per100": {
+              "calories": 266,
+              "protein_g": 8.85,
+              "carbs_g": 49.42,
+              "fat_g": 3.33,
+              "saturated_fat_g": 0.759,
+              "fiber_g": 2.7,
+              "sodium_mg": 491
+            }
+          }
+        ]
+      },
+      "seo": {
+        "title": "ほうれん草のポタージュの作り方｜なめらかで簡単 | Manual de Cocina",
+        "description": "じゃがいも、玉ねぎ、野菜ブイヨンで作る、鮮やかな緑のなめらかなほうれん草のポタージュ。4人分、40分で完成。手順を写真付きで解説します。",
+        "image_variants": [
+          "/recetas/crema-de-espinacas/portada-1x1.webp",
+          "/recetas/crema-de-espinacas/portada-4x3.webp",
+          "/recetas/crema-de-espinacas/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "ほうれん草のポタージュの緑色を保つには？",
+            "a": "ほうれん草は最後に加えて3分だけ煮て、すぐにミキサーにかけます。煮すぎると色がくすんでしまいます。"
+          },
+          {
+            "q": "冷凍ほうれん草でも作れますか？",
+            "a": "作れます。解凍して水気をよく絞った冷凍ほうれん草を約300g使い、生のほうれん草と同じように加えます。"
+          },
+          {
+            "q": "ほうれん草のポタージュはどれくらい保存できますか？",
+            "a": "密閉容器に入れて冷蔵庫で3日まで、冷凍庫で3か月までです。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "f4fa2c70-49c5-5c8f-93be-23f91ef8eee0",
+      "recipe_group_id": "1b400f69-0ae4-4e49-8de5-462e3da63e71",
+      "language": "pt",
+      "slug": "creme-de-espinafre",
+      "public_path": "/pt/creme-de-espinafre",
+      "source_url": null,
+      "title": "Creme de espinafre",
+      "excerpt": "Creme de espinafre caseiro, sedoso, com batata, cebola, caldo de legumes e um toque de noz-moscada. Para 4 pessoas, pronto em 40 minutos.",
+      "summary": "O creme de espinafre é feito refogando cebola e alho na manteiga, cozinhando a batata no caldo, juntando o espinafre no final para manter a cor e batendo tudo até ficar liso. A batata dá corpo e o creme de leite deixa a textura sedosa.\n\nA batata cozinha 15 minutos e o espinafre só 3. Depois é batido e aquecido com creme de leite e noz-moscada. Serve-se com um fio de creme e croutons. Rende 4 porções.",
+      "category": "Sopas e cremes",
+      "category_slug": "sopas-y-cremas",
+      "difficulty": "Fácil",
+      "course": "Entrada",
+      "cuisine": "Internacional",
+      "prep_time_minutes": 15,
+      "cook_time_minutes": 25,
+      "total_time_minutes": 40,
+      "servings": 4,
+      "keywords": [
+        "creme de espinafre",
+        "receita de creme de espinafre",
+        "como fazer creme de espinafre",
+        "creme de espinafre caseiro",
+        "sopa de espinafre",
+        "creme de espinafre fácil",
+        "crema de espinacas"
+      ],
+      "ingredients": [
+        {
+          "name": "espinafre fresco",
+          "amount": "400",
+          "unit": "g",
+          "group": "Para o creme"
+        },
+        {
+          "name": "batata média",
+          "amount": "200",
+          "unit": "g",
+          "group": "Para o creme"
+        },
+        {
+          "name": "cebola",
+          "amount": "1",
+          "unit": "",
+          "group": "Para o creme"
+        },
+        {
+          "name": "dentes de alho",
+          "amount": "2",
+          "unit": "",
+          "group": "Para o creme"
+        },
+        {
+          "name": "manteiga",
+          "amount": "30",
+          "unit": "g",
+          "group": "Para o creme"
+        },
+        {
+          "name": "caldo de legumes quente",
+          "amount": "800",
+          "unit": "ml",
+          "group": "Para o creme"
+        },
+        {
+          "name": "creme de leite",
+          "amount": "100",
+          "unit": "ml",
+          "group": "Para o creme"
+        },
+        {
+          "name": "noz-moscada",
+          "amount": "1",
+          "unit": "pitada",
+          "group": "Para o creme"
+        },
+        {
+          "name": "sal",
+          "amount": "1",
+          "unit": "pitada",
+          "group": "Para o creme"
+        },
+        {
+          "name": "pimenta-do-reino moída",
+          "amount": "1",
+          "unit": "pitada",
+          "group": "Para o creme"
+        },
+        {
+          "name": "croutons",
+          "amount": "30",
+          "unit": "g",
+          "group": "Para servir"
+        },
+        {
+          "name": "creme de leite, para decorar",
+          "amount": "1",
+          "unit": "colher de sopa",
+          "group": "Para servir"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepare os ingredientes",
+          "content": "Pique 1 cebola e 2 dentes de alho. Descasque 1 batata média (200 g) e corte em cubos de 2 cm. Lave 400 g de espinafre fresco e escorra.",
+          "image_url": "/recetas/crema-de-espinacas/paso-01.webp",
+          "image_alt": "Creme de espinafre: Prepare os ingredientes"
+        },
+        {
+          "title": "Refogue a cebola e o alho",
+          "content": "Derreta 30 g de manteiga em uma panela em fogo médio e refogue a cebola e o alho por 5 minutos, até ficarem macios.",
+          "image_url": "/recetas/crema-de-espinacas/paso-02.webp",
+          "image_alt": "Creme de espinafre: Refogue a cebola e o alho"
+        },
+        {
+          "title": "Cozinhe a batata",
+          "content": "Junte a batata e 800 ml de caldo de legumes quente e cozinhe em fogo médio por 15 minutos, até a batata ficar macia.",
+          "image_url": "/recetas/crema-de-espinacas/paso-03.webp",
+          "image_alt": "Creme de espinafre: Cozinhe a batata"
+        },
+        {
+          "title": "Junte o espinafre",
+          "content": "Junte o espinafre e cozinhe por 3 minutos, até murchar.",
+          "image_url": "/recetas/crema-de-espinacas/paso-04.webp",
+          "image_alt": "Creme de espinafre: Junte o espinafre"
+        },
+        {
+          "title": "Bata",
+          "content": "Bata com o mixer até obter um creme liso.",
+          "image_url": "/recetas/crema-de-espinacas/paso-05.webp",
+          "image_alt": "Creme de espinafre: Bata"
+        },
+        {
+          "title": "Junte o creme de leite e a noz-moscada",
+          "content": "Junte 100 ml de creme de leite e 1 pitada de noz-moscada e aqueça por 2 minutos sem deixar ferver.",
+          "image_url": "/recetas/crema-de-espinacas/paso-06.webp",
+          "image_alt": "Creme de espinafre: Junte o creme de leite e a noz-moscada"
+        },
+        {
+          "title": "Acerte o tempero",
+          "content": "Prove e acerte com sal e pimenta; o caldo já é salgado, então use pouco sal.",
+          "image_url": "/recetas/crema-de-espinacas/paso-07.webp",
+          "image_alt": "Creme de espinafre: Acerte o tempero"
+        },
+        {
+          "title": "Sirva",
+          "content": "Sirva em pratos fundos com um fio de creme de leite e 30 g de croutons por cima.",
+          "image_url": "/recetas/crema-de-espinacas/paso-08.webp",
+          "image_alt": "Creme de espinafre: Sirva"
+        }
+      ],
+      "image_url": "/recetas/crema-de-espinacas/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/crema-de-espinacas/portada.webp",
+          "alt": "Creme de espinafre"
+        }
+      ],
+      "notes": "Junte o espinafre no final para ele manter a cor verde intensa e o sabor fresco; se cozinhar demais, o creme fica acinzentado. A batata engrossa o creme sem precisar de farinha. Se ficar muito grosso, junte um pouco de caldo quente ao bater. Para uma versão sem lactose, troque o creme de leite por leite de coco e a manteiga por azeite. Dura na geladeira até 3 dias e pode ser congelado por até 3 meses.",
+      "nutrition": {
+        "calories": 260,
+        "protein_g": 6.3,
+        "carbs_g": 23,
+        "fat_g": 17.2,
+        "sodium_mg": 765,
+        "serving_size": "1 porção (1/4 da receita)",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Soma dos nutrientes por 100 g multiplicados pelo peso dos ingredientes e divididos por 4 porções. Usam-se 400 g de espinafre, 200 g de batata, 150 g de cebola, 6 g de alho, 30 g de manteiga, 800 g de caldo de legumes, 115 g de creme de leite (100 ml no creme e 15 ml para decorar) e 30 g de croutons (calculados como pão branco). Sal, pimenta e noz-moscada não são contados.",
+        "note": "Estimativa por porção. Os croutons são calculados como pão branco, sem o óleo para torrá-los. O sódio inclui o sal do caldo e da manteiga; sobe se você juntar sal no final.",
+        "inputs": [
+          {
+            "fdc_id": "168462",
+            "description": "Spinach, raw (400 g de espinacas frescas)",
+            "grams": 400,
+            "per100": {
+              "calories": 23,
+              "protein_g": 2.86,
+              "carbs_g": 3.63,
+              "fat_g": 0.39,
+              "saturated_fat_g": 0.063,
+              "fiber_g": 2.2,
+              "sodium_mg": 79
+            }
+          },
+          {
+            "fdc_id": "170026",
+            "description": "Potatoes, flesh and skin, raw (1 papa mediana ≈ 200 g)",
+            "grams": 200,
+            "per100": {
+              "calories": 77,
+              "protein_g": 2.05,
+              "carbs_g": 17.49,
+              "fat_g": 0.09,
+              "saturated_fat_g": 0.026,
+              "fiber_g": 2.1,
+              "sodium_mg": 6
+            }
+          },
+          {
+            "fdc_id": "170000",
+            "description": "Onions, raw (1 cebolla ≈ 150 g)",
+            "grams": 150,
+            "per100": {
+              "calories": 40,
+              "protein_g": 1.1,
+              "carbs_g": 9.34,
+              "fat_g": 0.1,
+              "saturated_fat_g": 0.042,
+              "fiber_g": 1.7,
+              "sodium_mg": 4
+            }
+          },
+          {
+            "fdc_id": "169230",
+            "description": "Garlic, raw (2 dientes ≈ 6 g)",
+            "grams": 6,
+            "per100": {
+              "calories": 149,
+              "protein_g": 6.36,
+              "carbs_g": 33.06,
+              "fat_g": 0.5,
+              "saturated_fat_g": 0.089,
+              "fiber_g": 2.1,
+              "sodium_mg": 17
+            }
+          },
+          {
+            "fdc_id": "173430",
+            "description": "Butter, salted (30 g)",
+            "grams": 30,
+            "per100": {
+              "calories": 717,
+              "protein_g": 0.85,
+              "carbs_g": 0.06,
+              "fat_g": 81.11,
+              "saturated_fat_g": 51.368,
+              "fiber_g": 0,
+              "sodium_mg": 643
+            }
+          },
+          {
+            "fdc_id": "171583",
+            "description": "Soup, vegetable broth, ready to serve (800 ml ≈ 800 g)",
+            "grams": 800,
+            "per100": {
+              "calories": 5,
+              "protein_g": 0.2,
+              "carbs_g": 0.9,
+              "fat_g": 0,
+              "saturated_fat_g": 0,
+              "fiber_g": 0,
+              "sodium_mg": 294
+            }
+          },
+          {
+            "fdc_id": "170859",
+            "description": "Cream, fluid, heavy whipping (100 ml en la crema + 15 ml para decorar ≈ 115 g)",
+            "grams": 115,
+            "per100": {
+              "calories": 340,
+              "protein_g": 2.84,
+              "carbs_g": 2.74,
+              "fat_g": 36.08,
+              "saturated_fat_g": 22.76,
+              "fiber_g": 0,
+              "sodium_mg": 27
+            }
+          },
+          {
+            "fdc_id": "172686",
+            "description": "Bread, white, commercially prepared (30 g de picatostes, como pan blanco)",
+            "grams": 30,
+            "per100": {
+              "calories": 266,
+              "protein_g": 8.85,
+              "carbs_g": 49.42,
+              "fat_g": 3.33,
+              "saturated_fat_g": 0.759,
+              "fiber_g": 2.7,
+              "sodium_mg": 491
+            }
+          }
+        ]
+      },
+      "seo": {
+        "title": "Creme de espinafre caseiro, sedoso e fácil | Manual de Cocina",
+        "description": "Creme de espinafre caseiro com batata, cebola e caldo de legumes, liso e bem verde. Para 4 pessoas, pronto em 40 minutos. Receita passo a passo.",
+        "image_variants": [
+          "/recetas/crema-de-espinacas/portada-1x1.webp",
+          "/recetas/crema-de-espinacas/portada-4x3.webp",
+          "/recetas/crema-de-espinacas/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Como manter a cor verde do creme de espinafre?",
+            "a": "Junte o espinafre no final, cozinhe só 3 minutos e bata logo em seguida. Se cozinhar demais, o creme fica com um verde opaco."
+          },
+          {
+            "q": "Dá para usar espinafre congelado?",
+            "a": "Dá. Use cerca de 300 g de espinafre congelado, descongelado e bem espremido, e junte como o fresco."
+          },
+          {
+            "q": "Quanto tempo dura o creme de espinafre?",
+            "a": "Até 3 dias na geladeira em recipiente fechado e até 3 meses no congelador."
+          }
+        ]
+      }
+    }
+  ]
+}
