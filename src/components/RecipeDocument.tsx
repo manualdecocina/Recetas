@@ -1,7 +1,9 @@
 import type { Recipe } from '@/types/recipe'
 import { parseVideo, isoDuration } from '@/lib/video'
 import { publicUrl, absoluteUrl, getSiteUrl, RECIPE_AUTHOR, authorUrl, languageTag } from '@/lib/site'
-import { UI_TEXT } from '@/lib/i18n'
+import { getMdCopy } from '@/lib/copy'
+import { categorySlugFromLabel } from '@/lib/categories'
+import { breadcrumbJsonLd } from '@/lib/breadcrumbs'
 import { getRecipeTranslations } from '@/lib/public-content'
 import { publicPathHref } from '@/lib/site'
 import SiteHeader from '@/components/md/SiteHeader'
@@ -16,12 +18,11 @@ function cleanHtml(html: string): string {
     .replace(/javascript:/gi, '')
 }
 
-// Contrato público sin cambios: mismas props, mismo JSON-LD Recipe y BreadcrumbList.
+// Contrato público: mismas props; JSON-LD Recipe y BreadcrumbList (igual a la miga visible).
 // Solo cambió la presentación (src/components/md/*). Este componente ahora también
 // pinta cabecera y pie, para que las rutas que lo usan no tengan que hacerlo.
 
 export async function RecipeDocument({ recipe, relatedRecipes = [] }: { recipe: Recipe; relatedRecipes?: Array<Pick<Recipe, 'id' | 'language' | 'slug' | 'public_path' | 'title' | 'excerpt' | 'category' | 'image_url'>> }) {
-  const text = UI_TEXT[recipe.language]
   const translations = recipe.recipe_group_id ? await getRecipeTranslations(recipe.recipe_group_id) : []
   const alternates = Object.fromEntries(
     translations.filter((t) => t.language !== recipe.language).map((t) => [t.language, publicPathHref(t.public_path)])
@@ -32,11 +33,15 @@ export async function RecipeDocument({ recipe, relatedRecipes = [] }: { recipe: 
       ? recipe.prep_time_minutes + recipe.cook_time_minutes
       : null)
 
-  const breadcrumbLd = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-    { '@type': 'ListItem', position: 1, name: text.home, item: publicUrl('/' + recipe.language) },
-    { '@type': 'ListItem', position: 2, name: text.recipes, item: publicUrl('/' + recipe.language + '/recetas') },
-    { '@type': 'ListItem', position: 3, name: recipe.title, item: publicUrl(recipe.public_path) },
-  ] }
+  // BreadcrumbList = exactamente la miga visible de RecipeDocumentVisual:
+  // Manual de Cocina › Recetas › Categoría (la categoría solo si pertenece a la taxonomía).
+  const copy = getMdCopy(recipe.language)
+  const categorySlug = categorySlugFromLabel(recipe.language, recipe.category)
+  const breadcrumbLd = breadcrumbJsonLd([
+    { name: 'Manual de Cocina', path: '/' + recipe.language },
+    { name: copy.navRecipes, path: '/' + recipe.language + '/recetas' },
+    ...(recipe.category && categorySlug ? [{ name: recipe.category, path: `/${recipe.language}/categorias/${categorySlug}` }] : []),
+  ])
 
   const seoMeta = (recipe.seo ?? {}) as Record<string, unknown>
   const imageVariants = Array.isArray(seoMeta.image_variants)
@@ -105,8 +110,9 @@ export async function RecipeDocument({ recipe, relatedRecipes = [] }: { recipe: 
     dateModified: recipe.updated_at,
     recipeIngredient: recipe.ingredients.map((i) => [i.amount, i.unit, i.name].filter(Boolean).join(' ')),
     recipeInstructions: recipe.steps.map((s, i) => ({ '@type': 'HowToStep', position: i + 1, name: s.title || undefined, text: s.content, image: s.image_url ? absoluteUrl(s.image_url) : undefined, url: `${publicUrl(recipe.public_path)}#paso-${i + 1}` })),
-    prepTime: recipe.prep_time_minutes != null ? `PT${recipe.prep_time_minutes}M` : undefined,
-    cookTime: recipe.cook_time_minutes != null ? `PT${recipe.cook_time_minutes}M` : undefined,
+    // Solo tiempos reales y positivos; un 0 (p. ej. bebidas sin cocción) se omite en vez de publicar PT0M.
+    prepTime: recipe.prep_time_minutes != null && recipe.prep_time_minutes > 0 ? `PT${recipe.prep_time_minutes}M` : undefined,
+    cookTime: recipe.cook_time_minutes != null && recipe.cook_time_minutes > 0 ? `PT${recipe.cook_time_minutes}M` : undefined,
     totalTime: totalMinutes != null && totalMinutes > 0 ? `PT${totalMinutes}M` : undefined,
     recipeYield: recipe.servings ? String(recipe.servings) : undefined,
     recipeCategory: recipe.category ?? undefined,

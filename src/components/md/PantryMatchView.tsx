@@ -3,6 +3,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import Link from 'next/link';
 import RecipeCard from './RecipeCard';
 import { getMdCopy } from '@/lib/copy';
+import { countLabel } from '@/lib/plural';
 import type { MdPantryIngredient, MdPantryRecipe } from '@/lib/md-data';
 
 /**
@@ -208,7 +209,7 @@ export default function PantryMatchView({ ingredients, recipes }: { ingredients:
             {matches.map(({ recipe, checklist, effectiveMissingCount, isComplete }) => (
               <div className="md-pantry-result" key={recipe.id}>
                 <span className={`md-pantry-badge${isComplete ? ' md-pantry-badge-complete' : ''}`}>
-                  {isComplete ? t.pantryComplete : `${effectiveMissingCount} ${t.pantryMissingSuffix}`}
+                  {isComplete ? t.pantryComplete : countLabel('es', effectiveMissingCount, 'missingIngredient')}
                 </span>
                 <RecipeCard recipe={recipe} />
                 {checklist.length > 0 && (

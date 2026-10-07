@@ -7,7 +7,7 @@ import RecipeListingView, { type MdListingFilters, type MdListingOptions } from 
 import type { MdRecipeCardData } from '@/components/md/md-types'
 import { UI_TEXT } from '@/lib/i18n'
 import { allLanguageAlternates } from '@/lib/seo'
-import { getSiteUrl } from '@/lib/site'
+import { getSiteUrl, languageTag } from '@/lib/site'
 import { SUPPORTED_LANGUAGES, type RecipeLanguage } from '@/types/recipe'
 import { categoryLabel } from '@/lib/categories'
 
@@ -185,7 +185,7 @@ export default async function RecipesListPage({ params, searchParams }: Props) {
   const headerAlternates = Object.fromEntries(SUPPORTED_LANGUAGES.map((l) => [l, `/${l}/recetas`]))
 
   return (
-    <div className="md-site" lang={lang}>
+    <div className="md-site" lang={languageTag(lang)}>
       <SiteHeader lang={lang} alternates={headerAlternates} />
       {cardRecipes.length >= 2 && (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd).replace(/</g, '\\u003c') }} />

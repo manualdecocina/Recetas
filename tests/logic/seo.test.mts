@@ -62,8 +62,9 @@ check('receta localizada: hreflang usa las URL públicas históricas', () => {
     tr
   )
   assert.equal(a.canonical, 'https://manualdecocina.com/de/kolumbianisches-lechona-rezept')
-  assert.deepEqual(Object.keys(a.languages).sort(), ['de', 'es', 'ja'])
+  assert.deepEqual(Object.keys(a.languages).sort(), ['de', 'es', 'ja', 'x-default'])
   assert.equal(a.languages.es, 'https://manualdecocina.com/receta-de-lechona-colombiana')
+  assert.equal(a.languages['x-default'], a.languages.es, 'x-default apunta a la URL española real (raíz histórica)')
   assert.equal(a.languages.de, a.canonical)
 })
 
@@ -80,7 +81,8 @@ check('traducciones sin versión es: hreflang sin x-default', () => {
 check('home/listado: 7 idiomas, canonical propia', () => {
   const a: any = allLanguageAlternates('/ja/recetas', (l: string) => `/${l}/recetas`)
   assert.equal(a.canonical, 'https://manualdecocina.com/ja/recetas')
-  assert.deepEqual(Object.keys(a.languages).sort(), ['de', 'en', 'es', 'fr', 'it', 'ja', 'pt-BR'])
+  assert.deepEqual(Object.keys(a.languages).sort(), ['de', 'en', 'es', 'fr', 'it', 'ja', 'pt-BR', 'x-default'])
+  assert.equal(a.languages['x-default'], 'https://manualdecocina.com/es/recetas')
 })
 
 process.env.NEXT_PUBLIC_ALLOW_INDEXING = 'false'

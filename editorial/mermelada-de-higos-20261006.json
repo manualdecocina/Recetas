@@ -41,7 +41,7 @@
       "category_slug": "desayunos-y-brunch",
       "difficulty": "Fácil",
       "course": "Desayuno",
-      "cuisine": "Conservas",
+      "cuisine": null,
       "prep_time_minutes": 45,
       "cook_time_minutes": 40,
       "total_time_minutes": 85,
@@ -234,7 +234,7 @@
       "category_slug": "desayunos-y-brunch",
       "difficulty": "Einfach",
       "course": "Frühstück",
-      "cuisine": "Eingemachtes",
+      "cuisine": null,
       "prep_time_minutes": 45,
       "cook_time_minutes": 40,
       "total_time_minutes": 85,
@@ -427,7 +427,7 @@
       "category_slug": "desayunos-y-brunch",
       "difficulty": "Easy",
       "course": "Breakfast",
-      "cuisine": "Preserves",
+      "cuisine": null,
       "prep_time_minutes": 45,
       "cook_time_minutes": 40,
       "total_time_minutes": 85,
@@ -620,7 +620,7 @@
       "category_slug": "desayunos-y-brunch",
       "difficulty": "Facile",
       "course": "Petit-déjeuner",
-      "cuisine": "Conserves",
+      "cuisine": null,
       "prep_time_minutes": 45,
       "cook_time_minutes": 40,
       "total_time_minutes": 85,
@@ -813,7 +813,7 @@
       "category_slug": "desayunos-y-brunch",
       "difficulty": "Facile",
       "course": "Colazione",
-      "cuisine": "Conserve",
+      "cuisine": null,
       "prep_time_minutes": 45,
       "cook_time_minutes": 40,
       "total_time_minutes": 85,
@@ -1006,7 +1006,7 @@
       "category_slug": "desayunos-y-brunch",
       "difficulty": "簡単",
       "course": "朝食",
-      "cuisine": "保存食",
+      "cuisine": null,
       "prep_time_minutes": 45,
       "cook_time_minutes": 40,
       "total_time_minutes": 85,
@@ -1199,7 +1199,7 @@
       "category_slug": "desayunos-y-brunch",
       "difficulty": "Fácil",
       "course": "Café da manhã",
-      "cuisine": "Conservas",
+      "cuisine": null,
       "prep_time_minutes": 45,
       "cook_time_minutes": 40,
       "total_time_minutes": 85,
@@ -1378,5 +1378,8 @@
         ]
       }
     }
+  ],
+  "taxonomy_changes": [
+    "2026-10-07: recipeCuisine normalizado (sin categorías de plato como cocina); aplicado en Supabase."
   ]
 }

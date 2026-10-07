@@ -2,6 +2,7 @@ import type { ReactNode } from 'react'
 import SiteHeader from '@/components/md/SiteHeader'
 import SiteFooter from '@/components/md/SiteFooter'
 import { SUPPORTED_LANGUAGES, type RecipeLanguage } from '@/types/recipe'
+import { languageTag } from '@/lib/site'
 
 // Misma API que antes (lang, eyebrow, title, intro, children): las 8 páginas institucionales
 // y las páginas de contenido heredadas siguen usándola sin cambios. `eyebrow` ahora es opcional.
@@ -22,7 +23,7 @@ export function InstitutionalPage({ lang, slug, eyebrow, title, intro, children 
     ? (Object.fromEntries(SUPPORTED_LANGUAGES.map((l) => [l, `/${l}/${slug}`])) as Partial<Record<RecipeLanguage, string>>)
     : undefined
   return (
-    <div className="md-site" lang={language}>
+    <div className="md-site" lang={languageTag(language)}>
       <SiteHeader lang={language} alternates={alternates} />
       <main className="md-reading md-institutional" id="md-main">
         {eyebrow && <p className="md-eyebrow">{eyebrow}</p>}

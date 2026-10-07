@@ -9,7 +9,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: 'Manual de Cocina',
     short_name: 'Manual de Cocina',
-    description: 'Recetas claras, paso a paso, con fotos reales.',
+    description: 'Recetas claras, paso a paso, con imágenes ilustrativas.',
     start_url: '/',
     display: 'standalone',
     background_color: '#171614',

@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import type { MdLanguage } from './md-types';
 import { getMdCopy } from '@/lib/copy';
+import { countLabel } from '@/lib/plural';
 
 const KEY = 'manualdecocina:rated';
 
@@ -93,7 +94,7 @@ export default function RatingWidget({ recipeId, lang, ratingCount, ratingSum }:
       </div>
       <span className="md-rating-summary">
         {count > 0
-          ? `${average.toFixed(1)} ${t.ratingAverageOf5} · ${count} ${t.ratingVotesSuffix}`
+          ? `${average.toFixed(1)} ${t.ratingAverageOf5} · ${countLabel(lang, count, 'vote')}`
           : t.ratingNoVotesYet}
       </span>
       {myVote !== null && <span className="md-rating-thanks">{t.ratingThanks}</span>}
