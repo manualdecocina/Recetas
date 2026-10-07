@@ -4,8 +4,9 @@ import '../site.css'
 import { editorialSerif, uiSans } from '../fonts'
 import ThemeSync from '@/components/md/ThemeSync'
 import AdSenseLoader from '@/components/md/AdSenseLoader'
-import { getSiteUrl, isIndexingAllowed, adsenseClientId, adsenseCmpReady, absoluteUrl, languageTag } from '@/lib/site'
+import { getSiteUrl, adsenseClientId, adsenseCmpReady, absoluteUrl, languageTag } from '@/lib/site'
 import { DEFAULT_LANGUAGE, SUPPORTED_LANGUAGES } from '@/types/recipe'
+import { siteRobots } from '@/lib/seo'
 
 // Layout RAÍZ del sitio público (patrón i18n oficial de Next.js App Router).
 // Cada idioma produce su propio <html lang>: /es → lang="es", /de → lang="de", etc.
@@ -13,26 +14,12 @@ import { DEFAULT_LANGUAGE, SUPPORTED_LANGUAGES } from '@/types/recipe'
 //
 // TODO(diseño): tipografía e identidad visual — fuera del alcance de esta fase.
 
-// Seguro anti-duplicado: sin NEXT_PUBLIC_ALLOW_INDEXING="true" todo el sitio es noindex.
-const allowIndexing = isIndexingAllowed()
+// Seguro anti-duplicado: sin NEXT_PUBLIC_ALLOW_INDEXING="true" todo el sitio es noindex (siteRobots).
 
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteUrl()),
   title: 'Manual de Cocina',
-  robots: {
-    index: allowIndexing,
-    follow: allowIndexing,
-    googleBot: allowIndexing ? {
-      index: true,
-      follow: true,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-      'max-video-preview': -1,
-    } : {
-      index: false,
-      follow: false,
-    },
-  },
+  robots: siteRobots(),
 }
 
 export function generateStaticParams() {

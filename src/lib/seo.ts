@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { SUPPORTED_LANGUAGES } from '@/types/recipe'
-import { getSiteUrl, normalizePublicPath, publicUrl, absoluteUrl, languageTag } from '@/lib/site'
+import { getSiteUrl, normalizePublicPath, publicUrl, absoluteUrl, languageTag, isIndexingAllowed } from '@/lib/site'
 
 export const SITE_NAME = 'Manual de Cocina'
 const TITLE_SUFFIX = ` | ${SITE_NAME}`
@@ -9,6 +9,20 @@ const TITLE_SUFFIX = ` | ${SITE_NAME}`
 export function withSiteName(title: string): string {
   const base = title.endsWith(TITLE_SUFFIX) ? title.slice(0, -TITLE_SUFFIX.length) : title
   return `${base}${TITLE_SUFFIX}`
+}
+
+/** Robots único del sitio público. Sin NEXT_PUBLIC_ALLOW_INDEXING="true" (preview) devuelve
+ * noindex/nofollow también para googlebot. Las páginas que declaran `robots` propio deben usar
+ * esta función: un objeto robots en una página reemplaza el del layout y podía reabrir la indexación. */
+export function siteRobots(): NonNullable<Metadata['robots']> {
+  const allow = isIndexingAllowed()
+  return {
+    index: allow,
+    follow: allow,
+    googleBot: allow
+      ? { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 }
+      : { index: false, follow: false },
+  }
 }
 
 type Languages = NonNullable<NonNullable<Metadata['alternates']>['languages']>

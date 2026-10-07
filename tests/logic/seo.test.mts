@@ -2,7 +2,7 @@ import assert from 'node:assert/strict'
 
 process.env.NEXT_PUBLIC_SITE_URL = 'https://manualdecocina.com/'
 process.env.NEXT_PUBLIC_ALLOW_INDEXING = 'true'
-const { recipeAlternates, allLanguageAlternates } = await import('@/lib/seo')
+const { recipeAlternates, allLanguageAlternates, siteRobots } = await import('@/lib/seo')
 const site = await import('@/lib/site')
 
 let n = 0
@@ -86,6 +86,12 @@ check('home/listado: 7 idiomas, canonical propia', () => {
 })
 
 process.env.NEXT_PUBLIC_ALLOW_INDEXING = 'false'
+check('preview: siteRobots bloquea index/follow también para googlebot', () => {
+  const r: any = siteRobots()
+  assert.equal(r.index, false)
+  assert.equal(r.follow, false)
+  assert.deepEqual(r.googleBot, { index: false, follow: false })
+})
 const robots = (await import('@/app/robots')).default
 check('robots sin permiso: Disallow / y sin sitemap', () => {
   const r: any = robots()
