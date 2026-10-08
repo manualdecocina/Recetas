@@ -31,11 +31,11 @@
     "branch": "recetas/lote-03-20261008",
     "target": 15,
     "status": "in_progress",
-    "stage": "localización",
-    "current_recipe": "como-preparar-queso",
+    "stage": "identidad",
+    "current_recipe": "pollo-agridulce",
     "started_at": "2026-10-08T12:39:02.511Z",
     "completed_recipes": 0,
-    "prepared_recipes": 9,
+    "prepared_recipes": 10,
     "published_recipes": 0,
     "identity_qa": "PASS_15_ENTITIES_105_ROUTES_NO_COLLISIONS",
     "identity_file": "editorial/lote03-identidades-rutas-20261008.json",
@@ -408,11 +408,11 @@
         "editorial_status": "published",
         "position": 26,
         "eligibility": "validate_url_master_before_writing",
-        "status": "in_progress",
+        "status": "prepared",
         "stage": "localización",
         "identity_qa": "PASS",
         "classification": "ELIGIBLE_EXISTING_CULINARY_CANDIDATE_OR_CORE_REBUILD",
-        "languages_ready": 0,
+        "languages_ready": 7,
         "images_ready": 11,
         "source_not_reused": true,
         "es_content_file": "editorial/como-preparar-queso-20261008.json",
@@ -427,14 +427,17 @@
         "image_originals": 8,
         "image_visual_qa": "PASS_ALL8_ORIGINALS",
         "cover_variant_visual_qa": "PASS_WHOLE_CHEESE_ALL_RATIOS",
-        "localizations_pending": [
-          "de",
-          "en",
-          "fr",
-          "it",
-          "ja",
-          "pt"
-        ]
+        "localizations_pending": [],
+        "sql_file": "scripts/publish-como-preparar-queso-20261008.sql",
+        "sql_sha256": "dfac1c6b2326f7adb630237e05d0b06d28aae432f79cf125fefad107ed6a7f2f",
+        "sql_executed": false,
+        "qa_file": "editorial/como-preparar-queso-qa-20261008.json",
+        "localization_qa_file": "editorial/como-preparar-queso-localization-qa-20261008.json",
+        "editorial_qa": "PASS_EDITORIAL_MEDIA_LOCALIZATION_NOT_LIVE",
+        "package_sha256": "6992b68c41e77ebb0b93138f542552735c7256eea99b46c2cb360f68a8e39354",
+        "published_database": false,
+        "media_remote_hash_qa": "PASS_ALL19_EXACT_BYTES_GITSHA",
+        "next_action": "Keep7language package/19media unchanged; include in atomic15recipe publication after remaining5complete."
       },
       {
         "id": "ec187585-de34-4781-8353-9b8e3da68885",
@@ -528,9 +531,9 @@
     "owner": "manual-continuation-20261008-bandeja-localization",
     "status": "active",
     "acquired_at": "2026-10-08T08:39:14.486Z",
-    "expires_at": "2026-10-08T19:36:21.503Z",
-    "reason": "Same continuing producer;cheeseESfrozen8phases, originalmedia next.",
-    "renewed_at": "2026-10-08T18:06:21.503Z"
+    "expires_at": "2026-10-08T19:56:00.579Z",
+    "reason": "Same continuing producer;10prepared7/7, next sweetandsourchicken identity/research.",
+    "renewed_at": "2026-10-08T18:26:00.574Z"
   },
   "blockers": [],
   "debt": [
@@ -610,7 +613,7 @@
     "stage": "identidad"
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z",
-  "updated_at": "2026-10-08T18:13:55.832Z",
+  "updated_at": "2026-10-08T18:26:00.574Z",
   "completed_batches": [
     {
       "id": "lote-02-20261008",

@@ -1,6 +1,6 @@
 {
   "scope": "Manual de Cocina only; lote03",
-  "state": "ES_FROZEN_MEDIA_AND_LOCALIZATIONS_PENDING",
+  "state": "READY_FOR_BATCH_PUBLICATION",
   "provenance": "Original culinary reconstruction; historical identity and approvedroutes retained; noWordPress bodies/translations/images reused.",
   "ai_owner_confirmation": "Content and ImageGen authorized; no kitchen test claimed.",
   "category_slug": "entrantes-y-aperitivos",
@@ -9,9 +9,7 @@
   "steps_sha256": "f607a0addc1606a6b8fce66121cbef69c8b7dfd65d36894be24f95c2b87fa481",
   "time_notes": "20prep+35cook+5coagulation+30drain+60refrigeratedcooling=150min proposed; actualcoldcenter4C, delaysrecorded. No overnightaging.",
   "publication_blockers": [
-    "Originalmedia pending",
-    "Sixlocalizations pending",
-    "Full15batchCI/deploy/DB/cache/liveQA pending"
+    "Remaining5recipes; fullbatch CI/merge, observed deployed media hashes, atomic DB publication and cache/liveQA pending"
   ],
   "sources": [
     {
@@ -193,9 +191,1005 @@
           }
         ]
       },
-      "published": false,
-      "editorial_status": "draft",
+      "published": true,
+      "editorial_status": "published",
       "content_html": "<p>Queso blanco fresco con leche pasteurizada y vinagre: calentamiento controlado, separación de cuajada, escurrido y enfriado. Se proponen 150 minutos y 8 porciones de 50 g; rendimiento pendiente de medir y nutrición estimada por comparación con queso blanco USDA terminado.</p><p>Queso blanco fresco hecho con leche entera pasteurizada y vinagre alimentario de acidez 5 %, sin cuajo. La leche debe estar fresca y mantenerse refrigerada; no uses leche cruda, deteriorada ni UHT para esta propuesta. El ácido y el calor no hacen estéril el producto. La separación depende de la leche y de la acidez: empieza con parte del ácido diluido y registra lo realmente usado, sin superar la cantidad indicada. Escurre el suero y enfría de inmediato en frigorífico; no manipules gasa caliente con las manos. No hace falta prensar con pesos ni hervir el queso en bolsas. Su textura puede variar con la humedad; no es mozzarella ni queso curado. Puedes variar la sal como otra fórmula, anotando el peso y revisando la estimación nutricional. Hierbas, especias, aceite y acompañamientos requieren registrar cantidades aparte. La ficha USDA de queso blanco es una referencia de producto terminado comparable, no una prueba del queso casero: su sal y humedad pueden diferir. No se asignan al queso todos los nutrientes de la leche ni se inventa retención de suero. Raciones de 50 g; las 8 raciones y 400 g son propuestas pendientes de medir. La fibra está ausente en la ficha y se omite. Mantén a 4 °C o menos, consume dentro de 2 días como propuesta conservadora y desecha si supera 2 horas fuera del frío, o 1 hora por encima de 32 °C. No es vida útil ensayada. Contiene leche y lactosa, sin garantía de ausencia de otros alérgenos por contaminación cruzada. Para personas especialmente vulnerables, el producto casero sin proceso validado no equivale a un queso comercial controlado.</p>"
+    },
+    {
+      "id": "329d4e34-26e5-5565-aeb2-c46a4aea2c42",
+      "recipe_group_id": "37e555b3-fa4f-4309-84de-62d613fe25ab",
+      "slug": "frischkaese-selber-machen",
+      "public_path": "/de/frischkaese-selber-machen",
+      "source_url": null,
+      "language": "de",
+      "title": "Frischen weißen Käse selber machen",
+      "excerpt": "Pasteurisierte Milch, Essig und Salz: frischer Weißkäse mit Abtropfen, Kühlung und gewogenen Portionen.",
+      "summary": "Frischer Weißkäse aus pasteurisierter Milch und Essig mit kontrolliertem Erhitzen, Trennung des Bruchs, Abtropfen und Kühlung. Vorgeschlagen sind 150 Minuten und 8 Portionen à 50 g; die Ausbeute ist ungemessen, die Nährwerte basieren auf vergleichbarem fertigem USDA-Weißkäse.",
+      "category": "Vorspeisen",
+      "category_slug": "entrantes-y-aperitivos",
+      "difficulty": "Mittel",
+      "course": "Frischer Käse",
+      "cuisine": "Hausküche",
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 35,
+      "total_time_minutes": 150,
+      "servings": 8,
+      "ingredients": [
+        {
+          "name": "frische gekühlte pasteurisierte Vollmilch von der Kuh; keine UHT-Milch",
+          "amount": 2000,
+          "unit": "ml",
+          "group": "Käse"
+        },
+        {
+          "name": "weißer Speiseessig mit 5 % Säure, höchstens diese Menge",
+          "amount": 75,
+          "unit": "ml",
+          "group": "Gerinnung"
+        },
+        {
+          "name": "Trinkwasser zum Verdünnen des Essigs",
+          "amount": 150,
+          "unit": "ml",
+          "group": "Gerinnung"
+        },
+        {
+          "name": "feines Salz für den Käsebruch",
+          "amount": 2.5,
+          "unit": "g",
+          "group": "Käse"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Saubere Zutaten und Geräte vorbereiten",
+          "content": "2000 ml frische pasteurisierte Kuhvollmilch innerhalb ihrer Haltbarkeit verwenden, bei höchstens 4 °C gelagert; keine rohe, verdorbene oder UHT-Milch für diesen Vorschlag. Bis zu 75 ml weißen Speiseessig mit 5 % Säure, 150 ml Trinkwasser und 2,5 g feines Salz abmessen. Schweren Topf, Lebensmittelthermometer, Spatel, stabiles Sieb, hitzefeste Schüssel, kleine gelochte Form, Auffangschale und neues lebensmitteltaugliches Käsetuch bereitstellen. Hände mindestens 20 Sekunden mit Wasser und Seife waschen. Geräte und Flächen waschen und abspülen; das Tuch nach Herstellerangaben waschen, spülen und gegebenenfalls mit kochendem Wasser behandeln. Schmutzige Tücher und Spülbecken dürfen es nicht berühren. Platz im Kühlschrank für Form und getrennte Molke schaffen.",
+          "image_url": "/recetas/como-preparar-queso/paso-01.webp",
+          "image_alt": "Milch, Essig, Wasser, Salz und saubere Käsegeräte"
+        },
+        {
+          "title": "Mit Thermometer erhitzen, ohne Anbrennen",
+          "content": "Milch in den Topf geben und bei niedriger bis mittlerer Hitze unter Rühren am Boden erwärmen. Etwa 15 Minuten bis 80 °C einplanen, aber nach sauberem Thermometer entscheiden. Anschließend 20 Minuten bei 80 °C halten, Hitze regulieren und sanft rühren; nicht sprudelnd kochen. Insgesamt sind 35 Minuten Garzeit vorgesehen. Das macht Milch oder Küche nicht steril und rechtfertigt keine rohe oder verdorbene Milch. Beim Topf bleiben; zusätzliche tatsächliche Aufheizzeit zur Gesamtzeit addieren.",
+          "image_url": "/recetas/como-preparar-queso/paso-02.webp",
+          "image_alt": "Sanft erhitzte Vollmilch mit sauberem Thermometer"
+        },
+        {
+          "title": "Säure zugeben und Trennung beobachten",
+          "content": "Essig mit Trinkwasser in einem sauberen Krug mischen. Topf vom Herd nehmen. Zuerst 180 ml der Mischung mit 60 ml Essig und 120 ml Wasser langsam und sanft einrühren. Bleibt die Flüssigkeit deutlich milchig, den Rest nach und nach bis zu den vorbereiteten 225 ml zugeben, ohne die ursprünglichen 75 ml Essig zu überschreiten. Weiße Bruchklumpen sollen sich von gelblicher, durchscheinender Molke trennen; nicht zerschlagen. Ohne Hitze 5 Minuten ruhen lassen. Eventuell wird nicht alles benötigt: verwendete Menge notieren. Bei ausbleibender Trennung trotz korrektem Erhitzen und Höchstmenge Milch und deklarierte Säure prüfen; nicht unbegrenzt Säure nachgießen.",
+          "image_url": "/recetas/como-preparar-queso/paso-03.webp",
+          "image_alt": "Weißer Bruch trennt sich bei Essigzugabe von gelblicher Molke"
+        },
+        {
+          "title": "Ohne Verbrennungen abseihen und abtropfen",
+          "content": "Sieb sicher über die hitzefeste Schüssel setzen und mit vorbereitetem Tuch auslegen. Heißen Bruch und Molke langsam hineingießen, Hände vor Dampf und Spritzern schützen; das Sieb nicht frei in der Luft halten. 30 Minuten auf sauberer, vor Staub und rohen Lebensmitteln geschützter Fläche abtropfen lassen. Der Siebboden darf die Molke nicht berühren. Heißes Tuch nicht mit bloßen Händen verdrehen oder ausdrücken. Abgetrennte Molke gehört weder zum Käse noch zu seiner Nährwertschätzung; nicht wieder untermischen oder zu den Portionen zählen. Nach dem Abtropfen unverzüglich im Kühlschrank kühlen.",
+          "image_url": "/recetas/como-preparar-queso/paso-04.webp",
+          "image_alt": "Käsebruch tropft im sauberen Tuch über getrennter Molke ab"
+        },
+        {
+          "title": "Salzen und in die Form geben",
+          "content": "Sobald das Gefäß ohne Verbrennungsgefahr handhabbar ist, den Bruch mit sauberem Löffel in eine saubere Schüssel geben. Die 2,5 g Salz sanft untermischen; keine Kräuter, Öl oder Gewürze zu dieser Formel. In die mit sauberem Tuch ausgelegte gelochte Form füllen, Tuch darüberfalten und mit dem Löffel leicht setzen, nicht mit Händen pressen. Form über eine Auffangschale stellen, ohne Käse in Molke zu tauchen. Keine improvisierten Gewichte verwenden oder gereifte Käsetextur versprechen. Dies ist frischer säuregeronnener Weißkäse, keine Mozzarella und kein garantiert schmelzender Käse.",
+          "image_url": "/recetas/como-preparar-queso/paso-05.webp",
+          "image_alt": "Gesalzener weißer Bruch neben einer ausgelegten gelochten Form"
+        },
+        {
+          "title": "Beim weiteren Abtropfen kühlen",
+          "content": "Form und Auffangschale sofort bei höchstens 4 °C in den Kühlschrank stellen. Oberfläche schützen, warmen Käse aber nicht luftdicht schließen; von rohen Lebensmitteln getrennt halten. Zum Kühlen und Fertigabtropfen 60 Minuten vorsehen. Mit sauberem Thermometer prüfen, dass der Kern höchstens 4 °C erreicht, bevor der Käse aus der Form und in ein geschlossenes Gefäß kommt. Falls nötig länger im Kühlschrank kühlen und Verzögerung notieren: eine geplante Stunde garantiert keine tatsächliche Abkühlung. Molke aus der Schale entfernen, damit sie den Bruch nicht berührt. Nicht bei Raumtemperatur fertigkühlen.",
+          "image_url": "/recetas/como-preparar-queso/paso-06.webp",
+          "image_alt": "Mit Tuch bedeckte Käseform erhöht über Molke im Kühlschrank"
+        },
+        {
+          "title": "Käse wiegen und Portionen anpassen",
+          "content": "Kalten Käse in ein sauberes Gefäß stürzen und nur fertigen Bruch wiegen, ohne Tuch, Form oder Molke. 400 g Ausbeute und 8 Portionen à 50 g sind ein Vorschlag bis zur Küchenprüfung, keine bestätigte Ausbeute aus diesen 2000 ml Milch. Bei anderem Endgewicht die Portion bei 50 g belassen und die Anzahl anpassen. Angezeigte Nährwerte gelten für 50 g vergleichbaren USDA-Weißkäse, nicht für sämtliche Milchnährstoffe geteilt durch 8. Feuchte, Salz und Zusammensetzung können vom Hauskäse abweichen. Verworfene Molke nicht dem Käse zurechnen oder Rückhaltequoten erfinden.",
+          "image_url": "/recetas/como-preparar-queso/paso-07.webp",
+          "image_alt": "Kalter Käse auf einer Waage ohne angezeigtes Gewicht, Tuch getrennt"
+        },
+        {
+          "title": "Kalt servieren und kurz aufbewahren",
+          "content": "Käse kalt in gewogenen Portionen von 50 g servieren; Beilagen sind nicht eingerechnet. Vorgesehen sind 20 Minuten Vorbereitung, 35 Garen und 95 Warten: 5 Gerinnung, 30 Abtropfen und 60 Kühlung; insgesamt 150 Minuten. Vorgeschlagene Zeiten ohne bestätigte Küchenprüfung. Abgedeckt bei höchstens 4 °C lagern und innerhalb von 2 Tagen verbrauchen, als konservativer Vorschlag, nicht geprüfte Haltbarkeit; kürzere Milch- oder Handhabungsgrenzen beachten. Einfrieren kann die Textur verändern. Insgesamt höchstens 2 Stunden außerhalb der Kühlung, oder 1 Stunde bei über 32 °C; danach verwerfen. Geruch allein genügt nicht. Enthält Milch und Laktose, nicht laktosefrei. Für besonders gefährdete Menschen ist Hauskäse ohne validierten Prozess nicht einem kontrollierten Handelsprodukt gleichzusetzen.",
+          "image_url": "/recetas/como-preparar-queso/portada.webp",
+          "image_alt": "Frischer kalter Weißkäse mit abgetrenntem Stück ohne Garnitur"
+        }
+      ],
+      "notes": "Frischer säuregeronnener Weißkäse aus frischer pasteurisierter Vollmilch und Speiseessig mit 5 % Säure, ohne Lab. Keine rohe, verdorbene oder UHT-Milch für diesen Vorschlag. Hitze und Säure machen ihn nicht steril. Verdünnten Essig schrittweise bis zur Höchstmenge zugeben und die tatsächliche Menge notieren. Molke abtropfen, heißes Tuch nicht mit Händen drücken und umgehend kühlen. Keine improvisierten Pressgewichte oder Käse in Beuteln kochen. Feuchte beeinflusst die Textur; keine Mozzarella oder gereifter Käse. Änderungen von Salz oder Zusätzen erfordern eine neue dokumentierte Formel. Nährwerte basieren auf vergleichbarem fertigem USDA-Weißkäse mit möglicherweise anderem Salz- und Wassergehalt; keine vollständige Milchnährstoffretention wird behauptet. Portionen tatsächlich auf 50 g wiegen; 400 g und 8 Portionen sind Vorschläge. Fehlende Ballaststoffdaten werden ausgelassen. Bei höchstens 4 °C lagern, innerhalb von 2 Tagen verbrauchen: konservativ, nicht getestet. Nach 2 Stunden ungekühlt oder 1 Stunde über 32 °C verwerfen. Enthält Milch und Laktose; Etiketten und Kreuzkontakt beachten. Für besonders gefährdete Personen ersetzt unvalidierter Hauskäse kein kontrolliertes Handelsprodukt.",
+      "nutrition": {
+        "saturated_fat_g": 6.8,
+        "protein_g": 10.2,
+        "sodium_mg": 352.0,
+        "fat_g": 12.2,
+        "carbs_g": 1.3,
+        "calories": 155.0,
+        "sugar_g": 0.9,
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (abril de 2018)",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "inputs": [
+          {
+            "ingredient": "queso blanco terminado comparable, referencia nutricional; no ingrediente adicional",
+            "edible_grams": 50,
+            "fdc_id": 172224,
+            "fdc_description": "Cheese, white, queso blanco",
+            "per_100g": {
+              "saturated_fat_g": 13.7,
+              "protein_g": 20.4,
+              "sodium_mg": 704,
+              "fat_g": 24.3,
+              "carbs_g": 2.53,
+              "calories": 310,
+              "sugar_g": 1.76
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/172224/nutrients",
+            "basis": "finished_food_proxy_per_50g_not_raw_input_retention"
+          }
+        ],
+        "serving_size": "50 g fertiger Käse, gewogen; Gesamtausbeute unbestätigt",
+        "method": "Orientierender Vergleich mit fertigem USDA-Weißkäse FDC 172224. Die sieben vorhandenen Werte je 100 g mit 50/100 multiplizieren für eine gewogene Portion von 50 g. Nicht die Milchnährstoffe summieren oder Molkeretention erfinden. Das Salzprofil gehört zum vergleichbaren USDA-Produkt, nicht einer Messung der zugegebenen 2,5 g Salz; es wird nicht nochmals addiert.",
+        "note": "Referenz eines fertigen Lebensmittels, keine Laboranalyse, bestätigte Hauskäsezusammensetzung oder gemessene Ausbeute. Feuchte, Fett und Salz können abweichen. Milch, Essig und Wasser bilden getrennte Molke; vollständige Nährstoffretention wird nicht angenommen. 400 g Ausbeute bleiben ungemessen; Werte gelten für tatsächliche 50 g Käse auch bei anderer Portionsanzahl. Fehlende Ballaststoffe werden ausgelassen, nicht null gesetzt. Zusammensetzung und Ausbeute am echten Ergebnis bestätigen."
+      },
+      "keywords": [
+        "Weißkäse selber machen",
+        "Frischkäse ohne Lab",
+        "Käse aus pasteurisierter Milch",
+        "frischer hausgemachter Käse"
+      ],
+      "image_url": "/recetas/como-preparar-queso/portada.webp",
+      "gallery": [],
+      "seo": {
+        "title": "Frischen Weißkäse selber machen: Schritte und Lagerung",
+        "description": "Weißkäse aus pasteurisierter Milch und Essig: erhitzen, abtropfen, kühlen. Gewogene 50-g-Portionen, vorgeschlagene Ausbeute und geschätzte USDA-Nährwerte.",
+        "image_alt": "Kalter frischer Weißkäse mit leicht körniger Textur und abgetrenntem Stück, ohne Kräuter oder Beilagen",
+        "image_variants": [
+          "/recetas/como-preparar-queso/portada-1x1.webp",
+          "/recetas/como-preparar-queso/portada-4x3.webp",
+          "/recetas/como-preparar-queso/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Warum gerinnt die Milch nicht, und geht UHT?",
+            "a": "Milchbehandlung und tatsächliche Säure beeinflussen die Trennung. Frische pasteurisierte Vollmilch verwenden, keine UHT-Milch für diesen Vorschlag. Thermometer und 5 % Säure des Speiseessigs prüfen. Verdünnt bis zur angegebenen Höchstmenge zugeben, niemals unbegrenzt oder mit verdorbener Milch."
+          },
+          {
+            "q": "Welche Ausbeute und Nährwerte sind zu erwarten?",
+            "a": "400 g und 8 Portionen à 50 g sind unbestätigte Vorschläge. Kalten abgetropften Bruch wiegen und die Anzahl bei gleicher Portionsgröße anpassen. Werte basieren auf vergleichbarem fertigem USDA-Weißkäse, nicht sämtlicher Milch oder erfundenen Molkeverlusten. Salz und Feuchte können abweichen; fehlende Ballaststoffe werden nicht als null gezeigt."
+          },
+          {
+            "q": "Wie lagern und kann ich Salz ändern?",
+            "a": "Abgedeckt bei höchstens 4 °C halten und binnen 2 Tagen verbrauchen, als konservativer Vorschlag, nicht getestete Haltbarkeit. Nach Überschreiten der angegebenen ungekühlten Zeiten verwerfen. Salzänderungen als neue Formel dokumentieren; die USDA-Referenz misst nicht den tatsächlichen Salzgehalt dieses Hauskäses. Enthält Milch und Laktose, kein gereifter Käse."
+          }
+        ]
+      },
+      "published": true,
+      "editorial_status": "published",
+      "content_html": "<p>Frischer Weißkäse aus pasteurisierter Milch und Essig mit kontrolliertem Erhitzen, Trennung des Bruchs, Abtropfen und Kühlung. Vorgeschlagen sind 150 Minuten und 8 Portionen à 50 g; die Ausbeute ist ungemessen, die Nährwerte basieren auf vergleichbarem fertigem USDA-Weißkäse.</p><p>Frischer säuregeronnener Weißkäse aus frischer pasteurisierter Vollmilch und Speiseessig mit 5 % Säure, ohne Lab. Keine rohe, verdorbene oder UHT-Milch für diesen Vorschlag. Hitze und Säure machen ihn nicht steril. Verdünnten Essig schrittweise bis zur Höchstmenge zugeben und die tatsächliche Menge notieren. Molke abtropfen, heißes Tuch nicht mit Händen drücken und umgehend kühlen. Keine improvisierten Pressgewichte oder Käse in Beuteln kochen. Feuchte beeinflusst die Textur; keine Mozzarella oder gereifter Käse. Änderungen von Salz oder Zusätzen erfordern eine neue dokumentierte Formel. Nährwerte basieren auf vergleichbarem fertigem USDA-Weißkäse mit möglicherweise anderem Salz- und Wassergehalt; keine vollständige Milchnährstoffretention wird behauptet. Portionen tatsächlich auf 50 g wiegen; 400 g und 8 Portionen sind Vorschläge. Fehlende Ballaststoffdaten werden ausgelassen. Bei höchstens 4 °C lagern, innerhalb von 2 Tagen verbrauchen: konservativ, nicht getestet. Nach 2 Stunden ungekühlt oder 1 Stunde über 32 °C verwerfen. Enthält Milch und Laktose; Etiketten und Kreuzkontakt beachten. Für besonders gefährdete Personen ersetzt unvalidierter Hauskäse kein kontrolliertes Handelsprodukt.</p>"
+    },
+    {
+      "id": "39702d25-96a8-55f9-994c-6c4a90aef793",
+      "recipe_group_id": "37e555b3-fa4f-4309-84de-62d613fe25ab",
+      "slug": "how-to-make-fresh-cheese",
+      "public_path": "/en/how-to-make-fresh-cheese",
+      "source_url": null,
+      "language": "en",
+      "title": "How to make fresh white cheese at home",
+      "excerpt": "Pasteurized milk, vinegar and salt: fresh white cheese with draining, chilling and weighed portions.",
+      "summary": "Fresh white cheese made with pasteurized milk and vinegar, using controlled heating, curd separation, draining and chilling. Allow a proposed 150 minutes and 8 portions of 50 g; yield remains unmeasured and nutrition uses a comparable finished USDA white cheese.",
+      "category": "Starters & appetizers",
+      "category_slug": "entrantes-y-aperitivos",
+      "difficulty": "Medium",
+      "course": "Fresh cheese",
+      "cuisine": "Home cooking",
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 35,
+      "total_time_minutes": 150,
+      "servings": 8,
+      "ingredients": [
+        {
+          "name": "fresh refrigerated pasteurized whole cow's milk; not UHT",
+          "amount": 2000,
+          "unit": "ml",
+          "group": "Cheese"
+        },
+        {
+          "name": "food-grade white vinegar with 5 % acidity, up to this amount",
+          "amount": 75,
+          "unit": "ml",
+          "group": "Coagulation"
+        },
+        {
+          "name": "drinking water to dilute the vinegar",
+          "amount": 150,
+          "unit": "ml",
+          "group": "Coagulation"
+        },
+        {
+          "name": "fine salt folded into the curd",
+          "amount": 2.5,
+          "unit": "g",
+          "group": "Cheese"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepare clean ingredients and equipment",
+          "content": "Use 2000 ml fresh pasteurized whole cow's milk, within its date and kept at 4 °C or below; do not use raw, spoiled or UHT milk for this proposal. Measure up to 75 ml food-grade white vinegar with 5 % acidity, 150 ml drinking water and 2.5 g fine salt. Set out a heavy pot, food thermometer, spatula, stable strainer, heatproof bowl, small perforated mold, tray and new food-safe cheesecloth. Wash hands with soap and water for at least 20 seconds. Wash and rinse equipment and surfaces; prepare the cloth according to its instructions, including washing, rinsing and boiling-water treatment if suitable. Keep it away from dirty cloths and the sink. Clear refrigerator space for the mold and separately collected whey.",
+          "image_url": "/recetas/como-preparar-queso/paso-01.webp",
+          "image_alt": "Milk, vinegar, water, salt and clean cheesemaking equipment"
+        },
+        {
+          "title": "Heat with a thermometer without scorching",
+          "content": "Pour milk into the pot and heat gently over low to medium heat, stirring along the bottom. Allow about 15 minutes to reach 80 °C, checking the clean thermometer rather than the clock. Then hold at 80 °C for 20 minutes, adjusting heat and stirring gently without a rolling boil. Proposed cooking time is 35 minutes overall. This does not sterilize milk or the kitchen and does not justify using raw or spoiled milk. Stay with the pot and add any extra actual heating time to the total.",
+          "image_url": "/recetas/como-preparar-queso/paso-02.webp",
+          "image_alt": "Gently heating whole milk with a clean food thermometer"
+        },
+        {
+          "title": "Add acid and observe separation",
+          "content": "Mix vinegar and drinking water in a clean jug. Remove the pot from the heat. Slowly add 180 ml of the mixture first, containing 60 ml vinegar and 120 ml water, with gentle movements. If the liquid remains clearly milky, gradually add the remaining mixture, up to the prepared 225 ml, without exceeding the original 75 ml vinegar. Look for white curd clumps separating from more translucent yellowish whey; do not beat the clumps apart. Rest off the heat for 5 minutes. Not all the mixture may be needed: record the amount used. If separation fails at this maximum after correct heating, check milk and declared acidity rather than adding unlimited acid.",
+          "image_url": "/recetas/como-preparar-queso/paso-03.webp",
+          "image_alt": "White curd separating from yellowish whey as diluted vinegar is added"
+        },
+        {
+          "title": "Strain and drain without burns",
+          "content": "Secure the strainer over a heatproof bowl and line with the prepared cloth. Slowly pour in hot curds and whey, protecting hands from steam and splashes; do not hold the strainer unsupported. Drain for 30 minutes on a clean surface protected from dust and raw foods. The strainer bottom must not touch collected whey. Never twist or squeeze hot cloth with bare hands. Separated whey is excluded from the cheese and its nutrition estimate; do not mix it back or count it in the stated servings. Move the cheese into refrigerated cooling promptly after draining.",
+          "image_url": "/recetas/como-preparar-queso/paso-04.webp",
+          "image_alt": "Curds draining through clean cloth into a separate whey bowl"
+        },
+        {
+          "title": "Salt and fill the mold",
+          "content": "When the container can be handled without burns, transfer curd with a clean spoon to a clean bowl. Gently fold in the 2.5 g salt without herbs, oil or spices. Fill the small perforated mold lined with clean cloth, fold the cloth over the top and settle with the spoon rather than pressing by hand. Set the mold over a tray collecting whey without immersing the cheese. Do not add improvised weights or promise aged-cheese texture. This is fresh acid-coagulated white cheese, not mozzarella or a cheese that necessarily melts.",
+          "image_url": "/recetas/como-preparar-queso/paso-05.webp",
+          "image_alt": "Plain curd mixed with salt beside a cloth-lined perforated mold"
+        },
+        {
+          "title": "Chill while drainage finishes",
+          "content": "Immediately refrigerate the mold and tray at 4 °C or below. Protect the surface without sealing the still-warm cheese airtight and keep separate from raw foods. Allow a proposed 60 minutes to chill and finish draining; use a clean thermometer to check that the center reaches 4 °C or below before unmolding and closing its storage container. If longer is needed, continue in the refrigerator and record the delay: the planned hour does not guarantee actual cooling. Remove tray whey so it cannot touch the curd. Do not finish cooling at room temperature.",
+          "image_url": "/recetas/como-preparar-queso/paso-06.webp",
+          "image_alt": "Covered cheese mold raised above collected whey in a clean refrigerator"
+        },
+        {
+          "title": "Weigh cheese and adjust portions",
+          "content": "Unmold cold cheese into a clean container and weigh only finished curd, excluding cloth, mold and whey. A yield of 400 g and 8 portions of 50 g is proposed pending a kitchen test, not a confirmed yield from these 2000 ml milk. If the final mass differs, keep each portion at 50 g and adjust the serving count to the actual weight. Nutrition shown refers to 50 g of comparable USDA white cheese, not all milk nutrients divided by 8. Its moisture, salt and composition may differ from homemade cheese. Do not assign discarded whey to the cheese or invent retention percentages.",
+          "image_url": "/recetas/como-preparar-queso/paso-07.webp",
+          "image_alt": "Cold cheese and a wedge weighed without cloth or whey, blank scale display"
+        },
+        {
+          "title": "Serve cold and store briefly",
+          "content": "Serve cold cheese in weighed 50 g portions, excluding accompaniments from the calculation. Proposed times are 20 minutes preparation, 35 cooking and 95 waiting: 5 coagulation, 30 draining and 60 chilling; total 150 minutes. These are estimates without a confirmed kitchen test. Store covered at 4 °C or below and use within 2 days as a conservative proposal, not tested shelf life; respect shorter milk or handling limits. Freezing may change texture. Limit cumulative time outside refrigeration to 2 hours, or 1 hour above 32 °C, and discard if exceeded. Smell alone is not a safety check. Contains milk and lactose; it is not lactose-free. For especially vulnerable people, unvalidated homemade cheese is not equivalent to a controlled commercial product.",
+          "image_url": "/recetas/como-preparar-queso/portada.webp",
+          "image_alt": "Plain cold fresh white cheese with a cut wedge, no garnish"
+        }
+      ],
+      "notes": "Fresh acid-coagulated white cheese made with fresh pasteurized whole milk and food-grade vinegar of 5 % acidity, without rennet. Avoid raw, spoiled or UHT milk for this proposal. Heat and acid do not make the result sterile. Add diluted acid gradually and record the amount used; do not exceed the maximum. Drain whey, avoid handling hot cloth and chill promptly. Do not press with improvised weights or boil cheese in bags. Texture depends on moisture; this is not mozzarella or aged cheese. Changes to salt, herbs, oil, spices or accompaniments require a recorded different formula. Nutrition is a finished USDA white-cheese proxy, whose salt and moisture may differ; not all milk nutrients are retained and no whey retention is invented. Portions are weighed at 50 g; 400 g yield and 8 servings remain proposed. Missing fiber is omitted. Keep at 4 °C or below and use within 2 days as a conservative untested storage proposal. Discard after 2 hours out of refrigeration, or 1 hour above 32 °C. Contains milk and lactose; labels and cross-contact matter. For vulnerable people, unvalidated homemade cheese is not equivalent to a controlled commercial product.",
+      "nutrition": {
+        "saturated_fat_g": 6.8,
+        "protein_g": 10.2,
+        "sodium_mg": 352.0,
+        "fat_g": 12.2,
+        "carbs_g": 1.3,
+        "calories": 155.0,
+        "sugar_g": 0.9,
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (abril de 2018)",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "inputs": [
+          {
+            "ingredient": "queso blanco terminado comparable, referencia nutricional; no ingrediente adicional",
+            "edible_grams": 50,
+            "fdc_id": 172224,
+            "fdc_description": "Cheese, white, queso blanco",
+            "per_100g": {
+              "saturated_fat_g": 13.7,
+              "protein_g": 20.4,
+              "sodium_mg": 704,
+              "fat_g": 24.3,
+              "carbs_g": 2.53,
+              "calories": 310,
+              "sugar_g": 1.76
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/172224/nutrients",
+            "basis": "finished_food_proxy_per_50g_not_raw_input_retention"
+          }
+        ],
+        "serving_size": "50 g finished cheese, weighed; total yield unconfirmed",
+        "method": "Estimated comparison with finished USDA white cheese, FDC 172224. Multiply each of the seven available values per 100 g by 50/100 for one weighed 50 g portion. Do not sum raw milk nutrients or invent whey retention. The USDA salt profile belongs to the comparable finished product, not a measurement of the added 2.5 g salt, which is not added again to the estimate.",
+        "note": "Finished-food proxy, not a laboratory analysis, measured homemade composition or confirmed yield. Moisture, fat and salt may differ. Milk, vinegar and water produce separated whey; their nutrients are not assumed to remain entirely in cheese. Proposed 400 g yield is unmeasured; estimates are per actual 50 g cheese even if serving count changes. Fiber absent from the USDA entry is omitted rather than set to zero. Confirm composition and yield from the actual result."
+      },
+      "keywords": [
+        "homemade white cheese",
+        "fresh cheese without rennet",
+        "pasteurized milk cheese",
+        "how to make fresh cheese"
+      ],
+      "image_url": "/recetas/como-preparar-queso/portada.webp",
+      "gallery": [],
+      "seo": {
+        "title": "How to make fresh white cheese: steps and storage",
+        "description": "Fresh white cheese with pasteurized milk and vinegar: heat, drain and chill. Weighed 50 g portions, proposed yield and estimated USDA nutrition.",
+        "image_alt": "Plain chilled fresh white cheese with a slightly grainy texture and a cut wedge, without herbs or accompaniments",
+        "image_variants": [
+          "/recetas/como-preparar-queso/portada-1x1.webp",
+          "/recetas/como-preparar-queso/portada-4x3.webp",
+          "/recetas/como-preparar-queso/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Why does milk fail to separate, and can I use UHT?",
+            "a": "Milk treatment and actual acidity affect separation. Use fresh pasteurized whole milk for this proposal, not UHT. Check the thermometer and food-grade vinegar's 5 % acidity. Add diluted acid gradually up to the stated limit, never indefinitely, and never use spoiled milk."
+          },
+          {
+            "q": "How much cheese will I get, and how is nutrition estimated?",
+            "a": "400 g and 8 portions of 50 g are unconfirmed proposals. Weigh cold drained curd and adjust the count, keeping 50 g per portion. Values use comparable finished USDA white cheese, without counting all milk or inventing whey losses. Salt and moisture may differ. Missing fiber is not shown as zero."
+          },
+          {
+            "q": "How should I store it, and can I change the salt?",
+            "a": "Keep covered at 4 °C or below and use within 2 days as a conservative proposal, not tested shelf life. Discard if the stated time outside refrigeration is exceeded. Record salt changes as a new formula; the USDA reference does not measure actual homemade salt content. Contains milk and lactose, and is not aged cheese."
+          }
+        ]
+      },
+      "published": true,
+      "editorial_status": "published",
+      "content_html": "<p>Fresh white cheese made with pasteurized milk and vinegar, using controlled heating, curd separation, draining and chilling. Allow a proposed 150 minutes and 8 portions of 50 g; yield remains unmeasured and nutrition uses a comparable finished USDA white cheese.</p><p>Fresh acid-coagulated white cheese made with fresh pasteurized whole milk and food-grade vinegar of 5 % acidity, without rennet. Avoid raw, spoiled or UHT milk for this proposal. Heat and acid do not make the result sterile. Add diluted acid gradually and record the amount used; do not exceed the maximum. Drain whey, avoid handling hot cloth and chill promptly. Do not press with improvised weights or boil cheese in bags. Texture depends on moisture; this is not mozzarella or aged cheese. Changes to salt, herbs, oil, spices or accompaniments require a recorded different formula. Nutrition is a finished USDA white-cheese proxy, whose salt and moisture may differ; not all milk nutrients are retained and no whey retention is invented. Portions are weighed at 50 g; 400 g yield and 8 servings remain proposed. Missing fiber is omitted. Keep at 4 °C or below and use within 2 days as a conservative untested storage proposal. Discard after 2 hours out of refrigeration, or 1 hour above 32 °C. Contains milk and lactose; labels and cross-contact matter. For vulnerable people, unvalidated homemade cheese is not equivalent to a controlled commercial product.</p>"
+    },
+    {
+      "id": "99fcf230-d40a-5014-a002-b35e285f4b93",
+      "recipe_group_id": "37e555b3-fa4f-4309-84de-62d613fe25ab",
+      "slug": "comment-preparer-le-fromage",
+      "public_path": "/fr/comment-preparer-le-fromage",
+      "source_url": "https://manualdecocina.com/fr/comment-preparer-le-fromage/",
+      "language": "fr",
+      "title": "Comment préparer un fromage blanc frais maison",
+      "excerpt": "Lait pasteurisé, vinaigre et sel : fromage blanc frais égoutté, refroidi et servi en portions pesées.",
+      "summary": "Fromage blanc frais au lait pasteurisé et au vinaigre : chauffage contrôlé, séparation du caillé, égouttage et refroidissement. Proposition de 150 minutes et 8 portions de 50 g ; rendement non mesuré, nutrition estimée par comparaison avec un queso blanco USDA fini.",
+      "category": "Entrées et apéritifs",
+      "category_slug": "entrantes-y-aperitivos",
+      "difficulty": "Moyenne",
+      "course": "Fromage frais",
+      "cuisine": "Cuisine maison",
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 35,
+      "total_time_minutes": 150,
+      "servings": 8,
+      "ingredients": [
+        {
+          "name": "lait entier de vache pasteurisé, frais et réfrigéré ; non UHT",
+          "amount": 2000,
+          "unit": "ml",
+          "group": "Fromage"
+        },
+        {
+          "name": "vinaigre blanc alimentaire d'acidité 5 %, jusqu'à cette quantité",
+          "amount": 75,
+          "unit": "ml",
+          "group": "Coagulation"
+        },
+        {
+          "name": "eau potable pour diluer le vinaigre",
+          "amount": 150,
+          "unit": "ml",
+          "group": "Coagulation"
+        },
+        {
+          "name": "sel fin incorporé au caillé",
+          "amount": 2.5,
+          "unit": "g",
+          "group": "Fromage"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Préparez des ingrédients et ustensiles propres",
+          "content": "Utilisez 2000 ml de lait entier pasteurisé frais, dans sa date limite et conservé à 4 °C ou moins ; aucun lait cru, avarié ou UHT pour cette proposition. Mesurez jusqu'à 75 ml de vinaigre blanc alimentaire d'acidité 5 %, 150 ml d'eau potable et 2,5 g de sel fin. Préparez une casserole épaisse, un thermomètre alimentaire, une spatule, une passoire stable, un bol résistant à la chaleur, un petit moule perforé, un plateau et une étamine neuve adaptée aux aliments. Lavez les mains au savon pendant au moins 20 secondes. Lavez et rincez matériel et surfaces ; préparez l'étamine selon sa notice, avec lavage, rinçage et traitement à l'eau bouillante si adapté. Évitez chiffons sales et contact avec l'évier. Libérez une place au réfrigérateur pour le moule et le petit-lait séparé.",
+          "image_url": "/recetas/como-preparar-queso/paso-01.webp",
+          "image_alt": "Lait, vinaigre, eau, sel et matériel propre"
+        },
+        {
+          "title": "Chauffez avec un thermomètre sans brûler",
+          "content": "Versez le lait dans la casserole et chauffez doucement, en remuant le fond. Prévoyez environ 15 minutes pour atteindre 80 °C, mais décidez selon le thermomètre propre. Maintenez ensuite 80 °C pendant 20 minutes en réglant le feu et en remuant délicatement, sans forte ébullition. La cuisson prévue totalise 35 minutes. Cela ne stérilise ni lait ni cuisine et ne justifie pas le lait cru ou avarié. Surveillez la casserole et ajoutez au total tout temps de chauffage réel supplémentaire.",
+          "image_url": "/recetas/como-preparar-queso/paso-02.webp",
+          "image_alt": "Lait entier chauffé doucement avec thermomètre propre"
+        },
+        {
+          "title": "Ajoutez l'acide et observez la séparation",
+          "content": "Mélangez vinaigre et eau potable dans un pichet propre. Retirez la casserole du feu. Incorporez doucement d'abord 180 ml du mélange, soit 60 ml de vinaigre et 120 ml d'eau. Si le liquide reste nettement laiteux, ajoutez progressivement le reste jusqu'aux 225 ml préparés, sans dépasser les 75 ml de vinaigre initiaux. Recherchez des grumeaux blancs de caillé séparés d'un petit-lait jaunâtre plus translucide ; ne fouettez pas les grumeaux. Laissez reposer hors feu 5 minutes. Tout le mélange ne sera peut-être pas nécessaire : notez la quantité utilisée. Sans séparation au maximum malgré un chauffage correct, vérifiez lait et acidité déclarée plutôt que d'ajouter de l'acide sans limite.",
+          "image_url": "/recetas/como-preparar-queso/paso-03.webp",
+          "image_alt": "Caillé blanc séparé du petit-lait jaunâtre pendant l'ajout de vinaigre dilué"
+        },
+        {
+          "title": "Filtrez et égouttez sans vous brûler",
+          "content": "Fixez la passoire au-dessus du bol résistant à la chaleur et tapissez-la de l'étamine préparée. Versez lentement caillé et petit-lait chauds en protégeant les mains des projections et de la vapeur ; ne tenez pas la passoire dans le vide. Égouttez 30 minutes sur une surface propre, à l'abri de poussière et d'aliments crus. Le fond ne doit pas toucher le petit-lait recueilli. Ne tordez ni pressez l'étamine chaude à mains nues. Le petit-lait séparé est exclu du fromage et de son estimation nutritionnelle ; ne le réincorporez pas et ne le comptez pas dans les portions. Commencez sans délai le refroidissement au réfrigérateur après égouttage.",
+          "image_url": "/recetas/como-preparar-queso/paso-04.webp",
+          "image_alt": "Caillé filtré dans une étamine propre, petit-lait séparé"
+        },
+        {
+          "title": "Salez et remplissez le moule",
+          "content": "Dès que le récipient se manipule sans risque de brûlure, transférez le caillé avec une cuillère propre dans un bol propre. Incorporez délicatement les 2,5 g de sel, sans herbes, huile ni épices dans cette formule. Remplissez le moule perforé garni d'étamine propre, repliez celle-ci sur le dessus et tassez légèrement à la cuillère, sans presser à la main. Placez le moule au-dessus d'un plateau collectant le petit-lait sans immerger le fromage. Aucun poids improvisé ni promesse de texture affinée. C'est un fromage blanc frais à coagulation acide, pas une mozzarella ni un fromage qui fond nécessairement.",
+          "image_url": "/recetas/como-preparar-queso/paso-05.webp",
+          "image_alt": "Caillé salé près d'un moule perforé garni d'étamine"
+        },
+        {
+          "title": "Refroidissez pendant la fin de l'égouttage",
+          "content": "Réfrigérez aussitôt moule et plateau à 4 °C ou moins. Protégez la surface sans fermer hermétiquement le fromage encore chaud ; séparez-le des aliments crus. Prévoyez 60 minutes pour refroidir et finir l'égouttage. Avec un thermomètre propre, vérifiez que le centre atteint 4 °C ou moins avant démoulage et stockage en boîte fermée. Si nécessaire, poursuivez au réfrigérateur et notez le délai : l'heure prévue ne garantit pas la température réelle. Retirez le petit-lait du plateau pour qu'il ne touche pas le caillé. Ne finissez pas à température ambiante.",
+          "image_url": "/recetas/como-preparar-queso/paso-06.webp",
+          "image_alt": "Moule couvert surélevé au-dessus du petit-lait dans le réfrigérateur"
+        },
+        {
+          "title": "Pesez le fromage et adaptez les portions",
+          "content": "Démoulez le fromage froid dans un récipient propre et pesez uniquement le caillé fini, sans étamine, moule ou petit-lait. Un rendement de 400 g et 8 portions de 50 g est proposé, en attente d'un essai en cuisine, pas confirmé pour ces 2000 ml de lait. Si la masse change, gardez 50 g par portion et adaptez leur nombre au poids réel. Les valeurs concernent 50 g de queso blanco USDA comparable, pas tous les nutriments du lait divisés par 8. Humidité, sel et composition peuvent différer du fromage maison. N'attribuez pas le petit-lait écarté au fromage et n'inventez pas de taux de rétention.",
+          "image_url": "/recetas/como-preparar-queso/paso-07.webp",
+          "image_alt": "Fromage froid pesé sans étamine ni petit-lait, écran de balance vide"
+        },
+        {
+          "title": "Servez froid et conservez brièvement",
+          "content": "Servez en portions pesées de 50 g, sans accompagnements comptés. Proposition : 20 minutes de préparation, 35 de cuisson et 95 d'attente : 5 de coagulation, 30 d'égouttage et 60 de refroidissement ; total 150 minutes. Temps proposés, sans essai confirmé. Conservez couvert à 4 °C ou moins et consommez dans les 2 jours comme proposition prudente, pas durée de vie testée ; respectez toute limite plus courte du lait ou des manipulations. La congélation peut modifier la texture. Limitez le temps cumulé hors froid à 2 heures, ou 1 heure au-dessus de 32 °C, puis jetez si dépassé. L'odeur seule ne suffit pas. Contient lait et lactose, pas sans lactose. Pour les personnes particulièrement vulnérables, un fromage maison sans procédé validé n'équivaut pas à un produit commercial contrôlé.",
+          "image_url": "/recetas/como-preparar-queso/portada.webp",
+          "image_alt": "Petit fromage blanc frais froid et quartier sans garniture"
+        }
+      ],
+      "notes": "Fromage blanc frais coagulé à l'acide, avec lait entier pasteurisé frais et vinaigre alimentaire d'acidité 5 %, sans présure. Pas de lait cru, avarié ou UHT pour cette proposition. Chaleur et acide ne rendent pas le fromage stérile. Ajoutez le mélange progressivement, notez la quantité et ne dépassez pas le maximum. Égouttez le petit-lait, ne pressez pas de tissu chaud à mains nues et réfrigérez rapidement. Pas de poids improvisés ni cuisson du fromage en sachets. Texture variable selon l'humidité ; pas de mozzarella ou fromage affiné. Toute modification de sel ou ajout exige une formule documentée. La nutrition compare un queso blanco USDA fini, dont sel et humidité peuvent différer ; aucune rétention intégrale du lait n'est supposée. Pesez des portions de 50 g ; 400 g et 8 portions restent proposés. Les fibres manquantes sont omises. À 4 °C ou moins, consommer dans les 2 jours : proposition prudente non testée. Jeter après 2 heures hors froid, ou 1 heure au-dessus de 32 °C. Contient lait et lactose ; étiquettes et contamination croisée à vérifier. Un fromage maison non validé n'équivaut pas à un produit commercial contrôlé pour les personnes vulnérables.",
+      "nutrition": {
+        "saturated_fat_g": 6.8,
+        "protein_g": 10.2,
+        "sodium_mg": 352.0,
+        "fat_g": 12.2,
+        "carbs_g": 1.3,
+        "calories": 155.0,
+        "sugar_g": 0.9,
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (abril de 2018)",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "inputs": [
+          {
+            "ingredient": "queso blanco terminado comparable, referencia nutricional; no ingrediente adicional",
+            "edible_grams": 50,
+            "fdc_id": 172224,
+            "fdc_description": "Cheese, white, queso blanco",
+            "per_100g": {
+              "saturated_fat_g": 13.7,
+              "protein_g": 20.4,
+              "sodium_mg": 704,
+              "fat_g": 24.3,
+              "carbs_g": 2.53,
+              "calories": 310,
+              "sugar_g": 1.76
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/172224/nutrients",
+            "basis": "finished_food_proxy_per_50g_not_raw_input_retention"
+          }
+        ],
+        "serving_size": "50 g de fromage fini, pesés ; rendement total non confirmé",
+        "method": "Comparaison indicative avec queso blanco fini USDA FDC 172224. Multipliez les sept valeurs disponibles pour 100 g par 50/100 pour une portion pesée de 50 g. Ne sommez pas les nutriments du lait et n'inventez pas de rétention du petit-lait. Le profil de sel appartient au fromage USDA comparable, pas à une mesure des 2,5 g ajoutés ; cette quantité n'est pas additionnée une seconde fois.",
+        "note": "Référence de produit fini, pas analyse de laboratoire, composition maison confirmée ou rendement mesuré. Humidité, graisse et sel peuvent différer. Lait, vinaigre et eau produisent du petit-lait séparé : aucune rétention intégrale n'est présumée. Rendement proposé de 400 g non mesuré ; valeurs pour 50 g réels même si le nombre de portions change. Fibres absentes omises, pas mises à zéro. Composition et rendement à confirmer sur le résultat réel."
+      },
+      "keywords": [
+        "fromage blanc frais maison",
+        "fromage sans présure",
+        "queso blanco maison",
+        "fromage au lait pasteurisé"
+      ],
+      "image_url": "/recetas/como-preparar-queso/portada.webp",
+      "gallery": [],
+      "seo": {
+        "title": "Préparer du fromage blanc frais : étapes et conservation",
+        "description": "Fromage frais au lait pasteurisé et vinaigre : chauffer, égoutter, refroidir. Portions pesées de 50 g, rendement proposé et nutrition estimée USDA.",
+        "image_alt": "Fromage blanc frais froid à texture légèrement granuleuse, avec un quartier découpé, sans herbes ni accompagnement",
+        "image_variants": [
+          "/recetas/como-preparar-queso/portada-1x1.webp",
+          "/recetas/como-preparar-queso/portada-4x3.webp",
+          "/recetas/como-preparar-queso/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Pourquoi le lait ne coagule-t-il pas, et puis-je utiliser UHT ?",
+            "a": "Traitement du lait et acidité réelle modifient la séparation. Cette proposition utilise du lait entier pasteurisé frais, non UHT. Vérifiez thermomètre et vinaigre alimentaire d'acidité 5 %. Ajoutez progressivement jusqu'au maximum, jamais sans limite ni avec lait avarié."
+          },
+          {
+            "q": "Quel rendement et quelle nutrition attendre ?",
+            "a": "400 g et 8 portions de 50 g sont proposés, non confirmés. Pesez le caillé froid égoutté et adaptez le nombre en gardant 50 g par portion. Valeurs comparées à un queso blanco USDA fini, sans attribuer tout le lait au fromage ni inventer des pertes de petit-lait. Sel et humidité peuvent varier. Les fibres absentes ne sont pas indiquées comme zéro."
+          },
+          {
+            "q": "Comment conserver et modifier le sel ?",
+            "a": "Gardez couvert à 4 °C ou moins, à consommer dans les 2 jours comme proposition prudente, pas durée de conservation testée. Jetez si les limites hors froid sont dépassées. Consignez tout changement de sel ; la référence USDA ne mesure pas le sel réel de ce fromage. Contient lait et lactose, sans affinage."
+          }
+        ]
+      },
+      "published": true,
+      "editorial_status": "published",
+      "content_html": "<p>Fromage blanc frais au lait pasteurisé et au vinaigre : chauffage contrôlé, séparation du caillé, égouttage et refroidissement. Proposition de 150 minutes et 8 portions de 50 g ; rendement non mesuré, nutrition estimée par comparaison avec un queso blanco USDA fini.</p><p>Fromage blanc frais coagulé à l&#x27;acide, avec lait entier pasteurisé frais et vinaigre alimentaire d&#x27;acidité 5 %, sans présure. Pas de lait cru, avarié ou UHT pour cette proposition. Chaleur et acide ne rendent pas le fromage stérile. Ajoutez le mélange progressivement, notez la quantité et ne dépassez pas le maximum. Égouttez le petit-lait, ne pressez pas de tissu chaud à mains nues et réfrigérez rapidement. Pas de poids improvisés ni cuisson du fromage en sachets. Texture variable selon l&#x27;humidité ; pas de mozzarella ou fromage affiné. Toute modification de sel ou ajout exige une formule documentée. La nutrition compare un queso blanco USDA fini, dont sel et humidité peuvent différer ; aucune rétention intégrale du lait n&#x27;est supposée. Pesez des portions de 50 g ; 400 g et 8 portions restent proposés. Les fibres manquantes sont omises. À 4 °C ou moins, consommer dans les 2 jours : proposition prudente non testée. Jeter après 2 heures hors froid, ou 1 heure au-dessus de 32 °C. Contient lait et lactose ; étiquettes et contamination croisée à vérifier. Un fromage maison non validé n&#x27;équivaut pas à un produit commercial contrôlé pour les personnes vulnérables.</p>"
+    },
+    {
+      "id": "9196bccf-a13d-509d-b947-e68fe5483d09",
+      "recipe_group_id": "37e555b3-fa4f-4309-84de-62d613fe25ab",
+      "slug": "come-preparare-il-formaggio",
+      "public_path": "/it/come-preparare-il-formaggio",
+      "source_url": "https://manualdecocina.com/it/come-preparare-il-formaggio/",
+      "language": "it",
+      "title": "Come preparare il formaggio bianco fresco in casa",
+      "excerpt": "Latte pastorizzato, aceto e sale: formaggio fresco scolato, raffreddato e diviso in porzioni pesate.",
+      "summary": "Formaggio bianco fresco con latte pastorizzato e aceto: riscaldamento controllato, separazione della cagliata, scolatura e raffreddamento. Proposti 150 minuti e 8 porzioni da 50 g; resa non misurata e nutrizione stimata per confronto con queso blanco USDA finito.",
+      "category": "Antipasti",
+      "category_slug": "entrantes-y-aperitivos",
+      "difficulty": "Media",
+      "course": "Formaggio fresco",
+      "cuisine": "Cucina casalinga",
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 35,
+      "total_time_minutes": 150,
+      "servings": 8,
+      "ingredients": [
+        {
+          "name": "latte vaccino intero pastorizzato, fresco e refrigerato; non UHT",
+          "amount": 2000,
+          "unit": "ml",
+          "group": "Formaggio"
+        },
+        {
+          "name": "aceto bianco alimentare con acidità 5 %, fino a questa quantità",
+          "amount": 75,
+          "unit": "ml",
+          "group": "Coagulazione"
+        },
+        {
+          "name": "acqua potabile per diluire l'aceto",
+          "amount": 150,
+          "unit": "ml",
+          "group": "Coagulazione"
+        },
+        {
+          "name": "sale fino incorporato nella cagliata",
+          "amount": 2.5,
+          "unit": "g",
+          "group": "Formaggio"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepara ingredienti e utensili puliti",
+          "content": "Usa 2000 ml di latte vaccino intero pastorizzato fresco, entro la scadenza e conservato a 4 °C o meno; non usare latte crudo, deteriorato o UHT per questa proposta. Misura fino a 75 ml di aceto bianco alimentare con acidità 5 %, 150 ml di acqua potabile e 2,5 g di sale fino. Prepara pentola spessa, termometro alimentare, spatola, colino stabile, ciotola resistente al calore, piccolo stampo perforato, vassoio e garza nuova per alimenti. Lava le mani con acqua e sapone per almeno 20 secondi. Lava e risciacqua utensili e superfici; prepara la garza secondo le istruzioni, con lavaggio, risciacquo e acqua bollente se adatta. Evita panni sporchi e contatto con il lavello. Libera spazio in frigorifero per stampo e siero separato.",
+          "image_url": "/recetas/como-preparar-queso/paso-01.webp",
+          "image_alt": "Latte, aceto, acqua, sale e utensili puliti"
+        },
+        {
+          "title": "Scalda con il termometro senza bruciare",
+          "content": "Versa il latte nella pentola e scalda dolcemente a fuoco basso o medio, mescolando sul fondo. Prevedi circa 15 minuti per raggiungere 80 °C, ma decidi dal termometro pulito. Mantieni poi 80 °C per 20 minuti regolando il fuoco e mescolando delicatamente, senza bollore forte. Cottura prevista complessiva di 35 minuti. Non rende latte o cucina sterili e non giustifica latte crudo o deteriorato. Sorveglia la pentola e aggiungi al totale eventuale tempo reale di riscaldamento ulteriore.",
+          "image_url": "/recetas/como-preparar-queso/paso-02.webp",
+          "image_alt": "Latte intero scaldato dolcemente con termometro pulito"
+        },
+        {
+          "title": "Aggiungi l'acido e osserva la separazione",
+          "content": "Mescola aceto e acqua potabile in una caraffa pulita. Togli la pentola dal fuoco. Versa prima lentamente 180 ml della miscela, ossia 60 ml di aceto e 120 ml d'acqua, con movimenti delicati. Se il liquido resta nettamente lattiginoso, aggiungi gradualmente il resto fino ai 225 ml preparati, senza superare i 75 ml di aceto iniziali. Cerca grumi bianchi di cagliata separati da siero giallastro più traslucido; non sbatterli. Lascia riposare fuori fuoco per 5 minuti. Potrebbe non servire tutta la miscela: annota quanto usato. Se non separa alla quantità massima dopo corretto riscaldamento, controlla latte e acidità dichiarata, senza aggiungere acido illimitato.",
+          "image_url": "/recetas/como-preparar-queso/paso-03.webp",
+          "image_alt": "Cagliata bianca separata dal siero con aggiunta di aceto diluito"
+        },
+        {
+          "title": "Filtra e scola senza ustionarti",
+          "content": "Sistema stabilmente il colino sopra una ciotola resistente al calore e rivestilo con la garza preparata. Versa lentamente cagliata e siero caldi proteggendo le mani da vapore e schizzi; non tenere il colino sospeso. Scola per 30 minuti su superficie pulita, protetta da polvere e alimenti crudi. Il fondo non deve toccare il siero raccolto. Non torcere o strizzare garza calda a mani nude. Il siero separato è escluso dal formaggio e dalla stima nutrizionale: non reincorporarlo o contarne le porzioni. Inizia senza ritardi il raffreddamento in frigorifero dopo la scolatura.",
+          "image_url": "/recetas/como-preparar-queso/paso-04.webp",
+          "image_alt": "Cagliata nella garza pulita e siero raccolto separatamente"
+        },
+        {
+          "title": "Sala e riempi lo stampo",
+          "content": "Quando il recipiente si può maneggiare senza ustioni, trasferisci la cagliata con cucchiaio pulito in una ciotola pulita. Incorpora delicatamente i 2,5 g di sale, senza erbe, olio o spezie in questa formula. Riempi lo stampo perforato rivestito di garza pulita, ripiegala sopra e assesta con il cucchiaio senza premere con le mani. Metti lo stampo sopra un vassoio che raccolga il siero senza immergere il formaggio. Niente pesi improvvisati o promessa di consistenza stagionata. È formaggio bianco fresco a coagulazione acida, non mozzarella né un formaggio che fonda necessariamente.",
+          "image_url": "/recetas/como-preparar-queso/paso-05.webp",
+          "image_alt": "Cagliata salata vicino a stampo perforato rivestito"
+        },
+        {
+          "title": "Raffredda mentre termina la scolatura",
+          "content": "Porta subito stampo e vassoio in frigorifero a 4 °C o meno. Proteggi la superficie senza chiudere ermeticamente il formaggio ancora caldo e separalo dagli alimenti crudi. Prevedi 60 minuti per raffreddare e finire di scolare; verifica con termometro pulito che il centro raggiunga 4 °C o meno prima di sformare e conservare in un contenitore chiuso. Se serve più tempo, continua in frigorifero e annota il ritardo: l'ora prevista non garantisce la temperatura reale. Togli il siero dal vassoio perché non tocchi la cagliata. Non terminare a temperatura ambiente.",
+          "image_url": "/recetas/como-preparar-queso/paso-06.webp",
+          "image_alt": "Stampo coperto sollevato sopra il siero in frigorifero"
+        },
+        {
+          "title": "Pesa il formaggio e adatta le porzioni",
+          "content": "Sforma il formaggio freddo in un recipiente pulito e pesa solo la cagliata finita, senza garza, stampo o siero. Resa orientativa di 400 g e 8 porzioni da 50 g, in attesa di prova in cucina: non è una resa confermata da questi 2000 ml di latte. Se la massa finale cambia, mantieni 50 g per porzione e adatta il numero al peso reale. Nutrizione riferita a 50 g di queso blanco USDA comparabile, non tutti i nutrienti del latte divisi per 8. Umidità, sale e composizione possono differire dal prodotto casalingo. Non assegnare al formaggio il siero scartato o inventare percentuali di ritenzione.",
+          "image_url": "/recetas/como-preparar-queso/paso-07.webp",
+          "image_alt": "Formaggio freddo sulla bilancia senza lettura numerica, garza separata"
+        },
+        {
+          "title": "Servi freddo e conserva brevemente",
+          "content": "Servi freddo in porzioni pesate da 50 g, senza accompagnamenti nel calcolo. Tempi proposti: 20 minuti preparazione, 35 cottura e 95 attesa: 5 coagulazione, 30 scolatura e 60 raffreddamento; totale 150 minuti. Non sono tempi confermati da una prova. Conserva coperto a 4 °C o meno e consuma entro 2 giorni come proposta prudente, non durata testata; rispetta limiti più brevi del latte o delle manipolazioni. La congelazione può cambiare consistenza. Limita il tempo cumulato fuori frigorifero a 2 ore, o 1 ora oltre 32 °C, poi scarta se superato. L'odore non basta. Contiene latte e lattosio, non è senza lattosio. Per persone particolarmente vulnerabili, un formaggio casalingo senza processo validato non equivale a un prodotto commerciale controllato.",
+          "image_url": "/recetas/como-preparar-queso/portada.webp",
+          "image_alt": "Formaggio bianco fresco freddo con spicchio senza guarnizioni"
+        }
+      ],
+      "notes": "Formaggio bianco fresco a coagulazione acida con latte intero pastorizzato fresco e aceto alimentare con acidità 5 %, senza caglio. Niente latte crudo, deteriorato o UHT per questa proposta. Calore e acido non rendono sterile il risultato. Aggiungi il liquido diluito gradualmente, annota l'uso e non superare il massimo. Scola il siero, non stringere garza calda a mani nude e raffredda subito. Niente pesi improvvisati o formaggio bollito in sacchetti. L'umidità cambia consistenza; non è mozzarella o formaggio stagionato. Variazioni di sale o aggiunte richiedono formula documentata. I valori confrontano queso blanco USDA finito, con umidità e sale potenzialmente diversi; nessuna ritenzione totale del latte è supposta. Porzioni pesate da 50 g; 400 g e 8 porzioni restano proposti. Fibra assente omessa. A 4 °C o meno, consumare entro 2 giorni: proposta prudente non testata. Scartare dopo 2 ore fuori freddo, o 1 ora oltre 32 °C. Contiene latte e lattosio; verificare etichette e contatto crociato. Prodotto casalingo non validato non equivale a formaggio commerciale controllato per persone vulnerabili.",
+      "nutrition": {
+        "saturated_fat_g": 6.8,
+        "protein_g": 10.2,
+        "sodium_mg": 352.0,
+        "fat_g": 12.2,
+        "carbs_g": 1.3,
+        "calories": 155.0,
+        "sugar_g": 0.9,
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (abril de 2018)",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "inputs": [
+          {
+            "ingredient": "queso blanco terminado comparable, referencia nutricional; no ingrediente adicional",
+            "edible_grams": 50,
+            "fdc_id": 172224,
+            "fdc_description": "Cheese, white, queso blanco",
+            "per_100g": {
+              "saturated_fat_g": 13.7,
+              "protein_g": 20.4,
+              "sodium_mg": 704,
+              "fat_g": 24.3,
+              "carbs_g": 2.53,
+              "calories": 310,
+              "sugar_g": 1.76
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/172224/nutrients",
+            "basis": "finished_food_proxy_per_50g_not_raw_input_retention"
+          }
+        ],
+        "serving_size": "50 g di formaggio finito, pesati; resa totale non confermata",
+        "method": "Confronto orientativo con queso blanco finito USDA FDC 172224. Moltiplica i sette valori presenti per 100 g per 50/100 per una porzione pesata da 50 g. Non sommare i nutrienti del latte o inventare ritenzione del siero. Il profilo di sale appartiene al prodotto USDA comparabile, non a una misura dei 2,5 g aggiunti; non sommarli una seconda volta.",
+        "note": "Referenza di alimento finito, non analisi, composizione casalinga confermata o resa misurata. Umidità, grassi e sale possono differire. Latte, aceto e acqua producono siero separato; non si assume ritenzione totale dei nutrienti. Resa proposta di 400 g non misurata; valori per 50 g reali anche se cambia il numero di porzioni. Fibra assente omessa, non messa a zero. Composizione e resa da confermare sul risultato reale."
+      },
+      "keywords": [
+        "formaggio bianco fatto in casa",
+        "formaggio fresco senza caglio",
+        "queso blanco casalingo",
+        "formaggio con latte pastorizzato"
+      ],
+      "image_url": "/recetas/como-preparar-queso/portada.webp",
+      "gallery": [],
+      "seo": {
+        "title": "Preparare formaggio bianco fresco: passaggi e conservazione",
+        "description": "Formaggio fresco con latte pastorizzato e aceto: scalda, scola e raffredda. Porzioni da 50 g pesate, resa proposta e nutrizione stimata USDA.",
+        "image_alt": "Formaggio bianco fresco freddo a grana delicata con spicchio tagliato, senza erbe o accompagnamenti",
+        "image_variants": [
+          "/recetas/como-preparar-queso/portada-1x1.webp",
+          "/recetas/como-preparar-queso/portada-4x3.webp",
+          "/recetas/como-preparar-queso/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Perché il latte non coagula e posso usare UHT?",
+            "a": "Trattamento del latte e acidità reale modificano la separazione. Qui si propone latte intero pastorizzato fresco, non UHT. Controlla termometro e aceto alimentare con acidità 5 %. Aggiungi gradualmente fino al massimo, mai senza limite o con latte deteriorato."
+          },
+          {
+            "q": "Quanto formaggio si ottiene e come si stima la nutrizione?",
+            "a": "400 g e 8 porzioni da 50 g sono proposti, non confermati. Pesa la cagliata fredda scolata e adatta il numero mantenendo 50 g per porzione. Valori da queso blanco USDA finito comparabile, senza assegnare tutto il latte al formaggio o inventare perdite di siero. Sale e umidità possono variare. Fibra assente non indicata come zero."
+          },
+          {
+            "q": "Come si conserva e posso cambiare il sale?",
+            "a": "Coperto a 4 °C o meno, consumare entro 2 giorni come proposta prudente, non durata testata. Scarta se supera i tempi indicati fuori freddo. Registra le variazioni di sale come nuova formula; la referenza USDA non misura il sale del formaggio casalingo. Contiene latte e lattosio, senza stagionatura."
+          }
+        ]
+      },
+      "published": true,
+      "editorial_status": "published",
+      "content_html": "<p>Formaggio bianco fresco con latte pastorizzato e aceto: riscaldamento controllato, separazione della cagliata, scolatura e raffreddamento. Proposti 150 minuti e 8 porzioni da 50 g; resa non misurata e nutrizione stimata per confronto con queso blanco USDA finito.</p><p>Formaggio bianco fresco a coagulazione acida con latte intero pastorizzato fresco e aceto alimentare con acidità 5 %, senza caglio. Niente latte crudo, deteriorato o UHT per questa proposta. Calore e acido non rendono sterile il risultato. Aggiungi il liquido diluito gradualmente, annota l&#x27;uso e non superare il massimo. Scola il siero, non stringere garza calda a mani nude e raffredda subito. Niente pesi improvvisati o formaggio bollito in sacchetti. L&#x27;umidità cambia consistenza; non è mozzarella o formaggio stagionato. Variazioni di sale o aggiunte richiedono formula documentata. I valori confrontano queso blanco USDA finito, con umidità e sale potenzialmente diversi; nessuna ritenzione totale del latte è supposta. Porzioni pesate da 50 g; 400 g e 8 porzioni restano proposti. Fibra assente omessa. A 4 °C o meno, consumare entro 2 giorni: proposta prudente non testata. Scartare dopo 2 ore fuori freddo, o 1 ora oltre 32 °C. Contiene latte e lattosio; verificare etichette e contatto crociato. Prodotto casalingo non validato non equivale a formaggio commerciale controllato per persone vulnerabili.</p>"
+    },
+    {
+      "id": "08c6912e-467d-5c9e-9d3b-0c6d14ff4f31",
+      "recipe_group_id": "37e555b3-fa4f-4309-84de-62d613fe25ab",
+      "slug": "チーズの作り方",
+      "public_path": "/ja/チーズの作り方",
+      "source_url": "https://manualdecocina.com/ja/チーズの作り方/",
+      "language": "ja",
+      "title": "家庭で作るフレッシュ・ホワイトチーズ",
+      "excerpt": "低温殺菌済みの牛乳、酢、塩で作るチーズ。水切りと冷却を行い、仕上がった量を量って取り分けます。",
+      "summary": "殺菌済み全乳と酢を使い、温度を管理して加熱し、カードとホエーを分離、水切り、冷却します。所要150分、50 gずつ8人分は提案値です。歩留まりは未測定で、栄養値はUSDAの比較用ホワイトチーズ完成品に基づく推定です。",
+      "category": "前菜・おつまみ",
+      "category_slug": "entrantes-y-aperitivos",
+      "difficulty": "普通",
+      "course": "フレッシュチーズ",
+      "cuisine": "家庭料理",
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 35,
+      "total_time_minutes": 150,
+      "servings": 8,
+      "ingredients": [
+        {
+          "name": "新鮮で冷蔵された殺菌済み牛の全乳（UHT乳はこの案では使わない）",
+          "amount": 2000,
+          "unit": "ml",
+          "group": "チーズ"
+        },
+        {
+          "name": "酸度5 %の食用ホワイトビネガー（この量を上限に使用）",
+          "amount": 75,
+          "unit": "ml",
+          "group": "凝固"
+        },
+        {
+          "name": "酢を薄める飲用水",
+          "amount": 150,
+          "unit": "ml",
+          "group": "凝固"
+        },
+        {
+          "name": "カードに混ぜる細かい塩",
+          "amount": 2.5,
+          "unit": "g",
+          "group": "チーズ"
+        }
+      ],
+      "steps": [
+        {
+          "title": "材料と清潔な器具を準備する",
+          "content": "期限内で新鮮な殺菌済み牛の全乳2000 mlを使い、4 °C以下で保存しておきます。この案では未殺菌乳、傷んだ乳、UHT乳は使いません。酸度5 %の食用ホワイトビネガーを最大75 ml、飲用水150 ml、細かい塩2.5 g用意します。厚手鍋、食品用温度計、へら、安定したざる、耐熱ボウル、小さい穴あき型、受け皿、新しい食品用チーズクロスを準備します。手を石けんと水で少なくとも20秒洗います。器具と作業台を洗ってすすぎ、クロスは説明書に従って洗浄・すすぎを行い、対応していれば熱湯処理します。汚れた布や流しに触れさせません。型と分離したホエーを置く冷蔵庫の場所を確保します。",
+          "image_url": "/recetas/como-preparar-queso/paso-01.webp",
+          "image_alt": "牛乳、酢、水、塩と清潔なチーズ作りの道具"
+        },
+        {
+          "title": "温度計で確認しながら焦がさず加熱する",
+          "content": "牛乳を鍋に入れ、弱火から中火で底を混ぜながら穏やかに加熱します。80 °Cに達するまで約15分を見込みますが、時計ではなく清潔な温度計で判断します。その後80 °Cを20分保ち、火力を調整しながら優しく混ぜ、激しく沸騰させません。加熱時間は合計35分の予定です。牛乳や台所が無菌になるわけではなく、未殺菌乳や傷んだ乳を使う理由にはなりません。鍋から離れず、実際の加熱が長くなった分は総時間に加えます。",
+          "image_url": "/recetas/como-preparar-queso/paso-02.webp",
+          "image_alt": "清潔な温度計を入れて全乳を穏やかに加熱"
+        },
+        {
+          "title": "酸を加えて分離を確認する",
+          "content": "清潔なピッチャーで酢と飲用水を混ぜ、鍋を火から外します。まず酢60 mlと水120 mlに相当する混合液180 mlをゆっくり加え、穏やかに動かします。液体がまだ明らかに乳白色なら、残りを少しずつ加え、用意した225 mlまでとします。元の酢75 mlを超えません。白いカードの塊が、やや透けた黄色いホエーから分かれる状態を見ます。塊を泡立てて壊さず、火から外したまま5分休ませます。全量が必要とは限らないので使用量を記録します。正しい加熱と上限量でも分離しない場合は、乳と表示酸度を確認し、酸を際限なく足しません。",
+          "image_url": "/recetas/como-preparar-queso/paso-03.webp",
+          "image_alt": "薄めた酢を加え、白いカードと黄色いホエーが分離"
+        },
+        {
+          "title": "やけどを避けてこし、水切りする",
+          "content": "耐熱ボウルの上にざるを安定させ、準備したクロスを敷きます。蒸気や飛び散りから手を守り、熱いカードとホエーをゆっくり注ぎます。ざるを空中で手持ちしません。ほこりや生の食品から守った清潔な場所で30分水切りします。ざるの底が受けたホエーに触れないようにします。熱いクロスを素手でねじったり絞ったりしません。分離したホエーはチーズと栄養推定から除外し、戻したり、この分量の一部として提供したりしません。水切り後は遅らせず冷蔵庫で冷却を始めます。",
+          "image_url": "/recetas/como-preparar-queso/paso-04.webp",
+          "image_alt": "清潔なクロスでカードをこし、ホエーを別に受ける"
+        },
+        {
+          "title": "塩を混ぜて型に入れる",
+          "content": "容器をやけどなく扱えるようになったら、清潔なスプーンでカードを清潔なボウルへ移します。塩2.5 gを優しく混ぜ、この配合にはハーブ、油、香辛料を加えません。清潔なクロスを敷いた穴あき型に詰め、上にクロスを折り返し、スプーンで軽く整えます。手で圧縮しません。型はホエーを受ける皿の上に置き、チーズが液に浸からないようにします。即席の重しを加えず、熟成チーズの食感を約束しません。酸で凝固させるフレッシュ・ホワイトチーズで、モッツァレラや必ず溶けるチーズではありません。",
+          "image_url": "/recetas/como-preparar-queso/paso-05.webp",
+          "image_alt": "塩を混ぜたカードとクロスを敷いた穴あき型"
+        },
+        {
+          "title": "水切りを続けながら冷蔵する",
+          "content": "型と受け皿をすぐ4 °C以下の冷蔵庫へ入れます。表面を保護し、まだ温かいチーズを密閉せず、生の食品と離します。冷却と水切り完了に60分を見込み、型から出して密閉容器に保存する前に、清潔な温度計で中心が4 °C以下になったことを確認します。足りなければ冷蔵庫で続け、延長時間を記録します。予定の一時間だけで実際の冷却が保証されるわけではありません。受け皿のホエーを取り除き、カードに触れさせません。室温で冷却を仕上げません。",
+          "image_url": "/recetas/como-preparar-queso/paso-06.webp",
+          "image_alt": "冷蔵庫でホエーより高く置きクロスで覆った型"
+        },
+        {
+          "title": "チーズを量って人数分を調整する",
+          "content": "冷たいチーズを清潔な容器に型から出し、クロス、型、ホエーを除いた完成カードだけを量ります。400 gの出来上がりと50 gずつ8人分は調理確認前の提案で、この牛乳2000 mlからの確定歩留まりではありません。完成量が異なれば一人分50 gを保ち、実重量に合わせて人数分を調整します。表示栄養値は比較用USDAホワイトチーズ50 gで、牛乳の全栄養素を8で割った値ではありません。水分、塩分、組成は家庭の結果と異なる場合があります。捨てたホエーをチーズに割り当てたり、栄養素の残存率を作り上げたりしません。",
+          "image_url": "/recetas/como-preparar-queso/paso-07.webp",
+          "image_alt": "クロスやホエーを除いて冷たいチーズを量る、数値表示なし"
+        },
+        {
+          "title": "冷たく提供し、短期間保存する",
+          "content": "チーズは量った50 gずつを冷たく提供し、付け合わせは計算に含みません。準備20分、加熱35分、待ち時間95分を想定します。内訳は凝固5分、水切り30分、冷却60分で、合計150分です。調理試験で確定した時間ではありません。覆って4 °C以下で保存し、2日以内に食べる保守的な提案です。検証済み保存期間ではなく、乳や取扱いにもっと短い制限があれば従います。冷凍すると食感が変わる可能性があります。冷蔵外の累積時間を2時間、32 °Cを超える場合は1時間以内に制限し、超えたら廃棄します。においだけで判断しません。乳と乳糖を含み、乳糖不使用ではありません。特に影響を受けやすい人には、工程未検証の自家製品は管理された市販品と同等ではありません。",
+          "image_url": "/recetas/como-preparar-queso/portada.webp",
+          "image_alt": "飾りなしの冷たいフレッシュ・ホワイトチーズと切った一片"
+        }
+      ],
+      "notes": "新鮮な殺菌済み全乳と酸度5 %の食用酢で作る、レンネットなしの酸凝固フレッシュ・ホワイトチーズです。この案では未殺菌乳、傷んだ乳、UHT乳を使いません。加熱と酸は無菌化を意味しません。薄めた酸は徐々に上限まで加え、実使用量を記録します。ホエーを分離し、熱い布を素手で絞らず、すぐ冷蔵します。即席の重しや袋ごと煮沸する工程はありません。水分で食感が変わり、モッツァレラや熟成品ではありません。塩や追加食材を変える場合は別配合として記録します。栄養値はUSDAの比較用完成ホワイトチーズで、実物の水分・塩分とは異なる場合があります。乳の全栄養素が残るとは仮定せず、ホエーの残存率を捏造しません。一人分は実際に量った50 gで、400 gと8人分は未確認の提案です。欠測の食物繊維は省略します。4 °C以下で2日以内は保守的な未検証保存案です。冷蔵外2時間、32 °C超では1時間を超えたら廃棄します。乳と乳糖を含み、表示と交差接触にも注意します。工程未検証の家庭製品は、影響を受けやすい人にとって管理された市販品と同等ではありません。",
+      "nutrition": {
+        "saturated_fat_g": 6.8,
+        "protein_g": 10.2,
+        "sodium_mg": 352.0,
+        "fat_g": 12.2,
+        "carbs_g": 1.3,
+        "calories": 155.0,
+        "sugar_g": 0.9,
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (abril de 2018)",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "inputs": [
+          {
+            "ingredient": "queso blanco terminado comparable, referencia nutricional; no ingrediente adicional",
+            "edible_grams": 50,
+            "fdc_id": 172224,
+            "fdc_description": "Cheese, white, queso blanco",
+            "per_100g": {
+              "saturated_fat_g": 13.7,
+              "protein_g": 20.4,
+              "sodium_mg": 704,
+              "fat_g": 24.3,
+              "carbs_g": 2.53,
+              "calories": 310,
+              "sugar_g": 1.76
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/172224/nutrients",
+            "basis": "finished_food_proxy_per_50g_not_raw_input_retention"
+          }
+        ],
+        "serving_size": "完成チーズ50 gを実際に計量、総出来上がり量は未確認",
+        "method": "USDA FDC 172224の完成品queso blancoによる参考比較。存在する七項目の100 g当たり値に50/100を掛け、実際に量った50 g一人分とします。牛乳の全栄養を合算したり、ホエーの残存率を作ったりしません。塩分はUSDA比較品の組成であり、加えた塩2.5 gの実測値ではなく、さらに二重加算しません。",
+        "note": "完成食品の参照値で、家庭品の分析や組成、出来上がり量の確定ではありません。水分、脂質、塩分は異なり得ます。乳・酢・水は分離ホエーを生じ、全栄養がチーズに残るとは仮定しません。400 gの提案歩留まりは未測定です。人数分が変わっても実際のチーズ50 g当たりの参照値です。欠測の食物繊維は省略し、ゼロで埋めません。実際の結果で組成と歩留まりを確認する必要があります。"
+      },
+      "keywords": [
+        "フレッシュチーズの作り方",
+        "レンネットなしのチーズ",
+        "牛乳と酢のチーズ",
+        "自家製ホワイトチーズ"
+      ],
+      "image_url": "/recetas/como-preparar-queso/portada.webp",
+      "gallery": [],
+      "seo": {
+        "title": "フレッシュ・ホワイトチーズの作り方と保存",
+        "description": "殺菌済み牛乳と酢で作るチーズ。加熱、水切り、冷却と50 gずつの計量。出来上がり量は提案、栄養値はUSDA比較推定。",
+        "image_alt": "少し粒感のある冷たいフレッシュ・ホワイトチーズと切った一片、ハーブや付け合わせなし",
+        "image_variants": [
+          "/recetas/como-preparar-queso/portada-1x1.webp",
+          "/recetas/como-preparar-queso/portada-4x3.webp",
+          "/recetas/como-preparar-queso/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "分離しない理由とUHT乳については？",
+            "a": "乳の処理や実際の酸度で分離が変わります。この案は新鮮な殺菌済み全乳用で、UHT乳は使いません。温度計と食用酢の酸度5 %を確認し、薄めて上限まで段階的に加えます。酸を際限なく足したり傷んだ乳を使ったりしません。"
+          },
+          {
+            "q": "出来上がり量と栄養値は確定していますか？",
+            "a": "400 g、50 gずつ8人分は未確認の提案です。冷たい水切り済みカードを量り、一人分50 gを保って人数分を調整します。栄養値はUSDAの比較用完成ホワイトチーズに基づき、牛乳全量の栄養や架空のホエー損失を使いません。塩分・水分は変わり得ます。欠測の食物繊維をゼロと表示しません。"
+          },
+          {
+            "q": "保存方法と塩の変更は？",
+            "a": "覆って4 °C以下で保存し、2日以内は保守的な提案であって検証済み期間ではありません。冷蔵外時間の制限を超えたら廃棄します。塩の変更は別配合として記録し、USDA参照値が家庭品の実塩分を測定した値ではないことに留意します。乳と乳糖を含み、熟成チーズではありません。"
+          }
+        ]
+      },
+      "published": true,
+      "editorial_status": "published",
+      "content_html": "<p>殺菌済み全乳と酢を使い、温度を管理して加熱し、カードとホエーを分離、水切り、冷却します。所要150分、50 gずつ8人分は提案値です。歩留まりは未測定で、栄養値はUSDAの比較用ホワイトチーズ完成品に基づく推定です。</p><p>新鮮な殺菌済み全乳と酸度5 %の食用酢で作る、レンネットなしの酸凝固フレッシュ・ホワイトチーズです。この案では未殺菌乳、傷んだ乳、UHT乳を使いません。加熱と酸は無菌化を意味しません。薄めた酸は徐々に上限まで加え、実使用量を記録します。ホエーを分離し、熱い布を素手で絞らず、すぐ冷蔵します。即席の重しや袋ごと煮沸する工程はありません。水分で食感が変わり、モッツァレラや熟成品ではありません。塩や追加食材を変える場合は別配合として記録します。栄養値はUSDAの比較用完成ホワイトチーズで、実物の水分・塩分とは異なる場合があります。乳の全栄養素が残るとは仮定せず、ホエーの残存率を捏造しません。一人分は実際に量った50 gで、400 gと8人分は未確認の提案です。欠測の食物繊維は省略します。4 °C以下で2日以内は保守的な未検証保存案です。冷蔵外2時間、32 °C超では1時間を超えたら廃棄します。乳と乳糖を含み、表示と交差接触にも注意します。工程未検証の家庭製品は、影響を受けやすい人にとって管理された市販品と同等ではありません。</p>"
+    },
+    {
+      "id": "d11d0d5b-9031-538b-8f62-e844781cffd3",
+      "recipe_group_id": "37e555b3-fa4f-4309-84de-62d613fe25ab",
+      "slug": "como-preparar-queijo-fresco",
+      "public_path": "/pt/como-preparar-queijo-fresco",
+      "source_url": null,
+      "language": "pt",
+      "title": "Como preparar queijo branco fresco em casa",
+      "excerpt": "Leite pasteurizado, vinagre e sal: queijo fresco escorrido, resfriado e servido em porções pesadas.",
+      "summary": "Queijo branco fresco de leite pasteurizado e vinagre, com aquecimento controlado, separação da coalhada, drenagem e resfriamento. Propostos 150 minutos e 8 porções de 50 g; rendimento não medido e nutrição estimada por comparação com queso blanco pronto do USDA.",
+      "category": "Entradas e aperitivos",
+      "category_slug": "entrantes-y-aperitivos",
+      "difficulty": "Média",
+      "course": "Queijo fresco",
+      "cuisine": "Cozinha caseira",
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 35,
+      "total_time_minutes": 150,
+      "servings": 8,
+      "ingredients": [
+        {
+          "name": "leite integral de vaca pasteurizado, fresco e refrigerado; não UHT",
+          "amount": 2000,
+          "unit": "ml",
+          "group": "Queijo"
+        },
+        {
+          "name": "vinagre branco alimentício com acidez 5 %, até esta quantidade",
+          "amount": 75,
+          "unit": "ml",
+          "group": "Coagulação"
+        },
+        {
+          "name": "água potável para diluir o vinagre",
+          "amount": 150,
+          "unit": "ml",
+          "group": "Coagulação"
+        },
+        {
+          "name": "sal fino incorporado à coalhada",
+          "amount": 2.5,
+          "unit": "g",
+          "group": "Queijo"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepare ingredientes e utensílios limpos",
+          "content": "Use 2000 ml de leite integral de vaca pasteurizado fresco, dentro da validade e mantido a 4 °C ou menos; não use leite cru, estragado ou UHT nesta proposta. Meça até 75 ml de vinagre branco alimentício com acidez 5 %, 150 ml de água potável e 2,5 g de sal fino. Separe panela de fundo grosso, termômetro culinário, espátula, peneira estável, tigela resistente ao calor, forma pequena perfurada, bandeja e tecido novo próprio para queijo e alimentos. Lave as mãos com água e sabão por pelo menos 20 segundos. Lave e enxágue utensílios e superfícies; prepare o tecido conforme suas instruções, com lavagem, enxágue e água fervente se apropriado. Evite panos sujos e contato com a pia. Libere espaço na geladeira para a forma e o soro separado.",
+          "image_url": "/recetas/como-preparar-queso/paso-01.webp",
+          "image_alt": "Leite, vinagre, água, sal e utensílios limpos"
+        },
+        {
+          "title": "Aqueça com termômetro sem queimar",
+          "content": "Despeje o leite na panela e aqueça suavemente em fogo baixo ou médio, mexendo pelo fundo. Preveja cerca de 15 minutos para chegar a 80 °C, mas decida pelo termômetro limpo. Mantenha então 80 °C por 20 minutos, ajustando o fogo e mexendo suavemente, sem fervura forte. São 35 minutos de cozimento previstos ao todo. Isso não esteriliza leite ou cozinha e não justifica leite cru ou estragado. Vigie a panela e acrescente ao total qualquer tempo real adicional de aquecimento.",
+          "image_url": "/recetas/como-preparar-queso/paso-02.webp",
+          "image_alt": "Leite integral aquecido suavemente com termômetro limpo"
+        },
+        {
+          "title": "Adicione o ácido e observe a separação",
+          "content": "Misture vinagre e água potável em jarra limpa. Retire a panela do fogo. Incorpore primeiro 180 ml da mistura, equivalentes a 60 ml de vinagre e 120 ml de água, aos poucos e suavemente. Se o líquido continuar claramente leitoso, adicione gradualmente o restante até os 225 ml preparados, sem ultrapassar os 75 ml de vinagre iniciais. Procure grumos brancos de coalhada separados de soro amarelado mais translúcido; não bata os grumos. Descanse fora do fogo por 5 minutos. Talvez não precise de toda a mistura: registre quanto usou. Se não separar no máximo e com aquecimento correto, confira leite e acidez declarada, sem acrescentar ácido sem limite.",
+          "image_url": "/recetas/como-preparar-queso/paso-03.webp",
+          "image_alt": "Coalhada branca separando do soro com vinagre diluído"
+        },
+        {
+          "title": "Coe e escorra sem se queimar",
+          "content": "Apoie a peneira com estabilidade sobre a tigela resistente ao calor e forre com o tecido preparado. Despeje coalhada e soro quentes lentamente, protegendo as mãos do vapor e dos respingos; não segure a peneira no ar. Escorra por 30 minutos em superfície limpa, protegida de poeira e alimentos crus. O fundo não deve tocar o soro coletado. Não torça nem aperte tecido quente com as mãos nuas. O soro separado fica fora do queijo e da estimativa nutricional; não reincorpore nem sirva como parte das porções indicadas. Inicie sem demora o resfriamento na geladeira depois da drenagem.",
+          "image_url": "/recetas/como-preparar-queso/paso-04.webp",
+          "image_alt": "Coalhada em tecido limpo, soro coletado separadamente"
+        },
+        {
+          "title": "Salgue e coloque na forma",
+          "content": "Quando o recipiente puder ser manuseado sem queimadura, transfira a coalhada com colher limpa para uma tigela limpa. Misture suavemente os 2,5 g de sal, sem ervas, óleo ou especiarias nesta fórmula. Preencha a forma perfurada forrada com tecido limpo, dobre-o sobre a superfície e acomode com a colher, sem comprimir com as mãos. Apoie a forma sobre bandeja coletora sem mergulhar o queijo no soro. Não use pesos improvisados nem prometa textura de queijo maturado. É queijo branco fresco por coagulação ácida, não muçarela nem queijo que necessariamente derreta.",
+          "image_url": "/recetas/como-preparar-queso/paso-05.webp",
+          "image_alt": "Coalhada salgada perto de forma perfurada forrada"
+        },
+        {
+          "title": "Resfrie enquanto termina a drenagem",
+          "content": "Leve imediatamente forma e bandeja à geladeira, a 4 °C ou menos. Proteja a superfície sem fechar hermeticamente o queijo ainda quente e mantenha separado de alimentos crus. Preveja 60 minutos para resfriar e completar a drenagem; confira com termômetro limpo que o centro chega a 4 °C ou menos antes de desenformar e guardar em recipiente fechado. Se precisar de mais tempo, continue na geladeira e registre o atraso: a hora prevista não garante o resfriamento real. Retire o soro da bandeja para não tocar a coalhada. Não termine de resfriar em temperatura ambiente.",
+          "image_url": "/recetas/como-preparar-queso/paso-06.webp",
+          "image_alt": "Forma coberta elevada acima do soro na geladeira"
+        },
+        {
+          "title": "Pese o queijo e ajuste as porções",
+          "content": "Desenforme o queijo frio em recipiente limpo e pese apenas a coalhada pronta, sem tecido, forma ou soro. Rendimento orientativo de 400 g e 8 porções de 50 g são propostos, pendentes de teste culinário; não são rendimento confirmado destes 2000 ml de leite. Se a massa final mudar, mantenha a porção de 50 g e ajuste a quantidade de porções ao peso real. A nutrição exibida corresponde a 50 g de queso blanco USDA comparável, não todos os nutrientes do leite divididos por 8. Umidade, sal e composição podem diferir do queijo caseiro. Não atribua o soro descartado ao queijo nem invente percentuais de retenção.",
+          "image_url": "/recetas/como-preparar-queso/paso-07.webp",
+          "image_alt": "Queijo frio pesado sem tecido ou soro, visor sem números"
+        },
+        {
+          "title": "Sirva frio e conserve por pouco tempo",
+          "content": "Sirva frio em porções pesadas de 50 g, sem acompanhamentos incluídos no cálculo. Previsão: 20 minutos de preparo, 35 de cozimento e 95 de espera: 5 de coagulação, 30 de drenagem e 60 de resfriamento; total 150 minutos. Tempos propostos, sem teste confirmado. Guarde coberto a 4 °C ou menos e consuma em até 2 dias como proposta conservadora, não validade testada; respeite limites menores do leite ou do manuseio. Congelar pode mudar a textura. Limite o tempo acumulado fora da geladeira a 2 horas, ou 1 hora acima de 32 °C, e descarte se ultrapassar. O cheiro sozinho não comprova segurança. Contém leite e lactose, não é sem lactose. Para pessoas especialmente vulneráveis, queijo caseiro sem processo validado não equivale a produto comercial controlado.",
+          "image_url": "/recetas/como-preparar-queso/portada.webp",
+          "image_alt": "Queijo branco fresco frio com fatia cortada, sem enfeites"
+        }
+      ],
+      "notes": "Queijo branco fresco coagulado por ácido, de leite integral pasteurizado fresco e vinagre alimentício com acidez 5 %, sem coalho. Não use leite cru, estragado ou UHT nesta proposta. Calor e ácido não tornam o resultado estéril. Adicione o líquido diluído gradualmente, registre o uso e não ultrapasse o máximo. Separe o soro, não aperte tecido quente com mãos nuas e refrigere prontamente. Sem pesos improvisados ou queijo fervido em sacos. A umidade muda a textura; não é muçarela nem queijo maturado. Mudanças de sal ou adições exigem fórmula documentada. Nutrição comparada com queso blanco pronto do USDA, cuja umidade e sal podem diferir; não se supõe retenção total dos nutrientes do leite. Pese porções de 50 g; 400 g e 8 porções são propostas. Fibra ausente omitida. Mantenha a 4 °C ou menos e consuma em até 2 dias: proposta conservadora não testada. Descarte após 2 horas fora do frio, ou 1 hora acima de 32 °C. Contém leite e lactose; confira rótulos e contato cruzado. Produto caseiro sem processo validado não equivale a queijo comercial controlado para pessoas vulneráveis.",
+      "nutrition": {
+        "saturated_fat_g": 6.8,
+        "protein_g": 10.2,
+        "sodium_mg": 352.0,
+        "fat_g": 12.2,
+        "carbs_g": 1.3,
+        "calories": 155.0,
+        "sugar_g": 0.9,
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (abril de 2018)",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "inputs": [
+          {
+            "ingredient": "queso blanco terminado comparable, referencia nutricional; no ingrediente adicional",
+            "edible_grams": 50,
+            "fdc_id": 172224,
+            "fdc_description": "Cheese, white, queso blanco",
+            "per_100g": {
+              "saturated_fat_g": 13.7,
+              "protein_g": 20.4,
+              "sodium_mg": 704,
+              "fat_g": 24.3,
+              "carbs_g": 2.53,
+              "calories": 310,
+              "sugar_g": 1.76
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/172224/nutrients",
+            "basis": "finished_food_proxy_per_50g_not_raw_input_retention"
+          }
+        ],
+        "serving_size": "50 g de queijo pronto, pesados; rendimento total não confirmado",
+        "method": "Comparação orientativa com queso blanco pronto USDA FDC 172224. Multiplique os sete valores disponíveis por 100 g por 50/100 para uma porção pesada de 50 g. Não some todos os nutrientes do leite nem invente retenção de soro. O perfil de sal é do produto USDA comparável, não uma medição dos 2,5 g adicionados; não os acrescente de novo à estimativa.",
+        "note": "Referência de alimento pronto, não análise, composição caseira confirmada ou rendimento medido. Umidade, gordura e sal podem diferir. Leite, vinagre e água geram soro separado; não se supõe retenção integral dos nutrientes. Rendimento proposto de 400 g não medido; valores por 50 g reais mesmo se mudar a contagem de porções. Fibra ausente omitida, não substituída por zero. Composição e rendimento precisam ser confirmados no resultado real."
+      },
+      "keywords": [
+        "queijo branco caseiro",
+        "queijo fresco sem coalho",
+        "queijo com leite pasteurizado",
+        "como preparar queijo fresco"
+      ],
+      "image_url": "/recetas/como-preparar-queso/portada.webp",
+      "gallery": [],
+      "seo": {
+        "title": "Como preparar queijo branco fresco: etapas e conservação",
+        "description": "Queijo fresco com leite pasteurizado e vinagre: aquecimento, drenagem e resfriamento. Porções pesadas de 50 g, rendimento proposto e nutrição estimada USDA.",
+        "image_alt": "Queijo branco fresco frio de textura levemente granulosa com fatia separada, sem ervas ou acompanhamentos",
+        "image_variants": [
+          "/recetas/como-preparar-queso/portada-1x1.webp",
+          "/recetas/como-preparar-queso/portada-4x3.webp",
+          "/recetas/como-preparar-queso/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Por que o leite não separa e posso usar UHT?",
+            "a": "Tratamento do leite e acidez real afetam a separação. Esta proposta usa leite integral pasteurizado fresco, não UHT. Confira termômetro e vinagre alimentício com acidez 5 %. Adicione diluído aos poucos até o máximo, nunca sem limite ou com leite estragado."
+          },
+          {
+            "q": "Quanto queijo rende e como estimar a nutrição?",
+            "a": "400 g e 8 porções de 50 g são propostas não confirmadas. Pese a coalhada fria drenada e ajuste a contagem mantendo 50 g por porção. Valores de queso blanco USDA pronto comparável, sem atribuir todo o leite ao queijo ou inventar perdas do soro. Sal e umidade podem variar. Fibra ausente não aparece como zero."
+          },
+          {
+            "q": "Como conservar e posso mudar o sal?",
+            "a": "Guarde coberto a 4 °C ou menos, consumindo em até 2 dias como proposta conservadora, não validade testada. Descarte se ultrapassar os limites fora do frio. Registre mudanças de sal como nova fórmula; a referência USDA não mede o sal do queijo caseiro. Contém leite e lactose, sem maturação."
+          }
+        ]
+      },
+      "published": true,
+      "editorial_status": "published",
+      "content_html": "<p>Queijo branco fresco de leite pasteurizado e vinagre, com aquecimento controlado, separação da coalhada, drenagem e resfriamento. Propostos 150 minutos e 8 porções de 50 g; rendimento não medido e nutrição estimada por comparação com queso blanco pronto do USDA.</p><p>Queijo branco fresco coagulado por ácido, de leite integral pasteurizado fresco e vinagre alimentício com acidez 5 %, sem coalho. Não use leite cru, estragado ou UHT nesta proposta. Calor e ácido não tornam o resultado estéril. Adicione o líquido diluído gradualmente, registre o uso e não ultrapasse o máximo. Separe o soro, não aperte tecido quente com mãos nuas e refrigere prontamente. Sem pesos improvisados ou queijo fervido em sacos. A umidade muda a textura; não é muçarela nem queijo maturado. Mudanças de sal ou adições exigem fórmula documentada. Nutrição comparada com queso blanco pronto do USDA, cuja umidade e sal podem diferir; não se supõe retenção total dos nutrientes do leite. Pese porções de 50 g; 400 g e 8 porções são propostas. Fibra ausente omitida. Mantenha a 4 °C ou menos e consuma em até 2 dias: proposta conservadora não testada. Descarte após 2 horas fora do frio, ou 1 hora acima de 32 °C. Contém leite e lactose; confira rótulos e contato cruzado. Produto caseiro sem processo validado não equivale a queijo comercial controlado para pessoas vulneráveis.</p>"
     }
   ],
   "yield_proposal": {
@@ -205,5 +1199,8 @@
     "served_weight_measured": false,
     "confirmed": false
   },
-  "nutrition_basis": "Explicit USDA finishedfoodproxy50g; not ingredientmassretention or assertedhomecomposition"
+  "nutrition_basis": "Explicit USDA finishedfoodproxy50g; not ingredientmassretention or assertedhomecomposition",
+  "portuguese_locale": "pt-BR",
+  "published_database": false,
+  "localization_qa": "PASS_ALL6_EXACT_PHASE_NUMBERS_AMOUNTS_MEDIA_NUTRITION"
 }

@@ -163,3 +163,8 @@ Identidad y siete rutas sin colisiones verificadas; texto original en fuente ún
 
 
 Queso:8PNG originales/11WebP visualmente PASS. Corrección limitada a enfriado: molde elevado sobre suero y gasa cubriendo cuajada; variantes rechazadas excluidas. Portada conserva queso entero en todas proporciones; aún0publicaciones03. Próximaacción:6localizaciones/SQLQA.
+
+
+## Queso listo7/7; décima receta
+
+Fuenteúnica editorial/como-preparar-queso-20261008.json (7records), paqueteSHA2566992b68c41e77ebb0b93138f542552735c7256eea99b46c2cb360f68a8e39354; pasosSHA256f607a0addc1606a6b8fce66121cbef69c8b7dfd65d36894be24f95c2b87fa481. SQL scripts/publish-como-preparar-queso-20261008.sql SHA256dfac1c6b2326f7adb630237e05d0b06d28aae432f79cf125fefad107ed6a7f2f NOejecutado. DB fresco124ESpub, filaESfalse MD5intacto66b5cc01578061609f255e18f6a5473f;0UUID/rutas/content_pagescolisiones. 8PNG+11WebP19medios positivosyGitSHAexacto observados en2cfec27d5d41d8da910d673bfbc001cf3260d25b.8fases4ingredientes3FAQ,20prep35cook95espera150total,8raciones50g/400gpropuestosno prueba. FDC1722247campos refproducto terminado50g; fibraausenteomitida, nopérdida/retenciónsuero inventada. 6localizaciones preservan cifras/fases/medios, PTpt-BR. Lote03:10preparadas/15,0publicadas. Próximaacción:pollo-agridulce;5pendientes antesdeCI/merge/deployhash/DBatómica/cache/liveQA. No rehacer las10listas.
