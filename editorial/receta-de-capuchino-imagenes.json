@@ -2,7 +2,7 @@
   "schema_version": 1,
   "slug": "receta-de-capuchino",
   "created_at": "2026-10-08T10:06:24.116Z",
-  "state": "BRIEF_FROZEN_IMAGES_PENDING",
+  "state": "IMAGES_COMPLETE_LOCALIZATION_PENDING",
   "steps_sha256": "0dc981c5de9814177bdc763822dedf1e07a267f2fe01dec62f6003d32d8a5b40",
   "output_directory": "public/recetas/receta-de-capuchino",
   "style_consistency": "Photorealistic editorial cooking photo for Manual de Cocina. Cream home kitchen, dark oak counter, plain cream ceramic cappuccino cup and saucer, unbranded stainless home espresso machine, small stainless steaming pitcher. Warm natural window light. Espresso and whole milk only, no sugar, cocoa, cinnamon, whipped cream or toppings. No text, logos, numerals, watermark, collage or split panels. Horizontal 4:3.",
@@ -33,64 +33,198 @@
       "filename": "portada.webp",
       "width": 1600,
       "height": 1200,
-      "prompt_key": "cover"
+      "prompt_key": "cover",
+      "path": "public/recetas/receta-de-capuchino/portada.webp",
+      "bytes": 158184,
+      "sha256": "be6ef656faaccc23866af7d26643fe3fd73d8d00bf1eadeb92fbca366bc34d69",
+      "role": "webp"
     },
     {
       "filename": "portada-1x1.webp",
       "width": 1200,
       "height": 1200,
-      "prompt_key": "cover"
+      "prompt_key": "cover",
+      "path": "public/recetas/receta-de-capuchino/portada-1x1.webp",
+      "bytes": 107372,
+      "sha256": "354a59db73586614abf79e5573d2ec817dfc0fae78fdc6ad943052d413e8c5c2",
+      "role": "webp"
     },
     {
       "filename": "portada-4x3.webp",
       "width": 1600,
       "height": 1200,
-      "prompt_key": "cover"
+      "prompt_key": "cover",
+      "path": "public/recetas/receta-de-capuchino/portada-4x3.webp",
+      "bytes": 158184,
+      "sha256": "be6ef656faaccc23866af7d26643fe3fd73d8d00bf1eadeb92fbca366bc34d69",
+      "role": "webp"
     },
     {
       "filename": "portada-16x9.webp",
       "width": 1600,
       "height": 900,
-      "prompt_key": "cover"
+      "prompt_key": "cover",
+      "path": "public/recetas/receta-de-capuchino/portada-16x9.webp",
+      "bytes": 123906,
+      "sha256": "0be4fe129dba96c56606fb9268968eb1586c34b6a39217fd254a4eaf9d4db400",
+      "role": "webp"
     },
     {
       "filename": "paso-01.webp",
       "width": 1600,
       "height": 1200,
       "prompt_key": "step_01",
-      "alt_es": "Jarra metálica con leche fría junto a una taza vacía y una cafetera"
+      "alt_es": "Jarra metálica con leche fría junto a una taza vacía y una cafetera",
+      "path": "public/recetas/receta-de-capuchino/paso-01.webp",
+      "bytes": 149774,
+      "sha256": "bb8e2de09efef6f4d59d9aaa65887e7df306337cc293940a1f70e651f30816b8",
+      "role": "webp"
     },
     {
       "filename": "paso-02.webp",
       "width": 1600,
       "height": 1200,
       "prompt_key": "step_02",
-      "alt_es": "Espresso recién extraído en una taza bajo el portafiltro"
+      "alt_es": "Espresso recién extraído en una taza bajo el portafiltro",
+      "path": "public/recetas/receta-de-capuchino/paso-02.webp",
+      "bytes": 148928,
+      "sha256": "5b77541ee77268f13ff06d4233891092d4ac0bfb0b8ca579be649b51f144ed2f",
+      "role": "webp"
     },
     {
       "filename": "paso-03.webp",
       "width": 1600,
       "height": 1200,
       "prompt_key": "step_03",
-      "alt_es": "Lanza de vapor texturizando leche en una jarra metálica"
+      "alt_es": "Lanza de vapor texturizando leche en una jarra metálica",
+      "path": "public/recetas/receta-de-capuchino/paso-03.webp",
+      "bytes": 153008,
+      "sha256": "95347af21095ffae9f6e5a6ec1c04cb09a803f6237c7f205669e7d84ce98e28b",
+      "role": "webp"
     },
     {
       "filename": "paso-04.webp",
       "width": 1600,
       "height": 1200,
       "prompt_key": "step_04",
-      "alt_es": "Leche texturizada brillante en una jarra tras girarla suavemente"
+      "alt_es": "Leche texturizada brillante en una jarra tras girarla suavemente",
+      "path": "public/recetas/receta-de-capuchino/paso-04.webp",
+      "bytes": 131962,
+      "sha256": "5cf186e865ebf840eb29676a218812e7b1f8991f3f456f636898bd0211535348",
+      "role": "webp"
     },
     {
       "filename": "paso-05.webp",
       "width": 1600,
       "height": 1200,
       "prompt_key": "cover",
-      "alt_es": "Capuchino terminado con espuma fina en una taza de cerámica"
+      "alt_es": "Capuchino terminado con espuma fina en una taza de cerámica",
+      "path": "public/recetas/receta-de-capuchino/paso-05.webp",
+      "bytes": 158184,
+      "sha256": "be6ef656faaccc23866af7d26643fe3fd73d8d00bf1eadeb92fbca366bc34d69",
+      "role": "webp"
     }
   ],
   "expected_webp_count": 9,
   "original_generation_count": 5,
-  "visual_qa": "PENDING",
-  "localized_alts_status": "ES_ONLY_LOCALIZATIONS_PENDING"
+  "visual_qa": {
+    "status": "PASS",
+    "checked_at": "2026-10-08T10:16:00.331Z",
+    "checks": [
+      "All five distinct scenes and nine crops inspected",
+      "No toppings",
+      "No invented thermometer reading",
+      "Opaque vessel anatomy corrected before acceptance",
+      "Rejected versions excluded from rendered assets"
+    ],
+    "corrections": [
+      {
+        "scene": "step_01",
+        "reason": "Overfilled pitcher then transparent exterior introduced by edit",
+        "action": "Two ImageGen edits",
+        "result": "Opaque pitcher and headroom restored"
+      },
+      {
+        "scene": "step_02",
+        "reason": "Full espresso cup then transparent cutaway introduced by edit",
+        "action": "Two ImageGen edits",
+        "result": "Low coffee level and opaque ceramic restored"
+      }
+    ]
+  },
+  "localized_alts_status": "ES_ONLY_LOCALIZATIONS_PENDING",
+  "originals": [
+    {
+      "path": "public/recetas/receta-de-capuchino/originales/cover.png",
+      "bytes": 2034003,
+      "width": 1448,
+      "height": 1086,
+      "sha256": "eb1b3ae362eabb4c74ae4fca76fe91ecb517e3f51f3b149a50a2b31b237488c2",
+      "role": "approved_original"
+    },
+    {
+      "path": "public/recetas/receta-de-capuchino/originales/step_01.png",
+      "bytes": 2028621,
+      "width": 1448,
+      "height": 1086,
+      "sha256": "d89b19ae7b03b5ab01c0838b091886e1837d6020fc206eb916955a6b6c73eee4",
+      "role": "approved_original"
+    },
+    {
+      "path": "public/recetas/receta-de-capuchino/originales/step_02.png",
+      "bytes": 2020476,
+      "width": 1448,
+      "height": 1086,
+      "sha256": "79f27936535020322b3917005cff64758657c39073d54c7979b585f7f7ee0b32",
+      "role": "approved_original"
+    },
+    {
+      "path": "public/recetas/receta-de-capuchino/originales/step_03.png",
+      "bytes": 2171998,
+      "width": 1448,
+      "height": 1086,
+      "sha256": "fb1d2451e910a60491109c6adc7c9e7c69556121f47828f7783eed7683bcbad7",
+      "role": "approved_original"
+    },
+    {
+      "path": "public/recetas/receta-de-capuchino/originales/step_04.png",
+      "bytes": 1986075,
+      "width": 1448,
+      "height": 1086,
+      "sha256": "e861994d1147c0cab6d9f9678a2f112fae6366336314b5e10373a5af3d67cb01",
+      "role": "approved_original"
+    },
+    {
+      "path": "public/recetas/receta-de-capuchino/originales/step_01_rejected.png",
+      "bytes": 2124175,
+      "width": 1448,
+      "height": 1086,
+      "sha256": "036f2caad8d59634875dda0845b0389ad90b4c1ed7ac04100559a28df49a8df0",
+      "role": "rejected_original"
+    },
+    {
+      "path": "public/recetas/receta-de-capuchino/originales/step_01_rejected_b.png",
+      "bytes": 2060963,
+      "width": 1448,
+      "height": 1086,
+      "sha256": "75792a9c8e2e00a3beb397807e23b1514c98c66d69b40414d5e98bfd26860c7f",
+      "role": "rejected_original"
+    },
+    {
+      "path": "public/recetas/receta-de-capuchino/originales/step_02_rejected.png",
+      "bytes": 2200646,
+      "width": 1448,
+      "height": 1086,
+      "sha256": "9e648b5a61043fa5d8bab55d9b3c92bdc5efe065581b11447058038a4b25ddaa",
+      "role": "rejected_original"
+    },
+    {
+      "path": "public/recetas/receta-de-capuchino/originales/step_02_rejected_b.png",
+      "bytes": 2039284,
+      "width": 1448,
+      "height": 1086,
+      "sha256": "7449556fe63f89c01b5366ef894e7a75f8b5de5b807d387b983fe8406655e25a",
+      "role": "rejected_original"
+    }
+  ]
 }

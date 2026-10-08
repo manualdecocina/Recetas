@@ -30,7 +30,7 @@
     "id": "lote-02-20261008",
     "target": 15,
     "status": "in_progress",
-    "stage": "images",
+    "stage": "localization",
     "recipes": [
       {
         "id": "e47eac88-0649-4785-baf0-43b92dd2ec2e",
@@ -291,7 +291,7 @@
         "recipe_group_id": "cc320b67-294e-4420-b904-4bd3d12d4c1b",
         "slug": "receta-de-capuchino",
         "public_path": "/receta-de-capuchino",
-        "stage": "images",
+        "stage": "localization",
         "status": "in_progress",
         "identity_qa": "PASS",
         "classification": "ELIGIBLE_CATALOG_CANDIDATE",
@@ -300,9 +300,19 @@
         "image_manifest": "editorial/receta-de-capuchino-imagenes.json",
         "qa_file": "editorial/receta-de-capuchino-qa-20261008.json",
         "steps_sha256": "0dc981c5de9814177bdc763822dedf1e07a267f2fe01dec62f6003d32d8a5b40",
-        "images_ready": 0,
+        "images_ready": 9,
         "languages_ready": 1,
-        "distinct_images_pending": 5
+        "distinct_images_pending": 0,
+        "image_originals": 5,
+        "image_visual_qa": "PASS",
+        "localizations_pending": [
+          "de",
+          "en",
+          "fr",
+          "it",
+          "ja",
+          "pt"
+        ]
       },
       {
         "id": "3a512fac-c4ae-40ad-92b1-412c608da8ed",
@@ -395,14 +405,14 @@
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
   "progress_branch": "recetas/lote-02-20261008",
-  "last_checkpoint_at": "2026-10-08T10:06:24.117Z",
+  "last_checkpoint_at": "2026-10-08T10:16:00.331Z",
   "handoff": {
     "first_prepared_recipe": "como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada",
     "first_recipe_source": "editorial/como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada-20261008.json",
     "next_recipe": "receta-de-capuchino",
     "batch_remaining_to_prepare": 3,
     "published_this_batch": 0,
-    "required_action": "Generate five distinct capuchino originals, nine WebP, six localizations; twelve prior recipes prepared. No batch published.",
+    "required_action": "Complete six capuchino translations and SQL; twelve earlier recipes prepared, batch remains unpublished.",
     "scope": "Preview only; production migration not executed."
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z"
