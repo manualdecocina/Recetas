@@ -2,7 +2,7 @@
   "schema_version": 1,
   "slug": "receta-de-bandeja-paisa",
   "created_at": "2026-10-08T08:16:00.000Z",
-  "state": "BRIEF_FROZEN_IMAGES_PENDING",
+  "state": "COMPLETE_ES_ALTS_AND_VISUAL_QA_LOCALIZATIONS_PENDING",
   "steps_sha256": "8f045f79a1db3ebe2bec9b564361abea2322635e3b263e93b82f2b5e762e9c5d",
   "output_directory": "public/recetas/receta-de-bandeja-paisa",
   "style_consistency": "Photorealistic natural culinary editorial photograph for Manual de Cocina. Consistent visual system across the series: Colombian home kitchen, warm natural window light, matte dark-wood work surface, cream ceramic cookware, realistic food textures and portions, no text, no logos, no watermark, no unrelated ingredients, no people except clean hands when the action requires them.",
@@ -84,118 +84,182 @@
     {
       "filename": "portada.webp",
       "source": "imagegen_new",
-      "width": 1600,
-      "height": 1200,
+      "width": 1448,
+      "height": 1086,
       "alt_es": "Bandeja paisa colombiana completa servida en plato grande",
-      "prompt_key": "cover"
+      "prompt_key": "cover",
+      "bytes": 211188,
+      "sha256": "8f5d0b199234120cfc8fd9e1bf4618abd95b5120f59b0514a6de9532a82fe6b2",
+      "public_path": "/recetas/receta-de-bandeja-paisa/portada.webp",
+      "visual_qa": "PASS"
     },
     {
       "filename": "portada-1x1.webp",
       "source": "crop_from_portada",
-      "width": 1200,
-      "height": 1200,
+      "width": 1086,
+      "height": 1086,
       "alt_es": "Bandeja paisa colombiana completa servida en plato grande",
-      "prompt_key": "cover"
+      "prompt_key": "cover",
+      "bytes": 152184,
+      "sha256": "d9a85336a89e71cb00aa800596fb9d4ea995306f9908b602f3313d3a1f6f88d2",
+      "public_path": "/recetas/receta-de-bandeja-paisa/portada-1x1.webp",
+      "visual_qa": "PASS"
     },
     {
       "filename": "portada-4x3.webp",
       "source": "crop_from_portada",
-      "width": 1600,
-      "height": 1200,
+      "width": 1448,
+      "height": 1086,
       "alt_es": "Bandeja paisa colombiana completa servida en plato grande",
-      "prompt_key": "cover"
+      "prompt_key": "cover",
+      "bytes": 211188,
+      "sha256": "8f5d0b199234120cfc8fd9e1bf4618abd95b5120f59b0514a6de9532a82fe6b2",
+      "public_path": "/recetas/receta-de-bandeja-paisa/portada-4x3.webp",
+      "visual_qa": "PASS"
     },
     {
       "filename": "portada-16x9.webp",
       "source": "crop_from_portada",
-      "width": 1600,
-      "height": 900,
+      "width": 1448,
+      "height": 814,
       "alt_es": "Bandeja paisa colombiana completa servida en plato grande",
-      "prompt_key": "cover"
+      "prompt_key": "cover",
+      "bytes": 185794,
+      "sha256": "db1fa53fbb1d529e7c80916f8c76c45199a8ba5f914da1c7521aaa2254d443d4",
+      "public_path": "/recetas/receta-de-bandeja-paisa/portada-16x9.webp",
+      "visual_qa": "PASS"
     },
     {
       "filename": "paso-01.webp",
       "source": "imagegen_new",
-      "width": 1600,
-      "height": 1200,
+      "width": 1448,
+      "height": 1086,
       "alt_es": "Bandeja paisa: frijoles rojos secos cubiertos con agua para el remojo",
-      "prompt_key": "step_01"
+      "prompt_key": "step_01",
+      "bytes": 105316,
+      "sha256": "68af47fc3d07fa7aad33703df7e6fd4e6ef69a6587802953b9786dc5a4169ad8",
+      "public_path": "/recetas/receta-de-bandeja-paisa/paso-01.webp",
+      "visual_qa": "PASS"
     },
     {
       "filename": "paso-02.webp",
       "source": "imagegen_new",
-      "width": 1600,
-      "height": 1200,
+      "width": 1448,
+      "height": 1086,
       "alt_es": "Bandeja paisa: frijoles rojos cociéndose suavemente en una olla",
-      "prompt_key": "step_02"
+      "prompt_key": "step_02",
+      "bytes": 113178,
+      "sha256": "b958cb87ec5ffc56636f8086942a81279766726cacbfc6055c43df8350f52f6d",
+      "public_path": "/recetas/receta-de-bandeja-paisa/paso-02.webp",
+      "visual_qa": "PASS"
     },
     {
       "filename": "paso-03.webp",
       "source": "imagegen_new",
-      "width": 1600,
-      "height": 1200,
+      "width": 1448,
+      "height": 1086,
       "alt_es": "Bandeja paisa: hogao espeso de tomate y cebolla en una sartén",
-      "prompt_key": "step_03"
+      "prompt_key": "step_03",
+      "bytes": 136504,
+      "sha256": "f51071474c8b85c4c0553d0dbf8e87cb2875552371da486945d5636402cd5490",
+      "public_path": "/recetas/receta-de-bandeja-paisa/paso-03.webp",
+      "visual_qa": "PASS"
     },
     {
       "filename": "paso-04.webp",
       "source": "imagegen_new",
-      "width": 1600,
-      "height": 1200,
+      "width": 1448,
+      "height": 1086,
       "alt_es": "Bandeja paisa: frijoles rojos terminados con hogao y caldo espeso",
-      "prompt_key": "step_04"
+      "prompt_key": "step_04",
+      "bytes": 122498,
+      "sha256": "85f16cc00958dbc7283ccfbb9166fac06f812e6a9d576381dec340d82a892b50",
+      "public_path": "/recetas/receta-de-bandeja-paisa/paso-04.webp",
+      "visual_qa": "PASS"
     },
     {
       "filename": "paso-05.webp",
       "source": "imagegen_new",
-      "width": 1600,
-      "height": 1200,
+      "width": 1448,
+      "height": 1086,
       "alt_es": "Bandeja paisa: arroz blanco cocido y suelto en una olla",
-      "prompt_key": "step_05"
+      "prompt_key": "step_05",
+      "bytes": 82842,
+      "sha256": "dcc8a0e7d9e7951fcc47419650cec94a9c46b782f7bb43b65ed905347097cdf0",
+      "public_path": "/recetas/receta-de-bandeja-paisa/paso-05.webp",
+      "visual_qa": "PASS"
     },
     {
       "filename": "paso-06.webp",
       "source": "imagegen_new",
-      "width": 1600,
-      "height": 1200,
+      "width": 1448,
+      "height": 1086,
       "alt_es": "Bandeja paisa: cuatro arepas pequeñas dorándose en una plancha",
-      "prompt_key": "step_06"
+      "prompt_key": "step_06",
+      "bytes": 133168,
+      "sha256": "d493486ec6748c890dfeafe2187069c9d9729bba5244868693af8b57a69f7c9d",
+      "public_path": "/recetas/receta-de-bandeja-paisa/paso-06.webp",
+      "visual_qa": "PASS"
     },
     {
       "filename": "paso-07.webp",
       "source": "imagegen_new",
-      "width": 1600,
-      "height": 1200,
+      "width": 1448,
+      "height": 1086,
       "alt_es": "Bandeja paisa: tiras de chicharrón doradas y crujientes en una sartén",
-      "prompt_key": "step_07"
+      "prompt_key": "step_07",
+      "bytes": 137468,
+      "sha256": "05d55974e0fe1fa2b687ffe87627f217336bb1750a8ce8b5605c5092132101b5",
+      "public_path": "/recetas/receta-de-bandeja-paisa/paso-07.webp",
+      "visual_qa": "PASS"
     },
     {
       "filename": "paso-08.webp",
       "source": "imagegen_new",
-      "width": 1600,
-      "height": 1200,
+      "width": 1448,
+      "height": 1086,
       "alt_es": "Bandeja paisa: carne molida dorada y cuatro chorizos cocinándose",
-      "prompt_key": "step_08"
+      "prompt_key": "step_08",
+      "bytes": 139582,
+      "sha256": "9bd4ee0796de68379ad46ae0aa43c09dc23b56564b1ca3c59c34bbde1c45a262",
+      "public_path": "/recetas/receta-de-bandeja-paisa/paso-08.webp",
+      "visual_qa": "PASS"
     },
     {
       "filename": "paso-09.webp",
       "source": "imagegen_new",
-      "width": 1600,
-      "height": 1200,
+      "width": 1448,
+      "height": 1086,
       "alt_es": "Bandeja paisa: tajadas de plátano maduro doradas y huevos fritos con clara cuajada",
-      "prompt_key": "step_09"
+      "prompt_key": "step_09",
+      "bytes": 134708,
+      "sha256": "7a463560ddc92658e90fd6c35b9f0d79e5c3651c7e5f70d5e176ef203702ffef",
+      "public_path": "/recetas/receta-de-bandeja-paisa/paso-09.webp",
+      "visual_qa": "PASS"
     },
     {
       "filename": "paso-10.webp",
       "source": "imagegen_new",
-      "width": 1600,
-      "height": 1200,
+      "width": 1448,
+      "height": 1086,
       "alt_es": "Bandeja paisa completa con frijoles, arroz, arepa, carnes, plátano, huevo, aguacate y hogao",
-      "prompt_key": "step_10"
+      "prompt_key": "step_10",
+      "bytes": 159822,
+      "sha256": "e98ecc3a03bf05b6aa52422c73461f2bcb1564831fd5ec0e164359dcf1425c2b",
+      "public_path": "/recetas/receta-de-bandeja-paisa/paso-10.webp",
+      "visual_qa": "PASS"
     }
   ],
   "expected_webp_count": 14,
   "original_generation_count": 11,
-  "localized_alts_status": "ES_ONLY_LOCALIZATIONS_PENDING",
-  "visual_qa": "PENDING"
+  "localized_alts_status": "ES_COMPLETE_DE_EN_FR_IT_JA_PT_BR_PENDING",
+  "visual_qa": "PASS",
+  "completed_at": "2026-10-08T08:52:00.000Z",
+  "visual_qa_notes": [
+    "Contact-sheet review confirms a coherent Colombian home-kitchen series and the exact 10-step progression.",
+    "Cover crops retain beans, rice, arepa, beef, chicharrón, chorizo, plantain, egg, avocado and hogao.",
+    "All 14 WebP files decode successfully; portada.webp and portada-4x3.webp intentionally share the same 4:3 binary."
+  ],
+  "total_webp_bytes": 2025440,
+  "distinct_binary_count": 13
 }
