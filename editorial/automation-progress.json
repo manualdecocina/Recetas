@@ -30,7 +30,7 @@
     "id": "lote-02-20261008",
     "target": 15,
     "status": "in_progress",
-    "stage": "images",
+    "stage": "identity_validation",
     "recipes": [
       {
         "id": "e47eac88-0649-4785-baf0-43b92dd2ec2e",
@@ -83,11 +83,15 @@
         "recipe_group_id": "b67728b9-bce4-4c97-b366-528cd318140a",
         "slug": "barras-de-cereal",
         "public_path": "/barras-de-cereal",
-        "stage": "images",
-        "status": "in_progress",
+        "stage": "prepared",
+        "status": "prepared_pending_batch_publication",
         "es_content_file": "editorial/barras-de-cereal-20261008.json",
         "image_manifest": "editorial/barras-de-cereal-imagenes.json",
-        "images_ready": 0
+        "images_ready": 12,
+        "languages_ready": 7,
+        "editorial_qa": "PASS",
+        "qa_file": "editorial/barras-de-cereal-qa-20261008.json",
+        "portuguese_locale": "pt-BR"
       },
       {
         "id": "035e3edf-8b72-4604-8cd9-ae6883eff1c5",
@@ -178,19 +182,19 @@
         "status": "reserved"
       }
     ],
-    "current_recipe": "barras-de-cereal",
+    "current_recipe": "ensalada-de-pollo-con-aguacate-y-mango",
     "started_at": "2026-10-08T02:27:18.812Z",
     "branch": "recetas/lote-02-20261008",
     "completed_recipes": 0,
-    "prepared_recipes": 3,
+    "prepared_recipes": 4,
     "published_recipes": 0
   },
-  "next_candidate_position": 4,
+  "next_candidate_position": 5,
   "run_lease": {
     "owner": "continuous-run-20261008-0301",
     "status": "active",
     "acquired_at": "2026-10-08T03:02:36.623Z",
-    "expires_at": "2026-10-08T05:16:40.856Z",
+    "expires_at": "2026-10-08T05:28:16.359Z",
     "reason": "User explicitly requested continuous production; this worker owns the open batch and resumes rainbow juice."
   },
   "blockers": [],
@@ -239,14 +243,14 @@
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
   "progress_branch": "recetas/lote-02-20261008",
-  "last_checkpoint_at": "2026-10-08T03:46:40.856Z",
+  "last_checkpoint_at": "2026-10-08T03:58:16.359Z",
   "handoff": {
     "first_prepared_recipe": "como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada",
     "first_recipe_source": "editorial/como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada-20261008.json",
-    "next_recipe": "barras-de-cereal",
-    "batch_remaining_to_prepare": 12,
+    "next_recipe": "ensalada-de-pollo-con-aguacate-y-mango",
+    "batch_remaining_to_prepare": 11,
     "published_this_batch": 0,
-    "required_action": "Continue cereal bars after identity validation. Preserve the three accepted seven-language packages and media; complete all fifteen before joint publication.",
+    "required_action": "Continue chicken-avocado-mango salad identity validation; preserve four complete packages. Complete and jointly publish all fifteen, then preview QA.",
     "scope": "Preview only; production migration not executed."
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z"

@@ -24,6 +24,7 @@ for key in nutrients:
     calculated = round(sum(x['edible_grams'] / 100 * x['per_100g'][key] for x in es['nutrition']['inputs']) / es['servings'], 0 if key == 'sodium_mg' else 1)
     assert calculated == es['nutrition'][key], (key, calculated)
 assets = {}
+assert len(manifest['images']) == len(es['steps']) + 4
 for image in manifest['images']:
     path = root / 'public/recetas' / slug / image['archivo']
     digest = hashlib.sha256(path.read_bytes()).hexdigest()

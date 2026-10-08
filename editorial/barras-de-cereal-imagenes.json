@@ -48,7 +48,296 @@
       "prompt": "Use case: photorealistic-natural. Asset type: original Manual de Cocina cereal bar recipe photograph. One single realistic photo, 4:3 landscape composition, soft natural window light, light neutral clean kitchen, simple unbranded utensils. Natural coarse edible textures and accurate phases. No text, watermark, logo, collage, extra ingredients, chocolate, coconut, coloured sprinkles or sugar dusting. Cutting phase: cold square oat-raisin slab lifted out of its tin onto a clean cutting board with parchment underneath. The slab is neatly cut into exactly 3 rows and 4 columns, twelve rectangular pieces, one slightly pulled away to show the cut edges. A large plain kitchen knife safely resting beside the slab, no hands, chocolate or coating."
     }
   ],
-  "images": [],
-  "state": "GENERATION_PENDING",
+  "images": [
+    {
+      "archivo": "paso-01.webp",
+      "paso": {
+        "numero": 1,
+        "titulo": "Prepara el molde y pesa"
+      },
+      "muestra": "Molde cuadrado forrado e ingredientes pesados separados; almendras picadas, pasas, avena y semillas.",
+      "alt_es": "Barras de cereal: prepara el molde y pesa",
+      "alt_by_language": {
+        "es": "Barras de cereal: prepara el molde y pesa",
+        "de": "Müsliriegel mit Hafer, Honig und Erdnuss: Form vorbereiten und Zutaten wiegen",
+        "en": "Oat cereal bars with honey and peanut butter: Prepare the tin and weigh",
+        "fr": "Barres de céréales à l’avoine, miel et cacahuète: Préparer le moule et peser",
+        "it": "Barrette di cereali con avena, miele e arachidi: Prepara lo stampo e pesa",
+        "ja": "オーツ麦と蜂蜜、ピーナッツのシリアルバー: 型を用意して材料を量る",
+        "pt": "Barras de cereal com aveia, mel e amendoim: Prepare a forma e pese"
+      },
+      "estado": "entregada",
+      "sha256": "58306d5bd920b2627602ebc8d26817973666242976e057073e1c6fdca8e9f0b2",
+      "width": 1448,
+      "height": 1086,
+      "visual_qa": "PASS: molde forrado y ocho ingredientes separados, almendras picadas; sin mezcla ni barras anticipadas.",
+      "source_original_sha256": "71e24d5f36659fd62a7dbed4ed54588c006c7b8381e3fac20a5353d982ad9467",
+      "full_resolution_original": false
+    },
+    {
+      "archivo": "paso-02.webp",
+      "paso": {
+        "numero": 2,
+        "titulo": "Tuesta la avena y las semillas"
+      },
+      "muestra": "Avena, almendras picadas y semillas tostándose juntas en sartén seca; sin miel ni pasas todavía.",
+      "alt_es": "Barras de cereal: tuesta la avena y las semillas",
+      "alt_by_language": {
+        "es": "Barras de cereal: tuesta la avena y las semillas",
+        "de": "Müsliriegel mit Hafer, Honig und Erdnuss: Hafer und Kerne rösten",
+        "en": "Oat cereal bars with honey and peanut butter: Toast the oats and seeds",
+        "fr": "Barres de céréales à l’avoine, miel et cacahuète: Torréfier l’avoine et les graines",
+        "it": "Barrette di cereali con avena, miele e arachidi: Tosta avena e semi",
+        "ja": "オーツ麦と蜂蜜、ピーナッツのシリアルバー: オーツ麦と種を煎る",
+        "pt": "Barras de cereal com aveia, mel e amendoim: Toste a aveia e as sementes"
+      },
+      "estado": "entregada",
+      "sha256": "45ea98fa7e2a353ec4632ea7bb3284a53019036307d46e1c3e4d5e517d40fcda",
+      "width": 1448,
+      "height": 1086,
+      "visual_qa": "PASS: tostado seco de copos, almendras picadas y semillas; sin pasas ni ligante todavía.",
+      "source_original_sha256": "8f0ff5e07f6a7c4a4fe5abca45472d21d0e5dc267aded61a2a01e4a5a8b35c72",
+      "full_resolution_original": false
+    },
+    {
+      "archivo": "paso-03.webp",
+      "paso": {
+        "numero": 3,
+        "titulo": "Calienta la miel con la crema"
+      },
+      "muestra": "Miel y crema de cacahuete suaves en cazo a fuego bajo, sin caramelo oscuro.",
+      "alt_es": "Barras de cereal: calienta la miel con la crema",
+      "alt_by_language": {
+        "es": "Barras de cereal: calienta la miel con la crema",
+        "de": "Müsliriegel mit Hafer, Honig und Erdnuss: Honig und Erdnussmus erwärmen",
+        "en": "Oat cereal bars with honey and peanut butter: Warm the honey and peanut butter",
+        "fr": "Barres de céréales à l’avoine, miel et cacahuète: Chauffer le miel et la purée de cacahuète",
+        "it": "Barrette di cereali con avena, miele e arachidi: Scalda miele e crema di arachidi",
+        "ja": "オーツ麦と蜂蜜、ピーナッツのシリアルバー: 蜂蜜とピーナッツバターを温める",
+        "pt": "Barras de cereal com aveia, mel e amendoim: Aqueça o mel e a pasta de amendoim"
+      },
+      "estado": "entregada",
+      "sha256": "1ac95949b07711025bee750ac18af6c3311b8144dcd52812ae8c3d16fc83f464",
+      "width": 1448,
+      "height": 1086,
+      "visual_qa": "PASS: ligante uniforme claro de miel y cacahuete en cazo; sin ebullición, caramelo oscuro ni cereal.",
+      "source_original_sha256": "d871b11f31a6a6cb385b2498ca44b9a36ea8ad5494bf202aa02fab7cf9e73047",
+      "full_resolution_original": false
+    },
+    {
+      "archivo": "paso-04.webp",
+      "paso": {
+        "numero": 4,
+        "titulo": "Integra las pasas y el ligante"
+      },
+      "muestra": "Avena, almendras, semillas y pasas recubiertas con mezcla ligante en un cuenco.",
+      "alt_es": "Barras de cereal: integra las pasas y el ligante",
+      "alt_by_language": {
+        "es": "Barras de cereal: integra las pasas y el ligante",
+        "de": "Müsliriegel mit Hafer, Honig und Erdnuss: Rosinen und Bindemischung einarbeiten",
+        "en": "Oat cereal bars with honey and peanut butter: Mix in the raisins and binder",
+        "fr": "Barres de céréales à l’avoine, miel et cacahuète: Ajouter les raisins et le liant",
+        "it": "Barrette di cereali con avena, miele e arachidi: Unisci uvetta e legante",
+        "ja": "オーツ麦と蜂蜜、ピーナッツのシリアルバー: レーズンとつなぎを混ぜる",
+        "pt": "Barras de cereal com aveia, mel e amendoim: Misture as passas e o ligante"
+      },
+      "estado": "entregada",
+      "sha256": "c42c02c1c3647709646be1ca9a739a409eba29ff1e5069aa4cd5f3df87b9956b",
+      "width": 1448,
+      "height": 1086,
+      "visual_qa": "PASS: mezcla recubierta con almendras pequeñas picadas, semillas y pasas; sin almendras enteras ni barras anticipadas.",
+      "source_original_sha256": "45085410c9fa45bfc337a52d8dd855f19f04479a3d97cc96b5324602f35211bb",
+      "full_resolution_original": false
+    },
+    {
+      "archivo": "paso-05.webp",
+      "paso": {
+        "numero": 5,
+        "titulo": "Compacta en una capa uniforme"
+      },
+      "muestra": "Mezcla compactada en molde cuadrado forrado con papel, presionada a través de otra hoja.",
+      "alt_es": "Barras de cereal: compacta en una capa uniforme",
+      "alt_by_language": {
+        "es": "Barras de cereal: compacta en una capa uniforme",
+        "de": "Müsliriegel mit Hafer, Honig und Erdnuss: Gleichmäßig festdrücken",
+        "en": "Oat cereal bars with honey and peanut butter: Press into an even layer",
+        "fr": "Barres de céréales à l’avoine, miel et cacahuète: Tasser en couche régulière",
+        "it": "Barrette di cereali con avena, miele e arachidi: Compatta in uno strato uniforme",
+        "ja": "オーツ麦と蜂蜜、ピーナッツのシリアルバー: 均一に押し固める",
+        "pt": "Barras de cereal com aveia, mel e amendoim: Compacte em uma camada uniforme"
+      },
+      "estado": "entregada",
+      "sha256": "0b0b09f75ed196ce99a979fb857873aa741b62589eaafa6299e173bce2775b1c",
+      "width": 1448,
+      "height": 1086,
+      "visual_qa": "PASS: placa sin cortar presionada con vaso sobre papel; almendras pequeñas picadas y mano correcta.",
+      "source_original_sha256": "ddf9ee6b7b3d2a68003f3556ac2212d1cf0ffb0a6672b60efc8a271176d6a671",
+      "full_resolution_original": false
+    },
+    {
+      "archivo": "paso-06.webp",
+      "paso": {
+        "numero": 6,
+        "titulo": "Enfría y refrigera antes de cortar"
+      },
+      "muestra": "Placa completa tapada en molde forrado, enfriándose en nevera antes del corte.",
+      "alt_es": "Barras de cereal: enfría y refrigera antes de cortar",
+      "alt_by_language": {
+        "es": "Barras de cereal: enfría y refrigera antes de cortar",
+        "de": "Müsliriegel mit Hafer, Honig und Erdnuss: Abkühlen und vor dem Schneiden kühlen",
+        "en": "Oat cereal bars with honey and peanut butter: Cool and refrigerate before cutting",
+        "fr": "Barres de céréales à l’avoine, miel et cacahuète: Refroidir et réfrigérer avant de couper",
+        "it": "Barrette di cereali con avena, miele e arachidi: Raffredda prima di tagliare",
+        "ja": "オーツ麦と蜂蜜、ピーナッツのシリアルバー: 冷蔵してから切る",
+        "pt": "Barras de cereal com aveia, mel e amendoim: Esfrie e leve à geladeira antes de cortar"
+      },
+      "estado": "entregada",
+      "sha256": "e5513fbe34536fc7983febd69781a398e07304478d7f88485a6c2705e352f8fe",
+      "width": 1448,
+      "height": 1086,
+      "visual_qa": "PASS: placa completa sin cortar, cubierta y refrigerada en molde forrado.",
+      "source_original_sha256": "80673021f0f5f5f985c97445e93f5b96e66a084a9726645b6aad04f79bd3481a",
+      "full_resolution_original": false
+    },
+    {
+      "archivo": "paso-07.webp",
+      "paso": {
+        "numero": 7,
+        "titulo": "Corta doce barras"
+      },
+      "muestra": "Placa fría en tabla cortada en 3 filas y 4 columnas con cuchillo, 12 barras sin cobertura.",
+      "alt_es": "Barras de cereal: corta doce barras",
+      "alt_by_language": {
+        "es": "Barras de cereal: corta doce barras",
+        "de": "Müsliriegel mit Hafer, Honig und Erdnuss: Zwölf Riegel schneiden",
+        "en": "Oat cereal bars with honey and peanut butter: Cut twelve bars",
+        "fr": "Barres de céréales à l’avoine, miel et cacahuète: Découper douze barres",
+        "it": "Barrette di cereali con avena, miele e arachidi: Taglia dodici barrette",
+        "ja": "オーツ麦と蜂蜜、ピーナッツのシリアルバー: 12本に切る",
+        "pt": "Barras de cereal com aveia, mel e amendoim: Corte doze barras"
+      },
+      "estado": "entregada",
+      "sha256": "de06ca4b84e14a898e077d0add357ee9fe1599d4de414662f1b0224c9f143983",
+      "width": 1448,
+      "height": 1086,
+      "visual_qa": "PASS: doce barras en tres filas y cuatro columnas con cuchillo en tabla; sin cobertura.",
+      "source_original_sha256": "7c447b8f3d01726e38a9a961ccac089c227bdd74e5154ba6a62a59f31d710b12",
+      "full_resolution_original": false
+    },
+    {
+      "archivo": "paso-08.webp",
+      "paso": {
+        "numero": 8,
+        "titulo": "Sirve y conserva en frío"
+      },
+      "muestra": "Barras de avena terminadas con almendras, semillas de girasol y pasas visibles, sin chocolate.",
+      "alt_es": "Barras de cereal: sirve y conserva en frío",
+      "alt_by_language": {
+        "es": "Barras de cereal: sirve y conserva en frío",
+        "de": "Müsliriegel mit Hafer, Honig und Erdnuss: Servieren und kalt aufbewahren",
+        "en": "Oat cereal bars with honey and peanut butter: Serve and store chilled",
+        "fr": "Barres de céréales à l’avoine, miel et cacahuète: Servir et conserver au froid",
+        "it": "Barrette di cereali con avena, miele e arachidi: Servi e conserva al freddo",
+        "ja": "オーツ麦と蜂蜜、ピーナッツのシリアルバー: 盛り付けて冷蔵保存する",
+        "pt": "Barras de cereal com aveia, mel e amendoim: Sirva e conserve na geladeira"
+      },
+      "estado": "entregada",
+      "sha256": "5f7ed4fcbeb1453de967b41e26dd86db922592a7aad8eead600432893bb3806b",
+      "width": 1448,
+      "height": 1086,
+      "visual_qa": "PASS: barras compactas con copos, pasas, semillas y almendras troceadas; sin cobertura ni ingredientes extra.",
+      "source_original_sha256": "418a5a555f0131fcea79a63bf261d9174e3e02994b0866d5c877f87624a849f7",
+      "full_resolution_original": false
+    },
+    {
+      "archivo": "portada-16x9.webp",
+      "paso": "portada",
+      "muestra": "Barras de avena terminadas con almendras, semillas de girasol y pasas visibles, sin chocolate.",
+      "alt_es": "Barras rectangulares de avena con almendras, semillas y pasas visibles, sin chocolate ni cobertura",
+      "alt_by_language": {
+        "es": "Barras rectangulares de avena con almendras, semillas y pasas visibles, sin chocolate ni cobertura",
+        "de": "Rechteckige Haferriegel mit sichtbaren Mandeln, Kernen und Rosinen, ohne Schokolade oder Überzug",
+        "en": "Rectangular oat cereal bars with visible almonds, seeds and raisins, without chocolate or coating",
+        "fr": "Barres rectangulaires d’avoine aux amandes, graines et raisins visibles, sans chocolat ni nappage",
+        "it": "Barrette rettangolari di avena con mandorle, semi e uvetta visibili, senza cioccolato né copertura",
+        "ja": "アーモンド、種、レーズンが見える長方形のオーツ麦バー、チョコレートやコーティングなし",
+        "pt": "Barras retangulares de aveia com amêndoas, sementes e passas visíveis, sem chocolate nem cobertura"
+      },
+      "estado": "entregada",
+      "sha256": "ad4b957fa1a9472c98029158bbab6965f61a2b2daead53d0322daa345a73c879",
+      "width": 1448,
+      "height": 814,
+      "visual_qa": "PASS: barras compactas con copos, pasas, semillas y almendras troceadas; sin cobertura ni ingredientes extra.",
+      "source_original_sha256": "418a5a555f0131fcea79a63bf261d9174e3e02994b0866d5c877f87624a849f7",
+      "full_resolution_original": false
+    },
+    {
+      "archivo": "portada-1x1.webp",
+      "paso": "portada",
+      "muestra": "Barras de avena terminadas con almendras, semillas de girasol y pasas visibles, sin chocolate.",
+      "alt_es": "Barras rectangulares de avena con almendras, semillas y pasas visibles, sin chocolate ni cobertura",
+      "alt_by_language": {
+        "es": "Barras rectangulares de avena con almendras, semillas y pasas visibles, sin chocolate ni cobertura",
+        "de": "Rechteckige Haferriegel mit sichtbaren Mandeln, Kernen und Rosinen, ohne Schokolade oder Überzug",
+        "en": "Rectangular oat cereal bars with visible almonds, seeds and raisins, without chocolate or coating",
+        "fr": "Barres rectangulaires d’avoine aux amandes, graines et raisins visibles, sans chocolat ni nappage",
+        "it": "Barrette rettangolari di avena con mandorle, semi e uvetta visibili, senza cioccolato né copertura",
+        "ja": "アーモンド、種、レーズンが見える長方形のオーツ麦バー、チョコレートやコーティングなし",
+        "pt": "Barras retangulares de aveia com amêndoas, sementes e passas visíveis, sem chocolate nem cobertura"
+      },
+      "estado": "entregada",
+      "sha256": "14fbc4971e1f895c4f32d6f49aa4ac783ed7d1a143cc93d7332e5b01b5bb5298",
+      "width": 1086,
+      "height": 1086,
+      "visual_qa": "PASS: barras compactas con copos, pasas, semillas y almendras troceadas; sin cobertura ni ingredientes extra.",
+      "source_original_sha256": "418a5a555f0131fcea79a63bf261d9174e3e02994b0866d5c877f87624a849f7",
+      "full_resolution_original": false
+    },
+    {
+      "archivo": "portada-4x3.webp",
+      "paso": "portada",
+      "muestra": "Barras de avena terminadas con almendras, semillas de girasol y pasas visibles, sin chocolate.",
+      "alt_es": "Barras rectangulares de avena con almendras, semillas y pasas visibles, sin chocolate ni cobertura",
+      "alt_by_language": {
+        "es": "Barras rectangulares de avena con almendras, semillas y pasas visibles, sin chocolate ni cobertura",
+        "de": "Rechteckige Haferriegel mit sichtbaren Mandeln, Kernen und Rosinen, ohne Schokolade oder Überzug",
+        "en": "Rectangular oat cereal bars with visible almonds, seeds and raisins, without chocolate or coating",
+        "fr": "Barres rectangulaires d’avoine aux amandes, graines et raisins visibles, sans chocolat ni nappage",
+        "it": "Barrette rettangolari di avena con mandorle, semi e uvetta visibili, senza cioccolato né copertura",
+        "ja": "アーモンド、種、レーズンが見える長方形のオーツ麦バー、チョコレートやコーティングなし",
+        "pt": "Barras retangulares de aveia com amêndoas, sementes e passas visíveis, sem chocolate nem cobertura"
+      },
+      "estado": "entregada",
+      "sha256": "5f7ed4fcbeb1453de967b41e26dd86db922592a7aad8eead600432893bb3806b",
+      "width": 1448,
+      "height": 1086,
+      "visual_qa": "PASS: barras compactas con copos, pasas, semillas y almendras troceadas; sin cobertura ni ingredientes extra.",
+      "source_original_sha256": "418a5a555f0131fcea79a63bf261d9174e3e02994b0866d5c877f87624a849f7",
+      "full_resolution_original": false
+    },
+    {
+      "archivo": "portada.webp",
+      "paso": "portada",
+      "muestra": "Barras de avena terminadas con almendras, semillas de girasol y pasas visibles, sin chocolate.",
+      "alt_es": "Barras rectangulares de avena con almendras, semillas y pasas visibles, sin chocolate ni cobertura",
+      "alt_by_language": {
+        "es": "Barras rectangulares de avena con almendras, semillas y pasas visibles, sin chocolate ni cobertura",
+        "de": "Rechteckige Haferriegel mit sichtbaren Mandeln, Kernen und Rosinen, ohne Schokolade oder Überzug",
+        "en": "Rectangular oat cereal bars with visible almonds, seeds and raisins, without chocolate or coating",
+        "fr": "Barres rectangulaires d’avoine aux amandes, graines et raisins visibles, sans chocolat ni nappage",
+        "it": "Barrette rettangolari di avena con mandorle, semi e uvetta visibili, senza cioccolato né copertura",
+        "ja": "アーモンド、種、レーズンが見える長方形のオーツ麦バー、チョコレートやコーティングなし",
+        "pt": "Barras retangulares de aveia com amêndoas, sementes e passas visíveis, sem chocolate nem cobertura"
+      },
+      "estado": "entregada",
+      "sha256": "5f7ed4fcbeb1453de967b41e26dd86db922592a7aad8eead600432893bb3806b",
+      "width": 1448,
+      "height": 1086,
+      "visual_qa": "PASS: barras compactas con copos, pasas, semillas y almendras troceadas; sin cobertura ni ingredientes extra.",
+      "source_original_sha256": "418a5a555f0131fcea79a63bf261d9174e3e02994b0866d5c877f87624a849f7",
+      "full_resolution_original": true
+    }
+  ],
+  "state": "COMPLETE_LOCALIZED_ALTS_AND_VISUAL_QA",
   "last_step_reuses_cover": true
 }
