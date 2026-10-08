@@ -77,6 +77,7 @@ def check(task):
    schema=schemas[0]
    if schema.get('name')!=record['title']:errors.append('Recipe title')
    for field,key in [('prepTime','prep_time_minutes'),('cookTime','cook_time_minutes'),('totalTime','total_time_minutes')]:
+    if record[key]==0 and field not in schema:continue
     if duration_minutes(schema.get(field))!=record[key]:errors.append('Recipe '+field+' differs from editorial time')
    if [norm(s.get('text','')) for s in schema.get('recipeInstructions',[])]!=[norm(s['content']) for s in record['steps']]:errors.append('Recipe step text')
   return {'path':record['public_path'],'language':record['language'],'http':status,'ok':not errors,'errors':errors}

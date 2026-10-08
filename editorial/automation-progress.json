@@ -498,6 +498,14 @@
       "sha256": "a1a163e57a4308c99471f6853dd4f4befb166d11367bb3b4290b8398a8c3f56f",
       "state": "CURRENT_SOURCE_REPRODUCIBLE_NOT_REEXECUTED",
       "initial_execution_sha256": "c8cc5ebc2157c0cb6e36f581b7144ef088446aa293b67d4b837d2ae0e73123e0"
+    },
+    "qa_latest": {
+      "run": 37774729078,
+      "pages": 105,
+      "passed": 98,
+      "all_http200": true,
+      "hreflang": "PASS_ALL105",
+      "remaining": "Audit zero-cookTime absent in schema for rainbow juice; optional zero duration is valid. Rerun corrected audit."
     }
   },
   "next_candidate_position": 17,
@@ -558,5 +566,5 @@
   "last_checkpoint_at": "2026-10-08T11:43:50.514Z",
   "handoff": "105/105 pagesHTTP200 and frozen content visible; only pageQA failure was globalrecipe x-default. FixPR92 opened, wait CI/merge/deploy then rerun PR91. 15DBpublished but batch notQAclosed.",
   "next_relay_requested_at": "2026-10-08T02:59:04Z",
-  "updated_at": "2026-10-08T12:07:47.856Z"
+  "updated_at": "2026-10-08T12:09:46.603Z"
 }
