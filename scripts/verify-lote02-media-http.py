@@ -15,5 +15,5 @@ def check(asset):
 with concurrent.futures.ThreadPoolExecutor(max_workers=10) as pool:rows=list(pool.map(check,plan['media']))
 report={'checked_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'base':base,'assets':len(rows),'passed':sum(r['ok'] for r in rows),'errors':[r for r in rows if not r['ok']],'results':rows}
 (root/'lote02-media-deployment-verification.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
-print(json.dumps({k:v for k,v in report.items() if k!='results'},ensure_ascii=False))
+print(json.dumps({'checked_at':report['checked_at'],'assets':len(rows),'passed':report['passed'],'error_count':len(report['errors']),'first_errors':report['errors'][:3]},ensure_ascii=False))
 raise SystemExit(0 if report['passed']==172 and not report['errors'] else 1)
