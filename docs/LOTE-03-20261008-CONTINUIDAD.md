@@ -48,3 +48,7 @@ Fuente única editorial/receta-de-pizza-casera-20261008.json:10fases,12ingredien
 ### Pizza idiomas 2026-10-08T14:26:19.578Z
 
 ES/DE/EN3/7 en la fuente única;10fases,12ingredientes,3FAQ; cifras por fase DE/EN coinciden exactamente con ES tras normalizar coma/punto decimal. Medios correctos ya remotos. PendientesFR/IT/JA/PT-BR ySQL/QA. No regenerar ni sobrescribir versiones correctas.
+
+### Pizza5idiomas 2026-10-08T14:33:14.979Z
+
+ES/DE/EN/FR/IT5/7, cifras por fase exactas en cuatro traducciones tras normalizar decimales. Todas las imágenes correctas remotas. PróximoJA yPT-BR, luegoSQL/QA. No rehacer los5idiomas ni medios.
