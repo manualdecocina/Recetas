@@ -11,3 +11,7 @@ Ingredientes: 50 relaciones canónicas y 94 entradas pendientes, con 144/144 ing
 Continuidad: leer editorial/automation-progress.json y editorial/automation-queue.json remotos. Siguiente candidato, posición 17: receta-de-sopa-de-mariscos-con-mejillones. Validar URL Master/decisiones posteriores, duplicados y borradores nuevos; reservar el siguiente lote con SHA esperado. La cerveza artesanal permanece REVIEW retenida. No crear otro productor si existe run_lease activo.
 
 GitHub/main dispara el hosting existente. No tocar DNS ni manualdecocina.com ni quitar noindex.
+
+## Relevo vigente después del cierre
+
+Lote02 permanece cerrado15/15. El productor continuó y reservó lote03 en `recetas/lote-03-20261008` con CAS desde main84cc670. Commit inicial fc854b992c93c1f2cc8a6d58b19e5660f5dbc2d1. Antes de cualquier producción, leer el progreso MÁS RECIENTE de ESA RAMA y `docs/LOTE-03-20261008-CONTINUIDAD.md`. Esta rama02 sirve como puntero para instrucciones antiguas; no debe producirse sobre ella ni reiniciar el lote02. Si lease vivo, evitar productor paralelo. Si liberado/expirado, conciliar rama03/PR/DB y retomar allí primera etapa pendiente.
