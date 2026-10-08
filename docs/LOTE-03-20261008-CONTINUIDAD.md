@@ -160,3 +160,6 @@ Fuente única editorial/receta-de-ensalada-de-frutos-rojos-20261008.json con rec
 ## Queso — ES congelado
 
 Identidad y siete rutas sin colisiones verificadas; texto original en fuente única. 8 fases, 20 preparación + 35 cocción + 95 espera = 150 minutos propuestos. FDC172224 queso blanco terminado como referencia por 50g; no se atribuyen nutrientes del suero al queso. Rendimiento400g/8porciones pendiente de medir; fibra ausente omitida. Ficha y briefs congelados antes de imágenes. Próxima acción: generar/verificar8originales y11WebP, localizar6idiomas. No publicado.
+
+
+Queso:8PNG originales/11WebP visualmente PASS. Corrección limitada a enfriado: molde elevado sobre suero y gasa cubriendo cuajada; variantes rechazadas excluidas. Portada conserva queso entero en todas proporciones; aún0publicaciones03. Próximaacción:6localizaciones/SQLQA.
