@@ -178,3 +178,8 @@ IdentidadMD5b58bdbcbe9ec4dccf664940793ebbb87,1ESfalse,7rutas/content_pages0colis
 ## Recuperación de Work y pollo completo
 
 El propietario trasladó la mesa llena de errores el 2026-10-08. Reserva transferida con SHA esperado a work-recovery-cda9798a16b5. Instrucciones de automatización corregidas para seguir current_batch.branch y el checkpoint remoto en lugar de volver al lote02. Pollo agridulce: fuente original ES intacta, siete idiomas, 9 originales PNG y 13 WebP, variantes/alt/localización y cálculo de 11 fichas USDA con 8 campos aprobados. Medios remotos d3a8aadcb07af42f3862e8be2eef3c4d91db590e, 22 Git SHA coincidentes. Paquete bf3226d3c03ba0756e6fbb48489b935a615c58baa872313f3e8bb690c697c41c. Lote03:11/15preparadas,0publicadas. Próxima flan de chocolate; quedan4antes deCI/despliegue/publicación atómica/QA. No rehacer las11listas.
+
+
+## Fish and Chips — medios completos
+
+Nueve originales PNG y doce WebP preservados con bytes, dimensiones, SHA256 y Git SHA exactos. Todas las fases y cuatro recortes de portada superaron QA visual; no se añadieron salsa, limón, cerveza, huevo ni guarniciones. ES y pasos congelados sin cambios. Próxima acción: seis localizaciones y SQL guardado, sin publicar todavía. Lote03:12/15 preparadas, Fish and Chips en localización, 0/15 publicadas.
