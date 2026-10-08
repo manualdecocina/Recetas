@@ -25,3 +25,8 @@ Completar ES nuevo, nutrición USDA, congelar pasos y prompts antes de imágenes
 Cerrar las15; SQL105filas y rollback ante divergencia; PR y CI/typecheck/build; merge SHA esperado; observar todos los mediosHTTP200/hash; transacción DB7/7; revalidar mediante Actions sin leer secret;105páginas QA + auditoría global con total real. Catálogo esperado tras lote139 solo si la consulta actual confirma124 antes. Mantener noindex, sin DNS/migración. No afirmar lote terminado por prepared/published=true/CI.
 
 Actualizado 2026-10-08T13:16:56.244Z.
+
+
+## Checkpoint posterior — 2026-10-08T13:40:44.360Z
+
+Empanadas ES cerrado en12fases y medios completos:12 originalesPNG+15WebP, revisión visual PASS y SHA256/dimensiones en editorial/receta-empanadas-argentinas-imagenes.json. Pasos ES SHA256 658f6db71e55437414fec6224e62be54a9403523e6bf022982827d91ce303426. No rehacer ES ni imágenes. Estado actual: **localización DE,EN,FR,IT,JA,PT-BR pendiente**, después SQL protegido y QA de paquete. Fuente única editorial/receta-empanadas-argentinas-20261008.json; sopa7/7 preparada intacta. Total de lote03:1/15 paquetes preparados completos,0/15publicados. La sección anterior que decía próximo ES queda superada por este checkpoint; consultar automation-progress.json de esta rama.
