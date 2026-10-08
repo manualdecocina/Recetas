@@ -44,3 +44,7 @@ Fuente única editorial/receta-de-pizza-casera-20261008.json:10fases,12ingredien
 ## Pizza medios completos 2026-10-08T14:19:06.430Z
 
 10originalesPNG y13WebP generados con ImageGen y verificados visualmente, todas las fases. Portada4:3 y16:9 mantienenpizza entera; cuadrada es recorte cercano con borde externo/plato recortado y cobertura/corte central visibles. Manifiesto con hashes y prompts actualizado. ES congelado intacto. PendienteDE/EN/FR/IT/JA/PT-BR, SQL protegido y QA; preparado2/15, publicado0/15.
+
+### Pizza idiomas 2026-10-08T14:26:19.578Z
+
+ES/DE/EN3/7 en la fuente única;10fases,12ingredientes,3FAQ; cifras por fase DE/EN coinciden exactamente con ES tras normalizar coma/punto decimal. Medios correctos ya remotos. PendientesFR/IT/JA/PT-BR ySQL/QA. No regenerar ni sobrescribir versiones correctas.
