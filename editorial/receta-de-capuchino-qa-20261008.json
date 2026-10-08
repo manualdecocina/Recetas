@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "slug": "receta-de-capuchino",
-  "status": "ES_PASS_IMAGES_PENDING",
+  "status": "PASS_PREPUBLICATION",
   "identity": {
     "classification": "ELIGIBLE_CATALOG_CANDIDATE",
     "evidence": "docs/P2-CATALOG-20260924.md explicitly CATALOG CANDIDATE",
@@ -32,5 +32,94 @@
     "estimated": true,
     "grounds_not_consumed": true
   },
-  "steps_sha256": "0dc981c5de9814177bdc763822dedf1e07a267f2fe01dec62f6003d32d8a5b40"
+  "steps_sha256": "0dc981c5de9814177bdc763822dedf1e07a267f2fe01dec62f6003d32d8a5b40",
+  "localization": {
+    "checks": [
+      {
+        "language": "es",
+        "structural": "PASS",
+        "text_numeric_differences": []
+      },
+      {
+        "language": "de",
+        "structural": "PASS",
+        "text_numeric_differences": []
+      },
+      {
+        "language": "en",
+        "structural": "PASS",
+        "text_numeric_differences": []
+      },
+      {
+        "language": "fr",
+        "structural": "PASS",
+        "text_numeric_differences": []
+      },
+      {
+        "language": "it",
+        "structural": "PASS",
+        "text_numeric_differences": []
+      },
+      {
+        "language": "ja",
+        "structural": "PASS",
+        "text_numeric_differences": [
+          {
+            "step": 1,
+            "es": [
+              "180",
+              "200",
+              "120",
+              "4"
+            ],
+            "localized": [
+              "180",
+              "200",
+              "4",
+              "120"
+            ]
+          }
+        ]
+      },
+      {
+        "language": "pt",
+        "structural": "PASS",
+        "text_numeric_differences": []
+      }
+    ],
+    "es_hash": "0dc981c5de9814177bdc763822dedf1e07a267f2fe01dec62f6003d32d8a5b40",
+    "package_sha256": "38fa95700a5fbe0a4c46d4bcb09ef0a81e12880c3f03cc9cfda9557c272c1b2f",
+    "sql_sha256": "e149c36d0aa0ae394a35e547baf0c8a7b1b4f132dae99bbf4849fb3ee523a528",
+    "status": "PASS",
+    "semantic_review": {
+      "status": "PASS",
+      "explanation": "JA step1 reorders 4C storage threshold and120g; same amounts and thresholds."
+    }
+  },
+  "image_qa": {
+    "status": "PASS",
+    "checked_at": "2026-10-08T10:16:00.331Z",
+    "checks": [
+      "All five distinct scenes and nine crops inspected",
+      "No toppings",
+      "No invented thermometer reading",
+      "Opaque vessel anatomy corrected before acceptance",
+      "Rejected versions excluded from rendered assets"
+    ],
+    "corrections": [
+      {
+        "scene": "step_01",
+        "reason": "Overfilled pitcher then transparent exterior introduced by edit",
+        "action": "Two ImageGen edits",
+        "result": "Opaque pitcher and headroom restored"
+      },
+      {
+        "scene": "step_02",
+        "reason": "Full espresso cup then transparent cutaway introduced by edit",
+        "action": "Two ImageGen edits",
+        "result": "Low coffee level and opaque ceramic restored"
+      }
+    ]
+  },
+  "media_commit": "6ccc8e1475cbdd322a2ff27b1db652dfb772d9db"
 }

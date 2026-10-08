@@ -30,7 +30,7 @@
     "id": "lote-02-20261008",
     "target": 15,
     "status": "in_progress",
-    "stage": "localization",
+    "stage": "identity",
     "recipes": [
       {
         "id": "e47eac88-0649-4785-baf0-43b92dd2ec2e",
@@ -291,8 +291,8 @@
         "recipe_group_id": "cc320b67-294e-4420-b904-4bd3d12d4c1b",
         "slug": "receta-de-capuchino",
         "public_path": "/receta-de-capuchino",
-        "stage": "localization",
-        "status": "in_progress",
+        "stage": "prepared",
+        "status": "prepared_pending_batch_publication",
         "identity_qa": "PASS",
         "classification": "ELIGIBLE_CATALOG_CANDIDATE",
         "routes_file": "editorial/receta-de-capuchino-rutas-20261008.json",
@@ -301,18 +301,20 @@
         "qa_file": "editorial/receta-de-capuchino-qa-20261008.json",
         "steps_sha256": "0dc981c5de9814177bdc763822dedf1e07a267f2fe01dec62f6003d32d8a5b40",
         "images_ready": 9,
-        "languages_ready": 1,
+        "languages_ready": 7,
         "distinct_images_pending": 0,
         "image_originals": 5,
         "image_visual_qa": "PASS",
-        "localizations_pending": [
-          "de",
-          "en",
-          "fr",
-          "it",
-          "ja",
-          "pt"
-        ]
+        "localizations_pending": [],
+        "portuguese_locale": "pt-BR",
+        "editorial_qa": "PASS",
+        "localization_qa": "PASS",
+        "localization_qa_file": "editorial/receta-de-capuchino-localization-qa-20261008.json",
+        "sql_file": "scripts/publish-receta-de-capuchino-20261008.sql",
+        "package_sha256": "38fa95700a5fbe0a4c46d4bcb09ef0a81e12880c3f03cc9cfda9557c272c1b2f",
+        "sql_sha256": "e149c36d0aa0ae394a35e547baf0c8a7b1b4f132dae99bbf4849fb3ee523a528",
+        "publication_gate": "BATCH_15_COMPLETION_PENDING",
+        "media_commit": "6ccc8e1475cbdd322a2ff27b1db652dfb772d9db"
       },
       {
         "id": "3a512fac-c4ae-40ad-92b1-412c608da8ed",
@@ -331,11 +333,11 @@
         "status": "reserved"
       }
     ],
-    "current_recipe": "receta-de-capuchino",
+    "current_recipe": "receta-de-lasana-de-pollo-con-champinones",
     "started_at": "2026-10-08T02:27:18.812Z",
     "branch": "recetas/lote-02-20261008",
     "completed_recipes": 0,
-    "prepared_recipes": 12,
+    "prepared_recipes": 13,
     "published_recipes": 0,
     "selection_adjustments": [
       {
@@ -405,14 +407,14 @@
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
   "progress_branch": "recetas/lote-02-20261008",
-  "last_checkpoint_at": "2026-10-08T10:16:00.331Z",
+  "last_checkpoint_at": "2026-10-08T10:21:36.118Z",
   "handoff": {
     "first_prepared_recipe": "como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada",
     "first_recipe_source": "editorial/como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada-20261008.json",
-    "next_recipe": "receta-de-capuchino",
-    "batch_remaining_to_prepare": 3,
+    "next_recipe": "receta-de-lasana-de-pollo-con-champinones",
+    "batch_remaining_to_prepare": 2,
     "published_this_batch": 0,
-    "required_action": "Complete six capuchino translations and SQL; twelve earlier recipes prepared, batch remains unpublished.",
+    "required_action": "Prepare lasaña pollo champiñones and pollo limón miel espárragos, then publish all fifteen. Lasaña KEEP/REBUILD Recipe resolved docs/QA-BLOQUE-REVIEW-20260925-47.md.",
     "scope": "Preview only; production migration not executed."
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z"
