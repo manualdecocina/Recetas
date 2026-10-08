@@ -29,8 +29,19 @@
     "localized_step_figures_preserved": true
   },
   "numeric_text_review": "Repeated increment wording 30 en 30 is translated as increments of 30 ml. Japanese renders 'one at a time' and 'one quarter' explicitly as 1 and 4; these describe the same operations and portions.",
-  "steps_sha256": "8f045f79a1db3ebe2bec9b564361abea2322635e3b263e93b82f2b5e762e9c5d",
+  "steps_sha256": "945629d13e5ef3e77192e5e741687b143d76632255272e5ae2f52ec0577c7875",
   "publication_gate": "BATCH_15_COMPLETION_PENDING",
   "package_sha256": "b4f78fa32165fff43934ba8c98f8b5a655953cca0140f2e4462690eef362d1ae",
-  "sql_sha256": "dd17af8a272e61645c62fe6f6adeaca9154cc7880b71063c21663853a15e2c71"
+  "sql_sha256": "dd17af8a272e61645c62fe6f6adeaca9154cc7880b71063c21663853a15e2c71",
+  "postpublication_time_correction": {
+    "reason": "Include already-required 8–12h soaking in total time; no ingredient, cooking phase, media or nutrition change",
+    "previous_steps_sha256": "8f045f79a1db3ebe2bec9b564361abea2322635e3b263e93b82f2b5e762e9c5d",
+    "steps_sha256": "945629d13e5ef3e77192e5e741687b143d76632255272e5ae2f52ec0577c7875",
+    "minimum_total_minutes": 675,
+    "maximum_total_minutes": 915,
+    "minimum_soak_minutes": 480,
+    "maximum_soak_minutes": 720,
+    "media_regenerated": false,
+    "kitchen_test_confirmed": false
+  }
 }
