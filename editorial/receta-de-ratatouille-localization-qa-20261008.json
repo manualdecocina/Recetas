@@ -1,0 +1,206 @@
+{
+  "schema_version": 1,
+  "slug": "receta-de-ratatouille",
+  "checked_at": "2026-10-08T09:38:21.291Z",
+  "result": "PASS",
+  "languages": [
+    "es",
+    "de",
+    "en",
+    "fr",
+    "it",
+    "ja",
+    "pt"
+  ],
+  "portuguese_locale": "pt-BR",
+  "checks": [
+    {
+      "language": "es",
+      "structural": "PASS",
+      "text_numeric_differences": []
+    },
+    {
+      "language": "de",
+      "structural": "PASS",
+      "text_numeric_differences": [
+        {
+          "step": 4,
+          "es": [
+            "10",
+            "8",
+            "10",
+            "15",
+            "15",
+            "60"
+          ],
+          "localized": [
+            "10",
+            "8",
+            "10",
+            "15",
+            "60"
+          ]
+        },
+        {
+          "step": 7,
+          "es": [
+            "8",
+            "4",
+            "4",
+            "2",
+            "1",
+            "32",
+            "3",
+            "74"
+          ],
+          "localized": [
+            "8",
+            "4",
+            "2",
+            "4",
+            "1",
+            "32",
+            "3",
+            "74"
+          ]
+        }
+      ]
+    },
+    {
+      "language": "en",
+      "structural": "PASS",
+      "text_numeric_differences": [
+        {
+          "step": 4,
+          "es": [
+            "10",
+            "8",
+            "10",
+            "15",
+            "15",
+            "60"
+          ],
+          "localized": [
+            "10",
+            "8",
+            "10",
+            "15",
+            "60"
+          ]
+        }
+      ]
+    },
+    {
+      "language": "fr",
+      "structural": "PASS",
+      "text_numeric_differences": [
+        {
+          "step": 4,
+          "es": [
+            "10",
+            "8",
+            "10",
+            "15",
+            "15",
+            "60"
+          ],
+          "localized": [
+            "10",
+            "8",
+            "10",
+            "15",
+            "60"
+          ]
+        }
+      ]
+    },
+    {
+      "language": "it",
+      "structural": "PASS",
+      "text_numeric_differences": [
+        {
+          "step": 4,
+          "es": [
+            "10",
+            "8",
+            "10",
+            "15",
+            "15",
+            "60"
+          ],
+          "localized": [
+            "10",
+            "8",
+            "10",
+            "15",
+            "60"
+          ]
+        }
+      ]
+    },
+    {
+      "language": "ja",
+      "structural": "PASS",
+      "text_numeric_differences": [
+        {
+          "step": 4,
+          "es": [
+            "10",
+            "8",
+            "10",
+            "15",
+            "15",
+            "60"
+          ],
+          "localized": [
+            "10",
+            "8",
+            "10",
+            "15",
+            "60"
+          ]
+        },
+        {
+          "step": 7,
+          "es": [
+            "8",
+            "4",
+            "4",
+            "2",
+            "1",
+            "32",
+            "3",
+            "74"
+          ],
+          "localized": [
+            "8",
+            "4",
+            "2",
+            "32",
+            "1",
+            "4",
+            "3",
+            "74"
+          ]
+        }
+      ]
+    },
+    {
+      "language": "pt",
+      "structural": "PASS",
+      "text_numeric_differences": []
+    }
+  ],
+  "text_numeric_review": "PASS: de/en/fr/it/ja step4 renders 15 en 15 ml as 15 ml increments (same instruction); de and ja step7 reorder refrigeration temperature/time without changing thresholds.",
+  "ingredients_per_record": 12,
+  "steps_per_record": 7,
+  "faq_per_record": 3,
+  "amounts_times_servings_nutrition_media": "EXACT_PARITY",
+  "es_steps_sha256": "541d26ab971e3f2d41e4a6767bb4a5f6729b487572db63139110bac16f6121e4",
+  "visual_qa": "PASS_ALL_SEVEN_PHASES_AND_VARIANTS",
+  "route_collisions": "PASS_ROUTE_EVIDENCE",
+  "kitchen_test_performed": false,
+  "package_sha256": "37603ce4985e4be32b159101c7f240470815c777f290987a699b0b82e5a7961a",
+  "sql_sha256": "decc23dce4ac906bf31bdf572ac7c121c0c063da28d4a725a5a10e074caeeadf",
+  "publication_gate": "BATCH_15_COMPLETION_PENDING"
+}

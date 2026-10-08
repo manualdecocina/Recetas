@@ -2,7 +2,7 @@
   "schema_version": 1,
   "slug": "receta-de-ratatouille",
   "created_at": "2026-10-08T09:22:16.967Z",
-  "state": "IMAGES_COMPLETE_LOCALIZATIONS_PENDING",
+  "state": "IMAGES_AND_LOCALIZATIONS_COMPLETE",
   "steps_sha256": "541d26ab971e3f2d41e4a6767bb4a5f6729b487572db63139110bac16f6121e4",
   "output_directory": "public/recetas/receta-de-ratatouille",
   "style_consistency": "Photorealistic editorial culinary photograph for Manual de Cocina, warm natural window light, pale cream rustic kitchen, dark oak counter, one wide 30 cm stainless steel heavy-bottomed casserole, realistic portions and utensils. Ratatouille in chunky 2 cm cubes, NEVER spiral slices, never baked rounds. Only eggplant with purple skin, green-skinned zucchini, red sweet pepper, onion, ripe red tomato, garlic, olive oil, dried thyme, pepper, salt and fresh basil. No meat, cheese, bread or pasta. No text, numerals, labels, logos or watermark; no collage or split panels. Horizontal 4:3 single scene.",
@@ -186,7 +186,7 @@
   ],
   "expected_webp_count": 11,
   "original_generation_count": 7,
-  "localized_alts_status": "ES_ONLY_LOCALIZATIONS_PENDING",
+  "localized_alts_status": "COMPLETE_7_LANGUAGES",
   "visual_qa": "PASS_ALL_SEVEN_PHASES_AND_COVER_VARIANTS",
   "original_assets": [
     {
@@ -273,5 +273,91 @@
       "approved_original": "originales/paso-05.png"
     }
   ],
-  "generation_call_count": 8
+  "generation_call_count": 8,
+  "localized_alts": {
+    "es": {
+      "cover": "Ratatouille de berenjena, calabacín, pimiento y tomate en dados con albahaca",
+      "steps": [
+        "Ratatouille: verduras limpias y cortadas en dados antes de cocinar",
+        "Ratatouille: dados de berenjena dorándose en una sola capa",
+        "Ratatouille: calabacín en dados salteado y ligeramente dorado",
+        "Ratatouille: cebolla y pimiento rojo ablandándose en la cazuela",
+        "Ratatouille: tomate picado, ajo y tomillo formando la base del guiso",
+        "Ratatouille: todas las verduras en dados guisándose juntas sin tapa",
+        "Ratatouille terminada en dados con albahaca fresca, lista para servir"
+      ]
+    },
+    "de": {
+      "cover": "Gewürfelte Ratatouille aus Aubergine, Zucchini, Paprika und Tomate mit Basilikum",
+      "steps": [
+        "Ratatouille: sauberes, gewürfeltes Gemüse vor dem Garen",
+        "Ratatouille: Auberginenwürfel bräunen in einer einzelnen Lage",
+        "Ratatouille: angebratene, leicht gebräunte Zucchiniwürfel",
+        "Ratatouille: Zwiebel und rote Paprika werden im Topf weich",
+        "Ratatouille: gehackte Tomate, Knoblauch und Thymian bilden die Schmorgrundlage",
+        "Ratatouille: alle Gemüsewürfel schmoren zusammen im offenen Topf",
+        "Fertige gewürfelte Ratatouille mit frischem Basilikum, servierbereit"
+      ]
+    },
+    "en": {
+      "cover": "Diced eggplant, zucchini, pepper and tomato ratatouille with basil",
+      "steps": [
+        "Ratatouille: clean, diced vegetables before cooking",
+        "Ratatouille: eggplant cubes browning in a single layer",
+        "Ratatouille: lightly browned, sautéed zucchini cubes",
+        "Ratatouille: onion and red pepper softening in the casserole",
+        "Ratatouille: chopped tomato, garlic and thyme forming the stew base",
+        "Ratatouille: all diced vegetables stewing together uncovered",
+        "Finished chunky ratatouille with fresh basil, ready to serve"
+      ]
+    },
+    "fr": {
+      "cover": "Ratatouille d'aubergine, courgette, poivron et tomate en dés au basilic",
+      "steps": [
+        "Ratatouille : légumes propres et coupés en dés avant cuisson",
+        "Ratatouille : dés d'aubergine dorant en une seule couche",
+        "Ratatouille : dés de courgette sautés et légèrement dorés",
+        "Ratatouille : oignon et poivron rouge s'attendrissant dans la cocotte",
+        "Ratatouille : tomate hachée, ail et thym formant la base du mijoté",
+        "Ratatouille : tous les légumes en dés mijotant ensemble sans couvercle",
+        "Ratatouille en dés terminée avec basilic frais, prête à servir"
+      ]
+    },
+    "it": {
+      "cover": "Ratatouille di melanzana, zucchina, peperone e pomodoro a cubetti con basilico",
+      "steps": [
+        "Ratatouille: verdure pulite e tagliate a cubetti prima della cottura",
+        "Ratatouille: cubetti di melanzana dorano in un solo strato",
+        "Ratatouille: cubetti di zucchina saltati e leggermente dorati",
+        "Ratatouille: cipolla e peperone rosso si ammorbidiscono nella casseruola",
+        "Ratatouille: pomodoro tritato, aglio e timo formano la base dello stufato",
+        "Ratatouille: tutte le verdure a cubetti stufano insieme senza coperchio",
+        "Ratatouille a cubetti pronta con basilico fresco"
+      ]
+    },
+    "ja": {
+      "cover": "なす、ズッキーニ、パプリカ、トマトの角切りラタトゥイユとバジル",
+      "steps": [
+        "ラタトゥイユ：調理前の洗って角切りにした野菜",
+        "ラタトゥイユ：なすの角切りを重ねずに焼く",
+        "ラタトゥイユ：軽く焼き色が付いたズッキーニの角切り",
+        "ラタトゥイユ：鍋で玉ねぎと赤パプリカを柔らかくする",
+        "ラタトゥイユ：刻んだトマト、にんにく、タイムで煮込みのベースを作る",
+        "ラタトゥイユ：すべての角切り野菜をふたなしで一緒に煮込む",
+        "生バジルを添えた角切りラタトゥイユの完成"
+      ]
+    },
+    "pt": {
+      "cover": "Ratatouille de berinjela, abobrinha, pimentão e tomate em cubos com manjericão",
+      "steps": [
+        "Ratatouille: legumes limpos e cortados em cubos antes de cozinhar",
+        "Ratatouille: cubos de berinjela dourando em uma só camada",
+        "Ratatouille: cubos de abobrinha salteados e levemente dourados",
+        "Ratatouille: cebola e pimentão vermelho amaciando na panela",
+        "Ratatouille: tomate picado, alho e tomilho formando a base do ensopado",
+        "Ratatouille: todos os legumes em cubos cozinhando juntos sem tampa",
+        "Ratatouille em cubos finalizada com manjericão fresco, pronta para servir"
+      ]
+    }
+  }
 }

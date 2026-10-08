@@ -30,7 +30,7 @@
     "id": "lote-02-20261008",
     "target": 15,
     "status": "in_progress",
-    "stage": "localization",
+    "stage": "identity",
     "recipes": [
       {
         "id": "e47eac88-0649-4785-baf0-43b92dd2ec2e",
@@ -231,8 +231,8 @@
         "recipe_group_id": "0bbedb8a-3d06-41dd-8bfc-3dc1ebeac0a7",
         "slug": "receta-de-ratatouille",
         "public_path": "/receta-de-ratatouille",
-        "stage": "localization",
-        "status": "in_progress",
+        "stage": "prepared",
+        "status": "prepared_pending_batch_publication",
         "identity_qa": "PASS",
         "classification": "ELIGIBLE_CATALOG_CANDIDATE",
         "routes_file": "editorial/receta-de-ratatouille-rutas-20261008.json",
@@ -241,18 +241,20 @@
         "qa_file": "editorial/receta-de-ratatouille-qa-20261008.json",
         "steps_sha256": "541d26ab971e3f2d41e4a6767bb4a5f6729b487572db63139110bac16f6121e4",
         "images_ready": 11,
-        "languages_ready": 1,
+        "languages_ready": 7,
         "distinct_images_pending": 0,
         "image_originals": 7,
         "image_visual_qa": "PASS",
-        "localizations_pending": [
-          "de",
-          "en",
-          "fr",
-          "it",
-          "ja",
-          "pt"
-        ]
+        "localizations_pending": [],
+        "portuguese_locale": "pt-BR",
+        "editorial_qa": "PASS",
+        "localization_qa": "PASS",
+        "localization_qa_file": "editorial/receta-de-ratatouille-localization-qa-20261008.json",
+        "sql_file": "scripts/publish-receta-de-ratatouille-20261008.sql",
+        "package_sha256": "37603ce4985e4be32b159101c7f240470815c777f290987a699b0b82e5a7961a",
+        "sql_sha256": "decc23dce4ac906bf31bdf572ac7c121c0c063da28d4a725a5a10e074caeeadf",
+        "publication_gate": "BATCH_15_COMPLETION_PENDING",
+        "media_commit": "a3326d32244128da1c7d3d4221ab695407bdf968"
       },
       {
         "id": "aa9afced-ac23-4e4b-afef-7d28bf2d7af6",
@@ -287,11 +289,11 @@
         "status": "reserved"
       }
     ],
-    "current_recipe": "receta-de-ratatouille",
+    "current_recipe": "receta-de-cordon-bleu",
     "started_at": "2026-10-08T02:27:18.812Z",
     "branch": "recetas/lote-02-20261008",
     "completed_recipes": 0,
-    "prepared_recipes": 10,
+    "prepared_recipes": 11,
     "published_recipes": 0,
     "selection_adjustments": [
       {
@@ -312,7 +314,7 @@
     "status": "active",
     "acquired_at": "2026-10-08T08:39:14.486Z",
     "expires_at": "2026-10-08T11:01:06.928Z",
-    "reason": "Ten recipes prepared, rice completed; continuing ratatouille without releasing production.",
+    "reason": "Eleven prepared; continuing cordon bleu, no batch published yet.",
     "renewed_at": "2026-10-08T09:31:06.928Z"
   },
   "blockers": [],
@@ -361,14 +363,14 @@
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
   "progress_branch": "recetas/lote-02-20261008",
-  "last_checkpoint_at": "2026-10-08T09:31:06.928Z",
+  "last_checkpoint_at": "2026-10-08T09:38:21.291Z",
   "handoff": {
     "first_prepared_recipe": "como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada",
     "first_recipe_source": "editorial/como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada-20261008.json",
-    "next_recipe": "receta-de-ratatouille",
-    "batch_remaining_to_prepare": 5,
+    "next_recipe": "receta-de-cordon-bleu",
+    "batch_remaining_to_prepare": 4,
     "published_this_batch": 0,
-    "required_action": "Seven ratatouille originals and eleven WebP validated; localize six remaining languages, verify parity and prepare guarded SQL, then continue cordon bleu.",
+    "required_action": "Ratatouille complete 7/7 and guarded SQL. Validate cordon bleu identity and routes; continue remaining four. Lasaña chicken/mushroom REVIEW was resolved KEEP/REBUILD MODEL Recipe in docs/QA-BLOQUE-REVIEW-20260925-47.md: keep reservation, no replacement needed.",
     "scope": "Preview only; production migration not executed."
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z"
