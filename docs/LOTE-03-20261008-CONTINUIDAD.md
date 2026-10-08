@@ -65,3 +65,8 @@ Lote03 preparado3/15, publicado0/15. Próximo lasana-de-calabacin-y-berenjena (p
 ## 2026-10-08T14:55:43.599Z — Lasaña de calabacín y berenjena: ES congelado
 
 Cuarta entidad, id f7df8371-8273-4b15-ba6e-32390a185395, grupo9a28dffd-cdde-4e20-a746-88336cb0a016. Fuente única editorial/lasana-de-calabacin-y-berenjena-20261008.json; 10 pasos y12ingredientes originales, sin reutilizar WordPress. Hash de pasos8c69d9bf8d3c51a2e8691d844e022a34002ff8a4b1cd9e381fbde9466825b797. Brief congelado antes de imágenes; doce fichas USDA verificadas,8campos presentes. Ricotta170851=150kcal/100g. Nutrición por1/6estimada289.1kcal, no confirmada en cocina. Tiempos30prep+80cocción+30esperas=140min propuestos. Mezcla ricotta301g→2×150.5g, salsa cocinada dividida en4sin inventar peso evaporado, verduras en3. Categoría preservada Platos principales. Siete rutas aprobadas, incluida JA histórica /ja/ズッキーニとナスのラザニア. Pendiente:10 originales y13WebP, revisión visual,6localizaciones,SQL y QA. Primeras3listas; lote03publicado0/15. No regenerar contenido/medios anteriores.
+
+
+## 2026-10-08T15:08:44.550Z — Lasaña: medios completos
+
+10originalesPNG y13WebP definitivos; todas las fases y variantes revisadas visualmente. Portada1x1recorta lados de fuente de fondo y16x9borde exterior de plato; la porción principal y sus capas permanecen enteras. Hash ES congelado intacto. No regenerar medios. Siguiente: añadir DE,EN,FR,IT,JA,PT-BR a la misma fuente; QA ySQL protegido. Estado03:3recetas completas, cuarta ES+medios,0publicadas.
