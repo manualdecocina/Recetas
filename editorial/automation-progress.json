@@ -31,11 +31,11 @@
     "branch": "recetas/lote-03-20261008",
     "target": 15,
     "status": "in_progress",
-    "stage": "localización",
-    "current_recipe": "receta-de-ensalada-de-frutos-rojos",
+    "stage": "identidad",
+    "current_recipe": "como-preparar-queso",
     "started_at": "2026-10-08T12:39:02.511Z",
     "completed_recipes": 0,
-    "prepared_recipes": 8,
+    "prepared_recipes": 9,
     "published_recipes": 0,
     "identity_qa": "PASS_15_ENTITIES_105_ROUTES_NO_COLLISIONS",
     "identity_file": "editorial/lote03-identidades-rutas-20261008.json",
@@ -368,11 +368,11 @@
         "editorial_status": "published",
         "position": 25,
         "eligibility": "validate_url_master_before_writing",
-        "status": "in_progress",
-        "stage": "imágenes",
+        "status": "prepared",
+        "stage": "localización",
         "identity_qa": "PASS",
         "classification": "ELIGIBLE_EXISTING_CULINARY_CANDIDATE_OR_CORE_REBUILD",
-        "languages_ready": 1,
+        "languages_ready": 7,
         "images_ready": 9,
         "source_not_reused": true,
         "es_content_file": "editorial/receta-de-ensalada-de-frutos-rojos-20261008.json",
@@ -383,19 +383,21 @@
         "original_images_required": 6,
         "distinct_images_pending": 0,
         "expected_es_row_md5": "880ec62424f98541f378f89f5d0a98ad",
-        "next_action": "Append6localizations to existingESsource; finalizeQA and guardedSQL; first8ready unchanged.",
+        "next_action": "Keep7language package/15media unchanged; include in atomic15recipe batchpublication after remaining6complete.",
         "image_originals": 6,
         "image_visual_qa": "PASS_ALL6_ORIGINALS",
         "cover_variant_visual_qa": "PASS_WHOLE_BOWL_ALL_RATIOS",
         "next_image": null,
-        "localizations_pending": [
-          "de",
-          "en",
-          "fr",
-          "it",
-          "ja",
-          "pt"
-        ]
+        "localizations_pending": [],
+        "sql_file": "scripts/publish-receta-de-ensalada-de-frutos-rojos-20261008.sql",
+        "sql_sha256": "bafa6a355f055451797de4046b44dc696b0ca25358a3b1384c5bd4d6e4156407",
+        "sql_executed": false,
+        "qa_file": "editorial/receta-de-ensalada-de-frutos-rojos-qa-20261008.json",
+        "localization_qa_file": "editorial/receta-de-ensalada-de-frutos-rojos-localization-qa-20261008.json",
+        "editorial_qa": "PASS_EDITORIAL_MEDIA_LOCALIZATION_NOT_LIVE",
+        "package_sha256": "031ba8dde3d44fc4d087896364bf840bff951f78322c90a3e7b1be64fa262a33",
+        "published_database": false,
+        "media_remote_hash_qa": "PASS_ALL15_EXACT_BYTES_GITSHA"
       },
       {
         "id": "f16da00a-a43d-44ec-9aae-a061efd4efb0",
@@ -506,9 +508,9 @@
     "owner": "manual-continuation-20261008-bandeja-localization",
     "status": "active",
     "acquired_at": "2026-10-08T08:39:14.486Z",
-    "expires_at": "2026-10-08T19:03:57.706Z",
-    "reason": "Samecontinuingproducer;8ready7/7; next berry salad identity/ES.",
-    "renewed_at": "2026-10-08T17:33:57.706Z"
+    "expires_at": "2026-10-08T19:25:10.527Z",
+    "reason": "Same continuing producer;9prepared7/7,next homemade cheese identity/research.",
+    "renewed_at": "2026-10-08T17:55:10.527Z"
   },
   "blockers": [],
   "debt": [
@@ -580,15 +582,15 @@
   "last_checkpoint_at": "2026-10-08T16:22:46.289Z",
   "handoff": {
     "branch": "recetas/lote-03-20261008",
-    "current_recipe": "receta-de-ensalada-de-frutos-rojos",
+    "current_recipe": "como-preparar-queso",
     "prepared_recipes": 6,
     "published_recipes": 0,
-    "next_action": "Append6localizations to existingESsource; finalizeQA and guardedSQL; first8ready unchanged.",
+    "next_action": "Validate cheese identity/routes and freshDB; verify primary safe cheesemaking method and traceable nutrition without inventing wheyretention/yield. Preserve first9ready recipes.",
     "checkpoint_at": "2026-10-08T16:22:46.289Z",
-    "stage": "localización"
+    "stage": "identidad"
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z",
-  "updated_at": "2026-10-08T17:45:53.074Z",
+  "updated_at": "2026-10-08T17:55:10.527Z",
   "completed_batches": [
     {
       "id": "lote-02-20261008",

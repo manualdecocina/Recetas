@@ -1,0 +1,70 @@
+{
+  "recipe": "receta-de-ensalada-de-frutos-rojos",
+  "status": "PASS_EDITORIAL_MEDIA_LOCALIZATION_NOT_LIVE",
+  "steps_sha256": "692d3db2821b7b68e368a1f8982cf6d63f02acd4bd2426f585f9ac7c0dc9b4bb",
+  "languages": [
+    "es",
+    "de",
+    "en",
+    "fr",
+    "it",
+    "ja",
+    "pt"
+  ],
+  "steps_per_language": 6,
+  "ingredients": 6,
+  "faq_per_language": 3,
+  "usda_foods": 6,
+  "nutrition_recalculated": true,
+  "numeric_nutrition_shared": true,
+  "shared_amounts": true,
+  "shared_media": true,
+  "originals": 6,
+  "webp": 9,
+  "media_hashes_verified": true,
+  "remote_media_hashes_verified": true,
+  "visual_qa": {
+    "portada": {
+      "status": "PASS",
+      "notes": "Cuatro bayas identificables, fresas sin hojas, grosellas sin tallos, aliño claro sin adornos. Cuenco completo centrado con margen amplio para recortes.",
+      "correction": "Solo cámara más alejada para conservar el cuenco completo en recorte cuadrado."
+    },
+    "paso-01": {
+      "status": "PASS",
+      "notes": "Cuatro variedades separadas, fresas enteras con hojas y grosellas con tallos antes de limpiar, limón entero y miel. Cuenco vacío, sin lectura inventada de báscula."
+    },
+    "paso-02": {
+      "status": "PASS",
+      "notes": "Fresas enteras con hojas lavadas bajo agua corriente en colador limpio, fruta intacta y otras bayas separadas. Sin jabón, desinfectantes ni mezcla prematura."
+    },
+    "paso-03": {
+      "status": "PASS",
+      "notes": "Fresas limpias sin hojas cortadas de forma plausible en tabla estable, descartes separados. Frambuesas, moras y grosellas sin tallos en cuencos separados, sin aliño prematuro."
+    },
+    "paso-04": {
+      "status": "PASS",
+      "notes": "Solo aliño translúcido de limón y miel con cuchara limpia, limón, colador y semillas separadas. Sin bayas con tallos ni mezcla prematura.",
+      "correction": "Se eliminaron cuencos de fruta de la primera imagen de aliño; mostraban grosellas con tallos después de retirarlos."
+    },
+    "paso-05": {
+      "status": "PASS",
+      "notes": "Mezcla delicada de cuatro bayas enteras o fresas cortadas, sin hojas/tallos, aliño claro visible. Sin yogur, crema, puré, adornos ni otras frutas."
+    }
+  },
+  "cover_crop_qa": "PASS_WHOLE_BOWL_ALL_RATIOS",
+  "localization_qa_file": "editorial/receta-de-ensalada-de-frutos-rojos-localization-qa-20261008.json",
+  "times": {
+    "prep": 20,
+    "cook": 0,
+    "mandatory_wait": 0,
+    "total": 20,
+    "extra_actual_times_required": true
+  },
+  "yield_confirmed": false,
+  "kitchen_test_confirmed": false,
+  "published_database": false,
+  "package_sha256": "031ba8dde3d44fc4d087896364bf840bff951f78322c90a3e7b1be64fa262a33",
+  "publication_blockers": [
+    "Remaining6recipes; fullbatch CI/merge, observed deployed media hashes, atomic DB publication and cache/liveQA pending"
+  ]
+}

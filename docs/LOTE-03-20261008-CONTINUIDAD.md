@@ -151,3 +151,7 @@ IdentidadESf706a385-30ef-4835-91e5-a24be0a9ac17/grupo7151996b-f41e-4e46-932a-bd6
 
 ## Frutos rojos medios completos
 6originalesPNG/9WebP conservados, bytes positivos y hashes comprobados. Fases y4recortes PASS; correcciones soloencuadreportada y retirada de fruta alrededor del aliño de fase4, no regenerar originales correctos. Seislocalizaciones pendientes.8preparadas,0publicadas del lote03.
+
+
+## Frutos rojos7/7 preparado
+Fuente única editorial/receta-de-ensalada-de-frutos-rojos-20261008.json con records[7],6fases,6ingredientes,3FAQ y mismas cifras/medios ES/DE/EN/FR/IT/JA/PT-BR.6PNG/9WebP PASS visual/local/remote exactbyte/hash. SHA pasos692d3db2821b7b68e368a1f8982cf6d63f02acd4bd2426f585f9ac7c0dc9b4bb; paquete031ba8dde3d44fc4d087896364bf840bff951f78322c90a3e7b1be64fa262a33; SQLbafa6a355f055451797de4046b44dc696b0ca25358a3b1384c5bd4d6e4156407 noejecutado. Nutrición6USDA8campos,81.9kcal/porciónestimada, variedadesrawnetas, ficha grosella roja/blanca declarada.4porciones20prep0cook20totalpropuestas. DBfresca1ESfalse MD5intacto,0colisiones7rutas/content_pages/UUID,124ESpublicadas. Lote03:9/15preparadas,0/15publicadas. Próximo:como-preparar-queso, validar método/nutrición sin inventarretenciónsuero/rendimiento. CI/merge/deploy/DB/cache/liveQA pendientes del lote completo.
