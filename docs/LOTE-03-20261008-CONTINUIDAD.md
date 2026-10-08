@@ -98,3 +98,7 @@ Quinta entidad: id9e04ccf3-9d8f-4823-a0fd-f371c6866acf, grupo413ca438-81b2-42a0-
 
 ### Hummus: medios completos (2026-10-08T15:50:09.403Z)
 Ocho originales PNG y once WebP revisados, portada íntegra en los tres formatos. Se corrigió la fase del limón retirando los garbanzos introducidos antes de tiempo; no se usa la imagen descartada. Hash ES conservado. Pendientes seis idiomas, SQL y los gates del lote completo. Publicación del lote03: 0/15.
+
+
+### Hummus completo en siete idiomas (2026-10-08T16:02:22.774Z)
+Paquete único editorial/receta-de-hummus-20261008.json: ES, DE, EN, FR, IT, JA y pt-BR; ocho pasos y diez ingredientes, tres FAQ, cantidades y tiempos idénticos. SHA paquete ddc51fc92ce231b87a25096c715fdc017c531c9571cbd4938ad0f2a9f4e0c916; SQL protegido 6d24afcb19bb6db7b554fa7cf90ce50a9d1d02f41e15272557f2957ddd837f78, NO ejecutado. Diecinueve medios remotos no vacíos con hash exacto. Preflight DB: ES sin publicar y MD5 intacto; cero colisiones y cero UUID nuevos existentes; catálogo124. Lote03: cinco preparadas de quince, cero publicadas. Siguiente: receta-de-pina-colada.

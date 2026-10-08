@@ -31,11 +31,11 @@
     "branch": "recetas/lote-03-20261008",
     "target": 15,
     "status": "in_progress",
-    "stage": "localización",
-    "current_recipe": "receta-de-hummus",
+    "stage": "identidad",
+    "current_recipe": "receta-de-pina-colada",
     "started_at": "2026-10-08T12:39:02.511Z",
     "completed_recipes": 0,
-    "prepared_recipes": 4,
+    "prepared_recipes": 5,
     "published_recipes": 0,
     "identity_qa": "PASS_15_ENTITIES_105_ROUTES_NO_COLLISIONS",
     "identity_file": "editorial/lote03-identidades-rutas-20261008.json",
@@ -210,11 +210,11 @@
         "editorial_status": "published",
         "position": 21,
         "eligibility": "validate_url_master_before_writing",
-        "status": "in_progress",
+        "status": "prepared",
         "stage": "localización",
         "identity_qa": "PASS",
         "classification": "ELIGIBLE_EXISTING_CULINARY_CANDIDATE_OR_CORE_REBUILD",
-        "languages_ready": 5,
+        "languages_ready": 7,
         "images_ready": 11,
         "source_not_reused": true,
         "es_content_file": "editorial/receta-de-hummus-20261008.json",
@@ -225,15 +225,20 @@
         "original_images_required": 8,
         "distinct_images_pending": 0,
         "expected_es_row_md5": "ac80098c1d3bdf5f3bd584bea93c4837",
-        "next_action": "Complete JA and pt-BR, editorialQA and guardedSQL; frozenES and19remote media intact.",
+        "next_action": "Keep7language package and19media unchanged; include in atomic15recipe publication after remaining10complete.",
         "image_originals": 8,
         "image_visual_qa": "PASS_ALL8_ORIGINALS",
         "cover_variant_visual_qa": "PASS_ALL_RATIOS_WHOLE_BOWL",
         "next_image": null,
-        "localizations_pending": [
-          "ja",
-          "pt"
-        ]
+        "localizations_pending": [],
+        "sql_file": "scripts/publish-receta-de-hummus-20261008.sql",
+        "sql_sha256": "6d24afcb19bb6db7b554fa7cf90ce50a9d1d02f41e15272557f2957ddd837f78",
+        "sql_executed": false,
+        "qa_file": "editorial/receta-de-hummus-qa-20261008.json",
+        "localization_qa_file": "editorial/receta-de-hummus-localization-qa-20261008.json",
+        "editorial_qa": "PASS_EDITORIAL_MEDIA_LOCALIZATION_NOT_LIVE",
+        "package_sha256": "ddc51fc92ce231b87a25096c715fdc017c531c9571cbd4938ad0f2a9f4e0c916",
+        "published_database": false
       },
       {
         "id": "1b078b4e-6544-41d5-8e9c-52e6d8fa3d8e",
@@ -412,9 +417,9 @@
     "owner": "manual-continuation-20261008-bandeja-localization",
     "status": "active",
     "acquired_at": "2026-10-08T08:39:14.486Z",
-    "expires_at": "2026-10-08T17:20:09.403Z",
+    "expires_at": "2026-10-08T17:32:22.774Z",
     "reason": "Same continuing producer; first4recipes7/7ready, hummusESfrozen next8images. Batch03published0/15.",
-    "renewed_at": "2026-10-08T15:50:09.403Z"
+    "renewed_at": "2026-10-08T16:02:22.774Z"
   },
   "blockers": [],
   "debt": [
@@ -483,17 +488,17 @@
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
   "progress_branch": "recetas/lote-03-20261008",
-  "last_checkpoint_at": "2026-10-08T15:57:24.138Z",
+  "last_checkpoint_at": "2026-10-08T16:02:22.774Z",
   "handoff": {
     "branch": "recetas/lote-03-20261008",
-    "current_recipe": "receta-de-hummus",
-    "prepared_recipes": 4,
+    "current_recipe": "receta-de-pina-colada",
+    "prepared_recipes": 5,
     "published_recipes": 0,
-    "next_action": "Complete JA and pt-BR, editorialQA and guardedSQL; frozenES and19remote media intact.",
-    "checkpoint_at": "2026-10-08T15:50:09.403Z"
+    "next_action": "Validate piña colada metadata/classification, approved7routes and original formula/USDA before ESfreeze. Keep first5ready packages intact.",
+    "checkpoint_at": "2026-10-08T16:02:22.774Z"
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z",
-  "updated_at": "2026-10-08T15:57:24.138Z",
+  "updated_at": "2026-10-08T16:02:22.774Z",
   "completed_batches": [
     {
       "id": "lote-02-20261008",
