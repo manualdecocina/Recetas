@@ -536,7 +536,16 @@
         "next_action": "Localize six languages with identical figures, phases and media; then create guarded SQL.",
         "image_originals": 9,
         "image_visual_qa": "PASS_ALL9_ORIGINALS",
-        "cover_variant_visual_qa": "PASS_WHOLE_PLATE_ALL4_RATIOS"
+        "cover_variant_visual_qa": "PASS_WHOLE_PLATE_ALL4_RATIOS",
+        "media_repair_evidence": {
+          "reason": "Remote paso-02.webp observed as zero bytes after initial media commit; rebuilt conversion only from the exact preserved original PNG, no ImageGen regeneration.",
+          "asset": "paso-02.webp",
+          "original_png_sha256": "6e8fbcfddb5f3cbfb16a722fa5d5897668e7e52164ab94d848e074232cd88c24",
+          "webp_sha256": "0ab6f754b2fed3143cf4977f403c5b61854d5bc8ae54d2be6c7d6df22aace575",
+          "git_blob_sha": "55d63734f73febc74ce711c6eaa3eb1ee7e194ff",
+          "bytes": 114478
+        },
+        "media_remote_hash_qa": "PENDING_REVERIFY_AFTER_ZERO_BYTE_REPAIR"
       },
       {
         "id": "92f6fc6a-3b44-4422-b0ea-7a6ef257f8d7",
@@ -579,8 +588,8 @@
     "owner": "automation-continuation-20261009-fish-and-chips",
     "status": "active",
     "acquired_at": "2026-10-08T22:59:20.000Z",
-    "renewed_at": "2026-10-08T23:07:00.000Z",
-    "expires_at": "2026-10-09T00:37:00.000Z",
+    "renewed_at": "2026-10-08T23:15:00.000Z",
+    "expires_at": "2026-10-09T00:45:00.000Z",
     "previous_owner": "work-resume-1648240aa2fa-1791492779924",
     "reason": "Expired lease reconciled at unchanged branch head; resume Fish and Chips from nine frozen image phases without rebuilding 12 prepared recipes."
   },

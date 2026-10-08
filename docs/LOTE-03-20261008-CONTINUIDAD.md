@@ -183,3 +183,6 @@ El propietario trasladó la mesa llena de errores el 2026-10-08. Reserva transfe
 ## Fish and Chips — medios completos
 
 Nueve originales PNG y doce WebP preservados con bytes, dimensiones, SHA256 y Git SHA exactos. Todas las fases y cuatro recortes de portada superaron QA visual; no se añadieron salsa, limón, cerveza, huevo ni guarniciones. ES y pasos congelados sin cambios. Próxima acción: seis localizaciones y SQL guardado, sin publicar todavía. Lote03:12/15 preparadas, Fish and Chips en localización, 0/15 publicadas.
+
+
+Media repair: paso-02.webp was observed at zero bytes after the initial commit. It was reconstructed only by deterministic conversion from the exact preserved paso-02.png; no ImageGen regeneration. Replacement expected 114478 bytes, SHA256 0ab6f754b2fed3143cf4977f403c5b61854d5bc8ae54d2be6c7d6df22aace575; remote revalidation required immediately.
