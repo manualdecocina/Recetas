@@ -536,12 +536,12 @@
   },
   "next_candidate_position": 32,
   "run_lease": {
-    "owner": "manual-continuation-20261008-bandeja-localization",
+    "owner": "work-recovery-cda9798a16b5",
     "status": "active",
-    "acquired_at": "2026-10-08T08:39:14.486Z",
-    "expires_at": "2026-10-08T19:56:00.579Z",
-    "reason": "Same continuing producer;10prepared7/7, next sweetandsourchicken identity/research.",
-    "renewed_at": "2026-10-08T18:26:00.574Z"
+    "acquired_at": "2026-10-08T19:09:04.258Z",
+    "renewed_at": "2026-10-08T19:09:04.258Z",
+    "expires_at": "2026-10-08T20:39:04.259Z",
+    "reason": "Explicit user handoff from full/erroring previous Work desk; remote HEAD, DB and batch03 reconciled; resume chicken images only; preserve first10 complete packages."
   },
   "blockers": [],
   "debt": [
@@ -610,18 +610,18 @@
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
   "progress_branch": "recetas/lote-03-20261008",
-  "last_checkpoint_at": "2026-10-08T16:22:46.289Z",
+  "last_checkpoint_at": "2026-10-08T19:09:04.258Z",
   "handoff": {
     "branch": "recetas/lote-03-20261008",
-    "current_recipe": "como-preparar-queso",
-    "prepared_recipes": 6,
+    "current_recipe": "pollo-agridulce",
+    "prepared_recipes": 10,
     "published_recipes": 0,
-    "next_action": "Validate cheese identity/routes and freshDB; verify primary safe cheesemaking method and traceable nutrition without inventing wheyretention/yield. Preserve first9ready recipes.",
-    "checkpoint_at": "2026-10-08T16:22:46.289Z",
-    "stage": "identidad"
+    "stage": "imágenes",
+    "checkpoint_at": "2026-10-08T19:09:04.258Z",
+    "next_action": "Resume frozen pollo-agridulce:9originals plus13WebP including finalstep reuse; localize6languages. Preserve first10ready7/7. Fourfollowingreservedrecipes remain. No batch03 publication yet."
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z",
-  "updated_at": "2026-10-08T18:31:21.356Z",
+  "updated_at": "2026-10-08T19:09:04.258Z",
   "completed_batches": [
     {
       "id": "lote-02-20261008",
@@ -1238,5 +1238,18 @@
       },
       "evidence_file": "editorial/lote02-final-qa-20261008.json"
     }
-  }
+  },
+  "lease_history": [
+    {
+      "owner": "manual-continuation-20261008-bandeja-localization",
+      "status": "active",
+      "acquired_at": "2026-10-08T08:39:14.486Z",
+      "expires_at": "2026-10-08T19:56:00.579Z",
+      "reason": "Same continuing producer;10prepared7/7, next sweetandsourchicken identity/research.",
+      "renewed_at": "2026-10-08T18:26:00.574Z",
+      "recovered_at": "2026-10-08T19:09:04.258Z",
+      "recovery_authority": "User: Continúa lo que estaba haciendo work su mesa de trabajo llena de muchos errores.",
+      "last_old_head": "810c07fee23244326a1cc35816de85c428b0b227"
+    }
+  ]
 }
