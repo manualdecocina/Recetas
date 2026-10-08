@@ -4,8 +4,8 @@
   "repository": "manualdecocina/Recetas",
   "preview": "https://preview.manualdecocina.com",
   "updated_date": "2026-10-08",
-  "automation_status": "not_created_pending_github_autodeploy_verification",
-  "automation_id": null,
+  "automation_status": "created_paused_for_model_selection",
+  "automation_id": "6ac6fb673c5c8191b3435ae6074ddc63",
   "requested_schedule": "RRULE:FREQ=HOURLY",
   "requested_model": "gpt-6.1-sol",
   "requested_reasoning": "high",
@@ -31,12 +31,8 @@
   "run_lease": null,
   "blockers": [
     {
-      "code": "GITHUB_AUTODEPLOY_UNVERIFIED",
-      "detail": "GitHub push/main can trigger Hostinger deployments without a direct hosting connector; verify actual public marker before creating the hourly task."
-    },
-    {
       "code": "MODEL_CONTROL_UNVERIFIED",
-      "detail": "Automation create schema has no model/effort arguments. Verify saved task settings before asserting gpt-6.1-sol/high."
+      "detail": "Task created and paused. Select GPT-6.1 Sol / High in the saved task settings before enabling; automation tools have no model/effort parameters."
     }
   ],
   "debt": [],
@@ -59,9 +55,21 @@
       "normalization": "strip terminal CR/LF only"
     },
     "auto_deployment": {
-      "verified": false,
+      "verified": true,
       "marker_path": "/.well-known/manualdecocina-deploy.txt",
-      "expected_body": "manualdecocina-autodeploy-probe-20261008-aeaa89798135\n"
+      "expected_body": "manualdecocina-autodeploy-probe-20261008-aeaa89798135\n",
+      "evidence": {
+        "status": 200,
+        "expected_marker": true,
+        "checked_at": "2026-10-08T02:07:39.397609+00:00",
+        "sha256": "210ac4e569aae395263edae57dfee4a1569e9b7b644face948d9208b87f3151a"
+      },
+      "merged_pr": 87,
+      "merge_sha": "0802652f36c637545f987c73095b42fec053d725"
     }
-  }
+  },
+  "schedule_verified": true,
+  "schedule": "BEGIN:VEVENT\nDTSTART:20261008T030943Z\nRRULE:FREQ=HOURLY\nEND:VEVENT",
+  "default_timezone": "Europe/Berlin",
+  "is_enabled": false
 }
