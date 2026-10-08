@@ -250,10 +250,10 @@
         "position": 22,
         "eligibility": "validate_url_master_before_writing",
         "status": "in_progress",
-        "stage": "imágenes",
+        "stage": "localización",
         "identity_qa": "PASS",
         "classification": "ELIGIBLE_EXISTING_CULINARY_CANDIDATE_OR_CORE_REBUILD",
-        "languages_ready": 1,
+        "languages_ready": 5,
         "images_ready": 9,
         "source_not_reused": true,
         "es_content_file": "editorial/receta-de-pina-colada-20261008.json",
@@ -264,16 +264,12 @@
         "original_images_required": 6,
         "distinct_images_pending": 0,
         "expected_es_row_md5": "5f8c556c3a86ef05410b815dbff15f90",
-        "next_action": "Localize six languages;6originals/9WebP reviewed, frozenESunchanged. No03DBpublication yet.",
+        "next_action": "Complete JA and pt-BR; then editorialQA/guardedSQL. Keep frozenES and15remote media intact;5previousrecipes prepared.",
         "image_originals": 6,
         "image_visual_qa": "PASS_ALL6_ORIGINALS",
         "cover_variant_visual_qa": "PASS_ALL_RATIOS_WHOLE_TWO_GLASSES",
         "next_image": null,
         "localizations_pending": [
-          "de",
-          "en",
-          "fr",
-          "it",
           "ja",
           "pt"
         ]
@@ -509,17 +505,17 @@
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
   "progress_branch": "recetas/lote-03-20261008",
-  "last_checkpoint_at": "2026-10-08T16:12:16.344Z",
+  "last_checkpoint_at": "2026-10-08T16:18:22.996Z",
   "handoff": {
     "branch": "recetas/lote-03-20261008",
     "current_recipe": "receta-de-pina-colada",
     "prepared_recipes": 5,
     "published_recipes": 0,
-    "next_action": "Localize six languages;6originals/9WebP reviewed, frozenESunchanged. No03DBpublication yet.",
+    "next_action": "Complete JA and pt-BR; then editorialQA/guardedSQL. Keep frozenES and15remote media intact;5previousrecipes prepared.",
     "checkpoint_at": "2026-10-08T16:07:17.443Z"
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z",
-  "updated_at": "2026-10-08T16:12:16.344Z",
+  "updated_at": "2026-10-08T16:18:22.996Z",
   "completed_batches": [
     {
       "id": "lote-02-20261008",
