@@ -4,7 +4,7 @@
   "repository": "manualdecocina/Recetas",
   "preview": "https://preview.manualdecocina.com",
   "updated_date": "2026-10-08",
-  "automation_status": "created_paused_for_model_selection",
+  "automation_status": "enabled_user_requested_immediate_start",
   "automation_id": "6ac6fb673c5c8191b3435ae6074ddc63",
   "requested_schedule": "RRULE:FREQ=HOURLY",
   "requested_model": "gpt-6.1-sol",
@@ -29,12 +29,7 @@
   "current_batch": null,
   "next_candidate_position": 1,
   "run_lease": null,
-  "blockers": [
-    {
-      "code": "MODEL_CONTROL_UNVERIFIED",
-      "detail": "Task created and paused. Select GPT-6.1 Sol / High in the saved task settings before enabling; automation tools have no model/effort parameters."
-    }
-  ],
+  "blockers": [],
   "debt": [],
   "stop_condition": "All eligible pending recipes published and QA passed, held entities accounted for, pre-migration technical gates closed; production migration still not executed",
   "production_migration": "NOT_EXECUTED",
@@ -69,7 +64,14 @@
     }
   },
   "schedule_verified": true,
-  "schedule": "BEGIN:VEVENT\nDTSTART:20261008T030943Z\nRRULE:FREQ=HOURLY\nEND:VEVENT",
+  "schedule": "BEGIN:VEVENT\nDTSTART:20261008T021317Z\nRRULE:FREQ=HOURLY\nEND:VEVENT",
   "default_timezone": "Europe/Berlin",
-  "is_enabled": false
+  "is_enabled": true,
+  "configuration_notes": [
+    {
+      "code": "MODEL_SETTING_UNVERIFIED",
+      "detail": "GPT-6.1 Sol / High requested; scheduler tools cannot inspect or set it. User explicitly requested immediate start on 2026-10-08 after this limitation was explained."
+    }
+  ],
+  "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)"
 }
