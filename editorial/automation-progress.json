@@ -30,7 +30,7 @@
     "id": "lote-02-20261008",
     "target": 15,
     "status": "in_progress",
-    "stage": "identity_validation",
+    "stage": "images",
     "recipes": [
       {
         "id": "e47eac88-0649-4785-baf0-43b92dd2ec2e",
@@ -128,8 +128,11 @@
         "recipe_group_id": "00a8928a-742e-4878-ba98-0539334c3530",
         "slug": "pasta-frutos-del-mar",
         "public_path": "/pasta-frutos-del-mar",
-        "stage": "identity_validation",
-        "status": "reserved"
+        "stage": "images",
+        "status": "in_progress",
+        "es_content_file": "editorial/pasta-frutos-del-mar-20261008.json",
+        "image_manifest": "editorial/pasta-frutos-del-mar-imagenes.json",
+        "images_ready": 0
       },
       {
         "id": "c3860fad-711e-4bfd-ba29-13b0e71afe3c",
@@ -208,7 +211,7 @@
     "owner": "continuous-run-20261008-0301",
     "status": "active",
     "acquired_at": "2026-10-08T03:02:36.623Z",
-    "expires_at": "2026-10-08T06:00:45.553Z",
+    "expires_at": "2026-10-08T06:03:54.883Z",
     "reason": "User explicitly requested continuous production; this worker owns the open batch and resumes rainbow juice."
   },
   "blockers": [],
@@ -257,14 +260,14 @@
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
   "progress_branch": "recetas/lote-02-20261008",
-  "last_checkpoint_at": "2026-10-08T04:30:45.553Z",
+  "last_checkpoint_at": "2026-10-08T04:33:54.883Z",
   "handoff": {
     "first_prepared_recipe": "como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada",
     "first_recipe_source": "editorial/como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada-20261008.json",
     "next_recipe": "pasta-frutos-del-mar",
     "batch_remaining_to_prepare": 9,
     "published_this_batch": 0,
-    "required_action": "Validate seafood pasta identity and historical routes; complete original ES, accepted images and six localizations. Preserve six complete packages; publish all fifteen jointly and then verify preview.",
+    "required_action": "Seafood pasta ES, nutrition including proposed shell-on yield and image brief frozen. Generate and inspect distinct original assets, finish six localizations. Preserve six complete packages, complete fifteen and jointly publish with preview QA.",
     "scope": "Preview only; production migration not executed."
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z"
