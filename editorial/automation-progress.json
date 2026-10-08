@@ -30,7 +30,7 @@
     "id": "lote-02-20261008",
     "target": 15,
     "status": "in_progress",
-    "stage": "identity_validation",
+    "stage": "es",
     "recipes": [
       {
         "id": "e47eac88-0649-4785-baf0-43b92dd2ec2e",
@@ -170,8 +170,11 @@
         "recipe_group_id": "8686de2f-500a-4c72-8f1c-1e9c0341e905",
         "slug": "receta-de-bandeja-paisa",
         "public_path": "/receta-de-bandeja-paisa",
-        "stage": "identity_validation",
-        "status": "reserved"
+        "stage": "es",
+        "status": "in_progress",
+        "identity_qa": "PASS",
+        "routes_file": "editorial/receta-de-bandeja-paisa-rutas-20261008.json",
+        "classification": "ELIGIBLE_REBUILD_CANDIDATE"
       },
       {
         "id": "e25621f2-c633-443c-8cb2-03780274d501",
@@ -247,7 +250,7 @@
     "status": "active",
     "acquired_at": "2026-10-08T06:57:07.835Z",
     "expires_at": "2026-10-08T08:27:07.835Z",
-    "reason": "Ravioli 7/7 package and per-recipe transactional SQL complete; next checkpoint is bandeja paisa identity validation."
+    "reason": "Ravioli prepared 7/7; bandeja paisa identity and seven routes validated without collisions. Next stage is original Spanish editorial work."
   },
   "blockers": [],
   "debt": [],
@@ -295,14 +298,14 @@
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
   "progress_branch": "recetas/lote-02-20261008",
-  "last_checkpoint_at": "2026-10-08T07:12:00.000Z",
+  "last_checkpoint_at": "2026-10-08T07:18:00.000Z",
   "handoff": {
     "first_prepared_recipe": "como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada",
     "first_recipe_source": "editorial/como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada-20261008.json",
     "next_recipe": "receta-de-bandeja-paisa",
     "batch_remaining_to_prepare": 7,
     "published_this_batch": 0,
-    "required_action": "Validate bandeja paisa identity, URL Master classification and 7-route collisions; then freeze original ES before creating images. Do not publish until all 15 batch members are complete.",
+    "required_action": "Draft and validate original Spanish bandeja paisa: grouped measured ingredients, cookable steps, complete times, safety/storage/substitutions, 3 FAQ, SEO and traceable per-serving USDA estimate. Freeze ES step hash before any image generation.",
     "scope": "Preview only; production migration not executed."
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z"
