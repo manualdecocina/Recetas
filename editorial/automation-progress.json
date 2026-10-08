@@ -170,10 +170,11 @@
   "next_candidate_position": 2,
   "run_lease": {
     "owner": "manual-start-20261008",
-    "status": "active",
+    "status": "released",
     "acquired_at": "2026-10-08T02:27:18.812Z",
-    "expires_at": "2026-10-08T04:26:04.702Z",
-    "reason": "User requested immediate production in the active chat; avoid concurrent duplicate recipe work."
+    "expires_at": "2026-10-08T02:58:00.027Z",
+    "reason": "Immediate manual production completed first recipe; next authorized hourly worker may acquire lease and continue recipe 2. No other manual recipe worker remains active.",
+    "released_at": "2026-10-08T02:58:00.027Z"
   },
   "blockers": [],
   "debt": [],
@@ -221,5 +222,14 @@
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
   "progress_branch": "recetas/lote-02-20261008",
-  "last_checkpoint_at": "2026-10-08T02:56:04.702Z"
+  "last_checkpoint_at": "2026-10-08T02:58:00.027Z",
+  "handoff": {
+    "first_prepared_recipe": "como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada",
+    "first_recipe_source": "editorial/como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada-20261008.json",
+    "next_recipe": "receta-jugo-arcoiris",
+    "batch_remaining_to_prepare": 14,
+    "published_this_batch": 0,
+    "required_action": "Resume current batch; prepare remaining 14 completely, then publish all 15 together and verify preview. Never regenerate accepted images or repeat first recipe.",
+    "scope": "Preview only; production migration not executed."
+  }
 }
