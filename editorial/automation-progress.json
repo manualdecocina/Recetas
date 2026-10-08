@@ -45,7 +45,8 @@
         "distinct_images_pending": 0,
         "languages_ready": 7,
         "editorial_qa": "PASS",
-        "qa_file": "editorial/como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada-qa-20261008.json"
+        "qa_file": "editorial/como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada-qa-20261008.json",
+        "portuguese_locale": "pt-BR"
       },
       {
         "id": "8ae419ae-f12a-4faa-8379-bb4b2c00a77b",
@@ -211,7 +212,7 @@
     }
   },
   "schedule_verified": true,
-  "schedule": "BEGIN:VEVENT\nDTSTART:20261008T021317Z\nRRULE:FREQ=HOURLY\nEND:VEVENT",
+  "schedule": "BEGIN:VEVENT\nDTSTART:20261008T025904Z\nRRULE:FREQ=HOURLY\nEND:VEVENT",
   "default_timezone": "Europe/Berlin",
   "is_enabled": true,
   "configuration_notes": [
@@ -222,7 +223,7 @@
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
   "progress_branch": "recetas/lote-02-20261008",
-  "last_checkpoint_at": "2026-10-08T02:58:00.027Z",
+  "last_checkpoint_at": "2026-10-08T02:58:57.384Z",
   "handoff": {
     "first_prepared_recipe": "como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada",
     "first_recipe_source": "editorial/como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada-20261008.json",
@@ -231,5 +232,6 @@
     "published_this_batch": 0,
     "required_action": "Resume current batch; prepare remaining 14 completely, then publish all 15 together and verify preview. Never regenerate accepted images or repeat first recipe.",
     "scope": "Preview only; production migration not executed."
-  }
+  },
+  "next_relay_requested_at": "2026-10-08T02:59:04Z"
 }
