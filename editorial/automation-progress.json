@@ -30,7 +30,7 @@
     "id": "lote-02-20261008",
     "target": 15,
     "status": "in_progress",
-    "stage": "images",
+    "stage": "localization",
     "recipes": [
       {
         "id": "e47eac88-0649-4785-baf0-43b92dd2ec2e",
@@ -170,7 +170,7 @@
         "recipe_group_id": "8686de2f-500a-4c72-8f1c-1e9c0341e905",
         "slug": "receta-de-bandeja-paisa",
         "public_path": "/receta-de-bandeja-paisa",
-        "stage": "images",
+        "stage": "localization",
         "status": "in_progress",
         "identity_qa": "PASS",
         "routes_file": "editorial/receta-de-bandeja-paisa-rutas-20261008.json",
@@ -180,8 +180,20 @@
         "steps_sha256": "8f045f79a1db3ebe2bec9b564361abea2322635e3b263e93b82f2b5e762e9c5d",
         "es_editorial_qa": "PASS_STRUCTURAL_AND_NUTRITION_TRACEABILITY",
         "qa_file": "editorial/receta-de-bandeja-paisa-qa-20261008.json",
-        "images_ready": 0,
-        "distinct_images_pending": 11
+        "images_ready": 14,
+        "distinct_images_pending": 0,
+        "image_originals": 11,
+        "image_visual_qa": "PASS",
+        "media_commit": "d826f579c1496dde495b3bddd25b3764f05bd56b",
+        "languages_ready": 1,
+        "localizations_pending": [
+          "de",
+          "en",
+          "fr",
+          "it",
+          "ja",
+          "pt-BR"
+        ]
       },
       {
         "id": "e25621f2-c633-443c-8cb2-03780274d501",
@@ -253,11 +265,12 @@
   },
   "next_candidate_position": 17,
   "run_lease": {
-    "owner": "automation-run-20261008-0759",
-    "status": "active",
+    "owner": null,
+    "status": "released",
     "acquired_at": "2026-10-08T07:59:45.000Z",
-    "expires_at": "2026-10-08T09:29:45.000Z",
-    "reason": "Bandeja paisa original ES, step hash, USDA calculation, QA and image brief frozen; image generation in progress."
+    "expires_at": null,
+    "released_at": "2026-10-08T08:55:00.000Z",
+    "reason": "Bandeja paisa ES and all 14 final WebP assets completed with hashes and visual QA; handoff at localization stage."
   },
   "blockers": [],
   "debt": [],
@@ -305,14 +318,14 @@
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
   "progress_branch": "recetas/lote-02-20261008",
-  "last_checkpoint_at": "2026-10-08T08:19:00.000Z",
+  "last_checkpoint_at": "2026-10-08T08:55:00.000Z",
   "handoff": {
     "first_prepared_recipe": "como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada",
     "first_recipe_source": "editorial/como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada-20261008.json",
     "next_recipe": "receta-de-bandeja-paisa",
     "batch_remaining_to_prepare": 7,
     "published_this_batch": 0,
-    "required_action": "Generate 11 new bandeja paisa originals with built-in ImageGen from the frozen manifest, inspect each phase, derive 14 final WebP assets, record hashes, then localize 7/7.",
+    "required_action": "Localize the frozen bandeja paisa record to de, en, fr, it, ja and pt-BR, preserving all figures, structure and the 14 verified media paths; then mark it prepared and continue with arroz blanco perfecto.",
     "scope": "Preview only; production migration not executed."
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z"
