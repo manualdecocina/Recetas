@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "slug": "pollo-al-limon-y-miel-con-esparragos-asados",
+  "status": "PASS_PREPUBLICATION",
+  "identity": {
+    "classification": "ELIGIBLE_EXISTING_RECIPE_CANDIDATE",
+    "evidence": "Existing unpublished Recipe entity reserved in eligible queue; no discard or health classification; distinct from mustard-honey recipe",
+    "routes": {
+      "es": "/pollo-al-limon-y-miel-con-esparragos-asados",
+      "de": "/de/kostliches-zitronen-honig-hahnchen-rezept-mit-gerostetem-spargel-2",
+      "en": "/en/delicious-lemon-and-honey-chicken-recipe-with-roasted-asparagus-2",
+      "fr": "/fr/delicieuse-recette-de-poulet-au-citron-et-miel-avec-asperges-roties",
+      "it": "/it/deliziosa-ricetta-di-pollo-al-limone-e-miele-con-asparagi-arrostiti-2",
+      "ja": "/ja/おいしいレモンとはちみつチキンのレシピ、ロー",
+      "pt": "/pt/frango-com-limao-e-mel-e-aspargos-assados"
+    },
+    "gsc_rows": {
+      "es": 431,
+      "de": 341,
+      "en": 497,
+      "fr": 786,
+      "it": 414,
+      "ja": 491
+    },
+    "pt": "NEW",
+    "historical_ja": "Preserve exact approved truncated GSC path, including punctuation",
+    "collision_check_at": "2026-10-08T10:50:06.826Z",
+    "result": "ONLY_EXPECTED_ES_RECIPE; no content_pages collisions"
+  },
+  "nutrition": {
+    "status": "PASS",
+    "inputs": 8,
+    "water_ml": 60,
+    "estimated": true
+  },
+  "steps_sha256": "74ec2477cc6115cc3c512e208ad72af2aa64c78378b415820d1930daf0ee8155",
+  "visual_qa": {
+    "status": "PASS",
+    "manifest": "editorial/pollo-al-limon-y-miel-con-esparragos-asados-imagenes.json",
+    "approved_scenes": 6,
+    "webp": 10,
+    "media_commit": "d97851a4996f7f52e277db165d089e70c648fb19"
+  },
+  "localization": {
+    "status": "PASS",
+    "languages": [
+      "es",
+      "de",
+      "en",
+      "fr",
+      "it",
+      "ja",
+      "pt"
+    ],
+    "pt_locale": "pt-BR",
+    "numerical_fields": "PASS_NUMERIC_FIELDS_MEDIA_AND_STRUCTURE",
+    "step_number_review": "Japanese step1 reorders4pieces after weights; step6 moves cold temperature after time limits and states one reheat explicitly; values and meaning match ES.",
+    "routes": {
+      "es": "/pollo-al-limon-y-miel-con-esparragos-asados",
+      "de": "/de/kostliches-zitronen-honig-hahnchen-rezept-mit-gerostetem-spargel-2",
+      "en": "/en/delicious-lemon-and-honey-chicken-recipe-with-roasted-asparagus-2",
+      "fr": "/fr/delicieuse-recette-de-poulet-au-citron-et-miel-avec-asperges-roties",
+      "it": "/it/deliziosa-ricetta-di-pollo-al-limone-e-miele-con-asparagi-arrostiti-2",
+      "ja": "/ja/おいしいレモンとはちみつチキンのレシピ、ロー",
+      "pt": "/pt/frango-com-limao-e-mel-e-aspargos-assados"
+    }
+  },
+  "publication": "PENDING_FULL_BATCH_CI_DEPLOY_DB_CACHE_QA"
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "slug": "receta-de-bandeja-paisa",
+  "checked_at": "2026-10-08T08:48:39.376Z",
+  "result": "PASS",
+  "checks": {
+    "records_7": true,
+    "languages": [
+      "es",
+      "de",
+      "en",
+      "fr",
+      "it",
+      "ja",
+      "pt"
+    ],
+    "unique_ids": true,
+    "unique_paths": true,
+    "ingredient_amounts_identical": true,
+    "steps_each_10": true,
+    "faq_each_3": true,
+    "times_and_servings_identical": true,
+    "nutrition_numeric_values_identical": true,
+    "media_paths_identical": true,
+    "localized_alt_texts": true,
+    "portuguese_locale": "pt-BR",
+    "no_x_default": true,
+    "nutrition_input_labels_aligned": true,
+    "localized_step_figures_preserved": true
+  },
+  "numeric_text_review": "Repeated increment wording 30 en 30 is translated as increments of 30 ml. Japanese renders 'one at a time' and 'one quarter' explicitly as 1 and 4; these describe the same operations and portions.",
+  "steps_sha256": "8f045f79a1db3ebe2bec9b564361abea2322635e3b263e93b82f2b5e762e9c5d",
+  "publication_gate": "BATCH_15_COMPLETION_PENDING",
+  "package_sha256": "b4f78fa32165fff43934ba8c98f8b5a655953cca0140f2e4462690eef362d1ae",
+  "sql_sha256": "dd17af8a272e61645c62fe6f6adeaca9154cc7880b71063c21663853a15e2c71"
+}

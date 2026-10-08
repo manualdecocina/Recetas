@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "slug": "arroz-blanco-perfecto",
+  "checked_at": "2026-10-08T08:54:19.262Z",
+  "identity": {
+    "id": "e25621f2-c633-443c-8cb2-03780274d501",
+    "recipe_group_id": "53237760-f2f8-4852-9c3c-ac101fa2f237",
+    "language": "es",
+    "slug": "arroz-blanco-perfecto",
+    "public_path": "/arroz-blanco-perfecto",
+    "source_url": "https://manualdecocina.com/arroz-blanco-perfecto/",
+    "created_at": "2026-09-23 20:50:30.190454+00",
+    "updated_at": "2026-10-07 01:12:39.564667+00",
+    "expected_initial_state": {
+      "rows_in_group": 1,
+      "language": "es",
+      "published": false
+    }
+  },
+  "classification": {
+    "result": "ELIGIBLE_REBUILD_CANDIDATE",
+    "evidence": "docs/P2-CATALOG-20260924.md: /arroz-blanco-perfecto/ — REBUILD CANDIDATE",
+    "distinct_from_published": [
+      "arroz-pilaf",
+      "receta-de-arroz-chino",
+      "arroz-frito",
+      "arroz-mixto",
+      "arroz-con-leche-el-postre-casero"
+    ],
+    "identity_intent": "Plain long-grain white rice by absorption, not pilaf, fried rice, mixed rice or pudding."
+  },
+  "routes": {
+    "es": "/arroz-blanco-perfecto",
+    "de": "/de/lockerer-weisser-reis",
+    "en": "/en/perfect-white-rice",
+    "fr": "/fr/riz-blanc-parfait",
+    "it": "/it/riso-bianco-perfetto",
+    "ja": "/ja/完璧な白米",
+    "pt": "/pt/arroz-branco-soltinho"
+  },
+  "historical_routes": {
+    "es": {
+      "matrix_row": 375
+    },
+    "en": {
+      "matrix_row": 187,
+      "clicks": 6
+    },
+    "fr": {
+      "matrix_row": 748
+    },
+    "it": {
+      "matrix_row": 714
+    },
+    "ja": {
+      "matrix_row": 603,
+      "unicode_path_preserved": true
+    }
+  },
+  "new_routes": [
+    "de",
+    "pt"
+  ],
+  "portuguese_locale": "pt-BR",
+  "x_default": null,
+  "collision_check": {
+    "result": "PASS",
+    "recipes_matches": [
+      {
+        "id": "e25621f2-c633-443c-8cb2-03780274d501",
+        "language": "es",
+        "public_path": "/arroz-blanco-perfecto",
+        "expected_identity": true
+      }
+    ],
+    "content_pages_matches": [],
+    "content_redirects_matches": [
+      {
+        "source_path": "/arroz-blanco-perfecto",
+        "target_path": "/es/recetas",
+        "status_code": 302
+      }
+    ],
+    "checked_collections": [
+      "recipes public_path",
+      "recipes (language,slug)",
+      "content_pages public_path",
+      "content_redirects source_path"
+    ]
+  },
+  "publication_gate": "BATCH_15_COMPLETION_PENDING"
+}

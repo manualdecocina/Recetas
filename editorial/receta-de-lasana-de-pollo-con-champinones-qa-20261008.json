@@ -1,0 +1,213 @@
+{
+  "schema_version": 1,
+  "slug": "receta-de-lasana-de-pollo-con-champinones",
+  "status": "PASS_PREPUBLICATION",
+  "identity": {
+    "classification": "KEEP_REBUILD_RECIPE",
+    "evidence": "docs/QA-BLOQUE-REVIEW-20260925-47.md resolves earlier REVIEW to KEEP/REBUILD MODEL Recipe",
+    "routes": {
+      "es": "/receta-de-lasana-de-pollo-con-champinones",
+      "de": "/de/huhnchen-lasana-mit-pilzen-rezept",
+      "en": "/en/chicken-lasana-with-mushrooms-recipe",
+      "fr": "/fr/recette-de-poulet-lasana-aux-champignons",
+      "it": "/it/ricetta-lasana-di-pollo-con-funghi",
+      "ja": "/ja/キノコ入りチキンラサナのレシピ",
+      "pt": "/pt/lasanha-de-frango-com-champignon"
+    },
+    "gsc_rows": {
+      "es": 408,
+      "de": 198,
+      "en": 843,
+      "fr": 519,
+      "it": 96,
+      "ja": 182
+    },
+    "pt": "NEW",
+    "collision_check_at": "2026-10-08T10:25:39.829Z",
+    "result": "ONLY_EXPECTED_ES_RECIPE; no content_pages collisions"
+  },
+  "nutrition": {
+    "status": "PASS",
+    "inputs": 13,
+    "estimated": true
+  },
+  "steps_sha256": "b0a186f36b233efcac7e14151ae57158486ac90c80c5e410a28438af3bbee2cf",
+  "localization": {
+    "checks": [
+      {
+        "language": "es",
+        "structural": "PASS",
+        "text_numeric_differences": []
+      },
+      {
+        "language": "de",
+        "structural": "PASS",
+        "text_numeric_differences": [
+          {
+            "step": 8,
+            "es": [
+              "10",
+              "6",
+              "4",
+              "2",
+              "1",
+              "32",
+              "3",
+              "74"
+            ],
+            "localized": [
+              "10",
+              "6",
+              "2",
+              "4",
+              "32",
+              "1",
+              "3",
+              "74"
+            ]
+          }
+        ]
+      },
+      {
+        "language": "en",
+        "structural": "PASS",
+        "text_numeric_differences": []
+      },
+      {
+        "language": "fr",
+        "structural": "PASS",
+        "text_numeric_differences": []
+      },
+      {
+        "language": "it",
+        "structural": "PASS",
+        "text_numeric_differences": []
+      },
+      {
+        "language": "ja",
+        "structural": "PASS",
+        "text_numeric_differences": [
+          {
+            "step": 3,
+            "es": [
+              "10",
+              "8",
+              "10",
+              "3",
+              "0.25",
+              "74"
+            ],
+            "localized": [
+              "10",
+              "2",
+              "8",
+              "10",
+              "3",
+              "0.25",
+              "74"
+            ]
+          },
+          {
+            "step": 6,
+            "es": [
+              "240",
+              "30",
+              "30",
+              "120"
+            ],
+            "localized": [
+              "4",
+              "1",
+              "2",
+              "240",
+              "3",
+              "30",
+              "30",
+              "3",
+              "120"
+            ]
+          },
+          {
+            "step": 7,
+            "es": [
+              "20",
+              "190",
+              "10",
+              "15",
+              "74",
+              "5"
+            ],
+            "localized": [
+              "190",
+              "20",
+              "10",
+              "15",
+              "74",
+              "5"
+            ]
+          },
+          {
+            "step": 8,
+            "es": [
+              "10",
+              "6",
+              "4",
+              "2",
+              "1",
+              "32",
+              "3",
+              "74"
+            ],
+            "localized": [
+              "10",
+              "6",
+              "2",
+              "32",
+              "1",
+              "4",
+              "3",
+              "1",
+              "1",
+              "74"
+            ]
+          }
+        ]
+      },
+      {
+        "language": "pt",
+        "structural": "PASS",
+        "text_numeric_differences": []
+      }
+    ],
+    "es_hash": "b0a186f36b233efcac7e14151ae57158486ac90c80c5e410a28438af3bbee2cf",
+    "package_sha256": "f52016963df441e43362b84fdb0488118a1fa0e969db6eded5b0d9294615e4f7",
+    "sql_sha256": "39bddbae8b1aff26230478c0e45b6f3b71a7b6c743e29aec96cdfe4adf97f8c8",
+    "status": "PASS",
+    "semantic_review": {
+      "status": "PASS",
+      "explanation": "DE storage thresholds reordered. JA writes two batches, quarter reserve, three/two layers and one reheat with digits and reorders oven/storage clauses. Weights, ratios, temperatures and timings match ES."
+    }
+  },
+  "image_qa": {
+    "status": "PASS",
+    "checked_at": "2026-10-08T10:34:57.556Z",
+    "checks": [
+      "All eight scenes and twelve crops inspected",
+      "Three pasta and two filling layers in serving",
+      "Raw chicken separated from vegetables",
+      "Pasta draining scene corrected to exclude finished dish",
+      "Cooked chicken in filling",
+      "Pourable bechamel",
+      "No red sauce or invented thermometer reading"
+    ],
+    "corrections": [
+      {
+        "scene": "step_02",
+        "reason": "Finished lasagna shown during draining stage",
+        "action": "New ImageGen phase-only image",
+        "result": "PASS"
+      }
+    ]
+  },
+  "media_commit": "c6add35b1b73f058b72cf898566e648b5743cff9"
+}

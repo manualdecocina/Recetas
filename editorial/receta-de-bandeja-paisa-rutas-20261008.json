@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "slug": "receta-de-bandeja-paisa",
+  "checked_at": "2026-10-08T07:18:00.000Z",
+  "identity": {
+    "id": "835f1de3-70b7-4d41-a9ff-1695b7ae21fc",
+    "recipe_group_id": "8686de2f-500a-4c72-8f1c-1e9c0341e905",
+    "language": "es",
+    "public_path": "/receta-de-bandeja-paisa",
+    "source_url": "https://manualdecocina.com/receta-de-bandeja-paisa/",
+    "expected_initial_state": {
+      "rows_in_group": 1,
+      "language": "es",
+      "published": false
+    }
+  },
+  "classification": {
+    "result": "ELIGIBLE_REBUILD_CANDIDATE",
+    "evidence": "docs/P2-CATALOG-20260924.md: /receta-de-bandeja-paisa/ — REBUILD CANDIDATE",
+    "legacy_redirect_note": "scripts/data/legacy-redirects.json currently routes the unpublished legacy path to /es/recetas; preserve until the complete batch publication changes the DB state."
+  },
+  "routes": {
+    "es": "/receta-de-bandeja-paisa",
+    "de": "/de/bandeja-paisa-kolumbianischer-teller",
+    "en": "/en/bandeja-paisa-colombian-platter",
+    "fr": "/fr/bandeja-paisa-assiette-colombienne",
+    "it": "/it/bandeja-paisa-piatto-colombiano",
+    "ja": "/ja/bandeja-paisa",
+    "pt": "/pt/bandeja-paisa"
+  },
+  "portuguese_locale": "pt-BR",
+  "x_default": null,
+  "collision_check": {
+    "result": "PASS",
+    "recipes_matches": [
+      {
+        "language": "es",
+        "id": "835f1de3-70b7-4d41-a9ff-1695b7ae21fc",
+        "public_path": "/receta-de-bandeja-paisa",
+        "expected_identity": true
+      }
+    ],
+    "content_pages_matches": [],
+    "checked_collections": [
+      "public.recipes public_path",
+      "public.recipes (language,slug)",
+      "public.content_pages public_path"
+    ]
+  },
+  "publication_gate": "BATCH_15_COMPLETION_PENDING"
+}

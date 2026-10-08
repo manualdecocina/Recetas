@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-08",
+  "classification": "REBUILD_CANDIDATE_VALIDATED",
+  "classification_source": "docs/P2-CATALOG-20260924.md",
+  "historical_rows": [
+    {
+      "": "227",
+      "Rank": "228",
+      "URL histórica": "https://manualdecocina.com/it/pasta-frutti-di-mare/",
+      "Path normalizado": "/it/pasta-frutti-di-mare",
+      "Clics": "4",
+      "Impresiones": "2072",
+      "CTR": "0.0019",
+      "Posición": "56.74",
+      "Idioma": "it",
+      "Recipe exacta": "",
+      "Estado actual": "",
+      "Content page exacta": "",
+      "Redirect": "",
+      "Entidad actual": "",
+      "Path actual/destino": "",
+      "Clasificación técnica": "SIN MAPEO",
+      "Prioridad": "P1",
+      "Acción técnica recomendada": "Sin coincidencia exacta. Comparar con clasificación histórica y, solo si era entidad aceptada, resolver path/redirect técnico."
+    },
+    {
+      "": "303",
+      "Rank": "304",
+      "URL histórica": "https://manualdecocina.com/pasta-frutos-del-mar/",
+      "Path normalizado": "/pasta-frutos-del-mar",
+      "Clics": "2",
+      "Impresiones": "855",
+      "CTR": "0.0023",
+      "Posición": "29.36",
+      "Idioma": "es",
+      "Recipe exacta": "sí",
+      "Estado actual": "unpublished / published",
+      "Content page exacta": "",
+      "Redirect": "",
+      "Entidad actual": "recipe: Pasta Frutos del Mar",
+      "Path actual/destino": "/pasta-frutos-del-mar",
+      "Clasificación técnica": "PENDIENTE",
+      "Prioridad": "P2",
+      "Acción técnica recomendada": "Entidad existente pero no activa. Comparar con clasificación previa antes de publicar o retirar."
+    }
+  ],
+  "source_matrix_sha256": "9ed8aa29c3338c989d1dd22362d94da1f92e0d63c061418ab1d86bd406214b68",
+  "new_proposed_paths": {
+    "de": "/de/pasta-mit-meeresfruchten",
+    "en": "/en/seafood-pasta",
+    "fr": "/fr/pates-aux-fruits-de-mer",
+    "ja": "/ja/seafood-pasta",
+    "pt": "/pt/massa-com-frutos-do-mar"
+  },
+  "collision_check": {
+    "recipes": "Only expected preserved ES identity; no other matching pasta group",
+    "content_pages": "No path or slug collisions across seven routes",
+    "content_redirects": "ES catalogue fallback only, direct HTTP200 required after publication"
+  },
+  "decision": "Preserve historical ES and IT paths; other paths new and collision-free, no invented historical attribution. All ES identifiers and historical source URL unchanged; no redirects edited."
+}

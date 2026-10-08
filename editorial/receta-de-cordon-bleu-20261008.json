@@ -1,0 +1,2367 @@
+{
+  "schema_version": 1,
+  "slug": "receta-de-cordon-bleu",
+  "category_slug": "platos-principales",
+  "steps_frozen": true,
+  "steps_sha256": "75e4f93e42dd49a3d1e0d12bb9007108dccf046547e49295f6cb97e5fe70243c",
+  "time_notes": "30 min preparación + 15 min refrigeración + 30 min cocción + 5 min reposo = 80 min. Seguridad por temperatura, no por reloj.",
+  "ai_owner_confirmation": {
+    "status": "delegated_editorial_authority",
+    "authority": "Usuario autorizó producción y publicación autónomas de lotes completos el 2026-10-08.",
+    "kitchen_test_performed": false
+  },
+  "publication_blockers": [
+    "BATCH_15_COMPLETION_PENDING",
+    "PREVIEW_QA_PENDING"
+  ],
+  "scope": "https://preview.manualdecocina.com",
+  "state": "PREPARED_PENDING_BATCH_PUBLICATION",
+  "provenance": {
+    "created_at": "2026-10-08T09:43:29.120Z",
+    "body_source": "new original editorial draft",
+    "wordpress_body_used": false
+  },
+  "sources": [
+    {
+      "url": "https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_sr_legacy_food_json_2018-04.zip",
+      "purpose": "Nine raw nutrition input records read directly from official USDA archive.",
+      "archive_sha256": "0fe8ae486a2c8eb42cb96413f058deb51863a46c8fb8eeb4b1fb45006dd338ef",
+      "accessed": "2026-10-08"
+    },
+    {
+      "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures",
+      "purpose": "Poultry and filling 74 C; leftovers 74 C."
+    },
+    {
+      "url": "https://ask.fsis.usda.gov/article/How-do-I-handle-leftovers-safely",
+      "purpose": "Refrigeration time limits."
+    }
+  ],
+  "records": [
+    {
+      "id": "aa9afced-ac23-4e4b-afef-7d28bf2d7af6",
+      "recipe_group_id": "675e919b-02fe-4900-95c4-d56849fa0cb7",
+      "language": "es",
+      "slug": "receta-de-cordon-bleu",
+      "public_path": "/receta-de-cordon-bleu",
+      "source_url": "https://manualdecocina.com/receta-de-cordon-bleu/",
+      "title": "Cordon bleu de pollo al horno",
+      "excerpt": "Cordon bleu de pollo para 4, relleno de jamón y queso, con empanado al horno y comprobación de temperatura en el centro.",
+      "summary": "Esta propuesta de cordon bleu utiliza pechuga de pollo aplanada y enrollada alrededor de jamón cocido y queso tipo emmental. El empanado se termina al horno con una cantidad medida de aceite, sin freír en una sartén llena de grasa. La receta conserva la URL histórica de cordon bleu.\n\nSe proponen 4 piezas, una por persona, con 30 minutos de preparación, 15 de refrigeración, unos 30 de cocción y 5 de reposo: 80 minutos en total. El grosor del pollo, el diámetro del rollo y el horno pueden ampliar la cocción. Las cantidades, los tiempos y el rendimiento son estimados, pendientes de prueba de cocina; un termómetro confirma la seguridad, no el color del empanado.",
+      "category": "Platos principales",
+      "category_slug": "platos-principales",
+      "difficulty": "Media",
+      "course": "Plato principal",
+      "cuisine": "Europea, propuesta casera",
+      "prep_time_minutes": 30,
+      "cook_time_minutes": 30,
+      "total_time_minutes": 80,
+      "servings": 4,
+      "keywords": [
+        "cordon bleu",
+        "cordon bleu de pollo",
+        "pollo relleno de jamón y queso",
+        "cordon bleu al horno"
+      ],
+      "ingredients": [
+        {
+          "name": "pechuga de pollo cruda sin piel ni hueso",
+          "amount": "800",
+          "unit": "g, en 4 piezas de unos 200 g",
+          "group": "Pollo y relleno"
+        },
+        {
+          "name": "jamón cocido en lonchas, listo para comer",
+          "amount": "100",
+          "unit": "g",
+          "group": "Pollo y relleno"
+        },
+        {
+          "name": "queso tipo emmental o suizo en lonchas",
+          "amount": "100",
+          "unit": "g",
+          "group": "Pollo y relleno"
+        },
+        {
+          "name": "sal fina",
+          "amount": "3",
+          "unit": "g",
+          "group": "Sazonado"
+        },
+        {
+          "name": "pimienta negra molida",
+          "amount": "0.5",
+          "unit": "g",
+          "group": "Sazonado"
+        },
+        {
+          "name": "harina de trigo de uso común",
+          "amount": "60",
+          "unit": "g",
+          "group": "Empanado"
+        },
+        {
+          "name": "huevo entero crudo sin cáscara",
+          "amount": "100",
+          "unit": "g, aprox. 2 huevos grandes",
+          "group": "Empanado"
+        },
+        {
+          "name": "pan rallado seco sin sazonar",
+          "amount": "100",
+          "unit": "g",
+          "group": "Empanado"
+        },
+        {
+          "name": "aceite de oliva",
+          "amount": "30",
+          "unit": "g",
+          "group": "Acabado al horno"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Aplana el pollo y prepara la zona",
+          "content": "No laves el pollo crudo. Abre cada una de las 4 piezas de unos 200 g en libro sin separar las mitades y colócala entre dos hojas de papel de horno. Aplana con mazo o rodillo hasta unos 4–5 mm de grosor uniforme, sin romperla. Reparte los 3 g de sal y 0,5 g de pimienta entre las piezas. Usa tabla y utensilios separados de los alimentos listos para comer y limpia todo lo que toque pollo crudo.",
+          "image_alt": "Cordon bleu: pechuga cruda abierta y aplanada entre hojas de papel",
+          "image_url": "/recetas/receta-de-cordon-bleu/paso-01.webp"
+        },
+        {
+          "title": "Rellena, enrolla y cierra",
+          "content": "Coloca 25 g de jamón y 25 g de queso en cada pieza, dejando un borde libre de unos 2 cm. Dobla los laterales y enrolla desde el extremo corto para encerrar el relleno. Cierra con palillos de madera sin pintar y cuenta cuántos usas para retirarlos después. Si hay una rotura que deja salir el relleno, acomoda el pollo para cubrirla; no dejes queso expuesto al borde.",
+          "image_alt": "Cordon bleu: pollo relleno de jamón y queso durante el enrollado",
+          "image_url": "/recetas/receta-de-cordon-bleu/paso-02.webp"
+        },
+        {
+          "title": "Empana las cuatro piezas",
+          "content": "Prepara tres platos: los 60 g de harina, los 100 g de huevo batido y los 100 g de pan rallado. Pasa cada rollo por harina y sacude el exceso, después por huevo y finalmente por pan rallado, presionando suavemente para cubrir toda la superficie y los cierres. No viertas el huevo sobre el pan rallado. Desecha cualquier sobrante de empanado que haya tocado pollo crudo; no lo guardes.",
+          "image_alt": "Cordon bleu: empanado con platos separados de harina, huevo y pan rallado",
+          "image_url": "/recetas/receta-de-cordon-bleu/paso-03.webp"
+        },
+        {
+          "title": "Refrigera y precalienta",
+          "content": "Pon las piezas empanadas en una bandeja limpia, cubre y refrigera 15 minutos a 4 °C o menos para que el empanado se asiente. Mientras, precalienta el horno a 200 °C con calor arriba y abajo, sin ventilador. Prepara otra bandeja con papel de horno. Esta refrigeración forma parte de los 80 minutos totales; no dejes los rollos esperando en la encimera.",
+          "image_alt": "Cordon bleu: cuatro rollos empanados cubiertos en la nevera",
+          "image_url": "/recetas/receta-de-cordon-bleu/paso-04.webp"
+        },
+        {
+          "title": "Pincela y hornea",
+          "content": "Distribuye los 30 g de aceite sobre las cuatro piezas con una brocha limpia. Colócalas con el cierre hacia abajo, separadas al menos 3 cm, y hornea a media altura durante unos 25–30 minutos. A los 15 minutos, gira la bandeja si dora de forma desigual. No cortes una pieza para decidir si está hecha; pasa al control de temperatura. Si el empanado se oscurece antes de que el interior esté listo, cubre holgadamente con aluminio.",
+          "image_alt": "Cordon bleu: rollos empanados dorándose en una bandeja de horno",
+          "image_url": "/recetas/receta-de-cordon-bleu/paso-05.webp"
+        },
+        {
+          "title": "Comprueba el centro con termómetro",
+          "content": "Introduce la sonda por un lateral hasta el centro del rollo, atravesando el pollo y llegando junto al relleno, sin tocar la bandeja. Comprueba cada pieza en más de un punto: tanto el pollo como el centro deben alcanzar al menos 74 °C. Si alguna queda por debajo, hornea 3–5 minutos más y vuelve a medir con la sonda limpia. El queso fundido o la corteza dorada no garantizan una cocción segura; prolongar puede superar el tiempo estimado.",
+          "image_alt": "Cordon bleu: sonda de termómetro comprobando el centro de un rollo horneado",
+          "image_url": "/recetas/receta-de-cordon-bleu/paso-06.webp"
+        },
+        {
+          "title": "Reposa, retira los palillos y sirve",
+          "content": "Deja reposar 5 minutos en una superficie resistente al calor. Retira y cuenta todos los palillos antes de servir, avisa de cualquier pieza que no hayas podido recuperar y no sirvas esa porción hasta localizarla. Reparte una pieza por persona; corta con cuchillo limpio si quieres mostrar el relleno. Refrigera las sobras en recipientes bajos a 4 °C o menos dentro de 2 horas, o 1 hora si el ambiente supera 32 °C. Se propone consumirlas en 2 días y recalentar una sola vez hasta 74 °C en el centro.",
+          "image_alt": "Cordon bleu de pollo horneado y cortado, con jamón y queso en el interior",
+          "image_url": "/recetas/receta-de-cordon-bleu/paso-07.webp"
+        }
+      ],
+      "notes": "Contiene trigo, huevo y lácteos; el jamón y el pan rallado pueden añadir otros alérgenos según marca. No se propone aquí una versión sin gluten, sin huevo o sin lácteos porque cambia la cobertura y el relleno. Puedes emplear un queso semiduro que funda, manteniendo el peso, pero sabor, grasa y sodio cambiarán. No sustituyas jamón listo para comer por carne cruda sin otra formulación. Usa pechuga sin salmuera añadida para aproximarte al cálculo. Los palillos se cuentan y se retiran antes de servir. El pollo no se lava; separa zona cruda, platos y brochas, y lávate las manos. La estimación nutricional cuenta toda la harina, huevo, pan rallado y aceite preparados, aunque parte se deseche. No se recomienda congelar los rollos crudos dentro de esta ficha; para las sobras cocidas, enfría y refrigera rápidamente y consume en 2 días.",
+      "nutrition": {
+        "fat_g": 26.5,
+        "calories": 635,
+        "saturated_fat_g": 7.9,
+        "sodium_mg": 850,
+        "protein_g": 64,
+        "sugar_g": 1.9,
+        "carbs_g": 31,
+        "fiber_g": 1.9,
+        "estimated": true,
+        "serving_size": "1 de 4 piezas propuestas",
+        "source": "USDA FoodData Central — SR Legacy, descarga JSON abril de 2018",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "method": "Nueve fichas USDA verificadas en el archivo oficial por FDC ID. Pesos comestibles crudos sumados y divididos entre 4; se cuenta toda la harina, huevo, pan rallado, aceite y sal, aunque parte del empanado se descarte. El jamón cocido se aproxima con Ham, sliced, regular; el queso con Cheese, swiss. No se incluye una guarnición adicional.",
+        "note": "Estimación conservadora, no análisis del plato terminado. Marca de jamón y queso, salmuera del pollo, tamaño real y cantidad de empanado que se adhiera cambian el resultado. Cantidades, tiempos y rendimiento pendientes de prueba de cocina.",
+        "inputs": [
+          {
+            "fdc_id": 171077,
+            "fdc_description": "Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw",
+            "per_100g": {
+              "fat_g": 2.62,
+              "calories": 120,
+              "saturated_fat_g": 0.563,
+              "sodium_mg": 45,
+              "protein_g": 22.5,
+              "sugar_g": 0,
+              "carbs_g": 0,
+              "fiber_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171077/nutrients",
+            "ingredient": "pechuga de pollo cruda sin piel ni hueso",
+            "edible_grams": 800
+          },
+          {
+            "fdc_id": 173864,
+            "fdc_description": "Ham, sliced, regular (approximately 11% fat)",
+            "per_100g": {
+              "fiber_g": 1.3,
+              "saturated_fat_g": 0.5,
+              "sodium_mg": 814,
+              "fat_g": 8.8,
+              "carbs_g": 3.63,
+              "calories": 164,
+              "sugar_g": 1,
+              "protein_g": 16.6
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173864/nutrients",
+            "ingredient": "jamón cocido en lonchas",
+            "edible_grams": 100
+          },
+          {
+            "fdc_id": 171251,
+            "fdc_description": "Cheese, swiss",
+            "per_100g": {
+              "fat_g": 31,
+              "carbs_g": 1.44,
+              "calories": 393,
+              "sugar_g": 0,
+              "sodium_mg": 187,
+              "protein_g": 27,
+              "saturated_fat_g": 18.2,
+              "fiber_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171251/nutrients",
+            "ingredient": "queso tipo emmental o suizo",
+            "edible_grams": 100
+          },
+          {
+            "fdc_id": 168936,
+            "fdc_description": "Wheat flour, white, all-purpose, enriched, unbleached",
+            "per_100g": {
+              "fiber_g": 2.7,
+              "fat_g": 0.98,
+              "carbs_g": 76.3,
+              "calories": 364,
+              "protein_g": 10.3,
+              "sodium_mg": 2,
+              "saturated_fat_g": 0.155,
+              "sugar_g": 0.27
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/168936/nutrients",
+            "ingredient": "harina de trigo",
+            "edible_grams": 60
+          },
+          {
+            "fdc_id": 171287,
+            "fdc_description": "Egg, whole, raw, fresh",
+            "per_100g": {
+              "calories": 143,
+              "saturated_fat_g": 3.13,
+              "protein_g": 12.6,
+              "sodium_mg": 142,
+              "sugar_g": 0.37,
+              "fat_g": 9.51,
+              "carbs_g": 0.72,
+              "fiber_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171287/nutrients",
+            "ingredient": "huevo entero crudo sin cáscara",
+            "edible_grams": 100
+          },
+          {
+            "fdc_id": 174928,
+            "fdc_description": "Bread, crumbs, dry, grated, plain",
+            "per_100g": {
+              "fat_g": 5.3,
+              "protein_g": 13.4,
+              "fiber_g": 4.5,
+              "sodium_mg": 732,
+              "carbs_g": 72,
+              "calories": 395,
+              "sugar_g": 6.2,
+              "saturated_fat_g": 1.2
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/174928/nutrients",
+            "ingredient": "pan rallado seco sin sazonar",
+            "edible_grams": 100
+          },
+          {
+            "fdc_id": 171413,
+            "fdc_description": "Oil, olive, salad or cooking",
+            "per_100g": {
+              "fat_g": 100,
+              "carbs_g": 0,
+              "calories": 884,
+              "sodium_mg": 2,
+              "protein_g": 0,
+              "saturated_fat_g": 13.8,
+              "fiber_g": 0,
+              "sugar_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171413/nutrients",
+            "ingredient": "aceite de oliva",
+            "edible_grams": 30
+          },
+          {
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "fiber_g": 0,
+              "sodium_mg": 38800,
+              "saturated_fat_g": 0,
+              "protein_g": 0,
+              "fat_g": 0,
+              "carbs_g": 0,
+              "calories": 0,
+              "sugar_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients",
+            "ingredient": "sal fina",
+            "edible_grams": 3
+          },
+          {
+            "fdc_id": 170931,
+            "fdc_description": "Spices, pepper, black",
+            "per_100g": {
+              "fat_g": 3.26,
+              "sugar_g": 0.64,
+              "carbs_g": 64,
+              "calories": 251,
+              "protein_g": 10.4,
+              "fiber_g": 25.3,
+              "sodium_mg": 20,
+              "saturated_fat_g": 1.39
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170931/nutrients",
+            "ingredient": "pimienta negra molida",
+            "edible_grams": 0.5
+          }
+        ]
+      },
+      "image_url": "/recetas/receta-de-cordon-bleu/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/receta-de-cordon-bleu/portada.webp",
+          "alt": "Cordon bleu de pollo al horno, cortado para mostrar jamón y queso fundido"
+        }
+      ],
+      "seo": {
+        "title": "Cordon bleu de pollo al horno: paso a paso | Manual de Cocina",
+        "description": "Cordon bleu para 4 con jamón, queso y empanado al horno. Aprende a cerrar el relleno y comprobar 74 °C en el centro antes de servir.",
+        "image_alt": "Cordon bleu de pollo al horno, cortado para mostrar jamón y queso fundido",
+        "image_variants": [
+          "/recetas/receta-de-cordon-bleu/portada-1x1.webp",
+          "/recetas/receta-de-cordon-bleu/portada-4x3.webp",
+          "/recetas/receta-de-cordon-bleu/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "¿Cómo evito que se salga el queso?",
+            "a": "Aplana sin romper el pollo, deja un borde libre de 2 cm, dobla los laterales, cierra bien y coloca el rollo con el cierre abajo. El queso expuesto al borde se escapará con más facilidad; el reposo de 15 minutos en frío ayuda a asentar el empanado."
+          },
+          {
+            "q": "¿Puedo fiarme del color dorado para saber si está hecho?",
+            "a": "No. Comprueba cada rollo con termómetro en varios puntos y verifica al menos 74 °C en el pollo y junto al relleno. El empanado puede dorarse antes de que el centro esté listo."
+          },
+          {
+            "q": "¿Puedo preparar los rollos con antelación?",
+            "a": "La ficha solo incluye 15 minutos de refrigeración antes del horno. No se ha validado aquí un reposo prolongado ni la congelación de las piezas crudas. Guarda las sobras cocidas en frío y consúmelas en 2 días."
+          }
+        ]
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "content_html": "<p>Esta propuesta de cordon bleu utiliza pechuga de pollo aplanada y enrollada alrededor de jamón cocido y queso tipo emmental. El empanado se termina al horno con una cantidad medida de aceite, sin freír en una sartén llena de grasa. La receta conserva la URL histórica de cordon bleu.</p><p>Se proponen 4 piezas, una por persona, con 30 minutos de preparación, 15 de refrigeración, unos 30 de cocción y 5 de reposo: 80 minutos en total. El grosor del pollo, el diámetro del rollo y el horno pueden ampliar la cocción. Las cantidades, los tiempos y el rendimiento son estimados, pendientes de prueba de cocina; un termómetro confirma la seguridad, no el color del empanado.</p>"
+    },
+    {
+      "id": "eeea6f8e-55a0-5954-923c-142e9efd7e80",
+      "recipe_group_id": "675e919b-02fe-4900-95c4-d56849fa0cb7",
+      "language": "de",
+      "slug": "cordon-bleu-rezept",
+      "public_path": "/de/cordon-bleu-rezept",
+      "source_url": null,
+      "title": "Hähnchen-Cordon-bleu aus dem Ofen",
+      "excerpt": "Hähnchen-Cordon-bleu für 4 mit Kochschinken und Käse, im Ofen gebacken und mit Temperaturkontrolle im Kern.",
+      "summary": "Dünn geklopfte Hähnchenbrust wird um Kochschinken und Käse nach Emmentaler Art gerollt, paniert und mit einer abgewogenen Ölmenge im Ofen gebacken. Die historische Cordon-bleu-URL bleibt erhalten.\n\nVorgeschlagen sind 4 Rollen, eine pro Person: 30 Minuten Vorbereitung, 15 Kühlen, etwa 30 Garen und 5 Ruhen, insgesamt 80 Minuten. Fleischdicke, Rollendurchmesser und Ofen können die Garzeit verlängern. Mengen, Zeiten und Ausbeute sind Schätzungen und noch nicht in der Küche erprobt. Die Sicherheit mit einem Thermometer prüfen, nicht anhand der Farbe der Panade.",
+      "category": "Hauptgerichte",
+      "category_slug": "platos-principales",
+      "difficulty": "Mittel",
+      "course": "Hauptgericht",
+      "cuisine": "Europäisch, Vorschlag für die Hausküche",
+      "prep_time_minutes": 30,
+      "cook_time_minutes": 30,
+      "total_time_minutes": 80,
+      "servings": 4,
+      "keywords": [
+        "Hähnchen Cordon bleu",
+        "Cordon bleu Ofen",
+        "Hähnchen Schinken Käse",
+        "Cordon bleu backen"
+      ],
+      "ingredients": [
+        {
+          "name": "rohe Hähnchenbrust ohne Haut und Knochen",
+          "amount": "800",
+          "unit": "g, 4 Stücke zu etwa 200 g",
+          "group": "Hähnchen und Füllung"
+        },
+        {
+          "name": "verzehrfertiger Kochschinken in Scheiben",
+          "amount": "100",
+          "unit": "g",
+          "group": "Hähnchen und Füllung"
+        },
+        {
+          "name": "Emmentaler oder Schweizer Käse in Scheiben",
+          "amount": "100",
+          "unit": "g",
+          "group": "Hähnchen und Füllung"
+        },
+        {
+          "name": "feines Salz",
+          "amount": "3",
+          "unit": "g",
+          "group": "Würzung"
+        },
+        {
+          "name": "gemahlener schwarzer Pfeffer",
+          "amount": "0.5",
+          "unit": "g",
+          "group": "Würzung"
+        },
+        {
+          "name": "Weizenmehl",
+          "amount": "60",
+          "unit": "g",
+          "group": "Panade"
+        },
+        {
+          "name": "rohes Vollei ohne Schale",
+          "amount": "100",
+          "unit": "g, etwa 2 große Eier",
+          "group": "Panade"
+        },
+        {
+          "name": "ungewürzte trockene Semmelbrösel",
+          "amount": "100",
+          "unit": "g",
+          "group": "Panade"
+        },
+        {
+          "name": "Olivenöl",
+          "amount": "30",
+          "unit": "g",
+          "group": "Zum Backen"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Hähnchen flach klopfen und Arbeitsplatz vorbereiten",
+          "content": "Rohes Hähnchen nicht waschen. Jedes der 4 Stücke zu etwa 200 g im Schmetterlingsschnitt öffnen, ohne die Hälften zu trennen, und zwischen zwei Bögen Backpapier legen. Mit Fleischklopfer oder Nudelholz gleichmäßig auf etwa 4–5 mm klopfen, ohne Risse. Die 3 g Salz und 0,5 g Pfeffer verteilen. Brett und Werkzeuge von verzehrfertigen Lebensmitteln trennen und alles reinigen, was rohes Hähnchen berührt.",
+          "image_alt": "Rohe geöffnete Hähnchenbrust zwischen Backpapier flach geklopft",
+          "image_url": "/recetas/receta-de-cordon-bleu/paso-01.webp"
+        },
+        {
+          "title": "Füllen, rollen und schließen",
+          "content": "Je 25 g Schinken und 25 g Käse auflegen und etwa 2 cm Rand frei lassen. Seiten einschlagen und vom kurzen Ende aufrollen, sodass die Füllung eingeschlossen ist. Mit unbemalten Holzzahnstochern sichern und diese zum späteren Entfernen zählen. Risse durch Verschieben des Fleisches abdecken; am Rand darf kein Käse offen liegen.",
+          "image_alt": "Hähnchen wird mit Schinken und Käse aufgerollt",
+          "image_url": "/recetas/receta-de-cordon-bleu/paso-02.webp"
+        },
+        {
+          "title": "Vier Rollen panieren",
+          "content": "Drei Teller mit 60 g Mehl, 100 g verquirltem Ei und 100 g Semmelbröseln bereitstellen. Jede Rolle in Mehl wenden und Überschuss abschütteln, dann durch Ei und Brösel ziehen. Die Brösel sanft auf Oberfläche und Verschlüsse drücken. Ei nicht in die Brösel gießen. Reste, die rohes Hähnchen berührt haben, entsorgen und nicht aufbewahren.",
+          "image_alt": "Panieren mit getrennten Tellern für Mehl, Ei und Brösel",
+          "image_url": "/recetas/receta-de-cordon-bleu/paso-03.webp"
+        },
+        {
+          "title": "Kühlen und Ofen vorheizen",
+          "content": "Panierte Rollen auf ein sauberes Blech setzen, abdecken und 15 Minuten bei höchstens 4 °C kühlen. Währenddessen den Ofen auf 200 °C Ober-/Unterhitze ohne Umluft vorheizen. Ein weiteres Blech mit Backpapier belegen. Das Kühlen gehört zu den insgesamt 80 Minuten; die Rollen nicht auf der Arbeitsplatte warten lassen.",
+          "image_alt": "Vier abgedeckte panierte Hähnchenrollen im Kühlschrank",
+          "image_url": "/recetas/receta-de-cordon-bleu/paso-04.webp"
+        },
+        {
+          "title": "Einölen und backen",
+          "content": "Die 30 g Öl mit einem sauberen Pinsel auf die vier Rollen verteilen. Mit Naht nach unten und mindestens 3 cm Abstand auflegen. Auf mittlerer Schiene etwa 25–30 Minuten backen. Nach 15 Minuten das Blech drehen, falls es ungleichmäßig bräunt. Zum Prüfen nicht anschneiden, sondern die Temperatur messen. Wird die Panade zu dunkel, bevor der Kern gar ist, locker mit Alufolie abdecken.",
+          "image_alt": "Panierte Hähnchenrollen werden auf einem Ofenblech goldbraun",
+          "image_url": "/recetas/receta-de-cordon-bleu/paso-05.webp"
+        },
+        {
+          "title": "Kerntemperatur messen",
+          "content": "Die Sonde seitlich durch das Fleisch bis zur Mitte neben der Füllung einführen, ohne das Blech zu berühren. Jede Rolle an mehreren Stellen prüfen: Hähnchen und Kern müssen mindestens 74 °C erreichen. Bei zu niedriger Temperatur weitere 3–5 Minuten backen und mit sauberer Sonde erneut messen. Geschmolzener Käse und goldene Kruste beweisen keine sichere Garung; die geschätzte Zeit kann überschritten werden.",
+          "image_alt": "Thermometersonde prüft den Kern einer gebackenen Hähnchenrolle",
+          "image_url": "/recetas/receta-de-cordon-bleu/paso-06.webp"
+        },
+        {
+          "title": "Ruhen lassen, Zahnstocher entfernen und servieren",
+          "content": "Auf hitzefester Unterlage 5 Minuten ruhen lassen. Alle Zahnstocher vor dem Servieren entfernen und zählen. Fehlt einer, die betroffene Rolle kennzeichnen und erst servieren, wenn er gefunden ist. Eine Rolle pro Person servieren; bei Bedarf mit sauberem Messer aufschneiden. Reste in flachen Behältern innerhalb von 2 Stunden bei höchstens 4 °C kühlen, bei Umgebungstemperatur über 32 °C innerhalb von 1 Stunde. Vorgeschlagen sind 2 Tage Lagerung und nur einmaliges Wiedererhitzen auf 74 °C im Kern.",
+          "image_alt": "Aufgeschnittenes gebackenes Cordon bleu mit Schinken und Käse",
+          "image_url": "/recetas/receta-de-cordon-bleu/paso-07.webp"
+        }
+      ],
+      "notes": "Enthält Weizen, Ei und Milchprodukte; Schinken und Brösel können je nach Marke weitere Allergene enthalten. Gluten-, ei- oder milchfreie Varianten sind hier nicht vorgesehen, da sie Panade und Füllung verändern. Ein schmelzender halbfester Käse kann bei gleichem Gewicht eingesetzt werden; Geschmack, Fett und Natrium ändern sich. Verzehrfertigen Schinken nicht ohne neue Rezeptur durch rohes Fleisch ersetzen. Für die Nährwertannäherung Hähnchen ohne zugesetzte Lake verwenden. Zahnstocher zählen und vor dem Servieren entfernen. Hähnchen nicht waschen; rohe Arbeitsbereiche, Teller und Pinsel trennen und Hände waschen. Die Schätzung zählt das gesamte vorbereitete Mehl, Ei, die Brösel und das Öl, auch bei Verlusten. Das Einfrieren roher Rollen wird in diesem Vorschlag nicht empfohlen. Gegarte Reste rasch abkühlen, kühlen und innerhalb von 2 Tagen verbrauchen.",
+      "nutrition": {
+        "fat_g": 26.5,
+        "calories": 635,
+        "saturated_fat_g": 7.9,
+        "sodium_mg": 850,
+        "protein_g": 64,
+        "sugar_g": 1.9,
+        "carbs_g": 31,
+        "fiber_g": 1.9,
+        "estimated": true,
+        "serving_size": "1 von 4 vorgeschlagenen Rollen",
+        "source": "USDA FoodData Central — SR Legacy, April 2018 JSON",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "method": "Neun USDA-Datensätze anhand der FDC-ID im offiziellen Archiv geprüft. Rohe essbare Gewichte addiert und durch 4 geteilt. Mehl, Ei, Brösel, Öl und Salz werden vollständig gezählt, auch bei Panadenresten. Kochschinken wird mit Ham, sliced, regular und Käse mit Cheese, swiss angenähert. Ohne Beilage.",
+        "note": "Konservative Schätzung, keine Analyse des fertigen Gerichts. Schinken- und Käsemarke, Hähnchenlake, tatsächliche Größe und haftende Panade beeinflussen die Werte. Mengen, Zeiten und Ausbeute sind noch nicht in der Küche erprobt.",
+        "inputs": [
+          {
+            "fdc_id": 171077,
+            "fdc_description": "Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw",
+            "per_100g": {
+              "fat_g": 2.62,
+              "calories": 120,
+              "saturated_fat_g": 0.563,
+              "sodium_mg": 45,
+              "protein_g": 22.5,
+              "sugar_g": 0,
+              "carbs_g": 0,
+              "fiber_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171077/nutrients",
+            "ingredient": "rohe Hähnchenbrust ohne Haut und Knochen",
+            "edible_grams": 800
+          },
+          {
+            "fdc_id": 173864,
+            "fdc_description": "Ham, sliced, regular (approximately 11% fat)",
+            "per_100g": {
+              "fiber_g": 1.3,
+              "saturated_fat_g": 0.5,
+              "sodium_mg": 814,
+              "fat_g": 8.8,
+              "carbs_g": 3.63,
+              "calories": 164,
+              "sugar_g": 1,
+              "protein_g": 16.6
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173864/nutrients",
+            "ingredient": "verzehrfertiger Kochschinken in Scheiben",
+            "edible_grams": 100
+          },
+          {
+            "fdc_id": 171251,
+            "fdc_description": "Cheese, swiss",
+            "per_100g": {
+              "fat_g": 31,
+              "carbs_g": 1.44,
+              "calories": 393,
+              "sugar_g": 0,
+              "sodium_mg": 187,
+              "protein_g": 27,
+              "saturated_fat_g": 18.2,
+              "fiber_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171251/nutrients",
+            "ingredient": "Emmentaler oder Schweizer Käse in Scheiben",
+            "edible_grams": 100
+          },
+          {
+            "fdc_id": 168936,
+            "fdc_description": "Wheat flour, white, all-purpose, enriched, unbleached",
+            "per_100g": {
+              "fiber_g": 2.7,
+              "fat_g": 0.98,
+              "carbs_g": 76.3,
+              "calories": 364,
+              "protein_g": 10.3,
+              "sodium_mg": 2,
+              "saturated_fat_g": 0.155,
+              "sugar_g": 0.27
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/168936/nutrients",
+            "ingredient": "Weizenmehl",
+            "edible_grams": 60
+          },
+          {
+            "fdc_id": 171287,
+            "fdc_description": "Egg, whole, raw, fresh",
+            "per_100g": {
+              "calories": 143,
+              "saturated_fat_g": 3.13,
+              "protein_g": 12.6,
+              "sodium_mg": 142,
+              "sugar_g": 0.37,
+              "fat_g": 9.51,
+              "carbs_g": 0.72,
+              "fiber_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171287/nutrients",
+            "ingredient": "rohes Vollei ohne Schale",
+            "edible_grams": 100
+          },
+          {
+            "fdc_id": 174928,
+            "fdc_description": "Bread, crumbs, dry, grated, plain",
+            "per_100g": {
+              "fat_g": 5.3,
+              "protein_g": 13.4,
+              "fiber_g": 4.5,
+              "sodium_mg": 732,
+              "carbs_g": 72,
+              "calories": 395,
+              "sugar_g": 6.2,
+              "saturated_fat_g": 1.2
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/174928/nutrients",
+            "ingredient": "ungewürzte trockene Semmelbrösel",
+            "edible_grams": 100
+          },
+          {
+            "fdc_id": 171413,
+            "fdc_description": "Oil, olive, salad or cooking",
+            "per_100g": {
+              "fat_g": 100,
+              "carbs_g": 0,
+              "calories": 884,
+              "sodium_mg": 2,
+              "protein_g": 0,
+              "saturated_fat_g": 13.8,
+              "fiber_g": 0,
+              "sugar_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171413/nutrients",
+            "ingredient": "Olivenöl",
+            "edible_grams": 30
+          },
+          {
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "fiber_g": 0,
+              "sodium_mg": 38800,
+              "saturated_fat_g": 0,
+              "protein_g": 0,
+              "fat_g": 0,
+              "carbs_g": 0,
+              "calories": 0,
+              "sugar_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients",
+            "ingredient": "feines Salz",
+            "edible_grams": 3
+          },
+          {
+            "fdc_id": 170931,
+            "fdc_description": "Spices, pepper, black",
+            "per_100g": {
+              "fat_g": 3.26,
+              "sugar_g": 0.64,
+              "carbs_g": 64,
+              "calories": 251,
+              "protein_g": 10.4,
+              "fiber_g": 25.3,
+              "sodium_mg": 20,
+              "saturated_fat_g": 1.39
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170931/nutrients",
+            "ingredient": "gemahlener schwarzer Pfeffer",
+            "edible_grams": 0.5
+          }
+        ]
+      },
+      "image_url": "/recetas/receta-de-cordon-bleu/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/receta-de-cordon-bleu/portada.webp",
+          "alt": "Ofen-Cordon-bleu aus Hähnchen, aufgeschnitten mit Schinken und geschmolzenem Käse"
+        }
+      ],
+      "seo": {
+        "title": "Hähnchen-Cordon-bleu aus dem Ofen | Manual de Cocina",
+        "description": "Cordon bleu für 4 mit Kochschinken, Käse und Ofenpanade. Füllung sicher einschließen und vor dem Servieren 74 °C im Kern prüfen.",
+        "image_alt": "Ofen-Cordon-bleu aus Hähnchen, aufgeschnitten mit Schinken und geschmolzenem Käse",
+        "image_variants": [
+          "/recetas/receta-de-cordon-bleu/portada-1x1.webp",
+          "/recetas/receta-de-cordon-bleu/portada-4x3.webp",
+          "/recetas/receta-de-cordon-bleu/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Wie verhindere ich auslaufenden Käse?",
+            "a": "Das Hähnchen ohne Risse klopfen, 2 cm Rand lassen, Seiten einschlagen und fest schließen. Mit der Naht nach unten auflegen. Offenliegender Käse läuft leichter aus; 15 Minuten Kühlen festigen die Panade."
+          },
+          {
+            "q": "Reicht eine goldene Panade als Garprobe?",
+            "a": "Nein. Jede Rolle an mehreren Stellen messen: im Fleisch und neben der Füllung mindestens 74 °C. Die Panade kann vor dem Kern bräunen."
+          },
+          {
+            "q": "Kann ich die Rollen vorbereiten?",
+            "a": "Vorgesehen sind nur 15 Minuten Kühlen vor dem Backen. Längere Lagerung und Einfrieren roher Rollen sind hier nicht geprüft. Gegarte Reste kühlen und innerhalb von 2 Tagen verbrauchen."
+          }
+        ]
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "content_html": "<p>Dünn geklopfte Hähnchenbrust wird um Kochschinken und Käse nach Emmentaler Art gerollt, paniert und mit einer abgewogenen Ölmenge im Ofen gebacken. Die historische Cordon-bleu-URL bleibt erhalten.</p><p>Vorgeschlagen sind 4 Rollen, eine pro Person: 30 Minuten Vorbereitung, 15 Kühlen, etwa 30 Garen und 5 Ruhen, insgesamt 80 Minuten. Fleischdicke, Rollendurchmesser und Ofen können die Garzeit verlängern. Mengen, Zeiten und Ausbeute sind Schätzungen und noch nicht in der Küche erprobt. Die Sicherheit mit einem Thermometer prüfen, nicht anhand der Farbe der Panade.</p>"
+    },
+    {
+      "id": "1a4bb757-e88f-55a2-941a-17188419b5ce",
+      "recipe_group_id": "675e919b-02fe-4900-95c4-d56849fa0cb7",
+      "language": "en",
+      "slug": "cordon-bleu-recipe",
+      "public_path": "/en/cordon-bleu-recipe",
+      "source_url": null,
+      "title": "Oven-baked chicken cordon bleu",
+      "excerpt": "Chicken cordon bleu for 4, filled with ham and cheese, breadcrumb-coated and oven-baked, with a temperature check at the centre.",
+      "summary": "Thin chicken breasts are rolled around cooked ham and Swiss-style cheese, then breadcrumb-coated and baked with a measured amount of oil. This version retains the historical cordon bleu URL.\n\nThe proposed yield is 4 rolls, one per person: 30 minutes preparation, 15 chilling, about 30 cooking and 5 resting, or 80 minutes overall. Thickness, roll diameter and the oven can increase cooking time. Quantities, timings and yield are estimates awaiting a kitchen trial. Check safety with a thermometer, rather than the crust colour.",
+      "category": "Main dishes",
+      "category_slug": "platos-principales",
+      "difficulty": "Medium",
+      "course": "Main course",
+      "cuisine": "European, home-style proposal",
+      "prep_time_minutes": 30,
+      "cook_time_minutes": 30,
+      "total_time_minutes": 80,
+      "servings": 4,
+      "keywords": [
+        "chicken cordon bleu",
+        "baked cordon bleu",
+        "ham and cheese chicken",
+        "oven-baked chicken"
+      ],
+      "ingredients": [
+        {
+          "name": "raw boneless skinless chicken breast",
+          "amount": "800",
+          "unit": "g, in 4 pieces of about 200 g",
+          "group": "Chicken and filling"
+        },
+        {
+          "name": "ready-to-eat sliced cooked ham",
+          "amount": "100",
+          "unit": "g",
+          "group": "Chicken and filling"
+        },
+        {
+          "name": "sliced Emmental or Swiss-style cheese",
+          "amount": "100",
+          "unit": "g",
+          "group": "Chicken and filling"
+        },
+        {
+          "name": "fine salt",
+          "amount": "3",
+          "unit": "g",
+          "group": "Seasoning"
+        },
+        {
+          "name": "ground black pepper",
+          "amount": "0.5",
+          "unit": "g",
+          "group": "Seasoning"
+        },
+        {
+          "name": "plain all-purpose wheat flour",
+          "amount": "60",
+          "unit": "g",
+          "group": "Breading"
+        },
+        {
+          "name": "raw whole egg without shell",
+          "amount": "100",
+          "unit": "g, about 2 large eggs",
+          "group": "Breading"
+        },
+        {
+          "name": "plain dry breadcrumbs",
+          "amount": "100",
+          "unit": "g",
+          "group": "Breading"
+        },
+        {
+          "name": "olive oil",
+          "amount": "30",
+          "unit": "g",
+          "group": "Oven finish"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Flatten the chicken and prepare the work area",
+          "content": "Do not wash raw chicken. Butterfly each of the 4 pieces of about 200 g, leaving the halves joined, and place between two sheets of baking paper. Flatten with a mallet or rolling pin to an even 4–5 mm without tearing. Divide the 3 g salt and 0.5 g pepper among the pieces. Keep the board and utensils separate from ready-to-eat food, and clean everything that touches raw chicken.",
+          "image_alt": "Raw butterflied chicken flattened between baking paper",
+          "image_url": "/recetas/receta-de-cordon-bleu/paso-01.webp"
+        },
+        {
+          "title": "Fill, roll and close",
+          "content": "Place 25 g ham and 25 g cheese on each piece, leaving about 2 cm clear at the edges. Fold in the sides and roll from the short end to enclose the filling. Secure with plain unpainted wooden toothpicks, counting them for removal later. Cover any tear by adjusting the chicken; leave no cheese exposed at the edges.",
+          "image_alt": "Chicken being rolled around ham and cheese",
+          "image_url": "/recetas/receta-de-cordon-bleu/paso-02.webp"
+        },
+        {
+          "title": "Bread all four rolls",
+          "content": "Set out three dishes containing 60 g flour, 100 g beaten egg and 100 g breadcrumbs. Coat each roll in flour, shake off excess, dip in egg, then press gently into breadcrumbs to cover the surface and seams. Do not pour egg into the breadcrumbs. Discard any leftover coating that has touched raw chicken; do not keep it.",
+          "image_alt": "Chicken breading with separate flour, egg and breadcrumb dishes",
+          "image_url": "/recetas/receta-de-cordon-bleu/paso-03.webp"
+        },
+        {
+          "title": "Chill and preheat",
+          "content": "Put the breaded rolls on a clean tray, cover and refrigerate for 15 minutes at 4 °C or below to set the coating. Meanwhile preheat a conventional oven, top and bottom heat without fan, to 200 °C. Line another tray with baking paper. Chilling is included in the 80 minutes overall; do not leave rolls waiting on the counter.",
+          "image_alt": "Four covered breaded chicken rolls chilling in a refrigerator",
+          "image_url": "/recetas/receta-de-cordon-bleu/paso-04.webp"
+        },
+        {
+          "title": "Brush with oil and bake",
+          "content": "Brush the four rolls with the 30 g oil using a clean brush. Arrange seam-side down at least 3 cm apart. Bake on the middle shelf for about 25–30 minutes, rotating the tray at 15 minutes if browning unevenly. Do not cut a roll to judge doneness; proceed to the temperature check. Loosely cover with foil if the crumbs darken before the centre is ready.",
+          "image_alt": "Breaded chicken rolls turning golden on an oven tray",
+          "image_url": "/recetas/receta-de-cordon-bleu/paso-05.webp"
+        },
+        {
+          "title": "Check the centre with a thermometer",
+          "content": "Insert the probe through the side into the centre, through the chicken and beside the filling, without touching the tray. Check every roll in more than one spot: both chicken and centre must reach at least 74 °C. If a roll is cooler, bake for another 3–5 minutes and check again with a clean probe. Melted cheese or a golden crust does not prove safety; cooking may exceed the estimate.",
+          "image_alt": "Thermometer probe checking the centre of a baked chicken roll",
+          "image_url": "/recetas/receta-de-cordon-bleu/paso-06.webp"
+        },
+        {
+          "title": "Rest, remove toothpicks and serve",
+          "content": "Rest for 5 minutes on a heatproof surface. Remove and count every toothpick before serving. If one is missing, identify the affected piece and do not serve it until found. Serve one roll per person; use a clean knife to reveal the filling if desired. Refrigerate leftovers in shallow containers at 4 °C or below within 2 hours, or 1 hour if the room exceeds 32 °C. The proposed limit is 2 days; reheat only once to 74 °C at the centre.",
+          "image_alt": "Baked chicken cordon bleu cut to show ham and cheese",
+          "image_url": "/recetas/receta-de-cordon-bleu/paso-07.webp"
+        }
+      ],
+      "notes": "Contains wheat, egg and dairy; ham and breadcrumbs may contain other allergens depending on the brand. Gluten-free, egg-free and dairy-free versions are not proposed here because they alter coating and filling. A melting semi-hard cheese can replace the cheese at the same weight, changing flavour, fat and sodium. Do not replace ready-to-eat ham with raw meat without reformulating. Use chicken without added brine to approximate the calculation. Count and remove toothpicks before serving. Do not wash chicken; separate raw preparation areas, dishes and brushes, and wash hands. The nutrition estimate includes all prepared flour, egg, breadcrumbs and oil even though some are discarded. Freezing the raw rolls is not recommended within this proposal. Cool cooked leftovers promptly, refrigerate and use within 2 days.",
+      "nutrition": {
+        "fat_g": 26.5,
+        "calories": 635,
+        "saturated_fat_g": 7.9,
+        "sodium_mg": 850,
+        "protein_g": 64,
+        "sugar_g": 1.9,
+        "carbs_g": 31,
+        "fiber_g": 1.9,
+        "estimated": true,
+        "serving_size": "1 of 4 proposed rolls",
+        "source": "USDA FoodData Central — SR Legacy, April 2018 JSON",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "method": "Nine USDA records verified by FDC ID in the official archive. Raw edible weights are summed and divided by 4. All prepared flour, egg, breadcrumbs, oil and salt are counted even when coating is discarded. Cooked ham uses Ham, sliced, regular as a proxy and cheese uses Cheese, swiss. No side dish is included.",
+        "note": "Conservative estimate, not an analysis of the finished dish. Ham and cheese brands, chicken brine, actual size and adhered coating change the result. Quantities, timings and yield await a kitchen trial.",
+        "inputs": [
+          {
+            "fdc_id": 171077,
+            "fdc_description": "Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw",
+            "per_100g": {
+              "fat_g": 2.62,
+              "calories": 120,
+              "saturated_fat_g": 0.563,
+              "sodium_mg": 45,
+              "protein_g": 22.5,
+              "sugar_g": 0,
+              "carbs_g": 0,
+              "fiber_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171077/nutrients",
+            "ingredient": "raw boneless skinless chicken breast",
+            "edible_grams": 800
+          },
+          {
+            "fdc_id": 173864,
+            "fdc_description": "Ham, sliced, regular (approximately 11% fat)",
+            "per_100g": {
+              "fiber_g": 1.3,
+              "saturated_fat_g": 0.5,
+              "sodium_mg": 814,
+              "fat_g": 8.8,
+              "carbs_g": 3.63,
+              "calories": 164,
+              "sugar_g": 1,
+              "protein_g": 16.6
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173864/nutrients",
+            "ingredient": "ready-to-eat sliced cooked ham",
+            "edible_grams": 100
+          },
+          {
+            "fdc_id": 171251,
+            "fdc_description": "Cheese, swiss",
+            "per_100g": {
+              "fat_g": 31,
+              "carbs_g": 1.44,
+              "calories": 393,
+              "sugar_g": 0,
+              "sodium_mg": 187,
+              "protein_g": 27,
+              "saturated_fat_g": 18.2,
+              "fiber_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171251/nutrients",
+            "ingredient": "sliced Emmental or Swiss-style cheese",
+            "edible_grams": 100
+          },
+          {
+            "fdc_id": 168936,
+            "fdc_description": "Wheat flour, white, all-purpose, enriched, unbleached",
+            "per_100g": {
+              "fiber_g": 2.7,
+              "fat_g": 0.98,
+              "carbs_g": 76.3,
+              "calories": 364,
+              "protein_g": 10.3,
+              "sodium_mg": 2,
+              "saturated_fat_g": 0.155,
+              "sugar_g": 0.27
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/168936/nutrients",
+            "ingredient": "plain all-purpose wheat flour",
+            "edible_grams": 60
+          },
+          {
+            "fdc_id": 171287,
+            "fdc_description": "Egg, whole, raw, fresh",
+            "per_100g": {
+              "calories": 143,
+              "saturated_fat_g": 3.13,
+              "protein_g": 12.6,
+              "sodium_mg": 142,
+              "sugar_g": 0.37,
+              "fat_g": 9.51,
+              "carbs_g": 0.72,
+              "fiber_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171287/nutrients",
+            "ingredient": "raw whole egg without shell",
+            "edible_grams": 100
+          },
+          {
+            "fdc_id": 174928,
+            "fdc_description": "Bread, crumbs, dry, grated, plain",
+            "per_100g": {
+              "fat_g": 5.3,
+              "protein_g": 13.4,
+              "fiber_g": 4.5,
+              "sodium_mg": 732,
+              "carbs_g": 72,
+              "calories": 395,
+              "sugar_g": 6.2,
+              "saturated_fat_g": 1.2
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/174928/nutrients",
+            "ingredient": "plain dry breadcrumbs",
+            "edible_grams": 100
+          },
+          {
+            "fdc_id": 171413,
+            "fdc_description": "Oil, olive, salad or cooking",
+            "per_100g": {
+              "fat_g": 100,
+              "carbs_g": 0,
+              "calories": 884,
+              "sodium_mg": 2,
+              "protein_g": 0,
+              "saturated_fat_g": 13.8,
+              "fiber_g": 0,
+              "sugar_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171413/nutrients",
+            "ingredient": "olive oil",
+            "edible_grams": 30
+          },
+          {
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "fiber_g": 0,
+              "sodium_mg": 38800,
+              "saturated_fat_g": 0,
+              "protein_g": 0,
+              "fat_g": 0,
+              "carbs_g": 0,
+              "calories": 0,
+              "sugar_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients",
+            "ingredient": "fine salt",
+            "edible_grams": 3
+          },
+          {
+            "fdc_id": 170931,
+            "fdc_description": "Spices, pepper, black",
+            "per_100g": {
+              "fat_g": 3.26,
+              "sugar_g": 0.64,
+              "carbs_g": 64,
+              "calories": 251,
+              "protein_g": 10.4,
+              "fiber_g": 25.3,
+              "sodium_mg": 20,
+              "saturated_fat_g": 1.39
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170931/nutrients",
+            "ingredient": "ground black pepper",
+            "edible_grams": 0.5
+          }
+        ]
+      },
+      "image_url": "/recetas/receta-de-cordon-bleu/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/receta-de-cordon-bleu/portada.webp",
+          "alt": "Oven-baked chicken cordon bleu cut to show ham and melted cheese"
+        }
+      ],
+      "seo": {
+        "title": "Oven-baked chicken cordon bleu: step by step | Manual de Cocina",
+        "description": "Chicken cordon bleu for 4 with ham, cheese and oven-baked breadcrumbs. Close the filling and check 74 °C at the centre before serving.",
+        "image_alt": "Oven-baked chicken cordon bleu cut to show ham and melted cheese",
+        "image_variants": [
+          "/recetas/receta-de-cordon-bleu/portada-1x1.webp",
+          "/recetas/receta-de-cordon-bleu/portada-4x3.webp",
+          "/recetas/receta-de-cordon-bleu/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "How can I stop the cheese leaking?",
+            "a": "Flatten without tearing, leave a 2 cm border, fold in the sides, close firmly and put the seam underneath. Cheese exposed at an edge leaks more easily; 15 minutes of chilling helps the coating set."
+          },
+          {
+            "q": "Does a golden crust mean the chicken is cooked?",
+            "a": "No. Check every roll at several points with a thermometer: chicken and the area beside the filling must reach at least 74 °C. The crumbs can brown before the centre is ready."
+          },
+          {
+            "q": "Can I prepare the rolls ahead?",
+            "a": "This proposal includes only 15 minutes of chilling before baking. Longer storage and freezing the raw rolls have not been validated here. Refrigerate cooked leftovers and use within 2 days."
+          }
+        ]
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "content_html": "<p>Thin chicken breasts are rolled around cooked ham and Swiss-style cheese, then breadcrumb-coated and baked with a measured amount of oil. This version retains the historical cordon bleu URL.</p><p>The proposed yield is 4 rolls, one per person: 30 minutes preparation, 15 chilling, about 30 cooking and 5 resting, or 80 minutes overall. Thickness, roll diameter and the oven can increase cooking time. Quantities, timings and yield are estimates awaiting a kitchen trial. Check safety with a thermometer, rather than the crust colour.</p>"
+    },
+    {
+      "id": "292b3cd1-9285-5378-b433-f067c6a7b9e3",
+      "recipe_group_id": "675e919b-02fe-4900-95c4-d56849fa0cb7",
+      "language": "fr",
+      "slug": "recette-cordon-bleu",
+      "public_path": "/fr/recette-cordon-bleu",
+      "source_url": null,
+      "title": "Cordon bleu de poulet au four",
+      "excerpt": "Cordon bleu de poulet pour 4, garni de jambon et de fromage, pané au four avec contrôle de la température à cœur.",
+      "summary": "Des blancs de poulet aplatis sont roulés autour de jambon cuit et de fromage de type emmental, puis panés et cuits au four avec une quantité mesurée d’huile. Cette version conserve l’URL historique du cordon bleu.\n\nLe rendement proposé est de 4 rouleaux, un par personne : 30 minutes de préparation, 15 au froid, environ 30 de cuisson et 5 de repos, soit 80 minutes au total. L’épaisseur, le diamètre et le four peuvent allonger la cuisson. Quantités, durées et rendement sont estimés, en attente d’un essai en cuisine. La sécurité se vérifie au thermomètre, pas à la couleur de la panure.",
+      "category": "Plats principaux",
+      "category_slug": "platos-principales",
+      "difficulty": "Moyenne",
+      "course": "Plat principal",
+      "cuisine": "Européenne, proposition maison",
+      "prep_time_minutes": 30,
+      "cook_time_minutes": 30,
+      "total_time_minutes": 80,
+      "servings": 4,
+      "keywords": [
+        "cordon bleu poulet",
+        "cordon bleu au four",
+        "poulet jambon fromage",
+        "cordon bleu maison"
+      ],
+      "ingredients": [
+        {
+          "name": "blanc de poulet cru sans peau ni os",
+          "amount": "800",
+          "unit": "g, 4 morceaux d’environ 200 g",
+          "group": "Poulet et garniture"
+        },
+        {
+          "name": "jambon cuit en tranches prêt à consommer",
+          "amount": "100",
+          "unit": "g",
+          "group": "Poulet et garniture"
+        },
+        {
+          "name": "emmental ou fromage suisse en tranches",
+          "amount": "100",
+          "unit": "g",
+          "group": "Poulet et garniture"
+        },
+        {
+          "name": "sel fin",
+          "amount": "3",
+          "unit": "g",
+          "group": "Assaisonnement"
+        },
+        {
+          "name": "poivre noir moulu",
+          "amount": "0.5",
+          "unit": "g",
+          "group": "Assaisonnement"
+        },
+        {
+          "name": "farine de blé courante",
+          "amount": "60",
+          "unit": "g",
+          "group": "Panure"
+        },
+        {
+          "name": "œuf entier cru sans coquille",
+          "amount": "100",
+          "unit": "g, environ 2 gros œufs",
+          "group": "Panure"
+        },
+        {
+          "name": "chapelure sèche nature",
+          "amount": "100",
+          "unit": "g",
+          "group": "Panure"
+        },
+        {
+          "name": "huile d’olive",
+          "amount": "30",
+          "unit": "g",
+          "group": "Finition au four"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Aplatir le poulet et préparer le plan de travail",
+          "content": "Ne lavez pas le poulet cru. Ouvrez chacun des 4 morceaux d’environ 200 g en portefeuille sans détacher les moitiés. Placez entre deux feuilles de papier cuisson et aplatissez au maillet ou au rouleau à environ 4–5 mm, sans déchirer. Répartissez les 3 g de sel et 0,5 g de poivre. Séparez planche et ustensiles des aliments prêts à consommer et nettoyez tout ce qui touche le poulet cru.",
+          "image_alt": "Blanc de poulet cru ouvert et aplati entre des feuilles de papier",
+          "image_url": "/recetas/receta-de-cordon-bleu/paso-01.webp"
+        },
+        {
+          "title": "Garnir, rouler et fermer",
+          "content": "Posez 25 g de jambon et 25 g de fromage sur chaque morceau en laissant environ 2 cm libres au bord. Repliez les côtés et roulez depuis le petit côté pour enfermer la garniture. Fixez avec des cure-dents en bois non peints et comptez-les pour les retirer ensuite. Recouvrez toute déchirure en ajustant le poulet ; ne laissez pas de fromage exposé au bord.",
+          "image_alt": "Poulet roulé autour de jambon et de fromage",
+          "image_url": "/recetas/receta-de-cordon-bleu/paso-02.webp"
+        },
+        {
+          "title": "Paner les quatre rouleaux",
+          "content": "Préparez trois assiettes avec 60 g de farine, 100 g d’œuf battu et 100 g de chapelure. Passez chaque rouleau dans la farine, secouez l’excédent, puis dans l’œuf et la chapelure. Pressez doucement pour couvrir toute la surface et les fermetures. Ne versez pas l’œuf dans la chapelure. Jetez les restes de panure ayant touché le poulet cru ; ne les conservez pas.",
+          "image_alt": "Panure avec assiettes séparées de farine, œuf et chapelure",
+          "image_url": "/recetas/receta-de-cordon-bleu/paso-03.webp"
+        },
+        {
+          "title": "Réfrigérer et préchauffer",
+          "content": "Placez les rouleaux panés sur une plaque propre, couvrez et réfrigérez 15 minutes à 4 °C ou moins pour fixer la panure. Préchauffez le four à 200 °C, chaleur traditionnelle haut et bas sans ventilation. Garnissez une autre plaque de papier cuisson. Ce passage au froid fait partie des 80 minutes ; ne laissez pas les rouleaux attendre sur le plan de travail.",
+          "image_alt": "Quatre rouleaux de poulet panés couverts au réfrigérateur",
+          "image_url": "/recetas/receta-de-cordon-bleu/paso-04.webp"
+        },
+        {
+          "title": "Huiler et enfourner",
+          "content": "Répartissez les 30 g d’huile sur les quatre pièces avec un pinceau propre. Placez la fermeture dessous et espacez d’au moins 3 cm. Faites cuire à mi-hauteur environ 25–30 minutes. Tournez la plaque après 15 minutes si elle dore inégalement. Ne coupez pas une pièce pour juger la cuisson : passez au thermomètre. Si la panure fonce avant que le cœur soit prêt, couvrez lâchement d’aluminium.",
+          "image_alt": "Rouleaux panés dorant sur une plaque au four",
+          "image_url": "/recetas/receta-de-cordon-bleu/paso-05.webp"
+        },
+        {
+          "title": "Vérifier la température à cœur",
+          "content": "Introduisez la sonde par le côté, à travers le poulet jusqu’au centre près de la garniture, sans toucher la plaque. Mesurez chaque pièce à plusieurs endroits : poulet et cœur doivent atteindre au moins 74 °C. Sinon, poursuivez 3–5 minutes et mesurez de nouveau avec une sonde propre. Fromage fondu et croûte dorée ne prouvent pas une cuisson sûre ; la durée estimée peut être dépassée.",
+          "image_alt": "Sonde du thermomètre au centre d’un rouleau de poulet cuit",
+          "image_url": "/recetas/receta-de-cordon-bleu/paso-06.webp"
+        },
+        {
+          "title": "Laisser reposer, retirer les cure-dents et servir",
+          "content": "Laissez reposer 5 minutes sur une surface résistante à la chaleur. Retirez et comptez tous les cure-dents avant de servir. S’il en manque un, identifiez la pièce concernée et ne la servez pas avant de le retrouver. Servez une pièce par personne, découpée au couteau propre si souhaité. Réfrigérez les restes dans des contenants peu profonds à 4 °C ou moins sous 2 heures, ou 1 heure si la température ambiante dépasse 32 °C. Conservation proposée : 2 jours ; réchauffez une seule fois à 74 °C à cœur.",
+          "image_alt": "Cordon bleu de poulet cuit et coupé avec jambon et fromage",
+          "image_url": "/recetas/receta-de-cordon-bleu/paso-07.webp"
+        }
+      ],
+      "notes": "Contient blé, œuf et produits laitiers ; jambon et chapelure peuvent contenir d’autres allergènes selon la marque. Aucune variante sans gluten, œuf ou lait n’est proposée ici car elle modifie panure et garniture. Un fromage demi-dur fondant peut remplacer le fromage au même poids, mais goût, matières grasses et sodium changent. Ne remplacez pas le jambon prêt à consommer par de la viande crue sans nouvelle formulation. Choisissez du poulet sans saumure ajoutée pour approcher le calcul. Comptez et retirez les cure-dents avant de servir. Ne lavez pas le poulet ; séparez zone crue, assiettes et pinceaux, et lavez les mains. Le calcul compte toute la farine, l’œuf, la chapelure et l’huile préparés, même si une partie est jetée. La congélation des rouleaux crus n’est pas recommandée dans cette fiche. Refroidissez et réfrigérez rapidement les restes cuits et consommez sous 2 jours.",
+      "nutrition": {
+        "fat_g": 26.5,
+        "calories": 635,
+        "saturated_fat_g": 7.9,
+        "sodium_mg": 850,
+        "protein_g": 64,
+        "sugar_g": 1.9,
+        "carbs_g": 31,
+        "fiber_g": 1.9,
+        "estimated": true,
+        "serving_size": "1 des 4 rouleaux proposés",
+        "source": "USDA FoodData Central — SR Legacy, April 2018 JSON",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "method": "Neuf fiches USDA vérifiées par FDC ID dans l’archive officielle. Poids crus comestibles additionnés et divisés par 4. Farine, œuf, chapelure, huile et sel sont intégralement comptés, même si de la panure est jetée. Le jambon est approché par Ham, sliced, regular et le fromage par Cheese, swiss. Sans accompagnement.",
+        "note": "Estimation conservatrice, pas une analyse du plat fini. Marques de jambon et de fromage, saumure du poulet, taille réelle et panure adhérente modifient le résultat. Quantités, durées et rendement en attente d’un essai en cuisine.",
+        "inputs": [
+          {
+            "fdc_id": 171077,
+            "fdc_description": "Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw",
+            "per_100g": {
+              "fat_g": 2.62,
+              "calories": 120,
+              "saturated_fat_g": 0.563,
+              "sodium_mg": 45,
+              "protein_g": 22.5,
+              "sugar_g": 0,
+              "carbs_g": 0,
+              "fiber_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171077/nutrients",
+            "ingredient": "blanc de poulet cru sans peau ni os",
+            "edible_grams": 800
+          },
+          {
+            "fdc_id": 173864,
+            "fdc_description": "Ham, sliced, regular (approximately 11% fat)",
+            "per_100g": {
+              "fiber_g": 1.3,
+              "saturated_fat_g": 0.5,
+              "sodium_mg": 814,
+              "fat_g": 8.8,
+              "carbs_g": 3.63,
+              "calories": 164,
+              "sugar_g": 1,
+              "protein_g": 16.6
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173864/nutrients",
+            "ingredient": "jambon cuit en tranches prêt à consommer",
+            "edible_grams": 100
+          },
+          {
+            "fdc_id": 171251,
+            "fdc_description": "Cheese, swiss",
+            "per_100g": {
+              "fat_g": 31,
+              "carbs_g": 1.44,
+              "calories": 393,
+              "sugar_g": 0,
+              "sodium_mg": 187,
+              "protein_g": 27,
+              "saturated_fat_g": 18.2,
+              "fiber_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171251/nutrients",
+            "ingredient": "emmental ou fromage suisse en tranches",
+            "edible_grams": 100
+          },
+          {
+            "fdc_id": 168936,
+            "fdc_description": "Wheat flour, white, all-purpose, enriched, unbleached",
+            "per_100g": {
+              "fiber_g": 2.7,
+              "fat_g": 0.98,
+              "carbs_g": 76.3,
+              "calories": 364,
+              "protein_g": 10.3,
+              "sodium_mg": 2,
+              "saturated_fat_g": 0.155,
+              "sugar_g": 0.27
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/168936/nutrients",
+            "ingredient": "farine de blé courante",
+            "edible_grams": 60
+          },
+          {
+            "fdc_id": 171287,
+            "fdc_description": "Egg, whole, raw, fresh",
+            "per_100g": {
+              "calories": 143,
+              "saturated_fat_g": 3.13,
+              "protein_g": 12.6,
+              "sodium_mg": 142,
+              "sugar_g": 0.37,
+              "fat_g": 9.51,
+              "carbs_g": 0.72,
+              "fiber_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171287/nutrients",
+            "ingredient": "œuf entier cru sans coquille",
+            "edible_grams": 100
+          },
+          {
+            "fdc_id": 174928,
+            "fdc_description": "Bread, crumbs, dry, grated, plain",
+            "per_100g": {
+              "fat_g": 5.3,
+              "protein_g": 13.4,
+              "fiber_g": 4.5,
+              "sodium_mg": 732,
+              "carbs_g": 72,
+              "calories": 395,
+              "sugar_g": 6.2,
+              "saturated_fat_g": 1.2
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/174928/nutrients",
+            "ingredient": "chapelure sèche nature",
+            "edible_grams": 100
+          },
+          {
+            "fdc_id": 171413,
+            "fdc_description": "Oil, olive, salad or cooking",
+            "per_100g": {
+              "fat_g": 100,
+              "carbs_g": 0,
+              "calories": 884,
+              "sodium_mg": 2,
+              "protein_g": 0,
+              "saturated_fat_g": 13.8,
+              "fiber_g": 0,
+              "sugar_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171413/nutrients",
+            "ingredient": "huile d’olive",
+            "edible_grams": 30
+          },
+          {
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "fiber_g": 0,
+              "sodium_mg": 38800,
+              "saturated_fat_g": 0,
+              "protein_g": 0,
+              "fat_g": 0,
+              "carbs_g": 0,
+              "calories": 0,
+              "sugar_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients",
+            "ingredient": "sel fin",
+            "edible_grams": 3
+          },
+          {
+            "fdc_id": 170931,
+            "fdc_description": "Spices, pepper, black",
+            "per_100g": {
+              "fat_g": 3.26,
+              "sugar_g": 0.64,
+              "carbs_g": 64,
+              "calories": 251,
+              "protein_g": 10.4,
+              "fiber_g": 25.3,
+              "sodium_mg": 20,
+              "saturated_fat_g": 1.39
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170931/nutrients",
+            "ingredient": "poivre noir moulu",
+            "edible_grams": 0.5
+          }
+        ]
+      },
+      "image_url": "/recetas/receta-de-cordon-bleu/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/receta-de-cordon-bleu/portada.webp",
+          "alt": "Cordon bleu de poulet au four coupé pour montrer le jambon et le fromage fondu"
+        }
+      ],
+      "seo": {
+        "title": "Cordon bleu de poulet au four, étape par étape | Manual de Cocina",
+        "description": "Cordon bleu pour 4 avec jambon, fromage et panure au four. Fermez la garniture et vérifiez 74 °C à cœur avant de servir.",
+        "image_alt": "Cordon bleu de poulet au four coupé pour montrer le jambon et le fromage fondu",
+        "image_variants": [
+          "/recetas/receta-de-cordon-bleu/portada-1x1.webp",
+          "/recetas/receta-de-cordon-bleu/portada-4x3.webp",
+          "/recetas/receta-de-cordon-bleu/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Comment éviter une fuite de fromage ?",
+            "a": "Aplatissez sans déchirer, laissez 2 cm de bord, repliez les côtés, fermez bien et placez la fermeture dessous. Le fromage exposé fuit plus facilement ; 15 minutes au froid fixent la panure."
+          },
+          {
+            "q": "Une croûte dorée suffit-elle à prouver la cuisson ?",
+            "a": "Non. Mesurez chaque rouleau à plusieurs endroits et vérifiez au moins 74 °C dans le poulet et près de la garniture. La panure peut dorer avant le cœur."
+          },
+          {
+            "q": "Peut-on préparer les rouleaux à l’avance ?",
+            "a": "La fiche prévoit seulement 15 minutes au froid avant le four. Un stockage prolongé ou la congélation à cru n’ont pas été validés ici. Réfrigérez les restes cuits et consommez sous 2 jours."
+          }
+        ]
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "content_html": "<p>Des blancs de poulet aplatis sont roulés autour de jambon cuit et de fromage de type emmental, puis panés et cuits au four avec une quantité mesurée d’huile. Cette version conserve l’URL historique du cordon bleu.</p><p>Le rendement proposé est de 4 rouleaux, un par personne : 30 minutes de préparation, 15 au froid, environ 30 de cuisson et 5 de repos, soit 80 minutes au total. L’épaisseur, le diamètre et le four peuvent allonger la cuisson. Quantités, durées et rendement sont estimés, en attente d’un essai en cuisine. La sécurité se vérifie au thermomètre, pas à la couleur de la panure.</p>"
+    },
+    {
+      "id": "8914841f-9d16-5c4b-a28c-6d4358e399ef",
+      "recipe_group_id": "675e919b-02fe-4900-95c4-d56849fa0cb7",
+      "language": "it",
+      "slug": "cordon-bleu-ricetta",
+      "public_path": "/it/cordon-bleu-ricetta",
+      "source_url": null,
+      "title": "Cordon bleu di pollo al forno",
+      "excerpt": "Cordon bleu di pollo per 4, ripieno di prosciutto cotto e formaggio, impanato al forno con controllo della temperatura al cuore.",
+      "summary": "Il petto di pollo viene appiattito, arrotolato intorno a prosciutto cotto e formaggio tipo Emmental, impanato e cotto al forno con una quantità pesata di olio. Si conserva l’URL storica del cordon bleu.\n\nSi propongono 4 involtini, uno a persona: 30 minuti di preparazione, 15 in frigorifero, circa 30 di cottura e 5 di riposo, per 80 minuti totali. Spessore, diametro e forno possono allungare la cottura. Dosi, tempi e resa sono stime in attesa di prova in cucina. La sicurezza si controlla con il termometro, non dal colore della panatura.",
+      "category": "Secondi piatti",
+      "category_slug": "platos-principales",
+      "difficulty": "Media",
+      "course": "Secondo piatto",
+      "cuisine": "Europea, proposta casalinga",
+      "prep_time_minutes": 30,
+      "cook_time_minutes": 30,
+      "total_time_minutes": 80,
+      "servings": 4,
+      "keywords": [
+        "cordon bleu pollo",
+        "cordon bleu al forno",
+        "pollo prosciutto formaggio",
+        "cordon bleu casalingo"
+      ],
+      "ingredients": [
+        {
+          "name": "petto di pollo crudo senza pelle né ossa",
+          "amount": "800",
+          "unit": "g, in 4 pezzi da circa 200 g",
+          "group": "Pollo e ripieno"
+        },
+        {
+          "name": "prosciutto cotto a fette pronto al consumo",
+          "amount": "100",
+          "unit": "g",
+          "group": "Pollo e ripieno"
+        },
+        {
+          "name": "Emmental o formaggio svizzero a fette",
+          "amount": "100",
+          "unit": "g",
+          "group": "Pollo e ripieno"
+        },
+        {
+          "name": "sale fino",
+          "amount": "3",
+          "unit": "g",
+          "group": "Condimento"
+        },
+        {
+          "name": "pepe nero macinato",
+          "amount": "0.5",
+          "unit": "g",
+          "group": "Condimento"
+        },
+        {
+          "name": "farina di frumento comune",
+          "amount": "60",
+          "unit": "g",
+          "group": "Panatura"
+        },
+        {
+          "name": "uovo intero crudo senza guscio",
+          "amount": "100",
+          "unit": "g, circa 2 uova grandi",
+          "group": "Panatura"
+        },
+        {
+          "name": "pangrattato secco non condito",
+          "amount": "100",
+          "unit": "g",
+          "group": "Panatura"
+        },
+        {
+          "name": "olio d’oliva",
+          "amount": "30",
+          "unit": "g",
+          "group": "Finitura al forno"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Appiattire il pollo e preparare la zona",
+          "content": "Non lavare il pollo crudo. Aprire a libro ciascuno dei 4 pezzi da circa 200 g senza separare le metà, mettere fra due fogli di carta forno e appiattire con batticarne o matterello a circa 4–5 mm uniformi, senza strappi. Distribuire i 3 g di sale e 0,5 g di pepe. Tenere tagliere e utensili separati dai cibi pronti al consumo e pulire tutto ciò che tocca il pollo crudo.",
+          "image_alt": "Petto di pollo crudo aperto e appiattito fra carta forno",
+          "image_url": "/recetas/receta-de-cordon-bleu/paso-01.webp"
+        },
+        {
+          "title": "Farcire, arrotolare e chiudere",
+          "content": "Mettere 25 g di prosciutto e 25 g di formaggio su ogni pezzo, lasciando circa 2 cm liberi ai bordi. Ripiegare i lati e arrotolare dal lato corto per racchiudere il ripieno. Fissare con stuzzicadenti di legno non verniciato, contando quelli usati per rimuoverli dopo. Coprire eventuali strappi sistemando la carne; non lasciare formaggio esposto ai bordi.",
+          "image_alt": "Pollo arrotolato con prosciutto cotto e formaggio",
+          "image_url": "/recetas/receta-de-cordon-bleu/paso-02.webp"
+        },
+        {
+          "title": "Impanare i quattro involtini",
+          "content": "Preparare tre piatti con 60 g di farina, 100 g di uovo sbattuto e 100 g di pangrattato. Passare ogni involtino nella farina, scuotere l’eccesso, poi nell’uovo e nel pangrattato, premendo delicatamente su tutta la superficie e sulle chiusure. Non versare l’uovo nel pangrattato. Eliminare ogni avanzo di panatura che abbia toccato pollo crudo; non conservarlo.",
+          "image_alt": "Panatura con piatti separati di farina, uovo e pangrattato",
+          "image_url": "/recetas/receta-de-cordon-bleu/paso-03.webp"
+        },
+        {
+          "title": "Refrigerare e preriscaldare",
+          "content": "Mettere su una teglia pulita, coprire e refrigerare 15 minuti a 4 °C o meno per fissare la panatura. Intanto preriscaldare il forno a 200 °C, statico con calore sopra e sotto, senza ventilazione. Rivestire un’altra teglia con carta forno. Il passaggio al freddo è incluso negli 80 minuti; non lasciare gli involtini sul piano di lavoro.",
+          "image_alt": "Quattro involtini impanati coperti in frigorifero",
+          "image_url": "/recetas/receta-de-cordon-bleu/paso-04.webp"
+        },
+        {
+          "title": "Spennellare e cuocere",
+          "content": "Distribuire i 30 g di olio sui quattro pezzi con un pennello pulito. Posare con la chiusura sotto, distanti almeno 3 cm, e cuocere al ripiano centrale per circa 25–30 minuti. Dopo 15 minuti ruotare la teglia se la doratura è irregolare. Non tagliare per decidere la cottura: controllare la temperatura. Se la panatura scurisce prima che il centro sia pronto, coprire morbidamente con alluminio.",
+          "image_alt": "Involtini di pollo impanati che dorano in forno",
+          "image_url": "/recetas/receta-de-cordon-bleu/paso-05.webp"
+        },
+        {
+          "title": "Misurare al cuore",
+          "content": "Inserire la sonda dal fianco fino al centro, attraversando il pollo e arrivando vicino al ripieno, senza toccare la teglia. Controllare ogni pezzo in più punti: pollo e centro devono raggiungere almeno 74 °C. Se la temperatura è inferiore, cuocere altri 3–5 minuti e rimisurare con sonda pulita. Formaggio fuso e crosta dorata non garantiscono sicurezza; si può superare il tempo stimato.",
+          "image_alt": "Sonda del termometro al cuore di un involtino cotto",
+          "image_url": "/recetas/receta-de-cordon-bleu/paso-06.webp"
+        },
+        {
+          "title": "Riposare, rimuovere gli stuzzicadenti e servire",
+          "content": "Lasciare riposare 5 minuti su una superficie resistente al calore. Togliere e contare tutti gli stuzzicadenti prima di servire. Se ne manca uno, segnalare il pezzo interessato e non servirlo finché non è stato trovato. Servire un pezzo a persona e tagliare con coltello pulito, se desiderato. Refrigerare gli avanzi in contenitori bassi a 4 °C o meno entro 2 ore, oppure 1 ora se l’ambiente supera 32 °C. Si propone di consumare entro 2 giorni e riscaldare una sola volta a 74 °C al centro.",
+          "image_alt": "Cordon bleu cotto e tagliato con prosciutto e formaggio",
+          "image_url": "/recetas/receta-de-cordon-bleu/paso-07.webp"
+        }
+      ],
+      "notes": "Contiene frumento, uovo e latticini; prosciutto e pangrattato possono contenere altri allergeni secondo la marca. Non si propongono versioni senza glutine, uovo o latte, perché cambiano panatura e ripieno. Un formaggio semiduro fondente può sostituire il formaggio allo stesso peso, cambiando sapore, grassi e sodio. Non sostituire il prosciutto pronto al consumo con carne cruda senza una nuova formulazione. Usare pollo senza salamoia aggiunta per avvicinarsi al calcolo. Contare e rimuovere gli stuzzicadenti. Non lavare il pollo; separare zona cruda, piatti e pennelli e lavare le mani. La stima conta tutta la farina, l’uovo, il pangrattato e l’olio preparati anche se parte viene eliminata. Non si raccomanda di congelare gli involtini crudi in questa scheda. Raffreddare e refrigerare rapidamente gli avanzi cotti e consumare entro 2 giorni.",
+      "nutrition": {
+        "fat_g": 26.5,
+        "calories": 635,
+        "saturated_fat_g": 7.9,
+        "sodium_mg": 850,
+        "protein_g": 64,
+        "sugar_g": 1.9,
+        "carbs_g": 31,
+        "fiber_g": 1.9,
+        "estimated": true,
+        "serving_size": "1 dei 4 involtini proposti",
+        "source": "USDA FoodData Central — SR Legacy, April 2018 JSON",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "method": "Nove schede USDA verificate tramite FDC ID nell’archivio ufficiale. Pesi crudi edibili sommati e divisi per 4; tutta la farina, uovo, pangrattato, olio e sale vengono conteggiati anche con scarti. Prosciutto approssimato con Ham, sliced, regular e formaggio con Cheese, swiss. Nessun contorno incluso.",
+        "note": "Stima conservativa, non analisi del piatto finito. Marca di prosciutto e formaggio, salamoia del pollo, dimensioni reali e panatura aderente cambiano il risultato. Dosi, tempi e resa in attesa di prova in cucina.",
+        "inputs": [
+          {
+            "fdc_id": 171077,
+            "fdc_description": "Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw",
+            "per_100g": {
+              "fat_g": 2.62,
+              "calories": 120,
+              "saturated_fat_g": 0.563,
+              "sodium_mg": 45,
+              "protein_g": 22.5,
+              "sugar_g": 0,
+              "carbs_g": 0,
+              "fiber_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171077/nutrients",
+            "ingredient": "petto di pollo crudo senza pelle né ossa",
+            "edible_grams": 800
+          },
+          {
+            "fdc_id": 173864,
+            "fdc_description": "Ham, sliced, regular (approximately 11% fat)",
+            "per_100g": {
+              "fiber_g": 1.3,
+              "saturated_fat_g": 0.5,
+              "sodium_mg": 814,
+              "fat_g": 8.8,
+              "carbs_g": 3.63,
+              "calories": 164,
+              "sugar_g": 1,
+              "protein_g": 16.6
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173864/nutrients",
+            "ingredient": "prosciutto cotto a fette pronto al consumo",
+            "edible_grams": 100
+          },
+          {
+            "fdc_id": 171251,
+            "fdc_description": "Cheese, swiss",
+            "per_100g": {
+              "fat_g": 31,
+              "carbs_g": 1.44,
+              "calories": 393,
+              "sugar_g": 0,
+              "sodium_mg": 187,
+              "protein_g": 27,
+              "saturated_fat_g": 18.2,
+              "fiber_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171251/nutrients",
+            "ingredient": "Emmental o formaggio svizzero a fette",
+            "edible_grams": 100
+          },
+          {
+            "fdc_id": 168936,
+            "fdc_description": "Wheat flour, white, all-purpose, enriched, unbleached",
+            "per_100g": {
+              "fiber_g": 2.7,
+              "fat_g": 0.98,
+              "carbs_g": 76.3,
+              "calories": 364,
+              "protein_g": 10.3,
+              "sodium_mg": 2,
+              "saturated_fat_g": 0.155,
+              "sugar_g": 0.27
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/168936/nutrients",
+            "ingredient": "farina di frumento comune",
+            "edible_grams": 60
+          },
+          {
+            "fdc_id": 171287,
+            "fdc_description": "Egg, whole, raw, fresh",
+            "per_100g": {
+              "calories": 143,
+              "saturated_fat_g": 3.13,
+              "protein_g": 12.6,
+              "sodium_mg": 142,
+              "sugar_g": 0.37,
+              "fat_g": 9.51,
+              "carbs_g": 0.72,
+              "fiber_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171287/nutrients",
+            "ingredient": "uovo intero crudo senza guscio",
+            "edible_grams": 100
+          },
+          {
+            "fdc_id": 174928,
+            "fdc_description": "Bread, crumbs, dry, grated, plain",
+            "per_100g": {
+              "fat_g": 5.3,
+              "protein_g": 13.4,
+              "fiber_g": 4.5,
+              "sodium_mg": 732,
+              "carbs_g": 72,
+              "calories": 395,
+              "sugar_g": 6.2,
+              "saturated_fat_g": 1.2
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/174928/nutrients",
+            "ingredient": "pangrattato secco non condito",
+            "edible_grams": 100
+          },
+          {
+            "fdc_id": 171413,
+            "fdc_description": "Oil, olive, salad or cooking",
+            "per_100g": {
+              "fat_g": 100,
+              "carbs_g": 0,
+              "calories": 884,
+              "sodium_mg": 2,
+              "protein_g": 0,
+              "saturated_fat_g": 13.8,
+              "fiber_g": 0,
+              "sugar_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171413/nutrients",
+            "ingredient": "olio d’oliva",
+            "edible_grams": 30
+          },
+          {
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "fiber_g": 0,
+              "sodium_mg": 38800,
+              "saturated_fat_g": 0,
+              "protein_g": 0,
+              "fat_g": 0,
+              "carbs_g": 0,
+              "calories": 0,
+              "sugar_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients",
+            "ingredient": "sale fino",
+            "edible_grams": 3
+          },
+          {
+            "fdc_id": 170931,
+            "fdc_description": "Spices, pepper, black",
+            "per_100g": {
+              "fat_g": 3.26,
+              "sugar_g": 0.64,
+              "carbs_g": 64,
+              "calories": 251,
+              "protein_g": 10.4,
+              "fiber_g": 25.3,
+              "sodium_mg": 20,
+              "saturated_fat_g": 1.39
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170931/nutrients",
+            "ingredient": "pepe nero macinato",
+            "edible_grams": 0.5
+          }
+        ]
+      },
+      "image_url": "/recetas/receta-de-cordon-bleu/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/receta-de-cordon-bleu/portada.webp",
+          "alt": "Cordon bleu di pollo al forno tagliato con prosciutto e formaggio fuso"
+        }
+      ],
+      "seo": {
+        "title": "Cordon bleu di pollo al forno: tutti i passaggi | Manual de Cocina",
+        "description": "Cordon bleu per 4 con prosciutto, formaggio e panatura al forno. Chiudi il ripieno e verifica 74 °C al cuore prima di servire.",
+        "image_alt": "Cordon bleu di pollo al forno tagliato con prosciutto e formaggio fuso",
+        "image_variants": [
+          "/recetas/receta-de-cordon-bleu/portada-1x1.webp",
+          "/recetas/receta-de-cordon-bleu/portada-4x3.webp",
+          "/recetas/receta-de-cordon-bleu/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Come evitare che il formaggio esca?",
+            "a": "Appiattire senza strappi, lasciare 2 cm di bordo, ripiegare i lati e chiudere bene con la giunzione sotto. Il formaggio esposto fuoriesce più facilmente; 15 minuti al freddo fissano la panatura."
+          },
+          {
+            "q": "La doratura basta a capire se è cotto?",
+            "a": "No. Misurare ogni involtino in vari punti: almeno 74 °C nel pollo e accanto al ripieno. La panatura può dorare prima del centro."
+          },
+          {
+            "q": "Si possono preparare in anticipo?",
+            "a": "La scheda include solo 15 minuti in frigorifero prima del forno. Non sono stati validati riposo prolungato o congelamento a crudo. Refrigerare gli avanzi cotti e consumare entro 2 giorni."
+          }
+        ]
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "content_html": "<p>Il petto di pollo viene appiattito, arrotolato intorno a prosciutto cotto e formaggio tipo Emmental, impanato e cotto al forno con una quantità pesata di olio. Si conserva l’URL storica del cordon bleu.</p><p>Si propongono 4 involtini, uno a persona: 30 minuti di preparazione, 15 in frigorifero, circa 30 di cottura e 5 di riposo, per 80 minuti totali. Spessore, diametro e forno possono allungare la cottura. Dosi, tempi e resa sono stime in attesa di prova in cucina. La sicurezza si controlla con il termometro, non dal colore della panatura.</p>"
+    },
+    {
+      "id": "3ce1e3c6-0409-5356-ba77-1c97a929a42f",
+      "recipe_group_id": "675e919b-02fe-4900-95c4-d56849fa0cb7",
+      "language": "ja",
+      "slug": "コルドンブルーのレシピ",
+      "public_path": "/ja/コルドンブルーのレシピ",
+      "source_url": null,
+      "title": "鶏肉のコルドンブルー、オーブン焼き",
+      "excerpt": "4人分の鶏肉のコルドンブルー。加熱済みハムとチーズを包み、パン粉を付けてオーブンで焼き、中心温度を確認します。",
+      "summary": "薄くのばした鶏むね肉で加熱済みハムとエメンタール系チーズを巻き、パン粉を付けます。計量した油を塗ってオーブンで焼く案で、歴史的なコルドンブルーのURLを維持します。\n\n提案する出来上がりは4本で、1人1本です。準備30分、冷蔵15分、加熱約30分、休ませる時間5分、合計80分。肉の厚さ、巻いた直径、オーブンによって加熱が長くなります。分量、時間、出来上がり量は推定で、実際の調理試験は未実施です。衣の色ではなく温度計で安全を確認してください。",
+      "category": "主菜",
+      "category_slug": "platos-principales",
+      "difficulty": "中級",
+      "course": "主菜",
+      "cuisine": "ヨーロッパ風の家庭料理案",
+      "prep_time_minutes": 30,
+      "cook_time_minutes": 30,
+      "total_time_minutes": 80,
+      "servings": 4,
+      "keywords": [
+        "鶏肉のコルドンブルー",
+        "コルドンブルー オーブン",
+        "ハム チーズ 鶏肉",
+        "コルドンブルー 作り方"
+      ],
+      "ingredients": [
+        {
+          "name": "皮と骨のない生の鶏むね肉",
+          "amount": "800",
+          "unit": "g、約200 gのもの4枚",
+          "group": "鶏肉と詰め物"
+        },
+        {
+          "name": "そのまま食べられる加熱済みハムの薄切り",
+          "amount": "100",
+          "unit": "g",
+          "group": "鶏肉と詰め物"
+        },
+        {
+          "name": "エメンタールまたはスイス系チーズの薄切り",
+          "amount": "100",
+          "unit": "g",
+          "group": "鶏肉と詰め物"
+        },
+        {
+          "name": "細粒の塩",
+          "amount": "3",
+          "unit": "g",
+          "group": "味付け"
+        },
+        {
+          "name": "粗びきではない黒こしょう",
+          "amount": "0.5",
+          "unit": "g",
+          "group": "味付け"
+        },
+        {
+          "name": "一般的な小麦粉",
+          "amount": "60",
+          "unit": "g",
+          "group": "衣"
+        },
+        {
+          "name": "殻を除いた生の全卵",
+          "amount": "100",
+          "unit": "g、大きい卵約2個",
+          "group": "衣"
+        },
+        {
+          "name": "味付けのない乾燥パン粉",
+          "amount": "100",
+          "unit": "g",
+          "group": "衣"
+        },
+        {
+          "name": "オリーブ油",
+          "amount": "30",
+          "unit": "g",
+          "group": "オーブン焼き用"
+        }
+      ],
+      "steps": [
+        {
+          "title": "鶏肉をのばして作業場所を整える",
+          "content": "生の鶏肉は洗いません。約200 gの肉4枚をそれぞれ、両側を切り離さずに観音開きにします。オーブン用紙2枚ではさみ、肉たたきや麺棒で破らずに厚さ約4–5 mmに均一にのばします。塩3 gとこしょう0.5 gを分配します。そのまま食べる食品とはまな板や道具を分け、生の鶏肉に触れたものをすべて洗浄します。",
+          "image_alt": "オーブン用紙にはさんで開き、薄くのばした生の鶏むね肉",
+          "image_url": "/recetas/receta-de-cordon-bleu/paso-01.webp"
+        },
+        {
+          "title": "詰め物を包んで閉じる",
+          "content": "各肉にハム25 gとチーズ25 gをのせ、縁を約2 cm空けます。左右を内側に折り、短辺から巻いて詰め物を包みます。無塗装の木製つまようじで留め、後で抜けるよう使用本数を数えます。裂け目は肉を調整して覆い、縁にチーズが露出しないようにします。",
+          "image_alt": "ハムとチーズを鶏肉で巻いているところ",
+          "image_url": "/recetas/receta-de-cordon-bleu/paso-02.webp"
+        },
+        {
+          "title": "4本に衣を付ける",
+          "content": "小麦粉60 g、溶き卵100 g、パン粉100 gを別々の皿に用意します。肉を小麦粉にまぶして余分を落とし、卵、パン粉の順に付けます。軽く押し、表面と閉じ目を覆います。卵をパン粉へ注がないでください。生の鶏肉に触れた衣の残りは保存せず捨てます。",
+          "image_alt": "小麦粉、卵、パン粉を別皿にした衣付け",
+          "image_url": "/recetas/receta-de-cordon-bleu/paso-03.webp"
+        },
+        {
+          "title": "冷蔵して予熱する",
+          "content": "衣を付けた肉を清潔なトレーに置いて覆い、4 °C以下で15分冷蔵して衣を落ち着かせます。その間にファンを使わない上下加熱のオーブンを200 °Cに予熱し、別の天板にオーブン用紙を敷きます。冷蔵時間も合計80分に含まれます。肉を調理台で待たせないでください。",
+          "image_alt": "覆って冷蔵庫に入れた衣付きの鶏肉4本",
+          "image_url": "/recetas/receta-de-cordon-bleu/paso-04.webp"
+        },
+        {
+          "title": "油を塗って焼く",
+          "content": "清潔な刷毛で油30 gを4本に分けて塗ります。閉じ目を下にし、少なくとも3 cm空け、オーブン中段で約25–30分焼きます。15分で焼きむらがあれば天板の向きを変えます。切って焼けたか判断せず、次の温度確認へ進みます。中心が焼ける前に衣が濃く色付いたら、アルミホイルをふんわりかぶせます。",
+          "image_alt": "オーブンの天板できつね色に焼ける鶏肉",
+          "image_url": "/recetas/receta-de-cordon-bleu/paso-05.webp"
+        },
+        {
+          "title": "温度計で中心を確認する",
+          "content": "側面から肉を通して中心の詰め物付近にプローブを差し、天板に触れないようにします。各肉を複数の位置で測り、鶏肉も中心も少なくとも74 °Cに達していることを確認します。低ければさらに3–5分焼き、清潔なプローブで再測定します。溶けたチーズやきつね色の衣は安全の証拠ではなく、推定時間を超える場合があります。",
+          "image_alt": "焼いた鶏肉の中心に温度計のプローブを差す",
+          "image_url": "/recetas/receta-de-cordon-bleu/paso-06.webp"
+        },
+        {
+          "title": "休ませてつまようじを抜き、盛り付ける",
+          "content": "耐熱面で5分休ませます。提供前につまようじをすべて抜き、数を照合します。不足した場合は該当する肉を特定し、見つかるまで提供しません。1人1本を盛り、断面を見せる場合は清潔な包丁で切ります。残りは浅い容器に入れ、2時間以内、室温が32 °Cを超える場合は1時間以内に4 °C以下で冷蔵します。保存は2日以内を提案し、再加熱は1回だけ、中心を74 °Cにします。",
+          "image_alt": "切った鶏肉のコルドンブルーのハムとチーズ",
+          "image_url": "/recetas/receta-de-cordon-bleu/paso-07.webp"
+        }
+      ],
+      "notes": "小麦、卵、乳製品を含みます。ハムとパン粉は製品によりほかのアレルゲンを含むため表示を確認してください。衣や詰め物が変わるため、グルテン、卵、乳不使用版はここでは提案しません。溶けるセミハードチーズを同じ重さで代用できますが、風味、脂質、ナトリウムは変わります。そのまま食べられるハムを、新たな配合なしに生肉へ替えないでください。計算に近づけるには塩水を加えていない鶏肉を使います。つまようじを数え、提供前に抜きます。鶏肉は洗わず、生肉用の場所、皿、刷毛を分け、手を洗います。栄養推定は廃棄分も含め用意した小麦粉、卵、パン粉、油の全量を計上しています。この案では生の巻いた肉の冷凍は推奨しません。加熱後の残りを速やかに冷やして冷蔵し、2日以内に食べます。",
+      "nutrition": {
+        "fat_g": 26.5,
+        "calories": 635,
+        "saturated_fat_g": 7.9,
+        "sodium_mg": 850,
+        "protein_g": 64,
+        "sugar_g": 1.9,
+        "carbs_g": 31,
+        "fiber_g": 1.9,
+        "estimated": true,
+        "serving_size": "提案する4本のうち1本",
+        "source": "USDA FoodData Central — SR Legacy, April 2018 JSON",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "method": "公式アーカイブでFDC IDからUSDAの9項目を確認。生の可食重量の合計を4で割り、廃棄する衣も含め小麦粉、卵、パン粉、油、塩の全量を計上。ハムはHam, sliced, regular、チーズはCheese, swissで近似。付け合わせは含まない。",
+        "note": "完成品の分析ではなく、保守的な推定。ハム・チーズの製品、鶏肉の塩水、実際の大きさ、付着する衣により値は変わる。分量、時間、出来上がり量は調理試験待ち。",
+        "inputs": [
+          {
+            "fdc_id": 171077,
+            "fdc_description": "Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw",
+            "per_100g": {
+              "fat_g": 2.62,
+              "calories": 120,
+              "saturated_fat_g": 0.563,
+              "sodium_mg": 45,
+              "protein_g": 22.5,
+              "sugar_g": 0,
+              "carbs_g": 0,
+              "fiber_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171077/nutrients",
+            "ingredient": "皮と骨のない生の鶏むね肉",
+            "edible_grams": 800
+          },
+          {
+            "fdc_id": 173864,
+            "fdc_description": "Ham, sliced, regular (approximately 11% fat)",
+            "per_100g": {
+              "fiber_g": 1.3,
+              "saturated_fat_g": 0.5,
+              "sodium_mg": 814,
+              "fat_g": 8.8,
+              "carbs_g": 3.63,
+              "calories": 164,
+              "sugar_g": 1,
+              "protein_g": 16.6
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173864/nutrients",
+            "ingredient": "そのまま食べられる加熱済みハムの薄切り",
+            "edible_grams": 100
+          },
+          {
+            "fdc_id": 171251,
+            "fdc_description": "Cheese, swiss",
+            "per_100g": {
+              "fat_g": 31,
+              "carbs_g": 1.44,
+              "calories": 393,
+              "sugar_g": 0,
+              "sodium_mg": 187,
+              "protein_g": 27,
+              "saturated_fat_g": 18.2,
+              "fiber_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171251/nutrients",
+            "ingredient": "エメンタールまたはスイス系チーズの薄切り",
+            "edible_grams": 100
+          },
+          {
+            "fdc_id": 168936,
+            "fdc_description": "Wheat flour, white, all-purpose, enriched, unbleached",
+            "per_100g": {
+              "fiber_g": 2.7,
+              "fat_g": 0.98,
+              "carbs_g": 76.3,
+              "calories": 364,
+              "protein_g": 10.3,
+              "sodium_mg": 2,
+              "saturated_fat_g": 0.155,
+              "sugar_g": 0.27
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/168936/nutrients",
+            "ingredient": "一般的な小麦粉",
+            "edible_grams": 60
+          },
+          {
+            "fdc_id": 171287,
+            "fdc_description": "Egg, whole, raw, fresh",
+            "per_100g": {
+              "calories": 143,
+              "saturated_fat_g": 3.13,
+              "protein_g": 12.6,
+              "sodium_mg": 142,
+              "sugar_g": 0.37,
+              "fat_g": 9.51,
+              "carbs_g": 0.72,
+              "fiber_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171287/nutrients",
+            "ingredient": "殻を除いた生の全卵",
+            "edible_grams": 100
+          },
+          {
+            "fdc_id": 174928,
+            "fdc_description": "Bread, crumbs, dry, grated, plain",
+            "per_100g": {
+              "fat_g": 5.3,
+              "protein_g": 13.4,
+              "fiber_g": 4.5,
+              "sodium_mg": 732,
+              "carbs_g": 72,
+              "calories": 395,
+              "sugar_g": 6.2,
+              "saturated_fat_g": 1.2
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/174928/nutrients",
+            "ingredient": "味付けのない乾燥パン粉",
+            "edible_grams": 100
+          },
+          {
+            "fdc_id": 171413,
+            "fdc_description": "Oil, olive, salad or cooking",
+            "per_100g": {
+              "fat_g": 100,
+              "carbs_g": 0,
+              "calories": 884,
+              "sodium_mg": 2,
+              "protein_g": 0,
+              "saturated_fat_g": 13.8,
+              "fiber_g": 0,
+              "sugar_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171413/nutrients",
+            "ingredient": "オリーブ油",
+            "edible_grams": 30
+          },
+          {
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "fiber_g": 0,
+              "sodium_mg": 38800,
+              "saturated_fat_g": 0,
+              "protein_g": 0,
+              "fat_g": 0,
+              "carbs_g": 0,
+              "calories": 0,
+              "sugar_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients",
+            "ingredient": "細粒の塩",
+            "edible_grams": 3
+          },
+          {
+            "fdc_id": 170931,
+            "fdc_description": "Spices, pepper, black",
+            "per_100g": {
+              "fat_g": 3.26,
+              "sugar_g": 0.64,
+              "carbs_g": 64,
+              "calories": 251,
+              "protein_g": 10.4,
+              "fiber_g": 25.3,
+              "sodium_mg": 20,
+              "saturated_fat_g": 1.39
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170931/nutrients",
+            "ingredient": "粗びきではない黒こしょう",
+            "edible_grams": 0.5
+          }
+        ]
+      },
+      "image_url": "/recetas/receta-de-cordon-bleu/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/receta-de-cordon-bleu/portada.webp",
+          "alt": "オーブンで焼いた鶏肉のコルドンブルーを切り、ハムと溶けたチーズを見せた断面"
+        }
+      ],
+      "seo": {
+        "title": "鶏肉のコルドンブルー、オーブン焼きの手順 | Manual de Cocina",
+        "description": "4人分のハムとチーズ入り鶏肉のコルドンブルー。詰め物を閉じ、オーブンで焼いて中心74 °Cを確認する手順。",
+        "image_alt": "オーブンで焼いた鶏肉のコルドンブルーを切り、ハムと溶けたチーズを見せた断面",
+        "image_variants": [
+          "/recetas/receta-de-cordon-bleu/portada-1x1.webp",
+          "/recetas/receta-de-cordon-bleu/portada-4x3.webp",
+          "/recetas/receta-de-cordon-bleu/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "チーズが漏れないようにするには？",
+            "a": "肉を破らず薄くし、縁を2 cm空け、左右を折ってしっかり閉じ、閉じ目を下にします。縁に出たチーズは漏れやすく、15分の冷蔵は衣を安定させます。"
+          },
+          {
+            "q": "衣がきつね色なら加熱完了ですか？",
+            "a": "いいえ。各肉の複数箇所を温度計で測り、鶏肉と詰め物付近が少なくとも74 °Cになることを確認します。中心が焼ける前に衣が色付くことがあります。"
+          },
+          {
+            "q": "先に準備しておけますか？",
+            "a": "この案は焼く前の冷蔵15分だけを含みます。長時間の生の保存や冷凍は検証していません。加熱後の残りは冷蔵し、2日以内に食べます。"
+          }
+        ]
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "content_html": "<p>薄くのばした鶏むね肉で加熱済みハムとエメンタール系チーズを巻き、パン粉を付けます。計量した油を塗ってオーブンで焼く案で、歴史的なコルドンブルーのURLを維持します。</p><p>提案する出来上がりは4本で、1人1本です。準備30分、冷蔵15分、加熱約30分、休ませる時間5分、合計80分。肉の厚さ、巻いた直径、オーブンによって加熱が長くなります。分量、時間、出来上がり量は推定で、実際の調理試験は未実施です。衣の色ではなく温度計で安全を確認してください。</p>"
+    },
+    {
+      "id": "172f09c9-39e9-5c84-87b0-675776cdf64e",
+      "recipe_group_id": "675e919b-02fe-4900-95c4-d56849fa0cb7",
+      "language": "pt",
+      "slug": "cordon-bleu-de-frango",
+      "public_path": "/pt/cordon-bleu-de-frango",
+      "source_url": null,
+      "title": "Cordon bleu de frango assado",
+      "excerpt": "Cordon bleu de frango para 4, recheado com presunto e queijo, empanado no forno com verificação da temperatura no centro.",
+      "summary": "Peitos de frango achatados são enrolados com presunto cozido e queijo tipo emmental, empanados e assados com uma quantidade pesada de azeite. Esta versão mantém a URL histórica do cordon bleu.\n\nA proposta rende 4 rolinhos, um por pessoa: 30 minutos de preparo, 15 de geladeira, cerca de 30 de cozimento e 5 de descanso, totalizando 80 minutos. Espessura, diâmetro e forno podem aumentar o tempo. Quantidades, tempos e rendimento são estimados, aguardando teste de cozinha. Confirme a segurança com termômetro, não pela cor do empanado.",
+      "category": "Pratos principais",
+      "category_slug": "platos-principales",
+      "difficulty": "Média",
+      "course": "Prato principal",
+      "cuisine": "Europeia, proposta caseira",
+      "prep_time_minutes": 30,
+      "cook_time_minutes": 30,
+      "total_time_minutes": 80,
+      "servings": 4,
+      "keywords": [
+        "cordon bleu de frango",
+        "cordon bleu assado",
+        "frango presunto queijo",
+        "cordon bleu no forno"
+      ],
+      "ingredients": [
+        {
+          "name": "peito de frango cru sem pele e sem osso",
+          "amount": "800",
+          "unit": "g, em 4 peças de cerca de 200 g",
+          "group": "Frango e recheio"
+        },
+        {
+          "name": "presunto cozido fatiado, pronto para consumo",
+          "amount": "100",
+          "unit": "g",
+          "group": "Frango e recheio"
+        },
+        {
+          "name": "queijo tipo emmental ou suíço fatiado",
+          "amount": "100",
+          "unit": "g",
+          "group": "Frango e recheio"
+        },
+        {
+          "name": "sal fino",
+          "amount": "3",
+          "unit": "g",
+          "group": "Tempero"
+        },
+        {
+          "name": "pimenta-do-reino moída",
+          "amount": "0.5",
+          "unit": "g",
+          "group": "Tempero"
+        },
+        {
+          "name": "farinha de trigo comum",
+          "amount": "60",
+          "unit": "g",
+          "group": "Empanado"
+        },
+        {
+          "name": "ovo inteiro cru sem casca",
+          "amount": "100",
+          "unit": "g, aproximadamente 2 ovos grandes",
+          "group": "Empanado"
+        },
+        {
+          "name": "farinha de rosca seca sem tempero",
+          "amount": "100",
+          "unit": "g",
+          "group": "Empanado"
+        },
+        {
+          "name": "azeite de oliva",
+          "amount": "30",
+          "unit": "g",
+          "group": "Finalização no forno"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Achate o frango e prepare a área",
+          "content": "Não lave o frango cru. Abra cada uma das 4 peças de cerca de 200 g como um livro, sem separar as metades. Coloque entre duas folhas de papel-manteiga e bata com martelo ou rolo até cerca de 4–5 mm uniformes, sem rasgar. Divida os 3 g de sal e 0,5 g de pimenta. Separe tábua e utensílios dos alimentos prontos para consumo e limpe tudo que tocar o frango cru.",
+          "image_alt": "Peito de frango cru aberto e achatado entre folhas de papel-manteiga",
+          "image_url": "/recetas/receta-de-cordon-bleu/paso-01.webp"
+        },
+        {
+          "title": "Recheie, enrole e feche",
+          "content": "Coloque 25 g de presunto e 25 g de queijo em cada peça, deixando cerca de 2 cm livres nas bordas. Dobre as laterais e enrole pelo lado curto para envolver o recheio. Prenda com palitos de madeira sem pintura e conte quantos usar para retirar depois. Ajuste o frango para cobrir qualquer rasgo; não deixe queijo exposto na borda.",
+          "image_alt": "Frango sendo enrolado com presunto e queijo",
+          "image_url": "/recetas/receta-de-cordon-bleu/paso-02.webp"
+        },
+        {
+          "title": "Empane os quatro rolinhos",
+          "content": "Prepare três pratos com 60 g de farinha, 100 g de ovo batido e 100 g de farinha de rosca. Passe cada rolinho na farinha e sacuda o excesso, depois no ovo e na farinha de rosca, apertando delicadamente para cobrir a superfície e os fechamentos. Não despeje o ovo sobre a farinha de rosca. Descarte qualquer sobra do empanado que tenha tocado frango cru; não guarde.",
+          "image_alt": "Empanado com pratos separados de farinha, ovo e farinha de rosca",
+          "image_url": "/recetas/receta-de-cordon-bleu/paso-03.webp"
+        },
+        {
+          "title": "Refrigere e preaqueça",
+          "content": "Coloque as peças empanadas em uma assadeira limpa, cubra e refrigere 15 minutos a 4 °C ou menos para firmar a cobertura. Enquanto isso, preaqueça o forno a 200 °C, com calor superior e inferior, sem ventilação. Forre outra assadeira com papel-manteiga. A refrigeração faz parte dos 80 minutos totais; não deixe os rolinhos esperando na bancada.",
+          "image_alt": "Quatro rolinhos empanados cobertos na geladeira",
+          "image_url": "/recetas/receta-de-cordon-bleu/paso-04.webp"
+        },
+        {
+          "title": "Pincele e asse",
+          "content": "Distribua os 30 g de azeite nas quatro peças com pincel limpo. Coloque a emenda para baixo e deixe pelo menos 3 cm de espaço. Asse na altura média por cerca de 25–30 minutos. Aos 15 minutos, gire a assadeira se dourar de modo desigual. Não corte para decidir se está pronto: verifique a temperatura. Se a cobertura escurecer antes de o centro cozinhar, cubra frouxamente com papel-alumínio.",
+          "image_alt": "Rolinhos empanados dourando em assadeira no forno",
+          "image_url": "/recetas/receta-de-cordon-bleu/paso-05.webp"
+        },
+        {
+          "title": "Confira o centro com termômetro",
+          "content": "Insira a sonda pela lateral até o centro, atravessando o frango e chegando junto ao recheio, sem tocar a assadeira. Meça cada peça em mais de um ponto: frango e centro devem atingir pelo menos 74 °C. Se alguma ficar abaixo, asse mais 3–5 minutos e meça de novo com a sonda limpa. Queijo derretido e crosta dourada não garantem segurança; o tempo estimado pode ser ultrapassado.",
+          "image_alt": "Sonda do termômetro verificando o centro de um rolinho assado",
+          "image_url": "/recetas/receta-de-cordon-bleu/paso-06.webp"
+        },
+        {
+          "title": "Descanse, retire os palitos e sirva",
+          "content": "Deixe descansar 5 minutos em superfície resistente ao calor. Retire e conte todos os palitos antes de servir. Se faltar algum, identifique a peça e não sirva até encontrá-lo. Sirva uma peça por pessoa; corte com faca limpa para mostrar o recheio, se desejar. Refrigere sobras em recipientes rasos a 4 °C ou menos dentro de 2 horas, ou 1 hora se o ambiente superar 32 °C. Propõe-se consumir em 2 dias e reaquecer uma única vez até 74 °C no centro.",
+          "image_alt": "Cordon bleu de frango assado cortado com presunto e queijo",
+          "image_url": "/recetas/receta-de-cordon-bleu/paso-07.webp"
+        }
+      ],
+      "notes": "Contém trigo, ovo e laticínios; presunto e farinha de rosca podem conter outros alérgenos conforme a marca. Não se propõem versões sem glúten, ovo ou leite porque alteram cobertura e recheio. Pode usar queijo semiduro que derreta com o mesmo peso, mas sabor, gordura e sódio mudam. Não substitua presunto pronto para consumo por carne crua sem outra formulação. Use frango sem salmoura adicionada para aproximar o cálculo. Conte e retire os palitos antes de servir. Não lave o frango; separe área crua, pratos e pincéis e lave as mãos. A estimativa conta toda a farinha, ovo, farinha de rosca e azeite preparados, embora parte seja descartada. Não se recomenda congelar os rolinhos crus nesta ficha. Resfrie e refrigere rapidamente as sobras cozidas e consuma em 2 dias.",
+      "nutrition": {
+        "fat_g": 26.5,
+        "calories": 635,
+        "saturated_fat_g": 7.9,
+        "sodium_mg": 850,
+        "protein_g": 64,
+        "sugar_g": 1.9,
+        "carbs_g": 31,
+        "fiber_g": 1.9,
+        "estimated": true,
+        "serving_size": "1 dos 4 rolinhos propostos",
+        "source": "USDA FoodData Central — SR Legacy, April 2018 JSON",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "method": "Nove fichas USDA verificadas por FDC ID no arquivo oficial. Pesos comestíveis crus somados e divididos por 4. Toda a farinha, ovo, farinha de rosca, azeite e sal são contabilizados, mesmo com descarte de cobertura. Presunto aproximado por Ham, sliced, regular e queijo por Cheese, swiss. Sem acompanhamento.",
+        "note": "Estimativa conservadora, não análise do prato pronto. Marcas do presunto e queijo, salmoura do frango, tamanho real e cobertura aderida mudam o resultado. Quantidades, tempos e rendimento aguardam teste de cozinha.",
+        "inputs": [
+          {
+            "fdc_id": 171077,
+            "fdc_description": "Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw",
+            "per_100g": {
+              "fat_g": 2.62,
+              "calories": 120,
+              "saturated_fat_g": 0.563,
+              "sodium_mg": 45,
+              "protein_g": 22.5,
+              "sugar_g": 0,
+              "carbs_g": 0,
+              "fiber_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171077/nutrients",
+            "ingredient": "peito de frango cru sem pele e sem osso",
+            "edible_grams": 800
+          },
+          {
+            "fdc_id": 173864,
+            "fdc_description": "Ham, sliced, regular (approximately 11% fat)",
+            "per_100g": {
+              "fiber_g": 1.3,
+              "saturated_fat_g": 0.5,
+              "sodium_mg": 814,
+              "fat_g": 8.8,
+              "carbs_g": 3.63,
+              "calories": 164,
+              "sugar_g": 1,
+              "protein_g": 16.6
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173864/nutrients",
+            "ingredient": "presunto cozido fatiado, pronto para consumo",
+            "edible_grams": 100
+          },
+          {
+            "fdc_id": 171251,
+            "fdc_description": "Cheese, swiss",
+            "per_100g": {
+              "fat_g": 31,
+              "carbs_g": 1.44,
+              "calories": 393,
+              "sugar_g": 0,
+              "sodium_mg": 187,
+              "protein_g": 27,
+              "saturated_fat_g": 18.2,
+              "fiber_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171251/nutrients",
+            "ingredient": "queijo tipo emmental ou suíço fatiado",
+            "edible_grams": 100
+          },
+          {
+            "fdc_id": 168936,
+            "fdc_description": "Wheat flour, white, all-purpose, enriched, unbleached",
+            "per_100g": {
+              "fiber_g": 2.7,
+              "fat_g": 0.98,
+              "carbs_g": 76.3,
+              "calories": 364,
+              "protein_g": 10.3,
+              "sodium_mg": 2,
+              "saturated_fat_g": 0.155,
+              "sugar_g": 0.27
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/168936/nutrients",
+            "ingredient": "farinha de trigo comum",
+            "edible_grams": 60
+          },
+          {
+            "fdc_id": 171287,
+            "fdc_description": "Egg, whole, raw, fresh",
+            "per_100g": {
+              "calories": 143,
+              "saturated_fat_g": 3.13,
+              "protein_g": 12.6,
+              "sodium_mg": 142,
+              "sugar_g": 0.37,
+              "fat_g": 9.51,
+              "carbs_g": 0.72,
+              "fiber_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171287/nutrients",
+            "ingredient": "ovo inteiro cru sem casca",
+            "edible_grams": 100
+          },
+          {
+            "fdc_id": 174928,
+            "fdc_description": "Bread, crumbs, dry, grated, plain",
+            "per_100g": {
+              "fat_g": 5.3,
+              "protein_g": 13.4,
+              "fiber_g": 4.5,
+              "sodium_mg": 732,
+              "carbs_g": 72,
+              "calories": 395,
+              "sugar_g": 6.2,
+              "saturated_fat_g": 1.2
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/174928/nutrients",
+            "ingredient": "farinha de rosca seca sem tempero",
+            "edible_grams": 100
+          },
+          {
+            "fdc_id": 171413,
+            "fdc_description": "Oil, olive, salad or cooking",
+            "per_100g": {
+              "fat_g": 100,
+              "carbs_g": 0,
+              "calories": 884,
+              "sodium_mg": 2,
+              "protein_g": 0,
+              "saturated_fat_g": 13.8,
+              "fiber_g": 0,
+              "sugar_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171413/nutrients",
+            "ingredient": "azeite de oliva",
+            "edible_grams": 30
+          },
+          {
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "fiber_g": 0,
+              "sodium_mg": 38800,
+              "saturated_fat_g": 0,
+              "protein_g": 0,
+              "fat_g": 0,
+              "carbs_g": 0,
+              "calories": 0,
+              "sugar_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients",
+            "ingredient": "sal fino",
+            "edible_grams": 3
+          },
+          {
+            "fdc_id": 170931,
+            "fdc_description": "Spices, pepper, black",
+            "per_100g": {
+              "fat_g": 3.26,
+              "sugar_g": 0.64,
+              "carbs_g": 64,
+              "calories": 251,
+              "protein_g": 10.4,
+              "fiber_g": 25.3,
+              "sodium_mg": 20,
+              "saturated_fat_g": 1.39
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170931/nutrients",
+            "ingredient": "pimenta-do-reino moída",
+            "edible_grams": 0.5
+          }
+        ]
+      },
+      "image_url": "/recetas/receta-de-cordon-bleu/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/receta-de-cordon-bleu/portada.webp",
+          "alt": "Cordon bleu de frango assado cortado para mostrar presunto e queijo derretido"
+        }
+      ],
+      "seo": {
+        "title": "Cordon bleu de frango assado: passo a passo | Manual de Cocina",
+        "description": "Cordon bleu para 4 com presunto, queijo e empanado no forno. Feche o recheio e confira 74 °C no centro antes de servir.",
+        "image_alt": "Cordon bleu de frango assado cortado para mostrar presunto e queijo derretido",
+        "image_variants": [
+          "/recetas/receta-de-cordon-bleu/portada-1x1.webp",
+          "/recetas/receta-de-cordon-bleu/portada-4x3.webp",
+          "/recetas/receta-de-cordon-bleu/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Como evitar que o queijo vaze?",
+            "a": "Achate sem rasgar, deixe borda de 2 cm, dobre as laterais, feche bem e coloque a emenda para baixo. Queijo exposto vaza mais facilmente; 15 minutos de geladeira ajudam a firmar o empanado."
+          },
+          {
+            "q": "A cor dourada comprova o cozimento?",
+            "a": "Não. Confira cada rolinho em vários pontos com termômetro e verifique pelo menos 74 °C no frango e junto ao recheio. O empanado pode dourar antes de o centro ficar pronto."
+          },
+          {
+            "q": "Posso preparar os rolinhos antes?",
+            "a": "A ficha só inclui 15 minutos de geladeira antes de assar. Repouso prolongado e congelamento das peças cruas não foram validados aqui. Refrigere sobras cozidas e consuma em 2 dias."
+          }
+        ]
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "content_html": "<p>Peitos de frango achatados são enrolados com presunto cozido e queijo tipo emmental, empanados e assados com uma quantidade pesada de azeite. Esta versão mantém a URL histórica do cordon bleu.</p><p>A proposta rende 4 rolinhos, um por pessoa: 30 minutos de preparo, 15 de geladeira, cerca de 30 de cozimento e 5 de descanso, totalizando 80 minutos. Espessura, diâmetro e forno podem aumentar o tempo. Quantidades, tempos e rendimento são estimados, aguardando teste de cozinha. Confirme a segurança com termômetro, não pela cor do empanado.</p>"
+    }
+  ],
+  "portuguese_locale": "pt-BR"
+}

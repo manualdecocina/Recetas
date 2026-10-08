@@ -1,0 +1,73 @@
+{
+  "status": "PASS",
+  "step_number_differences": [
+    {
+      "language": "ja",
+      "step": 1,
+      "es": [
+        "210",
+        "600",
+        "4",
+        "800",
+        "200",
+        "1.5",
+        "2",
+        "3",
+        "0.25",
+        "1",
+        "0.25"
+      ],
+      "local": [
+        "210",
+        "600",
+        "800",
+        "200",
+        "4",
+        "1.5",
+        "2",
+        "3",
+        "0.25",
+        "1",
+        "0.25"
+      ]
+    },
+    {
+      "language": "ja",
+      "step": 6,
+      "es": [
+        "5",
+        "4",
+        "4",
+        "2",
+        "1",
+        "32",
+        "3",
+        "74"
+      ],
+      "local": [
+        "5",
+        "4",
+        "2",
+        "32",
+        "1",
+        "4",
+        "3",
+        "1",
+        "74",
+        "1"
+      ]
+    }
+  ],
+  "package_sha256": "dd60444bcbbaa2d710706b49336ecf787d96899c48c3fb08ce3fabab474757ae",
+  "sql_sha256": "896792a3650af5213e8751332303b56699d550d610179c21dc9e77af71867930",
+  "language_order": [
+    "es",
+    "de",
+    "en",
+    "fr",
+    "it",
+    "ja",
+    "pt"
+  ],
+  "semantic_review": "Japanese step1 reorders4pieces after weights; step6 moves cold temperature after time limits and states one reheat explicitly; values and meaning match ES."
+}

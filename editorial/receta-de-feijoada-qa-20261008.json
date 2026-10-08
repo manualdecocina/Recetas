@@ -1,0 +1,22 @@
+{
+  "recipe": "receta-de-feijoada",
+  "checked_at": "2026-10-08T04:28:09.746030+00:00",
+  "status": "PASS",
+  "languages": 7,
+  "steps": 8,
+  "assets": 12,
+  "steps_sha256": "cb8b07801dbf9ba4bcb1b25fca03901b2447abc0b2cb45bf21afd7096c144223",
+  "checks": [
+    "frozen ES instructions",
+    "seven unique routes and UUIDs",
+    "numeric and timing parity",
+    "USDA weighted calculation",
+    "WebP decode and SHA256 integrity",
+    "localized media alts and three FAQ"
+  ],
+  "publication": "PENDING_BATCH_COMPLETION",
+  "preview_http_visual_qa": "PENDING_PUBLICATION",
+  "no_kitchen_test_claim": true,
+  "responsive_cover_visual_qa": "PASS: actual 1x1, 4x3 and 16x9 WebP crops retain black beans, pork, bacon and sausage in dark broth, inspected after conversion.",
+  "local_asset_recovery": "paso-02.webp was found empty locally after conversion; restored from the identical original without regeneration and matched the accepted manifest SHA256 before rechecking all assets."
+}

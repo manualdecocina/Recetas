@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "slug": "receta-de-ratatouille",
+  "checked_at": "2026-10-08T09:22:16.967Z",
+  "identity": {
+    "id": "2300175e-c47a-4318-a6f9-8ee54387722e",
+    "recipe_group_id": "0bbedb8a-3d06-41dd-8bfc-3dc1ebeac0a7",
+    "slug": "receta-de-ratatouille",
+    "public_path": "/receta-de-ratatouille",
+    "source_url": "https://manualdecocina.com/receta-de-ratatouille/",
+    "created_at": "2026-09-23 20:50:30.10332+00",
+    "updated_at": "2026-10-07 01:12:39.564667+00",
+    "expected_initial_state": {
+      "rows_in_group": 1,
+      "language": "es",
+      "published": false
+    }
+  },
+  "classification": {
+    "result": "ELIGIBLE_CATALOG_CANDIDATE",
+    "evidence": "docs/P2-CATALOG-20260924.md: /receta-de-ratatouille/ CATALOG CANDIDATE; no later hold or duplicate found.",
+    "duplicate_identity_check": "Only this ES record matches ratatouille/pisto."
+  },
+  "routes": {
+    "es": "/receta-de-ratatouille",
+    "de": "/de/ratatouille-rezept",
+    "en": "/en/ratatouille-recipe",
+    "fr": "/fr/recette-ratatouille",
+    "it": "/it/ricetta-ratatouille",
+    "ja": "/ja/ラタトゥイユのレシピ",
+    "pt": "/pt/ratatouille-caseira"
+  },
+  "historical_routes": {
+    "es": {
+      "matrix_row": 381
+    },
+    "de": {
+      "matrix_row": 679
+    },
+    "en": {
+      "matrix_row": 761
+    },
+    "fr": {
+      "matrix_row": 326
+    },
+    "it": {
+      "matrix_row": 562
+    },
+    "ja": {
+      "matrix_row": 154,
+      "unicode_path_preserved": true
+    }
+  },
+  "new_routes": [
+    "pt"
+  ],
+  "portuguese_locale": "pt-BR",
+  "x_default": null,
+  "collision_check": {
+    "result": "PASS",
+    "recipes_matches": [
+      {
+        "id": "2300175e-c47a-4318-a6f9-8ee54387722e",
+        "language": "es",
+        "public_path": "/receta-de-ratatouille",
+        "expected_identity": true
+      }
+    ],
+    "content_pages_matches": []
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "checks": [
+    {
+      "language": "es",
+      "structural": "PASS",
+      "text_numeric_differences": []
+    },
+    {
+      "language": "de",
+      "structural": "PASS",
+      "text_numeric_differences": []
+    },
+    {
+      "language": "en",
+      "structural": "PASS",
+      "text_numeric_differences": []
+    },
+    {
+      "language": "fr",
+      "structural": "PASS",
+      "text_numeric_differences": []
+    },
+    {
+      "language": "it",
+      "structural": "PASS",
+      "text_numeric_differences": []
+    },
+    {
+      "language": "ja",
+      "structural": "PASS",
+      "text_numeric_differences": [
+        {
+          "step": 1,
+          "es": [
+            "180",
+            "200",
+            "120",
+            "4"
+          ],
+          "localized": [
+            "180",
+            "200",
+            "4",
+            "120"
+          ]
+        }
+      ]
+    },
+    {
+      "language": "pt",
+      "structural": "PASS",
+      "text_numeric_differences": []
+    }
+  ],
+  "es_hash": "0dc981c5de9814177bdc763822dedf1e07a267f2fe01dec62f6003d32d8a5b40",
+  "package_sha256": "38fa95700a5fbe0a4c46d4bcb09ef0a81e12880c3f03cc9cfda9557c272c1b2f",
+  "sql_sha256": "e149c36d0aa0ae394a35e547baf0c8a7b1b4f132dae99bbf4849fb3ee523a528",
+  "status": "PASS",
+  "semantic_review": {
+    "status": "PASS",
+    "explanation": "JA step1 reorders 4C storage threshold and120g; same amounts and thresholds."
+  }
+}

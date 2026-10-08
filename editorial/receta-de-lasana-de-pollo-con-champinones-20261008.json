@@ -1,0 +1,3052 @@
+{
+  "schema_version": 1,
+  "slug": "receta-de-lasana-de-pollo-con-champinones",
+  "category_slug": "pastas",
+  "state": "PREPARED_PENDING_BATCH_PUBLICATION",
+  "steps_frozen": true,
+  "steps_sha256": "b0a186f36b233efcac7e14151ae57158486ac90c80c5e410a28438af3bbee2cf",
+  "time_notes": "20 prep +60 cooking with pasta/filling/sauce partly parallel +10 rest=90min",
+  "ai_owner_confirmation": {
+    "status": "delegated_editorial_authority",
+    "kitchen_test_performed": false
+  },
+  "publication_blockers": [
+    "BATCH_15_COMPLETION_PENDING",
+    "PREVIEW_QA_PENDING"
+  ],
+  "scope": "https://preview.manualdecocina.com",
+  "provenance": {
+    "created_at": "2026-10-08T10:25:39.829Z",
+    "body_source": "new original editorial draft",
+    "wordpress_body_used": false
+  },
+  "sources": [
+    {
+      "url": "https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_sr_legacy_food_json_2018-04.zip",
+      "archive_sha256": "0fe8ae486a2c8eb42cb96413f058deb51863a46c8fb8eeb4b1fb45006dd338ef",
+      "purpose": "Thirteen verified USDA ingredient inputs",
+      "accessed": "2026-10-08"
+    },
+    {
+      "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures",
+      "purpose": "Chicken and casserole74C"
+    },
+    {
+      "url": "https://ask.fsis.usda.gov/article/How-do-I-handle-leftovers-safely",
+      "purpose": "Refrigeration timing, shallowcontainers"
+    }
+  ],
+  "records": [
+    {
+      "id": "3a512fac-c4ae-40ad-92b1-412c608da8ed",
+      "recipe_group_id": "14f34319-2bdc-478f-b55b-909be0df6964",
+      "language": "es",
+      "slug": "receta-de-lasana-de-pollo-con-champinones",
+      "public_path": "/receta-de-lasana-de-pollo-con-champinones",
+      "source_url": "https://manualdecocina.com/receta-de-lasana-de-pollo-con-champinones/",
+      "title": "Lasaña de pollo con champiñones y bechamel",
+      "excerpt": "Lasaña de pollo y champiñones para 6, con pasta precocida, relleno sin exceso de líquido, bechamel casera y mozzarella gratinada.",
+      "summary": "Esta propuesta de lasaña combina pollo cocinado en dados, champiñones salteados y una bechamel de leche entera. Se monta con tres capas de pasta previamente cocida y dos capas de relleno, y termina con mozzarella de baja humedad. Conserva la URL histórica de la lasaña de pollo con champiñones y su clasificación aprobada como receta.\n\nSe proponen 6 porciones en una fuente de unos 20 × 30 cm, 20 minutos de preparación, 60 de cocción con algunas tareas en paralelo y 10 de reposo: 90 minutos en total. La marca y el tamaño de las láminas pueden cambiar el montaje y la cocción. Cantidades, tiempos y rendimiento son estimados y pendientes de prueba de cocina; la temperatura del pollo y del centro se comprueba con termómetro.",
+      "category": "Pastas",
+      "category_slug": "pastas",
+      "difficulty": "Media",
+      "course": "Plato principal",
+      "cuisine": "Italiana, adaptación casera",
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 60,
+      "total_time_minutes": 90,
+      "servings": 6,
+      "keywords": [
+        "lasaña de pollo",
+        "lasaña con champiñones",
+        "bechamel casera",
+        "lasaña blanca"
+      ],
+      "ingredients": [
+        {
+          "name": "láminas de lasaña secas que requieren cocción previa",
+          "amount": "240",
+          "unit": "g",
+          "group": "Pasta"
+        },
+        {
+          "name": "pechuga de pollo cruda sin piel ni hueso",
+          "amount": "600",
+          "unit": "g",
+          "group": "Relleno"
+        },
+        {
+          "name": "champiñones blancos frescos",
+          "amount": "500",
+          "unit": "g",
+          "group": "Relleno"
+        },
+        {
+          "name": "cebolla",
+          "amount": "150",
+          "unit": "g",
+          "group": "Relleno"
+        },
+        {
+          "name": "ajo",
+          "amount": "10",
+          "unit": "g",
+          "group": "Relleno"
+        },
+        {
+          "name": "aceite de oliva",
+          "amount": "20",
+          "unit": "g",
+          "group": "Relleno"
+        },
+        {
+          "name": "leche entera pasteurizada",
+          "amount": "700",
+          "unit": "g",
+          "group": "Bechamel"
+        },
+        {
+          "name": "mantequilla sin sal",
+          "amount": "40",
+          "unit": "g",
+          "group": "Bechamel"
+        },
+        {
+          "name": "harina de trigo de uso común",
+          "amount": "40",
+          "unit": "g",
+          "group": "Bechamel"
+        },
+        {
+          "name": "mozzarella de baja humedad de leche entera, rallada",
+          "amount": "180",
+          "unit": "g",
+          "group": "Acabado"
+        },
+        {
+          "name": "sal fina",
+          "amount": "6",
+          "unit": "g",
+          "group": "Sazonado"
+        },
+        {
+          "name": "pimienta negra molida",
+          "amount": "0.5",
+          "unit": "g",
+          "group": "Sazonado"
+        },
+        {
+          "name": "nuez moscada molida",
+          "amount": "0.2",
+          "unit": "g",
+          "group": "Sazonado"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepara los ingredientes y la fuente",
+          "content": "Precalienta el horno a 190 °C con calor arriba y abajo, sin ventilador, y prepara una fuente de unos 20 × 30 cm. Limpia y corta los 500 g de champiñones en láminas, pica los 150 g de cebolla y los 10 g de ajo. En otra tabla corta los 600 g de pollo en dados de unos 1,5 cm, sin lavarlo. Separa utensilios crudos y cocidos. Divide la sal: 3 g para el relleno y 3 g para la bechamel; la pimienta: 0,25 g para cada uno.",
+          "image_alt": "Ingredientes de lasaña separados, champiñones laminados y pollo crudo en una tabla aparte",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-01.webp"
+        },
+        {
+          "title": "Cuece y escurre las láminas",
+          "content": "Cuece los 240 g de láminas en una olla grande con agua potable hirviendo, sin sal añadida, siguiendo el tiempo del envase y retirándolas aproximadamente 1 minuto antes si después se hornean. El agua de cocción se desecha y no forma parte del cálculo. Escurre y extiende sobre un paño limpio, sin amontonarlas. Usa láminas que requieren cocción previa; las listas para horno necesitan otra proporción de líquido y no son la opción de esta ficha.",
+          "image_alt": "Láminas de lasaña cocidas extendidas sin superponerse sobre un paño limpio",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-02.webp"
+        },
+        {
+          "title": "Cocina el pollo por separado",
+          "content": "Calienta 10 g del aceite en una sartén amplia. Añade el pollo en dos tandas si queda amontonado y cocina a fuego medio-alto unos 8–10 minutos en total, removiendo. Reparte parte de los 3 g de sal y 0,25 g de pimienta destinados al relleno. Comprueba los dados más gruesos con termómetro: deben alcanzar al menos 74 °C. Si no llegan, prolonga la cocción. Pasa a un recipiente limpio con utensilio limpio, nunca al plato del pollo crudo.",
+          "image_alt": "Dados de pollo cocinándose en una sartén sin champiñones",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-03.webp"
+        },
+        {
+          "title": "Saltea los champiñones y mezcla el relleno",
+          "content": "En la misma sartén añade los otros 10 g de aceite y la cebolla; cocina 4–5 minutos. Incorpora el ajo 30 segundos y luego los champiñones. Saltea 8–10 minutos, en tandas si hace falta, hasta que se reduzcan y el líquido libre se evapore. Añade el resto de sal y pimienta reservadas al relleno, incorpora el pollo cocido y mezcla. El relleno debe quedar húmedo pero sin un charco; si hay líquido, reduce antes de montar.",
+          "image_alt": "Champiñones y cebolla salteados mezclados con dados de pollo cocidos",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-04.webp"
+        },
+        {
+          "title": "Haz la bechamel",
+          "content": "Derrite los 40 g de mantequilla en un cazo a fuego medio-bajo. Añade los 40 g de harina y remueve 2 minutos sin dorarla. Vierte los 700 g de leche poco a poco, batiendo para disolver grumos. Cocina a hervor suave 6–8 minutos, removiendo hasta que cubra la cuchara pero se pueda extender. Incorpora los otros 3 g de sal, 0,25 g de pimienta y 0,2 g de nuez moscada. No reduzcas hasta obtener una pasta espesa.",
+          "image_alt": "Bechamel blanca y fluida removida con varillas en un cazo",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-05.webp"
+        },
+        {
+          "title": "Monta las tres capas de pasta",
+          "content": "Extiende una capa fina de bechamel en el fondo. Reserva aproximadamente un cuarto de la salsa restante para la cubierta y divide el resto entre dos capas. Divide el relleno en dos partes iguales y los 240 g originales de pasta en tres capas adaptadas a la fuente, cortando láminas si hace falta. Alterna pasta, mitad del relleno, bechamel y 30 g de mozzarella; repite con otros 30 g de mozzarella. Termina con la tercera capa de pasta, la salsa reservada y los 120 g de mozzarella restantes. Cubre todos los bordes de pasta con salsa.",
+          "image_alt": "Montaje de lasaña en fuente con láminas, pollo, champiñones y bechamel",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-06.webp"
+        },
+        {
+          "title": "Hornea y comprueba el centro",
+          "content": "Cubre holgadamente con aluminio y hornea 20 minutos a 190 °C. Retira el aluminio y hornea otros 10–15 minutos hasta que burbujee y la superficie dore sin quemarse. Introduce una sonda limpia en varios puntos del centro, sin tocar la fuente: debe alcanzar al menos 74 °C. Si está por debajo, cubre si hace falta y prolonga 5 minutos antes de medir otra vez. La corteza dorada no sustituye esta comprobación.",
+          "image_alt": "Lasaña gratinada en una fuente de horno con la superficie dorada",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-07.webp"
+        },
+        {
+          "title": "Reposa, porciona y conserva",
+          "content": "Reposa 10 minutos sobre una superficie resistente al calor y corta en 6 porciones. Sirve con utensilios limpios. Para guardar, separa las sobras en recipientes bajos y refrigera a 4 °C o menos dentro de 2 horas, o 1 hora si el ambiente supera 32 °C. Se propone consumirlas en 3 días y recalentar la porción una sola vez hasta 74 °C en el centro. No dejes toda la fuente enfriándose durante horas en la encimera.",
+          "image_alt": "Porción de lasaña blanca con pollo y champiñones mostrando sus capas",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-08.webp"
+        }
+      ],
+      "notes": "Contiene trigo y lácteos; revisa si las láminas llevan huevo u otros alérgenos. Esta ficha utiliza pasta seca para precocer, no láminas listas para horno, y no valida sustituciones sin gluten o sin leche. Puedes cambiar champiñones blancos por cremini al mismo peso, con variación de sabor y nutrientes. Usa pollo sin salmuera añadida y mozzarella de baja humedad, no bolas húmedas, para aproximarte al cálculo y evitar exceso de agua. No sustituyas el pollo por sobras sin ajustar la formulación y su conservación previa. Los champiñones se reducen antes de montar; no añadas nata o caldo extra. No se ha validado aquí el montaje crudo de un día para otro ni la congelación; prepara y hornea de forma continua. La nutrición usa los pesos comestibles originales y divide entre 6, sin calcular absorción o pérdida exacta durante la cocción; no incluye guarniciones.",
+      "nutrition": {
+        "sodium_mg": 705,
+        "sugar_g": 10,
+        "saturated_fat_g": 11.4,
+        "carbs_g": 47,
+        "calories": 567.7,
+        "fat_g": 23.5,
+        "fiber_g": 2.8,
+        "protein_g": 41.6,
+        "estimated": true,
+        "serving_size": "1 de 6 porciones propuestas",
+        "source": "USDA FoodData Central — SR Legacy, abril de 2018",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "method": "Trece fichas USDA verificadas por FDC ID en el archivo oficial. Pesos comestibles originales sumados y divididos entre 6; pasta seca aproximada con Pasta, dry, enriched y mozzarella con Cheese, mozzarella, whole milk, low moisture. Se cuentan toda la grasa y el sazonado. Agua de cocer desechada, sin sal añadida; no se incluyen guarniciones.",
+        "note": "Estimación, no análisis del plato cocinado. Marcas de pasta y mozzarella, salmuera del pollo y reparto real cambian las cifras; cantidades, tiempos y rendimiento pendientes de prueba de cocina.",
+        "inputs": [
+          {
+            "fdc_id": 169736,
+            "fdc_description": "Pasta, dry, enriched",
+            "per_100g": {
+              "sodium_mg": 6,
+              "sugar_g": 2.67,
+              "saturated_fat_g": 0.277,
+              "carbs_g": 74.7,
+              "calories": 371,
+              "fat_g": 1.51,
+              "fiber_g": 3.2,
+              "protein_g": 13
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169736/nutrients",
+            "ingredient": "láminas de lasaña secas",
+            "edible_grams": 240
+          },
+          {
+            "fdc_id": 171077,
+            "fdc_description": "Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw",
+            "per_100g": {
+              "fat_g": 2.62,
+              "calories": 120,
+              "saturated_fat_g": 0.563,
+              "sodium_mg": 45,
+              "protein_g": 22.5,
+              "sugar_g": 0,
+              "carbs_g": 0,
+              "fiber_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171077/nutrients",
+            "ingredient": "pechuga de pollo cruda",
+            "edible_grams": 600
+          },
+          {
+            "fdc_id": 169251,
+            "fdc_description": "Mushrooms, white, raw",
+            "per_100g": {
+              "sugar_g": 1.98,
+              "saturated_fat_g": 0.05,
+              "fiber_g": 1,
+              "fat_g": 0.34,
+              "sodium_mg": 5,
+              "protein_g": 3.09,
+              "carbs_g": 3.26,
+              "calories": 22
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169251/nutrients",
+            "ingredient": "champiñones blancos",
+            "edible_grams": 500
+          },
+          {
+            "fdc_id": 170000,
+            "fdc_description": "Onions, raw",
+            "per_100g": {
+              "sugar_g": 4.24,
+              "fat_g": 0.1,
+              "carbs_g": 9.34,
+              "calories": 40,
+              "saturated_fat_g": 0.042,
+              "protein_g": 1.1,
+              "fiber_g": 1.7,
+              "sodium_mg": 4
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170000/nutrients",
+            "ingredient": "cebolla",
+            "edible_grams": 150
+          },
+          {
+            "fdc_id": 169230,
+            "fdc_description": "Garlic, raw",
+            "per_100g": {
+              "carbs_g": 33.1,
+              "calories": 149,
+              "sugar_g": 1,
+              "saturated_fat_g": 0.089,
+              "fiber_g": 2.1,
+              "sodium_mg": 17,
+              "protein_g": 6.36,
+              "fat_g": 0.5
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169230/nutrients",
+            "ingredient": "ajo",
+            "edible_grams": 10
+          },
+          {
+            "fdc_id": 171413,
+            "fdc_description": "Oil, olive, salad or cooking",
+            "per_100g": {
+              "fat_g": 100,
+              "carbs_g": 0,
+              "calories": 884,
+              "sodium_mg": 2,
+              "protein_g": 0,
+              "saturated_fat_g": 13.8,
+              "fiber_g": 0,
+              "sugar_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171413/nutrients",
+            "ingredient": "aceite de oliva",
+            "edible_grams": 20
+          },
+          {
+            "fdc_id": 171265,
+            "fdc_description": "Milk, whole, 3.25% milkfat, with added vitamin D",
+            "per_100g": {
+              "fat_g": 3.25,
+              "sugar_g": 5.05,
+              "carbs_g": 4.8,
+              "calories": 61,
+              "saturated_fat_g": 1.86,
+              "fiber_g": 0,
+              "sodium_mg": 43,
+              "protein_g": 3.15
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171265/nutrients",
+            "ingredient": "leche entera",
+            "edible_grams": 700
+          },
+          {
+            "fdc_id": 173430,
+            "fdc_description": "Butter, without salt",
+            "per_100g": {
+              "sugar_g": 0.06,
+              "calories": 717,
+              "saturated_fat_g": 50.5,
+              "fat_g": 81.1,
+              "carbs_g": 0.06,
+              "protein_g": 0.85,
+              "fiber_g": 0,
+              "sodium_mg": 11
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173430/nutrients",
+            "ingredient": "mantequilla sin sal",
+            "edible_grams": 40
+          },
+          {
+            "fdc_id": 168936,
+            "fdc_description": "Wheat flour, white, all-purpose, enriched, unbleached",
+            "per_100g": {
+              "fiber_g": 2.7,
+              "fat_g": 0.98,
+              "carbs_g": 76.3,
+              "calories": 364,
+              "protein_g": 10.3,
+              "sodium_mg": 2,
+              "saturated_fat_g": 0.155,
+              "sugar_g": 0.27
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/168936/nutrients",
+            "ingredient": "harina de trigo",
+            "edible_grams": 40
+          },
+          {
+            "fdc_id": 170846,
+            "fdc_description": "Cheese, mozzarella, whole milk, low moisture",
+            "per_100g": {
+              "sugar_g": 1.01,
+              "sodium_mg": 710,
+              "saturated_fat_g": 15.6,
+              "fiber_g": 0,
+              "protein_g": 21.6,
+              "fat_g": 24.6,
+              "carbs_g": 2.47,
+              "calories": 318
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170846/nutrients",
+            "ingredient": "mozzarella baja humedad entera",
+            "edible_grams": 180
+          },
+          {
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "fiber_g": 0,
+              "sodium_mg": 38800,
+              "saturated_fat_g": 0,
+              "protein_g": 0,
+              "fat_g": 0,
+              "carbs_g": 0,
+              "calories": 0,
+              "sugar_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients",
+            "ingredient": "sal",
+            "edible_grams": 6
+          },
+          {
+            "fdc_id": 170931,
+            "fdc_description": "Spices, pepper, black",
+            "per_100g": {
+              "fat_g": 3.26,
+              "sugar_g": 0.64,
+              "carbs_g": 64,
+              "calories": 251,
+              "protein_g": 10.4,
+              "fiber_g": 25.3,
+              "sodium_mg": 20,
+              "saturated_fat_g": 1.39
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170931/nutrients",
+            "ingredient": "pimienta",
+            "edible_grams": 0.5
+          },
+          {
+            "fdc_id": 171326,
+            "fdc_description": "Spices, nutmeg, ground",
+            "per_100g": {
+              "protein_g": 5.84,
+              "sodium_mg": 16,
+              "saturated_fat_g": 25.9,
+              "fat_g": 36.3,
+              "carbs_g": 49.3,
+              "calories": 525,
+              "sugar_g": 2.99,
+              "fiber_g": 20.8
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171326/nutrients",
+            "ingredient": "nuez moscada",
+            "edible_grams": 0.2
+          }
+        ]
+      },
+      "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/receta-de-lasana-de-pollo-con-champinones/portada.webp",
+          "alt": "Lasaña de pollo y champiñones con bechamel y queso dorado, servida en una porción"
+        }
+      ],
+      "seo": {
+        "title": "Lasaña de pollo con champiñones y bechamel | Manual de Cocina",
+        "description": "Lasaña blanca para 6 con pollo, champiñones, bechamel y mozzarella. Cuece la pasta, reduce el relleno y comprueba 74 °C en el centro.",
+        "image_alt": "Lasaña de pollo y champiñones con bechamel y queso dorado, servida en una porción",
+        "image_variants": [
+          "/recetas/receta-de-lasana-de-pollo-con-champinones/portada-1x1.webp",
+          "/recetas/receta-de-lasana-de-pollo-con-champinones/portada-4x3.webp",
+          "/recetas/receta-de-lasana-de-pollo-con-champinones/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "¿Puedo usar láminas listas para horno?",
+            "a": "No como cambio directo en esta formulación. Se proponen 240 g de pasta seca para cocer previamente. Las láminas listas para horno absorben salsa y requieren ajustar líquidos y tiempo según el envase."
+          },
+          {
+            "q": "¿Cómo evito que quede aguada?",
+            "a": "Evapora el líquido libre de los champiñones antes de unir el pollo, usa mozzarella de baja humedad y bechamel que cubra la cuchara sin ser una pasta. Reposa 10 minutos antes de cortar."
+          },
+          {
+            "q": "¿Puedo montar la lasaña el día anterior?",
+            "a": "Esta ficha propone preparación y horneado continuos; no valida un montaje crudo prolongado ni congelación. Guarda la lasaña ya cocinada en porciones frías, consume en 3 días y recalienta una vez hasta 74 °C."
+          }
+        ]
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "content_html": "<p>Esta propuesta de lasaña combina pollo cocinado en dados, champiñones salteados y una bechamel de leche entera. Se monta con tres capas de pasta previamente cocida y dos capas de relleno, y termina con mozzarella de baja humedad. Conserva la URL histórica de la lasaña de pollo con champiñones y su clasificación aprobada como receta.</p><p>Se proponen 6 porciones en una fuente de unos 20 × 30 cm, 20 minutos de preparación, 60 de cocción con algunas tareas en paralelo y 10 de reposo: 90 minutos en total. La marca y el tamaño de las láminas pueden cambiar el montaje y la cocción. Cantidades, tiempos y rendimiento son estimados y pendientes de prueba de cocina; la temperatura del pollo y del centro se comprueba con termómetro.</p>"
+    },
+    {
+      "id": "2c209239-d104-5286-b66f-7ab68c0de8f4",
+      "recipe_group_id": "14f34319-2bdc-478f-b55b-909be0df6964",
+      "language": "de",
+      "slug": "huhnchen-lasana-mit-pilzen-rezept",
+      "public_path": "/de/huhnchen-lasana-mit-pilzen-rezept",
+      "source_url": null,
+      "title": "Hähnchen-Lasagne mit Champignons und Béchamel",
+      "excerpt": "Lasagne für 6 mit Hähnchen, Champignons, vorgekochter Pasta, hausgemachter Béchamel und goldener Mozzarella.",
+      "summary": "Gegarte Hähnchenwürfel, gebratene Champignons und Vollmilch-Béchamel werden zwischen drei vorgekochte Pastaschichten und zwei Füllungsschichten verteilt und mit Mozzarella mit geringem Wassergehalt überbacken. Historische URL und genehmigte Recipe-Klassifizierung bleiben erhalten.\n\nVorgeschlagen sind 6 Portionen aus einer Form von etwa 20 × 30 cm: 20 Minuten Vorbereitung, 60 Garen mit teils parallelen Arbeiten, 10 Ruhen, insgesamt 90 Minuten. Marke und Größe der Platten beeinflussen Aufbau und Garung. Mengen, Zeiten und Ausbeute sind Schätzungen ohne Küchentest. Hähnchen und Auflaufkern mit Thermometer prüfen.",
+      "category": "Pasta",
+      "category_slug": "pastas",
+      "difficulty": "Mittel",
+      "course": "Hauptgericht",
+      "cuisine": "Italienisch, hausgemachte Anpassung",
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 60,
+      "total_time_minutes": 90,
+      "servings": 6,
+      "keywords": [
+        "Hähnchen Lasagne",
+        "Champignon Lasagne",
+        "Béchamel selbst machen",
+        "weiße Lasagne"
+      ],
+      "ingredients": [
+        {
+          "name": "trockene Lasagneplatten zum Vorkochen",
+          "amount": "240",
+          "unit": "g",
+          "group": "Pasta"
+        },
+        {
+          "name": "rohe Hähnchenbrust ohne Haut und Knochen",
+          "amount": "600",
+          "unit": "g",
+          "group": "Füllung"
+        },
+        {
+          "name": "frische weiße Champignons",
+          "amount": "500",
+          "unit": "g",
+          "group": "Füllung"
+        },
+        {
+          "name": "Zwiebel",
+          "amount": "150",
+          "unit": "g",
+          "group": "Füllung"
+        },
+        {
+          "name": "Knoblauch",
+          "amount": "10",
+          "unit": "g",
+          "group": "Füllung"
+        },
+        {
+          "name": "Olivenöl",
+          "amount": "20",
+          "unit": "g",
+          "group": "Füllung"
+        },
+        {
+          "name": "pasteurisierte Vollmilch",
+          "amount": "700",
+          "unit": "g",
+          "group": "Béchamel"
+        },
+        {
+          "name": "ungesalzene Butter",
+          "amount": "40",
+          "unit": "g",
+          "group": "Béchamel"
+        },
+        {
+          "name": "Weizenmehl",
+          "amount": "40",
+          "unit": "g",
+          "group": "Béchamel"
+        },
+        {
+          "name": "geriebener Vollmilch-Mozzarella mit geringem Wassergehalt",
+          "amount": "180",
+          "unit": "g",
+          "group": "Zum Überbacken"
+        },
+        {
+          "name": "feines Salz",
+          "amount": "6",
+          "unit": "g",
+          "group": "Würzung"
+        },
+        {
+          "name": "gemahlener schwarzer Pfeffer",
+          "amount": "0.5",
+          "unit": "g",
+          "group": "Würzung"
+        },
+        {
+          "name": "gemahlene Muskatnuss",
+          "amount": "0.2",
+          "unit": "g",
+          "group": "Würzung"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Zutaten und Form vorbereiten",
+          "content": "Ofen auf 190 °C Ober-/Unterhitze ohne Umluft vorheizen, eine Form von etwa 20 × 30 cm bereitstellen. 500 g Champignons putzen und schneiden, 150 g Zwiebel und 10 g Knoblauch hacken. 600 g Hähnchen auf einem anderen Brett in etwa 1,5 cm große Würfel schneiden, nicht waschen. Rohe und gegarte Werkzeuge trennen. Salz aufteilen: 3 g für Füllung und 3 g für Béchamel; Pfeffer je 0,25 g.",
+          "image_alt": "Lasagnezutaten mit Champignons und rohem Hähnchen auf separatem Brett",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-01.webp"
+        },
+        {
+          "title": "Platten kochen und abtropfen",
+          "content": "240 g Platten in einem großen Topf mit kochendem Trinkwasser ohne Salzzugabe nach Packungszeit kochen, etwa 1 Minute früher herausnehmen, wenn sie anschließend gebacken werden. Kochwasser entsorgen; nicht im Nährwert enthalten. Abtropfen und einzeln auf einem sauberen Tuch auslegen. Vorkochplatten verwenden; ofenfertige Platten benötigen ein anderes Flüssigkeitsverhältnis und gehören nicht zu dieser Rezeptur.",
+          "image_alt": "Gekochte Lasagneplatten einzeln auf sauberem Tuch",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-02.webp"
+        },
+        {
+          "title": "Hähnchen separat garen",
+          "content": "10 g Öl in großer Pfanne erhitzen. Bei Platzmangel Hähnchen in zwei Durchgängen bei mittelhoher Hitze insgesamt etwa 8–10 Minuten unter Rühren garen. Einen Teil der für die Füllung vorgesehenen 3 g Salz und 0,25 g Pfeffer verwenden. Dickste Würfel mit Thermometer prüfen: mindestens 74 °C. Bei Bedarf weitergaren. Mit sauberem Werkzeug in einen sauberen Behälter geben, nie auf den Rohfleischteller.",
+          "image_alt": "Hähnchenwürfel garen allein in einer Pfanne",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-03.webp"
+        },
+        {
+          "title": "Champignons braten und Füllung mischen",
+          "content": "Die übrigen 10 g Öl und Zwiebel in dieselbe Pfanne geben, 4–5 Minuten garen. Knoblauch 30 Sekunden zugeben, dann Champignons. Etwa 8–10 Minuten, nötigenfalls portionsweise, braten, bis sie reduziert sind und freie Flüssigkeit verdampft ist. Restliche Füllungswürzung und gegartes Hähnchen einrühren. Feucht, aber ohne Pfütze; Flüssigkeit vor dem Schichten reduzieren.",
+          "image_alt": "Gebratene Champignons und Zwiebeln mit gegarten Hähnchenwürfeln",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-04.webp"
+        },
+        {
+          "title": "Béchamel zubereiten",
+          "content": "40 g Butter bei mittelniedriger Hitze im Topf schmelzen. 40 g Mehl 2 Minuten einrühren, ohne Bräunung. 700 g Milch nach und nach unter Rühren zugießen, Klumpen lösen. Sanft 6–8 Minuten unter Rühren köcheln, bis die Sauce den Löffel überzieht, aber streichfähig bleibt. Die übrigen 3 g Salz, 0,25 g Pfeffer und 0,2 g Muskat zugeben. Nicht zu einer dicken Paste reduzieren.",
+          "image_alt": "Weiße fließende Béchamel wird im Topf gerührt",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-05.webp"
+        },
+        {
+          "title": "Drei Pastaschichten aufbauen",
+          "content": "Dünn Béchamel auf dem Boden verteilen. Etwa ein Viertel der übrigen Sauce für oben reservieren, Rest auf zwei Schichten verteilen. Füllung halbieren und die ursprünglich 240 g Pasta in drei zur Form passende Schichten teilen, bei Bedarf zuschneiden. Pasta, halbe Füllung, Béchamel und 30 g Mozzarella schichten; mit weiteren 30 g Mozzarella wiederholen. Dritte Pastaschicht, reservierte Sauce und übrige 120 g Mozzarella auflegen. Alle Pastaränder mit Sauce bedecken.",
+          "image_alt": "Pasta, Hähnchen, Champignons und Béchamel werden geschichtet",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-06.webp"
+        },
+        {
+          "title": "Backen und Kerntemperatur prüfen",
+          "content": "Locker mit Alufolie abdecken, 20 Minuten bei 190 °C backen. Folie entfernen, weitere 10–15 Minuten bis zum Blubbern und Goldbraunwerden backen, ohne Verbrennen. Saubere Sonde an mehreren Stellen im Kern einsetzen, nicht an die Form: mindestens 74 °C. Ist es kälter, nötigenfalls abdecken, weitere 5 Minuten backen und erneut messen. Bräunung ersetzt die Messung nicht.",
+          "image_alt": "Goldbraune Lasagne in einer Ofenform",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-07.webp"
+        },
+        {
+          "title": "Ruhen lassen, portionieren und lagern",
+          "content": "Auf hitzefester Fläche 10 Minuten ruhen lassen, in 6 Portionen schneiden, mit sauberen Werkzeugen servieren. Reste in flache Behälter teilen und innerhalb von 2 Stunden bei höchstens 4 °C kühlen, bei Umgebung über 32 °C innerhalb von 1 Stunde. Vorgeschlagene Lagerung: 3 Tage; Portion nur einmal auf 74 °C im Kern erhitzen. Ganze Form nicht stundenlang auf der Arbeitsplatte abkühlen lassen.",
+          "image_alt": "Weiße Hähnchen-Champignon-Lasagne zeigt ihre Schichten",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-08.webp"
+        }
+      ],
+      "notes": "Enthält Weizen und Milchprodukte; Platten auf Ei und weitere Allergene prüfen. Trockene Vorkochplatten, keine ofenfertigen; gluten- und milchfreie Varianten nicht geprüft. Braune Champignons können bei gleichem Gewicht verwendet werden, Geschmack und Nährwerte ändern sich. Hähnchen ohne zugesetzte Lake und Mozzarella mit wenig Wasser statt feuchter Kugeln verwenden. Hähnchenreste nicht ohne angepasste Rezeptur und Berücksichtigung der bisherigen Lagerung einsetzen. Champignons vor dem Aufbau reduzieren; keine zusätzliche Sahne oder Brühe. Rohes Schichten über Nacht und Einfrieren sind nicht geprüft; kontinuierlich zubereiten und backen. Nährwerte basieren auf ursprünglichen essbaren Gewichten geteilt durch 6, ohne exakte Aufnahme oder Garverluste und ohne Beilage.",
+      "nutrition": {
+        "sodium_mg": 705,
+        "sugar_g": 10,
+        "saturated_fat_g": 11.4,
+        "carbs_g": 47,
+        "calories": 567.7,
+        "fat_g": 23.5,
+        "fiber_g": 2.8,
+        "protein_g": 41.6,
+        "estimated": true,
+        "serving_size": "1 von 6 vorgeschlagenen Portionen",
+        "source": "USDA FoodData Central — SR Legacy, April 2018 JSON",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "method": "Dreizehn USDA-Datensätze nach FDC-ID im offiziellen Archiv geprüft. Ursprüngliche essbare Gewichte addiert und durch 6 geteilt. Pasta mit Pasta, dry, enriched und Käse mit Cheese, mozzarella, whole milk, low moisture angenähert. Fett und Würzung vollständig gezählt. Ungesalzenes Kochwasser entsorgt, ohne Beilage.",
+        "note": "Schätzung, keine Analyse des gegarten Gerichts. Pasta- und Käsemarke, Hähnchenlake und tatsächliche Portionen ändern Werte. Mengen, Zeiten und Ausbeute ohne Küchentest.",
+        "inputs": [
+          {
+            "fdc_id": 169736,
+            "fdc_description": "Pasta, dry, enriched",
+            "per_100g": {
+              "sodium_mg": 6,
+              "sugar_g": 2.67,
+              "saturated_fat_g": 0.277,
+              "carbs_g": 74.7,
+              "calories": 371,
+              "fat_g": 1.51,
+              "fiber_g": 3.2,
+              "protein_g": 13
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169736/nutrients",
+            "ingredient": "trockene Lasagneplatten zum Vorkochen",
+            "edible_grams": 240
+          },
+          {
+            "fdc_id": 171077,
+            "fdc_description": "Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw",
+            "per_100g": {
+              "fat_g": 2.62,
+              "calories": 120,
+              "saturated_fat_g": 0.563,
+              "sodium_mg": 45,
+              "protein_g": 22.5,
+              "sugar_g": 0,
+              "carbs_g": 0,
+              "fiber_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171077/nutrients",
+            "ingredient": "rohe Hähnchenbrust ohne Haut und Knochen",
+            "edible_grams": 600
+          },
+          {
+            "fdc_id": 169251,
+            "fdc_description": "Mushrooms, white, raw",
+            "per_100g": {
+              "sugar_g": 1.98,
+              "saturated_fat_g": 0.05,
+              "fiber_g": 1,
+              "fat_g": 0.34,
+              "sodium_mg": 5,
+              "protein_g": 3.09,
+              "carbs_g": 3.26,
+              "calories": 22
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169251/nutrients",
+            "ingredient": "frische weiße Champignons",
+            "edible_grams": 500
+          },
+          {
+            "fdc_id": 170000,
+            "fdc_description": "Onions, raw",
+            "per_100g": {
+              "sugar_g": 4.24,
+              "fat_g": 0.1,
+              "carbs_g": 9.34,
+              "calories": 40,
+              "saturated_fat_g": 0.042,
+              "protein_g": 1.1,
+              "fiber_g": 1.7,
+              "sodium_mg": 4
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170000/nutrients",
+            "ingredient": "Zwiebel",
+            "edible_grams": 150
+          },
+          {
+            "fdc_id": 169230,
+            "fdc_description": "Garlic, raw",
+            "per_100g": {
+              "carbs_g": 33.1,
+              "calories": 149,
+              "sugar_g": 1,
+              "saturated_fat_g": 0.089,
+              "fiber_g": 2.1,
+              "sodium_mg": 17,
+              "protein_g": 6.36,
+              "fat_g": 0.5
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169230/nutrients",
+            "ingredient": "Knoblauch",
+            "edible_grams": 10
+          },
+          {
+            "fdc_id": 171413,
+            "fdc_description": "Oil, olive, salad or cooking",
+            "per_100g": {
+              "fat_g": 100,
+              "carbs_g": 0,
+              "calories": 884,
+              "sodium_mg": 2,
+              "protein_g": 0,
+              "saturated_fat_g": 13.8,
+              "fiber_g": 0,
+              "sugar_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171413/nutrients",
+            "ingredient": "Olivenöl",
+            "edible_grams": 20
+          },
+          {
+            "fdc_id": 171265,
+            "fdc_description": "Milk, whole, 3.25% milkfat, with added vitamin D",
+            "per_100g": {
+              "fat_g": 3.25,
+              "sugar_g": 5.05,
+              "carbs_g": 4.8,
+              "calories": 61,
+              "saturated_fat_g": 1.86,
+              "fiber_g": 0,
+              "sodium_mg": 43,
+              "protein_g": 3.15
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171265/nutrients",
+            "ingredient": "pasteurisierte Vollmilch",
+            "edible_grams": 700
+          },
+          {
+            "fdc_id": 173430,
+            "fdc_description": "Butter, without salt",
+            "per_100g": {
+              "sugar_g": 0.06,
+              "calories": 717,
+              "saturated_fat_g": 50.5,
+              "fat_g": 81.1,
+              "carbs_g": 0.06,
+              "protein_g": 0.85,
+              "fiber_g": 0,
+              "sodium_mg": 11
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173430/nutrients",
+            "ingredient": "ungesalzene Butter",
+            "edible_grams": 40
+          },
+          {
+            "fdc_id": 168936,
+            "fdc_description": "Wheat flour, white, all-purpose, enriched, unbleached",
+            "per_100g": {
+              "fiber_g": 2.7,
+              "fat_g": 0.98,
+              "carbs_g": 76.3,
+              "calories": 364,
+              "protein_g": 10.3,
+              "sodium_mg": 2,
+              "saturated_fat_g": 0.155,
+              "sugar_g": 0.27
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/168936/nutrients",
+            "ingredient": "Weizenmehl",
+            "edible_grams": 40
+          },
+          {
+            "fdc_id": 170846,
+            "fdc_description": "Cheese, mozzarella, whole milk, low moisture",
+            "per_100g": {
+              "sugar_g": 1.01,
+              "sodium_mg": 710,
+              "saturated_fat_g": 15.6,
+              "fiber_g": 0,
+              "protein_g": 21.6,
+              "fat_g": 24.6,
+              "carbs_g": 2.47,
+              "calories": 318
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170846/nutrients",
+            "ingredient": "geriebener Vollmilch-Mozzarella mit geringem Wassergehalt",
+            "edible_grams": 180
+          },
+          {
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "fiber_g": 0,
+              "sodium_mg": 38800,
+              "saturated_fat_g": 0,
+              "protein_g": 0,
+              "fat_g": 0,
+              "carbs_g": 0,
+              "calories": 0,
+              "sugar_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients",
+            "ingredient": "feines Salz",
+            "edible_grams": 6
+          },
+          {
+            "fdc_id": 170931,
+            "fdc_description": "Spices, pepper, black",
+            "per_100g": {
+              "fat_g": 3.26,
+              "sugar_g": 0.64,
+              "carbs_g": 64,
+              "calories": 251,
+              "protein_g": 10.4,
+              "fiber_g": 25.3,
+              "sodium_mg": 20,
+              "saturated_fat_g": 1.39
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170931/nutrients",
+            "ingredient": "gemahlener schwarzer Pfeffer",
+            "edible_grams": 0.5
+          },
+          {
+            "fdc_id": 171326,
+            "fdc_description": "Spices, nutmeg, ground",
+            "per_100g": {
+              "protein_g": 5.84,
+              "sodium_mg": 16,
+              "saturated_fat_g": 25.9,
+              "fat_g": 36.3,
+              "carbs_g": 49.3,
+              "calories": 525,
+              "sugar_g": 2.99,
+              "fiber_g": 20.8
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171326/nutrients",
+            "ingredient": "gemahlene Muskatnuss",
+            "edible_grams": 0.2
+          }
+        ]
+      },
+      "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/receta-de-lasana-de-pollo-con-champinones/portada.webp",
+          "alt": "Hähnchen-Champignon-Lasagne mit Béchamel und goldener Käsekruste als Portion"
+        }
+      ],
+      "seo": {
+        "title": "Hähnchen-Lasagne mit Champignons und Béchamel | Manual de Cocina",
+        "description": "Weiße Lasagne für 6 mit Hähnchen, Champignons, Béchamel und Mozzarella. Pasta vorkochen, Füllung reduzieren und 74 °C im Kern prüfen.",
+        "image_alt": "Hähnchen-Champignon-Lasagne mit Béchamel und goldener Käsekruste als Portion",
+        "image_variants": [
+          "/recetas/receta-de-lasana-de-pollo-con-champinones/portada-1x1.webp",
+          "/recetas/receta-de-lasana-de-pollo-con-champinones/portada-4x3.webp",
+          "/recetas/receta-de-lasana-de-pollo-con-champinones/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Kann ich ofenfertige Platten verwenden?",
+            "a": "Nicht direkt austauschen. Vorgesehen sind 240 g trockene Pasta zum Vorkochen. Ofenfertige Platten nehmen Sauce auf und erfordern Flüssigkeits- und Zeitanpassung nach Packung."
+          },
+          {
+            "q": "Wie vermeide ich eine wässrige Lasagne?",
+            "a": "Freie Champignonflüssigkeit vor Zugabe des Hähnchens verdampfen lassen, wasserarmen Mozzarella und Béchamel verwenden, die den Löffel überzieht, ohne Paste zu werden. Vor dem Schneiden 10 Minuten ruhen."
+          },
+          {
+            "q": "Kann ich am Vortag schichten?",
+            "a": "Kontinuierliche Zubereitung und Backen sind vorgesehen; längerer roher Aufbau oder Einfrieren sind nicht geprüft. Gegarte Portionen kühlen, innerhalb von 3 Tagen verbrauchen und einmal auf 74 °C erhitzen."
+          }
+        ]
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "content_html": "<p>Gegarte Hähnchenwürfel, gebratene Champignons und Vollmilch-Béchamel werden zwischen drei vorgekochte Pastaschichten und zwei Füllungsschichten verteilt und mit Mozzarella mit geringem Wassergehalt überbacken. Historische URL und genehmigte Recipe-Klassifizierung bleiben erhalten.</p><p>Vorgeschlagen sind 6 Portionen aus einer Form von etwa 20 × 30 cm: 20 Minuten Vorbereitung, 60 Garen mit teils parallelen Arbeiten, 10 Ruhen, insgesamt 90 Minuten. Marke und Größe der Platten beeinflussen Aufbau und Garung. Mengen, Zeiten und Ausbeute sind Schätzungen ohne Küchentest. Hähnchen und Auflaufkern mit Thermometer prüfen.</p>"
+    },
+    {
+      "id": "d02cf810-aa36-5d1f-83ba-b39ff6b19a42",
+      "recipe_group_id": "14f34319-2bdc-478f-b55b-909be0df6964",
+      "language": "en",
+      "slug": "chicken-lasana-with-mushrooms-recipe",
+      "public_path": "/en/chicken-lasana-with-mushrooms-recipe",
+      "source_url": null,
+      "title": "Chicken and mushroom lasagna with béchamel",
+      "excerpt": "Chicken and mushroom lasagna for 6 with preboiled pasta, a filling without excess liquid, homemade béchamel and browned mozzarella.",
+      "summary": "Cooked diced chicken, sautéed mushrooms and whole-milk béchamel are arranged with three layers of preboiled pasta and two filling layers, then topped with low-moisture mozzarella. The historical chicken-and-mushroom-lasagna URL and approved Recipe classification are retained.\n\nThe proposed yield is 6 portions in a dish about 20 × 30 cm: 20 minutes preparation, 60 cooking with some tasks in parallel, and 10 resting, 90 overall. Sheet brand and size can change assembly and cooking. Quantities, timings and yield are estimates awaiting a kitchen trial; check the chicken and casserole centre with a thermometer.",
+      "category": "Pasta",
+      "category_slug": "pastas",
+      "difficulty": "Medium",
+      "course": "Main course",
+      "cuisine": "Italian, home-style adaptation",
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 60,
+      "total_time_minutes": 90,
+      "servings": 6,
+      "keywords": [
+        "chicken lasagna",
+        "mushroom lasagna",
+        "homemade béchamel",
+        "white lasagna"
+      ],
+      "ingredients": [
+        {
+          "name": "dry lasagna sheets requiring preboiling",
+          "amount": "240",
+          "unit": "g",
+          "group": "Pasta"
+        },
+        {
+          "name": "raw boneless skinless chicken breast",
+          "amount": "600",
+          "unit": "g",
+          "group": "Filling"
+        },
+        {
+          "name": "fresh white mushrooms",
+          "amount": "500",
+          "unit": "g",
+          "group": "Filling"
+        },
+        {
+          "name": "onion",
+          "amount": "150",
+          "unit": "g",
+          "group": "Filling"
+        },
+        {
+          "name": "garlic",
+          "amount": "10",
+          "unit": "g",
+          "group": "Filling"
+        },
+        {
+          "name": "olive oil",
+          "amount": "20",
+          "unit": "g",
+          "group": "Filling"
+        },
+        {
+          "name": "pasteurised whole milk",
+          "amount": "700",
+          "unit": "g",
+          "group": "Béchamel"
+        },
+        {
+          "name": "unsalted butter",
+          "amount": "40",
+          "unit": "g",
+          "group": "Béchamel"
+        },
+        {
+          "name": "plain all-purpose wheat flour",
+          "amount": "40",
+          "unit": "g",
+          "group": "Béchamel"
+        },
+        {
+          "name": "shredded low-moisture whole-milk mozzarella",
+          "amount": "180",
+          "unit": "g",
+          "group": "Topping"
+        },
+        {
+          "name": "fine salt",
+          "amount": "6",
+          "unit": "g",
+          "group": "Seasoning"
+        },
+        {
+          "name": "ground black pepper",
+          "amount": "0.5",
+          "unit": "g",
+          "group": "Seasoning"
+        },
+        {
+          "name": "ground nutmeg",
+          "amount": "0.2",
+          "unit": "g",
+          "group": "Seasoning"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepare ingredients and baking dish",
+          "content": "Preheat a conventional oven, top and bottom heat without fan, to 190 °C. Prepare a dish about 20 × 30 cm. Clean and slice 500 g mushrooms, chop 150 g onion and 10 g garlic. On another board cut 600 g chicken into about 1.5 cm cubes without washing it. Separate raw and cooked utensils. Divide salt: 3 g for filling and 3 g for béchamel; pepper: 0.25 g for each.",
+          "image_alt": "Lasagna ingredients with sliced mushrooms and raw chicken on a separate board",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-01.webp"
+        },
+        {
+          "title": "Boil and drain the sheets",
+          "content": "Boil 240 g sheets in a large pot of potable water without added salt. Follow the packet time, taking them out about 1 minute early if they will be baked. Discard cooking water; it is excluded from the calculation. Drain and spread separately on a clean cloth. Use sheets requiring preboiling: oven-ready sheets need another liquid ratio and are not specified here.",
+          "image_alt": "Cooked lasagna sheets laid separately on a clean cloth",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-02.webp"
+        },
+        {
+          "title": "Cook the chicken separately",
+          "content": "Heat 10 g oil in a wide skillet. Add chicken in two batches if crowded and cook over medium-high heat for about 8–10 minutes overall, stirring. Add part of the filling’s 3 g salt and 0.25 g pepper. Check the thickest cubes with a thermometer: at least 74 °C. Continue cooking if needed. Transfer with a clean utensil to a clean container, never to the raw-chicken plate.",
+          "image_alt": "Chicken cubes cooking alone in a skillet",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-03.webp"
+        },
+        {
+          "title": "Sauté mushrooms and combine the filling",
+          "content": "Add the other 10 g oil and onion to the same skillet and cook 4–5 minutes. Add garlic for 30 seconds, then mushrooms. Sauté 8–10 minutes, in batches if needed, until reduced and free liquid evaporates. Add the rest of the filling’s salt and pepper, then the cooked chicken. The filling should be moist without a puddle; reduce liquid before assembly.",
+          "image_alt": "Sautéed mushrooms and onion mixed with cooked chicken cubes",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-04.webp"
+        },
+        {
+          "title": "Make the béchamel",
+          "content": "Melt 40 g butter in a saucepan over medium-low heat. Stir in 40 g flour for 2 minutes without browning. Gradually whisk in 700 g milk to remove lumps. Simmer gently for 6–8 minutes, stirring, until it coats a spoon but remains spreadable. Add the other 3 g salt, 0.25 g pepper and 0.2 g nutmeg. Do not reduce to a thick paste.",
+          "image_alt": "Smooth pourable white béchamel whisked in a saucepan",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-05.webp"
+        },
+        {
+          "title": "Build three pasta layers",
+          "content": "Spread a thin béchamel layer on the base. Reserve about a quarter of the remaining sauce for the top, dividing the rest between two layers. Split filling in two equal parts and the original 240 g pasta into three layers fitted to the dish, trimming sheets if needed. Layer pasta, half filling, béchamel and 30 g mozzarella; repeat with another 30 g mozzarella. Finish with the third pasta layer, reserved sauce and remaining 120 g mozzarella. Cover every pasta edge with sauce.",
+          "image_alt": "Layering pasta, chicken, mushrooms and béchamel in a baking dish",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-06.webp"
+        },
+        {
+          "title": "Bake and check the centre",
+          "content": "Cover loosely with foil and bake 20 minutes at 190 °C. Remove foil and bake another 10–15 minutes until bubbling and golden, without burning. Insert a clean probe at several central points without touching the dish: at least 74 °C. If cooler, cover if needed and bake another 5 minutes before measuring again. Browning does not replace the temperature check.",
+          "image_alt": "Golden baked lasagna in its oven dish",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-07.webp"
+        },
+        {
+          "title": "Rest, portion and store",
+          "content": "Rest for 10 minutes on a heatproof surface, then cut into 6 portions and serve with clean utensils. Divide leftovers into shallow containers and refrigerate at 4 °C or below within 2 hours, or 1 hour if the room exceeds 32 °C. Use within a proposed 3 days and reheat a portion only once to 74 °C at the centre. Do not leave the whole dish cooling on the counter for hours.",
+          "image_alt": "White chicken and mushroom lasagna portion showing its layers",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-08.webp"
+        }
+      ],
+      "notes": "Contains wheat and dairy; check sheets for egg or other allergens. This formula uses dry sheets for preboiling, not oven-ready sheets, and gluten-free or dairy-free substitutions have not been validated. Cremini can replace white mushrooms at the same weight, altering flavour and nutrients. Use chicken without added brine and low-moisture mozzarella, rather than wet balls, to approximate the calculation and avoid excess water. Do not substitute leftover chicken without adjusting the formula and considering its previous storage. Reduce mushrooms before assembly; add no extra cream or stock. Overnight raw assembly and freezing have not been validated; prepare and bake continuously. Nutrition uses original edible weights divided by 6, without exact absorption or cooking-loss calculation, and excludes sides.",
+      "nutrition": {
+        "sodium_mg": 705,
+        "sugar_g": 10,
+        "saturated_fat_g": 11.4,
+        "carbs_g": 47,
+        "calories": 567.7,
+        "fat_g": 23.5,
+        "fiber_g": 2.8,
+        "protein_g": 41.6,
+        "estimated": true,
+        "serving_size": "1 of 6 proposed portions",
+        "source": "USDA FoodData Central — SR Legacy, April 2018 JSON",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "method": "Thirteen USDA records verified by FDC ID in the official archive. Original edible weights summed and divided by 6. Dry sheets use Pasta, dry, enriched as a proxy; cheese uses Cheese, mozzarella, whole milk, low moisture. All fat and seasoning counted. Unsalted cooking water discarded; no sides included.",
+        "note": "Estimate, not analysis of cooked lasagna. Pasta and cheese brands, chicken brine and actual portions change values. Quantities, timings and yield await a kitchen trial.",
+        "inputs": [
+          {
+            "fdc_id": 169736,
+            "fdc_description": "Pasta, dry, enriched",
+            "per_100g": {
+              "sodium_mg": 6,
+              "sugar_g": 2.67,
+              "saturated_fat_g": 0.277,
+              "carbs_g": 74.7,
+              "calories": 371,
+              "fat_g": 1.51,
+              "fiber_g": 3.2,
+              "protein_g": 13
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169736/nutrients",
+            "ingredient": "dry lasagna sheets requiring preboiling",
+            "edible_grams": 240
+          },
+          {
+            "fdc_id": 171077,
+            "fdc_description": "Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw",
+            "per_100g": {
+              "fat_g": 2.62,
+              "calories": 120,
+              "saturated_fat_g": 0.563,
+              "sodium_mg": 45,
+              "protein_g": 22.5,
+              "sugar_g": 0,
+              "carbs_g": 0,
+              "fiber_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171077/nutrients",
+            "ingredient": "raw boneless skinless chicken breast",
+            "edible_grams": 600
+          },
+          {
+            "fdc_id": 169251,
+            "fdc_description": "Mushrooms, white, raw",
+            "per_100g": {
+              "sugar_g": 1.98,
+              "saturated_fat_g": 0.05,
+              "fiber_g": 1,
+              "fat_g": 0.34,
+              "sodium_mg": 5,
+              "protein_g": 3.09,
+              "carbs_g": 3.26,
+              "calories": 22
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169251/nutrients",
+            "ingredient": "fresh white mushrooms",
+            "edible_grams": 500
+          },
+          {
+            "fdc_id": 170000,
+            "fdc_description": "Onions, raw",
+            "per_100g": {
+              "sugar_g": 4.24,
+              "fat_g": 0.1,
+              "carbs_g": 9.34,
+              "calories": 40,
+              "saturated_fat_g": 0.042,
+              "protein_g": 1.1,
+              "fiber_g": 1.7,
+              "sodium_mg": 4
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170000/nutrients",
+            "ingredient": "onion",
+            "edible_grams": 150
+          },
+          {
+            "fdc_id": 169230,
+            "fdc_description": "Garlic, raw",
+            "per_100g": {
+              "carbs_g": 33.1,
+              "calories": 149,
+              "sugar_g": 1,
+              "saturated_fat_g": 0.089,
+              "fiber_g": 2.1,
+              "sodium_mg": 17,
+              "protein_g": 6.36,
+              "fat_g": 0.5
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169230/nutrients",
+            "ingredient": "garlic",
+            "edible_grams": 10
+          },
+          {
+            "fdc_id": 171413,
+            "fdc_description": "Oil, olive, salad or cooking",
+            "per_100g": {
+              "fat_g": 100,
+              "carbs_g": 0,
+              "calories": 884,
+              "sodium_mg": 2,
+              "protein_g": 0,
+              "saturated_fat_g": 13.8,
+              "fiber_g": 0,
+              "sugar_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171413/nutrients",
+            "ingredient": "olive oil",
+            "edible_grams": 20
+          },
+          {
+            "fdc_id": 171265,
+            "fdc_description": "Milk, whole, 3.25% milkfat, with added vitamin D",
+            "per_100g": {
+              "fat_g": 3.25,
+              "sugar_g": 5.05,
+              "carbs_g": 4.8,
+              "calories": 61,
+              "saturated_fat_g": 1.86,
+              "fiber_g": 0,
+              "sodium_mg": 43,
+              "protein_g": 3.15
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171265/nutrients",
+            "ingredient": "pasteurised whole milk",
+            "edible_grams": 700
+          },
+          {
+            "fdc_id": 173430,
+            "fdc_description": "Butter, without salt",
+            "per_100g": {
+              "sugar_g": 0.06,
+              "calories": 717,
+              "saturated_fat_g": 50.5,
+              "fat_g": 81.1,
+              "carbs_g": 0.06,
+              "protein_g": 0.85,
+              "fiber_g": 0,
+              "sodium_mg": 11
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173430/nutrients",
+            "ingredient": "unsalted butter",
+            "edible_grams": 40
+          },
+          {
+            "fdc_id": 168936,
+            "fdc_description": "Wheat flour, white, all-purpose, enriched, unbleached",
+            "per_100g": {
+              "fiber_g": 2.7,
+              "fat_g": 0.98,
+              "carbs_g": 76.3,
+              "calories": 364,
+              "protein_g": 10.3,
+              "sodium_mg": 2,
+              "saturated_fat_g": 0.155,
+              "sugar_g": 0.27
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/168936/nutrients",
+            "ingredient": "plain all-purpose wheat flour",
+            "edible_grams": 40
+          },
+          {
+            "fdc_id": 170846,
+            "fdc_description": "Cheese, mozzarella, whole milk, low moisture",
+            "per_100g": {
+              "sugar_g": 1.01,
+              "sodium_mg": 710,
+              "saturated_fat_g": 15.6,
+              "fiber_g": 0,
+              "protein_g": 21.6,
+              "fat_g": 24.6,
+              "carbs_g": 2.47,
+              "calories": 318
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170846/nutrients",
+            "ingredient": "shredded low-moisture whole-milk mozzarella",
+            "edible_grams": 180
+          },
+          {
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "fiber_g": 0,
+              "sodium_mg": 38800,
+              "saturated_fat_g": 0,
+              "protein_g": 0,
+              "fat_g": 0,
+              "carbs_g": 0,
+              "calories": 0,
+              "sugar_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients",
+            "ingredient": "fine salt",
+            "edible_grams": 6
+          },
+          {
+            "fdc_id": 170931,
+            "fdc_description": "Spices, pepper, black",
+            "per_100g": {
+              "fat_g": 3.26,
+              "sugar_g": 0.64,
+              "carbs_g": 64,
+              "calories": 251,
+              "protein_g": 10.4,
+              "fiber_g": 25.3,
+              "sodium_mg": 20,
+              "saturated_fat_g": 1.39
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170931/nutrients",
+            "ingredient": "ground black pepper",
+            "edible_grams": 0.5
+          },
+          {
+            "fdc_id": 171326,
+            "fdc_description": "Spices, nutmeg, ground",
+            "per_100g": {
+              "protein_g": 5.84,
+              "sodium_mg": 16,
+              "saturated_fat_g": 25.9,
+              "fat_g": 36.3,
+              "carbs_g": 49.3,
+              "calories": 525,
+              "sugar_g": 2.99,
+              "fiber_g": 20.8
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171326/nutrients",
+            "ingredient": "ground nutmeg",
+            "edible_grams": 0.2
+          }
+        ]
+      },
+      "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/receta-de-lasana-de-pollo-con-champinones/portada.webp",
+          "alt": "Chicken and mushroom lasagna portion with béchamel and golden cheese"
+        }
+      ],
+      "seo": {
+        "title": "Chicken and mushroom lasagna with béchamel | Manual de Cocina",
+        "description": "White lasagna for 6 with chicken, mushrooms, béchamel and mozzarella. Preboil pasta, reduce the filling and check 74 °C at the centre.",
+        "image_alt": "Chicken and mushroom lasagna portion with béchamel and golden cheese",
+        "image_variants": [
+          "/recetas/receta-de-lasana-de-pollo-con-champinones/portada-1x1.webp",
+          "/recetas/receta-de-lasana-de-pollo-con-champinones/portada-4x3.webp",
+          "/recetas/receta-de-lasana-de-pollo-con-champinones/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Can I use oven-ready sheets?",
+            "a": "Not as a direct swap. This formula uses 240 g dry pasta for preboiling. Oven-ready sheets absorb sauce and require liquid and time adjustments following their packet."
+          },
+          {
+            "q": "How can I prevent watery lasagna?",
+            "a": "Evaporate free mushroom liquid before adding chicken, use low-moisture mozzarella and béchamel that coats a spoon without becoming a paste. Rest 10 minutes before cutting."
+          },
+          {
+            "q": "Can I assemble it the day before?",
+            "a": "This proposal uses continuous preparation and baking; extended raw assembly and freezing are unvalidated. Refrigerate cooked portions, use within 3 days and reheat once to 74 °C."
+          }
+        ]
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "content_html": "<p>Cooked diced chicken, sautéed mushrooms and whole-milk béchamel are arranged with three layers of preboiled pasta and two filling layers, then topped with low-moisture mozzarella. The historical chicken-and-mushroom-lasagna URL and approved Recipe classification are retained.</p><p>The proposed yield is 6 portions in a dish about 20 × 30 cm: 20 minutes preparation, 60 cooking with some tasks in parallel, and 10 resting, 90 overall. Sheet brand and size can change assembly and cooking. Quantities, timings and yield are estimates awaiting a kitchen trial; check the chicken and casserole centre with a thermometer.</p>"
+    },
+    {
+      "id": "8a73dec2-1ab9-5dfb-b97d-11c03fa09dda",
+      "recipe_group_id": "14f34319-2bdc-478f-b55b-909be0df6964",
+      "language": "fr",
+      "slug": "recette-de-poulet-lasana-aux-champignons",
+      "public_path": "/fr/recette-de-poulet-lasana-aux-champignons",
+      "source_url": null,
+      "title": "Lasagnes au poulet et aux champignons, béchamel maison",
+      "excerpt": "Lasagnes pour 6 au poulet et aux champignons, pâtes précuites, garniture sans excès de liquide, béchamel et mozzarella gratinée.",
+      "summary": "Poulet cuit en dés, champignons sautés et béchamel au lait entier sont montés avec trois couches de pâtes précuites et deux de garniture, puis recouverts de mozzarella à faible humidité. L’URL historique et la classification Recipe approuvée sont conservées.\n\nLa proposition donne 6 portions dans un plat d’environ 20 × 30 cm : préparation 20 minutes, cuisson 60 avec certaines tâches en parallèle, repos 10, soit 90 au total. Marque et taille des feuilles modifient montage et cuisson. Quantités, durées et rendement sont estimés, en attente d’un essai en cuisine ; mesurez poulet et centre au thermomètre.",
+      "category": "Pâtes",
+      "category_slug": "pastas",
+      "difficulty": "Moyenne",
+      "course": "Plat principal",
+      "cuisine": "Italienne, adaptation maison",
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 60,
+      "total_time_minutes": 90,
+      "servings": 6,
+      "keywords": [
+        "lasagnes poulet",
+        "lasagnes champignons",
+        "béchamel maison",
+        "lasagnes blanches"
+      ],
+      "ingredients": [
+        {
+          "name": "feuilles de lasagnes sèches à précuire",
+          "amount": "240",
+          "unit": "g",
+          "group": "Pâtes"
+        },
+        {
+          "name": "blanc de poulet cru sans peau ni os",
+          "amount": "600",
+          "unit": "g",
+          "group": "Garniture"
+        },
+        {
+          "name": "champignons blancs frais",
+          "amount": "500",
+          "unit": "g",
+          "group": "Garniture"
+        },
+        {
+          "name": "oignon",
+          "amount": "150",
+          "unit": "g",
+          "group": "Garniture"
+        },
+        {
+          "name": "ail",
+          "amount": "10",
+          "unit": "g",
+          "group": "Garniture"
+        },
+        {
+          "name": "huile d’olive",
+          "amount": "20",
+          "unit": "g",
+          "group": "Garniture"
+        },
+        {
+          "name": "lait entier pasteurisé",
+          "amount": "700",
+          "unit": "g",
+          "group": "Béchamel"
+        },
+        {
+          "name": "beurre doux",
+          "amount": "40",
+          "unit": "g",
+          "group": "Béchamel"
+        },
+        {
+          "name": "farine de blé courante",
+          "amount": "40",
+          "unit": "g",
+          "group": "Béchamel"
+        },
+        {
+          "name": "mozzarella de lait entier à faible humidité râpée",
+          "amount": "180",
+          "unit": "g",
+          "group": "Finition"
+        },
+        {
+          "name": "sel fin",
+          "amount": "6",
+          "unit": "g",
+          "group": "Assaisonnement"
+        },
+        {
+          "name": "poivre noir moulu",
+          "amount": "0.5",
+          "unit": "g",
+          "group": "Assaisonnement"
+        },
+        {
+          "name": "muscade moulue",
+          "amount": "0.2",
+          "unit": "g",
+          "group": "Assaisonnement"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Préparer les ingrédients et le plat",
+          "content": "Préchauffez à 190 °C, chaleur traditionnelle haut et bas sans ventilation, et préparez un plat d’environ 20 × 30 cm. Nettoyez et émincez 500 g de champignons, hachez 150 g d’oignon et 10 g d’ail. Sur une autre planche, coupez 600 g de poulet en dés d’environ 1,5 cm sans le laver. Séparez ustensiles crus et cuits. Divisez le sel : 3 g pour garniture, 3 g pour béchamel ; poivre : 0,25 g chacun.",
+          "image_alt": "Ingrédients avec champignons émincés et poulet cru sur planche séparée",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-01.webp"
+        },
+        {
+          "title": "Cuire et égoutter les feuilles",
+          "content": "Faites cuire 240 g de feuilles dans une grande casserole d’eau potable bouillante sans sel ajouté, selon le paquet, environ 1 minute de moins si elles passent ensuite au four. Jetez l’eau, exclue du calcul. Égouttez et étalez séparément sur un linge propre. Utilisez des feuilles à précuire ; les feuilles prêtes au four demandent une autre quantité de liquide et ne sont pas prévues ici.",
+          "image_alt": "Feuilles cuites étalées séparément sur un linge propre",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-02.webp"
+        },
+        {
+          "title": "Cuire le poulet séparément",
+          "content": "Chauffez 10 g d’huile dans une grande poêle. Ajoutez le poulet en deux fois s’il est serré et cuisez à feu moyen-vif environ 8–10 minutes au total en remuant. Ajoutez une partie des 3 g de sel et 0,25 g de poivre de la garniture. Vérifiez les plus gros dés : au moins 74 °C au thermomètre. Prolongez si nécessaire. Transférez avec un ustensile propre dans un récipient propre, jamais sur l’assiette du poulet cru.",
+          "image_alt": "Dés de poulet cuisant seuls dans une poêle",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-03.webp"
+        },
+        {
+          "title": "Sauter les champignons et réunir la garniture",
+          "content": "Ajoutez les autres 10 g d’huile et l’oignon dans la même poêle ; cuisez 4–5 minutes. Ajoutez l’ail 30 secondes, puis les champignons. Faites sauter 8–10 minutes, en plusieurs fois si besoin, jusqu’à réduction et évaporation du liquide libre. Ajoutez le reste du sel et du poivre prévus pour la garniture et le poulet cuit. Le mélange doit être humide sans flaque ; réduisez avant le montage.",
+          "image_alt": "Champignons et oignon sautés avec dés de poulet cuit",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-04.webp"
+        },
+        {
+          "title": "Préparer la béchamel",
+          "content": "Faites fondre 40 g de beurre à feu moyen-doux dans une casserole. Ajoutez 40 g de farine et remuez 2 minutes sans coloration. Versez progressivement 700 g de lait en fouettant pour supprimer les grumeaux. Laissez frémir 6–8 minutes en remuant jusqu’à nappage de la cuillère, avec une sauce encore étalable. Ajoutez les autres 3 g de sel, 0,25 g de poivre et 0,2 g de muscade. Ne réduisez pas en pâte épaisse.",
+          "image_alt": "Béchamel blanche fluide fouettée dans une casserole",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-05.webp"
+        },
+        {
+          "title": "Monter trois couches de pâtes",
+          "content": "Étalez un peu de béchamel au fond. Réservez environ un quart du reste pour le dessus et partagez le reste entre deux couches. Divisez la garniture en deux et les 240 g initiaux de pâtes en trois couches adaptées au plat, en coupant si besoin. Alternez pâtes, moitié de garniture, béchamel et 30 g de mozzarella ; répétez avec encore 30 g de mozzarella. Terminez par la troisième couche de pâtes, sauce réservée et les 120 g de mozzarella restants. Couvrez tous les bords de pâtes de sauce.",
+          "image_alt": "Montage des pâtes, poulet, champignons et béchamel",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-06.webp"
+        },
+        {
+          "title": "Enfourner et mesurer le centre",
+          "content": "Couvrez lâchement d’aluminium et cuisez 20 minutes à 190 °C. Retirez l’aluminium et poursuivez 10–15 minutes, jusqu’à bouillonnement et dorure sans brûler. Insérez une sonde propre en plusieurs points du centre sans toucher le plat : au moins 74 °C. Sinon couvrez si besoin, prolongez 5 minutes et mesurez encore. La croûte dorée ne remplace pas le contrôle.",
+          "image_alt": "Lasagnes gratinées dans un plat de cuisson",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-07.webp"
+        },
+        {
+          "title": "Laisser reposer, portionner et conserver",
+          "content": "Reposez 10 minutes sur une surface résistante à la chaleur et coupez en 6 portions. Servez avec des ustensiles propres. Répartissez les restes en contenants peu profonds et réfrigérez à 4 °C ou moins sous 2 heures, ou 1 heure si l’ambiance dépasse 32 °C. Consommez sous 3 jours proposés et réchauffez une portion une seule fois à 74 °C à cœur. Ne laissez pas tout le plat refroidir des heures sur le plan de travail.",
+          "image_alt": "Part de lasagnes blanches montrant poulet, champignons et couches",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-08.webp"
+        }
+      ],
+      "notes": "Contient blé et lait ; vérifiez œuf et autres allergènes dans les feuilles. Pâtes sèches à précuire, pas prêtes au four ; substitutions sans gluten ou lait non validées. Les champignons bruns peuvent remplacer les blancs au même poids, avec variation de goût et nutriments. Poulet sans saumure ajoutée et mozzarella à faible humidité, pas boules humides, pour approcher le calcul et éviter l’eau. Ne remplacez pas le poulet par des restes sans adapter formule et conservation antérieure. Réduisez les champignons avant montage, sans crème ou bouillon supplémentaire. Montage cru la veille et congélation non validés ; préparez et enfournez sans interruption. Calcul selon les poids comestibles initiaux divisés par 6, sans absorption ou pertes exactes de cuisson ni accompagnement.",
+      "nutrition": {
+        "sodium_mg": 705,
+        "sugar_g": 10,
+        "saturated_fat_g": 11.4,
+        "carbs_g": 47,
+        "calories": 567.7,
+        "fat_g": 23.5,
+        "fiber_g": 2.8,
+        "protein_g": 41.6,
+        "estimated": true,
+        "serving_size": "1 des 6 portions proposées",
+        "source": "USDA FoodData Central — SR Legacy, April 2018 JSON",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "method": "Treize fiches USDA vérifiées par FDC ID dans l’archive officielle. Poids comestibles initiaux additionnés et divisés par 6. Pâtes approchées par Pasta, dry, enriched et fromage par Cheese, mozzarella, whole milk, low moisture. Graisses et assaisonnements intégralement comptés. Eau de cuisson sans sel jetée ; sans accompagnement.",
+        "note": "Estimation, pas analyse du plat cuit. Marques de pâtes et mozzarella, saumure du poulet et partage réel modifient les chiffres. Quantités, durées et rendement en attente d’un essai en cuisine.",
+        "inputs": [
+          {
+            "fdc_id": 169736,
+            "fdc_description": "Pasta, dry, enriched",
+            "per_100g": {
+              "sodium_mg": 6,
+              "sugar_g": 2.67,
+              "saturated_fat_g": 0.277,
+              "carbs_g": 74.7,
+              "calories": 371,
+              "fat_g": 1.51,
+              "fiber_g": 3.2,
+              "protein_g": 13
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169736/nutrients",
+            "ingredient": "feuilles de lasagnes sèches à précuire",
+            "edible_grams": 240
+          },
+          {
+            "fdc_id": 171077,
+            "fdc_description": "Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw",
+            "per_100g": {
+              "fat_g": 2.62,
+              "calories": 120,
+              "saturated_fat_g": 0.563,
+              "sodium_mg": 45,
+              "protein_g": 22.5,
+              "sugar_g": 0,
+              "carbs_g": 0,
+              "fiber_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171077/nutrients",
+            "ingredient": "blanc de poulet cru sans peau ni os",
+            "edible_grams": 600
+          },
+          {
+            "fdc_id": 169251,
+            "fdc_description": "Mushrooms, white, raw",
+            "per_100g": {
+              "sugar_g": 1.98,
+              "saturated_fat_g": 0.05,
+              "fiber_g": 1,
+              "fat_g": 0.34,
+              "sodium_mg": 5,
+              "protein_g": 3.09,
+              "carbs_g": 3.26,
+              "calories": 22
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169251/nutrients",
+            "ingredient": "champignons blancs frais",
+            "edible_grams": 500
+          },
+          {
+            "fdc_id": 170000,
+            "fdc_description": "Onions, raw",
+            "per_100g": {
+              "sugar_g": 4.24,
+              "fat_g": 0.1,
+              "carbs_g": 9.34,
+              "calories": 40,
+              "saturated_fat_g": 0.042,
+              "protein_g": 1.1,
+              "fiber_g": 1.7,
+              "sodium_mg": 4
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170000/nutrients",
+            "ingredient": "oignon",
+            "edible_grams": 150
+          },
+          {
+            "fdc_id": 169230,
+            "fdc_description": "Garlic, raw",
+            "per_100g": {
+              "carbs_g": 33.1,
+              "calories": 149,
+              "sugar_g": 1,
+              "saturated_fat_g": 0.089,
+              "fiber_g": 2.1,
+              "sodium_mg": 17,
+              "protein_g": 6.36,
+              "fat_g": 0.5
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169230/nutrients",
+            "ingredient": "ail",
+            "edible_grams": 10
+          },
+          {
+            "fdc_id": 171413,
+            "fdc_description": "Oil, olive, salad or cooking",
+            "per_100g": {
+              "fat_g": 100,
+              "carbs_g": 0,
+              "calories": 884,
+              "sodium_mg": 2,
+              "protein_g": 0,
+              "saturated_fat_g": 13.8,
+              "fiber_g": 0,
+              "sugar_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171413/nutrients",
+            "ingredient": "huile d’olive",
+            "edible_grams": 20
+          },
+          {
+            "fdc_id": 171265,
+            "fdc_description": "Milk, whole, 3.25% milkfat, with added vitamin D",
+            "per_100g": {
+              "fat_g": 3.25,
+              "sugar_g": 5.05,
+              "carbs_g": 4.8,
+              "calories": 61,
+              "saturated_fat_g": 1.86,
+              "fiber_g": 0,
+              "sodium_mg": 43,
+              "protein_g": 3.15
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171265/nutrients",
+            "ingredient": "lait entier pasteurisé",
+            "edible_grams": 700
+          },
+          {
+            "fdc_id": 173430,
+            "fdc_description": "Butter, without salt",
+            "per_100g": {
+              "sugar_g": 0.06,
+              "calories": 717,
+              "saturated_fat_g": 50.5,
+              "fat_g": 81.1,
+              "carbs_g": 0.06,
+              "protein_g": 0.85,
+              "fiber_g": 0,
+              "sodium_mg": 11
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173430/nutrients",
+            "ingredient": "beurre doux",
+            "edible_grams": 40
+          },
+          {
+            "fdc_id": 168936,
+            "fdc_description": "Wheat flour, white, all-purpose, enriched, unbleached",
+            "per_100g": {
+              "fiber_g": 2.7,
+              "fat_g": 0.98,
+              "carbs_g": 76.3,
+              "calories": 364,
+              "protein_g": 10.3,
+              "sodium_mg": 2,
+              "saturated_fat_g": 0.155,
+              "sugar_g": 0.27
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/168936/nutrients",
+            "ingredient": "farine de blé courante",
+            "edible_grams": 40
+          },
+          {
+            "fdc_id": 170846,
+            "fdc_description": "Cheese, mozzarella, whole milk, low moisture",
+            "per_100g": {
+              "sugar_g": 1.01,
+              "sodium_mg": 710,
+              "saturated_fat_g": 15.6,
+              "fiber_g": 0,
+              "protein_g": 21.6,
+              "fat_g": 24.6,
+              "carbs_g": 2.47,
+              "calories": 318
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170846/nutrients",
+            "ingredient": "mozzarella de lait entier à faible humidité râpée",
+            "edible_grams": 180
+          },
+          {
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "fiber_g": 0,
+              "sodium_mg": 38800,
+              "saturated_fat_g": 0,
+              "protein_g": 0,
+              "fat_g": 0,
+              "carbs_g": 0,
+              "calories": 0,
+              "sugar_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients",
+            "ingredient": "sel fin",
+            "edible_grams": 6
+          },
+          {
+            "fdc_id": 170931,
+            "fdc_description": "Spices, pepper, black",
+            "per_100g": {
+              "fat_g": 3.26,
+              "sugar_g": 0.64,
+              "carbs_g": 64,
+              "calories": 251,
+              "protein_g": 10.4,
+              "fiber_g": 25.3,
+              "sodium_mg": 20,
+              "saturated_fat_g": 1.39
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170931/nutrients",
+            "ingredient": "poivre noir moulu",
+            "edible_grams": 0.5
+          },
+          {
+            "fdc_id": 171326,
+            "fdc_description": "Spices, nutmeg, ground",
+            "per_100g": {
+              "protein_g": 5.84,
+              "sodium_mg": 16,
+              "saturated_fat_g": 25.9,
+              "fat_g": 36.3,
+              "carbs_g": 49.3,
+              "calories": 525,
+              "sugar_g": 2.99,
+              "fiber_g": 20.8
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171326/nutrients",
+            "ingredient": "muscade moulue",
+            "edible_grams": 0.2
+          }
+        ]
+      },
+      "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/receta-de-lasana-de-pollo-con-champinones/portada.webp",
+          "alt": "Part de lasagnes poulet-champignons avec béchamel et fromage doré"
+        }
+      ],
+      "seo": {
+        "title": "Lasagnes poulet-champignons et béchamel | Manual de Cocina",
+        "description": "Lasagnes blanches pour 6 avec poulet, champignons, béchamel et mozzarella. Précuisez les pâtes, réduisez la garniture et vérifiez 74 °C à cœur.",
+        "image_alt": "Part de lasagnes poulet-champignons avec béchamel et fromage doré",
+        "image_variants": [
+          "/recetas/receta-de-lasana-de-pollo-con-champinones/portada-1x1.webp",
+          "/recetas/receta-de-lasana-de-pollo-con-champinones/portada-4x3.webp",
+          "/recetas/receta-de-lasana-de-pollo-con-champinones/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Peut-on utiliser des feuilles prêtes au four ?",
+            "a": "Pas en remplacement direct. Cette formule utilise 240 g de pâtes sèches à précuire. Les feuilles prêtes au four absorbent la sauce : adaptez liquides et durée selon leur paquet."
+          },
+          {
+            "q": "Comment éviter des lasagnes aqueuses ?",
+            "a": "Évaporez le liquide libre des champignons avant le poulet, utilisez mozzarella à faible humidité et béchamel nappant la cuillère sans devenir une pâte. Reposez 10 minutes avant de couper."
+          },
+          {
+            "q": "Peut-on monter le plat la veille ?",
+            "a": "Préparation et cuisson continues sont proposées ; montage cru prolongé et congélation non validés. Réfrigérez les portions cuites, consommez sous 3 jours et réchauffez une fois à 74 °C."
+          }
+        ]
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "content_html": "<p>Poulet cuit en dés, champignons sautés et béchamel au lait entier sont montés avec trois couches de pâtes précuites et deux de garniture, puis recouverts de mozzarella à faible humidité. L’URL historique et la classification Recipe approuvée sont conservées.</p><p>La proposition donne 6 portions dans un plat d’environ 20 × 30 cm : préparation 20 minutes, cuisson 60 avec certaines tâches en parallèle, repos 10, soit 90 au total. Marque et taille des feuilles modifient montage et cuisson. Quantités, durées et rendement sont estimés, en attente d’un essai en cuisine ; mesurez poulet et centre au thermomètre.</p>"
+    },
+    {
+      "id": "ee96c0da-eac6-5ad9-ad07-9a5585997d0e",
+      "recipe_group_id": "14f34319-2bdc-478f-b55b-909be0df6964",
+      "language": "it",
+      "slug": "ricetta-lasana-di-pollo-con-funghi",
+      "public_path": "/it/ricetta-lasana-di-pollo-con-funghi",
+      "source_url": null,
+      "title": "Lasagne di pollo e funghi con besciamella",
+      "excerpt": "Lasagne per 6 con pollo, funghi, pasta precotta, ripieno senza liquido in eccesso, besciamella e mozzarella gratinata.",
+      "summary": "Pollo cotto a dadini, funghi saltati e besciamella al latte intero vengono montati con tre strati di pasta precotta e due di ripieno, finendo con mozzarella a bassa umidità. Restano URL storica e classificazione Recipe approvata.\n\nSi propongono 6 porzioni in pirofila di circa 20 × 30 cm: preparazione 20 minuti, cottura 60 con alcune attività in parallelo, riposo 10, totale 90. Marca e dimensione delle sfoglie possono cambiare montaggio e cottura. Dosi, tempi e resa sono stime in attesa di prova in cucina; pollo e centro si controllano con termometro.",
+      "category": "Pasta",
+      "category_slug": "pastas",
+      "difficulty": "Media",
+      "course": "Piatto principale",
+      "cuisine": "Italiana, adattamento casalingo",
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 60,
+      "total_time_minutes": 90,
+      "servings": 6,
+      "keywords": [
+        "lasagne pollo",
+        "lasagne funghi",
+        "besciamella casalinga",
+        "lasagne bianche"
+      ],
+      "ingredients": [
+        {
+          "name": "sfoglie secche per lasagne da precuocere",
+          "amount": "240",
+          "unit": "g",
+          "group": "Pasta"
+        },
+        {
+          "name": "petto di pollo crudo senza pelle né ossa",
+          "amount": "600",
+          "unit": "g",
+          "group": "Ripieno"
+        },
+        {
+          "name": "champignon bianchi freschi",
+          "amount": "500",
+          "unit": "g",
+          "group": "Ripieno"
+        },
+        {
+          "name": "cipolla",
+          "amount": "150",
+          "unit": "g",
+          "group": "Ripieno"
+        },
+        {
+          "name": "aglio",
+          "amount": "10",
+          "unit": "g",
+          "group": "Ripieno"
+        },
+        {
+          "name": "olio d’oliva",
+          "amount": "20",
+          "unit": "g",
+          "group": "Ripieno"
+        },
+        {
+          "name": "latte intero pastorizzato",
+          "amount": "700",
+          "unit": "g",
+          "group": "Besciamella"
+        },
+        {
+          "name": "burro non salato",
+          "amount": "40",
+          "unit": "g",
+          "group": "Besciamella"
+        },
+        {
+          "name": "farina di frumento comune",
+          "amount": "40",
+          "unit": "g",
+          "group": "Besciamella"
+        },
+        {
+          "name": "mozzarella di latte intero a bassa umidità grattugiata",
+          "amount": "180",
+          "unit": "g",
+          "group": "Finitura"
+        },
+        {
+          "name": "sale fino",
+          "amount": "6",
+          "unit": "g",
+          "group": "Condimento"
+        },
+        {
+          "name": "pepe nero macinato",
+          "amount": "0.5",
+          "unit": "g",
+          "group": "Condimento"
+        },
+        {
+          "name": "noce moscata macinata",
+          "amount": "0.2",
+          "unit": "g",
+          "group": "Condimento"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Preparare ingredienti e pirofila",
+          "content": "Preriscaldare a 190 °C, forno statico sopra e sotto senza ventola, e preparare una pirofila di circa 20 × 30 cm. Pulire e affettare 500 g di funghi, tritare 150 g di cipolla e 10 g di aglio. Su altro tagliere tagliare 600 g di pollo in dadini di circa 1,5 cm senza lavarlo. Separare utensili crudi e cotti. Dividere sale: 3 g al ripieno, 3 g alla besciamella; pepe: 0,25 g ciascuno.",
+          "image_alt": "Ingredienti con funghi affettati e pollo crudo su tagliere separato",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-01.webp"
+        },
+        {
+          "title": "Cuocere e scolare la pasta",
+          "content": "Cuocere 240 g di sfoglie in una pentola grande di acqua potabile bollente senza sale aggiunto, seguendo la confezione e togliendo circa 1 minuto prima se poi vanno in forno. Eliminare l’acqua, esclusa dal calcolo. Scolare e stendere separate su panno pulito. Usare sfoglie da precuocere; quelle pronte al forno richiedono un altro rapporto di liquidi e non sono previste qui.",
+          "image_alt": "Sfoglie cotte separate su panno pulito",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-02.webp"
+        },
+        {
+          "title": "Cuocere il pollo separatamente",
+          "content": "Scaldare 10 g di olio in padella ampia. Cuocere il pollo in due riprese se troppo ammassato, a fuoco medio-alto per circa 8–10 minuti totali mescolando. Usare parte dei 3 g di sale e 0,25 g di pepe del ripieno. Controllare i dadini più grandi: almeno 74 °C al termometro. Prolungare se necessario. Trasferire con utensile pulito in contenitore pulito, mai nel piatto del pollo crudo.",
+          "image_alt": "Dadini di pollo che cuociono da soli in padella",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-03.webp"
+        },
+        {
+          "title": "Saltare i funghi e unire il ripieno",
+          "content": "Nella stessa padella mettere gli altri 10 g di olio e la cipolla, cuocere 4–5 minuti. Aggiungere aglio per 30 secondi, poi funghi. Saltare 8–10 minuti, in riprese se serve, finché ridotti e senza liquido libero. Aggiungere sale e pepe del ripieno rimasti e pollo cotto. Il ripieno deve essere umido senza pozza; ridurre il liquido prima del montaggio.",
+          "image_alt": "Funghi e cipolla saltati uniti al pollo cotto",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-04.webp"
+        },
+        {
+          "title": "Fare la besciamella",
+          "content": "Sciogliere 40 g di burro a fuoco medio-basso in casseruola. Mescolare 40 g di farina per 2 minuti senza dorare. Versare 700 g di latte poco alla volta con la frusta, sciogliendo i grumi. Sobbollire 6–8 minuti mescolando, finché vela il cucchiaio ma resta spalmabile. Unire gli altri 3 g di sale, 0,25 g di pepe e 0,2 g di noce moscata. Non ridurre a pasta densa.",
+          "image_alt": "Besciamella bianca fluida mescolata con frusta",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-05.webp"
+        },
+        {
+          "title": "Montare tre strati di pasta",
+          "content": "Stendere poca besciamella sul fondo. Tenere circa un quarto della salsa restante per sopra e dividere il resto in due strati. Dividere il ripieno a metà e i 240 g iniziali di pasta in tre strati adatti alla pirofila, tagliando se necessario. Alternare pasta, metà ripieno, besciamella e 30 g di mozzarella; ripetere con altri 30 g di mozzarella. Finire con terzo strato di pasta, salsa tenuta e i 120 g di mozzarella rimasti. Coprire tutti i bordi di pasta con salsa.",
+          "image_alt": "Montaggio di pasta, pollo, funghi e besciamella",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-06.webp"
+        },
+        {
+          "title": "Infornare e controllare il centro",
+          "content": "Coprire morbidamente con alluminio e cuocere 20 minuti a 190 °C. Togliere l’alluminio e cuocere altri 10–15 minuti, fino a bolle e doratura senza bruciare. Inserire sonda pulita in più punti centrali senza toccare la pirofila: almeno 74 °C. Se inferiore, coprire se serve e cuocere altri 5 minuti prima di rimisurare. La doratura non sostituisce il controllo.",
+          "image_alt": "Lasagne gratinate nella pirofila",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-07.webp"
+        },
+        {
+          "title": "Riposare, porzionare e conservare",
+          "content": "Riposare 10 minuti su superficie resistente al calore, tagliare in 6 porzioni e servire con utensili puliti. Dividere gli avanzi in contenitori bassi e refrigerare a 4 °C o meno entro 2 ore, o 1 ora se l’ambiente supera 32 °C. Si propone consumo entro 3 giorni e riscaldamento di ogni porzione una sola volta a 74 °C al centro. Non lasciare l’intera pirofila per ore sul piano a raffreddare.",
+          "image_alt": "Porzione di lasagne bianche con strati di pollo e funghi",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-08.webp"
+        }
+      ],
+      "notes": "Contiene frumento e latticini; controllare uovo e altri allergeni nelle sfoglie. Questa formula usa pasta secca da precuocere, non pronta al forno; sostituzioni senza glutine o latte non validate. Cremini al posto degli champignon bianchi allo stesso peso cambiano sapore e nutrienti. Usare pollo senza salamoia aggiunta e mozzarella a bassa umidità, non palline umide, per avvicinare il calcolo ed evitare acqua in eccesso. Non sostituire con avanzi di pollo senza riformulare e considerare la conservazione precedente. Ridurre i funghi prima di montare; niente panna o brodo aggiuntivo. Montaggio crudo il giorno prima e congelamento non validati: preparare e infornare senza interruzioni. Nutrizione dai pesi edibili iniziali divisi per 6, senza assorbimento o perdite esatte di cottura e senza contorni.",
+      "nutrition": {
+        "sodium_mg": 705,
+        "sugar_g": 10,
+        "saturated_fat_g": 11.4,
+        "carbs_g": 47,
+        "calories": 567.7,
+        "fat_g": 23.5,
+        "fiber_g": 2.8,
+        "protein_g": 41.6,
+        "estimated": true,
+        "serving_size": "1 delle 6 porzioni proposte",
+        "source": "USDA FoodData Central — SR Legacy, April 2018 JSON",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "method": "Tredici schede USDA verificate per FDC ID nell’archivio ufficiale. Pesi edibili iniziali sommati e divisi per 6. Pasta approssimata con Pasta, dry, enriched e formaggio con Cheese, mozzarella, whole milk, low moisture. Grassi e condimenti contati integralmente. Acqua di cottura senza sale eliminata; nessun contorno.",
+        "note": "Stima, non analisi del piatto cotto. Marche di pasta e mozzarella, salamoia del pollo e porzioni reali cambiano i valori. Dosi, tempi e resa attendono prova in cucina.",
+        "inputs": [
+          {
+            "fdc_id": 169736,
+            "fdc_description": "Pasta, dry, enriched",
+            "per_100g": {
+              "sodium_mg": 6,
+              "sugar_g": 2.67,
+              "saturated_fat_g": 0.277,
+              "carbs_g": 74.7,
+              "calories": 371,
+              "fat_g": 1.51,
+              "fiber_g": 3.2,
+              "protein_g": 13
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169736/nutrients",
+            "ingredient": "sfoglie secche per lasagne da precuocere",
+            "edible_grams": 240
+          },
+          {
+            "fdc_id": 171077,
+            "fdc_description": "Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw",
+            "per_100g": {
+              "fat_g": 2.62,
+              "calories": 120,
+              "saturated_fat_g": 0.563,
+              "sodium_mg": 45,
+              "protein_g": 22.5,
+              "sugar_g": 0,
+              "carbs_g": 0,
+              "fiber_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171077/nutrients",
+            "ingredient": "petto di pollo crudo senza pelle né ossa",
+            "edible_grams": 600
+          },
+          {
+            "fdc_id": 169251,
+            "fdc_description": "Mushrooms, white, raw",
+            "per_100g": {
+              "sugar_g": 1.98,
+              "saturated_fat_g": 0.05,
+              "fiber_g": 1,
+              "fat_g": 0.34,
+              "sodium_mg": 5,
+              "protein_g": 3.09,
+              "carbs_g": 3.26,
+              "calories": 22
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169251/nutrients",
+            "ingredient": "champignon bianchi freschi",
+            "edible_grams": 500
+          },
+          {
+            "fdc_id": 170000,
+            "fdc_description": "Onions, raw",
+            "per_100g": {
+              "sugar_g": 4.24,
+              "fat_g": 0.1,
+              "carbs_g": 9.34,
+              "calories": 40,
+              "saturated_fat_g": 0.042,
+              "protein_g": 1.1,
+              "fiber_g": 1.7,
+              "sodium_mg": 4
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170000/nutrients",
+            "ingredient": "cipolla",
+            "edible_grams": 150
+          },
+          {
+            "fdc_id": 169230,
+            "fdc_description": "Garlic, raw",
+            "per_100g": {
+              "carbs_g": 33.1,
+              "calories": 149,
+              "sugar_g": 1,
+              "saturated_fat_g": 0.089,
+              "fiber_g": 2.1,
+              "sodium_mg": 17,
+              "protein_g": 6.36,
+              "fat_g": 0.5
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169230/nutrients",
+            "ingredient": "aglio",
+            "edible_grams": 10
+          },
+          {
+            "fdc_id": 171413,
+            "fdc_description": "Oil, olive, salad or cooking",
+            "per_100g": {
+              "fat_g": 100,
+              "carbs_g": 0,
+              "calories": 884,
+              "sodium_mg": 2,
+              "protein_g": 0,
+              "saturated_fat_g": 13.8,
+              "fiber_g": 0,
+              "sugar_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171413/nutrients",
+            "ingredient": "olio d’oliva",
+            "edible_grams": 20
+          },
+          {
+            "fdc_id": 171265,
+            "fdc_description": "Milk, whole, 3.25% milkfat, with added vitamin D",
+            "per_100g": {
+              "fat_g": 3.25,
+              "sugar_g": 5.05,
+              "carbs_g": 4.8,
+              "calories": 61,
+              "saturated_fat_g": 1.86,
+              "fiber_g": 0,
+              "sodium_mg": 43,
+              "protein_g": 3.15
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171265/nutrients",
+            "ingredient": "latte intero pastorizzato",
+            "edible_grams": 700
+          },
+          {
+            "fdc_id": 173430,
+            "fdc_description": "Butter, without salt",
+            "per_100g": {
+              "sugar_g": 0.06,
+              "calories": 717,
+              "saturated_fat_g": 50.5,
+              "fat_g": 81.1,
+              "carbs_g": 0.06,
+              "protein_g": 0.85,
+              "fiber_g": 0,
+              "sodium_mg": 11
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173430/nutrients",
+            "ingredient": "burro non salato",
+            "edible_grams": 40
+          },
+          {
+            "fdc_id": 168936,
+            "fdc_description": "Wheat flour, white, all-purpose, enriched, unbleached",
+            "per_100g": {
+              "fiber_g": 2.7,
+              "fat_g": 0.98,
+              "carbs_g": 76.3,
+              "calories": 364,
+              "protein_g": 10.3,
+              "sodium_mg": 2,
+              "saturated_fat_g": 0.155,
+              "sugar_g": 0.27
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/168936/nutrients",
+            "ingredient": "farina di frumento comune",
+            "edible_grams": 40
+          },
+          {
+            "fdc_id": 170846,
+            "fdc_description": "Cheese, mozzarella, whole milk, low moisture",
+            "per_100g": {
+              "sugar_g": 1.01,
+              "sodium_mg": 710,
+              "saturated_fat_g": 15.6,
+              "fiber_g": 0,
+              "protein_g": 21.6,
+              "fat_g": 24.6,
+              "carbs_g": 2.47,
+              "calories": 318
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170846/nutrients",
+            "ingredient": "mozzarella di latte intero a bassa umidità grattugiata",
+            "edible_grams": 180
+          },
+          {
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "fiber_g": 0,
+              "sodium_mg": 38800,
+              "saturated_fat_g": 0,
+              "protein_g": 0,
+              "fat_g": 0,
+              "carbs_g": 0,
+              "calories": 0,
+              "sugar_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients",
+            "ingredient": "sale fino",
+            "edible_grams": 6
+          },
+          {
+            "fdc_id": 170931,
+            "fdc_description": "Spices, pepper, black",
+            "per_100g": {
+              "fat_g": 3.26,
+              "sugar_g": 0.64,
+              "carbs_g": 64,
+              "calories": 251,
+              "protein_g": 10.4,
+              "fiber_g": 25.3,
+              "sodium_mg": 20,
+              "saturated_fat_g": 1.39
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170931/nutrients",
+            "ingredient": "pepe nero macinato",
+            "edible_grams": 0.5
+          },
+          {
+            "fdc_id": 171326,
+            "fdc_description": "Spices, nutmeg, ground",
+            "per_100g": {
+              "protein_g": 5.84,
+              "sodium_mg": 16,
+              "saturated_fat_g": 25.9,
+              "fat_g": 36.3,
+              "carbs_g": 49.3,
+              "calories": 525,
+              "sugar_g": 2.99,
+              "fiber_g": 20.8
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171326/nutrients",
+            "ingredient": "noce moscata macinata",
+            "edible_grams": 0.2
+          }
+        ]
+      },
+      "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/receta-de-lasana-de-pollo-con-champinones/portada.webp",
+          "alt": "Porzione di lasagne pollo e funghi con besciamella e formaggio dorato"
+        }
+      ],
+      "seo": {
+        "title": "Lasagne di pollo e funghi con besciamella | Manual de Cocina",
+        "description": "Lasagne bianche per 6 con pollo, funghi, besciamella e mozzarella. Precuoci la pasta, riduci il ripieno e verifica 74 °C al centro.",
+        "image_alt": "Porzione di lasagne pollo e funghi con besciamella e formaggio dorato",
+        "image_variants": [
+          "/recetas/receta-de-lasana-de-pollo-con-champinones/portada-1x1.webp",
+          "/recetas/receta-de-lasana-de-pollo-con-champinones/portada-4x3.webp",
+          "/recetas/receta-de-lasana-de-pollo-con-champinones/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Posso usare sfoglie pronte al forno?",
+            "a": "Non come sostituzione diretta. Sono previsti 240 g di pasta secca da precuocere. Sfoglie pronte assorbono salsa e richiedono adeguare liquidi e tempi secondo confezione."
+          },
+          {
+            "q": "Come evitare lasagne acquose?",
+            "a": "Evaporare liquido libero dei funghi prima del pollo, usare mozzarella a bassa umidità e besciamella che vela il cucchiaio senza diventare pasta. Riposare 10 minuti prima del taglio."
+          },
+          {
+            "q": "Posso montarle il giorno prima?",
+            "a": "Si propone preparazione e cottura continue; montaggio crudo prolungato e congelamento non validati. Refrigerare porzioni cotte, consumare entro 3 giorni e riscaldare una volta a 74 °C."
+          }
+        ]
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "content_html": "<p>Pollo cotto a dadini, funghi saltati e besciamella al latte intero vengono montati con tre strati di pasta precotta e due di ripieno, finendo con mozzarella a bassa umidità. Restano URL storica e classificazione Recipe approvata.</p><p>Si propongono 6 porzioni in pirofila di circa 20 × 30 cm: preparazione 20 minuti, cottura 60 con alcune attività in parallelo, riposo 10, totale 90. Marca e dimensione delle sfoglie possono cambiare montaggio e cottura. Dosi, tempi e resa sono stime in attesa di prova in cucina; pollo e centro si controllano con termometro.</p>"
+    },
+    {
+      "id": "68ad0f73-267d-539a-9756-380f492a5f0a",
+      "recipe_group_id": "14f34319-2bdc-478f-b55b-909be0df6964",
+      "language": "ja",
+      "slug": "キノコ入りチキンラサナのレシピ",
+      "public_path": "/ja/キノコ入りチキンラサナのレシピ",
+      "source_url": null,
+      "title": "鶏肉とマッシュルームのベシャメルラザニア",
+      "excerpt": "6人分の鶏肉とマッシュルームのラザニア。下ゆでしたパスタ、水分を飛ばした詰め物、ベシャメル、モッツァレラを重ねます。",
+      "summary": "加熱した鶏肉の角切り、炒めたマッシュルーム、全乳のベシャメルを、下ゆでしたパスタ3層と詰め物2層に組み、低水分モッツァレラで仕上げます。歴史的URLと承認済みRecipe分類を維持します。\n\n約20 × 30 cmの耐熱容器で6人分を提案します。準備20分、一部を並行する加熱60分、休ませる10分、合計90分の推定です。パスタの製品や大きさで組み方と加熱が変わります。分量、時間、出来上がり量は調理試験待ちで、鶏肉と中心を温度計で確認します。",
+      "category": "パスタ",
+      "category_slug": "pastas",
+      "difficulty": "中級",
+      "course": "主菜",
+      "cuisine": "イタリア風の家庭料理案",
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 60,
+      "total_time_minutes": 90,
+      "servings": 6,
+      "keywords": [
+        "鶏肉 ラザニア",
+        "マッシュルーム ラザニア",
+        "ベシャメル",
+        "白いラザニア"
+      ],
+      "ingredients": [
+        {
+          "name": "下ゆでが必要な乾燥ラザニアシート",
+          "amount": "240",
+          "unit": "g",
+          "group": "パスタ"
+        },
+        {
+          "name": "皮と骨のない生の鶏むね肉",
+          "amount": "600",
+          "unit": "g",
+          "group": "詰め物"
+        },
+        {
+          "name": "生の白マッシュルーム",
+          "amount": "500",
+          "unit": "g",
+          "group": "詰め物"
+        },
+        {
+          "name": "玉ねぎ",
+          "amount": "150",
+          "unit": "g",
+          "group": "詰め物"
+        },
+        {
+          "name": "にんにく",
+          "amount": "10",
+          "unit": "g",
+          "group": "詰め物"
+        },
+        {
+          "name": "オリーブ油",
+          "amount": "20",
+          "unit": "g",
+          "group": "詰め物"
+        },
+        {
+          "name": "殺菌済み全乳",
+          "amount": "700",
+          "unit": "g",
+          "group": "ベシャメル"
+        },
+        {
+          "name": "無塩バター",
+          "amount": "40",
+          "unit": "g",
+          "group": "ベシャメル"
+        },
+        {
+          "name": "一般的な小麦粉",
+          "amount": "40",
+          "unit": "g",
+          "group": "ベシャメル"
+        },
+        {
+          "name": "低水分の全乳モッツァレラ、細切り",
+          "amount": "180",
+          "unit": "g",
+          "group": "仕上げ"
+        },
+        {
+          "name": "細粒の塩",
+          "amount": "6",
+          "unit": "g",
+          "group": "味付け"
+        },
+        {
+          "name": "黒こしょう",
+          "amount": "0.5",
+          "unit": "g",
+          "group": "味付け"
+        },
+        {
+          "name": "粉末ナツメグ",
+          "amount": "0.2",
+          "unit": "g",
+          "group": "味付け"
+        }
+      ],
+      "steps": [
+        {
+          "title": "材料と耐熱容器を用意する",
+          "content": "ファンなし上下加熱のオーブンを190 °Cに予熱し、約20 × 30 cmの耐熱容器を用意します。マッシュルーム500 gをきれいにして薄切りにし、玉ねぎ150 gとにんにく10 gを刻みます。別のまな板で鶏肉600 gを約1.5 cm角に切り、洗いません。生用と加熱済み用の道具を分けます。塩は詰め物3 g、ベシャメル3 g、こしょうは各0.25 gに分けます。",
+          "image_alt": "薄切りマッシュルームと別まな板の生の鶏肉などの材料",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-01.webp"
+        },
+        {
+          "title": "パスタをゆでて水を切る",
+          "content": "シート240 gを大きな鍋の沸騰した飲用水で、塩を加えず製品表示に従ってゆでます。後で焼く場合は約1分早めに取り出します。ゆで汁は捨て、栄養計算に含めません。水を切り、清潔な布に重ねず広げます。下ゆで用シートを使用し、直接オーブン用は水分の比率が異なるためこの案には使いません。",
+          "image_alt": "清潔な布に重ねず広げたゆで済みラザニアシート",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-02.webp"
+        },
+        {
+          "title": "鶏肉を別に加熱する",
+          "content": "広いフライパンで油10 gを温めます。混み合う場合は鶏肉を2回に分け、中強火で合計約8–10分混ぜて加熱します。詰め物用の塩3 gとこしょう0.25 gの一部を加えます。大きい肉の中心を温度計で測り、少なくとも74 °Cを確認し、足りなければ加熱を続けます。清潔な道具で清潔な容器へ移し、生肉の皿には戻しません。",
+          "image_alt": "フライパンで鶏肉の角切りだけを加熱する",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-03.webp"
+        },
+        {
+          "title": "マッシュルームを炒めて詰め物を合わせる",
+          "content": "同じフライパンに残りの油10 gと玉ねぎを入れ、4–5分加熱します。にんにくを30秒炒めてマッシュルームを加えます。必要なら分けて8–10分炒め、縮んで遊離した水分が蒸発するまで加熱します。詰め物用の残りの塩とこしょう、加熱した鶏肉を合わせます。湿り気は残し、水たまりがあれば組む前に煮詰めます。",
+          "image_alt": "炒めたマッシュルームと玉ねぎに加熱済み鶏肉を混ぜる",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-04.webp"
+        },
+        {
+          "title": "ベシャメルを作る",
+          "content": "鍋でバター40 gを中弱火で溶かし、小麦粉40 gを2分混ぜ、色を付けません。牛乳700 gを少しずつ加えて泡立て器でだまをなくします。静かに6–8分煮て混ぜ、スプーンを覆い、なお広げられる濃度にします。残りの塩3 g、こしょう0.25 g、ナツメグ0.2 gを加えます。固いペーストまで煮詰めません。",
+          "image_alt": "鍋で泡立て器で混ぜる白く流動性のあるベシャメル",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-05.webp"
+        },
+        {
+          "title": "パスタを3層に組む",
+          "content": "底にベシャメルを薄く塗ります。残りのソースの約4分の1を上用に取り、あとは2層に分けます。詰め物を半分に、元のパスタ240 gを容器に合う3層に分け、必要なら切ります。パスタ、詰め物半量、ベシャメル、モッツァレラ30 gを重ね、さらにモッツァレラ30 gを使って同様に繰り返します。3層目のパスタ、取っておいたソース、残りのモッツァレラ120 gで仕上げます。パスタの縁をすべてソースで覆います。",
+          "image_alt": "耐熱容器にパスタ、鶏肉、マッシュルーム、ソースを重ねる",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-06.webp"
+        },
+        {
+          "title": "焼いて中心温度を確認する",
+          "content": "アルミホイルをふんわりかぶせ、190 °Cで20分焼きます。外してさらに10–15分、沸々として表面が焦げずに色付くまで焼きます。清潔なプローブを容器に触れないよう中心の複数箇所に入れ、少なくとも74 °Cを確認します。低ければ必要に応じて覆い、5分延長して再測定します。焼き色では温度確認を代替できません。",
+          "image_alt": "耐熱容器に入った焼き色のついたラザニア",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-07.webp"
+        },
+        {
+          "title": "休ませて切り、保存する",
+          "content": "耐熱面で10分休ませ、6等分し、清潔な道具で提供します。残りは浅い容器に分け、2時間以内、室温が32 °Cを超える場合は1時間以内に4 °C以下で冷蔵します。保存は3日以内を提案し、1人分を1回だけ中心74 °Cまで再加熱します。容器全体を調理台で何時間も冷まさないでください。",
+          "image_alt": "層が見える鶏肉とマッシュルームの白いラザニア",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-08.webp"
+        }
+      ],
+      "notes": "小麦と乳製品を含み、シートの卵やほかのアレルゲンを確認します。この配合は下ゆで用の乾燥パスタで、直接オーブン用やグルテン・乳不使用代替は未検証です。白マッシュルームを同重量のブラウン種に替えると味と栄養が変わります。計算に近づけ水分過多を避けるため、塩水無添加の鶏肉と、水分の多い球形ではない低水分モッツァレラを使います。前回の保存を考慮し配合を調整せずに残りの鶏肉へ替えません。組む前にマッシュルームの水分を飛ばし、生クリームやだしは追加しません。生の組み立てを翌日まで保存したり冷凍する案は未検証で、準備から焼くまで続けて行います。栄養は元の可食重量を6で割り、吸収や加熱損失の正確な計算、付け合わせは含めません。",
+      "nutrition": {
+        "sodium_mg": 705,
+        "sugar_g": 10,
+        "saturated_fat_g": 11.4,
+        "carbs_g": 47,
+        "calories": 567.7,
+        "fat_g": 23.5,
+        "fiber_g": 2.8,
+        "protein_g": 41.6,
+        "estimated": true,
+        "serving_size": "提案する6人分のうち1人分",
+        "source": "USDA FoodData Central — SR Legacy, April 2018 JSON",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "method": "公式アーカイブでFDC IDからUSDA13項目を確認。元の可食重量を合計して6で割る。乾燥シートはPasta, dry, enriched、チーズはCheese, mozzarella, whole milk, low moistureで近似。油脂と味付け全量を計上。無塩のゆで汁を捨て、付け合わせは除外。",
+        "note": "調理済み料理の分析ではなく推定。パスタとチーズの製品、鶏肉の塩水、実際の分け方で変わる。分量、時間、出来上がり量は調理試験待ち。",
+        "inputs": [
+          {
+            "fdc_id": 169736,
+            "fdc_description": "Pasta, dry, enriched",
+            "per_100g": {
+              "sodium_mg": 6,
+              "sugar_g": 2.67,
+              "saturated_fat_g": 0.277,
+              "carbs_g": 74.7,
+              "calories": 371,
+              "fat_g": 1.51,
+              "fiber_g": 3.2,
+              "protein_g": 13
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169736/nutrients",
+            "ingredient": "下ゆでが必要な乾燥ラザニアシート",
+            "edible_grams": 240
+          },
+          {
+            "fdc_id": 171077,
+            "fdc_description": "Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw",
+            "per_100g": {
+              "fat_g": 2.62,
+              "calories": 120,
+              "saturated_fat_g": 0.563,
+              "sodium_mg": 45,
+              "protein_g": 22.5,
+              "sugar_g": 0,
+              "carbs_g": 0,
+              "fiber_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171077/nutrients",
+            "ingredient": "皮と骨のない生の鶏むね肉",
+            "edible_grams": 600
+          },
+          {
+            "fdc_id": 169251,
+            "fdc_description": "Mushrooms, white, raw",
+            "per_100g": {
+              "sugar_g": 1.98,
+              "saturated_fat_g": 0.05,
+              "fiber_g": 1,
+              "fat_g": 0.34,
+              "sodium_mg": 5,
+              "protein_g": 3.09,
+              "carbs_g": 3.26,
+              "calories": 22
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169251/nutrients",
+            "ingredient": "生の白マッシュルーム",
+            "edible_grams": 500
+          },
+          {
+            "fdc_id": 170000,
+            "fdc_description": "Onions, raw",
+            "per_100g": {
+              "sugar_g": 4.24,
+              "fat_g": 0.1,
+              "carbs_g": 9.34,
+              "calories": 40,
+              "saturated_fat_g": 0.042,
+              "protein_g": 1.1,
+              "fiber_g": 1.7,
+              "sodium_mg": 4
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170000/nutrients",
+            "ingredient": "玉ねぎ",
+            "edible_grams": 150
+          },
+          {
+            "fdc_id": 169230,
+            "fdc_description": "Garlic, raw",
+            "per_100g": {
+              "carbs_g": 33.1,
+              "calories": 149,
+              "sugar_g": 1,
+              "saturated_fat_g": 0.089,
+              "fiber_g": 2.1,
+              "sodium_mg": 17,
+              "protein_g": 6.36,
+              "fat_g": 0.5
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169230/nutrients",
+            "ingredient": "にんにく",
+            "edible_grams": 10
+          },
+          {
+            "fdc_id": 171413,
+            "fdc_description": "Oil, olive, salad or cooking",
+            "per_100g": {
+              "fat_g": 100,
+              "carbs_g": 0,
+              "calories": 884,
+              "sodium_mg": 2,
+              "protein_g": 0,
+              "saturated_fat_g": 13.8,
+              "fiber_g": 0,
+              "sugar_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171413/nutrients",
+            "ingredient": "オリーブ油",
+            "edible_grams": 20
+          },
+          {
+            "fdc_id": 171265,
+            "fdc_description": "Milk, whole, 3.25% milkfat, with added vitamin D",
+            "per_100g": {
+              "fat_g": 3.25,
+              "sugar_g": 5.05,
+              "carbs_g": 4.8,
+              "calories": 61,
+              "saturated_fat_g": 1.86,
+              "fiber_g": 0,
+              "sodium_mg": 43,
+              "protein_g": 3.15
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171265/nutrients",
+            "ingredient": "殺菌済み全乳",
+            "edible_grams": 700
+          },
+          {
+            "fdc_id": 173430,
+            "fdc_description": "Butter, without salt",
+            "per_100g": {
+              "sugar_g": 0.06,
+              "calories": 717,
+              "saturated_fat_g": 50.5,
+              "fat_g": 81.1,
+              "carbs_g": 0.06,
+              "protein_g": 0.85,
+              "fiber_g": 0,
+              "sodium_mg": 11
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173430/nutrients",
+            "ingredient": "無塩バター",
+            "edible_grams": 40
+          },
+          {
+            "fdc_id": 168936,
+            "fdc_description": "Wheat flour, white, all-purpose, enriched, unbleached",
+            "per_100g": {
+              "fiber_g": 2.7,
+              "fat_g": 0.98,
+              "carbs_g": 76.3,
+              "calories": 364,
+              "protein_g": 10.3,
+              "sodium_mg": 2,
+              "saturated_fat_g": 0.155,
+              "sugar_g": 0.27
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/168936/nutrients",
+            "ingredient": "一般的な小麦粉",
+            "edible_grams": 40
+          },
+          {
+            "fdc_id": 170846,
+            "fdc_description": "Cheese, mozzarella, whole milk, low moisture",
+            "per_100g": {
+              "sugar_g": 1.01,
+              "sodium_mg": 710,
+              "saturated_fat_g": 15.6,
+              "fiber_g": 0,
+              "protein_g": 21.6,
+              "fat_g": 24.6,
+              "carbs_g": 2.47,
+              "calories": 318
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170846/nutrients",
+            "ingredient": "低水分の全乳モッツァレラ、細切り",
+            "edible_grams": 180
+          },
+          {
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "fiber_g": 0,
+              "sodium_mg": 38800,
+              "saturated_fat_g": 0,
+              "protein_g": 0,
+              "fat_g": 0,
+              "carbs_g": 0,
+              "calories": 0,
+              "sugar_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients",
+            "ingredient": "細粒の塩",
+            "edible_grams": 6
+          },
+          {
+            "fdc_id": 170931,
+            "fdc_description": "Spices, pepper, black",
+            "per_100g": {
+              "fat_g": 3.26,
+              "sugar_g": 0.64,
+              "carbs_g": 64,
+              "calories": 251,
+              "protein_g": 10.4,
+              "fiber_g": 25.3,
+              "sodium_mg": 20,
+              "saturated_fat_g": 1.39
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170931/nutrients",
+            "ingredient": "黒こしょう",
+            "edible_grams": 0.5
+          },
+          {
+            "fdc_id": 171326,
+            "fdc_description": "Spices, nutmeg, ground",
+            "per_100g": {
+              "protein_g": 5.84,
+              "sodium_mg": 16,
+              "saturated_fat_g": 25.9,
+              "fat_g": 36.3,
+              "carbs_g": 49.3,
+              "calories": 525,
+              "sugar_g": 2.99,
+              "fiber_g": 20.8
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171326/nutrients",
+            "ingredient": "粉末ナツメグ",
+            "edible_grams": 0.2
+          }
+        ]
+      },
+      "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/receta-de-lasana-de-pollo-con-champinones/portada.webp",
+          "alt": "ベシャメルと焼けたチーズを重ねた鶏肉とマッシュルームのラザニア1人分"
+        }
+      ],
+      "seo": {
+        "title": "鶏肉とマッシュルームのベシャメルラザニア | Manual de Cocina",
+        "description": "6人分の白いラザニア。鶏肉、マッシュルーム、ベシャメル、モッツァレラを重ね、下ゆでと水分調整、中心74 °Cを確認。",
+        "image_alt": "ベシャメルと焼けたチーズを重ねた鶏肉とマッシュルームのラザニア1人分",
+        "image_variants": [
+          "/recetas/receta-de-lasana-de-pollo-con-champinones/portada-1x1.webp",
+          "/recetas/receta-de-lasana-de-pollo-con-champinones/portada-4x3.webp",
+          "/recetas/receta-de-lasana-de-pollo-con-champinones/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "直接オーブン用のシートに替えられますか？",
+            "a": "そのままの置換はできません。下ゆでする乾燥パスタ240 gの案です。直接オーブン用はソースを吸うため、製品に合わせ水分と時間を調整する必要があります。"
+          },
+          {
+            "q": "水っぽくしない方法は？",
+            "a": "鶏肉を合わせる前にマッシュルームの遊離水を飛ばし、低水分モッツァレラと、ペーストでなくスプーンを覆うベシャメルを使います。切る前に10分休ませます。"
+          },
+          {
+            "q": "前日に組み立てられますか？",
+            "a": "準備と加熱を連続する案で、生の長時間保存や冷凍は未検証です。加熱後の分量を冷蔵し、3日以内に食べ、1回だけ74 °Cまで再加熱します。"
+          }
+        ]
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "content_html": "<p>加熱した鶏肉の角切り、炒めたマッシュルーム、全乳のベシャメルを、下ゆでしたパスタ3層と詰め物2層に組み、低水分モッツァレラで仕上げます。歴史的URLと承認済みRecipe分類を維持します。</p><p>約20 × 30 cmの耐熱容器で6人分を提案します。準備20分、一部を並行する加熱60分、休ませる10分、合計90分の推定です。パスタの製品や大きさで組み方と加熱が変わります。分量、時間、出来上がり量は調理試験待ちで、鶏肉と中心を温度計で確認します。</p>"
+    },
+    {
+      "id": "90942a2a-dd69-5244-bb86-525c8c89996e",
+      "recipe_group_id": "14f34319-2bdc-478f-b55b-909be0df6964",
+      "language": "pt",
+      "slug": "lasanha-de-frango-com-champignon",
+      "public_path": "/pt/lasanha-de-frango-com-champignon",
+      "source_url": null,
+      "title": "Lasanha de frango com champignon e molho branco",
+      "excerpt": "Lasanha para 6 com frango, champignon, massa pré-cozida, recheio sem líquido excessivo, bechamel caseiro e muçarela gratinada.",
+      "summary": "Frango cozido em cubos, champignon refogado e bechamel de leite integral são montados com três camadas de massa pré-cozida e duas de recheio, terminando com muçarela de baixa umidade. Mantém a URL histórica e a classificação Recipe aprovada.\n\nPropõem-se 6 porções em refratário de cerca de 20 × 30 cm: preparo 20 minutos, cozimento 60 com algumas tarefas em paralelo, descanso 10, total 90. Marca e tamanho das placas podem alterar montagem e cozimento. Quantidades, tempos e rendimento são estimativas aguardando teste de cozinha; confira frango e centro com termômetro.",
+      "category": "Massas",
+      "category_slug": "pastas",
+      "difficulty": "Média",
+      "course": "Prato principal",
+      "cuisine": "Italiana, adaptação caseira",
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 60,
+      "total_time_minutes": 90,
+      "servings": 6,
+      "keywords": [
+        "lasanha de frango",
+        "lasanha de champignon",
+        "bechamel caseiro",
+        "lasanha branca"
+      ],
+      "ingredients": [
+        {
+          "name": "placas de lasanha secas que exigem pré-cozimento",
+          "amount": "240",
+          "unit": "g",
+          "group": "Massa"
+        },
+        {
+          "name": "peito de frango cru sem pele e osso",
+          "amount": "600",
+          "unit": "g",
+          "group": "Recheio"
+        },
+        {
+          "name": "champignon branco fresco",
+          "amount": "500",
+          "unit": "g",
+          "group": "Recheio"
+        },
+        {
+          "name": "cebola",
+          "amount": "150",
+          "unit": "g",
+          "group": "Recheio"
+        },
+        {
+          "name": "alho",
+          "amount": "10",
+          "unit": "g",
+          "group": "Recheio"
+        },
+        {
+          "name": "azeite de oliva",
+          "amount": "20",
+          "unit": "g",
+          "group": "Recheio"
+        },
+        {
+          "name": "leite integral pasteurizado",
+          "amount": "700",
+          "unit": "g",
+          "group": "Bechamel"
+        },
+        {
+          "name": "manteiga sem sal",
+          "amount": "40",
+          "unit": "g",
+          "group": "Bechamel"
+        },
+        {
+          "name": "farinha de trigo comum",
+          "amount": "40",
+          "unit": "g",
+          "group": "Bechamel"
+        },
+        {
+          "name": "muçarela de leite integral de baixa umidade ralada",
+          "amount": "180",
+          "unit": "g",
+          "group": "Finalização"
+        },
+        {
+          "name": "sal fino",
+          "amount": "6",
+          "unit": "g",
+          "group": "Tempero"
+        },
+        {
+          "name": "pimenta-do-reino moída",
+          "amount": "0.5",
+          "unit": "g",
+          "group": "Tempero"
+        },
+        {
+          "name": "noz-moscada moída",
+          "amount": "0.2",
+          "unit": "g",
+          "group": "Tempero"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepare ingredientes e refratário",
+          "content": "Preaqueça a 190 °C com calor superior e inferior, sem ventilação, e prepare refratário de cerca de 20 × 30 cm. Limpe e fatie 500 g de champignon, pique 150 g de cebola e 10 g de alho. Em outra tábua corte 600 g de frango em cubos de cerca de 1,5 cm sem lavar. Separe utensílios crus e cozidos. Divida sal: 3 g para recheio e 3 g para bechamel; pimenta: 0,25 g para cada.",
+          "image_alt": "Ingredientes com champignon fatiado e frango cru em tábua separada",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-01.webp"
+        },
+        {
+          "title": "Cozinhe e escorra as placas",
+          "content": "Cozinhe 240 g de placas em panela grande com água potável fervente sem sal adicionado, conforme embalagem, retirando cerca de 1 minuto antes se forem ao forno depois. Descarte a água, fora do cálculo. Escorra e espalhe sem sobrepor sobre pano limpo. Use placas que exigem pré-cozimento; as prontas para forno precisam de outra proporção de líquido e não são usadas aqui.",
+          "image_alt": "Placas de lasanha cozidas separadas sobre pano limpo",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-02.webp"
+        },
+        {
+          "title": "Cozinhe o frango separado",
+          "content": "Aqueça 10 g de azeite em frigideira ampla. Se amontoar, faça o frango em duas levas, em fogo médio-alto por cerca de 8–10 minutos no total, mexendo. Use parte dos 3 g de sal e 0,25 g de pimenta do recheio. Confira os cubos mais grossos: pelo menos 74 °C com termômetro. Prolongue se necessário. Transfira com utensílio limpo para recipiente limpo, nunca para o prato do frango cru.",
+          "image_alt": "Cubos de frango cozinhando sozinhos na frigideira",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-03.webp"
+        },
+        {
+          "title": "Refogue o champignon e misture o recheio",
+          "content": "Na mesma frigideira, adicione os outros 10 g de azeite e cebola; cozinhe 4–5 minutos. Junte alho por 30 segundos, depois champignon. Refogue 8–10 minutos, em levas se preciso, até reduzir e evaporar o líquido livre. Acrescente o restante do sal e pimenta do recheio e o frango cozido. Deve ficar úmido sem poça; reduza líquido antes de montar.",
+          "image_alt": "Champignon e cebola refogados com frango cozido",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-04.webp"
+        },
+        {
+          "title": "Faça o bechamel",
+          "content": "Derreta 40 g de manteiga em panela no fogo médio-baixo. Junte 40 g de farinha e mexa 2 minutos sem dourar. Adicione 700 g de leite aos poucos, batendo para desfazer grumos. Cozinhe em fervura suave por 6–8 minutos mexendo, até cobrir a colher mas continuar espalhável. Junte os outros 3 g de sal, 0,25 g de pimenta e 0,2 g de noz-moscada. Não reduza a pasta espessa.",
+          "image_alt": "Bechamel branco fluido mexido com batedor na panela",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-05.webp"
+        },
+        {
+          "title": "Monte três camadas de massa",
+          "content": "Espalhe camada fina de bechamel no fundo. Reserve cerca de um quarto do molho restante para cobertura e divida o resto em duas camadas. Divida recheio em duas partes e os 240 g originais de massa em três camadas adaptadas ao refratário, cortando se preciso. Alterne massa, metade do recheio, bechamel e 30 g de muçarela; repita com outros 30 g de muçarela. Termine com terceira camada de massa, molho reservado e os 120 g de muçarela restantes. Cubra todas as bordas da massa com molho.",
+          "image_alt": "Montagem de massa, frango, champignon e molho branco",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-06.webp"
+        },
+        {
+          "title": "Asse e confira o centro",
+          "content": "Cubra frouxamente com alumínio e asse 20 minutos a 190 °C. Retire alumínio e asse mais 10–15 minutos até borbulhar e dourar sem queimar. Insira sonda limpa em vários pontos centrais, sem tocar o refratário: pelo menos 74 °C. Se abaixo, cubra se preciso e prolongue 5 minutos antes de medir novamente. Crosta dourada não substitui a conferência.",
+          "image_alt": "Lasanha gratinada em refratário",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-07.webp"
+        },
+        {
+          "title": "Descanse, porcione e conserve",
+          "content": "Descanse 10 minutos em superfície resistente ao calor e corte em 6 porções; sirva com utensílios limpos. Separe sobras em recipientes rasos e refrigere a 4 °C ou menos dentro de 2 horas, ou 1 hora se o ambiente superar 32 °C. Propõe-se consumir em 3 dias e reaquecer a porção uma única vez até 74 °C no centro. Não deixe o refratário inteiro esfriar por horas na bancada.",
+          "image_alt": "Porção de lasanha branca mostrando camadas de frango e champignon",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-08.webp"
+        }
+      ],
+      "notes": "Contém trigo e laticínios; confira ovo e outros alérgenos nas placas. Usa massa seca para pré-cozinhar, não pronta para forno; substituições sem glúten ou leite não validadas. Cremini pode substituir champignon branco no mesmo peso, mudando sabor e nutrientes. Use frango sem salmoura e muçarela de baixa umidade, não bolas úmidas, para aproximar cálculo e evitar água. Não substitua por sobras de frango sem reformular e considerar conservação anterior. Reduza champignon antes de montar; sem creme de leite ou caldo extra. Montagem crua de véspera e congelamento não validados: prepare e asse continuamente. Nutrição usa pesos comestíveis originais divididos por 6, sem absorção ou perda exata de cozimento e sem acompanhamentos.",
+      "nutrition": {
+        "sodium_mg": 705,
+        "sugar_g": 10,
+        "saturated_fat_g": 11.4,
+        "carbs_g": 47,
+        "calories": 567.7,
+        "fat_g": 23.5,
+        "fiber_g": 2.8,
+        "protein_g": 41.6,
+        "estimated": true,
+        "serving_size": "1 das 6 porções propostas",
+        "source": "USDA FoodData Central — SR Legacy, April 2018 JSON",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "method": "Treze fichas USDA verificadas por FDC ID no arquivo oficial. Pesos comestíveis originais somados e divididos por 6. Massa aproximada com Pasta, dry, enriched e queijo com Cheese, mozzarella, whole milk, low moisture. Gorduras e temperos contados integralmente. Água de cozimento sem sal descartada; sem acompanhamento.",
+        "note": "Estimativa, não análise do prato cozido. Marcas de massa e muçarela, salmoura do frango e porções reais mudam valores. Quantidades, tempos e rendimento aguardam teste de cozinha.",
+        "inputs": [
+          {
+            "fdc_id": 169736,
+            "fdc_description": "Pasta, dry, enriched",
+            "per_100g": {
+              "sodium_mg": 6,
+              "sugar_g": 2.67,
+              "saturated_fat_g": 0.277,
+              "carbs_g": 74.7,
+              "calories": 371,
+              "fat_g": 1.51,
+              "fiber_g": 3.2,
+              "protein_g": 13
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169736/nutrients",
+            "ingredient": "placas de lasanha secas que exigem pré-cozimento",
+            "edible_grams": 240
+          },
+          {
+            "fdc_id": 171077,
+            "fdc_description": "Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw",
+            "per_100g": {
+              "fat_g": 2.62,
+              "calories": 120,
+              "saturated_fat_g": 0.563,
+              "sodium_mg": 45,
+              "protein_g": 22.5,
+              "sugar_g": 0,
+              "carbs_g": 0,
+              "fiber_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171077/nutrients",
+            "ingredient": "peito de frango cru sem pele e osso",
+            "edible_grams": 600
+          },
+          {
+            "fdc_id": 169251,
+            "fdc_description": "Mushrooms, white, raw",
+            "per_100g": {
+              "sugar_g": 1.98,
+              "saturated_fat_g": 0.05,
+              "fiber_g": 1,
+              "fat_g": 0.34,
+              "sodium_mg": 5,
+              "protein_g": 3.09,
+              "carbs_g": 3.26,
+              "calories": 22
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169251/nutrients",
+            "ingredient": "champignon branco fresco",
+            "edible_grams": 500
+          },
+          {
+            "fdc_id": 170000,
+            "fdc_description": "Onions, raw",
+            "per_100g": {
+              "sugar_g": 4.24,
+              "fat_g": 0.1,
+              "carbs_g": 9.34,
+              "calories": 40,
+              "saturated_fat_g": 0.042,
+              "protein_g": 1.1,
+              "fiber_g": 1.7,
+              "sodium_mg": 4
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170000/nutrients",
+            "ingredient": "cebola",
+            "edible_grams": 150
+          },
+          {
+            "fdc_id": 169230,
+            "fdc_description": "Garlic, raw",
+            "per_100g": {
+              "carbs_g": 33.1,
+              "calories": 149,
+              "sugar_g": 1,
+              "saturated_fat_g": 0.089,
+              "fiber_g": 2.1,
+              "sodium_mg": 17,
+              "protein_g": 6.36,
+              "fat_g": 0.5
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169230/nutrients",
+            "ingredient": "alho",
+            "edible_grams": 10
+          },
+          {
+            "fdc_id": 171413,
+            "fdc_description": "Oil, olive, salad or cooking",
+            "per_100g": {
+              "fat_g": 100,
+              "carbs_g": 0,
+              "calories": 884,
+              "sodium_mg": 2,
+              "protein_g": 0,
+              "saturated_fat_g": 13.8,
+              "fiber_g": 0,
+              "sugar_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171413/nutrients",
+            "ingredient": "azeite de oliva",
+            "edible_grams": 20
+          },
+          {
+            "fdc_id": 171265,
+            "fdc_description": "Milk, whole, 3.25% milkfat, with added vitamin D",
+            "per_100g": {
+              "fat_g": 3.25,
+              "sugar_g": 5.05,
+              "carbs_g": 4.8,
+              "calories": 61,
+              "saturated_fat_g": 1.86,
+              "fiber_g": 0,
+              "sodium_mg": 43,
+              "protein_g": 3.15
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171265/nutrients",
+            "ingredient": "leite integral pasteurizado",
+            "edible_grams": 700
+          },
+          {
+            "fdc_id": 173430,
+            "fdc_description": "Butter, without salt",
+            "per_100g": {
+              "sugar_g": 0.06,
+              "calories": 717,
+              "saturated_fat_g": 50.5,
+              "fat_g": 81.1,
+              "carbs_g": 0.06,
+              "protein_g": 0.85,
+              "fiber_g": 0,
+              "sodium_mg": 11
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173430/nutrients",
+            "ingredient": "manteiga sem sal",
+            "edible_grams": 40
+          },
+          {
+            "fdc_id": 168936,
+            "fdc_description": "Wheat flour, white, all-purpose, enriched, unbleached",
+            "per_100g": {
+              "fiber_g": 2.7,
+              "fat_g": 0.98,
+              "carbs_g": 76.3,
+              "calories": 364,
+              "protein_g": 10.3,
+              "sodium_mg": 2,
+              "saturated_fat_g": 0.155,
+              "sugar_g": 0.27
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/168936/nutrients",
+            "ingredient": "farinha de trigo comum",
+            "edible_grams": 40
+          },
+          {
+            "fdc_id": 170846,
+            "fdc_description": "Cheese, mozzarella, whole milk, low moisture",
+            "per_100g": {
+              "sugar_g": 1.01,
+              "sodium_mg": 710,
+              "saturated_fat_g": 15.6,
+              "fiber_g": 0,
+              "protein_g": 21.6,
+              "fat_g": 24.6,
+              "carbs_g": 2.47,
+              "calories": 318
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170846/nutrients",
+            "ingredient": "muçarela de leite integral de baixa umidade ralada",
+            "edible_grams": 180
+          },
+          {
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "fiber_g": 0,
+              "sodium_mg": 38800,
+              "saturated_fat_g": 0,
+              "protein_g": 0,
+              "fat_g": 0,
+              "carbs_g": 0,
+              "calories": 0,
+              "sugar_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients",
+            "ingredient": "sal fino",
+            "edible_grams": 6
+          },
+          {
+            "fdc_id": 170931,
+            "fdc_description": "Spices, pepper, black",
+            "per_100g": {
+              "fat_g": 3.26,
+              "sugar_g": 0.64,
+              "carbs_g": 64,
+              "calories": 251,
+              "protein_g": 10.4,
+              "fiber_g": 25.3,
+              "sodium_mg": 20,
+              "saturated_fat_g": 1.39
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170931/nutrients",
+            "ingredient": "pimenta-do-reino moída",
+            "edible_grams": 0.5
+          },
+          {
+            "fdc_id": 171326,
+            "fdc_description": "Spices, nutmeg, ground",
+            "per_100g": {
+              "protein_g": 5.84,
+              "sodium_mg": 16,
+              "saturated_fat_g": 25.9,
+              "fat_g": 36.3,
+              "carbs_g": 49.3,
+              "calories": 525,
+              "sugar_g": 2.99,
+              "fiber_g": 20.8
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171326/nutrients",
+            "ingredient": "noz-moscada moída",
+            "edible_grams": 0.2
+          }
+        ]
+      },
+      "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/receta-de-lasana-de-pollo-con-champinones/portada.webp",
+          "alt": "Porção de lasanha de frango com champignon, bechamel e queijo dourado"
+        }
+      ],
+      "seo": {
+        "title": "Lasanha de frango com champignon e bechamel | Manual de Cocina",
+        "description": "Lasanha branca para 6 com frango, champignon, bechamel e muçarela. Pré-cozinhe massa, reduza recheio e confira 74 °C no centro.",
+        "image_alt": "Porção de lasanha de frango com champignon, bechamel e queijo dourado",
+        "image_variants": [
+          "/recetas/receta-de-lasana-de-pollo-con-champinones/portada-1x1.webp",
+          "/recetas/receta-de-lasana-de-pollo-con-champinones/portada-4x3.webp",
+          "/recetas/receta-de-lasana-de-pollo-con-champinones/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Posso usar placas prontas para forno?",
+            "a": "Não como troca direta. São 240 g de massa seca para pré-cozinhar. Placas prontas absorvem molho e precisam de ajuste de líquido e tempo conforme embalagem."
+          },
+          {
+            "q": "Como evitar lasanha aguada?",
+            "a": "Evapore líquido livre do champignon antes de juntar frango, use muçarela de baixa umidade e bechamel que cubra a colher sem virar pasta. Descanse 10 minutos antes de cortar."
+          },
+          {
+            "q": "Posso montar no dia anterior?",
+            "a": "A proposta é preparo e forno contínuos; montagem crua prolongada e congelamento não validados. Refrigere porções cozidas, consuma em 3 dias e reaqueça uma vez a 74 °C."
+          }
+        ]
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "content_html": "<p>Frango cozido em cubos, champignon refogado e bechamel de leite integral são montados com três camadas de massa pré-cozida e duas de recheio, terminando com muçarela de baixa umidade. Mantém a URL histórica e a classificação Recipe aprovada.</p><p>Propõem-se 6 porções em refratário de cerca de 20 × 30 cm: preparo 20 minutos, cozimento 60 com algumas tarefas em paralelo, descanso 10, total 90. Marca e tamanho das placas podem alterar montagem e cozimento. Quantidades, tempos e rendimento são estimativas aguardando teste de cozinha; confira frango e centro com termômetro.</p>"
+    }
+  ],
+  "portuguese_locale": "pt-BR"
+}

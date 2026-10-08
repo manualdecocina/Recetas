@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "verified_at": "2026-10-08T06:11:42.991Z",
+  "recipe_id": "82997c99-0b32-42e0-8e22-1617a936c949",
+  "recipe_group_id": "e8238258-5fe1-4344-8851-917fa546f20b",
+  "source_url": "https://manualdecocina.com/receta-raviolis-caseros/",
+  "authority": [
+    "editorial/automation-queue.json",
+    "docs/P2-CATALOG-20260924.md",
+    "docs/CONTRATO-PRESERVACION-BASE-Y-CLASIFICACION-20261004.md",
+    "Supabase public.recipes and public.content_pages read-only collision check"
+  ],
+  "languages": [
+    {
+      "language": "es",
+      "slug": "receta-raviolis-caseros",
+      "public_path": "/receta-raviolis-caseros",
+      "route_kind": "historical_preserved"
+    },
+    {
+      "language": "de",
+      "slug": "hausgemachte-ravioli",
+      "public_path": "/de/hausgemachte-ravioli",
+      "route_kind": "new_collision_checked"
+    },
+    {
+      "language": "en",
+      "slug": "homemade-ravioli",
+      "public_path": "/en/homemade-ravioli",
+      "route_kind": "new_collision_checked"
+    },
+    {
+      "language": "fr",
+      "slug": "raviolis-maison",
+      "public_path": "/fr/raviolis-maison",
+      "route_kind": "new_collision_checked"
+    },
+    {
+      "language": "it",
+      "slug": "ravioli-fatti-in-casa",
+      "public_path": "/it/ravioli-fatti-in-casa",
+      "route_kind": "new_collision_checked"
+    },
+    {
+      "language": "ja",
+      "slug": "homemade-ravioli",
+      "public_path": "/ja/homemade-ravioli",
+      "route_kind": "new_collision_checked"
+    },
+    {
+      "language": "pt-BR",
+      "slug": "ravioli-caseiro",
+      "public_path": "/pt/ravioli-caseiro",
+      "route_kind": "new_collision_checked"
+    }
+  ],
+  "x_default": false,
+  "collision_check": {
+    "recipes": "only preserved ES row exists in target group; no conflicting translated routes",
+    "content_pages": "no target slug/path collisions",
+    "checked_project": "eqbdtctxbpepbeickhqi"
+  }
+}
