@@ -30,7 +30,7 @@
     "id": "lote-02-20261008",
     "target": 15,
     "status": "in_progress",
-    "stage": "images",
+    "stage": "identity_validation",
     "recipes": [
       {
         "id": "e47eac88-0649-4785-baf0-43b92dd2ec2e",
@@ -68,11 +68,15 @@
         "recipe_group_id": "c934c115-46a8-4009-ae75-fb10bd3d184f",
         "slug": "receta-de-alfajores-de-maicena",
         "public_path": "/receta-de-alfajores-de-maicena",
-        "stage": "images",
-        "status": "in_progress",
+        "stage": "prepared",
+        "status": "prepared_pending_batch_publication",
         "es_content_file": "editorial/receta-de-alfajores-de-maicena-20261008.json",
         "image_manifest": "editorial/receta-de-alfajores-de-maicena-imagenes.json",
-        "images_ready": 0
+        "images_ready": 12,
+        "languages_ready": 7,
+        "editorial_qa": "PASS",
+        "qa_file": "editorial/receta-de-alfajores-de-maicena-qa-20261008.json",
+        "portuguese_locale": "pt-BR"
       },
       {
         "id": "9fb02391-f9aa-4dd1-bc03-eb8abe6a67f8",
@@ -171,19 +175,19 @@
         "status": "reserved"
       }
     ],
-    "current_recipe": "receta-de-alfajores-de-maicena",
+    "current_recipe": "barras-de-cereal",
     "started_at": "2026-10-08T02:27:18.812Z",
     "branch": "recetas/lote-02-20261008",
     "completed_recipes": 0,
-    "prepared_recipes": 2,
+    "prepared_recipes": 3,
     "published_recipes": 0
   },
-  "next_candidate_position": 3,
+  "next_candidate_position": 4,
   "run_lease": {
     "owner": "continuous-run-20261008-0301",
     "status": "active",
     "acquired_at": "2026-10-08T03:02:36.623Z",
-    "expires_at": "2026-10-08T05:04:57.808Z",
+    "expires_at": "2026-10-08T05:13:33.784Z",
     "reason": "User explicitly requested continuous production; this worker owns the open batch and resumes rainbow juice."
   },
   "blockers": [],
@@ -232,14 +236,14 @@
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
   "progress_branch": "recetas/lote-02-20261008",
-  "last_checkpoint_at": "2026-10-08T03:34:57.808Z",
+  "last_checkpoint_at": "2026-10-08T03:43:33.784Z",
   "handoff": {
     "first_prepared_recipe": "como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada",
     "first_recipe_source": "editorial/como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada-20261008.json",
-    "next_recipe": "receta-de-alfajores-de-maicena",
-    "batch_remaining_to_prepare": 13,
+    "next_recipe": "barras-de-cereal",
+    "batch_remaining_to_prepare": 12,
     "published_this_batch": 0,
-    "required_action": "Continue alfajores identity, ES, images, localization; first two accepted packages must not be regenerated. Publish all fifteen together after completion.",
+    "required_action": "Continue cereal bars after identity validation. Preserve the three accepted seven-language packages and media; complete all fifteen before joint publication.",
     "scope": "Preview only; production migration not executed."
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z"

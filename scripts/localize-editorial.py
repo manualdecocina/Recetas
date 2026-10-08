@@ -16,6 +16,10 @@ patches = json.loads((ROOT / 'editorial' / f'{slug}-localizaciones-20261008.json
 assert set(patches) == {'de', 'en', 'fr', 'it', 'ja', 'pt'}
 es = item['records'][0]
 assert es['language'] == 'es' and item['steps_frozen']
+manifest_path = ROOT / 'editorial' / f'{slug}-imagenes.json'
+manifest = json.loads(manifest_path.read_text())
+assert len(manifest['images']) == len(es['steps']) + 4, 'All accepted media must exist before marking the package complete'
+assert all((ROOT / 'public/recetas' / slug / image['archivo']).is_file() for image in manifest['images'])
 frozen_steps = copy.deepcopy(es['steps'])
 for step in frozen_steps:
     step['image_url'] = ''
@@ -55,8 +59,6 @@ item['image_alts_by_language'] = {r['language']: {'title': r['title'], 'cover': 
 item['state'] = 'COMPLETE_7_LANGUAGES_AND_IMAGES_BATCH_PUBLICATION_PENDING'
 item['publication_blockers'] = ['BATCH_15_COMPLETION_PENDING', 'PREVIEW_QA_PENDING']
 source.write_text(json.dumps(item, ensure_ascii=False, indent=2) + '\n')
-manifest_path = ROOT / 'editorial' / f'{slug}-imagenes.json'
-manifest = json.loads(manifest_path.read_text())
 for image in manifest['images']:
     n = None if image['paso'] == 'portada' else image['paso']['numero']
     image['alt_by_language'] = {lang: alt['cover'] if n is None else alt['steps'][n - 1] for lang, alt in item['image_alts_by_language'].items()}
