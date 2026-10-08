@@ -51,10 +51,22 @@ if not args.metadata_only:
   with Image.open(f) as im:
    assert im.format=='WEBP' and im.size==(a['width'],a['height']),(path,im.size);im.verify()
  for g in plan['groups']:
+  manifest=json.loads((R/g['images_file']).read_text())
   originals=list((R/'public/recetas'/g['slug']/'originales').glob('*.png'))
   assert originals,(g['slug'],'missing originals')
+  declared=manifest.get('originals',manifest.get('original_assets',[]))
+  assert declared,(g['slug'],'missing original metadata')
+  expected={a.get('path') or a['repository_path']:a for a in declared}
+  assert set(expected)=={str(f.relative_to(R)) for f in originals},(g['slug'],'original inventory')
   for f in originals:
-   with Image.open(f) as im:assert im.format=='PNG';im.verify()
+   a=expected[str(f.relative_to(R))]
+   assert hashlib.sha256(f.read_bytes()).hexdigest()==a['sha256'],str(f)
+   with Image.open(f) as im:
+    assert im.format=='PNG'
+    if 'width' in a:assert im.size==(a['width'],a['height'])
+    im.verify()
+  sources={a.get('source_original_sha256') for a in manifest.get('images',[]) if a.get('source_original_sha256')}
+  assert sources<={a['sha256'] for a in declared},(g['slug'],'source original hashes')
 assert len(paths)==105
 report={'status':'PASS_METADATA_ONLY' if args.metadata_only else 'PASS','groups':15,'language_records':105,'webp':172,'records':rows,'checks':['frozenEShash','identity and routes','UUIDv5','closed taxonomy','ingredient/time/nutrition parity','USDA weighted calculation','localized required fields','all media references']+([] if args.metadata_only else ['172WebP decode and SHA256','originalPNG decode'])}
 (R/'lote02-prepublication-validation.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
