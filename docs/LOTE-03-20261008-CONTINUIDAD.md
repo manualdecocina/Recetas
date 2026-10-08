@@ -119,3 +119,6 @@ Paquete único editorial/receta-de-pina-colada-20261008.json SHA459fa9f6c22dfa90
 ### Okonomiyaki: ES congelado
 
 Identidad y siete rutas conciliadas de nuevo: una ES sin publicar, MD5 8ee444b23668f2a1a2a67d726744951f; sin colisiones en recipes/content_pages. ES original: nueve fases, once ingredientes, dos discos; 25 preparación + 24 cocción en tandas + 3 precalentamiento = 52 minutos estimados. Centro74°C por huevo con carne. Nutrición de diez fichas USDA exactas, aceite/bacon completos sin inventar absorción: 547,5kcal/ración estimadas. Hash de pasos 3db4de103f4e0d96d7864e7e35a77db33bfcb8f8497a2508ec8aa2d3f29f23f4. Brief congelado ANTES de imágenes. No prueba de cocina afirmada. Próximo: nueve originales y doce WebP, seis localizaciones y SQL protegido. Primeras seis completas se preservan. Lote03 publicado0/15.
+
+
+Okonomiyaki checkpoint de medios parciales: cinco originales PNG (portada/fase9 y fases1–4), ocho WebP, bytespositivos y hashesSHA256/Git exactos. Portada ajustada de encuadre; fases2/3 corregidas para no adelantar masa. Los tres recortes muestran completos ambos discos. No regenerar estos cinco originales. Restan fases5–8 y seis idiomas. Lote03 publicado0/15.
