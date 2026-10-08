@@ -75,3 +75,8 @@ Cuarta entidad, id f7df8371-8273-4b15-ba6e-32390a185395, grupo9a28dffd-cdde-4e20
 ## 2026-10-08T15:14:11.423Z — Lasaña3/7idiomas
 
 ES,DE,EN guardados en fuente única. Diez fases con cifras por fase iguales; ingredientes, tiempos, nutrición ymedios compartidos. PendientesFR,IT,JA,PT-BR; no rehacer los tres idiomas ni los medios. Lote03con3recetas completas, cuarta3/7; publicado0/15.
+
+
+## 2026-10-08T15:17:54.900Z — Lasaña5/7idiomas
+
+FR eITañadidos ycomprobados: cifras de10fases iguales, cantidades/nutrición/medios preservados. ES,DE,EN,FR,IT en fuente única; faltan JA yPT-BR y cierreSQL/QA. No rehacer cinco idiomas ni23medios. Lote03publicado0/15.
