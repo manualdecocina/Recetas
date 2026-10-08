@@ -1,0 +1,428 @@
+{
+  "schema_version": 1,
+  "slug": "receta-de-ratatouille",
+  "category_slug": "guarniciones",
+  "steps_frozen": true,
+  "steps_sha256": "541d26ab971e3f2d41e4a6767bb4a5f6729b487572db63139110bac16f6121e4",
+  "time_notes": "20 min preparación + 55 min cocción = 75 min, estimados; la reducción puede prolongarse.",
+  "ai_owner_confirmation": {
+    "status": "delegated_editorial_authority",
+    "authority": "Usuario autorizó producción y publicación autónomas de lotes completos el 2026-10-08.",
+    "kitchen_test_performed": false
+  },
+  "publication_blockers": [
+    "IMAGES_PENDING",
+    "LOCALIZATIONS_PENDING",
+    "BATCH_15_COMPLETION_PENDING",
+    "PREVIEW_QA_PENDING"
+  ],
+  "scope": "https://preview.manualdecocina.com",
+  "state": "ES_COMPLETE_STEPS_FROZEN_IMAGES_PENDING",
+  "provenance": {
+    "created_at": "2026-10-08T09:22:16.967Z",
+    "body_source": "new original editorial draft",
+    "wordpress_body_used": false
+  },
+  "sources": [
+    {
+      "url": "https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_sr_legacy_food_json_2018-04.zip",
+      "purpose": "All eleven input records read directly from USDA JSON archive.",
+      "archive_sha256": "0fe8ae486a2c8eb42cb96413f058deb51863a46c8fb8eeb4b1fb45006dd338ef",
+      "accessed": "2026-10-08"
+    },
+    {
+      "url": "https://ask.fsis.usda.gov/article/How-do-I-handle-leftovers-safely",
+      "purpose": "Shallow containers, cooling time limits, chilled storage."
+    },
+    {
+      "url": "https://ask.fsis.usda.gov/article/How-do-I-reheat-leftovers-safely",
+      "purpose": "74 C reheating"
+    }
+  ],
+  "records": [
+    {
+      "id": "2300175e-c47a-4318-a6f9-8ee54387722e",
+      "recipe_group_id": "0bbedb8a-3d06-41dd-8bfc-3dc1ebeac0a7",
+      "language": "es",
+      "slug": "receta-de-ratatouille",
+      "public_path": "/receta-de-ratatouille",
+      "source_url": "https://manualdecocina.com/receta-de-ratatouille/",
+      "title": "Ratatouille de verduras en dados",
+      "excerpt": "Ratatouille para 4 con berenjena, calabacín, pimiento y tomate: verduras doradas por tandas y un guiso final sin convertirlas en puré.",
+      "summary": "Esta ratatouille reúne berenjena, calabacín, pimiento rojo y tomate en un guiso de verduras cortadas en dados. Dorar por separado la berenjena y el calabacín ayuda a controlar su textura antes de reunirlos con el sofrito y el tomate. La ficha propone una versión en cazuela, no una espiral de láminas al horno.\n\nSe proponen 4 guarniciones generosas, con 20 minutos de preparación y unos 55 de cocción: 75 minutos en total. El agua de las verduras, el tamaño del corte y la amplitud de la cazuela cambian el tiempo de reducción. Cantidades, tiempos y rendimiento son estimados y están pendientes de una prueba de cocina.",
+      "category": "Guarniciones",
+      "category_slug": "guarniciones",
+      "difficulty": "Baja",
+      "course": "Guarnición",
+      "cuisine": "Francesa, propuesta casera",
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 55,
+      "total_time_minutes": 75,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "berenjena con piel, sin tallo",
+          "amount": "400",
+          "unit": "g",
+          "group": "Verduras"
+        },
+        {
+          "name": "calabacín con piel, sin extremos",
+          "amount": "400",
+          "unit": "g",
+          "group": "Verduras"
+        },
+        {
+          "name": "pimiento rojo sin semillas",
+          "amount": "250",
+          "unit": "g",
+          "group": "Verduras"
+        },
+        {
+          "name": "cebolla pelada",
+          "amount": "200",
+          "unit": "g",
+          "group": "Verduras"
+        },
+        {
+          "name": "tomate maduro sin pedúnculo",
+          "amount": "600",
+          "unit": "g",
+          "group": "Verduras"
+        },
+        {
+          "name": "ajo pelado",
+          "amount": "12",
+          "unit": "g",
+          "group": "Verduras"
+        },
+        {
+          "name": "aceite de oliva",
+          "amount": "40",
+          "unit": "g, dividido",
+          "group": "Sazonado"
+        },
+        {
+          "name": "sal fina",
+          "amount": "5",
+          "unit": "g",
+          "group": "Sazonado"
+        },
+        {
+          "name": "tomillo seco",
+          "amount": "1",
+          "unit": "g",
+          "group": "Sazonado"
+        },
+        {
+          "name": "pimienta negra molida",
+          "amount": "0.5",
+          "unit": "g",
+          "group": "Sazonado"
+        },
+        {
+          "name": "albahaca fresca",
+          "amount": "8",
+          "unit": "g",
+          "group": "Acabado"
+        },
+        {
+          "name": "agua caliente",
+          "amount": "60",
+          "unit": "ml, solo si hace falta",
+          "group": "Corrección de cocción"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Lava, pesa y corta las verduras",
+          "content": "Lava las verduras y la albahaca con agua corriente. Retira tallos, semillas y partes dañadas; pesa las cantidades comestibles indicadas. Corta berenjena y calabacín en dados de unos 2 cm; pimiento y cebolla, en piezas de 1–2 cm. Pica el tomate y el ajo por separado. Prepara una cazuela ancha de fondo grueso de unos 28–30 cm y capacidad de al menos 4 litros.",
+          "image_alt": "Ratatouille: verduras limpias y cortadas en dados antes de cocinar",
+          "image_url": "/recetas/receta-de-ratatouille/paso-01.webp"
+        },
+        {
+          "title": "Dora la berenjena por tandas",
+          "content": "Calienta 10 g de aceite en la cazuela a fuego medio-alto y añade la mitad de la berenjena. Dora 7–8 minutos, moviendo lo justo para que cambie de cara, hasta que tenga bordes dorados y empiece a ablandarse. Retira a un plato y repite con los otros 10 g de aceite y la berenjena restante. No llenes la cazuela hasta apilarla: si suelta agua, deja que se evapore antes de seguir.",
+          "image_alt": "Ratatouille: dados de berenjena dorándose en una sola capa",
+          "image_url": "/recetas/receta-de-ratatouille/paso-02.webp"
+        },
+        {
+          "title": "Saltea el calabacín",
+          "content": "Añade 10 g de aceite a la misma cazuela y el calabacín. Saltea unos 6 minutos a fuego medio-alto, hasta que algunas caras estén doradas y el centro aún tenga resistencia. Retira junto a la berenjena. No añadas sal todavía ni remuevas sin parar; la intención es dorar, no cocer los dados en su propio líquido.",
+          "image_alt": "Ratatouille: calabacín en dados salteado y ligeramente dorado",
+          "image_url": "/recetas/receta-de-ratatouille/paso-03.webp"
+        },
+        {
+          "title": "Ablanda cebolla y pimiento",
+          "content": "Baja a fuego medio, añade los 10 g de aceite restantes, la cebolla y el pimiento. Cocina 8–10 minutos, removiendo de vez en cuando, hasta que la cebolla esté translúcida y el pimiento se ablande. Si el fondo se pega antes de que estén listos, añade agua caliente de 15 en 15 ml, hasta un máximo de 60 ml para toda la receta, y raspa suavemente sin arrancar partes quemadas.",
+          "image_alt": "Ratatouille: cebolla y pimiento rojo ablandándose en la cazuela",
+          "image_url": "/recetas/receta-de-ratatouille/paso-04.webp"
+        },
+        {
+          "title": "Forma la base de tomate",
+          "content": "Añade el ajo y remueve 30 segundos, sin dejarlo ennegrecer. Incorpora los 600 g de tomate, los 5 g de sal, 1 g de tomillo seco y 0,5 g de pimienta. Cocina unos 5 minutos a fuego medio, removiendo, hasta que el tomate empiece a deshacerse y deje una base jugosa. Mantén la cazuela destapada.",
+          "image_alt": "Ratatouille: tomate picado, ajo y tomillo formando la base del guiso",
+          "image_url": "/recetas/receta-de-ratatouille/paso-05.webp"
+        },
+        {
+          "title": "Reúne y termina el guiso",
+          "content": "Devuelve berenjena y calabacín con sus jugos a la cazuela. Mezcla con suavidad y cocina destapado a fuego medio-bajo 15–18 minutos, removiendo desde el fondo de vez en cuando. Debe quedar jugoso, sin charco de agua, con la berenjena tierna y las piezas aún reconocibles. Si el tomate sigue muy acuoso, prolonga unos minutos; si se seca, usa parte del agua de corrección sin superar los 60 ml. El tiempo puede aumentar.",
+          "image_alt": "Ratatouille: todas las verduras en dados guisándose juntas sin tapa",
+          "image_url": "/recetas/receta-de-ratatouille/paso-06.webp"
+        },
+        {
+          "title": "Añade albahaca y sirve",
+          "content": "Apaga el fuego, añade los 8 g de albahaca troceada y mezcla. Reparte en 4 guarniciones y sirve caliente. Para guardar sobras, pásalas a recipientes bajos y refrigera a 4 °C o menos dentro de 2 horas, o 1 hora si el ambiente supera 32 °C. Se propone consumirlas en 3 días y recalentarlas hasta al menos 74 °C en el centro.",
+          "image_alt": "Ratatouille terminada en dados con albahaca fresca, lista para servir",
+          "image_url": "/recetas/receta-de-ratatouille/paso-07.webp"
+        }
+      ],
+      "notes": "No se sala ni remoja la berenjena en esta propuesta; por eso se controla el dorado en tandas. Puedes cambiar el pimiento rojo por otro pimiento dulce del mismo peso, con cambio de sabor y nutrición. Si omites la albahaca, el acabado será distinto; el cálculo incluye sus 8 g. No se propone sustituir berenjena o calabacín por patata porque cambiaría los tiempos y la intención del plato. Los ingredientes no incluyen alérgenos habituales, pero revisa etiquetas y contaminación cruzada. La textura al día siguiente será más blanda. Enfría en recipientes bajos, no en la cazuela grande; conserva a 4 °C o menos y consume en 3 días. Recalienta solo la porción que vayas a comer hasta 74 °C y evita ciclos repetidos de calentamiento. Para congelar, usa recipientes cerrados por un plazo propuesto de 2 meses, sabiendo que el calabacín perderá firmeza; descongela en la nevera.",
+      "nutrition": {
+        "saturated_fat_g": 1.6,
+        "sugar_g": 14.8,
+        "fat_g": 11.1,
+        "carbs_g": 24.5,
+        "calories": 199.6,
+        "fiber_g": 8.2,
+        "sodium_mg": 508,
+        "protein_g": 5,
+        "estimated": true,
+        "serving_size": "1 de 4 guarniciones propuestas",
+        "source": "USDA FoodData Central — SR Legacy, descarga JSON abril de 2018",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "method": "Once fichas del archivo oficial SR Legacy verificadas por FDC ID; pesos comestibles crudos sumados y divididos entre 4. Se cuentan los 40 g de aceite y los 5 g de sal completos. El agua de corrección no aporta energía. No se usa un peso final supuesto.",
+        "note": "Estimación informativa, no análisis del plato terminado. Variedad, reducción del tomate, restos de aceite y tamaño real de cada porción pueden cambiar los valores. Cantidades, tiempos y rendimiento pendientes de prueba de cocina.",
+        "inputs": [
+          {
+            "fdc_id": 169228,
+            "fdc_description": "Eggplant, raw",
+            "per_100g": {
+              "saturated_fat_g": 0.034,
+              "sugar_g": 3.53,
+              "fat_g": 0.18,
+              "carbs_g": 5.88,
+              "calories": 25,
+              "fiber_g": 3,
+              "sodium_mg": 2,
+              "protein_g": 0.98
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169228/nutrients",
+            "ingredient": "berenjena con piel, sin tallo",
+            "edible_grams": 400
+          },
+          {
+            "fdc_id": 169291,
+            "fdc_description": "Squash, summer, zucchini, includes skin, raw",
+            "per_100g": {
+              "sugar_g": 2.5,
+              "fat_g": 0.32,
+              "carbs_g": 3.11,
+              "calories": 17,
+              "fiber_g": 1,
+              "sodium_mg": 8,
+              "protein_g": 1.21,
+              "saturated_fat_g": 0.084
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169291/nutrients",
+            "ingredient": "calabacín con piel, sin extremos",
+            "edible_grams": 400
+          },
+          {
+            "fdc_id": 170108,
+            "fdc_description": "Peppers, sweet, red, raw",
+            "per_100g": {
+              "fiber_g": 2.1,
+              "calories": 26,
+              "saturated_fat_g": 0.059,
+              "sodium_mg": 4,
+              "sugar_g": 4.2,
+              "carbs_g": 6.03,
+              "protein_g": 0.99,
+              "fat_g": 0.3
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170108/nutrients",
+            "ingredient": "pimiento rojo sin semillas",
+            "edible_grams": 250
+          },
+          {
+            "fdc_id": 170000,
+            "fdc_description": "Onions, raw",
+            "per_100g": {
+              "sugar_g": 4.24,
+              "fat_g": 0.1,
+              "carbs_g": 9.34,
+              "calories": 40,
+              "saturated_fat_g": 0.042,
+              "protein_g": 1.1,
+              "fiber_g": 1.7,
+              "sodium_mg": 4
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170000/nutrients",
+            "ingredient": "cebolla pelada",
+            "edible_grams": 200
+          },
+          {
+            "fdc_id": 170457,
+            "fdc_description": "Tomatoes, red, ripe, raw, year round average",
+            "per_100g": {
+              "sugar_g": 2.63,
+              "carbs_g": 3.89,
+              "calories": 18,
+              "saturated_fat_g": 0.028,
+              "fat_g": 0.2,
+              "fiber_g": 1.2,
+              "sodium_mg": 5,
+              "protein_g": 0.88
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170457/nutrients",
+            "ingredient": "tomate maduro sin pedúnculo",
+            "edible_grams": 600
+          },
+          {
+            "fdc_id": 169230,
+            "fdc_description": "Garlic, raw",
+            "per_100g": {
+              "carbs_g": 33.1,
+              "calories": 149,
+              "sugar_g": 1,
+              "saturated_fat_g": 0.089,
+              "fiber_g": 2.1,
+              "sodium_mg": 17,
+              "protein_g": 6.36,
+              "fat_g": 0.5
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169230/nutrients",
+            "ingredient": "ajo pelado",
+            "edible_grams": 12
+          },
+          {
+            "fdc_id": 171413,
+            "fdc_description": "Oil, olive, salad or cooking",
+            "per_100g": {
+              "fat_g": 100,
+              "carbs_g": 0,
+              "calories": 884,
+              "sodium_mg": 2,
+              "protein_g": 0,
+              "saturated_fat_g": 13.8,
+              "fiber_g": 0,
+              "sugar_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171413/nutrients",
+            "ingredient": "aceite de oliva",
+            "edible_grams": 40
+          },
+          {
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "fiber_g": 0,
+              "sodium_mg": 38800,
+              "saturated_fat_g": 0,
+              "protein_g": 0,
+              "fat_g": 0,
+              "carbs_g": 0,
+              "calories": 0,
+              "sugar_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients",
+            "ingredient": "sal fina",
+            "edible_grams": 5
+          },
+          {
+            "fdc_id": 170938,
+            "fdc_description": "Spices, thyme, dried",
+            "per_100g": {
+              "fat_g": 7.43,
+              "carbs_g": 63.9,
+              "calories": 276,
+              "protein_g": 9.11,
+              "sodium_mg": 55,
+              "saturated_fat_g": 2.73,
+              "fiber_g": 37,
+              "sugar_g": 1.71
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170938/nutrients",
+            "ingredient": "tomillo seco",
+            "edible_grams": 1
+          },
+          {
+            "fdc_id": 170931,
+            "fdc_description": "Spices, pepper, black",
+            "per_100g": {
+              "fat_g": 3.26,
+              "sugar_g": 0.64,
+              "carbs_g": 64,
+              "calories": 251,
+              "protein_g": 10.4,
+              "fiber_g": 25.3,
+              "sodium_mg": 20,
+              "saturated_fat_g": 1.39
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170931/nutrients",
+            "ingredient": "pimienta negra molida",
+            "edible_grams": 0.5
+          },
+          {
+            "fdc_id": 172232,
+            "fdc_description": "Basil, fresh",
+            "per_100g": {
+              "saturated_fat_g": 0.041,
+              "sugar_g": 0.3,
+              "fat_g": 0.64,
+              "carbs_g": 2.65,
+              "calories": 23,
+              "fiber_g": 1.6,
+              "sodium_mg": 4,
+              "protein_g": 3.15
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/172232/nutrients",
+            "ingredient": "albahaca fresca",
+            "edible_grams": 8
+          }
+        ]
+      },
+      "keywords": [
+        "ratatouille",
+        "ratatouille en dados",
+        "guiso de verduras",
+        "ratatouille en cazuela"
+      ],
+      "image_url": "/recetas/receta-de-ratatouille/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/receta-de-ratatouille/portada.webp",
+          "alt": "Ratatouille de berenjena, calabacín, pimiento y tomate en dados con albahaca"
+        }
+      ],
+      "seo": {
+        "title": "Ratatouille en dados: verduras en cazuela | Manual de Cocina",
+        "description": "Ratatouille para 4: dora berenjena y calabacín por tandas y termina con tomate y albahaca. Pasos, tiempos estimados y conservación.",
+        "image_alt": "Ratatouille de berenjena, calabacín, pimiento y tomate en dados con albahaca",
+        "image_variants": [
+          "/recetas/receta-de-ratatouille/portada-1x1.webp",
+          "/recetas/receta-de-ratatouille/portada-4x3.webp",
+          "/recetas/receta-de-ratatouille/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "¿La ratatouille tiene que hacerse en láminas al horno?",
+            "a": "No. Esta ficha propone verduras en dados guisadas en cazuela. Una presentación en espiral de láminas necesita otro corte y otros tiempos; no se intercambia sin ajustar la receta."
+          },
+          {
+            "q": "¿Cómo evito una ratatouille aguada?",
+            "a": "Dora berenjena y calabacín por tandas, no amontones las verduras y termina destapado. El tomate debe reducir hasta quedar jugoso sin agua libre; su contenido de agua puede exigir más tiempo que los 75 minutos estimados."
+          },
+          {
+            "q": "¿Puedo prepararla el día anterior?",
+            "a": "Sí, si enfrías en recipientes bajos y refrigeras dentro de 2 horas, o 1 hora por encima de 32 °C. Se propone conservar 3 días a 4 °C o menos y recalentar hasta 74 °C; las verduras quedarán más blandas."
+          }
+        ]
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "content_html": "<p>Esta ratatouille reúne berenjena, calabacín, pimiento rojo y tomate en un guiso de verduras cortadas en dados. Dorar por separado la berenjena y el calabacín ayuda a controlar su textura antes de reunirlos con el sofrito y el tomate. La ficha propone una versión en cazuela, no una espiral de láminas al horno.</p><p>Se proponen 4 guarniciones generosas, con 20 minutos de preparación y unos 55 de cocción: 75 minutos en total. El agua de las verduras, el tamaño del corte y la amplitud de la cazuela cambian el tiempo de reducción. Cantidades, tiempos y rendimiento son estimados y están pendientes de una prueba de cocina.</p>"
+    }
+  ]
+}

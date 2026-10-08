@@ -30,7 +30,7 @@
     "id": "lote-02-20261008",
     "target": 15,
     "status": "in_progress",
-    "stage": "identity",
+    "stage": "images",
     "recipes": [
       {
         "id": "e47eac88-0649-4785-baf0-43b92dd2ec2e",
@@ -231,8 +231,18 @@
         "recipe_group_id": "0bbedb8a-3d06-41dd-8bfc-3dc1ebeac0a7",
         "slug": "receta-de-ratatouille",
         "public_path": "/receta-de-ratatouille",
-        "stage": "identity_validation",
-        "status": "reserved"
+        "stage": "images",
+        "status": "in_progress",
+        "identity_qa": "PASS",
+        "classification": "ELIGIBLE_CATALOG_CANDIDATE",
+        "routes_file": "editorial/receta-de-ratatouille-rutas-20261008.json",
+        "es_content_file": "editorial/receta-de-ratatouille-20261008.json",
+        "image_manifest": "editorial/receta-de-ratatouille-imagenes.json",
+        "qa_file": "editorial/receta-de-ratatouille-qa-20261008.json",
+        "steps_sha256": "541d26ab971e3f2d41e4a6767bb4a5f6729b487572db63139110bac16f6121e4",
+        "images_ready": 0,
+        "languages_ready": 1,
+        "distinct_images_pending": 7
       },
       {
         "id": "aa9afced-ac23-4e4b-afef-7d28bf2d7af6",
@@ -340,14 +350,14 @@
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
   "progress_branch": "recetas/lote-02-20261008",
-  "last_checkpoint_at": "2026-10-08T09:15:14.407Z",
+  "last_checkpoint_at": "2026-10-08T09:22:16.967Z",
   "handoff": {
     "first_prepared_recipe": "como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada",
     "first_recipe_source": "editorial/como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada-20261008.json",
     "next_recipe": "receta-de-ratatouille",
     "batch_remaining_to_prepare": 5,
     "published_this_batch": 0,
-    "required_action": "Validate ratatouille identity/routes/classification, author ES, freeze images brief; do not regenerate prepared ten recipes. Batch must publish atomically with all 15.",
+    "required_action": "Generate seven ratatouille originals from frozen brief; cover reused for final step, derive eleven WebP; inspect phases and preserve originals, then six localizations.",
     "scope": "Preview only; production migration not executed."
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z"
