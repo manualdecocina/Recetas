@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "project": "Manual de Cocina",
+  "repository": "manualdecocina/Recetas",
+  "preview": "https://preview.manualdecocina.com",
+  "updated_date": "2026-10-08",
+  "automation_status": "not_created_missing_hosting_connector",
+  "automation_id": null,
+  "requested_schedule": "RRULE:FREQ=HOURLY",
+  "requested_model": "gpt-6.1-sol",
+  "requested_reasoning": "high",
+  "model_setting_verified": false,
+  "batch_size": 15,
+  "queue_path": "editorial/automation-queue.json",
+  "baseline": {
+    "published_groups": 109,
+    "published_rows_by_language": {
+      "es": 109,
+      "de": 109,
+      "en": 109,
+      "fr": 109,
+      "it": 109,
+      "ja": 109,
+      "pt": 109
+    },
+    "unpublished_es_groups": 100,
+    "last_published_pr": 84
+  },
+  "current_batch": null,
+  "next_candidate_position": 1,
+  "run_lease": null,
+  "blockers": [
+    {
+      "code": "HOSTINGER_DEPLOYMENT_CONNECTOR_UNAVAILABLE",
+      "detail": "No tools exposed for existing Node.js hosting deployment. Do not use AI Builder or shell/API workarounds."
+    },
+    {
+      "code": "MODEL_CONTROL_UNVERIFIED",
+      "detail": "Automation create schema has no model/effort arguments. Verify saved task settings before asserting gpt-6.1-sol/high."
+    }
+  ],
+  "debt": [
+    {
+      "code": "LOTE01_GLOBAL_CACHE_QA",
+      "pr": 85,
+      "status": "pending_recheck",
+      "detail": "70 recipe pages and 120 media passed. Recheck home/sitemap after TTL; PR85 draft requires unavailable REVALIDATE_SECRET in Actions. Do not expose secrets or weaken auth."
+    }
+  ],
+  "stop_condition": "All eligible pending recipes published and QA passed, held entities accounted for, pre-migration technical gates closed; production migration still not executed",
+  "production_migration": "NOT_EXECUTED",
+  "preview_indexing_block": "ACTIVE"
+}
