@@ -30,7 +30,7 @@
     "id": "lote-02-20261008",
     "target": 15,
     "status": "in_progress",
-    "stage": "deploy",
+    "stage": "DB",
     "recipes": [
       {
         "id": "e47eac88-0649-4785-baf0-43b92dd2ec2e",
@@ -420,6 +420,15 @@
       "sha": "e9b47890f046fd29b5e2bc55fd565a6343126bf2",
       "head_sha": "700148969dac24be21ace69775735f38a842e5f1",
       "merged_at": "2026-10-08T11:29:55.871Z"
+    },
+    "deployment": {
+      "status": "PASS",
+      "checked_at": "2026-10-08T11:34:21.995280+00:00",
+      "media": 172,
+      "http200": 172,
+      "matching_sha256": 172,
+      "evidence_file": "editorial/lote02-media-deployment-verification-20261008.json",
+      "merge_sha": "e9b47890f046fd29b5e2bc55fd565a6343126bf2"
     }
   },
   "next_candidate_position": 17,
@@ -477,7 +486,7 @@
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
   "progress_branch": "recetas/lote-02-20261008",
-  "last_checkpoint_at": "2026-10-08T11:29:55.871Z",
-  "handoff": "PR90 merged after CI passed. Waiting for observed HTTP200 and exact SHA256 for172 WebP on preview. DB has NOT been published; only execute batchSQL after all172 media pass.",
+  "last_checkpoint_at": "2026-10-08T11:34:59.126Z",
+  "handoff": "172/172 deployed WebP verified HTTP200 + exactSHA256. Baseline15 ES still unpublished and all15rowMD5 match. Next execute frozen atomic SQL then verify105rows/7langs pergroup, revalidation and QA.",
   "next_relay_requested_at": "2026-10-08T02:59:04Z"
 }
