@@ -31,7 +31,7 @@
     "branch": "recetas/lote-03-20261008",
     "target": 15,
     "status": "in_progress",
-    "stage": "imágenes",
+    "stage": "localización",
     "current_recipe": "receta-de-hummus",
     "started_at": "2026-10-08T12:39:02.511Z",
     "completed_recipes": 0,
@@ -211,11 +211,11 @@
         "position": 21,
         "eligibility": "validate_url_master_before_writing",
         "status": "in_progress",
-        "stage": "ES",
+        "stage": "imágenes",
         "identity_qa": "PASS",
         "classification": "ELIGIBLE_EXISTING_CULINARY_CANDIDATE_OR_CORE_REBUILD",
         "languages_ready": 1,
-        "images_ready": 0,
+        "images_ready": 11,
         "source_not_reused": true,
         "es_content_file": "editorial/receta-de-hummus-20261008.json",
         "image_manifest": "editorial/receta-de-hummus-imagenes.json",
@@ -223,9 +223,21 @@
         "steps_sha256": "8afc2dbb0500a8d5f1848a6d9999724fa7e153b599384252127a55c34456cd8d",
         "es_editorial_qa": "PASS_STRUCTURAL_USDA_TRACEABILITY",
         "original_images_required": 8,
-        "distinct_images_pending": 8,
+        "distinct_images_pending": 0,
         "expected_es_row_md5": "ac80098c1d3bdf5f3bd584bea93c4837",
-        "next_action": "Generate8originals from frozenhummusbrief, visually inspect and preserve11WebP/8PNG; then6localizations. No03DBpublication until all15ready/deployed."
+        "next_action": "Localize six languages; all8originals/11WebP visually reviewed, frozenESunchanged. No batch03DBpublication yet.",
+        "image_originals": 8,
+        "image_visual_qa": "PASS_ALL8_ORIGINALS",
+        "cover_variant_visual_qa": "PASS_ALL_RATIOS_WHOLE_BOWL",
+        "next_image": null,
+        "localizations_pending": [
+          "de",
+          "en",
+          "fr",
+          "it",
+          "ja",
+          "pt"
+        ]
       },
       {
         "id": "1b078b4e-6544-41d5-8e9c-52e6d8fa3d8e",
@@ -404,9 +416,9 @@
     "owner": "manual-continuation-20261008-bandeja-localization",
     "status": "active",
     "acquired_at": "2026-10-08T08:39:14.486Z",
-    "expires_at": "2026-10-08T17:04:55.111Z",
+    "expires_at": "2026-10-08T17:20:09.403Z",
     "reason": "Same continuing producer; first4recipes7/7ready, hummusESfrozen next8images. Batch03published0/15.",
-    "renewed_at": "2026-10-08T15:34:55.111Z"
+    "renewed_at": "2026-10-08T15:50:09.403Z"
   },
   "blockers": [],
   "debt": [
@@ -475,17 +487,17 @@
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
   "progress_branch": "recetas/lote-03-20261008",
-  "last_checkpoint_at": "2026-10-08T14:39:54.562Z",
+  "last_checkpoint_at": "2026-10-08T15:50:09.403Z",
   "handoff": {
     "branch": "recetas/lote-03-20261008",
     "current_recipe": "receta-de-hummus",
     "prepared_recipes": 4,
     "published_recipes": 0,
-    "next_action": "Generate8originals from frozenhummusbrief, visually inspect and preserve11WebP/8PNG; then6localizations. No03DBpublication until all15ready/deployed.",
-    "checkpoint_at": "2026-10-08T14:39:54.562Z"
+    "next_action": "Localize six languages; all8originals/11WebP visually reviewed, frozenESunchanged. No batch03DBpublication yet.",
+    "checkpoint_at": "2026-10-08T15:50:09.403Z"
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z",
-  "updated_at": "2026-10-08T15:34:55.111Z",
+  "updated_at": "2026-10-08T15:50:09.403Z",
   "completed_batches": [
     {
       "id": "lote-02-20261008",

@@ -1,6 +1,6 @@
 {
   "scope": "Manual de Cocina only; lote03",
-  "state": "ES_FROZEN_MEDIA_AND_LOCALIZATIONS_PENDING",
+  "state": "MEDIA_READY_LOCALIZATIONS_PENDING_NOT_PUBLISHED",
   "provenance": "Original culinary reconstruction; identity/routes preserved, no WordPress text, translations or images reused.",
   "ai_owner_confirmation": "Original content and ImageGen authorized. No kitchen test claimed.",
   "category_slug": "entrantes-y-aperitivos",
@@ -346,7 +346,15 @@
         "hummus con limón"
       ],
       "image_url": "/recetas/receta-de-hummus/portada.webp",
-      "gallery": [],
+      "gallery": [
+        "/recetas/receta-de-hummus/paso-01.webp",
+        "/recetas/receta-de-hummus/paso-02.webp",
+        "/recetas/receta-de-hummus/paso-03.webp",
+        "/recetas/receta-de-hummus/paso-04.webp",
+        "/recetas/receta-de-hummus/paso-05.webp",
+        "/recetas/receta-de-hummus/paso-06.webp",
+        "/recetas/receta-de-hummus/paso-07.webp"
+      ],
       "seo": {
         "title": "Hummus casero con tahini y limón: cantidades y pasos",
         "description": "Prepara hummus con garbanzos de conserva, tahini y limón: peso escurrido, agua y aceite medidos, triturado por fases y conservación para seis raciones.",
@@ -382,5 +390,6 @@
     "water_ml_to_g_approximation": 1,
     "served_weight_measured": false,
     "confirmed": false
-  }
+  },
+  "published_database": false
 }

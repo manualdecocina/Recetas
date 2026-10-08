@@ -94,3 +94,7 @@ Lote03:4/15preparadas,0/15publicadas,11restantes. SIGUIENTE receta-de-hummus. Co
 ## 2026-10-08T15:34:55.111Z — Hummus: ES congelado antes de imágenes
 
 Quinta entidad: id9e04ccf3-9d8f-4823-a0fd-f371c6866acf, grupo413ca438-81b2-42a0-8694-a14c1df6ef79. Fuente única editorial/receta-de-hummus-20261008.json; 8fases/10ingredientes/3FAQ originales. Categoría Entrantes y aperitivos preservada. HashES8afc2dbb0500a8d5f1848a6d9999724fa7e153b599384252127a55c34456cd8d. Garbanzos de conserva enjuagados/escurridos400g netos con piel FDC173801; tahini tostado60g FDC170189. Nueve fichas USDA/8campos presentes, nutrición por1/6estimada184.8kcal; no prueba de cocina.20prep+0cocción=20min porque parte de conserva ya cocida; cocer secos exigeotro tiempo/nutrición. Peso servido no medido. Preflight SupabaseMD5ac80098c1d3bdf5f3bd584bea93c4837 intacto,7rutas sin colisiones recipes/content_pages; catálogo124. Brief congelado antes de8originales; pendientesmedios y6localizaciones. No rehacer las4recetas listas ni susmedios. Lote03publicado0/15.
+
+
+### Hummus: medios completos (2026-10-08T15:50:09.403Z)
+Ocho originales PNG y once WebP revisados, portada íntegra en los tres formatos. Se corrigió la fase del limón retirando los garbanzos introducidos antes de tiempo; no se usa la imagen descartada. Hash ES conservado. Pendientes seis idiomas, SQL y los gates del lote completo. Publicación del lote03: 0/15.
