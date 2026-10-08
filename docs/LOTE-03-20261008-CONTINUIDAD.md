@@ -114,3 +114,8 @@ Seis originales PNG y nueve WebP revisados. Ambos vasos íntegros en formatos cu
 
 ### Piña colada completa en siete idiomas (2026-10-08T16:22:46.289Z)
 Paquete único editorial/receta-de-pina-colada-20261008.json SHA459fa9f6c22dfa9081f8deb2e271c1333e13f2ef40d1105e40d8afb21c766ef5; SQL protegido SHA9fcabc1338bdee68b1ce2676b441c774156be6e4ac2fafa0bd61e808a6cdf84d, NO ejecutado. Seis pasos/cinco ingredientes/tres FAQ por idioma, quince medios remotos con tamaños positivos y hashes exactos. Nutrición recalculada incluye254,1kcal y10,0g etanol estimado por ración. PreflightDB: MD5yfechasESintactos, sin publicación/collisiones/UUIDexistentes; catálogo124. Lote03:6/15preparadas,0/15publicadas; siguiente receta-de-okonomiyaki.
+
+
+### Okonomiyaki: ES congelado
+
+Identidad y siete rutas conciliadas de nuevo: una ES sin publicar, MD5 8ee444b23668f2a1a2a67d726744951f; sin colisiones en recipes/content_pages. ES original: nueve fases, once ingredientes, dos discos; 25 preparación + 24 cocción en tandas + 3 precalentamiento = 52 minutos estimados. Centro74°C por huevo con carne. Nutrición de diez fichas USDA exactas, aceite/bacon completos sin inventar absorción: 547,5kcal/ración estimadas. Hash de pasos 3db4de103f4e0d96d7864e7e35a77db33bfcb8f8497a2508ec8aa2d3f29f23f4. Brief congelado ANTES de imágenes. No prueba de cocina afirmada. Próximo: nueve originales y doce WebP, seis localizaciones y SQL protegido. Primeras seis completas se preservan. Lote03 publicado0/15.

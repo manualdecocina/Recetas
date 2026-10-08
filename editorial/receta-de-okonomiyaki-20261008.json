@@ -1,0 +1,420 @@
+{
+  "scope": "Manual de Cocina only; lote03",
+  "state": "ES_FROZEN_MEDIA_AND_LOCALIZATIONS_PENDING",
+  "provenance": "Original culinary reconstruction; identities/routes preserved. No WordPress bodies, translations or images reused.",
+  "ai_owner_confirmation": "Original content and ImageGen authorized; no kitchen test claimed.",
+  "category_slug": "entrantes-y-aperitivos",
+  "cover": "/recetas/receta-de-okonomiyaki/portada.webp",
+  "steps_frozen": true,
+  "steps_sha256": "3db4de103f4e0d96d7864e7e35a77db33bfcb8f8497a2508ec8aa2d3f29f23f4",
+  "time_notes": "25prep+24cook+3preheat=52min sequential two batches. Add actual further cooking or reheating. No mandatory batter rest.",
+  "publication_blockers": [
+    "Original media pending",
+    "Six localizations pending",
+    "Full15 batch CI/deploy/DB/cache/liveQA pending"
+  ],
+  "sources": [
+    {
+      "url": "https://www.justonecookbook.com/okonomiyaki/",
+      "purpose": "Primary technique only: cabbage mixed into batter, thin pork on top, covered cooking and flipping. Original simpler ratios and finish; no copied body or images. Distinguishes Osaka from layered Hiroshima.",
+      "accessed": "2026-10-08"
+    },
+    {
+      "url": "https://www.kikkoman.co.uk/recipes/detail/japanese-okonomiyaki-pancake-recipe-osaka-style",
+      "purpose": "Primary manufacturer corroboration of flour/egg/cabbage/bacon/shoyu family and pan preparation; no copied proportions or wording.",
+      "accessed": "2026-10-08"
+    },
+    {
+      "url": "https://www.foodsafety.gov/blog/salmonella-and-eggs",
+      "purpose": "Official egg dishes containing meat165F/74C, raw batter hygiene, refrigerator4C,2h/1h above32C.",
+      "accessed": "2026-10-08"
+    },
+    {
+      "url": "https://www.foodsafety.gov/food-safety-charts/cold-food-storage-charts",
+      "purpose": "Official3–4days cooked leftovers; proposed conservative3days refrigerated, reheat74C.",
+      "accessed": "2026-10-08"
+    },
+    {
+      "url": "https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_sr_legacy_food_json_2018-04.zip",
+      "purpose": "Ten exact USDA raw ingredient foods, all eight fields present. Conservative full retention of oil and bacon fat, no measured absorption/yield claim.",
+      "accessed": "2026-10-08"
+    }
+  ],
+  "records": [
+    {
+      "id": "2fd8b5c5-b708-407f-9437-ee0478f1f5b9",
+      "recipe_group_id": "f4940b22-428f-4f14-a8f3-a2a208e8ac0e",
+      "slug": "receta-de-okonomiyaki",
+      "public_path": "/receta-de-okonomiyaki",
+      "source_url": "https://manualdecocina.com/receta-de-okonomiyaki/",
+      "language": "es",
+      "title": "Okonomiyaki casero de repollo y bacon",
+      "excerpt": "Dos discos de repollo, huevo y bacon con salsa y mayonesa medidas: una adaptación casera con cocción en tandas y comprobación del centro.",
+      "summary": "Okonomiyaki de repollo y bacon en una adaptación doméstica de inspiración Osaka. Dos discos propuestos se cocinan en tandas y se terminan con salsa sencilla y mayonesa medida. La receta prevé 52minutos y exige comprobar el centro con termómetro; cantidades, tiempos y rendimiento no están confirmados en cocina.",
+      "category": "Entrantes y aperitivos",
+      "category_slug": "entrantes-y-aperitivos",
+      "difficulty": "Media",
+      "course": "Entrante",
+      "cuisine": "Inspiración japonesa, Osaka",
+      "prep_time_minutes": 25,
+      "cook_time_minutes": 24,
+      "total_time_minutes": 52,
+      "servings": 2,
+      "ingredients": [
+        {
+          "name": "repollo blanco, peso limpio sin tronco duro",
+          "amount": "300",
+          "unit": "g",
+          "group": "Masa de repollo"
+        },
+        {
+          "name": "harina de trigo común sin levadura, no premezcla",
+          "amount": "100",
+          "unit": "g",
+          "group": "Masa de repollo"
+        },
+        {
+          "name": "huevo entero crudo, pesado sin cáscara",
+          "amount": "100",
+          "unit": "g",
+          "group": "Masa de repollo"
+        },
+        {
+          "name": "agua potable",
+          "amount": "100",
+          "unit": "ml",
+          "group": "Masa de repollo"
+        },
+        {
+          "name": "cebolleta, bulbo y hojas tiernas limpios",
+          "amount": "30",
+          "unit": "g",
+          "group": "Masa de repollo"
+        },
+        {
+          "name": "salsa de soja tipo shoyu, con trigo",
+          "amount": "10",
+          "unit": "g",
+          "group": "Masa de repollo"
+        },
+        {
+          "name": "bacon curado crudo en lonchas finas",
+          "amount": "60",
+          "unit": "g",
+          "group": "Cobertura de carne"
+        },
+        {
+          "name": "aceite de colza o canola",
+          "amount": "10",
+          "unit": "g",
+          "group": "Sartén"
+        },
+        {
+          "name": "kétchup",
+          "amount": "30",
+          "unit": "g",
+          "group": "Salsa y acabado"
+        },
+        {
+          "name": "salsa Worcestershire",
+          "amount": "10",
+          "unit": "g",
+          "group": "Salsa y acabado"
+        },
+        {
+          "name": "mayonesa comercial normal, elaborada con huevo pasteurizado",
+          "amount": "20",
+          "unit": "g",
+          "group": "Salsa y acabado"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepara la mesa y separa los alimentos crudos",
+          "content": "Reúne una sartén antiadherente de unos 24 cm con tapa, dos espátulas anchas, báscula, cuencos y un termómetro de alimentos limpio. Pesa 100 g de harina, 100 g de huevo sin cáscara, 100 ml de agua, 10 g de shoyu, 60 g de bacon crudo, 10 g de aceite, 30 g de kétchup, 10 g de Worcestershire y 20 g de mayonesa comercial. Los huevos equivalen aproximadamente a dos unidades, pero manda el peso. Mantén bacon y huevo refrigerados hasta usarlos y separados de las verduras y salsas listas para comer. No pruebes la masa cruda. Revisa las etiquetas: trigo, huevo y soja están presentes, y la Worcestershire puede contener pescado.",
+          "image_url": "/recetas/receta-de-okonomiyaki/paso-01.webp",
+          "image_alt": "Okonomiyaki casero: Prepara la mesa y separa los alimentos crudos"
+        },
+        {
+          "title": "Lava y pica las verduras",
+          "content": "Retira las hojas dañadas y el tronco duro del repollo. Lava las verduras con agua potable, sin jabón, y escurre y seca bien antes de pesarlas. Obtén 300 g netos de repollo y pícalo en trocitos finos, de unos 5 mm; corta 30 g netos de cebolleta en rodajitas finas. Usa todo el bulbo y las hojas tiernas pesados en la masa, sin reservar una guarnición adicional. Lava manos, tabla y utensilios si han tocado huevo o bacon crudos. Un corte fino facilita un disco uniforme; el repollo húmedo puede diluir la masa.",
+          "image_url": "/recetas/receta-de-okonomiyaki/paso-02.webp",
+          "image_alt": "Okonomiyaki casero: Lava y pica las verduras"
+        },
+        {
+          "title": "Mezcla la salsa de acabado",
+          "content": "En un cuenco limpio combina los 30 g de kétchup con los 10 g de Worcestershire hasta una salsa uniforme: son 40 g antes de repartir. Reserva tapada junto a los 20 g de mayonesa comercial, en frío mientras preparas la masa. No añadas azúcar, salsa de ostras, agua ni ingredientes extra. Esta mezcla sencilla es un acabado casero propuesto, no una reproducción exacta de una salsa comercial japonesa. Mantén cucharas y cuencos de estas salsas separados de los utilizados para la carne o el huevo crudos.",
+          "image_url": "/recetas/receta-de-okonomiyaki/paso-03.webp",
+          "image_alt": "Okonomiyaki casero: Mezcla la salsa de acabado"
+        },
+        {
+          "title": "Haz la masa y divídela",
+          "content": "Bate los 100 g de huevo con los 100 ml de agua y los 10 g de shoyu. Incorpora los 100 g de harina y mezcla hasta eliminar los grumos secos; no sigas batiendo innecesariamente. Añade todo el repollo y la cebolleta y remueve con una espátula hasta cubrirlos. Divide la mezcla en dos porciones similares; unos 320 g por porción es solo la suma inicial aproximada, no un peso cocinado medido. No se exige reposo ni se añaden levadura, ñame, caldo dashi o tempura. Conserva tapada en frío la porción que espera mientras cocinas la primera.",
+          "image_url": "/recetas/receta-de-okonomiyaki/paso-04.webp",
+          "image_alt": "Okonomiyaki casero: Haz la masa y divídela"
+        },
+        {
+          "title": "Forma el primer disco y cocina su base",
+          "content": "Calienta la sartén a fuego medio durante unos 3 minutos sin llevarla a humear. Distribuye 5 g de aceite. Extiende una mitad de la masa en un círculo de unos 18 cm, con grosor uniforme de 1,5–2 cm. Reparte 30 g de bacon crudo en lonchas finas sobre la cara superior, sin plegarlo en capas gruesas. Baja a fuego medio-bajo, tapa y cocina unos 5 minutos para asentar la base. No aplastes el disco ni lo hagas más grueso para usar toda la masa. La carne todavía está cruda: no reutilices sus pinzas o plato para servir sin lavarlos.",
+          "image_url": "/recetas/receta-de-okonomiyaki/paso-05.webp",
+          "image_alt": "Okonomiyaki casero: Forma el primer disco y cocina su base"
+        },
+        {
+          "title": "Da la vuelta y cocina el lado del bacon",
+          "content": "Destapa con cuidado por el vapor. Introduce las dos espátulas bajo el disco para sostenerlo y gíralo con un movimiento controlado, dejando el bacon en contacto con la sartén. No apoyes la cara cruda en un plato de servicio limpio. Tapa y cocina unos 5 minutos más a fuego medio-bajo. Si la superficie se oscurece muy deprisa, baja el fuego; una costra tostada no demuestra que el centro esté cocido. Mantén la porción pendiente refrigerada y lava las espátulas si han tocado carne o masa cruda antes de usarlas con comida ya lista.",
+          "image_url": "/recetas/receta-de-okonomiyaki/paso-06.webp",
+          "image_alt": "Okonomiyaki casero: Da la vuelta y cocina el lado del bacon"
+        },
+        {
+          "title": "Termina la cocción y comprueba el centro",
+          "content": "Gira de nuevo para dejar el bacon hacia arriba y cocina unos 2 minutos destapado. Introduce la sonda limpia por el lateral hasta el centro, sin tocar la sartén: este plato de huevo con carne debe llegar al menos a 74 °C. Comprueba también que no quede masa húmeda de harina en el interior; el aspecto por sí solo no sustituye el termómetro. Si falta temperatura o cocción, continúa a fuego bajo y revisa otra vez, contando el tiempo adicional. Retira con utensilios limpios a un plato limpio y cúbrelo brevemente mientras preparas el segundo; no mantengas la comida durante horas a temperatura ambiente.",
+          "image_url": "/recetas/receta-de-okonomiyaki/paso-07.webp",
+          "image_alt": "Okonomiyaki casero: Termina la cocción y comprueba el centro"
+        },
+        {
+          "title": "Cocina la segunda porción",
+          "content": "En la misma sartén caliente reparte los 5 g de aceite restantes y forma otro disco con la mitad de masa reservada y los 30 g de bacon restantes. Repite la secuencia: 5 minutos tapado por la base, 5 minutos tapado con el bacon hacia abajo y 2 minutos destapado después de girar de nuevo. Comprueba al menos 74 °C en su centro con la sonda limpia, sin tocar el fondo. Los dos discos suman una previsión de 24 minutos de cocción en tandas, más el precalentamiento. Si necesitas recalentar el primero para servirlos juntos calientes, hazlo hasta 74 °C y añade ese tiempo real; no se presupone una cocción simultánea.",
+          "image_url": "/recetas/receta-de-okonomiyaki/paso-08.webp",
+          "image_alt": "Okonomiyaki casero: Cocina la segunda porción"
+        },
+        {
+          "title": "Reparte la salsa y sirve",
+          "content": "Pasa el segundo disco a un plato limpio. Reparte toda la salsa mezclada: 20 g por disco, y traza líneas con 10 g de mayonesa comercial sobre cada uno. Sirve los dos okonomiyaki recién hechos; una ración propuesta es un disco completo. No se incluyen bonito, algas, cebolleta de adorno, jengibre ni acompañamientos fuera de la fórmula. Se estiman 25 minutos de preparación, 24 de cocción y 3 de precalentamiento, 52 en total, con cualquier ajuste real añadido. Para sobras, refrigera en un recipiente poco profundo a 4 °C o menos dentro de 2 horas, o 1 hora si el ambiente supera 32 °C; consume dentro de 3 días y recalienta a 74 °C. Guarda las salsas aparte cuando sea posible y respeta su etiqueta.",
+          "image_url": "/recetas/receta-de-okonomiyaki/portada.webp",
+          "image_alt": "Okonomiyaki casero: Reparte la salsa y sirve"
+        }
+      ],
+      "notes": "Adaptación doméstica de inspiración Osaka: el repollo se mezcla con una masa de harina y huevo y se cocina con bacon fino. No reproduce una fórmula tradicional completa: no incorpora ñame, dashi, tenkasu ni capas de fideos de Hiroshima. La mezcla de kétchup y Worcestershire es un acabado sencillo propio, con mayonesa comercial normal de huevo pasteurizado según etiqueta. No sustituye las salsas manteniendo las mismas cifras: pesa y recalcula la variante. Contiene trigo, huevo y soja; Worcestershire puede incluir pescado y otras marcas añadir alérgenos. No es vegetariana por el bacon. Si haces una variante sin carne, define otra fórmula y su nutrición, sin etiquetar esta como tal. El corte fino y el grosor uniforme ayudan a girar los discos; no añadas harina o agua sin registrar el cambio. Evita probar masa cruda y separa utensilios de carne/huevo crudos de los de servir. Comprueba 74°C en el centro de cada disco: el dorado no basta. Guarda sobras a 4°C o menos dentro de 2 horas, o 1 hora por encima de 32°C, en recipiente poco profundo; consume en 3 días y recalienta a 74°C. Las salsas se conservan según etiqueta. Dos discos, 52 minutos y su textura son propuestas, no prueba de cocina ni rendimiento confirmado; suma los ajustes de cocción o recalentamiento reales.",
+      "nutrition": {
+        "calories": 547.5,
+        "protein_g": 18.4,
+        "carbs_g": 53.7,
+        "fat_g": 29.1,
+        "saturated_fat_g": 7.0,
+        "sodium_mg": 865.8,
+        "fiber_g": 5.6,
+        "sugar_g": 9.3,
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (abril de 2018)",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "inputs": [
+          {
+            "ingredient": "repollo blanco crudo limpio",
+            "edible_grams": 300,
+            "fdc_id": 169975,
+            "fdc_description": "Cabbage, raw",
+            "per_100g": {
+              "fat_g": 0.1,
+              "carbs_g": 5.8,
+              "calories": 25.0,
+              "sugar_g": 3.2,
+              "protein_g": 1.28,
+              "fiber_g": 2.5,
+              "sodium_mg": 18.0,
+              "saturated_fat_g": 0.034
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169975/nutrients"
+          },
+          {
+            "ingredient": "harina de trigo común blanca no enriquecida",
+            "edible_grams": 100,
+            "fdc_id": 169761,
+            "fdc_description": "Wheat flour, white, all-purpose, unenriched",
+            "per_100g": {
+              "fat_g": 0.98,
+              "carbs_g": 76.3,
+              "calories": 364,
+              "fiber_g": 2.7,
+              "sodium_mg": 2.0,
+              "protein_g": 10.3,
+              "saturated_fat_g": 0.155,
+              "sugar_g": 0.27
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169761/nutrients"
+          },
+          {
+            "ingredient": "huevo entero crudo sin cáscara",
+            "edible_grams": 100,
+            "fdc_id": 171287,
+            "fdc_description": "Egg, whole, raw, fresh",
+            "per_100g": {
+              "calories": 143,
+              "saturated_fat_g": 3.13,
+              "protein_g": 12.6,
+              "sodium_mg": 142,
+              "sugar_g": 0.37,
+              "fat_g": 9.51,
+              "carbs_g": 0.72,
+              "fiber_g": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171287/nutrients"
+          },
+          {
+            "ingredient": "cebolleta cruda, hojas y bulbo",
+            "edible_grams": 30,
+            "fdc_id": 170005,
+            "fdc_description": "Onions, spring or scallions (includes tops and bulb), raw",
+            "per_100g": {
+              "sugar_g": 2.33,
+              "calories": 32.0,
+              "fat_g": 0.19,
+              "protein_g": 1.83,
+              "fiber_g": 2.6,
+              "sodium_mg": 16.0,
+              "saturated_fat_g": 0.032,
+              "carbs_g": 7.34
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170005/nutrients"
+          },
+          {
+            "ingredient": "shoyu de soja y trigo",
+            "edible_grams": 10,
+            "fdc_id": 174277,
+            "fdc_description": "Soy sauce made from soy and wheat (shoyu)",
+            "per_100g": {
+              "fat_g": 0.57,
+              "carbs_g": 4.93,
+              "sugar_g": 0.4,
+              "protein_g": 8.14,
+              "sodium_mg": 5490.0,
+              "saturated_fat_g": 0.073,
+              "calories": 53.0,
+              "fiber_g": 0.8
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/174277/nutrients"
+          },
+          {
+            "ingredient": "bacon curado crudo sin preparar",
+            "edible_grams": 60,
+            "fdc_id": 168277,
+            "fdc_description": "Pork, cured, bacon, unprepared",
+            "per_100g": {
+              "protein_g": 13.7,
+              "sodium_mg": 751,
+              "saturated_fat_g": 12.6,
+              "fat_g": 37.1,
+              "carbs_g": 0.0,
+              "calories": 393,
+              "sugar_g": 0.35,
+              "fiber_g": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/168277/nutrients"
+          },
+          {
+            "ingredient": "aceite de colza/canola",
+            "edible_grams": 10,
+            "fdc_id": 172336,
+            "fdc_description": "Oil, canola",
+            "per_100g": {
+              "fat_g": 100,
+              "saturated_fat_g": 7.36,
+              "protein_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 884,
+              "fiber_g": 0.0,
+              "sodium_mg": 0.0,
+              "sugar_g": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/172336/nutrients"
+          },
+          {
+            "ingredient": "kétchup",
+            "edible_grams": 30,
+            "fdc_id": 168556,
+            "fdc_description": "Catsup",
+            "per_100g": {
+              "sodium_mg": 907,
+              "protein_g": 1.04,
+              "fiber_g": 0.3,
+              "saturated_fat_g": 0.014,
+              "sugar_g": 21.3,
+              "fat_g": 0.1,
+              "carbs_g": 27.4,
+              "calories": 101
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/168556/nutrients"
+          },
+          {
+            "ingredient": "Worcestershire",
+            "edible_grams": 10,
+            "fdc_id": 171610,
+            "fdc_description": "Sauce, worcestershire",
+            "per_100g": {
+              "protein_g": 0.0,
+              "fiber_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "fat_g": 0.0,
+              "sodium_mg": 1300.0,
+              "carbs_g": 19.2,
+              "calories": 77.0,
+              "sugar_g": 10.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171610/nutrients"
+          },
+          {
+            "ingredient": "mayonesa comercial normal",
+            "edible_grams": 20,
+            "fdc_id": 171009,
+            "fdc_description": "Salad dressing, mayonnaise, regular",
+            "per_100g": {
+              "saturated_fat_g": 11.7,
+              "sodium_mg": 635,
+              "protein_g": 0.96,
+              "fat_g": 74.8,
+              "carbs_g": 0.57,
+              "calories": 680,
+              "fiber_g": 0.0,
+              "sugar_g": 0.57
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171009/nutrients"
+          }
+        ],
+        "serving_size": "Un disco completo; la mitad del lote de 2 discos propuestos",
+        "method": "Diez fichas USDA verificadas: nutrientes por 100 g multiplicados por los gramos comestibles indicados, sumados y divididos entre 2. Repollo169975, harina169761, huevo171287, cebolleta170005, shoyu174277, bacon crudo168277, canola172336, kétchup168556, Worcestershire171610 y mayonesa normal171009. Agua potable100ml sin aporte a estos campos.",
+        "note": "Estimación pendiente de cocina, no análisis. Se incluye todo el aceite y la grasa del bacon crudo, aunque una parte pueda quedar en la sartén; no se inventa una absorción o pérdida medida. Las marcas de bacon y salsas cambian los valores y el sodio. Los770g son suma aproximada inicial con100ml de agua tratados como100g, no rendimiento servido confirmado. Sin bonito, algas, guarnición ni acompañamientos. Todos los campos están presentes en las fichas; una ausencia nunca se convierte en cero."
+      },
+      "keywords": [
+        "okonomiyaki casero",
+        "okonomiyaki de repollo",
+        "okonomiyaki con bacon",
+        "tortita japonesa de repollo"
+      ],
+      "image_url": "/recetas/receta-de-okonomiyaki/portada.webp",
+      "gallery": [],
+      "seo": {
+        "title": "Okonomiyaki casero de repollo y bacon: pasos y cantidades",
+        "description": "Adaptación casera de okonomiyaki con repollo, huevo y bacon. Dos discos propuestos, salsa medida, cocción en tandas y nutrición estimada trazable.",
+        "image_alt": "Dos okonomiyaki dorados de repollo y bacon, terminados con salsa oscura y líneas de mayonesa, sin algas, bonito ni guarnición",
+        "image_variants": [
+          "/recetas/receta-de-okonomiyaki/portada-1x1.webp",
+          "/recetas/receta-de-okonomiyaki/portada-4x3.webp",
+          "/recetas/receta-de-okonomiyaki/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "¿Es la versión tradicional completa de Osaka?",
+            "a": "Es una adaptación casera que mezcla el repollo con la masa. No lleva ñame, dashi ni tenkasu, y su salsa de kétchup con Worcestershire es una propuesta sencilla propia. No se promete el mismo sabor o textura que una receta tradicional ni que la versión de Hiroshima con capas y fideos."
+          },
+          {
+            "q": "¿Por qué se rompe al girarlo?",
+            "a": "Un disco demasiado grueso, repollo muy húmedo o una base aún blanda dificultan el giro. Seca y pica fino el repollo, conserva un grosor uniforme de 1,5–2 cm y sostén con dos espátulas anchas. Cocina el tiempo que necesite sin dar por seguro el centro solo porque esté dorado."
+          },
+          {
+            "q": "¿Puedo quitar el bacon o cambiar las salsas?",
+            "a": "Sí, como variante separada: anota las cantidades y recalcula la nutrición. Esta fórmula incluye 60 g de bacon, 40 g de salsa mezclada y 20 g de mayonesa para dos discos; no se trasladan sus cifras a una versión sin carne, sin huevo o con otras marcas. Revisa los alérgenos de las salsas."
+          }
+        ]
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "content_html": "<p>Okonomiyaki de repollo y bacon en una adaptación doméstica de inspiración Osaka. Dos discos propuestos se cocinan en tandas y se terminan con salsa sencilla y mayonesa medida. La receta prevé 52minutos y exige comprobar el centro con termómetro; cantidades, tiempos y rendimiento no están confirmados en cocina.</p><p>Adaptación doméstica de inspiración Osaka: el repollo se mezcla con una masa de harina y huevo y se cocina con bacon fino. No reproduce una fórmula tradicional completa: no incorpora ñame, dashi, tenkasu ni capas de fideos de Hiroshima. La mezcla de kétchup y Worcestershire es un acabado sencillo propio, con mayonesa comercial normal de huevo pasteurizado según etiqueta. No sustituye las salsas manteniendo las mismas cifras: pesa y recalcula la variante. Contiene trigo, huevo y soja; Worcestershire puede incluir pescado y otras marcas añadir alérgenos. No es vegetariana por el bacon. Si haces una variante sin carne, define otra fórmula y su nutrición, sin etiquetar esta como tal. El corte fino y el grosor uniforme ayudan a girar los discos; no añadas harina o agua sin registrar el cambio. Evita probar masa cruda y separa utensilios de carne/huevo crudos de los de servir. Comprueba 74°C en el centro de cada disco: el dorado no basta. Guarda sobras a 4°C o menos dentro de 2 horas, o 1 hora por encima de 32°C, en recipiente poco profundo; consume en 3 días y recalienta a 74°C. Las salsas se conservan según etiqueta. Dos discos, 52 minutos y su textura son propuestas, no prueba de cocina ni rendimiento confirmado; suma los ajustes de cocción o recalentamiento reales.</p>"
+    }
+  ],
+  "yield_proposal": {
+    "servings": 2,
+    "discs": 2,
+    "input_mass_g": 770,
+    "served_weight_measured": false,
+    "confirmed": false
+  }
+}
