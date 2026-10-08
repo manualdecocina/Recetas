@@ -31,7 +31,7 @@
     "branch": "recetas/lote-03-20261008",
     "target": 15,
     "status": "in_progress",
-    "stage": "imágenes",
+    "stage": "localización",
     "current_recipe": "receta-de-pizza-casera",
     "started_at": "2026-10-08T12:39:02.511Z",
     "completed_recipes": 0,
@@ -124,11 +124,11 @@
         "position": 19,
         "eligibility": "validate_url_master_before_writing",
         "status": "in_progress",
-        "stage": "imágenes",
+        "stage": "localización",
         "identity_qa": "PASS",
         "classification": "ELIGIBLE_EXISTING_CULINARY_CANDIDATE_OR_CORE_REBUILD",
         "languages_ready": 1,
-        "images_ready": 0,
+        "images_ready": 13,
         "source_not_reused": true,
         "es_content_file": "editorial/receta-de-pizza-casera-20261008.json",
         "image_manifest": "editorial/receta-de-pizza-casera-imagenes.json",
@@ -136,9 +136,20 @@
         "steps_sha256": "c46659df9c024fae0638a605b9837b21f122e283710a326370bdea86e49a37d3",
         "es_editorial_qa": "PASS_STRUCTURAL_USDA_TRACEABILITY",
         "original_images_required": 10,
-        "distinct_images_pending": 10,
+        "distinct_images_pending": 0,
         "expected_es_row_md5": "b7f0fd0719e91da3a4ea936fb873c16b",
-        "next_image": "portada.webp"
+        "next_image": null,
+        "image_originals": 10,
+        "image_visual_qa": "PASS_ALL10_ORIGINALS",
+        "cover_variant_visual_qa": "PASS_MAIN_SUBJECT_SQUARE_CLOSE_CROP",
+        "localizations_pending": [
+          "de",
+          "en",
+          "fr",
+          "it",
+          "ja",
+          "pt"
+        ]
       },
       {
         "id": "f7df8371-8273-4b15-ba6e-32390a185395",
@@ -351,9 +362,9 @@
     "owner": "manual-continuation-20261008-bandeja-localization",
     "status": "active",
     "acquired_at": "2026-10-08T08:39:14.486Z",
-    "expires_at": "2026-10-08T15:32:21.148Z",
+    "expires_at": "2026-10-08T15:49:06.430Z",
     "reason": "Same continuing producer: soup and empanadas ready7/7, next pizza ES; batch03published0/15.",
-    "renewed_at": "2026-10-08T14:02:21.147Z"
+    "renewed_at": "2026-10-08T14:19:06.430Z"
   },
   "blockers": [],
   "debt": [
@@ -422,17 +433,17 @@
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
   "progress_branch": "recetas/lote-03-20261008",
-  "last_checkpoint_at": "2026-10-08T14:09:37.400Z",
+  "last_checkpoint_at": "2026-10-08T14:19:06.430Z",
   "handoff": {
     "branch": "recetas/lote-03-20261008",
     "current_recipe": "receta-de-pizza-casera",
     "prepared_recipes": 2,
     "published_recipes": 0,
-    "next_action": "Pizza ES frozen10phases/12ingredients/9USDA foods;218min complete planning, no kitchen test. Generate10 originals from frozen manifest, preserve13WebP, localize6 then guardedSQL. Soup+empanadas ready2/15, published0/15.",
-    "checkpoint_at": "2026-10-08T14:09:37.400Z"
+    "next_action": "Pizza all10originals/13WebP hash verified; ES10phases frozen. Complete6localizations then guardedSQL/QA. Soup+empanadas prepared2/15; batch03published0/15.",
+    "checkpoint_at": "2026-10-08T14:19:06.430Z"
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z",
-  "updated_at": "2026-10-08T14:09:37.400Z",
+  "updated_at": "2026-10-08T14:19:06.430Z",
   "completed_batches": [
     {
       "id": "lote-02-20261008",

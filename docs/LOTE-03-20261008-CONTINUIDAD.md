@@ -40,3 +40,7 @@ Sopa y empanadas: preparadas2/15; publicadas0/15 del lote03. Siguiente: receta-d
 ## Pizza ES congelado 2026-10-08T14:09:37.400Z
 
 Fuente única editorial/receta-de-pizza-casera-20261008.json:10fases,12ingredientes,3FAQ,9fichas USDA con8nutrientes presentes. Categoría exacta Panes y masas.35prep+30horno+153esperas=218min propuestos, no prueba de cocina. Salsa reconciliada151,5g por pizza(150tomate+1sal+0,5orégano); dos pizzas30cm,4raciones. ESsteps SHA256 c46659df9c024fae0638a605b9837b21f122e283710a326370bdea86e49a37d3. Ficha congelada10originales portada+9fases y13WebP finales; imágenes aún pendientes. No publicar parcialmente.
+
+## Pizza medios completos 2026-10-08T14:19:06.430Z
+
+10originalesPNG y13WebP generados con ImageGen y verificados visualmente, todas las fases. Portada4:3 y16:9 mantienenpizza entera; cuadrada es recorte cercano con borde externo/plato recortado y cobertura/corte central visibles. Manifiesto con hashes y prompts actualizado. ES congelado intacto. PendienteDE/EN/FR/IT/JA/PT-BR, SQL protegido y QA; preparado2/15, publicado0/15.
