@@ -3,7 +3,7 @@
   "recipe_group_id": "eafc642e-46c8-4c17-9815-9de6dd4809fc",
   "date": "2026-10-08",
   "steps_frozen": true,
-  "steps_sha256": "69b8f64efc952399695d9ce0ed4e11702f5363245094845c8714650587d265b6",
+  "steps_sha256": "af2a84d89f4d509a2de72817706d75f8d6f02bbee027f8c725214e0c6e65ed3e",
   "directory": "public/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas",
   "image_source": "built-in ImageGen",
   "prompts": [
@@ -331,5 +331,11 @@
   "cover_variant_visual_qa": "PASS_WHOLE_PLATE_ALL4_RATIOS",
   "generated_with": "built-in ImageGen",
   "source_images_original": true,
-  "kitchen_test_confirmed": false
+  "kitchen_test_confirmed": false,
+  "media_reference_correction": {
+    "previous_steps_sha256": "69b8f64efc952399695d9ce0ed4e11702f5363245094845c8714650587d265b6",
+    "steps_sha256": "af2a84d89f4d509a2de72817706d75f8d6f02bbee027f8c725214e0c6e65ed3e",
+    "es_text_sha256": "4d98b8ad1dca13b36766e741aeaa374558c8e10516c0735c9f6d67421536e931",
+    "reason": "Last serving phase uses the existing cover as frozen image brief specifies; remove nonexistent paso-09 reference. No ES editorial text or image generation changed."
+  }
 }

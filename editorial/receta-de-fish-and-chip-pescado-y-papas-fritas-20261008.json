@@ -1,14 +1,14 @@
 {
   "scope": "Manual de Cocina only; lote03",
-  "state": "MEDIA_READY_LOCALIZATIONS_IN_PROGRESS_NOT_PUBLISHED",
+  "state": "COMPLETE7_PREPARED_NOT_PUBLISHED",
   "provenance": "Original editorial content; no legacy WordPress text or images reused. Reserved identities and approved paths preserved.",
   "ai_owner_confirmation": "Owner authorized content and images; no kitchen test performed",
   "category_slug": "platos-principales",
   "cover": "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/portada.webp",
   "steps_frozen": true,
-  "steps_sha256": "69b8f64efc952399695d9ce0ed4e11702f5363245094845c8714650587d265b6",
+  "steps_sha256": "af2a84d89f4d509a2de72817706d75f8d6f02bbee027f8c725214e0c6e65ed3e",
   "publication_blockers": [
-    "IMAGES_LOCALIZATIONS_FULL15_CI_DEPLOY_DB_CACHE_QA_PENDING"
+    "FULL15_CI_MERGE_DEPLOY_DB_CACHE_LIVE_QA_PENDING"
   ],
   "sources": [
     {
@@ -54,8 +54,8 @@
       "source_url": "https://manualdecocina.com/receta-de-fish-and-chip-pescado-y-papas-fritas/",
       "language": "es",
       "category": "Platos principales",
-      "published": false,
-      "editorial_status": "ready",
+      "published": true,
+      "editorial_status": "published",
       "nutrition": {
         "calories": 682.1,
         "protein_g": 34.7,
@@ -273,7 +273,7 @@
         {
           "title": "Sirve y registra el rendimiento",
           "content": "Divide en 4 porciones: 1 pieza de pescado y una cuarta parte de las papas. Sirve enseguida, sin salsa, limón ni otros acompañamientos dentro del cálculo. Para la estimación se proponen 100 g de aceite retenido en todo el lote, no los 1000 g del baño: no es una absorción medida ni una cifra exacta. Pesa sobrantes de mezcla, harina y producto para ajustar; el aceite usado restante no se cuenta como comido. Refrigera sobras cubiertas a 4°C o menos antes de 2 horas, o 1 hora por encima de 32°C, y consume en 2 días como propuesta prudente no ensayada. Recalienta a 74°C; la textura puede perderse.",
-          "image_url": "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/paso-09.webp",
+          "image_url": "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/portada.webp",
           "image_alt": "Fish and chips: pescado rebozado y papas fritas: Sirve y registra el rendimiento"
         }
       ],
@@ -335,8 +335,8 @@
       "source_url": "https://manualdecocina.com/de/fish-and-chip-rezept-fish-and-chips/",
       "language": "de",
       "category": "Hauptgerichte",
-      "published": false,
-      "editorial_status": "ready",
+      "published": true,
+      "editorial_status": "published",
       "nutrition": {
         "calories": 682.1,
         "protein_g": 34.7,
@@ -616,8 +616,8 @@
       "source_url": "https://manualdecocina.com/en/fish-and-chip-recipe-fish-and-chips/",
       "language": "en",
       "category": "Main dishes",
-      "published": false,
-      "editorial_status": "ready",
+      "published": true,
+      "editorial_status": "published",
       "nutrition": {
         "calories": 682.1,
         "protein_g": 34.7,
@@ -870,7 +870,1138 @@
         ]
       },
       "content_html": "<p>An original home recipe for fresh cod with egg-free, beer-free batter and twice-fried skin-on chips. Four servings and 75 minutes are proposed, including soaking. Quantities, oil retention and timings have not been tested in a kitchen.</p><p>Use fresh Atlantic cod and skin-on potatoes to match the nutrition inputs; another fish or peeled potatoes require recalculation. Of 150 g flour, use 30 g for dusting and 120 g in batter with 50 g cornstarch and 220 ml cold sparkling water. Split 6 g salt into 2 g for batter, 2 g for fish and 2 g for chips. The 20-minute soak is included in 30 minutes of preparation. Proposed cooking is 10 minutes heating and adjustments + 14 first fry + 12 fish + 8 second fry + 1 draining = 45; total 75 minutes. Batch size and pan may extend timings. The 1000 g oil bath is not all eaten: 100 g retained oil for the whole batch is an unmeasured hypothesis. All flour and starch are counted as a formulation ceiling; weigh unused residues and recalculate. Nutrition is approximate, without laboratory analysis or health claims. Contains fish and wheat; check starch and water labels and shared-oil cross-contact. Fish must reach 63°C, leftovers 74°C. Chill to 4°C or below within 2 hours, or 1 hour above 32°C; using within 2 days is a prudent proposal without shelf-life testing. Sauces and extra sides are excluded.</p>"
+    },
+    {
+      "title": "Fish and chips à la pâte à l’eau gazeuse",
+      "excerpt": "Cabillaud frais en pâte à frire et grosses frites avec peau, cuites en deux bains. Quatre portions proposées et nutrition estimée.",
+      "summary": "Recette maison originale de cabillaud frais, enrobé d’une pâte sans bière ni œuf, avec des frites à peau en double cuisson. Quatre portions et 75 minutes, trempage compris, sont proposées. Quantités, rétention d’huile et durées n’ont pas été testées en cuisine.",
+      "difficulty": "Moyenne",
+      "course": "Plat principal",
+      "cuisine": "Britannique",
+      "prep_time_minutes": 30,
+      "cook_time_minutes": 45,
+      "total_time_minutes": 75,
+      "servings": 4,
+      "notes": "Utilisez du cabillaud de l’Atlantique frais et des pommes de terre avec peau pour correspondre aux fiches nutritionnelles. Un autre poisson ou des pommes de terre pelées nécessitent un nouveau calcul. Sur 150 g de farine, réservez 30 g pour fariner et 120 g pour la pâte avec 50 g de fécule et 220 ml d’eau gazeuse froide. Répartissez les 6 g de sel en 2 g pour la pâte, 2 g pour le poisson et 2 g pour les frites. Le trempage de 20 minutes est compris dans les 30 minutes de préparation. Cuisson proposée : 10 minutes de chauffe et réglages + 14 première friture + 12 poisson + 8 seconde friture + 1 égouttage = 45 ; total 75 minutes. La casserole peut imposer davantage de fournées et de temps. Le bain de 1000 g d’huile n’est pas entièrement consommé : les 100 g retenus pour toute la recette sont une hypothèse non mesurée. Toute la farine et la fécule constituent une limite de formulation ; pesez les restes inutilisés et recalculez. Nutrition indicative, sans analyse ni promesse de santé. Contient poisson et blé ; vérifiez les étiquettes de la fécule et de l’eau, ainsi que le contact croisé dans l’huile. Poisson à cœur : au moins 63°C ; restes réchauffés : 74°C. Réfrigérez à 4°C ou moins dans les 2 heures, ou 1 heure au-dessus de 32°C. Consommer sous 2 jours reste une proposition prudente sans essai de conservation. Sauces et garnitures supplémentaires exclues.",
+      "keywords": [
+        "fish and chips",
+        "cabillaud en pâte à frire",
+        "frites double cuisson",
+        "pâte à l’eau gazeuse"
+      ],
+      "category_slug": "platos-principales",
+      "id": "5396ebbc-5219-542a-9db1-f1ff0b363ad6",
+      "recipe_group_id": "eafc642e-46c8-4c17-9815-9de6dd4809fc",
+      "slug": "recette-de-fish-and-chips-fish-and-chips",
+      "public_path": "/fr/recette-de-fish-and-chips-fish-and-chips",
+      "source_url": "https://manualdecocina.com/fr/recette-de-fish-and-chips-fish-and-chips/",
+      "language": "fr",
+      "category": "Plats principaux",
+      "published": true,
+      "editorial_status": "published",
+      "nutrition": {
+        "calories": 682.1,
+        "protein_g": 34.7,
+        "carbs_g": 75,
+        "fat_g": 26.6,
+        "saturated_fat_g": 2.9,
+        "fiber_g": 5.3,
+        "sugar_g": 1.7,
+        "sodium_mg": 677,
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "inputs": [
+          {
+            "ingredient": "cabillaud de l’Atlantique cru",
+            "edible_grams": 600,
+            "fdc_id": 171955,
+            "fdc_description": "Fish, cod, Atlantic, raw",
+            "per_100g": {
+              "sugar_g": 0,
+              "calories": 82,
+              "fiber_g": 0,
+              "sodium_mg": 54,
+              "protein_g": 17.8,
+              "saturated_fat_g": 0.131,
+              "fat_g": 0.67,
+              "carbs_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171955/nutrients"
+          },
+          {
+            "ingredient": "pommes de terre crues avec peau",
+            "edible_grams": 800,
+            "fdc_id": 170026,
+            "fdc_description": "Potatoes, flesh and skin, raw",
+            "per_100g": {
+              "fat_g": 0.09,
+              "calories": 77,
+              "sodium_mg": 6,
+              "saturated_fat_g": 0.025,
+              "protein_g": 2.05,
+              "fiber_g": 2.1,
+              "carbs_g": 17.5,
+              "sugar_g": 0.82
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170026/nutrients"
+          },
+          {
+            "ingredient": "farine de blé totale",
+            "edible_grams": 150,
+            "fdc_id": 169761,
+            "fdc_description": "Wheat flour, white, all-purpose, unenriched",
+            "per_100g": {
+              "fat_g": 0.98,
+              "carbs_g": 76.3,
+              "calories": 364,
+              "fiber_g": 2.7,
+              "sodium_mg": 2,
+              "protein_g": 10.3,
+              "saturated_fat_g": 0.155,
+              "sugar_g": 0.27
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169761/nutrients"
+          },
+          {
+            "ingredient": "fécule de maïs",
+            "edible_grams": 50,
+            "fdc_id": 169698,
+            "fdc_description": "Cornstarch",
+            "per_100g": {
+              "sugar_g": 0,
+              "fat_g": 0.05,
+              "carbs_g": 91.3,
+              "calories": 381,
+              "protein_g": 0.26,
+              "fiber_g": 0.9,
+              "sodium_mg": 9,
+              "saturated_fat_g": 0.009
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169698/nutrients"
+          },
+          {
+            "ingredient": "huile de tournesol retenue, hypothèse non mesurée",
+            "edible_grams": 100,
+            "fdc_id": 171025,
+            "fdc_description": "Oil, sunflower, linoleic, (approx. 65%)",
+            "per_100g": {
+              "saturated_fat_g": 10.3,
+              "fiber_g": 0,
+              "sodium_mg": 0,
+              "protein_g": 0,
+              "fat_g": 100,
+              "carbs_g": 0,
+              "calories": 884,
+              "sugar_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171025/nutrients"
+          },
+          {
+            "ingredient": "sel de table",
+            "edible_grams": 6,
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "fiber_g": 0,
+              "sodium_mg": 38800,
+              "saturated_fat_g": 0,
+              "protein_g": 0,
+              "fat_g": 0,
+              "carbs_g": 0,
+              "calories": 0,
+              "sugar_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients"
+          }
+        ],
+        "serving_size": "Un quart du poisson et des frites ; quatre portions proposées sans poids final mesuré",
+        "method": "Additionner les nutriments de 600 g de cabillaud cru, 800 g de pommes de terre avec peau, 150 g de farine, 50 g de fécule, 100 g d’huile de tournesol retenue supposée et 6 g de sel, avec six fiches USDA vérifiées, puis diviser par 4. L’huile est une hypothèse non testée ; toute la farine et la fécule forment une limite de formulation. Recalculer selon les résidus réels. Exclure l’huile restante du bain de 1000 g et l’eau de trempage. L’eau gazeuse sans sucre n’apporte pas d’énergie ; vérifier le sodium de la marque.",
+        "note": "Estimation de formulation incertaine en raison de l’huile absorbée et de la pâte inutilisée, sans analyse, mesure de rétention ni essai en cuisine. Ingrédients crus et fiches USDA ; pertes de trempage et de cuisson non modélisées. Hypothèse de 100 g d’huile pour quatre portions, avec toute la farine et la fécule comme plafond d’ingrédients. Mesurer résidus et absorption pour affiner. Sauces, citron et garnitures exclus. Les huit nutriments viennent des fiches, sans remplacer les données manquantes par zéro."
+      },
+      "image_url": "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/portada.webp",
+      "ingredients": [
+        {
+          "name": "cabillaud de l’Atlantique frais, sans peau ni arêtes",
+          "amount": "600",
+          "unit": "g",
+          "group": "Poisson et pâte à frire"
+        },
+        {
+          "name": "farine de blé ordinaire sans levure : 30 g pour fariner et 120 g pour la pâte",
+          "amount": "150",
+          "unit": "g",
+          "group": "Poisson et pâte à frire"
+        },
+        {
+          "name": "fécule de maïs",
+          "amount": "50",
+          "unit": "g",
+          "group": "Poisson et pâte à frire"
+        },
+        {
+          "name": "eau gazeuse froide, sans sucre ni arôme",
+          "amount": "220",
+          "unit": "ml",
+          "group": "Poisson et pâte à frire"
+        },
+        {
+          "name": "pommes de terre crues lavées avec peau, poids comestible",
+          "amount": "800",
+          "unit": "g",
+          "group": "Pommes de terre et friture"
+        },
+        {
+          "name": "huile de tournesol raffinée pour le bain de friture ; pas entièrement consommée",
+          "amount": "1000",
+          "unit": "g",
+          "group": "Pommes de terre et friture"
+        },
+        {
+          "name": "sel de table total, réparti entre poisson, pâte et frites",
+          "amount": "6",
+          "unit": "g",
+          "group": "Assaisonnement"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Vérifier et portionner le poisson",
+          "content": "Pesez 600 g de cabillaud de l’Atlantique frais sans peau ni arêtes et divisez en 4 morceaux d’environ 150 g, d’épaisseur semblable. Séchez avec du papier propre et gardez couvert à 4°C ou moins. Si le poisson était congelé, décongelez-le auparavant au réfrigérateur ; ce délai supplémentaire est exclu. Ne lavez pas le poisson cru et ne le placez pas près d’aliments prêts à manger. Utilisez une planche et des ustensiles séparés, lavez les mains et recherchez soigneusement les arêtes. Rendement et quantités sont proposés sans essai en cuisine.",
+          "image_url": "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/paso-01.webp",
+          "image_alt": "Quatre portions de cabillaud cru sans arêtes sur une planche dédiée"
+        },
+        {
+          "title": "Couper et faire tremper les pommes de terre",
+          "content": "Lavez et brossez les pommes de terre, retirez les parties vertes ou abîmées et pesez 800 g comestibles avec peau. Coupez des bâtonnets d’environ 1 cm d’épaisseur pour une cuisson régulière. Couvrez d’eau potable fraîche et laissez tremper 20 minutes. Jetez l’eau de trempage ; elle ne fait partie ni de la recette ni du calcul nutritionnel. Ce trempage est inclus dans les 30 minutes de préparation et ne s’ajoute pas de nouveau au total. Gardez le poisson au froid.",
+          "image_url": "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/paso-02.webp",
+          "image_alt": "Bâtonnets crus de pommes de terre avec peau dans l’eau"
+        },
+        {
+          "title": "Sécher les frites et préparer l’huile",
+          "content": "Égouttez et séchez très soigneusement les pommes de terre : l’eau en surface peut faire éclabousser l’huile. Versez 1000 g d’huile de tournesol dans une casserole lourde, sèche, stable et assez grande ; l’huile ne doit pas dépasser un tiers de sa hauteur. Préparez thermomètre de friture, pince ou écumoire sèche, grille et plateau. Chauffez à 160°C ; les 10 minutes de chauffe proposées comprennent les réglages ultérieurs. Ne laissez jamais l’huile sans surveillance et ne versez pas d’eau dans de l’huile chaude.",
+          "image_url": "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/paso-03.webp",
+          "image_alt": "Pommes de terre séchées près d’une casserole stable d’huile"
+        },
+        {
+          "title": "Effectuer la première friture",
+          "content": "Faites frire à 160°C en 2 petites fournées d’environ 7 minutes chacune, soit 14 minutes proposées au total. Les frites doivent s’attendrir sans beaucoup dorer ; vérifiez un morceau et ajustez selon l’épaisseur. Ne surchargez pas la casserole et n’ajoutez pas de pommes de terre mouillées. Retirez avec un ustensile sec et laissez sur la grille pendant la préparation et la cuisson du poisson. Cette attente chevauche les phases suivantes, sans repos supplémentaire. La seconde friture se fait juste avant de servir.",
+          "image_url": "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/paso-04.webp",
+          "image_alt": "Frites encore pâles retirées du premier bain"
+        },
+        {
+          "title": "Préparer la pâte froide",
+          "content": "Réservez 30 g sur les 150 g de farine pour fariner. Mélangez les 120 g restants avec 50 g de fécule de maïs et 2 g sur les 6 g de sel total. Incorporez 220 ml d’eau gazeuse très froide et mélangez seulement jusqu’à obtenir une pâte nappant la cuillère, sans la travailler excessivement. N’ajoutez bière, œuf, levure chimique ou farine supplémentaire qu’en documentant le changement. Préparez près de la friture pour profiter des bulles ; ne goûtez pas la farine crue. Notez toute quantité ajoutée si la consistance change.",
+          "image_url": "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/paso-05.webp",
+          "image_alt": "Pâte froide à l’eau gazeuse et farine réservée"
+        },
+        {
+          "title": "Fariner et enrober le cabillaud",
+          "content": "Sortez le poisson du froid lorsque l’huile approche 180°C. Répartissez 2 g de sel entre les 4 morceaux. Farinez avec les 30 g réservés, secouez l’excédent et plongez chaque morceau dans la pâte, en laissant couler le surplus avant de frire. Ne réutilisez pas comme aliment une pâte ayant touché du poisson cru sans la cuire. L’estimation compte toute la farine et la fécule comme limite de formulation ; pesez les restes inutilisés et recalculez la consommation réelle, sans prétendre que toute la pâte adhère.",
+          "image_url": "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/paso-06.webp",
+          "image_alt": "Cabillaud cru plongé dans la pâte claire"
+        },
+        {
+          "title": "Frire et vérifier le poisson",
+          "content": "Faites frire vers 180°C en 2 fournées, environ 6 minutes chacune, soit 12 minutes proposées. Retournez avec précaution si nécessaire, sans empiler les morceaux. Recherchez une croûte dorée et vérifiez au thermomètre alimentaire propre au moins 63°C au cœur du poisson. La couleur ou la flottaison ne suffisent pas. Prolongez et mesurez de nouveau si nécessaire. Égouttez sur grille sans couvrir et maintenez chaud à 60°C ou plus durant la brève seconde friture des pommes de terre. Notez les durées réelles ; la proposition ne vaut pas essai validé.",
+          "image_url": "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/paso-07.webp",
+          "image_alt": "Cabillaud doré contrôlé avec une sonde alimentaire"
+        },
+        {
+          "title": "Dorer les frites au second bain",
+          "content": "Portez l’huile à 190°C sans fumée. Faites frire les pommes de terre précuites en 2 fournées d’environ 4 minutes, soit 8 minutes proposées au total, jusqu’à ce que l’extérieur soit doré et croustillant. Retirez, égouttez 1 minute sur grille et répartissez les derniers 2 g de sel. L’huile commune touche poisson et blé : ces frites ne conviennent pas aux personnes devant éviter ces allergènes. Ne versez ni eau ni pommes de terre humides dans l’huile ; laissez-la refroidir avant manipulation.",
+          "image_url": "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/paso-08.webp",
+          "image_alt": "Frites dorées égouttant après le second bain"
+        },
+        {
+          "title": "Servir et noter le rendement",
+          "content": "Répartissez en 4 portions : 1 morceau de poisson et un quart des frites. Servez immédiatement ; sauces, citron et accompagnements supplémentaires sont exclus du calcul. L’estimation propose 100 g d’huile retenue dans toute la recette, pas les 1000 g du bain : ni absorption mesurée ni chiffre exact. Pesez pâte, farine et produit restants pour affiner ; l’huile de friture restante n’est pas comptée comme consommée. Réfrigérez les restes couverts à 4°C ou moins avant 2 heures, ou 1 heure au-dessus de 32°C, et consommez sous 2 jours comme proposition prudente non testée. Réchauffez à 74°C ; le croustillant peut disparaître.",
+          "image_url": "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/portada.webp",
+          "image_alt": "Cabillaud doré et grosses frites avec peau dans une assiette"
+        }
+      ],
+      "gallery": [
+        {
+          "url": "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/portada.webp",
+          "alt": "Cabillaud en pâte dorée et grosses frites avec peau sur une assiette blanche, sans sauce ni décoration"
+        }
+      ],
+      "seo": {
+        "title": "Fish and chips à l’eau gazeuse : recette étape par étape",
+        "description": "Cabillaud frais en pâte à frire et grosses frites avec peau, cuites en deux bains. Quatre portions proposées et nutrition estimée.",
+        "image_alt": "Cabillaud en pâte dorée et grosses frites avec peau sur une assiette blanche, sans sauce ni décoration",
+        "image_variants": [
+          "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/portada-1x1.webp",
+          "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/portada-4x3.webp",
+          "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Faut-il de la bière ou de l’œuf dans la pâte ?",
+            "a": "Cette formule utilise de l’eau gazeuse froide, de la farine et de la fécule. Bière, œuf ou farine avec levure changent ingrédients, allergènes et calcul nutritionnel ; ce n’est pas présenté comme la même recette."
+          },
+          {
+            "q": "Pourquoi frire les pommes de terre deux fois ?",
+            "a": "La première friture proposée à 160°C attendrit le cœur ; la seconde à 190°C dore la surface. Un séchage soigneux et de petites fournées réduisent éclaboussures et fortes baisses de température. Adaptez les durées à l’épaisseur réelle."
+          },
+          {
+            "q": "Les valeurs nutritionnelles comprennent-elles toute l’huile ?",
+            "a": "Non. Le bain proposé contient 1000 g, mais le calcul suppose 100 g retenus dans quatre portions, sans mesure. Toute la farine et la fécule forment une limite de formulation ; pesez les résidus et recalculez. Aucune absorption exacte n’est affirmée."
+          }
+        ]
+      },
+      "content_html": "<p>Recette maison originale de cabillaud frais, enrobé d’une pâte sans bière ni œuf, avec des frites à peau en double cuisson. Quatre portions et 75 minutes, trempage compris, sont proposées. Quantités, rétention d’huile et durées n’ont pas été testées en cuisine.</p><p>Utilisez du cabillaud de l’Atlantique frais et des pommes de terre avec peau pour correspondre aux fiches nutritionnelles. Un autre poisson ou des pommes de terre pelées nécessitent un nouveau calcul. Sur 150 g de farine, réservez 30 g pour fariner et 120 g pour la pâte avec 50 g de fécule et 220 ml d’eau gazeuse froide. Répartissez les 6 g de sel en 2 g pour la pâte, 2 g pour le poisson et 2 g pour les frites. Le trempage de 20 minutes est compris dans les 30 minutes de préparation. Cuisson proposée : 10 minutes de chauffe et réglages + 14 première friture + 12 poisson + 8 seconde friture + 1 égouttage = 45 ; total 75 minutes. La casserole peut imposer davantage de fournées et de temps. Le bain de 1000 g d’huile n’est pas entièrement consommé : les 100 g retenus pour toute la recette sont une hypothèse non mesurée. Toute la farine et la fécule constituent une limite de formulation ; pesez les restes inutilisés et recalculez. Nutrition indicative, sans analyse ni promesse de santé. Contient poisson et blé ; vérifiez les étiquettes de la fécule et de l’eau, ainsi que le contact croisé dans l’huile. Poisson à cœur : au moins 63°C ; restes réchauffés : 74°C. Réfrigérez à 4°C ou moins dans les 2 heures, ou 1 heure au-dessus de 32°C. Consommer sous 2 jours reste une proposition prudente sans essai de conservation. Sauces et garnitures supplémentaires exclues.</p>"
+    },
+    {
+      "title": "Fish and chips con pastella all’acqua frizzante",
+      "excerpt": "Merluzzo fresco in pastella e patate con buccia fritte due volte. Quattro porzioni proposte, procedimento dettagliato e valori nutrizionali stimati.",
+      "summary": "Ricetta casalinga originale con merluzzo fresco, pastella senza birra né uova e patate con buccia a doppia frittura. Si propongono quattro porzioni e 75 minuti, ammollo incluso. Quantità, olio trattenuto e tempi non sono stati provati in cucina.",
+      "difficulty": "Media",
+      "course": "Secondo piatto",
+      "cuisine": "Britannica",
+      "prep_time_minutes": 30,
+      "cook_time_minutes": 45,
+      "total_time_minutes": 75,
+      "servings": 4,
+      "notes": "Usa merluzzo atlantico fresco e patate con buccia, coerenti con le schede nutrizionali. Un altro pesce o patate sbucciate richiedono un nuovo calcolo. Dei 150 g di farina, usa 30 g per infarinare e 120 g nella pastella con 50 g di amido e 220 ml di acqua frizzante fredda. Dividi i 6 g di sale: 2 g nella pastella, 2 g sul pesce e 2 g sulle patate. L’ammollo di 20 minuti rientra nei 30 minuti di preparazione. Cottura proposta: 10 minuti riscaldamento e regolazioni + 14 prima frittura + 12 pesce + 8 seconda frittura + 1 sgocciolamento = 45; totale 75 minuti. La pentola può richiedere più turni e tempo. I 1000 g del bagno d’olio non vengono consumati tutti: 100 g trattenuti nell’intera preparazione sono un’ipotesi non misurata. Tutta la farina e l’amido sono un limite di formulazione; pesa i residui inutilizzati e ricalcola. Nutrizione indicativa, senza analisi né promesse di salute. Contiene pesce e frumento; controlla etichette di amido e acqua e contatto crociato nell’olio. Pesce almeno a 63°C al cuore, avanzi riscaldati a 74°C. Raffredda a 4°C o meno entro 2 ore, oppure 1 ora sopra 32°C. Consumo entro 2 giorni proposto prudentemente, senza prova di conservazione. Salse e contorni aggiuntivi esclusi.",
+      "keywords": [
+        "fish and chips",
+        "merluzzo in pastella",
+        "patate doppia frittura",
+        "pastella all’acqua frizzante"
+      ],
+      "category_slug": "platos-principales",
+      "id": "7f001b0f-37dd-5db3-aacf-0d617da492db",
+      "recipe_group_id": "eafc642e-46c8-4c17-9815-9de6dd4809fc",
+      "slug": "ricetta-fish-and-chips-fish-and-chips",
+      "public_path": "/it/ricetta-fish-and-chips-fish-and-chips",
+      "source_url": "https://manualdecocina.com/it/ricetta-fish-and-chips-fish-and-chips/",
+      "language": "it",
+      "category": "Secondi piatti",
+      "published": true,
+      "editorial_status": "published",
+      "nutrition": {
+        "calories": 682.1,
+        "protein_g": 34.7,
+        "carbs_g": 75,
+        "fat_g": 26.6,
+        "saturated_fat_g": 2.9,
+        "fiber_g": 5.3,
+        "sugar_g": 1.7,
+        "sodium_mg": 677,
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "inputs": [
+          {
+            "ingredient": "merluzzo atlantico crudo",
+            "edible_grams": 600,
+            "fdc_id": 171955,
+            "fdc_description": "Fish, cod, Atlantic, raw",
+            "per_100g": {
+              "sugar_g": 0,
+              "calories": 82,
+              "fiber_g": 0,
+              "sodium_mg": 54,
+              "protein_g": 17.8,
+              "saturated_fat_g": 0.131,
+              "fat_g": 0.67,
+              "carbs_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171955/nutrients"
+          },
+          {
+            "ingredient": "patate crude con buccia",
+            "edible_grams": 800,
+            "fdc_id": 170026,
+            "fdc_description": "Potatoes, flesh and skin, raw",
+            "per_100g": {
+              "fat_g": 0.09,
+              "calories": 77,
+              "sodium_mg": 6,
+              "saturated_fat_g": 0.025,
+              "protein_g": 2.05,
+              "fiber_g": 2.1,
+              "carbs_g": 17.5,
+              "sugar_g": 0.82
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170026/nutrients"
+          },
+          {
+            "ingredient": "farina di frumento totale",
+            "edible_grams": 150,
+            "fdc_id": 169761,
+            "fdc_description": "Wheat flour, white, all-purpose, unenriched",
+            "per_100g": {
+              "fat_g": 0.98,
+              "carbs_g": 76.3,
+              "calories": 364,
+              "fiber_g": 2.7,
+              "sodium_mg": 2,
+              "protein_g": 10.3,
+              "saturated_fat_g": 0.155,
+              "sugar_g": 0.27
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169761/nutrients"
+          },
+          {
+            "ingredient": "amido di mais",
+            "edible_grams": 50,
+            "fdc_id": 169698,
+            "fdc_description": "Cornstarch",
+            "per_100g": {
+              "sugar_g": 0,
+              "fat_g": 0.05,
+              "carbs_g": 91.3,
+              "calories": 381,
+              "protein_g": 0.26,
+              "fiber_g": 0.9,
+              "sodium_mg": 9,
+              "saturated_fat_g": 0.009
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169698/nutrients"
+          },
+          {
+            "ingredient": "olio di girasole trattenuto, ipotesi non misurata",
+            "edible_grams": 100,
+            "fdc_id": 171025,
+            "fdc_description": "Oil, sunflower, linoleic, (approx. 65%)",
+            "per_100g": {
+              "saturated_fat_g": 10.3,
+              "fiber_g": 0,
+              "sodium_mg": 0,
+              "protein_g": 0,
+              "fat_g": 100,
+              "carbs_g": 0,
+              "calories": 884,
+              "sugar_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171025/nutrients"
+          },
+          {
+            "ingredient": "sale da cucina",
+            "edible_grams": 6,
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "fiber_g": 0,
+              "sodium_mg": 38800,
+              "saturated_fat_g": 0,
+              "protein_g": 0,
+              "fat_g": 0,
+              "carbs_g": 0,
+              "calories": 0,
+              "sugar_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients"
+          }
+        ],
+        "serving_size": "Un quarto del pesce e delle patate; quattro porzioni proposte senza peso finale misurato",
+        "method": "Somma i nutrienti di 600 g di merluzzo crudo, 800 g di patate con buccia, 150 g di farina, 50 g di amido, 100 g ipotizzati di olio di girasole trattenuto e 6 g di sale con sei schede USDA verificate; dividi per 4. L’olio è un’ipotesi non testata e tutta la farina e l’amido sono un limite di formulazione; i residui reali richiedono ricalcolo. Escludi l’olio restante del bagno di 1000 g e l’acqua d’ammollo. L’acqua frizzante senza zucchero non apporta energia; controlla il sodio della marca.",
+        "note": "Stima di formulazione con notevole incertezza da olio assorbito e pastella inutilizzata, senza analisi, misurazione di ritenzione né prova in cucina. Materie prime crude e schede USDA, senza modellare perdite d’ammollo e cottura. I 100 g di olio sono un’ipotesi per quattro porzioni; tutta la farina e l’amido sono un limite superiore degli ingredienti. Misura residui e assorbimento reale per affinare. Esclusi salse, limone e altri contorni. Gli otto nutrienti provengono dalle schede, senza sostituire dati assenti con zero."
+      },
+      "image_url": "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/portada.webp",
+      "ingredients": [
+        {
+          "name": "merluzzo atlantico fresco senza pelle né lische",
+          "amount": "600",
+          "unit": "g",
+          "group": "Pesce e pastella"
+        },
+        {
+          "name": "farina di frumento comune senza lievito: 30 g per infarinare e 120 g per la pastella",
+          "amount": "150",
+          "unit": "g",
+          "group": "Pesce e pastella"
+        },
+        {
+          "name": "amido di mais",
+          "amount": "50",
+          "unit": "g",
+          "group": "Pesce e pastella"
+        },
+        {
+          "name": "acqua frizzante fredda, senza zucchero né aromi",
+          "amount": "220",
+          "unit": "ml",
+          "group": "Pesce e pastella"
+        },
+        {
+          "name": "patate crude lavate con buccia, peso edibile",
+          "amount": "800",
+          "unit": "g",
+          "group": "Patate e frittura"
+        },
+        {
+          "name": "olio di girasole raffinato per il bagno di frittura; non tutto consumato",
+          "amount": "1000",
+          "unit": "g",
+          "group": "Patate e frittura"
+        },
+        {
+          "name": "sale da cucina totale, diviso tra pesce, pastella e patate",
+          "amount": "6",
+          "unit": "g",
+          "group": "Condimento"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Controlla e porziona il pesce",
+          "content": "Pesa 600 g di merluzzo atlantico fresco senza pelle né lische e dividilo in 4 pezzi di circa 150 g, di spessore simile. Tampona con carta pulita e conserva coperto a 4°C o meno. Se congelato, scongela prima in frigorifero; questo tempo aggiuntivo è escluso. Non lavare il pesce crudo né metterlo accanto ad alimenti pronti. Usa tagliere e utensili separati, lavati le mani e controlla attentamente le lische. Resa e quantità sono proposte senza prova in cucina.",
+          "image_url": "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/paso-01.webp",
+          "image_alt": "Quattro porzioni di merluzzo crudo senza lische su tagliere dedicato"
+        },
+        {
+          "title": "Taglia e metti a bagno le patate",
+          "content": "Lava e spazzola le patate, elimina parti verdi o danneggiate e pesa 800 g edibili con buccia. Taglia bastoncini di circa 1 cm per una cottura uniforme. Copri con acqua potabile fresca e lascia a bagno 20 minuti. Elimina l’acqua d’ammollo: non fa parte della ricetta né del calcolo nutrizionale. L’ammollo rientra nei 30 minuti di preparazione e non va aggiunto nuovamente al totale. Tieni il pesce al freddo.",
+          "image_url": "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/paso-02.webp",
+          "image_alt": "Bastoncini di patate crude con buccia in ammollo"
+        },
+        {
+          "title": "Asciuga le patate e prepara l’olio",
+          "content": "Scola e asciuga scrupolosamente le patate: l’acqua superficiale può far schizzare l’olio. Metti 1000 g di olio di girasole in una pentola pesante, asciutta, stabile e abbastanza capiente; l’olio non deve superare un terzo dell’altezza. Prepara termometro da frittura, pinze o schiumarola asciutte e griglia su vassoio. Scalda a 160°C; i 10 minuti di riscaldamento proposti includono le successive regolazioni. Non lasciare l’olio incustodito e non versare acqua nell’olio caldo.",
+          "image_url": "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/paso-03.webp",
+          "image_alt": "Patate asciugate accanto a una pentola stabile d’olio"
+        },
+        {
+          "title": "Esegui la prima frittura delle patate",
+          "content": "Friggi a 160°C in 2 piccoli turni di circa 7 minuti ciascuno, 14 minuti totali proposti. Le patate devono ammorbidirsi senza dorarsi molto; controlla un pezzo e regola in base allo spessore. Non riempire troppo la pentola né aggiungere patate bagnate. Estrai con utensile asciutto e lascia sulla griglia mentre prepari e cuoci il pesce. L’attesa si sovrappone alle fasi successive, senza riposo aggiuntivo. La seconda frittura avverrà poco prima di servire.",
+          "image_url": "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/paso-04.webp",
+          "image_alt": "Patate ancora chiare estratte dalla prima frittura"
+        },
+        {
+          "title": "Prepara la pastella fredda",
+          "content": "Tieni da parte 30 g dei 150 g di farina per infarinare. Mescola i restanti 120 g con 50 g di amido di mais e 2 g dei 6 g di sale totale. Aggiungi 220 ml di acqua frizzante molto fredda e mescola solo fino a ottenere una pastella che veli il cucchiaio, senza lavorarla troppo. Non aggiungere birra, uova, lievito chimico o altra farina senza registrare la modifica. Prepara vicino alla frittura per sfruttare il gas; non assaggiare farina cruda. Registra eventuali aggiunte se cambia la consistenza.",
+          "image_url": "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/paso-05.webp",
+          "image_alt": "Pastella fredda all’acqua frizzante con farina separata"
+        },
+        {
+          "title": "Infarina e rivesti il merluzzo",
+          "content": "Togli il pesce dal frigorifero quando l’olio è vicino a 180°C. Distribuisci 2 g del sale totale tra i 4 pezzi. Infarina con i 30 g tenuti da parte, scuoti l’eccesso e immergi ogni pezzo nella pastella, lasciando cadere il surplus prima di friggere. Non riutilizzare come alimento una pastella che ha toccato pesce crudo senza cuocerla. La stima conta tutta la farina e l’amido come limite di formulazione; pesa ciò che resta inutilizzato e ricalcola il consumo reale, senza fingere che tutto il rivestimento aderisca.",
+          "image_url": "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/paso-06.webp",
+          "image_alt": "Merluzzo crudo immerso nella pastella chiara"
+        },
+        {
+          "title": "Friggi e controlla il pesce",
+          "content": "Friggi a circa 180°C in 2 turni di approssimativamente 6 minuti ciascuno, 12 minuti proposti. Gira delicatamente se necessario e non sovrapporre i pezzi. Cerca una crosta dorata e verifica con termometro alimentare pulito almeno 63°C al centro del pesce. Colore o galleggiamento non bastano. Se serve, prolunga e misura di nuovo. Sgocciola sulla griglia senza coprire e mantieni caldo a 60°C o più durante la breve seconda frittura delle patate. Registra i tempi reali; la proposta non è una prova approvata.",
+          "image_url": "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/paso-07.webp",
+          "image_alt": "Merluzzo dorato controllato con sonda alimentare"
+        },
+        {
+          "title": "Dora le patate con la seconda frittura",
+          "content": "Porta l’olio a 190°C senza farlo fumare. Friggi le patate precotte in 2 turni di circa 4 minuti, 8 minuti totali proposti, fino a doratura e croccantezza esterne. Estrai, sgocciola 1 minuto sulla griglia e distribuisci gli ultimi 2 g di sale. L’olio condiviso entra in contatto con pesce e frumento: queste patate non sono adatte a chi deve evitare tali allergeni. Non versare acqua né patate umide nell’olio; lascialo raffreddare prima di maneggiarlo.",
+          "image_url": "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/paso-08.webp",
+          "image_alt": "Patate dorate sulla griglia dopo la seconda frittura"
+        },
+        {
+          "title": "Servi e registra la resa",
+          "content": "Dividi in 4 porzioni: 1 pezzo di pesce e un quarto delle patate. Servi subito; salsa, limone e altri contorni non rientrano nel calcolo. Si ipotizzano 100 g di olio trattenuto in tutta la preparazione, non i 1000 g del bagno: non è assorbimento misurato né valore esatto. Pesa pastella, farina e prodotto rimasti per affinare il calcolo; l’olio di frittura residuo non è considerato mangiato. Refrigeri gli avanzi coperti a 4°C o meno entro 2 ore, oppure 1 ora sopra 32°C, e consumali entro 2 giorni come proposta prudente non testata. Riscalda a 74°C; la croccantezza può ridursi.",
+          "image_url": "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/portada.webp",
+          "image_alt": "Merluzzo dorato e patate spesse con buccia nel piatto"
+        }
+      ],
+      "gallery": [
+        {
+          "url": "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/portada.webp",
+          "alt": "Merluzzo in pastella dorata con patate fritte spesse con buccia su piatto bianco, senza salsa né decorazioni"
+        }
+      ],
+      "seo": {
+        "title": "Fish and chips all’acqua frizzante: ricetta passo passo",
+        "description": "Merluzzo fresco in pastella e patate con buccia fritte due volte. Quattro porzioni proposte, procedimento dettagliato e valori nutrizionali stimati.",
+        "image_alt": "Merluzzo in pastella dorata con patate fritte spesse con buccia su piatto bianco, senza salsa né decorazioni",
+        "image_variants": [
+          "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/portada-1x1.webp",
+          "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/portada-4x3.webp",
+          "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "La pastella richiede birra o uova?",
+            "a": "Questa formula usa acqua frizzante fredda, farina e amido. Birra, uova o farina con lievito cambiano ingredienti, allergeni e calcolo nutrizionale; non sono presentati come la stessa ricetta."
+          },
+          {
+            "q": "Perché friggere le patate due volte?",
+            "a": "La prima frittura proposta a 160°C ammorbidisce l’interno; la seconda a 190°C dora la superficie. Asciugare bene e friggere in piccoli turni riduce schizzi e forti cali di temperatura. Regola i tempi sullo spessore effettivo."
+          },
+          {
+            "q": "La nutrizione comprende tutto l’olio della pentola?",
+            "a": "No. Il bagno proposto contiene 1000 g, ma il calcolo ipotizza 100 g trattenuti in quattro porzioni senza misurazione. Tutta la farina e l’amido sono un limite di formulazione; pesa i residui e ricalcola. Non si afferma un assorbimento esatto."
+          }
+        ]
+      },
+      "content_html": "<p>Ricetta casalinga originale con merluzzo fresco, pastella senza birra né uova e patate con buccia a doppia frittura. Si propongono quattro porzioni e 75 minuti, ammollo incluso. Quantità, olio trattenuto e tempi non sono stati provati in cucina.</p><p>Usa merluzzo atlantico fresco e patate con buccia, coerenti con le schede nutrizionali. Un altro pesce o patate sbucciate richiedono un nuovo calcolo. Dei 150 g di farina, usa 30 g per infarinare e 120 g nella pastella con 50 g di amido e 220 ml di acqua frizzante fredda. Dividi i 6 g di sale: 2 g nella pastella, 2 g sul pesce e 2 g sulle patate. L’ammollo di 20 minuti rientra nei 30 minuti di preparazione. Cottura proposta: 10 minuti riscaldamento e regolazioni + 14 prima frittura + 12 pesce + 8 seconda frittura + 1 sgocciolamento = 45; totale 75 minuti. La pentola può richiedere più turni e tempo. I 1000 g del bagno d’olio non vengono consumati tutti: 100 g trattenuti nell’intera preparazione sono un’ipotesi non misurata. Tutta la farina e l’amido sono un limite di formulazione; pesa i residui inutilizzati e ricalcola. Nutrizione indicativa, senza analisi né promesse di salute. Contiene pesce e frumento; controlla etichette di amido e acqua e contatto crociato nell’olio. Pesce almeno a 63°C al cuore, avanzi riscaldati a 74°C. Raffredda a 4°C o meno entro 2 ore, oppure 1 ora sopra 32°C. Consumo entro 2 giorni proposto prudentemente, senza prova di conservazione. Salse e contorni aggiuntivi esclusi.</p>"
+    },
+    {
+      "title": "炭酸水の衣で作るフィッシュアンドチップス",
+      "excerpt": "生のタラに炭酸水の衣をつけ、皮付きポテトを二度揚げします。提案量は四人分。手順と推定栄養値を掲載しています。",
+      "summary": "生のタラ、ビールと卵を使わない衣、皮付きポテトの二度揚げを組み合わせた独自の家庭向けレシピです。四人分、浸水を含む75分を提案します。分量、油の残留量、所要時間は調理試験で確認していません。",
+      "difficulty": "中級",
+      "course": "主菜",
+      "cuisine": "イギリス料理",
+      "prep_time_minutes": 30,
+      "cook_time_minutes": 45,
+      "total_time_minutes": 75,
+      "servings": 4,
+      "notes": "栄養計算の食品データに合わせ、生の大西洋産タラと皮付きじゃがいもを使います。別の魚や皮をむいたじゃがいもでは再計算が必要です。小麦粉150 gのうち30 gは打ち粉、120 gは衣に使い、コーンスターチ50 g、冷たい炭酸水220 mlを加えます。塩6 gは衣2 g、魚2 g、ポテト2 gに分けます。20分の浸水は下準備30分の中に含まれます。提案する加熱時間は、油の予熱と調整10分＋ポテトの最初の揚げ14分＋魚12分＋ポテトの二度目の揚げ8分＋油切り1分＝45分、合計75分です。鍋によって揚げる回数や時間は増えます。揚げ油1000 gを全部食べるわけではありません。全量に残る油100 gは未測定の仮定です。小麦粉とでんぷんは全量を配合上限として計上し、未使用の残りを量って差し引き、再計算します。栄養値は目安で、分析や健康効果の保証ではありません。魚と小麦を含みます。でんぷんと水の表示、共用油による交差接触も確認してください。魚の中心は最低63°C、残りを温め直すときは74°Cにします。2時間以内、周囲が32°Cを超える場合は1時間以内に、4°C以下で冷蔵します。2日以内に食べるという案は保存試験をしていない慎重な提案です。ソースや追加の付け合わせは含みません。",
+      "keywords": [
+        "フィッシュアンドチップス",
+        "タラのフライ",
+        "ポテトの二度揚げ",
+        "炭酸水の衣"
+      ],
+      "category_slug": "platos-principales",
+      "id": "2ea38bde-bd1e-5b75-b870-3fed22be00a6",
+      "recipe_group_id": "eafc642e-46c8-4c17-9815-9de6dd4809fc",
+      "slug": "フィッシュアンドチップスのレシピ",
+      "public_path": "/ja/フィッシュアンドチップスのレシピ",
+      "source_url": null,
+      "language": "ja",
+      "category": "主菜",
+      "published": true,
+      "editorial_status": "published",
+      "nutrition": {
+        "calories": 682.1,
+        "protein_g": 34.7,
+        "carbs_g": 75,
+        "fat_g": 26.6,
+        "saturated_fat_g": 2.9,
+        "fiber_g": 5.3,
+        "sugar_g": 1.7,
+        "sodium_mg": 677,
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "inputs": [
+          {
+            "ingredient": "生の大西洋産タラ",
+            "edible_grams": 600,
+            "fdc_id": 171955,
+            "fdc_description": "Fish, cod, Atlantic, raw",
+            "per_100g": {
+              "sugar_g": 0,
+              "calories": 82,
+              "fiber_g": 0,
+              "sodium_mg": 54,
+              "protein_g": 17.8,
+              "saturated_fat_g": 0.131,
+              "fat_g": 0.67,
+              "carbs_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171955/nutrients"
+          },
+          {
+            "ingredient": "生の皮付きじゃがいも",
+            "edible_grams": 800,
+            "fdc_id": 170026,
+            "fdc_description": "Potatoes, flesh and skin, raw",
+            "per_100g": {
+              "fat_g": 0.09,
+              "calories": 77,
+              "sodium_mg": 6,
+              "saturated_fat_g": 0.025,
+              "protein_g": 2.05,
+              "fiber_g": 2.1,
+              "carbs_g": 17.5,
+              "sugar_g": 0.82
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170026/nutrients"
+          },
+          {
+            "ingredient": "小麦粉の総量",
+            "edible_grams": 150,
+            "fdc_id": 169761,
+            "fdc_description": "Wheat flour, white, all-purpose, unenriched",
+            "per_100g": {
+              "fat_g": 0.98,
+              "carbs_g": 76.3,
+              "calories": 364,
+              "fiber_g": 2.7,
+              "sodium_mg": 2,
+              "protein_g": 10.3,
+              "saturated_fat_g": 0.155,
+              "sugar_g": 0.27
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169761/nutrients"
+          },
+          {
+            "ingredient": "コーンスターチ",
+            "edible_grams": 50,
+            "fdc_id": 169698,
+            "fdc_description": "Cornstarch",
+            "per_100g": {
+              "sugar_g": 0,
+              "fat_g": 0.05,
+              "carbs_g": 91.3,
+              "calories": 381,
+              "protein_g": 0.26,
+              "fiber_g": 0.9,
+              "sodium_mg": 9,
+              "saturated_fat_g": 0.009
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169698/nutrients"
+          },
+          {
+            "ingredient": "残留したひまわり油、未測定の仮定",
+            "edible_grams": 100,
+            "fdc_id": 171025,
+            "fdc_description": "Oil, sunflower, linoleic, (approx. 65%)",
+            "per_100g": {
+              "saturated_fat_g": 10.3,
+              "fiber_g": 0,
+              "sodium_mg": 0,
+              "protein_g": 0,
+              "fat_g": 100,
+              "carbs_g": 0,
+              "calories": 884,
+              "sugar_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171025/nutrients"
+          },
+          {
+            "ingredient": "食塩",
+            "edible_grams": 6,
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "fiber_g": 0,
+              "sodium_mg": 38800,
+              "saturated_fat_g": 0,
+              "protein_g": 0,
+              "fat_g": 0,
+              "carbs_g": 0,
+              "calories": 0,
+              "sugar_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients"
+          }
+        ],
+        "serving_size": "魚とポテトの四分の一。提案量は四人分で、完成後の重量は未測定",
+        "method": "確認した六つのUSDA食品データで、生タラ600 g、皮付きじゃがいも800 g、小麦粉150 g、コーンスターチ50 g、仮定した残留ひまわり油100 g、塩6 gの栄養を合計し、4で割ります。油の残留は未試験の仮定で、小麦粉とでんぷんの全量は配合上限です。実際の残りに応じて再計算します。揚げ油1000 gの残りと浸水用の水は含めません。無糖の炭酸水はエネルギー供給なしとして扱い、製品のナトリウム表示を確認します。",
+        "note": "吸油と未使用の衣による不確実性が大きい配合上の推定値です。分析、油残留の測定、調理試験はしていません。生の材料とUSDAデータを使い、浸水や加熱による損失はモデル化していません。四人分の油100 gを仮定し、小麦粉とでんぷんは全量を材料の上限として数えます。残りと実際の吸油量を測って精度を上げてください。ソース、レモン、追加の付け合わせは含みません。八つの栄養項目は食品データに基づき、欠測値をゼロで補っていません。"
+      },
+      "image_url": "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/portada.webp",
+      "ingredients": [
+        {
+          "name": "生の大西洋産タラ、皮と骨を除いたもの",
+          "amount": "600",
+          "unit": "g",
+          "group": "魚と衣"
+        },
+        {
+          "name": "膨張剤を含まない普通の小麦粉：打ち粉30 g、衣120 g",
+          "amount": "150",
+          "unit": "g",
+          "group": "魚と衣"
+        },
+        {
+          "name": "コーンスターチ",
+          "amount": "50",
+          "unit": "g",
+          "group": "魚と衣"
+        },
+        {
+          "name": "冷たい無糖・無香料の炭酸水",
+          "amount": "220",
+          "unit": "ml",
+          "group": "魚と衣"
+        },
+        {
+          "name": "洗った生の皮付きじゃがいも、可食部重量",
+          "amount": "800",
+          "unit": "g",
+          "group": "ポテトと揚げ油"
+        },
+        {
+          "name": "揚げ油用の精製ひまわり油。全量を食べるわけではない",
+          "amount": "1000",
+          "unit": "g",
+          "group": "ポテトと揚げ油"
+        },
+        {
+          "name": "食塩の総量。魚、衣、ポテトに分ける",
+          "amount": "6",
+          "unit": "g",
+          "group": "味付け"
+        }
+      ],
+      "steps": [
+        {
+          "title": "魚を確認して切り分ける",
+          "content": "皮と骨を除いた生の大西洋産タラ600 gを量り、厚みがそろうように約150 gずつの4切れに分けます。清潔なペーパーで水気を拭き、覆って4°C以下で保管します。冷凍品なら先に冷蔵庫で解凍してください。その追加時間は含みません。生魚を洗ったり、そのまま食べる食品の隣に置いたりしないでください。専用のまな板と道具を使い、手を洗い、骨を丁寧に確認します。出来上がり量と分量は調理試験をしていない提案です。",
+          "image_url": "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/paso-01.webp",
+          "image_alt": "専用のまな板に並んだ骨なしの生タラ四切れ"
+        },
+        {
+          "title": "じゃがいもを切って水に浸す",
+          "content": "じゃがいもを洗ってこすり、緑色や傷んだ部分を除き、皮付きの可食部800 gを量ります。均一に火が通るよう、約1 cmの棒状に切ります。新しい飲用水に浸し、20分置きます。浸した水は捨て、レシピや栄養計算には含めません。この浸水は下準備30分の中で行い、合計時間に再び加算しません。待つ間も魚は冷蔵します。",
+          "image_url": "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/paso-02.webp",
+          "image_alt": "新しい水に浸した生の皮付きじゃがいもの棒切り"
+        },
+        {
+          "title": "ポテトを乾かして油を準備する",
+          "content": "じゃがいもの水を切り、表面に水が残らないよう十分に拭きます。水気は油はねの原因になります。乾いた重く安定した十分な容量の鍋に、ひまわり油1000 gを入れます。油面は鍋の高さの三分の一を超えないようにします。揚げ物用温度計、乾いたトングまたは網じゃくし、受け皿付きの網を準備します。160°Cまで加熱します。提案する予熱10分には後の温度調整も含まれます。油から目を離さず、熱い油に水を注がないでください。",
+          "image_url": "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/paso-03.webp",
+          "image_alt": "安定した油鍋の横で水気を拭いたじゃがいも"
+        },
+        {
+          "title": "ポテトを最初に揚げる",
+          "content": "160°Cで、少量ずつ2回に分けて各約7分揚げます。提案時間は合計14分です。濃く色づく前に中が柔らかくなったか、ひとかけを確認し、厚みに応じて調整します。鍋を詰め込まず、濡れたじゃがいもは入れません。乾いた道具ですくい、魚の下準備と加熱の間は網に置きます。この待ち時間は次の作業と重なり、独立した休ませ時間として加えません。二度目の揚げは盛り付け直前に行います。",
+          "image_url": "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/paso-04.webp",
+          "image_alt": "最初の揚げでまだ淡い色のポテトをすくう様子"
+        },
+        {
+          "title": "冷たい衣を作る",
+          "content": "小麦粉150 gのうち30 gを打ち粉用に取っておきます。残り120 gにコーンスターチ50 g、塩の総量6 gのうち2 gを混ぜます。よく冷えた炭酸水220 mlを加え、スプーンを覆う程度になるまで軽く混ぜ、練りすぎません。変更を記録せずにビール、卵、ベーキングパウダーや追加の小麦粉を入れないでください。炭酸を活かすため揚げる直前に作り、生の小麦粉を味見しません。固さを調整するため何か加えたら、その量を記録します。",
+          "image_url": "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/paso-05.webp",
+          "image_alt": "冷たい炭酸水の衣と別皿の打ち粉"
+        },
+        {
+          "title": "タラに打ち粉と衣をつける",
+          "content": "油が180°C近くになったら魚を冷蔵庫から出します。塩の総量から2 gを4切れに分けて振ります。取っておいた小麦粉30 gをまぶして余分を落とし、各切れを衣にくぐらせ、余りを垂らしてから揚げます。生魚に触れた衣を加熱せず食品として再利用しないでください。推定値では小麦粉とでんぷんの全量を配合上限として数えています。使わなかった量を量って実際の摂取分を再計算し、衣が全部付着したかのように扱わないでください。",
+          "image_url": "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/paso-06.webp",
+          "image_alt": "淡い衣にくぐらせている生タラ"
+        },
+        {
+          "title": "魚を揚げて中心温度を確認する",
+          "content": "約180°Cで2回に分け、各約6分、提案時間は合計12分です。必要なら慎重に返し、切り身を重ねません。衣がきつね色になったら、清潔な食品用温度計で魚の中心が最低63°Cか確認します。色や浮き上がりだけでは判断できません。足りなければ加熱を続け、再度測ります。覆わず網で油を切り、ポテトの短い二度目の揚げの間は60°C以上で保温します。実際の時間を記録し、この提案を調理試験合格済みとは扱わないでください。",
+          "image_url": "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/paso-07.webp",
+          "image_alt": "きつね色のタラを食品用温度計で確認する様子"
+        },
+        {
+          "title": "ポテトを二度揚げして色づける",
+          "content": "油を煙が出ないよう190°Cまで上げます。下揚げしたポテトを2回に分けて各約4分、提案時間は合計8分、外がきつね色でカリッとするまで揚げます。取り出し、網で1分油を切り、最後の塩2 gを振ります。共用油は魚と小麦に触れるので、これらのアレルゲンを避ける必要がある人には適しません。油に水や湿ったポテトを入れず、扱う前に冷ましてください。",
+          "image_url": "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/paso-08.webp",
+          "image_alt": "二度揚げ後に網で油を切るきつね色のポテト"
+        },
+        {
+          "title": "盛り付けて出来上がり量を記録する",
+          "content": "4人分に分け、各皿に魚1切れとポテトの四分の一を盛ります。すぐに出し、ソース、レモン、追加の付け合わせは計算に含めません。推定では揚げ油1000 gではなく、全量に残る油100 gを仮定しています。測定した吸油量でも正確な値でもありません。残った衣、小麦粉、出来上がりを量って計算を調整し、残った揚げ油を食べた分に数えません。残りは覆い、2時間以内、周囲が32°Cを超える場合は1時間以内に4°C以下で冷蔵し、2日以内に食べる案は未試験の慎重な提案として扱います。74°Cまで温め直します。食感は損なわれることがあります。",
+          "image_url": "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/portada.webp",
+          "image_alt": "皿に盛ったきつね色のタラと太い皮付きポテト"
+        }
+      ],
+      "gallery": [
+        {
+          "url": "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/portada.webp",
+          "alt": "白い皿に盛ったきつね色の衣のタラと太い皮付きフライドポテト。ソースや飾りなし"
+        }
+      ],
+      "seo": {
+        "title": "炭酸水の衣で作るフィッシュアンドチップスの手順",
+        "description": "生のタラに炭酸水の衣をつけ、皮付きポテトを二度揚げします。提案量は四人分。手順と推定栄養値を掲載しています。",
+        "image_alt": "白い皿に盛ったきつね色の衣のタラと太い皮付きフライドポテト。ソースや飾りなし",
+        "image_variants": [
+          "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/portada-1x1.webp",
+          "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/portada-4x3.webp",
+          "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "衣にはビールや卵が必要ですか？",
+            "a": "この配合は冷たい炭酸水、小麦粉、コーンスターチを使います。ビール、卵、膨張剤入りの小麦粉に変えると、材料、アレルゲン、栄養計算が変わるため、同じレシピとは扱いません。"
+          },
+          {
+            "q": "なぜポテトを二度揚げするのですか？",
+            "a": "最初の160°Cで中を柔らかくし、二度目の190°Cで表面を色づける提案です。十分に乾かして少量ずつ揚げると、油はねや大きな温度低下を抑えられます。実際の厚みに合わせて時間を調整してください。"
+          },
+          {
+            "q": "鍋の油は全部栄養計算に含まれますか？",
+            "a": "いいえ。揚げ油は1000 gですが、四人分に残る100 gを未測定の仮定として計算します。小麦粉とでんぷんは全量を配合上限として数えているので、残りを量って再計算してください。正確な吸油量とは断定しません。"
+          }
+        ]
+      },
+      "content_html": "<p>生のタラ、ビールと卵を使わない衣、皮付きポテトの二度揚げを組み合わせた独自の家庭向けレシピです。四人分、浸水を含む75分を提案します。分量、油の残留量、所要時間は調理試験で確認していません。</p><p>栄養計算の食品データに合わせ、生の大西洋産タラと皮付きじゃがいもを使います。別の魚や皮をむいたじゃがいもでは再計算が必要です。小麦粉150 gのうち30 gは打ち粉、120 gは衣に使い、コーンスターチ50 g、冷たい炭酸水220 mlを加えます。塩6 gは衣2 g、魚2 g、ポテト2 gに分けます。20分の浸水は下準備30分の中に含まれます。提案する加熱時間は、油の予熱と調整10分＋ポテトの最初の揚げ14分＋魚12分＋ポテトの二度目の揚げ8分＋油切り1分＝45分、合計75分です。鍋によって揚げる回数や時間は増えます。揚げ油1000 gを全部食べるわけではありません。全量に残る油100 gは未測定の仮定です。小麦粉とでんぷんは全量を配合上限として計上し、未使用の残りを量って差し引き、再計算します。栄養値は目安で、分析や健康効果の保証ではありません。魚と小麦を含みます。でんぷんと水の表示、共用油による交差接触も確認してください。魚の中心は最低63°C、残りを温め直すときは74°Cにします。2時間以内、周囲が32°Cを超える場合は1時間以内に、4°C以下で冷蔵します。2日以内に食べるという案は保存試験をしていない慎重な提案です。ソースや追加の付け合わせは含みません。</p>"
+    },
+    {
+      "title": "Fish and chips com massa de água com gás",
+      "excerpt": "Bacalhau fresco empanado em massa e batatas com casca de fritura dupla. Quatro porções propostas, preparo detalhado e nutrição estimada.",
+      "summary": "Receita caseira original de bacalhau fresco com massa sem cerveja nem ovo e batatas com casca fritas duas vezes. Propõe quatro porções e 75 minutos, incluindo o molho. Quantidades, retenção de óleo e tempos não foram testados na cozinha.",
+      "difficulty": "Média",
+      "course": "Prato principal",
+      "cuisine": "Britânica",
+      "prep_time_minutes": 30,
+      "cook_time_minutes": 45,
+      "total_time_minutes": 75,
+      "servings": 4,
+      "notes": "Use bacalhau-do-atlântico fresco, não salgado, e batatas com casca para corresponder às fichas nutricionais. Outro peixe ou batatas descascadas exigem novo cálculo. Dos 150 g de farinha, reserve 30 g para enfarinhar e use 120 g na massa com 50 g de amido e 220 ml de água com gás fria. Divida os 6 g de sal em 2 g para a massa, 2 g para o peixe e 2 g para as batatas. Os 20 minutos de molho estão nos 30 minutos de preparo. Cozimento proposto: 10 minutos aquecimento e ajustes + 14 primeira fritura + 12 peixe + 8 segunda fritura + 1 escorrimento = 45; total 75 minutos. A panela pode exigir mais levas e tempo. O banho de 1000 g de óleo não é todo consumido: 100 g retidos no lote são uma hipótese não medida. Toda a farinha e o amido entram como limite da formulação; pese as sobras não utilizadas e recalcule. Nutrição orientativa, sem análise nem promessa de saúde. Contém peixe e trigo; confira rótulos do amido e da água e contato cruzado no óleo. Peixe a pelo menos 63°C no centro; sobras reaquecidas a 74°C. Refrigere a 4°C ou menos antes de 2 horas, ou 1 hora acima de 32°C. Consumo em 2 dias é proposta prudente sem teste de conservação. Molhos e acompanhamentos extras não estão incluídos.",
+      "keywords": [
+        "fish and chips",
+        "bacalhau fresco empanado",
+        "batata frita duas vezes",
+        "massa com água com gás"
+      ],
+      "category_slug": "platos-principales",
+      "id": "5aba4018-f0f3-5039-9b33-61e03e70b1b3",
+      "recipe_group_id": "eafc642e-46c8-4c17-9815-9de6dd4809fc",
+      "slug": "receita-de-fish-and-chips",
+      "public_path": "/pt/receita-de-fish-and-chips",
+      "source_url": null,
+      "language": "pt",
+      "category": "Pratos principais",
+      "published": true,
+      "editorial_status": "published",
+      "nutrition": {
+        "calories": 682.1,
+        "protein_g": 34.7,
+        "carbs_g": 75,
+        "fat_g": 26.6,
+        "saturated_fat_g": 2.9,
+        "fiber_g": 5.3,
+        "sugar_g": 1.7,
+        "sodium_mg": 677,
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "inputs": [
+          {
+            "ingredient": "bacalhau-do-atlântico cru",
+            "edible_grams": 600,
+            "fdc_id": 171955,
+            "fdc_description": "Fish, cod, Atlantic, raw",
+            "per_100g": {
+              "sugar_g": 0,
+              "calories": 82,
+              "fiber_g": 0,
+              "sodium_mg": 54,
+              "protein_g": 17.8,
+              "saturated_fat_g": 0.131,
+              "fat_g": 0.67,
+              "carbs_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171955/nutrients"
+          },
+          {
+            "ingredient": "batatas cruas com casca",
+            "edible_grams": 800,
+            "fdc_id": 170026,
+            "fdc_description": "Potatoes, flesh and skin, raw",
+            "per_100g": {
+              "fat_g": 0.09,
+              "calories": 77,
+              "sodium_mg": 6,
+              "saturated_fat_g": 0.025,
+              "protein_g": 2.05,
+              "fiber_g": 2.1,
+              "carbs_g": 17.5,
+              "sugar_g": 0.82
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170026/nutrients"
+          },
+          {
+            "ingredient": "farinha de trigo total",
+            "edible_grams": 150,
+            "fdc_id": 169761,
+            "fdc_description": "Wheat flour, white, all-purpose, unenriched",
+            "per_100g": {
+              "fat_g": 0.98,
+              "carbs_g": 76.3,
+              "calories": 364,
+              "fiber_g": 2.7,
+              "sodium_mg": 2,
+              "protein_g": 10.3,
+              "saturated_fat_g": 0.155,
+              "sugar_g": 0.27
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169761/nutrients"
+          },
+          {
+            "ingredient": "amido de milho",
+            "edible_grams": 50,
+            "fdc_id": 169698,
+            "fdc_description": "Cornstarch",
+            "per_100g": {
+              "sugar_g": 0,
+              "fat_g": 0.05,
+              "carbs_g": 91.3,
+              "calories": 381,
+              "protein_g": 0.26,
+              "fiber_g": 0.9,
+              "sodium_mg": 9,
+              "saturated_fat_g": 0.009
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169698/nutrients"
+          },
+          {
+            "ingredient": "óleo de girassol retido, hipótese não medida",
+            "edible_grams": 100,
+            "fdc_id": 171025,
+            "fdc_description": "Oil, sunflower, linoleic, (approx. 65%)",
+            "per_100g": {
+              "saturated_fat_g": 10.3,
+              "fiber_g": 0,
+              "sodium_mg": 0,
+              "protein_g": 0,
+              "fat_g": 100,
+              "carbs_g": 0,
+              "calories": 884,
+              "sugar_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171025/nutrients"
+          },
+          {
+            "ingredient": "sal de cozinha",
+            "edible_grams": 6,
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "fiber_g": 0,
+              "sodium_mg": 38800,
+              "saturated_fat_g": 0,
+              "protein_g": 0,
+              "fat_g": 0,
+              "carbs_g": 0,
+              "calories": 0,
+              "sugar_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients"
+          }
+        ],
+        "serving_size": "Um quarto do peixe e das batatas; quatro porções propostas sem peso final medido",
+        "method": "Some nutrientes de 600 g de bacalhau cru, 800 g de batatas com casca, 150 g de farinha, 50 g de amido, 100 g propostos de óleo de girassol retido e 6 g de sal com seis fichas USDA verificadas; divida por 4. O óleo é hipótese sem teste de absorção; toda a farinha e o amido entram como limite da formulação. Resíduos reais exigem recálculo. Exclua o óleo restante dos 1000 g do banho e a água do molho. Água com gás sem açúcar não fornece energia; confira o sódio da marca.",
+        "note": "Estimativa da formulação com incerteza relevante por óleo absorvido e massa não utilizada, sem análise, medição de retenção nem teste de cozinha. Usa matérias-primas cruas e fichas USDA, sem modelar perdas de molho e cozimento. Os 100 g de óleo são suposição para quatro porções; toda a farinha e o amido formam um limite superior de ingredientes. Meça resíduos e absorção real para refinar. Exclui molhos, limão e acompanhamentos. Os oito nutrientes vêm das fichas, sem preencher dados ausentes com zero."
+      },
+      "image_url": "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/portada.webp",
+      "ingredients": [
+        {
+          "name": "bacalhau-do-atlântico fresco, não salgado, sem pele nem espinhas",
+          "amount": "600",
+          "unit": "g",
+          "group": "Peixe e massa"
+        },
+        {
+          "name": "farinha de trigo comum sem fermento: 30 g para enfarinhar e 120 g para a massa",
+          "amount": "150",
+          "unit": "g",
+          "group": "Peixe e massa"
+        },
+        {
+          "name": "amido de milho",
+          "amount": "50",
+          "unit": "g",
+          "group": "Peixe e massa"
+        },
+        {
+          "name": "água com gás fria, sem açúcar nem sabor",
+          "amount": "220",
+          "unit": "ml",
+          "group": "Peixe e massa"
+        },
+        {
+          "name": "batatas cruas lavadas com casca, peso comestível",
+          "amount": "800",
+          "unit": "g",
+          "group": "Batatas e fritura"
+        },
+        {
+          "name": "óleo de girassol refinado para o banho de fritura; nem todo é consumido",
+          "amount": "1000",
+          "unit": "g",
+          "group": "Batatas e fritura"
+        },
+        {
+          "name": "sal de cozinha total, dividido entre peixe, massa e batatas",
+          "amount": "6",
+          "unit": "g",
+          "group": "Tempero"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Confira e porcione o peixe",
+          "content": "Pese 600 g de bacalhau-do-atlântico fresco, não salgado, sem pele nem espinhas, e divida em 4 pedaços de cerca de 150 g com espessura parecida. Seque com papel limpo e reserve coberto a 4°C ou menos. Se estava congelado, descongele antes na geladeira; esse tempo adicional não está incluído. Não lave o peixe cru nem o coloque junto a alimentos prontos. Use tábua e utensílios separados, lave as mãos e confira cuidadosamente as espinhas. Rendimento e quantidades são propostas sem teste de cozinha.",
+          "image_url": "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/paso-01.webp",
+          "image_alt": "Quatro porções de bacalhau fresco cru sem espinhas em tábua separada"
+        },
+        {
+          "title": "Corte e deixe as batatas de molho",
+          "content": "Lave e escove as batatas, retire partes verdes ou danificadas e pese 800 g comestíveis com casca. Corte palitos de cerca de 1 cm de espessura para cozinhar por igual. Cubra com água potável fresca e deixe de molho por 20 minutos. Descarte a água: ela não faz parte da receita nem do cálculo nutricional. Esse molho ocorre dentro dos 30 minutos de preparo, sem ser somado novamente ao total. Mantenha o peixe refrigerado enquanto espera.",
+          "image_url": "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/paso-02.webp",
+          "image_alt": "Palitos de batata crua com casca de molho em água fresca"
+        },
+        {
+          "title": "Seque as batatas e prepare o óleo",
+          "content": "Escorra e seque muito bem as batatas: água na superfície pode fazer o óleo espirrar. Coloque os 1000 g de óleo de girassol numa panela pesada, seca, estável e grande o suficiente; o óleo não deve ultrapassar um terço da altura. Prepare termômetro de fritura, pinça ou escumadeira seca e grade sobre bandeja. Aqueça a 160°C; os 10 minutos propostos para aquecimento incluem ajustes posteriores. Não deixe óleo sem vigilância nem despeje água numa panela de óleo quente.",
+          "image_url": "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/paso-03.webp",
+          "image_alt": "Batatas secas ao lado de uma panela estável com óleo"
+        },
+        {
+          "title": "Faça a primeira fritura das batatas",
+          "content": "Frite a 160°C em 2 levas pequenas de aproximadamente 7 minutos cada, 14 minutos totais propostos. Devem ficar macias sem dourar muito; confira um palito e ajuste conforme a espessura. Não encha demais a panela nem adicione batatas molhadas. Retire com utensílio seco e deixe na grade enquanto prepara e cozinha o peixe. A espera se sobrepõe às fases seguintes e não acrescenta descanso separado. A segunda fritura ocorre pouco antes de servir.",
+          "image_url": "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/paso-04.webp",
+          "image_alt": "Batatas ainda claras retiradas da primeira fritura"
+        },
+        {
+          "title": "Prepare a massa fria",
+          "content": "Separe 30 g dos 150 g de farinha para enfarinhar. Misture os outros 120 g com 50 g de amido de milho e 2 g dos 6 g de sal total. Adicione 220 ml de água com gás bem fria e misture apenas até obter uma massa que cubra a colher, sem trabalhar demais. Não acrescente cerveja, ovo, fermento químico nem mais farinha sem registrar a mudança. Prepare perto da fritura para aproveitar o gás; não prove farinha crua. Registre qualquer quantidade adicionada se a consistência mudar.",
+          "image_url": "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/paso-05.webp",
+          "image_alt": "Massa fria de água com gás e farinha separada"
+        },
+        {
+          "title": "Enfarinhe e cubra o bacalhau",
+          "content": "Retire o peixe da geladeira quando o óleo estiver perto de 180°C. Divida 2 g do sal total entre os 4 pedaços. Enfarinhe com os 30 g reservados, sacuda o excesso e passe cada pedaço pela massa, deixando o excedente escorrer antes de fritar. Não reutilize como alimento uma massa que tocou peixe cru sem cozinhá-la. A estimativa conta toda a farinha e o amido como limite da formulação; pese o que não foi usado e recalcule o consumo real, sem fingir que toda a massa adere.",
+          "image_url": "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/paso-06.webp",
+          "image_alt": "Bacalhau fresco cru sendo mergulhado na massa clara"
+        },
+        {
+          "title": "Frite e verifique o peixe",
+          "content": "Frite a cerca de 180°C em 2 levas, aproximadamente 6 minutos cada, 12 minutos propostos. Vire com cuidado se necessário e não empilhe os pedaços. Busque cobertura dourada e verifique com termômetro alimentar limpo pelo menos 63°C no centro do peixe. Cor ou flutuação não bastam. Se necessário, prolongue e meça novamente. Escorra na grade sem cobrir e mantenha quente a 60°C ou mais durante a breve segunda fritura das batatas. Registre os tempos reais; a proposta não equivale a um teste aprovado.",
+          "image_url": "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/paso-07.webp",
+          "image_alt": "Peixe dourado conferido com termômetro alimentar"
+        },
+        {
+          "title": "Doure as batatas na segunda fritura",
+          "content": "Eleve o óleo a 190°C sem deixar fumar. Frite as batatas pré-cozidas em 2 levas de cerca de 4 minutos, 8 minutos totais propostos, até ficarem douradas e crocantes por fora. Retire, escorra por 1 minuto na grade e distribua os últimos 2 g de sal. O óleo compartilhado entra em contato com peixe e trigo, portanto essas batatas não servem para quem precisa evitar esses alérgenos. Não despeje água nem batatas úmidas no óleo; deixe esfriar antes de manusear.",
+          "image_url": "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/paso-08.webp",
+          "image_alt": "Batatas douradas escorrendo após a segunda fritura"
+        },
+        {
+          "title": "Sirva e registre o rendimento",
+          "content": "Divida em 4 porções: 1 pedaço de peixe e um quarto das batatas. Sirva imediatamente; molho, limão e acompanhamentos extras não entram no cálculo. A estimativa propõe 100 g de óleo retido no lote inteiro, não os 1000 g do banho: não é absorção medida nem valor exato. Pese sobras de massa, farinha e produto para ajustar; o óleo de fritura restante não conta como ingerido. Refrigere sobras cobertas a 4°C ou menos antes de 2 horas, ou 1 hora acima de 32°C, e consuma em 2 dias como proposta prudente não testada. Reaqueça a 74°C; a textura pode se perder.",
+          "image_url": "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/portada.webp",
+          "image_alt": "Peixe dourado com palitos grossos de batata com casca no prato"
+        }
+      ],
+      "gallery": [
+        {
+          "url": "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/portada.webp",
+          "alt": "Bacalhau fresco em massa dourada ao lado de batatas fritas grossas com casca em prato branco, sem molho nem decoração"
+        }
+      ],
+      "seo": {
+        "title": "Fish and chips com água com gás: receita passo a passo",
+        "description": "Bacalhau fresco empanado em massa e batatas com casca de fritura dupla. Quatro porções propostas, preparo detalhado e nutrição estimada.",
+        "image_alt": "Bacalhau fresco em massa dourada ao lado de batatas fritas grossas com casca em prato branco, sem molho nem decoração",
+        "image_variants": [
+          "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/portada-1x1.webp",
+          "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/portada-4x3.webp",
+          "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "A massa precisa de cerveja ou ovo?",
+            "a": "Esta fórmula usa água com gás fria, farinha e amido. Trocar por cerveja, ovo ou farinha com fermento altera ingredientes, alérgenos e cálculo nutricional; não é apresentado como a mesma receita."
+          },
+          {
+            "q": "Por que fritar as batatas duas vezes?",
+            "a": "A primeira fritura proposta a 160°C amacia o interior; a segunda a 190°C doura a superfície. Secar bem e usar pequenas levas reduz respingos e grandes quedas de temperatura. Ajuste os tempos à espessura real."
+          },
+          {
+            "q": "A nutrição inclui todo o óleo da panela?",
+            "a": "Não. O banho proposto usa 1000 g, mas o cálculo supõe 100 g retidos nas quatro porções, sem medição. Toda a farinha e o amido são um limite da formulação; pese resíduos e recalcule. Não se afirma absorção exata."
+          }
+        ]
+      },
+      "content_html": "<p>Receita caseira original de bacalhau fresco com massa sem cerveja nem ovo e batatas com casca fritas duas vezes. Propõe quatro porções e 75 minutos, incluindo o molho. Quantidades, retenção de óleo e tempos não foram testados na cozinha.</p><p>Use bacalhau-do-atlântico fresco, não salgado, e batatas com casca para corresponder às fichas nutricionais. Outro peixe ou batatas descascadas exigem novo cálculo. Dos 150 g de farinha, reserve 30 g para enfarinhar e use 120 g na massa com 50 g de amido e 220 ml de água com gás fria. Divida os 6 g de sal em 2 g para a massa, 2 g para o peixe e 2 g para as batatas. Os 20 minutos de molho estão nos 30 minutos de preparo. Cozimento proposto: 10 minutos aquecimento e ajustes + 14 primeira fritura + 12 peixe + 8 segunda fritura + 1 escorrimento = 45; total 75 minutos. A panela pode exigir mais levas e tempo. O banho de 1000 g de óleo não é todo consumido: 100 g retidos no lote são uma hipótese não medida. Toda a farinha e o amido entram como limite da formulação; pese as sobras não utilizadas e recalcule. Nutrição orientativa, sem análise nem promessa de saúde. Contém peixe e trigo; confira rótulos do amido e da água e contato cruzado no óleo. Peixe a pelo menos 63°C no centro; sobras reaquecidas a 74°C. Refrigere a 4°C ou menos antes de 2 horas, ou 1 hora acima de 32°C. Consumo em 2 dias é proposta prudente sem teste de conservação. Molhos e acompanhamentos extras não estão incluídos.</p>"
     }
   ],
-  "portuguese_locale": "pt-BR"
+  "portuguese_locale": "pt-BR",
+  "media_reference_correction": {
+    "previous_steps_sha256": "69b8f64efc952399695d9ce0ed4e11702f5363245094845c8714650587d265b6",
+    "steps_sha256": "af2a84d89f4d509a2de72817706d75f8d6f02bbee027f8c725214e0c6e65ed3e",
+    "es_text_sha256": "4d98b8ad1dca13b36766e741aeaa374558c8e10516c0735c9f6d67421536e931",
+    "reason": "Last serving phase uses the existing cover as frozen image brief specifies; remove nonexistent paso-09 reference. No ES editorial text or image generation changed."
+  },
+  "published_database": false
 }
