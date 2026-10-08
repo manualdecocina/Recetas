@@ -30,3 +30,9 @@ Actualizado 2026-10-08T13:16:56.244Z.
 ## Checkpoint posterior — 2026-10-08T13:40:44.360Z
 
 Empanadas ES cerrado en12fases y medios completos:12 originalesPNG+15WebP, revisión visual PASS y SHA256/dimensiones en editorial/receta-empanadas-argentinas-imagenes.json. Pasos ES SHA256 658f6db71e55437414fec6224e62be54a9403523e6bf022982827d91ce303426. No rehacer ES ni imágenes. Estado actual: **localización DE,EN,FR,IT,JA,PT-BR pendiente**, después SQL protegido y QA de paquete. Fuente única editorial/receta-empanadas-argentinas-20261008.json; sopa7/7 preparada intacta. Total de lote03:1/15 paquetes preparados completos,0/15publicados. La sección anterior que decía próximo ES queda superada por este checkpoint; consultar automation-progress.json de esta rama.
+
+## Checkpoint 2026-10-08T14:02:21.147Z
+
+Empanadas argentinas completas 7/7: fuente única editorial/receta-empanadas-argentinas-20261008.json, pasos ES SHA256 658f6db71e55437414fec6224e62be54a9403523e6bf022982827d91ce303426; 12 PNG originales y 15 WebP definitivos ya preservados y verificados. Ingredientes15, fases12, FAQ3; nutrición recalculada con13fichas USDA verificadas. DE/EN/FR/IT/PT conservan todas las cifras por fase; JA explicita conteos escritos en ES y repite el subtotal95 sin cambiar total215. SQL protegido SHA256 5d066104ab49dc2153ac259f95bea6d08677008f729eb83d678d0db2968329c6, NO ejecutado. DB actual124ES publicadas, grupo empanadas1ES sin publicar, sin colisiónUUID6; duplicado archivado retenido.
+
+Sopa y empanadas: preparadas2/15; publicadas0/15 del lote03. Siguiente: receta-de-pizza-casera. No rehacer fuentes ni imágenes correctas. Completar13restantes y publicar15 en una transacción tras CI/merge/despliegue observado; caché/QA final pendientes. El lote02 permanece cerrado15publicadas/105páginas verificadas sin errores.

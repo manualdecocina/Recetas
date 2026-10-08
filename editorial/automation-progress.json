@@ -31,11 +31,11 @@
     "branch": "recetas/lote-03-20261008",
     "target": 15,
     "status": "in_progress",
-    "stage": "localización",
-    "current_recipe": "receta-empanadas-argentinas",
+    "stage": "ES",
+    "current_recipe": "receta-de-pizza-casera",
     "started_at": "2026-10-08T12:39:02.511Z",
     "completed_recipes": 0,
-    "prepared_recipes": 1,
+    "prepared_recipes": 2,
     "published_recipes": 0,
     "identity_qa": "PASS_15_ENTITIES_105_ROUTES_NO_COLLISIONS",
     "identity_file": "editorial/lote03-identidades-rutas-20261008.json",
@@ -85,11 +85,11 @@
         "editorial_status": "published",
         "position": 18,
         "eligibility": "validate_url_master_before_writing",
-        "status": "in_progress",
+        "status": "prepared",
         "stage": "localización",
         "identity_qa": "PASS",
         "classification": "CORE_KEEP_REBUILD_ARGENTINE_BEEF_EMPANDAS",
-        "languages_ready": 1,
+        "languages_ready": 7,
         "images_ready": 15,
         "source_not_reused": true,
         "archived_duplicate_preserved": true,
@@ -105,14 +105,14 @@
         "image_visual_qa": "PASS_ALL12_ORIGINALS",
         "cover_variant_visual_qa": "PASS_ALL_RATIOS_MAIN_SUBJECT",
         "next_image": null,
-        "localizations_pending": [
-          "de",
-          "en",
-          "fr",
-          "it",
-          "ja",
-          "pt"
-        ]
+        "localizations_pending": [],
+        "sql_file": "scripts/publish-receta-empanadas-argentinas-20261008.sql",
+        "sql_sha256": "5d066104ab49dc2153ac259f95bea6d08677008f729eb83d678d0db2968329c6",
+        "sql_executed": false,
+        "qa_file": "editorial/receta-empanadas-argentinas-qa-20261008.json",
+        "editorial_qa": "PASS_EDITORIAL_MEDIA_LOCALIZATION_NOT_LIVE",
+        "package_sha256": "fe9e60a1ea1ceca154f3d18f40a9749e81b10058b0bd343c2c90f3b5a6926472",
+        "next_action": "Keep ready package; include in atomic15recipe publication after remaining13 complete."
       },
       {
         "id": "58aa988c-29f3-408c-8254-dd1be441cb04",
@@ -342,9 +342,9 @@
     "owner": "manual-continuation-20261008-bandeja-localization",
     "status": "active",
     "acquired_at": "2026-10-08T08:39:14.486Z",
-    "expires_at": "2026-10-08T14:54:36.506Z",
-    "reason": "Same continuing producer: soup package ready7/7, next Argentine empanadas ES. Batch03 published0/15.",
-    "renewed_at": "2026-10-08T13:24:36.506Z"
+    "expires_at": "2026-10-08T15:32:21.148Z",
+    "reason": "Same continuing producer: soup and empanadas ready7/7, next pizza ES; batch03published0/15.",
+    "renewed_at": "2026-10-08T14:02:21.147Z"
   },
   "blockers": [],
   "debt": [
@@ -413,17 +413,17 @@
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
   "progress_branch": "recetas/lote-03-20261008",
-  "last_checkpoint_at": "2026-10-08T13:40:44.360Z",
+  "last_checkpoint_at": "2026-10-08T14:02:21.147Z",
   "handoff": {
     "branch": "recetas/lote-03-20261008",
-    "current_recipe": "receta-empanadas-argentinas",
-    "prepared_recipes": 1,
+    "current_recipe": "receta-de-pizza-casera",
+    "prepared_recipes": 2,
     "published_recipes": 0,
-    "next_action": "Empanadas all12 original photos+15WebP hash verified and durable; ES12steps remain frozen. Complete6 localizations then guardedSQL/QA. Soup prepared1/15; batch03published0/15.",
-    "checkpoint_at": "2026-10-08T13:16:56.244Z"
+    "next_action": "Do not regenerate soup or empanadas. Continue pizza identity/ES freeze then images/localizations. Publish all15 atomically after CI/deploy gates.",
+    "checkpoint_at": "2026-10-08T14:02:21.147Z"
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z",
-  "updated_at": "2026-10-08T13:40:44.360Z",
+  "updated_at": "2026-10-08T14:02:21.147Z",
   "completed_batches": [
     {
       "id": "lote-02-20261008",
