@@ -1,0 +1,313 @@
+{
+  "scope": "Manual de Cocina only; lote03",
+  "state": "ES_FROZEN_IMAGES_PENDING",
+  "provenance": "Original editorial content; no legacy WordPress text or images reused. Reserved identities and approved paths preserved.",
+  "ai_owner_confirmation": "Owner authorized content and images; no kitchen test performed",
+  "category_slug": "platos-principales",
+  "cover": "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/portada.webp",
+  "steps_frozen": true,
+  "steps_sha256": "69b8f64efc952399695d9ce0ed4e11702f5363245094845c8714650587d265b6",
+  "publication_blockers": [
+    "IMAGES_LOCALIZATIONS_FULL15_CI_DEPLOY_DB_CACHE_QA_PENDING"
+  ],
+  "sources": [
+    {
+      "url": "https://www.gordonramsay.com/gr/recipes/gordons-fish-and-chips-in-10-minutes/",
+      "purpose": "Referencia primaria para intención culinaria de pescado rebozado y papas fritas; fórmula original diferente, sin copiar cantidades, texto, imágenes ni nutrición.",
+      "accessed": "2026-10-08"
+    },
+    {
+      "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures",
+      "purpose": "Temperaturas oficiales de pescado63°C y sobras74°C.",
+      "accessed": "2026-10-08"
+    },
+    {
+      "url": "https://www.foodsafety.gov/keep-food-safe/4-steps-to-food-safety",
+      "purpose": "Separación de crudos, frío, límites2horas/1hora y mantenimiento caliente60°C.",
+      "accessed": "2026-10-08"
+    }
+  ],
+  "records": [
+    {
+      "title": "Fish and chips: pescado rebozado y papas fritas",
+      "excerpt": "Pescado blanco con rebozado de agua con gas y papas de doble fritura. Cuatro raciones propuestas, pasos claros y nutrición estimada.",
+      "summary": "Versión casera original de fish and chips con bacalao fresco, rebozado sin cerveza ni huevo y papas con piel de doble fritura. Propone cuatro porciones y 75 minutos, incluido el remojo. Cantidades, retención de aceite y tiempos pendientes de prueba de cocina.",
+      "difficulty": "Media",
+      "course": "Plato principal",
+      "cuisine": "Británica",
+      "prep_time_minutes": 30,
+      "cook_time_minutes": 45,
+      "total_time_minutes": 75,
+      "servings": 4,
+      "notes": "Usa bacalao atlántico fresco y papas con piel para que las materias primas correspondan a las fichas nutricionales. Otro pescado o papas peladas requieren revisar el cálculo. El rebozado se hace con 30 g de harina para enharinar y 120 g en la mezcla, 50 g de almidón y 220 ml de agua con gas; no lleva cerveza ni huevo. Los 6 g de sal se reparten en 2 g para mezcla, 2 g para pescado y 2 g para papas. El remojo de 20 minutos está dentro de la preparación de 30; la cocción propuesta suma 10 calentamiento y ajustes + 14 primera fritura + 12 pescado + 8 segunda fritura + 1 escurrido = 45, total 75 minutos. Las tandas y tiempos pueden aumentar según la olla. La cifra de aceite ingerido es una hipótesis de 100 g para el lote, no un ensayo de absorción; el baño emplea 1000 g y el resto no se consume. Se cuenta toda la harina y el almidón como límite de formulación; los residuos reales se pesan y descuentan. Nutrición orientativa, sin análisis ni promesas de salud. Contiene pescado y trigo; verifica etiquetas del almidón y agua, y contaminación cruzada del aceite. Temperatura mínima del pescado 63°C, sobras 74°C. Frío a 4°C o menos, límites de 2 horas o 1 hora sobre 32°C; consumo en 2 días propuesto sin ensayo. No incluye salsas ni guarniciones extra.",
+      "keywords": [
+        "fish and chips",
+        "pescado rebozado",
+        "papas fritas",
+        "bacalao"
+      ],
+      "category_slug": "platos-principales",
+      "id": "2f9fce85-8989-4252-af0d-3c24e046b1bc",
+      "recipe_group_id": "eafc642e-46c8-4c17-9815-9de6dd4809fc",
+      "slug": "receta-de-fish-and-chip-pescado-y-papas-fritas",
+      "public_path": "/receta-de-fish-and-chip-pescado-y-papas-fritas",
+      "source_url": "https://manualdecocina.com/receta-de-fish-and-chip-pescado-y-papas-fritas/",
+      "language": "es",
+      "category": "Platos principales",
+      "published": false,
+      "editorial_status": "ready",
+      "nutrition": {
+        "calories": 682.1,
+        "protein_g": 34.7,
+        "carbs_g": 75.0,
+        "fat_g": 26.6,
+        "saturated_fat_g": 2.9,
+        "fiber_g": 5.3,
+        "sugar_g": 1.7,
+        "sodium_mg": 677.0,
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (abril de2018)",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "inputs": [
+          {
+            "ingredient": "bacalao atlántico crudo",
+            "edible_grams": 600,
+            "fdc_id": 171955,
+            "fdc_description": "Fish, cod, Atlantic, raw",
+            "per_100g": {
+              "sugar_g": 0.0,
+              "calories": 82.0,
+              "fiber_g": 0.0,
+              "sodium_mg": 54.0,
+              "protein_g": 17.8,
+              "saturated_fat_g": 0.131,
+              "fat_g": 0.67,
+              "carbs_g": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171955/nutrients"
+          },
+          {
+            "ingredient": "papas crudas con piel",
+            "edible_grams": 800,
+            "fdc_id": 170026,
+            "fdc_description": "Potatoes, flesh and skin, raw",
+            "per_100g": {
+              "fat_g": 0.09,
+              "calories": 77.0,
+              "sodium_mg": 6.0,
+              "saturated_fat_g": 0.025,
+              "protein_g": 2.05,
+              "fiber_g": 2.1,
+              "carbs_g": 17.5,
+              "sugar_g": 0.82
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170026/nutrients"
+          },
+          {
+            "ingredient": "harina de trigo total",
+            "edible_grams": 150,
+            "fdc_id": 169761,
+            "fdc_description": "Wheat flour, white, all-purpose, unenriched",
+            "per_100g": {
+              "fat_g": 0.98,
+              "carbs_g": 76.3,
+              "calories": 364,
+              "fiber_g": 2.7,
+              "sodium_mg": 2.0,
+              "protein_g": 10.3,
+              "saturated_fat_g": 0.155,
+              "sugar_g": 0.27
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169761/nutrients"
+          },
+          {
+            "ingredient": "almidón de maíz",
+            "edible_grams": 50,
+            "fdc_id": 169698,
+            "fdc_description": "Cornstarch",
+            "per_100g": {
+              "sugar_g": 0.0,
+              "fat_g": 0.05,
+              "carbs_g": 91.3,
+              "calories": 381,
+              "protein_g": 0.26,
+              "fiber_g": 0.9,
+              "sodium_mg": 9.0,
+              "saturated_fat_g": 0.009
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169698/nutrients"
+          },
+          {
+            "ingredient": "aceite de girasol retenido, hipótesis no medida",
+            "edible_grams": 100,
+            "fdc_id": 171025,
+            "fdc_description": "Oil, sunflower, linoleic, (approx. 65%)",
+            "per_100g": {
+              "saturated_fat_g": 10.3,
+              "fiber_g": 0.0,
+              "sodium_mg": 0.0,
+              "protein_g": 0.0,
+              "fat_g": 100,
+              "carbs_g": 0.0,
+              "calories": 884,
+              "sugar_g": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171025/nutrients"
+          },
+          {
+            "ingredient": "sal de mesa",
+            "edible_grams": 6,
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "fiber_g": 0.0,
+              "sodium_mg": 38800.0,
+              "saturated_fat_g": 0.0,
+              "protein_g": 0.0,
+              "fat_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 0.0,
+              "sugar_g": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients"
+          }
+        ],
+        "serving_size": "Una cuarta parte del pescado y las papas; cuatro porciones propuestas, sin peso final medido",
+        "method": "Suma nutrientes de 600 g de bacalao crudo, 800 g de papas con piel, 150 g de harina, 50 g de almidón, 100 g de aceite de girasol retenido propuesto y 6 g de sal, con seis fichas USDA verificadas, y divide entre 4. El aceite es una hipótesis sin ensayo de absorción y se cuenta toda la harina/almidón como límite de formulación; residuos reales requieren recálculo. No se incluye el aceite restante de los 1000 g del baño ni agua del remojo. El agua con gas sin azúcar se trata como agua sin aporte energético; revisar sodio de la marca.",
+        "note": "Estimación de formulación con una incertidumbre relevante por aceite absorbido y rebozado no utilizado; no es análisis, medición de retención ni prueba de cocina. Materias primas crudas y fichas USDA; no se modelan pérdidas por remojo y cocción. Se usa 100 g de aceite como supuesto para cuatro raciones y toda harina/almidón como límite superior de ingredientes. Medir residuos y absorción real para afinar. No incluye salsas, limón ni acompañamientos. Los ocho nutrientes se obtienen de las fichas sin rellenar datos ausentes con cero."
+      },
+      "image_url": "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/portada.webp",
+      "ingredients": [
+        {
+          "name": "bacalao atlántico fresco, sin piel ni espinas",
+          "amount": "600",
+          "unit": "g",
+          "group": "Pescado y rebozado"
+        },
+        {
+          "name": "harina de trigo común sin levadura: 30 g para enharinar y 120 g para la mezcla",
+          "amount": "150",
+          "unit": "g",
+          "group": "Pescado y rebozado"
+        },
+        {
+          "name": "almidón de maíz",
+          "amount": "50",
+          "unit": "g",
+          "group": "Pescado y rebozado"
+        },
+        {
+          "name": "agua con gas fría, sin azúcar ni sabor",
+          "amount": "220",
+          "unit": "ml",
+          "group": "Pescado y rebozado"
+        },
+        {
+          "name": "papas crudas lavadas, con piel, peso comestible",
+          "amount": "800",
+          "unit": "g",
+          "group": "Papas y fritura"
+        },
+        {
+          "name": "aceite de girasol refinado para el baño de fritura; no se consume todo",
+          "amount": "1000",
+          "unit": "g",
+          "group": "Papas y fritura"
+        },
+        {
+          "name": "sal de mesa total, repartida entre pescado, mezcla y papas",
+          "amount": "6",
+          "unit": "g",
+          "group": "Sazón"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Revisa y porciona el pescado",
+          "content": "Pesa 600 g de bacalao atlántico fresco sin piel ni espinas y divídelo en 4 piezas de unos 150 g, de grosor parecido. Seca con papel limpio y reserva cubierto a 4°C o menos. Si era congelado, descongela antes en el refrigerador; ese tiempo adicional no está incluido. No laves el pescado crudo ni lo pongas junto a alimentos listos. Usa tabla y utensilios separados, lávate las manos y comprueba las espinas con cuidado. El rendimiento y las cantidades son propuestas sin prueba de cocina.",
+          "image_url": "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/paso-01.webp",
+          "image_alt": "Fish and chips: pescado rebozado y papas fritas: Revisa y porciona el pescado"
+        },
+        {
+          "title": "Corta y remoja las papas",
+          "content": "Lava y cepilla las papas, retira zonas verdes o dañadas y pesa 800 g comestibles con piel. Corta bastones de unos 1 cm de grosor para que se hagan de forma pareja. Cúbrelos con agua potable fresca y remoja 20 minutos. El agua del remojo se desecha y no forma parte de la receta ni de su nutrición. Este remojo ocurre dentro de los 30 minutos de preparación, no se añade de nuevo al total. Mantén el pescado frío mientras esperas.",
+          "image_url": "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/paso-02.webp",
+          "image_alt": "Fish and chips: pescado rebozado y papas fritas: Corta y remoja las papas"
+        },
+        {
+          "title": "Seca las papas y prepara el aceite",
+          "content": "Escurre las papas y sécalas minuciosamente: no debe quedar agua superficial que salpique en el aceite. Coloca los 1000 g de aceite de girasol en una olla pesada, seca y estable de capacidad suficiente; el aceite no debe superar un tercio de su altura. Usa termómetro para fritura, pinzas o espumadera seca y rejilla con bandeja. Calienta a 160°C; los 10 minutos propuestos de calentamiento incluyen los ajustes posteriores de temperatura. No dejes aceite sin vigilancia ni eches agua en una olla de aceite caliente.",
+          "image_url": "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/paso-03.webp",
+          "image_alt": "Fish and chips: pescado rebozado y papas fritas: Seca las papas y prepara el aceite"
+        },
+        {
+          "title": "Haz la primera fritura de las papas",
+          "content": "Fríe las papas a 160°C en 2 tandas pequeñas durante unos 7 minutos por tanda, 14 minutos en total propuestos. Deben ablandarse sin quedar muy doradas; comprueba una pieza y ajusta según su grosor. No llenes la olla ni añadas papas mojadas. Retira con utensilio seco y deja en rejilla mientras preparas y cocinas el pescado. Esta espera se solapa con las fases siguientes y no añade un descanso separado. La segunda fritura se hará justo antes de servir.",
+          "image_url": "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/paso-04.webp",
+          "image_alt": "Fish and chips: pescado rebozado y papas fritas: Haz la primera fritura de las papas"
+        },
+        {
+          "title": "Prepara el rebozado frío",
+          "content": "Separa 30 g de los 150 g de harina para enharinar. Mezcla los otros 120 g con 50 g de almidón de maíz y 2 g de los 6 g de sal total. Incorpora 220 ml de agua con gas muy fría y mezcla solo hasta una masa que cubra la cuchara, sin trabajarla en exceso. No añadas cerveza, huevo, levadura química ni más harina sin registrar el cambio. Prepara la mezcla cerca de la fritura para aprovechar el gas; no pruebes harina cruda. Si cambia la consistencia, registra cualquier cantidad añadida.",
+          "image_url": "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/paso-05.webp",
+          "image_alt": "Fish and chips: pescado rebozado y papas fritas: Prepara el rebozado frío"
+        },
+        {
+          "title": "Enharina y cubre el bacalao",
+          "content": "Saca el pescado del frío cuando el aceite esté cerca de 180°C. Reparte 2 g de la sal total entre las 4 piezas. Enharina con los 30 g reservados, sacude el exceso y pasa cada pieza por la mezcla, dejando caer el sobrante antes de freír. No reutilices como alimento una mezcla que haya tocado pescado crudo sin cocinarla. La estimación cuenta toda la harina y el almidón como límite de la formulación; pesa lo que no se use y recalcula el consumo real, sin fingir que el rebozado se adhiere por completo.",
+          "image_url": "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/paso-06.webp",
+          "image_alt": "Fish and chips: pescado rebozado y papas fritas: Enharina y cubre el bacalao"
+        },
+        {
+          "title": "Fríe y verifica el pescado",
+          "content": "Fríe a unos 180°C en 2 tandas, aproximadamente 6 minutos por tanda, 12 minutos propuestos. Gira con cuidado si hace falta; no apiles las piezas. Busca una cubierta dorada y comprueba con termómetro alimentario limpio al menos 63°C en el centro del pescado. El color o que flote no bastan. Si no llega, prolonga y mide de nuevo. Escurre en rejilla, sin taparlo, y mantenlo caliente a 60°C o más durante la breve segunda fritura de las papas. Registra los tiempos reales y no presentes la propuesta como prueba aprobada.",
+          "image_url": "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/paso-07.webp",
+          "image_alt": "Fish and chips: pescado rebozado y papas fritas: Fríe y verifica el pescado"
+        },
+        {
+          "title": "Dora las papas en la segunda fritura",
+          "content": "Sube el aceite a 190°C sin que humee. Fríe las papas ya precocidas en 2 tandas de unos 4 minutos, 8 minutos propuestos en total, hasta doradas y crujientes por fuera. Retira y deja escurrir 1 minuto en rejilla; reparte los últimos 2 g de sal. El mismo aceite entra en contacto con pescado y trigo, por lo que estas papas no son aptas para alguien que deba evitar esos alérgenos. No viertas agua ni papas húmedas sobre el aceite y deja que se enfríe antes de manejarlo.",
+          "image_url": "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/paso-08.webp",
+          "image_alt": "Fish and chips: pescado rebozado y papas fritas: Dora las papas en la segunda fritura"
+        },
+        {
+          "title": "Sirve y registra el rendimiento",
+          "content": "Divide en 4 porciones: 1 pieza de pescado y una cuarta parte de las papas. Sirve enseguida, sin salsa, limón ni otros acompañamientos dentro del cálculo. Para la estimación se proponen 100 g de aceite retenido en todo el lote, no los 1000 g del baño: no es una absorción medida ni una cifra exacta. Pesa sobrantes de mezcla, harina y producto para ajustar; el aceite usado restante no se cuenta como comido. Refrigera sobras cubiertas a 4°C o menos antes de 2 horas, o 1 hora por encima de 32°C, y consume en 2 días como propuesta prudente no ensayada. Recalienta a 74°C; la textura puede perderse.",
+          "image_url": "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/paso-09.webp",
+          "image_alt": "Fish and chips: pescado rebozado y papas fritas: Sirve y registra el rendimiento"
+        }
+      ],
+      "gallery": [
+        {
+          "url": "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/portada.webp",
+          "alt": "Una pieza de bacalao con rebozado dorado junto a papas fritas gruesas con piel, en plato blanco sin salsa ni adornos"
+        }
+      ],
+      "seo": {
+        "title": "Fish and chips: pescado rebozado y papas paso a paso",
+        "description": "Pescado blanco con rebozado de agua con gas y papas de doble fritura. Cuatro raciones propuestas, pasos claros y nutrición estimada.",
+        "image_alt": "Una pieza de bacalao con rebozado dorado junto a papas fritas gruesas con piel, en plato blanco sin salsa ni adornos",
+        "image_variants": [
+          "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/portada-1x1.webp",
+          "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/portada-4x3.webp",
+          "/recetas/receta-de-fish-and-chip-pescado-y-papas-fritas/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "¿El rebozado necesita cerveza o huevo?",
+            "a": "Esta fórmula usa agua con gas fría, harina y almidón. Cambiar por cerveza, huevo o harina con levadura altera ingredientes, alérgenos y cálculo; no se presenta como la misma receta."
+          },
+          {
+            "q": "¿Por qué se fríen las papas dos veces?",
+            "a": "La primera fritura propuesta a 160°C busca un interior tierno; la segunda a 190°C dora la superficie. Secar muy bien y trabajar en tandas evita salpicaduras y grandes caídas de temperatura. Los tiempos se ajustan al grosor real."
+          },
+          {
+            "q": "¿La nutrición incluye todo el aceite de la olla?",
+            "a": "No. La propuesta usa un baño de 1000 g, pero calcula 100 g retenidos en las cuatro porciones como hipótesis no medida. Cuenta toda la harina y el almidón como límite de formulación; pesa residuos y recalcula. No se afirma una absorción exacta."
+          }
+        ]
+      },
+      "content_html": "<p>Versión casera original de fish and chips con bacalao fresco, rebozado sin cerveza ni huevo y papas con piel de doble fritura. Propone cuatro porciones y 75 minutos, incluido el remojo. Cantidades, retención de aceite y tiempos pendientes de prueba de cocina.</p><p>Usa bacalao atlántico fresco y papas con piel para que las materias primas correspondan a las fichas nutricionales. Otro pescado o papas peladas requieren revisar el cálculo. El rebozado se hace con 30 g de harina para enharinar y 120 g en la mezcla, 50 g de almidón y 220 ml de agua con gas; no lleva cerveza ni huevo. Los 6 g de sal se reparten en 2 g para mezcla, 2 g para pescado y 2 g para papas. El remojo de 20 minutos está dentro de la preparación de 30; la cocción propuesta suma 10 calentamiento y ajustes + 14 primera fritura + 12 pescado + 8 segunda fritura + 1 escurrido = 45, total 75 minutos. Las tandas y tiempos pueden aumentar según la olla. La cifra de aceite ingerido es una hipótesis de 100 g para el lote, no un ensayo de absorción; el baño emplea 1000 g y el resto no se consume. Se cuenta toda la harina y el almidón como límite de formulación; los residuos reales se pesan y descuentan. Nutrición orientativa, sin análisis ni promesas de salud. Contiene pescado y trigo; verifica etiquetas del almidón y agua, y contaminación cruzada del aceite. Temperatura mínima del pescado 63°C, sobras 74°C. Frío a 4°C o menos, límites de 2 horas o 1 hora sobre 32°C; consumo en 2 días propuesto sin ensayo. No incluye salsas ni guarniciones extra.</p>"
+    }
+  ]
+}

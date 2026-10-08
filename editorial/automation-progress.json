@@ -519,13 +519,21 @@
         "editorial_status": "published",
         "position": 29,
         "eligibility": "validate_url_master_before_writing",
-        "status": "reserved",
-        "stage": "identidad",
+        "status": "in_progress",
+        "stage": "imágenes",
         "identity_qa": "PASS",
         "classification": "ELIGIBLE_EXISTING_CULINARY_CANDIDATE_OR_CORE_REBUILD",
         "languages_ready": 0,
         "images_ready": 0,
-        "source_not_reused": true
+        "source_not_reused": true,
+        "es_content_file": "editorial/receta-de-fish-and-chip-pescado-y-papas-fritas-20261008.json",
+        "image_manifest": "editorial/receta-de-fish-and-chip-pescado-y-papas-fritas-imagenes.json",
+        "nutrition_evidence_file": "editorial/receta-de-fish-and-chip-pescado-y-papas-fritas-usda-verificado-20261008.json",
+        "steps_sha256": "69b8f64efc952399695d9ce0ed4e11702f5363245094845c8714650587d265b6",
+        "original_images_required": 9,
+        "distinct_images_pending": 9,
+        "es_editorial_qa": "PASS_USDA_TRACEABILITY_EXPLICIT_OIL_RETENTION_ESTIMATE",
+        "next_action": "Generate and inspect nine original phases, then localize six languages."
       },
       {
         "id": "92f6fc6a-3b44-4422-b0ea-7a6ef257f8d7",
@@ -568,8 +576,8 @@
     "owner": "work-resume-1648240aa2fa-1791492779924",
     "status": "active",
     "acquired_at": "2026-10-08T20:52:59.919Z",
-    "renewed_at": "2026-10-08T21:13:04.704Z",
-    "expires_at": "2026-10-08T22:43:04.704Z",
+    "renewed_at": "2026-10-08T21:16:57.990Z",
+    "expires_at": "2026-10-08T22:46:57.990Z",
     "previous_owner": "work-recovery-cda9798a16b5",
     "reason": "Explicit user handover from blocked Work windows. Prior checkpoint19:34,last branch commit19:47, no live PR/Actions; retain11prepared and original frozen flan."
   },
@@ -651,7 +659,7 @@
     "next_action": "Finish remaining four: chocolateflan,fishandchips,tomatosauce,spinachtortilla. Preserve first11packages. Full15CI/deploy/atomicDB/cache/liveQA remains."
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z",
-  "updated_at": "2026-10-08T21:13:04.704Z",
+  "updated_at": "2026-10-08T21:16:57.990Z",
   "completed_batches": [
     {
       "id": "lote-02-20261008",
