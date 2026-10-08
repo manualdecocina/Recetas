@@ -30,7 +30,7 @@
     "id": "lote-02-20261008",
     "target": 15,
     "status": "in_progress",
-    "stage": "identity",
+    "stage": "images",
     "recipes": [
       {
         "id": "e47eac88-0649-4785-baf0-43b92dd2ec2e",
@@ -261,8 +261,18 @@
         "recipe_group_id": "675e919b-02fe-4900-95c4-d56849fa0cb7",
         "slug": "receta-de-cordon-bleu",
         "public_path": "/receta-de-cordon-bleu",
-        "stage": "identity_validation",
-        "status": "reserved"
+        "stage": "images",
+        "status": "in_progress",
+        "identity_qa": "PASS",
+        "classification": "ELIGIBLE_EXISTING_RECIPE_CANDIDATE",
+        "routes_file": "editorial/receta-de-cordon-bleu-rutas-20261008.json",
+        "es_content_file": "editorial/receta-de-cordon-bleu-20261008.json",
+        "image_manifest": "editorial/receta-de-cordon-bleu-imagenes.json",
+        "qa_file": "editorial/receta-de-cordon-bleu-qa-20261008.json",
+        "steps_sha256": "75e4f93e42dd49a3d1e0d12bb9007108dccf046547e49295f6cb97e5fe70243c",
+        "images_ready": 0,
+        "languages_ready": 1,
+        "distinct_images_pending": 7
       },
       {
         "id": "f1ba021c-866e-4b37-a577-485a64b44ae9",
@@ -363,14 +373,14 @@
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
   "progress_branch": "recetas/lote-02-20261008",
-  "last_checkpoint_at": "2026-10-08T09:38:21.291Z",
+  "last_checkpoint_at": "2026-10-08T09:43:29.120Z",
   "handoff": {
     "first_prepared_recipe": "como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada",
     "first_recipe_source": "editorial/como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada-20261008.json",
     "next_recipe": "receta-de-cordon-bleu",
     "batch_remaining_to_prepare": 4,
     "published_this_batch": 0,
-    "required_action": "Ratatouille complete 7/7 and guarded SQL. Validate cordon bleu identity and routes; continue remaining four. Lasaña chicken/mushroom REVIEW was resolved KEEP/REBUILD MODEL Recipe in docs/QA-BLOQUE-REVIEW-20260925-47.md: keep reservation, no replacement needed.",
+    "required_action": "Generate seven cordon bleu originals from frozen brief, derive eleven WebP and inspect, preserve all; then localize six languages. Eleven earlier recipes prepared, no publication yet.",
     "scope": "Preview only; production migration not executed."
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z"
