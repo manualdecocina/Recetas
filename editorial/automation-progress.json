@@ -30,7 +30,7 @@
     "id": "lote-02-20261008",
     "target": 15,
     "status": "in_progress",
-    "stage": "identity_validation",
+    "stage": "images",
     "recipes": [
       {
         "id": "e47eac88-0649-4785-baf0-43b92dd2ec2e",
@@ -98,8 +98,11 @@
         "recipe_group_id": "43e5b443-a225-49c7-b432-217b5df787be",
         "slug": "ensalada-de-pollo-con-aguacate-y-mango",
         "public_path": "/ensalada-de-pollo-con-aguacate-y-mango",
-        "stage": "identity_validation",
-        "status": "reserved"
+        "stage": "images",
+        "status": "in_progress",
+        "es_content_file": "editorial/ensalada-de-pollo-con-aguacate-y-mango-20261008.json",
+        "image_manifest": "editorial/ensalada-de-pollo-con-aguacate-y-mango-imagenes.json",
+        "images_ready": 0
       },
       {
         "id": "baa74cdf-fb7d-4607-9cb1-0a4e135f81b6",
@@ -194,7 +197,7 @@
     "owner": "continuous-run-20261008-0301",
     "status": "active",
     "acquired_at": "2026-10-08T03:02:36.623Z",
-    "expires_at": "2026-10-08T05:28:16.359Z",
+    "expires_at": "2026-10-08T05:31:41.016Z",
     "reason": "User explicitly requested continuous production; this worker owns the open batch and resumes rainbow juice."
   },
   "blockers": [],
@@ -243,7 +246,7 @@
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
   "progress_branch": "recetas/lote-02-20261008",
-  "last_checkpoint_at": "2026-10-08T03:58:16.359Z",
+  "last_checkpoint_at": "2026-10-08T04:01:41.016Z",
   "handoff": {
     "first_prepared_recipe": "como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada",
     "first_recipe_source": "editorial/como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada-20261008.json",
