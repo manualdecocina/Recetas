@@ -6,7 +6,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 LANGS = {'es', 'de', 'en', 'fr', 'it', 'ja', 'pt'}
 batch = json.loads((ROOT / 'editorial/lote-01-plan-v2-20261008.json').read_text())
-assert batch['publication_status'] == 'NOT_EXECUTED'
+assert batch['publication_status'] in {'NOT_EXECUTED', 'APPLIED_QA_PENDING', 'APPLIED_QA_PASSED'}
 assert len(batch['groups']) == 10
 assert len({g['recipe_group_id'] for g in batch['groups']}) == 10
 assert len({g['public_path'] for g in batch['groups']}) == 10
@@ -36,7 +36,7 @@ for g in batch['groups']:
     assert len(manifest['images']) == len(r['steps']) + 4
     assert len({im['archivo'] for im in manifest['images']}) == len(manifest['images'])
     for im in manifest['images']:
-        assert im['estado'] == 'pendiente' and im['muestra'] and set(im['alt_by_language']) == LANGS
+        assert im['estado'] in {'pendiente', 'entregada', 'subida'} and im['muestra'] and set(im['alt_by_language']) == LANGS
     for index, step in enumerate(r['steps']):
         im = manifest['images'][index + 4]
         assert im['paso'] == {'numero': index + 1, 'titulo': step['title']}
@@ -56,4 +56,4 @@ for g in batch['groups']:
     assert item['ai_owner_confirmation']['status'] == 'pending'
     images_count += len(manifest['images'])
 print(f'OK: 10 Spanish drafts, 80 frozen steps, {images_count} image slots, alts in 7 languages; USDA arithmetic verified.')
-print('Full recipe translations, final media, publication and public QA remain pending.')
+print('Frozen Spanish snapshots verified. Run validate-lote01-complete.py for the localized delivery; publication status is recorded in the batch manifest.')
