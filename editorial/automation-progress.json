@@ -30,7 +30,7 @@
     "id": "lote-02-20261008",
     "target": 15,
     "status": "in_progress",
-    "stage": "localization",
+    "stage": "identity",
     "recipes": [
       {
         "id": "e47eac88-0649-4785-baf0-43b92dd2ec2e",
@@ -321,8 +321,8 @@
         "recipe_group_id": "14f34319-2bdc-478f-b55b-909be0df6964",
         "slug": "receta-de-lasana-de-pollo-con-champinones",
         "public_path": "/receta-de-lasana-de-pollo-con-champinones",
-        "stage": "localization",
-        "status": "in_progress",
+        "stage": "prepared",
+        "status": "prepared_pending_batch_publication",
         "identity_qa": "PASS",
         "classification": "KEEP_REBUILD_RECIPE",
         "routes_file": "editorial/receta-de-lasana-de-pollo-con-champinones-rutas-20261008.json",
@@ -331,18 +331,20 @@
         "qa_file": "editorial/receta-de-lasana-de-pollo-con-champinones-qa-20261008.json",
         "steps_sha256": "b0a186f36b233efcac7e14151ae57158486ac90c80c5e410a28438af3bbee2cf",
         "images_ready": 12,
-        "languages_ready": 1,
+        "languages_ready": 7,
         "distinct_images_pending": 0,
         "image_originals": 8,
         "image_visual_qa": "PASS",
-        "localizations_pending": [
-          "de",
-          "en",
-          "fr",
-          "it",
-          "ja",
-          "pt"
-        ]
+        "localizations_pending": [],
+        "portuguese_locale": "pt-BR",
+        "editorial_qa": "PASS",
+        "localization_qa": "PASS",
+        "localization_qa_file": "editorial/receta-de-lasana-de-pollo-con-champinones-localization-qa-20261008.json",
+        "sql_file": "scripts/publish-receta-de-lasana-de-pollo-con-champinones-20261008.sql",
+        "package_sha256": "f52016963df441e43362b84fdb0488118a1fa0e969db6eded5b0d9294615e4f7",
+        "sql_sha256": "39bddbae8b1aff26230478c0e45b6f3b71a7b6c743e29aec96cdfe4adf97f8c8",
+        "publication_gate": "BATCH_15_COMPLETION_PENDING",
+        "media_commit": "c6add35b1b73f058b72cf898566e648b5743cff9"
       },
       {
         "id": "2ac6ac2b-ce9e-458c-b43d-93ea541ea20c",
@@ -353,11 +355,11 @@
         "status": "reserved"
       }
     ],
-    "current_recipe": "receta-de-lasana-de-pollo-con-champinones",
+    "current_recipe": "pollo-al-limon-y-miel-con-esparragos-asados",
     "started_at": "2026-10-08T02:27:18.812Z",
     "branch": "recetas/lote-02-20261008",
     "completed_recipes": 0,
-    "prepared_recipes": 13,
+    "prepared_recipes": 14,
     "published_recipes": 0,
     "selection_adjustments": [
       {
@@ -377,9 +379,9 @@
     "owner": "manual-continuation-20261008-bandeja-localization",
     "status": "active",
     "acquired_at": "2026-10-08T08:39:14.486Z",
-    "expires_at": "2026-10-08T11:32:39.257Z",
+    "expires_at": "2026-10-08T12:12:47.747Z",
     "reason": "Twelve prepared; completing last three before batch publication.",
-    "renewed_at": "2026-10-08T10:02:39.257Z"
+    "renewed_at": "2026-10-08T10:42:47.747Z"
   },
   "blockers": [],
   "debt": [],
@@ -427,14 +429,14 @@
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
   "progress_branch": "recetas/lote-02-20261008",
-  "last_checkpoint_at": "2026-10-08T10:34:57.557Z",
+  "last_checkpoint_at": "2026-10-08T10:42:47.747Z",
   "handoff": {
     "first_prepared_recipe": "como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada",
     "first_recipe_source": "editorial/como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada-20261008.json",
-    "next_recipe": "receta-de-lasana-de-pollo-con-champinones",
-    "batch_remaining_to_prepare": 2,
+    "next_recipe": "pollo-al-limon-y-miel-con-esparragos-asados",
+    "batch_remaining_to_prepare": 1,
     "published_this_batch": 0,
-    "required_action": "Complete six lasaña translations and SQL; thirteen earlier recipes prepared, batch remains unpublished.",
+    "required_action": "Complete final chicken lemon honey asparagus recipe, then publish all fifteen. Fourteen prepared, none published. No regeneration of completed recipes.",
     "scope": "Preview only; production migration not executed."
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z"
