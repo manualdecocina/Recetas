@@ -43,8 +43,99 @@
       "prompt": "Use case: photorealistic-natural. Culinary editorial photograph, single landscape4:3 image, soft daylight, clean pale kitchen, consistent white ceramics and steel equipment. No text, labels, logos, watermark, collage or extra ingredients. Saucepan removed from stove heat; immersion blender head completely submerged in softened red tomato sauce, sauce becoming smooth, no splashes, no closed jug blender, no herbs or extra ingredients."
     }
   ],
-  "images": [],
-  "originals": [],
-  "state": "IMAGES_PENDING",
-  "last_step_reuses_cover": true
+  "images": [
+    {
+      "asset": "portada.webp",
+      "path": "public/recetas/salsa-de-tomate-casera/portada.webp",
+      "public_path": "/recetas/salsa-de-tomate-casera/portada.webp",
+      "sha256": "bf9229c696050d2e73a2b10d672a91a2b015b0eaf53bbc9931bda04097cddbb0",
+      "bytes": 116092,
+      "width": 1280,
+      "height": 960,
+      "original": "portada.png",
+      "visual_qa": "PASS",
+      "git_blob_sha": "b38d4d195619944689d05c629c774d3121c4a69c"
+    },
+    {
+      "asset": "portada-1x1.webp",
+      "path": "public/recetas/salsa-de-tomate-casera/portada-1x1.webp",
+      "public_path": "/recetas/salsa-de-tomate-casera/portada-1x1.webp",
+      "sha256": "6870c48e75905d9843974f49ffb793c0e5440553cf442b76b71e63b70230452a",
+      "bytes": 114746,
+      "width": 1024,
+      "height": 1024,
+      "original": "portada.png",
+      "visual_qa": "PASS",
+      "git_blob_sha": "4b5f0e745c39b238f5acbbfde5880cfa6c5a4a63"
+    },
+    {
+      "asset": "portada-4x3.webp",
+      "path": "public/recetas/salsa-de-tomate-casera/portada-4x3.webp",
+      "public_path": "/recetas/salsa-de-tomate-casera/portada-4x3.webp",
+      "sha256": "bf9229c696050d2e73a2b10d672a91a2b015b0eaf53bbc9931bda04097cddbb0",
+      "bytes": 116092,
+      "width": 1280,
+      "height": 960,
+      "original": "portada.png",
+      "visual_qa": "PASS",
+      "git_blob_sha": "b38d4d195619944689d05c629c774d3121c4a69c"
+    },
+    {
+      "asset": "portada-16x9.webp",
+      "path": "public/recetas/salsa-de-tomate-casera/portada-16x9.webp",
+      "public_path": "/recetas/salsa-de-tomate-casera/portada-16x9.webp",
+      "sha256": "4d3b1816299c9c3591ff1648c7365534695be3a7b352a1db6ebf6f67197471b1",
+      "bytes": 105590,
+      "width": 1280,
+      "height": 720,
+      "original": "portada.png",
+      "visual_qa": "PASS",
+      "git_blob_sha": "08d8e3ec0c3877c96cf341b5b902ff1152e3bd49"
+    },
+    {
+      "asset": "paso-01.webp",
+      "path": "public/recetas/salsa-de-tomate-casera/paso-01.webp",
+      "public_path": "/recetas/salsa-de-tomate-casera/paso-01.webp",
+      "sha256": "c40e49659ea23bfa6c527af3b172c84e935223712fadaddf6abdc2216939abd7",
+      "bytes": 131264,
+      "width": 1200,
+      "height": 900,
+      "original": "paso-01.png",
+      "visual_qa": "PASS",
+      "git_blob_sha": "0215e4fb4fba391cee9a96dfb051f5cec3f2466f"
+    }
+  ],
+  "originals": [
+    {
+      "asset": "portada.png",
+      "path": "public/recetas/salsa-de-tomate-casera/originals/portada.png",
+      "sha256": "14790a01c975de9ecdccc47aaae0d6195bcd44b25a1eb37676c5a49f9aa7a290",
+      "bytes": 1987297,
+      "width": 1448,
+      "height": 1086,
+      "phase": 7,
+      "visual_qa": "PASS",
+      "source": "built-in ImageGen",
+      "git_blob_sha": "cabc780570d866f4ffbcdf4c5e71993b5e42d656"
+    },
+    {
+      "asset": "paso-01.png",
+      "path": "public/recetas/salsa-de-tomate-casera/originals/paso-01.png",
+      "sha256": "92f9d9d738658a9cada5e9c131a44ed31a6fb69bd1341fd059e5543a59beb399",
+      "bytes": 2198594,
+      "width": 1448,
+      "height": 1086,
+      "phase": 1,
+      "visual_qa": "PASS",
+      "source": "built-in ImageGen",
+      "git_blob_sha": "d7d1b7fd17132877e6278de8dc13457e92dcea61"
+    }
+  ],
+  "state": "IMAGES_IN_PROGRESS_2_OF7",
+  "last_step_reuses_cover": true,
+  "cover_variant_visual_qa": "PASS_FOOD_SURFACE_ALL4_RATIOS_SQUARE_RIM_CLOSE_CROP",
+  "visual_qa_details": {
+    "portada.png": "PASS: red sauce in white bowl, no added garnish; square close crop preserves sauce surface.",
+    "paso-01.png": "PASS: raw chopped tomatoes with skin and seeds, onion and garlic separately."
+  }
 }
