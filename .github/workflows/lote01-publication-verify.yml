@@ -26,7 +26,7 @@ jobs:
           python3 - <<'PY'
           import json, os, pathlib, time, urllib.parse, urllib.request, xml.etree.ElementTree as ET
           base = 'https://preview.manualdecocina.com'
-          secret = os.environ.get('REVALIDATE_SECRET')
+          secret = (os.environ.get('REVALIDATE_SECRET') or '').rstrip('\r\n')
           if not secret:
               raise SystemExit('REVALIDATE_SECRET is missing from GitHub secrets')
           request = urllib.request.Request(base + '/api/revalidate', data=b'{}', method='POST',
