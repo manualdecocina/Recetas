@@ -3,7 +3,7 @@
   "project": "Manual de Cocina",
   "repository": "manualdecocina/Recetas",
   "preview": "https://preview.manualdecocina.com",
-  "updated_date": "2026-10-08",
+  "updated_date": "2026-10-09",
   "automation_status": "enabled_user_requested_immediate_start",
   "automation_id": "6ac6fb673c5c8191b3435ae6074ddc63",
   "requested_schedule": "RRULE:FREQ=HOURLY",
@@ -31,7 +31,7 @@
     "branch": "recetas/lote-03-20261008",
     "target": 15,
     "status": "in_progress",
-    "stage": "identidad",
+    "stage": "imágenes",
     "current_recipe": "receta-de-fish-and-chip-pescado-y-papas-fritas",
     "started_at": "2026-10-08T12:39:02.511Z",
     "completed_recipes": 0,
@@ -573,13 +573,13 @@
   },
   "next_candidate_position": 32,
   "run_lease": {
-    "owner": "work-resume-1648240aa2fa-1791492779924",
+    "owner": "automation-continuation-20261009-fish-and-chips",
     "status": "active",
-    "acquired_at": "2026-10-08T20:52:59.919Z",
-    "renewed_at": "2026-10-08T21:16:57.990Z",
-    "expires_at": "2026-10-08T22:46:57.990Z",
-    "previous_owner": "work-recovery-cda9798a16b5",
-    "reason": "Explicit user handover from blocked Work windows. Prior checkpoint19:34,last branch commit19:47, no live PR/Actions; retain11prepared and original frozen flan."
+    "acquired_at": "2026-10-08T22:59:20.000Z",
+    "renewed_at": "2026-10-08T22:59:20.000Z",
+    "expires_at": "2026-10-09T00:29:20.000Z",
+    "previous_owner": "work-resume-1648240aa2fa-1791492779924",
+    "reason": "Expired lease reconciled at unchanged branch head; resume Fish and Chips from nine frozen image phases without rebuilding 12 prepared recipes."
   },
   "blockers": [],
   "debt": [
