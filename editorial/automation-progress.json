@@ -31,7 +31,7 @@
     "branch": "recetas/lote-03-20261008",
     "target": 15,
     "status": "in_progress",
-    "stage": "imágenes",
+    "stage": "localización",
     "current_recipe": "receta-de-ensalada-rusa",
     "started_at": "2026-10-08T12:39:02.511Z",
     "completed_recipes": 0,
@@ -329,11 +329,11 @@
         "position": 24,
         "eligibility": "validate_url_master_before_writing",
         "status": "in_progress",
-        "stage": "ES",
+        "stage": "imágenes",
         "identity_qa": "PASS",
         "classification": "ELIGIBLE_EXISTING_CULINARY_CANDIDATE_OR_CORE_REBUILD",
         "languages_ready": 1,
-        "images_ready": 0,
+        "images_ready": 12,
         "source_not_reused": true,
         "es_content_file": "editorial/receta-de-ensalada-rusa-20261008.json",
         "image_manifest": "editorial/receta-de-ensalada-rusa-imagenes.json",
@@ -341,9 +341,21 @@
         "steps_sha256": "d21ad29ef03fba0ce67083e5834f15d7859b510fd2559432b6905056c36852a8",
         "es_editorial_qa": "PASS_STRUCTURAL_COOKED_WEIGHT_USDA_TRACEABILITY",
         "original_images_required": 9,
-        "distinct_images_pending": 9,
+        "distinct_images_pending": 0,
         "expected_es_row_md5": "4d95b0114e28634f4cc3ab21ff569c69",
-        "next_action": "Generate9phases from frozenbrief; preserveoriginals/WebP/hashes, localize6. First7ready packages unchanged; published03=0."
+        "next_action": "Append6localizations to existinguniqueESsource; finalQA/guardedSQL. No batch03publication yet.",
+        "image_originals": 9,
+        "image_visual_qa": "PASS_ALL9_ORIGINALS",
+        "cover_variant_visual_qa": "PASS_WHOLE_BOWL_ALL_RATIOS",
+        "next_image": null,
+        "localizations_pending": [
+          "de",
+          "en",
+          "fr",
+          "it",
+          "ja",
+          "pt"
+        ]
       },
       {
         "id": "f706a385-30ef-4835-91e5-a24be0a9ac17",
@@ -471,9 +483,9 @@
     "owner": "manual-continuation-20261008-bandeja-localization",
     "status": "active",
     "acquired_at": "2026-10-08T08:39:14.486Z",
-    "expires_at": "2026-10-08T18:37:46.294Z",
-    "reason": "Samecontinuingproducer; first7ready7/7, ensalada-rusaESfrozen next9images.",
-    "renewed_at": "2026-10-08T17:07:46.294Z"
+    "expires_at": "2026-10-08T18:53:14.627Z",
+    "reason": "Same continuing producer; 7 ready, ensalada rusa9originals12WebP complete, next6localizations.",
+    "renewed_at": "2026-10-08T17:23:14.627Z"
   },
   "blockers": [],
   "debt": [
@@ -548,11 +560,12 @@
     "current_recipe": "receta-de-ensalada-rusa",
     "prepared_recipes": 6,
     "published_recipes": 0,
-    "next_action": "Generate9phases from frozenbrief; preserveoriginals/WebP/hashes, localize6. First7ready packages unchanged; published03=0.",
-    "checkpoint_at": "2026-10-08T16:22:46.289Z"
+    "next_action": "Append6localizations to existinguniqueESsource; finalQA/guardedSQL. No batch03publication yet.",
+    "checkpoint_at": "2026-10-08T16:22:46.289Z",
+    "stage": "localización"
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z",
-  "updated_at": "2026-10-08T17:07:46.294Z",
+  "updated_at": "2026-10-08T17:23:14.627Z",
   "completed_batches": [
     {
       "id": "lote-02-20261008",
