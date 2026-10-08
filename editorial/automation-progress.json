@@ -30,7 +30,7 @@
     "id": "lote-02-20261008",
     "target": 15,
     "status": "in_progress",
-    "stage": "PR/CI",
+    "stage": "deploy",
     "recipes": [
       {
         "id": "e47eac88-0649-4785-baf0-43b92dd2ec2e",
@@ -410,7 +410,16 @@
       "media_run": 37768286039,
       "initial_media_failure": "First eight recipes did not have original PNG files in GitHub; 65 original/rejected PNG files recovered, no media regenerated.",
       "correction": "65 original PNG files preserved with SHA256 metadata; strengthened original inventory, SHA256 and dimension checks",
-      "state": "CORRECTION_READY_RERUN_PENDING"
+      "state": "PASS",
+      "corrected_head": "700148969dac24be21ace69775735f38a842e5f1",
+      "corrected_quality_run": 37770109095,
+      "corrected_media_run": 37770109110
+    },
+    "merge": {
+      "pr": 90,
+      "sha": "e9b47890f046fd29b5e2bc55fd565a6343126bf2",
+      "head_sha": "700148969dac24be21ace69775735f38a842e5f1",
+      "merged_at": "2026-10-08T11:29:55.871Z"
     }
   },
   "next_candidate_position": 17,
@@ -468,7 +477,7 @@
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
   "progress_branch": "recetas/lote-02-20261008",
-  "last_checkpoint_at": "2026-10-08T11:25:45.705Z",
-  "handoff": "PR90 open; all15prepared/0published. Missing original PNG CI failure corrected by verified recovery (65 PNG files for first8), no WebP or content regenerated. Wait CI green then merge expected SHA; verify172deployed media hashes before atomic105rowDB publication; then revalidate/cache/globalQA.",
+  "last_checkpoint_at": "2026-10-08T11:29:55.871Z",
+  "handoff": "PR90 merged after CI passed. Waiting for observed HTTP200 and exact SHA256 for172 WebP on preview. DB has NOT been published; only execute batchSQL after all172 media pass.",
   "next_relay_requested_at": "2026-10-08T02:59:04Z"
 }
