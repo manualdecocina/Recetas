@@ -1,0 +1,2686 @@
+{
+  "schema_version": 1,
+  "batch": "lote-03-20261008",
+  "checked_at": "2026-10-08T12:39:02.511Z",
+  "base_main_sha": "84cc670ea4dcb676659ab7bf7fe35f232e0290a2",
+  "status": "PASS",
+  "authorization": "Existing nonarchived culinary candidates; owner authorized all eligible pre-migration backlog, no health/REVIEW/OUT/archived revival.",
+  "preservation_contract": "docs/CONTRATO-PRESERVACION-BASE-Y-CLASIFICACION-20261004.md",
+  "url_master_rule": "docs/URL-MASTER-MODEL.md: unequivocal editorial equivalence; preserve matching historical paths",
+  "classification_sources": [
+    "docs/CATALOG-FINAL-V1-20260924.md",
+    "docs/P2-CATALOG-20260924.md",
+    "docs/P1-SPANISH-20260924.md",
+    "editorial/automation-queue.json"
+  ],
+  "duplicate_decisions": [
+    {
+      "slug": "receta-empanadas-argentinas",
+      "decision": "Preserve approved CORE P2 identity5179; archived seed96ad remains archived and untouched."
+    },
+    {
+      "slug": "salsa-de-tomate-casera",
+      "decision": "Standalone sauce entity; distinct from spaghetti/rollo de carne recipes. Unmapped long ES alias is retained for later redirect review; no invented redirect."
+    }
+  ],
+  "new_draft_search": {
+    "current_tree_entries": 2494,
+    "current_tree_truncated": false,
+    "matching_editorial_sources": 0,
+    "github_search_completed": true,
+    "legacy_reconstruction_not_editorial_source": true
+  },
+  "database": {
+    "catalog": {
+      "de": 124,
+      "en": 124,
+      "es": 124,
+      "fr": 124,
+      "it": 124,
+      "ja": 124,
+      "pt": 124
+    },
+    "targets": [
+      {
+        "id": "f706a385-30ef-4835-91e5-a24be0a9ac17",
+        "slug": "receta-de-ensalada-de-frutos-rojos",
+        "language": "es",
+        "published": false,
+        "created_at": "2026-09-23T20:50:30.274106+00:00",
+        "source_url": "https://manualdecocina.com/receta-de-ensalada-de-frutos-rojos/",
+        "public_path": "/receta-de-ensalada-de-frutos-rojos",
+        "published_at": "2026-09-23T20:50:30.274106+00:00",
+        "recipe_group_id": "7151996b-f41e-4e46-932a-bd6584dc972c",
+        "editorial_status": "published",
+        "expected_row_md5": "880ec62424f98541f378f89f5d0a98ad"
+      },
+      {
+        "id": "d3f9ad59-7c1d-4f02-8fcc-7cc9224773d3",
+        "slug": "receta-de-ensalada-rusa",
+        "language": "es",
+        "published": false,
+        "created_at": "2026-09-23T20:50:30.190454+00:00",
+        "source_url": "https://manualdecocina.com/receta-de-ensalada-rusa/",
+        "public_path": "/receta-de-ensalada-rusa",
+        "published_at": "2026-09-23T20:50:30.190454+00:00",
+        "recipe_group_id": "b04d6480-7bc2-40c9-b7c7-84fdc0d3c507",
+        "editorial_status": "published",
+        "expected_row_md5": "4d95b0114e28634f4cc3ab21ff569c69"
+      },
+      {
+        "id": "00cef267-34b5-4bf9-9192-95dd250a102a",
+        "slug": "receta-empanadas-argentinas",
+        "language": "es",
+        "published": false,
+        "created_at": "2026-09-23T20:50:30.015432+00:00",
+        "source_url": "https://manualdecocina.com/receta-empanadas-argentinas/",
+        "public_path": "/receta-empanadas-argentinas",
+        "published_at": "2026-09-23T20:50:30.015432+00:00",
+        "recipe_group_id": "5179abcc-7963-45a9-9cd8-a8ed30a192ea",
+        "editorial_status": "published",
+        "expected_row_md5": "d86127f173cf98eaa4c42d3bbddc41d7"
+      },
+      {
+        "id": "f7df8371-8273-4b15-ba6e-32390a185395",
+        "slug": "lasana-de-calabacin-y-berenjena",
+        "language": "es",
+        "published": false,
+        "created_at": "2026-09-23T20:50:29.843053+00:00",
+        "source_url": "https://manualdecocina.com/lasana-de-calabacin-y-berenjena/",
+        "public_path": "/lasana-de-calabacin-y-berenjena",
+        "published_at": "2026-09-23T20:50:29.843053+00:00",
+        "recipe_group_id": "9a28dffd-cdde-4e20-a746-88336cb0a016",
+        "editorial_status": "published",
+        "expected_row_md5": "10e12c287c255ee35eac23e73a744d7e"
+      },
+      {
+        "id": "b344d1ea-972a-4382-8845-1e29f1704476",
+        "slug": "receta-de-tortilla-de-espinaca",
+        "language": "es",
+        "published": false,
+        "created_at": "2026-09-23T20:50:30.190454+00:00",
+        "source_url": "https://manualdecocina.com/receta-de-tortilla-de-espinaca/",
+        "public_path": "/receta-de-tortilla-de-espinaca",
+        "published_at": "2026-09-23T20:50:30.190454+00:00",
+        "recipe_group_id": "5ec0b548-d9d8-4c42-ab6c-70c32958aad9",
+        "editorial_status": "published",
+        "expected_row_md5": "11c048700a5a90fd665afa05b0c855dd"
+      },
+      {
+        "id": "1b078b4e-6544-41d5-8e9c-52e6d8fa3d8e",
+        "slug": "receta-de-pina-colada",
+        "language": "es",
+        "published": false,
+        "created_at": "2026-09-23T20:50:30.015432+00:00",
+        "source_url": "https://manualdecocina.com/receta-de-pina-colada/",
+        "public_path": "/receta-de-pina-colada",
+        "published_at": "2026-09-23T20:50:30.015432+00:00",
+        "recipe_group_id": "e91765d0-3d25-4790-a08f-89ce82446332",
+        "editorial_status": "published",
+        "expected_row_md5": "5f8c556c3a86ef05410b815dbff15f90"
+      },
+      {
+        "id": "2fd8b5c5-b708-407f-9437-ee0478f1f5b9",
+        "slug": "receta-de-okonomiyaki",
+        "language": "es",
+        "published": false,
+        "created_at": "2026-09-23T20:50:30.190454+00:00",
+        "source_url": "https://manualdecocina.com/receta-de-okonomiyaki/",
+        "public_path": "/receta-de-okonomiyaki",
+        "published_at": "2026-09-23T20:50:30.190454+00:00",
+        "recipe_group_id": "f4940b22-428f-4f14-a8f3-a2a208e8ac0e",
+        "editorial_status": "published",
+        "expected_row_md5": "8ee444b23668f2a1a2a67d726744951f"
+      },
+      {
+        "id": "9e04ccf3-9d8f-4823-a0fd-f371c6866acf",
+        "slug": "receta-de-hummus",
+        "language": "es",
+        "published": false,
+        "created_at": "2026-09-23T20:50:30.190454+00:00",
+        "source_url": "https://manualdecocina.com/receta-de-hummus/",
+        "public_path": "/receta-de-hummus",
+        "published_at": "2026-09-23T20:50:30.190454+00:00",
+        "recipe_group_id": "413ca438-81b2-42a0-8694-a14c1df6ef79",
+        "editorial_status": "published",
+        "expected_row_md5": "ac80098c1d3bdf5f3bd584bea93c4837"
+      },
+      {
+        "id": "ec187585-de34-4781-8353-9b8e3da68885",
+        "slug": "pollo-agridulce",
+        "language": "es",
+        "published": false,
+        "created_at": "2026-09-23T20:50:30.274106+00:00",
+        "source_url": "https://manualdecocina.com/pollo-agridulce/",
+        "public_path": "/pollo-agridulce",
+        "published_at": "2026-09-23T20:50:30.274106+00:00",
+        "recipe_group_id": "aad582c9-6559-4226-a297-8294c664d4c5",
+        "editorial_status": "published",
+        "expected_row_md5": "b58bdbcbe9ec4dccf664940793ebbb87"
+      },
+      {
+        "id": "e478ae0e-c138-4903-a079-e8a9bf5b194a",
+        "slug": "receta-de-flan-de-chocolate",
+        "language": "es",
+        "published": false,
+        "created_at": "2026-09-23T20:50:30.10332+00:00",
+        "source_url": "https://manualdecocina.com/receta-de-flan-de-chocolate/",
+        "public_path": "/receta-de-flan-de-chocolate",
+        "published_at": "2026-09-23T20:50:30.10332+00:00",
+        "recipe_group_id": "cafa20f9-b141-461e-b60a-ead32318e8fb",
+        "editorial_status": "published",
+        "expected_row_md5": "50a0374e20d460ff073fc77c99e8f3ec"
+      },
+      {
+        "id": "2f9fce85-8989-4252-af0d-3c24e046b1bc",
+        "slug": "receta-de-fish-and-chip-pescado-y-papas-fritas",
+        "language": "es",
+        "published": false,
+        "created_at": "2026-09-23T20:50:30.190454+00:00",
+        "source_url": "https://manualdecocina.com/receta-de-fish-and-chip-pescado-y-papas-fritas/",
+        "public_path": "/receta-de-fish-and-chip-pescado-y-papas-fritas",
+        "published_at": "2026-09-23T20:50:30.190454+00:00",
+        "recipe_group_id": "eafc642e-46c8-4c17-9815-9de6dd4809fc",
+        "editorial_status": "published",
+        "expected_row_md5": "968df9cec1adad1e598974f53af4da7c"
+      },
+      {
+        "id": "58aa988c-29f3-408c-8254-dd1be441cb04",
+        "slug": "receta-de-pizza-casera",
+        "language": "es",
+        "published": false,
+        "created_at": "2026-09-23T20:50:30.015432+00:00",
+        "source_url": "https://manualdecocina.com/receta-de-pizza-casera/",
+        "public_path": "/receta-de-pizza-casera",
+        "published_at": "2026-09-23T20:50:30.015432+00:00",
+        "recipe_group_id": "31a06fe5-2ae5-4451-8ee8-e53376013609",
+        "editorial_status": "published",
+        "expected_row_md5": "b7f0fd0719e91da3a4ea936fb873c16b"
+      },
+      {
+        "id": "a4919aee-1056-44c8-96e0-e82b8c4b3eea",
+        "slug": "receta-de-sopa-de-mariscos-con-mejillones",
+        "language": "es",
+        "published": false,
+        "created_at": "2026-09-23T20:50:30.10332+00:00",
+        "source_url": "https://manualdecocina.com/receta-de-sopa-de-mariscos-con-mejillones/",
+        "public_path": "/receta-de-sopa-de-mariscos-con-mejillones",
+        "published_at": "2026-09-23T20:50:30.10332+00:00",
+        "recipe_group_id": "03d0b017-8568-45d9-b993-87765956a71b",
+        "editorial_status": "published",
+        "expected_row_md5": "d519c7e604615cfc50584d04328676a4"
+      },
+      {
+        "id": "f16da00a-a43d-44ec-9aae-a061efd4efb0",
+        "slug": "como-preparar-queso",
+        "language": "es",
+        "published": false,
+        "created_at": "2026-09-23T20:50:30.274106+00:00",
+        "source_url": "https://manualdecocina.com/como-preparar-queso/",
+        "public_path": "/como-preparar-queso",
+        "published_at": "2026-09-23T20:50:30.274106+00:00",
+        "recipe_group_id": "37e555b3-fa4f-4309-84de-62d613fe25ab",
+        "editorial_status": "published",
+        "expected_row_md5": "66b5cc01578061609f255e18f6a5473f"
+      },
+      {
+        "id": "92f6fc6a-3b44-4422-b0ea-7a6ef257f8d7",
+        "slug": "salsa-de-tomate-casera",
+        "language": "es",
+        "published": false,
+        "created_at": "2026-09-23T20:50:30.371317+00:00",
+        "source_url": "https://manualdecocina.com/salsa-de-tomate-casera/",
+        "public_path": "/salsa-de-tomate-casera",
+        "published_at": "2026-09-23T20:50:30.371317+00:00",
+        "recipe_group_id": "26e35ba2-35e6-4066-b663-242746818f42",
+        "editorial_status": "published",
+        "expected_row_md5": "70159200981c2cb4cd75da5e33a9a80c"
+      }
+    ],
+    "group_sizes": [
+      {
+        "n": 1,
+        "recipe_group_id": "5ec0b548-d9d8-4c42-ab6c-70c32958aad9"
+      },
+      {
+        "n": 1,
+        "recipe_group_id": "9a28dffd-cdde-4e20-a746-88336cb0a016"
+      },
+      {
+        "n": 1,
+        "recipe_group_id": "b04d6480-7bc2-40c9-b7c7-84fdc0d3c507"
+      },
+      {
+        "n": 1,
+        "recipe_group_id": "7151996b-f41e-4e46-932a-bd6584dc972c"
+      },
+      {
+        "n": 1,
+        "recipe_group_id": "aad582c9-6559-4226-a297-8294c664d4c5"
+      },
+      {
+        "n": 1,
+        "recipe_group_id": "eafc642e-46c8-4c17-9815-9de6dd4809fc"
+      },
+      {
+        "n": 1,
+        "recipe_group_id": "03d0b017-8568-45d9-b993-87765956a71b"
+      },
+      {
+        "n": 1,
+        "recipe_group_id": "e91765d0-3d25-4790-a08f-89ce82446332"
+      },
+      {
+        "n": 1,
+        "recipe_group_id": "5179abcc-7963-45a9-9cd8-a8ed30a192ea"
+      },
+      {
+        "n": 1,
+        "recipe_group_id": "cafa20f9-b141-461e-b60a-ead32318e8fb"
+      },
+      {
+        "n": 1,
+        "recipe_group_id": "37e555b3-fa4f-4309-84de-62d613fe25ab"
+      },
+      {
+        "n": 1,
+        "recipe_group_id": "f4940b22-428f-4f14-a8f3-a2a208e8ac0e"
+      },
+      {
+        "n": 1,
+        "recipe_group_id": "26e35ba2-35e6-4066-b663-242746818f42"
+      },
+      {
+        "n": 1,
+        "recipe_group_id": "31a06fe5-2ae5-4451-8ee8-e53376013609"
+      },
+      {
+        "n": 1,
+        "recipe_group_id": "413ca438-81b2-42a0-8694-a14c1df6ef79"
+      }
+    ],
+    "recipe_collisions": null,
+    "content_page_collisions": null
+  },
+  "recipes": [
+    {
+      "id": "a4919aee-1056-44c8-96e0-e82b8c4b3eea",
+      "recipe_group_id": "03d0b017-8568-45d9-b993-87765956a71b",
+      "slug": "receta-de-sopa-de-mariscos-con-mejillones",
+      "public_path": "/receta-de-sopa-de-mariscos-con-mejillones",
+      "source_url": "https://manualdecocina.com/receta-de-sopa-de-mariscos-con-mejillones/",
+      "editorial_status": "published",
+      "position": 17,
+      "eligibility": "validate_url_master_before_writing",
+      "status": "not_started",
+      "routes": [
+        {
+          "language": "es",
+          "slug": "receta-de-sopa-de-mariscos-con-mejillones",
+          "public_path": "/receta-de-sopa-de-mariscos-con-mejillones",
+          "source": "preserved_existing_es",
+          "gsc": [
+            [
+              446,
+              "https://manualdecocina.com/receta-de-sopa-de-mariscos-con-mejillones/",
+              "/receta-de-sopa-de-mariscos-con-mejillones",
+              1,
+              108,
+              0.009300000000000001,
+              13.55,
+              "es",
+              "sí",
+              "unpublished / published",
+              "",
+              "",
+              "recipe: Receta de Sopa de Mariscos con Mejillones",
+              "/receta-de-sopa-de-mariscos-con-mejillones",
+              "PENDIENTE",
+              "P3",
+              "Entidad existente pero no activa. Comparar con clasificación previa antes de publicar o retirar."
+            ]
+          ]
+        },
+        {
+          "language": "de",
+          "slug": "rezept-fur-meeresfruchtesuppe-mit-muscheln",
+          "public_path": "/de/rezept-fur-meeresfruchtesuppe-mit-muscheln",
+          "source": "preserved_historical_gsc_equivalent_entity",
+          "gsc": [
+            [
+              246,
+              "https://manualdecocina.com/de/rezept-fur-meeresfruchtesuppe-mit-muscheln/",
+              "/de/rezept-fur-meeresfruchtesuppe-mit-muscheln",
+              4,
+              146,
+              0.0274,
+              29.42,
+              "de",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "SIN MAPEO",
+              "P3",
+              "Sin coincidencia exacta. Comparar con clasificación histórica y, solo si era entidad aceptada, resolver path/redirect técnico."
+            ]
+          ]
+        },
+        {
+          "language": "en",
+          "slug": "seafood-soup-with-mussels-recipe",
+          "public_path": "/en/seafood-soup-with-mussels-recipe",
+          "source": "new_localization_no_historical_match",
+          "gsc": []
+        },
+        {
+          "language": "fr",
+          "slug": "recette-de-soupe-de-fruits-de-mer-aux-moules",
+          "public_path": "/fr/recette-de-soupe-de-fruits-de-mer-aux-moules",
+          "source": "preserved_historical_gsc_equivalent_entity",
+          "gsc": [
+            [
+              110,
+              "https://manualdecocina.com/fr/recette-de-soupe-de-fruits-de-mer-aux-moules/",
+              "/fr/recette-de-soupe-de-fruits-de-mer-aux-moules",
+              14,
+              307,
+              0.045599999999999995,
+              10.24,
+              "fr",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "SIN MAPEO",
+              "P2",
+              "Sin coincidencia exacta. Comparar con clasificación histórica y, solo si era entidad aceptada, resolver path/redirect técnico."
+            ]
+          ]
+        },
+        {
+          "language": "it",
+          "slug": "ricetta-zuppa-di-mare-con-cozze",
+          "public_path": "/it/ricetta-zuppa-di-mare-con-cozze",
+          "source": "preserved_historical_gsc_equivalent_entity",
+          "gsc": [
+            [
+              574,
+              "https://manualdecocina.com/it/ricetta-zuppa-di-mare-con-cozze/",
+              "/it/ricetta-zuppa-di-mare-con-cozze",
+              0,
+              308,
+              0,
+              44.12,
+              "it",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "SIN MAPEO",
+              "P2",
+              "Sin coincidencia exacta. Comparar con clasificación histórica y, solo si era entidad aceptada, resolver path/redirect técnico."
+            ]
+          ]
+        },
+        {
+          "language": "ja",
+          "slug": "ムール貝入りシーフードスープのレシピ",
+          "public_path": "/ja/ムール貝入りシーフードスープのレシピ",
+          "source": "preserved_historical_gsc_equivalent_entity",
+          "gsc": [
+            [
+              98,
+              "https://manualdecocina.com/ja/ムール貝入りシーフードスープのレシピ/",
+              "/ja/ムール貝入りシーフードスープのレシピ",
+              16,
+              892,
+              0.0179,
+              3.62,
+              "ja",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "SIN MAPEO",
+              "P2",
+              "Sin coincidencia exacta. Comparar con clasificación histórica y, solo si era entidad aceptada, resolver path/redirect técnico."
+            ]
+          ]
+        },
+        {
+          "language": "pt",
+          "slug": "sopa-de-frutos-do-mar-com-mexilhoes",
+          "public_path": "/pt/sopa-de-frutos-do-mar-com-mexilhoes",
+          "source": "new_localization_no_historical_match",
+          "gsc": []
+        }
+      ]
+    },
+    {
+      "id": "00cef267-34b5-4bf9-9192-95dd250a102a",
+      "recipe_group_id": "5179abcc-7963-45a9-9cd8-a8ed30a192ea",
+      "slug": "receta-empanadas-argentinas",
+      "public_path": "/receta-empanadas-argentinas",
+      "source_url": "https://manualdecocina.com/receta-empanadas-argentinas/",
+      "editorial_status": "published",
+      "position": 18,
+      "eligibility": "validate_url_master_before_writing",
+      "status": "not_started",
+      "routes": [
+        {
+          "language": "es",
+          "slug": "receta-empanadas-argentinas",
+          "public_path": "/receta-empanadas-argentinas",
+          "source": "preserved_existing_es",
+          "gsc": [
+            [
+              452,
+              "https://manualdecocina.com/receta-empanadas-argentinas/",
+              "/receta-empanadas-argentinas",
+              1,
+              99,
+              0.0101,
+              9.46,
+              "es",
+              "sí",
+              "unpublished / published",
+              "",
+              "",
+              "recipe: Empanadas argentinas de carne",
+              "/receta-empanadas-argentinas",
+              "PENDIENTE",
+              "P3",
+              "Entidad existente pero no activa. Comparar con clasificación previa antes de publicar o retirar."
+            ]
+          ]
+        },
+        {
+          "language": "de",
+          "slug": "rezept-argentinische-empanadas",
+          "public_path": "/de/rezept-argentinische-empanadas",
+          "source": "preserved_historical_gsc_equivalent_entity",
+          "gsc": [
+            [
+              406,
+              "https://manualdecocina.com/de/rezept-argentinische-empanadas/",
+              "/de/rezept-argentinische-empanadas",
+              1,
+              296,
+              0.0034000000000000002,
+              63.63,
+              "de",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "SIN MAPEO",
+              "P2",
+              "Sin coincidencia exacta. Comparar con clasificación histórica y, solo si era entidad aceptada, resolver path/redirect técnico."
+            ]
+          ]
+        },
+        {
+          "language": "en",
+          "slug": "recipe-argentine-empanadas",
+          "public_path": "/en/recipe-argentine-empanadas",
+          "source": "preserved_historical_gsc_equivalent_entity",
+          "gsc": [
+            [
+              519,
+              "https://manualdecocina.com/en/recipe-argentine-empanadas/",
+              "/en/recipe-argentine-empanadas",
+              1,
+              16,
+              0.0625,
+              8.69,
+              "en",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "SIN MAPEO",
+              "P3",
+              "Sin coincidencia exacta. Comparar con clasificación histórica y, solo si era entidad aceptada, resolver path/redirect técnico."
+            ]
+          ]
+        },
+        {
+          "language": "fr",
+          "slug": "recette-argentine-empanadas",
+          "public_path": "/fr/recette-argentine-empanadas",
+          "source": "preserved_historical_gsc_equivalent_entity",
+          "gsc": [
+            [
+              313,
+              "https://manualdecocina.com/fr/recette-argentine-empanadas/",
+              "/fr/recette-argentine-empanadas",
+              2,
+              458,
+              0.0044,
+              60.58,
+              "fr",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "SIN MAPEO",
+              "P2",
+              "Sin coincidencia exacta. Comparar con clasificación histórica y, solo si era entidad aceptada, resolver path/redirect técnico."
+            ]
+          ]
+        },
+        {
+          "language": "it",
+          "slug": "ricetta-empanadas-argentine",
+          "public_path": "/it/ricetta-empanadas-argentine",
+          "source": "preserved_historical_gsc_equivalent_entity",
+          "gsc": [
+            [
+              368,
+              "https://manualdecocina.com/it/ricetta-empanadas-argentine/",
+              "/it/ricetta-empanadas-argentine",
+              1,
+              1612,
+              0.0006,
+              83.29,
+              "it",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "SIN MAPEO",
+              "P1",
+              "Sin coincidencia exacta. Comparar con clasificación histórica y, solo si era entidad aceptada, resolver path/redirect técnico."
+            ]
+          ]
+        },
+        {
+          "language": "ja",
+          "slug": "レシピ-アルゼンチン-エンパナーダ",
+          "public_path": "/ja/レシピ-アルゼンチン-エンパナーダ",
+          "source": "preserved_historical_gsc_equivalent_entity",
+          "gsc": [
+            [
+              195,
+              "https://manualdecocina.com/ja/レシピ-アルゼンチン-エンパナーダ/",
+              "/ja/レシピ-アルゼンチン-エンパナーダ",
+              6,
+              188,
+              0.0319,
+              14.94,
+              "ja",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "SIN MAPEO",
+              "P2",
+              "Sin coincidencia exacta. Comparar con clasificación histórica y, solo si era entidad aceptada, resolver path/redirect técnico."
+            ]
+          ]
+        },
+        {
+          "language": "pt",
+          "slug": "empanadas-argentinas-de-carne",
+          "public_path": "/pt/empanadas-argentinas-de-carne",
+          "source": "new_localization_no_historical_match",
+          "gsc": []
+        }
+      ]
+    },
+    {
+      "id": "58aa988c-29f3-408c-8254-dd1be441cb04",
+      "recipe_group_id": "31a06fe5-2ae5-4451-8ee8-e53376013609",
+      "slug": "receta-de-pizza-casera",
+      "public_path": "/receta-de-pizza-casera",
+      "source_url": "https://manualdecocina.com/receta-de-pizza-casera/",
+      "editorial_status": "published",
+      "position": 19,
+      "eligibility": "validate_url_master_before_writing",
+      "status": "not_started",
+      "routes": [
+        {
+          "language": "es",
+          "slug": "receta-de-pizza-casera",
+          "public_path": "/receta-de-pizza-casera",
+          "source": "preserved_existing_es",
+          "gsc": [
+            [
+              475,
+              "https://manualdecocina.com/receta-de-pizza-casera/",
+              "/receta-de-pizza-casera",
+              1,
+              69,
+              0.014499999999999999,
+              10.64,
+              "es",
+              "sí",
+              "unpublished / published",
+              "",
+              "",
+              "recipe: Receta de Pizza casera",
+              "/receta-de-pizza-casera",
+              "PENDIENTE",
+              "P3",
+              "Entidad existente pero no activa. Comparar con clasificación previa antes de publicar o retirar."
+            ]
+          ]
+        },
+        {
+          "language": "de",
+          "slug": "hausgemachtes-pizza-rezept",
+          "public_path": "/de/hausgemachtes-pizza-rezept",
+          "source": "preserved_historical_gsc_equivalent_entity",
+          "gsc": [
+            [
+              629,
+              "https://manualdecocina.com/de/hausgemachtes-pizza-rezept/",
+              "/de/hausgemachtes-pizza-rezept",
+              0,
+              144,
+              0,
+              62.35,
+              "de",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "SIN MAPEO",
+              "P3",
+              "Sin coincidencia exacta. Comparar con clasificación histórica y, solo si era entidad aceptada, resolver path/redirect técnico."
+            ]
+          ]
+        },
+        {
+          "language": "en",
+          "slug": "homemade-pizza-recipe",
+          "public_path": "/en/homemade-pizza-recipe",
+          "source": "new_localization_no_historical_match",
+          "gsc": []
+        },
+        {
+          "language": "fr",
+          "slug": "recette-de-pizza-maison",
+          "public_path": "/fr/recette-de-pizza-maison",
+          "source": "preserved_historical_gsc_equivalent_entity",
+          "gsc": [
+            [
+              965,
+              "https://manualdecocina.com/fr/recette-de-pizza-maison/",
+              "/fr/recette-de-pizza-maison",
+              0,
+              9,
+              0,
+              4.89,
+              "fr",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "SIN MAPEO",
+              "P3",
+              "Sin coincidencia exacta. Comparar con clasificación histórica y, solo si era entidad aceptada, resolver path/redirect técnico."
+            ]
+          ]
+        },
+        {
+          "language": "it",
+          "slug": "ricetta-pizza-fatta-in-casa",
+          "public_path": "/it/ricetta-pizza-fatta-in-casa",
+          "source": "preserved_historical_gsc_equivalent_entity",
+          "gsc": [
+            [
+              308,
+              "https://manualdecocina.com/it/ricetta-pizza-fatta-in-casa/",
+              "/it/ricetta-pizza-fatta-in-casa",
+              2,
+              614,
+              0.0033,
+              58.46,
+              "it",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "SIN MAPEO",
+              "P2",
+              "Sin coincidencia exacta. Comparar con clasificación histórica y, solo si era entidad aceptada, resolver path/redirect técnico."
+            ]
+          ]
+        },
+        {
+          "language": "ja",
+          "slug": "手作りピザのレシピ",
+          "public_path": "/ja/手作りピザのレシピ",
+          "source": "preserved_historical_gsc_equivalent_entity",
+          "gsc": [
+            [
+              502,
+              "https://manualdecocina.com/ja/手作りピザのレシピ/",
+              "/ja/手作りピザのレシピ",
+              1,
+              35,
+              0.0286,
+              11.83,
+              "ja",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "SIN MAPEO",
+              "P3",
+              "Sin coincidencia exacta. Comparar con clasificación histórica y, solo si era entidad aceptada, resolver path/redirect técnico."
+            ]
+          ]
+        },
+        {
+          "language": "pt",
+          "slug": "receita-de-pizza-caseira",
+          "public_path": "/pt/receita-de-pizza-caseira",
+          "source": "new_localization_no_historical_match",
+          "gsc": []
+        }
+      ]
+    },
+    {
+      "id": "f7df8371-8273-4b15-ba6e-32390a185395",
+      "recipe_group_id": "9a28dffd-cdde-4e20-a746-88336cb0a016",
+      "slug": "lasana-de-calabacin-y-berenjena",
+      "public_path": "/lasana-de-calabacin-y-berenjena",
+      "source_url": "https://manualdecocina.com/lasana-de-calabacin-y-berenjena/",
+      "editorial_status": "published",
+      "position": 20,
+      "eligibility": "validate_url_master_before_writing",
+      "status": "not_started",
+      "routes": [
+        {
+          "language": "es",
+          "slug": "lasana-de-calabacin-y-berenjena",
+          "public_path": "/lasana-de-calabacin-y-berenjena",
+          "source": "preserved_existing_es",
+          "gsc": [
+            [
+              495,
+              "https://manualdecocina.com/lasana-de-calabacin-y-berenjena/",
+              "/lasana-de-calabacin-y-berenjena",
+              1,
+              44,
+              0.0227,
+              21.57,
+              "es",
+              "sí",
+              "unpublished / published",
+              "",
+              "",
+              "recipe: Receta de Lasaña de calabacín y berenjena",
+              "/lasana-de-calabacin-y-berenjena",
+              "PENDIENTE",
+              "P3",
+              "Entidad existente pero no activa. Comparar con clasificación previa antes de publicar o retirar."
+            ]
+          ]
+        },
+        {
+          "language": "de",
+          "slug": "zucchini-auberginen-lasagne",
+          "public_path": "/de/zucchini-auberginen-lasagne",
+          "source": "preserved_historical_gsc_equivalent_entity",
+          "gsc": [
+            [
+              580,
+              "https://manualdecocina.com/de/zucchini-auberginen-lasagne/",
+              "/de/zucchini-auberginen-lasagne",
+              0,
+              277,
+              0,
+              74.51,
+              "de",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "SIN MAPEO",
+              "P2",
+              "Sin coincidencia exacta. Comparar con clasificación histórica y, solo si era entidad aceptada, resolver path/redirect técnico."
+            ]
+          ]
+        },
+        {
+          "language": "en",
+          "slug": "zucchini-and-eggplant-lasagna",
+          "public_path": "/en/zucchini-and-eggplant-lasagna",
+          "source": "preserved_historical_gsc_equivalent_entity",
+          "gsc": [
+            [
+              854,
+              "https://manualdecocina.com/en/zucchini-and-eggplant-lasagna/",
+              "/en/zucchini-and-eggplant-lasagna",
+              0,
+              24,
+              0,
+              31.83,
+              "en",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "SIN MAPEO",
+              "P3",
+              "Sin coincidencia exacta. Comparar con clasificación histórica y, solo si era entidad aceptada, resolver path/redirect técnico."
+            ]
+          ]
+        },
+        {
+          "language": "fr",
+          "slug": "lasagne-aux-courgettes-et-aubergines",
+          "public_path": "/fr/lasagne-aux-courgettes-et-aubergines",
+          "source": "preserved_historical_gsc_equivalent_entity",
+          "gsc": [
+            [
+              582,
+              "https://manualdecocina.com/fr/lasagne-aux-courgettes-et-aubergines/",
+              "/fr/lasagne-aux-courgettes-et-aubergines",
+              0,
+              262,
+              0,
+              70.69,
+              "fr",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "SIN MAPEO",
+              "P2",
+              "Sin coincidencia exacta. Comparar con clasificación histórica y, solo si era entidad aceptada, resolver path/redirect técnico."
+            ]
+          ]
+        },
+        {
+          "language": "it",
+          "slug": "lasagne-di-zucchine-e-melanzane",
+          "public_path": "/it/lasagne-di-zucchine-e-melanzane",
+          "source": "preserved_historical_gsc_equivalent_entity",
+          "gsc": [
+            [
+              314,
+              "https://manualdecocina.com/it/lasagne-di-zucchine-e-melanzane/",
+              "/it/lasagne-di-zucchine-e-melanzane",
+              2,
+              413,
+              0.0048,
+              37.46,
+              "it",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "SIN MAPEO",
+              "P2",
+              "Sin coincidencia exacta. Comparar con clasificación histórica y, solo si era entidad aceptada, resolver path/redirect técnico."
+            ]
+          ]
+        },
+        {
+          "language": "ja",
+          "slug": "ズッキーニとナスのラザニア",
+          "public_path": "/ja/ズッキーニとナスのラザニア",
+          "source": "preserved_historical_gsc_equivalent_entity",
+          "gsc": [
+            [
+              68,
+              "https://manualdecocina.com/ja/ズッキーニとナスのラザニア/",
+              "/ja/ズッキーニとナスのラザニア",
+              25,
+              427,
+              0.058499999999999996,
+              4.3,
+              "ja",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "SIN MAPEO",
+              "P1",
+              "Sin coincidencia exacta. Comparar con clasificación histórica y, solo si era entidad aceptada, resolver path/redirect técnico."
+            ]
+          ]
+        },
+        {
+          "language": "pt",
+          "slug": "lasanha-de-abobrinha-e-berinjela",
+          "public_path": "/pt/lasanha-de-abobrinha-e-berinjela",
+          "source": "new_localization_no_historical_match",
+          "gsc": []
+        }
+      ]
+    },
+    {
+      "id": "9e04ccf3-9d8f-4823-a0fd-f371c6866acf",
+      "recipe_group_id": "413ca438-81b2-42a0-8694-a14c1df6ef79",
+      "slug": "receta-de-hummus",
+      "public_path": "/receta-de-hummus",
+      "source_url": "https://manualdecocina.com/receta-de-hummus/",
+      "editorial_status": "published",
+      "position": 21,
+      "eligibility": "validate_url_master_before_writing",
+      "status": "not_started",
+      "routes": [
+        {
+          "language": "es",
+          "slug": "receta-de-hummus",
+          "public_path": "/receta-de-hummus",
+          "source": "preserved_existing_es",
+          "gsc": [
+            [
+              530,
+              "https://manualdecocina.com/receta-de-hummus/",
+              "/receta-de-hummus",
+              0,
+              1221,
+              0,
+              76.69,
+              "es",
+              "sí",
+              "unpublished / published",
+              "",
+              "",
+              "recipe: Receta de Hummus",
+              "/receta-de-hummus",
+              "PENDIENTE",
+              "P1",
+              "Entidad existente pero no activa. Comparar con clasificación previa antes de publicar o retirar."
+            ]
+          ]
+        },
+        {
+          "language": "de",
+          "slug": "hummus-rezept",
+          "public_path": "/de/hummus-rezept",
+          "source": "preserved_historical_gsc_equivalent_entity",
+          "gsc": [
+            [
+              769,
+              "https://manualdecocina.com/de/hummus-rezept/",
+              "/de/hummus-rezept",
+              0,
+              46,
+              0,
+              59.67,
+              "de",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "SIN MAPEO",
+              "P3",
+              "Sin coincidencia exacta. Comparar con clasificación histórica y, solo si era entidad aceptada, resolver path/redirect técnico."
+            ]
+          ]
+        },
+        {
+          "language": "en",
+          "slug": "hummus-recipe",
+          "public_path": "/en/hummus-recipe",
+          "source": "preserved_historical_gsc_equivalent_entity",
+          "gsc": [
+            [
+              675,
+              "https://manualdecocina.com/en/hummus-recipe/",
+              "/en/hummus-recipe",
+              0,
+              92,
+              0,
+              88.84,
+              "en",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "SIN MAPEO",
+              "P3",
+              "Sin coincidencia exacta. Comparar con clasificación histórica y, solo si era entidad aceptada, resolver path/redirect técnico."
+            ]
+          ]
+        },
+        {
+          "language": "fr",
+          "slug": "recette-de-houmous",
+          "public_path": "/fr/recette-de-houmous",
+          "source": "new_localization_no_historical_match",
+          "gsc": []
+        },
+        {
+          "language": "it",
+          "slug": "ricetta-dellhummus",
+          "public_path": "/it/ricetta-dellhummus",
+          "source": "preserved_historical_gsc_equivalent_entity",
+          "gsc": [
+            [
+              381,
+              "https://manualdecocina.com/it/ricetta-dellhummus/",
+              "/it/ricetta-dellhummus",
+              1,
+              1042,
+              0.001,
+              78.24,
+              "it",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "SIN MAPEO",
+              "P1",
+              "Sin coincidencia exacta. Comparar con clasificación histórica y, solo si era entidad aceptada, resolver path/redirect técnico."
+            ]
+          ]
+        },
+        {
+          "language": "ja",
+          "slug": "フムスのレシピ",
+          "public_path": "/ja/フムスのレシピ",
+          "source": "new_localization_no_historical_match",
+          "gsc": []
+        },
+        {
+          "language": "pt",
+          "slug": "receita-de-homus",
+          "public_path": "/pt/receita-de-homus",
+          "source": "new_localization_no_historical_match",
+          "gsc": []
+        }
+      ]
+    },
+    {
+      "id": "1b078b4e-6544-41d5-8e9c-52e6d8fa3d8e",
+      "recipe_group_id": "e91765d0-3d25-4790-a08f-89ce82446332",
+      "slug": "receta-de-pina-colada",
+      "public_path": "/receta-de-pina-colada",
+      "source_url": "https://manualdecocina.com/receta-de-pina-colada/",
+      "editorial_status": "published",
+      "position": 22,
+      "eligibility": "validate_url_master_before_writing",
+      "status": "not_started",
+      "routes": [
+        {
+          "language": "es",
+          "slug": "receta-de-pina-colada",
+          "public_path": "/receta-de-pina-colada",
+          "source": "preserved_existing_es",
+          "gsc": [
+            [
+              532,
+              "https://manualdecocina.com/receta-de-pina-colada/",
+              "/receta-de-pina-colada",
+              0,
+              952,
+              0,
+              68.4,
+              "es",
+              "sí",
+              "unpublished / published",
+              "",
+              "",
+              "recipe: Receta de piña colada",
+              "/receta-de-pina-colada",
+              "PENDIENTE",
+              "P2",
+              "Entidad existente pero no activa. Comparar con clasificación previa antes de publicar o retirar."
+            ]
+          ]
+        },
+        {
+          "language": "de",
+          "slug": "pina-colada-rezept",
+          "public_path": "/de/pina-colada-rezept",
+          "source": "preserved_historical_gsc_equivalent_entity",
+          "gsc": [
+            [
+              645,
+              "https://manualdecocina.com/de/pina-colada-rezept/",
+              "/de/pina-colada-rezept",
+              0,
+              124,
+              0,
+              67.47,
+              "de",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "SIN MAPEO",
+              "P3",
+              "Sin coincidencia exacta. Comparar con clasificación histórica y, solo si era entidad aceptada, resolver path/redirect técnico."
+            ]
+          ]
+        },
+        {
+          "language": "en",
+          "slug": "pina-colada-recipe",
+          "public_path": "/en/pina-colada-recipe",
+          "source": "preserved_historical_gsc_equivalent_entity",
+          "gsc": [
+            [
+              837,
+              "https://manualdecocina.com/en/pina-colada-recipe/",
+              "/en/pina-colada-recipe",
+              0,
+              27,
+              0,
+              70.37,
+              "en",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "SIN MAPEO",
+              "P3",
+              "Sin coincidencia exacta. Comparar con clasificación histórica y, solo si era entidad aceptada, resolver path/redirect técnico."
+            ]
+          ]
+        },
+        {
+          "language": "fr",
+          "slug": "recette-pina-colada",
+          "public_path": "/fr/recette-pina-colada",
+          "source": "preserved_historical_gsc_equivalent_entity",
+          "gsc": [
+            [
+              655,
+              "https://manualdecocina.com/fr/recette-pina-colada/",
+              "/fr/recette-pina-colada",
+              0,
+              110,
+              0,
+              2.87,
+              "fr",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "SIN MAPEO",
+              "P3",
+              "Sin coincidencia exacta. Comparar con clasificación histórica y, solo si era entidad aceptada, resolver path/redirect técnico."
+            ]
+          ]
+        },
+        {
+          "language": "it",
+          "slug": "ricetta-della-pina-colada",
+          "public_path": "/it/ricetta-della-pina-colada",
+          "source": "preserved_historical_gsc_equivalent_entity",
+          "gsc": [
+            [
+              533,
+              "https://manualdecocina.com/it/ricetta-della-pina-colada/",
+              "/it/ricetta-della-pina-colada",
+              0,
+              944,
+              0,
+              24.51,
+              "it",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "SIN MAPEO",
+              "P2",
+              "Sin coincidencia exacta. Comparar con clasificación histórica y, solo si era entidad aceptada, resolver path/redirect técnico."
+            ]
+          ]
+        },
+        {
+          "language": "ja",
+          "slug": "ピニャコラーダのレシピ",
+          "public_path": "/ja/ピニャコラーダのレシピ",
+          "source": "preserved_historical_gsc_equivalent_entity",
+          "gsc": [
+            [
+              395,
+              "https://manualdecocina.com/ja/ピニャコラーダのレシピ/",
+              "/ja/ピニャコラーダのレシピ",
+              1,
+              481,
+              0.0021,
+              58.86,
+              "ja",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "SIN MAPEO",
+              "P2",
+              "Sin coincidencia exacta. Comparar con clasificación histórica y, solo si era entidad aceptada, resolver path/redirect técnico."
+            ]
+          ]
+        },
+        {
+          "language": "pt",
+          "slug": "receita-de-pina-colada",
+          "public_path": "/pt/receita-de-pina-colada",
+          "source": "new_localization_no_historical_match",
+          "gsc": []
+        }
+      ]
+    },
+    {
+      "id": "2fd8b5c5-b708-407f-9437-ee0478f1f5b9",
+      "recipe_group_id": "f4940b22-428f-4f14-a8f3-a2a208e8ac0e",
+      "slug": "receta-de-okonomiyaki",
+      "public_path": "/receta-de-okonomiyaki",
+      "source_url": "https://manualdecocina.com/receta-de-okonomiyaki/",
+      "editorial_status": "published",
+      "position": 23,
+      "eligibility": "validate_url_master_before_writing",
+      "status": "not_started",
+      "routes": [
+        {
+          "language": "es",
+          "slug": "receta-de-okonomiyaki",
+          "public_path": "/receta-de-okonomiyaki",
+          "source": "preserved_existing_es",
+          "gsc": [
+            [
+              537,
+              "https://manualdecocina.com/receta-de-okonomiyaki/",
+              "/receta-de-okonomiyaki",
+              0,
+              759,
+              0,
+              70.44,
+              "es",
+              "sí",
+              "unpublished / published",
+              "",
+              "",
+              "recipe: Receta de Okonomiyaki",
+              "/receta-de-okonomiyaki",
+              "PENDIENTE",
+              "P2",
+              "Entidad existente pero no activa. Comparar con clasificación previa antes de publicar o retirar."
+            ]
+          ]
+        },
+        {
+          "language": "de",
+          "slug": "okonomiyaki-rezept",
+          "public_path": "/de/okonomiyaki-rezept",
+          "source": "preserved_historical_gsc_equivalent_entity",
+          "gsc": [
+            [
+              468,
+              "https://manualdecocina.com/de/okonomiyaki-rezept/",
+              "/de/okonomiyaki-rezept",
+              1,
+              74,
+              0.013500000000000002,
+              25.01,
+              "de",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "SIN MAPEO",
+              "P3",
+              "Sin coincidencia exacta. Comparar con clasificación histórica y, solo si era entidad aceptada, resolver path/redirect técnico."
+            ]
+          ]
+        },
+        {
+          "language": "en",
+          "slug": "okonomiyaki-recipe",
+          "public_path": "/en/okonomiyaki-recipe",
+          "source": "preserved_historical_gsc_equivalent_entity",
+          "gsc": [
+            [
+              868,
+              "https://manualdecocina.com/en/okonomiyaki-recipe/",
+              "/en/okonomiyaki-recipe",
+              0,
+              22,
+              0,
+              49.82,
+              "en",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "SIN MAPEO",
+              "P3",
+              "Sin coincidencia exacta. Comparar con clasificación histórica y, solo si era entidad aceptada, resolver path/redirect técnico."
+            ]
+          ]
+        },
+        {
+          "language": "fr",
+          "slug": "recette-okonomiyaki",
+          "public_path": "/fr/recette-okonomiyaki",
+          "source": "preserved_historical_gsc_equivalent_entity",
+          "gsc": [
+            [
+              538,
+              "https://manualdecocina.com/fr/recette-okonomiyaki/",
+              "/fr/recette-okonomiyaki",
+              0,
+              750,
+              0,
+              80.73,
+              "fr",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "SIN MAPEO",
+              "P2",
+              "Sin coincidencia exacta. Comparar con clasificación histórica y, solo si era entidad aceptada, resolver path/redirect técnico."
+            ]
+          ]
+        },
+        {
+          "language": "it",
+          "slug": "okonomiyaki-ricetta",
+          "public_path": "/it/okonomiyaki-ricetta",
+          "source": "preserved_historical_gsc_equivalent_entity",
+          "gsc": [
+            [
+              378,
+              "https://manualdecocina.com/it/okonomiyaki-ricetta/",
+              "/it/okonomiyaki-ricetta",
+              1,
+              1095,
+              0.0009,
+              65.91,
+              "it",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "SIN MAPEO",
+              "P1",
+              "Sin coincidencia exacta. Comparar con clasificación histórica y, solo si era entidad aceptada, resolver path/redirect técnico."
+            ]
+          ]
+        },
+        {
+          "language": "ja",
+          "slug": "お好み焼きのレシピ",
+          "public_path": "/ja/お好み焼きのレシピ",
+          "source": "preserved_historical_gsc_equivalent_entity",
+          "gsc": [
+            [
+              462,
+              "https://manualdecocina.com/ja/お好み焼きのレシピ/",
+              "/ja/お好み焼きのレシピ",
+              1,
+              89,
+              0.011200000000000002,
+              5,
+              "ja",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "SIN MAPEO",
+              "P3",
+              "Sin coincidencia exacta. Comparar con clasificación histórica y, solo si era entidad aceptada, resolver path/redirect técnico."
+            ]
+          ]
+        },
+        {
+          "language": "pt",
+          "slug": "receita-de-okonomiyaki",
+          "public_path": "/pt/receita-de-okonomiyaki",
+          "source": "new_localization_no_historical_match",
+          "gsc": []
+        }
+      ]
+    },
+    {
+      "id": "d3f9ad59-7c1d-4f02-8fcc-7cc9224773d3",
+      "recipe_group_id": "b04d6480-7bc2-40c9-b7c7-84fdc0d3c507",
+      "slug": "receta-de-ensalada-rusa",
+      "public_path": "/receta-de-ensalada-rusa",
+      "source_url": "https://manualdecocina.com/receta-de-ensalada-rusa/",
+      "editorial_status": "published",
+      "position": 24,
+      "eligibility": "validate_url_master_before_writing",
+      "status": "not_started",
+      "routes": [
+        {
+          "language": "es",
+          "slug": "receta-de-ensalada-rusa",
+          "public_path": "/receta-de-ensalada-rusa",
+          "source": "preserved_existing_es",
+          "gsc": [
+            [
+              540,
+              "https://manualdecocina.com/receta-de-ensalada-rusa/",
+              "/receta-de-ensalada-rusa",
+              0,
+              650,
+              0,
+              14.87,
+              "es",
+              "sí",
+              "unpublished / published",
+              "",
+              "",
+              "recipe: Receta de Ensalada Rusa",
+              "/receta-de-ensalada-rusa",
+              "PENDIENTE",
+              "P2",
+              "Entidad existente pero no activa. Comparar con clasificación previa antes de publicar o retirar."
+            ]
+          ]
+        },
+        {
+          "language": "de",
+          "slug": "russisches-salat-rezept",
+          "public_path": "/de/russisches-salat-rezept",
+          "source": "preserved_historical_gsc_equivalent_entity",
+          "gsc": [
+            [
+              204,
+              "https://manualdecocina.com/de/russisches-salat-rezept/",
+              "/de/russisches-salat-rezept",
+              5,
+              953,
+              0.0052,
+              45.59,
+              "de",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "SIN MAPEO",
+              "P2",
+              "Sin coincidencia exacta. Comparar con clasificación histórica y, solo si era entidad aceptada, resolver path/redirect técnico."
+            ]
+          ]
+        },
+        {
+          "language": "en",
+          "slug": "russian-salad-recipe",
+          "public_path": "/en/russian-salad-recipe",
+          "source": "preserved_historical_gsc_equivalent_entity",
+          "gsc": [
+            [
+              255,
+              "https://manualdecocina.com/en/russian-salad-recipe/",
+              "/en/russian-salad-recipe",
+              3,
+              1307,
+              0.0023,
+              9.36,
+              "en",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "SIN MAPEO",
+              "P1",
+              "Sin coincidencia exacta. Comparar con clasificación histórica y, solo si era entidad aceptada, resolver path/redirect técnico."
+            ]
+          ]
+        },
+        {
+          "language": "fr",
+          "slug": "recette-de-salade-russe",
+          "public_path": "/fr/recette-de-salade-russe",
+          "source": "preserved_historical_gsc_equivalent_entity",
+          "gsc": [
+            [
+              137,
+              "https://manualdecocina.com/fr/recette-de-salade-russe/",
+              "/fr/recette-de-salade-russe",
+              10,
+              1156,
+              0.0087,
+              61.19,
+              "fr",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "SIN MAPEO",
+              "P1",
+              "Sin coincidencia exacta. Comparar con clasificación histórica y, solo si era entidad aceptada, resolver path/redirect técnico."
+            ]
+          ]
+        },
+        {
+          "language": "it",
+          "slug": "ricetta-insalata-russa",
+          "public_path": "/it/ricetta-insalata-russa",
+          "source": "preserved_historical_gsc_equivalent_entity",
+          "gsc": [
+            [
+              385,
+              "https://manualdecocina.com/it/ricetta-insalata-russa/",
+              "/it/ricetta-insalata-russa",
+              1,
+              664,
+              0.0015,
+              42.81,
+              "it",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "SIN MAPEO",
+              "P2",
+              "Sin coincidencia exacta. Comparar con clasificación histórica y, solo si era entidad aceptada, resolver path/redirect técnico."
+            ]
+          ]
+        },
+        {
+          "language": "ja",
+          "slug": "ロシア風サラダのレシピ",
+          "public_path": "/ja/ロシア風サラダのレシピ",
+          "source": "preserved_historical_gsc_equivalent_entity",
+          "gsc": [
+            [
+              262,
+              "https://manualdecocina.com/ja/ロシア風サラダのレシピ/",
+              "/ja/ロシア風サラダのレシピ",
+              3,
+              879,
+              0.0034000000000000002,
+              4.93,
+              "ja",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "SIN MAPEO",
+              "P2",
+              "Sin coincidencia exacta. Comparar con clasificación histórica y, solo si era entidad aceptada, resolver path/redirect técnico."
+            ]
+          ]
+        },
+        {
+          "language": "pt",
+          "slug": "receita-de-salada-russa",
+          "public_path": "/pt/receita-de-salada-russa",
+          "source": "new_localization_no_historical_match",
+          "gsc": []
+        }
+      ]
+    },
+    {
+      "id": "f706a385-30ef-4835-91e5-a24be0a9ac17",
+      "recipe_group_id": "7151996b-f41e-4e46-932a-bd6584dc972c",
+      "slug": "receta-de-ensalada-de-frutos-rojos",
+      "public_path": "/receta-de-ensalada-de-frutos-rojos",
+      "source_url": "https://manualdecocina.com/receta-de-ensalada-de-frutos-rojos/",
+      "editorial_status": "published",
+      "position": 25,
+      "eligibility": "validate_url_master_before_writing",
+      "status": "not_started",
+      "routes": [
+        {
+          "language": "es",
+          "slug": "receta-de-ensalada-de-frutos-rojos",
+          "public_path": "/receta-de-ensalada-de-frutos-rojos",
+          "source": "preserved_existing_es",
+          "gsc": [
+            [
+              548,
+              "https://manualdecocina.com/receta-de-ensalada-de-frutos-rojos/",
+              "/receta-de-ensalada-de-frutos-rojos",
+              0,
+              462,
+              0,
+              52.56,
+              "es",
+              "sí",
+              "unpublished / published",
+              "",
+              "",
+              "recipe: Receta de Ensalada de Frutos Rojos",
+              "/receta-de-ensalada-de-frutos-rojos",
+              "PENDIENTE",
+              "P2",
+              "Entidad existente pero no activa. Comparar con clasificación previa antes de publicar o retirar."
+            ]
+          ]
+        },
+        {
+          "language": "de",
+          "slug": "roter-beeren-obstsalat",
+          "public_path": "/de/roter-beeren-obstsalat",
+          "source": "new_localization_no_historical_match",
+          "gsc": []
+        },
+        {
+          "language": "en",
+          "slug": "red-fruit-salad-recipe",
+          "public_path": "/en/red-fruit-salad-recipe",
+          "source": "preserved_historical_gsc_equivalent_entity",
+          "gsc": [
+            [
+              577,
+              "https://manualdecocina.com/en/red-fruit-salad-recipe/",
+              "/en/red-fruit-salad-recipe",
+              0,
+              295,
+              0,
+              61.76,
+              "en",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "SIN MAPEO",
+              "P2",
+              "Sin coincidencia exacta. Comparar con clasificación histórica y, solo si era entidad aceptada, resolver path/redirect técnico."
+            ]
+          ]
+        },
+        {
+          "language": "fr",
+          "slug": "recette-salade-de-fruits-rouges",
+          "public_path": "/fr/recette-salade-de-fruits-rouges",
+          "source": "preserved_historical_gsc_equivalent_entity",
+          "gsc": [
+            [
+              473,
+              "https://manualdecocina.com/fr/recette-salade-de-fruits-rouges/",
+              "/fr/recette-salade-de-fruits-rouges",
+              1,
+              71,
+              0.0141,
+              46.66,
+              "fr",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "SIN MAPEO",
+              "P3",
+              "Sin coincidencia exacta. Comparar con clasificación histórica y, solo si era entidad aceptada, resolver path/redirect técnico."
+            ]
+          ]
+        },
+        {
+          "language": "it",
+          "slug": "ricetta-insalata-di-frutti-rossi",
+          "public_path": "/it/ricetta-insalata-di-frutti-rossi",
+          "source": "preserved_historical_gsc_equivalent_entity",
+          "gsc": [
+            [
+              729,
+              "https://manualdecocina.com/it/ricetta-insalata-di-frutti-rossi/",
+              "/it/ricetta-insalata-di-frutti-rossi",
+              0,
+              63,
+              0,
+              4.9,
+              "it",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "SIN MAPEO",
+              "P3",
+              "Sin coincidencia exacta. Comparar con clasificación histórica y, solo si era entidad aceptada, resolver path/redirect técnico."
+            ]
+          ]
+        },
+        {
+          "language": "ja",
+          "slug": "赤いベリーのフルーツサラダ",
+          "public_path": "/ja/赤いベリーのフルーツサラダ",
+          "source": "new_localization_no_historical_match",
+          "gsc": []
+        },
+        {
+          "language": "pt",
+          "slug": "salada-de-frutas-vermelhas",
+          "public_path": "/pt/salada-de-frutas-vermelhas",
+          "source": "new_localization_no_historical_match",
+          "gsc": []
+        }
+      ]
+    },
+    {
+      "id": "f16da00a-a43d-44ec-9aae-a061efd4efb0",
+      "recipe_group_id": "37e555b3-fa4f-4309-84de-62d613fe25ab",
+      "slug": "como-preparar-queso",
+      "public_path": "/como-preparar-queso",
+      "source_url": "https://manualdecocina.com/como-preparar-queso/",
+      "editorial_status": "published",
+      "position": 26,
+      "eligibility": "validate_url_master_before_writing",
+      "status": "not_started",
+      "routes": [
+        {
+          "language": "es",
+          "slug": "como-preparar-queso",
+          "public_path": "/como-preparar-queso",
+          "source": "preserved_existing_es",
+          "gsc": [
+            [
+              549,
+              "https://manualdecocina.com/como-preparar-queso/",
+              "/como-preparar-queso",
+              0,
+              450,
+              0,
+              54.14,
+              "es",
+              "sí",
+              "unpublished / published",
+              "",
+              "",
+              "recipe: Cómo preparar Queso",
+              "/como-preparar-queso",
+              "PENDIENTE",
+              "P2",
+              "Entidad existente pero no activa. Comparar con clasificación previa antes de publicar o retirar."
+            ]
+          ]
+        },
+        {
+          "language": "de",
+          "slug": "frischkaese-selber-machen",
+          "public_path": "/de/frischkaese-selber-machen",
+          "source": "new_localization_no_historical_match",
+          "gsc": []
+        },
+        {
+          "language": "en",
+          "slug": "how-to-make-fresh-cheese",
+          "public_path": "/en/how-to-make-fresh-cheese",
+          "source": "new_localization_no_historical_match",
+          "gsc": []
+        },
+        {
+          "language": "fr",
+          "slug": "comment-preparer-le-fromage",
+          "public_path": "/fr/comment-preparer-le-fromage",
+          "source": "preserved_historical_gsc_equivalent_entity",
+          "gsc": [
+            [
+              311,
+              "https://manualdecocina.com/fr/comment-preparer-le-fromage/",
+              "/fr/comment-preparer-le-fromage",
+              2,
+              502,
+              0.004,
+              58.92,
+              "fr",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "SIN MAPEO",
+              "P2",
+              "Sin coincidencia exacta. Comparar con clasificación histórica y, solo si era entidad aceptada, resolver path/redirect técnico."
+            ]
+          ]
+        },
+        {
+          "language": "it",
+          "slug": "come-preparare-il-formaggio",
+          "public_path": "/it/come-preparare-il-formaggio",
+          "source": "preserved_historical_gsc_equivalent_entity",
+          "gsc": [
+            [
+              546,
+              "https://manualdecocina.com/it/come-preparare-il-formaggio/",
+              "/it/come-preparare-il-formaggio",
+              0,
+              511,
+              0,
+              55.24,
+              "it",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "SIN MAPEO",
+              "P2",
+              "Sin coincidencia exacta. Comparar con clasificación histórica y, solo si era entidad aceptada, resolver path/redirect técnico."
+            ]
+          ]
+        },
+        {
+          "language": "ja",
+          "slug": "チーズの作り方",
+          "public_path": "/ja/チーズの作り方",
+          "source": "preserved_historical_gsc_equivalent_entity",
+          "gsc": [
+            [
+              279,
+              "https://manualdecocina.com/ja/チーズの作り方/",
+              "/ja/チーズの作り方",
+              3,
+              201,
+              0.0149,
+              55.71,
+              "ja",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "SIN MAPEO",
+              "P3",
+              "Sin coincidencia exacta. Comparar con clasificación histórica y, solo si era entidad aceptada, resolver path/redirect técnico."
+            ]
+          ]
+        },
+        {
+          "language": "pt",
+          "slug": "como-preparar-queijo-fresco",
+          "public_path": "/pt/como-preparar-queijo-fresco",
+          "source": "new_localization_no_historical_match",
+          "gsc": []
+        }
+      ]
+    },
+    {
+      "id": "ec187585-de34-4781-8353-9b8e3da68885",
+      "recipe_group_id": "aad582c9-6559-4226-a297-8294c664d4c5",
+      "slug": "pollo-agridulce",
+      "public_path": "/pollo-agridulce",
+      "source_url": "https://manualdecocina.com/pollo-agridulce/",
+      "editorial_status": "published",
+      "position": 27,
+      "eligibility": "validate_url_master_before_writing",
+      "status": "not_started",
+      "routes": [
+        {
+          "language": "es",
+          "slug": "pollo-agridulce",
+          "public_path": "/pollo-agridulce",
+          "source": "preserved_existing_es",
+          "gsc": [
+            [
+              558,
+              "https://manualdecocina.com/pollo-agridulce/",
+              "/pollo-agridulce",
+              0,
+              401,
+              0,
+              39.7,
+              "es",
+              "sí",
+              "unpublished / published",
+              "",
+              "",
+              "recipe: Pollo Agridulce",
+              "/pollo-agridulce",
+              "PENDIENTE",
+              "P2",
+              "Entidad existente pero no activa. Comparar con clasificación previa antes de publicar o retirar."
+            ]
+          ]
+        },
+        {
+          "language": "de",
+          "slug": "suesssaures-haehnchen",
+          "public_path": "/de/suesssaures-haehnchen",
+          "source": "new_localization_no_historical_match",
+          "gsc": []
+        },
+        {
+          "language": "en",
+          "slug": "sweet-and-sour-chicken",
+          "public_path": "/en/sweet-and-sour-chicken",
+          "source": "new_localization_no_historical_match",
+          "gsc": []
+        },
+        {
+          "language": "fr",
+          "slug": "poulet-aigre-doux",
+          "public_path": "/fr/poulet-aigre-doux",
+          "source": "preserved_historical_gsc_equivalent_entity",
+          "gsc": [
+            [
+              536,
+              "https://manualdecocina.com/fr/poulet-aigre-doux/",
+              "/fr/poulet-aigre-doux",
+              0,
+              790,
+              0,
+              68.61,
+              "fr",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "SIN MAPEO",
+              "P2",
+              "Sin coincidencia exacta. Comparar con clasificación histórica y, solo si era entidad aceptada, resolver path/redirect técnico."
+            ]
+          ]
+        },
+        {
+          "language": "it",
+          "slug": "pollo-agrodolce",
+          "public_path": "/it/pollo-agrodolce",
+          "source": "preserved_historical_gsc_equivalent_entity",
+          "gsc": [
+            [
+              260,
+              "https://manualdecocina.com/it/pollo-agrodolce/",
+              "/it/pollo-agrodolce",
+              3,
+              929,
+              0.0032,
+              55.67,
+              "it",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "SIN MAPEO",
+              "P2",
+              "Sin coincidencia exacta. Comparar con clasificación histórica y, solo si era entidad aceptada, resolver path/redirect técnico."
+            ]
+          ]
+        },
+        {
+          "language": "ja",
+          "slug": "鶏肉の甘酢あん",
+          "public_path": "/ja/鶏肉の甘酢あん",
+          "source": "new_localization_no_historical_match",
+          "gsc": []
+        },
+        {
+          "language": "pt",
+          "slug": "frango-agridoce",
+          "public_path": "/pt/frango-agridoce",
+          "source": "new_localization_no_historical_match",
+          "gsc": []
+        }
+      ]
+    },
+    {
+      "id": "e478ae0e-c138-4903-a079-e8a9bf5b194a",
+      "recipe_group_id": "cafa20f9-b141-461e-b60a-ead32318e8fb",
+      "slug": "receta-de-flan-de-chocolate",
+      "public_path": "/receta-de-flan-de-chocolate",
+      "source_url": "https://manualdecocina.com/receta-de-flan-de-chocolate/",
+      "editorial_status": "published",
+      "position": 28,
+      "eligibility": "validate_url_master_before_writing",
+      "status": "not_started",
+      "routes": [
+        {
+          "language": "es",
+          "slug": "receta-de-flan-de-chocolate",
+          "public_path": "/receta-de-flan-de-chocolate",
+          "source": "preserved_existing_es",
+          "gsc": [
+            [
+              593,
+              "https://manualdecocina.com/receta-de-flan-de-chocolate/",
+              "/receta-de-flan-de-chocolate",
+              0,
+              210,
+              0,
+              67.39,
+              "es",
+              "sí",
+              "unpublished / published",
+              "",
+              "",
+              "recipe: Receta Flan de Chocolate",
+              "/receta-de-flan-de-chocolate",
+              "PENDIENTE",
+              "P3",
+              "Entidad existente pero no activa. Comparar con clasificación previa antes de publicar o retirar."
+            ]
+          ]
+        },
+        {
+          "language": "de",
+          "slug": "schokoladenflan-rezept",
+          "public_path": "/de/schokoladenflan-rezept",
+          "source": "new_localization_no_historical_match",
+          "gsc": []
+        },
+        {
+          "language": "en",
+          "slug": "chocolate-flan-recipe",
+          "public_path": "/en/chocolate-flan-recipe",
+          "source": "preserved_historical_gsc_equivalent_entity",
+          "gsc": [
+            [
+              555,
+              "https://manualdecocina.com/en/chocolate-flan-recipe/",
+              "/en/chocolate-flan-recipe",
+              0,
+              410,
+              0,
+              61.24,
+              "en",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "SIN MAPEO",
+              "P2",
+              "Sin coincidencia exacta. Comparar con clasificación histórica y, solo si era entidad aceptada, resolver path/redirect técnico."
+            ]
+          ]
+        },
+        {
+          "language": "fr",
+          "slug": "recette-de-flan-au-chocolat",
+          "public_path": "/fr/recette-de-flan-au-chocolat",
+          "source": "preserved_historical_gsc_equivalent_entity",
+          "gsc": [
+            [
+              790,
+              "https://manualdecocina.com/fr/recette-de-flan-au-chocolat/",
+              "/fr/recette-de-flan-au-chocolat",
+              0,
+              37,
+              0,
+              6.3,
+              "fr",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "SIN MAPEO",
+              "P3",
+              "Sin coincidencia exacta. Comparar con clasificación histórica y, solo si era entidad aceptada, resolver path/redirect técnico."
+            ]
+          ]
+        },
+        {
+          "language": "it",
+          "slug": "ricetta-flan-al-cioccolato",
+          "public_path": "/it/ricetta-flan-al-cioccolato",
+          "source": "preserved_historical_gsc_equivalent_entity",
+          "gsc": [
+            [
+              566,
+              "https://manualdecocina.com/it/ricetta-flan-al-cioccolato/",
+              "/it/ricetta-flan-al-cioccolato",
+              0,
+              352,
+              0,
+              50.12,
+              "it",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "SIN MAPEO",
+              "P2",
+              "Sin coincidencia exacta. Comparar con clasificación histórica y, solo si era entidad aceptada, resolver path/redirect técnico."
+            ]
+          ]
+        },
+        {
+          "language": "ja",
+          "slug": "チョコレートフランのレシピ",
+          "public_path": "/ja/チョコレートフランのレシピ",
+          "source": "preserved_historical_gsc_equivalent_entity",
+          "gsc": [
+            [
+              131,
+              "https://manualdecocina.com/ja/チョコレートフランのレシピ/",
+              "/ja/チョコレートフランのレシピ",
+              11,
+              274,
+              0.0401,
+              6.04,
+              "ja",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "SIN MAPEO",
+              "P2",
+              "Sin coincidencia exacta. Comparar con clasificación histórica y, solo si era entidad aceptada, resolver path/redirect técnico."
+            ]
+          ]
+        },
+        {
+          "language": "pt",
+          "slug": "receita-de-flan-de-chocolate",
+          "public_path": "/pt/receita-de-flan-de-chocolate",
+          "source": "new_localization_no_historical_match",
+          "gsc": []
+        }
+      ]
+    },
+    {
+      "id": "2f9fce85-8989-4252-af0d-3c24e046b1bc",
+      "recipe_group_id": "eafc642e-46c8-4c17-9815-9de6dd4809fc",
+      "slug": "receta-de-fish-and-chip-pescado-y-papas-fritas",
+      "public_path": "/receta-de-fish-and-chip-pescado-y-papas-fritas",
+      "source_url": "https://manualdecocina.com/receta-de-fish-and-chip-pescado-y-papas-fritas/",
+      "editorial_status": "published",
+      "position": 29,
+      "eligibility": "validate_url_master_before_writing",
+      "status": "not_started",
+      "routes": [
+        {
+          "language": "es",
+          "slug": "receta-de-fish-and-chip-pescado-y-papas-fritas",
+          "public_path": "/receta-de-fish-and-chip-pescado-y-papas-fritas",
+          "source": "preserved_existing_es",
+          "gsc": [
+            [
+              601,
+              "https://manualdecocina.com/receta-de-fish-and-chip-pescado-y-papas-fritas/",
+              "/receta-de-fish-and-chip-pescado-y-papas-fritas",
+              0,
+              192,
+              0,
+              21.4,
+              "es",
+              "sí",
+              "unpublished / published",
+              "",
+              "",
+              "recipe: Receta de Fish and Chips",
+              "/receta-de-fish-and-chip-pescado-y-papas-fritas",
+              "PENDIENTE",
+              "P3",
+              "Entidad existente pero no activa. Comparar con clasificación previa antes de publicar o retirar."
+            ]
+          ]
+        },
+        {
+          "language": "de",
+          "slug": "fish-and-chip-rezept-fish-and-chips",
+          "public_path": "/de/fish-and-chip-rezept-fish-and-chips",
+          "source": "preserved_historical_gsc_equivalent_entity",
+          "gsc": [
+            [
+              455,
+              "https://manualdecocina.com/de/fish-and-chip-rezept-fish-and-chips/",
+              "/de/fish-and-chip-rezept-fish-and-chips",
+              1,
+              98,
+              0.0102,
+              30.1,
+              "de",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "SIN MAPEO",
+              "P3",
+              "Sin coincidencia exacta. Comparar con clasificación histórica y, solo si era entidad aceptada, resolver path/redirect técnico."
+            ]
+          ]
+        },
+        {
+          "language": "en",
+          "slug": "fish-and-chip-recipe-fish-and-chips",
+          "public_path": "/en/fish-and-chip-recipe-fish-and-chips",
+          "source": "preserved_historical_gsc_equivalent_entity",
+          "gsc": [
+            [
+              470,
+              "https://manualdecocina.com/en/fish-and-chip-recipe-fish-and-chips/",
+              "/en/fish-and-chip-recipe-fish-and-chips",
+              1,
+              73,
+              0.0137,
+              74.75,
+              "en",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "SIN MAPEO",
+              "P3",
+              "Sin coincidencia exacta. Comparar con clasificación histórica y, solo si era entidad aceptada, resolver path/redirect técnico."
+            ]
+          ]
+        },
+        {
+          "language": "fr",
+          "slug": "recette-de-fish-and-chips-fish-and-chips",
+          "public_path": "/fr/recette-de-fish-and-chips-fish-and-chips",
+          "source": "preserved_historical_gsc_equivalent_entity",
+          "gsc": [
+            [
+              382,
+              "https://manualdecocina.com/fr/recette-de-fish-and-chips-fish-and-chips/",
+              "/fr/recette-de-fish-and-chips-fish-and-chips",
+              1,
+              755,
+              0.0013,
+              79.26,
+              "fr",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "SIN MAPEO",
+              "P2",
+              "Sin coincidencia exacta. Comparar con clasificación histórica y, solo si era entidad aceptada, resolver path/redirect técnico."
+            ]
+          ]
+        },
+        {
+          "language": "it",
+          "slug": "ricetta-fish-and-chips-fish-and-chips",
+          "public_path": "/it/ricetta-fish-and-chips-fish-and-chips",
+          "source": "preserved_historical_gsc_equivalent_entity",
+          "gsc": [
+            [
+              376,
+              "https://manualdecocina.com/it/ricetta-fish-and-chips-fish-and-chips/",
+              "/it/ricetta-fish-and-chips-fish-and-chips",
+              1,
+              1249,
+              0.0008,
+              75.43,
+              "it",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "SIN MAPEO",
+              "P1",
+              "Sin coincidencia exacta. Comparar con clasificación histórica y, solo si era entidad aceptada, resolver path/redirect técnico."
+            ]
+          ]
+        },
+        {
+          "language": "ja",
+          "slug": "フィッシュアンドチップスのレシピ",
+          "public_path": "/ja/フィッシュアンドチップスのレシピ",
+          "source": "new_localization_no_historical_match",
+          "gsc": []
+        },
+        {
+          "language": "pt",
+          "slug": "receita-de-fish-and-chips",
+          "public_path": "/pt/receita-de-fish-and-chips",
+          "source": "new_localization_no_historical_match",
+          "gsc": []
+        }
+      ]
+    },
+    {
+      "id": "92f6fc6a-3b44-4422-b0ea-7a6ef257f8d7",
+      "recipe_group_id": "26e35ba2-35e6-4066-b663-242746818f42",
+      "slug": "salsa-de-tomate-casera",
+      "public_path": "/salsa-de-tomate-casera",
+      "source_url": "https://manualdecocina.com/salsa-de-tomate-casera/",
+      "editorial_status": "published",
+      "position": 30,
+      "eligibility": "validate_url_master_before_writing",
+      "status": "not_started",
+      "routes": [
+        {
+          "language": "es",
+          "slug": "salsa-de-tomate-casera",
+          "public_path": "/salsa-de-tomate-casera",
+          "source": "preserved_existing_es",
+          "gsc": [
+            [
+              610,
+              "https://manualdecocina.com/salsa-de-tomate-casera/",
+              "/salsa-de-tomate-casera",
+              0,
+              172,
+              0,
+              68.54,
+              "es",
+              "sí",
+              "unpublished / published",
+              "",
+              "",
+              "recipe: u003cstrongu003eReceta Casera de Salsa de Tomate: Fácil, Rápida y Deliciosau003c/strongu003e",
+              "/salsa-de-tomate-casera",
+              "PENDIENTE",
+              "P3",
+              "Entidad existente pero no activa. Comparar con clasificación previa antes de publicar o retirar."
+            ]
+          ]
+        },
+        {
+          "language": "de",
+          "slug": "hausgemachte-tomatensauce",
+          "public_path": "/de/hausgemachte-tomatensauce",
+          "source": "new_localization_no_historical_match",
+          "gsc": []
+        },
+        {
+          "language": "en",
+          "slug": "homemade-tomato-sauce-recipe-easy-quick-and-delicious-2",
+          "public_path": "/en/homemade-tomato-sauce-recipe-easy-quick-and-delicious-2",
+          "source": "preserved_historical_gsc_equivalent_entity",
+          "gsc": [
+            [
+              803,
+              "https://manualdecocina.com/en/homemade-tomato-sauce-recipe-easy-quick-and-delicious-2/",
+              "/en/homemade-tomato-sauce-recipe-easy-quick-and-delicious-2",
+              0,
+              33,
+              0,
+              83.33,
+              "en",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "SIN MAPEO",
+              "P3",
+              "Sin coincidencia exacta. Comparar con clasificación histórica y, solo si era entidad aceptada, resolver path/redirect técnico."
+            ]
+          ]
+        },
+        {
+          "language": "fr",
+          "slug": "recette-de-sauce-tomate-maison-facile-rapide-et-delicieuse",
+          "public_path": "/fr/recette-de-sauce-tomate-maison-facile-rapide-et-delicieuse",
+          "source": "preserved_historical_gsc_equivalent_entity",
+          "gsc": [
+            [
+              658,
+              "https://manualdecocina.com/fr/recette-de-sauce-tomate-maison-facile-rapide-et-delicieuse/",
+              "/fr/recette-de-sauce-tomate-maison-facile-rapide-et-delicieuse",
+              0,
+              107,
+              0,
+              89.97,
+              "fr",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "SIN MAPEO",
+              "P3",
+              "Sin coincidencia exacta. Comparar con clasificación histórica y, solo si era entidad aceptada, resolver path/redirect técnico."
+            ]
+          ]
+        },
+        {
+          "language": "it",
+          "slug": "salsa-di-pomodoro-fatta-in-casa",
+          "public_path": "/it/salsa-di-pomodoro-fatta-in-casa",
+          "source": "new_localization_no_historical_match",
+          "gsc": []
+        },
+        {
+          "language": "ja",
+          "slug": "自家製トマトソース",
+          "public_path": "/ja/自家製トマトソース",
+          "source": "new_localization_no_historical_match",
+          "gsc": []
+        },
+        {
+          "language": "pt",
+          "slug": "molho-de-tomate-caseiro",
+          "public_path": "/pt/molho-de-tomate-caseiro",
+          "source": "new_localization_no_historical_match",
+          "gsc": []
+        }
+      ]
+    },
+    {
+      "id": "b344d1ea-972a-4382-8845-1e29f1704476",
+      "recipe_group_id": "5ec0b548-d9d8-4c42-ab6c-70c32958aad9",
+      "slug": "receta-de-tortilla-de-espinaca",
+      "public_path": "/receta-de-tortilla-de-espinaca",
+      "source_url": "https://manualdecocina.com/receta-de-tortilla-de-espinaca/",
+      "editorial_status": "published",
+      "position": 31,
+      "eligibility": "validate_url_master_before_writing",
+      "status": "not_started",
+      "routes": [
+        {
+          "language": "es",
+          "slug": "receta-de-tortilla-de-espinaca",
+          "public_path": "/receta-de-tortilla-de-espinaca",
+          "source": "preserved_existing_es",
+          "gsc": [
+            [
+              611,
+              "https://manualdecocina.com/receta-de-tortilla-de-espinaca/",
+              "/receta-de-tortilla-de-espinaca",
+              0,
+              171,
+              0,
+              34.81,
+              "es",
+              "sí",
+              "unpublished / published",
+              "",
+              "",
+              "recipe: Tortilla de Espinaca",
+              "/receta-de-tortilla-de-espinaca",
+              "PENDIENTE",
+              "P3",
+              "Entidad existente pero no activa. Comparar con clasificación previa antes de publicar o retirar."
+            ]
+          ]
+        },
+        {
+          "language": "de",
+          "slug": "spinat-omelette-rezept",
+          "public_path": "/de/spinat-omelette-rezept",
+          "source": "preserved_historical_gsc_equivalent_entity",
+          "gsc": [
+            [
+              584,
+              "https://manualdecocina.com/de/spinat-omelette-rezept/",
+              "/de/spinat-omelette-rezept",
+              0,
+              253,
+              0,
+              72.54,
+              "de",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "SIN MAPEO",
+              "P2",
+              "Sin coincidencia exacta. Comparar con clasificación histórica y, solo si era entidad aceptada, resolver path/redirect técnico."
+            ]
+          ]
+        },
+        {
+          "language": "en",
+          "slug": "spinach-omelette-recipe",
+          "public_path": "/en/spinach-omelette-recipe",
+          "source": "preserved_historical_gsc_equivalent_entity",
+          "gsc": [
+            [
+              556,
+              "https://manualdecocina.com/en/spinach-omelette-recipe/",
+              "/en/spinach-omelette-recipe",
+              0,
+              406,
+              0,
+              66.46,
+              "en",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "SIN MAPEO",
+              "P2",
+              "Sin coincidencia exacta. Comparar con clasificación histórica y, solo si era entidad aceptada, resolver path/redirect técnico."
+            ]
+          ]
+        },
+        {
+          "language": "fr",
+          "slug": "recette-domelette-aux-epinards",
+          "public_path": "/fr/recette-domelette-aux-epinards",
+          "source": "preserved_historical_gsc_equivalent_entity",
+          "gsc": [
+            [
+              948,
+              "https://manualdecocina.com/fr/recette-domelette-aux-epinards/",
+              "/fr/recette-domelette-aux-epinards",
+              0,
+              11,
+              0,
+              59.64,
+              "fr",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "SIN MAPEO",
+              "P3",
+              "Sin coincidencia exacta. Comparar con clasificación histórica y, solo si era entidad aceptada, resolver path/redirect técnico."
+            ]
+          ]
+        },
+        {
+          "language": "it",
+          "slug": "ricetta-frittata-di-spinaci",
+          "public_path": "/it/ricetta-frittata-di-spinaci",
+          "source": "new_localization_no_historical_match",
+          "gsc": []
+        },
+        {
+          "language": "ja",
+          "slug": "ほうれん草のオムレツ",
+          "public_path": "/ja/ほうれん草のオムレツ",
+          "source": "new_localization_no_historical_match",
+          "gsc": []
+        },
+        {
+          "language": "pt",
+          "slug": "receita-de-omelete-de-espinafre",
+          "public_path": "/pt/receita-de-omelete-de-espinafre",
+          "source": "new_localization_no_historical_match",
+          "gsc": []
+        }
+      ]
+    }
+  ],
+  "gsc_sheet_url": "https://docs.google.com/spreadsheets/d/1NlPii18f5lBVYu57E7bNpre7wzX57M05RSx9I05HI8g/edit",
+  "route_counts": {
+    "es_preserved": 15,
+    "historical_foreign_preserved": 57,
+    "new_foreign_localizations": 33,
+    "total": 105
+  },
+  "held_count": 49,
+  "held_untouched": true
+}
