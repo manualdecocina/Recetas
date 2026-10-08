@@ -30,7 +30,7 @@
     "id": "lote-02-20261008",
     "target": 15,
     "status": "in_progress",
-    "stage": "identity_validation",
+    "stage": "es",
     "recipes": [
       {
         "id": "e47eac88-0649-4785-baf0-43b92dd2ec2e",
@@ -201,8 +201,11 @@
         "recipe_group_id": "53237760-f2f8-4852-9c3c-ac101fa2f237",
         "slug": "arroz-blanco-perfecto",
         "public_path": "/arroz-blanco-perfecto",
-        "stage": "identity_validation",
-        "status": "reserved"
+        "stage": "es",
+        "status": "in_progress",
+        "identity_qa": "PASS",
+        "classification": "ELIGIBLE_REBUILD_CANDIDATE",
+        "routes_file": "editorial/arroz-blanco-perfecto-rutas-20261008.json"
       },
       {
         "id": "2300175e-c47a-4318-a6f9-8ee54387722e",
@@ -318,14 +321,14 @@
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
   "progress_branch": "recetas/lote-02-20261008",
-  "last_checkpoint_at": "2026-10-08T08:50:05.234Z",
+  "last_checkpoint_at": "2026-10-08T08:54:20.424Z",
   "handoff": {
     "first_prepared_recipe": "como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada",
     "first_recipe_source": "editorial/como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada-20261008.json",
     "next_recipe": "arroz-blanco-perfecto",
     "batch_remaining_to_prepare": 6,
     "published_this_batch": 0,
-    "required_action": "Validate arroz blanco perfecto identity, preservation contract, classification, historical routes and collisions; then produce original Spanish content before ImageGen.",
+    "required_action": "Write original arroz blanco perfecto ES; preserve five historical routes including Unicode JA; use Guarniciones; calculate nutrition from verified rice/oil/salt FDC entries; freeze steps before images.",
     "scope": "Preview only; production migration not executed."
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z"
