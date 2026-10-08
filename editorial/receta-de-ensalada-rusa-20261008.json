@@ -1,0 +1,346 @@
+{
+  "scope": "Manual de Cocina only; lote03",
+  "state": "ES_FROZEN_MEDIA_AND_LOCALIZATIONS_PENDING",
+  "provenance": "Original culinary reconstruction; identities and approvedroutespreserved. NoWordPress bodies/translations/images reused.",
+  "ai_owner_confirmation": "Original content and ImageGen authorized; no kitchen test claimed.",
+  "category_slug": "ensaladas",
+  "cover": "/recetas/receta-de-ensalada-rusa/portada.webp",
+  "steps_frozen": true,
+  "steps_sha256": "d21ad29ef03fba0ce67083e5834f15d7859b510fd2559432b6905056c36852a8",
+  "time_notes": "25prep+52cooksequential(35vegetables+12eggs+5peas)+15waterheating+60refrigeratedcooling=152min. Actual cooling until4C/additional batches extendtime. No extra mixedsaladrest required.",
+  "publication_blockers": [
+    "Original media pending",
+    "Sixlocalizations pending",
+    "Full15batchCI/deploy/DB/cache/liveQA pending"
+  ],
+  "sources": [
+    {
+      "url": "https://www.hogarmania.com/cocina/recetas/ensaladas-verduras/ensaladilla-rusa-3145.html",
+      "purpose": "Primary chef technique only: potato cooked whole in skin, then peeled; cooked vegetables and hard-boiled egg mixed with mayonnaise. Original simpler formula without tuna/olives, no copied body or imagery.",
+      "accessed": "2026-10-08"
+    },
+    {
+      "url": "https://www.foodsafety.gov/blog/salmonella-and-eggs",
+      "purpose": "Official firm cooked egg, raw egg hygiene, prompt coldstorage,2h/1h above32C.",
+      "accessed": "2026-10-08"
+    },
+    {
+      "url": "https://www.foodsafety.gov/food-safety-charts/cold-food-storage-charts",
+      "purpose": "Official refrigerator4C and eggsalads3–4days; proposed conservative2days for this salad.",
+      "accessed": "2026-10-08"
+    },
+    {
+      "url": "https://ask.fsis.usda.gov/article/How-do-I-handle-leftovers-safely",
+      "purpose": "Official shallowcontainers and promptrefrigeration forrapidcooling, not hourlongroomtemperature cooling.",
+      "accessed": "2026-10-08"
+    },
+    {
+      "url": "https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_sr_legacy_food_json_2018-04.zip",
+      "purpose": "Six exactfoodstates: cooked/peeled/drained ingredientweights, not rawpurchasegrammas matchedto cookedfoods; all8fields present.",
+      "accessed": "2026-10-08"
+    }
+  ],
+  "records": [
+    {
+      "id": "d3f9ad59-7c1d-4f02-8fcc-7cc9224773d3",
+      "recipe_group_id": "b04d6480-7bc2-40c9-b7c7-84fdc0d3c507",
+      "slug": "receta-de-ensalada-rusa",
+      "public_path": "/receta-de-ensalada-rusa",
+      "source_url": "https://manualdecocina.com/receta-de-ensalada-rusa/",
+      "language": "es",
+      "title": "Ensalada rusa casera con verduras y huevo duro",
+      "excerpt": "Patata, zanahoria, guisantes y huevo con mayonesa medida: seis porciones propuestas, pesos cocidos y enfriado incluido.",
+      "summary": "Ensalada rusa casera de patata, zanahoria, guisantes, huevo duro y mayonesa comercial. La fórmula usa pesos cocidos y escurridos, con cocción y enfriado incluidos en 152 minutos estimados para 6 porciones. Se pesa lo que entra en la mezcla y se verifica el frío antes de aliñar; no se afirma rendimiento ni prueba de cocina.",
+      "category": "Ensaladas",
+      "category_slug": "ensaladas",
+      "difficulty": "Fácil",
+      "course": "Ensalada",
+      "cuisine": "Versión casera de ensalada rusa",
+      "prep_time_minutes": 25,
+      "cook_time_minutes": 52,
+      "total_time_minutes": 152,
+      "servings": 6,
+      "ingredients": [
+        {
+          "name": "patata hervida con piel, pelada después, sin sal; peso de pulpa cocida y escurrida",
+          "amount": "400",
+          "unit": "g",
+          "group": "Base cocida y fría"
+        },
+        {
+          "name": "zanahoria hervida sin sal, peso cocido y escurrido",
+          "amount": "150",
+          "unit": "g",
+          "group": "Base cocida y fría"
+        },
+        {
+          "name": "guisantes congelados, hervidos sin sal, peso cocido y escurrido",
+          "amount": "100",
+          "unit": "g",
+          "group": "Base cocida y fría"
+        },
+        {
+          "name": "huevo duro, peso comestible cocido sin cáscara",
+          "amount": "100",
+          "unit": "g",
+          "group": "Base cocida y fría"
+        },
+        {
+          "name": "mayonesa comercial normal con huevo pasteurizado",
+          "amount": "120",
+          "unit": "g",
+          "group": "Aliño"
+        },
+        {
+          "name": "sal fina",
+          "amount": "2",
+          "unit": "g",
+          "group": "Aliño"
+        },
+        {
+          "name": "agua potable para cocer, cantidad total inicial; se desecha",
+          "amount": "2900",
+          "unit": "ml",
+          "group": "Proceso, no se sirve"
+        },
+        {
+          "name": "hielo de agua potable para enfriar huevos, no se sirve",
+          "amount": "500",
+          "unit": "g",
+          "group": "Proceso, no se sirve"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Reúne cantidades para cocinar y para incorporar",
+          "content": "Prepara báscula, olla y cazo, coladores limpios, bandejas o recipientes poco profundos, cuchillo, tabla y termómetro alimentario. Para obtener los pesos cocidos de la fórmula, comienza aproximadamente con 550 g de patatas enteras sin pelar, 200 g de zanahorias antes de pelar, tres huevos y 150 g de guisantes congelados. Son cantidades de compra propuestas, no rendimientos confirmados: después incorporarás solo 400 g de pulpa de patata cocida, 150 g de zanahoria cocida, 100 g de guisantes cocidos y 100 g de huevo duro pelado. Ten 120 g de mayonesa comercial, 2 g de sal, 2900 ml de agua potable y 500 g de hielo potable. Comprueba etiquetas de huevo, mostaza u otros alérgenos en la mayonesa; mantenla en frío según el envase. No añadas atún, aceitunas, embutidos ni adornos a esta versión.",
+          "image_url": "/recetas/receta-de-ensalada-rusa/paso-01.webp",
+          "image_alt": "Ensalada rusa: Reúne cantidades para cocinar y para incorporar"
+        },
+        {
+          "title": "Lava y prepara las verduras",
+          "content": "Lava las patatas enteras bajo agua potable, sin jabón, y frota su superficie para retirar tierra. Mantén su piel para cocerlas y escoge tamaños semejantes; desecha piezas podridas o dañadas. Lava las zanahorias, pela, retira extremos y córtalas en dados de unos 1 cm. No mezcles sus utensilios limpios con cáscaras de huevo ni carnes crudas. Los guisantes se cocinan desde congelados, sin descongelación previa. Los pesos finales se comprobarán después de cocer y escurrir: no asignes directamente el peso de compra a la pulpa que entrará en la ensalada.",
+          "image_url": "/recetas/receta-de-ensalada-rusa/paso-02.webp",
+          "image_alt": "Ensalada rusa: Lava y prepara las verduras"
+        },
+        {
+          "title": "Cuece las patatas y la zanahoria sin sal",
+          "content": "Pon las patatas enteras con piel en una olla con 1500 ml de agua potable, sin sal. Las piezas deben quedar cubiertas; si la olla exige más agua para cubrirlas, registra la cantidad de proceso añadida, que no se sirve. Calienta unos 5 minutos hasta hervor suave y estima 35 minutos de cocción desde entonces. Añade los dados de zanahoria durante los últimos 12 minutos. Comprueba con un tenedor limpio que el centro de las patatas esté tierno sin quedar crudo y que la zanahoria se pueda pinchar sin deshacerse. Retira antes cada verdura si está lista; si requiere más tiempo, cuenta el ajuste real. Escurre por completo sin conservar el agua. No machaques las patatas para acelerar el enfriado.",
+          "image_url": "/recetas/receta-de-ensalada-rusa/paso-03.webp",
+          "image_alt": "Ensalada rusa: Cuece las patatas y la zanahoria sin sal"
+        },
+        {
+          "title": "Haz los huevos duros por separado",
+          "content": "Coloca los huevos intactos en un cazo con 800 ml de agua potable, suficiente para cubrirlos; registra cualquier agua extra de proceso. No uses huevos rotos. Lleva a hervor suave, estimando unos 5 minutos de calentamiento, y cocina unos 12 minutos desde el hervor suave. Pasa con un utensilio limpio a un baño frío con los 500 g de hielo y agua potable de enfriado suficiente, anotada aparte del agua de cocción; esta agua tampoco se sirve. Abre después un huevo para comprobar clara y yema totalmente cuajadas. Si no están firmes, prolonga la cocción del resto y cuenta el tiempo real. No uses huevo crudo para hacer la mayonesa de esta propuesta. Lava manos y utensilios después de tocar las cáscaras.",
+          "image_url": "/recetas/receta-de-ensalada-rusa/paso-04.webp",
+          "image_alt": "Ensalada rusa: Haz los huevos duros por separado"
+        },
+        {
+          "title": "Cuece y escurre los guisantes",
+          "content": "En el cazo limpio calienta los 600 ml de agua potable restantes sin sal, con una previsión de 5 minutos hasta el hervor. Añade los guisantes congelados y cocina unos 5 minutos o el tiempo mayor que indique su envase, hasta tiernos. Mantén hervor suave y remueve con utensilio limpio. Escurre bien sin incorporar el agua a la ensalada. Esta receta emplea guisantes congelados cocidos, no guisantes de lata salados ni guisantes secos. El cálculo se hará con el peso escurrido que entra en la mezcla, no con todo lo comprado ni con el líquido de la olla.",
+          "image_url": "/recetas/receta-de-ensalada-rusa/paso-05.webp",
+          "image_alt": "Ensalada rusa: Cuece y escurre los guisantes"
+        },
+        {
+          "title": "Enfría con rapidez antes de añadir mayonesa",
+          "content": "Distribuye las patatas y verduras escurridas en recipientes limpios poco profundos y llévalas pronto al frigorífico, sin esperar una hora en la encimera. Los huevos se enfrían en su baño y se refrigeran también. Usa utensilios limpios para manipular; si la patata aún quema, deja solo el breve tiempo necesario para tocarla con seguridad y pela sin contaminarla. Prevé unos 60 minutos de enfriado en frío, pero comprueba con la sonda limpia que todo esté a 4 °C o menos antes de mezclar. Si tarda más, cuenta ese tiempo; no afirmes enfriado por el reloj. Refrigera los alimentos perecederos dentro de 2 horas fuera del frío, o 1 hora si el ambiente supera 32 °C. No dejes las ollas calientes profundas como único recipiente de enfriado.",
+          "image_url": "/recetas/receta-de-ensalada-rusa/paso-06.webp",
+          "image_alt": "Ensalada rusa: Enfría con rapidez antes de añadir mayonesa"
+        },
+        {
+          "title": "Pesa lo cocido y corta la base fría",
+          "content": "Con los alimentos fríos y bien escurridos, pesa 400 g de pulpa de patata cocida sin piel, 150 g de zanahoria cocida, 100 g de guisantes cocidos y 100 g de huevo duro sin cáscara. Pica la patata y el huevo en dados de alrededor de 1 cm y mantén los dados de zanahoria; coloca los cuatro componentes en un cuenco limpio. Los pesos son de los alimentos que realmente entran en la fórmula, no de los crudos con piel o cáscara. Si la primera cocción no produce suficiente, cocina otra cantidad, enfríala y cuenta el tiempo añadido; no completes con ingredientes crudos. Reserva el sobrante limpio en frío para otra preparación, separado de esta ensalada y sin incluirlo en su nutrición.",
+          "image_url": "/recetas/receta-de-ensalada-rusa/paso-07.webp",
+          "image_alt": "Ensalada rusa: Pesa lo cocido y corta la base fría"
+        },
+        {
+          "title": "Incorpora el aliño sin aplastar",
+          "content": "Con toda la base fría, añade los 120 g de mayonesa comercial y los 2 g de sal. Mezcla suavemente con espátula limpia para repartir el aliño sin convertir las patatas en puré. Usa toda la mayonesa pesada dentro de la mezcla, sin una capa extra por encima ni mayonesa para decorar. No añadas agua de cocción, aceite, vinagre o más sal sin registrar el cambio y recalcular. La fórmula contiene huevo y los alérgenos de la mayonesa; no se presenta como libre de alérgenos. Si sustituyes el aliño por yogur o una salsa sin huevo, define una variante distinta y no reutilices estas cifras.",
+          "image_url": "/recetas/receta-de-ensalada-rusa/paso-08.webp",
+          "image_alt": "Ensalada rusa: Incorpora el aliño sin aplastar"
+        },
+        {
+          "title": "Sirve fría y conserva las sobras",
+          "content": "Reparte la ensalada en 6 porciones similares, cada una aproximadamente la sexta parte del lote; no se afirma un peso servido medido. Sirve fría, sin pan, atún, aceitunas ni adornos fuera de la fórmula. La previsión completa incluye 25 minutos de preparación, 52 de cocción en secuencia, 15 de calentamiento de agua y 60 de enfriado en frío: 152 minutos en total. No se presupone que las ollas trabajen en paralelo; añade cualquier calentamiento, cocción o enfriado extra real. Guarda tapada en un recipiente poco profundo a 4 °C o menos y consume dentro de 2 días, respetando cualquier plazo menor del envase de mayonesa. Durante el servicio, mantén porciones pequeñas y repón desde el frigorífico. Descarta lo que haya superado 2 horas fuera del frío, o 1 hora por encima de 32 °C; no confíes solo en olor o aspecto.",
+          "image_url": "/recetas/receta-de-ensalada-rusa/portada.webp",
+          "image_alt": "Ensalada rusa: Sirve fría y conserva las sobras"
+        }
+      ],
+      "notes": "Versión casera sencilla de ensalada rusa con patata, zanahoria, guisantes, huevo duro y mayonesa comercial. No pretende ser la receta Olivier histórica completa ni una reproducción de un chef concreto. La fórmula se fija por los pesos cocidos y escurridos que entran en el cuenco, de modo que el rendimiento de pelado o cocción no se da por probado. Se proponen cantidades de compra y se pesa después: si falta producto, cocina y enfría más; sobrantes se guardan separados para otra preparación, fuera del cálculo. La patata se hierve entera con piel y se consume pelada, que corresponde a la ficha USDA empleada. No se sala el agua, que se desecha; los 2 g de sal están solo en el aliño. Usa mayonesa comercial normal con huevo pasteurizado según etiqueta, no mayonesa de huevo crudo. Contiene huevo y puede contener mostaza u otros alérgenos según marca. No añadas ingredientes o una capa extra de salsa conservando estas cifras. Para cambiar por yogur, salsa sin huevo, atún o aceitunas, registra otra fórmula y recalcula. Cuece el huevo con clara y yema firmes y usa utensilios separados de cáscaras y alimentos crudos. Enfría pronto en recipientes poco profundos en el frigorífico y comprueba 4°C o menos antes de aliñar; los 60 minutos son una previsión, no garantía. Mantén a 4°C o menos y consume en 2 días o antes si la etiqueta lo exige. Refrigera dentro de 2 horas fuera del frío, o 1 hora por encima de 32°C; descarta lo que exceda esos límites. No exige reposo adicional tras mezclar. Seis porciones y 152 minutos son propuestas pendientes de cocina, no tiempos ni rendimiento confirmados.",
+      "nutrition": {
+        "calories": 241.6,
+        "protein_g": 4.6,
+        "carbs_g": 18.1,
+        "fat_g": 16.9,
+        "saturated_fat_g": 2.9,
+        "sodium_mg": 306.2,
+        "fiber_g": 2.7,
+        "sugar_g": 2.5,
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (abril de 2018)",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "inputs": [
+          {
+            "ingredient": "pulpa de patata hervida CON piel y pelada después, sin sal, cocida escurrida",
+            "edible_grams": 400,
+            "fdc_id": 170438,
+            "fdc_description": "Potatoes, boiled, cooked in skin, flesh, without salt",
+            "per_100g": {
+              "carbs_g": 20.1,
+              "calories": 87.0,
+              "saturated_fat_g": 0.026,
+              "fat_g": 0.1,
+              "protein_g": 1.87,
+              "fiber_g": 1.8,
+              "sodium_mg": 4.0,
+              "sugar_g": 0.91
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170438/nutrients"
+          },
+          {
+            "ingredient": "zanahoria hervida sin sal, cocida escurrida",
+            "edible_grams": 150,
+            "fdc_id": 170394,
+            "fdc_description": "Carrots, cooked, boiled, drained, without salt",
+            "per_100g": {
+              "fat_g": 0.18,
+              "protein_g": 0.76,
+              "fiber_g": 3.0,
+              "sodium_mg": 58.0,
+              "saturated_fat_g": 0.03,
+              "carbs_g": 8.22,
+              "calories": 35.0,
+              "sugar_g": 3.45
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170394/nutrients"
+          },
+          {
+            "ingredient": "guisantes congelados hervidos sin sal, cocidos escurridos",
+            "edible_grams": 100,
+            "fdc_id": 170017,
+            "fdc_description": "Peas, green, frozen, cooked, boiled, drained, without salt",
+            "per_100g": {
+              "carbs_g": 14.3,
+              "saturated_fat_g": 0.049,
+              "protein_g": 5.15,
+              "fat_g": 0.27,
+              "fiber_g": 4.5,
+              "sugar_g": 4.4,
+              "sodium_mg": 72.0,
+              "calories": 78.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170017/nutrients"
+          },
+          {
+            "ingredient": "huevo duro pelado, peso comestible cocido",
+            "edible_grams": 100,
+            "fdc_id": 173424,
+            "fdc_description": "Egg, whole, cooked, hard-boiled",
+            "per_100g": {
+              "sugar_g": 1.12,
+              "fiber_g": 0.0,
+              "calories": 155,
+              "protein_g": 12.6,
+              "sodium_mg": 124,
+              "saturated_fat_g": 3.27,
+              "fat_g": 10.6,
+              "carbs_g": 1.12
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173424/nutrients"
+          },
+          {
+            "ingredient": "mayonesa comercial normal",
+            "edible_grams": 120,
+            "fdc_id": 171009,
+            "fdc_description": "Salad dressing, mayonnaise, regular",
+            "per_100g": {
+              "saturated_fat_g": 11.7,
+              "sodium_mg": 635,
+              "protein_g": 0.96,
+              "fat_g": 74.8,
+              "carbs_g": 0.57,
+              "calories": 680,
+              "fiber_g": 0.0,
+              "sugar_g": 0.57
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171009/nutrients"
+          },
+          {
+            "ingredient": "sal añadida directamente a la mezcla",
+            "edible_grams": 2,
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "fiber_g": 0.0,
+              "sodium_mg": 38800.0,
+              "saturated_fat_g": 0.0,
+              "protein_g": 0.0,
+              "fat_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 0.0,
+              "sugar_g": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients"
+          }
+        ],
+        "serving_size": "La sexta parte del lote; 6 porciones propuestas",
+        "method": "Seis fichas USDA verificadas, con estado de los alimentos igual al peso incorporado: patata170438 hervida con piel y pelada después400g, zanahoria170394 hervida escurrida150g, guisantes congelados170017 cocidos escurridos100g, huevo duro173424 pelado100g, mayonesa normal171009 120g y sal173468 2g. Multiplica cada valor por100g por los gramos comestibles indicados, suma y divide entre6. Agua de cocción y baño frío, hielo, pieles, cáscaras y sobrantes no se sirven ni se calculan.",
+        "note": "Estimación, no análisis ni prueba de cocina. Se usan pesos COCIDOS y escurridos antes de mezclar, no se calculan los pesos de compra crudos con fichas cocidas. Las cantidades de compra son propuestas, sin rendimiento de cocción confirmado. Patata: hervida CON piel, consumida SIN piel; no confundir con ficha de patata cruda ni cocida sin piel desde el inicio. Las marcas de mayonesa y el escurrido cambian los valores. Los872g son suma teórica de ingredientes incorporados, no peso de cada porción medido. Sin atún, aceitunas, pan o adornos. Todos los campos de las seis fichas están presentes; no se asigna cero a datos ausentes."
+      },
+      "keywords": [
+        "ensalada rusa casera",
+        "ensalada rusa con huevo",
+        "ensaladilla con verduras",
+        "ensalada rusa sin atún"
+      ],
+      "image_url": "/recetas/receta-de-ensalada-rusa/portada.webp",
+      "gallery": [],
+      "seo": {
+        "title": "Ensalada rusa casera: pesos cocidos, pasos y enfriado",
+        "description": "Ensalada rusa de patata, zanahoria, guisantes, huevo y mayonesa. Seis porciones propuestas, pesos cocidos, enfriado y nutrición estimada verificable.",
+        "image_alt": "Ensalada rusa cremosa con dados de patata y zanahoria, guisantes y huevo duro mezclados, sin atún, aceitunas, pan ni adorno",
+        "image_variants": [
+          "/recetas/receta-de-ensalada-rusa/portada-1x1.webp",
+          "/recetas/receta-de-ensalada-rusa/portada-4x3.webp",
+          "/recetas/receta-de-ensalada-rusa/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "¿Por qué los ingredientes indican peso cocido?",
+            "a": "Porque el cálculo utiliza fichas USDA de patata hervida con piel y pelada después, zanahoria y guisantes cocidos escurridos y huevo duro pelado. Primero cocina y enfría, después pesa lo que incorporas. Los pesos de compra propuestos no se dan como rendimiento confirmado ni se aplican sin más a fichas de alimentos cocidos."
+          },
+          {
+            "q": "¿Puedo añadir mayonesa mientras las verduras aún están calientes?",
+            "a": "En esta propuesta no: enfría pronto en recipientes poco profundos en el frigorífico y verifica 4 °C o menos antes de mezclar. No esperes una hora en la encimera. Los 60 minutos de enfriado son estimados y se alargan si el centro aún no está frío."
+          },
+          {
+            "q": "¿Puedo añadir atún, aceitunas o una capa de mayonesa?",
+            "a": "Sí, como variante con sus cantidades registradas y nutrición recalculada. Esta fórmula usa solo 120 g de mayonesa dentro de la mezcla y no incluye esos añadidos ni pan. Cambiar marca, aliño o ingredientes modifica también alérgenos, sal y conservación."
+          }
+        ]
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "content_html": "<p>Ensalada rusa casera de patata, zanahoria, guisantes, huevo duro y mayonesa comercial. La fórmula usa pesos cocidos y escurridos, con cocción y enfriado incluidos en 152 minutos estimados para 6 porciones. Se pesa lo que entra en la mezcla y se verifica el frío antes de aliñar; no se afirma rendimiento ni prueba de cocina.</p><p>Versión casera sencilla de ensalada rusa con patata, zanahoria, guisantes, huevo duro y mayonesa comercial. No pretende ser la receta Olivier histórica completa ni una reproducción de un chef concreto. La fórmula se fija por los pesos cocidos y escurridos que entran en el cuenco, de modo que el rendimiento de pelado o cocción no se da por probado. Se proponen cantidades de compra y se pesa después: si falta producto, cocina y enfría más; sobrantes se guardan separados para otra preparación, fuera del cálculo. La patata se hierve entera con piel y se consume pelada, que corresponde a la ficha USDA empleada. No se sala el agua, que se desecha; los 2 g de sal están solo en el aliño. Usa mayonesa comercial normal con huevo pasteurizado según etiqueta, no mayonesa de huevo crudo. Contiene huevo y puede contener mostaza u otros alérgenos según marca. No añadas ingredientes o una capa extra de salsa conservando estas cifras. Para cambiar por yogur, salsa sin huevo, atún o aceitunas, registra otra fórmula y recalcula. Cuece el huevo con clara y yema firmes y usa utensilios separados de cáscaras y alimentos crudos. Enfría pronto en recipientes poco profundos en el frigorífico y comprueba 4°C o menos antes de aliñar; los 60 minutos son una previsión, no garantía. Mantén a 4°C o menos y consume en 2 días o antes si la etiqueta lo exige. Refrigera dentro de 2 horas fuera del frío, o 1 hora por encima de 32°C; descarta lo que exceda esos límites. No exige reposo adicional tras mezclar. Seis porciones y 152 minutos son propuestas pendientes de cocina, no tiempos ni rendimiento confirmados.</p>"
+    }
+  ],
+  "yield_proposal": {
+    "servings": 6,
+    "mixed_input_mass_g": 872,
+    "served_weight_measured": false,
+    "confirmed": false
+  },
+  "purchase_quantities_proposed": {
+    "raw_unpeeled_potato_g": 550,
+    "raw_unpeeled_carrot_g": 200,
+    "eggs_units": 3,
+    "frozen_peas_g": 150,
+    "not_confirmed_yield": true
+  },
+  "incorporated_cooked_weights_g": {
+    "peeled_potato_flesh": 400,
+    "carrot": 150,
+    "peas": 100,
+    "peeled_hardboiled_egg": 100
+  }
+}
