@@ -30,7 +30,7 @@
     "id": "lote-02-20261008",
     "target": 15,
     "status": "in_progress",
-    "stage": "images",
+    "stage": "localization",
     "recipes": [
       {
         "id": "e47eac88-0649-4785-baf0-43b92dd2ec2e",
@@ -321,7 +321,7 @@
         "recipe_group_id": "14f34319-2bdc-478f-b55b-909be0df6964",
         "slug": "receta-de-lasana-de-pollo-con-champinones",
         "public_path": "/receta-de-lasana-de-pollo-con-champinones",
-        "stage": "images",
+        "stage": "localization",
         "status": "in_progress",
         "identity_qa": "PASS",
         "classification": "KEEP_REBUILD_RECIPE",
@@ -330,9 +330,19 @@
         "image_manifest": "editorial/receta-de-lasana-de-pollo-con-champinones-imagenes.json",
         "qa_file": "editorial/receta-de-lasana-de-pollo-con-champinones-qa-20261008.json",
         "steps_sha256": "b0a186f36b233efcac7e14151ae57158486ac90c80c5e410a28438af3bbee2cf",
-        "images_ready": 0,
+        "images_ready": 12,
         "languages_ready": 1,
-        "distinct_images_pending": 8
+        "distinct_images_pending": 0,
+        "image_originals": 8,
+        "image_visual_qa": "PASS",
+        "localizations_pending": [
+          "de",
+          "en",
+          "fr",
+          "it",
+          "ja",
+          "pt"
+        ]
       },
       {
         "id": "2ac6ac2b-ce9e-458c-b43d-93ea541ea20c",
@@ -417,14 +427,14 @@
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
   "progress_branch": "recetas/lote-02-20261008",
-  "last_checkpoint_at": "2026-10-08T10:25:39.830Z",
+  "last_checkpoint_at": "2026-10-08T10:34:57.557Z",
   "handoff": {
     "first_prepared_recipe": "como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada",
     "first_recipe_source": "editorial/como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada-20261008.json",
     "next_recipe": "receta-de-lasana-de-pollo-con-champinones",
     "batch_remaining_to_prepare": 2,
     "published_this_batch": 0,
-    "required_action": "Generate eight lasaña originals, twelve WebP and six localizations. Thirteen prior recipes prepared. No batch published.",
+    "required_action": "Complete six lasaña translations and SQL; thirteen earlier recipes prepared, batch remains unpublished.",
     "scope": "Preview only; production migration not executed."
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z"
