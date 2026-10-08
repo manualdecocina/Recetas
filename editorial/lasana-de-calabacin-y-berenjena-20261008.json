@@ -1,6 +1,6 @@
 {
   "scope": "Manual de Cocina only; lote03",
-  "state": "MEDIA_READY_LOCALIZATIONS_PENDING",
+  "state": "MEDIA_READY_LOCALIZATIONS_IN_PROGRESS_NOT_PUBLISHED",
   "provenance": "Original culinary reconstruction; identity/routes preserved, no WordPress text, translations or images reused.",
   "ai_owner_confirmation": "Original content and ImageGen authorized. No kitchen test claimed.",
   "category_slug": "platos-principales",
@@ -458,6 +458,854 @@
       "published": false,
       "editorial_status": "draft",
       "content_html": "<p>Lasaña propuesta de calabacín y berenjena asados en láminas, salsa de tomate, ricotta y mozzarella. Esta versión usa verduras como capas y no lleva placas de pasta. Rinde 6 raciones propuestas; los 140 minutos estimados incluyen asado, salsa, horno final, precalentado y reposo. Cantidades, tiempo y rendimiento están pendientes de confirmación en cocina.</p><p>Versión propuesta de lasaña con láminas de calabacín y berenjena asadas, ricotta y mozzarella, sin placas de pasta ni prueba de cocina declarada. Contiene leche; revisa etiquetas y utiliza quesos elaborados con leche pasteurizada. No se afirma que un producto sea apto para una alergia o celiaquía sin comprobar sus ingredientes. La ricotta se usa tal como se pesa y no se añade huevo. Puedes adaptar las verduras a lo que tengas, pero su humedad, grosor y tiempo de asado cambian; no prometemos idéntico resultado y hay que recalcular nutrición. Añadir pasta o sustituir queso exige otro montaje y revisar cantidades, tiempos y raciones. Asa en una sola capa y reduce la salsa para controlar agua libre. Mantén quesos y componentes preparados a 4 °C o menos si no vas a montar enseguida. Refrigera las sobras en recipientes poco profundos dentro de 2 horas, o 1 hora si el ambiente supera 32 °C; no esperes a que una fuente grande se enfríe por completo sobre la mesa. Consúmelas en 3 días y recalienta solo las porciones necesarias hasta 74 °C en el centro. No dejes la lasaña montada toda la noche fuera del frigorífico. Usa guantes y material apto para las temperaturas indicadas.</p>"
+    },
+    {
+      "id": "68a4bb20-f0a7-51ad-9371-540b95e47fc4",
+      "recipe_group_id": "9a28dffd-cdde-4e20-a746-88336cb0a016",
+      "slug": "zucchini-auberginen-lasagne",
+      "public_path": "/de/zucchini-auberginen-lasagne",
+      "source_url": "https://manualdecocina.com/de/zucchini-auberginen-lasagne/",
+      "language": "de",
+      "title": "Zucchini-Auberginen-Lasagne mit Ricotta",
+      "excerpt": "Geröstete Gemüsescheiben, dicke Tomatensauce und zwei Käsesorten: sechs vorgeschlagene Portionen mit genau erklärtem Schichtenaufbau.",
+      "summary": "Vorgeschlagene Lasagne aus gerösteten Zucchini- und Auberginenscheiben, Tomatensauce, Ricotta und Mozzarella. In dieser Variante bilden Gemüse statt Nudelplatten die Schichten. Vorgesehen sind 6 Portionen. Die geschätzten 140 Minuten umfassen Gemüse rösten, Sauce kochen, fertig backen, Vorheizen und Ruhen. Mengen, Zeiten und Ausbeute müssen noch in der Küche bestätigt werden.",
+      "category": "Hauptgerichte",
+      "category_slug": "platos-principales",
+      "difficulty": "Mittel",
+      "course": "Hauptgericht",
+      "cuisine": "Italienisch inspiriert",
+      "prep_time_minutes": 30,
+      "cook_time_minutes": 80,
+      "total_time_minutes": 140,
+      "servings": 6,
+      "ingredients": [
+        {
+          "name": "gewaschene Zucchini ohne Enden, mit Schale",
+          "amount": "500",
+          "unit": "g",
+          "group": "Gemüsescheiben"
+        },
+        {
+          "name": "gewaschene Aubergine ohne Stiel, mit Schale",
+          "amount": "500",
+          "unit": "g",
+          "group": "Gemüsescheiben"
+        },
+        {
+          "name": "Olivenöl, 20 g für Gemüse und 20 g für Sauce",
+          "amount": "40",
+          "unit": "g",
+          "group": "Abgemessenes Öl"
+        },
+        {
+          "name": "geschälte, gehackte Zwiebel",
+          "amount": "150",
+          "unit": "g",
+          "group": "Sauce"
+        },
+        {
+          "name": "geschälter, gehackter Knoblauch",
+          "amount": "10",
+          "unit": "g",
+          "group": "Sauce"
+        },
+        {
+          "name": "zerkleinerte Tomaten aus der Dose mit Flüssigkeit",
+          "amount": "500",
+          "unit": "g",
+          "group": "Sauce"
+        },
+        {
+          "name": "getrockneter Oregano",
+          "amount": "2",
+          "unit": "g",
+          "group": "Sauce"
+        },
+        {
+          "name": "gemahlener schwarzer Pfeffer",
+          "amount": "1",
+          "unit": "g",
+          "group": "Sauce"
+        },
+        {
+          "name": "Salz, 4 g für Gemüse, 3 g für Sauce und 1 g für Ricotta",
+          "amount": "8",
+          "unit": "g",
+          "group": "Abgemessenes Salz"
+        },
+        {
+          "name": "Ricotta aus pasteurisierter Vollmilch",
+          "amount": "300",
+          "unit": "g",
+          "group": "Käse"
+        },
+        {
+          "name": "geriebener Mozzarella aus pasteurisierter Vollmilch mit geringem Feuchtigkeitsgehalt",
+          "amount": "150",
+          "unit": "g",
+          "group": "Käse"
+        },
+        {
+          "name": "frische Basilikumblätter, gewaschen und getrocknet",
+          "amount": "5",
+          "unit": "g",
+          "group": "Zum Servieren"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Zutaten abwiegen und Backofen vorheizen",
+          "content": "Nach Entfernen von Enden und Stiel 500 g Zucchini und 500 g Aubergine mit Schale abwiegen. 150 g gehackte Zwiebel, 10 g Knoblauch, 500 g zerkleinerte Tomaten mit Flüssigkeit, 2 g Oregano und 1 g Pfeffer vorbereiten. Die 40 g Öl in 20 g für Gemüse und 20 g für Sauce aufteilen; die 8 g Salz in 4 g für Gemüse, 3 g für Sauce und 1 g für Ricotta. 300 g Ricotta und 150 g Mozzarella bei höchstens 4 °C aufbewahren. Die 5 g Basilikum waschen und trocknen. Etwa 20 Minuten auf 220 °C Ober-/Unterhitze oder 200 °C Umluft vorheizen. Zwei große Metallbleche von ungefähr 40 × 35 cm und eine ofenfeste Form von etwa 30 × 20 cm mit mindestens 6 cm Tiefe vorbereiten. Diese Variante verwendet Gemüsescheiben ohne Nudelplatten.",
+          "image_url": "/recetas/lasana-de-calabacin-y-berenjena/paso-01.webp",
+          "image_alt": "Ganze Zucchini und Auberginen mit getrennten Zutaten und leeren Blechen"
+        },
+        {
+          "title": "Gemüsescheiben schneiden und einpinseln",
+          "content": "Zucchini und Aubergine mit einem Messer auf einem stabilen Brett längs in etwa 5 mm dicke Scheiben schneiden. Jede Gemüsesorte auf ein eigenes Blech in einer einzigen Lage legen, ohne sie zu stapeln. Beide Seiten der Zucchini insgesamt mit 10 g Öl einpinseln und mit 2 g Salz würzen; für die Aubergine die übrigen 10 g Gemüseöl und 2 g Salz verwenden. Die Bleche nicht zusätzlich einfetten und kein Öl über die abgemessenen 40 g hinaus zugeben. Passt nicht alles ohne Überlappung, eine zusätzliche Runde vorbereiten und deren tatsächliche Zeit addieren; eine zweite Runde darf nicht in der vorgesehenen Backzeit versteckt werden.",
+          "image_url": "/recetas/lasana-de-calabacin-y-berenjena/paso-02.webp",
+          "image_alt": "Rohe Gemüsescheiben werden auf getrennten Blechen mit Öl bepinselt"
+        },
+        {
+          "title": "Gemüse rösten und Ofentemperatur senken",
+          "content": "Beide Bleche etwa 25 Minuten bei 220 °C Ober-/Unterhitze oder 200 °C Umluft rösten. Zur Hälfte die Einschubhöhen tauschen und die Bleche bei ungleichmäßiger Bräunung drehen; nach 20 Minuten erstmals prüfen. Die Scheiben sollen biegsam und leicht goldbraun sein, ohne harte Stellen oder Wasserpfütze auf dem Blech. Bei Bedarf weiter rösten und die zusätzliche Zeit addieren. Mit Ofenhandschuhen herausnehmen und alle Scheiben zum Schichten behalten. Den bereits heißen Ofen für das abschließende Backen auf 200 °C Ober-/Unterhitze oder 180 °C Umluft senken. Bräunung und Feuchtigkeitsverlust sind vorgeschlagene Merkmale, noch nicht durch einen Küchenversuch bestätigt.",
+          "image_url": "/recetas/lasana-de-calabacin-y-berenjena/paso-03.webp",
+          "image_alt": "Leicht goldbraune Zucchini- und Auberginenscheiben auf zwei Blechen"
+        },
+        {
+          "title": "Eine dicke Tomatensauce kochen",
+          "content": "Die für die Sauce reservierten 20 g Öl in einer breiten Pfanne bei mittlerer Hitze erwärmen. Die 150 g Zwiebel etwa 5 Minuten unter Rühren weich dünsten, ohne sie zu verbrennen. Die 10 g Knoblauch zugeben und 1 Minute rühren. Die 500 g Tomaten samt Flüssigkeit, 3 g Salz, 2 g Oregano und 1 g Pfeffer zugeben. Ohne Deckel bei milder Hitze etwa 14 Minuten köcheln und rühren, bis ein Löffel kurz eine Spur hinterlässt und sich kein wässriger Rand absetzt. Die Planung rechnet insgesamt 20 Minuten Saucenkochzeit. Ist sie noch flüssig, einige Minuten länger reduzieren und die Zeit addieren; ohne Neuberechnung kein Mehl, Zucker, Brühe oder Öl zugeben.",
+          "image_url": "/recetas/lasana-de-calabacin-y-berenjena/paso-04.webp",
+          "image_alt": "Dicke Tomatensauce mit weicher Zwiebel und Knoblauch in einer Pfanne"
+        },
+        {
+          "title": "Ricotta vorbereiten und Komponenten aufteilen",
+          "content": "Die 300 g Ricotta mit dem reservierten 1 g Salz mischen, ohne Ei oder Sahne und ohne eine bereits in der Nährwertrechnung enthaltene Menge abzutropfen. Diese Mischung von 301 g in zwei gleiche Teile zu 150,5 g teilen: jeder enthält 150 g Ricotta und 0,5 g Salz. Die gesamte gekochte Sauce in vier gleiche Teile aufteilen; ihr Endgewicht hängt von der Verdunstung ab und wird nicht als gemessene Ausbeute angegeben. Das gesamte geröstete Gemüse in drei ähnliche Teile aufteilen, jeweils mit Zucchini und Aubergine. Die 150 g Mozzarella für die Oberfläche reservieren. Saubere Löffel verwenden und erst schichten, wenn sich die Komponenten ohne Verbrennungsgefahr handhaben lassen.",
+          "image_url": "/recetas/lasana-de-calabacin-y-berenjena/paso-05.webp",
+          "image_alt": "Ricotta beim Mischen mit zwei Portionsschalen und reserviertem Mozzarella"
+        },
+        {
+          "title": "Saucenboden und erste Gemüseschicht verteilen",
+          "content": "Einen der vier Saucenteile ohne zusätzliches Öl auf dem Boden der 30 × 20 cm großen Form verteilen. Einen der drei Gemüseteile darauflegen und Zucchini mit Aubergine abwechseln, bis der Boden bedeckt ist. Beim Schichten ist leichtes Überlappen erlaubt, ohne einen Berg in der Mitte; die Scheiben wurden bereits getrennt geröstet. Kurze Stücke zum Schließen von Lücken verwenden und kein Gemüse wegwerfen, das in den Mengen enthalten ist. Dieser Variante keine Nudelplatten hinzufügen.",
+          "image_url": "/recetas/lasana-de-calabacin-y-berenjena/paso-06.webp",
+          "image_alt": "Erste geröstete Gemüseschicht auf dem Tomatensaucenboden"
+        },
+        {
+          "title": "Erste Ricotta- und zweite Gemüseschicht aufbauen",
+          "content": "Einen Teil von 150,5 g gewürztem Ricotta in kleinen Klecksen auf der ersten Gemüseschicht verteilen und vorsichtig glatt streichen. Den zweiten der vier Saucenteile hinzufügen und den zweiten der drei Gemüseteile mit Zucchini und Aubergine verteilen. Bis an die Ränder gleichmäßig schichten. Die andere Ricottahälfte, zwei Saucenteile, den letzten Gemüseteil und den gesamten Mozzarella für den nächsten Schritt aufbewahren, damit jede Schicht ihre geplante Menge erhält.",
+          "image_url": "/recetas/lasana-de-calabacin-y-berenjena/paso-07.webp",
+          "image_alt": "Zweite Gemüseschicht über Ricotta und Tomatensauce"
+        },
+        {
+          "title": "Schichten fertigstellen und Mozzarella aufstreuen",
+          "content": "Auf der zweiten Gemüseschicht die übrigen 150,5 g gewürzten Ricotta und den dritten Saucenteil verteilen. Den letzten Gemüseteil darauflegen und mit dem vierten und letzten Saucenteil bedecken. Die 150 g geriebenen Mozzarella über die ganze Oberfläche verteilen. Der Aufbau verbraucht drei Gemüseschichten, zwei Ricottaschichten und vier Saucenteile einschließlich des Bodens. Keinen zusätzlichen Käse, Parmesan, Ei, Fleisch oder Béchamel zugeben. Basilikum bleibt bis nach dem Backen beiseite.",
+          "image_url": "/recetas/lasana-de-calabacin-y-berenjena/paso-08.webp",
+          "image_alt": "Ungebackene Lasagne mit hellem geriebenem Mozzarella"
+        },
+        {
+          "title": "Backen, bis die Mitte gründlich erhitzt ist",
+          "content": "Alufolie wie ein Dach über die Form legen, ohne Tomate oder Käse zu berühren. Bei 200 °C Ober-/Unterhitze oder 180 °C Umluft etwa 20 Minuten backen. Die Folie mit Ofenhandschuhen entfernen und weitere 15 Minuten backen, insgesamt 35; nach 30 erstmals prüfen. Der Mozzarella soll geschmolzen und leicht goldbraun, die Sauce blubbernd und das Gemüse weich sein. Mit einer sauberen Sonde mindestens 74 °C in der Mitte prüfen; ein Foto bestätigt keine gemessene Temperatur. Ist die Mitte noch zu kühl oder bleibt viel freies Wasser, einige Minuten weiterbacken und die Zeit addieren; bei zu starker Bräunung die Oberfläche schützen. Ofenhandschuhe benutzen und die heiße Form auf einer hitzefesten Fläche abstellen.",
+          "image_url": "/recetas/lasana-de-calabacin-y-berenjena/paso-09.webp",
+          "image_alt": "Lasagne im Ofen mit goldbraunem Käse, angehobener Folie und sauberer Sonde"
+        },
+        {
+          "title": "Ruhen lassen und sechs Portionen servieren",
+          "content": "Die Form vor dem Schneiden etwa 10 Minuten auf einem Untersetzer ruhen lassen. Gemüselasagne kann eine weichere Portion ergeben als eine Nudellasagne; eine erprobte Schnittfestigkeit wird nicht versprochen. In 6 ähnliche Portionen teilen und die 5 g sauberen Basilikum beim Servieren verteilen. Die konservative Planung umfasst 30 Minuten Vorbereitung, 80 Minuten Garen (25 Rösten, 20 Sauce und 35 abschließendes Backen) sowie 30 Minuten Warten (20 Vorheizen und 10 Ruhen): geschätzte 140 Minuten. Überlappende Aufgaben werden nicht abgezogen. Tatsächliche Zusatzzeit für weitere Gemüserunden, Saucenreduktion oder Backen addieren. Mengen, Zeiten und sechs Portionen sind Vorschläge zur Bestätigung in der Küche; ein gekochtes Gewicht in Gramm wird nicht behauptet.",
+          "image_url": "/recetas/lasana-de-calabacin-y-berenjena/portada.webp",
+          "image_alt": "Servierte Gemüselasagne mit sichtbaren Ricotta- und Tomatenschichten und Basilikum"
+        }
+      ],
+      "notes": "Vorgeschlagene Lasagne mit gerösteten Zucchini- und Auberginenscheiben, Ricotta und Mozzarella, ohne Nudelplatten und ohne behaupteten Küchenversuch. Enthält Milch; Etiketten prüfen und Käse aus pasteurisierter Milch verwenden. Eignung bei Allergie oder Zöliakie wird ohne Zutatenprüfung nicht zugesagt. Ricotta wie abgewogen verwenden und kein Ei zugeben. Gemüse lässt sich anpassen, doch Feuchtigkeit, Dicke und Röstzeit ändern sich; ein identisches Ergebnis wird nicht versprochen und die Nährwerte müssen neu berechnet werden. Pasta hinzufügen oder Käse ersetzen erfordert einen anderen Aufbau und die Prüfung von Mengen, Zeiten und Portionen. In einer Lage rösten und die Sauce reduzieren, um freies Wasser zu begrenzen. Käse und vorbereitete Komponenten bei höchstens 4 °C lagern, wenn nicht sofort geschichtet wird. Reste innerhalb von 2 Stunden, bei über 32 °C Umgebungstemperatur innerhalb von 1 Stunde, in flachen Behältern kühlen; nicht warten, bis eine große Form auf der Arbeitsplatte völlig abgekühlt ist. Innerhalb von 3 Tagen verbrauchen und nur benötigte Portionen auf 74 °C in der Mitte erhitzen. Die fertig geschichtete Lasagne nicht über Nacht ungekühlt lassen. Ofenhandschuhe und für die Temperaturen geeignetes Material verwenden.",
+      "nutrition": {
+        "calories": 289.1,
+        "protein_g": 12.8,
+        "carbs_g": 21.1,
+        "fat_g": 18.6,
+        "saturated_fat_g": 8.2,
+        "sodium_mg": 914.7,
+        "fiber_g": 5.6,
+        "sugar_g": 10.2,
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (abril de 2018)",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "inputs": [
+          {
+            "ingredient": "calabacín crudo con piel, peso comestible",
+            "edible_grams": 500,
+            "fdc_id": 169291,
+            "fdc_description": "Squash, summer, zucchini, includes skin, raw",
+            "per_100g": {
+              "sugar_g": 2.5,
+              "fat_g": 0.32,
+              "carbs_g": 3.11,
+              "calories": 17.0,
+              "fiber_g": 1.0,
+              "sodium_mg": 8.0,
+              "protein_g": 1.21,
+              "saturated_fat_g": 0.084
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169291/nutrients"
+          },
+          {
+            "ingredient": "berenjena cruda con piel, peso comestible",
+            "edible_grams": 500,
+            "fdc_id": 169228,
+            "fdc_description": "Eggplant, raw",
+            "per_100g": {
+              "saturated_fat_g": 0.034,
+              "sugar_g": 3.53,
+              "fat_g": 0.18,
+              "carbs_g": 5.88,
+              "calories": 25.0,
+              "fiber_g": 3.0,
+              "sodium_mg": 2.0,
+              "protein_g": 0.98
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169228/nutrients"
+          },
+          {
+            "ingredient": "aceite de oliva total: 20 g verduras y 20 g salsa",
+            "edible_grams": 40,
+            "fdc_id": 171413,
+            "fdc_description": "Oil, olive, salad or cooking",
+            "per_100g": {
+              "fat_g": 100,
+              "carbs_g": 0.0,
+              "calories": 884,
+              "sodium_mg": 2.0,
+              "protein_g": 0.0,
+              "saturated_fat_g": 13.8,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171413/nutrients"
+          },
+          {
+            "ingredient": "cebolla cruda pelada",
+            "edible_grams": 150,
+            "fdc_id": 170000,
+            "fdc_description": "Onions, raw",
+            "per_100g": {
+              "sugar_g": 4.24,
+              "fat_g": 0.1,
+              "carbs_g": 9.34,
+              "calories": 40.0,
+              "saturated_fat_g": 0.042,
+              "protein_g": 1.1,
+              "fiber_g": 1.7,
+              "sodium_mg": 4.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170000/nutrients"
+          },
+          {
+            "ingredient": "ajo crudo pelado",
+            "edible_grams": 10,
+            "fdc_id": 169230,
+            "fdc_description": "Garlic, raw",
+            "per_100g": {
+              "carbs_g": 33.1,
+              "calories": 149,
+              "sugar_g": 1.0,
+              "saturated_fat_g": 0.089,
+              "fiber_g": 2.1,
+              "sodium_mg": 17.0,
+              "protein_g": 6.36,
+              "fat_g": 0.5
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169230/nutrients"
+          },
+          {
+            "ingredient": "tomate triturado en conserva con líquido",
+            "edible_grams": 500,
+            "fdc_id": 170501,
+            "fdc_description": "Tomatoes, crushed, canned",
+            "per_100g": {
+              "sodium_mg": 186,
+              "fat_g": 0.28,
+              "carbs_g": 7.29,
+              "calories": 32.0,
+              "fiber_g": 1.9,
+              "protein_g": 1.64,
+              "saturated_fat_g": 0.04,
+              "sugar_g": 4.4
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170501/nutrients"
+          },
+          {
+            "ingredient": "orégano seco",
+            "edible_grams": 2,
+            "fdc_id": 171328,
+            "fdc_description": "Spices, oregano, dried",
+            "per_100g": {
+              "sugar_g": 4.09,
+              "fat_g": 4.28,
+              "carbs_g": 68.9,
+              "calories": 265,
+              "fiber_g": 42.5,
+              "sodium_mg": 25.0,
+              "saturated_fat_g": 1.55,
+              "protein_g": 9.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171328/nutrients"
+          },
+          {
+            "ingredient": "pimienta negra molida",
+            "edible_grams": 1,
+            "fdc_id": 170931,
+            "fdc_description": "Spices, pepper, black",
+            "per_100g": {
+              "fat_g": 3.26,
+              "sugar_g": 0.64,
+              "carbs_g": 64.0,
+              "calories": 251,
+              "protein_g": 10.4,
+              "fiber_g": 25.3,
+              "sodium_mg": 20.0,
+              "saturated_fat_g": 1.39
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170931/nutrients"
+          },
+          {
+            "ingredient": "sal total: 4 g verduras, 3 g salsa y 1 g ricotta",
+            "edible_grams": 8,
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "fiber_g": 0.0,
+              "sodium_mg": 38800.0,
+              "saturated_fat_g": 0.0,
+              "protein_g": 0.0,
+              "fat_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 0.0,
+              "sugar_g": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients"
+          },
+          {
+            "ingredient": "ricotta de leche entera",
+            "edible_grams": 300,
+            "fdc_id": 170851,
+            "fdc_description": "Cheese, ricotta, whole milk",
+            "per_100g": {
+              "saturated_fat_g": 6.42,
+              "protein_g": 7.54,
+              "sodium_mg": 110,
+              "fat_g": 10.2,
+              "carbs_g": 7.27,
+              "calories": 150,
+              "fiber_g": 0.0,
+              "sugar_g": 0.27
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170851/nutrients"
+          },
+          {
+            "ingredient": "mozzarella de leche entera y baja humedad",
+            "edible_grams": 150,
+            "fdc_id": 170846,
+            "fdc_description": "Cheese, mozzarella, whole milk, low moisture",
+            "per_100g": {
+              "sugar_g": 1.01,
+              "sodium_mg": 710,
+              "saturated_fat_g": 15.6,
+              "fiber_g": 0.0,
+              "protein_g": 21.6,
+              "fat_g": 24.6,
+              "carbs_g": 2.47,
+              "calories": 318
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170846/nutrients"
+          },
+          {
+            "ingredient": "albahaca fresca",
+            "edible_grams": 5,
+            "fdc_id": 172232,
+            "fdc_description": "Basil, fresh",
+            "per_100g": {
+              "saturated_fat_g": 0.041,
+              "sugar_g": 0.3,
+              "fat_g": 0.64,
+              "carbs_g": 2.65,
+              "calories": 23.0,
+              "fiber_g": 1.6,
+              "sodium_mg": 4.0,
+              "protein_g": 3.15
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/172232/nutrients"
+          }
+        ],
+        "serving_size": "Ein Sechstel der Form; 6 vorgeschlagene Portionen",
+        "method": "Zwölf verifizierte USDA-Lebensmitteleinträge: essbare Gramm mit Nährstoffen je 100 g multiplizieren, summieren und durch 6 teilen. Enthalten sind sämtliche 40 g Öl und 8 g Salz, 500 g Tomaten samt Flüssigkeit, 300 g Vollmilchricotta und 150 g feuchtigkeitsarmer Vollmilchmozzarella. Gemüse wird mit jeweils 500 g rohem essbarem Gewicht berechnet; alle Scheiben bleiben enthalten, ohne modellierten spezifischen Nährstoffverlust beim Rösten.",
+        "note": "Schätzung, keine Laboranalyse oder bestätigte Ausbeute. Das gegarte Gewicht schwankt durch Verdunstung; es begründet keine Grammangabe je Portion. Alle Zutaten gelten als verzehrt, auch wenn Öl oder Sauce in Gefäßen verbleibt. Marke, Feuchtigkeit und Salzgehalt von Käse und Tomaten verändern die Werte. Keine spezifischen Nährstoffverluste durch Hitze berechnet; Pasta, Ei, Parmesan und Beilagen sind ausgeschlossen. Alle Datenfelder liegen vor; fehlende Daten werden nicht durch null ersetzt."
+      },
+      "keywords": [
+        "Zucchini-Auberginen-Lasagne",
+        "Gemüselasagne",
+        "Lasagne mit Ricotta",
+        "geröstete Gemüseschichten"
+      ],
+      "image_url": "/recetas/lasana-de-calabacin-y-berenjena/portada.webp",
+      "gallery": [
+        "/recetas/lasana-de-calabacin-y-berenjena/paso-01.webp",
+        "/recetas/lasana-de-calabacin-y-berenjena/paso-02.webp",
+        "/recetas/lasana-de-calabacin-y-berenjena/paso-03.webp",
+        "/recetas/lasana-de-calabacin-y-berenjena/paso-04.webp",
+        "/recetas/lasana-de-calabacin-y-berenjena/paso-05.webp",
+        "/recetas/lasana-de-calabacin-y-berenjena/paso-06.webp",
+        "/recetas/lasana-de-calabacin-y-berenjena/paso-07.webp",
+        "/recetas/lasana-de-calabacin-y-berenjena/paso-08.webp",
+        "/recetas/lasana-de-calabacin-y-berenjena/paso-09.webp"
+      ],
+      "seo": {
+        "title": "Zucchini-Auberginen-Lasagne mit Ricotta: Schritt für Schritt",
+        "description": "Geröstete Zucchini und Auberginen mit Tomate, Ricotta und Mozzarella schichten: Mengen, Aufbau, Backzeit und Ruhe für sechs vorgeschlagene Portionen.",
+        "image_alt": "Portion Zucchini-Auberginen-Lasagne mit Gemüse-, Ricotta- und Tomatenschichten, goldbraunem Mozzarella und Basilikum neben der Form",
+        "image_variants": [
+          "/recetas/lasana-de-calabacin-y-berenjena/portada-1x1.webp",
+          "/recetas/lasana-de-calabacin-y-berenjena/portada-4x3.webp",
+          "/recetas/lasana-de-calabacin-y-berenjena/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Wie wird die Lasagne weniger wässrig?",
+            "a": "Die etwa 5 mm dicken Scheiben in einer Lage rösten und die Sauce kochen, bis sich kein wässriger Rand absetzt. Rohes Gemüse nicht in der Form stapeln. Die 25 Minuten Rösten und 14 Minuten Tomatenreduktion sind Richtwerte; bei Bedarf weitergaren und die tatsächliche Zusatzzeit addieren."
+          },
+          {
+            "q": "Kann ich Nudelplatten hinzufügen?",
+            "a": "Diese Variante verwendet drei geröstete Gemüseschichten, zwei Ricottaschichten und vier Saucenteile. Pasta verändert Flüssigkeitsbedarf, Aufbau, Zeit, Ausbeute und Nährwerte. Eine angepasste Rezeptur verwenden und neu rechnen, statt trockene Platten in dieselben Mengen einzubauen."
+          },
+          {
+            "q": "Kann ich sie am Vortag schichten?",
+            "a": "Komponenten lassen sich für den nächsten Tag vorbereiten und schichten, wenn sie korrekt bei höchstens 4 °C in geeigneten Behältern gekühlt werden: innerhalb von 2 Stunden oder 1 Stunde bei über 32 °C. Eine kalte Form braucht länger im Ofen; mindestens 74 °C in der Mitte prüfen und die tatsächliche Zeit zählen. Die gleichen 35 Minuten werden nicht versprochen."
+          }
+        ]
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "content_html": "<p>Vorgeschlagene Lasagne aus gerösteten Zucchini- und Auberginenscheiben, Tomatensauce, Ricotta und Mozzarella. In dieser Variante bilden Gemüse statt Nudelplatten die Schichten. Vorgesehen sind 6 Portionen. Die geschätzten 140 Minuten umfassen Gemüse rösten, Sauce kochen, fertig backen, Vorheizen und Ruhen. Mengen, Zeiten und Ausbeute müssen noch in der Küche bestätigt werden.</p><p>Vorgeschlagene Lasagne mit gerösteten Zucchini- und Auberginenscheiben, Ricotta und Mozzarella, ohne Nudelplatten und ohne behaupteten Küchenversuch. Enthält Milch; Etiketten prüfen und Käse aus pasteurisierter Milch verwenden. Eignung bei Allergie oder Zöliakie wird ohne Zutatenprüfung nicht zugesagt. Ricotta wie abgewogen verwenden und kein Ei zugeben. Gemüse lässt sich anpassen, doch Feuchtigkeit, Dicke und Röstzeit ändern sich; ein identisches Ergebnis wird nicht versprochen und die Nährwerte müssen neu berechnet werden. Pasta hinzufügen oder Käse ersetzen erfordert einen anderen Aufbau und die Prüfung von Mengen, Zeiten und Portionen. In einer Lage rösten und die Sauce reduzieren, um freies Wasser zu begrenzen. Käse und vorbereitete Komponenten bei höchstens 4 °C lagern, wenn nicht sofort geschichtet wird. Reste innerhalb von 2 Stunden, bei über 32 °C Umgebungstemperatur innerhalb von 1 Stunde, in flachen Behältern kühlen; nicht warten, bis eine große Form auf der Arbeitsplatte völlig abgekühlt ist. Innerhalb von 3 Tagen verbrauchen und nur benötigte Portionen auf 74 °C in der Mitte erhitzen. Die fertig geschichtete Lasagne nicht über Nacht ungekühlt lassen. Ofenhandschuhe und für die Temperaturen geeignetes Material verwenden.</p>"
+    },
+    {
+      "id": "de5d78d9-7b68-5257-bab8-eabb629ba9b0",
+      "recipe_group_id": "9a28dffd-cdde-4e20-a746-88336cb0a016",
+      "slug": "zucchini-and-eggplant-lasagna",
+      "public_path": "/en/zucchini-and-eggplant-lasagna",
+      "source_url": "https://manualdecocina.com/en/zucchini-and-eggplant-lasagna/",
+      "language": "en",
+      "title": "Zucchini and eggplant lasagna with ricotta",
+      "excerpt": "Roasted vegetable sheets, thick tomato sauce and two cheeses: six proposed servings with each layer explained.",
+      "summary": "A proposed lasagna made with roasted zucchini and eggplant sheets, tomato sauce, ricotta and mozzarella. Vegetables form the layers in this version; there are no pasta sheets. The proposed yield is 6 servings. The estimated 140 minutes include roasting, sauce, final baking, preheating and resting. Quantities, timing and yield await confirmation in a kitchen trial.",
+      "category": "Main dishes",
+      "category_slug": "platos-principales",
+      "difficulty": "Medium",
+      "course": "Main dish",
+      "cuisine": "Italian-inspired",
+      "prep_time_minutes": 30,
+      "cook_time_minutes": 80,
+      "total_time_minutes": 140,
+      "servings": 6,
+      "ingredients": [
+        {
+          "name": "washed zucchini, ends trimmed, skin on",
+          "amount": "500",
+          "unit": "g",
+          "group": "Vegetable sheets"
+        },
+        {
+          "name": "washed eggplant, stem removed, skin on",
+          "amount": "500",
+          "unit": "g",
+          "group": "Vegetable sheets"
+        },
+        {
+          "name": "olive oil, 20 g for vegetables and 20 g for sauce",
+          "amount": "40",
+          "unit": "g",
+          "group": "Measured oil"
+        },
+        {
+          "name": "peeled, chopped onion",
+          "amount": "150",
+          "unit": "g",
+          "group": "Sauce"
+        },
+        {
+          "name": "peeled, chopped garlic",
+          "amount": "10",
+          "unit": "g",
+          "group": "Sauce"
+        },
+        {
+          "name": "canned crushed tomatoes with their liquid",
+          "amount": "500",
+          "unit": "g",
+          "group": "Sauce"
+        },
+        {
+          "name": "dried oregano",
+          "amount": "2",
+          "unit": "g",
+          "group": "Sauce"
+        },
+        {
+          "name": "ground black pepper",
+          "amount": "1",
+          "unit": "g",
+          "group": "Sauce"
+        },
+        {
+          "name": "salt, 4 g for vegetables, 3 g for sauce and 1 g for ricotta",
+          "amount": "8",
+          "unit": "g",
+          "group": "Measured salt"
+        },
+        {
+          "name": "pasteurized whole-milk ricotta",
+          "amount": "300",
+          "unit": "g",
+          "group": "Cheeses"
+        },
+        {
+          "name": "pasteurized low-moisture whole-milk mozzarella, grated",
+          "amount": "150",
+          "unit": "g",
+          "group": "Cheeses"
+        },
+        {
+          "name": "fresh basil leaves, washed and dried",
+          "amount": "5",
+          "unit": "g",
+          "group": "Finish"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Weigh the ingredients and preheat the oven",
+          "content": "Weigh 500 g zucchini and 500 g eggplant after trimming the ends and stem, keeping the skin. Prepare 150 g chopped onion, 10 g garlic, 500 g crushed tomatoes with their liquid, 2 g oregano and 1 g pepper. Divide the 40 g oil into 20 g for vegetables and 20 g for sauce; divide the 8 g salt into 4 g for vegetables, 3 g for sauce and 1 g for ricotta. Keep 300 g ricotta and 150 g mozzarella at 4 °C or below. Wash and dry the 5 g basil. Preheat for about 20 minutes at 220 °C conventional, or 200 °C fan. Prepare two large metal baking trays, about 40 × 35 cm, and an ovenproof dish about 30 × 20 cm and at least 6 cm deep. This proposal uses vegetable sheets, without pasta sheets.",
+          "image_url": "/recetas/lasana-de-calabacin-y-berenjena/paso-01.webp",
+          "image_alt": "Whole zucchini and eggplants with separate measured ingredients and empty trays"
+        },
+        {
+          "title": "Slice and brush the vegetables",
+          "content": "Cut zucchini and eggplant lengthwise into sheets about 5 mm thick using a knife and a stable board. Arrange each vegetable on its own tray in a single layer, without piling up the sheets. Brush both sides of the zucchini with 10 g oil in total and season with 2 g salt; use the other 10 g vegetable oil and 2 g salt for the eggplant. Do not grease the trays separately or add oil beyond the measured 40 g. If everything will not fit without overlapping, prepare an additional batch and add its actual time; do not hide a second batch within the planned oven time.",
+          "image_url": "/recetas/lasana-de-calabacin-y-berenjena/paso-02.webp",
+          "image_alt": "Raw zucchini and eggplant sheets brushed with oil on separate trays"
+        },
+        {
+          "title": "Roast the vegetables and lower the oven temperature",
+          "content": "Bake both trays for about 25 minutes at 220 °C conventional, or 200 °C fan. Halfway through, swap shelf positions and rotate the trays if they brown unevenly; start checking at 20 minutes. The sheets should be flexible and lightly golden, with no hard patches or puddle of water on the tray. Continue if necessary and add the extra time to the total. Remove with oven mitts and keep all the sheets for assembly. Lower the already hot oven to 200 °C conventional, or 180 °C fan, for the final bake. Browning and moisture reduction are proposed endpoints awaiting a kitchen trial.",
+          "image_url": "/recetas/lasana-de-calabacin-y-berenjena/paso-03.webp",
+          "image_alt": "Lightly golden roasted zucchini and eggplant sheets on two trays"
+        },
+        {
+          "title": "Cook a thick tomato sauce",
+          "content": "Heat the 20 g oil reserved for sauce in a wide pan over medium heat. Cook the 150 g onion for about 5 minutes, stirring until softened without burning. Add the 10 g garlic and stir for 1 minute. Add the 500 g tomatoes with their liquid, 3 g salt, 2 g oregano and 1 g pepper. Simmer uncovered over low heat for about 14 minutes, stirring, until a spoon leaves a brief track and no watery rim separates. This schedule allows 20 minutes for cooking the sauce. If it remains runny, reduce it a few minutes longer and add the time to the total; do not add flour, sugar, stock or oil without recalculating the recipe.",
+          "image_url": "/recetas/lasana-de-calabacin-y-berenjena/paso-04.webp",
+          "image_alt": "Thick tomato sauce with softened onion and garlic, stirred in a pan"
+        },
+        {
+          "title": "Prepare the ricotta and divide the components",
+          "content": "Mix the 300 g ricotta with the reserved 1 g salt, without egg or cream and without draining an amount already included in the nutrition calculation. Divide this 301 g mixture into two equal parts of 150.5 g: each contains 150 g ricotta and 0.5 g salt. Divide all the cooked sauce into four equal parts; its final weight depends on evaporation and is not presented as a measured yield. Divide all the roasted vegetables into three similar parts, with zucchini and eggplant in each. Reserve the 150 g mozzarella for the surface. Use clean spoons and assemble once the components can be handled without burns.",
+          "image_url": "/recetas/lasana-de-calabacin-y-berenjena/paso-05.webp",
+          "image_alt": "Ricotta being mixed, with two portion bowls and grated mozzarella reserved"
+        },
+        {
+          "title": "Spread the sauce base and first vegetable layer",
+          "content": "Put one of the four parts of sauce in the bottom of the 30 × 20 cm dish, without additional oil. Spread one of the three parts of vegetables over it, alternating zucchini and eggplant to cover the base. Slight overlapping is fine during assembly, without a mound in the center; the sheets have already been roasted separately. Use short pieces to fill gaps without discarding vegetables included in the quantities. Do not add pasta sheets to this version.",
+          "image_url": "/recetas/lasana-de-calabacin-y-berenjena/paso-06.webp",
+          "image_alt": "First roasted vegetable layer over a tomato-sauce base"
+        },
+        {
+          "title": "Add the first ricotta layer and second vegetable layer",
+          "content": "Spread one 150.5 g part of seasoned ricotta over the first vegetable layer in small spoonfuls, then smooth it gently. Add the second of the four parts of sauce and arrange the second of the three parts of vegetables, mixing zucchini and eggplant. Keep the layers level right to the edges. Reserve the other half of ricotta, two parts of sauce, the last part of vegetables and all the mozzarella for the next step, so every layer receives its planned amount.",
+          "image_url": "/recetas/lasana-de-calabacin-y-berenjena/paso-07.webp",
+          "image_alt": "Second vegetable layer placed over ricotta and tomato sauce"
+        },
+        {
+          "title": "Finish the layers and add the mozzarella",
+          "content": "Spread the remaining 150.5 g seasoned ricotta over the second vegetable layer, followed by the third part of sauce. Add the last part of vegetables and cover with the fourth and final part of sauce. Spread the 150 g grated mozzarella over the entire surface. Assembly uses three vegetable layers, two ricotta layers and four portions of sauce, including the bottom. Do not add extra cheese, Parmesan, egg, meat or béchamel. Reserve the basil until after baking.",
+          "image_url": "/recetas/lasana-de-calabacin-y-berenjena/paso-08.webp",
+          "image_alt": "Unbaked lasagna covered with pale grated mozzarella"
+        },
+        {
+          "title": "Bake until the center is thoroughly hot",
+          "content": "Tent the dish with foil without letting it touch the tomato or cheese. Bake at 200 °C conventional, or 180 °C fan, for about 20 minutes. Remove the foil using oven mitts and bake for another 15 minutes, 35 in total; start checking at 30. Look for melted, lightly golden mozzarella, bubbling sauce and tender vegetables. Use a clean probe to check that the center reaches at least 74 °C; a photograph does not confirm a measured temperature. If the center is too cool or much free water remains, continue for a few minutes and add the time to the total, shielding the surface if it browns too much. Use oven mitts and set the hot dish on a heatproof surface.",
+          "image_url": "/recetas/lasana-de-calabacin-y-berenjena/paso-09.webp",
+          "image_alt": "Lasagna in the oven with golden cheese, foil lifted and a clean probe"
+        },
+        {
+          "title": "Rest and serve six portions",
+          "content": "Rest the dish for about 10 minutes on a trivet before cutting. Vegetable lasagna may form a softer portion than pasta lasagna; no tested firmness is promised. Divide into 6 similar portions and distribute the 5 g clean basil when serving. The conservative schedule totals 30 minutes preparation, 80 cooking (25 roasting, 20 sauce and 35 final baking) and 30 waiting (20 preheating and 10 resting): an estimated 140 minutes. No overlapping tasks are deducted. Add the actual time of extra vegetable batches, sauce reduction or baking. Quantities, timing and six servings are proposals awaiting kitchen confirmation; no cooked yield in grams is claimed.",
+          "image_url": "/recetas/lasana-de-calabacin-y-berenjena/portada.webp",
+          "image_alt": "Finished vegetable lasagna serving showing ricotta and tomato layers with basil"
+        }
+      ],
+      "notes": "Proposed lasagna with roasted zucchini and eggplant sheets, ricotta and mozzarella, without pasta sheets or a claimed kitchen test. Contains milk; check labels and use cheeses made from pasteurized milk. Suitability for an allergy or coeliac disease is not asserted without checking ingredients. Use ricotta as weighed and do not add egg. You may adapt the vegetables, but moisture, thickness and roasting time change; an identical result is not promised and nutrition must be recalculated. Adding pasta or replacing cheese requires a revised assembly, quantities, timing and portions. Roast in a single layer and reduce the sauce to control free water. Keep cheeses and prepared components at 4 °C or below if not assembling immediately. Refrigerate leftovers in shallow containers within 2 hours, or 1 hour if the room temperature exceeds 32 °C; do not wait for a large dish to cool completely on the counter. Use within 3 days and reheat only the portions needed to 74 °C in the center. Do not leave assembled lasagna outside the refrigerator overnight. Use oven mitts and equipment rated for the stated temperatures.",
+      "nutrition": {
+        "calories": 289.1,
+        "protein_g": 12.8,
+        "carbs_g": 21.1,
+        "fat_g": 18.6,
+        "saturated_fat_g": 8.2,
+        "sodium_mg": 914.7,
+        "fiber_g": 5.6,
+        "sugar_g": 10.2,
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (abril de 2018)",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "inputs": [
+          {
+            "ingredient": "calabacín crudo con piel, peso comestible",
+            "edible_grams": 500,
+            "fdc_id": 169291,
+            "fdc_description": "Squash, summer, zucchini, includes skin, raw",
+            "per_100g": {
+              "sugar_g": 2.5,
+              "fat_g": 0.32,
+              "carbs_g": 3.11,
+              "calories": 17.0,
+              "fiber_g": 1.0,
+              "sodium_mg": 8.0,
+              "protein_g": 1.21,
+              "saturated_fat_g": 0.084
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169291/nutrients"
+          },
+          {
+            "ingredient": "berenjena cruda con piel, peso comestible",
+            "edible_grams": 500,
+            "fdc_id": 169228,
+            "fdc_description": "Eggplant, raw",
+            "per_100g": {
+              "saturated_fat_g": 0.034,
+              "sugar_g": 3.53,
+              "fat_g": 0.18,
+              "carbs_g": 5.88,
+              "calories": 25.0,
+              "fiber_g": 3.0,
+              "sodium_mg": 2.0,
+              "protein_g": 0.98
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169228/nutrients"
+          },
+          {
+            "ingredient": "aceite de oliva total: 20 g verduras y 20 g salsa",
+            "edible_grams": 40,
+            "fdc_id": 171413,
+            "fdc_description": "Oil, olive, salad or cooking",
+            "per_100g": {
+              "fat_g": 100,
+              "carbs_g": 0.0,
+              "calories": 884,
+              "sodium_mg": 2.0,
+              "protein_g": 0.0,
+              "saturated_fat_g": 13.8,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171413/nutrients"
+          },
+          {
+            "ingredient": "cebolla cruda pelada",
+            "edible_grams": 150,
+            "fdc_id": 170000,
+            "fdc_description": "Onions, raw",
+            "per_100g": {
+              "sugar_g": 4.24,
+              "fat_g": 0.1,
+              "carbs_g": 9.34,
+              "calories": 40.0,
+              "saturated_fat_g": 0.042,
+              "protein_g": 1.1,
+              "fiber_g": 1.7,
+              "sodium_mg": 4.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170000/nutrients"
+          },
+          {
+            "ingredient": "ajo crudo pelado",
+            "edible_grams": 10,
+            "fdc_id": 169230,
+            "fdc_description": "Garlic, raw",
+            "per_100g": {
+              "carbs_g": 33.1,
+              "calories": 149,
+              "sugar_g": 1.0,
+              "saturated_fat_g": 0.089,
+              "fiber_g": 2.1,
+              "sodium_mg": 17.0,
+              "protein_g": 6.36,
+              "fat_g": 0.5
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169230/nutrients"
+          },
+          {
+            "ingredient": "tomate triturado en conserva con líquido",
+            "edible_grams": 500,
+            "fdc_id": 170501,
+            "fdc_description": "Tomatoes, crushed, canned",
+            "per_100g": {
+              "sodium_mg": 186,
+              "fat_g": 0.28,
+              "carbs_g": 7.29,
+              "calories": 32.0,
+              "fiber_g": 1.9,
+              "protein_g": 1.64,
+              "saturated_fat_g": 0.04,
+              "sugar_g": 4.4
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170501/nutrients"
+          },
+          {
+            "ingredient": "orégano seco",
+            "edible_grams": 2,
+            "fdc_id": 171328,
+            "fdc_description": "Spices, oregano, dried",
+            "per_100g": {
+              "sugar_g": 4.09,
+              "fat_g": 4.28,
+              "carbs_g": 68.9,
+              "calories": 265,
+              "fiber_g": 42.5,
+              "sodium_mg": 25.0,
+              "saturated_fat_g": 1.55,
+              "protein_g": 9.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171328/nutrients"
+          },
+          {
+            "ingredient": "pimienta negra molida",
+            "edible_grams": 1,
+            "fdc_id": 170931,
+            "fdc_description": "Spices, pepper, black",
+            "per_100g": {
+              "fat_g": 3.26,
+              "sugar_g": 0.64,
+              "carbs_g": 64.0,
+              "calories": 251,
+              "protein_g": 10.4,
+              "fiber_g": 25.3,
+              "sodium_mg": 20.0,
+              "saturated_fat_g": 1.39
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170931/nutrients"
+          },
+          {
+            "ingredient": "sal total: 4 g verduras, 3 g salsa y 1 g ricotta",
+            "edible_grams": 8,
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "fiber_g": 0.0,
+              "sodium_mg": 38800.0,
+              "saturated_fat_g": 0.0,
+              "protein_g": 0.0,
+              "fat_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 0.0,
+              "sugar_g": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients"
+          },
+          {
+            "ingredient": "ricotta de leche entera",
+            "edible_grams": 300,
+            "fdc_id": 170851,
+            "fdc_description": "Cheese, ricotta, whole milk",
+            "per_100g": {
+              "saturated_fat_g": 6.42,
+              "protein_g": 7.54,
+              "sodium_mg": 110,
+              "fat_g": 10.2,
+              "carbs_g": 7.27,
+              "calories": 150,
+              "fiber_g": 0.0,
+              "sugar_g": 0.27
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170851/nutrients"
+          },
+          {
+            "ingredient": "mozzarella de leche entera y baja humedad",
+            "edible_grams": 150,
+            "fdc_id": 170846,
+            "fdc_description": "Cheese, mozzarella, whole milk, low moisture",
+            "per_100g": {
+              "sugar_g": 1.01,
+              "sodium_mg": 710,
+              "saturated_fat_g": 15.6,
+              "fiber_g": 0.0,
+              "protein_g": 21.6,
+              "fat_g": 24.6,
+              "carbs_g": 2.47,
+              "calories": 318
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170846/nutrients"
+          },
+          {
+            "ingredient": "albahaca fresca",
+            "edible_grams": 5,
+            "fdc_id": 172232,
+            "fdc_description": "Basil, fresh",
+            "per_100g": {
+              "saturated_fat_g": 0.041,
+              "sugar_g": 0.3,
+              "fat_g": 0.64,
+              "carbs_g": 2.65,
+              "calories": 23.0,
+              "fiber_g": 1.6,
+              "sodium_mg": 4.0,
+              "protein_g": 3.15
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/172232/nutrients"
+          }
+        ],
+        "serving_size": "One sixth of the dish; 6 proposed servings",
+        "method": "Twelve verified USDA food records: edible grams multiplied by nutrients per 100 g, summed and divided by 6. Includes all 40 g oil and 8 g salt, 500 g tomatoes with their liquid, 300 g whole-milk ricotta and 150 g low-moisture whole-milk mozzarella. Vegetables are calculated from 500 g raw edible weight of each; all sheets are retained, with no specific modeled nutrient loss during roasting.",
+        "note": "Estimate, not laboratory analysis or confirmed yield. Cooked weight varies with evaporation and is not used to claim grams per serving. Assumes all ingredients are consumed, even if oil or sauce remains in containers. Cheese and tomato brand, moisture and salt content affect the figures. No specific heat-related nutrient losses are modeled; pasta, egg, Parmesan and side dishes are excluded. Every data field is present; missing data are not replaced with zero."
+      },
+      "keywords": [
+        "zucchini and eggplant lasagna",
+        "vegetable lasagna",
+        "ricotta lasagna",
+        "roasted vegetable layers"
+      ],
+      "image_url": "/recetas/lasana-de-calabacin-y-berenjena/portada.webp",
+      "gallery": [
+        "/recetas/lasana-de-calabacin-y-berenjena/paso-01.webp",
+        "/recetas/lasana-de-calabacin-y-berenjena/paso-02.webp",
+        "/recetas/lasana-de-calabacin-y-berenjena/paso-03.webp",
+        "/recetas/lasana-de-calabacin-y-berenjena/paso-04.webp",
+        "/recetas/lasana-de-calabacin-y-berenjena/paso-05.webp",
+        "/recetas/lasana-de-calabacin-y-berenjena/paso-06.webp",
+        "/recetas/lasana-de-calabacin-y-berenjena/paso-07.webp",
+        "/recetas/lasana-de-calabacin-y-berenjena/paso-08.webp",
+        "/recetas/lasana-de-calabacin-y-berenjena/paso-09.webp"
+      ],
+      "seo": {
+        "title": "Zucchini and eggplant lasagna with ricotta, step by step",
+        "description": "Layer roasted zucchini and eggplant with tomato, ricotta and mozzarella: measured ingredients, assembly, baking and resting for six proposed servings.",
+        "image_alt": "Serving of zucchini and eggplant lasagna with vegetable, ricotta and tomato layers, golden mozzarella and fresh basil beside the baking dish",
+        "image_variants": [
+          "/recetas/lasana-de-calabacin-y-berenjena/portada-1x1.webp",
+          "/recetas/lasana-de-calabacin-y-berenjena/portada-4x3.webp",
+          "/recetas/lasana-de-calabacin-y-berenjena/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "How do I stop the lasagna becoming watery?",
+            "a": "Roast the roughly 5 mm sheets in a single layer and cook the sauce until no watery rim separates. Do not pile raw vegetables into the dish. The 25 minutes roasting and 14 minutes tomato reduction are estimates; continue if necessary and add the actual extra time."
+          },
+          {
+            "q": "Can I add pasta sheets?",
+            "a": "This version uses three roasted vegetable layers, two ricotta layers and four portions of sauce. Adding pasta changes the required liquid, assembly, timing, yield and nutrition. Use an adapted recipe and recalculate rather than inserting dry sheets into these same quantities."
+          },
+          {
+            "q": "Can I assemble it the day before?",
+            "a": "You can prepare the components and assemble it for the next day if you cool and refrigerate them correctly at 4 °C or below in suitable containers within 2 hours, or 1 hour above 32 °C. A cold dish needs longer in the oven; check at least 74 °C in the center and count the actual time. The same 35-minute bake is not promised."
+          }
+        ]
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "content_html": "<p>A proposed lasagna made with roasted zucchini and eggplant sheets, tomato sauce, ricotta and mozzarella. Vegetables form the layers in this version; there are no pasta sheets. The proposed yield is 6 servings. The estimated 140 minutes include roasting, sauce, final baking, preheating and resting. Quantities, timing and yield await confirmation in a kitchen trial.</p><p>Proposed lasagna with roasted zucchini and eggplant sheets, ricotta and mozzarella, without pasta sheets or a claimed kitchen test. Contains milk; check labels and use cheeses made from pasteurized milk. Suitability for an allergy or coeliac disease is not asserted without checking ingredients. Use ricotta as weighed and do not add egg. You may adapt the vegetables, but moisture, thickness and roasting time change; an identical result is not promised and nutrition must be recalculated. Adding pasta or replacing cheese requires a revised assembly, quantities, timing and portions. Roast in a single layer and reduce the sauce to control free water. Keep cheeses and prepared components at 4 °C or below if not assembling immediately. Refrigerate leftovers in shallow containers within 2 hours, or 1 hour if the room temperature exceeds 32 °C; do not wait for a large dish to cool completely on the counter. Use within 3 days and reheat only the portions needed to 74 °C in the center. Do not leave assembled lasagna outside the refrigerator overnight. Use oven mitts and equipment rated for the stated temperatures.</p>"
     }
   ],
   "yield_proposal": {
@@ -469,5 +1317,6 @@
     "minimum_depth_cm": 6,
     "cooked_weight_measured": false,
     "confirmed": false
-  }
+  },
+  "portuguese_locale": "pt-BR"
 }

@@ -70,3 +70,8 @@ Cuarta entidad, id f7df8371-8273-4b15-ba6e-32390a185395, grupo9a28dffd-cdde-4e20
 ## 2026-10-08T15:08:44.550Z — Lasaña: medios completos
 
 10originalesPNG y13WebP definitivos; todas las fases y variantes revisadas visualmente. Portada1x1recorta lados de fuente de fondo y16x9borde exterior de plato; la porción principal y sus capas permanecen enteras. Hash ES congelado intacto. No regenerar medios. Siguiente: añadir DE,EN,FR,IT,JA,PT-BR a la misma fuente; QA ySQL protegido. Estado03:3recetas completas, cuarta ES+medios,0publicadas.
+
+
+## 2026-10-08T15:14:11.423Z — Lasaña3/7idiomas
+
+ES,DE,EN guardados en fuente única. Diez fases con cifras por fase iguales; ingredientes, tiempos, nutrición ymedios compartidos. PendientesFR,IT,JA,PT-BR; no rehacer los tres idiomas ni los medios. Lote03con3recetas completas, cuarta3/7; publicado0/15.

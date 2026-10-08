@@ -162,10 +162,10 @@
         "position": 20,
         "eligibility": "validate_url_master_before_writing",
         "status": "in_progress",
-        "stage": "imágenes",
+        "stage": "localización",
         "identity_qa": "PASS",
         "classification": "ELIGIBLE_EXISTING_CULINARY_CANDIDATE_OR_CORE_REBUILD",
-        "languages_ready": 1,
+        "languages_ready": 3,
         "images_ready": 13,
         "source_not_reused": true,
         "es_content_file": "editorial/lasana-de-calabacin-y-berenjena-20261008.json",
@@ -176,14 +176,12 @@
         "original_images_required": 10,
         "distinct_images_pending": 0,
         "expected_es_row_md5": "10e12c287c255ee35eac23e73a744d7e",
-        "next_action": "Append6localizations to the existing unique source, preserve frozenEShash and all23media assets; complete guardedSQL and QA before batch15publication.",
+        "next_action": "AppendFR,IT,JA,PT-BR to unique source preserving3completedlanguages and23media. Finish SQL/QA; no03DB publication until full15ready/deployed.",
         "image_originals": 10,
         "image_visual_qa": "PASS_ALL10_ORIGINALS",
         "cover_variant_visual_qa": "PASS_MAIN_SERVING_ALL_RATIOS",
         "next_image": null,
         "localizations_pending": [
-          "de",
-          "en",
           "fr",
           "it",
           "ja",
@@ -384,9 +382,9 @@
     "owner": "manual-continuation-20261008-bandeja-localization",
     "status": "active",
     "acquired_at": "2026-10-08T08:39:14.486Z",
-    "expires_at": "2026-10-08T16:25:43.599Z",
+    "expires_at": "2026-10-08T16:44:11.423Z",
     "reason": "Same continuing producer; fourth recipe vegetable lasagna ES frozen, next original images. Keep first3 complete7/7 unchanged.",
-    "renewed_at": "2026-10-08T14:55:43.599Z"
+    "renewed_at": "2026-10-08T15:14:11.423Z"
   },
   "blockers": [],
   "debt": [
@@ -461,11 +459,11 @@
     "current_recipe": "lasana-de-calabacin-y-berenjena",
     "prepared_recipes": 3,
     "published_recipes": 0,
-    "next_action": "Append6localizations to the existing unique source, preserve frozenEShash and all23media assets; complete guardedSQL and QA before batch15publication.",
+    "next_action": "AppendFR,IT,JA,PT-BR to unique source preserving3completedlanguages and23media. Finish SQL/QA; no03DB publication until full15ready/deployed.",
     "checkpoint_at": "2026-10-08T14:39:54.562Z"
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z",
-  "updated_at": "2026-10-08T15:08:44.550Z",
+  "updated_at": "2026-10-08T15:14:11.423Z",
   "completed_batches": [
     {
       "id": "lote-02-20261008",
