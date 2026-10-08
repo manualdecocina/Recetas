@@ -102,3 +102,7 @@ Ocho originales PNG y once WebP revisados, portada íntegra en los tres formatos
 
 ### Hummus completo en siete idiomas (2026-10-08T16:02:22.774Z)
 Paquete único editorial/receta-de-hummus-20261008.json: ES, DE, EN, FR, IT, JA y pt-BR; ocho pasos y diez ingredientes, tres FAQ, cantidades y tiempos idénticos. SHA paquete ddc51fc92ce231b87a25096c715fdc017c531c9571cbd4938ad0f2a9f4e0c916; SQL protegido 6d24afcb19bb6db7b554fa7cf90ce50a9d1d02f41e15272557f2957ddd837f78, NO ejecutado. Diecinueve medios remotos no vacíos con hash exacto. Preflight DB: ES sin publicar y MD5 intacto; cero colisiones y cero UUID nuevos existentes; catálogo124. Lote03: cinco preparadas de quince, cero publicadas. Siguiente: receta-de-pina-colada.
+
+
+### Piña colada: ES y ficha congelados (2026-10-08T16:07:17.443Z)
+Identidad/rutas: seis históricas y PT nueva, cero colisiones. MD5 ES 5f8c556c3a86ef05410b815dbff15f90. Fórmula original: piña120g netos, zumo180g, crema de coco ENDULZADA60g, ron60g de40%vol y hielo180g. Dos raciones propuestas,15min preparación/0cocción. Cuatro fichas USDA con ocho campos y etanol presentes;254,1kcal y10,0g alcohol estimado por ración, sin fingir análisis. Hash pasos 0fd833037bc2a63d381a08ecd905bd38f422403486bc96f1e33eecdb5f176827. Seis originales/nueve WebP y seis idiomas pendientes. No DBpublicación.
