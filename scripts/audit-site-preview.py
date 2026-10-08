@@ -289,7 +289,9 @@ def audit_page(url):
         if unknown:
             err("hreflang_unknown_tag", url, sorted(unknown))
         es = p.hreflang.get("es")
-        if es and p.hreflang.get("x-default") != es:
+        if recipes and "x-default" in p.hreflang:
+            err("recipe_x_default_forbidden", url, p.hreflang["x-default"])
+        elif not recipes and es and p.hreflang.get("x-default") != es:
             err("x_default_policy", url, {"x-default": p.hreflang.get("x-default"), "es": es})
     if WP_MARKERS.search(html):
         err("wordpress_residue", url, WP_MARKERS.search(html).group(0))
