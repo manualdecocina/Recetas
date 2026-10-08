@@ -30,7 +30,7 @@
     "id": "lote-02-20261008",
     "target": 15,
     "status": "in_progress",
-    "stage": "images",
+    "stage": "localization",
     "recipes": [
       {
         "id": "e47eac88-0649-4785-baf0-43b92dd2ec2e",
@@ -231,7 +231,7 @@
         "recipe_group_id": "0bbedb8a-3d06-41dd-8bfc-3dc1ebeac0a7",
         "slug": "receta-de-ratatouille",
         "public_path": "/receta-de-ratatouille",
-        "stage": "images",
+        "stage": "localization",
         "status": "in_progress",
         "identity_qa": "PASS",
         "classification": "ELIGIBLE_CATALOG_CANDIDATE",
@@ -240,9 +240,19 @@
         "image_manifest": "editorial/receta-de-ratatouille-imagenes.json",
         "qa_file": "editorial/receta-de-ratatouille-qa-20261008.json",
         "steps_sha256": "541d26ab971e3f2d41e4a6767bb4a5f6729b487572db63139110bac16f6121e4",
-        "images_ready": 0,
+        "images_ready": 11,
         "languages_ready": 1,
-        "distinct_images_pending": 7
+        "distinct_images_pending": 0,
+        "image_originals": 7,
+        "image_visual_qa": "PASS",
+        "localizations_pending": [
+          "de",
+          "en",
+          "fr",
+          "it",
+          "ja",
+          "pt"
+        ]
       },
       {
         "id": "aa9afced-ac23-4e4b-afef-7d28bf2d7af6",
@@ -301,8 +311,9 @@
     "owner": "manual-continuation-20261008-bandeja-localization",
     "status": "active",
     "acquired_at": "2026-10-08T08:39:14.486Z",
-    "expires_at": "2026-10-08T10:09:14.486Z",
-    "reason": "Ten recipes prepared, rice completed; continuing ratatouille without releasing production."
+    "expires_at": "2026-10-08T11:01:06.928Z",
+    "reason": "Ten recipes prepared, rice completed; continuing ratatouille without releasing production.",
+    "renewed_at": "2026-10-08T09:31:06.928Z"
   },
   "blockers": [],
   "debt": [],
@@ -350,14 +361,14 @@
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
   "progress_branch": "recetas/lote-02-20261008",
-  "last_checkpoint_at": "2026-10-08T09:22:16.967Z",
+  "last_checkpoint_at": "2026-10-08T09:31:06.928Z",
   "handoff": {
     "first_prepared_recipe": "como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada",
     "first_recipe_source": "editorial/como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada-20261008.json",
     "next_recipe": "receta-de-ratatouille",
     "batch_remaining_to_prepare": 5,
     "published_this_batch": 0,
-    "required_action": "Generate seven ratatouille originals from frozen brief; cover reused for final step, derive eleven WebP; inspect phases and preserve originals, then six localizations.",
+    "required_action": "Seven ratatouille originals and eleven WebP validated; localize six remaining languages, verify parity and prepare guarded SQL, then continue cordon bleu.",
     "scope": "Preview only; production migration not executed."
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z"
