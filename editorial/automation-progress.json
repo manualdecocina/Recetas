@@ -31,11 +31,11 @@
     "branch": "recetas/lote-03-20261008",
     "target": 15,
     "status": "in_progress",
-    "stage": "localización",
-    "current_recipe": "receta-de-pina-colada",
+    "stage": "identidad",
+    "current_recipe": "receta-de-okonomiyaki",
     "started_at": "2026-10-08T12:39:02.511Z",
     "completed_recipes": 0,
-    "prepared_recipes": 5,
+    "prepared_recipes": 6,
     "published_recipes": 0,
     "identity_qa": "PASS_15_ENTITIES_105_ROUTES_NO_COLLISIONS",
     "identity_file": "editorial/lote03-identidades-rutas-20261008.json",
@@ -249,11 +249,11 @@
         "editorial_status": "published",
         "position": 22,
         "eligibility": "validate_url_master_before_writing",
-        "status": "in_progress",
+        "status": "prepared",
         "stage": "localización",
         "identity_qa": "PASS",
         "classification": "ELIGIBLE_EXISTING_CULINARY_CANDIDATE_OR_CORE_REBUILD",
-        "languages_ready": 5,
+        "languages_ready": 7,
         "images_ready": 9,
         "source_not_reused": true,
         "es_content_file": "editorial/receta-de-pina-colada-20261008.json",
@@ -264,15 +264,20 @@
         "original_images_required": 6,
         "distinct_images_pending": 0,
         "expected_es_row_md5": "5f8c556c3a86ef05410b815dbff15f90",
-        "next_action": "Complete JA and pt-BR; then editorialQA/guardedSQL. Keep frozenES and15remote media intact;5previousrecipes prepared.",
+        "next_action": "Keep7languages/15media unchanged; include in atomic15recipe publication after remaining9complete.",
         "image_originals": 6,
         "image_visual_qa": "PASS_ALL6_ORIGINALS",
         "cover_variant_visual_qa": "PASS_ALL_RATIOS_WHOLE_TWO_GLASSES",
         "next_image": null,
-        "localizations_pending": [
-          "ja",
-          "pt"
-        ]
+        "localizations_pending": [],
+        "sql_file": "scripts/publish-receta-de-pina-colada-20261008.sql",
+        "sql_sha256": "9fcabc1338bdee68b1ce2676b441c774156be6e4ac2fafa0bd61e808a6cdf84d",
+        "sql_executed": false,
+        "qa_file": "editorial/receta-de-pina-colada-qa-20261008.json",
+        "localization_qa_file": "editorial/receta-de-pina-colada-localization-qa-20261008.json",
+        "editorial_qa": "PASS_EDITORIAL_MEDIA_LOCALIZATION_NOT_LIVE",
+        "package_sha256": "459fa9f6c22dfa9081f8deb2e271c1333e13f2ef40d1105e40d8afb21c766ef5",
+        "published_database": false
       },
       {
         "id": "2fd8b5c5-b708-407f-9437-ee0478f1f5b9",
@@ -434,9 +439,9 @@
     "owner": "manual-continuation-20261008-bandeja-localization",
     "status": "active",
     "acquired_at": "2026-10-08T08:39:14.486Z",
-    "expires_at": "2026-10-08T17:37:17.443Z",
+    "expires_at": "2026-10-08T17:52:46.289Z",
     "reason": "Same continuing producer; first4recipes7/7ready, hummusESfrozen next8images. Batch03published0/15.",
-    "renewed_at": "2026-10-08T16:07:17.443Z"
+    "renewed_at": "2026-10-08T16:22:46.289Z"
   },
   "blockers": [],
   "debt": [
@@ -505,17 +510,17 @@
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
   "progress_branch": "recetas/lote-03-20261008",
-  "last_checkpoint_at": "2026-10-08T16:18:22.996Z",
+  "last_checkpoint_at": "2026-10-08T16:22:46.289Z",
   "handoff": {
     "branch": "recetas/lote-03-20261008",
-    "current_recipe": "receta-de-pina-colada",
-    "prepared_recipes": 5,
+    "current_recipe": "receta-de-okonomiyaki",
+    "prepared_recipes": 6,
     "published_recipes": 0,
-    "next_action": "Complete JA and pt-BR; then editorialQA/guardedSQL. Keep frozenES and15remote media intact;5previousrecipes prepared.",
-    "checkpoint_at": "2026-10-08T16:07:17.443Z"
+    "next_action": "Validate okonomiyaki identity/classification/approved7routes and original formula with exactUSDA; first6ready intact.",
+    "checkpoint_at": "2026-10-08T16:22:46.289Z"
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z",
-  "updated_at": "2026-10-08T16:18:22.996Z",
+  "updated_at": "2026-10-08T16:22:46.289Z",
   "completed_batches": [
     {
       "id": "lote-02-20261008",

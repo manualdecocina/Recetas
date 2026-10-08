@@ -110,3 +110,7 @@ Identidad/rutas: seis históricas y PT nueva, cero colisiones. MD5 ES 5f8c556c3a
 
 ### Piña colada: medios completos (2026-10-08T16:12:16.344Z)
 Seis originales PNG y nueve WebP revisados. Ambos vasos íntegros en formatos cuadrado,4:3 y16:9; sin adornos ajenos. Las fases respetan ingredientes separados, corte, base sin hielo/ron, batidora cerrada y vertido con jarra desconectada. HashES intacto. Pendientes seis idiomas/SQL/gates del lote15. Ninguna03publicada.
+
+
+### Piña colada completa en siete idiomas (2026-10-08T16:22:46.289Z)
+Paquete único editorial/receta-de-pina-colada-20261008.json SHA459fa9f6c22dfa9081f8deb2e271c1333e13f2ef40d1105e40d8afb21c766ef5; SQL protegido SHA9fcabc1338bdee68b1ce2676b441c774156be6e4ac2fafa0bd61e808a6cdf84d, NO ejecutado. Seis pasos/cinco ingredientes/tres FAQ por idioma, quince medios remotos con tamaños positivos y hashes exactos. Nutrición recalculada incluye254,1kcal y10,0g etanol estimado por ración. PreflightDB: MD5yfechasESintactos, sin publicación/collisiones/UUIDexistentes; catálogo124. Lote03:6/15preparadas,0/15publicadas; siguiente receta-de-okonomiyaki.
