@@ -30,7 +30,7 @@
     "id": "lote-02-20261008",
     "target": 15,
     "status": "in_progress",
-    "stage": "localization",
+    "stage": "PR/CI",
     "recipes": [
       {
         "id": "e47eac88-0649-4785-baf0-43b92dd2ec2e",
@@ -351,8 +351,8 @@
         "recipe_group_id": "ceed8c90-4245-4396-9095-d1d858d397ac",
         "slug": "pollo-al-limon-y-miel-con-esparragos-asados",
         "public_path": "/pollo-al-limon-y-miel-con-esparragos-asados",
-        "stage": "localization",
-        "status": "images_complete_localization_pending",
+        "stage": "prepared",
+        "status": "prepared_pending_batch_publication",
         "identity_qa": "PASS",
         "classification": "ELIGIBLE_EXISTING_RECIPE_CANDIDATE",
         "routes_file": "editorial/pollo-al-limon-y-miel-con-esparragos-asados-rutas-20261008.json",
@@ -362,24 +362,26 @@
         "steps_sha256": "74ec2477cc6115cc3c512e208ad72af2aa64c78378b415820d1930daf0ee8155",
         "images_ready": 10,
         "distinct_images_pending": 0,
-        "languages_ready": 1,
+        "languages_ready": 7,
         "image_originals": 6,
         "image_visual_qa": "PASS",
-        "localizations_pending": [
-          "de",
-          "en",
-          "fr",
-          "it",
-          "ja",
-          "pt"
-        ]
+        "localizations_pending": [],
+        "editorial_qa": "PASS",
+        "localization_qa": "PASS",
+        "portuguese_locale": "pt-BR",
+        "localization_qa_file": "editorial/pollo-al-limon-y-miel-con-esparragos-asados-localization-qa-20261008.json",
+        "sql_file": "scripts/publish-pollo-al-limon-y-miel-con-esparragos-asados-20261008.sql",
+        "package_sha256": "dd60444bcbbaa2d710706b49336ecf787d96899c48c3fb08ce3fabab474757ae",
+        "sql_sha256": "896792a3650af5213e8751332303b56699d550d610179c21dc9e77af71867930",
+        "publication_gate": "BATCH_15_CI_DEPLOY_DB_QA_PENDING",
+        "media_commit": "d97851a4996f7f52e277db165d089e70c648fb19"
       }
     ],
-    "current_recipe": "pollo-al-limon-y-miel-con-esparragos-asados",
+    "current_recipe": null,
     "started_at": "2026-10-08T02:27:18.812Z",
     "branch": "recetas/lote-02-20261008",
     "completed_recipes": 0,
-    "prepared_recipes": 14,
+    "prepared_recipes": 15,
     "published_recipes": 0,
     "selection_adjustments": [
       {
@@ -399,9 +401,9 @@
     "owner": "manual-continuation-20261008-bandeja-localization",
     "status": "active",
     "acquired_at": "2026-10-08T08:39:14.486Z",
-    "expires_at": "2026-10-08T12:25:35.701Z",
+    "expires_at": "2026-10-08T12:32:20.316Z",
     "reason": "Twelve prepared; completing last three before batch publication.",
-    "renewed_at": "2026-10-08T10:55:35.701Z"
+    "renewed_at": "2026-10-08T11:02:20.316Z"
   },
   "blockers": [],
   "debt": [],
@@ -449,7 +451,7 @@
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
   "progress_branch": "recetas/lote-02-20261008",
-  "last_checkpoint_at": "2026-10-08T10:55:35.701Z",
-  "handoff": "Final recipe ES frozen; generate six distinct approved scenes, preserve originals/WebP hashes, localize six languages; then publish all15 with CI/deploy/DB/cacheQA.",
+  "last_checkpoint_at": "2026-10-08T11:02:20.316Z",
+  "handoff": "All15 recipes prepared with7languages and approved images. Proceed whole-batch validations/transaction/PR/CI/merge/deploy hashes BEFORE DB; then cache/globalQA, no recipe yet published.",
   "next_relay_requested_at": "2026-10-08T02:59:04Z"
 }
