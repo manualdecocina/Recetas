@@ -147,3 +147,7 @@ Fuente única editorial/receta-de-ensalada-rusa-20261008.json con records[7],9fa
 
 ## Frutos rojos ES congelado
 IdentidadESf706a385-30ef-4835-91e5-a24be0a9ac17/grupo7151996b-f41e-4e46-932a-bd6584dc972c; MD5histórico880ec62424f98541f378f89f5d0a98ad intacto,1ESfalse,0duplicados/rutas/content_pages,124ESpublicadas. Identidad de ensalada de FRUTA coherente con rutas aprobadas; categoríaEnsaladas intacta. Seisfases/seisingredientes/3FAQ, fruta fresca neta200fresa150frambuesa150mora100grosella20zumo20miel;4porciones20prep0cook20total propuestos. SeisUSDA8camposverificados,81.9kcal/porción estimadas; ficha grosella roja/blanca declarada. SHA pasos692d3db2821b7b68e368a1f8982cf6d63f02acd4bd2426f585f9ac7c0dc9b4bb congelado antes de imágenes. Próximo:6originales/9WebP y6localizaciones.8/15preparadas,0/15publicadas.
+
+
+## Frutos rojos medios completos
+6originalesPNG/9WebP conservados, bytes positivos y hashes comprobados. Fases y4recortes PASS; correcciones soloencuadreportada y retirada de fruta alrededor del aliño de fase4, no regenerar originales correctos. Seislocalizaciones pendientes.8preparadas,0publicadas del lote03.
