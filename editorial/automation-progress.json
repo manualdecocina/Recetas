@@ -30,7 +30,7 @@
     "id": "lote-02-20261008",
     "target": 15,
     "status": "in_progress",
-    "stage": "identity_validation",
+    "stage": "images",
     "recipes": [
       {
         "id": "e47eac88-0649-4785-baf0-43b92dd2ec2e",
@@ -68,8 +68,11 @@
         "recipe_group_id": "c934c115-46a8-4009-ae75-fb10bd3d184f",
         "slug": "receta-de-alfajores-de-maicena",
         "public_path": "/receta-de-alfajores-de-maicena",
-        "stage": "identity_validation",
-        "status": "reserved"
+        "stage": "images",
+        "status": "in_progress",
+        "es_content_file": "editorial/receta-de-alfajores-de-maicena-20261008.json",
+        "image_manifest": "editorial/receta-de-alfajores-de-maicena-imagenes.json",
+        "images_ready": 0
       },
       {
         "id": "9fb02391-f9aa-4dd1-bc03-eb8abe6a67f8",
@@ -180,7 +183,7 @@
     "owner": "continuous-run-20261008-0301",
     "status": "active",
     "acquired_at": "2026-10-08T03:02:36.623Z",
-    "expires_at": "2026-10-08T05:00:47.195Z",
+    "expires_at": "2026-10-08T05:04:57.808Z",
     "reason": "User explicitly requested continuous production; this worker owns the open batch and resumes rainbow juice."
   },
   "blockers": [],
@@ -229,7 +232,7 @@
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
   "progress_branch": "recetas/lote-02-20261008",
-  "last_checkpoint_at": "2026-10-08T03:30:47.195Z",
+  "last_checkpoint_at": "2026-10-08T03:34:57.808Z",
   "handoff": {
     "first_prepared_recipe": "como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada",
     "first_recipe_source": "editorial/como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada-20261008.json",
