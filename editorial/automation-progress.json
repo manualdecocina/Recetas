@@ -446,8 +446,32 @@
       "detected_run": 37771194642,
       "all_105_http200": true,
       "all_visible_content_matched": true,
-      "remaining_fix_pr": 92,
-      "next_action": "Merge fix after CI, observe deployed recipe metadata and sitemap without x-default, rerun PR91 revalidation+QA."
+      "remaining_fix_pr": null,
+      "next_action": "Merge time correction PR93 after CI, execute guarded seven-row patch, rerun PR91 revalidation and all QA.",
+      "fix_pr": 92,
+      "fix_merge": "9fd929d69d9374107b8d4bbd974acc2b13627448",
+      "fix_ci_run": 37773304696,
+      "html_observed_without_x_default": true,
+      "sitemap_cache_refresh_pending": true
+    },
+    "time_correction": {
+      "status": "PR_CI_PENDING",
+      "pr": 93,
+      "head": "08aeaa668ec58369bb4842a4364b0b2b6910538f",
+      "recipe": "receta-de-bandeja-paisa",
+      "minimum_minutes": 675,
+      "maximum_minutes": 915,
+      "steps_sha256": "945629d13e5ef3e77192e5e741687b143d76632255272e5ae2f52ec0577c7875",
+      "sql_sha256": "0257f5e5fdf2e75b33b4a34977ffa909d50b27aad2d867f4259d14009e6cf926"
+    },
+    "visual_qa": {
+      "status": "PASS_DESKTOP_COVERS_15",
+      "catalog_count": 124,
+      "all_15_visible_first_catalog_page": true,
+      "body_sample": "pollo-al-limon-y-miel-con-esparragos-asados",
+      "body_images_ingredients_notes_FAQ": "PASS",
+      "selector_sample": "receta-de-capuchino",
+      "selector": "PASS"
     }
   },
   "next_candidate_position": 17,
@@ -455,7 +479,7 @@
     "owner": "manual-continuation-20261008-bandeja-localization",
     "status": "active",
     "acquired_at": "2026-10-08T08:39:14.486Z",
-    "expires_at": "2026-10-08T13:06:30.861Z",
+    "expires_at": "2026-10-08T13:34:07.748Z",
     "reason": "All15 published7/7; refreshing cache and executing publication/live/global QA.",
     "renewed_at": "2026-10-08T11:36:30.861Z"
   },
@@ -507,5 +531,6 @@
   "progress_branch": "recetas/lote-02-20261008",
   "last_checkpoint_at": "2026-10-08T11:43:50.514Z",
   "handoff": "105/105 pagesHTTP200 and frozen content visible; only pageQA failure was globalrecipe x-default. FixPR92 opened, wait CI/merge/deploy then rerun PR91. 15DBpublished but batch notQAclosed.",
-  "next_relay_requested_at": "2026-10-08T02:59:04Z"
+  "next_relay_requested_at": "2026-10-08T02:59:04Z",
+  "updated_at": "2026-10-08T12:04:07.748Z"
 }
