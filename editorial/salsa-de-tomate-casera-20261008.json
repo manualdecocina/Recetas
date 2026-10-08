@@ -1,0 +1,273 @@
+{
+  "scope": "Manual de Cocina only; lote03",
+  "state": "ES_FROZEN_IMAGES_PENDING",
+  "provenance": "Original editorial recipe, no legacy WordPress content or images reused",
+  "ai_owner_confirmation": "Owner authorized production; no kitchen test performed",
+  "category_slug": "salsas-y-aderezos",
+  "steps_frozen": true,
+  "steps_sha256": "fa57b0a667aea7cb0e3efe0e288878dad244e36d12476c6b100e744117b36fcb",
+  "cover": "/recetas/salsa-de-tomate-casera/portada.webp",
+  "published_database": false,
+  "publication_blockers": [
+    "IMAGES_LOCALIZATIONS_FULL15_CI_DEPLOY_DB_CACHE_QA_PENDING"
+  ],
+  "sources": [
+    {
+      "url": "https://fdc.nal.usda.gov/download-datasets/",
+      "purpose": "Fichas SR Legacy verificadas y archivadas en los paquetes remotos USDA de lote01 y lasaña; cinco ingredientes y cálculo nuevo por ocho raciones.",
+      "accessed": "2026-10-08"
+    },
+    {
+      "url": "https://www.foodsafety.gov/keep-food-safe/4-steps-to-food-safety",
+      "purpose": "Higiene, refrigeración y límites temporales oficiales.",
+      "accessed": "2026-10-08"
+    },
+    {
+      "url": "https://nchfp.uga.edu/how/can/how-do-i-can-tomatoes/standard-tomato-sauce/",
+      "purpose": "Distinguir esta salsa refrigerada de una conserva con acidificación y proceso validados. No se copia la fórmula de conserva.",
+      "accessed": "2026-10-08"
+    }
+  ],
+  "records": [
+    {
+      "title": "Salsa de tomate casera con cebolla y ajo",
+      "excerpt": "Salsa de tomate fresco con cebolla, ajo y aceite de oliva. Siete fases, ocho raciones propuestas y nutrición estimada sin azúcar añadido.",
+      "summary": "Salsa casera original de tomate fresco, cebolla y ajo, triturada sin colar. Propone ocho porciones y 45 minutos. Las cantidades, el rendimiento y los tiempos son estimados y no se ha realizado prueba de cocina.",
+      "difficulty": "Fácil",
+      "course": "Salsa",
+      "cuisine": "Casera",
+      "category_slug": "salsas-y-aderezos",
+      "category": "Salsas y aderezos",
+      "prep_time_minutes": 10,
+      "cook_time_minutes": 35,
+      "total_time_minutes": 45,
+      "servings": 8,
+      "notes": "Los pesos son comestibles: tomate sin pedúnculo pero con piel, semillas y jugos; cebolla y ajo pelados. No se cuela, para conservar las partes incluidas en el cálculo. La propuesta de 35 minutos de cocción suma 7 de cebolla, 1 de ajo, 25 de tomate —incluida la recuperación del hervor— y 2 de triturado fuera del fuego; preparación 10, total 45. Ajusta según humedad y tamaño de la cazuela y registra cambios. No promete un peso final: divide la salsa real en ocho porciones iguales. Cuenta los 30 g de aceite y los 4 g de sal completos, sin suponer pérdidas ni medir retención. No lleva azúcar, hierbas, queso ni agua añadida. Tomate enlatado, menos aceite, colado o ingredientes adicionales requieren otra estimación; no afirmes nutrición idéntica. El tomate maduro y un sofrito suave ayudan al sabor; añadir azúcar no es obligatorio y cambiaría el cálculo. Con una batidora de mano apta para líquido caliente, retira del fuego y mantén el cabezal sumergido para evitar salpicaduras. No cierres salsa caliente en una licuadora no apta. Esta fórmula no es una conserva estable a temperatura ambiente: no se ha validado su acidez ni proceso de envasado. Refrigera a 4°C o menos dentro de 2 horas, o 1 hora si el ambiente supera 32°C, en recipientes poco profundos. Consumo en 3 días y congelación en porciones hasta 1 mes son propuestas prudentes sin ensayo de vida útil o calidad. Descongela en frío y recalienta a 74°C. La salsa sola es la unidad nutricional; pasta, carne u otros alimentos servidos con ella quedan fuera.",
+      "keywords": [
+        "salsa de tomate casera",
+        "tomate fresco",
+        "salsa con cebolla y ajo",
+        "salsa sin azúcar añadido"
+      ],
+      "id": "92f6fc6a-3b44-4422-b0ea-7a6ef257f8d7",
+      "recipe_group_id": "26e35ba2-35e6-4066-b663-242746818f42",
+      "slug": "salsa-de-tomate-casera",
+      "public_path": "/salsa-de-tomate-casera",
+      "source_url": "https://manualdecocina.com/salsa-de-tomate-casera/",
+      "language": "es",
+      "published": false,
+      "editorial_status": "ready",
+      "nutrition": {
+        "calories": 65.0,
+        "protein_g": 1.4,
+        "carbs_g": 7.0,
+        "fat_g": 4.0,
+        "saturated_fat_g": 0.6,
+        "fiber_g": 1.8,
+        "sugar_g": 4.1,
+        "sodium_mg": 201.0,
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "inputs": [
+          {
+            "ingredient": "tomate rojo crudo con piel y semillas",
+            "edible_grams": 1000,
+            "fdc_id": 170457,
+            "fdc_description": "Tomatoes, red, ripe, raw, year round average",
+            "per_100g": {
+              "sugar_g": 2.63,
+              "carbs_g": 3.89,
+              "calories": 18,
+              "saturated_fat_g": 0.028,
+              "fat_g": 0.2,
+              "fiber_g": 1.2,
+              "sodium_mg": 5,
+              "protein_g": 0.88
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170457/nutrients"
+          },
+          {
+            "ingredient": "cebolla cruda pelada",
+            "edible_grams": 150,
+            "fdc_id": 170000,
+            "fdc_description": "Onions, raw",
+            "per_100g": {
+              "sugar_g": 4.24,
+              "fat_g": 0.1,
+              "carbs_g": 9.34,
+              "calories": 40,
+              "saturated_fat_g": 0.042,
+              "protein_g": 1.1,
+              "fiber_g": 1.7,
+              "sodium_mg": 4
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170000/nutrients"
+          },
+          {
+            "ingredient": "ajo crudo pelado",
+            "edible_grams": 10,
+            "fdc_id": 169230,
+            "fdc_description": "Garlic, raw",
+            "per_100g": {
+              "carbs_g": 33.06,
+              "calories": 149,
+              "sugar_g": 1,
+              "saturated_fat_g": 0.089,
+              "fiber_g": 2.1,
+              "sodium_mg": 17,
+              "protein_g": 6.36,
+              "fat_g": 0.5
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169230/nutrients"
+          },
+          {
+            "ingredient": "aceite de oliva total",
+            "edible_grams": 30,
+            "fdc_id": 171413,
+            "fdc_description": "Oil, olive, salad or cooking",
+            "per_100g": {
+              "fat_g": 100,
+              "carbs_g": 0,
+              "calories": 884,
+              "sodium_mg": 2,
+              "protein_g": 0,
+              "saturated_fat_g": 13.8,
+              "fiber_g": 0,
+              "sugar_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171413/nutrients"
+          },
+          {
+            "ingredient": "sal de mesa total",
+            "edible_grams": 4,
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "fiber_g": 0,
+              "sodium_mg": 38758,
+              "saturated_fat_g": 0,
+              "protein_g": 0,
+              "fat_g": 0,
+              "carbs_g": 0,
+              "calories": 0,
+              "sugar_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients"
+          }
+        ],
+        "serving_size": "Una octava parte de la salsa terminada; ocho porciones propuestas sin peso final medido",
+        "method": "Suma los nutrientes de 1000 g de tomate, 150 g de cebolla, 10 g de ajo, 30 g de aceite de oliva y 4 g de sal mediante cinco fichas USDA SR Legacy verificadas y divide entre 8. Se cuentan todo el aceite, la sal y las verduras; no se cuela ni se modelan pérdidas de cocción. El peso final no está medido y la estimación es por fracción del lote, no por 100 g de salsa.",
+        "note": "Estimación de formulación, sin análisis nutricional ni prueba de cocina. El rendimiento de ocho porciones y las cantidades son propuestos. Se cuenta toda la materia comestible, todo el aceite y toda la sal, sin factores de pérdida o retención medidos. La evaporación cambia el peso, no se inventa un rendimiento. No incluye alimentos acompañantes ni ingredientes opcionales. Los ocho nutrientes proceden de las fichas; no se sustituyen datos ausentes por cero."
+      },
+      "image_url": "/recetas/salsa-de-tomate-casera/portada.webp",
+      "ingredients": [
+        {
+          "name": "tomates rojos maduros, sin pedúnculo, con piel y semillas",
+          "amount": "1000",
+          "unit": "g",
+          "group": "Verduras"
+        },
+        {
+          "name": "cebolla pelada",
+          "amount": "150",
+          "unit": "g",
+          "group": "Verduras"
+        },
+        {
+          "name": "ajo pelado",
+          "amount": "10",
+          "unit": "g",
+          "group": "Verduras"
+        },
+        {
+          "name": "aceite de oliva",
+          "amount": "30",
+          "unit": "g",
+          "group": "Sofrito y sazón"
+        },
+        {
+          "name": "sal de mesa",
+          "amount": "4",
+          "unit": "g",
+          "group": "Sofrito y sazón"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Lava, pesa y corta las verduras",
+          "content": "Lava los tomates bajo agua corriente, retira pedúnculos y partes dañadas y pesa 1000 g de tomate comestible. Conserva piel, semillas y jugos. Pela y pesa 150 g de cebolla y 10 g de ajo. Corta los tomates en dados, pica la cebolla fina y el ajo pequeño, manteniéndolos separados. Usa tabla limpia y manos lavadas. Los 10 minutos de preparación y las cantidades son propuestas sin prueba de cocina.",
+          "image_url": "/recetas/salsa-de-tomate-casera/paso-01.webp",
+          "image_alt": "Salsa de tomate casera con cebolla y ajo: Lava, pesa y corta las verduras"
+        },
+        {
+          "title": "Sofríe la cebolla",
+          "content": "Pon los 30 g de aceite de oliva en una cazuela ancha y estable. Añade los 150 g de cebolla y cocina a fuego medio-bajo unos 7 minutos, removiendo, hasta que esté translúcida y blanda sin quemarse. Baja el fuego si toma demasiado color; no añadas agua ni aceite extra sin registrar el cambio. Toda la cantidad de aceite está incluida en la estimación nutricional.",
+          "image_url": "/recetas/salsa-de-tomate-casera/paso-02.webp",
+          "image_alt": "Salsa de tomate casera con cebolla y ajo: Sofríe la cebolla"
+        },
+        {
+          "title": "Añade el ajo sin quemarlo",
+          "content": "Incorpora los 10 g de ajo al sofrito y remueve durante 1 minuto a fuego bajo. Debe desprender aroma, sin ponerse oscuro; el ajo quemado amarga. Ten los tomates preparados para continuar inmediatamente. Este minuto forma parte de la cocción total propuesta.",
+          "image_url": "/recetas/salsa-de-tomate-casera/paso-03.webp",
+          "image_alt": "Salsa de tomate casera con cebolla y ajo: Añade el ajo sin quemarlo"
+        },
+        {
+          "title": "Incorpora el tomate y la sal",
+          "content": "Añade los 1000 g de tomate con sus jugos y los 4 g de sal. Remueve el fondo y sube brevemente el fuego hasta recuperar un hervor suave, sin salpicaduras violentas. La recuperación del hervor está incluida en los 25 minutos de la fase siguiente; no se suma aparte. No añadas azúcar ni acompañamientos que no figuren en los ingredientes.",
+          "image_url": "/recetas/salsa-de-tomate-casera/paso-04.webp",
+          "image_alt": "Salsa de tomate casera con cebolla y ajo: Incorpora el tomate y la sal"
+        },
+        {
+          "title": "Reduce a fuego suave",
+          "content": "Cocina a hervor suave, destapada, durante unos 25 minutos contados desde la adición del tomate, removiendo el fondo con frecuencia. Deben desaparecer los trozos firmes y formarse una salsa espesa que todavía se pueda remover. Ajusta el fuego para que no se pegue; la humedad del tomate puede exigir más tiempo. No prometas un peso o volumen final: registra duración y rendimiento reales si cambian.",
+          "image_url": "/recetas/salsa-de-tomate-casera/paso-05.webp",
+          "image_alt": "Salsa de tomate casera con cebolla y ajo: Reduce a fuego suave"
+        },
+        {
+          "title": "Tritura sin colar",
+          "content": "Retira la cazuela del fuego. Con una batidora de mano apta para líquidos calientes, tritura unos 2 minutos hasta una textura uniforme, manteniendo el cabezal sumergido y evitando salpicaduras. No uses una licuadora cerrada no apta con salsa caliente. No cueles: piel y semillas están incluidas en el cálculo. Si necesitas enfriar para usar otro equipo, ese tiempo adicional no está incluido y debe registrarse.",
+          "image_url": "/recetas/salsa-de-tomate-casera/paso-06.webp",
+          "image_alt": "Salsa de tomate casera con cebolla y ajo: Tritura sin colar"
+        },
+        {
+          "title": "Porciona y conserva en frío",
+          "content": "Divide la salsa terminada en 8 porciones iguales, sin asignar un peso final que no se haya medido. Sirve con utensilio limpio; la nutrición corresponde solo a la salsa. Para guardar, distribuye en recipientes poco profundos y refrigera a 4°C o menos antes de 2 horas, o 1 hora si el ambiente supera 32°C. Consume en 3 días como propuesta prudente no ensayada, o congela porciones hasta 1 mes como plazo orientativo de calidad. Descongela en frío y recalienta a 74°C. No almacenes esta fórmula a temperatura ambiente como conserva: su acidez y tratamiento no están validados.",
+          "image_url": "/recetas/salsa-de-tomate-casera/portada.webp",
+          "image_alt": "Salsa de tomate casera con cebolla y ajo: Porciona y conserva en frío"
+        }
+      ],
+      "gallery": [
+        {
+          "url": "/recetas/salsa-de-tomate-casera/portada.webp",
+          "alt": "Salsa roja de tomate triturada en un cuenco blanco, sin hierbas, queso ni otros adornos"
+        }
+      ],
+      "seo": {
+        "title": "Salsa de tomate casera con cebolla y ajo paso a paso",
+        "description": "Salsa de tomate fresco con cebolla, ajo y aceite de oliva. Siete fases, ocho raciones propuestas y nutrición estimada sin azúcar añadido.",
+        "image_alt": "Salsa roja de tomate triturada en un cuenco blanco, sin hierbas, queso ni otros adornos",
+        "image_variants": [
+          "/recetas/salsa-de-tomate-casera/portada-1x1.webp",
+          "/recetas/salsa-de-tomate-casera/portada-4x3.webp",
+          "/recetas/salsa-de-tomate-casera/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "¿Hace falta añadir azúcar?",
+            "a": "No en esta fórmula. Usa tomates maduros y evita quemar el ajo. La acidez varía según el tomate; añadir azúcar sería una variante con un cálculo distinto, no un ingrediente omitido de esta receta."
+          },
+          {
+            "q": "¿Puedo usar tomate enlatado o colar la salsa?",
+            "a": "Son variantes posibles, pero cambian materia prima, sodio, fibra o rendimiento. Esta estimación corresponde a tomate fresco con piel y semillas, sin colar; consulta la etiqueta y recalcula si sustituyes."
+          },
+          {
+            "q": "¿Se conserva en un frasco fuera del refrigerador?",
+            "a": "No. Esta receta lleva cebolla, ajo y aceite y no tiene acidez ni proceso de envasado validados. Está pensada para refrigeración o congelación en porciones, no para conserva a temperatura ambiente."
+          }
+        ]
+      },
+      "content_html": "<p>Salsa casera original de tomate fresco, cebolla y ajo, triturada sin colar. Propone ocho porciones y 45 minutos. Las cantidades, el rendimiento y los tiempos son estimados y no se ha realizado prueba de cocina.</p><p>Los pesos son comestibles: tomate sin pedúnculo pero con piel, semillas y jugos; cebolla y ajo pelados. No se cuela, para conservar las partes incluidas en el cálculo. La propuesta de 35 minutos de cocción suma 7 de cebolla, 1 de ajo, 25 de tomate —incluida la recuperación del hervor— y 2 de triturado fuera del fuego; preparación 10, total 45. Ajusta según humedad y tamaño de la cazuela y registra cambios. No promete un peso final: divide la salsa real en ocho porciones iguales. Cuenta los 30 g de aceite y los 4 g de sal completos, sin suponer pérdidas ni medir retención. No lleva azúcar, hierbas, queso ni agua añadida. Tomate enlatado, menos aceite, colado o ingredientes adicionales requieren otra estimación; no afirmes nutrición idéntica. El tomate maduro y un sofrito suave ayudan al sabor; añadir azúcar no es obligatorio y cambiaría el cálculo. Con una batidora de mano apta para líquido caliente, retira del fuego y mantén el cabezal sumergido para evitar salpicaduras. No cierres salsa caliente en una licuadora no apta. Esta fórmula no es una conserva estable a temperatura ambiente: no se ha validado su acidez ni proceso de envasado. Refrigera a 4°C o menos dentro de 2 horas, o 1 hora si el ambiente supera 32°C, en recipientes poco profundos. Consumo en 3 días y congelación en porciones hasta 1 mes son propuestas prudentes sin ensayo de vida útil o calidad. Descongela en frío y recalienta a 74°C. La salsa sola es la unidad nutricional; pasta, carne u otros alimentos servidos con ella quedan fuera.</p>"
+    }
+  ]
+}

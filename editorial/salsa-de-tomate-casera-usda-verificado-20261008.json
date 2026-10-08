@@ -1,0 +1,185 @@
+{
+  "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+  "verified_date": "2026-10-08",
+  "source_snapshots": [
+    "editorial/lote-01-usda-sr-legacy-20261008.json",
+    "editorial/lasana-de-calabacin-y-berenjena-usda-verificado-20261008.json"
+  ],
+  "source_archives": {
+    "csv_sha256": "b80817294b8850530aaedf2e515c02593b1824f763a0ff356e5c2081643e6fd0",
+    "json_sha256": "0fe8ae486a2c8eb42cb96413f058deb51863a46c8fb8eeb4b1fb45006dd338ef"
+  },
+  "foods": [
+    {
+      "fdc_id": 169230,
+      "description": "Garlic, raw",
+      "per_100g": {
+        "carbs_g": 33.06,
+        "calories": 149,
+        "sugar_g": 1,
+        "saturated_fat_g": 0.089,
+        "fiber_g": 2.1,
+        "sodium_mg": 17,
+        "protein_g": 6.36,
+        "fat_g": 0.5
+      }
+    },
+    {
+      "fdc_id": 170000,
+      "description": "Onions, raw",
+      "per_100g": {
+        "sugar_g": 4.24,
+        "fat_g": 0.1,
+        "carbs_g": 9.34,
+        "calories": 40,
+        "saturated_fat_g": 0.042,
+        "protein_g": 1.1,
+        "fiber_g": 1.7,
+        "sodium_mg": 4
+      }
+    },
+    {
+      "fdc_id": 170457,
+      "description": "Tomatoes, red, ripe, raw, year round average",
+      "per_100g": {
+        "sugar_g": 2.63,
+        "carbs_g": 3.89,
+        "calories": 18,
+        "saturated_fat_g": 0.028,
+        "fat_g": 0.2,
+        "fiber_g": 1.2,
+        "sodium_mg": 5,
+        "protein_g": 0.88
+      }
+    },
+    {
+      "fdc_id": 173468,
+      "description": "Salt, table",
+      "per_100g": {
+        "fiber_g": 0,
+        "sodium_mg": 38758,
+        "saturated_fat_g": 0,
+        "protein_g": 0,
+        "fat_g": 0,
+        "carbs_g": 0,
+        "calories": 0,
+        "sugar_g": 0
+      }
+    },
+    {
+      "fdc_id": 171413,
+      "description": "Oil, olive, salad or cooking",
+      "per_100g": {
+        "fat_g": 100,
+        "carbs_g": 0,
+        "calories": 884,
+        "sodium_mg": 2,
+        "protein_g": 0,
+        "saturated_fat_g": 13.8,
+        "fiber_g": 0,
+        "sugar_g": 0
+      },
+      "source_snapshot": "editorial/lasana-de-calabacin-y-berenjena-usda-verificado-20261008.json"
+    }
+  ],
+  "calculation_inputs": [
+    {
+      "ingredient": "tomate rojo crudo con piel y semillas",
+      "edible_grams": 1000,
+      "fdc_id": 170457,
+      "fdc_description": "Tomatoes, red, ripe, raw, year round average",
+      "per_100g": {
+        "sugar_g": 2.63,
+        "carbs_g": 3.89,
+        "calories": 18,
+        "saturated_fat_g": 0.028,
+        "fat_g": 0.2,
+        "fiber_g": 1.2,
+        "sodium_mg": 5,
+        "protein_g": 0.88
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/170457/nutrients"
+    },
+    {
+      "ingredient": "cebolla cruda pelada",
+      "edible_grams": 150,
+      "fdc_id": 170000,
+      "fdc_description": "Onions, raw",
+      "per_100g": {
+        "sugar_g": 4.24,
+        "fat_g": 0.1,
+        "carbs_g": 9.34,
+        "calories": 40,
+        "saturated_fat_g": 0.042,
+        "protein_g": 1.1,
+        "fiber_g": 1.7,
+        "sodium_mg": 4
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/170000/nutrients"
+    },
+    {
+      "ingredient": "ajo crudo pelado",
+      "edible_grams": 10,
+      "fdc_id": 169230,
+      "fdc_description": "Garlic, raw",
+      "per_100g": {
+        "carbs_g": 33.06,
+        "calories": 149,
+        "sugar_g": 1,
+        "saturated_fat_g": 0.089,
+        "fiber_g": 2.1,
+        "sodium_mg": 17,
+        "protein_g": 6.36,
+        "fat_g": 0.5
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/169230/nutrients"
+    },
+    {
+      "ingredient": "aceite de oliva total",
+      "edible_grams": 30,
+      "fdc_id": 171413,
+      "fdc_description": "Oil, olive, salad or cooking",
+      "per_100g": {
+        "fat_g": 100,
+        "carbs_g": 0,
+        "calories": 884,
+        "sodium_mg": 2,
+        "protein_g": 0,
+        "saturated_fat_g": 13.8,
+        "fiber_g": 0,
+        "sugar_g": 0
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/171413/nutrients"
+    },
+    {
+      "ingredient": "sal de mesa total",
+      "edible_grams": 4,
+      "fdc_id": 173468,
+      "fdc_description": "Salt, table",
+      "per_100g": {
+        "fiber_g": 0,
+        "sodium_mg": 38758,
+        "saturated_fat_g": 0,
+        "protein_g": 0,
+        "fat_g": 0,
+        "carbs_g": 0,
+        "calories": 0,
+        "sugar_g": 0
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients"
+    }
+  ],
+  "servings": 8,
+  "per_serving": {
+    "calories": 65.0,
+    "protein_g": 1.4,
+    "carbs_g": 7.0,
+    "fat_g": 4.0,
+    "saturated_fat_g": 0.6,
+    "fiber_g": 1.8,
+    "sugar_g": 4.1,
+    "sodium_mg": 201.0
+  },
+  "retention_assumptions": "Estimación de formulación, sin análisis nutricional ni prueba de cocina. El rendimiento de ocho porciones y las cantidades son propuestos. Se cuenta toda la materia comestible, todo el aceite y toda la sal, sin factores de pérdida o retención medidos. La evaporación cambia el peso, no se inventa un rendimiento. No incluye alimentos acompañantes ni ingredientes opcionales. Los ocho nutrientes proceden de las fichas; no se sustituyen datos ausentes por cero.",
+  "missing_data_not_zero": true
+}
