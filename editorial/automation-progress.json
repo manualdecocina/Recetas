@@ -30,7 +30,7 @@
     "id": "lote-02-20261008",
     "target": 15,
     "status": "in_progress",
-    "stage": "images",
+    "stage": "localization",
     "recipes": [
       {
         "id": "e47eac88-0649-4785-baf0-43b92dd2ec2e",
@@ -351,8 +351,8 @@
         "recipe_group_id": "ceed8c90-4245-4396-9095-d1d858d397ac",
         "slug": "pollo-al-limon-y-miel-con-esparragos-asados",
         "public_path": "/pollo-al-limon-y-miel-con-esparragos-asados",
-        "stage": "images",
-        "status": "es_frozen_images_pending",
+        "stage": "localization",
+        "status": "images_complete_localization_pending",
         "identity_qa": "PASS",
         "classification": "ELIGIBLE_EXISTING_RECIPE_CANDIDATE",
         "routes_file": "editorial/pollo-al-limon-y-miel-con-esparragos-asados-rutas-20261008.json",
@@ -360,9 +360,19 @@
         "image_manifest": "editorial/pollo-al-limon-y-miel-con-esparragos-asados-imagenes.json",
         "qa_file": "editorial/pollo-al-limon-y-miel-con-esparragos-asados-qa-20261008.json",
         "steps_sha256": "74ec2477cc6115cc3c512e208ad72af2aa64c78378b415820d1930daf0ee8155",
-        "images_ready": 0,
-        "distinct_images_pending": 6,
-        "languages_ready": 1
+        "images_ready": 10,
+        "distinct_images_pending": 0,
+        "languages_ready": 1,
+        "image_originals": 6,
+        "image_visual_qa": "PASS",
+        "localizations_pending": [
+          "de",
+          "en",
+          "fr",
+          "it",
+          "ja",
+          "pt"
+        ]
       }
     ],
     "current_recipe": "pollo-al-limon-y-miel-con-esparragos-asados",
@@ -389,9 +399,9 @@
     "owner": "manual-continuation-20261008-bandeja-localization",
     "status": "active",
     "acquired_at": "2026-10-08T08:39:14.486Z",
-    "expires_at": "2026-10-08T12:20:06.827Z",
+    "expires_at": "2026-10-08T12:25:35.701Z",
     "reason": "Twelve prepared; completing last three before batch publication.",
-    "renewed_at": "2026-10-08T10:50:06.827Z"
+    "renewed_at": "2026-10-08T10:55:35.701Z"
   },
   "blockers": [],
   "debt": [],
@@ -439,7 +449,7 @@
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
   "progress_branch": "recetas/lote-02-20261008",
-  "last_checkpoint_at": "2026-10-08T10:50:06.827Z",
+  "last_checkpoint_at": "2026-10-08T10:55:35.701Z",
   "handoff": "Final recipe ES frozen; generate six distinct approved scenes, preserve originals/WebP hashes, localize six languages; then publish all15 with CI/deploy/DB/cacheQA.",
   "next_relay_requested_at": "2026-10-08T02:59:04Z"
 }
