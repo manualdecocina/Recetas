@@ -1,11 +1,13 @@
 name: site-preview-audit
 on:
+  # Live metadata is checked after deployment; pre-merge checks use quality.
+  # Lote publication workflows run this audit against the deployed release.
   workflow_dispatch:
-  pull_request:
-    paths:
-      - 'scripts/audit-site-preview.py'
-      - 'scripts/data/legacy-redirects.json'
-      - '.github/workflows/site-preview-audit.yml'
+    inputs:
+      expected_es_recipes:
+        description: 'Current published ES count verified in Supabase'
+        required: true
+        default: '124'
 permissions:
   contents: read
 jobs:
@@ -15,6 +17,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: python3 scripts/audit-site-preview.py
+        env:
+          EXPECTED_ES_RECIPES: ${{ inputs.expected_es_recipes }}
       - uses: actions/upload-artifact@v4
         if: always()
         with:

@@ -62,9 +62,9 @@ check('receta localizada: hreflang usa las URL públicas históricas', () => {
     tr
   )
   assert.equal(a.canonical, 'https://manualdecocina.com/de/kolumbianisches-lechona-rezept')
-  assert.deepEqual(Object.keys(a.languages).sort(), ['de', 'es', 'ja', 'x-default'])
+  assert.deepEqual(Object.keys(a.languages).sort(), ['de', 'es', 'ja'])
   assert.equal(a.languages.es, 'https://manualdecocina.com/receta-de-lechona-colombiana')
-  assert.equal(a.languages['x-default'], a.languages.es, 'x-default apunta a la URL española real (raíz histórica)')
+  assert.equal('x-default' in a.languages, false, 'las recetas omiten x-default incluso con versión española')
   assert.equal(a.languages.de, a.canonical)
 })
 

@@ -48,8 +48,8 @@ console.log('OK home/listado + institucionales + herramienta + recetas + ingredi
 
 assert.ok(urls.includes('https://manualdecocina.com/ja/recetas'))
 const es = s.find((e) => e.url === 'https://manualdecocina.com/receta-de-lechona-colombiana')
-assert.deepEqual(Object.keys(es.alternates.languages).sort(), ['es', 'ja', 'x-default'])
-assert.equal(es.alternates.languages['x-default'], 'https://manualdecocina.com/receta-de-lechona-colombiana')
+assert.deepEqual(Object.keys(es.alternates.languages).sort(), ['es', 'ja'])
+assert.equal('x-default' in es.alternates.languages, false, 'el sitemap de recetas omite x-default')
 assert.equal(es.lastModified, '2026-09-20T00:00:00Z')
 console.log('OK receta histórica: alternates usan public_path')
 

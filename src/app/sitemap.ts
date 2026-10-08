@@ -147,7 +147,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     if (siblings.length > 1) {
       const map: Record<string, string> = {}
       for (const s of siblings) map[languageTag(s.language)] = publicUrl(s.public_path)
-      entry.alternates = { languages: withXDefault(map) as SitemapLanguages }
+      entry.alternates = { languages: map as SitemapLanguages }
     }
 
     entries.push(entry)
