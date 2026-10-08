@@ -30,7 +30,7 @@
     "id": "lote-02-20261008",
     "target": 15,
     "status": "in_progress",
-    "stage": "identity_validation",
+    "stage": "images",
     "recipes": [
       {
         "id": "e47eac88-0649-4785-baf0-43b92dd2ec2e",
@@ -83,8 +83,11 @@
         "recipe_group_id": "b67728b9-bce4-4c97-b366-528cd318140a",
         "slug": "barras-de-cereal",
         "public_path": "/barras-de-cereal",
-        "stage": "identity_validation",
-        "status": "reserved"
+        "stage": "images",
+        "status": "in_progress",
+        "es_content_file": "editorial/barras-de-cereal-20261008.json",
+        "image_manifest": "editorial/barras-de-cereal-imagenes.json",
+        "images_ready": 0
       },
       {
         "id": "035e3edf-8b72-4604-8cd9-ae6883eff1c5",
@@ -187,7 +190,7 @@
     "owner": "continuous-run-20261008-0301",
     "status": "active",
     "acquired_at": "2026-10-08T03:02:36.623Z",
-    "expires_at": "2026-10-08T05:13:33.784Z",
+    "expires_at": "2026-10-08T05:16:40.856Z",
     "reason": "User explicitly requested continuous production; this worker owns the open batch and resumes rainbow juice."
   },
   "blockers": [],
@@ -236,7 +239,7 @@
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
   "progress_branch": "recetas/lote-02-20261008",
-  "last_checkpoint_at": "2026-10-08T03:43:33.784Z",
+  "last_checkpoint_at": "2026-10-08T03:46:40.856Z",
   "handoff": {
     "first_prepared_recipe": "como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada",
     "first_recipe_source": "editorial/como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada-20261008.json",
