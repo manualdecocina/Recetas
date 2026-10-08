@@ -1,6 +1,8 @@
 """Save one accepted generated original as WebP, cover crops, hashes and localized alts."""
 import hashlib
+import io
 import json
+import os
 import sys
 from pathlib import Path
 from PIL import Image, ImageOps
@@ -30,7 +32,16 @@ for name, size, step in outputs:
     out = image if size == image.size else ImageOps.fit(image, size)
     destination = directory / name
     assert not destination.exists(), f'Do not overwrite an accepted asset: {destination}'
-    out.save(destination, 'WEBP', quality=88, method=6)
+    buffer = io.BytesIO()
+    out.save(buffer, 'WEBP', quality=88, method=6)
+    encoded = buffer.getvalue()
+    temporary = destination.with_suffix('.webp.pending')
+    with temporary.open('xb') as handle:
+        handle.write(encoded)
+        handle.flush()
+        os.fsync(handle.fileno())
+    os.replace(temporary, destination)
+    assert destination.read_bytes() == encoded, 'Written WebP differs from encoded original'
     alts = {lang: alt['cover'] if step is None else alt['steps'][step - 1] for lang, alt in recipe['image_alts_by_language'].items()}
     manifest['images'].append({'archivo': name, 'paso': 'portada' if step is None else {'numero': step, 'titulo': recipe['records'][0]['steps'][step - 1]['title']}, 'muestra': recipe['cover'] if step is None else recipe['step_visuals'][step - 1], 'alt_es': alts['es'], 'alt_by_language': alts, 'estado': 'entregada', 'sha256': hashlib.sha256(destination.read_bytes()).hexdigest(), 'width': out.width, 'height': out.height, 'visual_qa': qa, 'source_original_sha256': hashlib.sha256(source.read_bytes()).hexdigest(), 'full_resolution_original': number == 0 and name == 'portada.webp'})
 manifest['images'].sort(key=lambda entry: entry['archivo'])
