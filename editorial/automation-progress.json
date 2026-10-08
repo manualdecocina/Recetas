@@ -30,7 +30,7 @@
     "id": "lote-02-20261008",
     "target": 15,
     "status": "in_progress",
-    "stage": "images",
+    "stage": "identity_validation",
     "recipes": [
       {
         "id": "e47eac88-0649-4785-baf0-43b92dd2ec2e",
@@ -128,11 +128,16 @@
         "recipe_group_id": "00a8928a-742e-4878-ba98-0539334c3530",
         "slug": "pasta-frutos-del-mar",
         "public_path": "/pasta-frutos-del-mar",
-        "stage": "images",
-        "status": "in_progress",
+        "stage": "prepared",
+        "status": "prepared_pending_batch_publication",
         "es_content_file": "editorial/pasta-frutos-del-mar-20261008.json",
         "image_manifest": "editorial/pasta-frutos-del-mar-imagenes.json",
-        "images_ready": 0
+        "images_ready": 12,
+        "distinct_images_pending": 0,
+        "languages_ready": 7,
+        "editorial_qa": "PASS",
+        "qa_file": "editorial/pasta-frutos-del-mar-qa-20261008.json",
+        "portuguese_locale": "pt-BR"
       },
       {
         "id": "c3860fad-711e-4bfd-ba29-13b0e71afe3c",
@@ -199,20 +204,20 @@
         "status": "reserved"
       }
     ],
-    "current_recipe": "pasta-frutos-del-mar",
+    "current_recipe": "como-preparar-cerveza-artesanal",
     "started_at": "2026-10-08T02:27:18.812Z",
     "branch": "recetas/lote-02-20261008",
     "completed_recipes": 0,
-    "prepared_recipes": 6,
+    "prepared_recipes": 7,
     "published_recipes": 0
   },
-  "next_candidate_position": 7,
+  "next_candidate_position": 8,
   "run_lease": {
     "owner": "automation-run-20261008-0604",
     "status": "active",
     "acquired_at": "2026-10-08T06:05:05.494Z",
-    "expires_at": "2026-10-08T07:35:05.494Z",
-    "reason": "Recovered expired lease after remote branch and database reconciliation; resume seafood pasta from images without regenerating accepted work."
+    "expires_at": "2026-10-08T07:39:02.688Z",
+    "reason": "Seafood pasta recovered, reconciled against frozen ES, and completed without regeneration; validating next reserved candidate before editorial work."
   },
   "blockers": [],
   "debt": [],
@@ -260,14 +265,14 @@
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
   "progress_branch": "recetas/lote-02-20261008",
-  "last_checkpoint_at": "2026-10-08T06:05:05.494Z",
+  "last_checkpoint_at": "2026-10-08T06:09:02.688Z",
   "handoff": {
     "first_prepared_recipe": "como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada",
     "first_recipe_source": "editorial/como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada-20261008.json",
-    "next_recipe": "pasta-frutos-del-mar",
-    "batch_remaining_to_prepare": 9,
+    "next_recipe": "como-preparar-cerveza-artesanal",
+    "batch_remaining_to_prepare": 8,
     "published_this_batch": 0,
-    "required_action": "Expired lease recovered with CAS. Reconcile and persist seafood pasta images/localizations; do not regenerate any verified assets. Then continue the next eligible recipe.",
+    "required_action": "Validate the reserved beer candidate against the authoritative classification. It is marked REVIEW in the catalog; retain with evidence and replace from the next eligible queue entry rather than reviving it.",
     "scope": "Preview only; production migration not executed."
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z"
