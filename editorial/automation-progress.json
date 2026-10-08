@@ -30,7 +30,7 @@
     "id": "lote-02-20261008",
     "target": 15,
     "status": "in_progress",
-    "stage": "es",
+    "stage": "images",
     "recipes": [
       {
         "id": "e47eac88-0649-4785-baf0-43b92dd2ec2e",
@@ -170,11 +170,18 @@
         "recipe_group_id": "8686de2f-500a-4c72-8f1c-1e9c0341e905",
         "slug": "receta-de-bandeja-paisa",
         "public_path": "/receta-de-bandeja-paisa",
-        "stage": "es",
+        "stage": "images",
         "status": "in_progress",
         "identity_qa": "PASS",
         "routes_file": "editorial/receta-de-bandeja-paisa-rutas-20261008.json",
-        "classification": "ELIGIBLE_REBUILD_CANDIDATE"
+        "classification": "ELIGIBLE_REBUILD_CANDIDATE",
+        "es_content_file": "editorial/receta-de-bandeja-paisa-20261008.json",
+        "image_manifest": "editorial/receta-de-bandeja-paisa-imagenes.json",
+        "steps_sha256": "8f045f79a1db3ebe2bec9b564361abea2322635e3b263e93b82f2b5e762e9c5d",
+        "es_editorial_qa": "PASS_STRUCTURAL_AND_NUTRITION_TRACEABILITY",
+        "qa_file": "editorial/receta-de-bandeja-paisa-qa-20261008.json",
+        "images_ready": 0,
+        "distinct_images_pending": 11
       },
       {
         "id": "e25621f2-c633-443c-8cb2-03780274d501",
@@ -250,7 +257,7 @@
     "status": "active",
     "acquired_at": "2026-10-08T07:59:45.000Z",
     "expires_at": "2026-10-08T09:29:45.000Z",
-    "reason": "Released predecessor checkpoint reconciled; resume bandeja paisa original Spanish editorial work without changing accepted identities or prior recipes."
+    "reason": "Bandeja paisa original ES, step hash, USDA calculation, QA and image brief frozen; image generation in progress."
   },
   "blockers": [],
   "debt": [],
@@ -298,14 +305,14 @@
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
   "progress_branch": "recetas/lote-02-20261008",
-  "last_checkpoint_at": "2026-10-08T07:59:45.000Z",
+  "last_checkpoint_at": "2026-10-08T08:19:00.000Z",
   "handoff": {
     "first_prepared_recipe": "como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada",
     "first_recipe_source": "editorial/como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada-20261008.json",
     "next_recipe": "receta-de-bandeja-paisa",
     "batch_remaining_to_prepare": 7,
     "published_this_batch": 0,
-    "required_action": "Draft and validate original Spanish bandeja paisa: grouped measured ingredients, cookable steps, complete times, safety/storage/substitutions, 3 FAQ, SEO and traceable per-serving USDA estimate. Freeze ES step hash before any image generation.",
+    "required_action": "Generate 11 new bandeja paisa originals with built-in ImageGen from the frozen manifest, inspect each phase, derive 14 final WebP assets, record hashes, then localize 7/7.",
     "scope": "Preview only; production migration not executed."
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z"
