@@ -540,7 +540,7 @@
         "media_repair_evidence": {
           "reason": "Remote paso-02.webp observed as zero bytes after initial media commit; rebuilt conversion only from the exact preserved original PNG, no ImageGen regeneration.",
           "asset": "paso-02.webp",
-          "original_png_sha256": "6e8fbcfddb5f3cbfb16a722fa5d5897668e7e52164ab94d848e074232cd88c24",
+          "original_png_sha256": "1fff4679b986670f68d0dfbc7ed7278ee06670f21c7fe3c7cc50704c0256bbe4",
           "webp_sha256": "0ab6f754b2fed3143cf4977f403c5b61854d5bc8ae54d2be6c7d6df22aace575",
           "git_blob_sha": "55d63734f73febc74ce711c6eaa3eb1ee7e194ff",
           "bytes": 114478
@@ -585,14 +585,13 @@
   },
   "next_candidate_position": 32,
   "run_lease": {
-    "owner": "automation-continuation-20261009-fish-and-chips",
-    "status": "released",
-    "acquired_at": "2026-10-08T22:59:20.000Z",
-    "renewed_at": "2026-10-08T23:15:00.000Z",
-    "expires_at": "2026-10-09T00:45:00.000Z",
-    "previous_owner": "work-resume-1648240aa2fa-1791492779924",
-    "reason": "Fish and Chips 9 originals and 12 WebP preserved and remote-verified; next stage is six localizations. No producer remains active in this run.",
-    "released_at": "2026-10-08T23:19:00.000Z"
+    "owner": "work-fish-localization-20261008T2334",
+    "status": "active",
+    "acquired_at": "2026-10-08T23:33:59.326Z",
+    "renewed_at": "2026-10-08T23:33:59.326Z",
+    "expires_at": "2026-10-09T01:03:59.326Z",
+    "previous_owner": "automation-continuation-20261009-fish-and-chips",
+    "reason": "Continue six Fish and Chips localizations, then remaining two recipes and full15 publication."
   },
   "blockers": [],
   "debt": [
