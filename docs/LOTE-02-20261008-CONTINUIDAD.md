@@ -1,13 +1,13 @@
-# Lote 02 — continuidad inmediata
+# Lote 02 — cerrado el 8 de octubre de 2026
 
-El usuario pidió empezar sin esperar al siguiente horario. La ejecución manual produjo la primera receta completa: limón serrano, 7 idiomas, 11 archivos WebP y QA editorial aprobado. Está guardada en esta rama; todavía no está publicada.
+Las 15 recetas están publicadas y verificadas en siete idiomas: 105 páginas y 172 WebP con SHA256 exacto. El catálogo real tiene 124 grupos completos (868 páginas de recetas) y 85 filas ES sin publicar. No rehacer ninguna receta de este lote.
 
-Fuente única de contenido: `editorial/como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada-20261008.json` (7 registros). Ficha de fotos y prompts: archivo del mismo slug terminado en `-imagenes.json`. Evidencia de rutas y QA: archivos del mismo slug terminados en `-rutas-20261008.json` y `-qa-20261008.json`. Fotos definitivas: `public/recetas/como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada/`.
+Publicación PR90; corrección SEO sin x-default PR92; tiempo de bandeja paisa incluido el remojo PR93; revalidación y auditoría PR91. La auditoría run 37774945282 / artifact 11549262265 confirmó 105/105 páginas contra las fuentes, 1041 URLs HTTP200, 868 Recipe válidos, 962 BreadcrumbList y 1304 imágenes, con 0 errores. Se mantienen noindex/nofollow y robots bloqueado.
 
-El siguiente relevo debe leer `editorial/automation-progress.json` desde `recetas/lote-02-20261008`, adquirir un lease mediante actualización CAS y continuar con **receta-jugo-arcoiris**, sin volver a producir limón serrano. Quedan 14 recetas por preparar en este lote de 15. La primera se incluye en la publicación atómica del lote cuando las 15 estén completas; el resultado publicado ahora es 0/15.
+Evidencia y hashes: editorial/lote02-final-qa-20261008.json. Se conservan las fuentes únicas *-20261008.json, medios originales/WebP y manifests. SQL inicial ejecutado: scripts/publish-lote02-initial-executed-20261008.sql; corrección de 7 filas: scripts/correct-bandeja-total-time-20261008.sql. El SQL reproducible actual de publicación no debe reejecutarse: las 105 filas ya están publicadas.
 
-Se resolvió la antigua clasificación REVIEW de limón serrano con evidencia turística primaria de la Sierra de Francia; se conserva la URL histórica. No se alteró ninguna entidad archivada ni otra revisión. Se conservan cinco rutas históricas ES/DE/EN/FR/IT de la matriz GSC; JA/PT son nuevas propuestas sin colisión en recipes, content_pages ni content_redirects al comprobarlas el 2026-10-08. Repetir solo la comprobación transaccional de colisiones al publicar.
+Ingredientes: 50 relaciones canónicas y 94 entradas pendientes, con 144/144 ingredientes registrados por el mecanismo existente. La normalización pendiente queda registrada para el cierre técnico final; no bloquea esta publicación ni autoriza inventar aliases.
 
-Las cantidades, tiempos y rendimiento son propuestas originales; no se afirmó una prueba de cocina. La nutrición se calculó con USDA SR Legacy y usa aproximaciones explícitas para los embutidos. Los registros y fotos ya contienen las siete localizaciones; no regenerar fotos aceptadas ni rehacer investigaciones cerradas.
+Continuidad: leer editorial/automation-progress.json y editorial/automation-queue.json remotos. Siguiente candidato, posición 17: receta-de-sopa-de-mariscos-con-mejillones. Validar URL Master/decisiones posteriores, duplicados y borradores nuevos; reservar el siguiente lote con SHA esperado. La cerveza artesanal permanece REVIEW retenida. No crear otro productor si existe run_lease activo.
 
-Continuar según `docs/FLUJO-RECETAS.md` y las instrucciones completas de la automatización. Desplegar mediante GitHub/main → Hostinger automático, verificar activos, ejecutar SQL transaccional, revalidar en Actions con el secreto existente y hacer QA del lote. Noindex sigue activo. No migrar producción.
+GitHub/main dispara el hosting existente. No tocar DNS ni manualdecocina.com ni quitar noindex.
