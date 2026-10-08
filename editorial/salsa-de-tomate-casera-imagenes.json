@@ -139,6 +139,30 @@
       "original": "paso-04.png",
       "visual_qa": "PASS",
       "git_blob_sha": "8c0af15a5b7bb1ab558f9eba625345e1c73f3a7e"
+    },
+    {
+      "asset": "paso-05.webp",
+      "path": "public/recetas/salsa-de-tomate-casera/paso-05.webp",
+      "public_path": "/recetas/salsa-de-tomate-casera/paso-05.webp",
+      "sha256": "ef3b7aaff6b06fcc63ab67600cc859accffca4b15e2f9751f0b65d445e31859c",
+      "bytes": 154372,
+      "width": 1200,
+      "height": 900,
+      "original": "paso-05.png",
+      "visual_qa": "PASS",
+      "git_blob_sha": "d7e3962fa3299a8d83184644b9e726af3346297d"
+    },
+    {
+      "asset": "paso-06.webp",
+      "path": "public/recetas/salsa-de-tomate-casera/paso-06.webp",
+      "public_path": "/recetas/salsa-de-tomate-casera/paso-06.webp",
+      "sha256": "8474f1660f7688d1fd1e6ba2c6035adff0c60006b7f81da9b77f342e3a38c741",
+      "bytes": 106894,
+      "width": 1200,
+      "height": 900,
+      "original": "paso-06.png",
+      "visual_qa": "PASS",
+      "git_blob_sha": "c35815dae66a43e8991d4df6c8ab2e4dc12b7616"
     }
   ],
   "originals": [
@@ -201,9 +225,33 @@
       "visual_qa": "PASS",
       "source": "built-in ImageGen",
       "git_blob_sha": "1760d22b5b92d54d1535402e848e75504cc4244e"
+    },
+    {
+      "asset": "paso-05.png",
+      "path": "public/recetas/salsa-de-tomate-casera/originals/paso-05.png",
+      "sha256": "bb802574de9286c3c9a9267f63925fc961200f8aea4049c773a66f1a8d7eba81",
+      "bytes": 2326519,
+      "width": 1448,
+      "height": 1086,
+      "phase": 5,
+      "visual_qa": "PASS",
+      "source": "built-in ImageGen",
+      "git_blob_sha": "d702b89d683b9c515be458f79973de903c1d6401"
+    },
+    {
+      "asset": "paso-06.png",
+      "path": "public/recetas/salsa-de-tomate-casera/originals/paso-06.png",
+      "sha256": "69b3f0397a6483c6d1e75bad7979a0f43a0a9ff6e89b6e6bb47dc69c625c2efa",
+      "bytes": 2131124,
+      "width": 1448,
+      "height": 1086,
+      "phase": 6,
+      "visual_qa": "PASS",
+      "source": "built-in ImageGen",
+      "git_blob_sha": "45eb3140ea8da7e69506e24ac04e20901f9cbb5b"
     }
   ],
-  "state": "IMAGES_IN_PROGRESS_5_OF7",
+  "state": "MEDIA_COMPLETE_VISUAL_QA_PASS",
   "last_step_reuses_cover": true,
   "cover_variant_visual_qa": "PASS_FOOD_SURFACE_ALL4_RATIOS_SQUARE_RIM_CLOSE_CROP",
   "visual_qa_details": {
@@ -211,6 +259,17 @@
     "paso-01.png": "PASS: raw chopped tomatoes with skin and seeds, onion and garlic separately.",
     "paso-02.png": "PASS: translucent onion in olive oil before garlic/tomato.",
     "paso-03.png": "PASS: minced garlic added to pale softened onion, no burnt pieces.",
-    "paso-04.png": "PASS: fresh tomato pieces with seeds/skin and juices just added; not blended."
-  }
+    "paso-04.png": "PASS: fresh tomato pieces with seeds/skin and juices just added; not blended.",
+    "paso-05.png": "PASS: softened red tomato sauce gently simmering uncovered, before blending.",
+    "paso-06.png": "PASS_AFTER_TARGETED_EDIT: immersion bell housing fully submerged, only shaft emerges; pot off stove, no splashes."
+  },
+  "rejected_images": [
+    {
+      "path": "editorial/media-review/salsa-de-tomate-casera-paso-06-head-exposed.png",
+      "git_blob_sha": "3c1011e6da7f5e75144cc028a10b3ce4933daa02",
+      "reason": "Initial blender bell partly exposed above sauce; targeted ImageGen edit lowered only blender head.",
+      "reused_for_publication": false
+    }
+  ],
+  "image_edit_prompt": "Lower only immersion blender so entire bell housing and openings are below sauce surface; only straight shaft visible. Preserve pot, sauce, counter and light; no splashes."
 }
