@@ -63,7 +63,7 @@
       "width": 1280,
       "height": 960,
       "original": "portada.png",
-      "visual_qa": "PENDING_CROP_REVIEW"
+      "visual_qa": "PASS"
     },
     {
       "asset": "portada-1x1.webp",
@@ -74,7 +74,7 @@
       "width": 1024,
       "height": 1024,
       "original": "portada.png",
-      "visual_qa": "PENDING_CROP_REVIEW"
+      "visual_qa": "PASS"
     },
     {
       "asset": "portada-4x3.webp",
@@ -85,7 +85,7 @@
       "width": 1280,
       "height": 960,
       "original": "portada.png",
-      "visual_qa": "PENDING_CROP_REVIEW"
+      "visual_qa": "PASS"
     },
     {
       "asset": "portada-16x9.webp",
@@ -96,7 +96,7 @@
       "width": 1280,
       "height": 720,
       "original": "portada.png",
-      "visual_qa": "PENDING_CROP_REVIEW"
+      "visual_qa": "PASS"
     },
     {
       "asset": "paso-01.webp",
@@ -288,7 +288,7 @@
       "source": "built-in ImageGen"
     }
   ],
-  "state": "MEDIA_COMPLETE_COVER_CROPS_PENDING_REVIEW",
+  "state": "MEDIA_COMPLETE_VISUAL_QA_PASS",
   "last_step_reuses_cover": true,
   "visual_qa_details": {
     "portada": {
@@ -340,6 +340,10 @@
     {
       "phase": 3,
       "reason": "Removed premature batter and raw ingredients; sauce and separate mayonnaise only"
+    },
+    {
+      "phase": 7,
+      "reason": "Repositioned probe from top to side insertion toward center; display unreadable, no temperature claimed"
     }
   ],
   "cover_crop_qa": "PASS_TWO_COMPLETE_DISCS_ALL_RATIOS"

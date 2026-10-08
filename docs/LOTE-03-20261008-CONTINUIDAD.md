@@ -125,3 +125,8 @@ Okonomiyaki checkpoint de medios parciales: cinco originales PNG (portada/fase9 
 
 
 Okonomiyaki: nueve originales y doceWebP completos, todos revisados visualmente y hashesexactos. Fase7corregida para sonda por lateral; no lectura de temperatura inventada. Mediospreservados, ninguna regeneración pendiente. Siguiente: seislocalizaciones y SQLguardado. PrimeraEScongelada sin cambios. Lote03publicado0/15.
+
+
+### Okonomiyaki: paquete completo7/7, pendiente publicación conjunta
+
+Nueve fases, once ingredientes, dos discos propuestos18cm/1,5–2cm. ES congeladohash3db4de103f4e0d96d7864e7e35a77db33bfcb8f8497a2508ec8aa2d3f29f23f4; nuevePNG/doceWebP remotos con bytespositivos/hashGit exacto. Correcciones de encuadre/orden y sonda documentadas, no rehacermedios válidos. DE/EN/FR/IT/JA/PT-BR completos con cifras porfase idénticas, cantidades/nutrición/medioscompartidos, FAQ/SEO/alt propios. Rutas históricasES/DE/EN/FR/IT/JA preservadas y PTnuevo, cero colisiones en UUID/recipes/content_pages. Categorías exactas verificadas contra src/lib/categories.ts remoto. PaqueteSHA256 c3154e0d4e52ce82d06b6c46e22b7f212e255f837b68c7f47fbb9cf41774a3e6. SQLprotegido scripts/publish-receta-de-okonomiyaki-20261008.sql SHA256 f99b37d009b39547fee236d56655b18061d0d7d529a07e51b7cd5e838b71372a, NOejecutado, gate ready15_deployed y guardas de fechas/MD5/7idiomas/gruposajenos. Ficha localde medios corregida aPASS tras recortes visuales; QA pasa. DBactual sigueESfalseMD58ee444b23668f2a1a2a67d726744951f y catálogo124. Lote03 preparado7/15, publicado0/15. Siguiente: receta-de-ensalada-rusa. No abrirotro lote ni publicar parcial.

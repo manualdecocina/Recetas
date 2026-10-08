@@ -1,0 +1,80 @@
+{
+  "recipe": "receta-de-okonomiyaki",
+  "status": "PASS_EDITORIAL_MEDIA_LOCALIZATION_NOT_LIVE",
+  "steps_sha256": "3db4de103f4e0d96d7864e7e35a77db33bfcb8f8497a2508ec8aa2d3f29f23f4",
+  "languages": [
+    "es",
+    "de",
+    "en",
+    "fr",
+    "it",
+    "ja",
+    "pt"
+  ],
+  "steps_per_language": 9,
+  "ingredients": 11,
+  "faq_per_language": 3,
+  "usda_foods": 10,
+  "nutrition_recalculated": true,
+  "numeric_nutrition_shared": true,
+  "shared_amounts": true,
+  "shared_media": true,
+  "originals": 9,
+  "webp": 12,
+  "media_hashes_verified": true,
+  "remote_media_hashes_verified": true,
+  "visual_qa": {
+    "portada": {
+      "status": "PASS",
+      "note": "Cover framing corrected once before preservation; both cooked disks entirely fit center square crop, no unlisted garnish."
+    },
+    "paso-01": {
+      "status": "PASS",
+      "note": "Separate11ingredient mise, raw bacon/egg visibly uncooked; no fictitious readings or cooked disk."
+    },
+    "paso-02": {
+      "status": "PASS",
+      "note": "Phase2 corrected once: removed prematurely prepared batter and surrounding raw foods/sauces. Only safe chopping vegetables remains."
+    },
+    "paso-03": {
+      "status": "PASS",
+      "note": "Phase3 corrected once removing prematurely prepared batter/rawingredients; only dark mixed sauce and separate mayonnaise remain."
+    },
+    "paso-04": {
+      "status": "PASS",
+      "note": "Cabbage/scallion raw batter in two bowls while portioning, no bacon mixed in or sauces. Image does not establish weighed portions."
+    },
+    "paso-05": {
+      "status": "PASS",
+      "note": "Single raw cabbage pancake, thin raw pink bacon laid atop, no sauces; lifted lid before covering."
+    },
+    "paso-06": {
+      "status": "PASS",
+      "note": "Golden plain underside supported by two wide spatulas while bacon side turns downward; no sauce or invented temperature."
+    },
+    "paso-07": {
+      "status": "PASS",
+      "note": "Probe corrected once to side-wall insertion toward center, no metal on top or pan, display unreadable; cooked bacon top unadorned."
+    },
+    "paso-08": {
+      "status": "PASS",
+      "note": "Second raw disk in pan pink bacon versus first cooked unadorned golden disk on clean plate. Distinct sequential batch scene."
+    }
+  },
+  "cover_crop_qa": "PASS_TWO_COMPLETE_DISCS_ALL_RATIOS",
+  "localization_qa_file": "editorial/receta-de-okonomiyaki-localization-qa-20261008.json",
+  "times": {
+    "prep": 25,
+    "cook": 24,
+    "preheat_wait": 3,
+    "total": 52,
+    "extra_actual_times_required": true
+  },
+  "yield_confirmed": false,
+  "kitchen_test_confirmed": false,
+  "published_database": false,
+  "package_sha256": "c3154e0d4e52ce82d06b6c46e22b7f212e255f837b68c7f47fbb9cf41774a3e6",
+  "publication_blockers": [
+    "Remaining8recipes; fullbatch CI/merge, observed deployed media hashes, atomic DB publication and cache/liveQA pending"
+  ]
+}
