@@ -233,11 +233,11 @@
   },
   "next_candidate_position": 17,
   "run_lease": {
-    "owner": "automation-run-20261008-0604",
-    "status": "released",
-    "acquired_at": "2026-10-08T06:05:05.494Z",
-    "released_at": "2026-10-08T06:24:37.082Z",
-    "reason": "Durable checkpoint committed after ravioli ES freeze and 12-image visual QA; next relay should acquire by CAS and resume localization."
+    "owner": "automation-run-20261008-0656",
+    "status": "active",
+    "acquired_at": "2026-10-08T06:57:07.835Z",
+    "expires_at": "2026-10-08T08:27:07.835Z",
+    "reason": "Released predecessor checkpoint reconciled against branch and DB; resume ravioli localization without regenerating accepted ES or images."
   },
   "blockers": [],
   "debt": [],
@@ -285,14 +285,14 @@
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
   "progress_branch": "recetas/lote-02-20261008",
-  "last_checkpoint_at": "2026-10-08T06:24:37.082Z",
+  "last_checkpoint_at": "2026-10-08T06:57:07.835Z",
   "handoff": {
     "first_prepared_recipe": "como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada",
     "first_recipe_source": "editorial/como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada-20261008.json",
     "next_recipe": "receta-raviolis-caseros",
     "batch_remaining_to_prepare": 8,
     "published_this_batch": 0,
-    "required_action": "Acquire a new lease by CAS. Resume ravioli at localization: create DE, EN, FR, IT, JA and pt-BR records with frozen numbers/media, run QA, persist package and SQL. Do not regenerate its accepted images.",
+    "required_action": "Translate frozen ravioli record to DE, EN, FR, IT, JA and pt-BR; preserve every number, structure and media path; validate 7/7 before SQL.",
     "scope": "Preview only; production migration not executed."
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z"
