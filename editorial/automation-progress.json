@@ -30,15 +30,17 @@
     "id": "lote-02-20261008",
     "target": 15,
     "status": "in_progress",
-    "stage": "identity_validation",
+    "stage": "images",
     "recipes": [
       {
         "id": "e47eac88-0649-4785-baf0-43b92dd2ec2e",
         "recipe_group_id": "7dcd70ca-9fa9-40cc-95b8-a6444db4a292",
         "slug": "como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada",
         "public_path": "/como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada",
-        "stage": "identity_validation",
-        "status": "reserved"
+        "stage": "images",
+        "status": "in_progress",
+        "es_content_file": "editorial/como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada-20261008.json",
+        "image_manifest": "editorial/como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada-imagenes.json"
       },
       {
         "id": "8ae419ae-f12a-4faa-8379-bb4b2c00a77b",
@@ -155,7 +157,8 @@
     ],
     "current_recipe": "como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada",
     "started_at": "2026-10-08T02:27:18.812Z",
-    "branch": "recetas/lote-02-20261008"
+    "branch": "recetas/lote-02-20261008",
+    "completed_recipes": 0
   },
   "next_candidate_position": 1,
   "run_lease": {
@@ -210,5 +213,6 @@
     }
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
-  "progress_branch": "recetas/lote-02-20261008"
+  "progress_branch": "recetas/lote-02-20261008",
+  "last_checkpoint_at": "2026-10-08T02:35:59.629Z"
 }
