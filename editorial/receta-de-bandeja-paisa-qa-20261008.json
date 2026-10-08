@@ -41,6 +41,17 @@
     "localizations_7": true,
     "localization_qa_file": "editorial/receta-de-bandeja-paisa-localization-qa-20261008.json"
   },
-  "steps_sha256": "8f045f79a1db3ebe2bec9b564361abea2322635e3b263e93b82f2b5e762e9c5d",
-  "publication_gate": "BATCH_15_COMPLETION_PENDING"
+  "steps_sha256": "945629d13e5ef3e77192e5e741687b143d76632255272e5ae2f52ec0577c7875",
+  "publication_gate": "BATCH_15_COMPLETION_PENDING",
+  "postpublication_time_correction": {
+    "reason": "Include already-required 8–12h soaking in total time; no ingredient, cooking phase, media or nutrition change",
+    "previous_steps_sha256": "8f045f79a1db3ebe2bec9b564361abea2322635e3b263e93b82f2b5e762e9c5d",
+    "steps_sha256": "945629d13e5ef3e77192e5e741687b143d76632255272e5ae2f52ec0577c7875",
+    "minimum_total_minutes": 675,
+    "maximum_total_minutes": 915,
+    "minimum_soak_minutes": 480,
+    "maximum_soak_minutes": 720,
+    "media_regenerated": false,
+    "kitchen_test_confirmed": false
+  }
 }

@@ -4,6 +4,11 @@ from html.parser import HTMLParser
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 BASE='https://preview.manualdecocina.com'
 def norm(s):return re.sub(r'\s+',' ',str(s)).strip()
+def duration_minutes(value):
+ match=re.fullmatch(r'PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?',str(value))
+ if not match:return None
+ hours,minutes,seconds=(int(part or 0) for part in match.groups())
+ return hours*60+minutes+seconds/60
 def url(s):return urllib.parse.unquote(urllib.parse.urljoin(BASE+'/',s)).split('#')[0]
 def nodes(value,kind):
  if isinstance(value,dict):
@@ -71,6 +76,8 @@ def check(task):
   if schemas:
    schema=schemas[0]
    if schema.get('name')!=record['title']:errors.append('Recipe title')
+   for field,key in [('prepTime','prep_time_minutes'),('cookTime','cook_time_minutes'),('totalTime','total_time_minutes')]:
+    if duration_minutes(schema.get(field))!=record[key]:errors.append('Recipe '+field+' differs from editorial time')
    if [norm(s.get('text','')) for s in schema.get('recipeInstructions',[])]!=[norm(s['content']) for s in record['steps']]:errors.append('Recipe step text')
   return {'path':record['public_path'],'language':record['language'],'http':status,'ok':not errors,'errors':errors}
  except Exception as error:return {'path':record['public_path'],'language':record['language'],'ok':False,'errors':[str(error)]}

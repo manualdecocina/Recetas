@@ -44,7 +44,10 @@ begin
           or r.title is distinct from x.title or r.steps is distinct from x.steps
           or r.ingredients is distinct from x.ingredients or r.nutrition is distinct from x.nutrition
           or r.seo is distinct from x.seo or r.notes is distinct from x.notes
-          or r.summary is distinct from x.summary or r.content_html is distinct from x.content_html) then
+          or r.summary is distinct from x.summary or r.content_html is distinct from x.content_html
+          or r.prep_time_minutes is distinct from x.prep_time_minutes
+          or r.cook_time_minutes is distinct from x.cook_time_minutes
+          or r.total_time_minutes is distinct from x.total_time_minutes) then
     raise notice 'Batch02 already published with matching content; no mutation';
     return;
   end if;

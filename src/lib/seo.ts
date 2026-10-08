@@ -37,8 +37,8 @@ export function allLanguageAlternates(
   return { canonical: `${site}${normalizePublicPath(currentPath)}`, languages: withXDefault(map) as Languages }
 }
 
-/** Política única de x-default para todo el sitio: apunta a la versión en español
- * (idioma por defecto del sitio) cuando esa versión existe; si no existe, se omite. */
+/** Las páginas generales apuntan x-default al español cuando existe.
+ * Las recetas solo incluyen sus idiomas publicados, sin x-default. */
 export const X_DEFAULT = 'x-default'
 export const X_DEFAULT_LANGUAGE = 'es'
 
@@ -62,10 +62,10 @@ export function recipeAlternates(
 
   const map: Record<string, string> = {}
   for (const t of translations) map[languageTag(t.language)] = publicUrl(t.public_path)
-  // Cada versión enlaza a todas, incluida ella misma; x-default → versión española si existe.
+  // Cada versión enlaza a todas las traducciones publicadas, incluida ella misma.
   map[languageTag(current.language)] = canonical
 
-  return { canonical, languages: withXDefault(map) as Languages }
+  return { canonical, languages: map as Languages }
 }
 
 /** Título y descripción para buscadores: usa `seo.title` / `seo.description` si existen. */
