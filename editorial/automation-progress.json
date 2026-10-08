@@ -54,7 +54,7 @@
         "slug": "receta-jugo-arcoiris",
         "public_path": "/receta-jugo-arcoiris",
         "stage": "identity_validation",
-        "status": "reserved"
+        "status": "in_progress"
       },
       {
         "id": "669e4cf8-2a80-4cf2-8c5e-e13f78796117",
@@ -170,12 +170,11 @@
   },
   "next_candidate_position": 2,
   "run_lease": {
-    "owner": "manual-start-20261008",
-    "status": "released",
-    "acquired_at": "2026-10-08T02:27:18.812Z",
-    "expires_at": "2026-10-08T02:58:00.027Z",
-    "reason": "Immediate manual production completed first recipe; next authorized hourly worker may acquire lease and continue recipe 2. No other manual recipe worker remains active.",
-    "released_at": "2026-10-08T02:58:00.027Z"
+    "owner": "continuous-run-20261008-0301",
+    "status": "active",
+    "acquired_at": "2026-10-08T03:02:36.623Z",
+    "expires_at": "2026-10-08T04:32:36.623Z",
+    "reason": "User explicitly requested continuous production; this worker owns the open batch and resumes rainbow juice."
   },
   "blockers": [],
   "debt": [],
@@ -223,7 +222,7 @@
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
   "progress_branch": "recetas/lote-02-20261008",
-  "last_checkpoint_at": "2026-10-08T02:58:57.384Z",
+  "last_checkpoint_at": "2026-10-08T03:02:36.623Z",
   "handoff": {
     "first_prepared_recipe": "como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada",
     "first_recipe_source": "editorial/como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada-20261008.json",
