@@ -440,6 +440,14 @@
       "identity_dates_preserved": true,
       "sql_sha256": "c8cc5ebc2157c0cb6e36f581b7144ef088446aa293b67d4b837d2ae0e73123e0",
       "evidence_file": "editorial/lote02-db-publication-verification-20261008.json"
+    },
+    "qa_error": {
+      "code": "RECIPE_X_DEFAULT_FORBIDDEN",
+      "detected_run": 37771194642,
+      "all_105_http200": true,
+      "all_visible_content_matched": true,
+      "remaining_fix_pr": 92,
+      "next_action": "Merge fix after CI, observe deployed recipe metadata and sitemap without x-default, rerun PR91 revalidation+QA."
     }
   },
   "next_candidate_position": 17,
@@ -497,7 +505,7 @@
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
   "progress_branch": "recetas/lote-02-20261008",
-  "last_checkpoint_at": "2026-10-08T11:36:30.861Z",
-  "handoff": "All15 batch02groups are DBpublished105rows7/7, total124ES. All172WebP deployed hashespassed. Remaining samebatch gate: Actions revalidation and105visiblepageQA/globalcatalogQA/visualQA. Do not execute SQL again or open nextbatch until QAclosed.",
+  "last_checkpoint_at": "2026-10-08T11:43:50.514Z",
+  "handoff": "105/105 pagesHTTP200 and frozen content visible; only pageQA failure was globalrecipe x-default. FixPR92 opened, wait CI/merge/deploy then rerun PR91. 15DBpublished but batch notQAclosed.",
   "next_relay_requested_at": "2026-10-08T02:59:04Z"
 }
