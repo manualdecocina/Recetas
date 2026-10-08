@@ -30,7 +30,7 @@
     "id": "lote-02-20261008",
     "target": 15,
     "status": "in_progress",
-    "stage": "localization",
+    "stage": "identity_validation",
     "recipes": [
       {
         "id": "e47eac88-0649-4785-baf0-43b92dd2ec2e",
@@ -144,8 +144,8 @@
         "recipe_group_id": "e8238258-5fe1-4344-8851-917fa546f20b",
         "slug": "receta-raviolis-caseros",
         "public_path": "/receta-raviolis-caseros",
-        "stage": "localization",
-        "status": "in_progress",
+        "stage": "prepared",
+        "status": "prepared_pending_batch_publication",
         "es_content_file": "editorial/receta-raviolis-caseros-20261008.json",
         "image_manifest": "editorial/receta-raviolis-caseros-imagenes.json",
         "images_ready": 12,
@@ -153,7 +153,17 @@
         "es_editorial_qa": "PASS_STRUCTURAL_AND_NUTRITION_TRACEABILITY",
         "distinct_images_pending": 0,
         "visual_qa": "PASS",
-        "qa_file": "editorial/receta-raviolis-caseros-qa-20261008.json"
+        "qa_file": "editorial/receta-raviolis-caseros-qa-20261008.json",
+        "languages_ready": 7,
+        "portuguese_locale": "pt-BR",
+        "editorial_qa": "PASS",
+        "localization_qa": "PASS",
+        "localizations_file": "editorial/receta-raviolis-caseros-localizaciones-20261008.json",
+        "localization_qa_file": "editorial/receta-raviolis-caseros-localization-qa-20261008.json",
+        "sql_file": "scripts/publish-receta-raviolis-caseros-20261008.sql",
+        "package_sha256": "db7050e24912dea3fd18b858ff3d60780601ca8dfa2f2e463abb11be63b18a96",
+        "sql_sha256": "3148e1b6b4312fb912065c17af0ffa8a64cf5e72ffbb00799648e465014a3290",
+        "publication_gate": "BATCH_15_COMPLETION_PENDING"
       },
       {
         "id": "835f1de3-70b7-4d41-a9ff-1695b7ae21fc",
@@ -212,11 +222,11 @@
         "status": "reserved"
       }
     ],
-    "current_recipe": "receta-raviolis-caseros",
+    "current_recipe": "receta-de-bandeja-paisa",
     "started_at": "2026-10-08T02:27:18.812Z",
     "branch": "recetas/lote-02-20261008",
     "completed_recipes": 0,
-    "prepared_recipes": 7,
+    "prepared_recipes": 8,
     "published_recipes": 0,
     "selection_adjustments": [
       {
@@ -237,7 +247,7 @@
     "status": "active",
     "acquired_at": "2026-10-08T06:57:07.835Z",
     "expires_at": "2026-10-08T08:27:07.835Z",
-    "reason": "Released predecessor checkpoint reconciled against branch and DB; resume ravioli localization without regenerating accepted ES or images."
+    "reason": "Ravioli 7/7 package and per-recipe transactional SQL complete; next checkpoint is bandeja paisa identity validation."
   },
   "blockers": [],
   "debt": [],
@@ -285,14 +295,14 @@
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
   "progress_branch": "recetas/lote-02-20261008",
-  "last_checkpoint_at": "2026-10-08T06:57:07.835Z",
+  "last_checkpoint_at": "2026-10-08T07:12:00.000Z",
   "handoff": {
     "first_prepared_recipe": "como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada",
     "first_recipe_source": "editorial/como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada-20261008.json",
-    "next_recipe": "receta-raviolis-caseros",
-    "batch_remaining_to_prepare": 8,
+    "next_recipe": "receta-de-bandeja-paisa",
+    "batch_remaining_to_prepare": 7,
     "published_this_batch": 0,
-    "required_action": "Translate frozen ravioli record to DE, EN, FR, IT, JA and pt-BR; preserve every number, structure and media path; validate 7/7 before SQL.",
+    "required_action": "Validate bandeja paisa identity, URL Master classification and 7-route collisions; then freeze original ES before creating images. Do not publish until all 15 batch members are complete.",
     "scope": "Preview only; production migration not executed."
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z"
