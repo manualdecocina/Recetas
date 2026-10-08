@@ -31,11 +31,11 @@
     "branch": "recetas/lote-03-20261008",
     "target": 15,
     "status": "in_progress",
-    "stage": "localización",
-    "current_recipe": "receta-de-ensalada-rusa",
+    "stage": "identidad",
+    "current_recipe": "receta-de-ensalada-de-frutos-rojos",
     "started_at": "2026-10-08T12:39:02.511Z",
     "completed_recipes": 0,
-    "prepared_recipes": 7,
+    "prepared_recipes": 8,
     "published_recipes": 0,
     "identity_qa": "PASS_15_ENTITIES_105_ROUTES_NO_COLLISIONS",
     "identity_file": "editorial/lote03-identidades-rutas-20261008.json",
@@ -328,11 +328,11 @@
         "editorial_status": "published",
         "position": 24,
         "eligibility": "validate_url_master_before_writing",
-        "status": "in_progress",
-        "stage": "imágenes",
+        "status": "prepared",
+        "stage": "localización",
         "identity_qa": "PASS",
         "classification": "ELIGIBLE_EXISTING_CULINARY_CANDIDATE_OR_CORE_REBUILD",
-        "languages_ready": 1,
+        "languages_ready": 7,
         "images_ready": 12,
         "source_not_reused": true,
         "es_content_file": "editorial/receta-de-ensalada-rusa-20261008.json",
@@ -343,19 +343,21 @@
         "original_images_required": 9,
         "distinct_images_pending": 0,
         "expected_es_row_md5": "4d95b0114e28634f4cc3ab21ff569c69",
-        "next_action": "Append6localizations to existinguniqueESsource; finalQA/guardedSQL. No batch03publication yet.",
+        "next_action": "Keep7language package/21media unchanged; include in atomic15recipe publication after remaining7complete.",
         "image_originals": 9,
         "image_visual_qa": "PASS_ALL9_ORIGINALS",
         "cover_variant_visual_qa": "PASS_WHOLE_BOWL_ALL_RATIOS",
         "next_image": null,
-        "localizations_pending": [
-          "de",
-          "en",
-          "fr",
-          "it",
-          "ja",
-          "pt"
-        ]
+        "localizations_pending": [],
+        "sql_file": "scripts/publish-receta-de-ensalada-rusa-20261008.sql",
+        "sql_sha256": "c96ceb895733141293d154b805de927c3c1af288d629df7002dadd7241b6a690",
+        "sql_executed": false,
+        "qa_file": "editorial/receta-de-ensalada-rusa-qa-20261008.json",
+        "localization_qa_file": "editorial/receta-de-ensalada-rusa-localization-qa-20261008.json",
+        "editorial_qa": "PASS_EDITORIAL_MEDIA_LOCALIZATION_NOT_LIVE",
+        "package_sha256": "4270560c6f2f4c55262cf50061aeb7150066d5a0d605850aa843ce07dd76c735",
+        "published_database": false,
+        "media_remote_hash_qa": "PASS_ALL21_EXACT_BYTES_GITSHA"
       },
       {
         "id": "f706a385-30ef-4835-91e5-a24be0a9ac17",
@@ -483,9 +485,9 @@
     "owner": "manual-continuation-20261008-bandeja-localization",
     "status": "active",
     "acquired_at": "2026-10-08T08:39:14.486Z",
-    "expires_at": "2026-10-08T18:53:14.627Z",
-    "reason": "Same continuing producer; 7 ready, ensalada rusa9originals12WebP complete, next6localizations.",
-    "renewed_at": "2026-10-08T17:23:14.627Z"
+    "expires_at": "2026-10-08T19:03:57.706Z",
+    "reason": "Samecontinuingproducer;8ready7/7; next berry salad identity/ES.",
+    "renewed_at": "2026-10-08T17:33:57.706Z"
   },
   "blockers": [],
   "debt": [
@@ -557,15 +559,15 @@
   "last_checkpoint_at": "2026-10-08T16:22:46.289Z",
   "handoff": {
     "branch": "recetas/lote-03-20261008",
-    "current_recipe": "receta-de-ensalada-rusa",
+    "current_recipe": "receta-de-ensalada-de-frutos-rojos",
     "prepared_recipes": 6,
     "published_recipes": 0,
-    "next_action": "Append6localizations to existinguniqueESsource; finalQA/guardedSQL. No batch03publication yet.",
+    "next_action": "Validate berry salad against approvedidentity/routes and freshDB; create originalES; no batch03publication yet.",
     "checkpoint_at": "2026-10-08T16:22:46.289Z",
-    "stage": "localización"
+    "stage": "identidad"
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z",
-  "updated_at": "2026-10-08T17:23:14.627Z",
+  "updated_at": "2026-10-08T17:33:57.706Z",
   "completed_batches": [
     {
       "id": "lote-02-20261008",

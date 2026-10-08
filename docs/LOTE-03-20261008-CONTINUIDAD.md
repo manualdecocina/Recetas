@@ -139,3 +139,7 @@ Identidad conciliada: ESid d3f9ad59-7c1d-4f02-8fcc-7cc9224773d3, grupob04d6480-7
 
 ## Ensalada rusa: medios completos
 Nueve originales PNG y doce WebP conservados con bytes positivos y SHA256/Git SHA comprobados. QA visual de fases y cuatro recortes PASS. Se corrigió solo la fase6 (patatas enteras cocidas peladas y tres huevos con cáscara en recipientes separados); no se reutiliza la primera imagen incorrecta. Fórmula de pesos cocidos congelada; seis localizaciones pendientes. Siete recetas del lote ya preparadas; ninguna del lote03 publicada. Próxima acción: cerrar7/7 de ensalada rusa sin regenerar medios.
+
+
+## Ensalada rusa7/7 preparada
+Fuente única editorial/receta-de-ensalada-rusa-20261008.json con records[7],9fases,8ingredientes,3FAQ, mismas cifras/medios en ES/DE/EN/FR/IT/JA/PT-BR. Nueve originales y doceWebP PASS visual/hash/remoto. SHA pasos d21ad29ef03fba0ce67083e5834f15d7859b510fd2559432b6905056c36852a8; paquete4270560c6f2f4c55262cf50061aeb7150066d5a0d605850aa843ce07dd76c735; SQLc96ceb895733141293d154b805de927c3c1af288d629df7002dadd7241b6a690 no ejecutado. SeisUSDA verificadas de estados COCIDOS y pesos incorporados, compras propuestas sin afirmar rendimiento;25prep52cook15calentar60frío=152min estimados. DB fresca unaESfalse MD5 histórico intacto,0colisiones recetas/content_pages/UUID;124ESpublicadas. Lote03:8/15preparadas,0/15publicadas. Próxima receta:receta-de-ensalada-de-frutos-rojos; no rehacer las primeras8. CI/merge/deploy/DB/cache/liveQA pendientes del lote completo.
