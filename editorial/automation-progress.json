@@ -533,7 +533,7 @@
         "original_images_required": 9,
         "distinct_images_pending": 0,
         "es_editorial_qa": "PASS_USDA_TRACEABILITY_EXPLICIT_OIL_RETENTION_ESTIMATE",
-        "next_action": "Localize six languages with identical figures, phases and media; then create guarded SQL.",
+        "next_action": "Localize DE, EN, FR, IT, JA and pt-BR with identical numbers, nine phases and shared media; then create guarded SQL.",
         "image_originals": 9,
         "image_visual_qa": "PASS_ALL9_ORIGINALS",
         "cover_variant_visual_qa": "PASS_WHOLE_PLATE_ALL4_RATIOS",
@@ -545,7 +545,7 @@
           "git_blob_sha": "55d63734f73febc74ce711c6eaa3eb1ee7e194ff",
           "bytes": 114478
         },
-        "media_remote_hash_qa": "PENDING_REVERIFY_AFTER_ZERO_BYTE_REPAIR"
+        "media_remote_hash_qa": "PASS_ALL21_EXACT_BYTES_GITSHA"
       },
       {
         "id": "92f6fc6a-3b44-4422-b0ea-7a6ef257f8d7",
@@ -586,12 +586,13 @@
   "next_candidate_position": 32,
   "run_lease": {
     "owner": "automation-continuation-20261009-fish-and-chips",
-    "status": "active",
+    "status": "released",
     "acquired_at": "2026-10-08T22:59:20.000Z",
     "renewed_at": "2026-10-08T23:15:00.000Z",
     "expires_at": "2026-10-09T00:45:00.000Z",
     "previous_owner": "work-resume-1648240aa2fa-1791492779924",
-    "reason": "Expired lease reconciled at unchanged branch head; resume Fish and Chips from nine frozen image phases without rebuilding 12 prepared recipes."
+    "reason": "Fish and Chips 9 originals and 12 WebP preserved and remote-verified; next stage is six localizations. No producer remains active in this run.",
+    "released_at": "2026-10-08T23:19:00.000Z"
   },
   "blockers": [],
   "debt": [

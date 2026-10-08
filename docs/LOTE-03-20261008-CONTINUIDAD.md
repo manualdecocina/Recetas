@@ -186,3 +186,5 @@ Nueve originales PNG y doce WebP preservados con bytes, dimensiones, SHA256 y Gi
 
 
 Media repair: paso-02.webp was observed at zero bytes after the initial commit. It was reconstructed only by deterministic conversion from the exact preserved paso-02.png; no ImageGen regeneration. Replacement expected 114478 bytes, SHA256 0ab6f754b2fed3143cf4977f403c5b61854d5bc8ae54d2be6c7d6df22aace575; remote revalidation required immediately.
+
+Remote media recheck PASS: all21 assets positive (minimum81424 bytes) and exact Git blob SHA after deterministic repair. Lease released at Fish and Chips localization boundary; next producer must acquire by CAS and not regenerate these images.
