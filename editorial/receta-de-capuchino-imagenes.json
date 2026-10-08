@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "slug": "receta-de-capuchino",
+  "created_at": "2026-10-08T10:06:24.116Z",
+  "state": "BRIEF_FROZEN_IMAGES_PENDING",
+  "steps_sha256": "0dc981c5de9814177bdc763822dedf1e07a267f2fe01dec62f6003d32d8a5b40",
+  "output_directory": "public/recetas/receta-de-capuchino",
+  "style_consistency": "Photorealistic editorial cooking photo for Manual de Cocina. Cream home kitchen, dark oak counter, plain cream ceramic cappuccino cup and saucer, unbranded stainless home espresso machine, small stainless steaming pitcher. Warm natural window light. Espresso and whole milk only, no sugar, cocoa, cinnamon, whipped cream or toppings. No text, logos, numerals, watermark, collage or split panels. Horizontal 4:3.",
+  "generation_specs": [
+    {
+      "key": "cover",
+      "prompt": "Photorealistic editorial cooking photo for Manual de Cocina. Cream home kitchen, dark oak counter, plain cream ceramic cappuccino cup and saucer, unbranded stainless home espresso machine, small stainless steaming pitcher. Warm natural window light. Espresso and whole milk only, no sugar, cocoa, cinnamon, whipped cream or toppings. No text, logos, numerals, watermark, collage or split panels. Horizontal 4:3. Finished cappuccino in one modest cream ceramic cup with silky fine white foam and a tan espresso rim. Plain simple swirl rather than elaborate art. Cup on saucer, small milk pitcher behind, no garnish. This is also the serving step."
+    },
+    {
+      "key": "step_01",
+      "prompt": "Photorealistic editorial cooking photo for Manual de Cocina. Cream home kitchen, dark oak counter, plain cream ceramic cappuccino cup and saucer, unbranded stainless home espresso machine, small stainless steaming pitcher. Warm natural window light. Espresso and whole milk only, no sugar, cocoa, cinnamon, whipped cream or toppings. No text, logos, numerals, watermark, collage or split panels. Horizontal 4:3. Preparation: clean empty cream cup beside a small stainless steaming pitcher containing cold liquid white milk, an unbranded espresso machine in background. No foam yet, no coffee in cup. A small clean thermometer beside pitcher, display out of view."
+    },
+    {
+      "key": "step_02",
+      "prompt": "Photorealistic editorial cooking photo for Manual de Cocina. Cream home kitchen, dark oak counter, plain cream ceramic cappuccino cup and saucer, unbranded stainless home espresso machine, small stainless steaming pitcher. Warm natural window light. Espresso and whole milk only, no sugar, cocoa, cinnamon, whipped cream or toppings. No text, logos, numerals, watermark, collage or split panels. Horizontal 4:3. Extraction: a plain cream ceramic cup under a home espresso machine portafilter. Two thin brown streams of freshly extracted espresso flowing into a small dark espresso with crema. No milk or foam in cup. No display, controls or scale numerals visible."
+    },
+    {
+      "key": "step_03",
+      "prompt": "Photorealistic editorial cooking photo for Manual de Cocina. Cream home kitchen, dark oak counter, plain cream ceramic cappuccino cup and saucer, unbranded stainless home espresso machine, small stainless steaming pitcher. Warm natural window light. Espresso and whole milk only, no sugar, cocoa, cinnamon, whipped cream or toppings. No text, logos, numerals, watermark, collage or split panels. Horizontal 4:3. Milk texturing: close view of a stainless steam wand with tip just within milk surface of small stainless pitcher held by a realistic adult hand by the handle. Fine microfoam swirling, no huge bubbles or boiling, no milk spill. A clean thermometer probe in milk with display angled away, no readable digits. Do not touch wand with hand."
+    },
+    {
+      "key": "step_04",
+      "prompt": "Photorealistic editorial cooking photo for Manual de Cocina. Cream home kitchen, dark oak counter, plain cream ceramic cappuccino cup and saucer, unbranded stainless home espresso machine, small stainless steaming pitcher. Warm natural window light. Espresso and whole milk only, no sugar, cocoa, cinnamon, whipped cream or toppings. No text, logos, numerals, watermark, collage or split panels. Horizontal 4:3. After steaming: small stainless pitcher of glossy white textured milk with smooth fine foam being gently swirled by hand gripping handle on dark oak counter. Machine wand blurred behind, no visible readout. No pouring into coffee yet. Fine homogeneous microfoam, no whipped cream."
+    }
+  ],
+  "assets": [
+    {
+      "filename": "portada.webp",
+      "width": 1600,
+      "height": 1200,
+      "prompt_key": "cover"
+    },
+    {
+      "filename": "portada-1x1.webp",
+      "width": 1200,
+      "height": 1200,
+      "prompt_key": "cover"
+    },
+    {
+      "filename": "portada-4x3.webp",
+      "width": 1600,
+      "height": 1200,
+      "prompt_key": "cover"
+    },
+    {
+      "filename": "portada-16x9.webp",
+      "width": 1600,
+      "height": 900,
+      "prompt_key": "cover"
+    },
+    {
+      "filename": "paso-01.webp",
+      "width": 1600,
+      "height": 1200,
+      "prompt_key": "step_01",
+      "alt_es": "Jarra metálica con leche fría junto a una taza vacía y una cafetera"
+    },
+    {
+      "filename": "paso-02.webp",
+      "width": 1600,
+      "height": 1200,
+      "prompt_key": "step_02",
+      "alt_es": "Espresso recién extraído en una taza bajo el portafiltro"
+    },
+    {
+      "filename": "paso-03.webp",
+      "width": 1600,
+      "height": 1200,
+      "prompt_key": "step_03",
+      "alt_es": "Lanza de vapor texturizando leche en una jarra metálica"
+    },
+    {
+      "filename": "paso-04.webp",
+      "width": 1600,
+      "height": 1200,
+      "prompt_key": "step_04",
+      "alt_es": "Leche texturizada brillante en una jarra tras girarla suavemente"
+    },
+    {
+      "filename": "paso-05.webp",
+      "width": 1600,
+      "height": 1200,
+      "prompt_key": "cover",
+      "alt_es": "Capuchino terminado con espuma fina en una taza de cerámica"
+    }
+  ],
+  "expected_webp_count": 9,
+  "original_generation_count": 5,
+  "visual_qa": "PENDING",
+  "localized_alts_status": "ES_ONLY_LOCALIZATIONS_PENDING"
+}

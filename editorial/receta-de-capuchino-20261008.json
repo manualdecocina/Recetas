@@ -1,0 +1,202 @@
+{
+  "schema_version": 1,
+  "slug": "receta-de-capuchino",
+  "category_slug": "bebidas",
+  "state": "ES_COMPLETE_STEPS_FROZEN_IMAGES_PENDING",
+  "steps_frozen": true,
+  "steps_sha256": "0dc981c5de9814177bdc763822dedf1e07a267f2fe01dec62f6003d32d8a5b40",
+  "time_notes": "5 prep + 5 brew/steam = 10 minutes once machine ready; machine warm-up extra.",
+  "ai_owner_confirmation": {
+    "status": "delegated_editorial_authority",
+    "kitchen_test_performed": false
+  },
+  "publication_blockers": [
+    "IMAGES_PENDING",
+    "LOCALIZATIONS_PENDING",
+    "BATCH_15_COMPLETION_PENDING",
+    "PREVIEW_QA_PENDING"
+  ],
+  "scope": "https://preview.manualdecocina.com",
+  "provenance": {
+    "created_at": "2026-10-08T10:06:24.117Z",
+    "body_source": "new original editorial draft",
+    "wordpress_body_used": false
+  },
+  "sources": [
+    {
+      "url": "https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_sr_legacy_food_json_2018-04.zip",
+      "archive_sha256": "0fe8ae486a2c8eb42cb96413f058deb51863a46c8fb8eeb4b1fb45006dd338ef",
+      "purpose": "USDA 171891 prepared espresso and 171265 whole milk",
+      "accessed": "2026-10-08"
+    },
+    {
+      "url": "https://www.lamarzocco.com/uk/en/using-espresso-brew-ratios/",
+      "purpose": "18 g grounds →36 g beverage, 1:2 as starting point"
+    },
+    {
+      "url": "https://www.lamarzocco.com/uk/en/steaming-milk-on-the-linea-mini/",
+      "purpose": "Cold milk, clean wand, foam temperature around60C; limits depend on machine"
+    }
+  ],
+  "records": [
+    {
+      "id": "f1ba021c-866e-4b37-a577-485a64b44ae9",
+      "recipe_group_id": "cc320b67-294e-4420-b904-4bd3d12d4c1b",
+      "language": "es",
+      "slug": "receta-de-capuchino",
+      "public_path": "/receta-de-capuchino",
+      "source_url": "https://manualdecocina.com/receta-de-capuchino/",
+      "title": "Capuchino casero con espresso y leche",
+      "excerpt": "Un capuchino sin azúcar añadida con 36 g de espresso y 120 g de leche entera, espuma fina y control de la temperatura.",
+      "summary": "Este capuchino combina un espresso recién preparado con leche entera pasteurizada y una capa de espuma fina. No lleva cacao, chocolate, nata ni azúcar añadida; los azúcares del cálculo proceden principalmente de la leche. Se necesita una cafetera de espresso y una lanza de vapor apta para pequeñas cantidades, una jarra y un termómetro.\n\nLa propuesta rinde una taza de unos 180–200 ml según el aire incorporado. Se estiman 5 minutos de preparación y 5 para preparar el café y calentar la leche, 10 en total una vez que la máquina está lista. El precalentamiento de cada cafetera puede añadir tiempo. Cantidades, tiempos y volumen final están pendientes de prueba de cocina; no se afirma una proporción tradicional universal de tres partes iguales.",
+      "category": "Bebidas",
+      "category_slug": "bebidas",
+      "difficulty": "Media",
+      "course": "Bebida",
+      "cuisine": "Italiana, propuesta casera",
+      "prep_time_minutes": 5,
+      "cook_time_minutes": 5,
+      "total_time_minutes": 10,
+      "servings": 1,
+      "keywords": [
+        "capuchino",
+        "cappuccino casero",
+        "espresso con leche",
+        "espuma de leche"
+      ],
+      "ingredients": [
+        {
+          "name": "espresso recién preparado",
+          "amount": "36",
+          "unit": "g de bebida, no de café molido",
+          "group": "Café"
+        },
+        {
+          "name": "leche entera pasteurizada fría",
+          "amount": "120",
+          "unit": "g",
+          "group": "Leche"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepara la taza, la jarra y la leche",
+          "content": "Usa una taza de 180–200 ml, una jarra de vapor pequeña compatible con la cantidad de leche y un termómetro limpio. Precalienta la taza con agua caliente y vacíala completamente. Pesa los 120 g de leche fría a 4 °C o menos en la jarra; no la dejes esperar a temperatura ambiente. Sigue el manual de tu máquina para su precalentamiento y purga.",
+          "image_alt": "Jarra metálica con leche fría junto a una taza vacía y una cafetera",
+          "image_url": "/recetas/receta-de-capuchino/paso-01.webp"
+        },
+        {
+          "title": "Prepara y pesa el espresso",
+          "content": "Prepara café espresso en la taza caliente y pesa 36 g de bebida recién extraída, sin contar el peso de la taza. Si tu cafetera no permite extracción y vapor a la vez, sigue la secuencia de su manual y evita dejar el café mucho tiempo. El peso indicado es de líquido preparado, no de café seco. No añadas azúcar ni cacao en esta versión.",
+          "image_alt": "Espresso recién extraído en una taza bajo el portafiltro",
+          "image_url": "/recetas/receta-de-capuchino/paso-02.webp"
+        },
+        {
+          "title": "Texturiza la leche sin hervir",
+          "content": "Purga brevemente la lanza apuntando a la bandeja y sin acercar las manos al vapor. Introduce la punta cerca de la superficie de los 120 g de leche y abre el vapor para incorporar aire con un siseo suave, no grandes burbujas. Sumerge un poco la punta para formar un remolino y detén el vapor cuando el termómetro marque 55–60 °C. Cierra el vapor antes de retirar la jarra. No hiervas ni calientes solo por un tiempo fijo; la potencia de cada máquina cambia.",
+          "image_alt": "Lanza de vapor texturizando leche en una jarra metálica",
+          "image_url": "/recetas/receta-de-capuchino/paso-03.webp"
+        },
+        {
+          "title": "Integra la espuma y limpia la lanza",
+          "content": "Limpia enseguida la lanza con un paño limpio destinado a ella y purga según el manual, evitando quemaduras. Da un golpe suave a la base de la jarra sobre un paño y mueve la leche en círculos para unir espuma y líquido. Debe verse brillante y fluida, sin una capa de burbujas grandes separada. No vuelvas a vaporizar leche que ya se ha calentado.",
+          "image_alt": "Leche texturizada brillante en una jarra tras girarla suavemente",
+          "image_url": "/recetas/receta-de-capuchino/paso-04.webp"
+        },
+        {
+          "title": "Vierte y sirve de inmediato",
+          "content": "Vierte la leche sobre los 36 g de espresso con un hilo continuo y acerca la jarra al final para depositar la espuma fina. Utiliza toda la leche medida para mantener la estimación; no hace falta dibujar una figura. Sirve enseguida y comprueba que la taza no queme. El volumen propuesto de 180–200 ml depende de la espuma. Esta bebida no se guarda para recalentar: desecha la leche texturizada sobrante y conserva la leche sin usar en frío.",
+          "image_alt": "Capuchino terminado con espuma fina en una taza de cerámica",
+          "image_url": "/recetas/receta-de-capuchino/paso-05.webp"
+        }
+      ],
+      "notes": "Contiene leche y cafeína. Para el espresso puedes usar como punto de partida 18 g de café molido y obtener 36 g de bebida, relación 1:2, en unos 25–35 segundos; ajusta molienda y receta a tu equipo. Esa preparación sustituye al ingrediente espresso listo, no se suma a él, y los posos no se ingieren ni se cuentan como 18 g de café comestible. Usa la dosis adecuada a la cesta de tu máquina y sigue su manual. Si la jarra o lanza requiere más leche que 120 g, el equipo no es apropiado para esta formulación de una taza; no calientes de nuevo el sobrante. La leche sin lactosa puede espumar, pero su perfil nutricional cambia. Una bebida vegetal modifica espuma, sabor y nutrientes y requiere otra ficha; esta no se presenta como vegana. No se incluyen azúcar, cacao ni canela opcionales en los ingredientes o cálculo. No prometemos un contenido exacto de cafeína: depende de variedad, dosis y extracción. Mantén la leche fría y usa solo pasteurizada. El vapor y la taza pueden quemar; no dejes que el termómetro toque la lanza caliente.",
+      "nutrition": {
+        "fiber_g": 0,
+        "sodium_mg": 57,
+        "saturated_fat_g": 2.3,
+        "fat_g": 4,
+        "protein_g": 3.8,
+        "sugar_g": 6.1,
+        "carbs_g": 6.4,
+        "calories": 76.4,
+        "estimated": true,
+        "serving_size": "1 taza propuesta, toda la leche medida",
+        "source": "USDA FoodData Central — SR Legacy, abril de 2018",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "method": "Dos fichas USDA verificadas por FDC ID en el archivo oficial: 36 g de espresso preparado y 120 g de leche entera. Una ración; no se cuentan posos de café, agua de precalentar la taza ni aire incorporado. Se supone que toda la leche medida se vierte en la taza.",
+        "note": "Estimación, no análisis de la bebida. Leche real, extracción y líquido que quede en la jarra cambian el resultado; el volumen, los tiempos y el rendimiento esperan prueba de cocina. No incluye azúcar añadida ni cálculo de cafeína.",
+        "inputs": [
+          {
+            "fdc_id": 171891,
+            "fdc_description": "Beverages, coffee, brewed, espresso, restaurant-prepared",
+            "per_100g": {
+              "fiber_g": 0,
+              "sodium_mg": 14,
+              "saturated_fat_g": 0.092,
+              "fat_g": 0.18,
+              "protein_g": 0.12,
+              "sugar_g": 0,
+              "carbs_g": 1.67,
+              "calories": 9
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171891/nutrients",
+            "ingredient": "espresso preparado",
+            "edible_grams": 36
+          },
+          {
+            "fdc_id": 171265,
+            "fdc_description": "Milk, whole, 3.25% milkfat, with added vitamin D",
+            "per_100g": {
+              "fat_g": 3.25,
+              "sugar_g": 5.05,
+              "carbs_g": 4.8,
+              "calories": 61,
+              "saturated_fat_g": 1.86,
+              "fiber_g": 0,
+              "sodium_mg": 43,
+              "protein_g": 3.15
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171265/nutrients",
+            "ingredient": "leche entera pasteurizada",
+            "edible_grams": 120
+          }
+        ]
+      },
+      "image_url": "/recetas/receta-de-capuchino/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/receta-de-capuchino/portada.webp",
+          "alt": "Capuchino casero con espuma fina y crema de espresso en taza"
+        }
+      ],
+      "seo": {
+        "title": "Capuchino casero con espresso: paso a paso | Manual de Cocina",
+        "description": "Capuchino sin azúcar añadida con espresso y leche medida. Texturiza a 55–60 °C y sirve con espuma fina; receta propuesta para una taza.",
+        "image_alt": "Capuchino casero con espuma fina y crema de espresso en taza",
+        "image_variants": [
+          "/recetas/receta-de-capuchino/portada-1x1.webp",
+          "/recetas/receta-de-capuchino/portada-4x3.webp",
+          "/recetas/receta-de-capuchino/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "¿Por qué aparecen 36 g de espresso y no 36 g de café molido?",
+            "a": "Son el peso de la bebida ya preparada. Como punto de partida se pueden usar 18 g de café seco para obtener 36 g de espresso, relación 1:2. Los posos se desechan; no se añaden a la taza ni al cálculo nutricional."
+          },
+          {
+            "q": "¿Por qué la espuma queda con burbujas grandes?",
+            "a": "Suele entrar demasiado aire o la punta queda demasiado alta. Incorpora aire suavemente al principio y forma después un remolino; gira la jarra al terminar. Detén el calentamiento a 55–60 °C y no vuelvas a vaporizar la misma leche."
+          },
+          {
+            "q": "¿Puedo guardarlo o usar otra leche?",
+            "a": "Se propone servirlo inmediatamente, sin guardar para recalentar. La leche sin lactosa o vegetal cambia la espuma y la nutrición; el cálculo solo corresponde a leche entera pasteurizada y todo el peso medido."
+          }
+        ]
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "content_html": "<p>Este capuchino combina un espresso recién preparado con leche entera pasteurizada y una capa de espuma fina. No lleva cacao, chocolate, nata ni azúcar añadida; los azúcares del cálculo proceden principalmente de la leche. Se necesita una cafetera de espresso y una lanza de vapor apta para pequeñas cantidades, una jarra y un termómetro.</p><p>La propuesta rinde una taza de unos 180–200 ml según el aire incorporado. Se estiman 5 minutos de preparación y 5 para preparar el café y calentar la leche, 10 en total una vez que la máquina está lista. El precalentamiento de cada cafetera puede añadir tiempo. Cantidades, tiempos y volumen final están pendientes de prueba de cocina; no se afirma una proporción tradicional universal de tres partes iguales.</p>"
+    }
+  ]
+}

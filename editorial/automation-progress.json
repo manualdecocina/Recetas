@@ -30,7 +30,7 @@
     "id": "lote-02-20261008",
     "target": 15,
     "status": "in_progress",
-    "stage": "identity",
+    "stage": "images",
     "recipes": [
       {
         "id": "e47eac88-0649-4785-baf0-43b92dd2ec2e",
@@ -291,8 +291,18 @@
         "recipe_group_id": "cc320b67-294e-4420-b904-4bd3d12d4c1b",
         "slug": "receta-de-capuchino",
         "public_path": "/receta-de-capuchino",
-        "stage": "identity_validation",
-        "status": "reserved"
+        "stage": "images",
+        "status": "in_progress",
+        "identity_qa": "PASS",
+        "classification": "ELIGIBLE_CATALOG_CANDIDATE",
+        "routes_file": "editorial/receta-de-capuchino-rutas-20261008.json",
+        "es_content_file": "editorial/receta-de-capuchino-20261008.json",
+        "image_manifest": "editorial/receta-de-capuchino-imagenes.json",
+        "qa_file": "editorial/receta-de-capuchino-qa-20261008.json",
+        "steps_sha256": "0dc981c5de9814177bdc763822dedf1e07a267f2fe01dec62f6003d32d8a5b40",
+        "images_ready": 0,
+        "languages_ready": 1,
+        "distinct_images_pending": 5
       },
       {
         "id": "3a512fac-c4ae-40ad-92b1-412c608da8ed",
@@ -385,14 +395,14 @@
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
   "progress_branch": "recetas/lote-02-20261008",
-  "last_checkpoint_at": "2026-10-08T10:02:39.257Z",
+  "last_checkpoint_at": "2026-10-08T10:06:24.117Z",
   "handoff": {
     "first_prepared_recipe": "como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada",
     "first_recipe_source": "editorial/como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada-20261008.json",
     "next_recipe": "receta-de-capuchino",
     "batch_remaining_to_prepare": 3,
     "published_this_batch": 0,
-    "required_action": "Prepare capuchino, lasaña pollo champiñones, pollo limón miel espárragos. Lasaña REVIEW resolved KEEP/REBUILD Recipe by docs/QA-BLOQUE-REVIEW-20260925-47.md. Then publish whole fifteen via PR/CI/merge/deploy/DB/cache/QA.",
+    "required_action": "Generate five distinct capuchino originals, nine WebP, six localizations; twelve prior recipes prepared. No batch published.",
     "scope": "Preview only; production migration not executed."
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z"
