@@ -30,7 +30,7 @@
     "id": "lote-02-20261008",
     "target": 15,
     "status": "in_progress",
-    "stage": "localization",
+    "stage": "identity_validation",
     "recipes": [
       {
         "id": "e47eac88-0649-4785-baf0-43b92dd2ec2e",
@@ -53,11 +53,15 @@
         "recipe_group_id": "8d66b805-5283-43f9-833b-b1ba0875d57f",
         "slug": "receta-jugo-arcoiris",
         "public_path": "/receta-jugo-arcoiris",
-        "stage": "localization",
-        "status": "in_progress",
+        "stage": "prepared",
+        "status": "prepared_pending_batch_publication",
         "es_content_file": "editorial/receta-jugo-arcoiris-20261008.json",
         "image_manifest": "editorial/receta-jugo-arcoiris-imagenes.json",
-        "images_ready": 12
+        "images_ready": 12,
+        "languages_ready": 7,
+        "editorial_qa": "PASS",
+        "qa_file": "editorial/receta-jugo-arcoiris-qa-20261008.json",
+        "portuguese_locale": "pt-BR"
       },
       {
         "id": "669e4cf8-2a80-4cf2-8c5e-e13f78796117",
@@ -164,19 +168,19 @@
         "status": "reserved"
       }
     ],
-    "current_recipe": "receta-jugo-arcoiris",
+    "current_recipe": "receta-de-alfajores-de-maicena",
     "started_at": "2026-10-08T02:27:18.812Z",
     "branch": "recetas/lote-02-20261008",
     "completed_recipes": 0,
-    "prepared_recipes": 1,
+    "prepared_recipes": 2,
     "published_recipes": 0
   },
-  "next_candidate_position": 2,
+  "next_candidate_position": 3,
   "run_lease": {
     "owner": "continuous-run-20261008-0301",
     "status": "active",
     "acquired_at": "2026-10-08T03:02:36.623Z",
-    "expires_at": "2026-10-08T04:50:34.664Z",
+    "expires_at": "2026-10-08T05:00:47.195Z",
     "reason": "User explicitly requested continuous production; this worker owns the open batch and resumes rainbow juice."
   },
   "blockers": [],
@@ -225,14 +229,14 @@
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
   "progress_branch": "recetas/lote-02-20261008",
-  "last_checkpoint_at": "2026-10-08T03:20:34.664Z",
+  "last_checkpoint_at": "2026-10-08T03:30:47.195Z",
   "handoff": {
     "first_prepared_recipe": "como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada",
     "first_recipe_source": "editorial/como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada-20261008.json",
-    "next_recipe": "receta-jugo-arcoiris",
-    "batch_remaining_to_prepare": 14,
+    "next_recipe": "receta-de-alfajores-de-maicena",
+    "batch_remaining_to_prepare": 13,
     "published_this_batch": 0,
-    "required_action": "Resume current batch; prepare remaining 14 completely, then publish all 15 together and verify preview. Never regenerate accepted images or repeat first recipe.",
+    "required_action": "Continue alfajores identity, ES, images, localization; first two accepted packages must not be regenerated. Publish all fifteen together after completion.",
     "scope": "Preview only; production migration not executed."
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z"
