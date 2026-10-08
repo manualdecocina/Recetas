@@ -523,7 +523,7 @@
         "stage": "localización",
         "identity_qa": "PASS",
         "classification": "ELIGIBLE_EXISTING_CULINARY_CANDIDATE_OR_CORE_REBUILD",
-        "languages_ready": 0,
+        "languages_ready": 3,
         "images_ready": 12,
         "source_not_reused": true,
         "es_content_file": "editorial/receta-de-fish-and-chip-pescado-y-papas-fritas-20261008.json",
@@ -545,7 +545,13 @@
           "git_blob_sha": "55d63734f73febc74ce711c6eaa3eb1ee7e194ff",
           "bytes": 114478
         },
-        "media_remote_hash_qa": "PASS_ALL21_EXACT_BYTES_GITSHA"
+        "media_remote_hash_qa": "PASS_ALL21_EXACT_BYTES_GITSHA",
+        "localizations_pending": [
+          "fr",
+          "it",
+          "ja",
+          "pt"
+        ]
       },
       {
         "id": "92f6fc6a-3b44-4422-b0ea-7a6ef257f8d7",
@@ -588,7 +594,7 @@
     "owner": "work-fish-localization-20261008T2334",
     "status": "active",
     "acquired_at": "2026-10-08T23:33:59.326Z",
-    "renewed_at": "2026-10-08T23:33:59.326Z",
+    "renewed_at": "2026-10-08T23:36:07.095Z",
     "expires_at": "2026-10-09T01:03:59.326Z",
     "previous_owner": "automation-continuation-20261009-fish-and-chips",
     "reason": "Continue six Fish and Chips localizations, then remaining two recipes and full15 publication."
