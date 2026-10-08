@@ -30,7 +30,7 @@
     "id": "lote-02-20261008",
     "target": 15,
     "status": "in_progress",
-    "stage": "localization",
+    "stage": "identity",
     "recipes": [
       {
         "id": "e47eac88-0649-4785-baf0-43b92dd2ec2e",
@@ -201,8 +201,8 @@
         "recipe_group_id": "53237760-f2f8-4852-9c3c-ac101fa2f237",
         "slug": "arroz-blanco-perfecto",
         "public_path": "/arroz-blanco-perfecto",
-        "stage": "localization",
-        "status": "in_progress",
+        "stage": "prepared",
+        "status": "prepared_pending_batch_publication",
         "identity_qa": "PASS",
         "classification": "ELIGIBLE_REBUILD_CANDIDATE",
         "routes_file": "editorial/arroz-blanco-perfecto-rutas-20261008.json",
@@ -211,18 +211,20 @@
         "qa_file": "editorial/arroz-blanco-perfecto-qa-20261008.json",
         "steps_sha256": "562b620035218fa3a645db19ba18ffe279183421ff71a6b02c9aefd33d5b4c54",
         "images_ready": 10,
-        "languages_ready": 1,
+        "languages_ready": 7,
         "distinct_images_pending": 0,
         "image_originals": 6,
         "image_visual_qa": "PASS",
-        "localizations_pending": [
-          "de",
-          "en",
-          "fr",
-          "it",
-          "ja",
-          "pt"
-        ]
+        "localizations_pending": [],
+        "portuguese_locale": "pt-BR",
+        "editorial_qa": "PASS",
+        "localization_qa": "PASS",
+        "localization_qa_file": "editorial/arroz-blanco-perfecto-localization-qa-20261008.json",
+        "sql_file": "scripts/publish-arroz-blanco-perfecto-20261008.sql",
+        "package_sha256": "a8ae24caefac247b51987a8f5649d95b8b98dc437e91bf70ca9e1b0e7f057ba7",
+        "sql_sha256": "e90e43ae9a79f3765cf05e6b2dc3edafb341f613d12d2607eab6fe1f09b85d29",
+        "publication_gate": "BATCH_15_COMPLETION_PENDING",
+        "media_commit": "04c7d058d31e0a3acec51fbe632bbaf7b715f5d9"
       },
       {
         "id": "2300175e-c47a-4318-a6f9-8ee54387722e",
@@ -265,11 +267,11 @@
         "status": "reserved"
       }
     ],
-    "current_recipe": "arroz-blanco-perfecto",
+    "current_recipe": "receta-de-ratatouille",
     "started_at": "2026-10-08T02:27:18.812Z",
     "branch": "recetas/lote-02-20261008",
     "completed_recipes": 0,
-    "prepared_recipes": 9,
+    "prepared_recipes": 10,
     "published_recipes": 0,
     "selection_adjustments": [
       {
@@ -290,7 +292,7 @@
     "status": "active",
     "acquired_at": "2026-10-08T08:39:14.486Z",
     "expires_at": "2026-10-08T10:09:14.486Z",
-    "reason": "Bandeja paisa completed 7/7 with visual QA, media hashes and guarded SQL; continuing arroz blanco perfecto."
+    "reason": "Ten recipes prepared, rice completed; continuing ratatouille without releasing production."
   },
   "blockers": [],
   "debt": [],
@@ -338,14 +340,14 @@
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
   "progress_branch": "recetas/lote-02-20261008",
-  "last_checkpoint_at": "2026-10-08T09:09:23.143Z",
+  "last_checkpoint_at": "2026-10-08T09:15:14.407Z",
   "handoff": {
     "first_prepared_recipe": "como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada",
     "first_recipe_source": "editorial/como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada-20261008.json",
-    "next_recipe": "arroz-blanco-perfecto",
-    "batch_remaining_to_prepare": 6,
+    "next_recipe": "receta-de-ratatouille",
+    "batch_remaining_to_prepare": 5,
     "published_this_batch": 0,
-    "required_action": "Localize six remaining rice languages, preserve frozen ES, verify numeric/media parity, prepare guarded SQL; then remaining five eligible recipes.",
+    "required_action": "Validate ratatouille identity/routes/classification, author ES, freeze images brief; do not regenerate prepared ten recipes. Batch must publish atomically with all 15.",
     "scope": "Preview only; production migration not executed."
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z"

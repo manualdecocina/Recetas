@@ -2,7 +2,7 @@
   "schema_version": 1,
   "slug": "arroz-blanco-perfecto",
   "created_at": "2026-10-08T08:59:52.980Z",
-  "state": "IMAGES_COMPLETE_LOCALIZATIONS_PENDING",
+  "state": "IMAGES_AND_LOCALIZATIONS_COMPLETE",
   "steps_sha256": "562b620035218fa3a645db19ba18ffe279183421ff71a6b02c9aefd33d5b4c54",
   "output_directory": "public/recetas/arroz-blanco-perfecto",
   "style_consistency": "Photorealistic editorial culinary photograph for Manual de Cocina. A simple home kitchen with cream ceramic bowls, a pale beige background, a dark oak work surface, one stainless-steel thick-bottomed pot with matching fitted lid, warm natural window light, realistic food and utensil sizes. No text, labels, numerals, logos, watermark or collage. The rice is ordinary white long-grain rice, never sushi rice or risotto. No vegetables, herbs, meat, broth or unrelated food. Horizontal 4:3 composition.",
@@ -168,7 +168,7 @@
   ],
   "expected_webp_count": 10,
   "original_generation_count": 6,
-  "localized_alts_status": "ES_ONLY_LOCALIZATIONS_PENDING",
+  "localized_alts_status": "COMPLETE_7_LANGUAGES",
   "visual_qa": "PASS_ALL_SIX_PHASES_AND_COVER_VARIANTS",
   "original_assets": [
     {
@@ -221,5 +221,84 @@
     }
   ],
   "originals_preserved": "REPOSITORY_6_PNG",
-  "visual_qa_notes": "Measured ingredients, rinsing, active boil, covered low heat, off-heat rest and finished fluffy grains inspected individually and in contact sheet; no text or unrelated ingredients."
+  "visual_qa_notes": "Measured ingredients, rinsing, active boil, covered low heat, off-heat rest and finished fluffy grains inspected individually and in contact sheet; no text or unrelated ingredients.",
+  "localized_alts": {
+    "es": {
+      "cover": "Arroz blanco de grano largo cocido y suelto en un cuenco",
+      "steps": [
+        "Arroz blanco: arroz, agua, aceite y sal medidos para cuatro guarniciones",
+        "Arroz blanco: lavado del grano y escurrido en colador fino",
+        "Arroz blanco: agua y arroz alcanzan la ebullición en la olla",
+        "Arroz blanco: olla tapada durante la cocción a fuego mínimo",
+        "Arroz blanco: olla retirada del fuego y tapada durante el reposo",
+        "Arroz blanco cocido con granos separados, listo para servir"
+      ]
+    },
+    "de": {
+      "cover": "Locker gekochter weißer Langkornreis in einer Schüssel",
+      "steps": [
+        "Weißer Reis: Reis, Wasser, Öl und Salz für vier Beilagenportionen abgemessen",
+        "Weißer Reis: Körner waschen und im feinen Sieb abtropfen lassen",
+        "Weißer Reis: Reis und Wasser kochen im Topf auf",
+        "Weißer Reis: geschlossener Topf beim Garen auf kleinster Stufe",
+        "Weißer Reis: zugedeckter Topf ruht abseits der Kochstelle",
+        "Gekochter weißer Reis mit einzelnen Körnern, servierbereit"
+      ]
+    },
+    "en": {
+      "cover": "Cooked, fluffy long-grain white rice in a bowl",
+      "steps": [
+        "White rice: rice, water, oil and salt measured for four side portions",
+        "White rice: rinsing the grains and draining in a fine sieve",
+        "White rice: rice and water reaching the boil in the pan",
+        "White rice: covered pan cooking over the lowest heat",
+        "White rice: pan removed from the heat and covered during resting",
+        "Cooked white rice with separate grains, ready to serve"
+      ]
+    },
+    "fr": {
+      "cover": "Riz blanc à grain long cuit et séparé dans un bol",
+      "steps": [
+        "Riz blanc : riz, eau, huile et sel mesurés pour quatre accompagnements",
+        "Riz blanc : rinçage des grains et égouttage dans une passoire fine",
+        "Riz blanc : l'eau et le riz atteignent l'ébullition dans la casserole",
+        "Riz blanc : casserole couverte pendant la cuisson à feu minimal",
+        "Riz blanc : casserole retirée du feu et couverte pendant le repos",
+        "Riz blanc cuit aux grains séparés, prêt à servir"
+      ]
+    },
+    "it": {
+      "cover": "Riso bianco a chicco lungo cotto e sgranato in una ciotola",
+      "steps": [
+        "Riso bianco: riso, acqua, olio e sale misurati per quattro contorni",
+        "Riso bianco: lavaggio dei chicchi e scolatura nel colino fine",
+        "Riso bianco: acqua e riso raggiungono l'ebollizione nella pentola",
+        "Riso bianco: pentola coperta durante la cottura al minimo",
+        "Riso bianco: pentola tolta dal fuoco e coperta durante il riposo",
+        "Riso bianco cotto con chicchi separati, pronto da servire"
+      ]
+    },
+    "ja": {
+      "cover": "ボウルに盛った、柔らかく粒がほぐれる長粒種の白米",
+      "steps": [
+        "白米：付け合わせ4人分の米、水、油、塩を量った状態",
+        "白米：米を洗い、目の細かいざるで水を切る",
+        "白米：鍋の中で米と水が沸騰する",
+        "白米：最弱火で加熱するふた付き鍋",
+        "白米：火から下ろした鍋をふた付きで蒸らす",
+        "炊き上がった白米の粒をほぐした盛り付け"
+      ]
+    },
+    "pt": {
+      "cover": "Arroz branco de grão longo cozido e soltinho em uma tigela",
+      "steps": [
+        "Arroz branco: arroz, água, óleo e sal medidos para quatro acompanhamentos",
+        "Arroz branco: lavagem dos grãos e escorrimento em peneira fina",
+        "Arroz branco: água e arroz chegando à fervura na panela",
+        "Arroz branco: panela tampada durante o cozimento em fogo mínimo",
+        "Arroz branco: panela retirada do fogo e tampada durante o descanso",
+        "Arroz branco cozido com grãos separados, pronto para servir"
+      ]
+    }
+  }
 }
