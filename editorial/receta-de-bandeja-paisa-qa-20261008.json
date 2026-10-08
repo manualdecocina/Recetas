@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "slug": "receta-de-bandeja-paisa",
-  "checked_at": "2026-10-08T08:52:00.000Z",
-  "result": "PASS_ES_STRUCTURAL_NUTRITION_AND_MEDIA",
+  "checked_at": "2026-10-08T08:50:05.234Z",
+  "result": "PASS_EDITORIAL_MEDIA_AND_LOCALIZATION",
   "checks": {
     "identity_preserved": true,
     "historical_es_path_preserved": true,
@@ -37,8 +37,10 @@
     "expected_duplicate_binary_only": [
       "portada.webp",
       "portada-4x3.webp"
-    ]
+    ],
+    "localizations_7": true,
+    "localization_qa_file": "editorial/receta-de-bandeja-paisa-localization-qa-20261008.json"
   },
   "steps_sha256": "8f045f79a1db3ebe2bec9b564361abea2322635e3b263e93b82f2b5e762e9c5d",
-  "publication_gate": "LOCALIZATIONS_AND_REMAINDER_OF_BATCH_PENDING"
+  "publication_gate": "BATCH_15_COMPLETION_PENDING"
 }

@@ -30,7 +30,7 @@
     "id": "lote-02-20261008",
     "target": 15,
     "status": "in_progress",
-    "stage": "localization",
+    "stage": "identity_validation",
     "recipes": [
       {
         "id": "e47eac88-0649-4785-baf0-43b92dd2ec2e",
@@ -170,8 +170,8 @@
         "recipe_group_id": "8686de2f-500a-4c72-8f1c-1e9c0341e905",
         "slug": "receta-de-bandeja-paisa",
         "public_path": "/receta-de-bandeja-paisa",
-        "stage": "localization",
-        "status": "in_progress",
+        "stage": "prepared",
+        "status": "prepared_pending_batch_publication",
         "identity_qa": "PASS",
         "routes_file": "editorial/receta-de-bandeja-paisa-rutas-20261008.json",
         "classification": "ELIGIBLE_REBUILD_CANDIDATE",
@@ -185,15 +185,16 @@
         "image_originals": 11,
         "image_visual_qa": "PASS",
         "media_commit": "d826f579c1496dde495b3bddd25b3764f05bd56b",
-        "languages_ready": 1,
-        "localizations_pending": [
-          "de",
-          "en",
-          "fr",
-          "it",
-          "ja",
-          "pt-BR"
-        ]
+        "languages_ready": 7,
+        "localizations_pending": [],
+        "portuguese_locale": "pt-BR",
+        "editorial_qa": "PASS",
+        "localization_qa": "PASS",
+        "localization_qa_file": "editorial/receta-de-bandeja-paisa-localization-qa-20261008.json",
+        "sql_file": "scripts/publish-receta-de-bandeja-paisa-20261008.sql",
+        "package_sha256": "b4f78fa32165fff43934ba8c98f8b5a655953cca0140f2e4462690eef362d1ae",
+        "sql_sha256": "dd17af8a272e61645c62fe6f6adeaca9154cc7880b71063c21663853a15e2c71",
+        "publication_gate": "BATCH_15_COMPLETION_PENDING"
       },
       {
         "id": "e25621f2-c633-443c-8cb2-03780274d501",
@@ -244,11 +245,11 @@
         "status": "reserved"
       }
     ],
-    "current_recipe": "receta-de-bandeja-paisa",
+    "current_recipe": "arroz-blanco-perfecto",
     "started_at": "2026-10-08T02:27:18.812Z",
     "branch": "recetas/lote-02-20261008",
     "completed_recipes": 0,
-    "prepared_recipes": 8,
+    "prepared_recipes": 9,
     "published_recipes": 0,
     "selection_adjustments": [
       {
@@ -269,7 +270,7 @@
     "status": "active",
     "acquired_at": "2026-10-08T08:39:14.486Z",
     "expires_at": "2026-10-08T10:09:14.486Z",
-    "reason": "User requested immediate continuation; resume bandeja paisa localization from verified uploaded media."
+    "reason": "Bandeja paisa completed 7/7 with visual QA, media hashes and guarded SQL; continuing arroz blanco perfecto."
   },
   "blockers": [],
   "debt": [],
@@ -317,14 +318,14 @@
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
   "progress_branch": "recetas/lote-02-20261008",
-  "last_checkpoint_at": "2026-10-08T08:39:14.486Z",
+  "last_checkpoint_at": "2026-10-08T08:50:05.234Z",
   "handoff": {
     "first_prepared_recipe": "como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada",
     "first_recipe_source": "editorial/como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada-20261008.json",
-    "next_recipe": "receta-de-bandeja-paisa",
-    "batch_remaining_to_prepare": 7,
+    "next_recipe": "arroz-blanco-perfecto",
+    "batch_remaining_to_prepare": 6,
     "published_this_batch": 0,
-    "required_action": "Localize the frozen bandeja paisa record to de, en, fr, it, ja and pt-BR, preserving all figures, structure and the 14 verified media paths; then mark it prepared and continue with arroz blanco perfecto.",
+    "required_action": "Validate arroz blanco perfecto identity, preservation contract, classification, historical routes and collisions; then produce original Spanish content before ImageGen.",
     "scope": "Preview only; production migration not executed."
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z"
