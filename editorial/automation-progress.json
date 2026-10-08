@@ -246,11 +246,12 @@
   },
   "next_candidate_position": 17,
   "run_lease": {
-    "owner": "automation-run-20261008-0656",
-    "status": "active",
+    "owner": null,
+    "status": "released",
     "acquired_at": "2026-10-08T06:57:07.835Z",
-    "expires_at": "2026-10-08T08:27:07.835Z",
-    "reason": "Ravioli prepared 7/7; bandeja paisa identity and seven routes validated without collisions. Next stage is original Spanish editorial work."
+    "released_at": "2026-10-08T07:21:00.000Z",
+    "expires_at": null,
+    "reason": "Ravioli package completed and bandeja paisa identity/routes checkpointed. Lease released for the next relay to continue original Spanish editorial work."
   },
   "blockers": [],
   "debt": [],
@@ -298,7 +299,7 @@
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
   "progress_branch": "recetas/lote-02-20261008",
-  "last_checkpoint_at": "2026-10-08T07:18:00.000Z",
+  "last_checkpoint_at": "2026-10-08T07:21:00.000Z",
   "handoff": {
     "first_prepared_recipe": "como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada",
     "first_recipe_source": "editorial/como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada-20261008.json",
