@@ -80,3 +80,12 @@ ES,DE,EN guardados en fuente única. Diez fases con cifras por fase iguales; ing
 ## 2026-10-08T15:17:54.900Z — Lasaña5/7idiomas
 
 FR eITañadidos ycomprobados: cifras de10fases iguales, cantidades/nutrición/medios preservados. ES,DE,EN,FR,IT en fuente única; faltan JA yPT-BR y cierreSQL/QA. No rehacer cinco idiomas ni23medios. Lote03publicado0/15.
+
+
+## 2026-10-08T15:29:13.837Z — Cuarta receta completa7/7: lasaña de calabacín y berenjena
+
+Fuente única editorial/lasana-de-calabacin-y-berenjena-20261008.json ahora7records; hash169ee3c1600959c69897b7d03fba3563ed7af7584a42052e2b132847d32f66ff. QA editorial, cifras de10fases iguales en6localizaciones,12ingredientes/12fichasUSDA/8campos ymedios compartidos pasan. HashES8c69d9bf8d3c51a2e8691d844e022a34002ff8a4b1cd9e381fbde9466825b797 intacto. Portadas+9fases =13WebP y10PNG. QAfinal detectó paso-03.webp ypaso-09.webp vacíos; conversión restaurada desde los mismos originales, hashes exactos936f459da9e33c555b6126c0cfdf9ecfadb3a911de8bf98b20477ec2fb360f2b y ae0a4822685600e47c7194af06e5946f98bc041792de5f005e0f1f14ae754a4c. Commit de reparación5859abb322e921346aa656c3b1052d9523e0af80; árbol remoto comprobado con23blobs exactos a contenido no vacío del manifiesto. No se regeneraron imágenes.
+
+SQL scripts/publish-lasana-de-calabacin-y-berenjena-20261008.sql hash610beff878f3570b5a09fdc12426c43f7b7a77927b75ab5f2121d8578f741e33 NOEJECUTADO; exige ready15_deployed, bloquea cambio de estadoMD5, fechas/identidad incluso antes de retorno idempotente, UUID/rutas/content_pages y cambios ajenos; verifica7/7 yrecuento. Supabase reciente: unaESsin publicar,MD5reservado intacto,0colisiones de7rutas/UUIDincluidaspáginas; catálogo124ES. No publicación parcial.
+
+Lote03:4/15preparadas,0/15publicadas,11restantes. SIGUIENTE receta-de-hummus. Conservar sopa/empanadas/pizza/lasaña7/7 ymedios; no rehacer ni usar WordPress. Etapa hummusES; despuésimagen/localización/SQL/QA. Publicar15juntas solo trasCImerge,despliegue observado de medios,SQLatómico,cache yQAreal.

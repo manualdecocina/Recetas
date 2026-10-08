@@ -31,11 +31,11 @@
     "branch": "recetas/lote-03-20261008",
     "target": 15,
     "status": "in_progress",
-    "stage": "localización",
-    "current_recipe": "lasana-de-calabacin-y-berenjena",
+    "stage": "ES",
+    "current_recipe": "receta-de-hummus",
     "started_at": "2026-10-08T12:39:02.511Z",
     "completed_recipes": 0,
-    "prepared_recipes": 3,
+    "prepared_recipes": 4,
     "published_recipes": 0,
     "identity_qa": "PASS_15_ENTITIES_105_ROUTES_NO_COLLISIONS",
     "identity_file": "editorial/lote03-identidades-rutas-20261008.json",
@@ -161,11 +161,11 @@
         "editorial_status": "published",
         "position": 20,
         "eligibility": "validate_url_master_before_writing",
-        "status": "in_progress",
+        "status": "prepared",
         "stage": "localización",
         "identity_qa": "PASS",
         "classification": "ELIGIBLE_EXISTING_CULINARY_CANDIDATE_OR_CORE_REBUILD",
-        "languages_ready": 5,
+        "languages_ready": 7,
         "images_ready": 13,
         "source_not_reused": true,
         "es_content_file": "editorial/lasana-de-calabacin-y-berenjena-20261008.json",
@@ -176,15 +176,30 @@
         "original_images_required": 10,
         "distinct_images_pending": 0,
         "expected_es_row_md5": "10e12c287c255ee35eac23e73a744d7e",
-        "next_action": "AppendJAandPT-BR to unique source preserving5completedlanguages and23media; complete guardedSQL/editorialQA; no03DB publication until full15ready/deployed.",
+        "next_action": "Keep ready7language package and23media unchanged; include in atomic15recipe batch publication after remaining11complete.",
         "image_originals": 10,
         "image_visual_qa": "PASS_ALL10_ORIGINALS",
         "cover_variant_visual_qa": "PASS_MAIN_SERVING_ALL_RATIOS",
         "next_image": null,
-        "localizations_pending": [
-          "ja",
-          "pt"
-        ]
+        "localizations_pending": [],
+        "sql_file": "scripts/publish-lasana-de-calabacin-y-berenjena-20261008.sql",
+        "sql_sha256": "610beff878f3570b5a09fdc12426c43f7b7a77927b75ab5f2121d8578f741e33",
+        "sql_executed": false,
+        "qa_file": "editorial/lasana-de-calabacin-y-berenjena-qa-20261008.json",
+        "localization_qa_file": "editorial/lasana-de-calabacin-y-berenjena-localization-qa-20261008.json",
+        "editorial_qa": "PASS_EDITORIAL_MEDIA_LOCALIZATION_NOT_LIVE",
+        "package_sha256": "169ee3c1600959c69897b7d03fba3563ed7af7584a42052e2b132847d32f66ff",
+        "published_database": false,
+        "media_remote_hash_qa": "PASS_ALL23_AFTER_RESTORE",
+        "media_repair_evidence": {
+          "reason": "TwoWebP were zero bytes at finalQA; regenerated conversion only from exact existingoriginal PNG, noImageGenregeneration.",
+          "assets": [
+            "paso-03.webp",
+            "paso-09.webp"
+          ],
+          "commit": "5859abb322e921346aa656c3b1052d9523e0af80",
+          "hashes_match_original_manifest": true
+        }
       },
       {
         "id": "9e04ccf3-9d8f-4823-a0fd-f371c6866acf",
@@ -380,9 +395,9 @@
     "owner": "manual-continuation-20261008-bandeja-localization",
     "status": "active",
     "acquired_at": "2026-10-08T08:39:14.486Z",
-    "expires_at": "2026-10-08T16:44:11.423Z",
-    "reason": "Same continuing producer; fourth recipe vegetable lasagna ES frozen, next original images. Keep first3 complete7/7 unchanged.",
-    "renewed_at": "2026-10-08T15:14:11.423Z"
+    "expires_at": "2026-10-08T16:59:13.837Z",
+    "reason": "Samecontinuingproducer; soup,empanadas,pizza,vegetablelasagna prepared7/7; next hummusES. Batch03published0/15.",
+    "renewed_at": "2026-10-08T15:29:13.837Z"
   },
   "blockers": [],
   "debt": [
@@ -454,14 +469,14 @@
   "last_checkpoint_at": "2026-10-08T14:39:54.562Z",
   "handoff": {
     "branch": "recetas/lote-03-20261008",
-    "current_recipe": "lasana-de-calabacin-y-berenjena",
-    "prepared_recipes": 3,
+    "current_recipe": "receta-de-hummus",
+    "prepared_recipes": 4,
     "published_recipes": 0,
-    "next_action": "AppendJAandPT-BR to unique source preserving5completedlanguages and23media; complete guardedSQL/editorialQA; no03DB publication until full15ready/deployed.",
+    "next_action": "Prepare original hummusES from approved identity, use exact USDAtraceability, freezebrief BEFOREimages. Preserve first4ready packages/media. Remaining11in batch03; atomic15publication gates pending.",
     "checkpoint_at": "2026-10-08T14:39:54.562Z"
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z",
-  "updated_at": "2026-10-08T15:17:54.900Z",
+  "updated_at": "2026-10-08T15:29:13.837Z",
   "completed_batches": [
     {
       "id": "lote-02-20261008",
