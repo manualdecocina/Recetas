@@ -1,0 +1,473 @@
+{
+  "schema_version": 1,
+  "slug": "receta-de-lasana-de-pollo-con-champinones",
+  "category_slug": "pastas",
+  "state": "ES_COMPLETE_STEPS_FROZEN_IMAGES_PENDING",
+  "steps_frozen": true,
+  "steps_sha256": "b0a186f36b233efcac7e14151ae57158486ac90c80c5e410a28438af3bbee2cf",
+  "time_notes": "20 prep +60 cooking with pasta/filling/sauce partly parallel +10 rest=90min",
+  "ai_owner_confirmation": {
+    "status": "delegated_editorial_authority",
+    "kitchen_test_performed": false
+  },
+  "publication_blockers": [
+    "IMAGES_PENDING",
+    "LOCALIZATIONS_PENDING",
+    "BATCH_15_COMPLETION_PENDING",
+    "PREVIEW_QA_PENDING"
+  ],
+  "scope": "https://preview.manualdecocina.com",
+  "provenance": {
+    "created_at": "2026-10-08T10:25:39.829Z",
+    "body_source": "new original editorial draft",
+    "wordpress_body_used": false
+  },
+  "sources": [
+    {
+      "url": "https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_sr_legacy_food_json_2018-04.zip",
+      "archive_sha256": "0fe8ae486a2c8eb42cb96413f058deb51863a46c8fb8eeb4b1fb45006dd338ef",
+      "purpose": "Thirteen verified USDA ingredient inputs",
+      "accessed": "2026-10-08"
+    },
+    {
+      "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures",
+      "purpose": "Chicken and casserole74C"
+    },
+    {
+      "url": "https://ask.fsis.usda.gov/article/How-do-I-handle-leftovers-safely",
+      "purpose": "Refrigeration timing, shallowcontainers"
+    }
+  ],
+  "records": [
+    {
+      "id": "3a512fac-c4ae-40ad-92b1-412c608da8ed",
+      "recipe_group_id": "14f34319-2bdc-478f-b55b-909be0df6964",
+      "language": "es",
+      "slug": "receta-de-lasana-de-pollo-con-champinones",
+      "public_path": "/receta-de-lasana-de-pollo-con-champinones",
+      "source_url": "https://manualdecocina.com/receta-de-lasana-de-pollo-con-champinones/",
+      "title": "Lasaña de pollo con champiñones y bechamel",
+      "excerpt": "Lasaña de pollo y champiñones para 6, con pasta precocida, relleno sin exceso de líquido, bechamel casera y mozzarella gratinada.",
+      "summary": "Esta propuesta de lasaña combina pollo cocinado en dados, champiñones salteados y una bechamel de leche entera. Se monta con tres capas de pasta previamente cocida y dos capas de relleno, y termina con mozzarella de baja humedad. Conserva la URL histórica de la lasaña de pollo con champiñones y su clasificación aprobada como receta.\n\nSe proponen 6 porciones en una fuente de unos 20 × 30 cm, 20 minutos de preparación, 60 de cocción con algunas tareas en paralelo y 10 de reposo: 90 minutos en total. La marca y el tamaño de las láminas pueden cambiar el montaje y la cocción. Cantidades, tiempos y rendimiento son estimados y pendientes de prueba de cocina; la temperatura del pollo y del centro se comprueba con termómetro.",
+      "category": "Pastas",
+      "category_slug": "pastas",
+      "difficulty": "Media",
+      "course": "Plato principal",
+      "cuisine": "Italiana, adaptación casera",
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 60,
+      "total_time_minutes": 90,
+      "servings": 6,
+      "keywords": [
+        "lasaña de pollo",
+        "lasaña con champiñones",
+        "bechamel casera",
+        "lasaña blanca"
+      ],
+      "ingredients": [
+        {
+          "name": "láminas de lasaña secas que requieren cocción previa",
+          "amount": "240",
+          "unit": "g",
+          "group": "Pasta"
+        },
+        {
+          "name": "pechuga de pollo cruda sin piel ni hueso",
+          "amount": "600",
+          "unit": "g",
+          "group": "Relleno"
+        },
+        {
+          "name": "champiñones blancos frescos",
+          "amount": "500",
+          "unit": "g",
+          "group": "Relleno"
+        },
+        {
+          "name": "cebolla",
+          "amount": "150",
+          "unit": "g",
+          "group": "Relleno"
+        },
+        {
+          "name": "ajo",
+          "amount": "10",
+          "unit": "g",
+          "group": "Relleno"
+        },
+        {
+          "name": "aceite de oliva",
+          "amount": "20",
+          "unit": "g",
+          "group": "Relleno"
+        },
+        {
+          "name": "leche entera pasteurizada",
+          "amount": "700",
+          "unit": "g",
+          "group": "Bechamel"
+        },
+        {
+          "name": "mantequilla sin sal",
+          "amount": "40",
+          "unit": "g",
+          "group": "Bechamel"
+        },
+        {
+          "name": "harina de trigo de uso común",
+          "amount": "40",
+          "unit": "g",
+          "group": "Bechamel"
+        },
+        {
+          "name": "mozzarella de baja humedad de leche entera, rallada",
+          "amount": "180",
+          "unit": "g",
+          "group": "Acabado"
+        },
+        {
+          "name": "sal fina",
+          "amount": "6",
+          "unit": "g",
+          "group": "Sazonado"
+        },
+        {
+          "name": "pimienta negra molida",
+          "amount": "0.5",
+          "unit": "g",
+          "group": "Sazonado"
+        },
+        {
+          "name": "nuez moscada molida",
+          "amount": "0.2",
+          "unit": "g",
+          "group": "Sazonado"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepara los ingredientes y la fuente",
+          "content": "Precalienta el horno a 190 °C con calor arriba y abajo, sin ventilador, y prepara una fuente de unos 20 × 30 cm. Limpia y corta los 500 g de champiñones en láminas, pica los 150 g de cebolla y los 10 g de ajo. En otra tabla corta los 600 g de pollo en dados de unos 1,5 cm, sin lavarlo. Separa utensilios crudos y cocidos. Divide la sal: 3 g para el relleno y 3 g para la bechamel; la pimienta: 0,25 g para cada uno.",
+          "image_alt": "Ingredientes de lasaña separados, champiñones laminados y pollo crudo en una tabla aparte",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-01.webp"
+        },
+        {
+          "title": "Cuece y escurre las láminas",
+          "content": "Cuece los 240 g de láminas en una olla grande con agua potable hirviendo, sin sal añadida, siguiendo el tiempo del envase y retirándolas aproximadamente 1 minuto antes si después se hornean. El agua de cocción se desecha y no forma parte del cálculo. Escurre y extiende sobre un paño limpio, sin amontonarlas. Usa láminas que requieren cocción previa; las listas para horno necesitan otra proporción de líquido y no son la opción de esta ficha.",
+          "image_alt": "Láminas de lasaña cocidas extendidas sin superponerse sobre un paño limpio",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-02.webp"
+        },
+        {
+          "title": "Cocina el pollo por separado",
+          "content": "Calienta 10 g del aceite en una sartén amplia. Añade el pollo en dos tandas si queda amontonado y cocina a fuego medio-alto unos 8–10 minutos en total, removiendo. Reparte parte de los 3 g de sal y 0,25 g de pimienta destinados al relleno. Comprueba los dados más gruesos con termómetro: deben alcanzar al menos 74 °C. Si no llegan, prolonga la cocción. Pasa a un recipiente limpio con utensilio limpio, nunca al plato del pollo crudo.",
+          "image_alt": "Dados de pollo cocinándose en una sartén sin champiñones",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-03.webp"
+        },
+        {
+          "title": "Saltea los champiñones y mezcla el relleno",
+          "content": "En la misma sartén añade los otros 10 g de aceite y la cebolla; cocina 4–5 minutos. Incorpora el ajo 30 segundos y luego los champiñones. Saltea 8–10 minutos, en tandas si hace falta, hasta que se reduzcan y el líquido libre se evapore. Añade el resto de sal y pimienta reservadas al relleno, incorpora el pollo cocido y mezcla. El relleno debe quedar húmedo pero sin un charco; si hay líquido, reduce antes de montar.",
+          "image_alt": "Champiñones y cebolla salteados mezclados con dados de pollo cocidos",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-04.webp"
+        },
+        {
+          "title": "Haz la bechamel",
+          "content": "Derrite los 40 g de mantequilla en un cazo a fuego medio-bajo. Añade los 40 g de harina y remueve 2 minutos sin dorarla. Vierte los 700 g de leche poco a poco, batiendo para disolver grumos. Cocina a hervor suave 6–8 minutos, removiendo hasta que cubra la cuchara pero se pueda extender. Incorpora los otros 3 g de sal, 0,25 g de pimienta y 0,2 g de nuez moscada. No reduzcas hasta obtener una pasta espesa.",
+          "image_alt": "Bechamel blanca y fluida removida con varillas en un cazo",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-05.webp"
+        },
+        {
+          "title": "Monta las tres capas de pasta",
+          "content": "Extiende una capa fina de bechamel en el fondo. Reserva aproximadamente un cuarto de la salsa restante para la cubierta y divide el resto entre dos capas. Divide el relleno en dos partes iguales y los 240 g originales de pasta en tres capas adaptadas a la fuente, cortando láminas si hace falta. Alterna pasta, mitad del relleno, bechamel y 30 g de mozzarella; repite con otros 30 g de mozzarella. Termina con la tercera capa de pasta, la salsa reservada y los 120 g de mozzarella restantes. Cubre todos los bordes de pasta con salsa.",
+          "image_alt": "Montaje de lasaña en fuente con láminas, pollo, champiñones y bechamel",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-06.webp"
+        },
+        {
+          "title": "Hornea y comprueba el centro",
+          "content": "Cubre holgadamente con aluminio y hornea 20 minutos a 190 °C. Retira el aluminio y hornea otros 10–15 minutos hasta que burbujee y la superficie dore sin quemarse. Introduce una sonda limpia en varios puntos del centro, sin tocar la fuente: debe alcanzar al menos 74 °C. Si está por debajo, cubre si hace falta y prolonga 5 minutos antes de medir otra vez. La corteza dorada no sustituye esta comprobación.",
+          "image_alt": "Lasaña gratinada en una fuente de horno con la superficie dorada",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-07.webp"
+        },
+        {
+          "title": "Reposa, porciona y conserva",
+          "content": "Reposa 10 minutos sobre una superficie resistente al calor y corta en 6 porciones. Sirve con utensilios limpios. Para guardar, separa las sobras en recipientes bajos y refrigera a 4 °C o menos dentro de 2 horas, o 1 hora si el ambiente supera 32 °C. Se propone consumirlas en 3 días y recalentar la porción una sola vez hasta 74 °C en el centro. No dejes toda la fuente enfriándose durante horas en la encimera.",
+          "image_alt": "Porción de lasaña blanca con pollo y champiñones mostrando sus capas",
+          "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/paso-08.webp"
+        }
+      ],
+      "notes": "Contiene trigo y lácteos; revisa si las láminas llevan huevo u otros alérgenos. Esta ficha utiliza pasta seca para precocer, no láminas listas para horno, y no valida sustituciones sin gluten o sin leche. Puedes cambiar champiñones blancos por cremini al mismo peso, con variación de sabor y nutrientes. Usa pollo sin salmuera añadida y mozzarella de baja humedad, no bolas húmedas, para aproximarte al cálculo y evitar exceso de agua. No sustituyas el pollo por sobras sin ajustar la formulación y su conservación previa. Los champiñones se reducen antes de montar; no añadas nata o caldo extra. No se ha validado aquí el montaje crudo de un día para otro ni la congelación; prepara y hornea de forma continua. La nutrición usa los pesos comestibles originales y divide entre 6, sin calcular absorción o pérdida exacta durante la cocción; no incluye guarniciones.",
+      "nutrition": {
+        "sodium_mg": 705,
+        "sugar_g": 10,
+        "saturated_fat_g": 11.4,
+        "carbs_g": 47,
+        "calories": 567.7,
+        "fat_g": 23.5,
+        "fiber_g": 2.8,
+        "protein_g": 41.6,
+        "estimated": true,
+        "serving_size": "1 de 6 porciones propuestas",
+        "source": "USDA FoodData Central — SR Legacy, abril de 2018",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "method": "Trece fichas USDA verificadas por FDC ID en el archivo oficial. Pesos comestibles originales sumados y divididos entre 6; pasta seca aproximada con Pasta, dry, enriched y mozzarella con Cheese, mozzarella, whole milk, low moisture. Se cuentan toda la grasa y el sazonado. Agua de cocer desechada, sin sal añadida; no se incluyen guarniciones.",
+        "note": "Estimación, no análisis del plato cocinado. Marcas de pasta y mozzarella, salmuera del pollo y reparto real cambian las cifras; cantidades, tiempos y rendimiento pendientes de prueba de cocina.",
+        "inputs": [
+          {
+            "fdc_id": 169736,
+            "fdc_description": "Pasta, dry, enriched",
+            "per_100g": {
+              "sodium_mg": 6,
+              "sugar_g": 2.67,
+              "saturated_fat_g": 0.277,
+              "carbs_g": 74.7,
+              "calories": 371,
+              "fat_g": 1.51,
+              "fiber_g": 3.2,
+              "protein_g": 13
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169736/nutrients",
+            "ingredient": "láminas de lasaña secas",
+            "edible_grams": 240
+          },
+          {
+            "fdc_id": 171077,
+            "fdc_description": "Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw",
+            "per_100g": {
+              "fat_g": 2.62,
+              "calories": 120,
+              "saturated_fat_g": 0.563,
+              "sodium_mg": 45,
+              "protein_g": 22.5,
+              "sugar_g": 0,
+              "carbs_g": 0,
+              "fiber_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171077/nutrients",
+            "ingredient": "pechuga de pollo cruda",
+            "edible_grams": 600
+          },
+          {
+            "fdc_id": 169251,
+            "fdc_description": "Mushrooms, white, raw",
+            "per_100g": {
+              "sugar_g": 1.98,
+              "saturated_fat_g": 0.05,
+              "fiber_g": 1,
+              "fat_g": 0.34,
+              "sodium_mg": 5,
+              "protein_g": 3.09,
+              "carbs_g": 3.26,
+              "calories": 22
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169251/nutrients",
+            "ingredient": "champiñones blancos",
+            "edible_grams": 500
+          },
+          {
+            "fdc_id": 170000,
+            "fdc_description": "Onions, raw",
+            "per_100g": {
+              "sugar_g": 4.24,
+              "fat_g": 0.1,
+              "carbs_g": 9.34,
+              "calories": 40,
+              "saturated_fat_g": 0.042,
+              "protein_g": 1.1,
+              "fiber_g": 1.7,
+              "sodium_mg": 4
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170000/nutrients",
+            "ingredient": "cebolla",
+            "edible_grams": 150
+          },
+          {
+            "fdc_id": 169230,
+            "fdc_description": "Garlic, raw",
+            "per_100g": {
+              "carbs_g": 33.1,
+              "calories": 149,
+              "sugar_g": 1,
+              "saturated_fat_g": 0.089,
+              "fiber_g": 2.1,
+              "sodium_mg": 17,
+              "protein_g": 6.36,
+              "fat_g": 0.5
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169230/nutrients",
+            "ingredient": "ajo",
+            "edible_grams": 10
+          },
+          {
+            "fdc_id": 171413,
+            "fdc_description": "Oil, olive, salad or cooking",
+            "per_100g": {
+              "fat_g": 100,
+              "carbs_g": 0,
+              "calories": 884,
+              "sodium_mg": 2,
+              "protein_g": 0,
+              "saturated_fat_g": 13.8,
+              "fiber_g": 0,
+              "sugar_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171413/nutrients",
+            "ingredient": "aceite de oliva",
+            "edible_grams": 20
+          },
+          {
+            "fdc_id": 171265,
+            "fdc_description": "Milk, whole, 3.25% milkfat, with added vitamin D",
+            "per_100g": {
+              "fat_g": 3.25,
+              "sugar_g": 5.05,
+              "carbs_g": 4.8,
+              "calories": 61,
+              "saturated_fat_g": 1.86,
+              "fiber_g": 0,
+              "sodium_mg": 43,
+              "protein_g": 3.15
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171265/nutrients",
+            "ingredient": "leche entera",
+            "edible_grams": 700
+          },
+          {
+            "fdc_id": 173430,
+            "fdc_description": "Butter, without salt",
+            "per_100g": {
+              "sugar_g": 0.06,
+              "calories": 717,
+              "saturated_fat_g": 50.5,
+              "fat_g": 81.1,
+              "carbs_g": 0.06,
+              "protein_g": 0.85,
+              "fiber_g": 0,
+              "sodium_mg": 11
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173430/nutrients",
+            "ingredient": "mantequilla sin sal",
+            "edible_grams": 40
+          },
+          {
+            "fdc_id": 168936,
+            "fdc_description": "Wheat flour, white, all-purpose, enriched, unbleached",
+            "per_100g": {
+              "fiber_g": 2.7,
+              "fat_g": 0.98,
+              "carbs_g": 76.3,
+              "calories": 364,
+              "protein_g": 10.3,
+              "sodium_mg": 2,
+              "saturated_fat_g": 0.155,
+              "sugar_g": 0.27
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/168936/nutrients",
+            "ingredient": "harina de trigo",
+            "edible_grams": 40
+          },
+          {
+            "fdc_id": 170846,
+            "fdc_description": "Cheese, mozzarella, whole milk, low moisture",
+            "per_100g": {
+              "sugar_g": 1.01,
+              "sodium_mg": 710,
+              "saturated_fat_g": 15.6,
+              "fiber_g": 0,
+              "protein_g": 21.6,
+              "fat_g": 24.6,
+              "carbs_g": 2.47,
+              "calories": 318
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170846/nutrients",
+            "ingredient": "mozzarella baja humedad entera",
+            "edible_grams": 180
+          },
+          {
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "fiber_g": 0,
+              "sodium_mg": 38800,
+              "saturated_fat_g": 0,
+              "protein_g": 0,
+              "fat_g": 0,
+              "carbs_g": 0,
+              "calories": 0,
+              "sugar_g": 0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients",
+            "ingredient": "sal",
+            "edible_grams": 6
+          },
+          {
+            "fdc_id": 170931,
+            "fdc_description": "Spices, pepper, black",
+            "per_100g": {
+              "fat_g": 3.26,
+              "sugar_g": 0.64,
+              "carbs_g": 64,
+              "calories": 251,
+              "protein_g": 10.4,
+              "fiber_g": 25.3,
+              "sodium_mg": 20,
+              "saturated_fat_g": 1.39
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170931/nutrients",
+            "ingredient": "pimienta",
+            "edible_grams": 0.5
+          },
+          {
+            "fdc_id": 171326,
+            "fdc_description": "Spices, nutmeg, ground",
+            "per_100g": {
+              "protein_g": 5.84,
+              "sodium_mg": 16,
+              "saturated_fat_g": 25.9,
+              "fat_g": 36.3,
+              "carbs_g": 49.3,
+              "calories": 525,
+              "sugar_g": 2.99,
+              "fiber_g": 20.8
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171326/nutrients",
+            "ingredient": "nuez moscada",
+            "edible_grams": 0.2
+          }
+        ]
+      },
+      "image_url": "/recetas/receta-de-lasana-de-pollo-con-champinones/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/receta-de-lasana-de-pollo-con-champinones/portada.webp",
+          "alt": "Lasaña de pollo y champiñones con bechamel y queso dorado, servida en una porción"
+        }
+      ],
+      "seo": {
+        "title": "Lasaña de pollo con champiñones y bechamel | Manual de Cocina",
+        "description": "Lasaña blanca para 6 con pollo, champiñones, bechamel y mozzarella. Cuece la pasta, reduce el relleno y comprueba 74 °C en el centro.",
+        "image_alt": "Lasaña de pollo y champiñones con bechamel y queso dorado, servida en una porción",
+        "image_variants": [
+          "/recetas/receta-de-lasana-de-pollo-con-champinones/portada-1x1.webp",
+          "/recetas/receta-de-lasana-de-pollo-con-champinones/portada-4x3.webp",
+          "/recetas/receta-de-lasana-de-pollo-con-champinones/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "¿Puedo usar láminas listas para horno?",
+            "a": "No como cambio directo en esta formulación. Se proponen 240 g de pasta seca para cocer previamente. Las láminas listas para horno absorben salsa y requieren ajustar líquidos y tiempo según el envase."
+          },
+          {
+            "q": "¿Cómo evito que quede aguada?",
+            "a": "Evapora el líquido libre de los champiñones antes de unir el pollo, usa mozzarella de baja humedad y bechamel que cubra la cuchara sin ser una pasta. Reposa 10 minutos antes de cortar."
+          },
+          {
+            "q": "¿Puedo montar la lasaña el día anterior?",
+            "a": "Esta ficha propone preparación y horneado continuos; no valida un montaje crudo prolongado ni congelación. Guarda la lasaña ya cocinada en porciones frías, consume en 3 días y recalienta una vez hasta 74 °C."
+          }
+        ]
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "content_html": "<p>Esta propuesta de lasaña combina pollo cocinado en dados, champiñones salteados y una bechamel de leche entera. Se monta con tres capas de pasta previamente cocida y dos capas de relleno, y termina con mozzarella de baja humedad. Conserva la URL histórica de la lasaña de pollo con champiñones y su clasificación aprobada como receta.</p><p>Se proponen 6 porciones en una fuente de unos 20 × 30 cm, 20 minutos de preparación, 60 de cocción con algunas tareas en paralelo y 10 de reposo: 90 minutos en total. La marca y el tamaño de las láminas pueden cambiar el montaje y la cocción. Cantidades, tiempos y rendimiento son estimados y pendientes de prueba de cocina; la temperatura del pollo y del centro se comprueba con termómetro.</p>"
+    }
+  ]
+}
