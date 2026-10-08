@@ -63,7 +63,7 @@
       "width": 1280,
       "height": 960,
       "original": "portada.png",
-      "visual_qa": "PASS"
+      "visual_qa": "PENDING_CROP_REVIEW"
     },
     {
       "asset": "portada-1x1.webp",
@@ -74,7 +74,7 @@
       "width": 1024,
       "height": 1024,
       "original": "portada.png",
-      "visual_qa": "PASS"
+      "visual_qa": "PENDING_CROP_REVIEW"
     },
     {
       "asset": "portada-4x3.webp",
@@ -85,7 +85,7 @@
       "width": 1280,
       "height": 960,
       "original": "portada.png",
-      "visual_qa": "PASS"
+      "visual_qa": "PENDING_CROP_REVIEW"
     },
     {
       "asset": "portada-16x9.webp",
@@ -96,7 +96,7 @@
       "width": 1280,
       "height": 720,
       "original": "portada.png",
-      "visual_qa": "PASS"
+      "visual_qa": "PENDING_CROP_REVIEW"
     },
     {
       "asset": "paso-01.webp",
@@ -140,6 +140,50 @@
       "width": 1200,
       "height": 900,
       "original": "paso-04.png",
+      "visual_qa": "PASS"
+    },
+    {
+      "asset": "paso-05.webp",
+      "path": "public/recetas/receta-de-okonomiyaki/paso-05.webp",
+      "public_path": "/recetas/receta-de-okonomiyaki/paso-05.webp",
+      "sha256": "d647c1b663f30d72b71eb0d329d1c347b586128ec98c00fdd68c7495107cdfd4",
+      "bytes": 123254,
+      "width": 1200,
+      "height": 900,
+      "original": "paso-05.png",
+      "visual_qa": "PASS"
+    },
+    {
+      "asset": "paso-06.webp",
+      "path": "public/recetas/receta-de-okonomiyaki/paso-06.webp",
+      "public_path": "/recetas/receta-de-okonomiyaki/paso-06.webp",
+      "sha256": "8048b92ee74be3575b4706cea07d5a58794cfce2cc66a94ea5f83575abb4af48",
+      "bytes": 162372,
+      "width": 1200,
+      "height": 900,
+      "original": "paso-06.png",
+      "visual_qa": "PASS"
+    },
+    {
+      "asset": "paso-07.webp",
+      "path": "public/recetas/receta-de-okonomiyaki/paso-07.webp",
+      "public_path": "/recetas/receta-de-okonomiyaki/paso-07.webp",
+      "sha256": "77940bca174ca6d63c38613a3165d38975532b129e793b9b0c1e8339e153f0c0",
+      "bytes": 170980,
+      "width": 1200,
+      "height": 900,
+      "original": "paso-07.png",
+      "visual_qa": "PASS"
+    },
+    {
+      "asset": "paso-08.webp",
+      "path": "public/recetas/receta-de-okonomiyaki/paso-08.webp",
+      "public_path": "/recetas/receta-de-okonomiyaki/paso-08.webp",
+      "sha256": "2960e0966ebf66f7a7914b30e361d3eac945ea21a8a913858844dfb792067564",
+      "bytes": 127372,
+      "width": 1200,
+      "height": 900,
+      "original": "paso-08.png",
       "visual_qa": "PASS"
     }
   ],
@@ -198,9 +242,53 @@
       "phase": 4,
       "visual_qa": "PASS",
       "source": "built-in ImageGen"
+    },
+    {
+      "asset": "paso-05.png",
+      "path": "public/recetas/receta-de-okonomiyaki/originals/paso-05.png",
+      "sha256": "288d4edda4fc876d5cc61678b33b331cb804150fc69baf4a59ffcd25dd643ccf",
+      "bytes": 2368588,
+      "width": 1448,
+      "height": 1086,
+      "phase": 5,
+      "visual_qa": "PASS",
+      "source": "built-in ImageGen"
+    },
+    {
+      "asset": "paso-06.png",
+      "path": "public/recetas/receta-de-okonomiyaki/originals/paso-06.png",
+      "sha256": "68f6f7f595df04a85e8e6656f506076e1c25d59e2fd8d764c550e3bb897ba263",
+      "bytes": 2458467,
+      "width": 1448,
+      "height": 1086,
+      "phase": 6,
+      "visual_qa": "PASS",
+      "source": "built-in ImageGen"
+    },
+    {
+      "asset": "paso-07.png",
+      "path": "public/recetas/receta-de-okonomiyaki/originals/paso-07.png",
+      "sha256": "181b18736ef8758d732713a24d2e8e4735336e333ad32a82fc0f8e9ca3981dd9",
+      "bytes": 2449446,
+      "width": 1448,
+      "height": 1086,
+      "phase": 7,
+      "visual_qa": "PASS",
+      "source": "built-in ImageGen"
+    },
+    {
+      "asset": "paso-08.png",
+      "path": "public/recetas/receta-de-okonomiyaki/originals/paso-08.png",
+      "sha256": "d9cfc3573e8965a753e22327cb62d7ff37d06dcf5548cf8adcb89bca7aeb5523",
+      "bytes": 2331811,
+      "width": 1448,
+      "height": 1086,
+      "phase": 8,
+      "visual_qa": "PASS",
+      "source": "built-in ImageGen"
     }
   ],
-  "state": "MEDIA_PARTIAL",
+  "state": "MEDIA_COMPLETE_COVER_CROPS_PENDING_REVIEW",
   "last_step_reuses_cover": true,
   "visual_qa_details": {
     "portada": {
@@ -222,6 +310,22 @@
     "paso-04": {
       "status": "PASS",
       "note": "Cabbage/scallion raw batter in two bowls while portioning, no bacon mixed in or sauces. Image does not establish weighed portions."
+    },
+    "paso-05": {
+      "status": "PASS",
+      "note": "Single raw cabbage pancake, thin raw pink bacon laid atop, no sauces; lifted lid before covering."
+    },
+    "paso-06": {
+      "status": "PASS",
+      "note": "Golden plain underside supported by two wide spatulas while bacon side turns downward; no sauce or invented temperature."
+    },
+    "paso-07": {
+      "status": "PASS",
+      "note": "Probe corrected once to side-wall insertion toward center, no metal on top or pan, display unreadable; cooked bacon top unadorned."
+    },
+    "paso-08": {
+      "status": "PASS",
+      "note": "Second raw disk in pan pink bacon versus first cooked unadorned golden disk on clean plate. Distinct sequential batch scene."
     }
   },
   "corrections": [

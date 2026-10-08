@@ -122,3 +122,6 @@ Identidad y siete rutas conciliadas de nuevo: una ES sin publicar, MD5 8ee444b23
 
 
 Okonomiyaki checkpoint de medios parciales: cinco originales PNG (portada/fase9 y fases1–4), ocho WebP, bytespositivos y hashesSHA256/Git exactos. Portada ajustada de encuadre; fases2/3 corregidas para no adelantar masa. Los tres recortes muestran completos ambos discos. No regenerar estos cinco originales. Restan fases5–8 y seis idiomas. Lote03 publicado0/15.
+
+
+Okonomiyaki: nueve originales y doceWebP completos, todos revisados visualmente y hashesexactos. Fase7corregida para sonda por lateral; no lectura de temperatura inventada. Mediospreservados, ninguna regeneración pendiente. Siguiente: seislocalizaciones y SQLguardado. PrimeraEScongelada sin cambios. Lote03publicado0/15.
