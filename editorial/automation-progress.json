@@ -211,10 +211,10 @@
         "position": 21,
         "eligibility": "validate_url_master_before_writing",
         "status": "in_progress",
-        "stage": "imágenes",
+        "stage": "localización",
         "identity_qa": "PASS",
         "classification": "ELIGIBLE_EXISTING_CULINARY_CANDIDATE_OR_CORE_REBUILD",
-        "languages_ready": 1,
+        "languages_ready": 5,
         "images_ready": 11,
         "source_not_reused": true,
         "es_content_file": "editorial/receta-de-hummus-20261008.json",
@@ -225,16 +225,12 @@
         "original_images_required": 8,
         "distinct_images_pending": 0,
         "expected_es_row_md5": "ac80098c1d3bdf5f3bd584bea93c4837",
-        "next_action": "Localize six languages; all8originals/11WebP visually reviewed, frozenESunchanged. No batch03DBpublication yet.",
+        "next_action": "Complete JA and pt-BR, editorialQA and guardedSQL; frozenES and19remote media intact.",
         "image_originals": 8,
         "image_visual_qa": "PASS_ALL8_ORIGINALS",
         "cover_variant_visual_qa": "PASS_ALL_RATIOS_WHOLE_BOWL",
         "next_image": null,
         "localizations_pending": [
-          "de",
-          "en",
-          "fr",
-          "it",
           "ja",
           "pt"
         ]
@@ -487,17 +483,17 @@
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
   "progress_branch": "recetas/lote-03-20261008",
-  "last_checkpoint_at": "2026-10-08T15:50:09.403Z",
+  "last_checkpoint_at": "2026-10-08T15:57:24.138Z",
   "handoff": {
     "branch": "recetas/lote-03-20261008",
     "current_recipe": "receta-de-hummus",
     "prepared_recipes": 4,
     "published_recipes": 0,
-    "next_action": "Localize six languages; all8originals/11WebP visually reviewed, frozenESunchanged. No batch03DBpublication yet.",
+    "next_action": "Complete JA and pt-BR, editorialQA and guardedSQL; frozenES and19remote media intact.",
     "checkpoint_at": "2026-10-08T15:50:09.403Z"
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z",
-  "updated_at": "2026-10-08T15:50:09.403Z",
+  "updated_at": "2026-10-08T15:57:24.138Z",
   "completed_batches": [
     {
       "id": "lote-02-20261008",
