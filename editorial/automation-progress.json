@@ -30,7 +30,7 @@
     "id": "lote-02-20261008",
     "target": 15,
     "status": "in_progress",
-    "stage": "images",
+    "stage": "localization",
     "recipes": [
       {
         "id": "e47eac88-0649-4785-baf0-43b92dd2ec2e",
@@ -201,7 +201,7 @@
         "recipe_group_id": "53237760-f2f8-4852-9c3c-ac101fa2f237",
         "slug": "arroz-blanco-perfecto",
         "public_path": "/arroz-blanco-perfecto",
-        "stage": "images",
+        "stage": "localization",
         "status": "in_progress",
         "identity_qa": "PASS",
         "classification": "ELIGIBLE_REBUILD_CANDIDATE",
@@ -210,9 +210,19 @@
         "image_manifest": "editorial/arroz-blanco-perfecto-imagenes.json",
         "qa_file": "editorial/arroz-blanco-perfecto-qa-20261008.json",
         "steps_sha256": "562b620035218fa3a645db19ba18ffe279183421ff71a6b02c9aefd33d5b4c54",
-        "images_ready": 0,
+        "images_ready": 10,
         "languages_ready": 1,
-        "distinct_images_pending": 6
+        "distinct_images_pending": 0,
+        "image_originals": 6,
+        "image_visual_qa": "PASS",
+        "localizations_pending": [
+          "de",
+          "en",
+          "fr",
+          "it",
+          "ja",
+          "pt"
+        ]
       },
       {
         "id": "2300175e-c47a-4318-a6f9-8ee54387722e",
@@ -328,14 +338,14 @@
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
   "progress_branch": "recetas/lote-02-20261008",
-  "last_checkpoint_at": "2026-10-08T08:59:56.487Z",
+  "last_checkpoint_at": "2026-10-08T09:09:23.143Z",
   "handoff": {
     "first_prepared_recipe": "como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada",
     "first_recipe_source": "editorial/como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada-20261008.json",
     "next_recipe": "arroz-blanco-perfecto",
     "batch_remaining_to_prepare": 6,
     "published_this_batch": 0,
-    "required_action": "Generate six distinct white rice originals from frozen brief; cover reused for step six, derive ten WebP assets, inspect all stages, record hashes; then localize remaining six languages.",
+    "required_action": "Localize six remaining rice languages, preserve frozen ES, verify numeric/media parity, prepare guarded SQL; then remaining five eligible recipes.",
     "scope": "Preview only; production migration not executed."
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z"
