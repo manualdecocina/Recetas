@@ -1,0 +1,54 @@
+{
+  "recipe": "receta-de-pizza-casera",
+  "status": "PASS_EDITORIAL_MEDIA_LOCALIZATION_NOT_LIVE",
+  "steps_sha256": "c46659df9c024fae0638a605b9837b21f122e283710a326370bdea86e49a37d3",
+  "languages": [
+    "es",
+    "de",
+    "en",
+    "fr",
+    "it",
+    "ja",
+    "pt"
+  ],
+  "steps_per_language": 10,
+  "ingredients": 12,
+  "faq_per_language": 3,
+  "usda_foods": 9,
+  "nutrition_recalculated": true,
+  "numeric_nutrition_shared": true,
+  "shared_amounts": true,
+  "shared_media": true,
+  "originals": 10,
+  "webp": 13,
+  "media_hashes_verified": true,
+  "visual_qa": {
+    "portada": "PASS: cooked golden circular pizza with four wedges, one separated, melted mozzarella over red tomato with oregano and basil; no unlisted topping.",
+    "paso-01": "PASS: separate flour/dusting flour, yeast, sugar/salt, water, two oil bowls, crushed tomato, grated mozzarella, oregano/basil and two plain metal trays; no assembled food. Trays shown round, functionally consistent metal baking surface; shape not a measured yield claim.",
+    "paso-02": "PASS: hydrated yeast in water with small natural bubbles, spoon stirring by plausible hand, separate remaining water; no flour mixed, no invented thermometer read.",
+    "paso-03": "PASS: one cohesive pale dough kneaded by anatomically plausible hands, scraper and mixing bowl; flour dusting incidental and no unlisted topping.",
+    "paso-04": "PASS: one puffy fermented dough in glass bowl, cloth partly lifted with natural bubbles; no claim of a measured exact doubling from photograph.",
+    "paso-05": "PASS: exactly two equal pale dough balls, cloth and scraper, tomato and grated mozzarella separate in background, no topping on dough.",
+    "paso-06": "PASS: crushed tomato with oregano/salt in bowl, grated mozzarella separate covered, two empty lightly oiled trays outside oven; dough in background, no assembled pizza.",
+    "paso-07": "PASS: one intact pale circular pizza base with thicker rim stretched by plausible hands, plain metal tray nearby, no topping added.",
+    "paso-08": "PASS: raw round dough with clean broad rim, red tomato and evenly grated low-moisture mozzarella, no basil or extra toppings, plain metal tray.",
+    "paso-09": "PASS: one baked pizza on plain metal tray at oven, gloved support and spatula inspecting golden base; melted mozzarella, tomato/oregano, no basil before serving."
+  },
+  "cover_crop_qa": "PASS: main4:3 and16:9 preserve whole pizza; square is a closer crop with outer plate/right-rim edge trimmed, while four-wedge structure, separated wedge, cooked base and toppings remain visible. No regeneration.",
+  "localization_qa_file": "editorial/receta-de-pizza-casera-localization-qa-20261008.json",
+  "times": {
+    "prep": 35,
+    "cook": 30,
+    "waiting": 153,
+    "total": 218,
+    "extra_actual_times_required": true
+  },
+  "sauce_grams_per_pizza": 151.5,
+  "yield_confirmed": false,
+  "kitchen_test_confirmed": false,
+  "published_database": false,
+  "package_sha256": "a1dc97fc54fe9299b6c375c93e67a169a4488a00130dc99af177df1e9b685f88",
+  "publication_blockers": [
+    "Remaining12recipes in batch, CI/merge, observed media deploy hashes, atomic DB publication and cache/liveQA pending"
+  ]
+}

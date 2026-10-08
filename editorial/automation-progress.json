@@ -31,11 +31,11 @@
     "branch": "recetas/lote-03-20261008",
     "target": 15,
     "status": "in_progress",
-    "stage": "localización",
-    "current_recipe": "receta-de-pizza-casera",
+    "stage": "ES",
+    "current_recipe": "lasana-de-calabacin-y-berenjena",
     "started_at": "2026-10-08T12:39:02.511Z",
     "completed_recipes": 0,
-    "prepared_recipes": 2,
+    "prepared_recipes": 3,
     "published_recipes": 0,
     "identity_qa": "PASS_15_ENTITIES_105_ROUTES_NO_COLLISIONS",
     "identity_file": "editorial/lote03-identidades-rutas-20261008.json",
@@ -72,7 +72,7 @@
         "qa_file": "editorial/receta-de-sopa-de-mariscos-con-mejillones-qa-20261008.json",
         "sql_file": "scripts/publish-receta-de-sopa-de-mariscos-con-mejillones-20261008.sql",
         "package_sha256": "c1142dcc4cf1705cfa8bb54a0572bc8c5444ecc7d476fe5cc820445f22ff995d",
-        "sql_sha256": "90046d2ed0c8b723b0cd70d2b33e73a0176909f940384969b06bddf8baf62c8d",
+        "sql_sha256": "a066e3bd56da56cb251d5f2582a117aef702b561d13436088d028de73f3c3b7b",
         "publication_gate": "PENDING_FULL15_CI_DEPLOY_DB_CACHE_LIVE_QA",
         "published_database": false
       },
@@ -107,7 +107,7 @@
         "next_image": null,
         "localizations_pending": [],
         "sql_file": "scripts/publish-receta-empanadas-argentinas-20261008.sql",
-        "sql_sha256": "5d066104ab49dc2153ac259f95bea6d08677008f729eb83d678d0db2968329c6",
+        "sql_sha256": "d59376bd9705ed2deff8f580ecd64ccae7bad563dc553dac4e5852aa198c22ee",
         "sql_executed": false,
         "qa_file": "editorial/receta-empanadas-argentinas-qa-20261008.json",
         "editorial_qa": "PASS_EDITORIAL_MEDIA_LOCALIZATION_NOT_LIVE",
@@ -123,11 +123,11 @@
         "editorial_status": "published",
         "position": 19,
         "eligibility": "validate_url_master_before_writing",
-        "status": "in_progress",
+        "status": "prepared",
         "stage": "localización",
         "identity_qa": "PASS",
         "classification": "ELIGIBLE_EXISTING_CULINARY_CANDIDATE_OR_CORE_REBUILD",
-        "languages_ready": 5,
+        "languages_ready": 7,
         "images_ready": 13,
         "source_not_reused": true,
         "es_content_file": "editorial/receta-de-pizza-casera-20261008.json",
@@ -142,10 +142,15 @@
         "image_originals": 10,
         "image_visual_qa": "PASS_ALL10_ORIGINALS",
         "cover_variant_visual_qa": "PASS_MAIN_SUBJECT_SQUARE_CLOSE_CROP",
-        "localizations_pending": [
-          "ja",
-          "pt"
-        ]
+        "localizations_pending": [],
+        "sql_sha256": "3450046fdbfc30134c51d65d2a03d978116b91f6b3ec349a267481b21d823638",
+        "sql_file": "scripts/publish-receta-de-pizza-casera-20261008.sql",
+        "sql_executed": false,
+        "qa_file": "editorial/receta-de-pizza-casera-qa-20261008.json",
+        "localization_qa_file": "editorial/receta-de-pizza-casera-localization-qa-20261008.json",
+        "editorial_qa": "PASS_EDITORIAL_MEDIA_LOCALIZATION_NOT_LIVE",
+        "package_sha256": "a1dc97fc54fe9299b6c375c93e67a169a4488a00130dc99af177df1e9b685f88",
+        "next_action": "Keep ready package unchanged; include in atomic15recipe publication after remaining12 complete."
       },
       {
         "id": "f7df8371-8273-4b15-ba6e-32390a185395",
@@ -358,9 +363,9 @@
     "owner": "manual-continuation-20261008-bandeja-localization",
     "status": "active",
     "acquired_at": "2026-10-08T08:39:14.486Z",
-    "expires_at": "2026-10-08T15:49:06.430Z",
-    "reason": "Same continuing producer: soup and empanadas ready7/7, next pizza ES; batch03published0/15.",
-    "renewed_at": "2026-10-08T14:19:06.430Z"
+    "expires_at": "2026-10-08T16:09:54.562Z",
+    "reason": "Same continuing producer: soup, empanadas and pizza complete7/7; next vegetable lasagna ES. Batch03published0/15.",
+    "renewed_at": "2026-10-08T14:39:54.562Z"
   },
   "blockers": [],
   "debt": [
@@ -429,17 +434,17 @@
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
   "progress_branch": "recetas/lote-03-20261008",
-  "last_checkpoint_at": "2026-10-08T14:33:14.979Z",
+  "last_checkpoint_at": "2026-10-08T14:39:54.562Z",
   "handoff": {
     "branch": "recetas/lote-03-20261008",
-    "current_recipe": "receta-de-pizza-casera",
-    "prepared_recipes": 2,
+    "current_recipe": "lasana-de-calabacin-y-berenjena",
+    "prepared_recipes": 3,
     "published_recipes": 0,
-    "next_action": "Pizza ES/DE/EN/FR/IT5languages ready, exact phase figures; finishJA/PT-BR then guardedSQL/QA. Prepared2/15;published0/15.",
-    "checkpoint_at": "2026-10-08T14:33:14.979Z"
+    "next_action": "Preserve three ready packages/media; continue vegetable lasagna identity/ES, frozen image brief and six localizations. SQLblocks now validate original historical dates before idempotent return; latest hashes authoritative. Complete12remaining then CI/merge/deploy/atomicDB/cacheQA.",
+    "checkpoint_at": "2026-10-08T14:39:54.562Z"
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z",
-  "updated_at": "2026-10-08T14:33:14.979Z",
+  "updated_at": "2026-10-08T14:39:54.562Z",
   "completed_batches": [
     {
       "id": "lote-02-20261008",

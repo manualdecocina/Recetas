@@ -19,6 +19,16 @@ BEGIN
   OR (SELECT count(DISTINCT x->>'public_path') FROM jsonb_array_elements(j)x)<>7 THEN
   RAISE EXCEPTION 'Invalid soup payload';
  END IF;
+ IF EXISTS(SELECT 1 FROM public.recipes r WHERE r.id=(b->>'id')::uuid AND
+   (r.recipe_group_id<>g OR r.language<>'es' OR r.slug<>b->>'slug' OR r.public_path<>b->>'public_path'
+    OR r.source_url IS DISTINCT FROM b->>'source_url' OR r.created_at<>(b->>'created_at')::timestamptz
+    OR r.published_at IS DISTINCT FROM (b->>'published_at')::timestamptz)) THEN
+  RAISE EXCEPTION 'Historical identity/date divergence before idempotent or initial publication';
+ END IF;
+ IF EXISTS(SELECT 1 FROM jsonb_array_elements(j)x WHERE (x->>'recipe_group_id')::uuid<>g
+    OR x->>'language' NOT IN ('es','de','en','fr','it','ja','pt')) THEN
+  RAISE EXCEPTION 'Unexpected group or language in publication payload';
+ END IF;
  IF (SELECT count(*) FROM public.recipes WHERE recipe_group_id=g)=7
   AND NOT EXISTS(SELECT 1 FROM jsonb_populate_recordset(NULL::public.recipes,j)x LEFT JOIN public.recipes r ON r.id=x.id
     WHERE r.id IS NULL OR NOT r.published OR r.editorial_status<>'published' OR r.recipe_group_id<>x.recipe_group_id

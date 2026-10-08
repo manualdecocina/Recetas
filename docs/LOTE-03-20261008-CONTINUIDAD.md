@@ -52,3 +52,11 @@ ES/DE/EN3/7 en la fuente única;10fases,12ingredientes,3FAQ; cifras por fase DE/
 ### Pizza5idiomas 2026-10-08T14:33:14.979Z
 
 ES/DE/EN/FR/IT5/7, cifras por fase exactas en cuatro traducciones tras normalizar decimales. Todas las imágenes correctas remotas. PróximoJA yPT-BR, luegoSQL/QA. No rehacer los5idiomas ni medios.
+
+## Checkpoint definitivo pizza7/7 2026-10-08T14:39:54.562Z
+
+Fuente única editorial/receta-de-pizza-casera-20261008.json completa7/7, SHA256 a1dc97fc54fe9299b6c375c93e67a169a4488a00130dc99af177df1e9b685f88; ESsteps c46659df9c024fae0638a605b9837b21f122e283710a326370bdea86e49a37d3 intacto.10PNG/13WebP definitivos,12ingredientes,10fases,3FAQ/idioma y9fichas USDA verificadas. Cantidades/nutrición/medios compartidos; cifras de5traducciones exactas porfase, JA conteos escritos/tercio inferior revisados semánticamente. Supabase124ES publicadas; pizza1ESfalse y6UUID nuevos sincolisión. SQL noejecutado.
+
+Corrección de protecciónSQL para las3recetas: comprobar identidad/fechas históricas también ANTES del retorno idempotente, y grupo/idiomas delpayload. Hashes anteriores deSQLquedan supersedidos; no se ha cambiado ningún contenido/medio de sopa o empanadas. HashSQLvigente sopa a066e3bd56da56cb251d5f2582a117aef702b561d13436088d028de73f3c3b7b; empanadas d59376bd9705ed2deff8f580ecd64ccae7bad563dc553dac4e5852aa198c22ee; pizza3450046fdbfc30134c51d65d2a03d978116b91f6b3ec349a267481b21d823638.
+
+Lote03 preparado3/15, publicado0/15. Próximo lasana-de-calabacin-y-berenjena (posición20). No rehacer3paquetesni susmedios.12restantesantesdepublicar15completas trasCI/merge/despliegue observado; DB/cache/QA pendientes. Lote02permanece cerrado15publicadas.
