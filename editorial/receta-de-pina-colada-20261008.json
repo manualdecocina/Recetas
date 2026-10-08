@@ -1,6 +1,6 @@
 {
   "scope": "Manual de Cocina only; lote03",
-  "state": "ES_FROZEN_MEDIA_AND_LOCALIZATIONS_PENDING",
+  "state": "MEDIA_READY_LOCALIZATIONS_PENDING_NOT_PUBLISHED",
   "provenance": "Original culinary reconstruction; identity/routes preserved, no WordPress text, translations or images reused.",
   "ai_owner_confirmation": "Original content and ImageGen authorized. No kitchen test claimed.",
   "category_slug": "bebidas",
@@ -224,7 +224,13 @@
         "cóctel de piña"
       ],
       "image_url": "/recetas/receta-de-pina-colada/portada.webp",
-      "gallery": [],
+      "gallery": [
+        "/recetas/receta-de-pina-colada/paso-01.webp",
+        "/recetas/receta-de-pina-colada/paso-02.webp",
+        "/recetas/receta-de-pina-colada/paso-03.webp",
+        "/recetas/receta-de-pina-colada/paso-04.webp",
+        "/recetas/receta-de-pina-colada/paso-05.webp"
+      ],
       "seo": {
         "title": "Piña colada con ron: cantidades y pasos para batir",
         "description": "Piña colada batida con piña fresca, zumo, crema de coco dulce, ron e hielo medido. Dos raciones propuestas, pasos y cálculo con el alcohol incluido.",
@@ -259,5 +265,6 @@
     "input_mass_g": 600,
     "served_weight_measured": false,
     "confirmed": false
-  }
+  },
+  "published_database": false
 }

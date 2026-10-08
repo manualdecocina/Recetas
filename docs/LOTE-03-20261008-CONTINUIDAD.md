@@ -106,3 +106,7 @@ Paquete único editorial/receta-de-hummus-20261008.json: ES, DE, EN, FR, IT, JA 
 
 ### Piña colada: ES y ficha congelados (2026-10-08T16:07:17.443Z)
 Identidad/rutas: seis históricas y PT nueva, cero colisiones. MD5 ES 5f8c556c3a86ef05410b815dbff15f90. Fórmula original: piña120g netos, zumo180g, crema de coco ENDULZADA60g, ron60g de40%vol y hielo180g. Dos raciones propuestas,15min preparación/0cocción. Cuatro fichas USDA con ocho campos y etanol presentes;254,1kcal y10,0g alcohol estimado por ración, sin fingir análisis. Hash pasos 0fd833037bc2a63d381a08ecd905bd38f422403486bc96f1e33eecdb5f176827. Seis originales/nueve WebP y seis idiomas pendientes. No DBpublicación.
+
+
+### Piña colada: medios completos (2026-10-08T16:12:16.344Z)
+Seis originales PNG y nueve WebP revisados. Ambos vasos íntegros en formatos cuadrado,4:3 y16:9; sin adornos ajenos. Las fases respetan ingredientes separados, corte, base sin hielo/ron, batidora cerrada y vertido con jarra desconectada. HashES intacto. Pendientes seis idiomas/SQL/gates del lote15. Ninguna03publicada.
