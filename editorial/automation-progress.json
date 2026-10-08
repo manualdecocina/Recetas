@@ -4,7 +4,7 @@
   "repository": "manualdecocina/Recetas",
   "preview": "https://preview.manualdecocina.com",
   "updated_date": "2026-10-08",
-  "automation_status": "not_created_missing_hosting_connector",
+  "automation_status": "not_created_pending_github_autodeploy_verification",
   "automation_id": null,
   "requested_schedule": "RRULE:FREQ=HOURLY",
   "requested_model": "gpt-6.1-sol",
@@ -31,23 +31,37 @@
   "run_lease": null,
   "blockers": [
     {
-      "code": "HOSTINGER_DEPLOYMENT_CONNECTOR_UNAVAILABLE",
-      "detail": "No tools exposed for existing Node.js hosting deployment. Do not use AI Builder or shell/API workarounds."
+      "code": "GITHUB_AUTODEPLOY_UNVERIFIED",
+      "detail": "GitHub push/main can trigger Hostinger deployments without a direct hosting connector; verify actual public marker before creating the hourly task."
     },
     {
       "code": "MODEL_CONTROL_UNVERIFIED",
       "detail": "Automation create schema has no model/effort arguments. Verify saved task settings before asserting gpt-6.1-sol/high."
     }
   ],
-  "debt": [
-    {
-      "code": "LOTE01_GLOBAL_CACHE_QA",
-      "pr": 85,
-      "status": "pending_recheck",
-      "detail": "70 recipe pages and 120 media passed. Recheck home/sitemap after TTL; PR85 draft requires unavailable REVALIDATE_SECRET in Actions. Do not expose secrets or weaken auth."
-    }
-  ],
+  "debt": [],
   "stop_condition": "All eligible pending recipes published and QA passed, held entities accounted for, pre-migration technical gates closed; production migration still not executed",
   "production_migration": "NOT_EXECUTED",
-  "preview_indexing_block": "ACTIVE"
+  "preview_indexing_block": "ACTIVE",
+  "completed_checks": {
+    "lote01_global_qa": {
+      "run_id": 37715732019,
+      "artifact_id": 11523627032,
+      "pages": 936,
+      "recipe_pages": 763,
+      "es_recipes": 109,
+      "errors": 0,
+      "robots_blocked": true
+    },
+    "revalidation": {
+      "verified": true,
+      "pr": 85,
+      "normalization": "strip terminal CR/LF only"
+    },
+    "auto_deployment": {
+      "verified": false,
+      "marker_path": "/.well-known/manualdecocina-deploy.txt",
+      "expected_body": "manualdecocina-autodeploy-probe-20261008-aeaa89798135\n"
+    }
+  }
 }
