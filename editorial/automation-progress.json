@@ -394,16 +394,22 @@
         "replacement_position": 16,
         "recorded_at": "2026-10-08T06:11:42.991Z"
       }
-    ]
+    ],
+    "publication_plan": "editorial/lote-02-plan-20261008.json",
+    "sql_file": "scripts/publish-lote02-20261008.sql",
+    "sql_sha256": "c8cc5ebc2157c0cb6e36f581b7144ef088446aa293b67d4b837d2ae0e73123e0",
+    "media_count": 172,
+    "metadata_validation": "PASS",
+    "main_base_sha": "3fb45ab3da8a841214b67b0447952a2044199e8b"
   },
   "next_candidate_position": 17,
   "run_lease": {
     "owner": "manual-continuation-20261008-bandeja-localization",
     "status": "active",
     "acquired_at": "2026-10-08T08:39:14.486Z",
-    "expires_at": "2026-10-08T12:32:20.316Z",
+    "expires_at": "2026-10-08T12:39:51.183Z",
     "reason": "Twelve prepared; completing last three before batch publication.",
-    "renewed_at": "2026-10-08T11:02:20.316Z"
+    "renewed_at": "2026-10-08T11:09:51.183Z"
   },
   "blockers": [],
   "debt": [],
@@ -451,7 +457,7 @@
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
   "progress_branch": "recetas/lote-02-20261008",
-  "last_checkpoint_at": "2026-10-08T11:02:20.316Z",
+  "last_checkpoint_at": "2026-10-08T11:09:51.183Z",
   "handoff": "All15 recipes prepared with7languages and approved images. Proceed whole-batch validations/transaction/PR/CI/merge/deploy hashes BEFORE DB; then cache/globalQA, no recipe yet published.",
   "next_relay_requested_at": "2026-10-08T02:59:04Z"
 }
