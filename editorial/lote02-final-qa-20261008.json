@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "batch_id": "lote-02-20261008",
+  "closed_at": "2026-10-08T12:17:16.249Z",
+  "status": "PASS",
+  "published_groups": 15,
+  "published_rows": 105,
+  "media": {
+    "status": "PASS",
+    "checked_at": "2026-10-08T11:34:21.995280+00:00",
+    "media": 172,
+    "http200": 172,
+    "matching_sha256": 172,
+    "evidence_file": "editorial/lote02-media-deployment-verification-20261008.json",
+    "merge_sha": "e9b47890f046fd29b5e2bc55fd565a6343126bf2"
+  },
+  "db": {
+    "status": "PASS",
+    "checked_at": "2026-10-08T11:36:30.861Z",
+    "groups": 15,
+    "published_rows": 105,
+    "languages_per_group": 7,
+    "published_es_total": 124,
+    "identity_dates_preserved": true,
+    "sql_sha256": "c8cc5ebc2157c0cb6e36f581b7144ef088446aa293b67d4b837d2ae0e73123e0",
+    "evidence_file": "editorial/lote02-db-publication-verification-20261008.json"
+  },
+  "pr90": {
+    "pr": 90,
+    "sha": "e9b47890f046fd29b5e2bc55fd565a6343126bf2",
+    "head_sha": "700148969dac24be21ace69775735f38a842e5f1",
+    "merged_at": "2026-10-08T11:29:55.871Z"
+  },
+  "pr92": {
+    "sha": "9fd929d69d9374107b8d4bbd974acc2b13627448",
+    "merged": true,
+    "message": "Pull Request successfully merged"
+  },
+  "pr93": {
+    "sha": "ef93de8d5843836e8e09a4d8c27b8f34238b9aad",
+    "merged": true,
+    "message": "Pull Request successfully merged"
+  },
+  "pr91": {
+    "sha": "dc5a5b0340107e031081a268e2fbcae4fa49350f",
+    "merged": true,
+    "message": "Pull Request successfully merged"
+  },
+  "qa": {
+    "status": "PASS",
+    "validated_source_head": "78efdd7c8e648c768798225ad92fd3ca8958129f",
+    "verify_pr": 91,
+    "verify_merge": "dc5a5b0340107e031081a268e2fbcae4fa49350f",
+    "quality_run": 37774945318,
+    "media_run": 37774945626,
+    "publication_run": 37774945282,
+    "artifact_id": 11549262265,
+    "artifact_digest": "ba1e9e424dac95931ce1bc511f923efe06cd725f32818932ad2cb85784301f60",
+    "bounded": {
+      "checked_at": "2026-10-08T12:10:26.760137+00:00",
+      "groups": 15,
+      "pages": 105,
+      "passed": 105,
+      "errors": []
+    },
+    "global": {
+      "sitemap_urls": 1041,
+      "status": {
+        "200": 1041,
+        "403": 0,
+        "404": 0,
+        "3xx": 0,
+        "5xx": 0,
+        "other": 0
+      },
+      "internal_links_outside_sitemap": 7,
+      "internal_link_status": {
+        "200": 7,
+        "403": 0,
+        "404": 0,
+        "3xx": 0,
+        "5xx": 0,
+        "other": 0
+      },
+      "images": 1304,
+      "legacy_redirects": 147,
+      "legacy_redirect_status": {
+        "200": 42,
+        "307": 96,
+        "308": 9
+      },
+      "recipe_pages": 868,
+      "recipe_schema_valid": 868,
+      "es_recipes": 124,
+      "breadcrumb_pages": 962,
+      "breadcrumb_valid": 962,
+      "hreflang_by_language": {
+        "es": {
+          "pages": 171,
+          "with_hreflang": 145,
+          "with_x_default": 21,
+          "errors": 0
+        },
+        "de": {
+          "pages": 145,
+          "with_hreflang": 145,
+          "with_x_default": 21,
+          "errors": 0
+        },
+        "en": {
+          "pages": 145,
+          "with_hreflang": 145,
+          "with_x_default": 21,
+          "errors": 0
+        },
+        "fr": {
+          "pages": 145,
+          "with_hreflang": 145,
+          "with_x_default": 21,
+          "errors": 0
+        },
+        "it": {
+          "pages": 145,
+          "with_hreflang": 145,
+          "with_x_default": 21,
+          "errors": 0
+        },
+        "ja": {
+          "pages": 145,
+          "with_hreflang": 145,
+          "with_x_default": 21,
+          "errors": 0
+        },
+        "pt-BR": {
+          "pages": 145,
+          "with_hreflang": 145,
+          "with_x_default": 21,
+          "errors": 0
+        }
+      },
+      "orphan_pages": 0,
+      "robots_txt_blocked": true,
+      "pages_noindex_nofollow": 1041,
+      "not_found_probe": 404,
+      "errors": 0,
+      "errors_by_kind": {}
+    },
+    "evidence_file": "editorial/lote02-final-qa-20261008.json"
+  },
+  "visual": {
+    "status": "PASS_DESKTOP_COVERS_15",
+    "catalog_count": 124,
+    "all_15_visible_first_catalog_page": true,
+    "body_sample": "pollo-al-limon-y-miel-con-esparragos-asados",
+    "body_images_ingredients_notes_FAQ": "PASS",
+    "selector_sample": "receta-de-capuchino",
+    "selector": "PASS"
+  },
+  "ingredient_resolution": {
+    "canonical": 50,
+    "pending": 94,
+    "editorial_total": 144,
+    "unaccounted": 0
+  },
+  "remaining_catalog": {
+    "unpublished_es": 85,
+    "candidates_subject_to_classification": 36,
+    "held": 49
+  },
+  "production_migration_executed": false,
+  "noindex_removed": false
+}
