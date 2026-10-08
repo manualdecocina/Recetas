@@ -485,13 +485,19 @@
         "editorial_status": "published",
         "position": 28,
         "eligibility": "validate_url_master_before_writing",
-        "status": "reserved",
-        "stage": "identidad",
+        "status": "in_progress",
+        "stage": "imágenes",
         "identity_qa": "PASS",
         "classification": "ELIGIBLE_EXISTING_CULINARY_CANDIDATE_OR_CORE_REBUILD",
         "languages_ready": 0,
         "images_ready": 0,
-        "source_not_reused": true
+        "source_not_reused": true,
+        "es_content_file": "editorial/receta-de-flan-de-chocolate-20261008.json",
+        "image_manifest": "editorial/receta-de-flan-de-chocolate-imagenes.json",
+        "nutrition_evidence_file": "editorial/receta-de-flan-de-chocolate-usda-verificado-20261008.json",
+        "steps_sha256": "75a3dd6a54ce9658f5e00ba2a7f09dff5a5fad0f2a5382e25d1eb462d90c8b6d",
+        "distinct_images_pending": 9,
+        "next_action": "Generate the9missing original phases, inspect, preserve WebP+hashes, then localize6languages."
       },
       {
         "id": "2f9fce85-8989-4252-af0d-3c24e046b1bc",
@@ -548,12 +554,13 @@
   },
   "next_candidate_position": 32,
   "run_lease": {
-    "owner": "work-recovery-cda9798a16b5",
+    "owner": "work-resume-1648240aa2fa-1791492779924",
     "status": "active",
-    "acquired_at": "2026-10-08T19:09:04.258Z",
-    "renewed_at": "2026-10-08T19:34:48.323939+00:00",
-    "expires_at": "2026-10-08T21:04:48.323939+00:00",
-    "reason": "Transferred producer;11of15prepared,0published; next chocolateflan identity and originalES."
+    "acquired_at": "2026-10-08T20:52:59.919Z",
+    "renewed_at": "2026-10-08T20:52:59.919Z",
+    "expires_at": "2026-10-08T22:22:59.924Z",
+    "previous_owner": "work-recovery-cda9798a16b5",
+    "reason": "Explicit user handover from blocked Work windows. Prior checkpoint19:34,last branch commit19:47, no live PR/Actions; retain11prepared and original frozen flan."
   },
   "blockers": [],
   "debt": [
@@ -622,7 +629,7 @@
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
   "progress_branch": "recetas/lote-03-20261008",
-  "last_checkpoint_at": "2026-10-08T19:34:48.323939+00:00",
+  "last_checkpoint_at": "2026-10-08T20:52:59.919Z",
   "handoff": {
     "branch": "recetas/lote-03-20261008",
     "current_recipe": "receta-de-flan-de-chocolate",
@@ -633,7 +640,7 @@
     "next_action": "Finish remaining four: chocolateflan,fishandchips,tomatosauce,spinachtortilla. Preserve first11packages. Full15CI/deploy/atomicDB/cache/liveQA remains."
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z",
-  "updated_at": "2026-10-08T19:34:48.323939+00:00",
+  "updated_at": "2026-10-08T20:52:59.919Z",
   "completed_batches": [
     {
       "id": "lote-02-20261008",
