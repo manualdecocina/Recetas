@@ -26,5 +26,179 @@
   "identity_routes": "PASS",
   "visual_qa": "PENDING",
   "localization_qa": "PENDING",
-  "publication_gate": "BATCH_15_COMPLETION_PENDING"
+  "publication_gate": "BATCH_15_COMPLETION_PENDING",
+  "status": "PASS_PREPUBLICATION",
+  "localization": {
+    "checks": [
+      {
+        "language": "es",
+        "structural": "PASS",
+        "text_numeric_differences": []
+      },
+      {
+        "language": "de",
+        "structural": "PASS",
+        "text_numeric_differences": [
+          {
+            "step": 7,
+            "es": [
+              "5",
+              "4",
+              "2",
+              "1",
+              "32",
+              "2",
+              "74"
+            ],
+            "localized": [
+              "5",
+              "2",
+              "4",
+              "32",
+              "1",
+              "2",
+              "74"
+            ]
+          }
+        ]
+      },
+      {
+        "language": "en",
+        "structural": "PASS",
+        "text_numeric_differences": []
+      },
+      {
+        "language": "fr",
+        "structural": "PASS",
+        "text_numeric_differences": []
+      },
+      {
+        "language": "it",
+        "structural": "PASS",
+        "text_numeric_differences": []
+      },
+      {
+        "language": "ja",
+        "structural": "PASS",
+        "text_numeric_differences": [
+          {
+            "step": 1,
+            "es": [
+              "4",
+              "200",
+              "4",
+              "5",
+              "3",
+              "0.5"
+            ],
+            "localized": [
+              "200",
+              "4",
+              "2",
+              "4",
+              "5",
+              "3",
+              "0.5"
+            ]
+          },
+          {
+            "step": 4,
+            "es": [
+              "15",
+              "4",
+              "200",
+              "80"
+            ],
+            "localized": [
+              "4",
+              "15",
+              "200",
+              "80"
+            ]
+          },
+          {
+            "step": 5,
+            "es": [
+              "30",
+              "3",
+              "25",
+              "30",
+              "15"
+            ],
+            "localized": [
+              "30",
+              "4",
+              "3",
+              "25",
+              "30",
+              "15"
+            ]
+          },
+          {
+            "step": 7,
+            "es": [
+              "5",
+              "4",
+              "2",
+              "1",
+              "32",
+              "2",
+              "74"
+            ],
+            "localized": [
+              "5",
+              "1",
+              "1",
+              "2",
+              "32",
+              "1",
+              "4",
+              "2",
+              "1",
+              "74"
+            ]
+          }
+        ]
+      },
+      {
+        "language": "pt",
+        "structural": "PASS",
+        "text_numeric_differences": []
+      }
+    ],
+    "es_hash": "75e4f93e42dd49a3d1e0d12bb9007108dccf046547e49295f6cb97e5fe70243c",
+    "package_sha256": "5456590a4dea6a90fe2e4f38c275d623f3b0998a216643c4824b03825cad2706",
+    "sql_sha256": "03327fc835e67caadb923e0f50adc82e8543442149f0a23dc6ac70a984f042a5",
+    "status": "PASS",
+    "semantic_review": {
+      "status": "PASS",
+      "explanation": "DE storage thresholds reordered without changing meaning. JA explicitly uses digits for two paper sheets, four rolls, one per person, one reheat and reorders temperature/time clauses. All quantities and safety thresholds unchanged."
+    }
+  },
+  "image_qa": {
+    "status": "PASS",
+    "checked_at": "2026-10-08T09:55:55.483Z",
+    "checks": [
+      "All individual scenes inspected",
+      "All crops inspected",
+      "Four closed rolls in chilled and oven scenes",
+      "Thermometer probe at centre, no invented reading",
+      "No serving toothpicks"
+    ],
+    "corrections": [
+      {
+        "scene": "step_03",
+        "reason": "Exposed filling at ends",
+        "action": "ImageGen edit to tuck all ends closed",
+        "result": "PASS"
+      },
+      {
+        "scene": "step_04",
+        "reason": "Exposed filling at ends",
+        "action": "ImageGen edit to tuck all ends closed",
+        "result": "PASS"
+      }
+    ]
+  },
+  "media_commit": "7ab35fb32685809cda12c9ff10d83066612af8eb"
 }

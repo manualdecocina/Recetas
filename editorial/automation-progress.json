@@ -30,7 +30,7 @@
     "id": "lote-02-20261008",
     "target": 15,
     "status": "in_progress",
-    "stage": "localization",
+    "stage": "identity",
     "recipes": [
       {
         "id": "e47eac88-0649-4785-baf0-43b92dd2ec2e",
@@ -261,8 +261,8 @@
         "recipe_group_id": "675e919b-02fe-4900-95c4-d56849fa0cb7",
         "slug": "receta-de-cordon-bleu",
         "public_path": "/receta-de-cordon-bleu",
-        "stage": "localization",
-        "status": "in_progress",
+        "stage": "prepared",
+        "status": "prepared_pending_batch_publication",
         "identity_qa": "PASS",
         "classification": "ELIGIBLE_EXISTING_RECIPE_CANDIDATE",
         "routes_file": "editorial/receta-de-cordon-bleu-rutas-20261008.json",
@@ -271,18 +271,20 @@
         "qa_file": "editorial/receta-de-cordon-bleu-qa-20261008.json",
         "steps_sha256": "75e4f93e42dd49a3d1e0d12bb9007108dccf046547e49295f6cb97e5fe70243c",
         "images_ready": 11,
-        "languages_ready": 1,
+        "languages_ready": 7,
         "distinct_images_pending": 0,
         "image_originals": 7,
         "image_visual_qa": "PASS",
-        "localizations_pending": [
-          "de",
-          "en",
-          "fr",
-          "it",
-          "ja",
-          "pt"
-        ]
+        "localizations_pending": [],
+        "portuguese_locale": "pt-BR",
+        "editorial_qa": "PASS",
+        "localization_qa": "PASS",
+        "localization_qa_file": "editorial/receta-de-cordon-bleu-localization-qa-20261008.json",
+        "sql_file": "scripts/publish-receta-de-cordon-bleu-20261008.sql",
+        "package_sha256": "5456590a4dea6a90fe2e4f38c275d623f3b0998a216643c4824b03825cad2706",
+        "sql_sha256": "03327fc835e67caadb923e0f50adc82e8543442149f0a23dc6ac70a984f042a5",
+        "publication_gate": "BATCH_15_COMPLETION_PENDING",
+        "media_commit": "7ab35fb32685809cda12c9ff10d83066612af8eb"
       },
       {
         "id": "f1ba021c-866e-4b37-a577-485a64b44ae9",
@@ -309,11 +311,11 @@
         "status": "reserved"
       }
     ],
-    "current_recipe": "receta-de-cordon-bleu",
+    "current_recipe": "receta-de-capuchino",
     "started_at": "2026-10-08T02:27:18.812Z",
     "branch": "recetas/lote-02-20261008",
     "completed_recipes": 0,
-    "prepared_recipes": 11,
+    "prepared_recipes": 12,
     "published_recipes": 0,
     "selection_adjustments": [
       {
@@ -333,9 +335,9 @@
     "owner": "manual-continuation-20261008-bandeja-localization",
     "status": "active",
     "acquired_at": "2026-10-08T08:39:14.486Z",
-    "expires_at": "2026-10-08T11:01:06.928Z",
-    "reason": "Eleven prepared; continuing cordon bleu, no batch published yet.",
-    "renewed_at": "2026-10-08T09:31:06.928Z"
+    "expires_at": "2026-10-08T11:32:39.257Z",
+    "reason": "Twelve prepared; completing last three before batch publication.",
+    "renewed_at": "2026-10-08T10:02:39.257Z"
   },
   "blockers": [],
   "debt": [],
@@ -383,14 +385,14 @@
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
   "progress_branch": "recetas/lote-02-20261008",
-  "last_checkpoint_at": "2026-10-08T09:55:55.484Z",
+  "last_checkpoint_at": "2026-10-08T10:02:39.257Z",
   "handoff": {
     "first_prepared_recipe": "como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada",
     "first_recipe_source": "editorial/como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada-20261008.json",
-    "next_recipe": "receta-de-cordon-bleu",
-    "batch_remaining_to_prepare": 4,
+    "next_recipe": "receta-de-capuchino",
+    "batch_remaining_to_prepare": 3,
     "published_this_batch": 0,
-    "required_action": "Complete cordon bleu localizations and SQL; eleven earlier recipes prepared, batch remains unpublished.",
+    "required_action": "Prepare capuchino, lasaña pollo champiñones, pollo limón miel espárragos. Lasaña REVIEW resolved KEEP/REBUILD Recipe by docs/QA-BLOQUE-REVIEW-20260925-47.md. Then publish whole fifteen via PR/CI/merge/deploy/DB/cache/QA.",
     "scope": "Preview only; production migration not executed."
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z"
