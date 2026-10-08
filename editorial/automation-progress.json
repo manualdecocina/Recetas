@@ -30,7 +30,7 @@
     "id": "lote-02-20261008",
     "target": 15,
     "status": "in_progress",
-    "stage": "images",
+    "stage": "identity_validation",
     "recipes": [
       {
         "id": "e47eac88-0649-4785-baf0-43b92dd2ec2e",
@@ -98,11 +98,15 @@
         "recipe_group_id": "43e5b443-a225-49c7-b432-217b5df787be",
         "slug": "ensalada-de-pollo-con-aguacate-y-mango",
         "public_path": "/ensalada-de-pollo-con-aguacate-y-mango",
-        "stage": "images",
-        "status": "in_progress",
+        "stage": "prepared",
+        "status": "prepared_pending_batch_publication",
         "es_content_file": "editorial/ensalada-de-pollo-con-aguacate-y-mango-20261008.json",
         "image_manifest": "editorial/ensalada-de-pollo-con-aguacate-y-mango-imagenes.json",
-        "images_ready": 0
+        "images_ready": 12,
+        "languages_ready": 7,
+        "editorial_qa": "PASS",
+        "qa_file": "editorial/ensalada-de-pollo-con-aguacate-y-mango-qa-20261008.json",
+        "portuguese_locale": "pt-BR"
       },
       {
         "id": "baa74cdf-fb7d-4607-9cb1-0a4e135f81b6",
@@ -185,19 +189,19 @@
         "status": "reserved"
       }
     ],
-    "current_recipe": "ensalada-de-pollo-con-aguacate-y-mango",
+    "current_recipe": "receta-de-feijoada",
     "started_at": "2026-10-08T02:27:18.812Z",
     "branch": "recetas/lote-02-20261008",
     "completed_recipes": 0,
-    "prepared_recipes": 4,
+    "prepared_recipes": 5,
     "published_recipes": 0
   },
-  "next_candidate_position": 5,
+  "next_candidate_position": 6,
   "run_lease": {
     "owner": "continuous-run-20261008-0301",
     "status": "active",
     "acquired_at": "2026-10-08T03:02:36.623Z",
-    "expires_at": "2026-10-08T05:31:41.016Z",
+    "expires_at": "2026-10-08T05:45:53.344Z",
     "reason": "User explicitly requested continuous production; this worker owns the open batch and resumes rainbow juice."
   },
   "blockers": [],
@@ -246,14 +250,14 @@
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
   "progress_branch": "recetas/lote-02-20261008",
-  "last_checkpoint_at": "2026-10-08T04:01:41.016Z",
+  "last_checkpoint_at": "2026-10-08T04:15:53.344Z",
   "handoff": {
     "first_prepared_recipe": "como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada",
     "first_recipe_source": "editorial/como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada-20261008.json",
-    "next_recipe": "ensalada-de-pollo-con-aguacate-y-mango",
-    "batch_remaining_to_prepare": 11,
+    "next_recipe": "receta-de-feijoada",
+    "batch_remaining_to_prepare": 10,
     "published_this_batch": 0,
-    "required_action": "Continue chicken-avocado-mango salad identity validation; preserve four complete packages. Complete and jointly publish all fifteen, then preview QA.",
+    "required_action": "Validate feijoada identity and historical routes, complete original ES, images and six localizations. Preserve five complete packages; publish all fifteen together then verify preview.",
     "scope": "Preview only; production migration not executed."
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z"

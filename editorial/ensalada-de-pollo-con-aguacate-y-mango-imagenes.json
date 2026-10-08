@@ -48,7 +48,296 @@
       "prompt": "Use case: photorealistic-natural. Asset type: original Manual de Cocina chicken avocado mango salad recipe photograph. One realistic photo, 4:3 landscape, soft natural light, clean light neutral kitchen, plain unbranded utensils, correct food safety phases and natural edible textures. No text, label, logo, watermark, collage, extra ingredients, tomato, cheese, nuts, herbs, mayonnaise or thick creamy sauce. Assembly phase: large plain salad bowl containing dry romaine lettuce, thin cucumber half-moons, red onion slivers, golden mango 2 cm cubes, pale green avocado 2 cm cubes and cooked lightly golden chicken breast strips with opaque white interiors. Two plain serving spoons gently lift ingredients without crushing avocado. Light translucent dressing, no extra tomato, nuts, cheese, herbs, mayonnaise or raw chicken."
     }
   ],
-  "images": [],
-  "state": "GENERATION_PENDING",
+  "images": [
+    {
+      "archivo": "paso-01.webp",
+      "paso": {
+        "numero": 1,
+        "titulo": "Lava y seca los vegetales"
+      },
+      "muestra": "Vegetales lavados y secos, lechuga, pepino cortado y cebolla separados; sin pollo crudo cerca.",
+      "alt_es": "Ensalada de pollo, aguacate y mango: lava y seca los vegetales",
+      "alt_by_language": {
+        "es": "Ensalada de pollo, aguacate y mango: lava y seca los vegetales",
+        "de": "Hähnchensalat mit Avocado und Mango: Gemüse waschen und trocknen",
+        "en": "Chicken salad with avocado and mango: Wash and dry the produce",
+        "fr": "Salade de poulet à l’avocat et à la mangue: Laver et sécher les végétaux",
+        "it": "Insalata di pollo con avocado e mango: Lava e asciuga le verdure",
+        "ja": "鶏肉とアボカド、マンゴーのサラダ: 野菜を洗って乾かす",
+        "pt": "Salada de frango com abacate e manga: Lave e seque os vegetais"
+      },
+      "estado": "entregada",
+      "sha256": "73dd8b8ccd1c72dc45e55c9c335119faba0388746edf880cb4443997fbe13dde",
+      "width": 1448,
+      "height": 1086,
+      "visual_qa": "PASS: separate ready-to-eat produce bowls and washed whole fruit on clean board; no raw poultry or contamination.",
+      "source_original_sha256": "462d592cc21acc6d73995dffbc34e21307093dedd468524c86774c71371085a0",
+      "full_resolution_original": false
+    },
+    {
+      "archivo": "paso-02.webp",
+      "paso": {
+        "numero": 2,
+        "titulo": "Prepara cuatro filetes de pollo"
+      },
+      "muestra": "Cuatro filetes de pollo crudo de grosor uniforme sobre tabla separada, sin vegetales ni plato final.",
+      "alt_es": "Ensalada de pollo, aguacate y mango: prepara cuatro filetes de pollo",
+      "alt_by_language": {
+        "es": "Ensalada de pollo, aguacate y mango: prepara cuatro filetes de pollo",
+        "de": "Hähnchensalat mit Avocado und Mango: Vier Hähnchenfilets vorbereiten",
+        "en": "Chicken salad with avocado and mango: Prepare four chicken fillets",
+        "fr": "Salade de poulet à l’avocat et à la mangue: Préparer quatre filets de poulet",
+        "it": "Insalata di pollo con avocado e mango: Prepara quattro filetti di pollo",
+        "ja": "鶏肉とアボカド、マンゴーのサラダ: 鶏肉を4枚に整える",
+        "pt": "Salada de frango com abacate e manga: Prepare quatro filés de frango"
+      },
+      "estado": "entregada",
+      "sha256": "98097e29edf417c0da47e1054b8db8d1eeed55e8a46a18dcc2592095e7e63169",
+      "width": 1448,
+      "height": 1086,
+      "visual_qa": "PASS: four evenly thick raw chicken breast fillets on dedicated board; no ready-to-eat produce present.",
+      "source_original_sha256": "573efe97c30b2d766f43afdd64118ec1a7be7bd0084e232be54f2718345833e3",
+      "full_resolution_original": false
+    },
+    {
+      "archivo": "paso-03.webp",
+      "paso": {
+        "numero": 3,
+        "titulo": "Cocina y comprueba la temperatura"
+      },
+      "muestra": "Filetes dorados en sartén y termómetro midiendo el centro, sin ingredientes de ensalada en la zona de crudo.",
+      "alt_es": "Ensalada de pollo, aguacate y mango: cocina y comprueba la temperatura",
+      "alt_by_language": {
+        "es": "Ensalada de pollo, aguacate y mango: cocina y comprueba la temperatura",
+        "de": "Hähnchensalat mit Avocado und Mango: Braten und Kerntemperatur prüfen",
+        "en": "Chicken salad with avocado and mango: Cook and check the temperature",
+        "fr": "Salade de poulet à l’avocat et à la mangue: Cuire et vérifier la température",
+        "it": "Insalata di pollo con avocado e mango: Cuoci e controlla la temperatura",
+        "ja": "鶏肉とアボカド、マンゴーのサラダ: 焼いて中心温度を確認する",
+        "pt": "Salada de frango com abacate e manga: Cozinhe e confira a temperatura"
+      },
+      "estado": "entregada",
+      "sha256": "3aa86959ab38ee2e44900232f1e02a0ed75cffdb8378de799ddbaad39ab9d073",
+      "width": 1448,
+      "height": 1086,
+      "visual_qa": "PASS: two browned fillets in skillet, probe entering thick center away from pan; unreadable display makes no false temperature claim.",
+      "source_original_sha256": "0b45b9b72def50708df758bac02dd7f852512f6d33b534ad69cfce84d68fc14f",
+      "full_resolution_original": false
+    },
+    {
+      "archivo": "paso-04.webp",
+      "paso": {
+        "numero": 4,
+        "titulo": "Deja reposar y corta en tiras"
+      },
+      "muestra": "Pollo cocinado reposado y cortado en tiras sobre tabla limpia, con interior totalmente opaco.",
+      "alt_es": "Ensalada de pollo, aguacate y mango: deja reposar y corta en tiras",
+      "alt_by_language": {
+        "es": "Ensalada de pollo, aguacate y mango: deja reposar y corta en tiras",
+        "de": "Hähnchensalat mit Avocado und Mango: Ruhen lassen und in Streifen schneiden",
+        "en": "Chicken salad with avocado and mango: Rest and slice into strips",
+        "fr": "Salade de poulet à l’avocat et à la mangue: Laisser reposer et couper en lanières",
+        "it": "Insalata di pollo con avocado e mango: Lascia riposare e taglia a strisce",
+        "ja": "鶏肉とアボカド、マンゴーのサラダ: 休ませて細切りにする",
+        "pt": "Salada de frango com abacate e manga: Deixe descansar e corte em tiras"
+      },
+      "estado": "entregada",
+      "sha256": "935d89ff58de2404a93db0c26a3fbbfd8bf60df7bb32a944839f42da45b15bc7",
+      "width": 1448,
+      "height": 1086,
+      "visual_qa": "PASS: cooked chicken sliced into approximately 1 cm strips with opaque interior on clean board.",
+      "source_original_sha256": "2a434dae5f8cfdc06716b3f74dad845c9d85251cb38fe4664e18cf38dd03bf07",
+      "full_resolution_original": false
+    },
+    {
+      "archivo": "paso-05.webp",
+      "paso": {
+        "numero": 5,
+        "titulo": "Corta el mango y el aguacate"
+      },
+      "muestra": "Dados de mango y aguacate de unos 2 cm preparados sobre tabla de fruta limpia.",
+      "alt_es": "Ensalada de pollo, aguacate y mango: corta el mango y el aguacate",
+      "alt_by_language": {
+        "es": "Ensalada de pollo, aguacate y mango: corta el mango y el aguacate",
+        "de": "Hähnchensalat mit Avocado und Mango: Mango und Avocado würfeln",
+        "en": "Chicken salad with avocado and mango: Dice the mango and avocado",
+        "fr": "Salade de poulet à l’avocat et à la mangue: Couper mangue et avocat",
+        "it": "Insalata di pollo con avocado e mango: Taglia mango e avocado",
+        "ja": "鶏肉とアボカド、マンゴーのサラダ: マンゴーとアボカドを切る",
+        "pt": "Salada de frango com abacate e manga: Corte manga e abacate"
+      },
+      "estado": "entregada",
+      "sha256": "8e2672fc0cb8d00e13ef7a63e5060430a1a2b064576d3101faa4894c6c51e5d3",
+      "width": 1448,
+      "height": 1086,
+      "visual_qa": "PASS: mango and avocado pulp diced into approximately 2 cm cubes in separate bowls; no knife striking avocado pit.",
+      "source_original_sha256": "7b1c4fd80604af3ee43560fef0aa139ad73face1d6031fcaec1e857928b126e5",
+      "full_resolution_original": false
+    },
+    {
+      "archivo": "paso-06.webp",
+      "paso": {
+        "numero": 6,
+        "titulo": "Bate el aliño de lima"
+      },
+      "muestra": "Aliño claro de lima, miel y aceite batido con tenedor en cuenco pequeño, sin salsa cremosa.",
+      "alt_es": "Ensalada de pollo, aguacate y mango: bate el aliño de lima",
+      "alt_by_language": {
+        "es": "Ensalada de pollo, aguacate y mango: bate el aliño de lima",
+        "de": "Hähnchensalat mit Avocado und Mango: Limettendressing verrühren",
+        "en": "Chicken salad with avocado and mango: Whisk the lime dressing",
+        "fr": "Salade de poulet à l’avocat et à la mangue: Mélanger la vinaigrette au citron vert",
+        "it": "Insalata di pollo con avocado e mango: Mescola il condimento al lime",
+        "ja": "鶏肉とアボカド、マンゴーのサラダ: ライムのドレッシングを混ぜる",
+        "pt": "Salada de frango com abacate e manga: Misture o molho de limão"
+      },
+      "estado": "entregada",
+      "sha256": "d2aa07395f2eeef8dd2e09d07d44f6e7d697d9ab17de0076bb787106c5edecd7",
+      "width": 1448,
+      "height": 1086,
+      "visual_qa": "PASS: translucent lime, olive oil and honey dressing with pepper flecks, fork whisk; no dairy or unsupported additions.",
+      "source_original_sha256": "4b9068c19ce5aac415bc162afcc3820cc1a166c72033dd8dffca68f64918760c",
+      "full_resolution_original": false
+    },
+    {
+      "archivo": "paso-07.webp",
+      "paso": {
+        "numero": 7,
+        "titulo": "Monta la ensalada sin aplastar"
+      },
+      "muestra": "Montaje suave de lechuga, pepino, cebolla, mango, aguacate y pollo cocinado con dos cucharas.",
+      "alt_es": "Ensalada de pollo, aguacate y mango: monta la ensalada sin aplastar",
+      "alt_by_language": {
+        "es": "Ensalada de pollo, aguacate y mango: monta la ensalada sin aplastar",
+        "de": "Hähnchensalat mit Avocado und Mango: Salat vorsichtig mischen",
+        "en": "Chicken salad with avocado and mango: Assemble gently",
+        "fr": "Salade de poulet à l’avocat et à la mangue: Assembler délicatement",
+        "it": "Insalata di pollo con avocado e mango: Assembla delicatamente",
+        "ja": "鶏肉とアボカド、マンゴーのサラダ: つぶさずに盛り合わせる",
+        "pt": "Salada de frango com abacate e manga: Monte com cuidado"
+      },
+      "estado": "entregada",
+      "sha256": "cdd162a32c5bef47993212966243bd3754d33faf83842bc7d5b6f0c19c475ea5",
+      "width": 1448,
+      "height": 1086,
+      "visual_qa": "PASS: two spoons gently lifting romaine, cucumber, red onion, mango, avocado and cooked chicken; fruit remains intact.",
+      "source_original_sha256": "2e707d369c4018ac93c27c25bf939cd7fb29e8ffc1632793b0847ec69a58b8d7",
+      "full_resolution_original": false
+    },
+    {
+      "archivo": "paso-08.webp",
+      "paso": {
+        "numero": 8,
+        "titulo": "Sirve y conserva refrigerada"
+      },
+      "muestra": "Ensalada terminada de pollo dorado a tiras, mango y aguacate en dados, lechuga, pepino y cebolla.",
+      "alt_es": "Ensalada de pollo, aguacate y mango: sirve y conserva refrigerada",
+      "alt_by_language": {
+        "es": "Ensalada de pollo, aguacate y mango: sirve y conserva refrigerada",
+        "de": "Hähnchensalat mit Avocado und Mango: Servieren und gekühlt aufbewahren",
+        "en": "Chicken salad with avocado and mango: Serve and refrigerate",
+        "fr": "Salade de poulet à l’avocat et à la mangue: Servir et réfrigérer",
+        "it": "Insalata di pollo con avocado e mango: Servi e conserva in frigorifero",
+        "ja": "鶏肉とアボカド、マンゴーのサラダ: 盛り付けて冷蔵保存する",
+        "pt": "Salada de frango com abacate e manga: Sirva e guarde na geladeira"
+      },
+      "estado": "entregada",
+      "sha256": "92d7e45470a72e3b5c7cc8b7622f4645befb096db8697b8718ff23ee0e36ff69",
+      "width": 1448,
+      "height": 1086,
+      "visual_qa": "PASS: cooked opaque chicken strips, mango and avocado cubes, romaine, cucumber and red onion; no extra ingredients; cover coherent with final step.",
+      "source_original_sha256": "6539a7e0d6bfd5b36e8fce8e95270e987084101f167cec534ec4dab2d7392da0",
+      "full_resolution_original": false
+    },
+    {
+      "archivo": "portada-16x9.webp",
+      "paso": "portada",
+      "muestra": "Ensalada terminada de pollo dorado a tiras, mango y aguacate en dados, lechuga, pepino y cebolla.",
+      "alt_es": "Ensalada con tiras de pollo dorado, dados de mango y aguacate, lechuga, pepino y cebolla roja",
+      "alt_by_language": {
+        "es": "Ensalada con tiras de pollo dorado, dados de mango y aguacate, lechuga, pepino y cebolla roja",
+        "de": "Salat mit goldbraunen Hähnchenstreifen, Mango, Avocado, Romanasalat, Gurke und roter Zwiebel",
+        "en": "Salad with browned chicken strips, mango and avocado cubes, lettuce, cucumber and red onion",
+        "fr": "Salade aux lanières de poulet dorées, dés de mangue et avocat, laitue, concombre et oignon rouge",
+        "it": "Insalata con pollo dorato a strisce, mango e avocado a cubetti, lattuga, cetriolo e cipolla rossa",
+        "ja": "焼いた鶏肉の細切り、マンゴーとアボカド、レタス、きゅうり、紫玉ねぎのサラダ",
+        "pt": "Salada com tiras de frango dourado, cubos de manga e abacate, alface, pepino e cebola roxa"
+      },
+      "estado": "entregada",
+      "sha256": "87e1b30b7d5bd7fabcb4ff1a3076d4064987ca70ed64bdf43dc28dfb93610430",
+      "width": 1448,
+      "height": 814,
+      "visual_qa": "PASS: cooked opaque chicken strips, mango and avocado cubes, romaine, cucumber and red onion; no extra ingredients; cover coherent with final step.",
+      "source_original_sha256": "6539a7e0d6bfd5b36e8fce8e95270e987084101f167cec534ec4dab2d7392da0",
+      "full_resolution_original": false
+    },
+    {
+      "archivo": "portada-1x1.webp",
+      "paso": "portada",
+      "muestra": "Ensalada terminada de pollo dorado a tiras, mango y aguacate en dados, lechuga, pepino y cebolla.",
+      "alt_es": "Ensalada con tiras de pollo dorado, dados de mango y aguacate, lechuga, pepino y cebolla roja",
+      "alt_by_language": {
+        "es": "Ensalada con tiras de pollo dorado, dados de mango y aguacate, lechuga, pepino y cebolla roja",
+        "de": "Salat mit goldbraunen Hähnchenstreifen, Mango, Avocado, Romanasalat, Gurke und roter Zwiebel",
+        "en": "Salad with browned chicken strips, mango and avocado cubes, lettuce, cucumber and red onion",
+        "fr": "Salade aux lanières de poulet dorées, dés de mangue et avocat, laitue, concombre et oignon rouge",
+        "it": "Insalata con pollo dorato a strisce, mango e avocado a cubetti, lattuga, cetriolo e cipolla rossa",
+        "ja": "焼いた鶏肉の細切り、マンゴーとアボカド、レタス、きゅうり、紫玉ねぎのサラダ",
+        "pt": "Salada com tiras de frango dourado, cubos de manga e abacate, alface, pepino e cebola roxa"
+      },
+      "estado": "entregada",
+      "sha256": "30b7b7f2d2e2a3b5777e1093dd85d0073a99013566601bb4ff6d8f486c56c0de",
+      "width": 1086,
+      "height": 1086,
+      "visual_qa": "PASS: cooked opaque chicken strips, mango and avocado cubes, romaine, cucumber and red onion; no extra ingredients; cover coherent with final step.",
+      "source_original_sha256": "6539a7e0d6bfd5b36e8fce8e95270e987084101f167cec534ec4dab2d7392da0",
+      "full_resolution_original": false
+    },
+    {
+      "archivo": "portada-4x3.webp",
+      "paso": "portada",
+      "muestra": "Ensalada terminada de pollo dorado a tiras, mango y aguacate en dados, lechuga, pepino y cebolla.",
+      "alt_es": "Ensalada con tiras de pollo dorado, dados de mango y aguacate, lechuga, pepino y cebolla roja",
+      "alt_by_language": {
+        "es": "Ensalada con tiras de pollo dorado, dados de mango y aguacate, lechuga, pepino y cebolla roja",
+        "de": "Salat mit goldbraunen Hähnchenstreifen, Mango, Avocado, Romanasalat, Gurke und roter Zwiebel",
+        "en": "Salad with browned chicken strips, mango and avocado cubes, lettuce, cucumber and red onion",
+        "fr": "Salade aux lanières de poulet dorées, dés de mangue et avocat, laitue, concombre et oignon rouge",
+        "it": "Insalata con pollo dorato a strisce, mango e avocado a cubetti, lattuga, cetriolo e cipolla rossa",
+        "ja": "焼いた鶏肉の細切り、マンゴーとアボカド、レタス、きゅうり、紫玉ねぎのサラダ",
+        "pt": "Salada com tiras de frango dourado, cubos de manga e abacate, alface, pepino e cebola roxa"
+      },
+      "estado": "entregada",
+      "sha256": "92d7e45470a72e3b5c7cc8b7622f4645befb096db8697b8718ff23ee0e36ff69",
+      "width": 1448,
+      "height": 1086,
+      "visual_qa": "PASS: cooked opaque chicken strips, mango and avocado cubes, romaine, cucumber and red onion; no extra ingredients; cover coherent with final step.",
+      "source_original_sha256": "6539a7e0d6bfd5b36e8fce8e95270e987084101f167cec534ec4dab2d7392da0",
+      "full_resolution_original": false
+    },
+    {
+      "archivo": "portada.webp",
+      "paso": "portada",
+      "muestra": "Ensalada terminada de pollo dorado a tiras, mango y aguacate en dados, lechuga, pepino y cebolla.",
+      "alt_es": "Ensalada con tiras de pollo dorado, dados de mango y aguacate, lechuga, pepino y cebolla roja",
+      "alt_by_language": {
+        "es": "Ensalada con tiras de pollo dorado, dados de mango y aguacate, lechuga, pepino y cebolla roja",
+        "de": "Salat mit goldbraunen Hähnchenstreifen, Mango, Avocado, Romanasalat, Gurke und roter Zwiebel",
+        "en": "Salad with browned chicken strips, mango and avocado cubes, lettuce, cucumber and red onion",
+        "fr": "Salade aux lanières de poulet dorées, dés de mangue et avocat, laitue, concombre et oignon rouge",
+        "it": "Insalata con pollo dorato a strisce, mango e avocado a cubetti, lattuga, cetriolo e cipolla rossa",
+        "ja": "焼いた鶏肉の細切り、マンゴーとアボカド、レタス、きゅうり、紫玉ねぎのサラダ",
+        "pt": "Salada com tiras de frango dourado, cubos de manga e abacate, alface, pepino e cebola roxa"
+      },
+      "estado": "entregada",
+      "sha256": "92d7e45470a72e3b5c7cc8b7622f4645befb096db8697b8718ff23ee0e36ff69",
+      "width": 1448,
+      "height": 1086,
+      "visual_qa": "PASS: cooked opaque chicken strips, mango and avocado cubes, romaine, cucumber and red onion; no extra ingredients; cover coherent with final step.",
+      "source_original_sha256": "6539a7e0d6bfd5b36e8fce8e95270e987084101f167cec534ec4dab2d7392da0",
+      "full_resolution_original": true
+    }
+  ],
+  "state": "COMPLETE_LOCALIZED_ALTS_AND_VISUAL_QA",
   "last_step_reuses_cover": true
 }
