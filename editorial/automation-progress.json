@@ -31,7 +31,7 @@
     "branch": "recetas/lote-03-20261008",
     "target": 15,
     "status": "in_progress",
-    "stage": "ES",
+    "stage": "imágenes",
     "current_recipe": "lasana-de-calabacin-y-berenjena",
     "started_at": "2026-10-08T12:39:02.511Z",
     "completed_recipes": 0,
@@ -161,13 +161,22 @@
         "editorial_status": "published",
         "position": 20,
         "eligibility": "validate_url_master_before_writing",
-        "status": "reserved",
-        "stage": "identidad",
+        "status": "in_progress",
+        "stage": "ES",
         "identity_qa": "PASS",
         "classification": "ELIGIBLE_EXISTING_CULINARY_CANDIDATE_OR_CORE_REBUILD",
-        "languages_ready": 0,
+        "languages_ready": 1,
         "images_ready": 0,
-        "source_not_reused": true
+        "source_not_reused": true,
+        "es_content_file": "editorial/lasana-de-calabacin-y-berenjena-20261008.json",
+        "image_manifest": "editorial/lasana-de-calabacin-y-berenjena-imagenes.json",
+        "nutrition_evidence_file": "editorial/lasana-de-calabacin-y-berenjena-usda-verificado-20261008.json",
+        "steps_sha256": "8c69d9bf8d3c51a2e8691d844e022a34002ff8a4b1cd9e381fbde9466825b797",
+        "es_editorial_qa": "PASS_STRUCTURAL_USDA_TRACEABILITY",
+        "original_images_required": 10,
+        "distinct_images_pending": 10,
+        "expected_es_row_md5": "10e12c287c255ee35eac23e73a744d7e",
+        "next_action": "Generate10originals from frozen brief, visually inspect and preserve; then6localizations; no03DBpublication until all15 ready and deployed."
       },
       {
         "id": "9e04ccf3-9d8f-4823-a0fd-f371c6866acf",
@@ -363,9 +372,9 @@
     "owner": "manual-continuation-20261008-bandeja-localization",
     "status": "active",
     "acquired_at": "2026-10-08T08:39:14.486Z",
-    "expires_at": "2026-10-08T16:09:54.562Z",
-    "reason": "Same continuing producer: soup, empanadas and pizza complete7/7; next vegetable lasagna ES. Batch03published0/15.",
-    "renewed_at": "2026-10-08T14:39:54.562Z"
+    "expires_at": "2026-10-08T16:25:43.599Z",
+    "reason": "Same continuing producer; fourth recipe vegetable lasagna ES frozen, next original images. Keep first3 complete7/7 unchanged.",
+    "renewed_at": "2026-10-08T14:55:43.599Z"
   },
   "blockers": [],
   "debt": [
@@ -440,11 +449,11 @@
     "current_recipe": "lasana-de-calabacin-y-berenjena",
     "prepared_recipes": 3,
     "published_recipes": 0,
-    "next_action": "Preserve three ready packages/media; continue vegetable lasagna identity/ES, frozen image brief and six localizations. SQLblocks now validate original historical dates before idempotent return; latest hashes authoritative. Complete12remaining then CI/merge/deploy/atomicDB/cacheQA.",
+    "next_action": "Generate10originals from frozen brief, visually inspect and preserve; then6localizations; no03DBpublication until all15 ready and deployed.",
     "checkpoint_at": "2026-10-08T14:39:54.562Z"
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z",
-  "updated_at": "2026-10-08T14:39:54.562Z",
+  "updated_at": "2026-10-08T14:55:43.599Z",
   "completed_batches": [
     {
       "id": "lote-02-20261008",

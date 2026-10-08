@@ -1,0 +1,464 @@
+{
+  "scope": "Manual de Cocina only; lote03",
+  "state": "ES_FROZEN_MEDIA_AND_LOCALIZATIONS_PENDING",
+  "provenance": "Original culinary reconstruction; identity/routes preserved, no WordPress text, translations or images reused.",
+  "ai_owner_confirmation": "Original content and ImageGen authorized. No kitchen test claimed.",
+  "category_slug": "platos-principales",
+  "cover": "/recetas/lasana-de-calabacin-y-berenjena/portada.webp",
+  "steps_frozen": true,
+  "steps_sha256": "8c69d9bf8d3c51a2e8691d844e022a34002ff8a4b1cd9e381fbde9466825b797",
+  "time_notes": "30prep+80cook+30wait=140minutes, conservative sequential schedule; cook25roast+20sauce+35finaloven; wait20preheat+10rest. Additional batches/reduction/oven minutes must be counted.",
+  "publication_blockers": [
+    "Original media pending",
+    "Six localizations pending",
+    "Full15 batch CI/deploy/DB/cache/liveQA pending"
+  ],
+  "sources": [
+    {
+      "url": "https://www.thekitchn.com/vegetable-lasagna-recipe-23281101",
+      "purpose": "First-party culinary technique: roasting zucchini/eggplant reduces moisture. Original formula and prose, no copied recipe or nutritional figures; this version has no pasta.",
+      "accessed": "2026-10-08"
+    },
+    {
+      "url": "https://www.foodsafety.gov/people-at-risk",
+      "purpose": "Official cold storage and 2-hour/1-hour above 32°C handling limits; pasteurized milk and conservative 3-day leftovers, reheat to 74°C.",
+      "accessed": "2026-10-08"
+    },
+    {
+      "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures",
+      "purpose": "Official casserole/leftover safe center endpoint 74°C, checked independently of photographs.",
+      "accessed": "2026-10-08"
+    },
+    {
+      "url": "https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_sr_legacy_food_json_2018-04.zip",
+      "purpose": "Twelve exact USDA foods and eight present nutrient fields; selected durable snapshot, ricotta FDC170851 is150kcal/100g.",
+      "accessed": "2026-10-08"
+    }
+  ],
+  "records": [
+    {
+      "id": "f7df8371-8273-4b15-ba6e-32390a185395",
+      "recipe_group_id": "9a28dffd-cdde-4e20-a746-88336cb0a016",
+      "slug": "lasana-de-calabacin-y-berenjena",
+      "public_path": "/lasana-de-calabacin-y-berenjena",
+      "source_url": "https://manualdecocina.com/lasana-de-calabacin-y-berenjena/",
+      "language": "es",
+      "title": "Lasaña de calabacín y berenjena con ricotta",
+      "excerpt": "Láminas de verduras asadas, salsa espesa y dos quesos: una lasaña en seis raciones propuestas con montaje explicado por capas.",
+      "summary": "Lasaña propuesta de calabacín y berenjena asados en láminas, salsa de tomate, ricotta y mozzarella. Esta versión usa verduras como capas y no lleva placas de pasta. Rinde 6 raciones propuestas; los 140 minutos estimados incluyen asado, salsa, horno final, precalentado y reposo. Cantidades, tiempo y rendimiento están pendientes de confirmación en cocina.",
+      "category": "Platos principales",
+      "category_slug": "platos-principales",
+      "difficulty": "Media",
+      "course": "Plato principal",
+      "cuisine": "Inspiración italiana",
+      "prep_time_minutes": 30,
+      "cook_time_minutes": 80,
+      "total_time_minutes": 140,
+      "servings": 6,
+      "ingredients": [
+        {
+          "name": "calabacín lavado, sin extremos y con piel",
+          "amount": "500",
+          "unit": "g",
+          "group": "Láminas de verduras"
+        },
+        {
+          "name": "berenjena lavada, sin tallo y con piel",
+          "amount": "500",
+          "unit": "g",
+          "group": "Láminas de verduras"
+        },
+        {
+          "name": "aceite de oliva, 20 g para las verduras y 20 g para la salsa",
+          "amount": "40",
+          "unit": "g",
+          "group": "Aceite medido"
+        },
+        {
+          "name": "cebolla pelada y picada",
+          "amount": "150",
+          "unit": "g",
+          "group": "Salsa"
+        },
+        {
+          "name": "ajo pelado y picado",
+          "amount": "10",
+          "unit": "g",
+          "group": "Salsa"
+        },
+        {
+          "name": "tomate triturado en conserva, con su líquido",
+          "amount": "500",
+          "unit": "g",
+          "group": "Salsa"
+        },
+        {
+          "name": "orégano seco",
+          "amount": "2",
+          "unit": "g",
+          "group": "Salsa"
+        },
+        {
+          "name": "pimienta negra molida",
+          "amount": "1",
+          "unit": "g",
+          "group": "Salsa"
+        },
+        {
+          "name": "sal, 4 g para verduras, 3 g para salsa y 1 g para ricotta",
+          "amount": "8",
+          "unit": "g",
+          "group": "Sal medida"
+        },
+        {
+          "name": "ricotta de leche entera pasteurizada",
+          "amount": "300",
+          "unit": "g",
+          "group": "Quesos"
+        },
+        {
+          "name": "mozzarella de leche entera pasteurizada y baja humedad, rallada",
+          "amount": "150",
+          "unit": "g",
+          "group": "Quesos"
+        },
+        {
+          "name": "hojas de albahaca fresca, lavadas y secas",
+          "amount": "5",
+          "unit": "g",
+          "group": "Acabado"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Pesa los ingredientes y precalienta el horno",
+          "content": "Pesa 500 g de calabacín y 500 g de berenjena después de retirar extremos y tallo, conservando la piel. Prepara 150 g de cebolla picada, 10 g de ajo, 500 g de tomate triturado con su líquido, 2 g de orégano y 1 g de pimienta. Separa los 40 g de aceite en 20 g para verduras y 20 g para salsa; reparte los 8 g de sal en 4 g para verduras, 3 g para salsa y 1 g para ricotta. Mantén 300 g de ricotta y 150 g de mozzarella a 4 °C o menos. Lava y seca los 5 g de albahaca. Precalienta durante unos 20 minutos a 220 °C con calor arriba y abajo, o 200 °C con ventilador. Prepara dos bandejas metálicas amplias, de unos 40 × 35 cm, y una fuente de horno de unos 30 × 20 cm y al menos 6 cm de profundidad. La propuesta usa láminas de verduras, sin placas de pasta.",
+          "image_url": "/recetas/lasana-de-calabacin-y-berenjena/paso-01.webp",
+          "image_alt": "Lasaña de calabacín y berenjena: Pesa los ingredientes y precalienta el horno"
+        },
+        {
+          "title": "Corta y pincela las láminas",
+          "content": "Corta calabacín y berenjena a lo largo en láminas de unos 5 mm de grosor, con un cuchillo y una tabla estable. Distribuye cada verdura en su propia bandeja en una sola capa, sin amontonarla. Pincela ambas caras del calabacín con 10 g de aceite en total y sazona con 2 g de sal; usa los otros 10 g de aceite de verduras y 2 g de sal para la berenjena. No engrases además las bandejas ni añadas aceite fuera de los 40 g medidos. Si no cabe todo sin superponer láminas, prepara una tanda adicional y añade su tiempo real; no ocultes una segunda tanda en el tiempo de horno previsto.",
+          "image_url": "/recetas/lasana-de-calabacin-y-berenjena/paso-02.webp",
+          "image_alt": "Lasaña de calabacín y berenjena: Corta y pincela las láminas"
+        },
+        {
+          "title": "Asa las verduras y reduce la temperatura del horno",
+          "content": "Hornea las dos bandejas durante unos 25 minutos a 220 °C con calor arriba y abajo, o 200 °C con ventilador. A mitad de cocción intercambia las alturas y gira las bandejas si doran de forma desigual; empieza a revisar a los 20 minutos. Las láminas deben estar flexibles y ligeramente doradas, sin zonas duras ni un charco de agua en la bandeja. Si necesitan más tiempo, continúa y súmalo al total. Sácalas con guantes y conserva todas las láminas para montar. Baja el horno a 200 °C con calor arriba y abajo, o 180 °C con ventilador, para el horneado final; ya está caliente. El dorado y la reducción de humedad son orientativos, pendientes de prueba de cocina.",
+          "image_url": "/recetas/lasana-de-calabacin-y-berenjena/paso-03.webp",
+          "image_alt": "Lasaña de calabacín y berenjena: Asa las verduras y reduce la temperatura del horno"
+        },
+        {
+          "title": "Cocina una salsa de tomate espesa",
+          "content": "Calienta los 20 g de aceite reservados para salsa en una sartén amplia a fuego medio. Cocina los 150 g de cebolla unos 5 minutos, removiendo hasta que ablanden sin quemarse. Añade los 10 g de ajo y remueve 1 minuto. Incorpora los 500 g de tomate con su líquido, los 3 g de sal, los 2 g de orégano y el 1 g de pimienta. Cocina destapado a fuego suave unos 14 minutos, removiendo, hasta que una cuchara deje un surco breve y no se separe un borde de agua. Son 20 minutos de cocción de salsa en esta planificación. Si sigue líquida, reduce unos minutos más y añádelos al total; no añadas harina, azúcar, caldo ni aceite sin recalcular la receta.",
+          "image_url": "/recetas/lasana-de-calabacin-y-berenjena/paso-04.webp",
+          "image_alt": "Lasaña de calabacín y berenjena: Cocina una salsa de tomate espesa"
+        },
+        {
+          "title": "Prepara la ricotta y divide los componentes",
+          "content": "Mezcla los 300 g de ricotta con el 1 g de sal reservado, sin huevo ni nata y sin escurrir una cantidad que está incluida en el cálculo nutricional. Divide esta mezcla de 301 g en dos partes iguales de 150,5 g: cada una contiene 150 g de ricotta y 0,5 g de sal. Divide toda la salsa ya cocinada en cuatro partes iguales; su peso final depende de la evaporación y no se afirma un rendimiento medido. Divide todas las verduras asadas en tres partes similares, con calabacín y berenjena en cada una. Reserva los 150 g de mozzarella para la superficie. Usa cucharas limpias y monta cuando los componentes puedan manipularse sin quemaduras.",
+          "image_url": "/recetas/lasana-de-calabacin-y-berenjena/paso-05.webp",
+          "image_alt": "Lasaña de calabacín y berenjena: Prepara la ricotta y divide los componentes"
+        },
+        {
+          "title": "Extiende la base de salsa y la primera capa de verduras",
+          "content": "Pon una de las cuatro partes de salsa en el fondo de la fuente de 30 × 20 cm, sin aceite adicional. Distribuye por encima una de las tres partes de verduras, alternando calabacín y berenjena para cubrir la base. Se admite un ligero solapamiento al montar, sin formar montones en el centro; las láminas ya se han asado por separado. Usa fragmentos cortos para cubrir huecos, sin desechar verdura que forma parte de las cantidades. No añadas placas de pasta a esta versión.",
+          "image_url": "/recetas/lasana-de-calabacin-y-berenjena/paso-06.webp",
+          "image_alt": "Lasaña de calabacín y berenjena: Extiende la base de salsa y la primera capa de verduras"
+        },
+        {
+          "title": "Monta la primera capa de ricotta y la segunda de verduras",
+          "content": "Reparte sobre la primera capa de verduras una parte de 150,5 g de ricotta condimentada, en pequeñas cucharadas que después extiendes con cuidado. Añade la segunda de las cuatro partes de salsa y distribuye la segunda de las tres partes de verduras, mezclando calabacín y berenjena. Mantén el montaje nivelado hasta los bordes. Conserva para el siguiente paso la otra mitad de ricotta, dos partes de salsa, la última parte de verduras y toda la mozzarella; así ninguna capa se queda sin su cantidad prevista.",
+          "image_url": "/recetas/lasana-de-calabacin-y-berenjena/paso-07.webp",
+          "image_alt": "Lasaña de calabacín y berenjena: Monta la primera capa de ricotta y la segunda de verduras"
+        },
+        {
+          "title": "Termina las capas y añade la mozzarella",
+          "content": "Sobre la segunda capa de verduras extiende los otros 150,5 g de ricotta condimentada y la tercera parte de salsa. Coloca la última parte de verduras y cubre con la cuarta y última parte de salsa. Distribuye los 150 g de mozzarella rallada por toda la superficie. El montaje consume tres capas de verduras, dos de ricotta y cuatro repartos de salsa, incluido el fondo. No añadas queso extra, parmesano, huevo, carne ni bechamel. La albahaca se reserva para después del horno.",
+          "image_url": "/recetas/lasana-de-calabacin-y-berenjena/paso-08.webp",
+          "image_alt": "Lasaña de calabacín y berenjena: Termina las capas y añade la mozzarella"
+        },
+        {
+          "title": "Hornea hasta que el centro esté bien caliente",
+          "content": "Cubre la fuente con una lámina de aluminio a modo de techo, sin tocar el tomate ni el queso, y hornea a 200 °C con calor arriba y abajo, o 180 °C con ventilador, unos 20 minutos. Retira el aluminio con guantes y hornea otros 15 minutos, 35 en total; empieza a revisar a los 30. Busca mozzarella fundida y ligeramente dorada, salsa burbujeando y verduras tiernas. Comprueba con una sonda limpia que el centro alcance al menos 74 °C; la fotografía no confirma una temperatura medida. Si falta temperatura o queda mucha agua libre, sigue unos minutos y súmalos al total, protegiendo la superficie si dora demasiado. Usa guantes y apoya la fuente caliente sobre una superficie resistente al calor.",
+          "image_url": "/recetas/lasana-de-calabacin-y-berenjena/paso-09.webp",
+          "image_alt": "Lasaña de calabacín y berenjena: Hornea hasta que el centro esté bien caliente"
+        },
+        {
+          "title": "Deja reposar y sirve seis raciones",
+          "content": "Deja reposar la fuente unos 10 minutos sobre un salvamanteles antes de cortar; la lasaña de verduras puede dar una porción más suave que una de pasta, sin prometer una firmeza ensayada. Divide en 6 porciones similares y reparte los 5 g de albahaca limpia al servir. La planificación conservadora suma 30 minutos de preparación, 80 de cocción (25 de asado, 20 de salsa y 35 de horno final) y 30 de esperas (20 de precalentado y 10 de reposo): 140 minutos estimados. No se descuentan tareas que puedan coincidir. Añade el tiempo real de tandas de verduras adicionales, reducción de salsa u horno. Las cantidades, tiempos y seis raciones son propuestas pendientes de confirmación en cocina; no se afirma un rendimiento cocinado en gramos.",
+          "image_url": "/recetas/lasana-de-calabacin-y-berenjena/portada.webp",
+          "image_alt": "Lasaña de calabacín y berenjena: Deja reposar y sirve seis raciones"
+        }
+      ],
+      "notes": "Versión propuesta de lasaña con láminas de calabacín y berenjena asadas, ricotta y mozzarella, sin placas de pasta ni prueba de cocina declarada. Contiene leche; revisa etiquetas y utiliza quesos elaborados con leche pasteurizada. No se afirma que un producto sea apto para una alergia o celiaquía sin comprobar sus ingredientes. La ricotta se usa tal como se pesa y no se añade huevo. Puedes adaptar las verduras a lo que tengas, pero su humedad, grosor y tiempo de asado cambian; no prometemos idéntico resultado y hay que recalcular nutrición. Añadir pasta o sustituir queso exige otro montaje y revisar cantidades, tiempos y raciones. Asa en una sola capa y reduce la salsa para controlar agua libre. Mantén quesos y componentes preparados a 4 °C o menos si no vas a montar enseguida. Refrigera las sobras en recipientes poco profundos dentro de 2 horas, o 1 hora si el ambiente supera 32 °C; no esperes a que una fuente grande se enfríe por completo sobre la mesa. Consúmelas en 3 días y recalienta solo las porciones necesarias hasta 74 °C en el centro. No dejes la lasaña montada toda la noche fuera del frigorífico. Usa guantes y material apto para las temperaturas indicadas.",
+      "nutrition": {
+        "calories": 289.1,
+        "protein_g": 12.8,
+        "carbs_g": 21.1,
+        "fat_g": 18.6,
+        "saturated_fat_g": 8.2,
+        "sodium_mg": 914.7,
+        "fiber_g": 5.6,
+        "sugar_g": 10.2,
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (abril de 2018)",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "inputs": [
+          {
+            "ingredient": "calabacín crudo con piel, peso comestible",
+            "edible_grams": 500,
+            "fdc_id": 169291,
+            "fdc_description": "Squash, summer, zucchini, includes skin, raw",
+            "per_100g": {
+              "sugar_g": 2.5,
+              "fat_g": 0.32,
+              "carbs_g": 3.11,
+              "calories": 17.0,
+              "fiber_g": 1.0,
+              "sodium_mg": 8.0,
+              "protein_g": 1.21,
+              "saturated_fat_g": 0.084
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169291/nutrients"
+          },
+          {
+            "ingredient": "berenjena cruda con piel, peso comestible",
+            "edible_grams": 500,
+            "fdc_id": 169228,
+            "fdc_description": "Eggplant, raw",
+            "per_100g": {
+              "saturated_fat_g": 0.034,
+              "sugar_g": 3.53,
+              "fat_g": 0.18,
+              "carbs_g": 5.88,
+              "calories": 25.0,
+              "fiber_g": 3.0,
+              "sodium_mg": 2.0,
+              "protein_g": 0.98
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169228/nutrients"
+          },
+          {
+            "ingredient": "aceite de oliva total: 20 g verduras y 20 g salsa",
+            "edible_grams": 40,
+            "fdc_id": 171413,
+            "fdc_description": "Oil, olive, salad or cooking",
+            "per_100g": {
+              "fat_g": 100,
+              "carbs_g": 0.0,
+              "calories": 884,
+              "sodium_mg": 2.0,
+              "protein_g": 0.0,
+              "saturated_fat_g": 13.8,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171413/nutrients"
+          },
+          {
+            "ingredient": "cebolla cruda pelada",
+            "edible_grams": 150,
+            "fdc_id": 170000,
+            "fdc_description": "Onions, raw",
+            "per_100g": {
+              "sugar_g": 4.24,
+              "fat_g": 0.1,
+              "carbs_g": 9.34,
+              "calories": 40.0,
+              "saturated_fat_g": 0.042,
+              "protein_g": 1.1,
+              "fiber_g": 1.7,
+              "sodium_mg": 4.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170000/nutrients"
+          },
+          {
+            "ingredient": "ajo crudo pelado",
+            "edible_grams": 10,
+            "fdc_id": 169230,
+            "fdc_description": "Garlic, raw",
+            "per_100g": {
+              "carbs_g": 33.1,
+              "calories": 149,
+              "sugar_g": 1.0,
+              "saturated_fat_g": 0.089,
+              "fiber_g": 2.1,
+              "sodium_mg": 17.0,
+              "protein_g": 6.36,
+              "fat_g": 0.5
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169230/nutrients"
+          },
+          {
+            "ingredient": "tomate triturado en conserva con líquido",
+            "edible_grams": 500,
+            "fdc_id": 170501,
+            "fdc_description": "Tomatoes, crushed, canned",
+            "per_100g": {
+              "sodium_mg": 186,
+              "fat_g": 0.28,
+              "carbs_g": 7.29,
+              "calories": 32.0,
+              "fiber_g": 1.9,
+              "protein_g": 1.64,
+              "saturated_fat_g": 0.04,
+              "sugar_g": 4.4
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170501/nutrients"
+          },
+          {
+            "ingredient": "orégano seco",
+            "edible_grams": 2,
+            "fdc_id": 171328,
+            "fdc_description": "Spices, oregano, dried",
+            "per_100g": {
+              "sugar_g": 4.09,
+              "fat_g": 4.28,
+              "carbs_g": 68.9,
+              "calories": 265,
+              "fiber_g": 42.5,
+              "sodium_mg": 25.0,
+              "saturated_fat_g": 1.55,
+              "protein_g": 9.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171328/nutrients"
+          },
+          {
+            "ingredient": "pimienta negra molida",
+            "edible_grams": 1,
+            "fdc_id": 170931,
+            "fdc_description": "Spices, pepper, black",
+            "per_100g": {
+              "fat_g": 3.26,
+              "sugar_g": 0.64,
+              "carbs_g": 64.0,
+              "calories": 251,
+              "protein_g": 10.4,
+              "fiber_g": 25.3,
+              "sodium_mg": 20.0,
+              "saturated_fat_g": 1.39
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170931/nutrients"
+          },
+          {
+            "ingredient": "sal total: 4 g verduras, 3 g salsa y 1 g ricotta",
+            "edible_grams": 8,
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "fiber_g": 0.0,
+              "sodium_mg": 38800.0,
+              "saturated_fat_g": 0.0,
+              "protein_g": 0.0,
+              "fat_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 0.0,
+              "sugar_g": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients"
+          },
+          {
+            "ingredient": "ricotta de leche entera",
+            "edible_grams": 300,
+            "fdc_id": 170851,
+            "fdc_description": "Cheese, ricotta, whole milk",
+            "per_100g": {
+              "saturated_fat_g": 6.42,
+              "protein_g": 7.54,
+              "sodium_mg": 110,
+              "fat_g": 10.2,
+              "carbs_g": 7.27,
+              "calories": 150,
+              "fiber_g": 0.0,
+              "sugar_g": 0.27
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170851/nutrients"
+          },
+          {
+            "ingredient": "mozzarella de leche entera y baja humedad",
+            "edible_grams": 150,
+            "fdc_id": 170846,
+            "fdc_description": "Cheese, mozzarella, whole milk, low moisture",
+            "per_100g": {
+              "sugar_g": 1.01,
+              "sodium_mg": 710,
+              "saturated_fat_g": 15.6,
+              "fiber_g": 0.0,
+              "protein_g": 21.6,
+              "fat_g": 24.6,
+              "carbs_g": 2.47,
+              "calories": 318
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170846/nutrients"
+          },
+          {
+            "ingredient": "albahaca fresca",
+            "edible_grams": 5,
+            "fdc_id": 172232,
+            "fdc_description": "Basil, fresh",
+            "per_100g": {
+              "saturated_fat_g": 0.041,
+              "sugar_g": 0.3,
+              "fat_g": 0.64,
+              "carbs_g": 2.65,
+              "calories": 23.0,
+              "fiber_g": 1.6,
+              "sodium_mg": 4.0,
+              "protein_g": 3.15
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/172232/nutrients"
+          }
+        ],
+        "serving_size": "Una sexta parte de la fuente; 6 raciones propuestas",
+        "method": "Doce fichas USDA verificadas: gramos comestibles por nutrientes por 100 g, suma y división entre 6. Se incluyen todos los 40 g de aceite y 8 g de sal, 500 g de tomate con líquido, 300 g de ricotta entera y 150 g de mozzarella entera de baja humedad. Las verduras se calculan con 500 g comestibles crudos de cada una; se conservan sus láminas y no se supone una pérdida específica de nutrientes durante el asado.",
+        "note": "Estimación, no análisis ni rendimiento confirmado. El peso cocinado varía con la evaporación y no se usa para afirmar gramos por ración. Se supone consumir todos los ingredientes, aunque quede aceite o salsa en los recipientes. La marca, humedad y sal de quesos y tomate cambian las cifras. No se calculan pérdidas específicas de nutrientes con calor ni se incluyen pasta, huevo, parmesano o acompañamientos. Todos los datos están presentes; los datos ausentes no se sustituyen por cero."
+      },
+      "keywords": [
+        "lasaña de calabacín y berenjena",
+        "lasaña de verduras",
+        "lasaña con ricotta",
+        "verduras asadas en capas"
+      ],
+      "image_url": "/recetas/lasana-de-calabacin-y-berenjena/portada.webp",
+      "gallery": [],
+      "seo": {
+        "title": "Lasaña de calabacín y berenjena con ricotta, paso a paso",
+        "description": "Monta una lasaña con láminas de calabacín y berenjena asadas, tomate, ricotta y mozzarella: cantidades, capas, horno y reposo para seis raciones.",
+        "image_alt": "Porción de lasaña de calabacín y berenjena con capas de verduras, ricotta y tomate, mozzarella dorada y albahaca fresca junto a la fuente",
+        "image_variants": [
+          "/recetas/lasana-de-calabacin-y-berenjena/portada-1x1.webp",
+          "/recetas/lasana-de-calabacin-y-berenjena/portada-4x3.webp",
+          "/recetas/lasana-de-calabacin-y-berenjena/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "¿Cómo evito que la lasaña quede aguada?",
+            "a": "Asa las láminas de unos 5 mm en una sola capa y cocina la salsa hasta que no tenga un borde de agua separado. No amontones las verduras crudas dentro de la fuente. Los 25 minutos de asado y 14 de reducción del tomate son orientativos: continúa si hace falta y suma el tiempo real."
+          },
+          {
+            "q": "¿Puedo añadir placas de pasta?",
+            "a": "Esta versión monta tres capas de verduras asadas, dos de ricotta y cuatro repartos de salsa. Añadir pasta modifica el líquido necesario, el montaje, los tiempos, la cantidad final y la nutrición; usa una receta adaptada y recalcula, en vez de introducir placas secas en estas mismas cantidades."
+          },
+          {
+            "q": "¿Puedo montarla el día anterior?",
+            "a": "Puedes preparar componentes y montarla para el día siguiente si los enfrías y refrigeras correctamente a 4 °C o menos, en recipientes adecuados y dentro del límite de 2 horas, o 1 hora si hace más de 32 °C. Una fuente fría necesita más horno que la propuesta; comprueba al menos 74 °C en el centro y añade el tiempo real. No se promete que tarde los mismos 35 minutos."
+          }
+        ]
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "content_html": "<p>Lasaña propuesta de calabacín y berenjena asados en láminas, salsa de tomate, ricotta y mozzarella. Esta versión usa verduras como capas y no lleva placas de pasta. Rinde 6 raciones propuestas; los 140 minutos estimados incluyen asado, salsa, horno final, precalentado y reposo. Cantidades, tiempo y rendimiento están pendientes de confirmación en cocina.</p><p>Versión propuesta de lasaña con láminas de calabacín y berenjena asadas, ricotta y mozzarella, sin placas de pasta ni prueba de cocina declarada. Contiene leche; revisa etiquetas y utiliza quesos elaborados con leche pasteurizada. No se afirma que un producto sea apto para una alergia o celiaquía sin comprobar sus ingredientes. La ricotta se usa tal como se pesa y no se añade huevo. Puedes adaptar las verduras a lo que tengas, pero su humedad, grosor y tiempo de asado cambian; no prometemos idéntico resultado y hay que recalcular nutrición. Añadir pasta o sustituir queso exige otro montaje y revisar cantidades, tiempos y raciones. Asa en una sola capa y reduce la salsa para controlar agua libre. Mantén quesos y componentes preparados a 4 °C o menos si no vas a montar enseguida. Refrigera las sobras en recipientes poco profundos dentro de 2 horas, o 1 hora si el ambiente supera 32 °C; no esperes a que una fuente grande se enfríe por completo sobre la mesa. Consúmelas en 3 días y recalienta solo las porciones necesarias hasta 74 °C en el centro. No dejes la lasaña montada toda la noche fuera del frigorífico. Usa guantes y material apto para las temperaturas indicadas.</p>"
+    }
+  ],
+  "yield_proposal": {
+    "servings": 6,
+    "dish_cm": [
+      30,
+      20
+    ],
+    "minimum_depth_cm": 6,
+    "cooked_weight_measured": false,
+    "confirmed": false
+  }
+}
