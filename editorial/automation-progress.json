@@ -30,7 +30,7 @@
     "id": "lote-02-20261008",
     "target": 15,
     "status": "in_progress",
-    "stage": "images",
+    "stage": "localization",
     "recipes": [
       {
         "id": "e47eac88-0649-4785-baf0-43b92dd2ec2e",
@@ -144,13 +144,16 @@
         "recipe_group_id": "e8238258-5fe1-4344-8851-917fa546f20b",
         "slug": "receta-raviolis-caseros",
         "public_path": "/receta-raviolis-caseros",
-        "stage": "images",
+        "stage": "localization",
         "status": "in_progress",
         "es_content_file": "editorial/receta-raviolis-caseros-20261008.json",
         "image_manifest": "editorial/receta-raviolis-caseros-imagenes.json",
-        "images_ready": 0,
+        "images_ready": 12,
         "steps_sha256": "28f379dbcbb6a679348f117ba182107b3c09d12e3906656d0daf043975597d4e",
-        "es_editorial_qa": "PASS_STRUCTURAL_AND_NUTRITION_TRACEABILITY"
+        "es_editorial_qa": "PASS_STRUCTURAL_AND_NUTRITION_TRACEABILITY",
+        "distinct_images_pending": 0,
+        "visual_qa": "PASS",
+        "qa_file": "editorial/receta-raviolis-caseros-qa-20261008.json"
       },
       {
         "id": "835f1de3-70b7-4d41-a9ff-1695b7ae21fc",
@@ -233,8 +236,8 @@
     "owner": "automation-run-20261008-0604",
     "status": "active",
     "acquired_at": "2026-10-08T06:05:05.494Z",
-    "expires_at": "2026-10-08T07:45:35.470Z",
-    "reason": "Ravioli ES original frozen with grouped quantities, 8 cookable steps, 3 FAQ and traceable USDA nutrition; image generation is next."
+    "expires_at": "2026-10-08T07:54:16.032Z",
+    "reason": "Ravioli has 8 visually approved originals exported as 12 WebP assets with exact hashes; localizations are next."
   },
   "blockers": [],
   "debt": [],
@@ -282,14 +285,14 @@
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
   "progress_branch": "recetas/lote-02-20261008",
-  "last_checkpoint_at": "2026-10-08T06:15:35.470Z",
+  "last_checkpoint_at": "2026-10-08T06:24:16.032Z",
   "handoff": {
     "first_prepared_recipe": "como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada",
     "first_recipe_source": "editorial/como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada-20261008.json",
     "next_recipe": "receta-raviolis-caseros",
     "batch_remaining_to_prepare": 8,
     "published_this_batch": 0,
-    "required_action": "Generate and visually verify the 8 distinct ravioli originals (cover reused for step 8), export 12 WebP files, then localize 7/7 without altering frozen ES steps.",
+    "required_action": "Localize frozen ravioli package to DE, EN, FR, IT, JA and pt-BR with identical quantities, media and structure; then run editorial QA and generate SQL package.",
     "scope": "Preview only; production migration not executed."
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z"

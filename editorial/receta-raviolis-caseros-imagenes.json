@@ -49,8 +49,141 @@
       "prompt": "Use case: photorealistic-natural. Asset type: original Manual de Cocina homemade ravioli recipe photograph. One realistic 4:3 landscape photograph, soft natural light, clean neutral home kitchen, plain unbranded cookware, anatomically plausible hands only when needed and exact preparation phase. No text, labels, logos, watermark, collage, tomato sauce, cream sauce, meat, mushrooms, nuts or unlisted garnish. Two separate actions in one coherent kitchen scene, not a collage: a plain pot with one batch of square ravioli at a moderate boil and beside it a skillet with foaming golden-brown butter and whole sage leaves; no tomato sauce or cream."
     }
   ],
-  "images": [],
-  "state": "GENERATION_PENDING",
+  "images": [
+    {
+      "asset": "paso-01.webp",
+      "public_path": "/recetas/receta-raviolis-caseros/paso-01.webp",
+      "sha256": "6ef0b5f26390fe69e4cdd8457061d751b8400557e6e99daf7558395e334bf22c",
+      "bytes": 81066,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "visual_qa": "PASS"
+    },
+    {
+      "asset": "paso-02.webp",
+      "public_path": "/recetas/receta-raviolis-caseros/paso-02.webp",
+      "sha256": "6de2e21976cd70ff012b2f6dff49827af4ca7e93e03acc893be3f7a610fd9ee6",
+      "bytes": 104066,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "visual_qa": "PASS"
+    },
+    {
+      "asset": "paso-03.webp",
+      "public_path": "/recetas/receta-raviolis-caseros/paso-03.webp",
+      "sha256": "71b1f435224a0341fac622d7234306e4287f3a19e6829db948d2899f4cdd06cd",
+      "bytes": 159060,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "visual_qa": "PASS"
+    },
+    {
+      "asset": "paso-04.webp",
+      "public_path": "/recetas/receta-raviolis-caseros/paso-04.webp",
+      "sha256": "b69159b2a76a3faf349870fe9cd55c7b6569375d4afee5feb51b1411eac969c5",
+      "bytes": 72604,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "visual_qa": "PASS"
+    },
+    {
+      "asset": "paso-05.webp",
+      "public_path": "/recetas/receta-raviolis-caseros/paso-05.webp",
+      "sha256": "43ddf23dcf3326ac9e475e297e28cbee101ca46ce841766b9378fe055b73e064",
+      "bytes": 136986,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "visual_qa": "PASS"
+    },
+    {
+      "asset": "paso-06.webp",
+      "public_path": "/recetas/receta-raviolis-caseros/paso-06.webp",
+      "sha256": "93d191fb6e9dfd038afecae87bfd0a33458e5e349e0c1a302ca39a536cc82baa",
+      "bytes": 84424,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "visual_qa": "PASS"
+    },
+    {
+      "asset": "paso-07.webp",
+      "public_path": "/recetas/receta-raviolis-caseros/paso-07.webp",
+      "sha256": "c4327934befe4a814b36f633bbcf6cd59c66aeb28fe0521d5b6ed5565bd447fc",
+      "bytes": 121612,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "visual_qa": "PASS"
+    },
+    {
+      "asset": "paso-08.webp",
+      "public_path": "/recetas/receta-raviolis-caseros/paso-08.webp",
+      "sha256": "64426791c56cad7a37380659c40ca1f93a2c2b3b5f4f84c1c824b99486bd4d27",
+      "bytes": 111290,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "visual_qa": "PASS"
+    },
+    {
+      "asset": "portada.webp",
+      "public_path": "/recetas/receta-raviolis-caseros/portada.webp",
+      "sha256": "64426791c56cad7a37380659c40ca1f93a2c2b3b5f4f84c1c824b99486bd4d27",
+      "bytes": 111290,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "visual_qa": "PASS"
+    },
+    {
+      "asset": "portada-4x3.webp",
+      "public_path": "/recetas/receta-raviolis-caseros/portada-4x3.webp",
+      "sha256": "64426791c56cad7a37380659c40ca1f93a2c2b3b5f4f84c1c824b99486bd4d27",
+      "bytes": 111290,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "visual_qa": "PASS"
+    },
+    {
+      "asset": "portada-1x1.webp",
+      "public_path": "/recetas/receta-raviolis-caseros/portada-1x1.webp",
+      "sha256": "86ae87cf7cc13568d77980fd69a044cba35b7fb89f389325c160d82258ccccf4",
+      "bytes": 98532,
+      "dimensions": [
+        1086,
+        1086
+      ],
+      "visual_qa": "PASS"
+    },
+    {
+      "asset": "portada-16x9.webp",
+      "public_path": "/recetas/receta-raviolis-caseros/portada-16x9.webp",
+      "sha256": "a21890aa23b658e3430b96b4e033c5942c8948867823d87feef1f53c2f510470",
+      "bytes": 104108,
+      "dimensions": [
+        1448,
+        814
+      ],
+      "visual_qa": "PASS"
+    }
+  ],
+  "state": "COMPLETE_VISUAL_QA_PASS",
   "last_step_reuses_cover": true,
   "visual_targets": [
     "Ricotta escurriendo en colador fino dentro de la nevera, tapada y sobre un cuenco.",
@@ -61,5 +194,15 @@
     "Lámina fina de pasta con seis porciones, aire expulsado, bordes sellados y raviolis cortados.",
     "Raviolis hirviendo en tanda moderada y mantequilla con salvia dorándose en sartén aparte.",
     "Seis raviolis servidos con mantequilla avellanada y salvia, uno cortado muestra relleno verde y blanco."
-  ]
+  ],
+  "visual_review": {
+    "result": "PASS",
+    "reviewed_at": "2026-10-08",
+    "notes": [
+      "Cover shows six square ravioli, browned butter, sage and visible ricotta-spinach filling with no forbidden sauce.",
+      "Step sequence preserves cold ricotta draining, dry spinach, three eggs in flour, rested dough, portioned dry filling, sealing, boiling with separate sage butter, and final plate.",
+      "Step 3 was regenerated to remove an extra egg bowl; step 5 was regenerated to remove premature pasta assembly.",
+      "No legacy or other-recipe media used; cover is reused only for step 8 and responsive cover crops."
+    ]
+  }
 }
