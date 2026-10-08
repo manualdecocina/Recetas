@@ -31,7 +31,7 @@
     "branch": "recetas/lote-03-20261008",
     "target": 15,
     "status": "in_progress",
-    "stage": "identidad",
+    "stage": "imágenes",
     "current_recipe": "pollo-agridulce",
     "started_at": "2026-10-08T12:39:02.511Z",
     "completed_recipes": 0,
@@ -448,13 +448,21 @@
         "editorial_status": "published",
         "position": 27,
         "eligibility": "validate_url_master_before_writing",
-        "status": "reserved",
-        "stage": "identidad",
+        "status": "in_progress",
+        "stage": "imágenes",
         "identity_qa": "PASS",
         "classification": "ELIGIBLE_EXISTING_CULINARY_CANDIDATE_OR_CORE_REBUILD",
         "languages_ready": 0,
         "images_ready": 0,
-        "source_not_reused": true
+        "source_not_reused": true,
+        "es_content_file": "editorial/pollo-agridulce-20261008.json",
+        "image_manifest": "editorial/pollo-agridulce-imagenes.json",
+        "nutrition_evidence_file": "editorial/pollo-agridulce-usda-verificado-20261008.json",
+        "steps_sha256": "2cc0bb9c74c07c077b8147857be32f6158dbf3b043ae1743950bede2312c2262",
+        "es_editorial_qa": "PASS_STRUCTURAL_USDA_TRACEABILITY_RAWBREAST_NOADDEDSOLUTION_ALL_OIL_COUNTED",
+        "original_images_required": 9,
+        "distinct_images_pending": 9,
+        "expected_es_row_md5": "b58bdbcbe9ec4dccf664940793ebbb87"
       },
       {
         "id": "e478ae0e-c138-4903-a079-e8a9bf5b194a",
@@ -613,7 +621,7 @@
     "stage": "identidad"
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z",
-  "updated_at": "2026-10-08T18:26:00.574Z",
+  "updated_at": "2026-10-08T18:31:21.356Z",
   "completed_batches": [
     {
       "id": "lote-02-20261008",
