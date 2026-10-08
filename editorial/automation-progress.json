@@ -30,7 +30,7 @@
     "id": "lote-02-20261008",
     "target": 15,
     "status": "in_progress",
-    "stage": "identity_validation",
+    "stage": "ES",
     "recipes": [
       {
         "id": "e47eac88-0649-4785-baf0-43b92dd2ec2e",
@@ -140,12 +140,15 @@
         "portuguese_locale": "pt-BR"
       },
       {
-        "id": "c3860fad-711e-4bfd-ba29-13b0e71afe3c",
-        "recipe_group_id": "bfc90e7b-1f11-47da-96c8-218b623a16e8",
-        "slug": "como-preparar-cerveza-artesanal",
-        "public_path": "/como-preparar-cerveza-artesanal",
-        "stage": "identity_validation",
-        "status": "reserved"
+        "id": "82997c99-0b32-42e0-8e22-1617a936c949",
+        "recipe_group_id": "e8238258-5fe1-4344-8851-917fa546f20b",
+        "slug": "receta-raviolis-caseros",
+        "public_path": "/receta-raviolis-caseros",
+        "stage": "identity_validated",
+        "status": "in_progress",
+        "es_content_file": "editorial/receta-raviolis-caseros-20261008.json",
+        "image_manifest": "editorial/receta-raviolis-caseros-imagenes.json",
+        "images_ready": 0
       },
       {
         "id": "835f1de3-70b7-4d41-a9ff-1695b7ae21fc",
@@ -204,20 +207,32 @@
         "status": "reserved"
       }
     ],
-    "current_recipe": "como-preparar-cerveza-artesanal",
+    "current_recipe": "receta-raviolis-caseros",
     "started_at": "2026-10-08T02:27:18.812Z",
     "branch": "recetas/lote-02-20261008",
     "completed_recipes": 0,
     "prepared_recipes": 7,
-    "published_recipes": 0
+    "published_recipes": 0,
+    "selection_adjustments": [
+      {
+        "removed_slug": "como-preparar-cerveza-artesanal",
+        "removed_id": "c3860fad-711e-4bfd-ba29-13b0e71afe3c",
+        "removed_recipe_group_id": "bfc90e7b-1f11-47da-96c8-218b623a16e8",
+        "disposition": "retained_review_not_counted",
+        "evidence": "docs/P2-CATALOG-20260924.md: caso que requiere revisar encaje temático y tratamiento editorial",
+        "replacement_slug": "receta-raviolis-caseros",
+        "replacement_position": 16,
+        "recorded_at": "2026-10-08T06:11:42.991Z"
+      }
+    ]
   },
-  "next_candidate_position": 8,
+  "next_candidate_position": 17,
   "run_lease": {
     "owner": "automation-run-20261008-0604",
     "status": "active",
     "acquired_at": "2026-10-08T06:05:05.494Z",
-    "expires_at": "2026-10-08T07:39:02.688Z",
-    "reason": "Seafood pasta recovered, reconciled against frozen ES, and completed without regeneration; validating next reserved candidate before editorial work."
+    "expires_at": "2026-10-08T07:41:42.991Z",
+    "reason": "Beer retained under explicit thematic REVIEW; ravioli candidate reserved and identity/collision checks passed; drafting original ES."
   },
   "blockers": [],
   "debt": [],
@@ -265,14 +280,14 @@
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
   "progress_branch": "recetas/lote-02-20261008",
-  "last_checkpoint_at": "2026-10-08T06:09:02.688Z",
+  "last_checkpoint_at": "2026-10-08T06:11:42.991Z",
   "handoff": {
     "first_prepared_recipe": "como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada",
     "first_recipe_source": "editorial/como-preparar-limon-serrano-la-receta-de-ensalada-mas-buscada-20261008.json",
-    "next_recipe": "como-preparar-cerveza-artesanal",
+    "next_recipe": "receta-raviolis-caseros",
     "batch_remaining_to_prepare": 8,
     "published_this_batch": 0,
-    "required_action": "Validate the reserved beer candidate against the authoritative classification. It is marked REVIEW in the catalog; retain with evidence and replace from the next eligible queue entry rather than reviving it.",
+    "required_action": "Draft and freeze original ES for ravioli using preserved identity and collision-free routes; do not use WordPress body or media.",
     "scope": "Preview only; production migration not executed."
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z"
