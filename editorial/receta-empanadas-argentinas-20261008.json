@@ -1,0 +1,512 @@
+{
+  "scope": "Manual de Cocina only; lote03",
+  "state": "ES_FROZEN_MEDIA_AND_LOCALIZATIONS_PENDING",
+  "provenance": "Original culinary reconstruction; historical identity/routes only; no WordPress text, translations or images reused.",
+  "ai_owner_confirmation": "Owner authorized original content and ImageGen. No measured kitchen test claimed.",
+  "category_slug": "panes-y-masas",
+  "cover": "/recetas/receta-empanadas-argentinas/portada.webp",
+  "steps_frozen": true,
+  "steps_sha256": "658f6db71e55437414fec6224e62be54a9403523e6bf022982827d91ce303426",
+  "time_notes": "60prep+60cook+95rest/cooling=215min without deducting overlaps. Dough rest30+filling cooling60+final5; additional actual cooling/batch/thawing outside base. Proposed unconfirmed times.",
+  "publication_blockers": [
+    "Original media pending",
+    "Six localizations pending",
+    "Full15 batch CI/deploy/DB/cache/liveQA pending"
+  ],
+  "sources": [
+    {
+      "url": "https://www.argentina.gob.ar/jefatura/turismo/viaja-por-argentina/empanadas",
+      "purpose": "Regional diversity; no claim of one universal/provincial formula",
+      "accessed": "2026-10-08"
+    },
+    {
+      "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures",
+      "purpose": "Ground beef safety and reheating cooled cooked filling; recipe proposes72°C initial and74°C final",
+      "accessed": "2026-10-08"
+    },
+    {
+      "url": "https://www.foodsafety.gov/food-safety-charts/cold-food-storage-charts",
+      "purpose": "Ground meat and cooked leftovers refrigeration; conservative3day proposal",
+      "accessed": "2026-10-08"
+    },
+    {
+      "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/meat/ground-beef-and-food-safety",
+      "purpose": "Cached primary search confirms2hour/1hour hot ambient handling; page direct fetch403, not represented as successful direct read",
+      "accessed": "2026-10-08"
+    },
+    {
+      "url": "https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_sr_legacy_food_json_2018-04.zip",
+      "purpose": "Thirteen exact USDA foods,8 nutrient fields and durable selected snapshot",
+      "accessed": "2026-10-08"
+    }
+  ],
+  "records": [
+    {
+      "id": "00cef267-34b5-4bf9-9192-95dd250a102a",
+      "recipe_group_id": "5179abcc-7963-45a9-9cd8-a8ed30a192ea",
+      "slug": "receta-empanadas-argentinas",
+      "public_path": "/receta-empanadas-argentinas",
+      "source_url": "https://manualdecocina.com/receta-empanadas-argentinas/",
+      "language": "es",
+      "title": "Empanadas argentinas de carne al horno",
+      "excerpt": "Masa casera y relleno de carne, cebolla, pimiento, huevo y aceitunas, con enfriado previo y repulgue explicado por fases.",
+      "summary": "Propuesta casera de 20 empanadas argentinas de carne al horno: masa de trigo con mantequilla y relleno de res, cebolla, pimiento, huevo cocido y aceitunas verdes. El relleno se cocina, se enfría antes de montar y se calienta de nuevo en el horno. Rinde 10 raciones de 2 unidades, con 215 minutos estimados que incluyen reposo y enfriado; no se atribuye a una única variante provincial ni se afirma una prueba de cocina.",
+      "category": "Panes y masas",
+      "category_slug": "panes-y-masas",
+      "difficulty": "Media",
+      "course": "Empanadas",
+      "cuisine": "Argentina",
+      "prep_time_minutes": 60,
+      "cook_time_minutes": 60,
+      "total_time_minutes": 215,
+      "servings": 10,
+      "ingredients": [
+        {
+          "name": "harina de trigo común sin levadura, incluidos 20 g para estirar",
+          "amount": "500",
+          "unit": "g",
+          "group": "Masa"
+        },
+        {
+          "name": "mantequilla sin sal",
+          "amount": "100",
+          "unit": "g",
+          "group": "Masa"
+        },
+        {
+          "name": "agua para la masa",
+          "amount": "200",
+          "unit": "ml",
+          "group": "Masa"
+        },
+        {
+          "name": "sal para la masa",
+          "amount": "8",
+          "unit": "g",
+          "group": "Masa"
+        },
+        {
+          "name": "carne de res picada con aproximadamente 10 % de grasa",
+          "amount": "500",
+          "unit": "g",
+          "group": "Relleno"
+        },
+        {
+          "name": "cebolla",
+          "amount": "300",
+          "unit": "g",
+          "group": "Relleno"
+        },
+        {
+          "name": "pimiento rojo sin semillas",
+          "amount": "100",
+          "unit": "g",
+          "group": "Relleno"
+        },
+        {
+          "name": "aceite de oliva",
+          "amount": "20",
+          "unit": "g",
+          "group": "Relleno"
+        },
+        {
+          "name": "pimentón dulce",
+          "amount": "3",
+          "unit": "g",
+          "group": "Relleno"
+        },
+        {
+          "name": "comino molido",
+          "amount": "2",
+          "unit": "g",
+          "group": "Relleno"
+        },
+        {
+          "name": "pimienta negra molida",
+          "amount": "1",
+          "unit": "g",
+          "group": "Relleno"
+        },
+        {
+          "name": "sal para el relleno",
+          "amount": "6",
+          "unit": "g",
+          "group": "Relleno"
+        },
+        {
+          "name": "huevos para cocer, unos 100 g cocidos y pelados",
+          "amount": "2",
+          "unit": "unidades",
+          "group": "Relleno"
+        },
+        {
+          "name": "aceitunas verdes sin hueso escurridas",
+          "amount": "60",
+          "unit": "g",
+          "group": "Relleno"
+        },
+        {
+          "name": "huevo para pincelar, unos 50 g sin cáscara",
+          "amount": "1",
+          "unit": "unidad",
+          "group": "Acabado"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Pesa los ingredientes y prepara las verduras",
+          "content": "Reserva 20 g de los 500 g de harina para estirar y deja 480 g para la masa. Pela los 300 g de cebolla y córtalos en dados de unos 5 mm; corta también los 100 g de pimiento rojo sin semillas. Escurre, pesa y corta en rodajas los 60 g de aceitunas sin hueso. Mide por separado los 8 g de sal de la masa y los 6 g del relleno. Mantén los 500 g de carne picada a 4 °C o menos hasta cocinarla. Prepara una sartén amplia, una bandeja metálica poco profunda para enfriar el relleno, rodillo y dos placas de horno de aproximadamente 45 × 35 cm con papel de hornear. Lava manos y utensilios tras tocar carne o huevo crudos.",
+          "image_url": "/recetas/receta-empanadas-argentinas/paso-01.webp",
+          "image_alt": "Empanadas argentinas de carne: pesa los ingredientes y prepara las verduras"
+        },
+        {
+          "title": "Haz la masa y déjala reposar 30 minutos",
+          "content": "Derrite los 100 g de mantequilla sin sal y deja que pierda el calor fuerte, sin quemarla. Disuelve los 8 g de sal en los 200 ml de agua templada. Pon los 480 g de harina en un cuenco, incorpora el agua y la mantequilla y mezcla. Amasa unos 5–6 minutos hasta formar una masa uniforme y flexible; no añadas harina fuera de los 20 g reservados. Si queda pegajosa, deja que se enfríe unos minutos antes de valorar su textura. Envuelve o tapa bien y deja reposar 30 minutos. Este reposo forma parte del tiempo total y ayuda a estirar sin que los discos se encojan.",
+          "image_url": "/recetas/receta-empanadas-argentinas/paso-02.webp",
+          "image_alt": "Empanadas argentinas de carne: haz la masa y déjala reposar 30 minutos"
+        },
+        {
+          "title": "Cuece los dos huevos del relleno",
+          "content": "Coloca los 2 huevos destinados al relleno en un cazo y cúbrelos con agua potable unos 3 cm por encima. Lleva a ebullición suave, orientativamente 5 minutos según el cazo, y cocina 12 minutos desde que empieza a hervir; clara y yema deben quedar firmes. Enfríalos en agua fría unos 5 minutos, pélalos y pícalos en dados pequeños. La propuesta cuenta unos 100 g cocidos y pelados en total; el peso real depende del tamaño de los huevos. Guarda los dados en un recipiente limpio tapado en la nevera mientras terminas el relleno. El agua de cocción no se incorpora a la masa ni al cálculo nutricional.",
+          "image_url": "/recetas/receta-empanadas-argentinas/paso-03.webp",
+          "image_alt": "Empanadas argentinas de carne: cuece los dos huevos del relleno"
+        },
+        {
+          "title": "Sofríe la cebolla y el pimiento",
+          "content": "Calienta los 20 g de aceite de oliva en la sartén a fuego medio. Añade la cebolla y el pimiento y cocina unos 8 minutos, removiendo, hasta que la cebolla esté translúcida y el pimiento empiece a ablandarse. Baja el fuego si se tuestan antes de ablandarse. Todavía no añadas el huevo cocido ni las aceitunas. Esta base conserva humedad, pero no debe tener un charco de agua.",
+          "image_url": "/recetas/receta-empanadas-argentinas/paso-04.webp",
+          "image_alt": "Empanadas argentinas de carne: sofríe la cebolla y el pimiento"
+        },
+        {
+          "title": "Cocina la carne y sazona",
+          "content": "Añade los 500 g de carne picada y sepárala con una espátula en fragmentos pequeños. Cocina unos 10 minutos a fuego medio, removiendo para que no queden bloques crudos. Incorpora los 3 g de pimentón dulce, 2 g de comino, 1 g de pimienta y 6 g de sal durante los últimos 2 minutos. Comprueba con un termómetro que varias zonas del relleno alcancen al menos 72 °C; si falta temperatura, continúa y vuelve a medir. El color no sustituye la medición. Conserva los jugos y la grasa del relleno, que están incluidos en la estimación; no dejes líquido libre que empape la masa ni añadas caldo o grasa fuera de la lista.",
+          "image_url": "/recetas/receta-empanadas-argentinas/paso-05.webp",
+          "image_alt": "Empanadas argentinas de carne: cocina la carne y sazona"
+        },
+        {
+          "title": "Enfría el relleno y añade huevo y aceitunas",
+          "content": "Pasa enseguida la carne cocinada con sus verduras y jugos a la bandeja limpia, formando una capa de menos de 2 cm. Refrigera sin esperar a que una sartén grande se enfríe en la encimera; usa una protección limpia que permita salir al vapor y tapa una vez fría. Prevé aproximadamente 60 minutos, pero espera hasta que el relleno esté a 4 °C o menos y añade al total el tiempo extra que necesite. Incorpora entonces los dados de los 2 huevos cocidos y los 60 g de aceitunas. Mezcla con un utensilio limpio y conserva refrigerado hasta rellenar. No montes empanadas con relleno caliente: ablanda la masa y dificulta el cierre.",
+          "image_url": "/recetas/receta-empanadas-argentinas/paso-06.webp",
+          "image_alt": "Empanadas argentinas de carne: enfría el relleno y añade huevo y aceitunas"
+        },
+        {
+          "title": "Divide la masa y estira 20 discos",
+          "content": "Enciende el horno a 210 °C con calor arriba y abajo, o 190 °C con ventilador, para que se precaliente mientras montas. Divide la masa reposada en 20 porciones iguales de aproximadamente 39–40 g. Estira cada una hasta formar un disco de unos 14 cm y 2–3 mm de grosor. Usa solo los 20 g de harina reservados, repartidos entre mesa y rodillo, y sacude el exceso. Mantén los discos tapados para que el borde no se seque. El tamaño y el rendimiento de 20 unidades son propuestas pendientes de prueba de cocina.",
+          "image_url": "/recetas/receta-empanadas-argentinas/paso-07.webp",
+          "image_alt": "Empanadas argentinas de carne: divide la masa y estira 20 discos"
+        },
+        {
+          "title": "Reparte el relleno frío en los discos",
+          "content": "Saca de la nevera únicamente el relleno que vayas a usar de inmediato. Divide todo el relleno en 20 porciones iguales: aproximadamente 45–50 g por empanada según la evaporación real. Coloca cada porción en el centro de un disco y deja unos 2 cm de borde limpio. Comprueba que cada porción incluya carne, verduras, huevo y aceitunas; no agregues una aceituna con hueso. Si el relleno no cabe sin forzar, ajusta el reparto de las 20 porciones, sin dejar sobras fuera de la estimación ni aumentar el número de unidades sin recalcular.",
+          "image_url": "/recetas/receta-empanadas-argentinas/paso-08.webp",
+          "image_alt": "Empanadas argentinas de carne: reparte el relleno frío en los discos"
+        },
+        {
+          "title": "Cierra en media luna y forma el repulgue",
+          "content": "Dobla cada disco sobre el relleno para formar una media luna. Expulsa suavemente el aire atrapado sin aplastar la masa y presiona los bordes limpios entre sí. Humedece apenas el borde con agua potable si hace falta; no lo mojes en exceso. Pliega el borde hacia dentro de forma sucesiva para hacer un repulgue continuo, o sella con un tenedor si te resulta más cómodo. No prometemos un número regional específico de pliegues. Coloca las 20 empanadas entre las dos placas preparadas, con unos 2 cm de separación y sin apilarlas.",
+          "image_url": "/recetas/receta-empanadas-argentinas/paso-09.webp",
+          "image_alt": "Empanadas argentinas de carne: cierra en media luna y forma el repulgue"
+        },
+        {
+          "title": "Pincela con el huevo del acabado",
+          "content": "Casca el huevo reservado para pincelar, aproximadamente 50 g sin cáscara, en un cuenco limpio y bátelo hasta mezclar clara y yema. Pincela una capa fina sobre la superficie de las 20 empanadas sin llenar el borde ni formar charcos. El cálculo incluye los 50 g completos como supuesto conservador; lo que quede en el cuenco no se reutiliza como alimento listo para comer. No añadas leche ni aceite al huevo. Lleva las placas al horno precalentado sin prolongar el tiempo del relleno fuera de la nevera.",
+          "image_url": "/recetas/receta-empanadas-argentinas/paso-10.webp",
+          "image_alt": "Empanadas argentinas de carne: pincela con el huevo del acabado"
+        },
+        {
+          "title": "Hornea hasta que el centro alcance 74 °C",
+          "content": "Hornea ambas placas unos 25 minutos; empieza a revisar a los 20. A mitad de cocción, gira las placas e intercambia sus alturas con guantes de horno si tu horno dora de forma desigual. La masa debe quedar dorada y la base cocida, sin una franja húmeda. Como el relleno ya cocinado se enfrió, comprueba con una sonda fina que el centro de empanadas de ambas placas alcance al menos 74 °C; continúa horneando si falta temperatura aunque estén doradas. La propuesta supone capacidad para ambas placas a la vez. Si tu horno exige dos tandas, añade aproximadamente 25 minutos, más lo que exija la comprobación real, y mantén la segunda tanda refrigerada mientras espera.",
+          "image_url": "/recetas/receta-empanadas-argentinas/paso-11.webp",
+          "image_alt": "Empanadas argentinas de carne: hornea hasta que el centro alcance 74 °c"
+        },
+        {
+          "title": "Deja reposar 5 minutos y sirve",
+          "content": "Deja las empanadas sobre una rejilla unos 5 minutos para que el relleno pierda el calor más agresivo sin humedecer la base. Sirve 2 empanadas por ración: 20 unidades para 10 raciones. La propuesta cuenta 60 minutos de preparación, 60 de cocción y 95 de reposos y enfriado —30 de masa, 60 de relleno y 5 finales—, 215 minutos en total siguiendo estas fases sin descontar solapamientos. Son tiempos estimados, sin prueba de cocina; añade cualquier enfriado adicional, tanda extra o descongelación previa necesaria. La foto del plato terminado corresponde a esta fase, sin salsas ni guarniciones incluidas.",
+          "image_url": "/recetas/receta-empanadas-argentinas/portada.webp",
+          "image_alt": "Empanadas argentinas de carne: deja reposar 5 minutos y sirve"
+        }
+      ],
+      "notes": "Esta es una propuesta casera de empanadas argentinas de carne al horno, no una atribución a una variedad provincial concreta. La masa lleva mantequilla sin sal; sustituirla por grasa, aceite o tapas comerciales cambia textura y nutrición. La carne elegida tiene aproximadamente 10 % de grasa; otras carnes exigen revisar las cifras y, si usas aves, su temperatura de cocción. Contiene trigo/gluten, leche y huevo; comprueba también el envase de las aceitunas. Enfría el relleno en capa poco profunda y conserva a 4 °C o menos; no lo dejes sobre la encimera más de 2 horas, o 1 hora si el ambiente supera 32 °C. Guarda las sobras horneadas en recipientes poco profundos refrigerados dentro de esos límites y consume en un máximo de 3 días. Recalienta solo lo necesario hasta 74 °C en el centro. Si preparas el relleno la víspera, refrigéralo correctamente y usa el calendario real de cocción y conservación, sin reiniciar sus días al montar. Si partes de carne congelada, descongélala previamente en la nevera y añade el tiempo real al total; no descongeles sobre la mesa. Cantidades, tiempos y rendimiento de 20 unidades están propuestos y pendientes de prueba de cocina.",
+      "nutrition": {
+        "calories": 407.2,
+        "protein_g": 17.7,
+        "carbs_g": 42.3,
+        "fat_g": 18.2,
+        "saturated_fat_g": 8.0,
+        "sodium_mg": 693.6,
+        "fiber_g": 2.4,
+        "sugar_g": 2.0,
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (abril de 2018)",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "inputs": [
+          {
+            "ingredient": "harina de trigo común, incluido el supuesto de consumir los 20 g para estirar",
+            "edible_grams": 500,
+            "fdc_id": 169761,
+            "fdc_description": "Wheat flour, white, all-purpose, unenriched",
+            "per_100g": {
+              "fat_g": 0.98,
+              "carbs_g": 76.3,
+              "calories": 364,
+              "fiber_g": 2.7,
+              "sodium_mg": 2.0,
+              "protein_g": 10.3,
+              "saturated_fat_g": 0.155,
+              "sugar_g": 0.27
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169761/nutrients"
+          },
+          {
+            "ingredient": "mantequilla sin sal",
+            "edible_grams": 100,
+            "fdc_id": 173430,
+            "fdc_description": "Butter, without salt",
+            "per_100g": {
+              "sugar_g": 0.06,
+              "calories": 717,
+              "saturated_fat_g": 50.5,
+              "fat_g": 81.1,
+              "carbs_g": 0.06,
+              "protein_g": 0.85,
+              "fiber_g": 0.0,
+              "sodium_mg": 11.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173430/nutrients"
+          },
+          {
+            "ingredient": "carne picada de res cruda 90 % magra / 10 % grasa",
+            "edible_grams": 500,
+            "fdc_id": 174030,
+            "fdc_description": "Beef, ground, 90% lean meat / 10% fat, raw",
+            "per_100g": {
+              "fat_g": 10.0,
+              "carbs_g": 0.0,
+              "sugar_g": 0.0,
+              "protein_g": 20.0,
+              "fiber_g": 0.0,
+              "sodium_mg": 66.0,
+              "calories": 176,
+              "saturated_fat_g": 3.93
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/174030/nutrients"
+          },
+          {
+            "ingredient": "cebolla",
+            "edible_grams": 300,
+            "fdc_id": 170000,
+            "fdc_description": "Onions, raw",
+            "per_100g": {
+              "sugar_g": 4.24,
+              "fat_g": 0.1,
+              "carbs_g": 9.34,
+              "calories": 40.0,
+              "saturated_fat_g": 0.042,
+              "protein_g": 1.1,
+              "fiber_g": 1.7,
+              "sodium_mg": 4.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170000/nutrients"
+          },
+          {
+            "ingredient": "pimiento rojo",
+            "edible_grams": 100,
+            "fdc_id": 170108,
+            "fdc_description": "Peppers, sweet, red, raw",
+            "per_100g": {
+              "fiber_g": 2.1,
+              "calories": 26.0,
+              "saturated_fat_g": 0.059,
+              "sodium_mg": 4.0,
+              "sugar_g": 4.2,
+              "carbs_g": 6.03,
+              "protein_g": 0.99,
+              "fat_g": 0.3
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170108/nutrients"
+          },
+          {
+            "ingredient": "aceite de oliva",
+            "edible_grams": 20,
+            "fdc_id": 171413,
+            "fdc_description": "Oil, olive, salad or cooking",
+            "per_100g": {
+              "fat_g": 100,
+              "carbs_g": 0.0,
+              "calories": 884,
+              "sodium_mg": 2.0,
+              "protein_g": 0.0,
+              "saturated_fat_g": 13.8,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171413/nutrients"
+          },
+          {
+            "ingredient": "pimentón dulce",
+            "edible_grams": 3,
+            "fdc_id": 171329,
+            "fdc_description": "Spices, paprika",
+            "per_100g": {
+              "sugar_g": 10.3,
+              "fiber_g": 34.9,
+              "sodium_mg": 68.0,
+              "protein_g": 14.1,
+              "fat_g": 12.9,
+              "carbs_g": 54.0,
+              "calories": 282,
+              "saturated_fat_g": 2.14
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171329/nutrients"
+          },
+          {
+            "ingredient": "comino molido (ficha de semilla de comino molida sin aditivos)",
+            "edible_grams": 2,
+            "fdc_id": 170923,
+            "fdc_description": "Spices, cumin seed",
+            "per_100g": {
+              "protein_g": 17.8,
+              "fiber_g": 10.5,
+              "sodium_mg": 168,
+              "fat_g": 22.3,
+              "carbs_g": 44.2,
+              "calories": 375,
+              "saturated_fat_g": 1.54,
+              "sugar_g": 2.25
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170923/nutrients"
+          },
+          {
+            "ingredient": "pimienta negra molida",
+            "edible_grams": 1,
+            "fdc_id": 170931,
+            "fdc_description": "Spices, pepper, black",
+            "per_100g": {
+              "fat_g": 3.26,
+              "sugar_g": 0.64,
+              "carbs_g": 64.0,
+              "calories": 251,
+              "protein_g": 10.4,
+              "fiber_g": 25.3,
+              "sodium_mg": 20.0,
+              "saturated_fat_g": 1.39
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170931/nutrients"
+          },
+          {
+            "ingredient": "huevo cocido y pelado para el relleno",
+            "edible_grams": 100,
+            "fdc_id": 173424,
+            "fdc_description": "Egg, whole, cooked, hard-boiled",
+            "per_100g": {
+              "sugar_g": 1.12,
+              "fiber_g": 0.0,
+              "calories": 155,
+              "protein_g": 12.6,
+              "sodium_mg": 124,
+              "saturated_fat_g": 3.27,
+              "fat_g": 10.6,
+              "carbs_g": 1.12
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173424/nutrients"
+          },
+          {
+            "ingredient": "aceitunas verdes escurridas sin hueso",
+            "edible_grams": 60,
+            "fdc_id": 169096,
+            "fdc_description": "Olives, pickled, canned or bottled, green",
+            "per_100g": {
+              "fat_g": 15.3,
+              "sugar_g": 0.54,
+              "fiber_g": 3.3,
+              "sodium_mg": 1560.0,
+              "protein_g": 1.03,
+              "carbs_g": 3.84,
+              "calories": 145,
+              "saturated_fat_g": 2.03
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169096/nutrients"
+          },
+          {
+            "ingredient": "huevo crudo para pincelar, incluido completo",
+            "edible_grams": 50,
+            "fdc_id": 171287,
+            "fdc_description": "Egg, whole, raw, fresh",
+            "per_100g": {
+              "calories": 143,
+              "saturated_fat_g": 3.13,
+              "protein_g": 12.6,
+              "sodium_mg": 142,
+              "sugar_g": 0.37,
+              "fat_g": 9.51,
+              "carbs_g": 0.72,
+              "fiber_g": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171287/nutrients"
+          },
+          {
+            "ingredient": "sal, 8 g masa + 6 g relleno",
+            "edible_grams": 14,
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "fiber_g": 0.0,
+              "sodium_mg": 38800.0,
+              "saturated_fat_g": 0.0,
+              "protein_g": 0.0,
+              "fat_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 0.0,
+              "sugar_g": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients"
+          }
+        ],
+        "serving_size": "2 de las 20 empanadas; 10 raciones",
+        "method": "Trece fichas USDA verificadas. Pesos comestibles crudos, salvo los 100 g de huevo ya cocido y pelado, multiplicados por nutrientes por 100 g; total dividido entre 10. La sal suma 8 g de masa y 6 g de relleno. Se conservan jugos y grasa del relleno. Se asume conservadoramente el consumo de los 500 g de harina, incluidos 20 g para estirar, y de los 50 g de huevo para pincelar, aunque parte puede quedar en mesa o cuenco.",
+        "note": "Cifras estimadas, no análisis ni rendimiento confirmado en cocina. El peso real del huevo cocido, la grasa de la carne, la sal de las aceitunas, el descarte de jugos o el sobrante de harina y huevo cambian el resultado. No incluye salsa, guarnición, aceite adicional ni tapas comerciales. Se han usado datos presentes, incluidos ceros informados por USDA, sin sustituir datos ausentes por cero."
+      },
+      "keywords": [
+        "empanadas argentinas de carne",
+        "empanadas al horno",
+        "masa casera",
+        "repulgue"
+      ],
+      "image_url": "/recetas/receta-empanadas-argentinas/portada.webp",
+      "gallery": [],
+      "seo": {
+        "title": "Empanadas argentinas de carne al horno: masa casera",
+        "description": "Prepara 20 empanadas de carne con masa casera, huevo y aceitunas: enfriado del relleno, repulgue, horneado y conservación por fases.",
+        "image_alt": "Empanadas argentinas de carne al horno, doradas y con repulgue, una abierta con carne picada, cebolla, pimiento, huevo cocido y aceituna verde",
+        "image_variants": [
+          "/recetas/receta-empanadas-argentinas/portada-1x1.webp",
+          "/recetas/receta-empanadas-argentinas/portada-4x3.webp",
+          "/recetas/receta-empanadas-argentinas/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "¿Por qué debe estar frío el relleno?",
+            "a": "El relleno caliente ablanda la masa y dificulta el cierre. Extiéndelo en una capa de menos de 2 cm, refrigera de inmediato y espera a que esté a 4 °C o menos. Los 60 minutos son una previsión, no una garantía: si necesita más, añade el tiempo real antes de incorporar huevo y aceitunas."
+          },
+          {
+            "q": "¿Puedo usar tapas de empanada compradas?",
+            "a": "Sí, para 20 unidades de tamaño comparable, respetando conservación e instrucciones del fabricante. Cambian el peso, los ingredientes, los alérgenos y la nutrición de esta masa casera. No uses sus valores como si correspondieran a la harina y la mantequilla de la propuesta; el tiempo de horneado también puede variar."
+          },
+          {
+            "q": "¿Cómo evito que se abran en el horno?",
+            "a": "Usa el relleno frío, limpia el borde, no sobrecargues los discos y expulsa el aire antes de sellar. Presiona y haz un repulgue continuo o marca con tenedor. Mantén unos 2 cm entre empanadas; la masa dorada no sustituye verificar que el centro alcance 74 °C después de enfriar el relleno."
+          }
+        ]
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "content_html": "<p>Propuesta casera de 20 empanadas argentinas de carne al horno: masa de trigo con mantequilla y relleno de res, cebolla, pimiento, huevo cocido y aceitunas verdes. El relleno se cocina, se enfría antes de montar y se calienta de nuevo en el horno. Rinde 10 raciones de 2 unidades, con 215 minutos estimados que incluyen reposo y enfriado; no se atribuye a una única variante provincial ni se afirma una prueba de cocina.</p><p>Esta es una propuesta casera de empanadas argentinas de carne al horno, no una atribución a una variedad provincial concreta. La masa lleva mantequilla sin sal; sustituirla por grasa, aceite o tapas comerciales cambia textura y nutrición. La carne elegida tiene aproximadamente 10 % de grasa; otras carnes exigen revisar las cifras y, si usas aves, su temperatura de cocción. Contiene trigo/gluten, leche y huevo; comprueba también el envase de las aceitunas. Enfría el relleno en capa poco profunda y conserva a 4 °C o menos; no lo dejes sobre la encimera más de 2 horas, o 1 hora si el ambiente supera 32 °C. Guarda las sobras horneadas en recipientes poco profundos refrigerados dentro de esos límites y consume en un máximo de 3 días. Recalienta solo lo necesario hasta 74 °C en el centro. Si preparas el relleno la víspera, refrigéralo correctamente y usa el calendario real de cocción y conservación, sin reiniciar sus días al montar. Si partes de carne congelada, descongélala previamente en la nevera y añade el tiempo real al total; no descongeles sobre la mesa. Cantidades, tiempos y rendimiento de 20 unidades están propuestos y pendientes de prueba de cocina.</p>"
+    }
+  ],
+  "yield_proposal": {
+    "units": 20,
+    "servings": 10,
+    "units_per_serving": 2,
+    "confirmed": false
+  }
+}

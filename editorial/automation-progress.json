@@ -31,7 +31,7 @@
     "branch": "recetas/lote-03-20261008",
     "target": 15,
     "status": "in_progress",
-    "stage": "ES",
+    "stage": "imágenes",
     "current_recipe": "receta-empanadas-argentinas",
     "started_at": "2026-10-08T12:39:02.511Z",
     "completed_recipes": 0,
@@ -86,13 +86,21 @@
         "position": 18,
         "eligibility": "validate_url_master_before_writing",
         "status": "in_progress",
-        "stage": "ES",
+        "stage": "imágenes",
         "identity_qa": "PASS",
         "classification": "CORE_KEEP_REBUILD_ARGENTINE_BEEF_EMPANDAS",
-        "languages_ready": 0,
+        "languages_ready": 1,
         "images_ready": 0,
         "source_not_reused": true,
-        "archived_duplicate_preserved": true
+        "archived_duplicate_preserved": true,
+        "es_content_file": "editorial/receta-empanadas-argentinas-20261008.json",
+        "image_manifest": "editorial/receta-empanadas-argentinas-imagenes.json",
+        "nutrition_evidence_file": "editorial/receta-empanadas-argentinas-usda-verificado-20261008.json",
+        "steps_sha256": "658f6db71e55437414fec6224e62be54a9403523e6bf022982827d91ce303426",
+        "es_editorial_qa": "PASS_STRUCTURAL_USDA_TRACEABILITY",
+        "original_images_required": 12,
+        "distinct_images_pending": 12,
+        "expected_es_row_md5": "d86127f173cf98eaa4c42d3bbddc41d7"
       },
       {
         "id": "58aa988c-29f3-408c-8254-dd1be441cb04",
@@ -322,9 +330,9 @@
     "owner": "manual-continuation-20261008-bandeja-localization",
     "status": "active",
     "acquired_at": "2026-10-08T08:39:14.486Z",
-    "expires_at": "2026-10-08T14:46:56.244Z",
+    "expires_at": "2026-10-08T14:54:36.506Z",
     "reason": "Same continuing producer: soup package ready7/7, next Argentine empanadas ES. Batch03 published0/15.",
-    "renewed_at": "2026-10-08T13:16:56.244Z"
+    "renewed_at": "2026-10-08T13:24:36.506Z"
   },
   "blockers": [],
   "debt": [
@@ -393,17 +401,17 @@
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
   "progress_branch": "recetas/lote-03-20261008",
-  "last_checkpoint_at": "2026-10-08T13:16:56.244Z",
+  "last_checkpoint_at": "2026-10-08T13:24:36.506Z",
   "handoff": {
     "branch": "recetas/lote-03-20261008",
     "current_recipe": "receta-empanadas-argentinas",
     "prepared_recipes": 1,
     "published_recipes": 0,
-    "next_action": "Complete ES original Argentine beef empanadas, freeze steps before ImageGen, localize7, then continue remaining13; soup must not be regenerated. Publish entire15 only after deployment gate.",
+    "next_action": "Empanadas ES frozen12steps,15ingredients,13USDA foods; generate12 distinct originals from frozen manifest, preserve originals+WebP, localize6. Soup prepared remains unchanged; batch03published0.",
     "checkpoint_at": "2026-10-08T13:16:56.244Z"
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z",
-  "updated_at": "2026-10-08T13:16:56.244Z",
+  "updated_at": "2026-10-08T13:24:36.506Z",
   "completed_batches": [
     {
       "id": "lote-02-20261008",
