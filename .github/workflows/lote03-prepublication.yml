@@ -1,0 +1,24 @@
+name: lote03-prepublication
+on:
+  pull_request:
+    paths:
+      - 'editorial/**'
+      - 'public/recetas/**'
+      - 'scripts/*lote03*'
+      - '.github/workflows/lote03-prepublication.yml'
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 -m pip install Pillow
+      - run: python3 scripts/validate-lote03-complete.py
+      - run: python3 scripts/build-lote03-publication.py --check
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: lote03-prepublication-validation
+          path: lote03-prepublication-validation.json

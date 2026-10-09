@@ -188,3 +188,8 @@ Nueve originales PNG y doce WebP preservados con bytes, dimensiones, SHA256 y Gi
 Media repair: paso-02.webp was observed at zero bytes after the initial commit. It was reconstructed only by deterministic conversion from the exact preserved paso-02.png; no ImageGen regeneration. Replacement expected 114478 bytes, SHA256 0ab6f754b2fed3143cf4977f403c5b61854d5bc8ae54d2be6c7d6df22aace575; remote revalidation required immediately.
 
 Remote media recheck PASS: all21 assets positive (minimum81424 bytes) and exact Git blob SHA after deterministic repair. Lease released at Fish and Chips localization boundary; next producer must acquire by CAS and not regenerate these images.
+
+
+## 2026-10-09T00:20:07.357Z — Quince preparadas; publicación pendiente
+
+15/15 paquetes completos en siete idiomas, 0/15 publicados. Se preservan fuentes únicas y medios existentes. Plan: editorial/lote-03-plan-20261008.json; 174 WebP y127 PNG. QA de metadatos pasa105filas, nutrición estimada trazable y rutas; CI debe comprobar los301 archivos por bytes/SHA256/formato/dimensiones. SQL transaccional completo scripts/publish-lote03-20261008.sql SHA2563d28ca783fcdfd2a5ccf1690854faff47de9d3b956594976bcb27e0a93d7f574, no ejecutado. Base real124ESpublicadas, grupos reservados15ESfalse, colisiones[] comprobadas. Siguiente: PR y CI, merge con SHA esperado, observar174medios desplegadosHTTP200+hash; SQL15grupos→105filas y139ES, revalidación/QA105páginas y auditoría global única con recuento real. No abrir04 antes de cerrar03. Lease renovado por productor actual, CAS.

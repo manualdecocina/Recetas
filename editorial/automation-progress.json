@@ -635,15 +635,20 @@
         "published_database": false,
         "media_remote_hash_qa": "PASS_ALL17_EXACT_BYTES_GITSHA"
       }
-    ]
+    ],
+    "sql_file": "scripts/publish-lote03-20261008.sql",
+    "sql_sha256": "3d28ca783fcdfd2a5ccf1690854faff47de9d3b956594976bcb27e0a93d7f574",
+    "plan_file": "editorial/lote-03-plan-20261008.json",
+    "prepublication_qa": "PASS_METADATA_105_ROWS_174_WEBP_127_PNG_PENDING_CI_FILE_DECODE",
+    "next_action": "Create batch03 PR; require quality and complete media validator CI green. Then merge expected SHA, observe174deployed hashes before atomic SQL, cache and105pages/global QA."
   },
   "next_candidate_position": 32,
   "run_lease": {
     "owner": "work-fish-localization-20261008T2334",
     "status": "active",
     "acquired_at": "2026-10-08T23:33:59.326Z",
-    "renewed_at": "2026-10-09T00:10:08.789Z",
-    "expires_at": "2026-10-09T01:25:49.126Z",
+    "renewed_at": "2026-10-09T00:20:07.357Z",
+    "expires_at": "2026-10-09T01:50:07.358Z",
     "previous_owner": "automation-continuation-20261009-fish-and-chips",
     "reason": "Continue six Fish and Chips localizations, then remaining two recipes and full15 publication."
   },
@@ -725,7 +730,7 @@
     "next_action": "Finish remaining four: chocolateflan,fishandchips,tomatosauce,spinachtortilla. Preserve first11packages. Full15CI/deploy/atomicDB/cache/liveQA remains."
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z",
-  "updated_at": "2026-10-08T21:16:57.990Z",
+  "updated_at": "2026-10-09T00:20:07.357Z",
   "completed_batches": [
     {
       "id": "lote-02-20261008",
