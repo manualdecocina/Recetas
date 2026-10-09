@@ -1,0 +1,42 @@
+name: pantry-repair-live-qa
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/lib/ingredient-labels.ts'
+      - 'src/lib/md-data.ts'
+      - 'src/lib/pantry-localization.ts'
+      - 'editorial/pantry-ingredient-repair-20261009.json'
+      - 'scripts/verify-pantry-repair.py'
+      - '.github/workflows/pantry-repair-live-qa.yml'
+permissions:
+  contents: read
+jobs:
+  live:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify seven languages after the automatic deployment
+        run: |
+          python - <<'PY'
+          import subprocess, time
+          for attempt in range(20):
+              result = subprocess.run(["python", "scripts/verify-pantry-repair.py", "--base-url",
+                  "https://preview.manualdecocina.com", "--output", "pantry-live-qa.json"])
+              if result.returncode == 0:
+                  break
+              if attempt == 19:
+                  raise SystemExit(result.returncode)
+              print("Waiting for deployed pages to refresh", flush=True)
+              time.sleep(20)
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pantry-repair-seven-languages
+          path: pantry-live-qa.json
+          if-no-files-found: ignore

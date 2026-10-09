@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict'
-import { localizePantryRecipes } from '@/lib/pantry-localization'
+import { localizePantryRecipes, pantryIngredientCoverage } from '@/lib/pantry-localization'
 import { ingredientLabel } from '@/lib/ingredient-labels'
 import { getPantryCopy } from '@/lib/pantry-copy'
 import { SUPPORTED_LANGUAGES } from '@/types/recipe'
@@ -20,4 +20,11 @@ assert.equal(ingredientLabel('ajo', 'Ajo', 'en'), 'Garlic')
 assert.equal(ingredientLabel('ajo', 'Ajo', 'de'), 'Knoblauch')
 assert.equal(ingredientLabel('ajo', 'Ajo', 'ja'), 'にんにく')
 assert.equal(source[0].id, 'es-id', 'source must remain unchanged')
+const repeated = pantryIngredientCoverage(['sugar', 'milk', 'sugar'], 3)
+assert.deepEqual(repeated.ingredientIds, ['sugar', 'milk'], 'sugar used in two groups is one pantry requirement')
+assert.equal(repeated.totalCanonicalIngredients, 3, 'keep coverage of every editorial position')
+assert.equal(repeated.uncanonicalizedCount, 0, 'repeated canonical ingredient is resolved')
+assert.equal(pantryIngredientCoverage(['sugar', 'milk', 'sugar'], 4).uncanonicalizedCount, 1, 'do not hide unresolved positions after deduplication')
+assert.equal(ingredientLabel('banana', 'Banana', 'de'), 'Banane')
+assert.notEqual(ingredientLabel('banana', 'Banana', 'de'), ingredientLabel('platano', 'Plátano', 'de'), 'dessert banana and plantain are different ingredients')
 console.log('OK pantry: seven-language group join, historical paths, stable selections and incomplete ingredient guard')

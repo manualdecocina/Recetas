@@ -6,7 +6,7 @@ import type { MdIngredientSummary } from '@/components/md/IngredientViews'
 import type { MdHomeData } from '@/components/md/HomePageView'
 import { CATEGORY_TAXONOMY } from '@/lib/categories'
 import { ingredientLabel } from '@/lib/ingredient-labels'
-import { localizePantryRecipes } from '@/lib/pantry-localization'
+import { localizePantryRecipes, pantryIngredientCoverage } from '@/lib/pantry-localization'
 
 // Solo lectura, con el mismo cliente público y las mismas tablas/filtros que ya usan las
 // demás rutas (recetas publicadas por idioma). No inventa datos: si no hay, devuelve vacío.
@@ -91,8 +91,12 @@ export async function getIngredientSummaries(limit?: number, lang: RecipeLanguag
 
   const imageByRecipeId = new Map(recipeRows.map((r) => [r.id, r.image_url]))
   const statsByIngredient = new Map<string, { count: number; image_url: string | null }>()
+  const countedRecipes = new Set<string>()
   for (const row of linkRows) {
     if (!imageByRecipeId.has(row.recipe_id)) continue
+    const pair = `${row.ingredient_id}:${row.recipe_id}`
+    if (countedRecipes.has(pair)) continue
+    countedRecipes.add(pair)
     const current = statsByIngredient.get(row.ingredient_id) ?? { count: 0, image_url: null }
     current.count += 1
     if (!current.image_url) current.image_url = imageByRecipeId.get(row.recipe_id) ?? null
@@ -227,10 +231,7 @@ export async function getPantryMatchData(lang: RecipeLanguage = 'es'): Promise<{
       const totalIngredients = totalIngredientsByRecipe.get(recipe.id) ?? 0
       return {
         ...recipe,
-        ingredientIds,
-        totalIngredients,
-        totalCanonicalIngredients: ingredientIds.length,
-        uncanonicalizedCount: Math.max(0, totalIngredients - ingredientIds.length),
+        ...pantryIngredientCoverage(ingredientIds, totalIngredients),
       }
     })
     .filter((recipe) => recipe.totalCanonicalIngredients > 0)
