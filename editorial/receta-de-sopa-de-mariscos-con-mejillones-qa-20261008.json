@@ -1,0 +1,56 @@
+{
+  "recipe": "receta-de-sopa-de-mariscos-con-mejillones",
+  "status": "PASS_EDITORIAL_MEDIA_LOCALIZATION_NOT_LIVE",
+  "steps_sha256": "b0d2b5aa72f315e38b2666756e385885148a618df0e3f54d9a3971033cfb1a36",
+  "languages": [
+    "es",
+    "de",
+    "en",
+    "fr",
+    "it",
+    "ja",
+    "pt"
+  ],
+  "steps_per_language": 8,
+  "faq_per_language": 3,
+  "ingredient_count": 13,
+  "usda_foods": 11,
+  "originals": 8,
+  "webp": 11,
+  "shared_media": true,
+  "shared_quantities": true,
+  "shared_numeric_nutrition": true,
+  "times": {
+    "prep": 20,
+    "cook": 45,
+    "total": 65,
+    "optional_thaw_hours": "8–12 or actual packaging/thawing requirement",
+    "kitchen_test_confirmed": false
+  },
+  "mussel_yield_confirmed": false,
+  "visual_qa": {
+    "portada": "PASS: fluid tomato broth, open mussels, peeled cooked shrimp and distinct white cod; no unlisted garnish",
+    "paso-01": "PASS: vegetables, garlic, parsley, lemon juice and water; no seafood mixed with vegetables",
+    "paso-02": "PASS: closed live mussels scrubbed under running water; separate bowls of raw peeled shrimp and cod; intact plausible hands",
+    "paso-03": "PASS: translucent onion and carrot with garlic in oil; no broth or seafood yet",
+    "paso-04": "PASS: simmering tomato broth, vegetables and two bay leaves; no seafood yet",
+    "paso-05": "PASS: clean muslin-lined sieve filtering mussel liquid; opened cooked mussels separate",
+    "paso-06": "PASS: cod and shrimp in broth, thermometer in thick fish; no displayed invented reading or mussels yet",
+    "paso-07": "PASS: opened mussels, cooked cod/shrimp, parsley addition, lemon juice and removed bay leaves"
+  },
+  "cover_crop_qa": "PASS: square,4:3,16:9 show complete food subject and retain distinctive seafood; same original, no regeneration",
+  "historical_paths_preserved": [
+    "/receta-de-sopa-de-mariscos-con-mejillones",
+    "/de/rezept-fur-meeresfruchtesuppe-mit-muscheln",
+    "/fr/recette-de-soupe-de-fruits-de-mer-aux-moules",
+    "/it/ricetta-zuppa-di-mare-con-cozze",
+    "/ja/ムール貝入りシーフードスープのレシピ"
+  ],
+  "new_path_collision_check": "PASS against recipes and content_pages before writing",
+  "recipe_hreflang": "seven self+reciprocal; pt-BR; no x-default",
+  "package_sha256": "c1142dcc4cf1705cfa8bb54a0572bc8c5444ecc7d476fe5cc820445f22ff995d",
+  "published_database": false,
+  "publication_blockers": [
+    "Full15 recipe batch completion, CI/merge, observed media deploy, DB and cache/live QA gates pending"
+  ]
+}

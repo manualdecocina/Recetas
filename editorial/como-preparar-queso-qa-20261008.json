@@ -1,0 +1,81 @@
+{
+  "recipe": "como-preparar-queso",
+  "status": "PASS_EDITORIAL_MEDIA_LOCALIZATION_NOT_LIVE",
+  "steps_sha256": "f607a0addc1606a6b8fce66121cbef69c8b7dfd65d36894be24f95c2b87fa481",
+  "languages": [
+    "es",
+    "de",
+    "en",
+    "fr",
+    "it",
+    "ja",
+    "pt"
+  ],
+  "steps_per_language": 8,
+  "ingredients": 4,
+  "faq_per_language": 3,
+  "usda_foods": 1,
+  "nutrition_recalculated": true,
+  "nutrition_basis": "ExplicitUSDAfinishedquesoblancoproxy50g_notrawmilkretention_notmeasuredhomecomposition",
+  "missing_fields_omitted": [
+    "fiber_g"
+  ],
+  "numeric_nutrition_shared": true,
+  "shared_amounts": true,
+  "shared_media": true,
+  "originals": 8,
+  "webp": 11,
+  "media_hashes_verified": true,
+  "remote_media_hashes_verified": true,
+  "remote_media_commit": "2cfec27d5d41d8da910d673bfbc001cf3260d25b",
+  "visual_qa": {
+    "portada": {
+      "status": "PASS",
+      "notes": "Plainwhitefreshgrainycheese cleanwedge no extras; wholecheese fits coverratios, plate rim may crop."
+    },
+    "paso-01": {
+      "status": "PASS",
+      "notes": "Milkclearvinegar/water/salt, cleanpotcloththermometer, no finishedcurd or readablemeasurement."
+    },
+    "paso-02": {
+      "status": "PASS",
+      "notes": "Uniformmilk gentlyheatingcleanprobe/spatula blankdisplay no preacidcurd."
+    },
+    "paso-03": {
+      "status": "PASS",
+      "notes": "Offburnerpottrivet acidpour whitecurd/semitranslucentwhey gentlewoodspoon, no extras."
+    },
+    "paso-04": {
+      "status": "PASS",
+      "notes": "Stableclothlinedcolander catchbowlsmallairgap, curd/wheypour no squeezinghotcloth."
+    },
+    "paso-05": {
+      "status": "PASS",
+      "notes": "Clean spoonfoldingplaincurd saltbowl perforatedclothlinedmold separate readytofill, noherbsweights."
+    },
+    "paso-06": {
+      "status": "PASS_AFTER_LOCAL_CORRECTION",
+      "notes": "Raisedperforatedmoldrack clearairgapabove whey, breathablecleanclothcoversentiretop, emptycleanfridge. Initialcontactwheyandexposedtoprejectednotuploaded."
+    },
+    "paso-07": {
+      "status": "PASS",
+      "notes": "Coldwholecheeseandwedge onplate scale blankdisplay; mold/gasaseparate no wheyweighed no numericclaimedmass."
+    }
+  },
+  "cover_crop_qa": "PASS_WHOLE_CHEESE_ALL_RATIOS",
+  "localization_qa_file": "editorial/como-preparar-queso-localization-qa-20261008.json",
+  "times": {
+    "prep": 20,
+    "cook": 35,
+    "mandatory_wait": 95,
+    "total": 150,
+    "extra_actual_times_required": true
+  },
+  "yield_confirmed": false,
+  "kitchen_test_confirmed": false,
+  "published_database": false,
+  "package_sha256": "6992b68c41e77ebb0b93138f542552735c7256eea99b46c2cb360f68a8e39354",
+  "publication_blockers": [
+    "Remaining5recipes; fullbatch CI/merge, observed deployed media hashes, atomic DB publication and cache/liveQA pending"
+  ]
+}

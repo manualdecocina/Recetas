@@ -1,0 +1,2799 @@
+{
+  "scope": "Manual de Cocina only; lote03",
+  "state": "READY_7_OF_7_PACKAGE_NOT_YET_PUBLISHED",
+  "provenance": "Original culinary reconstruction; historical identity only, no WordPress editorial text, translations or images reused.",
+  "ai_owner_confirmation": "Owner authorized original content and ImageGen; no measured kitchen test or yield is claimed.",
+  "category_slug": "sopas-y-cremas",
+  "cover": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/portada.webp",
+  "steps_frozen": true,
+  "steps_sha256": "b0d2b5aa72f315e38b2666756e385885148a618df0e3f54d9a3971033cfb1a36",
+  "time_notes": "Fresh/already-thawed base65min; optional refrigerated thaw8–12h or actual package time additional. All times proposed, unconfirmed kitchen test.",
+  "publication_blockers": [
+    "Full15 recipe batch completion, CI/merge, observed media deploy, DB and cache/live QA gates pending"
+  ],
+  "sources": [
+    {
+      "url": "https://www.fda.gov/food/buy-store-serve-safe-food/selecting-and-serving-fresh-and-frozen-seafood-safely",
+      "purpose": "Live mussel inspection, refrigerated handling, cooking and time out of refrigeration",
+      "accessed": "2026-10-08"
+    },
+    {
+      "url": "https://www.foodsafety.gov/food-safety-charts/cold-food-storage-charts",
+      "purpose": "Soup/stew leftovers storage; conservative3day proposed maximum",
+      "accessed": "2026-10-08"
+    },
+    {
+      "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures",
+      "purpose": "Seafood63°C and leftovers74°C",
+      "accessed": "2026-10-08"
+    },
+    {
+      "url": "https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_sr_legacy_food_json_2018-04.zip",
+      "purpose": "Eleven exact USDA records, raw edible weights and unconfirmed25%mussel yield; durable selected snapshot",
+      "accessed": "2026-10-08"
+    }
+  ],
+  "records": [
+    {
+      "id": "a4919aee-1056-44c8-96e0-e82b8c4b3eea",
+      "recipe_group_id": "03d0b017-8568-45d9-b993-87765956a71b",
+      "slug": "receta-de-sopa-de-mariscos-con-mejillones",
+      "public_path": "/receta-de-sopa-de-mariscos-con-mejillones",
+      "source_url": "https://manualdecocina.com/receta-de-sopa-de-mariscos-con-mejillones/",
+      "language": "es",
+      "title": "Sopa de mariscos con mejillones",
+      "excerpt": "Sopa de mejillones, langostinos y bacalao en una base de tomate, con cocción por fases y líquido de mejillón filtrado.",
+      "summary": "Una sopa con caldo ligero de tomate, verduras y tres ingredientes del mar: mejillones, langostinos y bacalao fresco. Los mejillones se abren aparte y su líquido se filtra; el pescado y los langostinos se incorporan al final para controlar su cocción. Propuesta para 4 raciones, con 20 minutos de preparación y 45 de cocción, 65 en total, estimados y pendientes de prueba de cocina; la descongelación previa, si hace falta, añade una noche orientativa de 8–12 horas.",
+      "category": "Sopas y cremas",
+      "category_slug": "sopas-y-cremas",
+      "difficulty": "Media",
+      "course": "Sopa",
+      "cuisine": "Mediterránea",
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 45,
+      "total_time_minutes": 65,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "mejillones vivos con concha",
+          "amount": "1000",
+          "unit": "g",
+          "group": "Mariscos y pescado"
+        },
+        {
+          "name": "langostinos crudos pelados y sin intestino",
+          "amount": "300",
+          "unit": "g",
+          "group": "Mariscos y pescado"
+        },
+        {
+          "name": "filete de bacalao atlántico fresco sin piel ni espinas",
+          "amount": "300",
+          "unit": "g",
+          "group": "Mariscos y pescado"
+        },
+        {
+          "name": "tomate maduro",
+          "amount": "300",
+          "unit": "g",
+          "group": "Base de la sopa"
+        },
+        {
+          "name": "cebolla",
+          "amount": "120",
+          "unit": "g",
+          "group": "Base de la sopa"
+        },
+        {
+          "name": "zanahoria",
+          "amount": "80",
+          "unit": "g",
+          "group": "Base de la sopa"
+        },
+        {
+          "name": "ajo",
+          "amount": "10",
+          "unit": "g",
+          "group": "Base de la sopa"
+        },
+        {
+          "name": "aceite de oliva",
+          "amount": "20",
+          "unit": "g",
+          "group": "Base de la sopa"
+        },
+        {
+          "name": "agua",
+          "amount": "1200",
+          "unit": "ml",
+          "group": "Base de la sopa"
+        },
+        {
+          "name": "hojas de laurel",
+          "amount": "2",
+          "unit": "unidades",
+          "group": "Base de la sopa"
+        },
+        {
+          "name": "sal",
+          "amount": "4",
+          "unit": "g",
+          "group": "Base de la sopa"
+        },
+        {
+          "name": "zumo de limón",
+          "amount": "20",
+          "unit": "g",
+          "group": "Acabado"
+        },
+        {
+          "name": "perejil fresco",
+          "amount": "10",
+          "unit": "g",
+          "group": "Acabado"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepara las verduras y el acabado",
+          "content": "Lava los 300 g de tomate, los 80 g de zanahoria y los 10 g de perejil. Pela la zanahoria y los 120 g de cebolla; corta ambas verduras en dados de unos 5 mm. Trocea el tomate en dados pequeños. Pica los 10 g de ajo y el perejil por separado. Exprime y pesa 20 g de zumo de limón. De los 1200 ml de agua, reserva 100 ml para los mejillones y deja 1100 ml para la sopa. Prepara una olla amplia, otra con tapa para abrir los mejillones y un colador fino con gasa limpia.",
+          "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-01.webp",
+          "image_alt": "Sopa de mariscos con mejillones: prepara las verduras y el acabado"
+        },
+        {
+          "title": "Revisa los mejillones y corta el pescado",
+          "content": "Compra el kilo de mejillones vivos con concha de proveedor autorizado y conserva su información de origen. Descarta los que tengan la concha rota y los abiertos que no se cierren con un golpe suave. Cepilla bajo agua fría corriente y tira de las barbas justo antes de cocinarlos; no los dejes sumergidos en agua dulce. Corta los 300 g de bacalao fresco en dados de unos 3 cm y comprueba que no haya espinas. Usa los 300 g de langostinos ya pelados y sin intestino. Mantén el pescado y los mariscos separados de las verduras, a 4 °C o menos, hasta incorporarlos. Lava manos, tabla y cuchillo después de tocar los ingredientes crudos; reserva cuencos y utensilios limpios para los cocinados.",
+          "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-02.webp",
+          "image_alt": "Sopa de mariscos con mejillones: revisa los mejillones y corta el pescado"
+        },
+        {
+          "title": "Sofríe la cebolla y la zanahoria",
+          "content": "Calienta los 20 g de aceite en la olla grande a fuego medio. Añade la cebolla y la zanahoria y cocina unos 6 minutos, removiendo, hasta que la cebolla esté blanda y la zanahoria empiece a ablandarse. Incorpora el ajo y remueve 1 minuto más, sin dejar que se dore demasiado. Si empieza a pegarse, baja el fuego y añade una cucharada tomada de los 1100 ml de agua previstos, sin aumentar el agua total.",
+          "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-03.webp",
+          "image_alt": "Sopa de mariscos con mejillones: sofríe la cebolla y la zanahoria"
+        },
+        {
+          "title": "Cocina el tomate y prepara el caldo",
+          "content": "Añade el tomate al sofrito y cocina unos 5 minutos a fuego medio, removiendo, hasta que se deshaga parcialmente. Vierte los 1100 ml de agua restantes, añade las 2 hojas de laurel y los 4 g de sal. Lleva a hervor suave y cocina unos 15 minutos, con la tapa entreabierta, hasta que los dados de zanahoria estén tiernos. La sopa debe conservar caldo líquido alrededor de las verduras; regula el fuego para que no se reduzca hasta quedar como una salsa.",
+          "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-04.webp",
+          "image_alt": "Sopa de mariscos con mejillones: cocina el tomate y prepara el caldo"
+        },
+        {
+          "title": "Abre los mejillones y filtra su líquido",
+          "content": "Mientras hierve suavemente la base, calienta los 100 ml de agua reservados en la segunda olla. Añade los mejillones revisados, tapa y cocina aproximadamente 5–7 minutos, agitando la olla con cuidado una vez. Retira con un utensilio limpio los que se abran y mantenlos en un cuenco limpio tapado mientras terminas la sopa. Descarta los que sigan cerrados; no fuerces sus conchas. Pasa el líquido de la olla por un colador fino forrado con gasa limpia, sin apretar los sedimentos, y añádelo a la base de la sopa. No viertas directamente el fondo con arena. Las conchas y los descartes no forman parte del peso comestible del cálculo nutricional.",
+          "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-05.webp",
+          "image_alt": "Sopa de mariscos con mejillones: abre los mejillones y filtra su líquido"
+        },
+        {
+          "title": "Cuece primero el bacalao y después los langostinos",
+          "content": "Mantén el caldo a hervor suave e incorpora los dados de bacalao. Cocina unos 3–5 minutos y después añade los langostinos; deja otros 2–3 minutos, moviendo la olla suavemente para no romper el pescado. Comprueba con una sonda fina que las partes más gruesas del pescado y los langostinos alcancen al menos 63 °C. El pescado debe quedar opaco y separarse con facilidad, y los langostinos firmes y opacos. Si falta temperatura, continúa y vuelve a medir: las señales y la temperatura mandan sobre estos tiempos orientativos. No introduzcas en la sopa utensilios que hayan tocado marisco crudo sin lavarlos.",
+          "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-06.webp",
+          "image_alt": "Sopa de mariscos con mejillones: cuece primero el bacalao y después los langostinos"
+        },
+        {
+          "title": "Reincorpora los mejillones y termina la sopa",
+          "content": "Devuelve a la olla únicamente los mejillones abiertos y cocina aproximadamente 1 minuto a hervor suave para que todo quede caliente, sin prolongar innecesariamente la cocción. Retira las 2 hojas de laurel con un utensilio limpio. Apaga el fuego, incorpora los 20 g de zumo de limón y los 10 g de perejil picado y mezcla con cuidado. Prueba con una cuchara limpia; la receta y su estimación incluyen los 4 g de sal ya añadidos, por lo que cualquier ajuste adicional cambia el sodio. Comprueba que no haya conchas rotas ni mejillones cerrados en la olla.",
+          "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-07.webp",
+          "image_alt": "Sopa de mariscos con mejillones: reincorpora los mejillones y termina la sopa"
+        },
+        {
+          "title": "Reparte las cuatro raciones y sirve",
+          "content": "Distribuye el caldo, las verduras, el bacalao, los langostinos y los mejillones entre 4 cuencos y sirve enseguida. Deja algunas conchas abiertas visibles y avisa de que no se comen; no añadas un mejillón cerrado como decoración. La propuesta parte de pescado y langostinos frescos o ya descongelados: 20 minutos de preparación y 45 de cocción, 65 en total, todos estimados y pendientes de prueba de cocina. Si partes de pescado o langostinos congelados, añade previamente la descongelación refrigerada, orientativamente una noche de 8–12 horas y más si lo requiere el envase; la espera termina solo cuando estén descongelados. No descongeles sobre la encimera.",
+          "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/portada.webp",
+          "image_alt": "Sopa de mariscos con mejillones: reparte las cuatro raciones y sirve"
+        }
+      ],
+      "notes": "Usa bacalao fresco o descongelado, nunca bacalao salado sin adaptar el proceso y el cálculo. Puedes sustituirlo por otro pescado blanco firme sin espinas, pero cambia su composición nutricional. El agua permite controlar la sal añadida; sustituirla por caldo comercial modifica sodio, sabor y posibles alérgenos. Contiene pescado, crustáceos y moluscos. Compra los mejillones vivos de origen autorizado, respeta el frío y descarta conchas rotas y las que fallen la revisión o no se abran al cocinar. Conservación: reparte las sobras en recipientes poco profundos y refrigera a 4 °C o menos antes de 2 horas, o de 1 hora si el ambiente supera 32 °C; no esperes a que una olla grande se enfríe en la encimera. Consume en un máximo de 3 días. Recalienta solo la porción necesaria hasta alcanzar 74 °C en el centro, con el caldo a hervor, sabiendo que el marisco pierde textura con el recalentado. Los tiempos, las cantidades y el rendimiento son propuestas estimadas pendientes de prueba de cocina; no se afirma una prueba realizada.",
+      "nutrition": {
+        "calories": 262.6,
+        "protein_g": 37.3,
+        "carbs_g": 11.3,
+        "fat_g": 7.6,
+        "saturated_fat_g": 1.2,
+        "sodium_mg": 717.2,
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (abril de 2018)",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "inputs": [
+          {
+            "ingredient": "carne de mejillón cruda estimada de 1000 g con concha",
+            "edible_grams": 250,
+            "fdc_id": 174216,
+            "fdc_description": "Mollusks, mussel, blue, raw",
+            "per_100g": {
+              "fat_g": 2.24,
+              "carbs_g": 3.69,
+              "calories": 86.0,
+              "saturated_fat_g": 0.425,
+              "sodium_mg": 286,
+              "protein_g": 11.9
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/174216/nutrients"
+          },
+          {
+            "ingredient": "langostinos crudos pelados y sin intestino",
+            "edible_grams": 300,
+            "fdc_id": 175179,
+            "fdc_description": "Crustaceans, shrimp, raw",
+            "per_100g": {
+              "fat_g": 0.51,
+              "carbs_g": 0.0,
+              "calories": 85.0,
+              "protein_g": 20.1,
+              "sodium_mg": 119,
+              "saturated_fat_g": 0.101
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/175179/nutrients"
+          },
+          {
+            "ingredient": "filete de bacalao atlántico fresco sin piel ni espinas",
+            "edible_grams": 300,
+            "fdc_id": 171955,
+            "fdc_description": "Fish, cod, Atlantic, raw",
+            "per_100g": {
+              "calories": 82.0,
+              "sodium_mg": 54.0,
+              "protein_g": 17.8,
+              "saturated_fat_g": 0.131,
+              "fat_g": 0.67,
+              "carbs_g": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171955/nutrients"
+          },
+          {
+            "ingredient": "tomate maduro",
+            "edible_grams": 300,
+            "fdc_id": 170457,
+            "fdc_description": "Tomatoes, red, ripe, raw, year round average",
+            "per_100g": {
+              "carbs_g": 3.89,
+              "calories": 18.0,
+              "saturated_fat_g": 0.028,
+              "fat_g": 0.2,
+              "sodium_mg": 5.0,
+              "protein_g": 0.88
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170457/nutrients"
+          },
+          {
+            "ingredient": "cebolla",
+            "edible_grams": 120,
+            "fdc_id": 170000,
+            "fdc_description": "Onions, raw",
+            "per_100g": {
+              "fat_g": 0.1,
+              "carbs_g": 9.34,
+              "calories": 40.0,
+              "saturated_fat_g": 0.042,
+              "protein_g": 1.1,
+              "sodium_mg": 4.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170000/nutrients"
+          },
+          {
+            "ingredient": "zanahoria",
+            "edible_grams": 80,
+            "fdc_id": 170393,
+            "fdc_description": "Carrots, raw",
+            "per_100g": {
+              "saturated_fat_g": 0.032,
+              "sodium_mg": 69.0,
+              "protein_g": 0.93,
+              "fat_g": 0.24,
+              "carbs_g": 9.58,
+              "calories": 41.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170393/nutrients"
+          },
+          {
+            "ingredient": "ajo",
+            "edible_grams": 10,
+            "fdc_id": 169230,
+            "fdc_description": "Garlic, raw",
+            "per_100g": {
+              "carbs_g": 33.1,
+              "calories": 149,
+              "saturated_fat_g": 0.089,
+              "sodium_mg": 17.0,
+              "protein_g": 6.36,
+              "fat_g": 0.5
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169230/nutrients"
+          },
+          {
+            "ingredient": "aceite de oliva",
+            "edible_grams": 20,
+            "fdc_id": 171413,
+            "fdc_description": "Oil, olive, salad or cooking",
+            "per_100g": {
+              "fat_g": 100,
+              "carbs_g": 0.0,
+              "calories": 884,
+              "sodium_mg": 2.0,
+              "protein_g": 0.0,
+              "saturated_fat_g": 13.8
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171413/nutrients"
+          },
+          {
+            "ingredient": "zumo de limón",
+            "edible_grams": 20,
+            "fdc_id": 167747,
+            "fdc_description": "Lemon juice, raw",
+            "per_100g": {
+              "protein_g": 0.35,
+              "saturated_fat_g": 0.04,
+              "sodium_mg": 1.0,
+              "fat_g": 0.24,
+              "carbs_g": 6.9,
+              "calories": 22.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/167747/nutrients"
+          },
+          {
+            "ingredient": "perejil fresco",
+            "edible_grams": 10,
+            "fdc_id": 170416,
+            "fdc_description": "Parsley, fresh",
+            "per_100g": {
+              "carbs_g": 6.33,
+              "calories": 36.0,
+              "fat_g": 0.79,
+              "protein_g": 2.97,
+              "sodium_mg": 56.0,
+              "saturated_fat_g": 0.132
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170416/nutrients"
+          },
+          {
+            "ingredient": "sal",
+            "edible_grams": 4,
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "sodium_mg": 38800.0,
+              "saturated_fat_g": 0.0,
+              "protein_g": 0.0,
+              "fat_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients"
+          }
+        ],
+        "serving_size": "1 de 4 cuencos, sin conchas",
+        "method": "Once fichas USDA verificadas; pesos crudos comestibles multiplicados por sus nutrientes por 100 g y total dividido entre 4. Para el kilo de mejillones con concha se propone un 25 % comestible: 250 g de carne cruda equivalente, pendiente de pesar. Se cuentan completos el aceite, las verduras, el limón, el perejil y los 4 g de sal. Agua y conchas no aportan nutrientes contabilizados; las hojas de laurel se retiran y su transferencia aromática no se estima.",
+        "note": "Estimación informativa, no análisis del plato ni rendimiento confirmado en cocina. El rendimiento de los mejillones, la especie y los aditivos del langostino y las pérdidas o descartes cambian las cifras. El líquido filtrado de los mejillones puede aportar sales adicionales no reflejadas por el modelo de carne comestible. No se informan fibra ni azúcares totales porque la ficha de langostino elegida no aporta ambos datos; no se han convertido ausencias en ceros. No incluye pan, vino ni caldo comercial."
+      },
+      "keywords": [
+        "sopa de mariscos",
+        "sopa de mejillones",
+        "langostinos",
+        "bacalao fresco"
+      ],
+      "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/portada.webp",
+      "gallery": [
+        "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-01.webp",
+        "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-02.webp",
+        "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-03.webp",
+        "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-04.webp",
+        "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-05.webp",
+        "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-06.webp",
+        "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-07.webp"
+      ],
+      "seo": {
+        "title": "Sopa de mariscos con mejillones y bacalao",
+        "description": "Sopa de mariscos para 4 con mejillones, langostinos y bacalao: caldo de tomate, líquido filtrado y cocción por fases con consejos de conservación.",
+        "image_alt": "Cuenco de sopa con caldo de tomate, mejillones abiertos, langostinos pelados, dados de bacalao, zanahoria y perejil",
+        "image_variants": [
+          "/recetas/receta-de-sopa-de-mariscos-con-mejillones/portada-1x1.webp",
+          "/recetas/receta-de-sopa-de-mariscos-con-mejillones/portada-4x3.webp",
+          "/recetas/receta-de-sopa-de-mariscos-con-mejillones/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "¿Qué hago con los mejillones que no se abren?",
+            "a": "Descarta los que continúen cerrados después de cocinar y no fuerces la concha para comerlos. Antes de cocinar, descarta también conchas rotas y mejillones vivos abiertos que no se cierren con un golpe suave. El líquido de los que sí se abren se filtra antes de añadirlo a la sopa."
+          },
+          {
+            "q": "¿Puedo usar pescado y langostinos congelados?",
+            "a": "Sí, descongelados previamente en la nevera y pesados ya sin piel, espinas, cáscara ni intestino. Añade al total de 65 minutos una noche orientativa de 8–12 horas, o el tiempo que requiera el envase y la descongelación real. La receta usa mejillones vivos: los congelados requieren otro tratamiento y no se comprueban con la prueba de cierre de animales vivos."
+          },
+          {
+            "q": "¿Puedo sustituir el agua por caldo de pescado?",
+            "a": "Sí, con un caldo adecuado para tus alérgenos, pero su sal y su composición cambian la estimación. La propuesta utiliza 1200 ml de agua en total, de los que 100 ml sirven para abrir los mejillones. Evita añadir caldo muy salado al líquido de los mejillones y ajusta la sazón con prudencia."
+          }
+        ]
+      },
+      "published": true,
+      "editorial_status": "published",
+      "content_html": "<p>Una sopa con caldo ligero de tomate, verduras y tres ingredientes del mar: mejillones, langostinos y bacalao fresco. Los mejillones se abren aparte y su líquido se filtra; el pescado y los langostinos se incorporan al final para controlar su cocción. Propuesta para 4 raciones, con 20 minutos de preparación y 45 de cocción, 65 en total, estimados y pendientes de prueba de cocina; la descongelación previa, si hace falta, añade una noche orientativa de 8–12 horas.</p><p>Usa bacalao fresco o descongelado, nunca bacalao salado sin adaptar el proceso y el cálculo. Puedes sustituirlo por otro pescado blanco firme sin espinas, pero cambia su composición nutricional. El agua permite controlar la sal añadida; sustituirla por caldo comercial modifica sodio, sabor y posibles alérgenos. Contiene pescado, crustáceos y moluscos. Compra los mejillones vivos de origen autorizado, respeta el frío y descarta conchas rotas y las que fallen la revisión o no se abran al cocinar. Conservación: reparte las sobras en recipientes poco profundos y refrigera a 4 °C o menos antes de 2 horas, o de 1 hora si el ambiente supera 32 °C; no esperes a que una olla grande se enfríe en la encimera. Consume en un máximo de 3 días. Recalienta solo la porción necesaria hasta alcanzar 74 °C en el centro, con el caldo a hervor, sabiendo que el marisco pierde textura con el recalentado. Los tiempos, las cantidades y el rendimiento son propuestas estimadas pendientes de prueba de cocina; no se afirma una prueba realizada.</p>"
+    },
+    {
+      "id": "acb6620a-5d88-506b-b62e-c2e6a66ac948",
+      "recipe_group_id": "03d0b017-8568-45d9-b993-87765956a71b",
+      "slug": "rezept-fur-meeresfruchtesuppe-mit-muscheln",
+      "public_path": "/de/rezept-fur-meeresfruchtesuppe-mit-muscheln",
+      "source_url": "https://manualdecocina.com/de/rezept-fur-meeresfruchtesuppe-mit-muscheln/",
+      "language": "de",
+      "title": "Meeresfrüchtesuppe mit Miesmuscheln",
+      "excerpt": "Miesmuscheln, Garnelen und frischer Kabeljau in Tomatenbrühe, mit gefiltertem Muschelsud und Garen in Etappen.",
+      "summary": "Eine leichte Tomatensuppe mit Miesmuscheln, Garnelen und frischem Atlantik-Kabeljau. Die Muscheln werden separat geöffnet und ihr Sud wird gefiltert; Fisch und Garnelen kommen erst zum Schluss hinein. Vorgeschlagen sind 4 Portionen, 20 Minuten Vorbereitung und 45 Minuten Garzeit, insgesamt 65 Minuten. Mengen, Ausbeute und Zeiten sind Schätzungen und noch nicht in der Küche bestätigt. Tiefgekühlter Fisch oder Garnelen brauchen zusätzlich etwa 8–12 Stunden zum Auftauen über Nacht im Kühlschrank, gegebenenfalls länger nach Packungsangabe und tatsächlichem Auftauzustand.",
+      "category": "Suppen und Cremesuppen",
+      "category_slug": "sopas-y-cremas",
+      "difficulty": "Mittel",
+      "course": "Suppe",
+      "cuisine": "Mediterran",
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 45,
+      "total_time_minutes": 65,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "lebende Miesmuscheln mit Schale",
+          "amount": "1000",
+          "unit": "g",
+          "group": "Meeresfrüchte und Fisch"
+        },
+        {
+          "name": "rohe Garnelen, geschält und entdarmt",
+          "amount": "300",
+          "unit": "g",
+          "group": "Meeresfrüchte und Fisch"
+        },
+        {
+          "name": "frisches Atlantik-Kabeljaufilet ohne Haut und Gräten",
+          "amount": "300",
+          "unit": "g",
+          "group": "Meeresfrüchte und Fisch"
+        },
+        {
+          "name": "reife Tomate",
+          "amount": "300",
+          "unit": "g",
+          "group": "Suppenbasis"
+        },
+        {
+          "name": "Zwiebel",
+          "amount": "120",
+          "unit": "g",
+          "group": "Suppenbasis"
+        },
+        {
+          "name": "Möhre",
+          "amount": "80",
+          "unit": "g",
+          "group": "Suppenbasis"
+        },
+        {
+          "name": "Knoblauch",
+          "amount": "10",
+          "unit": "g",
+          "group": "Suppenbasis"
+        },
+        {
+          "name": "Olivenöl",
+          "amount": "20",
+          "unit": "g",
+          "group": "Suppenbasis"
+        },
+        {
+          "name": "Wasser",
+          "amount": "1200",
+          "unit": "ml",
+          "group": "Suppenbasis"
+        },
+        {
+          "name": "Lorbeerblätter",
+          "amount": "2",
+          "unit": "Blätter",
+          "group": "Suppenbasis"
+        },
+        {
+          "name": "Salz",
+          "amount": "4",
+          "unit": "g",
+          "group": "Suppenbasis"
+        },
+        {
+          "name": "Zitronensaft",
+          "amount": "20",
+          "unit": "g",
+          "group": "Zum Fertigstellen"
+        },
+        {
+          "name": "frische Petersilie",
+          "amount": "10",
+          "unit": "g",
+          "group": "Zum Fertigstellen"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Gemüse und Zutaten zum Fertigstellen vorbereiten",
+          "content": "300 g Tomate,80 g Möhre und 10 g Petersilie waschen. Möhre und 120 g Zwiebel schälen und in etwa 5 mm große Würfel schneiden. Tomate klein würfeln,10 g Knoblauch und Petersilie getrennt hacken.20 g Zitronensaft auspressen und abwiegen. Von 1200 ml Wasser 100 ml für die Muscheln zurückstellen;1100 ml bleiben für die Suppe. Einen großen Suppentopf, einen zweiten Topf mit Deckel und ein feines Sieb mit sauberem Mulltuch bereitlegen.",
+          "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-01.webp",
+          "image_alt": "Meeresfrüchtesuppe mit Miesmuscheln: Gemüse und Zutaten zum Fertigstellen vorbereiten"
+        },
+        {
+          "title": "Muscheln prüfen und Fisch schneiden",
+          "content": "1000 g lebende Muscheln mit Schale von einem zugelassenen Anbieter kaufen und Herkunftsangaben aufbewahren. Beschädigte Schalen und offene Muscheln, die sich beim sanften Klopfen nicht schließen, aussortieren. Unter kaltem fließendem Wasser abbürsten und Bärte direkt vor dem Garen entfernen; nicht in Süßwasser einlegen.300 g frischen Kabeljau in etwa 3 cm große Würfel schneiden und auf Gräten prüfen.300 g bereits geschälte und entdarmte Garnelen verwenden. Fisch und Muscheln getrennt vom Gemüse bei höchstens 4 °C aufbewahren. Nach Kontakt mit rohen Meeresfrüchten Hände, Brett und Messer waschen; für Gegartes saubere Schüsseln und Utensilien bereithalten.",
+          "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-02.webp",
+          "image_alt": "Meeresfrüchtesuppe mit Miesmuscheln: Muscheln prüfen und Fisch schneiden"
+        },
+        {
+          "title": "Zwiebel und Möhre anschwitzen",
+          "content": "20 g Olivenöl im großen Topf bei mittlerer Hitze erwärmen. Zwiebel und Möhre unter Rühren etwa 6 Minuten anschwitzen, bis die Zwiebel weich wird und die Möhre weicher zu werden beginnt. Knoblauch dazugeben und 1 Minute mitrühren, ohne ihn stark zu bräunen. Bei Ansetzen Hitze reduzieren und einen Löffel von den vorgesehenen 1100 ml Wasser zugeben; die Gesamtwassermenge nicht erhöhen.",
+          "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-03.webp",
+          "image_alt": "Meeresfrüchtesuppe mit Miesmuscheln: Zwiebel und Möhre anschwitzen"
+        },
+        {
+          "title": "Tomate garen und Brühe ansetzen",
+          "content": "Tomate hinzufügen und bei mittlerer Hitze unter Rühren etwa 5 Minuten garen, bis sie teilweise zerfällt. Die restlichen 1100 ml Wasser,2 Lorbeerblätter und 4 g Salz dazugeben. Sanft aufkochen und mit leicht geöffnetem Deckel etwa 15 Minuten köcheln, bis die Möhrenwürfel weich sind. Flüssige Brühe soll das Gemüse umgeben; die Hitze so einstellen, dass die Suppe nicht zu einer Sauce einkocht.",
+          "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-04.webp",
+          "image_alt": "Meeresfrüchtesuppe mit Miesmuscheln: Tomate garen und Brühe ansetzen"
+        },
+        {
+          "title": "Muscheln öffnen und Sud filtern",
+          "content": "Während die Basis köchelt, die zurückgestellten 100 ml Wasser im zweiten Topf erhitzen. Geprüfte Muscheln hineingeben, abdecken und ungefähr 5–7 Minuten garen; den Topf einmal vorsichtig schütteln. Geöffnete Muscheln mit sauberem Besteck in eine saubere abgedeckte Schüssel geben. Geschlossen bleibende Muscheln wegwerfen, nicht gewaltsam öffnen. Den Sud durch ein feines, mit sauberem Mulltuch ausgelegtes Sieb zur Suppe geben, ohne Sediment durchzudrücken oder sandigen Bodensatz hineinzuschütten. Schalen und aussortierte Muscheln zählen nicht zum essbaren Gewicht der Nährwertberechnung.",
+          "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-05.webp",
+          "image_alt": "Meeresfrüchtesuppe mit Miesmuscheln: Muscheln öffnen und Sud filtern"
+        },
+        {
+          "title": "Erst Kabeljau, dann Garnelen garen",
+          "content": "Die Brühe sanft köcheln lassen und Kabeljauwürfel hineingeben. Etwa 3–5 Minuten garen, dann Garnelen hinzufügen und weitere 2–3 Minuten garen. Den Topf behutsam bewegen, damit der Fisch nicht zerfällt. Mit einem feinen Fühler prüfen, dass die dicksten Fisch- und Garnelenstücke mindestens 63 °C erreichen. Fisch soll nicht mehr glasig sein und sich leicht teilen lassen; Garnelen sollen fest und undurchsichtig sein. Falls nötig weitergaren und erneut messen: Garzustand und Temperatur haben Vorrang vor geschätzten Zeiten. Besteck nach Kontakt mit rohen Meeresfrüchten vor weiterer Verwendung waschen.",
+          "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-06.webp",
+          "image_alt": "Meeresfrüchtesuppe mit Miesmuscheln: Erst Kabeljau, dann Garnelen garen"
+        },
+        {
+          "title": "Muscheln zurückgeben und Suppe fertigstellen",
+          "content": "Nur geöffnete Muscheln zurück in den Topf geben und etwa 1 Minute sanft köcheln, bis alles heiß ist; nicht unnötig lange weitergaren.2 Lorbeerblätter mit sauberem Besteck entfernen. Herd ausschalten,20 g Zitronensaft und 10 g gehackte Petersilie einrühren. Mit sauberem Löffel abschmecken. Rezept und Schätzung enthalten bereits 4 g Salz; zusätzliches Salz verändert den Natriumwert. Prüfen, dass keine Schalenbruchstücke oder geschlossenen Muscheln im Topf sind.",
+          "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-07.webp",
+          "image_alt": "Meeresfrüchtesuppe mit Miesmuscheln: Muscheln zurückgeben und Suppe fertigstellen"
+        },
+        {
+          "title": "Auf vier Portionen verteilen und servieren",
+          "content": "Brühe, Gemüse, Kabeljau, Garnelen und Muscheln auf 4 Schüsseln verteilen und sofort servieren. Einige offene Schalen sichtbar lassen und darauf hinweisen, dass sie nicht gegessen werden; keine geschlossene Muschel dekorativ hinzufügen. Ausgangspunkt sind frischer oder bereits aufgetauter Fisch und Garnelen:20 Minuten Vorbereitung plus 45 Minuten Garen, insgesamt 65, geschätzt und noch nicht küchengetestet. Bei tiefgekühlten Zutaten kommt vorher Kühlschrank-Auftauzeit hinzu, ungefähr 8–12 Stunden über Nacht oder länger laut Packung; erst vollständig aufgetaut beginnen. Nicht auf der Arbeitsplatte auftauen.",
+          "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/portada.webp",
+          "image_alt": "Meeresfrüchtesuppe mit Miesmuscheln: Auf vier Portionen verteilen und servieren"
+        }
+      ],
+      "notes": "Frischen oder aufgetauten Kabeljau verwenden; gesalzener Kabeljau erfordert eine angepasste Zubereitung und Berechnung. Anderer fester weißer Fisch ohne Gräten ist möglich, verändert aber die Nährwerte. Fertigbrühe statt Wasser verändert Natrium, Geschmack und mögliche Allergene. Enthält Fisch, Krebstiere und Weichtiere. Lebende Muscheln aus zugelassener Herkunft kaufen, kühl halten und beschädigte, nicht lebensfähig wirkende oder nach dem Garen geschlossene Exemplare aussortieren. Reste in flache Behälter verteilen und innerhalb 2 Stunden bei höchstens 4 °C kühlen, bei über 32 °C Umgebung innerhalb 1 Stunde; einen großen Topf nicht erst auf der Arbeitsplatte abkühlen lassen. Innerhalb 3 Tagen verbrauchen. Nur die benötigte Portion auf 74 °C im Inneren erhitzen und die Brühe aufkochen; erneutes Erhitzen beeinträchtigt die Textur. Mengen, Ausbeute und Zeiten sind vorgeschlagene Schätzungen ohne behaupteten Küchentest.",
+      "nutrition": {
+        "calories": 262.6,
+        "protein_g": 37.3,
+        "carbs_g": 11.3,
+        "fat_g": 7.6,
+        "saturated_fat_g": 1.2,
+        "sodium_mg": 717.2,
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (abril de 2018)",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "inputs": [
+          {
+            "ingredient": "carne de mejillón cruda estimada de 1000 g con concha",
+            "edible_grams": 250,
+            "fdc_id": 174216,
+            "fdc_description": "Mollusks, mussel, blue, raw",
+            "per_100g": {
+              "fat_g": 2.24,
+              "carbs_g": 3.69,
+              "calories": 86.0,
+              "saturated_fat_g": 0.425,
+              "sodium_mg": 286,
+              "protein_g": 11.9
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/174216/nutrients"
+          },
+          {
+            "ingredient": "langostinos crudos pelados y sin intestino",
+            "edible_grams": 300,
+            "fdc_id": 175179,
+            "fdc_description": "Crustaceans, shrimp, raw",
+            "per_100g": {
+              "fat_g": 0.51,
+              "carbs_g": 0.0,
+              "calories": 85.0,
+              "protein_g": 20.1,
+              "sodium_mg": 119,
+              "saturated_fat_g": 0.101
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/175179/nutrients"
+          },
+          {
+            "ingredient": "filete de bacalao atlántico fresco sin piel ni espinas",
+            "edible_grams": 300,
+            "fdc_id": 171955,
+            "fdc_description": "Fish, cod, Atlantic, raw",
+            "per_100g": {
+              "calories": 82.0,
+              "sodium_mg": 54.0,
+              "protein_g": 17.8,
+              "saturated_fat_g": 0.131,
+              "fat_g": 0.67,
+              "carbs_g": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171955/nutrients"
+          },
+          {
+            "ingredient": "tomate maduro",
+            "edible_grams": 300,
+            "fdc_id": 170457,
+            "fdc_description": "Tomatoes, red, ripe, raw, year round average",
+            "per_100g": {
+              "carbs_g": 3.89,
+              "calories": 18.0,
+              "saturated_fat_g": 0.028,
+              "fat_g": 0.2,
+              "sodium_mg": 5.0,
+              "protein_g": 0.88
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170457/nutrients"
+          },
+          {
+            "ingredient": "cebolla",
+            "edible_grams": 120,
+            "fdc_id": 170000,
+            "fdc_description": "Onions, raw",
+            "per_100g": {
+              "fat_g": 0.1,
+              "carbs_g": 9.34,
+              "calories": 40.0,
+              "saturated_fat_g": 0.042,
+              "protein_g": 1.1,
+              "sodium_mg": 4.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170000/nutrients"
+          },
+          {
+            "ingredient": "zanahoria",
+            "edible_grams": 80,
+            "fdc_id": 170393,
+            "fdc_description": "Carrots, raw",
+            "per_100g": {
+              "saturated_fat_g": 0.032,
+              "sodium_mg": 69.0,
+              "protein_g": 0.93,
+              "fat_g": 0.24,
+              "carbs_g": 9.58,
+              "calories": 41.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170393/nutrients"
+          },
+          {
+            "ingredient": "ajo",
+            "edible_grams": 10,
+            "fdc_id": 169230,
+            "fdc_description": "Garlic, raw",
+            "per_100g": {
+              "carbs_g": 33.1,
+              "calories": 149,
+              "saturated_fat_g": 0.089,
+              "sodium_mg": 17.0,
+              "protein_g": 6.36,
+              "fat_g": 0.5
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169230/nutrients"
+          },
+          {
+            "ingredient": "aceite de oliva",
+            "edible_grams": 20,
+            "fdc_id": 171413,
+            "fdc_description": "Oil, olive, salad or cooking",
+            "per_100g": {
+              "fat_g": 100,
+              "carbs_g": 0.0,
+              "calories": 884,
+              "sodium_mg": 2.0,
+              "protein_g": 0.0,
+              "saturated_fat_g": 13.8
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171413/nutrients"
+          },
+          {
+            "ingredient": "zumo de limón",
+            "edible_grams": 20,
+            "fdc_id": 167747,
+            "fdc_description": "Lemon juice, raw",
+            "per_100g": {
+              "protein_g": 0.35,
+              "saturated_fat_g": 0.04,
+              "sodium_mg": 1.0,
+              "fat_g": 0.24,
+              "carbs_g": 6.9,
+              "calories": 22.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/167747/nutrients"
+          },
+          {
+            "ingredient": "perejil fresco",
+            "edible_grams": 10,
+            "fdc_id": 170416,
+            "fdc_description": "Parsley, fresh",
+            "per_100g": {
+              "carbs_g": 6.33,
+              "calories": 36.0,
+              "fat_g": 0.79,
+              "protein_g": 2.97,
+              "sodium_mg": 56.0,
+              "saturated_fat_g": 0.132
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170416/nutrients"
+          },
+          {
+            "ingredient": "sal",
+            "edible_grams": 4,
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "sodium_mg": 38800.0,
+              "saturated_fat_g": 0.0,
+              "protein_g": 0.0,
+              "fat_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients"
+          }
+        ],
+        "serving_size": "1 von 4 Schüsseln, ohne Schalen",
+        "method": "Elf geprüfte USDA-Datensätze: rohe essbare Gewichte mit den Nährwerten je 100 g multiplizieren, addieren und durch 4 teilen. Für 1000 g Muscheln mit Schale wird eine noch abzuwiegende essbare Ausbeute von 25 % angesetzt, also 250 g rohes Fleischäquivalent. Öl, Gemüse, Zitrone, Petersilie und 4 g Salz werden vollständig gezählt. Wasser und Schalen liefern hier keine berücksichtigten Nährstoffe; Lorbeer wird entfernt und sein Nährstoffübergang nicht geschätzt.",
+        "note": "Informative Schätzung, keine Analyse des fertigen Gerichts oder bestätigte Ausbeute. Muschelausbeute, Garnelenart, Zusatzstoffe, Verluste und Aussortieren verändern Werte. Gefilterter Muschelsud kann zusätzliches Salz enthalten, das das Fleischmodell nicht vollständig abbildet. Ballaststoffe und Gesamtzucker werden nicht angegeben, weil beide Werte im gewählten Garnelendatensatz fehlen; fehlende Daten sind keine Nullen. Ohne Brot, Wein oder Fertigbrühe."
+      },
+      "keywords": [
+        "Meeresfrüchtesuppe",
+        "Miesmuschelsuppe",
+        "Garnelen",
+        "frischer Kabeljau"
+      ],
+      "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/portada.webp",
+      "gallery": [
+        "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-01.webp",
+        "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-02.webp",
+        "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-03.webp",
+        "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-04.webp",
+        "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-05.webp",
+        "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-06.webp",
+        "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-07.webp"
+      ],
+      "seo": {
+        "title": "Meeresfrüchtesuppe mit Muscheln und Kabeljau",
+        "description": "Meeresfrüchtesuppe für 4 mit Miesmuscheln, Garnelen und Kabeljau: Tomatenbrühe, gefilterter Muschelsud, Garen in Etappen und Aufbewahrung.",
+        "image_alt": "Tomatenbrühe mit geöffneten Miesmuscheln, geschälten Garnelen, Kabeljaustücken, Möhre und Petersilie",
+        "image_variants": [
+          "/recetas/receta-de-sopa-de-mariscos-con-mejillones/portada-1x1.webp",
+          "/recetas/receta-de-sopa-de-mariscos-con-mejillones/portada-4x3.webp",
+          "/recetas/receta-de-sopa-de-mariscos-con-mejillones/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Was mache ich mit Muscheln, die sich nicht öffnen?",
+            "a": "Nach dem Garen geschlossen bleibende Muscheln wegwerfen und nicht zum Essen gewaltsam öffnen. Vorher auch beschädigte Schalen und offene lebende Muscheln aussortieren, die sich beim sanften Klopfen nicht schließen. Den Sud der geöffneten Muscheln filtern, bevor er zur Suppe kommt."
+          },
+          {
+            "q": "Kann ich tiefgekühlten Fisch und Garnelen verwenden?",
+            "a": "Ja, vorher im Kühlschrank auftauen und ohne Haut, Gräten, Schalen oder Darm abwiegen. Zu 65 Minuten kommen ungefähr 8–12 Stunden über Nacht oder die laut Packung und tatsächlichem Auftauen benötigte Zeit hinzu. Diese Rezeptfassung verwendet lebende Muscheln; tiefgekühlte benötigen eine andere Behandlung und keinen Schließtest für lebende Tiere."
+          },
+          {
+            "q": "Kann ich Wasser durch Fischbrühe ersetzen?",
+            "a": "Ja, wenn sie zu deinen Allergenanforderungen passt; Salz und Zusammensetzung verändern aber die Schätzung. Vorgesehen sind insgesamt 1200 ml Wasser, davon 100 ml zum Öffnen der Muscheln. Sehr salzige Brühe nicht unbedacht mit Muschelsud kombinieren und vorsichtig abschmecken."
+          }
+        ]
+      },
+      "published": true,
+      "editorial_status": "published",
+      "content_html": "<p>Eine leichte Tomatensuppe mit Miesmuscheln, Garnelen und frischem Atlantik-Kabeljau. Die Muscheln werden separat geöffnet und ihr Sud wird gefiltert; Fisch und Garnelen kommen erst zum Schluss hinein. Vorgeschlagen sind 4 Portionen, 20 Minuten Vorbereitung und 45 Minuten Garzeit, insgesamt 65 Minuten. Mengen, Ausbeute und Zeiten sind Schätzungen und noch nicht in der Küche bestätigt. Tiefgekühlter Fisch oder Garnelen brauchen zusätzlich etwa 8–12 Stunden zum Auftauen über Nacht im Kühlschrank, gegebenenfalls länger nach Packungsangabe und tatsächlichem Auftauzustand.</p><p>Frischen oder aufgetauten Kabeljau verwenden; gesalzener Kabeljau erfordert eine angepasste Zubereitung und Berechnung. Anderer fester weißer Fisch ohne Gräten ist möglich, verändert aber die Nährwerte. Fertigbrühe statt Wasser verändert Natrium, Geschmack und mögliche Allergene. Enthält Fisch, Krebstiere und Weichtiere. Lebende Muscheln aus zugelassener Herkunft kaufen, kühl halten und beschädigte, nicht lebensfähig wirkende oder nach dem Garen geschlossene Exemplare aussortieren. Reste in flache Behälter verteilen und innerhalb 2 Stunden bei höchstens 4 °C kühlen, bei über 32 °C Umgebung innerhalb 1 Stunde; einen großen Topf nicht erst auf der Arbeitsplatte abkühlen lassen. Innerhalb 3 Tagen verbrauchen. Nur die benötigte Portion auf 74 °C im Inneren erhitzen und die Brühe aufkochen; erneutes Erhitzen beeinträchtigt die Textur. Mengen, Ausbeute und Zeiten sind vorgeschlagene Schätzungen ohne behaupteten Küchentest.</p>"
+    },
+    {
+      "id": "b08d83f4-d404-5959-a795-82206635805b",
+      "recipe_group_id": "03d0b017-8568-45d9-b993-87765956a71b",
+      "slug": "seafood-soup-with-mussels-recipe",
+      "public_path": "/en/seafood-soup-with-mussels-recipe",
+      "source_url": null,
+      "language": "en",
+      "title": "Seafood soup with mussels",
+      "excerpt": "Mussels, shrimp and fresh cod in tomato broth, with strained mussel liquid and carefully staged cooking.",
+      "summary": "A light tomato-broth soup with mussels, shrimp and fresh Atlantic cod. Steam the mussels separately and strain their liquid, then cook the fish and shrimp in stages. Proposed yield: 4 portions, with 20 minutes of preparation and 45 minutes of cooking, 65 minutes in total; quantities, yield and times are estimates awaiting kitchen testing. Frozen fish or shrimp need an additional overnight refrigerator thaw, roughly 8–12 hours or as long as the package and actual thawing require.",
+      "category": "Soups & creams",
+      "category_slug": "sopas-y-cremas",
+      "difficulty": "Medium",
+      "course": "Soup",
+      "cuisine": "Mediterranean",
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 45,
+      "total_time_minutes": 65,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "live mussels in their shells",
+          "amount": "1000",
+          "unit": "g",
+          "group": "Seafood and fish"
+        },
+        {
+          "name": "raw shrimp, peeled and deveined",
+          "amount": "300",
+          "unit": "g",
+          "group": "Seafood and fish"
+        },
+        {
+          "name": "fresh Atlantic cod fillet, skinless and boneless",
+          "amount": "300",
+          "unit": "g",
+          "group": "Seafood and fish"
+        },
+        {
+          "name": "ripe tomato",
+          "amount": "300",
+          "unit": "g",
+          "group": "Soup base"
+        },
+        {
+          "name": "onion",
+          "amount": "120",
+          "unit": "g",
+          "group": "Soup base"
+        },
+        {
+          "name": "carrot",
+          "amount": "80",
+          "unit": "g",
+          "group": "Soup base"
+        },
+        {
+          "name": "garlic",
+          "amount": "10",
+          "unit": "g",
+          "group": "Soup base"
+        },
+        {
+          "name": "olive oil",
+          "amount": "20",
+          "unit": "g",
+          "group": "Soup base"
+        },
+        {
+          "name": "water",
+          "amount": "1200",
+          "unit": "ml",
+          "group": "Soup base"
+        },
+        {
+          "name": "bay leaves",
+          "amount": "2",
+          "unit": "leaves",
+          "group": "Soup base"
+        },
+        {
+          "name": "salt",
+          "amount": "4",
+          "unit": "g",
+          "group": "Soup base"
+        },
+        {
+          "name": "lemon juice",
+          "amount": "20",
+          "unit": "g",
+          "group": "Finishing"
+        },
+        {
+          "name": "fresh parsley",
+          "amount": "10",
+          "unit": "g",
+          "group": "Finishing"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepare the vegetables and finishing ingredients",
+          "content": "Wash 300 g tomato, 80 g carrot and 10 g parsley. Peel the carrot and 120 g onion; dice both into pieces about 5 mm across. Chop the tomato into small pieces and mince 10 g garlic. Chop the parsley separately and squeeze and weigh 20 g lemon juice. Reserve 100 ml from the 1200 ml water for the mussels; the other 1100 ml goes into the soup. Prepare a large soup pot, a second lidded pot and a fine sieve lined with clean muslin.",
+          "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-01.webp",
+          "image_alt": "Seafood soup with mussels: Prepare the vegetables and finishing ingredients"
+        },
+        {
+          "title": "Inspect the mussels and cut the fish",
+          "content": "Buy the 1000 g live shell-on mussels from an approved supplier and retain their origin information. Discard cracked shells and open mussels that do not close when gently tapped. Scrub under cold running water and remove the beards just before cooking; do not leave them soaking in fresh water. Cut 300 g fresh cod into roughly 3 cm cubes and check for bones. Use 300 g shrimp already peeled and deveined. Keep the seafood separate from the vegetables at 4 °C or below until needed. Wash hands, board and knife after touching raw seafood; set aside clean bowls and utensils for cooked food.",
+          "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-02.webp",
+          "image_alt": "Seafood soup with mussels: Inspect the mussels and cut the fish"
+        },
+        {
+          "title": "Soften the onion and carrot",
+          "content": "Heat 20 g olive oil in the large pot over medium heat. Add the onion and carrot and stir for about 6 minutes, until the onion softens and the carrot starts to soften. Stir in the garlic for another 1 minute without letting it brown too much. If the vegetables stick, reduce the heat and add a spoonful taken from the planned 1100 ml water rather than increasing the total water.",
+          "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-03.webp",
+          "image_alt": "Seafood soup with mussels: Soften the onion and carrot"
+        },
+        {
+          "title": "Cook the tomato and make the broth",
+          "content": "Add the tomato and cook over medium heat for about 5 minutes, stirring, until it partly breaks down. Pour in the remaining 1100 ml water and add 2 bay leaves and 4 g salt. Bring to a gentle simmer and cook for about 15 minutes with the lid slightly ajar, until the diced carrot is tender. Keep fluid broth around the vegetables; regulate the heat so that the soup does not reduce to a sauce.",
+          "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-04.webp",
+          "image_alt": "Seafood soup with mussels: Cook the tomato and make the broth"
+        },
+        {
+          "title": "Steam the mussels and strain their liquid",
+          "content": "While the soup base simmers, heat the reserved 100 ml water in the second pot. Add the inspected mussels, cover and cook for about 5–7 minutes, carefully shaking the pot once. Remove opened mussels with a clean utensil and keep them in a clean covered bowl while you finish. Discard any that remain closed; do not force their shells open. Strain the cooking liquid through a fine sieve lined with clean muslin into the soup, without pressing sediment through or pouring in sandy residue. Shells and discarded mussels are excluded from the edible weight used for nutrition.",
+          "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-05.webp",
+          "image_alt": "Seafood soup with mussels: Steam the mussels and strain their liquid"
+        },
+        {
+          "title": "Cook the cod, then the shrimp",
+          "content": "Keep the broth at a gentle simmer and add the cod cubes. Cook for about 3–5 minutes, then add the shrimp and cook for a further 2–3 minutes, gently moving the pot so the fish does not break up. Use a fine-probe thermometer to check that the thickest pieces of cod and shrimp reach at least 63 °C. Fish should be opaque and separate easily, and shrimp firm and opaque. Continue cooking and recheck if needed: temperature and doneness take precedence over these approximate times. Wash utensils that have touched raw seafood before using them in the soup.",
+          "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-06.webp",
+          "image_alt": "Seafood soup with mussels: Cook the cod, then the shrimp"
+        },
+        {
+          "title": "Return the mussels and finish the soup",
+          "content": "Return only opened mussels to the pot and simmer for approximately 1 minute to heat everything through without prolonged cooking. Remove the 2 bay leaves with a clean utensil. Turn off the heat, add 20 g lemon juice and 10 g chopped parsley and stir gently. Taste with a clean spoon. The recipe and estimate include the 4 g salt already added; adding more changes the sodium estimate. Check that no broken shells or closed mussels remain in the pot.",
+          "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-07.webp",
+          "image_alt": "Seafood soup with mussels: Return the mussels and finish the soup"
+        },
+        {
+          "title": "Divide into four portions and serve",
+          "content": "Divide the broth, vegetables, cod, shrimp and mussels among 4 bowls and serve immediately. Leave some open shells visible and explain that the shells are not edible; never add a closed mussel as decoration. This proposal starts with fresh or already-thawed fish and shrimp: 20 minutes preparation plus 45 minutes cooking, 65 total, all estimated and awaiting kitchen testing. Starting frozen requires additional refrigerator thawing, roughly overnight for 8–12 hours or longer if the package requires; wait until fully thawed. Never thaw on the countertop.",
+          "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/portada.webp",
+          "image_alt": "Seafood soup with mussels: Divide into four portions and serve"
+        }
+      ],
+      "notes": "Use fresh or thawed cod, not salt cod without adapting the method and calculation. Another firm boneless white fish can replace it, but changes the nutritional composition. Commercial stock instead of water changes sodium, flavour and possible allergens. Contains fish, crustaceans and molluscs. Buy live mussels from an approved supplier, keep them cold and discard damaged shells, mussels that fail the live inspection and those that do not open when cooked. Storage: divide leftovers into shallow containers and refrigerate at 4 °C or below within 2 hours, or within 1 hour if the surroundings exceed 32 °C; do not wait for a large pot to cool on the countertop. Use within 3 days. Reheat only the portion needed to 74 °C in its centre, with the broth boiling; reheating reduces seafood texture. Quantities, yield and times are proposed estimates pending kitchen testing; no completed test is claimed.",
+      "nutrition": {
+        "calories": 262.6,
+        "protein_g": 37.3,
+        "carbs_g": 11.3,
+        "fat_g": 7.6,
+        "saturated_fat_g": 1.2,
+        "sodium_mg": 717.2,
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (abril de 2018)",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "inputs": [
+          {
+            "ingredient": "carne de mejillón cruda estimada de 1000 g con concha",
+            "edible_grams": 250,
+            "fdc_id": 174216,
+            "fdc_description": "Mollusks, mussel, blue, raw",
+            "per_100g": {
+              "fat_g": 2.24,
+              "carbs_g": 3.69,
+              "calories": 86.0,
+              "saturated_fat_g": 0.425,
+              "sodium_mg": 286,
+              "protein_g": 11.9
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/174216/nutrients"
+          },
+          {
+            "ingredient": "langostinos crudos pelados y sin intestino",
+            "edible_grams": 300,
+            "fdc_id": 175179,
+            "fdc_description": "Crustaceans, shrimp, raw",
+            "per_100g": {
+              "fat_g": 0.51,
+              "carbs_g": 0.0,
+              "calories": 85.0,
+              "protein_g": 20.1,
+              "sodium_mg": 119,
+              "saturated_fat_g": 0.101
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/175179/nutrients"
+          },
+          {
+            "ingredient": "filete de bacalao atlántico fresco sin piel ni espinas",
+            "edible_grams": 300,
+            "fdc_id": 171955,
+            "fdc_description": "Fish, cod, Atlantic, raw",
+            "per_100g": {
+              "calories": 82.0,
+              "sodium_mg": 54.0,
+              "protein_g": 17.8,
+              "saturated_fat_g": 0.131,
+              "fat_g": 0.67,
+              "carbs_g": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171955/nutrients"
+          },
+          {
+            "ingredient": "tomate maduro",
+            "edible_grams": 300,
+            "fdc_id": 170457,
+            "fdc_description": "Tomatoes, red, ripe, raw, year round average",
+            "per_100g": {
+              "carbs_g": 3.89,
+              "calories": 18.0,
+              "saturated_fat_g": 0.028,
+              "fat_g": 0.2,
+              "sodium_mg": 5.0,
+              "protein_g": 0.88
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170457/nutrients"
+          },
+          {
+            "ingredient": "cebolla",
+            "edible_grams": 120,
+            "fdc_id": 170000,
+            "fdc_description": "Onions, raw",
+            "per_100g": {
+              "fat_g": 0.1,
+              "carbs_g": 9.34,
+              "calories": 40.0,
+              "saturated_fat_g": 0.042,
+              "protein_g": 1.1,
+              "sodium_mg": 4.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170000/nutrients"
+          },
+          {
+            "ingredient": "zanahoria",
+            "edible_grams": 80,
+            "fdc_id": 170393,
+            "fdc_description": "Carrots, raw",
+            "per_100g": {
+              "saturated_fat_g": 0.032,
+              "sodium_mg": 69.0,
+              "protein_g": 0.93,
+              "fat_g": 0.24,
+              "carbs_g": 9.58,
+              "calories": 41.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170393/nutrients"
+          },
+          {
+            "ingredient": "ajo",
+            "edible_grams": 10,
+            "fdc_id": 169230,
+            "fdc_description": "Garlic, raw",
+            "per_100g": {
+              "carbs_g": 33.1,
+              "calories": 149,
+              "saturated_fat_g": 0.089,
+              "sodium_mg": 17.0,
+              "protein_g": 6.36,
+              "fat_g": 0.5
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169230/nutrients"
+          },
+          {
+            "ingredient": "aceite de oliva",
+            "edible_grams": 20,
+            "fdc_id": 171413,
+            "fdc_description": "Oil, olive, salad or cooking",
+            "per_100g": {
+              "fat_g": 100,
+              "carbs_g": 0.0,
+              "calories": 884,
+              "sodium_mg": 2.0,
+              "protein_g": 0.0,
+              "saturated_fat_g": 13.8
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171413/nutrients"
+          },
+          {
+            "ingredient": "zumo de limón",
+            "edible_grams": 20,
+            "fdc_id": 167747,
+            "fdc_description": "Lemon juice, raw",
+            "per_100g": {
+              "protein_g": 0.35,
+              "saturated_fat_g": 0.04,
+              "sodium_mg": 1.0,
+              "fat_g": 0.24,
+              "carbs_g": 6.9,
+              "calories": 22.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/167747/nutrients"
+          },
+          {
+            "ingredient": "perejil fresco",
+            "edible_grams": 10,
+            "fdc_id": 170416,
+            "fdc_description": "Parsley, fresh",
+            "per_100g": {
+              "carbs_g": 6.33,
+              "calories": 36.0,
+              "fat_g": 0.79,
+              "protein_g": 2.97,
+              "sodium_mg": 56.0,
+              "saturated_fat_g": 0.132
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170416/nutrients"
+          },
+          {
+            "ingredient": "sal",
+            "edible_grams": 4,
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "sodium_mg": 38800.0,
+              "saturated_fat_g": 0.0,
+              "protein_g": 0.0,
+              "fat_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients"
+          }
+        ],
+        "serving_size": "1 of 4 bowls, excluding shells",
+        "method": "Eleven verified USDA records: multiply raw edible weights by nutrients per 100 g, sum and divide by 4. A proposed 25 % edible yield from 1000 g shell-on mussels gives 250 g raw-equivalent meat, awaiting weighing. All oil, vegetables, lemon, parsley and 4 g salt are counted. Water and shells add no nutrients counted here; the bay leaves are removed and nutrient transfer from them is not estimated.",
+        "note": "Informative estimate, not analysis of the finished dish or a confirmed kitchen yield. Mussel yield, shrimp species or additives and losses or discards change the figures. Strained mussel liquid may add salts not fully reflected by the edible-meat model. Total fibre and sugars are omitted because the chosen shrimp record lacks both fields; missing data was not converted to zero. Excludes bread, wine and commercial stock."
+      },
+      "keywords": [
+        "seafood soup",
+        "mussel soup",
+        "shrimp",
+        "fresh cod"
+      ],
+      "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/portada.webp",
+      "gallery": [
+        "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-01.webp",
+        "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-02.webp",
+        "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-03.webp",
+        "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-04.webp",
+        "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-05.webp",
+        "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-06.webp",
+        "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-07.webp"
+      ],
+      "seo": {
+        "title": "Seafood soup with mussels, shrimp and cod",
+        "description": "Seafood soup for 4 with mussels, shrimp and cod: tomato broth, strained mussel liquid, staged cooking and practical storage advice.",
+        "image_alt": "Tomato-broth soup with open mussels, peeled shrimp, cod pieces, carrot and parsley",
+        "image_variants": [
+          "/recetas/receta-de-sopa-de-mariscos-con-mejillones/portada-1x1.webp",
+          "/recetas/receta-de-sopa-de-mariscos-con-mejillones/portada-4x3.webp",
+          "/recetas/receta-de-sopa-de-mariscos-con-mejillones/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "What should I do with mussels that do not open?",
+            "a": "Discard mussels that remain closed after cooking; do not force them open to eat them. Before cooking, also discard cracked shells and live open mussels that do not close when gently tapped. Strain the liquid from opened mussels before adding it to the soup."
+          },
+          {
+            "q": "Can I use frozen fish and shrimp?",
+            "a": "Yes, after thawing in the refrigerator and weighing them without skin, bones, shells or the digestive tract. Add an estimated overnight thaw of 8–12 hours to the 65 minutes, or allow the package instructions and actual thawing to determine the wait. This recipe uses live mussels; frozen mussels need different handling and cannot be assessed with the live-shell closing test."
+          },
+          {
+            "q": "Can fish stock replace the water?",
+            "a": "Yes, provided it suits your allergen requirements, but its salt and composition change the estimate. The proposal uses 1200 ml water in total, including 100 ml for opening the mussels. Avoid combining very salty stock with mussel liquid and adjust seasoning cautiously."
+          }
+        ]
+      },
+      "published": true,
+      "editorial_status": "published",
+      "content_html": "<p>A light tomato-broth soup with mussels, shrimp and fresh Atlantic cod. Steam the mussels separately and strain their liquid, then cook the fish and shrimp in stages. Proposed yield: 4 portions, with 20 minutes of preparation and 45 minutes of cooking, 65 minutes in total; quantities, yield and times are estimates awaiting kitchen testing. Frozen fish or shrimp need an additional overnight refrigerator thaw, roughly 8–12 hours or as long as the package and actual thawing require.</p><p>Use fresh or thawed cod, not salt cod without adapting the method and calculation. Another firm boneless white fish can replace it, but changes the nutritional composition. Commercial stock instead of water changes sodium, flavour and possible allergens. Contains fish, crustaceans and molluscs. Buy live mussels from an approved supplier, keep them cold and discard damaged shells, mussels that fail the live inspection and those that do not open when cooked. Storage: divide leftovers into shallow containers and refrigerate at 4 °C or below within 2 hours, or within 1 hour if the surroundings exceed 32 °C; do not wait for a large pot to cool on the countertop. Use within 3 days. Reheat only the portion needed to 74 °C in its centre, with the broth boiling; reheating reduces seafood texture. Quantities, yield and times are proposed estimates pending kitchen testing; no completed test is claimed.</p>"
+    },
+    {
+      "id": "b1eaaa94-6397-5ade-aed4-e5657b5269b0",
+      "recipe_group_id": "03d0b017-8568-45d9-b993-87765956a71b",
+      "slug": "recette-de-soupe-de-fruits-de-mer-aux-moules",
+      "public_path": "/fr/recette-de-soupe-de-fruits-de-mer-aux-moules",
+      "source_url": "https://manualdecocina.com/fr/recette-de-soupe-de-fruits-de-mer-aux-moules/",
+      "language": "fr",
+      "title": "Soupe de fruits de mer aux moules",
+      "excerpt": "Moules, crevettes et cabillaud frais dans un bouillon de tomate, avec jus de moules filtré et cuisson par étapes.",
+      "summary": "Une soupe au bouillon léger de tomate, avec moules, crevettes et cabillaud frais de l’Atlantique. Les moules s’ouvrent à part et leur jus est filtré; le poisson et les crevettes cuisent ensuite par étapes. Proposition pour 4 portions:20 minutes de préparation et 45 de cuisson,65 au total. Quantités, rendement et durées restent estimés et à confirmer en cuisine. Pour du poisson ou des crevettes surgelés, ajouter une décongélation au réfrigérateur, environ 8–12 heures pendant une nuit, ou davantage selon l’emballage et la décongélation réelle.",
+      "category": "Soupes et crèmes",
+      "category_slug": "sopas-y-cremas",
+      "difficulty": "Moyenne",
+      "course": "Soupe",
+      "cuisine": "Méditerranéenne",
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 45,
+      "total_time_minutes": 65,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "moules vivantes avec coquille",
+          "amount": "1000",
+          "unit": "g",
+          "group": "Fruits de mer et poisson"
+        },
+        {
+          "name": "crevettes crues décortiquées et déveinées",
+          "amount": "300",
+          "unit": "g",
+          "group": "Fruits de mer et poisson"
+        },
+        {
+          "name": "filet de cabillaud frais de l’Atlantique sans peau ni arêtes",
+          "amount": "300",
+          "unit": "g",
+          "group": "Fruits de mer et poisson"
+        },
+        {
+          "name": "tomate mûre",
+          "amount": "300",
+          "unit": "g",
+          "group": "Base de la soupe"
+        },
+        {
+          "name": "oignon",
+          "amount": "120",
+          "unit": "g",
+          "group": "Base de la soupe"
+        },
+        {
+          "name": "carotte",
+          "amount": "80",
+          "unit": "g",
+          "group": "Base de la soupe"
+        },
+        {
+          "name": "ail",
+          "amount": "10",
+          "unit": "g",
+          "group": "Base de la soupe"
+        },
+        {
+          "name": "huile d’olive",
+          "amount": "20",
+          "unit": "g",
+          "group": "Base de la soupe"
+        },
+        {
+          "name": "eau",
+          "amount": "1200",
+          "unit": "ml",
+          "group": "Base de la soupe"
+        },
+        {
+          "name": "feuilles de laurier",
+          "amount": "2",
+          "unit": "feuilles",
+          "group": "Base de la soupe"
+        },
+        {
+          "name": "sel",
+          "amount": "4",
+          "unit": "g",
+          "group": "Base de la soupe"
+        },
+        {
+          "name": "jus de citron",
+          "amount": "20",
+          "unit": "g",
+          "group": "Finition"
+        },
+        {
+          "name": "persil frais",
+          "amount": "10",
+          "unit": "g",
+          "group": "Finition"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Préparer les légumes et la finition",
+          "content": "Laver 300 g de tomate,80 g de carotte et 10 g de persil. Éplucher la carotte et 120 g d’oignon; couper en dés d’environ 5 mm. Couper la tomate en petits dés, hacher 10 g d’ail et le persil séparément. Presser et peser 20 g de jus de citron. Réserver 100 ml sur les 1200 ml d’eau pour les moules; les 1100 ml restants servent à la soupe. Préparer une grande casserole, une seconde avec couvercle et une passoire fine garnie d’une mousseline propre.",
+          "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-01.webp",
+          "image_alt": "Soupe de fruits de mer aux moules: Préparer les légumes et la finition"
+        },
+        {
+          "title": "Vérifier les moules et couper le poisson",
+          "content": "Acheter 1000 g de moules vivantes avec coquille auprès d’un fournisseur agréé et garder les informations d’origine. Écarter les coquilles cassées et les moules ouvertes qui ne se referment pas après un léger choc. Brosser sous l’eau froide courante et retirer les filaments juste avant cuisson; ne pas laisser tremper dans l’eau douce. Couper 300 g de cabillaud frais en cubes d’environ 3 cm et vérifier l’absence d’arêtes. Utiliser 300 g de crevettes déjà décortiquées et déveinées. Garder les produits de la mer séparés des légumes à 4 °C ou moins. Laver mains, planche et couteau après contact avec le cru; réserver des récipients et ustensiles propres pour le cuit.",
+          "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-02.webp",
+          "image_alt": "Soupe de fruits de mer aux moules: Vérifier les moules et couper le poisson"
+        },
+        {
+          "title": "Faire revenir l’oignon et la carotte",
+          "content": "Chauffer 20 g d’huile dans la grande casserole à feu moyen. Ajouter oignon et carotte et remuer environ 6 minutes, jusqu’à ce que l’oignon ramollisse et que la carotte commence à s’attendrir. Ajouter l’ail et remuer 1 minute sans trop le colorer. Si cela attache, baisser le feu et ajouter une cuillerée prélevée sur les 1100 ml d’eau prévus, sans augmenter l’eau totale.",
+          "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-03.webp",
+          "image_alt": "Soupe de fruits de mer aux moules: Faire revenir l’oignon et la carotte"
+        },
+        {
+          "title": "Cuire la tomate et préparer le bouillon",
+          "content": "Ajouter la tomate et cuire environ 5 minutes à feu moyen en remuant, jusqu’à ce qu’elle se défasse partiellement. Verser les 1100 ml d’eau restants; ajouter 2 feuilles de laurier et 4 g de sel. Porter à petit frémissement puis cuire environ 15 minutes avec le couvercle entrouvert, jusqu’à ce que la carotte soit tendre. Garder un bouillon liquide autour des légumes et régler le feu pour ne pas réduire la soupe en sauce.",
+          "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-04.webp",
+          "image_alt": "Soupe de fruits de mer aux moules: Cuire la tomate et préparer le bouillon"
+        },
+        {
+          "title": "Ouvrir les moules et filtrer leur jus",
+          "content": "Pendant que la base frémit, chauffer les 100 ml d’eau réservés dans la seconde casserole. Ajouter les moules vérifiées, couvrir et cuire environ 5–7 minutes, en secouant prudemment la casserole une fois. Retirer les moules ouvertes avec un ustensile propre et garder dans un récipient propre couvert. Jeter celles qui restent fermées, sans forcer la coquille. Filtrer le jus dans la soupe à travers la passoire fine et la mousseline propre, sans presser les dépôts ni verser le fond sableux. Coquilles et moules écartées ne font pas partie du poids comestible du calcul nutritionnel.",
+          "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-05.webp",
+          "image_alt": "Soupe de fruits de mer aux moules: Ouvrir les moules et filtrer leur jus"
+        },
+        {
+          "title": "Cuire le cabillaud puis les crevettes",
+          "content": "Garder le bouillon frémissant et ajouter les cubes de cabillaud. Cuire environ 3–5 minutes, puis ajouter les crevettes pour 2–3 minutes supplémentaires. Remuer doucement la casserole pour ne pas casser le poisson. Avec une sonde fine, vérifier que les parties les plus épaisses du poisson et des crevettes atteignent au moins 63 °C. Le poisson devient opaque et se détache facilement; les crevettes sont fermes et opaques. Si nécessaire, poursuivre et mesurer de nouveau: température et état de cuisson priment sur ces durées indicatives. Laver les ustensiles ayant touché du cru avant de les remettre dans la soupe.",
+          "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-06.webp",
+          "image_alt": "Soupe de fruits de mer aux moules: Cuire le cabillaud puis les crevettes"
+        },
+        {
+          "title": "Remettre les moules et terminer la soupe",
+          "content": "Remettre uniquement les moules ouvertes dans la casserole et laisser frémir environ 1 minute pour réchauffer l’ensemble sans prolonger inutilement la cuisson. Retirer les 2 feuilles de laurier avec un ustensile propre. Éteindre le feu, ajouter 20 g de jus de citron et 10 g de persil haché et mélanger délicatement. Goûter avec une cuillère propre. Recette et estimation comprennent déjà 4 g de sel; un ajout modifie le sodium. Vérifier l’absence de coquilles cassées et de moules fermées.",
+          "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-07.webp",
+          "image_alt": "Soupe de fruits de mer aux moules: Remettre les moules et terminer la soupe"
+        },
+        {
+          "title": "Répartir en quatre portions et servir",
+          "content": "Répartir bouillon, légumes, cabillaud, crevettes et moules dans 4 bols et servir aussitôt. Garder quelques coquilles ouvertes visibles et préciser qu’elles ne se mangent pas; ne pas décorer avec une moule fermée. La proposition part de poisson et crevettes frais ou déjà décongelés:20 minutes de préparation plus 45 de cuisson,65 au total, estimées et à confirmer par un essai en cuisine. Avec des ingrédients surgelés, ajouter auparavant une décongélation réfrigérée, environ 8–12 heures pendant une nuit ou plus selon l’emballage; attendre une décongélation complète. Ne pas décongeler sur le plan de travail.",
+          "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/portada.webp",
+          "image_alt": "Soupe de fruits de mer aux moules: Répartir en quatre portions et servir"
+        }
+      ],
+      "notes": "Employer du cabillaud frais ou décongelé, pas du poisson salé sans adapter méthode et calcul. Un autre poisson blanc ferme sans arêtes peut le remplacer, mais modifie les nutriments. Du bouillon industriel à la place de l’eau change sodium, goût et allergènes possibles. Contient poisson, crustacés et mollusques. Acheter les moules vivantes auprès d’un fournisseur agréé, respecter le froid et écarter les coquilles endommagées, les moules qui échouent au contrôle du vivant et celles qui ne s’ouvrent pas à la cuisson. Conservation: répartir les restes dans des récipients peu profonds et réfrigérer à 4 °C ou moins avant 2 heures, ou 1 heure si l’ambiance dépasse 32 °C; ne pas attendre qu’une grande casserole refroidisse sur le plan de travail. Consommer sous 3 jours. Réchauffer seulement la portion nécessaire à 74 °C à cœur, avec le bouillon porté à ébullition; les fruits de mer perdent de la texture. Quantités, rendement et temps proposés sont estimés, sans essai en cuisine prétendument réalisé.",
+      "nutrition": {
+        "calories": 262.6,
+        "protein_g": 37.3,
+        "carbs_g": 11.3,
+        "fat_g": 7.6,
+        "saturated_fat_g": 1.2,
+        "sodium_mg": 717.2,
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (abril de 2018)",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "inputs": [
+          {
+            "ingredient": "carne de mejillón cruda estimada de 1000 g con concha",
+            "edible_grams": 250,
+            "fdc_id": 174216,
+            "fdc_description": "Mollusks, mussel, blue, raw",
+            "per_100g": {
+              "fat_g": 2.24,
+              "carbs_g": 3.69,
+              "calories": 86.0,
+              "saturated_fat_g": 0.425,
+              "sodium_mg": 286,
+              "protein_g": 11.9
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/174216/nutrients"
+          },
+          {
+            "ingredient": "langostinos crudos pelados y sin intestino",
+            "edible_grams": 300,
+            "fdc_id": 175179,
+            "fdc_description": "Crustaceans, shrimp, raw",
+            "per_100g": {
+              "fat_g": 0.51,
+              "carbs_g": 0.0,
+              "calories": 85.0,
+              "protein_g": 20.1,
+              "sodium_mg": 119,
+              "saturated_fat_g": 0.101
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/175179/nutrients"
+          },
+          {
+            "ingredient": "filete de bacalao atlántico fresco sin piel ni espinas",
+            "edible_grams": 300,
+            "fdc_id": 171955,
+            "fdc_description": "Fish, cod, Atlantic, raw",
+            "per_100g": {
+              "calories": 82.0,
+              "sodium_mg": 54.0,
+              "protein_g": 17.8,
+              "saturated_fat_g": 0.131,
+              "fat_g": 0.67,
+              "carbs_g": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171955/nutrients"
+          },
+          {
+            "ingredient": "tomate maduro",
+            "edible_grams": 300,
+            "fdc_id": 170457,
+            "fdc_description": "Tomatoes, red, ripe, raw, year round average",
+            "per_100g": {
+              "carbs_g": 3.89,
+              "calories": 18.0,
+              "saturated_fat_g": 0.028,
+              "fat_g": 0.2,
+              "sodium_mg": 5.0,
+              "protein_g": 0.88
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170457/nutrients"
+          },
+          {
+            "ingredient": "cebolla",
+            "edible_grams": 120,
+            "fdc_id": 170000,
+            "fdc_description": "Onions, raw",
+            "per_100g": {
+              "fat_g": 0.1,
+              "carbs_g": 9.34,
+              "calories": 40.0,
+              "saturated_fat_g": 0.042,
+              "protein_g": 1.1,
+              "sodium_mg": 4.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170000/nutrients"
+          },
+          {
+            "ingredient": "zanahoria",
+            "edible_grams": 80,
+            "fdc_id": 170393,
+            "fdc_description": "Carrots, raw",
+            "per_100g": {
+              "saturated_fat_g": 0.032,
+              "sodium_mg": 69.0,
+              "protein_g": 0.93,
+              "fat_g": 0.24,
+              "carbs_g": 9.58,
+              "calories": 41.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170393/nutrients"
+          },
+          {
+            "ingredient": "ajo",
+            "edible_grams": 10,
+            "fdc_id": 169230,
+            "fdc_description": "Garlic, raw",
+            "per_100g": {
+              "carbs_g": 33.1,
+              "calories": 149,
+              "saturated_fat_g": 0.089,
+              "sodium_mg": 17.0,
+              "protein_g": 6.36,
+              "fat_g": 0.5
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169230/nutrients"
+          },
+          {
+            "ingredient": "aceite de oliva",
+            "edible_grams": 20,
+            "fdc_id": 171413,
+            "fdc_description": "Oil, olive, salad or cooking",
+            "per_100g": {
+              "fat_g": 100,
+              "carbs_g": 0.0,
+              "calories": 884,
+              "sodium_mg": 2.0,
+              "protein_g": 0.0,
+              "saturated_fat_g": 13.8
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171413/nutrients"
+          },
+          {
+            "ingredient": "zumo de limón",
+            "edible_grams": 20,
+            "fdc_id": 167747,
+            "fdc_description": "Lemon juice, raw",
+            "per_100g": {
+              "protein_g": 0.35,
+              "saturated_fat_g": 0.04,
+              "sodium_mg": 1.0,
+              "fat_g": 0.24,
+              "carbs_g": 6.9,
+              "calories": 22.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/167747/nutrients"
+          },
+          {
+            "ingredient": "perejil fresco",
+            "edible_grams": 10,
+            "fdc_id": 170416,
+            "fdc_description": "Parsley, fresh",
+            "per_100g": {
+              "carbs_g": 6.33,
+              "calories": 36.0,
+              "fat_g": 0.79,
+              "protein_g": 2.97,
+              "sodium_mg": 56.0,
+              "saturated_fat_g": 0.132
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170416/nutrients"
+          },
+          {
+            "ingredient": "sal",
+            "edible_grams": 4,
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "sodium_mg": 38800.0,
+              "saturated_fat_g": 0.0,
+              "protein_g": 0.0,
+              "fat_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients"
+          }
+        ],
+        "serving_size": "1 bol sur 4, sans coquilles",
+        "method": "Onze fiches USDA vérifiées: poids crus comestibles multipliés par les nutriments pour 100 g, somme divisée par 4. Pour 1000 g de moules avec coquille, rendement comestible proposé de 25 %, soit 250 g de chair crue équivalente, à confirmer par pesée. Huile, légumes, citron, persil et 4 g de sel comptés intégralement. Eau et coquilles n’ajoutent pas de nutriments comptabilisés ici; laurier retiré et transfert nutritionnel non estimé.",
+        "note": "Estimation informative, pas une analyse du plat ni un rendement mesuré. Rendement des moules, espèce ou additifs des crevettes, pertes et rejets modifient les chiffres. Le jus filtré des moules peut apporter des sels que le modèle de chair ne reflète pas complètement. Fibres et sucres totaux non indiqués car la fiche de crevettes choisie n’a pas ces deux données; les absences ne sont pas devenues des zéros. Sans pain, vin ni bouillon industriel."
+      },
+      "keywords": [
+        "soupe de fruits de mer",
+        "soupe de moules",
+        "crevettes",
+        "cabillaud frais"
+      ],
+      "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/portada.webp",
+      "gallery": [
+        "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-01.webp",
+        "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-02.webp",
+        "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-03.webp",
+        "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-04.webp",
+        "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-05.webp",
+        "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-06.webp",
+        "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-07.webp"
+      ],
+      "seo": {
+        "title": "Soupe de fruits de mer aux moules et cabillaud",
+        "description": "Soupe de fruits de mer pour 4 aux moules, crevettes et cabillaud: bouillon de tomate, jus filtré, cuisson par étapes et conseils de conservation.",
+        "image_alt": "Soupe au bouillon de tomate avec moules ouvertes, crevettes décortiquées, cabillaud, carotte et persil",
+        "image_variants": [
+          "/recetas/receta-de-sopa-de-mariscos-con-mejillones/portada-1x1.webp",
+          "/recetas/receta-de-sopa-de-mariscos-con-mejillones/portada-4x3.webp",
+          "/recetas/receta-de-sopa-de-mariscos-con-mejillones/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Que faire des moules qui ne s’ouvrent pas?",
+            "a": "Jeter celles qui restent fermées après cuisson, sans forcer pour les manger. Avant cuisson, écarter aussi les coquilles cassées et les moules vivantes ouvertes qui ne se referment pas après un léger choc. Filtrer le jus des moules ouvertes avant de l’ajouter à la soupe."
+          },
+          {
+            "q": "Puis-je utiliser du poisson et des crevettes surgelés?",
+            "a": "Oui, décongelés auparavant au réfrigérateur et pesés sans peau, arêtes, coquille ni intestin. Ajouter aux 65 minutes une nuit indicative de 8–12 heures, ou le temps exigé par l’emballage et la décongélation réelle. La recette utilise des moules vivantes: les surgelées exigent un autre traitement et ne se contrôlent pas avec le test de fermeture du vivant."
+          },
+          {
+            "q": "Le bouillon de poisson peut-il remplacer l’eau?",
+            "a": "Oui, s’il convient à tes allergènes, mais sel et composition changent l’estimation. La proposition emploie 1200 ml d’eau au total, dont 100 ml pour ouvrir les moules. Éviter d’associer un bouillon très salé au jus des moules et ajuster prudemment l’assaisonnement."
+          }
+        ]
+      },
+      "published": true,
+      "editorial_status": "published",
+      "content_html": "<p>Une soupe au bouillon léger de tomate, avec moules, crevettes et cabillaud frais de l’Atlantique. Les moules s’ouvrent à part et leur jus est filtré; le poisson et les crevettes cuisent ensuite par étapes. Proposition pour 4 portions:20 minutes de préparation et 45 de cuisson,65 au total. Quantités, rendement et durées restent estimés et à confirmer en cuisine. Pour du poisson ou des crevettes surgelés, ajouter une décongélation au réfrigérateur, environ 8–12 heures pendant une nuit, ou davantage selon l’emballage et la décongélation réelle.</p><p>Employer du cabillaud frais ou décongelé, pas du poisson salé sans adapter méthode et calcul. Un autre poisson blanc ferme sans arêtes peut le remplacer, mais modifie les nutriments. Du bouillon industriel à la place de l’eau change sodium, goût et allergènes possibles. Contient poisson, crustacés et mollusques. Acheter les moules vivantes auprès d’un fournisseur agréé, respecter le froid et écarter les coquilles endommagées, les moules qui échouent au contrôle du vivant et celles qui ne s’ouvrent pas à la cuisson. Conservation: répartir les restes dans des récipients peu profonds et réfrigérer à 4 °C ou moins avant 2 heures, ou 1 heure si l’ambiance dépasse 32 °C; ne pas attendre qu’une grande casserole refroidisse sur le plan de travail. Consommer sous 3 jours. Réchauffer seulement la portion nécessaire à 74 °C à cœur, avec le bouillon porté à ébullition; les fruits de mer perdent de la texture. Quantités, rendement et temps proposés sont estimés, sans essai en cuisine prétendument réalisé.</p>"
+    },
+    {
+      "id": "2837f282-0f83-5f4d-8980-c6e3532ba9f4",
+      "recipe_group_id": "03d0b017-8568-45d9-b993-87765956a71b",
+      "slug": "ricetta-zuppa-di-mare-con-cozze",
+      "public_path": "/it/ricetta-zuppa-di-mare-con-cozze",
+      "source_url": "https://manualdecocina.com/it/ricetta-zuppa-di-mare-con-cozze/",
+      "language": "it",
+      "title": "Zuppa di mare con cozze",
+      "excerpt": "Cozze, gamberi e merluzzo fresco nel brodo di pomodoro, con liquido delle cozze filtrato e cottura per fasi.",
+      "summary": "Una zuppa dal brodo leggero di pomodoro con cozze, gamberi e merluzzo fresco dell’Atlantico. Le cozze si aprono a parte e il loro liquido viene filtrato; pesce e gamberi cuociono poi in sequenza. Proposta per 4 porzioni: 20 minuti di preparazione e 45 di cottura, 65 totali. Quantità, resa e tempi sono stimati e da confermare in cucina. Pesce o gamberi surgelati richiedono in più una notte di scongelamento in frigorifero, indicativamente 8–12 ore o quanto richiedono confezione e scongelamento effettivo.",
+      "category": "Zuppe e creme",
+      "category_slug": "sopas-y-cremas",
+      "difficulty": "Media",
+      "course": "Zuppa",
+      "cuisine": "Mediterranea",
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 45,
+      "total_time_minutes": 65,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "cozze vive con guscio",
+          "amount": "1000",
+          "unit": "g",
+          "group": "Frutti di mare e pesce"
+        },
+        {
+          "name": "gamberi crudi sgusciati e privati dell’intestino",
+          "amount": "300",
+          "unit": "g",
+          "group": "Frutti di mare e pesce"
+        },
+        {
+          "name": "filetto di merluzzo fresco dell’Atlantico senza pelle né lische",
+          "amount": "300",
+          "unit": "g",
+          "group": "Frutti di mare e pesce"
+        },
+        {
+          "name": "pomodoro maturo",
+          "amount": "300",
+          "unit": "g",
+          "group": "Base della zuppa"
+        },
+        {
+          "name": "cipolla",
+          "amount": "120",
+          "unit": "g",
+          "group": "Base della zuppa"
+        },
+        {
+          "name": "carota",
+          "amount": "80",
+          "unit": "g",
+          "group": "Base della zuppa"
+        },
+        {
+          "name": "aglio",
+          "amount": "10",
+          "unit": "g",
+          "group": "Base della zuppa"
+        },
+        {
+          "name": "olio d’oliva",
+          "amount": "20",
+          "unit": "g",
+          "group": "Base della zuppa"
+        },
+        {
+          "name": "acqua",
+          "amount": "1200",
+          "unit": "ml",
+          "group": "Base della zuppa"
+        },
+        {
+          "name": "foglie di alloro",
+          "amount": "2",
+          "unit": "foglie",
+          "group": "Base della zuppa"
+        },
+        {
+          "name": "sale",
+          "amount": "4",
+          "unit": "g",
+          "group": "Base della zuppa"
+        },
+        {
+          "name": "succo di limone",
+          "amount": "20",
+          "unit": "g",
+          "group": "Finitura"
+        },
+        {
+          "name": "prezzemolo fresco",
+          "amount": "10",
+          "unit": "g",
+          "group": "Finitura"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepara le verdure e la finitura",
+          "content": "Lava 300 g di pomodoro, 80 g di carota e 10 g di prezzemolo. Pela la carota e 120 g di cipolla e taglia entrambe a dadini di circa 5 mm. Taglia il pomodoro a pezzetti e trita separatamente 10 g di aglio e il prezzemolo. Spremi e pesa 20 g di succo di limone. Riserva 100 ml dei 1200 ml d’acqua per le cozze; restano 1100 ml per la zuppa. Prepara una pentola grande, una seconda con coperchio e un colino fine rivestito di garza pulita.",
+          "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-01.webp",
+          "image_alt": "Zuppa di mare con cozze: Prepara le verdure e la finitura"
+        },
+        {
+          "title": "Controlla le cozze e taglia il pesce",
+          "content": "Acquista 1000 g di cozze vive con guscio da un fornitore autorizzato e conserva le informazioni d’origine. Scarta gusci rotti e cozze aperte che non si richiudono con un colpetto delicato. Spazzola sotto acqua fredda corrente e togli il bisso appena prima della cottura; non lasciarle immerse in acqua dolce. Taglia 300 g di merluzzo fresco a cubi di circa 3 cm e controlla le lische. Usa 300 g di gamberi già sgusciati e privati dell’intestino. Tieni pesce e molluschi separati dalle verdure a 4 °C o meno. Lava mani, tagliere e coltello dopo il contatto con il crudo; riserva recipienti e utensili puliti per il cotto.",
+          "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-02.webp",
+          "image_alt": "Zuppa di mare con cozze: Controlla le cozze e taglia il pesce"
+        },
+        {
+          "title": "Fai appassire cipolla e carota",
+          "content": "Scalda 20 g d’olio nella pentola grande a fuoco medio. Aggiungi cipolla e carota e mescola per circa 6 minuti, finché la cipolla si ammorbidisce e la carota inizia a diventare tenera. Unisci l’aglio e mescola per 1 minuto senza farlo colorire troppo. Se si attacca, abbassa il fuoco e aggiungi un cucchiaio prelevato dai 1100 ml d’acqua previsti, senza aumentare l’acqua totale.",
+          "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-03.webp",
+          "image_alt": "Zuppa di mare con cozze: Fai appassire cipolla e carota"
+        },
+        {
+          "title": "Cuoci il pomodoro e prepara il brodo",
+          "content": "Aggiungi il pomodoro e cuoci circa 5 minuti a fuoco medio, mescolando, finché si disfa in parte. Versa i 1100 ml d’acqua rimasti, 2 foglie d’alloro e 4 g di sale. Porta a lieve bollore e cuoci circa 15 minuti con il coperchio socchiuso, finché la carota è tenera. Mantieni brodo liquido intorno alle verdure e regola il fuoco per non ridurre la zuppa a una salsa.",
+          "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-04.webp",
+          "image_alt": "Zuppa di mare con cozze: Cuoci il pomodoro e prepara il brodo"
+        },
+        {
+          "title": "Apri le cozze e filtra il liquido",
+          "content": "Mentre la base sobbolle, scalda i 100 ml d’acqua riservati nella seconda pentola. Aggiungi le cozze controllate, copri e cuoci circa 5–7 minuti, scuotendo con cautela la pentola una volta. Togli quelle aperte con un utensile pulito e tienile in una ciotola pulita coperta. Scarta quelle rimaste chiuse senza forzarle. Filtra il liquido nella zuppa attraverso colino fine e garza pulita, senza premere i sedimenti né versare il fondo sabbioso. Gusci e scarti non rientrano nel peso commestibile del calcolo nutrizionale.",
+          "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-05.webp",
+          "image_alt": "Zuppa di mare con cozze: Apri le cozze e filtra il liquido"
+        },
+        {
+          "title": "Cuoci prima il merluzzo e poi i gamberi",
+          "content": "Fai sobbollire il brodo e aggiungi i cubi di merluzzo. Cuoci circa 3–5 minuti, poi aggiungi i gamberi per altri 2–3 minuti, muovendo delicatamente la pentola per non rompere il pesce. Con una sonda sottile verifica almeno 63 °C nelle parti più spesse di pesce e gamberi. Il pesce deve essere opaco e separarsi facilmente, i gamberi sodi e opachi. Se necessario prosegui e misura ancora: temperatura e stato di cottura prevalgono sui tempi indicativi. Lava gli utensili che hanno toccato frutti di mare crudi prima di usarli nella zuppa.",
+          "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-06.webp",
+          "image_alt": "Zuppa di mare con cozze: Cuoci prima il merluzzo e poi i gamberi"
+        },
+        {
+          "title": "Rimetti le cozze e termina la zuppa",
+          "content": "Rimetti solo le cozze aperte e fai sobbollire circa 1 minuto per scaldare tutto senza prolungare inutilmente la cottura. Togli le 2 foglie d’alloro con un utensile pulito. Spegni il fuoco, unisci 20 g di succo di limone e 10 g di prezzemolo tritato e mescola piano. Assaggia con un cucchiaio pulito. Ricetta e stima comprendono già 4 g di sale; aggiungerne modifica il sodio. Controlla che non ci siano gusci rotti o cozze chiuse.",
+          "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-07.webp",
+          "image_alt": "Zuppa di mare con cozze: Rimetti le cozze e termina la zuppa"
+        },
+        {
+          "title": "Dividi in quattro porzioni e servi",
+          "content": "Dividi brodo, verdure, merluzzo, gamberi e cozze in 4 ciotole e servi subito. Lascia visibili alcuni gusci aperti e ricorda che non si mangiano; non decorare con una cozza chiusa. Si parte da pesce e gamberi freschi o già scongelati: 20 minuti di preparazione più 45 di cottura, 65 totali, stimati e ancora da verificare in cucina. Partendo dal surgelato, aggiungi prima lo scongelamento in frigorifero, indicativamente una notte di 8–12 ore o più secondo la confezione, fino a scongelamento completo. Non scongelare sul piano di lavoro.",
+          "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/portada.webp",
+          "image_alt": "Zuppa di mare con cozze: Dividi in quattro porzioni e servi"
+        }
+      ],
+      "notes": "Usa merluzzo fresco o scongelato, non merluzzo salato senza adattare metodo e calcolo. Un altro pesce bianco sodo senza lische è possibile, ma cambia i nutrienti. Il brodo commerciale al posto dell’acqua modifica sodio, sapore e possibili allergeni. Contiene pesce, crostacei e molluschi. Acquista cozze vive da un fornitore autorizzato, mantieni il freddo e scarta gusci danneggiati, cozze che non superano il controllo da vive e quelle che non si aprono cuocendo. Distribuisci gli avanzi in contenitori bassi e refrigera a 4 °C o meno entro 2 ore, o 1 ora se l’ambiente supera 32 °C; non attendere che una grande pentola si raffreddi sul piano. Consuma entro 3 giorni. Riscalda solo la porzione necessaria a 74 °C al centro, facendo bollire il brodo; i frutti di mare perdono consistenza. Quantità, resa e tempi sono proposte stimate: non si dichiara una prova in cucina eseguita.",
+      "nutrition": {
+        "calories": 262.6,
+        "protein_g": 37.3,
+        "carbs_g": 11.3,
+        "fat_g": 7.6,
+        "saturated_fat_g": 1.2,
+        "sodium_mg": 717.2,
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (abril de 2018)",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "inputs": [
+          {
+            "ingredient": "carne de mejillón cruda estimada de 1000 g con concha",
+            "edible_grams": 250,
+            "fdc_id": 174216,
+            "fdc_description": "Mollusks, mussel, blue, raw",
+            "per_100g": {
+              "fat_g": 2.24,
+              "carbs_g": 3.69,
+              "calories": 86.0,
+              "saturated_fat_g": 0.425,
+              "sodium_mg": 286,
+              "protein_g": 11.9
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/174216/nutrients"
+          },
+          {
+            "ingredient": "langostinos crudos pelados y sin intestino",
+            "edible_grams": 300,
+            "fdc_id": 175179,
+            "fdc_description": "Crustaceans, shrimp, raw",
+            "per_100g": {
+              "fat_g": 0.51,
+              "carbs_g": 0.0,
+              "calories": 85.0,
+              "protein_g": 20.1,
+              "sodium_mg": 119,
+              "saturated_fat_g": 0.101
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/175179/nutrients"
+          },
+          {
+            "ingredient": "filete de bacalao atlántico fresco sin piel ni espinas",
+            "edible_grams": 300,
+            "fdc_id": 171955,
+            "fdc_description": "Fish, cod, Atlantic, raw",
+            "per_100g": {
+              "calories": 82.0,
+              "sodium_mg": 54.0,
+              "protein_g": 17.8,
+              "saturated_fat_g": 0.131,
+              "fat_g": 0.67,
+              "carbs_g": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171955/nutrients"
+          },
+          {
+            "ingredient": "tomate maduro",
+            "edible_grams": 300,
+            "fdc_id": 170457,
+            "fdc_description": "Tomatoes, red, ripe, raw, year round average",
+            "per_100g": {
+              "carbs_g": 3.89,
+              "calories": 18.0,
+              "saturated_fat_g": 0.028,
+              "fat_g": 0.2,
+              "sodium_mg": 5.0,
+              "protein_g": 0.88
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170457/nutrients"
+          },
+          {
+            "ingredient": "cebolla",
+            "edible_grams": 120,
+            "fdc_id": 170000,
+            "fdc_description": "Onions, raw",
+            "per_100g": {
+              "fat_g": 0.1,
+              "carbs_g": 9.34,
+              "calories": 40.0,
+              "saturated_fat_g": 0.042,
+              "protein_g": 1.1,
+              "sodium_mg": 4.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170000/nutrients"
+          },
+          {
+            "ingredient": "zanahoria",
+            "edible_grams": 80,
+            "fdc_id": 170393,
+            "fdc_description": "Carrots, raw",
+            "per_100g": {
+              "saturated_fat_g": 0.032,
+              "sodium_mg": 69.0,
+              "protein_g": 0.93,
+              "fat_g": 0.24,
+              "carbs_g": 9.58,
+              "calories": 41.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170393/nutrients"
+          },
+          {
+            "ingredient": "ajo",
+            "edible_grams": 10,
+            "fdc_id": 169230,
+            "fdc_description": "Garlic, raw",
+            "per_100g": {
+              "carbs_g": 33.1,
+              "calories": 149,
+              "saturated_fat_g": 0.089,
+              "sodium_mg": 17.0,
+              "protein_g": 6.36,
+              "fat_g": 0.5
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169230/nutrients"
+          },
+          {
+            "ingredient": "aceite de oliva",
+            "edible_grams": 20,
+            "fdc_id": 171413,
+            "fdc_description": "Oil, olive, salad or cooking",
+            "per_100g": {
+              "fat_g": 100,
+              "carbs_g": 0.0,
+              "calories": 884,
+              "sodium_mg": 2.0,
+              "protein_g": 0.0,
+              "saturated_fat_g": 13.8
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171413/nutrients"
+          },
+          {
+            "ingredient": "zumo de limón",
+            "edible_grams": 20,
+            "fdc_id": 167747,
+            "fdc_description": "Lemon juice, raw",
+            "per_100g": {
+              "protein_g": 0.35,
+              "saturated_fat_g": 0.04,
+              "sodium_mg": 1.0,
+              "fat_g": 0.24,
+              "carbs_g": 6.9,
+              "calories": 22.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/167747/nutrients"
+          },
+          {
+            "ingredient": "perejil fresco",
+            "edible_grams": 10,
+            "fdc_id": 170416,
+            "fdc_description": "Parsley, fresh",
+            "per_100g": {
+              "carbs_g": 6.33,
+              "calories": 36.0,
+              "fat_g": 0.79,
+              "protein_g": 2.97,
+              "sodium_mg": 56.0,
+              "saturated_fat_g": 0.132
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170416/nutrients"
+          },
+          {
+            "ingredient": "sal",
+            "edible_grams": 4,
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "sodium_mg": 38800.0,
+              "saturated_fat_g": 0.0,
+              "protein_g": 0.0,
+              "fat_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients"
+          }
+        ],
+        "serving_size": "1 di 4 ciotole, senza gusci",
+        "method": "Undici schede USDA verificate: pesi crudi commestibili moltiplicati per i nutrienti ogni 100 g, somma divisa per 4. Dai 1000 g di cozze con guscio si propone una resa commestibile del 25 %, 250 g di carne cruda equivalente, da confermare pesando. Olio, verdure, limone, prezzemolo e 4 g di sale sono contati interamente. Acqua e gusci non aggiungono nutrienti conteggiati; l’alloro viene rimosso e il suo trasferimento nutrizionale non è stimato.",
+        "note": "Stima informativa, non analisi del piatto o resa misurata. Resa delle cozze, specie o additivi dei gamberi, perdite e scarti cambiano le cifre. Il liquido filtrato può apportare sali non interamente rappresentati dal modello della carne. Fibre e zuccheri totali non sono indicati perché la scheda dei gamberi scelta manca di entrambi i dati; le assenze non sono diventate zeri. Esclude pane, vino e brodo commerciale."
+      },
+      "keywords": [
+        "zuppa di mare",
+        "zuppa di cozze",
+        "gamberi",
+        "merluzzo fresco"
+      ],
+      "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/portada.webp",
+      "gallery": [
+        "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-01.webp",
+        "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-02.webp",
+        "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-03.webp",
+        "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-04.webp",
+        "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-05.webp",
+        "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-06.webp",
+        "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-07.webp"
+      ],
+      "seo": {
+        "title": "Zuppa di mare con cozze, gamberi e merluzzo",
+        "description": "Zuppa di mare per 4 con cozze, gamberi e merluzzo: brodo di pomodoro, liquido filtrato, cottura per fasi e consigli per conservarla.",
+        "image_alt": "Zuppa in brodo di pomodoro con cozze aperte, gamberi sgusciati, merluzzo, carota e prezzemolo",
+        "image_variants": [
+          "/recetas/receta-de-sopa-de-mariscos-con-mejillones/portada-1x1.webp",
+          "/recetas/receta-de-sopa-de-mariscos-con-mejillones/portada-4x3.webp",
+          "/recetas/receta-de-sopa-de-mariscos-con-mejillones/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Cosa fare con le cozze che non si aprono?",
+            "a": "Scarta quelle rimaste chiuse dopo la cottura, senza forzarle per mangiarle. Prima della cottura elimina anche gusci rotti e cozze vive aperte che non si richiudono con un colpetto delicato. Filtra il liquido delle cozze aperte prima di unirlo alla zuppa."
+          },
+          {
+            "q": "Posso usare pesce e gamberi surgelati?",
+            "a": "Sì, scongelati prima in frigorifero e pesati senza pelle, lische, guscio o intestino. Ai 65 minuti aggiungi una notte indicativa di 8–12 ore, o il tempo richiesto dalla confezione e dallo scongelamento reale. Questa ricetta usa cozze vive; quelle surgelate richiedono un altro trattamento e non il controllo di chiusura degli animali vivi."
+          },
+          {
+            "q": "Posso sostituire l’acqua con brodo di pesce?",
+            "a": "Sì, se adatto ai tuoi allergeni, ma sale e composizione cambiano la stima. La proposta usa 1200 ml d’acqua in totale, di cui 100 ml per aprire le cozze. Evita brodo molto salato insieme al liquido delle cozze e regola il condimento con prudenza."
+          }
+        ]
+      },
+      "published": true,
+      "editorial_status": "published",
+      "content_html": "<p>Una zuppa dal brodo leggero di pomodoro con cozze, gamberi e merluzzo fresco dell’Atlantico. Le cozze si aprono a parte e il loro liquido viene filtrato; pesce e gamberi cuociono poi in sequenza. Proposta per 4 porzioni: 20 minuti di preparazione e 45 di cottura, 65 totali. Quantità, resa e tempi sono stimati e da confermare in cucina. Pesce o gamberi surgelati richiedono in più una notte di scongelamento in frigorifero, indicativamente 8–12 ore o quanto richiedono confezione e scongelamento effettivo.</p><p>Usa merluzzo fresco o scongelato, non merluzzo salato senza adattare metodo e calcolo. Un altro pesce bianco sodo senza lische è possibile, ma cambia i nutrienti. Il brodo commerciale al posto dell’acqua modifica sodio, sapore e possibili allergeni. Contiene pesce, crostacei e molluschi. Acquista cozze vive da un fornitore autorizzato, mantieni il freddo e scarta gusci danneggiati, cozze che non superano il controllo da vive e quelle che non si aprono cuocendo. Distribuisci gli avanzi in contenitori bassi e refrigera a 4 °C o meno entro 2 ore, o 1 ora se l’ambiente supera 32 °C; non attendere che una grande pentola si raffreddi sul piano. Consuma entro 3 giorni. Riscalda solo la porzione necessaria a 74 °C al centro, facendo bollire il brodo; i frutti di mare perdono consistenza. Quantità, resa e tempi sono proposte stimate: non si dichiara una prova in cucina eseguita.</p>"
+    },
+    {
+      "id": "2b545845-ab5c-5ffc-abbe-0b7c66291569",
+      "recipe_group_id": "03d0b017-8568-45d9-b993-87765956a71b",
+      "slug": "ムール貝入りシーフードスープのレシピ",
+      "public_path": "/ja/ムール貝入りシーフードスープのレシピ",
+      "source_url": "https://manualdecocina.com/ja/ムール貝入りシーフードスープのレシピ/",
+      "language": "ja",
+      "title": "ムール貝のシーフードスープ",
+      "excerpt": "ムール貝、エビ、マダラのトマトスープ。貝の煮汁をこし、魚介を順番に加熱します。",
+      "summary": "ムール貝、エビ、生の大西洋マダラを、軽いトマトのスープに合わせます。ムール貝は別鍋で加熱し、煮汁をこしてから使います。魚とエビは後から順に加えて火を通します。4人分の提案で、下準備20分、加熱45分、合計65分です。分量、出来上がり量、時間はいずれも推定で、実際の調理試験による確認はまだありません。冷凍の魚やエビを使う場合は、冷蔵庫で一晩、目安8～12時間、または包装の表示と実際の解凍に必要な時間を別途加えてください。",
+      "category": "スープ・ポタージュ",
+      "category_slug": "sopas-y-cremas",
+      "difficulty": "中級",
+      "course": "スープ",
+      "cuisine": "地中海料理",
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 45,
+      "total_time_minutes": 65,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "殻付きの生きたムール貝",
+          "amount": "1000",
+          "unit": "g",
+          "group": "魚介"
+        },
+        {
+          "name": "殻と背わたを取り除いた生エビ",
+          "amount": "300",
+          "unit": "g",
+          "group": "魚介"
+        },
+        {
+          "name": "皮と骨を取り除いた生の大西洋マダラの切り身",
+          "amount": "300",
+          "unit": "g",
+          "group": "魚介"
+        },
+        {
+          "name": "完熟トマト",
+          "amount": "300",
+          "unit": "g",
+          "group": "スープのベース"
+        },
+        {
+          "name": "玉ねぎ",
+          "amount": "120",
+          "unit": "g",
+          "group": "スープのベース"
+        },
+        {
+          "name": "にんじん",
+          "amount": "80",
+          "unit": "g",
+          "group": "スープのベース"
+        },
+        {
+          "name": "にんにく",
+          "amount": "10",
+          "unit": "g",
+          "group": "スープのベース"
+        },
+        {
+          "name": "オリーブオイル",
+          "amount": "20",
+          "unit": "g",
+          "group": "スープのベース"
+        },
+        {
+          "name": "水",
+          "amount": "1200",
+          "unit": "ml",
+          "group": "スープのベース"
+        },
+        {
+          "name": "ローリエ",
+          "amount": "2",
+          "unit": "枚",
+          "group": "スープのベース"
+        },
+        {
+          "name": "塩",
+          "amount": "4",
+          "unit": "g",
+          "group": "スープのベース"
+        },
+        {
+          "name": "レモン汁",
+          "amount": "20",
+          "unit": "g",
+          "group": "仕上げ"
+        },
+        {
+          "name": "生のパセリ",
+          "amount": "10",
+          "unit": "g",
+          "group": "仕上げ"
+        }
+      ],
+      "steps": [
+        {
+          "title": "野菜と仕上げの材料を準備する",
+          "content": "トマト300 g、にんじん80 g、パセリ10 gを洗います。にんじんと玉ねぎ120 gの皮をむき、約5 mm角に切ります。トマトを小さく切り、にんにく10 gとパセリは別々に刻みます。レモン汁20 gを搾って量ります。水1200 mlのうち100 mlをムール貝用に取り分け、残り1100 mlをスープ用にします。大きめの鍋、ふた付きの別鍋、清潔なガーゼを敷いた細かいざるを用意します。",
+          "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-01.webp",
+          "image_alt": "ムール貝のシーフードスープ: 野菜と仕上げの材料を準備する"
+        },
+        {
+          "title": "ムール貝を確認し、魚を切る",
+          "content": "殻付きの生きたムール貝1000 gを、認可された販売元から購入し、産地などの情報を残します。割れた殻、軽くたたいても閉じない開いた貝は除きます。冷たい流水で殻をブラシ洗いし、加熱直前に足糸を取ります。真水に漬けたままにしません。生のマダラ300 gを約3 cm角に切り、骨がないか確認します。殻と背わたを除いた生エビ300 gを用意します。魚介は野菜と分けて4 °C以下で保管します。生の魚介に触れた後は手、まな板、包丁を洗い、加熱済み食品用の清潔な器と道具を別に用意します。",
+          "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-02.webp",
+          "image_alt": "ムール貝のシーフードスープ: ムール貝を確認し、魚を切る"
+        },
+        {
+          "title": "玉ねぎとにんじんを炒める",
+          "content": "大きい鍋にオリーブオイル20 gを中火で温めます。玉ねぎとにんじんを加え、混ぜながら約6分炒め、玉ねぎをやわらかくし、にんじんにも火を通し始めます。にんにくを加えてさらに1分混ぜ、濃く焼き色を付けません。焦げ付きそうなら火を弱め、予定の水1100 mlからスプーン1杯分を加えます。水の総量は増やしません。",
+          "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-03.webp",
+          "image_alt": "ムール貝のシーフードスープ: 玉ねぎとにんじんを炒める"
+        },
+        {
+          "title": "トマトを加えてスープを煮る",
+          "content": "トマトを加え、中火で混ぜながら約5分、少し崩れるまで加熱します。残りの水1100 ml、ローリエ2枚、塩4 gを加えます。軽く煮立ったらふたを少しずらし、にんじんがやわらかくなるまで約15分煮ます。野菜の周囲にさらっとした汁が残るよう火を調整し、ソースのように煮詰めないでください。",
+          "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-04.webp",
+          "image_alt": "ムール貝のシーフードスープ: トマトを加えてスープを煮る"
+        },
+        {
+          "title": "ムール貝を開かせ、煮汁をこす",
+          "content": "スープを煮ている間に、別鍋で取り分けた水100 mlを熱します。確認済みのムール貝を入れてふたをし、約5～7分加熱します。途中で一度、鍋を慎重に揺すります。開いた貝を清潔な道具で清潔な器に取り、ふたをして置きます。最後まで閉じた貝は捨て、無理にこじ開けません。清潔なガーゼを敷いた細かいざるで煮汁をこし、スープに加えます。沈殿物を押し通したり、砂のある底の汁をそのまま流し込んだりしません。殻と捨てた貝は栄養計算の可食重量に含みません。",
+          "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-05.webp",
+          "image_alt": "ムール貝のシーフードスープ: ムール貝を開かせ、煮汁をこす"
+        },
+        {
+          "title": "マダラ、エビの順に加熱する",
+          "content": "スープを軽く煮立たせ、マダラを加えて約3～5分加熱します。エビを加えてさらに2～3分、魚が崩れないよう鍋をそっと動かします。細い温度計で魚とエビの最も厚い部分が少なくとも63 °Cになったことを確認します。魚は透明感がなくなり身がほぐれ、エビは弾力があって不透明になります。不十分なら加熱を続けて再確認します。推定時間より中心温度と火の通りを優先してください。生の魚介に触れた道具は洗ってからスープに使います。",
+          "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-06.webp",
+          "image_alt": "ムール貝のシーフードスープ: マダラ、エビの順に加熱する"
+        },
+        {
+          "title": "ムール貝を戻して仕上げる",
+          "content": "開いたムール貝だけを鍋に戻し、全体が熱くなるまで約1分軽く煮ます。必要以上に加熱を長引かせません。清潔な道具でローリエ2枚を取り出します。火を止め、レモン汁20 gと刻んだパセリ10 gを加えてやさしく混ぜます。清潔なスプーンで味見します。レシピと推定値にはすでに塩4 gが含まれ、追加するとナトリウム量が変わります。割れた殻や閉じた貝がないか確認します。",
+          "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-07.webp",
+          "image_alt": "ムール貝のシーフードスープ: ムール貝を戻して仕上げる"
+        },
+        {
+          "title": "4人分に分けてすぐに出す",
+          "content": "汁、野菜、マダラ、エビ、ムール貝を4つの器に分け、すぐに出します。開いた殻をいくつか見えるようにし、殻は食べないことを伝えます。閉じた貝を飾りに加えません。生鮮または解凍済みの魚とエビを使う提案で、下準備20分と加熱45分、合計65分は推定で、調理試験は未確認です。冷凍の場合は事前に冷蔵庫で解凍し、一晩8～12時間を目安に、包装の表示に応じてさらに長く取り、完全に解凍するまで待ちます。作業台の上で解凍しません。",
+          "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/portada.webp",
+          "image_alt": "ムール貝のシーフードスープ: 4人分に分けてすぐに出す"
+        }
+      ],
+      "notes": "生鮮または解凍したマダラを使います。塩漬けのタラは手順と計算を変更せずには使えません。骨のない身のしっかりした別の白身魚で代用できますが、栄養値が変わります。市販の魚のだしに替えると塩分、風味、アレルゲンが変わることがあります。魚、甲殻類、軟体動物を含みます。ムール貝は認可された販売元から生きたものを買い、冷蔵し、傷んだ殻、生存確認を満たさない貝、加熱後も開かない貝を除きます。残りは浅い容器に分け、2時間以内、周囲が32 °Cを超える場合は1時間以内に4 °C以下で冷蔵します。大鍋が作業台で冷めるまで待ちません。3日以内に食べます。必要な分だけ中心74 °Cまで再加熱し、汁を沸かします。魚介の食感は再加熱で変わります。分量、出来上がり量、時間は未試験の推定で、試作済みとはしていません。",
+      "nutrition": {
+        "calories": 262.6,
+        "protein_g": 37.3,
+        "carbs_g": 11.3,
+        "fat_g": 7.6,
+        "saturated_fat_g": 1.2,
+        "sodium_mg": 717.2,
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (abril de 2018)",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "inputs": [
+          {
+            "ingredient": "carne de mejillón cruda estimada de 1000 g con concha",
+            "edible_grams": 250,
+            "fdc_id": 174216,
+            "fdc_description": "Mollusks, mussel, blue, raw",
+            "per_100g": {
+              "fat_g": 2.24,
+              "carbs_g": 3.69,
+              "calories": 86.0,
+              "saturated_fat_g": 0.425,
+              "sodium_mg": 286,
+              "protein_g": 11.9
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/174216/nutrients"
+          },
+          {
+            "ingredient": "langostinos crudos pelados y sin intestino",
+            "edible_grams": 300,
+            "fdc_id": 175179,
+            "fdc_description": "Crustaceans, shrimp, raw",
+            "per_100g": {
+              "fat_g": 0.51,
+              "carbs_g": 0.0,
+              "calories": 85.0,
+              "protein_g": 20.1,
+              "sodium_mg": 119,
+              "saturated_fat_g": 0.101
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/175179/nutrients"
+          },
+          {
+            "ingredient": "filete de bacalao atlántico fresco sin piel ni espinas",
+            "edible_grams": 300,
+            "fdc_id": 171955,
+            "fdc_description": "Fish, cod, Atlantic, raw",
+            "per_100g": {
+              "calories": 82.0,
+              "sodium_mg": 54.0,
+              "protein_g": 17.8,
+              "saturated_fat_g": 0.131,
+              "fat_g": 0.67,
+              "carbs_g": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171955/nutrients"
+          },
+          {
+            "ingredient": "tomate maduro",
+            "edible_grams": 300,
+            "fdc_id": 170457,
+            "fdc_description": "Tomatoes, red, ripe, raw, year round average",
+            "per_100g": {
+              "carbs_g": 3.89,
+              "calories": 18.0,
+              "saturated_fat_g": 0.028,
+              "fat_g": 0.2,
+              "sodium_mg": 5.0,
+              "protein_g": 0.88
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170457/nutrients"
+          },
+          {
+            "ingredient": "cebolla",
+            "edible_grams": 120,
+            "fdc_id": 170000,
+            "fdc_description": "Onions, raw",
+            "per_100g": {
+              "fat_g": 0.1,
+              "carbs_g": 9.34,
+              "calories": 40.0,
+              "saturated_fat_g": 0.042,
+              "protein_g": 1.1,
+              "sodium_mg": 4.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170000/nutrients"
+          },
+          {
+            "ingredient": "zanahoria",
+            "edible_grams": 80,
+            "fdc_id": 170393,
+            "fdc_description": "Carrots, raw",
+            "per_100g": {
+              "saturated_fat_g": 0.032,
+              "sodium_mg": 69.0,
+              "protein_g": 0.93,
+              "fat_g": 0.24,
+              "carbs_g": 9.58,
+              "calories": 41.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170393/nutrients"
+          },
+          {
+            "ingredient": "ajo",
+            "edible_grams": 10,
+            "fdc_id": 169230,
+            "fdc_description": "Garlic, raw",
+            "per_100g": {
+              "carbs_g": 33.1,
+              "calories": 149,
+              "saturated_fat_g": 0.089,
+              "sodium_mg": 17.0,
+              "protein_g": 6.36,
+              "fat_g": 0.5
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169230/nutrients"
+          },
+          {
+            "ingredient": "aceite de oliva",
+            "edible_grams": 20,
+            "fdc_id": 171413,
+            "fdc_description": "Oil, olive, salad or cooking",
+            "per_100g": {
+              "fat_g": 100,
+              "carbs_g": 0.0,
+              "calories": 884,
+              "sodium_mg": 2.0,
+              "protein_g": 0.0,
+              "saturated_fat_g": 13.8
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171413/nutrients"
+          },
+          {
+            "ingredient": "zumo de limón",
+            "edible_grams": 20,
+            "fdc_id": 167747,
+            "fdc_description": "Lemon juice, raw",
+            "per_100g": {
+              "protein_g": 0.35,
+              "saturated_fat_g": 0.04,
+              "sodium_mg": 1.0,
+              "fat_g": 0.24,
+              "carbs_g": 6.9,
+              "calories": 22.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/167747/nutrients"
+          },
+          {
+            "ingredient": "perejil fresco",
+            "edible_grams": 10,
+            "fdc_id": 170416,
+            "fdc_description": "Parsley, fresh",
+            "per_100g": {
+              "carbs_g": 6.33,
+              "calories": 36.0,
+              "fat_g": 0.79,
+              "protein_g": 2.97,
+              "sodium_mg": 56.0,
+              "saturated_fat_g": 0.132
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170416/nutrients"
+          },
+          {
+            "ingredient": "sal",
+            "edible_grams": 4,
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "sodium_mg": 38800.0,
+              "saturated_fat_g": 0.0,
+              "protein_g": 0.0,
+              "fat_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients"
+          }
+        ],
+        "serving_size": "4人分のうち1杯、殻を除く",
+        "method": "確認したUSDAの11食品データを使用。生の可食重量に100 g当たりの栄養値を掛け、合計を4で割ります。殻付きムール貝1000 gからの可食部を暫定25 %、生の身相当250 gとし、実際の秤量は未確認です。油、野菜、レモン、パセリ、塩4 gを全量計上。水と殻は計算対象の栄養素を加えず、ローリエは取り除き、その成分移行は推定していません。",
+        "note": "情報提供のための推定で、完成品の分析や実測した出来上がり量ではありません。貝の歩留まり、エビの種類や添加物、損失と廃棄で変わります。こした貝の煮汁の塩分は、可食肉モデルだけでは完全に反映できません。採用したエビのデータに食物繊維と総糖類がないため、両項目は表示しません。欠損をゼロにはしていません。パン、ワイン、市販だしは含みません。"
+      },
+      "keywords": [
+        "シーフードスープ",
+        "ムール貝のスープ",
+        "エビ",
+        "生のマダラ"
+      ],
+      "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/portada.webp",
+      "gallery": [
+        "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-01.webp",
+        "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-02.webp",
+        "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-03.webp",
+        "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-04.webp",
+        "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-05.webp",
+        "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-06.webp",
+        "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-07.webp"
+      ],
+      "seo": {
+        "title": "ムール貝・エビ・マダラのシーフードスープ",
+        "description": "4人分のムール貝、エビ、マダラのスープ。トマトの汁にこした貝の煮汁を加え、魚介を順に加熱。保存方法も紹介します。",
+        "image_alt": "トマトのスープに開いたムール貝、殻をむいたエビ、マダラ、にんじん、パセリ",
+        "image_variants": [
+          "/recetas/receta-de-sopa-de-mariscos-con-mejillones/portada-1x1.webp",
+          "/recetas/receta-de-sopa-de-mariscos-con-mejillones/portada-4x3.webp",
+          "/recetas/receta-de-sopa-de-mariscos-con-mejillones/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "開かなかったムール貝はどうしますか？",
+            "a": "加熱後も閉じたままの貝は捨て、無理に開けて食べません。加熱前も割れた殻、軽くたたいても閉じない生きた状態の開いた貝を除きます。開いた貝の煮汁をこしてからスープに使います。"
+          },
+          {
+            "q": "冷凍の魚やエビを使えますか？",
+            "a": "事前に冷蔵庫で解凍し、皮、骨、殻、背わたを除いて量れば使えます。合計65分のほかに一晩8～12時間を目安とし、包装の指示と実際の解凍に必要な時間を加えます。このレシピのムール貝は生きたものです。冷凍品は別の扱いが必要で、生きた貝の閉じる反応では確認できません。"
+          },
+          {
+            "q": "水を魚のだしに替えられますか？",
+            "a": "アレルゲンに問題のないものなら可能ですが、塩分と成分が変わり、推定値も変わります。提案は水を合計1200 ml、そのうち100 mlをムール貝の加熱に使います。塩分の多いだしと貝の煮汁を組み合わせるときは、慎重に味を調整してください。"
+          }
+        ]
+      },
+      "published": true,
+      "editorial_status": "published",
+      "content_html": "<p>ムール貝、エビ、生の大西洋マダラを、軽いトマトのスープに合わせます。ムール貝は別鍋で加熱し、煮汁をこしてから使います。魚とエビは後から順に加えて火を通します。4人分の提案で、下準備20分、加熱45分、合計65分です。分量、出来上がり量、時間はいずれも推定で、実際の調理試験による確認はまだありません。冷凍の魚やエビを使う場合は、冷蔵庫で一晩、目安8～12時間、または包装の表示と実際の解凍に必要な時間を別途加えてください。</p><p>生鮮または解凍したマダラを使います。塩漬けのタラは手順と計算を変更せずには使えません。骨のない身のしっかりした別の白身魚で代用できますが、栄養値が変わります。市販の魚のだしに替えると塩分、風味、アレルゲンが変わることがあります。魚、甲殻類、軟体動物を含みます。ムール貝は認可された販売元から生きたものを買い、冷蔵し、傷んだ殻、生存確認を満たさない貝、加熱後も開かない貝を除きます。残りは浅い容器に分け、2時間以内、周囲が32 °Cを超える場合は1時間以内に4 °C以下で冷蔵します。大鍋が作業台で冷めるまで待ちません。3日以内に食べます。必要な分だけ中心74 °Cまで再加熱し、汁を沸かします。魚介の食感は再加熱で変わります。分量、出来上がり量、時間は未試験の推定で、試作済みとはしていません。</p>"
+    },
+    {
+      "id": "9f54fe80-f36c-5c89-bb17-aaa070c80588",
+      "recipe_group_id": "03d0b017-8568-45d9-b993-87765956a71b",
+      "slug": "sopa-de-frutos-do-mar-com-mexilhoes",
+      "public_path": "/pt/sopa-de-frutos-do-mar-com-mexilhoes",
+      "source_url": null,
+      "language": "pt",
+      "title": "Sopa de frutos do mar com mexilhões",
+      "excerpt": "Mexilhões, camarões e peixe fresco em caldo de tomate, com líquido dos mexilhões coado e cozimento por etapas.",
+      "summary": "Uma sopa de caldo leve de tomate com mexilhões, camarões e filé fresco de bacalhau-do-Atlântico, sem salga. Os mexilhões são abertos em outra panela e seu líquido é coado; o peixe e os camarões entram depois, em etapas. Proposta para 4 porções: 20 minutos de preparo e 45 de cozimento, 65 no total. Quantidades, rendimento e tempos são estimados e ainda não foram confirmados em teste de cozinha. Peixe ou camarão congelados precisam de uma noite adicional na geladeira, cerca de 8–12 horas ou o tempo indicado na embalagem e necessário para descongelar completamente.",
+      "category": "Sopas e cremes",
+      "category_slug": "sopas-y-cremas",
+      "difficulty": "Média",
+      "course": "Sopa",
+      "cuisine": "Mediterrânea",
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 45,
+      "total_time_minutes": 65,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "mexilhões vivos com concha",
+          "amount": "1000",
+          "unit": "g",
+          "group": "Frutos do mar e peixe"
+        },
+        {
+          "name": "camarões crus descascados e sem a veia intestinal",
+          "amount": "300",
+          "unit": "g",
+          "group": "Frutos do mar e peixe"
+        },
+        {
+          "name": "filé fresco de bacalhau-do-Atlântico, sem salga, pele ou espinhas",
+          "amount": "300",
+          "unit": "g",
+          "group": "Frutos do mar e peixe"
+        },
+        {
+          "name": "tomate maduro",
+          "amount": "300",
+          "unit": "g",
+          "group": "Base da sopa"
+        },
+        {
+          "name": "cebola",
+          "amount": "120",
+          "unit": "g",
+          "group": "Base da sopa"
+        },
+        {
+          "name": "cenoura",
+          "amount": "80",
+          "unit": "g",
+          "group": "Base da sopa"
+        },
+        {
+          "name": "alho",
+          "amount": "10",
+          "unit": "g",
+          "group": "Base da sopa"
+        },
+        {
+          "name": "azeite de oliva",
+          "amount": "20",
+          "unit": "g",
+          "group": "Base da sopa"
+        },
+        {
+          "name": "água",
+          "amount": "1200",
+          "unit": "ml",
+          "group": "Base da sopa"
+        },
+        {
+          "name": "folhas de louro",
+          "amount": "2",
+          "unit": "folhas",
+          "group": "Base da sopa"
+        },
+        {
+          "name": "sal",
+          "amount": "4",
+          "unit": "g",
+          "group": "Base da sopa"
+        },
+        {
+          "name": "suco de limão",
+          "amount": "20",
+          "unit": "g",
+          "group": "Finalização"
+        },
+        {
+          "name": "salsinha fresca",
+          "amount": "10",
+          "unit": "g",
+          "group": "Finalização"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepare os legumes e a finalização",
+          "content": "Lave 300 g de tomate, 80 g de cenoura e 10 g de salsinha. Descasque a cenoura e 120 g de cebola; corte ambos em cubinhos de cerca de 5 mm. Pique o tomate em pedaços pequenos e os 10 g de alho e a salsinha separadamente. Esprema e pese 20 g de suco de limão. Dos 1200 ml de água, reserve 100 ml para os mexilhões; os 1100 ml restantes vão para a sopa. Separe uma panela grande, outra com tampa e uma peneira fina forrada com gaze limpa.",
+          "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-01.webp",
+          "image_alt": "Sopa de frutos do mar com mexilhões: Prepare os legumes e a finalização"
+        },
+        {
+          "title": "Confira os mexilhões e corte o peixe",
+          "content": "Compre os 1000 g de mexilhões vivos com concha de fornecedor autorizado e guarde as informações de origem. Descarte conchas quebradas e mexilhões abertos que não se fechem após uma batida leve. Escove em água fria corrente e retire os fios logo antes de cozinhar; não deixe de molho em água doce. Corte os 300 g de peixe fresco em cubos de cerca de 3 cm e confira as espinhas. Use 300 g de camarões já descascados e sem a veia intestinal. Mantenha os frutos do mar separados dos legumes, a 4 °C ou menos. Lave mãos, tábua e faca após contato com os ingredientes crus; reserve recipientes e utensílios limpos para os cozidos.",
+          "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-02.webp",
+          "image_alt": "Sopa de frutos do mar com mexilhões: Confira os mexilhões e corte o peixe"
+        },
+        {
+          "title": "Refogue a cebola e a cenoura",
+          "content": "Aqueça os 20 g de azeite na panela grande em fogo médio. Coloque cebola e cenoura e mexa por cerca de 6 minutos, até a cebola amolecer e a cenoura começar a ficar macia. Junte o alho e mexa por mais 1 minuto, sem deixar dourar demais. Se começar a grudar, abaixe o fogo e acrescente uma colher da água retirada dos 1100 ml previstos, sem aumentar a quantidade total.",
+          "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-03.webp",
+          "image_alt": "Sopa de frutos do mar com mexilhões: Refogue a cebola e a cenoura"
+        },
+        {
+          "title": "Cozinhe o tomate e prepare o caldo",
+          "content": "Junte o tomate e cozinhe em fogo médio por cerca de 5 minutos, mexendo, até desmanchar parcialmente. Despeje os 1100 ml de água restantes e adicione 2 folhas de louro e 4 g de sal. Leve à fervura suave e cozinhe cerca de 15 minutos com a tampa entreaberta, até a cenoura ficar macia. Mantenha caldo líquido ao redor dos legumes e ajuste o fogo para que a sopa não reduza a um molho.",
+          "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-04.webp",
+          "image_alt": "Sopa de frutos do mar com mexilhões: Cozinhe o tomate e prepare o caldo"
+        },
+        {
+          "title": "Abra os mexilhões e coe o líquido",
+          "content": "Enquanto a base ferve suavemente, aqueça os 100 ml de água reservados na segunda panela. Acrescente os mexilhões conferidos, tampe e cozinhe aproximadamente 5–7 minutos, sacudindo a panela com cuidado uma vez. Retire os que abrirem com utensílio limpo e mantenha em uma tigela limpa tampada. Descarte os que permanecerem fechados, sem forçar a concha. Coe o líquido para a sopa pela peneira fina com gaze limpa, sem espremer os sedimentos nem despejar o fundo com areia. Conchas e descartes não entram no peso comestível do cálculo nutricional.",
+          "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-05.webp",
+          "image_alt": "Sopa de frutos do mar com mexilhões: Abra os mexilhões e coe o líquido"
+        },
+        {
+          "title": "Cozinhe primeiro o peixe, depois os camarões",
+          "content": "Mantenha o caldo em fervura suave e acrescente os cubos de peixe. Cozinhe cerca de 3–5 minutos; depois coloque os camarões por mais 2–3 minutos, movendo a panela delicadamente para não quebrar o peixe. Com termômetro de ponta fina, confira pelo menos 63 °C nas partes mais grossas do peixe e dos camarões. O peixe deve ficar opaco e se separar facilmente; os camarões, firmes e opacos. Se necessário, continue e meça novamente: temperatura e ponto de cozimento valem mais que os tempos aproximados. Lave utensílios que tocaram frutos do mar crus antes de usá-los na sopa.",
+          "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-06.webp",
+          "image_alt": "Sopa de frutos do mar com mexilhões: Cozinhe primeiro o peixe, depois os camarões"
+        },
+        {
+          "title": "Volte os mexilhões e finalize a sopa",
+          "content": "Volte à panela somente os mexilhões abertos e cozinhe em fervura suave por aproximadamente 1 minuto, aquecendo tudo sem prolongar demais. Retire as 2 folhas de louro com utensílio limpo. Desligue o fogo, misture 20 g de suco de limão e 10 g de salsinha picada com delicadeza. Prove com colher limpa. Receita e estimativa já incluem 4 g de sal; acrescentar mais muda o sódio. Confira se não há conchas quebradas nem mexilhões fechados.",
+          "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-07.webp",
+          "image_alt": "Sopa de frutos do mar com mexilhões: Volte os mexilhões e finalize a sopa"
+        },
+        {
+          "title": "Divida em quatro porções e sirva",
+          "content": "Divida caldo, legumes, peixe, camarões e mexilhões entre 4 tigelas e sirva imediatamente. Deixe algumas conchas abertas visíveis e avise que não são comestíveis; não use mexilhão fechado como decoração. A proposta começa com peixe e camarões frescos ou já descongelados: 20 minutos de preparo e 45 de cozimento, 65 no total, estimados e pendentes de teste em cozinha. Se estiverem congelados, acrescente antes a descongelação na geladeira, aproximadamente uma noite de 8–12 horas ou mais conforme a embalagem, até estarem totalmente descongelados. Não descongele na bancada.",
+          "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/portada.webp",
+          "image_alt": "Sopa de frutos do mar com mexilhões: Divida em quatro porções e sirva"
+        }
+      ],
+      "notes": "Use filé fresco ou descongelado da espécie bacalhau-do-Atlântico, sem salga; o bacalhau salgado e seco exige outro processo e outra conta. É possível substituir por outro peixe branco firme, sem espinhas, mas os nutrientes mudam. Caldo comercial no lugar da água altera sódio, sabor e possíveis alergênicos. Contém peixe, crustáceos e moluscos. Compre mexilhões vivos de fornecedor autorizado, preserve o frio e descarte conchas danificadas, exemplares que não passem na conferência em vida e os que não abram no cozimento. Divida as sobras em recipientes rasos e refrigere a 4 °C ou menos antes de 2 horas, ou 1 hora se o ambiente passar de 32 °C; não espere uma panela grande esfriar na bancada. Consuma em até 3 dias. Reaqueça apenas a porção necessária a 74 °C no centro, com o caldo fervendo; a textura dos frutos do mar perde qualidade. Quantidades, rendimento e tempos são propostas estimadas, sem alegação de teste de cozinha realizado.",
+      "nutrition": {
+        "calories": 262.6,
+        "protein_g": 37.3,
+        "carbs_g": 11.3,
+        "fat_g": 7.6,
+        "saturated_fat_g": 1.2,
+        "sodium_mg": 717.2,
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (abril de 2018)",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "inputs": [
+          {
+            "ingredient": "carne de mejillón cruda estimada de 1000 g con concha",
+            "edible_grams": 250,
+            "fdc_id": 174216,
+            "fdc_description": "Mollusks, mussel, blue, raw",
+            "per_100g": {
+              "fat_g": 2.24,
+              "carbs_g": 3.69,
+              "calories": 86.0,
+              "saturated_fat_g": 0.425,
+              "sodium_mg": 286,
+              "protein_g": 11.9
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/174216/nutrients"
+          },
+          {
+            "ingredient": "langostinos crudos pelados y sin intestino",
+            "edible_grams": 300,
+            "fdc_id": 175179,
+            "fdc_description": "Crustaceans, shrimp, raw",
+            "per_100g": {
+              "fat_g": 0.51,
+              "carbs_g": 0.0,
+              "calories": 85.0,
+              "protein_g": 20.1,
+              "sodium_mg": 119,
+              "saturated_fat_g": 0.101
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/175179/nutrients"
+          },
+          {
+            "ingredient": "filete de bacalao atlántico fresco sin piel ni espinas",
+            "edible_grams": 300,
+            "fdc_id": 171955,
+            "fdc_description": "Fish, cod, Atlantic, raw",
+            "per_100g": {
+              "calories": 82.0,
+              "sodium_mg": 54.0,
+              "protein_g": 17.8,
+              "saturated_fat_g": 0.131,
+              "fat_g": 0.67,
+              "carbs_g": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171955/nutrients"
+          },
+          {
+            "ingredient": "tomate maduro",
+            "edible_grams": 300,
+            "fdc_id": 170457,
+            "fdc_description": "Tomatoes, red, ripe, raw, year round average",
+            "per_100g": {
+              "carbs_g": 3.89,
+              "calories": 18.0,
+              "saturated_fat_g": 0.028,
+              "fat_g": 0.2,
+              "sodium_mg": 5.0,
+              "protein_g": 0.88
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170457/nutrients"
+          },
+          {
+            "ingredient": "cebolla",
+            "edible_grams": 120,
+            "fdc_id": 170000,
+            "fdc_description": "Onions, raw",
+            "per_100g": {
+              "fat_g": 0.1,
+              "carbs_g": 9.34,
+              "calories": 40.0,
+              "saturated_fat_g": 0.042,
+              "protein_g": 1.1,
+              "sodium_mg": 4.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170000/nutrients"
+          },
+          {
+            "ingredient": "zanahoria",
+            "edible_grams": 80,
+            "fdc_id": 170393,
+            "fdc_description": "Carrots, raw",
+            "per_100g": {
+              "saturated_fat_g": 0.032,
+              "sodium_mg": 69.0,
+              "protein_g": 0.93,
+              "fat_g": 0.24,
+              "carbs_g": 9.58,
+              "calories": 41.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170393/nutrients"
+          },
+          {
+            "ingredient": "ajo",
+            "edible_grams": 10,
+            "fdc_id": 169230,
+            "fdc_description": "Garlic, raw",
+            "per_100g": {
+              "carbs_g": 33.1,
+              "calories": 149,
+              "saturated_fat_g": 0.089,
+              "sodium_mg": 17.0,
+              "protein_g": 6.36,
+              "fat_g": 0.5
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169230/nutrients"
+          },
+          {
+            "ingredient": "aceite de oliva",
+            "edible_grams": 20,
+            "fdc_id": 171413,
+            "fdc_description": "Oil, olive, salad or cooking",
+            "per_100g": {
+              "fat_g": 100,
+              "carbs_g": 0.0,
+              "calories": 884,
+              "sodium_mg": 2.0,
+              "protein_g": 0.0,
+              "saturated_fat_g": 13.8
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171413/nutrients"
+          },
+          {
+            "ingredient": "zumo de limón",
+            "edible_grams": 20,
+            "fdc_id": 167747,
+            "fdc_description": "Lemon juice, raw",
+            "per_100g": {
+              "protein_g": 0.35,
+              "saturated_fat_g": 0.04,
+              "sodium_mg": 1.0,
+              "fat_g": 0.24,
+              "carbs_g": 6.9,
+              "calories": 22.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/167747/nutrients"
+          },
+          {
+            "ingredient": "perejil fresco",
+            "edible_grams": 10,
+            "fdc_id": 170416,
+            "fdc_description": "Parsley, fresh",
+            "per_100g": {
+              "carbs_g": 6.33,
+              "calories": 36.0,
+              "fat_g": 0.79,
+              "protein_g": 2.97,
+              "sodium_mg": 56.0,
+              "saturated_fat_g": 0.132
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170416/nutrients"
+          },
+          {
+            "ingredient": "sal",
+            "edible_grams": 4,
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "sodium_mg": 38800.0,
+              "saturated_fat_g": 0.0,
+              "protein_g": 0.0,
+              "fat_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients"
+          }
+        ],
+        "serving_size": "1 de 4 tigelas, sem conchas",
+        "method": "Onze fichas USDA verificadas: pesos crus comestíveis multiplicados pelos nutrientes a cada 100 g, somados e divididos por 4. Para os 1000 g de mexilhões com concha, propõe-se rendimento comestível de 25 %, 250 g de carne crua equivalente, ainda a confirmar por pesagem. Azeite, legumes, limão, salsinha e 4 g de sal são contados integralmente. Água e conchas não acrescentam nutrientes contabilizados; o louro é retirado e sua transferência de nutrientes não é estimada.",
+        "note": "Estimativa informativa, não análise do prato nem rendimento medido na cozinha. Rendimento dos mexilhões, espécie ou aditivos dos camarões, perdas e descartes alteram as cifras. O líquido coado dos mexilhões pode acrescentar sais não totalmente refletidos no modelo da carne comestível. Fibras e açúcares totais não são informados porque a ficha de camarão escolhida não traz ambos os dados; valores ausentes não foram transformados em zero. Não inclui pão, vinho ou caldo comercial."
+      },
+      "keywords": [
+        "sopa de frutos do mar",
+        "sopa de mexilhões",
+        "camarões",
+        "peixe fresco"
+      ],
+      "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/portada.webp",
+      "gallery": [
+        "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-01.webp",
+        "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-02.webp",
+        "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-03.webp",
+        "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-04.webp",
+        "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-05.webp",
+        "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-06.webp",
+        "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-07.webp"
+      ],
+      "seo": {
+        "title": "Sopa de frutos do mar com mexilhões e peixe",
+        "description": "Sopa para 4 com mexilhões, camarões e peixe fresco: caldo de tomate, líquido coado, cozimento por etapas e cuidados de conservação.",
+        "image_alt": "Sopa em caldo de tomate com mexilhões abertos, camarões descascados, cubos de peixe, cenoura e salsinha",
+        "image_variants": [
+          "/recetas/receta-de-sopa-de-mariscos-con-mejillones/portada-1x1.webp",
+          "/recetas/receta-de-sopa-de-mariscos-con-mejillones/portada-4x3.webp",
+          "/recetas/receta-de-sopa-de-mariscos-con-mejillones/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "O que fazer com os mexilhões que não abrem?",
+            "a": "Descarte os que continuarem fechados depois de cozinhar, sem forçar para comê-los. Antes, descarte também conchas quebradas e mexilhões vivos abertos que não se fechem com uma batida leve. Coe o líquido dos que abrirem antes de juntá-lo à sopa."
+          },
+          {
+            "q": "Posso usar peixe e camarões congelados?",
+            "a": "Sim, descongelados previamente na geladeira e pesados sem pele, espinhas, concha ou veia intestinal. Aos 65 minutos acrescente uma noite estimada de 8–12 horas, ou o tempo exigido pela embalagem e pela descongelação real. A receita usa mexilhões vivos; os congelados precisam de outro tratamento e não podem passar pelo teste de fechamento de animais vivos."
+          },
+          {
+            "q": "Posso trocar a água por caldo de peixe?",
+            "a": "Sim, se for adequado aos seus alergênicos, mas o sal e a composição mudam a estimativa. A proposta usa 1200 ml de água no total, incluindo 100 ml para abrir os mexilhões. Evite combinar caldo muito salgado com o líquido dos mexilhões e ajuste o tempero com prudência."
+          }
+        ]
+      },
+      "published": true,
+      "editorial_status": "published",
+      "content_html": "<p>Uma sopa de caldo leve de tomate com mexilhões, camarões e filé fresco de bacalhau-do-Atlântico, sem salga. Os mexilhões são abertos em outra panela e seu líquido é coado; o peixe e os camarões entram depois, em etapas. Proposta para 4 porções: 20 minutos de preparo e 45 de cozimento, 65 no total. Quantidades, rendimento e tempos são estimados e ainda não foram confirmados em teste de cozinha. Peixe ou camarão congelados precisam de uma noite adicional na geladeira, cerca de 8–12 horas ou o tempo indicado na embalagem e necessário para descongelar completamente.</p><p>Use filé fresco ou descongelado da espécie bacalhau-do-Atlântico, sem salga; o bacalhau salgado e seco exige outro processo e outra conta. É possível substituir por outro peixe branco firme, sem espinhas, mas os nutrientes mudam. Caldo comercial no lugar da água altera sódio, sabor e possíveis alergênicos. Contém peixe, crustáceos e moluscos. Compre mexilhões vivos de fornecedor autorizado, preserve o frio e descarte conchas danificadas, exemplares que não passem na conferência em vida e os que não abram no cozimento. Divida as sobras em recipientes rasos e refrigere a 4 °C ou menos antes de 2 horas, ou 1 hora se o ambiente passar de 32 °C; não espere uma panela grande esfriar na bancada. Consuma em até 3 dias. Reaqueça apenas a porção necessária a 74 °C no centro, com o caldo fervendo; a textura dos frutos do mar perde qualidade. Quantidades, rendimento e tempos são propostas estimadas, sem alegação de teste de cozinha realizado.</p>"
+    }
+  ],
+  "image_alts_by_language": {
+    "es": {
+      "cover": "Cuenco de sopa con caldo de tomate, mejillones abiertos, langostinos pelados, dados de bacalao, zanahoria y perejil",
+      "steps": [
+        "Sopa de mariscos con mejillones: prepara las verduras y el acabado",
+        "Sopa de mariscos con mejillones: revisa los mejillones y corta el pescado",
+        "Sopa de mariscos con mejillones: sofríe la cebolla y la zanahoria",
+        "Sopa de mariscos con mejillones: cocina el tomate y prepara el caldo",
+        "Sopa de mariscos con mejillones: abre los mejillones y filtra su líquido",
+        "Sopa de mariscos con mejillones: cuece primero el bacalao y después los langostinos",
+        "Sopa de mariscos con mejillones: reincorpora los mejillones y termina la sopa",
+        "Sopa de mariscos con mejillones: reparte las cuatro raciones y sirve"
+      ]
+    },
+    "de": {
+      "cover": "Tomatenbrühe mit geöffneten Miesmuscheln, geschälten Garnelen, Kabeljaustücken, Möhre und Petersilie",
+      "steps": [
+        "Meeresfrüchtesuppe mit Miesmuscheln: Gemüse und Zutaten zum Fertigstellen vorbereiten",
+        "Meeresfrüchtesuppe mit Miesmuscheln: Muscheln prüfen und Fisch schneiden",
+        "Meeresfrüchtesuppe mit Miesmuscheln: Zwiebel und Möhre anschwitzen",
+        "Meeresfrüchtesuppe mit Miesmuscheln: Tomate garen und Brühe ansetzen",
+        "Meeresfrüchtesuppe mit Miesmuscheln: Muscheln öffnen und Sud filtern",
+        "Meeresfrüchtesuppe mit Miesmuscheln: Erst Kabeljau, dann Garnelen garen",
+        "Meeresfrüchtesuppe mit Miesmuscheln: Muscheln zurückgeben und Suppe fertigstellen",
+        "Meeresfrüchtesuppe mit Miesmuscheln: Auf vier Portionen verteilen und servieren"
+      ]
+    },
+    "en": {
+      "cover": "Tomato-broth soup with open mussels, peeled shrimp, cod pieces, carrot and parsley",
+      "steps": [
+        "Seafood soup with mussels: Prepare the vegetables and finishing ingredients",
+        "Seafood soup with mussels: Inspect the mussels and cut the fish",
+        "Seafood soup with mussels: Soften the onion and carrot",
+        "Seafood soup with mussels: Cook the tomato and make the broth",
+        "Seafood soup with mussels: Steam the mussels and strain their liquid",
+        "Seafood soup with mussels: Cook the cod, then the shrimp",
+        "Seafood soup with mussels: Return the mussels and finish the soup",
+        "Seafood soup with mussels: Divide into four portions and serve"
+      ]
+    },
+    "fr": {
+      "cover": "Soupe au bouillon de tomate avec moules ouvertes, crevettes décortiquées, cabillaud, carotte et persil",
+      "steps": [
+        "Soupe de fruits de mer aux moules: Préparer les légumes et la finition",
+        "Soupe de fruits de mer aux moules: Vérifier les moules et couper le poisson",
+        "Soupe de fruits de mer aux moules: Faire revenir l’oignon et la carotte",
+        "Soupe de fruits de mer aux moules: Cuire la tomate et préparer le bouillon",
+        "Soupe de fruits de mer aux moules: Ouvrir les moules et filtrer leur jus",
+        "Soupe de fruits de mer aux moules: Cuire le cabillaud puis les crevettes",
+        "Soupe de fruits de mer aux moules: Remettre les moules et terminer la soupe",
+        "Soupe de fruits de mer aux moules: Répartir en quatre portions et servir"
+      ]
+    },
+    "it": {
+      "cover": "Zuppa in brodo di pomodoro con cozze aperte, gamberi sgusciati, merluzzo, carota e prezzemolo",
+      "steps": [
+        "Zuppa di mare con cozze: Prepara le verdure e la finitura",
+        "Zuppa di mare con cozze: Controlla le cozze e taglia il pesce",
+        "Zuppa di mare con cozze: Fai appassire cipolla e carota",
+        "Zuppa di mare con cozze: Cuoci il pomodoro e prepara il brodo",
+        "Zuppa di mare con cozze: Apri le cozze e filtra il liquido",
+        "Zuppa di mare con cozze: Cuoci prima il merluzzo e poi i gamberi",
+        "Zuppa di mare con cozze: Rimetti le cozze e termina la zuppa",
+        "Zuppa di mare con cozze: Dividi in quattro porzioni e servi"
+      ]
+    },
+    "ja": {
+      "cover": "トマトのスープに開いたムール貝、殻をむいたエビ、マダラ、にんじん、パセリ",
+      "steps": [
+        "ムール貝のシーフードスープ: 野菜と仕上げの材料を準備する",
+        "ムール貝のシーフードスープ: ムール貝を確認し、魚を切る",
+        "ムール貝のシーフードスープ: 玉ねぎとにんじんを炒める",
+        "ムール貝のシーフードスープ: トマトを加えてスープを煮る",
+        "ムール貝のシーフードスープ: ムール貝を開かせ、煮汁をこす",
+        "ムール貝のシーフードスープ: マダラ、エビの順に加熱する",
+        "ムール貝のシーフードスープ: ムール貝を戻して仕上げる",
+        "ムール貝のシーフードスープ: 4人分に分けてすぐに出す"
+      ]
+    },
+    "pt": {
+      "cover": "Sopa em caldo de tomate com mexilhões abertos, camarões descascados, cubos de peixe, cenoura e salsinha",
+      "steps": [
+        "Sopa de frutos do mar com mexilhões: Prepare os legumes e a finalização",
+        "Sopa de frutos do mar com mexilhões: Confira os mexilhões e corte o peixe",
+        "Sopa de frutos do mar com mexilhões: Refogue a cebola e a cenoura",
+        "Sopa de frutos do mar com mexilhões: Cozinhe o tomate e prepare o caldo",
+        "Sopa de frutos do mar com mexilhões: Abra os mexilhões e coe o líquido",
+        "Sopa de frutos do mar com mexilhões: Cozinhe primeiro o peixe, depois os camarões",
+        "Sopa de frutos do mar com mexilhões: Volte os mexilhões e finalize a sopa",
+        "Sopa de frutos do mar com mexilhões: Divida em quatro porções e sirva"
+      ]
+    }
+  },
+  "step_visuals": [
+    {
+      "step": 1,
+      "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-01.webp",
+      "action": "Prepara las verduras y el acabado"
+    },
+    {
+      "step": 2,
+      "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-02.webp",
+      "action": "Revisa los mejillones y corta el pescado"
+    },
+    {
+      "step": 3,
+      "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-03.webp",
+      "action": "Sofríe la cebolla y la zanahoria"
+    },
+    {
+      "step": 4,
+      "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-04.webp",
+      "action": "Cocina el tomate y prepara el caldo"
+    },
+    {
+      "step": 5,
+      "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-05.webp",
+      "action": "Abre los mejillones y filtra su líquido"
+    },
+    {
+      "step": 6,
+      "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-06.webp",
+      "action": "Cuece primero el bacalao y después los langostinos"
+    },
+    {
+      "step": 7,
+      "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/paso-07.webp",
+      "action": "Reincorpora los mejillones y termina la sopa"
+    },
+    {
+      "step": 8,
+      "image_url": "/recetas/receta-de-sopa-de-mariscos-con-mejillones/portada.webp",
+      "action": "Reparte las cuatro raciones y sirve"
+    }
+  ],
+  "portuguese_locale": "pt-BR"
+}

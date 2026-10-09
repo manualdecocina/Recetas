@@ -1,0 +1,69 @@
+{
+  "recipe": "receta-de-pina-colada",
+  "status": "PASS_EDITORIAL_MEDIA_LOCALIZATION_NOT_LIVE",
+  "steps_sha256": "0fd833037bc2a63d381a08ecd905bd38f422403486bc96f1e33eecdb5f176827",
+  "languages": [
+    "es",
+    "de",
+    "en",
+    "fr",
+    "it",
+    "ja",
+    "pt"
+  ],
+  "steps_per_language": 6,
+  "ingredients": 5,
+  "faq_per_language": 3,
+  "usda_foods": 4,
+  "nutrition_recalculated": true,
+  "ethanol_retained": true,
+  "alcohol_g_per_serving": 10.0,
+  "numeric_nutrition_shared": true,
+  "shared_amounts": true,
+  "shared_media": true,
+  "originals": 6,
+  "webp": 9,
+  "media_hashes_verified": true,
+  "remote_media_hashes_verified": true,
+  "visual_qa": {
+    "portada": {
+      "status": "PASS",
+      "notes": "Dos vasos similares de bebida amarilla pálida granizada, espuma natural, sin nata, adornos ni hielo extra visible. Foto ilustrativa, no peso/volumen medido."
+    },
+    "paso-01": {
+      "status": "PASS",
+      "notes": "Cinco ingredientes separados: pulpa, zumo, crema blanca, ron transparente y hielo picado; batidora vacía. Cantidades ilustrativas, no balanza medida."
+    },
+    "paso-02": {
+      "status": "PASS",
+      "notes": "Pulpa de piña cortada sobre tabla estable, piel separada; manos plausibles y cuchillo sin contacto con dedos; batidora vacía al fondo."
+    },
+    "paso-03": {
+      "status": "PASS",
+      "notes": "Fruta, zumo y crema de coco en batidora parada antes de mezclar; sin ron/hielo añadidos ni manos cerca de cuchillas. Sin acreditación de pesos por foto."
+    },
+    "paso-04": {
+      "status": "PASS",
+      "notes": "Batidora con tapa cerrada, mezcla amarilla pálida e hielo pequeño visible; vasito de ron vacío, sin manos/utensilios dentro. Ingredientes de fondo ilustran composición, no adiciones posteriores."
+    },
+    "paso-05": {
+      "status": "PASS",
+      "notes": "Jarra desconectada vertiendo bebida uniforme en uno de dos vasos, mano plausible sobre asa, sin guarnición ni cuchilla expuesta."
+    }
+  },
+  "cover_crop_qa": "PASS: both whole glasses fit square,4:3,16:9; no garnish or cream topping. Photo not measurement.",
+  "localization_qa_file": "editorial/receta-de-pina-colada-localization-qa-20261008.json",
+  "times": {
+    "prep": 15,
+    "cook": 0,
+    "total": 15,
+    "extra_actual_times_required": true
+  },
+  "yield_confirmed": false,
+  "kitchen_test_confirmed": false,
+  "published_database": false,
+  "package_sha256": "459fa9f6c22dfa9081f8deb2e271c1333e13f2ef40d1105e40d8afb21c766ef5",
+  "publication_blockers": [
+    "Remaining9recipes in batch; CI/merge, observed deployed media hashes, atomic DB publication and cache/liveQA pending"
+  ]
+}

@@ -1,0 +1,1132 @@
+{
+  "source_url": "https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_sr_legacy_food_json_2018-04.zip",
+  "dataset_sha256": "0fe8ae486a2c8eb42cb96413f058deb51863a46c8fb8eeb4b1fb45006dd338ef",
+  "verified_date": "2026-10-08",
+  "foods": [
+    {
+      "fdc_id": 170438,
+      "description": "Potatoes, boiled, cooked in skin, flesh, without salt",
+      "data_type": "SR Legacy",
+      "food_nutrients": [
+        {
+          "type": "FoodNutrient",
+          "id": 1523833,
+          "nutrient": {
+            "id": 1005,
+            "number": "205",
+            "name": "Carbohydrate, by difference",
+            "rank": 1110,
+            "unitName": "g"
+          },
+          "dataPoints": 0,
+          "foodNutrientDerivation": {
+            "code": "NC",
+            "description": "Calculated",
+            "foodNutrientSource": {
+              "id": 2,
+              "code": "4",
+              "description": "Calculated or imputed"
+            }
+          },
+          "amount": 20.1
+        },
+        {
+          "type": "FoodNutrient",
+          "id": 1523837,
+          "nutrient": {
+            "id": 1008,
+            "number": "208",
+            "name": "Energy",
+            "rank": 300,
+            "unitName": "kcal"
+          },
+          "dataPoints": 0,
+          "foodNutrientDerivation": {
+            "code": "NC",
+            "description": "Calculated",
+            "foodNutrientSource": {
+              "id": 2,
+              "code": "4",
+              "description": "Calculated or imputed"
+            }
+          },
+          "amount": 87.0
+        },
+        {
+          "type": "FoodNutrient",
+          "id": 1523858,
+          "nutrient": {
+            "id": 1258,
+            "number": "606",
+            "name": "Fatty acids, total saturated",
+            "rank": 9700,
+            "unitName": "g"
+          },
+          "dataPoints": 0,
+          "foodNutrientDerivation": {
+            "foodNutrientSource": {}
+          },
+          "amount": 0.026
+        },
+        {
+          "type": "FoodNutrient",
+          "id": 1523869,
+          "nutrient": {
+            "id": 1004,
+            "number": "204",
+            "name": "Total lipid (fat)",
+            "rank": 800,
+            "unitName": "g"
+          },
+          "dataPoints": 0,
+          "foodNutrientDerivation": {
+            "foodNutrientSource": {}
+          },
+          "amount": 0.1
+        },
+        {
+          "type": "FoodNutrient",
+          "id": 1523891,
+          "nutrient": {
+            "id": 1003,
+            "number": "203",
+            "name": "Protein",
+            "rank": 600,
+            "unitName": "g"
+          },
+          "dataPoints": 6,
+          "foodNutrientDerivation": {
+            "foodNutrientSource": {}
+          },
+          "amount": 1.87
+        },
+        {
+          "type": "FoodNutrient",
+          "id": 1523893,
+          "nutrient": {
+            "id": 1079,
+            "number": "291",
+            "name": "Fiber, total dietary",
+            "rank": 1200,
+            "unitName": "g"
+          },
+          "dataPoints": 0,
+          "foodNutrientDerivation": {
+            "foodNutrientSource": {}
+          },
+          "amount": 1.8
+        },
+        {
+          "type": "FoodNutrient",
+          "id": 1523897,
+          "nutrient": {
+            "id": 1093,
+            "number": "307",
+            "name": "Sodium, Na",
+            "rank": 5800,
+            "unitName": "mg"
+          },
+          "dataPoints": 6,
+          "foodNutrientDerivation": {
+            "foodNutrientSource": {}
+          },
+          "amount": 4.0
+        },
+        {
+          "type": "FoodNutrient",
+          "id": 1523913,
+          "nutrient": {
+            "id": 2000,
+            "number": "269",
+            "name": "Total Sugars",
+            "rank": 1510,
+            "unitName": "g"
+          },
+          "dataPoints": 0,
+          "foodNutrientDerivation": {
+            "code": "BFSN",
+            "description": "Based on another form of the food or similar food; Concentration adjustment; Solids; Retention factors not used",
+            "foodNutrientSource": {
+              "id": 2,
+              "code": "4",
+              "description": "Calculated or imputed"
+            }
+          },
+          "amount": 0.91
+        }
+      ]
+    },
+    {
+      "fdc_id": 170394,
+      "description": "Carrots, cooked, boiled, drained, without salt",
+      "data_type": "SR Legacy",
+      "food_nutrients": [
+        {
+          "type": "FoodNutrient",
+          "id": 1520070,
+          "nutrient": {
+            "id": 1004,
+            "number": "204",
+            "name": "Total lipid (fat)",
+            "rank": 800,
+            "unitName": "g"
+          },
+          "dataPoints": 4,
+          "foodNutrientDerivation": {
+            "code": "A",
+            "description": "Analytical",
+            "foodNutrientSource": {
+              "id": 1,
+              "code": "1",
+              "description": "Analytical or derived from analytical"
+            }
+          },
+          "max": 0.34,
+          "min": 0.02,
+          "amount": 0.18
+        },
+        {
+          "type": "FoodNutrient",
+          "id": 1520085,
+          "nutrient": {
+            "id": 1003,
+            "number": "203",
+            "name": "Protein",
+            "rank": 600,
+            "unitName": "g"
+          },
+          "dataPoints": 4,
+          "foodNutrientDerivation": {
+            "code": "A",
+            "description": "Analytical",
+            "foodNutrientSource": {
+              "id": 1,
+              "code": "1",
+              "description": "Analytical or derived from analytical"
+            }
+          },
+          "max": 0.83,
+          "min": 0.62,
+          "amount": 0.76
+        },
+        {
+          "type": "FoodNutrient",
+          "id": 1520090,
+          "nutrient": {
+            "id": 1079,
+            "number": "291",
+            "name": "Fiber, total dietary",
+            "rank": 1200,
+            "unitName": "g"
+          },
+          "dataPoints": 4,
+          "foodNutrientDerivation": {
+            "code": "A",
+            "description": "Analytical",
+            "foodNutrientSource": {
+              "id": 1,
+              "code": "1",
+              "description": "Analytical or derived from analytical"
+            }
+          },
+          "max": 3.1,
+          "min": 2.9,
+          "amount": 3.0
+        },
+        {
+          "type": "FoodNutrient",
+          "id": 1520094,
+          "nutrient": {
+            "id": 1093,
+            "number": "307",
+            "name": "Sodium, Na",
+            "rank": 5800,
+            "unitName": "mg"
+          },
+          "dataPoints": 4,
+          "foodNutrientDerivation": {
+            "code": "A",
+            "description": "Analytical",
+            "foodNutrientSource": {
+              "id": 1,
+              "code": "1",
+              "description": "Analytical or derived from analytical"
+            }
+          },
+          "max": 71.0,
+          "min": 46.0,
+          "amount": 58.0
+        },
+        {
+          "type": "FoodNutrient",
+          "id": 1520115,
+          "nutrient": {
+            "id": 1258,
+            "number": "606",
+            "name": "Fatty acids, total saturated",
+            "rank": 9700,
+            "unitName": "g"
+          },
+          "dataPoints": 0,
+          "foodNutrientDerivation": {
+            "code": "NC",
+            "description": "Calculated",
+            "foodNutrientSource": {
+              "id": 2,
+              "code": "4",
+              "description": "Calculated or imputed"
+            }
+          },
+          "amount": 0.03
+        },
+        {
+          "type": "FoodNutrient",
+          "id": 1520136,
+          "nutrient": {
+            "id": 1005,
+            "number": "205",
+            "name": "Carbohydrate, by difference",
+            "rank": 1110,
+            "unitName": "g"
+          },
+          "dataPoints": 0,
+          "foodNutrientDerivation": {
+            "code": "NC",
+            "description": "Calculated",
+            "foodNutrientSource": {
+              "id": 2,
+              "code": "4",
+              "description": "Calculated or imputed"
+            }
+          },
+          "amount": 8.22
+        },
+        {
+          "type": "FoodNutrient",
+          "id": 1520137,
+          "nutrient": {
+            "id": 1008,
+            "number": "208",
+            "name": "Energy",
+            "rank": 300,
+            "unitName": "kcal"
+          },
+          "dataPoints": 0,
+          "foodNutrientDerivation": {
+            "code": "NC",
+            "description": "Calculated",
+            "foodNutrientSource": {
+              "id": 2,
+              "code": "4",
+              "description": "Calculated or imputed"
+            }
+          },
+          "amount": 35.0
+        },
+        {
+          "type": "FoodNutrient",
+          "id": 1520139,
+          "nutrient": {
+            "id": 2000,
+            "number": "269",
+            "name": "Total Sugars",
+            "rank": 1510,
+            "unitName": "g"
+          },
+          "dataPoints": 0,
+          "foodNutrientDerivation": {
+            "foodNutrientSource": {}
+          },
+          "amount": 3.45
+        }
+      ]
+    },
+    {
+      "fdc_id": 170017,
+      "description": "Peas, green, frozen, cooked, boiled, drained, without salt",
+      "data_type": "SR Legacy",
+      "food_nutrients": [
+        {
+          "type": "FoodNutrient",
+          "id": 1488065,
+          "nutrient": {
+            "id": 1005,
+            "number": "205",
+            "name": "Carbohydrate, by difference",
+            "rank": 1110,
+            "unitName": "g"
+          },
+          "dataPoints": 0,
+          "foodNutrientDerivation": {
+            "code": "NC",
+            "description": "Calculated",
+            "foodNutrientSource": {
+              "id": 2,
+              "code": "4",
+              "description": "Calculated or imputed"
+            }
+          },
+          "amount": 14.3
+        },
+        {
+          "type": "FoodNutrient",
+          "id": 1488068,
+          "nutrient": {
+            "id": 1258,
+            "number": "606",
+            "name": "Fatty acids, total saturated",
+            "rank": 9700,
+            "unitName": "g"
+          },
+          "dataPoints": 0,
+          "foodNutrientDerivation": {
+            "foodNutrientSource": {}
+          },
+          "amount": 0.049
+        },
+        {
+          "type": "FoodNutrient",
+          "id": 1488084,
+          "nutrient": {
+            "id": 1003,
+            "number": "203",
+            "name": "Protein",
+            "rank": 600,
+            "unitName": "g"
+          },
+          "dataPoints": 11,
+          "foodNutrientDerivation": {
+            "foodNutrientSource": {}
+          },
+          "amount": 5.15
+        },
+        {
+          "type": "FoodNutrient",
+          "id": 1488106,
+          "nutrient": {
+            "id": 1004,
+            "number": "204",
+            "name": "Total lipid (fat)",
+            "rank": 800,
+            "unitName": "g"
+          },
+          "dataPoints": 11,
+          "foodNutrientDerivation": {
+            "foodNutrientSource": {}
+          },
+          "amount": 0.27
+        },
+        {
+          "type": "FoodNutrient",
+          "id": 1488109,
+          "nutrient": {
+            "id": 1079,
+            "number": "291",
+            "name": "Fiber, total dietary",
+            "rank": 1200,
+            "unitName": "g"
+          },
+          "dataPoints": 0,
+          "foodNutrientDerivation": {
+            "code": "BFSN",
+            "description": "Based on another form of the food or similar food; Concentration adjustment; Solids; Retention factors not used",
+            "foodNutrientSource": {
+              "id": 2,
+              "code": "4",
+              "description": "Calculated or imputed"
+            }
+          },
+          "amount": 4.5
+        },
+        {
+          "type": "FoodNutrient",
+          "id": 1488113,
+          "nutrient": {
+            "id": 2000,
+            "number": "269",
+            "name": "Total Sugars",
+            "rank": 1510,
+            "unitName": "g"
+          },
+          "dataPoints": 0,
+          "foodNutrientDerivation": {
+            "code": "NC",
+            "description": "Calculated",
+            "foodNutrientSource": {
+              "id": 2,
+              "code": "4",
+              "description": "Calculated or imputed"
+            }
+          },
+          "amount": 4.4
+        },
+        {
+          "type": "FoodNutrient",
+          "id": 1488127,
+          "nutrient": {
+            "id": 1093,
+            "number": "307",
+            "name": "Sodium, Na",
+            "rank": 5800,
+            "unitName": "mg"
+          },
+          "dataPoints": 47,
+          "foodNutrientDerivation": {
+            "foodNutrientSource": {}
+          },
+          "max": 147,
+          "min": 15.0,
+          "amount": 72.0
+        },
+        {
+          "type": "FoodNutrient",
+          "id": 1488140,
+          "nutrient": {
+            "id": 1008,
+            "number": "208",
+            "name": "Energy",
+            "rank": 300,
+            "unitName": "kcal"
+          },
+          "dataPoints": 0,
+          "foodNutrientDerivation": {
+            "code": "NC",
+            "description": "Calculated",
+            "foodNutrientSource": {
+              "id": 2,
+              "code": "4",
+              "description": "Calculated or imputed"
+            }
+          },
+          "amount": 78.0
+        }
+      ]
+    },
+    {
+      "fdc_id": 173424,
+      "description": "Egg, whole, cooked, hard-boiled",
+      "data_type": "SR Legacy",
+      "food_nutrients": [
+        {
+          "type": "FoodNutrient",
+          "id": 1777836,
+          "nutrient": {
+            "id": 2000,
+            "number": "269",
+            "name": "Total Sugars",
+            "rank": 1510,
+            "unitName": "g"
+          },
+          "dataPoints": 0,
+          "foodNutrientDerivation": {
+            "code": "NR",
+            "description": "Nutrient that is based on other nutrient/s; value used directly, ex. Nut.#204 from Nut.#298",
+            "foodNutrientSource": {
+              "id": 2,
+              "code": "4",
+              "description": "Calculated or imputed"
+            }
+          },
+          "amount": 1.12
+        },
+        {
+          "type": "FoodNutrient",
+          "id": 1777845,
+          "nutrient": {
+            "id": 1079,
+            "number": "291",
+            "name": "Fiber, total dietary",
+            "rank": 1200,
+            "unitName": "g"
+          },
+          "dataPoints": 0,
+          "foodNutrientDerivation": {
+            "code": "Z",
+            "description": "Assumed zero (Insignificant amount or not naturally occurring in a food, such as fiber in meat)",
+            "foodNutrientSource": {
+              "id": 5,
+              "code": "7",
+              "description": "Assumed zero"
+            }
+          },
+          "amount": 0.0
+        },
+        {
+          "type": "FoodNutrient",
+          "id": 1777847,
+          "nutrient": {
+            "id": 1008,
+            "number": "208",
+            "name": "Energy",
+            "rank": 300,
+            "unitName": "kcal"
+          },
+          "dataPoints": 0,
+          "foodNutrientDerivation": {
+            "code": "NC",
+            "description": "Calculated",
+            "foodNutrientSource": {
+              "id": 2,
+              "code": "4",
+              "description": "Calculated or imputed"
+            }
+          },
+          "amount": 155
+        },
+        {
+          "type": "FoodNutrient",
+          "id": 1777860,
+          "nutrient": {
+            "id": 1003,
+            "number": "203",
+            "name": "Protein",
+            "rank": 600,
+            "unitName": "g"
+          },
+          "dataPoints": 14,
+          "foodNutrientDerivation": {
+            "foodNutrientSource": {}
+          },
+          "amount": 12.6
+        },
+        {
+          "type": "FoodNutrient",
+          "id": 1777865,
+          "nutrient": {
+            "id": 1093,
+            "number": "307",
+            "name": "Sodium, Na",
+            "rank": 5800,
+            "unitName": "mg"
+          },
+          "dataPoints": 14,
+          "foodNutrientDerivation": {
+            "foodNutrientSource": {}
+          },
+          "amount": 124
+        },
+        {
+          "type": "FoodNutrient",
+          "id": 1777882,
+          "nutrient": {
+            "id": 1258,
+            "number": "606",
+            "name": "Fatty acids, total saturated",
+            "rank": 9700,
+            "unitName": "g"
+          },
+          "dataPoints": 0,
+          "foodNutrientDerivation": {
+            "foodNutrientSource": {}
+          },
+          "amount": 3.27
+        },
+        {
+          "type": "FoodNutrient",
+          "id": 1777904,
+          "nutrient": {
+            "id": 1004,
+            "number": "204",
+            "name": "Total lipid (fat)",
+            "rank": 800,
+            "unitName": "g"
+          },
+          "dataPoints": 7,
+          "foodNutrientDerivation": {
+            "foodNutrientSource": {}
+          },
+          "amount": 10.6
+        },
+        {
+          "type": "FoodNutrient",
+          "id": 1777905,
+          "nutrient": {
+            "id": 1005,
+            "number": "205",
+            "name": "Carbohydrate, by difference",
+            "rank": 1110,
+            "unitName": "g"
+          },
+          "dataPoints": 0,
+          "foodNutrientDerivation": {
+            "code": "NC",
+            "description": "Calculated",
+            "foodNutrientSource": {
+              "id": 2,
+              "code": "4",
+              "description": "Calculated or imputed"
+            }
+          },
+          "amount": 1.12
+        }
+      ]
+    },
+    {
+      "fdc_id": 171009,
+      "description": "Salad dressing, mayonnaise, regular",
+      "data_type": "SR Legacy",
+      "food_nutrients": [
+        {
+          "type": "FoodNutrient",
+          "id": 1572341,
+          "nutrient": {
+            "id": 1258,
+            "number": "606",
+            "name": "Fatty acids, total saturated",
+            "rank": 9700,
+            "unitName": "g"
+          },
+          "dataPoints": 0,
+          "foodNutrientDerivation": {
+            "code": "NC",
+            "description": "Calculated",
+            "foodNutrientSource": {
+              "id": 2,
+              "code": "4",
+              "description": "Calculated or imputed"
+            }
+          },
+          "amount": 11.7
+        },
+        {
+          "type": "FoodNutrient",
+          "id": 1572347,
+          "nutrient": {
+            "id": 1093,
+            "number": "307",
+            "name": "Sodium, Na",
+            "rank": 5800,
+            "unitName": "mg"
+          },
+          "dataPoints": 12,
+          "foodNutrientDerivation": {
+            "code": "A",
+            "description": "Analytical",
+            "foodNutrientSource": {
+              "id": 1,
+              "code": "1",
+              "description": "Analytical or derived from analytical"
+            }
+          },
+          "max": 709,
+          "min": 518,
+          "amount": 635
+        },
+        {
+          "type": "FoodNutrient",
+          "id": 1572359,
+          "nutrient": {
+            "id": 1003,
+            "number": "203",
+            "name": "Protein",
+            "rank": 600,
+            "unitName": "g"
+          },
+          "dataPoints": 12,
+          "foodNutrientDerivation": {
+            "code": "A",
+            "description": "Analytical",
+            "foodNutrientSource": {
+              "id": 1,
+              "code": "1",
+              "description": "Analytical or derived from analytical"
+            }
+          },
+          "max": 1.25,
+          "min": 0.45,
+          "amount": 0.96
+        },
+        {
+          "type": "FoodNutrient",
+          "id": 1572389,
+          "nutrient": {
+            "id": 1004,
+            "number": "204",
+            "name": "Total lipid (fat)",
+            "rank": 800,
+            "unitName": "g"
+          },
+          "dataPoints": 12,
+          "foodNutrientDerivation": {
+            "code": "A",
+            "description": "Analytical",
+            "foodNutrientSource": {
+              "id": 1,
+              "code": "1",
+              "description": "Analytical or derived from analytical"
+            }
+          },
+          "max": 76.3,
+          "min": 74.2,
+          "amount": 74.8
+        },
+        {
+          "type": "FoodNutrient",
+          "id": 1572390,
+          "nutrient": {
+            "id": 1005,
+            "number": "205",
+            "name": "Carbohydrate, by difference",
+            "rank": 1110,
+            "unitName": "g"
+          },
+          "dataPoints": 0,
+          "foodNutrientDerivation": {
+            "code": "NC",
+            "description": "Calculated",
+            "foodNutrientSource": {
+              "id": 2,
+              "code": "4",
+              "description": "Calculated or imputed"
+            }
+          },
+          "amount": 0.57
+        },
+        {
+          "type": "FoodNutrient",
+          "id": 1572391,
+          "nutrient": {
+            "id": 1008,
+            "number": "208",
+            "name": "Energy",
+            "rank": 300,
+            "unitName": "kcal"
+          },
+          "dataPoints": 0,
+          "foodNutrientDerivation": {
+            "code": "NC",
+            "description": "Calculated",
+            "foodNutrientSource": {
+              "id": 2,
+              "code": "4",
+              "description": "Calculated or imputed"
+            }
+          },
+          "amount": 680
+        },
+        {
+          "type": "FoodNutrient",
+          "id": 1572420,
+          "nutrient": {
+            "id": 1079,
+            "number": "291",
+            "name": "Fiber, total dietary",
+            "rank": 1200,
+            "unitName": "g"
+          },
+          "dataPoints": 0,
+          "foodNutrientDerivation": {
+            "foodNutrientSource": {}
+          },
+          "amount": 0.0
+        },
+        {
+          "type": "FoodNutrient",
+          "id": 1572423,
+          "nutrient": {
+            "id": 2000,
+            "number": "269",
+            "name": "Total Sugars",
+            "rank": 1510,
+            "unitName": "g"
+          },
+          "dataPoints": 0,
+          "foodNutrientDerivation": {
+            "code": "NR",
+            "description": "Nutrient that is based on other nutrient/s; value used directly, ex. Nut.#204 from Nut.#298",
+            "foodNutrientSource": {
+              "id": 2,
+              "code": "4",
+              "description": "Calculated or imputed"
+            }
+          },
+          "amount": 0.57
+        }
+      ]
+    },
+    {
+      "fdc_id": 173468,
+      "description": "Salt, table",
+      "data_type": "SR Legacy",
+      "food_nutrients": [
+        {
+          "type": "FoodNutrient",
+          "id": 1781379,
+          "nutrient": {
+            "id": 1079,
+            "number": "291",
+            "name": "Fiber, total dietary",
+            "rank": 1200,
+            "unitName": "g"
+          },
+          "dataPoints": 0,
+          "foodNutrientDerivation": {
+            "foodNutrientSource": {}
+          },
+          "amount": 0.0
+        },
+        {
+          "type": "FoodNutrient",
+          "id": 1781383,
+          "nutrient": {
+            "id": 1093,
+            "number": "307",
+            "name": "Sodium, Na",
+            "rank": 5800,
+            "unitName": "mg"
+          },
+          "dataPoints": 1,
+          "foodNutrientDerivation": {
+            "foodNutrientSource": {}
+          },
+          "amount": 38800.0
+        },
+        {
+          "type": "FoodNutrient",
+          "id": 1781387,
+          "nutrient": {
+            "id": 1258,
+            "number": "606",
+            "name": "Fatty acids, total saturated",
+            "rank": 9700,
+            "unitName": "g"
+          },
+          "dataPoints": 1,
+          "foodNutrientDerivation": {
+            "foodNutrientSource": {}
+          },
+          "amount": 0.0
+        },
+        {
+          "type": "FoodNutrient",
+          "id": 1781407,
+          "nutrient": {
+            "id": 1003,
+            "number": "203",
+            "name": "Protein",
+            "rank": 600,
+            "unitName": "g"
+          },
+          "dataPoints": 1,
+          "foodNutrientDerivation": {
+            "foodNutrientSource": {}
+          },
+          "amount": 0.0
+        },
+        {
+          "type": "FoodNutrient",
+          "id": 1781410,
+          "nutrient": {
+            "id": 1004,
+            "number": "204",
+            "name": "Total lipid (fat)",
+            "rank": 800,
+            "unitName": "g"
+          },
+          "dataPoints": 1,
+          "foodNutrientDerivation": {
+            "foodNutrientSource": {}
+          },
+          "amount": 0.0
+        },
+        {
+          "type": "FoodNutrient",
+          "id": 1781411,
+          "nutrient": {
+            "id": 1005,
+            "number": "205",
+            "name": "Carbohydrate, by difference",
+            "rank": 1110,
+            "unitName": "g"
+          },
+          "dataPoints": 0,
+          "foodNutrientDerivation": {
+            "foodNutrientSource": {}
+          },
+          "amount": 0.0
+        },
+        {
+          "type": "FoodNutrient",
+          "id": 1781412,
+          "nutrient": {
+            "id": 1008,
+            "number": "208",
+            "name": "Energy",
+            "rank": 300,
+            "unitName": "kcal"
+          },
+          "dataPoints": 0,
+          "foodNutrientDerivation": {
+            "code": "NC",
+            "description": "Calculated",
+            "foodNutrientSource": {
+              "id": 2,
+              "code": "4",
+              "description": "Calculated or imputed"
+            }
+          },
+          "amount": 0.0
+        },
+        {
+          "type": "FoodNutrient",
+          "id": 1781458,
+          "nutrient": {
+            "id": 2000,
+            "number": "269",
+            "name": "Total Sugars",
+            "rank": 1510,
+            "unitName": "g"
+          },
+          "dataPoints": 0,
+          "foodNutrientDerivation": {
+            "code": "Z",
+            "description": "Assumed zero (Insignificant amount or not naturally occurring in a food, such as fiber in meat)",
+            "foodNutrientSource": {
+              "id": 5,
+              "code": "7",
+              "description": "Assumed zero"
+            }
+          },
+          "amount": 0.0
+        }
+      ]
+    }
+  ],
+  "calculation_inputs": [
+    {
+      "ingredient": "pulpa de patata hervida CON piel y pelada después, sin sal, cocida escurrida",
+      "edible_grams": 400,
+      "fdc_id": 170438,
+      "fdc_description": "Potatoes, boiled, cooked in skin, flesh, without salt",
+      "per_100g": {
+        "carbs_g": 20.1,
+        "calories": 87.0,
+        "saturated_fat_g": 0.026,
+        "fat_g": 0.1,
+        "protein_g": 1.87,
+        "fiber_g": 1.8,
+        "sodium_mg": 4.0,
+        "sugar_g": 0.91
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/170438/nutrients"
+    },
+    {
+      "ingredient": "zanahoria hervida sin sal, cocida escurrida",
+      "edible_grams": 150,
+      "fdc_id": 170394,
+      "fdc_description": "Carrots, cooked, boiled, drained, without salt",
+      "per_100g": {
+        "fat_g": 0.18,
+        "protein_g": 0.76,
+        "fiber_g": 3.0,
+        "sodium_mg": 58.0,
+        "saturated_fat_g": 0.03,
+        "carbs_g": 8.22,
+        "calories": 35.0,
+        "sugar_g": 3.45
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/170394/nutrients"
+    },
+    {
+      "ingredient": "guisantes congelados hervidos sin sal, cocidos escurridos",
+      "edible_grams": 100,
+      "fdc_id": 170017,
+      "fdc_description": "Peas, green, frozen, cooked, boiled, drained, without salt",
+      "per_100g": {
+        "carbs_g": 14.3,
+        "saturated_fat_g": 0.049,
+        "protein_g": 5.15,
+        "fat_g": 0.27,
+        "fiber_g": 4.5,
+        "sugar_g": 4.4,
+        "sodium_mg": 72.0,
+        "calories": 78.0
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/170017/nutrients"
+    },
+    {
+      "ingredient": "huevo duro pelado, peso comestible cocido",
+      "edible_grams": 100,
+      "fdc_id": 173424,
+      "fdc_description": "Egg, whole, cooked, hard-boiled",
+      "per_100g": {
+        "sugar_g": 1.12,
+        "fiber_g": 0.0,
+        "calories": 155,
+        "protein_g": 12.6,
+        "sodium_mg": 124,
+        "saturated_fat_g": 3.27,
+        "fat_g": 10.6,
+        "carbs_g": 1.12
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/173424/nutrients"
+    },
+    {
+      "ingredient": "mayonesa comercial normal",
+      "edible_grams": 120,
+      "fdc_id": 171009,
+      "fdc_description": "Salad dressing, mayonnaise, regular",
+      "per_100g": {
+        "saturated_fat_g": 11.7,
+        "sodium_mg": 635,
+        "protein_g": 0.96,
+        "fat_g": 74.8,
+        "carbs_g": 0.57,
+        "calories": 680,
+        "fiber_g": 0.0,
+        "sugar_g": 0.57
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/171009/nutrients"
+    },
+    {
+      "ingredient": "sal añadida directamente a la mezcla",
+      "edible_grams": 2,
+      "fdc_id": 173468,
+      "fdc_description": "Salt, table",
+      "per_100g": {
+        "fiber_g": 0.0,
+        "sodium_mg": 38800.0,
+        "saturated_fat_g": 0.0,
+        "protein_g": 0.0,
+        "fat_g": 0.0,
+        "carbs_g": 0.0,
+        "calories": 0.0,
+        "sugar_g": 0.0
+      },
+      "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients"
+    }
+  ],
+  "servings": 6,
+  "per_serving": {
+    "calories": 241.6,
+    "protein_g": 4.6,
+    "carbs_g": 18.1,
+    "fat_g": 16.9,
+    "saturated_fat_g": 2.9,
+    "sodium_mg": 306.2,
+    "fiber_g": 2.7,
+    "sugar_g": 2.5
+  },
+  "proposed_yield": {
+    "servings": 6,
+    "mixed_input_mass_g": 872,
+    "served_weight_measured": false,
+    "confirmed": false
+  },
+  "purchase_quantities": {
+    "raw_unpeeled_potato_g": 550,
+    "raw_unpeeled_carrot_g": 200,
+    "eggs_units": 3,
+    "frozen_peas_g": 150,
+    "not_confirmed_yield": true
+  },
+  "retention_assumptions": [
+    "UseactualspecifiedCOOKEDdrainedweights400potato150carrot100peas100egg; purchase550/200/threeeggs/150peas are onlyproposed preparationquantities",
+    "Potato170438cookedINskin, thenpeel; peelnotconsumed. No mixingrawweightswithcookednutrientvalues",
+    "All120g mayonnaise and2g directsaltretained; no saltincookingwater",
+    "Cookingwater2900ml, anyaddition, coldwaterbath and500gice discarded; no nutrientcontribution or servedweightclaim",
+    "Excesspreparedfoods for anotherdish excluded; no inventedpeeling/cookingyield",
+    "All8fields present in sixexactUSDAfoods, no missing=zero"
+  ],
+  "missing_data_not_zero": true
+}

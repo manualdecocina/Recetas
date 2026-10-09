@@ -1,0 +1,2770 @@
+{
+  "scope": "Manual de Cocina only; lote03",
+  "state": "READY_7_OF_7_PACKAGE_NOT_YET_PUBLISHED",
+  "provenance": "Original culinary reconstruction; identity/routes preserved, no WordPress text, translations or images reused.",
+  "ai_owner_confirmation": "Original content and ImageGen authorized. No kitchen test claimed.",
+  "category_slug": "panes-y-masas",
+  "cover": "/recetas/receta-de-pizza-casera/portada.webp",
+  "steps_frozen": true,
+  "steps_sha256": "c46659df9c024fae0638a605b9837b21f122e283710a326370bdea86e49a37d3",
+  "time_notes": "35prep+30cook+153wait=218min conservative schedule, no deducted preparation overlaps. Wait10yeast+90ferment+20ballrest+30preheat+3lastpizza. First pizza rest occurs during second bake. Additional actual rest/rise/bake counted when needed.",
+  "publication_blockers": [
+    "Remaining12recipes in batch, CI/merge, observed media deploy hashes, atomic DB publication and cache/liveQA pending"
+  ],
+  "sources": [
+    {
+      "url": "https://www.fda.gov/consumers/consumer-updates/flour-raw-food-and-other-safety-facts",
+      "purpose": "Raw flour must be cooked, no raw-dough tasting; primary official page read",
+      "accessed": "2026-10-08"
+    },
+    {
+      "url": "https://www.kingarthurbaking.com/learn/pizza",
+      "purpose": "Technique research for dough relaxation, base doneness and flour choice; original quantities/prose, no reproduction of recipe",
+      "accessed": "2026-10-08"
+    },
+    {
+      "url": "https://redstaryeast.com/product/active-dry-yeast-jar/",
+      "purpose": "Manufacturer instructions for dry active yeast hydration43–46°C/10min, recipe uses44°C and its own5g/sugar/water weights; package instructions prevail",
+      "accessed": "2026-10-08"
+    },
+    {
+      "url": "https://www.foodsafety.gov/people-at-risk",
+      "purpose": "Primary handling2h/1h above32°C; cooked leftovers conservative3days, reheat74°C",
+      "accessed": "2026-10-08"
+    },
+    {
+      "url": "https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_sr_legacy_food_json_2018-04.zip",
+      "purpose": "Nine exact USDA foods,8 present nutrient fields, durable selected snapshot",
+      "accessed": "2026-10-08"
+    }
+  ],
+  "records": [
+    {
+      "id": "58aa988c-29f3-408c-8254-dd1be441cb04",
+      "recipe_group_id": "31a06fe5-2ae5-4451-8ee8-e53376013609",
+      "slug": "receta-de-pizza-casera",
+      "public_path": "/receta-de-pizza-casera",
+      "source_url": "https://manualdecocina.com/receta-de-pizza-casera/",
+      "language": "es",
+      "title": "Pizza casera de tomate y mozzarella",
+      "excerpt": "Masa de levadura con fermentación explicada, cobertura medida y base horneada por turnos: dos pizzas para cuatro raciones.",
+      "summary": "Propuesta de dos pizzas caseras de unos 30 cm con masa de trigo, tomate, mozzarella de baja humedad y albahaca. Se preparan por turnos en bandejas metálicas y rinden 4 raciones de media pizza. Los 218 minutos estimados incluyen hidratación de levadura, fermentación, reposo, precalentado y horno; cantidades y rendimiento están pendientes de prueba de cocina.",
+      "category": "Panes y masas",
+      "category_slug": "panes-y-masas",
+      "difficulty": "Media",
+      "course": "Pizza",
+      "cuisine": "Inspiración italiana",
+      "prep_time_minutes": 35,
+      "cook_time_minutes": 30,
+      "total_time_minutes": 218,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "harina de trigo común sin levadura, incluidos 20 g para estirar",
+          "amount": "500",
+          "unit": "g",
+          "group": "Masa"
+        },
+        {
+          "name": "agua, 50 ml para la levadura y 250 ml para mezclar",
+          "amount": "300",
+          "unit": "ml",
+          "group": "Masa"
+        },
+        {
+          "name": "levadura seca activa de panadería, no impulsor químico",
+          "amount": "5",
+          "unit": "g",
+          "group": "Masa"
+        },
+        {
+          "name": "azúcar para la levadura",
+          "amount": "5",
+          "unit": "g",
+          "group": "Masa"
+        },
+        {
+          "name": "sal para la masa",
+          "amount": "8",
+          "unit": "g",
+          "group": "Masa"
+        },
+        {
+          "name": "aceite de oliva para la masa",
+          "amount": "10",
+          "unit": "g",
+          "group": "Masa"
+        },
+        {
+          "name": "tomate triturado en conserva, incluido su líquido",
+          "amount": "300",
+          "unit": "g",
+          "group": "Cobertura"
+        },
+        {
+          "name": "sal para el tomate",
+          "amount": "2",
+          "unit": "g",
+          "group": "Cobertura"
+        },
+        {
+          "name": "orégano seco",
+          "amount": "1",
+          "unit": "g",
+          "group": "Cobertura"
+        },
+        {
+          "name": "mozzarella de leche entera pasteurizada y baja humedad",
+          "amount": "200",
+          "unit": "g",
+          "group": "Cobertura"
+        },
+        {
+          "name": "hojas de albahaca fresca",
+          "amount": "5",
+          "unit": "g",
+          "group": "Acabado"
+        },
+        {
+          "name": "aceite de oliva para las dos bandejas",
+          "amount": "10",
+          "unit": "g",
+          "group": "Bandejas"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Pesa los ingredientes y prepara dos bandejas",
+          "content": "Pesa los 500 g de harina y reserva 20 g para estirar; usa 480 g en la masa. Separa los 300 ml de agua en 50 ml para hidratar la levadura y 250 ml para mezclar. Mide los 5 g de levadura seca activa, 5 g de azúcar, 8 g de sal y 10 g de aceite de la masa. Para la cobertura prepara 300 g de tomate triturado, 2 g de sal, 1 g de orégano y 200 g de mozzarella de baja humedad rallada. Mantén el queso refrigerado a 4 °C o menos. Lava y seca los 5 g de albahaca. Prepara dos bandejas metálicas de unos 40 × 35 cm aptas para el horno y reparte los otros 10 g de aceite entre ambas, 5 g por bandeja, con una brocha. No añadas aceite fuera de estas cantidades.",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-01.webp",
+          "image_alt": "Pizza casera: Pesa los ingredientes y prepara dos bandejas"
+        },
+        {
+          "title": "Hidrata la levadura durante 10 minutos",
+          "content": "Calienta únicamente los 50 ml de agua hasta unos 44 °C, comprobados con termómetro, o a la temperatura que indique el fabricante de tu levadura seca activa. Disuelve los 5 g de azúcar y mezcla los 5 g de levadura. Deja hidratar 10 minutos; deben aparecer señales de actividad, como burbujas y una espuma ligera. No exijas que un volumen distinto reproduzca una marca de taza de otra fórmula. Si la levadura está caducada o no muestra actividad, sustitúyela antes de mezclar, sin añadir más agua ni azúcar a la receta. Los otros 250 ml de agua se usan a temperatura ambiente. No se propone levadura química ni una conversión automática a levadura fresca.",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-02.webp",
+          "image_alt": "Pizza casera: Hidrata la levadura durante 10 minutos"
+        },
+        {
+          "title": "Mezcla y amasa hasta formar una masa flexible",
+          "content": "Mezcla los 480 g de harina con los 8 g de sal en un cuenco grande. Incorpora toda la levadura hidratada, los 250 ml de agua restantes y los 10 g de aceite. Mezcla hasta que no quede harina seca y amasa unos 8–10 minutos sobre una superficie limpia hasta obtener una masa uniforme, elástica y ligeramente pegajosa. No uses la harina reservada para ocultar una masa mal mezclada ni añadas agua sin recalcular; la propuesta usa 300 ml en total. Una rasqueta ayuda a recogerla. La harina es cruda: no pruebes la masa y limpia manos y superficies antes de tocar la albahaca u otros alimentos listos para comer.",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-03.webp",
+          "image_alt": "Pizza casera: Mezcla y amasa hasta formar una masa flexible"
+        },
+        {
+          "title": "Deja fermentar hasta que aumente claramente de volumen",
+          "content": "Pon la masa en el mismo cuenco limpio, sin aceite adicional, y tapa para evitar que se reseque. Déjala en un lugar templado, orientativamente a 22–25 °C, durante unos 90 minutos. Busca un aumento cercano al doble y una masa aireada; el reloj no garantiza la fermentación. Si tu cocina está fría o la levadura actúa más despacio, espera y añade el tiempo real al total. Evita radiadores y un horno encendido para forzar el proceso. El tiempo y el aumento de volumen son propuestas pendientes de comprobación en cocina.",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-04.webp",
+          "image_alt": "Pizza casera: Deja fermentar hasta que aumente claramente de volumen"
+        },
+        {
+          "title": "Divide en dos bolas y deja reposar 20 minutos",
+          "content": "Desgasifica suavemente la masa y divídela en dos porciones iguales, de aproximadamente 404 g antes de usar la harina de estirado. Forma dos bolas recogiendo los bordes hacia la base y deja la unión debajo. Tapa y deja reposar 20 minutos para que la masa se relaje. No añadas aceite al recipiente ni dejes las bolas destapadas. Si se resiste al estirado más adelante, dale otros 10 minutos de reposo y súmalos al total, en vez de rasgarla o añadir harina sin medida.",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-05.webp",
+          "image_alt": "Pizza casera: Divide en dos bolas y deja reposar 20 minutos"
+        },
+        {
+          "title": "Precalienta el horno y prepara el tomate",
+          "content": "Coloca la rejilla en el tercio inferior del horno y precalienta a 240 °C con calor arriba y abajo, o 220 °C con ventilador, durante unos 30 minutos. Las bandejas engrasadas permanecen fuera y frías para montar sin quemaduras. Mezcla los 300 g de tomate triturado con los 2 g de sal y el 1 g de orégano; no escurras líquido que se ha incluido en el cálculo. Conserva el tomate y el queso tapados y refrigerados hasta usarlos. Mantén también las dos bolas de masa tapadas durante el precalentado. Esta propuesta usa bandejas metálicas, sin piedra ni papel de horno que pueda superar la temperatura permitida por su fabricante.",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-06.webp",
+          "image_alt": "Pizza casera: Precalienta el horno y prepara el tomate"
+        },
+        {
+          "title": "Estira la primera base hasta unos 30 cm",
+          "content": "Usa parte de los 20 g de harina reservados para la mesa y las manos. Aplana una bola desde el centro hacia fuera y estírala con suavidad hasta un círculo de aproximadamente 30 cm; deja un borde algo más grueso y un centro de unos 3–4 mm, sin agujeros. Pasa la base a una de las bandejas ya engrasadas. Si se encoge, deja reposar 10 minutos adicionales y vuelve a estirar; no tires hasta romperla. Mantén la segunda bola tapada y estírala solo al acercarse su turno. El diámetro y el rendimiento de dos pizzas están propuestos, no medidos en una prueba de cocina.",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-07.webp",
+          "image_alt": "Pizza casera: Estira la primera base hasta unos 30 cm"
+        },
+        {
+          "title": "Añade la mitad del tomate y del queso",
+          "content": "Reparte la mitad de la mezcla de tomate condimentado: 151,5 g, compuestos por 150 g de tomate, 1 g de sal y 0,5 g de orégano sobre la primera base, dejando unos 2 cm de borde sin cubrir. Distribuye 100 g de mozzarella rallada por encima sin formar un montón en el centro. No añadas carne, verduras, queso o aceite que no figuren en la lista. Reserva tapada y refrigerada la otra mitad de tomate y queso para la segunda pizza. La albahaca se incorpora después del horno para que conserve su textura; todavía no la pongas sobre esta base cruda.",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-08.webp",
+          "image_alt": "Pizza casera: Añade la mitad del tomate y del queso"
+        },
+        {
+          "title": "Hornea las dos pizzas por turnos",
+          "content": "Hornea la primera pizza en el tercio inferior durante unos 15 minutos y empieza a revisarla a los 12. El borde debe quedar dorado, el queso fundido y la base cocida, con color por debajo y sin una capa pastosa de masa cruda bajo el tomate. Levanta con cuidado un borde usando una espátula para comprobarlo; si el queso dora antes que la base, protege la parte superior o ajusta la altura y continúa. Saca con guantes y coloca en una rejilla. Estira y cubre la segunda base con los otros 151,5 g de mezcla condimentada —150 g de tomate, 1 g de sal y 0,5 g de orégano— y 100 g de mozzarella, usando solo lo que quede de los 20 g de harina reservados, y hornea otros 15 minutos con las mismas comprobaciones. La propuesta cuenta 30 minutos de horno para dos tandas; añade cualquier tiempo extra real. No sustituyas la cocción completa de la harina por el simple derretido del queso.",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-09.webp",
+          "image_alt": "Pizza casera: Hornea las dos pizzas por turnos"
+        },
+        {
+          "title": "Añade la albahaca, corta y sirve",
+          "content": "Deja cada pizza sobre una rejilla unos 3 minutos antes de cortar. Reparte los 5 g de albahaca limpia entre ambas, 2,5 g por pizza, y corta cada una en 4 porciones iguales: 8 porciones en total para 4 raciones de 2 porciones, equivalentes a media pizza. La planificación conservadora cuenta 35 minutos de preparación, 30 de horno y 153 de esperas: 10 de levadura, 90 de fermentación, 20 de reposo de bolas, 30 de precalentado y 3 finales de la última tanda. Son 218 minutos estimados, sin descontar tareas que puedan coincidir; el reposo de la primera pizza cabe durante el horno de la segunda. Añade los reposos o el horneado adicionales que necesite tu masa. No se afirma una prueba de cocina ni un rendimiento medido; la foto final muestra esta cobertura sin acompañamientos.",
+          "image_url": "/recetas/receta-de-pizza-casera/portada.webp",
+          "image_alt": "Pizza casera: Añade la albahaca, corta y sirve"
+        }
+      ],
+      "notes": "Propuesta de pizza casera de tomate y mozzarella, sin atribuir una denominación napolitana ni una prueba de cocina. Contiene trigo/gluten y leche; revisa los envases de levadura, tomate y queso. Usa mozzarella de leche pasteurizada, baja humedad; la mozzarella fresca aporta más agua y exige ajustar el montaje y recalcular nutrición. La levadura es seca activa: respeta la hidratación del envase y no cambies por impulsor químico. Las marcas de harina absorben de forma distinta: cantidades, fermentación, diámetro y tiempos son propuestas pendientes de ensayo. Si cambias agua, aceite, queso o coberturas, recalcula; no prometemos idéntico resultado. La harina y la masa crudas no se prueban. Mantén queso y tomate preparados a 4°C o menos hasta montar. Refrigera las sobras en recipientes poco profundos dentro de 2 horas, o 1 hora si el ambiente supera 32°C, y consúmelas en 3 días. Recalienta las porciones necesarias hasta 74°C en el centro. No dejes masa con queso crudo montada durante toda la fermentación. Usa guantes al manipular bandejas y comprueba que tus utensilios admitan 240°C.",
+      "nutrition": {
+        "calories": 692.0,
+        "protein_g": 25.5,
+        "carbs_g": 104.0,
+        "fat_g": 18.8,
+        "saturated_fat_g": 8.7,
+        "sodium_mg": 1467.9,
+        "fiber_g": 5.3,
+        "sugar_g": 5.4,
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (abril de 2018)",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "inputs": [
+          {
+            "ingredient": "harina, incluidos 20 g de estirado asumidos consumidos",
+            "edible_grams": 500,
+            "fdc_id": 169761,
+            "fdc_description": "Wheat flour, white, all-purpose, unenriched",
+            "per_100g": {
+              "fat_g": 0.98,
+              "carbs_g": 76.3,
+              "calories": 364,
+              "fiber_g": 2.7,
+              "sodium_mg": 2.0,
+              "protein_g": 10.3,
+              "saturated_fat_g": 0.155,
+              "sugar_g": 0.27
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169761/nutrients"
+          },
+          {
+            "ingredient": "levadura seca activa",
+            "edible_grams": 5,
+            "fdc_id": 175043,
+            "fdc_description": "Leavening agents, yeast, baker's, active dry",
+            "per_100g": {
+              "fat_g": 7.61,
+              "carbs_g": 41.2,
+              "calories": 325,
+              "protein_g": 40.4,
+              "fiber_g": 26.9,
+              "sodium_mg": 51.0,
+              "saturated_fat_g": 1.0,
+              "sugar_g": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/175043/nutrients"
+          },
+          {
+            "ingredient": "azúcar",
+            "edible_grams": 5,
+            "fdc_id": 169655,
+            "fdc_description": "Sugars, granulated",
+            "per_100g": {
+              "protein_g": 0.0,
+              "sodium_mg": 1.0,
+              "fat_g": 0.0,
+              "calories": 387,
+              "saturated_fat_g": 0.0,
+              "sugar_g": 99.8,
+              "carbs_g": 100,
+              "fiber_g": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169655/nutrients"
+          },
+          {
+            "ingredient": "sal total,8 g masa+2 g tomate",
+            "edible_grams": 10,
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "fiber_g": 0.0,
+              "sodium_mg": 38800.0,
+              "saturated_fat_g": 0.0,
+              "protein_g": 0.0,
+              "fat_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 0.0,
+              "sugar_g": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients"
+          },
+          {
+            "ingredient": "aceite de oliva total,10 g masa+10 g bandejas",
+            "edible_grams": 20,
+            "fdc_id": 171413,
+            "fdc_description": "Oil, olive, salad or cooking",
+            "per_100g": {
+              "fat_g": 100,
+              "carbs_g": 0.0,
+              "calories": 884,
+              "sodium_mg": 2.0,
+              "protein_g": 0.0,
+              "saturated_fat_g": 13.8,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171413/nutrients"
+          },
+          {
+            "ingredient": "tomate triturado en conserva, incluido líquido",
+            "edible_grams": 300,
+            "fdc_id": 170501,
+            "fdc_description": "Tomatoes, crushed, canned",
+            "per_100g": {
+              "sodium_mg": 186,
+              "fat_g": 0.28,
+              "carbs_g": 7.29,
+              "calories": 32.0,
+              "fiber_g": 1.9,
+              "protein_g": 1.64,
+              "saturated_fat_g": 0.04,
+              "sugar_g": 4.4
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170501/nutrients"
+          },
+          {
+            "ingredient": "orégano seco",
+            "edible_grams": 1,
+            "fdc_id": 171328,
+            "fdc_description": "Spices, oregano, dried",
+            "per_100g": {
+              "sugar_g": 4.09,
+              "fat_g": 4.28,
+              "carbs_g": 68.9,
+              "calories": 265,
+              "fiber_g": 42.5,
+              "sodium_mg": 25.0,
+              "saturated_fat_g": 1.55,
+              "protein_g": 9.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171328/nutrients"
+          },
+          {
+            "ingredient": "mozzarella de leche entera y baja humedad",
+            "edible_grams": 200,
+            "fdc_id": 170846,
+            "fdc_description": "Cheese, mozzarella, whole milk, low moisture",
+            "per_100g": {
+              "sugar_g": 1.01,
+              "sodium_mg": 710,
+              "saturated_fat_g": 15.6,
+              "fiber_g": 0.0,
+              "protein_g": 21.6,
+              "fat_g": 24.6,
+              "carbs_g": 2.47,
+              "calories": 318
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170846/nutrients"
+          },
+          {
+            "ingredient": "albahaca fresca",
+            "edible_grams": 5,
+            "fdc_id": 172232,
+            "fdc_description": "Basil, fresh",
+            "per_100g": {
+              "saturated_fat_g": 0.041,
+              "sugar_g": 0.3,
+              "fat_g": 0.64,
+              "carbs_g": 2.65,
+              "calories": 23.0,
+              "fiber_g": 1.6,
+              "sodium_mg": 4.0,
+              "protein_g": 3.15
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/172232/nutrients"
+          }
+        ],
+        "serving_size": "Media pizza,2 de las 8 porciones;4 raciones",
+        "method": "Nueve fichas USDA verificadas: pesos comestibles por nutrientes por 100 g, sumados y divididos entre 4. Agua sin aporte en estos campos. Sal 10 g y aceite 20 g suman masa y cobertura/bandejas. Incluye 300 g de tomate con su líquido,200 g de mozzarella de leche entera y baja humedad y 5 g de albahaca. Asume consumir todos los 500 g de harina y 20 g de aceite, aunque quede harina en mesa o aceite en bandejas.",
+        "note": "Estimación, no análisis ni rendimiento confirmado. La marca y sal del tomate y queso, el sobrante de harina o aceite y el uso de mozzarella fresca o de otra grasa cambian las cifras. El azúcar se incluye completo sin modelar su consumo durante la fermentación; no se calcula pérdida específica de nutrientes en el horno. No incluye coberturas o acompañamientos adicionales. Datos presentes, incluidos ceros USDA; no se sustituyen datos ausentes por cero."
+      },
+      "keywords": [
+        "pizza casera",
+        "masa de pizza",
+        "pizza de tomate y mozzarella",
+        "fermentación de pizza"
+      ],
+      "image_url": "/recetas/receta-de-pizza-casera/portada.webp",
+      "gallery": [
+        "/recetas/receta-de-pizza-casera/paso-01.webp",
+        "/recetas/receta-de-pizza-casera/paso-02.webp",
+        "/recetas/receta-de-pizza-casera/paso-03.webp",
+        "/recetas/receta-de-pizza-casera/paso-04.webp",
+        "/recetas/receta-de-pizza-casera/paso-05.webp",
+        "/recetas/receta-de-pizza-casera/paso-06.webp",
+        "/recetas/receta-de-pizza-casera/paso-07.webp",
+        "/recetas/receta-de-pizza-casera/paso-08.webp",
+        "/recetas/receta-de-pizza-casera/paso-09.webp"
+      ],
+      "seo": {
+        "title": "Pizza casera de tomate y mozzarella: masa paso a paso",
+        "description": "Prepara dos pizzas caseras con masa de levadura, tomate y mozzarella: cantidades, fermentación, precalentado y horno explicados por fases.",
+        "image_alt": "Pizza casera con borde dorado, tomate, mozzarella fundida y hojas de albahaca, cortada en cuatro porciones con una ligeramente separada",
+        "image_variants": [
+          "/recetas/receta-de-pizza-casera/portada-1x1.webp",
+          "/recetas/receta-de-pizza-casera/portada-4x3.webp",
+          "/recetas/receta-de-pizza-casera/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "¿Por qué la masa se encoge al estirarla?",
+            "a": "Puede necesitar relajarse. Después de dividirla se proponen 20 minutos tapada; si aún se resiste, deja otros 10 minutos y súmalos al tiempo total. Estira desde el centro sin rasgarla ni añadir harina fuera de los 20 g reservados."
+          },
+          {
+            "q": "¿Puedo cambiar la mozzarella de baja humedad por mozzarella fresca?",
+            "a": "La fresca contiene más agua y puede humedecer la base. Escurrirla o cambiar el queso modifica el peso comestible y la nutrición calculada con 200 g de mozzarella de leche entera y baja humedad. La sustitución necesita ajustar el montaje y recalcular; no se promete el mismo horneado."
+          },
+          {
+            "q": "¿Basta con que el queso se funda para sacar la pizza?",
+            "a": "No. La harina cruda debe cocinarse: comprueba borde dorado, base cocida por debajo y ausencia de una capa pastosa bajo el tomate. Los 15 minutos por tanda son orientativos; sigue horneando si la base lo necesita, aunque el queso ya esté fundido."
+          }
+        ]
+      },
+      "published": true,
+      "editorial_status": "published",
+      "content_html": "<p>Propuesta de dos pizzas caseras de unos 30 cm con masa de trigo, tomate, mozzarella de baja humedad y albahaca. Se preparan por turnos en bandejas metálicas y rinden 4 raciones de media pizza. Los 218 minutos estimados incluyen hidratación de levadura, fermentación, reposo, precalentado y horno; cantidades y rendimiento están pendientes de prueba de cocina.</p><p>Propuesta de pizza casera de tomate y mozzarella, sin atribuir una denominación napolitana ni una prueba de cocina. Contiene trigo/gluten y leche; revisa los envases de levadura, tomate y queso. Usa mozzarella de leche pasteurizada, baja humedad; la mozzarella fresca aporta más agua y exige ajustar el montaje y recalcular nutrición. La levadura es seca activa: respeta la hidratación del envase y no cambies por impulsor químico. Las marcas de harina absorben de forma distinta: cantidades, fermentación, diámetro y tiempos son propuestas pendientes de ensayo. Si cambias agua, aceite, queso o coberturas, recalcula; no prometemos idéntico resultado. La harina y la masa crudas no se prueban. Mantén queso y tomate preparados a 4°C o menos hasta montar. Refrigera las sobras en recipientes poco profundos dentro de 2 horas, o 1 hora si el ambiente supera 32°C, y consúmelas en 3 días. Recalienta las porciones necesarias hasta 74°C en el centro. No dejes masa con queso crudo montada durante toda la fermentación. Usa guantes al manipular bandejas y comprueba que tus utensilios admitan 240°C.</p>"
+    },
+    {
+      "id": "4fafae72-8de4-5afa-8a32-15f3b1b556c9",
+      "recipe_group_id": "31a06fe5-2ae5-4451-8ee8-e53376013609",
+      "slug": "hausgemachtes-pizza-rezept",
+      "public_path": "/de/hausgemachtes-pizza-rezept",
+      "source_url": "https://manualdecocina.com/de/hausgemachtes-pizza-rezept/",
+      "language": "de",
+      "title": "Hausgemachte Pizza mit Tomaten und Mozzarella",
+      "excerpt": "Hefeteig mit erklärter Gare, abgewogenem Belag und durchgebackenem Boden: zwei nacheinander gebackene Pizzen für vier Portionen.",
+      "summary": "Rezeptvorschlag für zwei hausgemachte Pizzen von etwa 30 cm Durchmesser mit Weizenteig, Tomaten, schnittfestem Mozzarella und Basilikum. Auf Metallblechen nacheinander gebacken ergeben sie 4 Portionen zu je einer halben Pizza. Die geschätzten 218 Minuten enthalten das Anrühren der Hefe, Gare, Ruhezeit, Vorheizen und Backen; Mengen und Ausbeute sind noch nicht durch einen Küchentest bestätigt.",
+      "category": "Brote und Teige",
+      "category_slug": "panes-y-masas",
+      "difficulty": "Mittel",
+      "course": "Pizza",
+      "cuisine": "Italienisch inspiriert",
+      "prep_time_minutes": 35,
+      "cook_time_minutes": 30,
+      "total_time_minutes": 218,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "Weizenmehl ohne Backtriebmittel, einschließlich 20 g zum Formen",
+          "amount": "500",
+          "unit": "g",
+          "group": "Teig"
+        },
+        {
+          "name": "Wasser, 50 ml für die Hefe und 250 ml zum Mischen",
+          "amount": "300",
+          "unit": "ml",
+          "group": "Teig"
+        },
+        {
+          "name": "aktive Trockenbackhefe, kein Backpulver",
+          "amount": "5",
+          "unit": "g",
+          "group": "Teig"
+        },
+        {
+          "name": "Zucker für die Hefe",
+          "amount": "5",
+          "unit": "g",
+          "group": "Teig"
+        },
+        {
+          "name": "Salz für den Teig",
+          "amount": "8",
+          "unit": "g",
+          "group": "Teig"
+        },
+        {
+          "name": "Olivenöl für den Teig",
+          "amount": "10",
+          "unit": "g",
+          "group": "Teig"
+        },
+        {
+          "name": "zerkleinerte Dosentomaten einschließlich Flüssigkeit",
+          "amount": "300",
+          "unit": "g",
+          "group": "Belag"
+        },
+        {
+          "name": "Salz für die Tomaten",
+          "amount": "2",
+          "unit": "g",
+          "group": "Belag"
+        },
+        {
+          "name": "getrockneter Oregano",
+          "amount": "1",
+          "unit": "g",
+          "group": "Belag"
+        },
+        {
+          "name": "schnittfester Mozzarella mit wenig Feuchtigkeit aus pasteurisierter Vollmilch",
+          "amount": "200",
+          "unit": "g",
+          "group": "Belag"
+        },
+        {
+          "name": "frische Basilikumblätter",
+          "amount": "5",
+          "unit": "g",
+          "group": "Zum Fertigstellen"
+        },
+        {
+          "name": "Olivenöl für beide Bleche",
+          "amount": "10",
+          "unit": "g",
+          "group": "Bleche"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Zutaten wiegen und zwei Bleche vorbereiten",
+          "content": "500 g Mehl wiegen, davon 20 g zum Formen zurücklegen und 480 g für den Teig verwenden. Die 300 ml Wasser in 50 ml für die Hefe und 250 ml zum Mischen aufteilen. 5 g aktive Trockenhefe, 5 g Zucker, 8 g Salz und 10 g Öl für den Teig abwiegen. Für den Belag 300 g zerkleinerte Tomaten, 2 g Salz, 1 g Oregano und 200 g geriebenen, feuchtigkeitsarmen Mozzarella bereitstellen. Käse bis zur Verwendung bei höchstens 4 °C kühlen. 5 g Basilikum waschen und trocknen. Zwei ofengeeignete Metallbleche von etwa 40 × 35 cm vorbereiten und die übrigen 10 g Öl mit einem Pinsel verteilen, 5 g je Blech. Kein zusätzliches Öl verwenden.",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-01.webp",
+          "image_alt": "Getrennte Zutaten für hausgemachte Pizza mit Mehl, Hefe, Wasser, Tomaten, Käse und Kräutern"
+        },
+        {
+          "title": "Hefe 10 Minuten anrühren",
+          "content": "Nur die 50 ml Wasser auf ungefähr 44 °C erwärmen und mit einem Thermometer prüfen; abweichende Temperaturangaben auf der Packung der aktiven Trockenhefe beachten. 5 g Zucker auflösen und 5 g Hefe einrühren. 10 Minuten quellen lassen. Kleine Bläschen und leichter Schaum zeigen Aktivität. Eine andere Flüssigkeitsmenge muss keine Tassenmarkierung einer anderen Rezeptur erreichen. Abgelaufene oder inaktive Hefe vor dem Mischen ersetzen, ohne zusätzliches Wasser oder Zucker in diese Rezeptur zu geben. Die übrigen 250 ml Wasser bei Zimmertemperatur verwenden. Backpulver ist ungeeignet; eine automatische Umrechnung auf Frischhefe wird nicht vorgeschlagen.",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-02.webp",
+          "image_alt": "Angerührte Trockenhefe mit feinen Bläschen im warmen Wasser"
+        },
+        {
+          "title": "Mischen und zu einem elastischen Teig kneten",
+          "content": "480 g Mehl und 8 g Salz in einer großen Schüssel mischen. Die vollständig angerührte Hefe, die übrigen 250 ml Wasser und 10 g Öl zugeben. Mischen, bis kein trockenes Mehl bleibt, dann auf sauberer Fläche etwa 8–10 Minuten zu einem gleichmäßigen, elastischen und leicht klebrigen Teig kneten. Zurückgelegtes Mehl nicht zum Kaschieren unzureichenden Mischens verwenden und Wasser nur mit Neuberechnung ändern: Insgesamt sind 300 ml vorgesehen. Eine Teigkarte hilft beim Aufnehmen. Mehl ist roh; Teig nicht probieren. Hände und Flächen vor Kontakt mit Basilikum oder verzehrfertigen Lebensmitteln reinigen.",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-03.webp",
+          "image_alt": "Hände kneten einen zusammenhängenden hellen Pizzateig"
+        },
+        {
+          "title": "Bis zur deutlichen Volumenzunahme gehen lassen",
+          "content": "Teig ohne weiteres Öl in dieselbe saubere Schüssel legen und gegen Austrocknen abdecken. An einem milden Ort, ungefähr bei 22–25 °C, etwa 90 Minuten gehen lassen. Der Teig soll luftig werden und annähernd sein doppeltes Volumen erreichen; die Uhr garantiert die Gare nicht. Bei kühler Küche oder langsamer Hefe länger warten und die tatsächliche Zusatzzeit zum Gesamtwert rechnen. Nicht auf einer Heizung oder im eingeschalteten Ofen beschleunigen. Zeit und Volumenzunahme sind Vorschläge, die noch im Küchentest geprüft werden müssen.",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-04.webp",
+          "image_alt": "Luftiger gegarter Pizzateig in einer abgedeckten Glasschüssel"
+        },
+        {
+          "title": "Zwei Kugeln formen und 20 Minuten ruhen lassen",
+          "content": "Teig vorsichtig entgasen und in zwei gleich große Stücke von ungefähr 404 g teilen, bevor das Mehl zum Formen verwendet wird. Die Ränder nach unten einschlagen und Kugeln mit dem Schluss nach unten formen. Abgedeckt 20 Minuten entspannen lassen. Kein Öl in das Gefäß geben und die Kugeln nicht offen liegen lassen. Falls sich der Teig später dem Dehnen widersetzt, weitere 10 Minuten ruhen lassen und dazurechnen, statt ihn zu zerreißen oder ungemessenes Mehl zuzugeben.",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-05.webp",
+          "image_alt": "Zwei gleich große Pizzateigkugeln ruhen neben einem sauberen Tuch"
+        },
+        {
+          "title": "Ofen vorheizen und Tomaten vorbereiten",
+          "content": "Rost im unteren Ofendrittel einschieben und etwa 30 Minuten auf 240 °C Ober-/Unterhitze oder 220 °C Umluft vorheizen. Die eingeölten Bleche bleiben zum sicheren Belegen draußen und kalt. 300 g zerkleinerte Tomaten mit 2 g Salz und 1 g Oregano mischen; die bereits eingerechnete Flüssigkeit nicht abgießen. Tomaten und Käse bis zum Gebrauch abgedeckt kühlen. Beide Teigkugeln während des Vorheizens abgedeckt halten. Dieser Vorschlag verwendet Metallbleche ohne Backstein oder Backpapier, dessen zulässige Herstellertemperatur überschritten werden könnte.",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-06.webp",
+          "image_alt": "Tomaten mit Oregano neben Käse und kalten eingeölten Blechen"
+        },
+        {
+          "title": "Ersten Boden auf etwa 30 cm ausziehen",
+          "content": "Etwas von den zurückgelegten 20 g Mehl für Fläche und Hände verwenden. Eine Kugel von innen nach außen flach drücken und vorsichtig zu einem Kreis von ungefähr 30 cm dehnen. Einen etwas dickeren Rand und eine geschlossene Mitte von etwa 3–4 mm lassen. Auf eines der bereits eingeölten Bleche legen. Zieht sich der Teig zusammen, weitere 10 Minuten ruhen lassen und erneut dehnen, ohne ihn zu zerreißen. Die zweite Kugel abgedeckt lassen und erst kurz vor ihrem Backdurchgang formen. Durchmesser und Ausbeute von zwei Pizzen sind vorgeschlagen, nicht in einem Küchentest gemessen.",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-07.webp",
+          "image_alt": "Hände dehnen einen geschlossenen runden Pizzaboden"
+        },
+        {
+          "title": "Hälfte der Tomatenmischung und des Käses auflegen",
+          "content": "Die Hälfte der gewürzten Tomatenmischung verteilen: 151,5 g aus 150 g Tomaten, 1 g Salz und 0,5 g Oregano. Etwa 2 cm Rand frei lassen. 100 g geriebenen Mozzarella gleichmäßig verteilen, ohne einen Haufen in der Mitte. Kein Fleisch, Gemüse, Käse oder Öl außerhalb der Zutatenliste zufügen. Die andere Hälfte der Mischung und des Käses für die zweite Pizza abgedeckt gekühlt halten. Basilikum kommt erst nach dem Backen darauf, damit seine Textur erhalten bleibt; jetzt noch nicht auf den rohen Boden legen.",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-08.webp",
+          "image_alt": "Roher Pizzaboden mit Tomaten und geriebenem Mozzarella innerhalb des freien Randes"
+        },
+        {
+          "title": "Beide Pizzen nacheinander backen",
+          "content": "Die erste Pizza im unteren Drittel etwa 15 Minuten backen und ab 12 Minuten prüfen. Rand goldbraun, Käse geschmolzen und Unterseite durchgebacken und gebräunt: Unter den Tomaten darf keine pastige rohe Teigschicht bleiben. Mit einem Pfannenwender vorsichtig einen Rand anheben. Bräunt der Käse früher als der Boden, Oberseite schützen oder Höhe ändern und weiterbacken. Mit Ofenhandschuhen herausnehmen und auf ein Gitter setzen. Zweiten Boden mit den übrigen 151,5 g gewürzter Mischung —150 g Tomaten, 1 g Salz und 0,5 g Oregano— und 100 g Mozzarella belegen; nur den Rest der zurückgelegten 20 g Mehl verwenden. Weitere 15 Minuten mit denselben Kontrollen backen. Vorgesehen sind 30 Minuten für zwei Durchgänge; tatsächliche Zusatzzeit ergänzen. Geschmolzener Käse ersetzt das vollständige Durchbacken des rohen Mehls nicht.",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-09.webp",
+          "image_alt": "Ofenhandschuh hält ein Pizzablech, während ein Pfannenwender den Boden prüft"
+        },
+        {
+          "title": "Basilikum auflegen, schneiden und servieren",
+          "content": "Jede Pizza vor dem Schneiden etwa 3 Minuten auf einem Gitter ruhen lassen. Die 5 g sauberen Basilikum verteilen, 2,5 g je Pizza. Jede in 4 gleich große Stücke schneiden: insgesamt 8 Stücke für 4 Portionen zu 2 Stücken, entsprechend einer halben Pizza. Die konservative Planung enthält 35 Minuten Vorbereitung, 30 Backen und 153 Warten: 10 für Hefe, 90 Gare, 20 Kugelruhe, 30 Vorheizen und 3 letzte Minuten für die zweite Pizza. Insgesamt geschätzte 218 Minuten, ohne mögliche zeitgleiche Arbeiten abzuziehen; die erste Pizza kann während des zweiten Backdurchgangs ruhen. Weitere erforderliche Ruhe- oder Backzeit dazurechnen. Kein Küchentest oder gemessener Ertrag wird behauptet. Das fertige Bild zeigt diesen Belag ohne Beilagen.",
+          "image_url": "/recetas/receta-de-pizza-casera/portada.webp",
+          "image_alt": "Fertige Tomaten-Mozzarella-Pizza mit Basilikum und vier Stücken"
+        }
+      ],
+      "notes": "Vorschlag für hausgemachte Tomaten-Mozzarella-Pizza ohne neapolitanische Bezeichnung oder behaupteten Küchentest. Enthält Weizen/Gluten und Milch; Etiketten von Hefe, Tomaten und Käse prüfen. Feuchtigkeitsarmen Mozzarella aus pasteurisierter Milch verwenden. Frischer Mozzarella enthält mehr Wasser: Belegen anpassen und Nährwerte neu berechnen. Aktive Trockenhefe nach Packungsangabe anrühren, nicht durch Backpulver ersetzen. Mehle nehmen Wasser unterschiedlich auf; Mengen, Gare, Durchmesser und Zeiten sind noch zu erproben. Bei Änderungen an Wasser, Öl, Käse oder Belag neu rechnen; gleiche Ergebnisse werden nicht versprochen. Rohes Mehl oder rohen Teig nicht probieren. Käse und vorbereitete Tomaten bis zum Belegen bei höchstens 4 °C halten. Reste innerhalb von 2 Stunden, bei über 32 °C Umgebung innerhalb von 1 Stunde, in flachen Behältern kühlen und binnen 3 Tagen essen. Benötigte Portionen im Kern auf 74 °C erhitzen. Eine rohe, mit Käse belegte Pizza nicht während der ganzen Teiggare stehen lassen. Ofenhandschuhe und für 240 °C geeignete Utensilien verwenden.",
+      "nutrition": {
+        "calories": 692.0,
+        "protein_g": 25.5,
+        "carbs_g": 104.0,
+        "fat_g": 18.8,
+        "saturated_fat_g": 8.7,
+        "sodium_mg": 1467.9,
+        "fiber_g": 5.3,
+        "sugar_g": 5.4,
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (abril de 2018)",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "inputs": [
+          {
+            "ingredient": "harina, incluidos 20 g de estirado asumidos consumidos",
+            "edible_grams": 500,
+            "fdc_id": 169761,
+            "fdc_description": "Wheat flour, white, all-purpose, unenriched",
+            "per_100g": {
+              "fat_g": 0.98,
+              "carbs_g": 76.3,
+              "calories": 364,
+              "fiber_g": 2.7,
+              "sodium_mg": 2.0,
+              "protein_g": 10.3,
+              "saturated_fat_g": 0.155,
+              "sugar_g": 0.27
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169761/nutrients"
+          },
+          {
+            "ingredient": "levadura seca activa",
+            "edible_grams": 5,
+            "fdc_id": 175043,
+            "fdc_description": "Leavening agents, yeast, baker's, active dry",
+            "per_100g": {
+              "fat_g": 7.61,
+              "carbs_g": 41.2,
+              "calories": 325,
+              "protein_g": 40.4,
+              "fiber_g": 26.9,
+              "sodium_mg": 51.0,
+              "saturated_fat_g": 1.0,
+              "sugar_g": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/175043/nutrients"
+          },
+          {
+            "ingredient": "azúcar",
+            "edible_grams": 5,
+            "fdc_id": 169655,
+            "fdc_description": "Sugars, granulated",
+            "per_100g": {
+              "protein_g": 0.0,
+              "sodium_mg": 1.0,
+              "fat_g": 0.0,
+              "calories": 387,
+              "saturated_fat_g": 0.0,
+              "sugar_g": 99.8,
+              "carbs_g": 100,
+              "fiber_g": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169655/nutrients"
+          },
+          {
+            "ingredient": "sal total,8 g masa+2 g tomate",
+            "edible_grams": 10,
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "fiber_g": 0.0,
+              "sodium_mg": 38800.0,
+              "saturated_fat_g": 0.0,
+              "protein_g": 0.0,
+              "fat_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 0.0,
+              "sugar_g": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients"
+          },
+          {
+            "ingredient": "aceite de oliva total,10 g masa+10 g bandejas",
+            "edible_grams": 20,
+            "fdc_id": 171413,
+            "fdc_description": "Oil, olive, salad or cooking",
+            "per_100g": {
+              "fat_g": 100,
+              "carbs_g": 0.0,
+              "calories": 884,
+              "sodium_mg": 2.0,
+              "protein_g": 0.0,
+              "saturated_fat_g": 13.8,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171413/nutrients"
+          },
+          {
+            "ingredient": "tomate triturado en conserva, incluido líquido",
+            "edible_grams": 300,
+            "fdc_id": 170501,
+            "fdc_description": "Tomatoes, crushed, canned",
+            "per_100g": {
+              "sodium_mg": 186,
+              "fat_g": 0.28,
+              "carbs_g": 7.29,
+              "calories": 32.0,
+              "fiber_g": 1.9,
+              "protein_g": 1.64,
+              "saturated_fat_g": 0.04,
+              "sugar_g": 4.4
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170501/nutrients"
+          },
+          {
+            "ingredient": "orégano seco",
+            "edible_grams": 1,
+            "fdc_id": 171328,
+            "fdc_description": "Spices, oregano, dried",
+            "per_100g": {
+              "sugar_g": 4.09,
+              "fat_g": 4.28,
+              "carbs_g": 68.9,
+              "calories": 265,
+              "fiber_g": 42.5,
+              "sodium_mg": 25.0,
+              "saturated_fat_g": 1.55,
+              "protein_g": 9.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171328/nutrients"
+          },
+          {
+            "ingredient": "mozzarella de leche entera y baja humedad",
+            "edible_grams": 200,
+            "fdc_id": 170846,
+            "fdc_description": "Cheese, mozzarella, whole milk, low moisture",
+            "per_100g": {
+              "sugar_g": 1.01,
+              "sodium_mg": 710,
+              "saturated_fat_g": 15.6,
+              "fiber_g": 0.0,
+              "protein_g": 21.6,
+              "fat_g": 24.6,
+              "carbs_g": 2.47,
+              "calories": 318
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170846/nutrients"
+          },
+          {
+            "ingredient": "albahaca fresca",
+            "edible_grams": 5,
+            "fdc_id": 172232,
+            "fdc_description": "Basil, fresh",
+            "per_100g": {
+              "saturated_fat_g": 0.041,
+              "sugar_g": 0.3,
+              "fat_g": 0.64,
+              "carbs_g": 2.65,
+              "calories": 23.0,
+              "fiber_g": 1.6,
+              "sodium_mg": 4.0,
+              "protein_g": 3.15
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/172232/nutrients"
+          }
+        ],
+        "serving_size": "Eine halbe Pizza, 2 der 8 Stücke; 4 Portionen",
+        "method": "Neun geprüfte USDA-Datensätze: essbare Gramm mit Nährstoffen je 100 g multiplizieren, summieren und durch 4 teilen. Wasser liefert keine der aufgeführten Nährstoffe. 10 g Salz und 20 g Öl umfassen Teig, Belag und Bleche. Eingerechnet sind 300 g Dosentomaten mit Flüssigkeit, 200 g feuchtigkeitsarmer Vollmilch-Mozzarella und 5 g Basilikum. Sämtliche 500 g Mehl und 20 g Öl gelten als verzehrt, auch wenn etwas auf Fläche oder Blech zurückbleibt.",
+        "note": "Schätzwerte, keine Laboranalyse oder bestätigte Küchenausbeute. Marke und Salzgehalt von Tomaten und Käse, zurückbleibendes Mehl/Öl sowie andere Käsesorten oder Fette verändern die Werte. Alle 5 g Zucker sind enthalten; Verbrauch bei der Gare und spezifische Nährstoffverluste beim Backen werden nicht modelliert. Zusätzlicher Belag und Beilagen sind ausgeschlossen. Vorhandene USDA-Werte einschließlich gemeldeter Nullen werden verwendet; fehlende Angaben werden nicht zu null gesetzt."
+      },
+      "keywords": [
+        "hausgemachte Pizza",
+        "Pizzateig",
+        "Tomaten-Mozzarella-Pizza",
+        "Pizzateig gehen lassen"
+      ],
+      "image_url": "/recetas/receta-de-pizza-casera/portada.webp",
+      "gallery": [
+        "/recetas/receta-de-pizza-casera/paso-01.webp",
+        "/recetas/receta-de-pizza-casera/paso-02.webp",
+        "/recetas/receta-de-pizza-casera/paso-03.webp",
+        "/recetas/receta-de-pizza-casera/paso-04.webp",
+        "/recetas/receta-de-pizza-casera/paso-05.webp",
+        "/recetas/receta-de-pizza-casera/paso-06.webp",
+        "/recetas/receta-de-pizza-casera/paso-07.webp",
+        "/recetas/receta-de-pizza-casera/paso-08.webp",
+        "/recetas/receta-de-pizza-casera/paso-09.webp"
+      ],
+      "seo": {
+        "title": "Hausgemachte Tomaten-Mozzarella-Pizza: Teig Schritt für Schritt",
+        "description": "Zwei hausgemachte Pizzen mit Hefeteig, Tomaten und Mozzarella: Mengen, Gare, Vorheizen und Backen in nachvollziehbaren Phasen.",
+        "image_alt": "Hausgemachte Pizza mit goldenem Rand, Tomaten, geschmolzenem Mozzarella und Basilikum, in vier Stücke geschnitten, eines leicht abgesetzt",
+        "image_variants": [
+          "/recetas/receta-de-pizza-casera/portada-1x1.webp",
+          "/recetas/receta-de-pizza-casera/portada-4x3.webp",
+          "/recetas/receta-de-pizza-casera/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Warum zieht sich der Teig beim Dehnen zusammen?",
+            "a": "Er muss sich möglicherweise entspannen. Nach dem Teilen sind 20 Minuten abgedeckte Ruhe vorgesehen; bei Widerstand weitere 10 Minuten warten und zur Gesamtzeit rechnen. Von der Mitte aus dehnen, ohne Reißen oder zusätzliches Mehl außerhalb der zurückgelegten 20 g."
+          },
+          {
+            "q": "Kann ich frischen statt feuchtigkeitsarmen Mozzarella nehmen?",
+            "a": "Frischer Mozzarella enthält mehr Wasser und kann den Boden durchnässen. Abtropfen oder ein Käsewechsel verändert essbares Gewicht und Nährwerte, die für 200 g feuchtigkeitsarmen Vollmilch-Mozzarella berechnet sind. Belegen anpassen und neu rechnen; gleiches Backverhalten wird nicht versprochen."
+          },
+          {
+            "q": "Reicht geschmolzener Käse als Zeichen, dass die Pizza fertig ist?",
+            "a": "Nein. Rohes Mehl muss garen: goldenen Rand, durchgebackene Unterseite und keine pastige Schicht unter den Tomaten prüfen. 15 Minuten je Durchgang sind ein Richtwert; bei Bedarf weiterbacken, auch wenn der Käse bereits geschmolzen ist."
+          }
+        ]
+      },
+      "published": true,
+      "editorial_status": "published",
+      "content_html": "<p>Rezeptvorschlag für zwei hausgemachte Pizzen von etwa 30 cm Durchmesser mit Weizenteig, Tomaten, schnittfestem Mozzarella und Basilikum. Auf Metallblechen nacheinander gebacken ergeben sie 4 Portionen zu je einer halben Pizza. Die geschätzten 218 Minuten enthalten das Anrühren der Hefe, Gare, Ruhezeit, Vorheizen und Backen; Mengen und Ausbeute sind noch nicht durch einen Küchentest bestätigt.</p><p>Vorschlag für hausgemachte Tomaten-Mozzarella-Pizza ohne neapolitanische Bezeichnung oder behaupteten Küchentest. Enthält Weizen/Gluten und Milch; Etiketten von Hefe, Tomaten und Käse prüfen. Feuchtigkeitsarmen Mozzarella aus pasteurisierter Milch verwenden. Frischer Mozzarella enthält mehr Wasser: Belegen anpassen und Nährwerte neu berechnen. Aktive Trockenhefe nach Packungsangabe anrühren, nicht durch Backpulver ersetzen. Mehle nehmen Wasser unterschiedlich auf; Mengen, Gare, Durchmesser und Zeiten sind noch zu erproben. Bei Änderungen an Wasser, Öl, Käse oder Belag neu rechnen; gleiche Ergebnisse werden nicht versprochen. Rohes Mehl oder rohen Teig nicht probieren. Käse und vorbereitete Tomaten bis zum Belegen bei höchstens 4 °C halten. Reste innerhalb von 2 Stunden, bei über 32 °C Umgebung innerhalb von 1 Stunde, in flachen Behältern kühlen und binnen 3 Tagen essen. Benötigte Portionen im Kern auf 74 °C erhitzen. Eine rohe, mit Käse belegte Pizza nicht während der ganzen Teiggare stehen lassen. Ofenhandschuhe und für 240 °C geeignete Utensilien verwenden.</p>"
+    },
+    {
+      "id": "f3f8aea8-3140-5f11-bf5d-fcea1206708a",
+      "recipe_group_id": "31a06fe5-2ae5-4451-8ee8-e53376013609",
+      "slug": "homemade-pizza-recipe",
+      "public_path": "/en/homemade-pizza-recipe",
+      "source_url": null,
+      "language": "en",
+      "title": "Homemade tomato and mozzarella pizza",
+      "excerpt": "Yeast dough with a measured topping and a fully baked base: two homemade pizzas, prepared in separate batches, for four servings.",
+      "summary": "A proposed recipe for two homemade pizzas about 30 cm across, with wheat dough, tomato, low-moisture mozzarella and basil. Metal trays are baked in turn, yielding 4 servings of half a pizza. The estimated 218 minutes include yeast hydration, rising, resting, preheating and baking; quantities and yield await kitchen testing.",
+      "category": "Breads & doughs",
+      "category_slug": "panes-y-masas",
+      "difficulty": "Medium",
+      "course": "Pizza",
+      "cuisine": "Italian-inspired",
+      "prep_time_minutes": 35,
+      "cook_time_minutes": 30,
+      "total_time_minutes": 218,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "plain all-purpose wheat flour, including 20 g for shaping",
+          "amount": "500",
+          "unit": "g",
+          "group": "Dough"
+        },
+        {
+          "name": "water, 50 ml for yeast and 250 ml for mixing",
+          "amount": "300",
+          "unit": "ml",
+          "group": "Dough"
+        },
+        {
+          "name": "active dry baker's yeast, not baking powder",
+          "amount": "5",
+          "unit": "g",
+          "group": "Dough"
+        },
+        {
+          "name": "sugar for the yeast",
+          "amount": "5",
+          "unit": "g",
+          "group": "Dough"
+        },
+        {
+          "name": "salt for the dough",
+          "amount": "8",
+          "unit": "g",
+          "group": "Dough"
+        },
+        {
+          "name": "olive oil for the dough",
+          "amount": "10",
+          "unit": "g",
+          "group": "Dough"
+        },
+        {
+          "name": "canned crushed tomatoes, including their liquid",
+          "amount": "300",
+          "unit": "g",
+          "group": "Topping"
+        },
+        {
+          "name": "salt for the tomatoes",
+          "amount": "2",
+          "unit": "g",
+          "group": "Topping"
+        },
+        {
+          "name": "dried oregano",
+          "amount": "1",
+          "unit": "g",
+          "group": "Topping"
+        },
+        {
+          "name": "low-moisture mozzarella made from pasteurized whole milk",
+          "amount": "200",
+          "unit": "g",
+          "group": "Topping"
+        },
+        {
+          "name": "fresh basil leaves",
+          "amount": "5",
+          "unit": "g",
+          "group": "Finish"
+        },
+        {
+          "name": "olive oil for the two trays",
+          "amount": "10",
+          "unit": "g",
+          "group": "Trays"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Weigh the ingredients and prepare two trays",
+          "content": "Weigh 500 g flour and reserve 20 g for shaping; use 480 g in the dough. Divide the 300 ml water into 50 ml for hydrating the yeast and 250 ml for mixing. Measure 5 g active dry yeast, 5 g sugar, 8 g salt and 10 g oil for the dough. Prepare 300 g crushed tomatoes, 2 g salt, 1 g oregano and 200 g grated low-moisture mozzarella for the topping. Keep the cheese refrigerated at 4 °C or below. Wash and dry 5 g basil. Prepare two oven-safe metal trays about 40 × 35 cm and brush the other 10 g oil between them, 5 g per tray. Add no oil beyond these amounts.",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-01.webp",
+          "image_alt": "Separate weighed flour, yeast, water, oil, tomato, grated mozzarella and herbs for homemade pizza"
+        },
+        {
+          "title": "Hydrate the yeast for 10 minutes",
+          "content": "Warm only the 50 ml water to about 44 °C, checked with a thermometer, or the temperature specified on your active dry yeast package. Dissolve 5 g sugar and stir in 5 g yeast. Leave for 10 minutes; look for activity such as bubbles and a light foam. A different volume need not reach a cup mark from another formula. If the yeast is expired or shows no activity, replace it before mixing, without adding extra water or sugar to this recipe. Use the other 250 ml water at room temperature. Baking powder is unsuitable, and no automatic fresh-yeast conversion is proposed.",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-02.webp",
+          "image_alt": "Hydrated active dry yeast with light bubbles being stirred in warm water"
+        },
+        {
+          "title": "Mix and knead until flexible",
+          "content": "Mix 480 g flour with 8 g salt in a large bowl. Add all the hydrated yeast, the remaining 250 ml water and 10 g oil. Mix until no dry flour remains, then knead on a clean surface for about 8–10 minutes until even, elastic and slightly tacky. Do not use the reserved flour to hide poorly mixed dough or add water without recalculating; the proposed total is 300 ml. A scraper helps collect the dough. Flour is raw: do not taste the dough, and clean hands and surfaces before touching basil or other ready-to-eat food.",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-03.webp",
+          "image_alt": "Hands kneading a pale cohesive pizza dough"
+        },
+        {
+          "title": "Let the dough rise until clearly expanded",
+          "content": "Put the dough in the same clean bowl without extra oil and cover to prevent drying. Leave in a mild place, around 22–25 °C, for about 90 minutes. Look for airy dough approaching twice its starting volume; the clock cannot guarantee fermentation. In a cold kitchen or with slower yeast, wait and add the actual extra time to the total. Do not force the rise on a radiator or in an operating oven. The timing and expansion are proposed and await kitchen verification.",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-04.webp",
+          "image_alt": "Puffy fermented pizza dough in a covered glass bowl"
+        },
+        {
+          "title": "Divide into two balls and rest for 20 minutes",
+          "content": "Gently release some gas and divide the dough into two equal portions of about 404 g before using the shaping flour. Fold the edges underneath to make round balls, with their seams down. Cover and rest for 20 minutes to relax. Add no oil to the container and do not leave the balls uncovered. If the dough later resists stretching, rest it for another 10 minutes and add that time to the total instead of tearing it or adding unmeasured flour.",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-05.webp",
+          "image_alt": "Two equal pizza dough balls resting beside a clean cloth"
+        },
+        {
+          "title": "Preheat the oven and prepare the tomatoes",
+          "content": "Set a rack in the lower third and preheat to 240 °C with conventional top and bottom heat, or 220 °C with a fan, for about 30 minutes. Keep the oiled trays outside and cool for safe assembly. Mix 300 g crushed tomatoes with 2 g salt and 1 g oregano; do not drain liquid already included in the calculation. Keep tomatoes and cheese covered and refrigerated until needed. Keep both dough balls covered during preheating. This proposal uses metal trays, without a stone or baking paper that might exceed its manufacturer's temperature limit.",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-06.webp",
+          "image_alt": "Crushed tomato mixed with oregano beside cheese and cool oiled trays"
+        },
+        {
+          "title": "Stretch the first base to about 30 cm",
+          "content": "Use some of the reserved 20 g flour on the surface and hands. Press one ball outward from its center and gently stretch to a circle about 30 cm across, leaving a slightly thicker rim and an intact center about 3–4 mm thick. Transfer to an already oiled tray. If it shrinks back, rest another 10 minutes and try again; do not pull until it tears. Keep the second ball covered and shape it only near its turn. The diameter and two-pizza yield are proposals, not measurements from a kitchen test.",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-07.webp",
+          "image_alt": "Hands gently stretching an intact round pizza base"
+        },
+        {
+          "title": "Add half the tomato mixture and cheese",
+          "content": "Spread half the seasoned tomato mixture: 151.5 g, comprising 150 g tomato, 1 g salt and 0.5 g oregano, over the first base, leaving about 2 cm of uncovered rim. Distribute 100 g grated mozzarella evenly without a central mound. Add no meat, vegetables, cheese or oil beyond the ingredient list. Keep the remaining tomato mixture and cheese covered and refrigerated for the second pizza. Basil goes on after baking to preserve its texture; do not put it on this raw base yet.",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-08.webp",
+          "image_alt": "Raw pizza base covered with tomato and grated mozzarella inside a clean rim"
+        },
+        {
+          "title": "Bake the pizzas one at a time",
+          "content": "Bake the first pizza in the lower third for about 15 minutes, checking from 12. The rim should be golden, the cheese melted and the underside cooked and colored, without a pasty raw-dough layer beneath the tomatoes. Carefully lift an edge with a spatula to inspect; if the cheese browns before the base cooks, shield the top or adjust the rack and continue. Remove with oven mitts and place on a rack. Stretch and top the second base with the other 151.5 g seasoned mixture—150 g tomato, 1 g salt and 0.5 g oregano—and 100 g mozzarella, using only what remains of the reserved 20 g flour. Bake for another 15 minutes with the same checks. The proposal counts 30 minutes for two batches; add any actual extra time. Melted cheese cannot replace thoroughly baking the raw flour.",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-09.webp",
+          "image_alt": "A baked pizza supported with an oven mitt while a spatula checks the base"
+        },
+        {
+          "title": "Add basil, cut and serve",
+          "content": "Rest each pizza on a rack for about 3 minutes before cutting. Divide 5 g clean basil between them, 2.5 g per pizza. Cut each into 4 equal slices: 8 slices total, making 4 servings of 2 slices, or half a pizza. Conservative planning counts 35 minutes preparation, 30 baking and 153 waiting: 10 for yeast, 90 rising, 20 ball resting, 30 preheating and 3 final minutes for the last batch. The estimated total is 218 minutes without deducting tasks that may overlap; the first pizza can rest while the second bakes. Add further rest or baking time your dough needs. No kitchen test or measured yield is claimed. The finished photograph shows this topping without side dishes.",
+          "image_url": "/recetas/receta-de-pizza-casera/portada.webp",
+          "image_alt": "Finished tomato and mozzarella pizza with basil and four slices"
+        }
+      ],
+      "notes": "A homemade tomato-mozzarella pizza proposal, without a Neapolitan designation or a claimed kitchen test. Contains wheat/gluten and milk; check yeast, tomato and cheese labels. Use pasteurized low-moisture mozzarella; fresh mozzarella brings more water and requires assembly adjustments and recalculated nutrition. Active dry yeast must follow its package hydration instructions; do not replace it with baking powder. Flours absorb water differently, so quantities, rising, diameter and times await testing. Recalculate changes to water, oil, cheese or toppings; identical results are not promised. Do not taste raw flour or dough. Keep prepared cheese and tomatoes at 4 °C or below until assembly. Refrigerate leftovers in shallow containers within 2 hours, or 1 hour above 32 °C, and eat within 3 days. Reheat needed portions to 74 °C in the center. Do not leave a cheese-topped raw pizza assembled throughout the dough's fermentation. Use oven mitts and utensils suitable for 240 °C.",
+      "nutrition": {
+        "calories": 692.0,
+        "protein_g": 25.5,
+        "carbs_g": 104.0,
+        "fat_g": 18.8,
+        "saturated_fat_g": 8.7,
+        "sodium_mg": 1467.9,
+        "fiber_g": 5.3,
+        "sugar_g": 5.4,
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (abril de 2018)",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "inputs": [
+          {
+            "ingredient": "harina, incluidos 20 g de estirado asumidos consumidos",
+            "edible_grams": 500,
+            "fdc_id": 169761,
+            "fdc_description": "Wheat flour, white, all-purpose, unenriched",
+            "per_100g": {
+              "fat_g": 0.98,
+              "carbs_g": 76.3,
+              "calories": 364,
+              "fiber_g": 2.7,
+              "sodium_mg": 2.0,
+              "protein_g": 10.3,
+              "saturated_fat_g": 0.155,
+              "sugar_g": 0.27
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169761/nutrients"
+          },
+          {
+            "ingredient": "levadura seca activa",
+            "edible_grams": 5,
+            "fdc_id": 175043,
+            "fdc_description": "Leavening agents, yeast, baker's, active dry",
+            "per_100g": {
+              "fat_g": 7.61,
+              "carbs_g": 41.2,
+              "calories": 325,
+              "protein_g": 40.4,
+              "fiber_g": 26.9,
+              "sodium_mg": 51.0,
+              "saturated_fat_g": 1.0,
+              "sugar_g": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/175043/nutrients"
+          },
+          {
+            "ingredient": "azúcar",
+            "edible_grams": 5,
+            "fdc_id": 169655,
+            "fdc_description": "Sugars, granulated",
+            "per_100g": {
+              "protein_g": 0.0,
+              "sodium_mg": 1.0,
+              "fat_g": 0.0,
+              "calories": 387,
+              "saturated_fat_g": 0.0,
+              "sugar_g": 99.8,
+              "carbs_g": 100,
+              "fiber_g": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169655/nutrients"
+          },
+          {
+            "ingredient": "sal total,8 g masa+2 g tomate",
+            "edible_grams": 10,
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "fiber_g": 0.0,
+              "sodium_mg": 38800.0,
+              "saturated_fat_g": 0.0,
+              "protein_g": 0.0,
+              "fat_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 0.0,
+              "sugar_g": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients"
+          },
+          {
+            "ingredient": "aceite de oliva total,10 g masa+10 g bandejas",
+            "edible_grams": 20,
+            "fdc_id": 171413,
+            "fdc_description": "Oil, olive, salad or cooking",
+            "per_100g": {
+              "fat_g": 100,
+              "carbs_g": 0.0,
+              "calories": 884,
+              "sodium_mg": 2.0,
+              "protein_g": 0.0,
+              "saturated_fat_g": 13.8,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171413/nutrients"
+          },
+          {
+            "ingredient": "tomate triturado en conserva, incluido líquido",
+            "edible_grams": 300,
+            "fdc_id": 170501,
+            "fdc_description": "Tomatoes, crushed, canned",
+            "per_100g": {
+              "sodium_mg": 186,
+              "fat_g": 0.28,
+              "carbs_g": 7.29,
+              "calories": 32.0,
+              "fiber_g": 1.9,
+              "protein_g": 1.64,
+              "saturated_fat_g": 0.04,
+              "sugar_g": 4.4
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170501/nutrients"
+          },
+          {
+            "ingredient": "orégano seco",
+            "edible_grams": 1,
+            "fdc_id": 171328,
+            "fdc_description": "Spices, oregano, dried",
+            "per_100g": {
+              "sugar_g": 4.09,
+              "fat_g": 4.28,
+              "carbs_g": 68.9,
+              "calories": 265,
+              "fiber_g": 42.5,
+              "sodium_mg": 25.0,
+              "saturated_fat_g": 1.55,
+              "protein_g": 9.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171328/nutrients"
+          },
+          {
+            "ingredient": "mozzarella de leche entera y baja humedad",
+            "edible_grams": 200,
+            "fdc_id": 170846,
+            "fdc_description": "Cheese, mozzarella, whole milk, low moisture",
+            "per_100g": {
+              "sugar_g": 1.01,
+              "sodium_mg": 710,
+              "saturated_fat_g": 15.6,
+              "fiber_g": 0.0,
+              "protein_g": 21.6,
+              "fat_g": 24.6,
+              "carbs_g": 2.47,
+              "calories": 318
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170846/nutrients"
+          },
+          {
+            "ingredient": "albahaca fresca",
+            "edible_grams": 5,
+            "fdc_id": 172232,
+            "fdc_description": "Basil, fresh",
+            "per_100g": {
+              "saturated_fat_g": 0.041,
+              "sugar_g": 0.3,
+              "fat_g": 0.64,
+              "carbs_g": 2.65,
+              "calories": 23.0,
+              "fiber_g": 1.6,
+              "sodium_mg": 4.0,
+              "protein_g": 3.15
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/172232/nutrients"
+          }
+        ],
+        "serving_size": "Half a pizza, 2 of the 8 slices; 4 servings",
+        "method": "Nine verified USDA records: edible grams multiplied by nutrients per 100 g, summed and divided by 4. Water contributes none of the listed nutrients. The 10 g salt and 20 g oil combine dough, topping and tray allocations. Includes 300 g canned tomato with liquid, 200 g whole-milk low-moisture mozzarella and 5 g basil. Assumes all 500 g flour and 20 g oil are consumed, even if some remains on the work surface or trays.",
+        "note": "Estimated values, not laboratory analysis or confirmed kitchen yield. Tomato and cheese brands and salt, leftover flour or oil, and different mozzarella or fats change the result. All 5 g sugar is included without modeling its consumption during fermentation; specific baking nutrient losses are not modeled. Excludes extra toppings and side dishes. Only present USDA values, including reported zeros, are used; missing data are not replaced with zero."
+      },
+      "keywords": [
+        "homemade pizza",
+        "pizza dough",
+        "tomato mozzarella pizza",
+        "pizza dough fermentation"
+      ],
+      "image_url": "/recetas/receta-de-pizza-casera/portada.webp",
+      "gallery": [
+        "/recetas/receta-de-pizza-casera/paso-01.webp",
+        "/recetas/receta-de-pizza-casera/paso-02.webp",
+        "/recetas/receta-de-pizza-casera/paso-03.webp",
+        "/recetas/receta-de-pizza-casera/paso-04.webp",
+        "/recetas/receta-de-pizza-casera/paso-05.webp",
+        "/recetas/receta-de-pizza-casera/paso-06.webp",
+        "/recetas/receta-de-pizza-casera/paso-07.webp",
+        "/recetas/receta-de-pizza-casera/paso-08.webp",
+        "/recetas/receta-de-pizza-casera/paso-09.webp"
+      ],
+      "seo": {
+        "title": "Homemade tomato and mozzarella pizza: dough step by step",
+        "description": "Make two homemade pizzas with yeast dough, tomato and mozzarella: measured ingredients, rising, preheating and baking explained in clear phases.",
+        "image_alt": "Homemade pizza with a golden rim, tomato, melted mozzarella and basil, cut into four slices with one slightly separated",
+        "image_variants": [
+          "/recetas/receta-de-pizza-casera/portada-1x1.webp",
+          "/recetas/receta-de-pizza-casera/portada-4x3.webp",
+          "/recetas/receta-de-pizza-casera/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Why does the dough shrink when stretched?",
+            "a": "It may need to relax. Rest it covered for the proposed 20 minutes after dividing; if it still resists, allow another 10 minutes and add them to the total. Stretch from the center without tearing or adding flour beyond the reserved 20 g."
+          },
+          {
+            "q": "Can I use fresh mozzarella instead of low-moisture mozzarella?",
+            "a": "Fresh mozzarella contains more water and can wet the base. Draining or changing cheese alters edible weight and the nutrition calculated with 200 g whole-milk low-moisture mozzarella. Adjust assembly and recalculate; identical baking is not promised."
+          },
+          {
+            "q": "Is melted cheese enough to tell the pizza is done?",
+            "a": "No. Raw flour must cook: check a golden rim, a cooked underside and no pasty layer below the tomatoes. The 15 minutes per batch are a guide; continue if the base needs longer, even when the cheese has melted."
+          }
+        ]
+      },
+      "published": true,
+      "editorial_status": "published",
+      "content_html": "<p>A proposed recipe for two homemade pizzas about 30 cm across, with wheat dough, tomato, low-moisture mozzarella and basil. Metal trays are baked in turn, yielding 4 servings of half a pizza. The estimated 218 minutes include yeast hydration, rising, resting, preheating and baking; quantities and yield await kitchen testing.</p><p>A homemade tomato-mozzarella pizza proposal, without a Neapolitan designation or a claimed kitchen test. Contains wheat/gluten and milk; check yeast, tomato and cheese labels. Use pasteurized low-moisture mozzarella; fresh mozzarella brings more water and requires assembly adjustments and recalculated nutrition. Active dry yeast must follow its package hydration instructions; do not replace it with baking powder. Flours absorb water differently, so quantities, rising, diameter and times await testing. Recalculate changes to water, oil, cheese or toppings; identical results are not promised. Do not taste raw flour or dough. Keep prepared cheese and tomatoes at 4 °C or below until assembly. Refrigerate leftovers in shallow containers within 2 hours, or 1 hour above 32 °C, and eat within 3 days. Reheat needed portions to 74 °C in the center. Do not leave a cheese-topped raw pizza assembled throughout the dough&#x27;s fermentation. Use oven mitts and utensils suitable for 240 °C.</p>"
+    },
+    {
+      "id": "a12d051c-4c94-53bc-8df4-b8731c63659c",
+      "recipe_group_id": "31a06fe5-2ae5-4451-8ee8-e53376013609",
+      "slug": "recette-de-pizza-maison",
+      "public_path": "/fr/recette-de-pizza-maison",
+      "source_url": "https://manualdecocina.com/fr/recette-de-pizza-maison/",
+      "language": "fr",
+      "title": "Pizza maison à la tomate et à la mozzarella",
+      "excerpt": "Pâte levée, garniture pesée et fond bien cuit : deux pizzas maison cuites successivement pour quatre portions.",
+      "summary": "Proposition de deux pizzas maison d'environ 30 cm, avec pâte de blé, tomate, mozzarella à faible teneur en eau et basilic. Cuites successivement sur des plaques métalliques, elles donnent 4 portions d'une demi-pizza. Les 218 minutes estimées comprennent hydratation de la levure, fermentation, repos, préchauffage et cuisson ; quantités et rendement restent à vérifier en cuisine.",
+      "category": "Pains et pâtes",
+      "category_slug": "panes-y-masas",
+      "difficulty": "Moyenne",
+      "course": "Pizza",
+      "cuisine": "Inspiration italienne",
+      "prep_time_minutes": 35,
+      "cook_time_minutes": 30,
+      "total_time_minutes": 218,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "farine de blé ordinaire sans poudre levante, dont 20 g pour étaler",
+          "amount": "500",
+          "unit": "g",
+          "group": "Pâte"
+        },
+        {
+          "name": "eau, 50 ml pour la levure et 250 ml pour mélanger",
+          "amount": "300",
+          "unit": "ml",
+          "group": "Pâte"
+        },
+        {
+          "name": "levure sèche active de boulanger, pas de levure chimique",
+          "amount": "5",
+          "unit": "g",
+          "group": "Pâte"
+        },
+        {
+          "name": "sucre pour la levure",
+          "amount": "5",
+          "unit": "g",
+          "group": "Pâte"
+        },
+        {
+          "name": "sel pour la pâte",
+          "amount": "8",
+          "unit": "g",
+          "group": "Pâte"
+        },
+        {
+          "name": "huile d'olive pour la pâte",
+          "amount": "10",
+          "unit": "g",
+          "group": "Pâte"
+        },
+        {
+          "name": "tomates concassées en conserve avec leur liquide",
+          "amount": "300",
+          "unit": "g",
+          "group": "Garniture"
+        },
+        {
+          "name": "sel pour les tomates",
+          "amount": "2",
+          "unit": "g",
+          "group": "Garniture"
+        },
+        {
+          "name": "origan séché",
+          "amount": "1",
+          "unit": "g",
+          "group": "Garniture"
+        },
+        {
+          "name": "mozzarella à faible teneur en eau au lait entier pasteurisé",
+          "amount": "200",
+          "unit": "g",
+          "group": "Garniture"
+        },
+        {
+          "name": "feuilles de basilic frais",
+          "amount": "5",
+          "unit": "g",
+          "group": "Finition"
+        },
+        {
+          "name": "huile d'olive pour les deux plaques",
+          "amount": "10",
+          "unit": "g",
+          "group": "Plaques"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Peser les ingrédients et préparer deux plaques",
+          "content": "Peser 500 g de farine, réserver 20 g pour étaler et utiliser 480 g dans la pâte. Répartir les 300 ml d'eau en 50 ml pour hydrater la levure et 250 ml pour mélanger. Mesurer 5 g de levure sèche active, 5 g de sucre, 8 g de sel et 10 g d'huile pour la pâte. Préparer 300 g de tomates concassées, 2 g de sel, 1 g d'origan et 200 g de mozzarella à faible teneur en eau râpée. Garder le fromage au réfrigérateur à 4 °C ou moins. Laver et sécher 5 g de basilic. Préparer deux plaques métalliques d'environ 40 × 35 cm adaptées au four et répartir au pinceau les 10 g d'huile restants, soit 5 g par plaque. Ne pas ajouter d'huile en dehors de ces quantités.",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-01.webp",
+          "image_alt": "Ingrédients séparés pour pizza maison : farine, levure, eau, huile, tomates, fromage et herbes"
+        },
+        {
+          "title": "Hydrater la levure pendant 10 minutes",
+          "content": "Chauffer uniquement les 50 ml d'eau à environ 44 °C, vérifiés au thermomètre, ou à la température indiquée par le fabricant de votre levure sèche active. Dissoudre 5 g de sucre et mélanger 5 g de levure. Laisser hydrater 10 minutes ; des bulles et une mousse légère doivent signaler une activité. Un volume différent n'a pas à atteindre un repère de tasse prévu pour une autre formule. Si la levure est périmée ou inactive, la remplacer avant de mélanger, sans ajouter d'eau ni de sucre à cette recette. Les 250 ml d'eau restants sont à température ambiante. La levure chimique ne convient pas, et aucune conversion automatique en levure fraîche n'est proposée.",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-02.webp",
+          "image_alt": "Levure sèche hydratée avec petites bulles dans l'eau tiède"
+        },
+        {
+          "title": "Mélanger et pétrir une pâte souple",
+          "content": "Mélanger 480 g de farine et 8 g de sel dans un grand saladier. Ajouter toute la levure hydratée, les 250 ml d'eau restants et 10 g d'huile. Mélanger jusqu'à disparition de la farine sèche, puis pétrir sur une surface propre environ 8–10 minutes pour obtenir une pâte homogène, élastique et légèrement collante. Ne pas masquer un mélange incomplet avec la farine réservée ni ajouter d'eau sans recalculer : le total proposé est de 300 ml. Une corne aide à rassembler la pâte. La farine est crue : ne pas goûter la pâte et nettoyer mains et surfaces avant de toucher le basilic ou des aliments prêts à manger.",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-03.webp",
+          "image_alt": "Mains pétrissant une pâte à pizza claire et homogène"
+        },
+        {
+          "title": "Laisser lever jusqu'à une nette augmentation de volume",
+          "content": "Placer la pâte dans le même saladier propre, sans huile supplémentaire, et couvrir contre le dessèchement. Laisser dans un endroit tempéré, autour de 22–25 °C, pendant environ 90 minutes. Chercher une pâte aérée et un volume proche du double ; le temps seul ne garantit pas la fermentation. Si la cuisine est froide ou la levure plus lente, attendre et ajouter le temps réel au total. Éviter radiateur et four allumé pour forcer la levée. Durée et augmentation de volume sont proposées, en attente d'essai en cuisine.",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-04.webp",
+          "image_alt": "Pâte à pizza levée et aérée dans un saladier couvert"
+        },
+        {
+          "title": "Former deux boules et laisser reposer 20 minutes",
+          "content": "Dégazer doucement et diviser en deux portions égales d'environ 404 g avant utilisation de la farine d'étalage. Ramener les bords dessous pour former des boules, soudure vers le bas. Couvrir et laisser détendre 20 minutes. Ne pas ajouter d'huile au récipient ni laisser les boules découvertes. Si la pâte résiste ensuite à l'étirement, laisser encore 10 minutes et les ajouter au total, plutôt que déchirer ou ajouter de la farine non pesée.",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-05.webp",
+          "image_alt": "Deux boules égales de pâte à pizza au repos près d'un linge propre"
+        },
+        {
+          "title": "Préchauffer le four et préparer les tomates",
+          "content": "Placer la grille dans le tiers inférieur et préchauffer environ 30 minutes à 240 °C en chaleur traditionnelle haut et bas, ou 220 °C en chaleur tournante. Les plaques huilées restent dehors et froides pour garnir sans brûlure. Mélanger 300 g de tomates concassées avec 2 g de sel et 1 g d'origan ; ne pas égoutter le liquide inclus dans le calcul. Garder tomates et fromage couverts au réfrigérateur jusqu'à utilisation. Maintenir aussi les deux boules couvertes pendant le préchauffage. Cette proposition utilise des plaques métalliques, sans pierre ni papier cuisson risquant de dépasser la température autorisée par son fabricant.",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-06.webp",
+          "image_alt": "Tomates avec origan près du fromage et des plaques froides huilées"
+        },
+        {
+          "title": "Étaler la première base jusqu'à environ 30 cm",
+          "content": "Utiliser une partie des 20 g de farine réservés pour la table et les mains. Aplatir une boule du centre vers l'extérieur et étirer doucement en un disque d'environ 30 cm, avec un bord un peu plus épais et un centre intact de 3–4 mm. Poser sur une plaque déjà huilée. Si la pâte se rétracte, laisser encore 10 minutes puis reprendre, sans tirer jusqu'à déchirer. Garder la seconde boule couverte et ne l'étaler qu'à l'approche de son tour. Diamètre et rendement de deux pizzas sont proposés, pas mesurés lors d'un essai en cuisine.",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-07.webp",
+          "image_alt": "Mains étirant un disque de pâte à pizza intact"
+        },
+        {
+          "title": "Ajouter la moitié du mélange de tomates et du fromage",
+          "content": "Répartir la moitié du mélange assaisonné : 151,5 g comprenant 150 g de tomates, 1 g de sel et 0,5 g d'origan. Laisser environ 2 cm de bord sans garniture. Distribuer 100 g de mozzarella râpée sans tas au centre. Ne pas ajouter viande, légumes, fromage ou huile hors de la liste. Réserver l'autre moitié des tomates et du fromage couverte au réfrigérateur pour la seconde pizza. Le basilic s'ajoute après cuisson pour conserver sa texture ; ne pas le mettre sur cette base crue.",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-08.webp",
+          "image_alt": "Base crue garnie de tomates et mozzarella râpée avec bord libre"
+        },
+        {
+          "title": "Cuire les pizzas successivement",
+          "content": "Cuire la première pizza dans le tiers inférieur environ 15 minutes et vérifier dès 12 minutes. Le bord doit être doré, le fromage fondu et le dessous cuit et coloré, sans couche pâteuse crue sous les tomates. Soulever prudemment un bord avec une spatule. Si le fromage colore avant le fond, protéger le dessus ou changer la hauteur et poursuivre. Sortir avec des gants et poser sur une grille. Étaler et garnir la seconde base avec les 151,5 g restants de mélange —150 g de tomates, 1 g de sel et 0,5 g d'origan— et 100 g de mozzarella, avec seulement ce qui reste des 20 g de farine réservés. Cuire encore 15 minutes avec les mêmes vérifications. La proposition compte 30 minutes pour deux fournées ; ajouter toute durée réelle supplémentaire. Le fromage fondu ne remplace pas la cuisson complète de la farine crue.",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-09.webp",
+          "image_alt": "Pizza cuite tenue avec un gant tandis qu'une spatule contrôle le dessous"
+        },
+        {
+          "title": "Ajouter le basilic, couper et servir",
+          "content": "Laisser chaque pizza sur une grille environ 3 minutes avant de couper. Répartir les 5 g de basilic propre, 2,5 g par pizza, et couper chacune en 4 parts égales : 8 parts pour 4 portions de 2 parts, soit une demi-pizza. La planification prudente compte 35 minutes de préparation, 30 de four et 153 d'attente : 10 pour la levure, 90 de fermentation, 20 de repos des boules, 30 de préchauffage et 3 finales pour la dernière fournée. Total estimé de 218 minutes sans soustraire les tâches éventuellement simultanées ; la première pizza peut reposer pendant la cuisson de la seconde. Ajouter les repos ou cuissons nécessaires. Aucun essai en cuisine ni rendement mesuré n'est revendiqué. La photo finale montre cette garniture sans accompagnement.",
+          "image_url": "/recetas/receta-de-pizza-casera/portada.webp",
+          "image_alt": "Pizza tomate-mozzarella terminée avec basilic et quatre parts"
+        }
+      ],
+      "notes": "Proposition de pizza maison tomate-mozzarella sans appellation napolitaine ni essai en cuisine revendiqué. Contient blé/gluten et lait ; vérifier les étiquettes de levure, tomates et fromage. Employer de la mozzarella à faible teneur en eau au lait pasteurisé. La fraîche apporte davantage d'eau : adapter le montage et recalculer la nutrition. Respecter l'hydratation indiquée sur la levure sèche active, sans remplacer par de la levure chimique. Les farines absorbent différemment : quantités, fermentation, diamètre et temps restent à tester. Toute modification d'eau, huile, fromage ou garniture exige un nouveau calcul ; résultat identique non garanti. Ne pas goûter farine ou pâte crues. Garder fromage et tomates préparées à 4 °C ou moins jusqu'au montage. Réfrigérer les restes dans des récipients peu profonds sous 2 heures, ou 1 heure au-dessus de 32 °C, et consommer sous 3 jours. Réchauffer les portions nécessaires à 74 °C au centre. Ne pas laisser une pizza crue garnie de fromage pendant toute la fermentation. Utiliser des gants et des ustensiles adaptés à 240 °C.",
+      "nutrition": {
+        "calories": 692.0,
+        "protein_g": 25.5,
+        "carbs_g": 104.0,
+        "fat_g": 18.8,
+        "saturated_fat_g": 8.7,
+        "sodium_mg": 1467.9,
+        "fiber_g": 5.3,
+        "sugar_g": 5.4,
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (abril de 2018)",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "inputs": [
+          {
+            "ingredient": "harina, incluidos 20 g de estirado asumidos consumidos",
+            "edible_grams": 500,
+            "fdc_id": 169761,
+            "fdc_description": "Wheat flour, white, all-purpose, unenriched",
+            "per_100g": {
+              "fat_g": 0.98,
+              "carbs_g": 76.3,
+              "calories": 364,
+              "fiber_g": 2.7,
+              "sodium_mg": 2.0,
+              "protein_g": 10.3,
+              "saturated_fat_g": 0.155,
+              "sugar_g": 0.27
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169761/nutrients"
+          },
+          {
+            "ingredient": "levadura seca activa",
+            "edible_grams": 5,
+            "fdc_id": 175043,
+            "fdc_description": "Leavening agents, yeast, baker's, active dry",
+            "per_100g": {
+              "fat_g": 7.61,
+              "carbs_g": 41.2,
+              "calories": 325,
+              "protein_g": 40.4,
+              "fiber_g": 26.9,
+              "sodium_mg": 51.0,
+              "saturated_fat_g": 1.0,
+              "sugar_g": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/175043/nutrients"
+          },
+          {
+            "ingredient": "azúcar",
+            "edible_grams": 5,
+            "fdc_id": 169655,
+            "fdc_description": "Sugars, granulated",
+            "per_100g": {
+              "protein_g": 0.0,
+              "sodium_mg": 1.0,
+              "fat_g": 0.0,
+              "calories": 387,
+              "saturated_fat_g": 0.0,
+              "sugar_g": 99.8,
+              "carbs_g": 100,
+              "fiber_g": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169655/nutrients"
+          },
+          {
+            "ingredient": "sal total,8 g masa+2 g tomate",
+            "edible_grams": 10,
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "fiber_g": 0.0,
+              "sodium_mg": 38800.0,
+              "saturated_fat_g": 0.0,
+              "protein_g": 0.0,
+              "fat_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 0.0,
+              "sugar_g": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients"
+          },
+          {
+            "ingredient": "aceite de oliva total,10 g masa+10 g bandejas",
+            "edible_grams": 20,
+            "fdc_id": 171413,
+            "fdc_description": "Oil, olive, salad or cooking",
+            "per_100g": {
+              "fat_g": 100,
+              "carbs_g": 0.0,
+              "calories": 884,
+              "sodium_mg": 2.0,
+              "protein_g": 0.0,
+              "saturated_fat_g": 13.8,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171413/nutrients"
+          },
+          {
+            "ingredient": "tomate triturado en conserva, incluido líquido",
+            "edible_grams": 300,
+            "fdc_id": 170501,
+            "fdc_description": "Tomatoes, crushed, canned",
+            "per_100g": {
+              "sodium_mg": 186,
+              "fat_g": 0.28,
+              "carbs_g": 7.29,
+              "calories": 32.0,
+              "fiber_g": 1.9,
+              "protein_g": 1.64,
+              "saturated_fat_g": 0.04,
+              "sugar_g": 4.4
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170501/nutrients"
+          },
+          {
+            "ingredient": "orégano seco",
+            "edible_grams": 1,
+            "fdc_id": 171328,
+            "fdc_description": "Spices, oregano, dried",
+            "per_100g": {
+              "sugar_g": 4.09,
+              "fat_g": 4.28,
+              "carbs_g": 68.9,
+              "calories": 265,
+              "fiber_g": 42.5,
+              "sodium_mg": 25.0,
+              "saturated_fat_g": 1.55,
+              "protein_g": 9.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171328/nutrients"
+          },
+          {
+            "ingredient": "mozzarella de leche entera y baja humedad",
+            "edible_grams": 200,
+            "fdc_id": 170846,
+            "fdc_description": "Cheese, mozzarella, whole milk, low moisture",
+            "per_100g": {
+              "sugar_g": 1.01,
+              "sodium_mg": 710,
+              "saturated_fat_g": 15.6,
+              "fiber_g": 0.0,
+              "protein_g": 21.6,
+              "fat_g": 24.6,
+              "carbs_g": 2.47,
+              "calories": 318
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170846/nutrients"
+          },
+          {
+            "ingredient": "albahaca fresca",
+            "edible_grams": 5,
+            "fdc_id": 172232,
+            "fdc_description": "Basil, fresh",
+            "per_100g": {
+              "saturated_fat_g": 0.041,
+              "sugar_g": 0.3,
+              "fat_g": 0.64,
+              "carbs_g": 2.65,
+              "calories": 23.0,
+              "fiber_g": 1.6,
+              "sodium_mg": 4.0,
+              "protein_g": 3.15
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/172232/nutrients"
+          }
+        ],
+        "serving_size": "Une demi-pizza, 2 des 8 parts ; 4 portions",
+        "method": "Neuf fiches USDA vérifiées : grammes comestibles multipliés par les nutriments pour 100 g, additionnés puis divisés par 4. L'eau n'apporte aucun nutriment de ces champs. Les 10 g de sel et 20 g d'huile réunissent pâte, garniture et plaques. Inclut 300 g de tomates avec liquide, 200 g de mozzarella au lait entier à faible teneur en eau et 5 g de basilic. Suppose la consommation des 500 g de farine et 20 g d'huile, même si une partie reste sur la table ou les plaques.",
+        "note": "Estimation, pas d'analyse de laboratoire ni rendement confirmé. Marque et sel des tomates/fromage, farine ou huile restante, autre mozzarella ou matière grasse modifient les valeurs. Les 5 g de sucre sont comptés intégralement sans modéliser leur consommation à la fermentation ni les pertes spécifiques de nutriments au four. Garnitures et accompagnements supplémentaires exclus. Valeurs USDA présentes, y compris zéros déclarés ; données manquantes jamais remplacées par zéro."
+      },
+      "keywords": [
+        "pizza maison",
+        "pâte à pizza",
+        "pizza tomate mozzarella",
+        "fermentation de pâte à pizza"
+      ],
+      "image_url": "/recetas/receta-de-pizza-casera/portada.webp",
+      "gallery": [
+        "/recetas/receta-de-pizza-casera/paso-01.webp",
+        "/recetas/receta-de-pizza-casera/paso-02.webp",
+        "/recetas/receta-de-pizza-casera/paso-03.webp",
+        "/recetas/receta-de-pizza-casera/paso-04.webp",
+        "/recetas/receta-de-pizza-casera/paso-05.webp",
+        "/recetas/receta-de-pizza-casera/paso-06.webp",
+        "/recetas/receta-de-pizza-casera/paso-07.webp",
+        "/recetas/receta-de-pizza-casera/paso-08.webp",
+        "/recetas/receta-de-pizza-casera/paso-09.webp"
+      ],
+      "seo": {
+        "title": "Pizza maison tomate-mozzarella : pâte étape par étape",
+        "description": "Préparez deux pizzas maison avec pâte levée, tomate et mozzarella : quantités, fermentation, préchauffage et cuisson expliqués par phases.",
+        "image_alt": "Pizza maison au bord doré, tomate, mozzarella fondue et basilic, coupée en quatre parts dont une légèrement séparée",
+        "image_variants": [
+          "/recetas/receta-de-pizza-casera/portada-1x1.webp",
+          "/recetas/receta-de-pizza-casera/portada-4x3.webp",
+          "/recetas/receta-de-pizza-casera/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Pourquoi la pâte se rétracte-t-elle à l'étalage ?",
+            "a": "Elle peut avoir besoin de se détendre. Après division, prévoir 20 minutes couvertes ; si elle résiste encore, attendre 10 minutes et les ajouter au total. Étaler depuis le centre sans déchirer ni ajouter de farine au-delà des 20 g réservés."
+          },
+          {
+            "q": "Puis-je remplacer la mozzarella à faible teneur en eau par de la fraîche ?",
+            "a": "La fraîche contient plus d'eau et peut détremper le fond. Égoutter ou changer le fromage modifie poids comestible et nutrition calculés avec 200 g de mozzarella au lait entier à faible teneur en eau. Adapter et recalculer ; cuisson identique non promise."
+          },
+          {
+            "q": "Le fromage fondu suffit-il pour sortir la pizza ?",
+            "a": "Non. La farine crue doit cuire : vérifier bord doré, dessous cuit et absence de couche pâteuse sous les tomates. Les 15 minutes par fournée sont indicatives ; poursuivre si le fond le demande, même si le fromage est fondu."
+          }
+        ]
+      },
+      "published": true,
+      "editorial_status": "published",
+      "content_html": "<p>Proposition de deux pizzas maison d&#x27;environ 30 cm, avec pâte de blé, tomate, mozzarella à faible teneur en eau et basilic. Cuites successivement sur des plaques métalliques, elles donnent 4 portions d&#x27;une demi-pizza. Les 218 minutes estimées comprennent hydratation de la levure, fermentation, repos, préchauffage et cuisson ; quantités et rendement restent à vérifier en cuisine.</p><p>Proposition de pizza maison tomate-mozzarella sans appellation napolitaine ni essai en cuisine revendiqué. Contient blé/gluten et lait ; vérifier les étiquettes de levure, tomates et fromage. Employer de la mozzarella à faible teneur en eau au lait pasteurisé. La fraîche apporte davantage d&#x27;eau : adapter le montage et recalculer la nutrition. Respecter l&#x27;hydratation indiquée sur la levure sèche active, sans remplacer par de la levure chimique. Les farines absorbent différemment : quantités, fermentation, diamètre et temps restent à tester. Toute modification d&#x27;eau, huile, fromage ou garniture exige un nouveau calcul ; résultat identique non garanti. Ne pas goûter farine ou pâte crues. Garder fromage et tomates préparées à 4 °C ou moins jusqu&#x27;au montage. Réfrigérer les restes dans des récipients peu profonds sous 2 heures, ou 1 heure au-dessus de 32 °C, et consommer sous 3 jours. Réchauffer les portions nécessaires à 74 °C au centre. Ne pas laisser une pizza crue garnie de fromage pendant toute la fermentation. Utiliser des gants et des ustensiles adaptés à 240 °C.</p>"
+    },
+    {
+      "id": "80a22f81-5e2f-5ab5-b023-5cd9efbe0f10",
+      "recipe_group_id": "31a06fe5-2ae5-4451-8ee8-e53376013609",
+      "slug": "ricetta-pizza-fatta-in-casa",
+      "public_path": "/it/ricetta-pizza-fatta-in-casa",
+      "source_url": "https://manualdecocina.com/it/ricetta-pizza-fatta-in-casa/",
+      "language": "it",
+      "title": "Pizza fatta in casa con pomodoro e mozzarella",
+      "excerpt": "Impasto lievitato, condimento pesato e fondo ben cotto: due pizze preparate e infornate a turno per quattro porzioni.",
+      "summary": "Proposta di due pizze casalinghe di circa 30 cm con impasto di frumento, pomodoro, mozzarella a bassa umidità e basilico. Si cuociono a turno su teglie metalliche e rendono 4 porzioni da mezza pizza. I 218 minuti stimati includono idratazione del lievito, lievitazione, riposo, preriscaldamento e cottura; quantità e resa attendono una prova in cucina.",
+      "category": "Pane e impasti",
+      "category_slug": "panes-y-masas",
+      "difficulty": "Media",
+      "course": "Pizza",
+      "cuisine": "Ispirazione italiana",
+      "prep_time_minutes": 35,
+      "cook_time_minutes": 30,
+      "total_time_minutes": 218,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "farina di frumento comune senza agenti lievitanti, compresi 20 g per stendere",
+          "amount": "500",
+          "unit": "g",
+          "group": "Impasto"
+        },
+        {
+          "name": "acqua, 50 ml per il lievito e 250 ml per impastare",
+          "amount": "300",
+          "unit": "ml",
+          "group": "Impasto"
+        },
+        {
+          "name": "lievito di birra secco attivo da reidratare, non lievito chimico",
+          "amount": "5",
+          "unit": "g",
+          "group": "Impasto"
+        },
+        {
+          "name": "zucchero per il lievito",
+          "amount": "5",
+          "unit": "g",
+          "group": "Impasto"
+        },
+        {
+          "name": "sale per l'impasto",
+          "amount": "8",
+          "unit": "g",
+          "group": "Impasto"
+        },
+        {
+          "name": "olio d'oliva per l'impasto",
+          "amount": "10",
+          "unit": "g",
+          "group": "Impasto"
+        },
+        {
+          "name": "pomodoro triturato in conserva con il suo liquido",
+          "amount": "300",
+          "unit": "g",
+          "group": "Condimento"
+        },
+        {
+          "name": "sale per il pomodoro",
+          "amount": "2",
+          "unit": "g",
+          "group": "Condimento"
+        },
+        {
+          "name": "origano secco",
+          "amount": "1",
+          "unit": "g",
+          "group": "Condimento"
+        },
+        {
+          "name": "mozzarella a bassa umidità di latte intero pastorizzato",
+          "amount": "200",
+          "unit": "g",
+          "group": "Condimento"
+        },
+        {
+          "name": "foglie di basilico fresco",
+          "amount": "5",
+          "unit": "g",
+          "group": "Finitura"
+        },
+        {
+          "name": "olio d'oliva per le due teglie",
+          "amount": "10",
+          "unit": "g",
+          "group": "Teglie"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Pesare gli ingredienti e preparare due teglie",
+          "content": "Pesare 500 g di farina, riservarne 20 g per stendere e usarne 480 g nell'impasto. Dividere i 300 ml d'acqua in 50 ml per idratare il lievito e 250 ml per impastare. Misurare 5 g di lievito secco attivo, 5 g di zucchero, 8 g di sale e 10 g d'olio per l'impasto. Preparare 300 g di pomodoro triturato, 2 g di sale, 1 g di origano e 200 g di mozzarella a bassa umidità grattugiata. Conservare il formaggio in frigorifero a 4 °C o meno. Lavare e asciugare 5 g di basilico. Preparare due teglie metalliche di circa 40 × 35 cm adatte al forno e distribuire con un pennello gli altri 10 g d'olio, 5 g per teglia. Non aggiungere olio oltre queste quantità.",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-01.webp",
+          "image_alt": "Ingredienti separati per pizza con farina, lievito, acqua, olio, pomodoro, formaggio ed erbe"
+        },
+        {
+          "title": "Idratare il lievito per 10 minuti",
+          "content": "Scaldare soltanto i 50 ml d'acqua a circa 44 °C, verificati con un termometro, oppure alla temperatura prescritta sulla confezione del lievito secco attivo. Sciogliere 5 g di zucchero e mescolare 5 g di lievito. Lasciare idratare 10 minuti: bollicine e una schiuma leggera indicano attività. Un volume diverso non deve riprodurre una tacca di tazza di un'altra formula. Se il lievito è scaduto o inattivo, sostituirlo prima di impastare senza aggiungere acqua o zucchero a questa ricetta. Usare gli altri 250 ml d'acqua a temperatura ambiente. Il lievito chimico non è adatto e non si propone una conversione automatica in lievito fresco.",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-02.webp",
+          "image_alt": "Lievito secco idratato con bollicine nell'acqua tiepida"
+        },
+        {
+          "title": "Mescolare e lavorare un impasto elastico",
+          "content": "Mescolare 480 g di farina e 8 g di sale in una ciotola grande. Unire tutto il lievito idratato, i 250 ml d'acqua rimasti e 10 g d'olio. Mescolare finché non resta farina asciutta, poi impastare su un piano pulito per circa 8–10 minuti, ottenendo una massa uniforme, elastica e appena appiccicosa. Non usare la farina riservata per nascondere una miscelazione incompleta né aggiungere acqua senza ricalcolare: la proposta usa 300 ml totali. Un tarocco aiuta a raccogliere l'impasto. La farina è cruda: non assaggiare l'impasto e pulire mani e superfici prima di toccare basilico o alimenti pronti al consumo.",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-03.webp",
+          "image_alt": "Mani che impastano una massa chiara e omogenea"
+        },
+        {
+          "title": "Lasciare lievitare fino a un aumento evidente",
+          "content": "Mettere l'impasto nella stessa ciotola pulita, senza olio aggiuntivo, e coprire per evitare che secchi. Lasciare in un luogo temperato, indicativamente a 22–25 °C, per circa 90 minuti. Cercare un volume vicino al doppio e una struttura ariosa: l'orologio non garantisce la lievitazione. Se la cucina è fredda o il lievito lento, aspettare e aggiungere il tempo reale al totale. Evitare termosifoni e forno acceso per accelerare. Tempi e aumento di volume sono proposti, in attesa di verifica in cucina.",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-04.webp",
+          "image_alt": "Impasto di pizza lievitato e arioso in ciotola coperta"
+        },
+        {
+          "title": "Formare due palline e riposare 20 minuti",
+          "content": "Sgonfiare delicatamente e dividere in due porzioni uguali di circa 404 g prima di usare la farina per stendere. Ripiegare i bordi sotto per formare palline, con la chiusura verso il basso. Coprire e lasciare rilassare 20 minuti. Non oliare ulteriormente il recipiente né lasciare le palline scoperte. Se poi l'impasto resiste alla stesura, aspettare altri 10 minuti e sommarli al totale anziché strapparlo o aggiungere farina non pesata.",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-05.webp",
+          "image_alt": "Due palline uguali di impasto a riposo accanto a un panno pulito"
+        },
+        {
+          "title": "Preriscaldare il forno e preparare il pomodoro",
+          "content": "Sistemare la griglia nel terzo inferiore e preriscaldare per circa 30 minuti a 240 °C statico con calore sopra e sotto, oppure 220 °C ventilato. Le teglie oliate restano fuori e fredde per assemblare senza scottarsi. Mescolare 300 g di pomodoro triturato con 2 g di sale e 1 g di origano; non scolare il liquido già incluso nel calcolo. Tenere pomodoro e formaggio coperti in frigorifero fino all'uso. Coprire anche entrambe le palline durante il preriscaldamento. La proposta usa teglie metalliche senza pietra né carta da forno che possa superare la temperatura autorizzata dal produttore.",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-06.webp",
+          "image_alt": "Pomodoro con origano accanto a formaggio e teglie fredde oliate"
+        },
+        {
+          "title": "Stendere la prima base a circa 30 cm",
+          "content": "Usare parte dei 20 g di farina riservati per piano e mani. Appiattire una pallina dal centro verso l'esterno e stendere delicatamente un disco di circa 30 cm, lasciando un bordo più spesso e un centro integro di circa 3–4 mm. Trasferire su una teglia già oliata. Se si ritira, far riposare altri 10 minuti e riprendere senza tirare fino a strapparla. Tenere coperta la seconda pallina e stenderla soltanto vicino al suo turno. Diametro e resa di due pizze sono proposti, non misurati in una prova in cucina.",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-07.webp",
+          "image_alt": "Mani che stendono una base tonda e integra"
+        },
+        {
+          "title": "Aggiungere metà del pomodoro condito e del formaggio",
+          "content": "Distribuire metà del composto condito: 151,5 g, cioè 150 g di pomodoro, 1 g di sale e 0,5 g di origano. Lasciare circa 2 cm di bordo libero. Distribuire 100 g di mozzarella grattugiata senza ammucchiarla al centro. Non aggiungere carne, verdure, formaggio o olio fuori dalla lista. Conservare l'altra metà di composto e formaggio coperta in frigorifero per la seconda pizza. Il basilico si aggiunge dopo la cottura per conservarne la consistenza: non metterlo ancora sulla base cruda.",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-08.webp",
+          "image_alt": "Base cruda con pomodoro e mozzarella grattugiata dentro il bordo libero"
+        },
+        {
+          "title": "Cuocere le pizze una alla volta",
+          "content": "Cuocere la prima pizza nel terzo inferiore per circa 15 minuti, controllando dai 12. Bordo dorato, formaggio fuso e fondo cotto e colorito: sotto il pomodoro non deve restare uno strato pastoso di impasto crudo. Sollevare con cautela un bordo usando una spatola. Se il formaggio colora prima del fondo, proteggere la parte superiore o modificare l'altezza e continuare. Estrarre con guanti e appoggiare su una griglia. Stendere e condire la seconda base con gli altri 151,5 g di composto —150 g di pomodoro, 1 g di sale e 0,5 g di origano— e 100 g di mozzarella, usando soltanto ciò che resta dei 20 g di farina riservati. Cuocere altri 15 minuti con gli stessi controlli. La proposta conta 30 minuti per due turni; aggiungere ogni tempo effettivo ulteriore. La fusione del formaggio non sostituisce la completa cottura della farina cruda.",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-09.webp",
+          "image_alt": "Pizza cotta sostenuta con guanto mentre una spatola controlla il fondo"
+        },
+        {
+          "title": "Aggiungere basilico, tagliare e servire",
+          "content": "Lasciare ogni pizza sulla griglia per circa 3 minuti prima di tagliare. Dividere i 5 g di basilico pulito, 2,5 g per pizza, e tagliare ciascuna in 4 spicchi uguali: 8 totali per 4 porzioni da 2 spicchi, equivalenti a mezza pizza. La pianificazione prudente conta 35 minuti di preparazione, 30 di forno e 153 di attese: 10 per il lievito, 90 di lievitazione, 20 di riposo delle palline, 30 di preriscaldamento e 3 finali dell'ultimo turno. Sono 218 minuti stimati senza sottrarre attività eventualmente sovrapposte; la prima pizza può riposare mentre cuoce la seconda. Aggiungere altri riposi o cottura necessari. Non si affermano prove in cucina né rese misurate. La foto finale mostra questo condimento senza contorni.",
+          "image_url": "/recetas/receta-de-pizza-casera/portada.webp",
+          "image_alt": "Pizza pomodoro-mozzarella pronta con basilico e quattro spicchi"
+        }
+      ],
+      "notes": "Proposta di pizza casalinga pomodoro-mozzarella senza denominazione napoletana né prova in cucina dichiarata. Contiene frumento/glutine e latte: controllare confezioni di lievito, pomodoro e formaggio. Usare mozzarella a bassa umidità di latte pastorizzato. Quella fresca contiene più acqua e richiede adattamento del montaggio e ricalcolo nutrizionale. Idratare il lievito secco attivo secondo il produttore, senza sostituirlo con lievito chimico. Le farine assorbono diversamente: quantità, lievitazione, diametro e tempi sono da provare. Ricalcolare cambi di acqua, olio, formaggio o condimenti; non si promette un risultato identico. Non assaggiare farina o impasto crudi. Tenere formaggio e pomodoro preparati a 4 °C o meno fino al montaggio. Refrigerare gli avanzi in contenitori bassi entro 2 ore, o 1 ora sopra 32 °C ambientali, e consumarli entro 3 giorni. Riscaldare le porzioni necessarie a 74 °C al centro. Non lasciare una pizza cruda già con formaggio per tutta la lievitazione. Usare guanti e utensili adatti a 240 °C.",
+      "nutrition": {
+        "calories": 692.0,
+        "protein_g": 25.5,
+        "carbs_g": 104.0,
+        "fat_g": 18.8,
+        "saturated_fat_g": 8.7,
+        "sodium_mg": 1467.9,
+        "fiber_g": 5.3,
+        "sugar_g": 5.4,
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (abril de 2018)",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "inputs": [
+          {
+            "ingredient": "harina, incluidos 20 g de estirado asumidos consumidos",
+            "edible_grams": 500,
+            "fdc_id": 169761,
+            "fdc_description": "Wheat flour, white, all-purpose, unenriched",
+            "per_100g": {
+              "fat_g": 0.98,
+              "carbs_g": 76.3,
+              "calories": 364,
+              "fiber_g": 2.7,
+              "sodium_mg": 2.0,
+              "protein_g": 10.3,
+              "saturated_fat_g": 0.155,
+              "sugar_g": 0.27
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169761/nutrients"
+          },
+          {
+            "ingredient": "levadura seca activa",
+            "edible_grams": 5,
+            "fdc_id": 175043,
+            "fdc_description": "Leavening agents, yeast, baker's, active dry",
+            "per_100g": {
+              "fat_g": 7.61,
+              "carbs_g": 41.2,
+              "calories": 325,
+              "protein_g": 40.4,
+              "fiber_g": 26.9,
+              "sodium_mg": 51.0,
+              "saturated_fat_g": 1.0,
+              "sugar_g": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/175043/nutrients"
+          },
+          {
+            "ingredient": "azúcar",
+            "edible_grams": 5,
+            "fdc_id": 169655,
+            "fdc_description": "Sugars, granulated",
+            "per_100g": {
+              "protein_g": 0.0,
+              "sodium_mg": 1.0,
+              "fat_g": 0.0,
+              "calories": 387,
+              "saturated_fat_g": 0.0,
+              "sugar_g": 99.8,
+              "carbs_g": 100,
+              "fiber_g": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169655/nutrients"
+          },
+          {
+            "ingredient": "sal total,8 g masa+2 g tomate",
+            "edible_grams": 10,
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "fiber_g": 0.0,
+              "sodium_mg": 38800.0,
+              "saturated_fat_g": 0.0,
+              "protein_g": 0.0,
+              "fat_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 0.0,
+              "sugar_g": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients"
+          },
+          {
+            "ingredient": "aceite de oliva total,10 g masa+10 g bandejas",
+            "edible_grams": 20,
+            "fdc_id": 171413,
+            "fdc_description": "Oil, olive, salad or cooking",
+            "per_100g": {
+              "fat_g": 100,
+              "carbs_g": 0.0,
+              "calories": 884,
+              "sodium_mg": 2.0,
+              "protein_g": 0.0,
+              "saturated_fat_g": 13.8,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171413/nutrients"
+          },
+          {
+            "ingredient": "tomate triturado en conserva, incluido líquido",
+            "edible_grams": 300,
+            "fdc_id": 170501,
+            "fdc_description": "Tomatoes, crushed, canned",
+            "per_100g": {
+              "sodium_mg": 186,
+              "fat_g": 0.28,
+              "carbs_g": 7.29,
+              "calories": 32.0,
+              "fiber_g": 1.9,
+              "protein_g": 1.64,
+              "saturated_fat_g": 0.04,
+              "sugar_g": 4.4
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170501/nutrients"
+          },
+          {
+            "ingredient": "orégano seco",
+            "edible_grams": 1,
+            "fdc_id": 171328,
+            "fdc_description": "Spices, oregano, dried",
+            "per_100g": {
+              "sugar_g": 4.09,
+              "fat_g": 4.28,
+              "carbs_g": 68.9,
+              "calories": 265,
+              "fiber_g": 42.5,
+              "sodium_mg": 25.0,
+              "saturated_fat_g": 1.55,
+              "protein_g": 9.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171328/nutrients"
+          },
+          {
+            "ingredient": "mozzarella de leche entera y baja humedad",
+            "edible_grams": 200,
+            "fdc_id": 170846,
+            "fdc_description": "Cheese, mozzarella, whole milk, low moisture",
+            "per_100g": {
+              "sugar_g": 1.01,
+              "sodium_mg": 710,
+              "saturated_fat_g": 15.6,
+              "fiber_g": 0.0,
+              "protein_g": 21.6,
+              "fat_g": 24.6,
+              "carbs_g": 2.47,
+              "calories": 318
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170846/nutrients"
+          },
+          {
+            "ingredient": "albahaca fresca",
+            "edible_grams": 5,
+            "fdc_id": 172232,
+            "fdc_description": "Basil, fresh",
+            "per_100g": {
+              "saturated_fat_g": 0.041,
+              "sugar_g": 0.3,
+              "fat_g": 0.64,
+              "carbs_g": 2.65,
+              "calories": 23.0,
+              "fiber_g": 1.6,
+              "sodium_mg": 4.0,
+              "protein_g": 3.15
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/172232/nutrients"
+          }
+        ],
+        "serving_size": "Mezza pizza, 2 degli 8 spicchi; 4 porzioni",
+        "method": "Nove schede USDA verificate: grammi edibili moltiplicati per nutrienti per 100 g, sommati e divisi per 4. L'acqua non apporta i nutrienti elencati. I 10 g di sale e 20 g d'olio sommano impasto, condimento e teglie. Include 300 g di pomodoro con liquido, 200 g di mozzarella intera a bassa umidità e 5 g di basilico. Si presume di consumare tutti i 500 g di farina e 20 g d'olio, anche se parte resta sul piano o nelle teglie.",
+        "note": "Stima, non analisi di laboratorio o resa confermata. Marca e sale di pomodoro/formaggio, farina o olio avanzati, altra mozzarella o grassi modificano i valori. Tutti i 5 g di zucchero sono inclusi senza modellarne il consumo durante la lievitazione né perdite specifiche nel forno. Esclusi condimenti e contorni aggiuntivi. Si usano dati USDA presenti, compresi zeri riportati; dati assenti non diventano zero."
+      },
+      "keywords": [
+        "pizza fatta in casa",
+        "impasto pizza",
+        "pizza pomodoro mozzarella",
+        "lievitazione pizza"
+      ],
+      "image_url": "/recetas/receta-de-pizza-casera/portada.webp",
+      "gallery": [
+        "/recetas/receta-de-pizza-casera/paso-01.webp",
+        "/recetas/receta-de-pizza-casera/paso-02.webp",
+        "/recetas/receta-de-pizza-casera/paso-03.webp",
+        "/recetas/receta-de-pizza-casera/paso-04.webp",
+        "/recetas/receta-de-pizza-casera/paso-05.webp",
+        "/recetas/receta-de-pizza-casera/paso-06.webp",
+        "/recetas/receta-de-pizza-casera/paso-07.webp",
+        "/recetas/receta-de-pizza-casera/paso-08.webp",
+        "/recetas/receta-de-pizza-casera/paso-09.webp"
+      ],
+      "seo": {
+        "title": "Pizza fatta in casa: impasto con pomodoro e mozzarella",
+        "description": "Prepara due pizze casalinghe con impasto lievitato, pomodoro e mozzarella: quantità, lievitazione, preriscaldamento e cottura per fasi.",
+        "image_alt": "Pizza casalinga con bordo dorato, pomodoro, mozzarella fusa e basilico, tagliata in quattro spicchi con uno leggermente separato",
+        "image_variants": [
+          "/recetas/receta-de-pizza-casera/portada-1x1.webp",
+          "/recetas/receta-de-pizza-casera/portada-4x3.webp",
+          "/recetas/receta-de-pizza-casera/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Perché l'impasto si ritira quando lo stendo?",
+            "a": "Potrebbe dover rilassarsi. Dopo la divisione sono proposti 20 minuti coperti; se resiste ancora, aspettare altri 10 minuti e aggiungerli al totale. Stendere dal centro senza strappare né usare farina oltre i 20 g riservati."
+          },
+          {
+            "q": "Posso sostituire la mozzarella a bassa umidità con quella fresca?",
+            "a": "La fresca contiene più acqua e può bagnare il fondo. Scolarla o cambiare formaggio modifica peso edibile e nutrizione calcolata con 200 g di mozzarella intera a bassa umidità. Adattare e ricalcolare; non è promessa la stessa cottura."
+          },
+          {
+            "q": "Il formaggio fuso basta per togliere la pizza dal forno?",
+            "a": "No. La farina cruda deve cuocere: verificare bordo dorato, fondo cotto e assenza di strato pastoso sotto il pomodoro. I 15 minuti per turno sono indicativi; continuare se il fondo lo richiede, anche con formaggio già fuso."
+          }
+        ]
+      },
+      "published": true,
+      "editorial_status": "published",
+      "content_html": "<p>Proposta di due pizze casalinghe di circa 30 cm con impasto di frumento, pomodoro, mozzarella a bassa umidità e basilico. Si cuociono a turno su teglie metalliche e rendono 4 porzioni da mezza pizza. I 218 minuti stimati includono idratazione del lievito, lievitazione, riposo, preriscaldamento e cottura; quantità e resa attendono una prova in cucina.</p><p>Proposta di pizza casalinga pomodoro-mozzarella senza denominazione napoletana né prova in cucina dichiarata. Contiene frumento/glutine e latte: controllare confezioni di lievito, pomodoro e formaggio. Usare mozzarella a bassa umidità di latte pastorizzato. Quella fresca contiene più acqua e richiede adattamento del montaggio e ricalcolo nutrizionale. Idratare il lievito secco attivo secondo il produttore, senza sostituirlo con lievito chimico. Le farine assorbono diversamente: quantità, lievitazione, diametro e tempi sono da provare. Ricalcolare cambi di acqua, olio, formaggio o condimenti; non si promette un risultato identico. Non assaggiare farina o impasto crudi. Tenere formaggio e pomodoro preparati a 4 °C o meno fino al montaggio. Refrigerare gli avanzi in contenitori bassi entro 2 ore, o 1 ora sopra 32 °C ambientali, e consumarli entro 3 giorni. Riscaldare le porzioni necessarie a 74 °C al centro. Non lasciare una pizza cruda già con formaggio per tutta la lievitazione. Usare guanti e utensili adatti a 240 °C.</p>"
+    },
+    {
+      "id": "5817cbc9-c7fd-5e94-9f18-a66575fb4c45",
+      "recipe_group_id": "31a06fe5-2ae5-4451-8ee8-e53376013609",
+      "slug": "手作りピザのレシピ",
+      "public_path": "/ja/手作りピザのレシピ",
+      "source_url": "https://manualdecocina.com/ja/手作りピザのレシピ/",
+      "language": "ja",
+      "title": "トマトとモッツァレラの手作りピザ",
+      "excerpt": "発酵を説明した生地に、量を決めた具をのせ、底まで焼く家庭用ピザ。順番に焼く2枚で4人分です。",
+      "summary": "小麦の生地、トマト、低水分モッツァレラ、バジルを使う、直径約30 cmの手作りピザ2枚の提案です。金属天板で順番に焼き、半枚ずつで4人分にします。推定218分にはイーストの吸水、発酵、休み、予熱、焼成を含みます。分量と出来上がり量は調理試験で確認していません。",
+      "category": "パン・生地料理",
+      "category_slug": "panes-y-masas",
+      "difficulty": "中級",
+      "course": "ピザ",
+      "cuisine": "イタリア風",
+      "prep_time_minutes": 35,
+      "cook_time_minutes": 30,
+      "total_time_minutes": 218,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "ベーキングパウダーを含まない一般的な小麦粉、成形用20 gを含む",
+          "amount": "500",
+          "unit": "g",
+          "group": "生地"
+        },
+        {
+          "name": "水、イースト用50 mlと混ぜるための250 ml",
+          "amount": "300",
+          "unit": "ml",
+          "group": "生地"
+        },
+        {
+          "name": "吸水させるタイプのアクティブドライイースト、ベーキングパウダーではない",
+          "amount": "5",
+          "unit": "g",
+          "group": "生地"
+        },
+        {
+          "name": "イースト用の砂糖",
+          "amount": "5",
+          "unit": "g",
+          "group": "生地"
+        },
+        {
+          "name": "生地用の塩",
+          "amount": "8",
+          "unit": "g",
+          "group": "生地"
+        },
+        {
+          "name": "生地用のオリーブオイル",
+          "amount": "10",
+          "unit": "g",
+          "group": "生地"
+        },
+        {
+          "name": "液体も含めた缶詰の砕いたトマト",
+          "amount": "300",
+          "unit": "g",
+          "group": "トッピング"
+        },
+        {
+          "name": "トマト用の塩",
+          "amount": "2",
+          "unit": "g",
+          "group": "トッピング"
+        },
+        {
+          "name": "乾燥オレガノ",
+          "amount": "1",
+          "unit": "g",
+          "group": "トッピング"
+        },
+        {
+          "name": "殺菌済み全乳から作った低水分モッツァレラ",
+          "amount": "200",
+          "unit": "g",
+          "group": "トッピング"
+        },
+        {
+          "name": "生バジルの葉",
+          "amount": "5",
+          "unit": "g",
+          "group": "仕上げ"
+        },
+        {
+          "name": "天板2枚用のオリーブオイル",
+          "amount": "10",
+          "unit": "g",
+          "group": "天板"
+        }
+      ],
+      "steps": [
+        {
+          "title": "材料を量り、天板を準備する",
+          "content": "小麦粉500 gを量り、成形用に20 gを取り分け、生地には480 gを使います。水300 mlはイーストの吸水用50 mlと混ぜるための250 mlに分けます。生地用にアクティブドライイースト5 g、砂糖5 g、塩8 g、油10 gを量ります。トッピングには砕いたトマト300 g、塩2 g、オレガノ1 g、すりおろした低水分モッツァレラ200 gを用意します。チーズは4 °C以下で冷蔵します。バジル5 gを洗って水気を取ります。オーブン対応の約40 × 35 cmの金属天板を2枚用意し、残りの油10 gを、各天板に5 gずつ刷毛で塗ります。決めた量以外の油は加えません。",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-01.webp",
+          "image_alt": "小麦粉、イースト、水、油、トマト、チーズ、ハーブを別々に用意したピザの材料"
+        },
+        {
+          "title": "イーストを10分吸水させる",
+          "content": "水50 mlだけを温度計で約44 °Cに温めます。使用するアクティブドライイーストのメーカーが別の温度を指定している場合は、その表示に従います。砂糖5 gを溶かし、イースト5 gを混ぜます。10分吸水させ、小さな泡や軽い泡立ちなどの活動があることを確認します。液量が異なるため、別の配合のカップ目盛りまで膨らむ必要はありません。期限切れや活動のないイーストは混ぜる前に取り替え、この配合に余分な水や砂糖を加えません。残りの水250 mlは室温で使います。ベーキングパウダーは使えず、生イーストへの自動換算も提案していません。",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-02.webp",
+          "image_alt": "温かい水に吸水させたイーストを混ぜ、小さな泡が見える"
+        },
+        {
+          "title": "混ぜて、しなやかな生地になるまでこねる",
+          "content": "大きなボウルで小麦粉480 gと塩8 gを混ぜます。吸水させたイーストを全量、残りの水250 ml、油10 gを加えます。乾いた粉がなくなるまで混ぜ、清潔な作業面で約8〜10分こねて、均一で弾力があり、わずかにべたつく生地にします。混ぜ不足を隠すために取り分けた粉を使ったり、再計算せず水を増やしたりしません。水は合計300 mlです。カードで生地を集めると扱いやすくなります。小麦粉は生の食品なので、生地を味見せず、バジルやそのまま食べる食品に触れる前に手と作業面を洗います。",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-03.webp",
+          "image_alt": "明るい色のまとまったピザ生地を手でこねる"
+        },
+        {
+          "title": "体積がはっきり増えるまで発酵させる",
+          "content": "同じ清潔なボウルに生地を入れ、追加の油は使わず、乾燥しないよう覆います。目安22〜25 °Cの穏やかな場所で約90分置きます。元の体積のほぼ倍に近づき、空気を含んだ状態を見ます。時計だけでは発酵を保証できません。台所が寒い、またはイーストの働きが遅い場合は待ち、実際の追加時間を合計に加えます。暖房器具や加熱中のオーブンで無理に早めません。時間と体積の増加は調理試験で未確認の提案です。",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-04.webp",
+          "image_alt": "覆いをかけたガラスボウルでふくらんだピザ生地"
+        },
+        {
+          "title": "丸めて20分休ませる",
+          "content": "やさしくガスを抜き、成形用の粉を使う前に約404 gずつの同量に2分割します。縁を底側に集めて丸め、とじ目を下にします。覆って20分休ませ、生地をゆるめます。容器に油を追加したり、丸めた生地を裸のまま置いたりしません。後で伸ばす際に抵抗する場合はさらに10分休ませ、その時間を加算します。無理に破いたり、量らない粉を足したりしません。",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-05.webp",
+          "image_alt": "清潔な布の横で休ませる同じ大きさの生地2個"
+        },
+        {
+          "title": "オーブンを予熱してトマトを混ぜる",
+          "content": "網をオーブンの下側3分の1の位置に置き、上下加熱240 °C、またはファン付き220 °Cで約30分予熱します。油を塗った天板は外で冷たいままにし、やけどせずに組み立てます。砕いたトマト300 gに塩2 gとオレガノ1 gを混ぜ、栄養計算に含めた液体は捨てません。トマトとチーズは使うまで覆って冷蔵します。予熱中は丸めた生地2個も覆います。この提案は金属天板を使い、ピザストーンやメーカーの使用温度を超えるおそれのあるオーブンシートは使いません。",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-06.webp",
+          "image_alt": "トマトとオレガノ、別のチーズ、冷たい油を塗った天板"
+        },
+        {
+          "title": "最初の生地を約30 cmまで伸ばす",
+          "content": "取り分けた小麦粉20 gの一部を台と手に使います。丸めた生地を中央から外へ押し、約30 cmの円形にやさしく伸ばします。縁は少し厚く、中央は約3〜4 mmで穴のない状態にします。油を塗った天板に移します。縮む場合はさらに10分休ませてから続け、破れるまで引っ張りません。次の生地は覆い、焼く順番が近づいてから伸ばします。直径とピザ2枚の出来上がり量は提案であり、調理試験の実測ではありません。",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-07.webp",
+          "image_alt": "穴のない丸いピザ生地を手でやさしく伸ばす"
+        },
+        {
+          "title": "トマトの混合物とチーズを半量のせる",
+          "content": "味付けしたトマトの半量151.5 gをのせます。内訳はトマト150 g、塩1 g、オレガノ0.5 gです。周囲は約2 cm空けます。すりおろしたモッツァレラ100 gを中央に山積みにせず均等に広げます。材料にない肉、野菜、チーズ、油は加えません。残りのトマトの混合物とチーズは、次のピザ用に覆って冷蔵します。バジルは食感を保つため焼いた後に加えるので、この生の生地にはまだのせません。",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-08.webp",
+          "image_alt": "縁を空けた生地にトマトとすりおろしたモッツァレラをのせた状態"
+        },
+        {
+          "title": "ピザを順番に焼く",
+          "content": "最初のピザをオーブン下側3分の1で約15分焼き、12分から確認します。縁がきつね色、チーズが溶け、底が焼けて色づき、トマトの下に生のねっとりした層がないことを見ます。ヘラで縁を慎重に持ち上げて確認し、チーズが底より早く色づく場合は上面を保護するか高さを調整して続けます。ミトンで取り出し、網に置きます。次の生地を伸ばし、残りの味付き混合物151.5 g —トマト150 g、塩1 g、オレガノ0.5 g— とモッツァレラ100 gをのせます。成形の粉は取り分けた20 gの残りだけを使います。同じ確認をしながらさらに15分焼きます。提案では2回の焼成に合計30分を見込みますが、実際に必要な追加時間は加算します。チーズが溶けるだけでは生の小麦粉が十分焼けたことにはなりません。",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-09.webp",
+          "image_alt": "ミトンで天板を支え、ヘラで焼けたピザの底を確認する"
+        },
+        {
+          "title": "バジルを加え、切って出す",
+          "content": "切る前にそれぞれ網の上で約3分休ませます。清潔なバジル5 gを分け、各ピザに2.5 gずつのせます。それぞれを同じ大きさの4切れにし、合計8切れ、2切れずつで4人分にします。1人分は半枚です。余裕をみた計画は準備35分、焼成30分、待ち時間153分です。待ち時間の内訳はイースト10分、発酵90分、丸めた生地の休み20分、予熱30分、最後のピザの休み3分です。合計218分は同時にできる作業を差し引かない推定で、最初のピザは次の焼成中に休ませられます。必要な追加の休みや焼成は加算します。調理試験や実測した出来上がり量は主張していません。完成写真はこの具だけを示し、付け合わせは含みません。",
+          "image_url": "/recetas/receta-de-pizza-casera/portada.webp",
+          "image_alt": "バジルをのせ、4切れに切ったトマトモッツァレラピザ"
+        }
+      ],
+      "notes": "トマトとモッツァレラの家庭用ピザの提案です。ナポリの名称や調理試験を行ったとは主張していません。小麦・グルテンと乳を含み、イースト、トマト、チーズの表示も確認します。殺菌済み乳の低水分モッツァレラを使います。フレッシュタイプは水分が多く、組み立ての調整と栄養の再計算が必要です。アクティブドライイーストはメーカーの吸水指示を守り、ベーキングパウダーに置き換えません。粉によって吸水が異なり、分量、発酵、直径、時間は試験待ちです。水、油、チーズ、具を変えたら再計算し、同じ結果は保証しません。生の小麦粉や生地は味見しません。準備したチーズとトマトは組み立てるまで4 °C以下に保ちます。残りは浅い容器に入れ、2時間以内、室温が32 °Cを超える場合は1時間以内に冷蔵し、3日以内に食べます。必要な分だけ中心74 °Cまで再加熱します。チーズをのせた生ピザを発酵時間中ずっと置きません。ミトンを使い、器具が240 °Cに対応するか確認します。",
+      "nutrition": {
+        "calories": 692.0,
+        "protein_g": 25.5,
+        "carbs_g": 104.0,
+        "fat_g": 18.8,
+        "saturated_fat_g": 8.7,
+        "sodium_mg": 1467.9,
+        "fiber_g": 5.3,
+        "sugar_g": 5.4,
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (abril de 2018)",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "inputs": [
+          {
+            "ingredient": "harina, incluidos 20 g de estirado asumidos consumidos",
+            "edible_grams": 500,
+            "fdc_id": 169761,
+            "fdc_description": "Wheat flour, white, all-purpose, unenriched",
+            "per_100g": {
+              "fat_g": 0.98,
+              "carbs_g": 76.3,
+              "calories": 364,
+              "fiber_g": 2.7,
+              "sodium_mg": 2.0,
+              "protein_g": 10.3,
+              "saturated_fat_g": 0.155,
+              "sugar_g": 0.27
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169761/nutrients"
+          },
+          {
+            "ingredient": "levadura seca activa",
+            "edible_grams": 5,
+            "fdc_id": 175043,
+            "fdc_description": "Leavening agents, yeast, baker's, active dry",
+            "per_100g": {
+              "fat_g": 7.61,
+              "carbs_g": 41.2,
+              "calories": 325,
+              "protein_g": 40.4,
+              "fiber_g": 26.9,
+              "sodium_mg": 51.0,
+              "saturated_fat_g": 1.0,
+              "sugar_g": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/175043/nutrients"
+          },
+          {
+            "ingredient": "azúcar",
+            "edible_grams": 5,
+            "fdc_id": 169655,
+            "fdc_description": "Sugars, granulated",
+            "per_100g": {
+              "protein_g": 0.0,
+              "sodium_mg": 1.0,
+              "fat_g": 0.0,
+              "calories": 387,
+              "saturated_fat_g": 0.0,
+              "sugar_g": 99.8,
+              "carbs_g": 100,
+              "fiber_g": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169655/nutrients"
+          },
+          {
+            "ingredient": "sal total,8 g masa+2 g tomate",
+            "edible_grams": 10,
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "fiber_g": 0.0,
+              "sodium_mg": 38800.0,
+              "saturated_fat_g": 0.0,
+              "protein_g": 0.0,
+              "fat_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 0.0,
+              "sugar_g": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients"
+          },
+          {
+            "ingredient": "aceite de oliva total,10 g masa+10 g bandejas",
+            "edible_grams": 20,
+            "fdc_id": 171413,
+            "fdc_description": "Oil, olive, salad or cooking",
+            "per_100g": {
+              "fat_g": 100,
+              "carbs_g": 0.0,
+              "calories": 884,
+              "sodium_mg": 2.0,
+              "protein_g": 0.0,
+              "saturated_fat_g": 13.8,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171413/nutrients"
+          },
+          {
+            "ingredient": "tomate triturado en conserva, incluido líquido",
+            "edible_grams": 300,
+            "fdc_id": 170501,
+            "fdc_description": "Tomatoes, crushed, canned",
+            "per_100g": {
+              "sodium_mg": 186,
+              "fat_g": 0.28,
+              "carbs_g": 7.29,
+              "calories": 32.0,
+              "fiber_g": 1.9,
+              "protein_g": 1.64,
+              "saturated_fat_g": 0.04,
+              "sugar_g": 4.4
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170501/nutrients"
+          },
+          {
+            "ingredient": "orégano seco",
+            "edible_grams": 1,
+            "fdc_id": 171328,
+            "fdc_description": "Spices, oregano, dried",
+            "per_100g": {
+              "sugar_g": 4.09,
+              "fat_g": 4.28,
+              "carbs_g": 68.9,
+              "calories": 265,
+              "fiber_g": 42.5,
+              "sodium_mg": 25.0,
+              "saturated_fat_g": 1.55,
+              "protein_g": 9.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171328/nutrients"
+          },
+          {
+            "ingredient": "mozzarella de leche entera y baja humedad",
+            "edible_grams": 200,
+            "fdc_id": 170846,
+            "fdc_description": "Cheese, mozzarella, whole milk, low moisture",
+            "per_100g": {
+              "sugar_g": 1.01,
+              "sodium_mg": 710,
+              "saturated_fat_g": 15.6,
+              "fiber_g": 0.0,
+              "protein_g": 21.6,
+              "fat_g": 24.6,
+              "carbs_g": 2.47,
+              "calories": 318
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170846/nutrients"
+          },
+          {
+            "ingredient": "albahaca fresca",
+            "edible_grams": 5,
+            "fdc_id": 172232,
+            "fdc_description": "Basil, fresh",
+            "per_100g": {
+              "saturated_fat_g": 0.041,
+              "sugar_g": 0.3,
+              "fat_g": 0.64,
+              "carbs_g": 2.65,
+              "calories": 23.0,
+              "fiber_g": 1.6,
+              "sodium_mg": 4.0,
+              "protein_g": 3.15
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/172232/nutrients"
+          }
+        ],
+        "serving_size": "半枚、全8切れのうち2切れ。4人分",
+        "method": "確認済みUSDA資料9件を使用。可食部のグラム数に100 g当たりの栄養を掛け、合計を4で割ります。水は表示項目に寄与しません。塩10 gと油20 gは、生地、具、天板分を合算しています。液体込みのトマト300 g、全乳の低水分モッツァレラ200 g、バジル5 gを含みます。台に粉や天板に油が残っても、小麦粉500 gと油20 gを全量食べると仮定します。",
+        "note": "推定値で、検査分析や調理で確認した収量ではありません。トマトとチーズの銘柄・塩分、粉や油の残り、別のモッツァレラや油脂で変わります。砂糖5 gは全量を含み、発酵による消費や焼成による特定の栄養損失はモデル化していません。追加の具や付け合わせは含みません。USDAが報告したゼロを含む存在する値を使い、欠測をゼロに置き換えません。"
+      },
+      "keywords": [
+        "手作りピザ",
+        "ピザ生地",
+        "トマトとモッツァレラのピザ",
+        "ピザ生地の発酵"
+      ],
+      "image_url": "/recetas/receta-de-pizza-casera/portada.webp",
+      "gallery": [
+        "/recetas/receta-de-pizza-casera/paso-01.webp",
+        "/recetas/receta-de-pizza-casera/paso-02.webp",
+        "/recetas/receta-de-pizza-casera/paso-03.webp",
+        "/recetas/receta-de-pizza-casera/paso-04.webp",
+        "/recetas/receta-de-pizza-casera/paso-05.webp",
+        "/recetas/receta-de-pizza-casera/paso-06.webp",
+        "/recetas/receta-de-pizza-casera/paso-07.webp",
+        "/recetas/receta-de-pizza-casera/paso-08.webp",
+        "/recetas/receta-de-pizza-casera/paso-09.webp"
+      ],
+      "seo": {
+        "title": "手作りトマトモッツァレラピザ：生地から順番に",
+        "description": "イースト生地で家庭用ピザ2枚を作る提案。分量、発酵、予熱、トマトとモッツァレラののせ方、底の焼き上がりを工程別に説明します。",
+        "image_alt": "きつね色の縁にトマト、溶けたモッツァレラ、バジルをのせた手作りピザ。4切れに分け、ひと切れを少し離している",
+        "image_variants": [
+          "/recetas/receta-de-pizza-casera/portada-1x1.webp",
+          "/recetas/receta-de-pizza-casera/portada-4x3.webp",
+          "/recetas/receta-de-pizza-casera/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "伸ばすと生地が縮むのはなぜですか？",
+            "a": "生地をゆるめる時間が必要かもしれません。分割後は覆って20分休ませる提案です。まだ抵抗する場合はさらに10分待ち、合計に加えます。中央から伸ばし、破いたり取り分けた20 g以上の粉を足したりしません。"
+          },
+          {
+            "q": "低水分モッツァレラをフレッシュタイプに替えられますか？",
+            "a": "フレッシュタイプは水分が多く、底がぬれやすくなります。水切りやチーズの変更で可食重量が変わり、全乳の低水分モッツァレラ200 gで計算した栄養も変わります。組み立てを調整して再計算し、同じ焼成結果は約束しません。"
+          },
+          {
+            "q": "チーズが溶ければ焼き上がりですか？",
+            "a": "いいえ。生の小麦粉を焼く必要があります。きつね色の縁、焼けた底、トマトの下にねっとりした生の層がないことを確認します。1回15分は目安です。チーズが溶けても底に必要なら焼き続けます。"
+          }
+        ]
+      },
+      "published": true,
+      "editorial_status": "published",
+      "content_html": "<p>小麦の生地、トマト、低水分モッツァレラ、バジルを使う、直径約30 cmの手作りピザ2枚の提案です。金属天板で順番に焼き、半枚ずつで4人分にします。推定218分にはイーストの吸水、発酵、休み、予熱、焼成を含みます。分量と出来上がり量は調理試験で確認していません。</p><p>トマトとモッツァレラの家庭用ピザの提案です。ナポリの名称や調理試験を行ったとは主張していません。小麦・グルテンと乳を含み、イースト、トマト、チーズの表示も確認します。殺菌済み乳の低水分モッツァレラを使います。フレッシュタイプは水分が多く、組み立ての調整と栄養の再計算が必要です。アクティブドライイーストはメーカーの吸水指示を守り、ベーキングパウダーに置き換えません。粉によって吸水が異なり、分量、発酵、直径、時間は試験待ちです。水、油、チーズ、具を変えたら再計算し、同じ結果は保証しません。生の小麦粉や生地は味見しません。準備したチーズとトマトは組み立てるまで4 °C以下に保ちます。残りは浅い容器に入れ、2時間以内、室温が32 °Cを超える場合は1時間以内に冷蔵し、3日以内に食べます。必要な分だけ中心74 °Cまで再加熱します。チーズをのせた生ピザを発酵時間中ずっと置きません。ミトンを使い、器具が240 °Cに対応するか確認します。</p>"
+    },
+    {
+      "id": "eae6e1b1-7621-5c8f-890f-41b7829ea5f2",
+      "recipe_group_id": "31a06fe5-2ae5-4451-8ee8-e53376013609",
+      "slug": "receita-de-pizza-caseira",
+      "public_path": "/pt/receita-de-pizza-caseira",
+      "source_url": null,
+      "language": "pt",
+      "title": "Pizza caseira de tomate e muçarela",
+      "excerpt": "Massa fermentada, cobertura pesada e base bem assada: duas pizzas preparadas e assadas em turnos para quatro porções.",
+      "summary": "Proposta de duas pizzas caseiras de cerca de 30 cm, com massa de trigo, tomate, muçarela de baixa umidade e manjericão. Assadas em turnos em formas metálicas, rendem 4 porções de meia pizza. Os 218 minutos estimados incluem hidratação do fermento, fermentação, descanso, preaquecimento e forno; quantidades e rendimento ainda precisam de teste na cozinha.",
+      "category": "Pães e massas",
+      "category_slug": "panes-y-masas",
+      "difficulty": "Média",
+      "course": "Pizza",
+      "cuisine": "Inspiração italiana",
+      "prep_time_minutes": 35,
+      "cook_time_minutes": 30,
+      "total_time_minutes": 218,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "farinha de trigo comum sem fermento, incluindo 20 g para abrir",
+          "amount": "500",
+          "unit": "g",
+          "group": "Massa"
+        },
+        {
+          "name": "água, 50 ml para o fermento e 250 ml para misturar",
+          "amount": "300",
+          "unit": "ml",
+          "group": "Massa"
+        },
+        {
+          "name": "fermento biológico seco ativo que exige hidratação, não fermento químico",
+          "amount": "5",
+          "unit": "g",
+          "group": "Massa"
+        },
+        {
+          "name": "açúcar para o fermento",
+          "amount": "5",
+          "unit": "g",
+          "group": "Massa"
+        },
+        {
+          "name": "sal para a massa",
+          "amount": "8",
+          "unit": "g",
+          "group": "Massa"
+        },
+        {
+          "name": "azeite para a massa",
+          "amount": "10",
+          "unit": "g",
+          "group": "Massa"
+        },
+        {
+          "name": "tomate triturado em conserva, incluindo o líquido",
+          "amount": "300",
+          "unit": "g",
+          "group": "Cobertura"
+        },
+        {
+          "name": "sal para o tomate",
+          "amount": "2",
+          "unit": "g",
+          "group": "Cobertura"
+        },
+        {
+          "name": "orégano seco",
+          "amount": "1",
+          "unit": "g",
+          "group": "Cobertura"
+        },
+        {
+          "name": "muçarela de baixa umidade feita com leite integral pasteurizado",
+          "amount": "200",
+          "unit": "g",
+          "group": "Cobertura"
+        },
+        {
+          "name": "folhas de manjericão fresco",
+          "amount": "5",
+          "unit": "g",
+          "group": "Finalização"
+        },
+        {
+          "name": "azeite para as duas formas",
+          "amount": "10",
+          "unit": "g",
+          "group": "Formas"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Pese os ingredientes e prepare duas formas",
+          "content": "Pese 500 g de farinha, reserve 20 g para abrir e use 480 g na massa. Divida os 300 ml de água em 50 ml para hidratar o fermento e 250 ml para misturar. Meça 5 g de fermento biológico seco ativo, 5 g de açúcar, 8 g de sal e 10 g de azeite para a massa. Prepare 300 g de tomate triturado, 2 g de sal, 1 g de orégano e 200 g de muçarela de baixa umidade ralada. Mantenha o queijo na geladeira a 4 °C ou menos. Lave e seque 5 g de manjericão. Prepare duas formas metálicas de cerca de 40 × 35 cm próprias para forno e distribua com pincel os outros 10 g de azeite, 5 g por forma. Não acrescente azeite fora dessas quantidades.",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-01.webp",
+          "image_alt": "Ingredientes separados para pizza com farinha, fermento, água, azeite, tomate, queijo e ervas"
+        },
+        {
+          "title": "Hidrate o fermento por 10 minutos",
+          "content": "Aqueça somente os 50 ml de água a aproximadamente 44 °C, conferidos com termômetro, ou à temperatura indicada pelo fabricante do seu fermento biológico seco ativo. Dissolva 5 g de açúcar e misture 5 g de fermento. Hidrate por 10 minutos; bolhas e uma espuma leve devem indicar atividade. Um volume diferente não precisa atingir a marca de uma xícara de outra fórmula. Se o fermento estiver vencido ou inativo, substitua antes de misturar, sem acrescentar água ou açúcar a esta receita. Use os outros 250 ml de água em temperatura ambiente. Fermento químico não serve, e não se propõe conversão automática para fermento fresco.",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-02.webp",
+          "image_alt": "Fermento seco hidratado com bolhas leves na água morna"
+        },
+        {
+          "title": "Misture e sove até obter uma massa flexível",
+          "content": "Misture 480 g de farinha e 8 g de sal em uma tigela grande. Acrescente todo o fermento hidratado, os 250 ml de água restantes e 10 g de azeite. Misture até não restar farinha seca e sove em superfície limpa por cerca de 8–10 minutos, até ficar uniforme, elástica e levemente pegajosa. Não use a farinha reservada para esconder uma mistura incompleta nem acrescente água sem recalcular: são 300 ml no total. Uma espátula de massa ajuda a recolher. A farinha é crua: não prove a massa e limpe mãos e superfícies antes de tocar o manjericão ou alimentos prontos para consumo.",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-03.webp",
+          "image_alt": "Mãos sovando uma massa de pizza clara e uniforme"
+        },
+        {
+          "title": "Deixe fermentar até aumentar claramente de volume",
+          "content": "Coloque a massa na mesma tigela limpa, sem azeite adicional, e cubra para não ressecar. Deixe em local ameno, aproximadamente a 22–25 °C, por cerca de 90 minutos. Busque massa aerada e volume próximo do dobro; o relógio não garante a fermentação. Se a cozinha estiver fria ou o fermento agir devagar, espere e acrescente o tempo real ao total. Não force o crescimento em aquecedor ou forno ligado. Tempo e aumento de volume são propostas ainda não confirmadas em teste de cozinha.",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-04.webp",
+          "image_alt": "Massa de pizza fermentada e aerada em tigela coberta"
+        },
+        {
+          "title": "Divida em duas bolas e descanse por 20 minutos",
+          "content": "Retire o excesso de gás com delicadeza e divida em duas partes iguais de aproximadamente 404 g antes de usar a farinha para abrir. Recolha as bordas para baixo e forme bolas com a emenda voltada para baixo. Cubra e descanse 20 minutos para relaxar. Não coloque azeite extra no recipiente nem deixe as bolas descobertas. Se depois a massa resistir ao abrir, deixe outros 10 minutos e some ao total, em vez de rasgar ou acrescentar farinha sem pesar.",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-05.webp",
+          "image_alt": "Duas bolas iguais de massa descansando junto de um pano limpo"
+        },
+        {
+          "title": "Preaqueça o forno e prepare o tomate",
+          "content": "Coloque a grade no terço inferior e preaqueça por cerca de 30 minutos a 240 °C com calor superior e inferior, ou 220 °C com ventilação. As formas untadas ficam fora e frias para montar sem queimaduras. Misture 300 g de tomate triturado com 2 g de sal e 1 g de orégano; não descarte o líquido já incluído no cálculo. Mantenha tomate e queijo cobertos na geladeira até usar. Deixe também as duas bolas cobertas durante o preaquecimento. A proposta usa formas metálicas, sem pedra nem papel-manteiga que possa ultrapassar a temperatura permitida pelo fabricante.",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-06.webp",
+          "image_alt": "Tomate com orégano junto do queijo e das formas frias untadas"
+        },
+        {
+          "title": "Abra a primeira base até cerca de 30 cm",
+          "content": "Use parte dos 20 g de farinha reservados na bancada e nas mãos. Achate uma bola do centro para fora e abra delicadamente um círculo de aproximadamente 30 cm, mantendo a borda um pouco mais grossa e o centro íntegro com cerca de 3–4 mm. Passe para uma forma já untada. Se encolher, descanse outros 10 minutos e tente novamente, sem puxar até rasgar. Mantenha a segunda bola coberta e abra só perto da sua vez. Diâmetro e rendimento de duas pizzas são propostas, não medidas de um teste de cozinha.",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-07.webp",
+          "image_alt": "Mãos abrindo uma base de pizza redonda e íntegra"
+        },
+        {
+          "title": "Coloque metade da mistura de tomate e do queijo",
+          "content": "Distribua metade da mistura temperada: 151,5 g, compostos por 150 g de tomate, 1 g de sal e 0,5 g de orégano. Deixe cerca de 2 cm de borda livre. Espalhe 100 g de muçarela ralada sem amontoar no centro. Não acrescente carne, legumes, queijo ou azeite fora da lista. Reserve a outra metade da mistura e do queijo coberta na geladeira para a segunda pizza. O manjericão entra depois do forno para preservar a textura; não coloque ainda sobre a base crua.",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-08.webp",
+          "image_alt": "Base crua com tomate e muçarela ralada dentro da borda livre"
+        },
+        {
+          "title": "Asse as pizzas uma de cada vez",
+          "content": "Asse a primeira pizza no terço inferior por cerca de 15 minutos, conferindo a partir dos 12. A borda deve dourar, o queijo derreter e a base ficar assada e com cor por baixo, sem camada pastosa de massa crua sob o tomate. Levante uma borda cuidadosamente com espátula para conferir. Se o queijo dourar antes da base, proteja a parte de cima ou ajuste a altura e continue. Retire com luvas e coloque em uma grade. Abra e cubra a segunda base com os outros 151,5 g da mistura —150 g de tomate, 1 g de sal e 0,5 g de orégano— e 100 g de muçarela, usando apenas o que restar dos 20 g de farinha reservados. Asse outros 15 minutos com as mesmas verificações. A proposta conta 30 minutos para dois turnos; acrescente qualquer tempo extra real. Queijo derretido não substitui o cozimento completo da farinha crua.",
+          "image_url": "/recetas/receta-de-pizza-casera/paso-09.webp",
+          "image_alt": "Pizza assada apoiada com luva enquanto uma espátula confere o fundo"
+        },
+        {
+          "title": "Finalize com manjericão, corte e sirva",
+          "content": "Descanse cada pizza na grade por cerca de 3 minutos antes de cortar. Divida os 5 g de manjericão limpo, 2,5 g por pizza, e corte cada uma em 4 fatias iguais: 8 ao todo para 4 porções de 2 fatias, equivalentes a meia pizza. O planejamento conservador conta 35 minutos de preparo, 30 de forno e 153 de esperas: 10 do fermento, 90 de fermentação, 20 de descanso das bolas, 30 de preaquecimento e 3 finais do último turno. São 218 minutos estimados sem descontar tarefas que podem coincidir; a primeira pizza descansa enquanto a segunda assa. Some descansos ou forno adicionais necessários. Não se afirma teste de cozinha nem rendimento medido. A foto final mostra essa cobertura sem acompanhamentos.",
+          "image_url": "/recetas/receta-de-pizza-casera/portada.webp",
+          "image_alt": "Pizza de tomate e muçarela pronta com manjericão e quatro fatias"
+        }
+      ],
+      "notes": "Proposta de pizza caseira de tomate e muçarela, sem denominação napolitana nem teste de cozinha alegado. Contém trigo/glúten e leite; confira os rótulos de fermento, tomate e queijo. Use muçarela de baixa umidade feita com leite pasteurizado. A fresca contém mais água e exige ajustar a montagem e recalcular a nutrição. Hidrate o fermento seco ativo conforme a embalagem; não substitua por fermento químico. Farinhas absorvem água de maneira diferente: quantidades, fermentação, diâmetro e tempos precisam de teste. Recalcule mudanças de água, azeite, queijo ou cobertura; não se promete resultado idêntico. Não prove farinha ou massa cruas. Mantenha queijo e tomate preparados a 4 °C ou menos até montar. Refrigere sobras em recipientes rasos em até 2 horas, ou 1 hora se o ambiente superar 32 °C, e consuma em até 3 dias. Reaqueça só as porções necessárias a 74 °C no centro. Não deixe pizza crua já com queijo durante toda a fermentação. Use luvas e utensílios compatíveis com 240 °C.",
+      "nutrition": {
+        "calories": 692.0,
+        "protein_g": 25.5,
+        "carbs_g": 104.0,
+        "fat_g": 18.8,
+        "saturated_fat_g": 8.7,
+        "sodium_mg": 1467.9,
+        "fiber_g": 5.3,
+        "sugar_g": 5.4,
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (abril de 2018)",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "inputs": [
+          {
+            "ingredient": "harina, incluidos 20 g de estirado asumidos consumidos",
+            "edible_grams": 500,
+            "fdc_id": 169761,
+            "fdc_description": "Wheat flour, white, all-purpose, unenriched",
+            "per_100g": {
+              "fat_g": 0.98,
+              "carbs_g": 76.3,
+              "calories": 364,
+              "fiber_g": 2.7,
+              "sodium_mg": 2.0,
+              "protein_g": 10.3,
+              "saturated_fat_g": 0.155,
+              "sugar_g": 0.27
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169761/nutrients"
+          },
+          {
+            "ingredient": "levadura seca activa",
+            "edible_grams": 5,
+            "fdc_id": 175043,
+            "fdc_description": "Leavening agents, yeast, baker's, active dry",
+            "per_100g": {
+              "fat_g": 7.61,
+              "carbs_g": 41.2,
+              "calories": 325,
+              "protein_g": 40.4,
+              "fiber_g": 26.9,
+              "sodium_mg": 51.0,
+              "saturated_fat_g": 1.0,
+              "sugar_g": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/175043/nutrients"
+          },
+          {
+            "ingredient": "azúcar",
+            "edible_grams": 5,
+            "fdc_id": 169655,
+            "fdc_description": "Sugars, granulated",
+            "per_100g": {
+              "protein_g": 0.0,
+              "sodium_mg": 1.0,
+              "fat_g": 0.0,
+              "calories": 387,
+              "saturated_fat_g": 0.0,
+              "sugar_g": 99.8,
+              "carbs_g": 100,
+              "fiber_g": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169655/nutrients"
+          },
+          {
+            "ingredient": "sal total,8 g masa+2 g tomate",
+            "edible_grams": 10,
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "fiber_g": 0.0,
+              "sodium_mg": 38800.0,
+              "saturated_fat_g": 0.0,
+              "protein_g": 0.0,
+              "fat_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 0.0,
+              "sugar_g": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients"
+          },
+          {
+            "ingredient": "aceite de oliva total,10 g masa+10 g bandejas",
+            "edible_grams": 20,
+            "fdc_id": 171413,
+            "fdc_description": "Oil, olive, salad or cooking",
+            "per_100g": {
+              "fat_g": 100,
+              "carbs_g": 0.0,
+              "calories": 884,
+              "sodium_mg": 2.0,
+              "protein_g": 0.0,
+              "saturated_fat_g": 13.8,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171413/nutrients"
+          },
+          {
+            "ingredient": "tomate triturado en conserva, incluido líquido",
+            "edible_grams": 300,
+            "fdc_id": 170501,
+            "fdc_description": "Tomatoes, crushed, canned",
+            "per_100g": {
+              "sodium_mg": 186,
+              "fat_g": 0.28,
+              "carbs_g": 7.29,
+              "calories": 32.0,
+              "fiber_g": 1.9,
+              "protein_g": 1.64,
+              "saturated_fat_g": 0.04,
+              "sugar_g": 4.4
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170501/nutrients"
+          },
+          {
+            "ingredient": "orégano seco",
+            "edible_grams": 1,
+            "fdc_id": 171328,
+            "fdc_description": "Spices, oregano, dried",
+            "per_100g": {
+              "sugar_g": 4.09,
+              "fat_g": 4.28,
+              "carbs_g": 68.9,
+              "calories": 265,
+              "fiber_g": 42.5,
+              "sodium_mg": 25.0,
+              "saturated_fat_g": 1.55,
+              "protein_g": 9.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171328/nutrients"
+          },
+          {
+            "ingredient": "mozzarella de leche entera y baja humedad",
+            "edible_grams": 200,
+            "fdc_id": 170846,
+            "fdc_description": "Cheese, mozzarella, whole milk, low moisture",
+            "per_100g": {
+              "sugar_g": 1.01,
+              "sodium_mg": 710,
+              "saturated_fat_g": 15.6,
+              "fiber_g": 0.0,
+              "protein_g": 21.6,
+              "fat_g": 24.6,
+              "carbs_g": 2.47,
+              "calories": 318
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170846/nutrients"
+          },
+          {
+            "ingredient": "albahaca fresca",
+            "edible_grams": 5,
+            "fdc_id": 172232,
+            "fdc_description": "Basil, fresh",
+            "per_100g": {
+              "saturated_fat_g": 0.041,
+              "sugar_g": 0.3,
+              "fat_g": 0.64,
+              "carbs_g": 2.65,
+              "calories": 23.0,
+              "fiber_g": 1.6,
+              "sodium_mg": 4.0,
+              "protein_g": 3.15
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/172232/nutrients"
+          }
+        ],
+        "serving_size": "Meia pizza, 2 das 8 fatias; 4 porções",
+        "method": "Nove fichas USDA verificadas: pesos comestíveis multiplicados pelos nutrientes por 100 g, somados e divididos por 4. A água não contribui para esses campos. Os 10 g de sal e 20 g de azeite somam massa, cobertura e formas. Inclui 300 g de tomate com líquido, 200 g de muçarela integral de baixa umidade e 5 g de manjericão. Assume consumo dos 500 g de farinha e 20 g de azeite, mesmo que parte fique na bancada ou nas formas.",
+        "note": "Estimativa, não análise laboratorial nem rendimento confirmado. Marca e sal de tomate/queijo, farinha ou azeite restantes, outra muçarela ou gordura alteram os valores. Inclui os 5 g de açúcar completos sem modelar seu consumo na fermentação nem perdas específicas de nutrientes no forno. Não inclui coberturas ou acompanhamentos extras. Dados USDA presentes, inclusive zeros informados, sem substituir dados ausentes por zero."
+      },
+      "keywords": [
+        "pizza caseira",
+        "massa de pizza",
+        "pizza de tomate e muçarela",
+        "fermentação de pizza"
+      ],
+      "image_url": "/recetas/receta-de-pizza-casera/portada.webp",
+      "gallery": [
+        "/recetas/receta-de-pizza-casera/paso-01.webp",
+        "/recetas/receta-de-pizza-casera/paso-02.webp",
+        "/recetas/receta-de-pizza-casera/paso-03.webp",
+        "/recetas/receta-de-pizza-casera/paso-04.webp",
+        "/recetas/receta-de-pizza-casera/paso-05.webp",
+        "/recetas/receta-de-pizza-casera/paso-06.webp",
+        "/recetas/receta-de-pizza-casera/paso-07.webp",
+        "/recetas/receta-de-pizza-casera/paso-08.webp",
+        "/recetas/receta-de-pizza-casera/paso-09.webp"
+      ],
+      "seo": {
+        "title": "Pizza caseira de tomate e muçarela: massa passo a passo",
+        "description": "Prepare duas pizzas caseiras com massa fermentada, tomate e muçarela: quantidades, fermentação, preaquecimento e forno explicados por fases.",
+        "image_alt": "Pizza caseira com borda dourada, tomate, muçarela derretida e manjericão, cortada em quatro fatias com uma ligeiramente separada",
+        "image_variants": [
+          "/recetas/receta-de-pizza-casera/portada-1x1.webp",
+          "/recetas/receta-de-pizza-casera/portada-4x3.webp",
+          "/recetas/receta-de-pizza-casera/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Por que a massa encolhe quando abro?",
+            "a": "Talvez precise relaxar. Após dividir, são propostos 20 minutos coberta; se ainda resistir, espere outros 10 minutos e some ao total. Abra do centro sem rasgar nem acrescentar farinha além dos 20 g reservados."
+          },
+          {
+            "q": "Posso trocar a muçarela de baixa umidade pela fresca?",
+            "a": "A fresca contém mais água e pode molhar a base. Escorrer ou trocar o queijo muda o peso comestível e a nutrição calculada com 200 g de muçarela integral de baixa umidade. Ajuste a montagem e recalcule; não se promete o mesmo forno."
+          },
+          {
+            "q": "Queijo derretido basta para tirar a pizza do forno?",
+            "a": "Não. A farinha crua deve cozinhar: confira borda dourada, fundo assado e nenhuma camada pastosa sob o tomate. Os 15 minutos por turno são orientativos; continue se a base precisar, mesmo com o queijo já derretido."
+          }
+        ]
+      },
+      "published": true,
+      "editorial_status": "published",
+      "content_html": "<p>Proposta de duas pizzas caseiras de cerca de 30 cm, com massa de trigo, tomate, muçarela de baixa umidade e manjericão. Assadas em turnos em formas metálicas, rendem 4 porções de meia pizza. Os 218 minutos estimados incluem hidratação do fermento, fermentação, descanso, preaquecimento e forno; quantidades e rendimento ainda precisam de teste na cozinha.</p><p>Proposta de pizza caseira de tomate e muçarela, sem denominação napolitana nem teste de cozinha alegado. Contém trigo/glúten e leite; confira os rótulos de fermento, tomate e queijo. Use muçarela de baixa umidade feita com leite pasteurizado. A fresca contém mais água e exige ajustar a montagem e recalcular a nutrição. Hidrate o fermento seco ativo conforme a embalagem; não substitua por fermento químico. Farinhas absorvem água de maneira diferente: quantidades, fermentação, diâmetro e tempos precisam de teste. Recalcule mudanças de água, azeite, queijo ou cobertura; não se promete resultado idêntico. Não prove farinha ou massa cruas. Mantenha queijo e tomate preparados a 4 °C ou menos até montar. Refrigere sobras em recipientes rasos em até 2 horas, ou 1 hora se o ambiente superar 32 °C, e consuma em até 3 dias. Reaqueça só as porções necessárias a 74 °C no centro. Não deixe pizza crua já com queijo durante toda a fermentação. Use luvas e utensílios compatíveis com 240 °C.</p>"
+    }
+  ],
+  "yield_proposal": {
+    "pizzas": 2,
+    "diameter_cm": 30,
+    "slices": 8,
+    "servings": 4,
+    "slices_per_serving": 2,
+    "confirmed": false
+  },
+  "portuguese_locale": "pt-BR",
+  "image_alts_by_language": {
+    "es": {
+      "cover": "Pizza casera con borde dorado, tomate, mozzarella fundida y hojas de albahaca, cortada en cuatro porciones con una ligeramente separada",
+      "steps": [
+        "Pizza casera: Pesa los ingredientes y prepara dos bandejas",
+        "Pizza casera: Hidrata la levadura durante 10 minutos",
+        "Pizza casera: Mezcla y amasa hasta formar una masa flexible",
+        "Pizza casera: Deja fermentar hasta que aumente claramente de volumen",
+        "Pizza casera: Divide en dos bolas y deja reposar 20 minutos",
+        "Pizza casera: Precalienta el horno y prepara el tomate",
+        "Pizza casera: Estira la primera base hasta unos 30 cm",
+        "Pizza casera: Añade la mitad del tomate y del queso",
+        "Pizza casera: Hornea las dos pizzas por turnos",
+        "Pizza casera: Añade la albahaca, corta y sirve"
+      ]
+    },
+    "de": {
+      "cover": "Hausgemachte Pizza mit goldenem Rand, Tomaten, geschmolzenem Mozzarella und Basilikum, in vier Stücke geschnitten, eines leicht abgesetzt",
+      "steps": [
+        "Getrennte Zutaten für hausgemachte Pizza mit Mehl, Hefe, Wasser, Tomaten, Käse und Kräutern",
+        "Angerührte Trockenhefe mit feinen Bläschen im warmen Wasser",
+        "Hände kneten einen zusammenhängenden hellen Pizzateig",
+        "Luftiger gegarter Pizzateig in einer abgedeckten Glasschüssel",
+        "Zwei gleich große Pizzateigkugeln ruhen neben einem sauberen Tuch",
+        "Tomaten mit Oregano neben Käse und kalten eingeölten Blechen",
+        "Hände dehnen einen geschlossenen runden Pizzaboden",
+        "Roher Pizzaboden mit Tomaten und geriebenem Mozzarella innerhalb des freien Randes",
+        "Ofenhandschuh hält ein Pizzablech, während ein Pfannenwender den Boden prüft",
+        "Fertige Tomaten-Mozzarella-Pizza mit Basilikum und vier Stücken"
+      ]
+    },
+    "en": {
+      "cover": "Homemade pizza with a golden rim, tomato, melted mozzarella and basil, cut into four slices with one slightly separated",
+      "steps": [
+        "Separate weighed flour, yeast, water, oil, tomato, grated mozzarella and herbs for homemade pizza",
+        "Hydrated active dry yeast with light bubbles being stirred in warm water",
+        "Hands kneading a pale cohesive pizza dough",
+        "Puffy fermented pizza dough in a covered glass bowl",
+        "Two equal pizza dough balls resting beside a clean cloth",
+        "Crushed tomato mixed with oregano beside cheese and cool oiled trays",
+        "Hands gently stretching an intact round pizza base",
+        "Raw pizza base covered with tomato and grated mozzarella inside a clean rim",
+        "A baked pizza supported with an oven mitt while a spatula checks the base",
+        "Finished tomato and mozzarella pizza with basil and four slices"
+      ]
+    },
+    "fr": {
+      "cover": "Pizza maison au bord doré, tomate, mozzarella fondue et basilic, coupée en quatre parts dont une légèrement séparée",
+      "steps": [
+        "Ingrédients séparés pour pizza maison : farine, levure, eau, huile, tomates, fromage et herbes",
+        "Levure sèche hydratée avec petites bulles dans l'eau tiède",
+        "Mains pétrissant une pâte à pizza claire et homogène",
+        "Pâte à pizza levée et aérée dans un saladier couvert",
+        "Deux boules égales de pâte à pizza au repos près d'un linge propre",
+        "Tomates avec origan près du fromage et des plaques froides huilées",
+        "Mains étirant un disque de pâte à pizza intact",
+        "Base crue garnie de tomates et mozzarella râpée avec bord libre",
+        "Pizza cuite tenue avec un gant tandis qu'une spatule contrôle le dessous",
+        "Pizza tomate-mozzarella terminée avec basilic et quatre parts"
+      ]
+    },
+    "it": {
+      "cover": "Pizza casalinga con bordo dorato, pomodoro, mozzarella fusa e basilico, tagliata in quattro spicchi con uno leggermente separato",
+      "steps": [
+        "Ingredienti separati per pizza con farina, lievito, acqua, olio, pomodoro, formaggio ed erbe",
+        "Lievito secco idratato con bollicine nell'acqua tiepida",
+        "Mani che impastano una massa chiara e omogenea",
+        "Impasto di pizza lievitato e arioso in ciotola coperta",
+        "Due palline uguali di impasto a riposo accanto a un panno pulito",
+        "Pomodoro con origano accanto a formaggio e teglie fredde oliate",
+        "Mani che stendono una base tonda e integra",
+        "Base cruda con pomodoro e mozzarella grattugiata dentro il bordo libero",
+        "Pizza cotta sostenuta con guanto mentre una spatola controlla il fondo",
+        "Pizza pomodoro-mozzarella pronta con basilico e quattro spicchi"
+      ]
+    },
+    "ja": {
+      "cover": "きつね色の縁にトマト、溶けたモッツァレラ、バジルをのせた手作りピザ。4切れに分け、ひと切れを少し離している",
+      "steps": [
+        "小麦粉、イースト、水、油、トマト、チーズ、ハーブを別々に用意したピザの材料",
+        "温かい水に吸水させたイーストを混ぜ、小さな泡が見える",
+        "明るい色のまとまったピザ生地を手でこねる",
+        "覆いをかけたガラスボウルでふくらんだピザ生地",
+        "清潔な布の横で休ませる同じ大きさの生地2個",
+        "トマトとオレガノ、別のチーズ、冷たい油を塗った天板",
+        "穴のない丸いピザ生地を手でやさしく伸ばす",
+        "縁を空けた生地にトマトとすりおろしたモッツァレラをのせた状態",
+        "ミトンで天板を支え、ヘラで焼けたピザの底を確認する",
+        "バジルをのせ、4切れに切ったトマトモッツァレラピザ"
+      ]
+    },
+    "pt": {
+      "cover": "Pizza caseira com borda dourada, tomate, muçarela derretida e manjericão, cortada em quatro fatias com uma ligeiramente separada",
+      "steps": [
+        "Ingredientes separados para pizza com farinha, fermento, água, azeite, tomate, queijo e ervas",
+        "Fermento seco hidratado com bolhas leves na água morna",
+        "Mãos sovando uma massa de pizza clara e uniforme",
+        "Massa de pizza fermentada e aerada em tigela coberta",
+        "Duas bolas iguais de massa descansando junto de um pano limpo",
+        "Tomate com orégano junto do queijo e das formas frias untadas",
+        "Mãos abrindo uma base de pizza redonda e íntegra",
+        "Base crua com tomate e muçarela ralada dentro da borda livre",
+        "Pizza assada apoiada com luva enquanto uma espátula confere o fundo",
+        "Pizza de tomate e muçarela pronta com manjericão e quatro fatias"
+      ]
+    }
+  }
+}

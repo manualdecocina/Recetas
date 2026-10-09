@@ -1,0 +1,82 @@
+{
+  "recipe": "receta-de-ensalada-rusa",
+  "status": "PASS_EDITORIAL_MEDIA_LOCALIZATION_NOT_LIVE",
+  "steps_sha256": "d21ad29ef03fba0ce67083e5834f15d7859b510fd2559432b6905056c36852a8",
+  "languages": [
+    "es",
+    "de",
+    "en",
+    "fr",
+    "it",
+    "ja",
+    "pt"
+  ],
+  "steps_per_language": 9,
+  "ingredients": 8,
+  "faq_per_language": 3,
+  "usda_foods": 6,
+  "nutrition_recalculated": true,
+  "numeric_nutrition_shared": true,
+  "shared_amounts": true,
+  "shared_media": true,
+  "originals": 9,
+  "webp": 12,
+  "media_hashes_verified": true,
+  "remote_media_hashes_verified": true,
+  "visual_qa": {
+    "portada": {
+      "status": "PASS",
+      "note": "Whole centered bowl with potato/carrot/peas/hardboiled egg coated mayonnaise, no extra garnish/tuna/olives; ample crop margins."
+    },
+    "paso-01": {
+      "status": "PASS",
+      "note": "Raw whole unpeeled potato/carrot, three intact eggs, frozen peas, mayonnaise separate, salt/water/ice. No preparedsalad or false weights."
+    },
+    "paso-02": {
+      "status": "PASS",
+      "note": "Safe carrot dicing, whole unpeeled potatoes remain; only vegetableprep, no premature mayonnaise/cooked salad."
+    },
+    "paso-03": {
+      "status": "PASS",
+      "note": "Whole skin-on potatoes and carrot cubes simmering together, safe fork test; no egg/peas/mayonnaise in pot."
+    },
+    "paso-04": {
+      "status": "PASS",
+      "note": "Exactly three whole eggs simmering in separate saucepan, clean icebath nearby; no vegetables/rawmayonnaise."
+    },
+    "paso-05": {
+      "status": "PASS",
+      "note": "Only cooked green peas draining in clean colander, no canned/dry peas or mixedsalad."
+    },
+    "paso-06": {
+      "status": "PASS",
+      "notes": "Enfriado separado en recipientes poco profundos: patatas cocidas enteras peladas, zanahoria, guisantes y exactamente tres huevos con cáscara. Sin mayonesa ni corte prematuro. La pantalla no prueba una temperatura.",
+      "correction": "Se corrigió exclusivamente la fase 6; la primera versión mostraba cuatro huevos pelados y patatas cortadas demasiado pronto."
+    },
+    "paso-07": {
+      "status": "PASS",
+      "notes": "Cuatro ingredientes cocidos separados; patata pelada cortada en dados, zanahoria, guisantes y huevo con yema firme. Sin mayonesa prematura."
+    },
+    "paso-08": {
+      "status": "PASS",
+      "notes": "Mezcla suave en un único bol; dados de patata y zanahoria, guisantes y huevo firme visibles con mayonesa. Sin puré, ingredientes adicionales ni adorno."
+    }
+  },
+  "cover_crop_qa": "PASS_WHOLE_BOWL_ALL_RATIOS",
+  "localization_qa_file": "editorial/receta-de-ensalada-rusa-localization-qa-20261008.json",
+  "times": {
+    "prep": 25,
+    "cook": 52,
+    "heat_wait": 15,
+    "refrigerated_cooling_wait": 60,
+    "total": 152,
+    "extra_actual_times_required": true
+  },
+  "yield_confirmed": false,
+  "kitchen_test_confirmed": false,
+  "published_database": false,
+  "package_sha256": "4270560c6f2f4c55262cf50061aeb7150066d5a0d605850aa843ce07dd76c735",
+  "publication_blockers": [
+    "Remaining7recipes; fullbatch CI/merge, observed deployed media hashes, atomic DB publication and cache/liveQA pending"
+  ]
+}

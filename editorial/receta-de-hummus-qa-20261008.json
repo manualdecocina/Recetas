@@ -1,0 +1,84 @@
+{
+  "recipe": "receta-de-hummus",
+  "status": "PASS_EDITORIAL_MEDIA_LOCALIZATION_NOT_LIVE",
+  "steps_sha256": "8afc2dbb0500a8d5f1848a6d9999724fa7e153b599384252127a55c34456cd8d",
+  "languages": [
+    "es",
+    "de",
+    "en",
+    "fr",
+    "it",
+    "ja",
+    "pt"
+  ],
+  "steps_per_language": 8,
+  "ingredients": 10,
+  "faq_per_language": 3,
+  "usda_foods": 9,
+  "nutrition_recalculated": true,
+  "numeric_nutrition_shared": true,
+  "shared_amounts": true,
+  "shared_media": true,
+  "originals": 8,
+  "webp": 11,
+  "media_hashes_verified": true,
+  "remote_media_hashes_verified": true,
+  "visual_qa": {
+    "portada": {
+      "status": "PASS",
+      "notes": "PASS: pale slightly textured creamy hummus, shallow spoon swirl, modest oil drizzle/paprika/chopped parsley; no whole beans or accompaniments. Illustration not measured garnish grams/yield."
+    },
+    "paso-01": {
+      "status": "PASS",
+      "notes": "PASS: cooked chickpeas, tahini, lemon juice, garlic, cumin/salt, water, two separate oil bowls, paprika/parsley, clean sieve and emptyprocessor; no mixed hummus. Illustration not proof of bowl weights."
+    },
+    "paso-02": {
+      "status": "PASS",
+      "notes": "PASS: cooked soft-looking chickpeas with skins in clean mesh sieve under runningwater, plausible hand; no claimed measured400g or complete sodium removal."
+    },
+    "paso-03": {
+      "status": "PASS",
+      "correction": "Se retiraron los garbanzos introducidos antes de la fase prevista; procesador vacío en la fase del limón, resto de la escena conservado."
+    },
+    "paso-04": {
+      "status": "PASS",
+      "notes": "Pasta beige homogénea con pequeños puntos de comino; sin garbanzos, guarnición ni manos junto a la cuchilla; inspección detenida. La fotografía no acredita cantidades."
+    },
+    "paso-05": {
+      "status": "PASS",
+      "notes": "Garbanzos cocidos con piel añadidos sobre base de tahini; procesador detenido, sin manos ni guarnición."
+    },
+    "paso-06": {
+      "status": "PASS",
+      "notes": "Agua vertida por tubo de alimentación de tapa cerrada; manos fuera del recipiente; aceite separado, sin guarnición."
+    },
+    "paso-07": {
+      "status": "PASS",
+      "notes": "Hummus servido con surco de cuchara y aceite añadido desde cucharita; pimentón/perejil separados aún; procesador detenido y sin cuchilla visible. Imagen ilustrativa, no medición del aceite."
+    }
+  },
+  "cover_crop_qa": "PASS: whole bowl remains visible in square,4:3 and16:9; garnish and texture preserved. Photographs do not verify measured weights.",
+  "localization_qa_file": "editorial/receta-de-hummus-localization-qa-20261008.json",
+  "times": {
+    "prep": 20,
+    "cook": 0,
+    "total": 20,
+    "extra_actual_times_required": true
+  },
+  "chickpea_net_drained_g": 400,
+  "skins_retained": true,
+  "tahini_roasted_sesame_g": 60,
+  "water_ml": 80,
+  "oil_g": {
+    "total": 20,
+    "blend": 15,
+    "finish": 5
+  },
+  "yield_confirmed": false,
+  "kitchen_test_confirmed": false,
+  "published_database": false,
+  "package_sha256": "ddc51fc92ce231b87a25096c715fdc017c531c9571cbd4938ad0f2a9f4e0c916",
+  "publication_blockers": [
+    "Remaining10recipes in batch; CI/merge, observed deployed media hashes, atomic DB publication and cache/liveQA pending"
+  ]
+}
