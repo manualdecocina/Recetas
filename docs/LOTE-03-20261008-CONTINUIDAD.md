@@ -206,3 +206,10 @@ PR95 integrado67eb6034dab046e8ae77f0810e5754b292593365, CI verde con301archivos 
 ## 2026-10-09T00:35:51.719Z — Publicación DB confirmada; caché/QA pendiente
 
 Corrección PR96 integrada52dafa72d8b2aefb054dc58521a9cdac427e23c5 con CI verde y artifact11586899171. Observación posterior run37865324726/artifact11588121193:174mediosHTTP200+SHA exacto,0errores. SQL final48cdf663... ejecutado transaccionalmente sin error. Consulta fresca confirma15grupos7/7=105publicadas,139ESpublicadas y70ESpendientes. Identidad/fechasESpreservadas;938filas ajenas inalteradas (MD577913769e2eaf154e55bc8b36673bfc3). Estado:15publicadas en DB pero0cerradas hasta caché+QA105páginas+auditoría global139ES+QAvisual. No reejecutarSQL ni regenerar imágenes. Siguiente: workflow PR de verificación posterior autorizado, secreto solo en Actions.rstripCRLF; inspeccionar y corregir gate final.
+
+
+## Cierre real 2026-10-09T00:46:05.137Z
+
+15/15 publicadas y cerradas,105/105 páginas7/7 validadas. PR95+PR96 publicaron los paquetes/SQL; PR97 incorporó revalidación y QA (merge e8bcafc8ac7f6dc2e992d750c6fe78557d1b5152). Run37865598567/artifact11587064736:1146URLsHTTP200,973Recipeválidos,1067BreadcrumbListválidos,1477imágenes,0errores; noindex/nofollow intacto. QA visual desktop15portadas+DE/EN/FR/IT/JA/PT-BR,home y catálogo139 confirmados. Evidencia editorial/lote03-final-qa-20261009.json y lote03-live-visual-qa-20261009.json. SQL definitivo SHA25648cdf6637ca77bd6962848b05e429851c85d3bb353f78b9d167b57cca526ae44 YA EJECUTADO; no repetir.
+
+Supabase fresco139grupos publicados7/7,70ES sinpublicar:21candidatasporvalidar y49retenidas. Ingredientes03:21canónicos+112pendientes=133,todosconservados; deuda técnica explícita para cierre final según D-060. Lease liberado tras cierre. Siguiente: reservar lote04 desde main una vez integrado este checkpoint, validar clasificación/identidades/rutas reales, sin recrear03 ni revivir retenidas.

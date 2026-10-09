@@ -30,11 +30,11 @@
     "id": "lote-03-20261008",
     "branch": "recetas/lote-03-20261008",
     "target": 15,
-    "status": "in_progress",
-    "stage": "cache/QA",
+    "status": "closed",
+    "stage": "cerrada",
     "current_recipe": null,
     "started_at": "2026-10-08T12:39:02.511Z",
-    "completed_recipes": 0,
+    "completed_recipes": 15,
     "prepared_recipes": 15,
     "published_recipes": 15,
     "identity_qa": "PASS_15_ENTITIES_105_ROUTES_NO_COLLISIONS",
@@ -49,8 +49,8 @@
         "editorial_status": "published",
         "position": 17,
         "eligibility": "validate_url_master_before_writing",
-        "status": "prepared",
-        "stage": "cache/QA",
+        "status": "closed",
+        "stage": "cerrada",
         "identity_qa": "PASS",
         "classification": "ELIGIBLE_EXISTING_CULINARY_CANDIDATE_OR_CORE_REBUILD",
         "languages_ready": 7,
@@ -73,9 +73,10 @@
         "sql_file": "scripts/publish-receta-de-sopa-de-mariscos-con-mejillones-20261008.sql",
         "package_sha256": "c1142dcc4cf1705cfa8bb54a0572bc8c5444ecc7d476fe5cc820445f22ff995d",
         "sql_sha256": "a066e3bd56da56cb251d5f2582a117aef702b561d13436088d028de73f3c3b7b",
-        "publication_gate": "PENDING_CACHE_105_PAGES_GLOBAL_AND_VISUAL_QA",
+        "publication_gate": "PASS_7_OF_7_LIVE_QA",
         "published_database": true,
-        "sql_executed": true
+        "sql_executed": true,
+        "next_action": "Published and QA closed; preserve."
       },
       {
         "id": "00cef267-34b5-4bf9-9192-95dd250a102a",
@@ -86,8 +87,8 @@
         "editorial_status": "published",
         "position": 18,
         "eligibility": "validate_url_master_before_writing",
-        "status": "prepared",
-        "stage": "cache/QA",
+        "status": "closed",
+        "stage": "cerrada",
         "identity_qa": "PASS",
         "classification": "CORE_KEEP_REBUILD_ARGENTINE_BEEF_EMPANDAS",
         "languages_ready": 7,
@@ -111,11 +112,11 @@
         "sql_sha256": "d59376bd9705ed2deff8f580ecd64ccae7bad563dc553dac4e5852aa198c22ee",
         "sql_executed": true,
         "qa_file": "editorial/receta-empanadas-argentinas-qa-20261008.json",
-        "editorial_qa": "PASS_EDITORIAL_MEDIA_LOCALIZATION_NOT_LIVE",
+        "editorial_qa": "PASS",
         "package_sha256": "fe9e60a1ea1ceca154f3d18f40a9749e81b10058b0bd343c2c90f3b5a6926472",
-        "next_action": "Keep ready package; include in atomic15recipe publication after remaining13 complete.",
+        "next_action": "Published and QA closed; preserve.",
         "published_database": true,
-        "publication_gate": "PENDING_CACHE_105_PAGES_GLOBAL_AND_VISUAL_QA"
+        "publication_gate": "PASS_7_OF_7_LIVE_QA"
       },
       {
         "id": "58aa988c-29f3-408c-8254-dd1be441cb04",
@@ -126,8 +127,8 @@
         "editorial_status": "published",
         "position": 19,
         "eligibility": "validate_url_master_before_writing",
-        "status": "prepared",
-        "stage": "cache/QA",
+        "status": "closed",
+        "stage": "cerrada",
         "identity_qa": "PASS",
         "classification": "ELIGIBLE_EXISTING_CULINARY_CANDIDATE_OR_CORE_REBUILD",
         "languages_ready": 7,
@@ -151,11 +152,11 @@
         "sql_executed": true,
         "qa_file": "editorial/receta-de-pizza-casera-qa-20261008.json",
         "localization_qa_file": "editorial/receta-de-pizza-casera-localization-qa-20261008.json",
-        "editorial_qa": "PASS_EDITORIAL_MEDIA_LOCALIZATION_NOT_LIVE",
+        "editorial_qa": "PASS",
         "package_sha256": "a1dc97fc54fe9299b6c375c93e67a169a4488a00130dc99af177df1e9b685f88",
-        "next_action": "Keep ready package unchanged; include in atomic15recipe publication after remaining12 complete.",
+        "next_action": "Published and QA closed; preserve.",
         "published_database": true,
-        "publication_gate": "PENDING_CACHE_105_PAGES_GLOBAL_AND_VISUAL_QA"
+        "publication_gate": "PASS_7_OF_7_LIVE_QA"
       },
       {
         "id": "f7df8371-8273-4b15-ba6e-32390a185395",
@@ -166,8 +167,8 @@
         "editorial_status": "published",
         "position": 20,
         "eligibility": "validate_url_master_before_writing",
-        "status": "prepared",
-        "stage": "cache/QA",
+        "status": "closed",
+        "stage": "cerrada",
         "identity_qa": "PASS",
         "classification": "ELIGIBLE_EXISTING_CULINARY_CANDIDATE_OR_CORE_REBUILD",
         "languages_ready": 7,
@@ -181,7 +182,7 @@
         "original_images_required": 10,
         "distinct_images_pending": 0,
         "expected_es_row_md5": "10e12c287c255ee35eac23e73a744d7e",
-        "next_action": "Keep ready7language package and23media unchanged; include in atomic15recipe batch publication after remaining11complete.",
+        "next_action": "Published and QA closed; preserve.",
         "image_originals": 10,
         "image_visual_qa": "PASS_ALL10_ORIGINALS",
         "cover_variant_visual_qa": "PASS_MAIN_SERVING_ALL_RATIOS",
@@ -192,7 +193,7 @@
         "sql_executed": true,
         "qa_file": "editorial/lasana-de-calabacin-y-berenjena-qa-20261008.json",
         "localization_qa_file": "editorial/lasana-de-calabacin-y-berenjena-localization-qa-20261008.json",
-        "editorial_qa": "PASS_EDITORIAL_MEDIA_LOCALIZATION_NOT_LIVE",
+        "editorial_qa": "PASS",
         "package_sha256": "169ee3c1600959c69897b7d03fba3563ed7af7584a42052e2b132847d32f66ff",
         "published_database": true,
         "media_remote_hash_qa": "PASS_ALL23_AFTER_RESTORE",
@@ -205,7 +206,7 @@
           "commit": "5859abb322e921346aa656c3b1052d9523e0af80",
           "hashes_match_original_manifest": true
         },
-        "publication_gate": "PENDING_CACHE_105_PAGES_GLOBAL_AND_VISUAL_QA"
+        "publication_gate": "PASS_7_OF_7_LIVE_QA"
       },
       {
         "id": "9e04ccf3-9d8f-4823-a0fd-f371c6866acf",
@@ -216,8 +217,8 @@
         "editorial_status": "published",
         "position": 21,
         "eligibility": "validate_url_master_before_writing",
-        "status": "prepared",
-        "stage": "cache/QA",
+        "status": "closed",
+        "stage": "cerrada",
         "identity_qa": "PASS",
         "classification": "ELIGIBLE_EXISTING_CULINARY_CANDIDATE_OR_CORE_REBUILD",
         "languages_ready": 7,
@@ -231,7 +232,7 @@
         "original_images_required": 8,
         "distinct_images_pending": 0,
         "expected_es_row_md5": "ac80098c1d3bdf5f3bd584bea93c4837",
-        "next_action": "Keep7language package and19media unchanged; include in atomic15recipe publication after remaining10complete.",
+        "next_action": "Published and QA closed; preserve.",
         "image_originals": 8,
         "image_visual_qa": "PASS_ALL8_ORIGINALS",
         "cover_variant_visual_qa": "PASS_ALL_RATIOS_WHOLE_BOWL",
@@ -242,10 +243,10 @@
         "sql_executed": true,
         "qa_file": "editorial/receta-de-hummus-qa-20261008.json",
         "localization_qa_file": "editorial/receta-de-hummus-localization-qa-20261008.json",
-        "editorial_qa": "PASS_EDITORIAL_MEDIA_LOCALIZATION_NOT_LIVE",
+        "editorial_qa": "PASS",
         "package_sha256": "ddc51fc92ce231b87a25096c715fdc017c531c9571cbd4938ad0f2a9f4e0c916",
         "published_database": true,
-        "publication_gate": "PENDING_CACHE_105_PAGES_GLOBAL_AND_VISUAL_QA"
+        "publication_gate": "PASS_7_OF_7_LIVE_QA"
       },
       {
         "id": "1b078b4e-6544-41d5-8e9c-52e6d8fa3d8e",
@@ -256,8 +257,8 @@
         "editorial_status": "published",
         "position": 22,
         "eligibility": "validate_url_master_before_writing",
-        "status": "prepared",
-        "stage": "cache/QA",
+        "status": "closed",
+        "stage": "cerrada",
         "identity_qa": "PASS",
         "classification": "ELIGIBLE_EXISTING_CULINARY_CANDIDATE_OR_CORE_REBUILD",
         "languages_ready": 7,
@@ -271,7 +272,7 @@
         "original_images_required": 6,
         "distinct_images_pending": 0,
         "expected_es_row_md5": "5f8c556c3a86ef05410b815dbff15f90",
-        "next_action": "Keep7languages/15media unchanged; include in atomic15recipe publication after remaining9complete.",
+        "next_action": "Published and QA closed; preserve.",
         "image_originals": 6,
         "image_visual_qa": "PASS_ALL6_ORIGINALS",
         "cover_variant_visual_qa": "PASS_ALL_RATIOS_WHOLE_TWO_GLASSES",
@@ -282,10 +283,10 @@
         "sql_executed": true,
         "qa_file": "editorial/receta-de-pina-colada-qa-20261008.json",
         "localization_qa_file": "editorial/receta-de-pina-colada-localization-qa-20261008.json",
-        "editorial_qa": "PASS_EDITORIAL_MEDIA_LOCALIZATION_NOT_LIVE",
+        "editorial_qa": "PASS",
         "package_sha256": "459fa9f6c22dfa9081f8deb2e271c1333e13f2ef40d1105e40d8afb21c766ef5",
         "published_database": true,
-        "publication_gate": "PENDING_CACHE_105_PAGES_GLOBAL_AND_VISUAL_QA"
+        "publication_gate": "PASS_7_OF_7_LIVE_QA"
       },
       {
         "id": "2fd8b5c5-b708-407f-9437-ee0478f1f5b9",
@@ -296,8 +297,8 @@
         "editorial_status": "published",
         "position": 23,
         "eligibility": "validate_url_master_before_writing",
-        "status": "prepared",
-        "stage": "cache/QA",
+        "status": "closed",
+        "stage": "cerrada",
         "identity_qa": "PASS",
         "classification": "ELIGIBLE_EXISTING_CULINARY_CANDIDATE_OR_CORE_REBUILD",
         "languages_ready": 7,
@@ -311,7 +312,7 @@
         "original_images_required": 9,
         "distinct_images_pending": 0,
         "expected_es_row_md5": "8ee444b23668f2a1a2a67d726744951f",
-        "next_action": "Keep7language package/21media unchanged; include in atomic15recipe publication after remaining8complete.",
+        "next_action": "Published and QA closed; preserve.",
         "image_originals": 9,
         "next_image": null,
         "cover_variant_visual_qa": "PASS_TWO_COMPLETE_DISCS_ALL_RATIOS",
@@ -322,11 +323,11 @@
         "sql_executed": true,
         "qa_file": "editorial/receta-de-okonomiyaki-qa-20261008.json",
         "localization_qa_file": "editorial/receta-de-okonomiyaki-localization-qa-20261008.json",
-        "editorial_qa": "PASS_EDITORIAL_MEDIA_LOCALIZATION_NOT_LIVE",
+        "editorial_qa": "PASS",
         "package_sha256": "c3154e0d4e52ce82d06b6c46e22b7f212e255f837b68c7f47fbb9cf41774a3e6",
         "published_database": true,
         "media_remote_hash_qa": "PASS_ALL21_EXACT_BYTES_GITSHA",
-        "publication_gate": "PENDING_CACHE_105_PAGES_GLOBAL_AND_VISUAL_QA"
+        "publication_gate": "PASS_7_OF_7_LIVE_QA"
       },
       {
         "id": "d3f9ad59-7c1d-4f02-8fcc-7cc9224773d3",
@@ -337,8 +338,8 @@
         "editorial_status": "published",
         "position": 24,
         "eligibility": "validate_url_master_before_writing",
-        "status": "prepared",
-        "stage": "cache/QA",
+        "status": "closed",
+        "stage": "cerrada",
         "identity_qa": "PASS",
         "classification": "ELIGIBLE_EXISTING_CULINARY_CANDIDATE_OR_CORE_REBUILD",
         "languages_ready": 7,
@@ -352,7 +353,7 @@
         "original_images_required": 9,
         "distinct_images_pending": 0,
         "expected_es_row_md5": "4d95b0114e28634f4cc3ab21ff569c69",
-        "next_action": "Keep7language package/21media unchanged; include in atomic15recipe publication after remaining7complete.",
+        "next_action": "Published and QA closed; preserve.",
         "image_originals": 9,
         "image_visual_qa": "PASS_ALL9_ORIGINALS",
         "cover_variant_visual_qa": "PASS_WHOLE_BOWL_ALL_RATIOS",
@@ -363,11 +364,11 @@
         "sql_executed": true,
         "qa_file": "editorial/receta-de-ensalada-rusa-qa-20261008.json",
         "localization_qa_file": "editorial/receta-de-ensalada-rusa-localization-qa-20261008.json",
-        "editorial_qa": "PASS_EDITORIAL_MEDIA_LOCALIZATION_NOT_LIVE",
+        "editorial_qa": "PASS",
         "package_sha256": "4270560c6f2f4c55262cf50061aeb7150066d5a0d605850aa843ce07dd76c735",
         "published_database": true,
         "media_remote_hash_qa": "PASS_ALL21_EXACT_BYTES_GITSHA",
-        "publication_gate": "PENDING_CACHE_105_PAGES_GLOBAL_AND_VISUAL_QA"
+        "publication_gate": "PASS_7_OF_7_LIVE_QA"
       },
       {
         "id": "f706a385-30ef-4835-91e5-a24be0a9ac17",
@@ -378,8 +379,8 @@
         "editorial_status": "published",
         "position": 25,
         "eligibility": "validate_url_master_before_writing",
-        "status": "prepared",
-        "stage": "cache/QA",
+        "status": "closed",
+        "stage": "cerrada",
         "identity_qa": "PASS",
         "classification": "ELIGIBLE_EXISTING_CULINARY_CANDIDATE_OR_CORE_REBUILD",
         "languages_ready": 7,
@@ -393,7 +394,7 @@
         "original_images_required": 6,
         "distinct_images_pending": 0,
         "expected_es_row_md5": "880ec62424f98541f378f89f5d0a98ad",
-        "next_action": "Keep7language package/15media unchanged; include in atomic15recipe batchpublication after remaining6complete.",
+        "next_action": "Published and QA closed; preserve.",
         "image_originals": 6,
         "image_visual_qa": "PASS_ALL6_ORIGINALS",
         "cover_variant_visual_qa": "PASS_WHOLE_BOWL_ALL_RATIOS",
@@ -404,11 +405,11 @@
         "sql_executed": true,
         "qa_file": "editorial/receta-de-ensalada-de-frutos-rojos-qa-20261008.json",
         "localization_qa_file": "editorial/receta-de-ensalada-de-frutos-rojos-localization-qa-20261008.json",
-        "editorial_qa": "PASS_EDITORIAL_MEDIA_LOCALIZATION_NOT_LIVE",
+        "editorial_qa": "PASS",
         "package_sha256": "031ba8dde3d44fc4d087896364bf840bff951f78322c90a3e7b1be64fa262a33",
         "published_database": true,
         "media_remote_hash_qa": "PASS_ALL15_EXACT_BYTES_GITSHA",
-        "publication_gate": "PENDING_CACHE_105_PAGES_GLOBAL_AND_VISUAL_QA"
+        "publication_gate": "PASS_7_OF_7_LIVE_QA"
       },
       {
         "id": "f16da00a-a43d-44ec-9aae-a061efd4efb0",
@@ -419,8 +420,8 @@
         "editorial_status": "published",
         "position": 26,
         "eligibility": "validate_url_master_before_writing",
-        "status": "prepared",
-        "stage": "cache/QA",
+        "status": "closed",
+        "stage": "cerrada",
         "identity_qa": "PASS",
         "classification": "ELIGIBLE_EXISTING_CULINARY_CANDIDATE_OR_CORE_REBUILD",
         "languages_ready": 7,
@@ -444,12 +445,12 @@
         "sql_executed": true,
         "qa_file": "editorial/como-preparar-queso-qa-20261008.json",
         "localization_qa_file": "editorial/como-preparar-queso-localization-qa-20261008.json",
-        "editorial_qa": "PASS_EDITORIAL_MEDIA_LOCALIZATION_NOT_LIVE",
+        "editorial_qa": "PASS",
         "package_sha256": "6992b68c41e77ebb0b93138f542552735c7256eea99b46c2cb360f68a8e39354",
         "published_database": true,
         "media_remote_hash_qa": "PASS_ALL19_EXACT_BYTES_GITSHA",
-        "next_action": "Keep7language package/19media unchanged; include in atomic15recipe publication after remaining5complete.",
-        "publication_gate": "PENDING_CACHE_105_PAGES_GLOBAL_AND_VISUAL_QA"
+        "next_action": "Published and QA closed; preserve.",
+        "publication_gate": "PASS_7_OF_7_LIVE_QA"
       },
       {
         "id": "ec187585-de34-4781-8353-9b8e3da68885",
@@ -460,8 +461,8 @@
         "editorial_status": "published",
         "position": 27,
         "eligibility": "validate_url_master_before_writing",
-        "status": "prepared",
-        "stage": "cache/QA",
+        "status": "closed",
+        "stage": "cerrada",
         "identity_qa": "PASS",
         "classification": "ELIGIBLE_EXISTING_CULINARY_CANDIDATE_OR_CORE_REBUILD",
         "languages_ready": 7,
@@ -478,15 +479,15 @@
         "image_originals": 9,
         "image_visual_qa": "PASS_ALL9_ORIGINALS",
         "cover_variant_visual_qa": "PASS_MAIN_SUBJECT_ALL_RATIOS",
-        "next_action": "Preserve completed package; include in atomic batch03 publication after four remaining recipes complete.",
+        "next_action": "Published and QA closed; preserve.",
         "localizations_pending": [],
         "localization_qa": "PASS",
-        "editorial_qa": "PASS_EDITORIAL_MEDIA_LOCALIZATION_NOT_LIVE",
+        "editorial_qa": "PASS",
         "qa_file": "editorial/pollo-agridulce-qa-20261008.json",
         "package_sha256": "bf3226d3c03ba0756e6fbb48489b935a615c58baa872313f3e8bb690c697c41c",
         "portuguese_locale": "pt-BR",
         "published_database": true,
-        "publication_gate": "PENDING_CACHE_105_PAGES_GLOBAL_AND_VISUAL_QA",
+        "publication_gate": "PASS_7_OF_7_LIVE_QA",
         "sql_executed": true
       },
       {
@@ -498,8 +499,8 @@
         "editorial_status": "published",
         "position": 28,
         "eligibility": "validate_url_master_before_writing",
-        "status": "prepared",
-        "stage": "cache/QA",
+        "status": "closed",
+        "stage": "cerrada",
         "identity_qa": "PASS",
         "classification": "ELIGIBLE_EXISTING_CULINARY_CANDIDATE_OR_CORE_REBUILD",
         "languages_ready": 7,
@@ -510,18 +511,18 @@
         "nutrition_evidence_file": "editorial/receta-de-flan-de-chocolate-usda-verificado-20261008.json",
         "steps_sha256": "75a3dd6a54ce9658f5e00ba2a7f09dff5a5fad0f2a5382e25d1eb462d90c8b6d",
         "distinct_images_pending": 0,
-        "next_action": "Include frozen7language source in full15atomic SQL after the three remaining recipes.",
+        "next_action": "Published and QA closed; preserve.",
         "image_originals": 9,
         "image_visual_qa": "PASS_ALL_PHASES",
         "cover_variant_visual_qa": "PASS",
         "localizations_pending": [],
         "localization_qa": "PASS",
-        "editorial_qa": "PASS_EDITORIAL_MEDIA_LOCALIZATION_NOT_LIVE",
+        "editorial_qa": "PASS",
         "qa_file": "editorial/receta-de-flan-de-chocolate-qa-20261008.json",
         "package_sha256": "cd319744411199724a952529d3355dc3cc85e3d36b92230d6babc8480b040389",
         "portuguese_locale": "pt-BR",
         "published_database": true,
-        "publication_gate": "PENDING_CACHE_105_PAGES_GLOBAL_AND_VISUAL_QA",
+        "publication_gate": "PASS_7_OF_7_LIVE_QA",
         "sql_executed": true
       },
       {
@@ -533,8 +534,8 @@
         "editorial_status": "published",
         "position": 29,
         "eligibility": "validate_url_master_before_writing",
-        "status": "prepared",
-        "stage": "cache/QA",
+        "status": "closed",
+        "stage": "cerrada",
         "identity_qa": "PASS",
         "classification": "ELIGIBLE_EXISTING_CULINARY_CANDIDATE_OR_CORE_REBUILD",
         "languages_ready": 7,
@@ -547,7 +548,7 @@
         "original_images_required": 9,
         "distinct_images_pending": 0,
         "es_editorial_qa": "PASS_USDA_TRACEABILITY_EXPLICIT_OIL_RETENTION_ESTIMATE",
-        "next_action": "Keep complete7language package unchanged; include in atomic15 publication after remaining2complete.",
+        "next_action": "Published and QA closed; preserve.",
         "image_originals": 9,
         "image_visual_qa": "PASS_ALL9_ORIGINALS",
         "cover_variant_visual_qa": "PASS_WHOLE_PLATE_ALL4_RATIOS",
@@ -562,14 +563,14 @@
         "media_remote_hash_qa": "PASS_ALL21_EXACT_BYTES_GITSHA",
         "localizations_pending": [],
         "localization_qa": "PASS",
-        "editorial_qa": "PASS_EDITORIAL_MEDIA_LOCALIZATION_NOT_LIVE",
+        "editorial_qa": "PASS",
         "package_sha256": "996fad561b26b9a68b984086fa6e5d5c4bb9d0af36d1e630fbf903b29dcaa3be",
         "sql_file": "scripts/publish-receta-de-fish-and-chip-pescado-y-papas-fritas-20261008.sql",
         "sql_sha256": "683015a275cf60463464f384ac2ed01160a3b0d1c0e5106d21859622c7744a37",
         "sql_executed": true,
         "qa_file": "editorial/receta-de-fish-and-chip-pescado-y-papas-fritas-qa-20261008.json",
         "published_database": true,
-        "publication_gate": "PENDING_CACHE_105_PAGES_GLOBAL_AND_VISUAL_QA"
+        "publication_gate": "PASS_7_OF_7_LIVE_QA"
       },
       {
         "id": "92f6fc6a-3b44-4422-b0ea-7a6ef257f8d7",
@@ -580,8 +581,8 @@
         "editorial_status": "published",
         "position": 30,
         "eligibility": "validate_url_master_before_writing",
-        "status": "prepared",
-        "stage": "cache/QA",
+        "status": "closed",
+        "stage": "cerrada",
         "identity_qa": "PASS_FRESH7_ROUTES_NO_COLLISIONS",
         "classification": "ELIGIBLE_EXISTING_CULINARY_CANDIDATE_OR_CORE_REBUILD",
         "languages_ready": 7,
@@ -595,7 +596,7 @@
         "es_editorial_qa": "PASS_STRUCTURAL_USDA5_TRACEABILITY",
         "original_images_required": 7,
         "distinct_images_pending": 0,
-        "next_action": "Include ready seven-language package and17verifiedmedia in atomic15 publication after spinach omelette.",
+        "next_action": "Published and QA closed; preserve.",
         "image_originals": 7,
         "cover_variant_visual_qa": "PASS_FOOD_SURFACE_ALL4_RATIOS_SQUARE_RIM_CLOSE_CROP",
         "next_image": null,
@@ -603,14 +604,14 @@
         "localizations_pending": [],
         "media_remote_hash_qa": "PASS_ALL17_EXACT_BYTES_GITSHA",
         "localization_qa": "PASS",
-        "editorial_qa": "PASS_EDITORIAL_MEDIA_LOCALIZATION_NOT_LIVE",
+        "editorial_qa": "PASS",
         "package_sha256": "a793be081c91a2f44df54571d6024d08a1af482dfa50cc4c15c473bb665bc03d",
         "sql_file": "scripts/publish-salsa-de-tomate-casera-20261008.sql",
         "sql_sha256": "903738e148368ca3f2bd1fe6ed041f280afa122019cbe3e3e290cfcfbb4fc35a",
         "sql_executed": true,
         "qa_file": "editorial/salsa-de-tomate-casera-qa-20261008.json",
         "published_database": true,
-        "publication_gate": "PENDING_CACHE_105_PAGES_GLOBAL_AND_VISUAL_QA"
+        "publication_gate": "PASS_7_OF_7_LIVE_QA"
       },
       {
         "id": "b344d1ea-972a-4382-8845-1e29f1704476",
@@ -621,8 +622,8 @@
         "editorial_status": "published",
         "position": 31,
         "eligibility": "validate_url_master_before_writing",
-        "status": "prepared",
-        "stage": "cache/QA",
+        "status": "closed",
+        "stage": "cerrada",
         "identity_qa": "PASS_FRESH7_ROUTES_NO_COLLISIONS_DISTINCT_CONCEPT",
         "classification": "ELIGIBLE_EXISTING_CULINARY_CANDIDATE_OR_CORE_REBUILD",
         "languages_ready": 7,
@@ -636,13 +637,13 @@
         "es_editorial_qa": "PASS_FIVE_USDA_RECORDS_AND_EGG71C",
         "original_images_required": 7,
         "distinct_images_pending": 0,
-        "next_action": "Include in full15 publication after batch validation CI merge observed deploy.",
+        "next_action": "Published and QA closed; preserve.",
         "image_originals": 7,
         "image_visual_qa": "PASS_ALL7_ORIGINALS",
         "cover_variant_visual_qa": "PASS_WHOLE_FOOD_ALL4_RATIOS_AFTER_FRAMING_EDIT",
         "localizations_pending": [],
         "localization_qa": "PASS",
-        "editorial_qa": "PASS_EDITORIAL_MEDIA_LOCALIZATION_NOT_LIVE",
+        "editorial_qa": "PASS",
         "package_sha256": "faece002f142f947898f49bb22ad5d898078f44bdb8c93768f78f4fb8a043409",
         "sql_file": "scripts/publish-receta-de-tortilla-de-espinaca-20261008.sql",
         "sql_sha256": "59239a7b5ee142884a9f26d9b63337a7d2aeec05d0b77752e687c7ea3b92a672",
@@ -650,14 +651,14 @@
         "qa_file": "editorial/receta-de-tortilla-de-espinaca-qa-20261008.json",
         "published_database": true,
         "media_remote_hash_qa": "PASS_ALL17_EXACT_BYTES_GITSHA",
-        "publication_gate": "PENDING_CACHE_105_PAGES_GLOBAL_AND_VISUAL_QA"
+        "publication_gate": "PASS_7_OF_7_LIVE_QA"
       }
     ],
     "sql_file": "scripts/publish-lote03-20261008.sql",
     "sql_sha256": "48cdf6637ca77bd6962848b05e429851c85d3bb353f78b9d167b57cca526ae44",
     "plan_file": "editorial/lote-03-plan-20261008.json",
-    "prepublication_qa": "PASS_METADATA_105_ROWS_174_WEBP_127_PNG_PENDING_CI_FILE_DECODE",
-    "next_action": "Create postpublication verification PR to revalidate cache via Actions secret, audit105pages then one global audit with actual139ES; visual QA; close batch only after passing.",
+    "prepublication_qa": "PASS_METADATA_AND_CI_ALL301_FILES_DECODED",
+    "next_action": "Batch03 closed. Validate next15candidate identities and classification, acquire CAS lease on newbatch04 branch, preserve all published groups.",
     "pr_number": 95,
     "pr_url": "https://github.com/manualdecocina/Recetas/pull/95",
     "pr_head_sha": "810e70ee4d5d13a3df1c129be41be211bd03b199",
@@ -713,9 +714,9 @@
         "published_es": 124
       },
       "resolved_in_source": true,
-      "pending": "Correction PR, CI and observed deployment before retry.",
+      "pending": null,
       "resolved_at": "2026-10-09T00:35:51.719Z",
-      "resolution": "CorrectedSQL merged96, observed174media then atomic publication succeeded; all105rows verified. Cache/live QA pending."
+      "resolution": "CorrectedSQL merged96, observed174media then atomic publication succeeded; all105rows verified. Cache/live QA pending. Cache and105livepages/global/visualQA passed."
     },
     "sql_compilation_qa": "PASS_ALL17_DO_BLOCKS_IN_READ_ONLY_TRANSACTION_ROLLED_BACK_WITH_EARLY_RETURNS",
     "correction_pr_number": 96,
@@ -851,17 +852,405 @@
       "es_historical_preserved": true,
       "unrelated_rows": 938,
       "unrelated_sha": "77913769e2eaf154e55bc8b36673bfc3"
+    },
+    "closed_at": "2026-10-09T00:46:05.137Z",
+    "qa": {
+      "schema_version": 1,
+      "batch": "lote-03-20261008",
+      "status": "PASS",
+      "closed_at": "2026-10-09T00:46:05.137Z",
+      "source_head": "9e58f772c19a09414b550aacca8eacf9ab9dcc18",
+      "recipes": 15,
+      "language_rows": 105,
+      "media": {
+        "published_webp": 174,
+        "original_png": 127,
+        "decoded_ci": true,
+        "deploy": {
+          "merge_sha": "52dafa72d8b2aefb054dc58521a9cdac427e23c5",
+          "run_id": 37865324726,
+          "artifact_id": 11588121193,
+          "assets": 174,
+          "passed": 174,
+          "errors": 0,
+          "checked_at": "2026-10-09T00:33:55.153206+00:00"
+        }
+      },
+      "sql": {
+        "file": "scripts/publish-lote03-20261008.sql",
+        "sha256": "48cdf6637ca77bd6962848b05e429851c85d3bb353f78b9d167b57cca526ae44",
+        "executed": true,
+        "backup": "editorial/backups/lote03-prepublication-db-20261009.json"
+      },
+      "database": {
+        "verified_at": "2026-10-09T00:35:51.719Z",
+        "sql_sha256": "48cdf6637ca77bd6962848b05e429851c85d3bb353f78b9d167b57cca526ae44",
+        "groups": [
+          {
+            "rows": 7,
+            "languages": 7,
+            "published": 7,
+            "recipe_group_id": "03d0b017-8568-45d9-b993-87765956a71b"
+          },
+          {
+            "rows": 7,
+            "languages": 7,
+            "published": 7,
+            "recipe_group_id": "26e35ba2-35e6-4066-b663-242746818f42"
+          },
+          {
+            "rows": 7,
+            "languages": 7,
+            "published": 7,
+            "recipe_group_id": "31a06fe5-2ae5-4451-8ee8-e53376013609"
+          },
+          {
+            "rows": 7,
+            "languages": 7,
+            "published": 7,
+            "recipe_group_id": "37e555b3-fa4f-4309-84de-62d613fe25ab"
+          },
+          {
+            "rows": 7,
+            "languages": 7,
+            "published": 7,
+            "recipe_group_id": "413ca438-81b2-42a0-8694-a14c1df6ef79"
+          },
+          {
+            "rows": 7,
+            "languages": 7,
+            "published": 7,
+            "recipe_group_id": "5179abcc-7963-45a9-9cd8-a8ed30a192ea"
+          },
+          {
+            "rows": 7,
+            "languages": 7,
+            "published": 7,
+            "recipe_group_id": "5ec0b548-d9d8-4c42-ab6c-70c32958aad9"
+          },
+          {
+            "rows": 7,
+            "languages": 7,
+            "published": 7,
+            "recipe_group_id": "7151996b-f41e-4e46-932a-bd6584dc972c"
+          },
+          {
+            "rows": 7,
+            "languages": 7,
+            "published": 7,
+            "recipe_group_id": "9a28dffd-cdde-4e20-a746-88336cb0a016"
+          },
+          {
+            "rows": 7,
+            "languages": 7,
+            "published": 7,
+            "recipe_group_id": "aad582c9-6559-4226-a297-8294c664d4c5"
+          },
+          {
+            "rows": 7,
+            "languages": 7,
+            "published": 7,
+            "recipe_group_id": "b04d6480-7bc2-40c9-b7c7-84fdc0d3c507"
+          },
+          {
+            "rows": 7,
+            "languages": 7,
+            "published": 7,
+            "recipe_group_id": "cafa20f9-b141-461e-b60a-ead32318e8fb"
+          },
+          {
+            "rows": 7,
+            "languages": 7,
+            "published": 7,
+            "recipe_group_id": "e91765d0-3d25-4790-a08f-89ce82446332"
+          },
+          {
+            "rows": 7,
+            "languages": 7,
+            "published": 7,
+            "recipe_group_id": "eafc642e-46c8-4c17-9815-9de6dd4809fc"
+          },
+          {
+            "rows": 7,
+            "languages": 7,
+            "published": 7,
+            "recipe_group_id": "f4940b22-428f-4f14-a8f3-a2a208e8ac0e"
+          }
+        ],
+        "published_es": 139,
+        "unpublished_es": 70,
+        "es_historical_preserved": true,
+        "unrelated_rows": 938,
+        "unrelated_sha": "77913769e2eaf154e55bc8b36673bfc3"
+      },
+      "cache": {
+        "confirmed": true,
+        "sitemap_contains_batch_urls": 105,
+        "secret_handling": "Actions only; trailing CR/LF removed"
+      },
+      "bounded": {
+        "checked_at": "2026-10-09T00:37:21.292803+00:00",
+        "groups": 15,
+        "pages": 105,
+        "passed": 105,
+        "errors": []
+      },
+      "global": {
+        "sitemap_urls": 1146,
+        "status": {
+          "200": 1146,
+          "403": 0,
+          "404": 0,
+          "3xx": 0,
+          "5xx": 0,
+          "other": 0
+        },
+        "internal_links_outside_sitemap": 7,
+        "internal_link_status": {
+          "200": 7,
+          "403": 0,
+          "404": 0,
+          "3xx": 0,
+          "5xx": 0,
+          "other": 0
+        },
+        "images": 1477,
+        "legacy_redirects": 147,
+        "legacy_redirect_status": {
+          "200": 57,
+          "307": 81,
+          "308": 9
+        },
+        "recipe_pages": 973,
+        "recipe_schema_valid": 973,
+        "es_recipes": 139,
+        "breadcrumb_pages": 1067,
+        "breadcrumb_valid": 1067,
+        "hreflang_by_language": {
+          "es": {
+            "pages": 186,
+            "with_hreflang": 160,
+            "with_x_default": 21,
+            "errors": 0
+          },
+          "de": {
+            "pages": 160,
+            "with_hreflang": 160,
+            "with_x_default": 21,
+            "errors": 0
+          },
+          "en": {
+            "pages": 160,
+            "with_hreflang": 160,
+            "with_x_default": 21,
+            "errors": 0
+          },
+          "fr": {
+            "pages": 160,
+            "with_hreflang": 160,
+            "with_x_default": 21,
+            "errors": 0
+          },
+          "it": {
+            "pages": 160,
+            "with_hreflang": 160,
+            "with_x_default": 21,
+            "errors": 0
+          },
+          "ja": {
+            "pages": 160,
+            "with_hreflang": 160,
+            "with_x_default": 21,
+            "errors": 0
+          },
+          "pt-BR": {
+            "pages": 160,
+            "with_hreflang": 160,
+            "with_x_default": 21,
+            "errors": 0
+          }
+        },
+        "orphan_pages": 0,
+        "robots_txt_blocked": true,
+        "pages_noindex_nofollow": 1146,
+        "not_found_probe": 404,
+        "errors": 0,
+        "errors_by_kind": {}
+      },
+      "visual_qa_file": "editorial/lote03-live-visual-qa-20261009.json",
+      "ingredient_resolution_file": "editorial/lote03-ingredient-resolution-20261009.json",
+      "verification": {
+        "pr": 97,
+        "merge_sha": "e8bcafc8ac7f6dc2e992d750c6fe78557d1b5152",
+        "run": 37865598567,
+        "job": 113611451727,
+        "conclusion": "success",
+        "artifact_id": 11587064736,
+        "artifact_digest": "sha256:efcad37a9ad0b26b0af5f0aa6ab46e5dd90f61316349c5fcc5904b5d94ea5743"
+      },
+      "remaining": {
+        "pending_candidates": 21,
+        "held": 49,
+        "unpublished_es": 70,
+        "technical_ingredient_debt": 112
+      },
+      "migration": {
+        "dns_changed": false,
+        "noindex_removed": false
+      }
+    },
+    "visual_qa": {
+      "schema_version": 1,
+      "batch": "lote-03-20261008",
+      "checked_at": "2026-10-09T00:46:05.137Z",
+      "status": "PASS_DESKTOP",
+      "viewport": {
+        "width": 1363,
+        "height": 936
+      },
+      "covers": [
+        {
+          "slug": "receta-de-sopa-de-mariscos-con-mejillones",
+          "url": "https://preview.manualdecocina.com/receta-de-sopa-de-mariscos-con-mejillones",
+          "status": "PASS_LOADED_COVER_CORRECT_FOOD_AND_READABLE_LAYOUT"
+        },
+        {
+          "slug": "receta-empanadas-argentinas",
+          "url": "https://preview.manualdecocina.com/receta-empanadas-argentinas",
+          "status": "PASS_LOADED_COVER_CORRECT_FOOD_AND_READABLE_LAYOUT"
+        },
+        {
+          "slug": "receta-de-pizza-casera",
+          "url": "https://preview.manualdecocina.com/receta-de-pizza-casera",
+          "status": "PASS_LOADED_COVER_CORRECT_FOOD_AND_READABLE_LAYOUT"
+        },
+        {
+          "slug": "lasana-de-calabacin-y-berenjena",
+          "url": "https://preview.manualdecocina.com/lasana-de-calabacin-y-berenjena",
+          "status": "PASS_LOADED_COVER_CORRECT_FOOD_AND_READABLE_LAYOUT"
+        },
+        {
+          "slug": "receta-de-hummus",
+          "url": "https://preview.manualdecocina.com/receta-de-hummus",
+          "status": "PASS_LOADED_COVER_CORRECT_FOOD_AND_READABLE_LAYOUT"
+        },
+        {
+          "slug": "receta-de-pina-colada",
+          "url": "https://preview.manualdecocina.com/receta-de-pina-colada",
+          "status": "PASS_LOADED_COVER_CORRECT_FOOD_AND_READABLE_LAYOUT"
+        },
+        {
+          "slug": "receta-de-okonomiyaki",
+          "url": "https://preview.manualdecocina.com/receta-de-okonomiyaki",
+          "status": "PASS_LOADED_COVER_CORRECT_FOOD_AND_READABLE_LAYOUT"
+        },
+        {
+          "slug": "receta-de-ensalada-rusa",
+          "url": "https://preview.manualdecocina.com/receta-de-ensalada-rusa",
+          "status": "PASS_LOADED_COVER_CORRECT_FOOD_AND_READABLE_LAYOUT"
+        },
+        {
+          "slug": "receta-de-ensalada-de-frutos-rojos",
+          "url": "https://preview.manualdecocina.com/receta-de-ensalada-de-frutos-rojos",
+          "status": "PASS_LOADED_COVER_CORRECT_FOOD_AND_READABLE_LAYOUT"
+        },
+        {
+          "slug": "como-preparar-queso",
+          "url": "https://preview.manualdecocina.com/como-preparar-queso",
+          "status": "PASS_LOADED_COVER_CORRECT_FOOD_AND_READABLE_LAYOUT"
+        },
+        {
+          "slug": "pollo-agridulce",
+          "url": "https://preview.manualdecocina.com/pollo-agridulce",
+          "status": "PASS_LOADED_COVER_CORRECT_FOOD_AND_READABLE_LAYOUT"
+        },
+        {
+          "slug": "receta-de-flan-de-chocolate",
+          "url": "https://preview.manualdecocina.com/receta-de-flan-de-chocolate",
+          "status": "PASS_LOADED_COVER_CORRECT_FOOD_AND_READABLE_LAYOUT"
+        },
+        {
+          "slug": "receta-de-fish-and-chip-pescado-y-papas-fritas",
+          "url": "https://preview.manualdecocina.com/receta-de-fish-and-chip-pescado-y-papas-fritas",
+          "status": "PASS_LOADED_COVER_CORRECT_FOOD_AND_READABLE_LAYOUT"
+        },
+        {
+          "slug": "salsa-de-tomate-casera",
+          "url": "https://preview.manualdecocina.com/salsa-de-tomate-casera",
+          "status": "PASS_LOADED_COVER_CORRECT_FOOD_AND_READABLE_LAYOUT"
+        },
+        {
+          "slug": "receta-de-tortilla-de-espinaca",
+          "url": "https://preview.manualdecocina.com/receta-de-tortilla-de-espinaca",
+          "status": "PASS_LOADED_COVER_CORRECT_FOOD_AND_READABLE_LAYOUT"
+        }
+      ],
+      "translated_layout_samples": [
+        {
+          "language": "de",
+          "path": "/de/hausgemachte-tomatensauce",
+          "status": "PASS"
+        },
+        {
+          "language": "en",
+          "path": "/en/homemade-tomato-sauce-recipe-easy-quick-and-delicious-2",
+          "status": "PASS"
+        },
+        {
+          "language": "fr",
+          "path": "/fr/recette-de-sauce-tomate-maison-facile-rapide-et-delicieuse",
+          "status": "PASS"
+        },
+        {
+          "language": "it",
+          "path": "/it/salsa-di-pomodoro-fatta-in-casa",
+          "status": "PASS"
+        },
+        {
+          "language": "ja",
+          "path": "/ja/自家製トマトソース",
+          "status": "PASS"
+        }
+      ],
+      "portuguese_sample": {
+        "slug": "receta-de-tortilla-de-espinaca",
+        "locale": "pt-BR",
+        "selector": "PASS_NAVIGATED_ES_TO_PT",
+        "steps": [
+          5,
+          6,
+          7
+        ],
+        "steps_images_ingredients": "PASS",
+        "safety_text": "71°C cooking and74°C reheating visible"
+      },
+      "home": {
+        "path": "/es",
+        "featured_new_recipe": "receta-de-ensalada-de-frutos-rojos",
+        "new_recipe_links": "PASS"
+      },
+      "catalog": {
+        "path": "/es/recetas",
+        "visible_count": 139,
+        "cards_images_titles": "PASS"
+      },
+      "notes": [
+        "Lazy images and font repaint were inspected again after loading; soup long title fully rendered.",
+        "All127 phase originals and174published variants have prior accepted visual reviews in individual manifests; this is live desktop layout QA.",
+        "No mobile viewport review claimed."
+      ]
     }
   },
   "next_candidate_position": 32,
   "run_lease": {
     "owner": "work-fish-localization-20261008T2334",
-    "status": "active",
+    "status": "released",
     "acquired_at": "2026-10-08T23:33:59.326Z",
     "renewed_at": "2026-10-09T00:35:51.719Z",
     "expires_at": "2026-10-09T02:05:51.719Z",
     "previous_owner": "automation-continuation-20261009-fish-and-chips",
-    "reason": "Continue six Fish and Chips localizations, then remaining two recipes and full15 publication."
+    "reason": "Batch03 publication and all gates closed; reserve batch04 from mergedmain.",
+    "released_at": "2026-10-09T00:46:05.137Z"
   },
   "blockers": [],
   "debt": [
@@ -874,6 +1263,17 @@
       "evidence_file": "editorial/lote02-ingredient-resolution-20261008.json",
       "publication_blocking": false,
       "reason": "All144 editorial ingredients accounted for by existing trigger; no aliases invented. Pending matches preserved per D-060."
+    },
+    {
+      "batch": "lote-03-20261008",
+      "kind": "ingredient_normalization",
+      "stage": "final_pre_migration_technical_closure",
+      "editorial_entries": 133,
+      "canonical_matches": 21,
+      "pending_entries": 112,
+      "evidence_file": "editorial/lote03-ingredient-resolution-20261009.json",
+      "publication_blocking": false,
+      "reason": "Existing trigger retained unresolved entries; resolve only approved canonical ingredient matches during final pre-migration technical closure. No aliases or destinations invented."
     }
   ],
   "stop_condition": "All eligible pending recipes published and QA passed, held entities accounted for, pre-migration technical gates closed; production migration still not executed",
@@ -930,18 +1330,18 @@
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
   "progress_branch": "recetas/lote-03-20261008",
-  "last_checkpoint_at": "2026-10-08T20:52:59.919Z",
+  "last_checkpoint_at": "2026-10-09T00:46:05.137Z",
   "handoff": {
     "branch": "recetas/lote-03-20261008",
-    "current_recipe": "receta-de-flan-de-chocolate",
-    "prepared_recipes": 11,
-    "published_recipes": 0,
-    "stage": "identidad",
-    "checkpoint_at": "2026-10-08T19:34:48.323939+00:00",
-    "next_action": "Finish remaining four: chocolateflan,fishandchips,tomatosauce,spinachtortilla. Preserve first11packages. Full15CI/deploy/atomicDB/cache/liveQA remains."
+    "stage": "cerrada",
+    "prepared_recipes": 15,
+    "published_recipes": 15,
+    "completed_recipes": 15,
+    "checkpoint_at": "2026-10-09T00:46:05.137Z",
+    "next_action": "Batch03 closed. Validate next15candidate identities and classification, acquire CAS lease on newbatch04 branch, preserve all published groups."
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z",
-  "updated_at": "2026-10-09T00:35:51.719Z",
+  "updated_at": "2026-10-09T00:46:05.137Z",
   "completed_batches": [
     {
       "id": "lote-02-20261008",
@@ -949,21 +1349,28 @@
       "language_rows": 105,
       "closed_at": "2026-10-08T12:17:16.249Z",
       "qa": "editorial/lote02-final-qa-20261008.json"
+    },
+    {
+      "id": "lote-03-20261008",
+      "recipes": 15,
+      "language_rows": 105,
+      "closed_at": "2026-10-09T00:46:05.137Z",
+      "qa": "editorial/lote03-final-qa-20261009.json"
     }
   ],
   "observed_catalog": {
-    "published_groups": 124,
+    "published_groups": 139,
     "published_rows_by_language": {
-      "es": 124,
-      "de": 124,
-      "en": 124,
-      "fr": 124,
-      "it": 124,
-      "ja": 124,
-      "pt": 124
+      "es": 139,
+      "de": 139,
+      "en": 139,
+      "fr": 139,
+      "it": 139,
+      "ja": 139,
+      "pt": 139
     },
-    "unpublished_es_groups": 85,
-    "checked_at": "2026-10-08T12:17:16.249Z"
+    "unpublished_es_groups": 70,
+    "checked_at": "2026-10-09T00:46:05.137Z"
   },
   "previous_batch": {
     "id": "lote-02-20261008",
