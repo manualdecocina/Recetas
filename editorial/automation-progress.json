@@ -31,7 +31,7 @@
     "branch": "recetas/lote-04-20261009",
     "target": 15,
     "status": "in_progress",
-    "stage": "deploy",
+    "stage": "DB",
     "current_recipe": null,
     "started_at": "2026-10-09T00:56:43.882Z",
     "completed_recipes": 0,
@@ -655,7 +655,7 @@
         "publication_gate": "WAIT_FULL15_CI_MERGE_OBSERVED_DEPLOY_DB_CACHE_LIVE_QA"
       }
     ],
-    "next_action": "Observe actual163deployedWebP200exactSHA256 before atomicDB publication; then cache/live/global154QA.",
+    "next_action": "Publish atomic105rows then verifyDB7/7 and cache/live/globalQA154ES.",
     "reservation_pr": 99,
     "reservation_merge_sha": "c6ac9d0b770525ecd02ea6a934cd2a48f94a8325",
     "prepared_count": 15,
@@ -679,6 +679,18 @@
       "logic": true,
       "build": true,
       "media_decoded": 281
+    },
+    "deploy": {
+      "merge_sha": "fa780c12a7ff81a6d4cf84ad8b0c08ef24a00c25",
+      "run_id": 37900574514,
+      "job_id": 113721903342,
+      "artifact_id": 11602026868,
+      "artifact_digest": "sha256:b00bec91c17b312a9fcc9696b19450ee28bde1e41e9f950fb44e35214e275fca",
+      "assets": 163,
+      "passed": 163,
+      "errors": 0,
+      "checked_at": "2026-10-09T07:44:37.594345+00:00",
+      "conclusion": "success"
     }
   },
   "next_candidate_position": 33,
