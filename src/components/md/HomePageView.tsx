@@ -19,7 +19,7 @@ export interface MdHomeData {
   latest: MdRecipeCardData[];
   /** Actual category count and a real representative recipe image, nullable. */
   categories: MdCategorySummary[];
-  /** Only when lang === 'es'; real ingredient slugs and names. */
+  /** Canonical ingredient slugs with localized display names. */
   ingredients: MdIngredientSummary[];
 }
 
@@ -54,7 +54,7 @@ export default function HomePageView({ lang, data }: { lang: MdLanguage; data: M
             </figure>
           )}
         </section>
-        {lang === 'es' && <PantryBanner lang={lang} headingId="md-pantry-banner-heading" container />}
+        {<PantryBanner lang={lang} headingId="md-pantry-banner-heading" container />}
         {data.latest.length > 0 && <section className="md-section" aria-labelledby="md-latest-heading">
           <div className="md-container">
             <div className="md-section-head"><div><p className="md-eyebrow">{t.navRecipes}</p>
@@ -69,11 +69,11 @@ export default function HomePageView({ lang, data }: { lang: MdLanguage; data: M
             <CategoryGrid lang={lang} categories={data.categories} />
           </div>
         </section>}
-        {lang === 'es' && data.ingredients.length > 0 && <section className="md-section" aria-labelledby="md-ingredients-heading-home">
+        {data.ingredients.length > 0 && <section className="md-section" aria-labelledby="md-ingredients-heading-home">
           <div className="md-container"><div className="md-section-head"><h2 className="md-title" id="md-ingredients-heading-home">{t.browseIngredients}</h2>
-            <Link className="md-link" href="/es/ingredientes">{t.seeAllIngredients}</Link></div>
+            <Link className="md-link" href={`/${lang}/ingredientes`}>{t.seeAllIngredients}</Link></div>
             <nav className="md-ingredient-list" aria-label={t.browseIngredients}>
-              {data.ingredients.map((item) => <Link className="md-ingredient-link" key={item.slug} href={`/es/ingredientes/${item.slug}`}>{item.name}</Link>)}
+              {data.ingredients.map((item) => <Link className="md-ingredient-link" key={item.slug} href={`/${lang}/ingredientes/${item.slug}`}>{item.name}</Link>)}
             </nav>
           </div>
         </section>}

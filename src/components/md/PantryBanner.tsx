@@ -40,7 +40,7 @@ export default function PantryBanner({ lang, headingId, card = false, container 
             <p className="md-lead">{t.pantryBannerBody}</p>
           </div>
         </div>
-        <Link className="md-button" href="/es/que-puedo-cocinar">{t.pantryBannerCta}</Link>
+        <Link className="md-button" href={`/${lang}/que-puedo-cocinar`}>{t.pantryBannerCta}</Link>
       </div>
     </section>
   );

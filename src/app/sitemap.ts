@@ -104,7 +104,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }
   }
   // Herramienta real (gratuita) sin página propia en el sitemap hasta ahora.
-  entries.push({ url: `${site}/es/que-puedo-cocinar` })
+  for (const l of SUPPORTED_LANGUAGES) entries.push({ url: `${site}/${l}/que-puedo-cocinar`, alternates: staticAlternates((x) => `/${x}/que-puedo-cocinar`) })
 
   // Use the same ordered, paginated rows as recipe URLs. A separate unpaginated
   // query stops at the API row limit and can drop category routes in later languages.
@@ -129,9 +129,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     .order('name', { ascending: true })
   if (ingredientError) throw new Error(`Sitemap ingredients: ${ingredientError.message}`)
 
-  entries.push({ url: `${site}/es/ingredientes` })
-  for (const ingredient of (ingredients ?? []) as IngredientRow[]) {
-    entries.push({ url: `${site}/es/ingredientes/${ingredient.slug}`, lastModified: ingredient.updated_at })
+  for (const l of SUPPORTED_LANGUAGES) {
+    entries.push({ url: `${site}/${l}/ingredientes`, alternates: staticAlternates((x) => `/${x}/ingredientes`) })
+    for (const ingredient of (ingredients ?? []) as IngredientRow[]) {
+      entries.push({ url: `${site}/${l}/ingredientes/${ingredient.slug}`, lastModified: ingredient.updated_at,
+        alternates: staticAlternates((x) => `/${x}/ingredientes/${ingredient.slug}`) })
+    }
   }
 
   for (const row of rows) {

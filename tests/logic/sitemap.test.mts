@@ -36,7 +36,7 @@ const urls = s.map((e) => e.url)
 
 // 7 idiomas × (home, listado, categorías) + 8 institucionales × 7 idiomas
 // + 3 recetas publicadas del mock + herramienta + índice ingredientes + 2 ingredientes + content page.
-assert.equal(s.length, 7 * 3 + 8 * 7 + 3 + 1 + 1 + 2 + 1)
+assert.equal(s.length, 7 * 3 + 8 * 7 + 3 + 7 + 7 + 2 * 7 + 1)
 assert.ok(!urls.some((url) => url.includes('/recipe-cards/')), 'recipe-cards no deben entrar en sitemap')
 assert.ok(urls.includes('https://manualdecocina.com/es/ingredientes'))
 assert.ok(urls.includes('https://manualdecocina.com/es/ingredientes/ajo'))

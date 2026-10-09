@@ -3,6 +3,8 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import Link from 'next/link';
 import RecipeCard from './RecipeCard';
 import { getMdCopy } from '@/lib/copy';
+import type { MdLanguage } from './md-types';
+import { getPantryCopy } from '@/lib/pantry-copy';
 import { countLabel } from '@/lib/plural';
 import type { MdPantryIngredient, MdPantryRecipe } from '@/lib/md-data';
 
@@ -29,7 +31,7 @@ interface Match {
  * canónicos y recipe_ingredients de recetas publicadas). No hay llamada a IA ni datos
  * inventados: si una receta no tiene ingredientes canonicalizados, simplemente no aparece.
  */
-function computeMatches(recipes: MdPantryRecipe[], selected: Set<string>, ingredientNameById: Map<string, string>): Match[] {
+function computeMatches(recipes: MdPantryRecipe[], selected: Set<string>, ingredientNameById: Map<string, string>, lang: MdLanguage): Match[] {
   if (selected.size === 0) return [];
   const results: Match[] = [];
   for (const recipe of recipes) {
@@ -51,13 +53,14 @@ function computeMatches(recipes: MdPantryRecipe[], selected: Set<string>, ingred
   results.sort((a, b) => {
     if (a.effectiveMissingCount !== b.effectiveMissingCount) return a.effectiveMissingCount - b.effectiveMissingCount;
     if (b.matched !== a.matched) return b.matched - a.matched;
-    return a.recipe.title.localeCompare(b.recipe.title, 'es');
+    return a.recipe.title.localeCompare(b.recipe.title, lang);
   });
   return results.slice(0, MAX_RESULTS);
 }
 
-export default function PantryMatchView({ ingredients, recipes }: { ingredients: MdPantryIngredient[]; recipes: MdPantryRecipe[] }) {
-  const t = getMdCopy('es');
+export default function PantryMatchView({ lang, ingredients, recipes }: { lang: MdLanguage; ingredients: MdPantryIngredient[]; recipes: MdPantryRecipe[] }) {
+  const t = getMdCopy(lang);
+  const ui = getPantryCopy(lang);
   const [selected, setSelected] = useState<Set<string>>(new Set());
   const [filter, setFilter] = useState('');
   const [hasViewedResults, setHasViewedResults] = useState(false);
@@ -77,11 +80,11 @@ export default function PantryMatchView({ ingredients, recipes }: { ingredients:
     } catch { /* La herramienta funciona aunque localStorage no esté disponible. */ }
   }, [ingredients]);
   const filteredIngredients = useMemo(() => {
-    const q = filter.trim().toLocaleLowerCase('es');
+    const q = filter.trim().toLocaleLowerCase(lang);
     if (!q) return ingredients;
-    return ingredients.filter((i) => i.name.toLocaleLowerCase('es').includes(q));
-  }, [ingredients, filter]);
-  const matches = useMemo(() => computeMatches(recipes, selected, ingredientNameById), [recipes, selected, ingredientNameById]);
+    return ingredients.filter((i) => i.name.toLocaleLowerCase(lang).includes(q));
+  }, [ingredients, filter, lang]);
+  const matches = useMemo(() => computeMatches(recipes, selected, ingredientNameById, lang), [recipes, selected, ingredientNameById, lang]);
 
   function persistSelection(next: Set<string>) {
     try {
@@ -124,12 +127,12 @@ export default function PantryMatchView({ ingredients, recipes }: { ingredients:
         <p className="md-eyebrow">{t.pantryEyebrow}</p>
         <h1 className="md-display">{t.pantryToolHeading}</h1>
         <p className="md-lead md-page-intro">{t.pantryToolIntro}</p>
-        <div className="md-pantry-how" aria-label="Cómo funciona">
-          <strong>Así funciona</strong>
+        <div className="md-pantry-how" aria-label={ui.how}>
+          <strong>{ui.how}</strong>
           <ol>
-            <li><span>1</span> Marca los ingredientes que tienes.</li>
-            <li><span>2</span> Pulsa <b>Ver qué puedo cocinar</b>.</li>
-            <li><span>3</span> Te mostramos primero las recetas para las que te falta menos.</li>
+            <li><span>1</span> {ui.step1}</li>
+            <li><span>2</span> {ui.step2}</li>
+            <li><span>3</span> {ui.step3}</li>
           </ol>
         </div>
       </header>
@@ -173,8 +176,8 @@ export default function PantryMatchView({ ingredients, recipes }: { ingredients:
         <div className="md-pantry-action" aria-live="polite">
           <p>
             {selected.size === 0
-              ? 'Marca uno o varios ingredientes para empezar.'
-              : `${selected.size} ${selected.size === 1 ? 'ingrediente seleccionado' : 'ingredientes seleccionados'}.`}
+              ? ui.start
+              : ui.selected(selected.size)}
           </p>
           <button
             type="button"
@@ -182,7 +185,7 @@ export default function PantryMatchView({ ingredients, recipes }: { ingredients:
             disabled={selected.size === 0}
             onClick={viewResults}
           >
-            {hasViewedResults ? 'Actualizar recetas' : 'Ver qué puedo cocinar'}
+            {hasViewedResults ? ui.update : ui.view}
             {selected.size > 0 && <span aria-hidden="true"> ↓</span>}
           </button>
         </div>
@@ -201,7 +204,7 @@ export default function PantryMatchView({ ingredients, recipes }: { ingredients:
           <div className="md-empty-block">
             <h2 className="md-subtitle">{t.emptyTitle}</h2>
             <p>{t.pantryEmptyNoMatches}</p>
-            <Link className="md-button" href="/es/recetas">{t.seeAllRecipes}</Link>
+            <Link className="md-button" href={`/${lang}/recetas`}>{t.seeAllRecipes}</Link>
           </div>
         )}
         {matches.length > 0 && (
@@ -209,13 +212,13 @@ export default function PantryMatchView({ ingredients, recipes }: { ingredients:
             {matches.map(({ recipe, checklist, effectiveMissingCount, isComplete }) => (
               <div className="md-pantry-result" key={recipe.id}>
                 <span className={`md-pantry-badge${isComplete ? ' md-pantry-badge-complete' : ''}`}>
-                  {isComplete ? t.pantryComplete : countLabel('es', effectiveMissingCount, 'missingIngredient')}
+                  {isComplete ? t.pantryComplete : countLabel(lang, effectiveMissingCount, 'missingIngredient')}
                 </span>
                 <RecipeCard recipe={recipe} />
                 {checklist.length > 0 && (
                   <details className="md-pantry-checklist">
                     <summary>
-                      {isComplete ? 'Ver ingredientes' : `Ver ingredientes · ${effectiveMissingCount} ${effectiveMissingCount === 1 ? 'faltante' : 'faltantes'}`}
+                      {isComplete ? ui.checklist : `${ui.checklist} · ${countLabel(lang, effectiveMissingCount, 'missingIngredient')}`}
                     </summary>
                     <ul>
                       {checklist.map((item) => (
@@ -227,7 +230,7 @@ export default function PantryMatchView({ ingredients, recipes }: { ingredients:
                     </ul>
                     {recipe.uncanonicalizedCount > 0 && (
                       <p className="md-pantry-missing-list">
-                        Además, {recipe.uncanonicalizedCount} {recipe.uncanonicalizedCount === 1 ? 'ingrediente adicional de esta receta está' : 'ingredientes adicionales de esta receta están'} en proceso de catalogación.
+                        {ui.pending(recipe.uncanonicalizedCount)}
                       </p>
                     )}
                   </details>
