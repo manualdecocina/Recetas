@@ -31,7 +31,7 @@
     "branch": "recetas/lote-04-20261009",
     "target": 15,
     "status": "in_progress",
-    "stage": "PR/CI",
+    "stage": "deploy",
     "current_recipe": null,
     "started_at": "2026-10-09T00:56:43.882Z",
     "completed_recipes": 0,
@@ -655,7 +655,7 @@
         "publication_gate": "WAIT_FULL15_CI_MERGE_OBSERVED_DEPLOY_DB_CACHE_LIVE_QA"
       }
     ],
-    "next_action": "PR/CI then merge, observed163HTTP200SHA256, atomicSQL105rows, cache/live105pages/global154ESQA.",
+    "next_action": "Observe actual163deployedWebP200exactSHA256 before atomicDB publication; then cache/live/global154QA.",
     "reservation_pr": 99,
     "reservation_merge_sha": "c6ac9d0b770525ecd02ea6a934cd2a48f94a8325",
     "prepared_count": 15,
@@ -666,15 +666,28 @@
       "compile_readonly": "PASS_ALL15_BLOCKS",
       "preflight_readonly": "PASS_ALL15_INITIAL_STATE_ROUTES_CONTENTPAGES"
     },
-    "publication_pr": 100
+    "publication_pr": 100,
+    "merge_sha": "fa780c12a7ff81a6d4cf84ad8b0c08ef24a00c25",
+    "merge_pr": 100,
+    "ci": {
+      "head": "7193a7d500746426ef7c92976a952ee09e071350",
+      "quality_run": 37900321332,
+      "prepublication_run": 37900321247,
+      "artifact_id": 11601684828,
+      "conclusion": "success",
+      "types": true,
+      "logic": true,
+      "build": true,
+      "media_decoded": 281
+    }
   },
   "next_candidate_position": 33,
   "run_lease": {
     "owner": "work-lote04-20261009T0059",
     "status": "active",
     "acquired_at": "2026-10-09T00:56:43.882Z",
-    "renewed_at": "2026-10-09T07:39:40.143Z",
-    "expires_at": "2026-10-09T09:09:40.143Z",
+    "renewed_at": "2026-10-09T07:42:34.566Z",
+    "expires_at": "2026-10-09T09:12:34.566Z",
     "base_main_sha": "3c8af0eff7a6e6a5c7bfcaedfedd3590e67d3032",
     "reason": "Single producer after batch03 fully closed; CAS reservation of next15."
   },
