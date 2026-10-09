@@ -110,6 +110,42 @@
       "public_path": "/recetas/acai-bowl/paso-02.webp",
       "original": "paso-02.png",
       "visual_qa": "PASS"
+    },
+    {
+      "asset": "paso-03.webp",
+      "path": "public/recetas/acai-bowl/paso-03.webp",
+      "sha256": "7ab74ed616d1124cbfecd4879d096bd7ee16cec933257af5f46fff49d1fa2f95",
+      "git_blob_sha": "c15d47bd107732795a9d812c9f60e0ea642aa5dd",
+      "bytes": 133424,
+      "width": 1280,
+      "height": 960,
+      "public_path": "/recetas/acai-bowl/paso-03.webp",
+      "original": "paso-03.png",
+      "visual_qa": "PASS"
+    },
+    {
+      "asset": "paso-04.webp",
+      "path": "public/recetas/acai-bowl/paso-04.webp",
+      "sha256": "0252b09c5b61af0c58dc7993dd4cfdf0c0e7c5e7de1046d7d821591659a8ce33",
+      "git_blob_sha": "7deeae114e077d00795d29ec1297b59f742db793",
+      "bytes": 97866,
+      "width": 1280,
+      "height": 960,
+      "public_path": "/recetas/acai-bowl/paso-04.webp",
+      "original": "paso-04.png",
+      "visual_qa": "PASS"
+    },
+    {
+      "asset": "paso-05.webp",
+      "path": "public/recetas/acai-bowl/paso-05.webp",
+      "sha256": "19394ac6ba0caa968bc947fe7d25e00a644403f707456a24ba140cf514bff2c6",
+      "git_blob_sha": "4449ab067f6fae2aa6fcf9381ba0f1281ea0f7a1",
+      "bytes": 124936,
+      "width": 1280,
+      "height": 960,
+      "public_path": "/recetas/acai-bowl/paso-05.webp",
+      "original": "paso-05.png",
+      "visual_qa": "PASS"
     }
   ],
   "originals": [
@@ -148,11 +184,61 @@
       "phase": 2,
       "visual_qa": "PASS",
       "source": "built-in ImageGen"
+    },
+    {
+      "asset": "paso-03.png",
+      "path": "public/recetas/acai-bowl/originals/paso-03.png",
+      "sha256": "d31671cb5edf510138890f958ae1b51c34d8937fa8f838951c4d83aad738da67",
+      "git_blob_sha": "a5fdcda48bb69d944f8ab7ba66f114479676fb28",
+      "bytes": 2260098,
+      "width": 1448,
+      "height": 1086,
+      "phase": 3,
+      "visual_qa": "PASS",
+      "source": "built-in ImageGen"
+    },
+    {
+      "asset": "paso-04.png",
+      "path": "public/recetas/acai-bowl/originals/paso-04.png",
+      "sha256": "099c2ff354a1a32bec56da58a00ed550fd9264eeb879d060b5a4f4e4236ddc38",
+      "git_blob_sha": "4be3b070267d5280f62e81726129477d66b919b8",
+      "bytes": 2060622,
+      "width": 1448,
+      "height": 1086,
+      "phase": 4,
+      "visual_qa": "PASS",
+      "source": "built-in ImageGen"
+    },
+    {
+      "asset": "paso-05.png",
+      "path": "public/recetas/acai-bowl/originals/paso-05.png",
+      "sha256": "d7261d97176101c11f1b9292596d3fe77758f98ecb48fc315bcda25fc795d32d",
+      "git_blob_sha": "e5b4a43b0eef45fc400594da88a19329fd5601b1",
+      "bytes": 2252769,
+      "width": 1448,
+      "height": 1086,
+      "phase": 5,
+      "visual_qa": "PASS",
+      "source": "built-in ImageGen"
     }
   ],
-  "state": "IMAGES_PARTIAL",
+  "state": "PASS_ALL6_ORIGINALS_AND9_WEBP",
   "last_step_reuses_cover": true,
   "original_images_required": 6,
   "published_webp_required": 9,
+  "edits": [
+    {
+      "phase": 3,
+      "prompt": "Use case: precise-object-edit. Edit only the contents of the white receiving bowl: remove every banana slice, strawberry, granola piece and almond slice from INSIDE that bowl. The bowl must contain ONLY solid dark purple frozen acai puree pieces falling from the pouch. Keep pouch, pouring hand, solid purple pieces, scissors, lighting, camera and all background dishes unchanged. This is phase03 opening pure frozen acai BEFORE blending or adding toppings. No finished bowl. No text.",
+      "reason": "Removed toppings prematurely placed inside pure-pulp receiving bowl",
+      "qa": "PASS_TARGETED_EDIT_ES_UNCHANGED"
+    },
+    {
+      "phase": 4,
+      "prompt": "Use case: precise-object-edit. Remove ONLY the finished topped serving bowl in the foreground and fill that space with the matching empty pale worktop. Keep the securely lidded stopped blender with dark purple thick cream, empty water glass, four separate background topping dishes, lighting, perspective and everything else unchanged. Phase04 is blending BEFORE dividing the cream into serving bowls, so no filled serving bowl anywhere. No text.",
+      "reason": "Removed prematurely completed serving bowl from blending phase",
+      "qa": "PASS_TARGETED_EDIT_ES_UNCHANGED"
+    }
+  ],
   "cover_variant_visual_qa": "PASS_PRIMARY_FRONT_BOWL_COMPLETE_ALL4_REAR_SECONDARY_PARTLY_CROPPED"
 }
