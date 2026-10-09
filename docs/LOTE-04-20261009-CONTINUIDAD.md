@@ -84,3 +84,8 @@ Ensalada de frijoles con romesco completa7/7,7PNG y10WebP;17hashes y cifras/estr
 ## Checkpoint 2026-10-09T06:40:53.713Z: 13/15 preparados
 
 Galletas de jengibre y melaza completas7/7,8PNG y11WebP;19hashes y cifras/estructura/medios verificados. Nueve fichas USDA con8nutrientes informados. Fórmula inicial644g,24unidades y159min propuestos sin ensayo. SQL protegido no ejecutado. SHAfuente 72e542ca2072ea6e20f50e5c0704d06c2de68ef5149846297b2d87cbb9ffde93, SQL 6b37c4d1950bc0c0d0f9ae62cfe57787e449810bf674cd11480bed6e465c7d5f. Identidad/fechas/MD5 y7rutas preservados. Siguiente: ensalada griega, después trufas de chocolate. Cero recetas del lote04 publicadas; mantener gates del lote completo.
+
+
+## 2026-10-09T07:06:20.178Z — Ensalada griega completa; 14/15 preparadas
+
+Paquete único receta-de-ensalada-griega-20261009.json con7records,10ingredientes,6pasos y3FAQ por idioma. Se conservan6PNG originales y9WebP con15hashes comprobados, cuatro recortes y fases revisadas. Correcciones limitadas a preparación de verduras y retirada de ensalada prematura en fase de aliño. Nutrición8nutrientes/10USDA completos; aceitunas maduras genéricas no Kalamata y feta genérico con limitación de marca explícita. Sin prueba de cocina afirmada. SQL con guardas y SHA 3144840ef7fdce937f5c63bbcc9431b0ea5e7e361116a748db1397006267ae51 no ejecutado. DBESfalseMD5 intacto,0colisiones de recetas/páginas. Siguiente: recetas-de-trufas-de-chocolate. Lote04todavía0publicadas; exige15completas+CI/merge/deploy observado+DB/cache/QA.
