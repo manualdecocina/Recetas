@@ -1,0 +1,485 @@
+{
+  "scope": "Manual de Cocina only; lote04",
+  "state": "ES_FROZEN_IMAGES_PENDING",
+  "provenance": "Original formula/prose; no WordPress bodies, translations or media reused.",
+  "category_slug": "postres",
+  "cover": "/recetas/receta-de-tarta-de-fresa/portada.webp",
+  "steps_frozen": true,
+  "steps_sha256": "af3a2421071e6e6e84be6eec549d38b8ab62de4939d14765c7468e9950f77013",
+  "time_notes": "Critical path20base+30basechill+35bake+45basecool+28remainingcreamchill+20assemble+60finalchill=238. Cream10mix+8cook startsafter20base;120creamchill beginsat38 andends158. Activeprep50,cook43. Preheat15overlapslast15basechill. Extend actual cooling until<=4C, no kitchen test.",
+  "published_database": false,
+  "publication_blockers": [
+    "IMAGES_6LOCALIZATIONS_SQL_FULL15_CI_DEPLOY_DB_CACHE_QA_PENDING"
+  ],
+  "sources": [
+    {
+      "url": "https://www.kingarthurbaking.com/recipes/berry-cream-tart-recipe",
+      "purpose": "Method identity only: cooked pastrycream, fullybaked shell and freshberries. Independent formula/prose, no copiedsource nutrition/media.",
+      "accessed": "2026-10-09"
+    },
+    {
+      "url": "https://www.kingarthurbaking.com/recipes/pate-sucree-recipe",
+      "purpose": "Method reference: pressindough, weightedshell and secondunweightedbake. Independentcoldbutter wholeegg formula and original cookableinstructions; not source recipe replication.",
+      "accessed": "2026-10-09"
+    },
+    {
+      "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures",
+      "purpose": "Official eggdish minimum71C; recipe uses72C thermometer check, plus cornstarch bubble stage.",
+      "accessed": "2026-10-09"
+    },
+    {
+      "url": "https://www.fda.gov/consumers/consumer-updates/7-tips-cleaning-fruits-vegetables",
+      "purpose": "Official washbeforecutting plainrunningwater without soap and cleanhandling.",
+      "accessed": "2026-10-09"
+    },
+    {
+      "url": "https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_sr_legacy_food_json_2018-04.zip",
+      "purpose": "13ingrediententries10exact USDAfoods all8nutrients verified. Wholeformula1259g dividedby8; no invented losses.",
+      "accessed": "2026-10-09"
+    }
+  ],
+  "records": [
+    {
+      "id": "2f5db784-9451-4166-9076-fe2dac7a35ca",
+      "recipe_group_id": "f1b26b6d-7c77-4c43-ab21-9fab2a7b22fc",
+      "slug": "receta-de-tarta-de-fresa",
+      "public_path": "/receta-de-tarta-de-fresa",
+      "source_url": "https://manualdecocina.com/receta-de-tarta-de-fresa/",
+      "language": "es",
+      "title": "Tarta de fresa con crema pastelera y base horneada",
+      "excerpt": "Tarta de fresa con base horneada, crema pastelera cocida y fruta fresca: ingredientes agrupados, enfriados completos y nutrición estimada por porción.",
+      "summary": "Tarta de fresa con base dulce completamente horneada, crema pastelera de huevo entero cocida y fresas frescas. Se proponen 8 porciones y 238 minutos completos con enfriados y tareas en paralelo; fórmula, tiempos y rendimiento pendientes de prueba de cocina.",
+      "category": "Postres",
+      "category_slug": "postres",
+      "difficulty": "Media",
+      "course": "Postre",
+      "cuisine": "Internacional",
+      "prep_time_minutes": 50,
+      "cook_time_minutes": 43,
+      "total_time_minutes": 238,
+      "servings": 8,
+      "ingredients": [
+        {
+          "name": "harina de trigo común, base",
+          "amount": "180",
+          "unit": "g",
+          "group": "Base"
+        },
+        {
+          "name": "mantequilla sin sal fría, base",
+          "amount": "90",
+          "unit": "g",
+          "group": "Base"
+        },
+        {
+          "name": "azúcar blanco, base",
+          "amount": "50",
+          "unit": "g",
+          "group": "Base"
+        },
+        {
+          "name": "huevo entero batido sin cáscara, base",
+          "amount": "30",
+          "unit": "g",
+          "group": "Base"
+        },
+        {
+          "name": "agua potable fría, base",
+          "amount": "20",
+          "unit": "g",
+          "group": "Base"
+        },
+        {
+          "name": "sal fina, base",
+          "amount": "1",
+          "unit": "g",
+          "group": "Base"
+        },
+        {
+          "name": "leche entera pasteurizada, crema",
+          "amount": "300",
+          "unit": "g",
+          "group": "Crema pastelera"
+        },
+        {
+          "name": "huevo entero batido sin cáscara, crema",
+          "amount": "100",
+          "unit": "g",
+          "group": "Crema pastelera"
+        },
+        {
+          "name": "azúcar blanco, crema",
+          "amount": "50",
+          "unit": "g",
+          "group": "Crema pastelera"
+        },
+        {
+          "name": "almidón de maíz, crema",
+          "amount": "25",
+          "unit": "g",
+          "group": "Crema pastelera"
+        },
+        {
+          "name": "extracto de vainilla, crema",
+          "amount": "3",
+          "unit": "g",
+          "group": "Crema pastelera"
+        },
+        {
+          "name": "mantequilla sin sal, crema",
+          "amount": "10",
+          "unit": "g",
+          "group": "Crema pastelera"
+        },
+        {
+          "name": "fresas crudas lavadas, sin pedúnculo y secas",
+          "amount": "400",
+          "unit": "g",
+          "group": "Fruta"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepara las migas de la base",
+          "content": "Usa báscula, cuenco, cazo, varillas, termómetro, rejilla y un molde metálico antiadherente de fondo desmontable de 22 cm, sin engrasado extra. Lávate las manos y separa la fruta de utensilios con huevo crudo. Mezcla los 180 g de harina, los 50 g de azúcar y el 1 g de sal de la base. Incorpora los 90 g de mantequilla fría en dados y frota brevemente con los dedos hasta obtener migas. No pruebes harina ni masa crudas.",
+          "image_url": "/recetas/receta-de-tarta-de-fresa/paso-01.webp",
+          "image_alt": "Tarta de fresa: Prepara las migas de la base"
+        },
+        {
+          "title": "Une y presiona la masa en el molde",
+          "content": "Bate huevo entero sin cáscara y pesa por separado 30 g para la base y 100 g para la crema; refrigera enseguida la parte de la crema y destina el sobrante a otra preparación cocinada. Añade a las migas los 30 g de huevo y los 20 g de agua fría. Une sin amasar mucho; usa toda la masa para cubrir fondo y paredes del molde, con grosor parejo y borde de unos 2 cm. Alisa con el reverso de una cuchara limpia, sin harina ni grasa adicionales, y pincha suavemente el fondo. Estas primeras tareas ocupan como referencia 20 minutos.",
+          "image_url": "/recetas/receta-de-tarta-de-fresa/paso-02.webp",
+          "image_alt": "Tarta de fresa: Une y presiona la masa en el molde"
+        },
+        {
+          "title": "Enfría la base y prepara la mezcla de crema",
+          "content": "Tapa el molde y refrigera 30 minutos a 4 °C o menos. Durante ese enfriado dedica 10 minutos a mezclar en el cazo, fuera del fuego, los 100 g de huevo de la crema con los 50 g de azúcar y los 25 g de almidón de maíz hasta que no queden grumos; añade gradualmente los 300 g de leche entera pasteurizada. Durante los últimos 15 minutos del enfriado de la base precalienta el horno a 180 °C, calor arriba y abajo, con rejilla central. El precalentado y la preparación de crema se solapan con el reposo; no se suman otra vez.",
+          "image_url": "/recetas/receta-de-tarta-de-fresa/paso-03.webp",
+          "image_alt": "Tarta de fresa: Enfría la base y prepara la mezcla de crema"
+        },
+        {
+          "title": "Cuece la crema y comprueba la temperatura",
+          "content": "Calienta el cazo a fuego medio bajo removiendo continuamente, también por fondo y esquinas, hasta que espese y aparezcan burbujas por toda la mezcla. Mantén ese burbujeo suave 1 minuto sin dejar de remover y comprueba con termómetro limpio que la crema alcanza al menos 72 °C. Se proponen 8 minutos de cocción en total, incluido ese minuto; prolonga hasta lograr ambas señales. Retira del fuego e incorpora los 10 g de mantequilla y los 3 g de extracto de vainilla. No basta con que parezca espesa si no se ha cocinado.",
+          "image_url": "/recetas/receta-de-tarta-de-fresa/paso-04.webp",
+          "image_alt": "Tarta de fresa: Cuece la crema y comprueba la temperatura"
+        },
+        {
+          "title": "Refrigera de inmediato la crema cocida",
+          "content": "Extiende la crema en un recipiente limpio y poco profundo. Cubre su superficie con material alimentario apto para esa temperatura y refrigera enseguida a 4 °C o menos, sin dejarla enfriar primero sobre la encimera. Reserva 120 minutos como referencia, hasta que toda la crema esté fría; prolonga si es necesario. Con el plan propuesto, la crema entra en frío tras 20 minutos de base, 10 de mezcla y 8 de cocción, mientras la base sigue su propia preparación.",
+          "image_url": "/recetas/receta-de-tarta-de-fresa/paso-05.webp",
+          "image_alt": "Tarta de fresa: Refrigera de inmediato la crema cocida"
+        },
+        {
+          "title": "Hornea la base hasta que esté completamente cocida",
+          "content": "Al terminar los 30 minutos de reposo de la base, cubre fondo y paredes con papel de horno y coloca encima pesas cerámicas aptas para hornear, hasta sostener bien el borde. Hornea 25 minutos a 180 °C. Saca el molde con guantes, retira con cuidado papel y pesas calientes y hornea sin ellos otros 10 minutos, hasta que fondo y borde estén dorados, secos y firmes, sin zonas de masa húmeda. Son 35 minutos orientativos; prolonga según el horno y no uses una base parcialmente cocida. Las pesas no se comen ni cuentan como ingrediente.",
+          "image_url": "/recetas/receta-de-tarta-de-fresa/paso-06.webp",
+          "image_alt": "Tarta de fresa: Hornea la base hasta que esté completamente cocida"
+        },
+        {
+          "title": "Enfría la base y espera a que la crema esté fría",
+          "content": "Deja el molde sobre una rejilla unos 45 minutos, hasta que la base no esté caliente. Desmolda con cuidado cuando esté fría y pásala al plato. Comprueba también que la crema haya cumplido sus 120 minutos de refrigeración y esté a 4 °C o menos. En el plan de 238 minutos, después de enfriar la base quedan otros 28 minutos de espera de crema; esta espera transcurre en la nevera. No rellenes la base caliente ni uses crema todavía tibia. Los tiempos reales pueden alargarse.",
+          "image_url": "/recetas/receta-de-tarta-de-fresa/paso-07.webp",
+          "image_alt": "Tarta de fresa: Enfría la base y espera a que la crema esté fría"
+        },
+        {
+          "title": "Lava las fresas y monta la tarta en frío",
+          "content": "Lava las fresas bajo agua corriente antes de quitar el pedúnculo, sin jabón, y desecha las piezas estropeadas. Seca con papel limpio, retira los pedúnculos y pesa 400 g de fruta preparada; corta en láminas. Remueve la crema fría con una cuchara limpia y reparte toda la cantidad en la base fría. Coloca encima todas las láminas de fresa, en filas ligeramente superpuestas. Reserva 20 minutos para lavar, pesar, cortar y montar. No añadas mermelada, glaseado, nata ni azúcar extra. Lavar la fruta no la esteriliza.",
+          "image_url": "/recetas/receta-de-tarta-de-fresa/paso-08.webp",
+          "image_alt": "Tarta de fresa: Lava las fresas y monta la tarta en frío"
+        },
+        {
+          "title": "Refrigera la tarta ya montada",
+          "content": "Cubre sin aplastar la fruta y refrigera la tarta montada 60 minutos a 4 °C o menos. Mantén la crema y la fruta frías; saca la tarta solo al servir. Ese reposo final ayuda al corte, pero no sustituye cocinar la crema ni enfriarla correctamente. Si necesitas prolongar cualquier enfriado, añade el tiempo real al total.",
+          "image_url": "/recetas/receta-de-tarta-de-fresa/paso-09.webp",
+          "image_alt": "Tarta de fresa: Refrigera la tarta ya montada"
+        },
+        {
+          "title": "Corta las porciones y conserva en frío",
+          "content": "Corta con cuchillo limpio en 8 porciones iguales. El plan completo propone 238 minutos: 20 de base, 30 de reposo con mezcla y cocción de crema en paralelo, 35 de horno, 45 de enfriado de base, 28 de espera de crema, 20 de montaje y 60 finales en frío. La preparación activa suma 50 minutos y la cocción 43, con solapamientos; tiempos y rendimiento no están probados. Los 1259 g son suma cruda, no peso final. Como propuesta doméstica de calidad sin ensayo, consume preferentemente el mismo día o dentro de 24 horas, tapada y siempre a 4 °C o menos. No devuelvas restos del plato a la tarta.",
+          "image_url": "/recetas/receta-de-tarta-de-fresa/portada.webp",
+          "image_alt": "Tarta de fresa: Corta las porciones y conserva en frío"
+        }
+      ],
+      "nutrition": {
+        "calories": 295.0,
+        "protein_g": 6.0,
+        "carbs_g": 38.3,
+        "fat_g": 13.3,
+        "saturated_fat_g": 7.6,
+        "fiber_g": 1.6,
+        "sugar_g": 17.0,
+        "sodium_mg": 91.0,
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (abril de 2018)",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "inputs": [
+          {
+            "ingredient": "harina de trigo común, base",
+            "edible_grams": 180,
+            "fdc_id": 168936,
+            "fdc_description": "Wheat flour, white, all-purpose, enriched, unbleached",
+            "per_100g": {
+              "calories": 364,
+              "protein_g": 10.3,
+              "carbs_g": 76.3,
+              "fat_g": 0.98,
+              "saturated_fat_g": 0.155,
+              "fiber_g": 2.7,
+              "sugar_g": 0.27,
+              "sodium_mg": 2.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/168936/nutrients"
+          },
+          {
+            "ingredient": "mantequilla sin sal fría, base",
+            "edible_grams": 90,
+            "fdc_id": 173430,
+            "fdc_description": "Butter, without salt",
+            "per_100g": {
+              "calories": 717,
+              "protein_g": 0.85,
+              "carbs_g": 0.06,
+              "fat_g": 81.1,
+              "saturated_fat_g": 50.5,
+              "fiber_g": 0.0,
+              "sugar_g": 0.06,
+              "sodium_mg": 11.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173430/nutrients"
+          },
+          {
+            "ingredient": "azúcar blanco, base",
+            "edible_grams": 50,
+            "fdc_id": 169655,
+            "fdc_description": "Sugars, granulated",
+            "per_100g": {
+              "calories": 387,
+              "protein_g": 0.0,
+              "carbs_g": 100,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "fiber_g": 0.0,
+              "sugar_g": 99.8,
+              "sodium_mg": 1.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169655/nutrients"
+          },
+          {
+            "ingredient": "huevo entero batido sin cáscara, base",
+            "edible_grams": 30,
+            "fdc_id": 171287,
+            "fdc_description": "Egg, whole, raw, fresh",
+            "per_100g": {
+              "calories": 143,
+              "protein_g": 12.6,
+              "carbs_g": 0.72,
+              "fat_g": 9.51,
+              "saturated_fat_g": 3.13,
+              "fiber_g": 0.0,
+              "sugar_g": 0.37,
+              "sodium_mg": 142
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171287/nutrients"
+          },
+          {
+            "ingredient": "agua potable fría, base",
+            "edible_grams": 20,
+            "fdc_id": 173647,
+            "fdc_description": "Beverages, water, tap, drinking",
+            "per_100g": {
+              "calories": 0.0,
+              "protein_g": 0.0,
+              "carbs_g": 0.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0,
+              "sodium_mg": 4.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173647/nutrients"
+          },
+          {
+            "ingredient": "sal fina, base",
+            "edible_grams": 1,
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "calories": 0.0,
+              "protein_g": 0.0,
+              "carbs_g": 0.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0,
+              "sodium_mg": 38800.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients"
+          },
+          {
+            "ingredient": "leche entera pasteurizada, crema",
+            "edible_grams": 300,
+            "fdc_id": 171265,
+            "fdc_description": "Milk, whole, 3.25% milkfat, with added vitamin D",
+            "per_100g": {
+              "calories": 61.0,
+              "protein_g": 3.15,
+              "carbs_g": 4.8,
+              "fat_g": 3.25,
+              "saturated_fat_g": 1.86,
+              "fiber_g": 0.0,
+              "sugar_g": 5.05,
+              "sodium_mg": 43.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171265/nutrients"
+          },
+          {
+            "ingredient": "huevo entero batido sin cáscara, crema",
+            "edible_grams": 100,
+            "fdc_id": 171287,
+            "fdc_description": "Egg, whole, raw, fresh",
+            "per_100g": {
+              "calories": 143,
+              "protein_g": 12.6,
+              "carbs_g": 0.72,
+              "fat_g": 9.51,
+              "saturated_fat_g": 3.13,
+              "fiber_g": 0.0,
+              "sugar_g": 0.37,
+              "sodium_mg": 142
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171287/nutrients"
+          },
+          {
+            "ingredient": "azúcar blanco, crema",
+            "edible_grams": 50,
+            "fdc_id": 169655,
+            "fdc_description": "Sugars, granulated",
+            "per_100g": {
+              "calories": 387,
+              "protein_g": 0.0,
+              "carbs_g": 100,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "fiber_g": 0.0,
+              "sugar_g": 99.8,
+              "sodium_mg": 1.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169655/nutrients"
+          },
+          {
+            "ingredient": "almidón de maíz, crema",
+            "edible_grams": 25,
+            "fdc_id": 169698,
+            "fdc_description": "Cornstarch",
+            "per_100g": {
+              "calories": 381,
+              "protein_g": 0.26,
+              "carbs_g": 91.3,
+              "fat_g": 0.05,
+              "saturated_fat_g": 0.009,
+              "fiber_g": 0.9,
+              "sugar_g": 0.0,
+              "sodium_mg": 9.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169698/nutrients"
+          },
+          {
+            "ingredient": "extracto de vainilla, crema",
+            "edible_grams": 3,
+            "fdc_id": 173471,
+            "fdc_description": "Vanilla extract",
+            "per_100g": {
+              "calories": 288,
+              "protein_g": 0.06,
+              "carbs_g": 12.6,
+              "fat_g": 0.06,
+              "saturated_fat_g": 0.01,
+              "fiber_g": 0.0,
+              "sugar_g": 12.6,
+              "sodium_mg": 9.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173471/nutrients"
+          },
+          {
+            "ingredient": "mantequilla sin sal, crema",
+            "edible_grams": 10,
+            "fdc_id": 173430,
+            "fdc_description": "Butter, without salt",
+            "per_100g": {
+              "calories": 717,
+              "protein_g": 0.85,
+              "carbs_g": 0.06,
+              "fat_g": 81.1,
+              "saturated_fat_g": 50.5,
+              "fiber_g": 0.0,
+              "sugar_g": 0.06,
+              "sodium_mg": 11.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173430/nutrients"
+          },
+          {
+            "ingredient": "fresas crudas lavadas, sin pedúnculo y secas",
+            "edible_grams": 400,
+            "fdc_id": 167762,
+            "fdc_description": "Strawberries, raw",
+            "per_100g": {
+              "calories": 32.0,
+              "protein_g": 0.67,
+              "carbs_g": 7.68,
+              "fat_g": 0.3,
+              "saturated_fat_g": 0.015,
+              "fiber_g": 2.0,
+              "sugar_g": 4.89,
+              "sodium_mg": 1.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/167762/nutrients"
+          }
+        ],
+        "serving_size": "Una octava parte de la tarta completa; sin peso final confirmado",
+        "method": "Suma nutrientes de las 13 entradas agrupadas de base, crema y fruta, con 1259 g de ingredientes crudos comestibles, y divide entre 8. Cuenta toda la masa, crema y 400 g de fresas preparadas, sin descontar evaporación o restos no medidos.",
+        "note": "Estimación de formulación, no laboratorio ni ensayo de cocina. Diez fichas USDA exactas y ocho nutrientes presentes en cada una. Leche entera de referencia con vitamina D añadida, sin afirmar fortificación de esta receta. Variación de marca, sobrantes y peso final no medidos."
+      },
+      "image_url": "/recetas/receta-de-tarta-de-fresa/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/receta-de-tarta-de-fresa/portada.webp",
+          "alt": "Tarta de fresas en láminas sobre crema pastelera, con base dulce dorada y una porción que muestra las capas"
+        }
+      ],
+      "published": true,
+      "editorial_status": "published",
+      "keywords": [
+        "tarta de fresa",
+        "tarta con crema pastelera",
+        "tarta de fresas con base horneada",
+        "postre de fresas"
+      ],
+      "notes": "Propuesta original para molde metálico antiadherente de fondo desmontable de 22 cm. Usa toda la masa presionada a mano, sin harina para estirar ni grasa extra en el molde. Ingredientes agrupados: base, crema y fruta. Pesa huevo entero batido sin cáscara; la base usa 30 g y la crema 100 g, sin convertirlos en un número exacto de huevos. Mantén la crema y huevos separados de las fresas hasta cocinar y limpiar utensilios. No pruebes harina o masa crudas. La base debe quedar completamente horneada y fría; la crema debe alcanzar al menos 72 °C y burbujear suavemente un minuto, después ir inmediatamente a recipiente poco profundo refrigerado a 4 °C o menos. La crema se enfría durante la preparación de la base, pero ambos deben estar fríos antes del montaje. Tiempos, ocho porciones y consistencia pendientes de ensayo; no se afirma prueba de cocina ni peso final. La suma cruda es 1259 g y no incluye pesas cerámicas o papel. Contiene trigo/gluten, leche y huevo; revisa etiquetas de mantequilla, vainilla y almidón. No se garantiza una versión sin alérgenos cambiando un solo ingrediente. Puedes proponer otra fruta firme y lavada en lugar de las fresas, pero cambia peso, acidez y nutrición; recalcula con ficha exacta. No sustituyas almidón de maíz por harina a igual peso suponiendo idéntica textura. No hay glaseado ni nata, ni crema de queso. Si preparas por separado, conserva la crema cocida siempre tapada y en frío, y monta con fruta recién lavada y seca para limitar humedad; no se fija una conservación anticipada ensayada. Como propuesta doméstica de calidad no verificada, consume el mismo día o dentro de 24 horas con refrigeración continua a 4 °C o menos; no reutilices restos del plato ni juzgues seguridad solo por olor. No se propone congelar la tarta montada: la fruta y la crema pueden perder textura. Nutrición estimada con trece entradas de ingrediente y diez alimentos USDA exactos; incluye toda la base, crema y fruta, divididas entre ocho, sin inventar pérdidas por evaporación o restos. Marca de leche y mantequilla, mediciones y rendimiento real cambian los valores.",
+      "seo": {
+        "title": "Tarta de fresa con crema pastelera: paso a paso",
+        "description": "Tarta de fresas con base dulce horneada y crema pastelera cocida. Cantidades agrupadas, enfriados completos y nutrición estimada; fórmula propuesta sin ensayo.",
+        "image_alt": "Tarta de fresas en láminas sobre crema pastelera, con base dulce dorada y una porción que muestra las capas",
+        "image_variants": [
+          "/recetas/receta-de-tarta-de-fresa/portada-1x1.webp",
+          "/recetas/receta-de-tarta-de-fresa/portada-4x3.webp",
+          "/recetas/receta-de-tarta-de-fresa/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "¿Se hornea la tarta con las fresas?",
+            "a": "No. Hornea por completo la base sin relleno, cuece la crema en el cazo y enfría ambos. Después monta las fresas lavadas, secas y cortadas sobre la crema fría y refrigera. No añadas fruta fresca a masa cruda ni montes sobre crema tibia."
+          },
+          {
+            "q": "¿Cuántos huevos y cuánto tiempo necesito?",
+            "a": "Pesa huevo entero sin cáscara: 30 g para la base y 100 g para la crema, sin traducirlo a un número fijo de huevos. Se proponen 238 minutos completos, con enfriados y tareas paralelas; prolonga lo necesario. Los tiempos y ocho porciones están pendientes de ensayo."
+          },
+          {
+            "q": "¿Cómo evito una crema cruda y cómo conservo la tarta?",
+            "a": "Remueve hasta burbujeo uniforme, mantén un minuto suave y comprueba al menos 72 °C con termómetro limpio. Refrigera inmediatamente la crema en recipiente poco profundo y monta en frío. Como propuesta doméstica de calidad sin ensayo, consume la tarta el mismo día o dentro de 24 horas, siempre a 4 °C o menos; lavar fresas no esteriliza."
+          }
+        ]
+      },
+      "content_html": "<p>Tarta de fresa con base dulce completamente horneada, crema pastelera de huevo entero cocida y fresas frescas. Se proponen 8 porciones y 238 minutos completos con enfriados y tareas en paralelo; fórmula, tiempos y rendimiento pendientes de prueba de cocina.</p><p>Propuesta original para molde metálico antiadherente de fondo desmontable de 22 cm. Usa toda la masa presionada a mano, sin harina para estirar ni grasa extra en el molde. Ingredientes agrupados: base, crema y fruta. Pesa huevo entero batido sin cáscara; la base usa 30 g y la crema 100 g, sin convertirlos en un número exacto de huevos. Mantén la crema y huevos separados de las fresas hasta cocinar y limpiar utensilios. No pruebes harina o masa crudas. La base debe quedar completamente horneada y fría; la crema debe alcanzar al menos 72 °C y burbujear suavemente un minuto, después ir inmediatamente a recipiente poco profundo refrigerado a 4 °C o menos. La crema se enfría durante la preparación de la base, pero ambos deben estar fríos antes del montaje. Tiempos, ocho porciones y consistencia pendientes de ensayo; no se afirma prueba de cocina ni peso final. La suma cruda es 1259 g y no incluye pesas cerámicas o papel. Contiene trigo/gluten, leche y huevo; revisa etiquetas de mantequilla, vainilla y almidón. No se garantiza una versión sin alérgenos cambiando un solo ingrediente. Puedes proponer otra fruta firme y lavada en lugar de las fresas, pero cambia peso, acidez y nutrición; recalcula con ficha exacta. No sustituyas almidón de maíz por harina a igual peso suponiendo idéntica textura. No hay glaseado ni nata, ni crema de queso. Si preparas por separado, conserva la crema cocida siempre tapada y en frío, y monta con fruta recién lavada y seca para limitar humedad; no se fija una conservación anticipada ensayada. Como propuesta doméstica de calidad no verificada, consume el mismo día o dentro de 24 horas con refrigeración continua a 4 °C o menos; no reutilices restos del plato ni juzgues seguridad solo por olor. No se propone congelar la tarta montada: la fruta y la crema pueden perder textura. Nutrición estimada con trece entradas de ingrediente y diez alimentos USDA exactos; incluye toda la base, crema y fruta, divididas entre ocho, sin inventar pérdidas por evaporación o restos. Marca de leche y mantequilla, mediciones y rendimiento real cambian los valores.</p>"
+    }
+  ]
+}
