@@ -13,3 +13,10 @@ Estado: 0 preparadas, 0 publicadas. Primera receta: muffins de chocolate. Siguie
 Publicar las 15 solo después de validación, CI verde, merge y despliegue observado de los medios. Después: SQL transaccional, caché desde Actions, QA 7/7 y auditoría global con recuento real. No ejecutar DNS ni quitar noindex.
 
 Cola: 20 candidatas pendientes (15 reservadas +5 siguientes), 50 retenidas, 70 ES sin publicar. La revisión de enlaces de ingredientes del cierre técnico permanece explícita en automation-progress.json.
+
+
+## Checkpoint 2026-10-09T01:23:00.444Z
+
+Muffins de chocolate completos para publicación: fuente única editorial/receta-de-muffins-de-chocolate-20261009.json con records[7], ES congelado sin cambios; 8 originales y 11 WebP revisados visualmente y comprobados por hashes Git. Nutrición estimada con diez fichas USDA verificadas. SQL protegido preparado y NO ejecutado. Lote04: 1/15 preparada, 0 publicadas. Próxima receta: acai-bowl, etapa identidad→ES. Conservar todos los medios y localizaciones correctos.
+
+SQL SHA256: 5f04d9f69843aef49eaf11ead0c5a0fc38f956e0ba892b39b3c35f9d25f5e393. Paquete SHA256: b8938e27b160a98111b832bf5e50f86e5df42efee7afdc19a92c0bb1da373e48. El cierre requiere las15, CI, merge, despliegue observado, publicación, caché y QA; no confundir preparación con publicación.
