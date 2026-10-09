@@ -49,3 +49,8 @@ Fuente única `editorial/galletas-de-avena-y-chocolate-20261009.json`:7idiomas,1
 ## Checkpoint 2026-10-09T03:17:24.655Z
 
 Donas glaseadas completadas y preparadas7/7,10originales13WebP,23activos con hash exacto y QA visual. ES congelado b4caacc7d75625430b021d7d83ae618c317dc84f76ca8328d908d274577acfb3. Paquete d2a0c10151cabc1140dc091366343958d28b7a08476c92b06c73977cded81c32; SQL protegido c3127cd6052acca0c8314b25a37762b82e5b1c74c2ac51edf9e212ef3383b702, no ejecutado. Nutrición:30gaceite retenido hipótesis NO medida, baño900g excluido. Lote04:6de15preparadas,0publicadas. Siguiente gazpacho-tradicional-espanol en identidad/ES; preservar todas las seis completas. Publicación+QA del lote completo pendiente.
+
+
+## 2026-10-09T03:36:40.777Z — Gazpacho preparado7/7; lote04 7/15preparado,0publicado
+
+Fuente única `editorial/gazpacho-tradicional-espanol-20261009.json`,10ingredientes7pasos3FAQ; ES SHA256`4d59f5bbbb24aae3151c55c9b76b5b63c9c1960c2c78659a91fd22788a37a08b`, paquete`7a38f86cd07e3220dacf4f4730d858460a1334487d013311ef117195f0061f5d`. Siete originales y diezWebP conhashes exactos yQAvisual; corrección limitada alpan excesivo enfase3. DiezUSDA exactos, fórmula1418gcrudos inclguarnición/4, sin colado/pérdidasinventadas;145minpropuestos25prep+120frío,0cocción. Rutas históricasEN/FR/ITconservadas,FRanomalíaGSC no cambia/fr/. SQLguardado`scripts/publish-gazpacho-tradicional-espanol-20261009.sql` SHA256`472cda6bc61643983aef6905577422fa4fa0424ac7c015dd9777f084af055457`,NOejecutado. Siguiente:tarta defresa identidad→ES; no rehacerlas7completas,nootro loteantespublicación+QA15.
