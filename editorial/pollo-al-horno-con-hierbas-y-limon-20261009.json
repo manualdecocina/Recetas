@@ -1,6 +1,6 @@
 {
   "scope": "Manual de Cocina lote05; five final candidates only",
-  "state": "ES_FROZEN_NUTRITION_COMPLETE_IMAGES_LOCALIZATIONS_PENDING",
+  "state": "SEVEN_LANGUAGES_READY_MEDIA_AND_PUBLICATION_PENDING",
   "provenance": "Original formula and prose; no WordPress editorial bodies reused.",
   "category_slug": "platos-principales",
   "steps_frozen": true,
@@ -31,51 +31,56 @@
       "category_slug": "platos-principales",
       "cuisine": "Cocina casera",
       "difficulty": "Media",
-      "prep_minutes": 15,
-      "cook_minutes": 25,
-      "total_minutes": 65,
       "servings": 4,
       "image_url": "/recetas/pollo-al-horno-con-hierbas-y-limon/portada.webp",
       "ingredients": [
         {
           "amount": 800,
           "unit": "g",
-          "name": "pechuga de pollo cruda, sin piel ni hueso"
+          "name": "pechuga de pollo cruda, sin piel ni hueso",
+          "group": "Ingredientes"
         },
         {
           "amount": 25,
           "unit": "g",
-          "name": "aceite de oliva"
+          "name": "aceite de oliva",
+          "group": "Ingredientes"
         },
         {
           "amount": 40,
           "unit": "g",
-          "name": "zumo de limón sin semillas"
+          "name": "zumo de limón sin semillas",
+          "group": "Ingredientes"
         },
         {
           "amount": 8,
           "unit": "g",
-          "name": "ajo pelado"
+          "name": "ajo pelado",
+          "group": "Ingredientes"
         },
         {
           "amount": 1,
           "unit": "g",
-          "name": "orégano seco"
+          "name": "orégano seco",
+          "group": "Ingredientes"
         },
         {
           "amount": 1,
           "unit": "g",
-          "name": "tomillo seco"
+          "name": "tomillo seco",
+          "group": "Ingredientes"
         },
         {
           "amount": 3,
           "unit": "g",
-          "name": "sal fina"
+          "name": "sal fina",
+          "group": "Ingredientes"
         },
         {
           "amount": 0.5,
           "unit": "g",
-          "name": "pimienta negra molida"
+          "name": "pimienta negra molida",
+          "group": "Ingredientes"
         }
       ],
       "steps": [
@@ -134,12 +139,148 @@
         "sodium_mg": 381.8,
         "serving_size": "Una cuarta parte del pollo y el aliño; 4 raciones",
         "estimated": true,
-        "source": {
-          "label": "USDA FoodData Central — SR Legacy (abril de 2018)",
-          "url": "https://fdc.nal.usda.gov/"
-        },
+        "source": "USDA FoodData Central — SR Legacy (2018)",
         "method": "Suma de gramos × nutrientes por 100 g de ocho alimentos USDA; total dividido entre 4. Se calculan pesos crudos sin hueso ni piel y todo el aliño. No se aplican pérdidas o retenciones no medidas.",
-        "note": "Estimación, no análisis de laboratorio ni prueba de cocina. Se calculan 800 g de pechuga cruda sin piel ni hueso y todo el aliño; el peso cocinado y los restos no se han medido. No incluye guarnición. Marcas y rendimiento pueden variar."
+        "note": "Estimación, no análisis de laboratorio ni prueba de cocina. Se calculan 800 g de pechuga cruda sin piel ni hueso y todo el aliño; el peso cocinado y los restos no se han medido. No incluye guarnición. Marcas y rendimiento pueden variar.",
+        "inputs": [
+          {
+            "fdc_id": 171077,
+            "description": "Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw",
+            "recipe_grams": 800,
+            "edible_grams": 800,
+            "per_100g": {
+              "fat_g": 2.62,
+              "calories": 120,
+              "saturated_fat_g": 0.563,
+              "sodium_mg": 45.0,
+              "protein_g": 22.5,
+              "sugar_g": 0.0,
+              "carbs_g": 0.0,
+              "fiber_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 171413,
+            "description": "Oil, olive, salad or cooking",
+            "recipe_grams": 25,
+            "edible_grams": 25,
+            "per_100g": {
+              "fat_g": 100,
+              "carbs_g": 0.0,
+              "calories": 884,
+              "sodium_mg": 2.0,
+              "protein_g": 0.0,
+              "saturated_fat_g": 13.8,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 167747,
+            "description": "Lemon juice, raw",
+            "recipe_grams": 40,
+            "edible_grams": 40,
+            "per_100g": {
+              "protein_g": 0.35,
+              "saturated_fat_g": 0.04,
+              "fiber_g": 0.3,
+              "sodium_mg": 1.0,
+              "sugar_g": 2.52,
+              "fat_g": 0.24,
+              "carbs_g": 6.9,
+              "calories": 22.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 169230,
+            "description": "Garlic, raw",
+            "recipe_grams": 8,
+            "edible_grams": 8,
+            "per_100g": {
+              "carbs_g": 33.1,
+              "calories": 149,
+              "sugar_g": 1.0,
+              "saturated_fat_g": 0.089,
+              "fiber_g": 2.1,
+              "sodium_mg": 17.0,
+              "protein_g": 6.36,
+              "fat_g": 0.5
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 171328,
+            "description": "Spices, oregano, dried",
+            "recipe_grams": 1,
+            "edible_grams": 1,
+            "per_100g": {
+              "sugar_g": 4.09,
+              "fat_g": 4.28,
+              "carbs_g": 68.9,
+              "calories": 265,
+              "fiber_g": 42.5,
+              "sodium_mg": 25.0,
+              "saturated_fat_g": 1.55,
+              "protein_g": 9.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170938,
+            "description": "Spices, thyme, dried",
+            "recipe_grams": 1,
+            "edible_grams": 1,
+            "per_100g": {
+              "fat_g": 7.43,
+              "carbs_g": 63.9,
+              "calories": 276,
+              "protein_g": 9.11,
+              "sodium_mg": 55.0,
+              "saturated_fat_g": 2.73,
+              "fiber_g": 37.0,
+              "sugar_g": 1.71
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 173468,
+            "description": "Salt, table",
+            "recipe_grams": 3,
+            "edible_grams": 3,
+            "per_100g": {
+              "fiber_g": 0.0,
+              "sodium_mg": 38800.0,
+              "saturated_fat_g": 0.0,
+              "protein_g": 0.0,
+              "fat_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 0.0,
+              "sugar_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170931,
+            "description": "Spices, pepper, black",
+            "recipe_grams": 0.5,
+            "edible_grams": 0.5,
+            "per_100g": {
+              "fat_g": 3.26,
+              "sugar_g": 0.64,
+              "carbs_g": 64.0,
+              "calories": 251,
+              "protein_g": 10.4,
+              "fiber_g": 25.3,
+              "sodium_mg": 20.0,
+              "saturated_fat_g": 1.39
+            },
+            "basis": "initial_edible_formula_grams"
+          }
+        ],
+        "source_url": "https://fdc.nal.usda.gov/"
       },
       "seo": {
         "title": "Pollo al horno con hierbas y limón: receta paso a paso",
@@ -158,13 +299,1877 @@
             "q": "¿Cómo evito que se seque?",
             "a": "Usa piezas de grosor parecido y empieza a medir a los 20 minutos. Retira cuando todas alcancen 74 °C; alargar por un tiempo fijo después de esa comprobación puede secarlas."
           }
+        ],
+        "image_alt": "Pollo al horno con hierbas y limón",
+        "image_variants": [
+          "/recetas/pollo-al-horno-con-hierbas-y-limon/portada-1x1.webp",
+          "/recetas/pollo-al-horno-con-hierbas-y-limon/portada-4x3.webp",
+          "/recetas/pollo-al-horno-con-hierbas-y-limon/portada-16x9.webp"
         ]
-      }
+      },
+      "prep_time_minutes": 15,
+      "cook_time_minutes": 25,
+      "total_time_minutes": 65,
+      "course": "Platos principales",
+      "summary": "Cuatro pechugas al horno con un aliño medido de limón, ajo y hierbas secas. Se incluyen 20 minutos de marinado en frío y 5 de reposo.",
+      "content_html": "<p>Cuatro pechugas al horno con un aliño medido de limón, ajo y hierbas secas. Se incluyen 20 minutos de marinado en frío y 5 de reposo.</p>",
+      "keywords": [
+        "Pollo al horno con hierbas y limón"
+      ],
+      "gallery": [
+        {
+          "url": "/recetas/pollo-al-horno-con-hierbas-y-limon/portada.webp",
+          "alt": "Pollo al horno con hierbas y limón"
+        }
+      ],
+      "published": true,
+      "editorial_status": "published"
+    },
+    {
+      "id": "10b4a4f1-400b-5c9c-8d81-210bfc4dbfa5",
+      "recipe_group_id": "224e8e13-f4a9-4077-82b7-43b89b8e35bd",
+      "language": "de",
+      "slug": "hahnchen-aus-dem-ofen-mit-krautern-und-zitrone",
+      "public_path": "/de/hahnchen-aus-dem-ofen-mit-krautern-und-zitrone",
+      "source_url": null,
+      "title": "Hähnchen aus dem Ofen mit Kräutern und Zitrone",
+      "excerpt": "Vier Hähnchenbrüste mit Knoblauch, Thymian, Oregano und Zitrone: abgewogene Marinade, kurze Kühlzeit und überprüfte Kerntemperatur.",
+      "category": "Hauptgerichte",
+      "category_slug": "platos-principales",
+      "cuisine": "Hausmannskost",
+      "difficulty": "Mittel",
+      "servings": 4,
+      "image_url": "/recetas/pollo-al-horno-con-hierbas-y-limon/portada.webp",
+      "ingredients": [
+        {
+          "amount": 800,
+          "unit": "g",
+          "name": "rohe Hähnchenbrust ohne Haut und Knochen",
+          "group": "Zutaten"
+        },
+        {
+          "amount": 25,
+          "unit": "g",
+          "name": "Olivenöl",
+          "group": "Zutaten"
+        },
+        {
+          "amount": 40,
+          "unit": "g",
+          "name": "Zitronensaft ohne Kerne",
+          "group": "Zutaten"
+        },
+        {
+          "amount": 8,
+          "unit": "g",
+          "name": "geschälter Knoblauch",
+          "group": "Zutaten"
+        },
+        {
+          "amount": 1,
+          "unit": "g",
+          "name": "getrockneter Oregano",
+          "group": "Zutaten"
+        },
+        {
+          "amount": 1,
+          "unit": "g",
+          "name": "getrockneter Thymian",
+          "group": "Zutaten"
+        },
+        {
+          "amount": 3,
+          "unit": "g",
+          "name": "feines Salz",
+          "group": "Zutaten"
+        },
+        {
+          "amount": 0.5,
+          "unit": "g",
+          "name": "gemahlener schwarzer Pfeffer",
+          "group": "Zutaten"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Form vorbereiten und abwiegen",
+          "content": "Den Backofen auf 200 °C Ober-/Unterhitze vorheizen. Eine etwa 30 × 20 cm große Form, Waage und Thermometer bereitstellen. 800 g rohe Hähnchenbrust ohne Haut und Knochen in vier ähnlich dicken Stücken abwiegen. Das Hähnchen nicht waschen; separate Bretter und Geräte für rohes Fleisch benutzen. Die Zitrone vor dem Auspressen waschen.",
+          "image_url": "/recetas/pollo-al-horno-con-hierbas-y-limon/paso-01.webp",
+          "image_alt": "Hähnchen aus dem Ofen mit Kräutern und Zitrone: Form vorbereiten und abwiegen"
+        },
+        {
+          "title": "Marinade mischen",
+          "content": "25 g Olivenöl, 40 g kernfreien Zitronensaft, 8 g fein gehackten geschälten Knoblauch, 1 g getrockneten Oregano, 1 g getrockneten Thymian, 3 g Salz und 0,5 g gemahlenen schwarzen Pfeffer in einer Schüssel verrühren. Knoblauch und Kräuter gleichmäßig verteilen. Es werden weder Zitronenschale noch Zitronenscheiben oder zusätzliche Mengen verwendet.",
+          "image_url": "/recetas/pollo-al-horno-con-hierbas-y-limon/paso-02.webp",
+          "image_alt": "Hähnchen aus dem Ofen mit Kräutern und Zitrone: Marinade mischen"
+        },
+        {
+          "title": "Würzen und kalt marinieren",
+          "content": "Das Hähnchen in einen Behälter geben, die gesamte Marinade hinzufügen und mit einer Zange wenden, sodass beide Seiten bedeckt sind. Abdecken und 20 Minuten bei höchstens 4 °C kühlen, nicht auf der Arbeitsfläche marinieren. Hände, Brett und Geräte nach Kontakt mit rohem Fleisch reinigen. Zum Servieren eine saubere Zange bereitlegen.",
+          "image_url": "/recetas/pollo-al-horno-con-hierbas-y-limon/paso-03.webp",
+          "image_alt": "Hähnchen aus dem Ofen mit Kräutern und Zitrone: Würzen und kalt marinieren"
+        },
+        {
+          "title": "Stücke in die Form legen",
+          "content": "Die vier Brüste nebeneinander in einer Lage in die Form legen und die Marinade aus dem Behälter darübergeben. Direkt in den vorgeheizten Ofen stellen. Marinade, die rohes Hähnchen berührt hat, wird mitgegart; nicht roh zum Servieren aufbewahren. Den Behälter vor erneuter Benutzung waschen.",
+          "image_url": "/recetas/pollo-al-horno-con-hierbas-y-limon/paso-04.webp",
+          "image_alt": "Hähnchen aus dem Ofen mit Kräutern und Zitrone: Stücke in die Form legen"
+        },
+        {
+          "title": "Backen und Gargrad messen",
+          "content": "Etwa 25 Minuten bei 200 °C backen. Ab Minute 20 jedes Stück prüfen: ein sauberes Thermometer seitlich bis in die Mitte der dicksten Stelle einführen. Alle Stücke müssen 74 °C erreichen. Liegt ein Stück darunter, weiterbacken und erneut messen. Fleisch- oder Saftfarbe ersetzt die Messung nicht. Zusätzliche Garzeit einrechnen.",
+          "image_url": "/recetas/pollo-al-horno-con-hierbas-y-limon/paso-05.webp",
+          "image_alt": "Hähnchen aus dem Ofen mit Kräutern und Zitrone: Backen und Gargrad messen"
+        },
+        {
+          "title": "Ruhen lassen und portionieren",
+          "content": "Die Form mit Ofenhandschuhen herausnehmen und 5 Minuten ruhen lassen. Mit einer sauberen Zange vier ähnliche Portionen bilden, bei Bedarf Stücke teilen. Die 800 g sind Rohgewicht, kein gemessener Garertrag. Die Nährwertschätzung zählt die gesamte Marinade; bleiben Reste zurück, bedeutet das nicht, dass alles verzehrt wurde.",
+          "image_url": "/recetas/pollo-al-horno-con-hierbas-y-limon/paso-06.webp",
+          "image_alt": "Hähnchen aus dem Ofen mit Kräutern und Zitrone: Ruhen lassen und portionieren"
+        },
+        {
+          "title": "Servieren und Reste kühlen",
+          "content": "Vier Portionen ohne eingerechnete Beilagen servieren. Die geplanten 65 Minuten umfassen 15 Minuten Vorbereitung, 20 Minuten Marinieren, 25 Minuten Backen und 5 Minuten Ruhen; das Vorheizen läuft parallel. Reste in flachen Behältern innerhalb von 2 Stunden kühlen, bei mehr als 32 °C innerhalb von 1 Stunde. Bei höchstens 4 °C lagern und auf 74 °C erhitzen.",
+          "image_url": "/recetas/pollo-al-horno-con-hierbas-y-limon/paso-07.webp",
+          "image_alt": "Hähnchen aus dem Ofen mit Kräutern und Zitrone: Servieren und Reste kühlen"
+        }
+      ],
+      "notes": "Eigenständiger Rezeptvorschlag, noch nicht in der Küche getestet. Nur Brust ohne Haut und Knochen verwenden; Schenkel, Stücke mit Knochen oder ein ganzes Hähnchen benötigen andere Zeiten und Nährwerte. Marinade nach Kontakt mit rohem Fleisch mitgaren. Rohgewichte sind kein gemessener Garertrag. Keine Beilage enthalten. Gekühlte Reste innerhalb von 3–4 Tagen verbrauchen; Geruch ist kein Sicherheitsnachweis. Die Schätzung zählt die gesamte Marinade, auch wenn tatsächlich Reste bleiben.",
+      "nutrition": {
+        "calories": 302.1,
+        "protein_g": 45.2,
+        "carbs_g": 1.8,
+        "fat_g": 11.6,
+        "saturated_fat_g": 2.0,
+        "fiber_g": 0.3,
+        "sugar_g": 0.3,
+        "sodium_mg": 381.8,
+        "serving_size": "Eine von 4 gleichen Portionen",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "method": "Summe der essbaren Ausgangsgewichte in Gramm × USDA-Nährwerte je 100 g, geteilt durch 4. Keine ungemessenen Garverluste angewandt. Berechnet werden 800 g rohe Brust ohne Haut und Knochen sowie die gesamte Marinade. Garertrag und Reste wurden nicht gemessen; keine Beilage enthalten.",
+        "note": "Schätzung, keine Laboranalyse oder Küchenprüfung. Marken, Reste und Garertrag können variieren. Berechnet werden 800 g rohe Brust ohne Haut und Knochen sowie die gesamte Marinade. Garertrag und Reste wurden nicht gemessen; keine Beilage enthalten.",
+        "inputs": [
+          {
+            "fdc_id": 171077,
+            "description": "Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw",
+            "recipe_grams": 800,
+            "edible_grams": 800,
+            "per_100g": {
+              "fat_g": 2.62,
+              "calories": 120,
+              "saturated_fat_g": 0.563,
+              "sodium_mg": 45.0,
+              "protein_g": 22.5,
+              "sugar_g": 0.0,
+              "carbs_g": 0.0,
+              "fiber_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 171413,
+            "description": "Oil, olive, salad or cooking",
+            "recipe_grams": 25,
+            "edible_grams": 25,
+            "per_100g": {
+              "fat_g": 100,
+              "carbs_g": 0.0,
+              "calories": 884,
+              "sodium_mg": 2.0,
+              "protein_g": 0.0,
+              "saturated_fat_g": 13.8,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 167747,
+            "description": "Lemon juice, raw",
+            "recipe_grams": 40,
+            "edible_grams": 40,
+            "per_100g": {
+              "protein_g": 0.35,
+              "saturated_fat_g": 0.04,
+              "fiber_g": 0.3,
+              "sodium_mg": 1.0,
+              "sugar_g": 2.52,
+              "fat_g": 0.24,
+              "carbs_g": 6.9,
+              "calories": 22.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 169230,
+            "description": "Garlic, raw",
+            "recipe_grams": 8,
+            "edible_grams": 8,
+            "per_100g": {
+              "carbs_g": 33.1,
+              "calories": 149,
+              "sugar_g": 1.0,
+              "saturated_fat_g": 0.089,
+              "fiber_g": 2.1,
+              "sodium_mg": 17.0,
+              "protein_g": 6.36,
+              "fat_g": 0.5
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 171328,
+            "description": "Spices, oregano, dried",
+            "recipe_grams": 1,
+            "edible_grams": 1,
+            "per_100g": {
+              "sugar_g": 4.09,
+              "fat_g": 4.28,
+              "carbs_g": 68.9,
+              "calories": 265,
+              "fiber_g": 42.5,
+              "sodium_mg": 25.0,
+              "saturated_fat_g": 1.55,
+              "protein_g": 9.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170938,
+            "description": "Spices, thyme, dried",
+            "recipe_grams": 1,
+            "edible_grams": 1,
+            "per_100g": {
+              "fat_g": 7.43,
+              "carbs_g": 63.9,
+              "calories": 276,
+              "protein_g": 9.11,
+              "sodium_mg": 55.0,
+              "saturated_fat_g": 2.73,
+              "fiber_g": 37.0,
+              "sugar_g": 1.71
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 173468,
+            "description": "Salt, table",
+            "recipe_grams": 3,
+            "edible_grams": 3,
+            "per_100g": {
+              "fiber_g": 0.0,
+              "sodium_mg": 38800.0,
+              "saturated_fat_g": 0.0,
+              "protein_g": 0.0,
+              "fat_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 0.0,
+              "sugar_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170931,
+            "description": "Spices, pepper, black",
+            "recipe_grams": 0.5,
+            "edible_grams": 0.5,
+            "per_100g": {
+              "fat_g": 3.26,
+              "sugar_g": 0.64,
+              "carbs_g": 64.0,
+              "calories": 251,
+              "protein_g": 10.4,
+              "fiber_g": 25.3,
+              "sodium_mg": 20.0,
+              "saturated_fat_g": 1.39
+            },
+            "basis": "initial_edible_formula_grams"
+          }
+        ],
+        "source_url": "https://fdc.nal.usda.gov/"
+      },
+      "seo": {
+        "title": "Hähnchen aus dem Ofen mit Kräutern und Zitrone: Schritt für Schritt",
+        "description": "Vier Hähnchenbrüste mit Knoblauch, Thymian, Oregano und Zitrone: abgewogene Marinade, kurze Kühlzeit und überprüfte Kerntemperatur.",
+        "about": "Vier Hähnchenbrüste mit Knoblauch, Thymian, Oregano und Zitrone: abgewogene Marinade, kurze Kühlzeit und überprüfte Kerntemperatur.",
+        "faq": [
+          {
+            "q": "Kann ich Schenkel oder ein ganzes Hähnchen verwenden?",
+            "a": "Diese benötigen andere Zeiten und Nährwerte. Die Formel verwendet 800 g Brust ohne Haut und Knochen; an der dicksten Stelle stets 74 °C prüfen."
+          },
+          {
+            "q": "Darf die Marinade zum Servieren verwendet werden?",
+            "a": "Marinade nach Kontakt mit rohem Hähnchen kommt in die Form und wird mitgegart. Nicht roh servieren oder ungegart erneut verwenden."
+          },
+          {
+            "q": "Wie bleibt das Hähnchen saftig?",
+            "a": "Ähnlich dicke Stücke verwenden und ab Minute 20 messen. Herausnehmen, sobald alle 74 °C erreichen; unnötig längeres Backen kann sie austrocknen."
+          }
+        ],
+        "image_alt": "Hähnchen aus dem Ofen mit Kräutern und Zitrone",
+        "image_variants": [
+          "/recetas/pollo-al-horno-con-hierbas-y-limon/portada-1x1.webp",
+          "/recetas/pollo-al-horno-con-hierbas-y-limon/portada-4x3.webp",
+          "/recetas/pollo-al-horno-con-hierbas-y-limon/portada-16x9.webp"
+        ]
+      },
+      "prep_time_minutes": 15,
+      "cook_time_minutes": 25,
+      "total_time_minutes": 65,
+      "course": "Hauptgerichte",
+      "summary": "Vier Hähnchenbrüste mit Knoblauch, Thymian, Oregano und Zitrone: abgewogene Marinade, kurze Kühlzeit und überprüfte Kerntemperatur.",
+      "content_html": "<p>Vier Hähnchenbrüste mit Knoblauch, Thymian, Oregano und Zitrone: abgewogene Marinade, kurze Kühlzeit und überprüfte Kerntemperatur.</p>",
+      "keywords": [
+        "Hähnchen aus dem Ofen mit Kräutern und Zitrone"
+      ],
+      "gallery": [
+        {
+          "url": "/recetas/pollo-al-horno-con-hierbas-y-limon/portada.webp",
+          "alt": "Hähnchen aus dem Ofen mit Kräutern und Zitrone"
+        }
+      ],
+      "published": true,
+      "editorial_status": "published"
+    },
+    {
+      "id": "17feb5ba-98d4-5321-8089-18ba132b42e7",
+      "recipe_group_id": "224e8e13-f4a9-4077-82b7-43b89b8e35bd",
+      "language": "en",
+      "slug": "pollo-al-horno-con-hierbas-y-limon",
+      "public_path": "/en/pollo-al-horno-con-hierbas-y-limon",
+      "source_url": "https://manualdecocina.com/en/pollo-al-horno-con-hierbas-y-limon/",
+      "title": "Oven chicken with herbs and lemon",
+      "excerpt": "Four chicken breasts with garlic, thyme, oregano and lemon: a weighed dressing, brief chilled marinade and checked internal temperature.",
+      "category": "Main dishes",
+      "category_slug": "platos-principales",
+      "cuisine": "Home cooking",
+      "difficulty": "Medium",
+      "servings": 4,
+      "image_url": "/recetas/pollo-al-horno-con-hierbas-y-limon/portada.webp",
+      "ingredients": [
+        {
+          "amount": 800,
+          "unit": "g",
+          "name": "raw skinless boneless chicken breast",
+          "group": "Ingredients"
+        },
+        {
+          "amount": 25,
+          "unit": "g",
+          "name": "olive oil",
+          "group": "Ingredients"
+        },
+        {
+          "amount": 40,
+          "unit": "g",
+          "name": "seedless lemon juice",
+          "group": "Ingredients"
+        },
+        {
+          "amount": 8,
+          "unit": "g",
+          "name": "peeled garlic",
+          "group": "Ingredients"
+        },
+        {
+          "amount": 1,
+          "unit": "g",
+          "name": "dried oregano",
+          "group": "Ingredients"
+        },
+        {
+          "amount": 1,
+          "unit": "g",
+          "name": "dried thyme",
+          "group": "Ingredients"
+        },
+        {
+          "amount": 3,
+          "unit": "g",
+          "name": "fine salt",
+          "group": "Ingredients"
+        },
+        {
+          "amount": 0.5,
+          "unit": "g",
+          "name": "ground black pepper",
+          "group": "Ingredients"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepare the dish and weigh",
+          "content": "Preheat the oven to 200 °C with conventional top and bottom heat. Set out a dish about 30 × 20 cm, scales and a thermometer. Weigh 800 g raw skinless boneless chicken breast in four pieces of similar thickness. Do not wash the chicken; use separate boards and utensils for raw food. Wash the lemon before squeezing.",
+          "image_url": "/recetas/pollo-al-horno-con-hierbas-y-limon/paso-01.webp",
+          "image_alt": "Oven chicken with herbs and lemon: Prepare the dish and weigh"
+        },
+        {
+          "title": "Mix the dressing",
+          "content": "In a bowl combine 25 g olive oil, 40 g seedless lemon juice, 8 g finely chopped peeled garlic, 1 g dried oregano, 1 g dried thyme, 3 g salt and 0.5 g ground black pepper. Stir with a spoon to distribute the garlic and herbs. No zest, lemon slices or extra quantities are used.",
+          "image_url": "/recetas/pollo-al-horno-con-hierbas-y-limon/paso-02.webp",
+          "image_alt": "Oven chicken with herbs and lemon: Mix the dressing"
+        },
+        {
+          "title": "Coat and marinate in the fridge",
+          "content": "Put the chicken in a container, add all the dressing and turn with tongs to coat both sides. Cover and refrigerate at 4 °C or below for 20 minutes. Do not marinate on the counter. Wash hands, board and utensils that touched raw meat; set aside clean tongs for serving.",
+          "image_url": "/recetas/pollo-al-horno-con-hierbas-y-limon/paso-03.webp",
+          "image_alt": "Oven chicken with herbs and lemon: Coat and marinate in the fridge"
+        },
+        {
+          "title": "Arrange the pieces",
+          "content": "Place the four breasts in the dish in a single layer without piling them up, and pour the dressing from the container over them. Put straight into the preheated oven. Dressing that touched raw chicken must cook with it; do not reserve it for serving raw or reuse the unwashed container.",
+          "image_url": "/recetas/pollo-al-horno-con-hierbas-y-limon/paso-04.webp",
+          "image_alt": "Oven chicken with herbs and lemon: Arrange the pieces"
+        },
+        {
+          "title": "Bake and check doneness",
+          "content": "Bake for about 25 minutes at 200 °C. Start checking at 20 minutes: insert a clean thermometer from the side into the centre of the thickest part of each piece. All must reach 74 °C. If one is below this, keep baking and measure again. Meat or juice colour does not replace this check. Add any extra cooking time.",
+          "image_url": "/recetas/pollo-al-horno-con-hierbas-y-limon/paso-05.webp",
+          "image_alt": "Oven chicken with herbs and lemon: Bake and check doneness"
+        },
+        {
+          "title": "Rest and prepare to serve",
+          "content": "Remove the dish with oven gloves and rest the chicken for 5 minutes. Use clean tongs and divide pieces if necessary into four similar servings. The 800 g is raw weight, not a measured cooked yield. Nutrition counts all the dressing as an estimate; any leftovers mean it may not all have been eaten.",
+          "image_url": "/recetas/pollo-al-horno-con-hierbas-y-limon/paso-06.webp",
+          "image_alt": "Oven chicken with herbs and lemon: Rest and prepare to serve"
+        },
+        {
+          "title": "Serve and store leftovers",
+          "content": "Serve four portions without included sides. The planned 65 minutes comprise 15 preparation, 20 marinating, 25 baking and 5 resting; preheating overlaps preparation and marinating. Refrigerate leftovers in shallow containers within 2 hours, or 1 hour above 32 °C ambient temperature. Store at 4 °C or below and reheat to 74 °C.",
+          "image_url": "/recetas/pollo-al-horno-con-hierbas-y-limon/paso-07.webp",
+          "image_alt": "Oven chicken with herbs and lemon: Serve and store leftovers"
+        }
+      ],
+      "notes": "Original proposed recipe, not yet kitchen tested. Use skinless boneless breasts; thighs, bone-in pieces or a whole bird need different timings and a different calculation. Dressing that touches raw meat cooks with it. Initial weights are not a measured cooked yield. No side dish is included. Use refrigerated leftovers within 3–4 days; smell does not establish safety. The estimate includes all the dressing even if some remains uneaten.",
+      "nutrition": {
+        "calories": 302.1,
+        "protein_g": 45.2,
+        "carbs_g": 1.8,
+        "fat_g": 11.6,
+        "saturated_fat_g": 2.0,
+        "fiber_g": 0.3,
+        "sugar_g": 0.3,
+        "sodium_mg": 381.8,
+        "serving_size": "One of 4 equal servings",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "method": "Sum of edible starting grams × USDA nutrients per 100 g, divided by 4. No unmeasured cooking losses applied. Calculated from 800 g raw skinless boneless breast and all the dressing. Cooked yield and leftovers have not been measured. No side dish is included.",
+        "note": "Estimate, not a laboratory analysis or kitchen test. Brands, leftovers and cooked yield can vary. Calculated from 800 g raw skinless boneless breast and all the dressing. Cooked yield and leftovers have not been measured. No side dish is included.",
+        "inputs": [
+          {
+            "fdc_id": 171077,
+            "description": "Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw",
+            "recipe_grams": 800,
+            "edible_grams": 800,
+            "per_100g": {
+              "fat_g": 2.62,
+              "calories": 120,
+              "saturated_fat_g": 0.563,
+              "sodium_mg": 45.0,
+              "protein_g": 22.5,
+              "sugar_g": 0.0,
+              "carbs_g": 0.0,
+              "fiber_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 171413,
+            "description": "Oil, olive, salad or cooking",
+            "recipe_grams": 25,
+            "edible_grams": 25,
+            "per_100g": {
+              "fat_g": 100,
+              "carbs_g": 0.0,
+              "calories": 884,
+              "sodium_mg": 2.0,
+              "protein_g": 0.0,
+              "saturated_fat_g": 13.8,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 167747,
+            "description": "Lemon juice, raw",
+            "recipe_grams": 40,
+            "edible_grams": 40,
+            "per_100g": {
+              "protein_g": 0.35,
+              "saturated_fat_g": 0.04,
+              "fiber_g": 0.3,
+              "sodium_mg": 1.0,
+              "sugar_g": 2.52,
+              "fat_g": 0.24,
+              "carbs_g": 6.9,
+              "calories": 22.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 169230,
+            "description": "Garlic, raw",
+            "recipe_grams": 8,
+            "edible_grams": 8,
+            "per_100g": {
+              "carbs_g": 33.1,
+              "calories": 149,
+              "sugar_g": 1.0,
+              "saturated_fat_g": 0.089,
+              "fiber_g": 2.1,
+              "sodium_mg": 17.0,
+              "protein_g": 6.36,
+              "fat_g": 0.5
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 171328,
+            "description": "Spices, oregano, dried",
+            "recipe_grams": 1,
+            "edible_grams": 1,
+            "per_100g": {
+              "sugar_g": 4.09,
+              "fat_g": 4.28,
+              "carbs_g": 68.9,
+              "calories": 265,
+              "fiber_g": 42.5,
+              "sodium_mg": 25.0,
+              "saturated_fat_g": 1.55,
+              "protein_g": 9.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170938,
+            "description": "Spices, thyme, dried",
+            "recipe_grams": 1,
+            "edible_grams": 1,
+            "per_100g": {
+              "fat_g": 7.43,
+              "carbs_g": 63.9,
+              "calories": 276,
+              "protein_g": 9.11,
+              "sodium_mg": 55.0,
+              "saturated_fat_g": 2.73,
+              "fiber_g": 37.0,
+              "sugar_g": 1.71
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 173468,
+            "description": "Salt, table",
+            "recipe_grams": 3,
+            "edible_grams": 3,
+            "per_100g": {
+              "fiber_g": 0.0,
+              "sodium_mg": 38800.0,
+              "saturated_fat_g": 0.0,
+              "protein_g": 0.0,
+              "fat_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 0.0,
+              "sugar_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170931,
+            "description": "Spices, pepper, black",
+            "recipe_grams": 0.5,
+            "edible_grams": 0.5,
+            "per_100g": {
+              "fat_g": 3.26,
+              "sugar_g": 0.64,
+              "carbs_g": 64.0,
+              "calories": 251,
+              "protein_g": 10.4,
+              "fiber_g": 25.3,
+              "sodium_mg": 20.0,
+              "saturated_fat_g": 1.39
+            },
+            "basis": "initial_edible_formula_grams"
+          }
+        ],
+        "source_url": "https://fdc.nal.usda.gov/"
+      },
+      "seo": {
+        "title": "Oven chicken with herbs and lemon: step-by-step recipe",
+        "description": "Four chicken breasts with garlic, thyme, oregano and lemon: a weighed dressing, brief chilled marinade and checked internal temperature.",
+        "about": "Four chicken breasts with garlic, thyme, oregano and lemon: a weighed dressing, brief chilled marinade and checked internal temperature.",
+        "faq": [
+          {
+            "q": "Can I use thighs or a whole chicken?",
+            "a": "They need different timings and nutrition. This formula uses 800 g skinless boneless breast; always check 74 °C at the thickest point."
+          },
+          {
+            "q": "Can I serve the dressing?",
+            "a": "Dressing that touched raw chicken goes into the dish and cooks with it. Do not serve it raw or reuse it uncooked."
+          },
+          {
+            "q": "How do I keep it from drying out?",
+            "a": "Choose pieces of similar thickness and start measuring at 20 minutes. Remove when all reach 74 °C; continuing for a fixed extra time can dry them out."
+          }
+        ],
+        "image_alt": "Oven chicken with herbs and lemon",
+        "image_variants": [
+          "/recetas/pollo-al-horno-con-hierbas-y-limon/portada-1x1.webp",
+          "/recetas/pollo-al-horno-con-hierbas-y-limon/portada-4x3.webp",
+          "/recetas/pollo-al-horno-con-hierbas-y-limon/portada-16x9.webp"
+        ]
+      },
+      "prep_time_minutes": 15,
+      "cook_time_minutes": 25,
+      "total_time_minutes": 65,
+      "course": "Main dishes",
+      "summary": "Four chicken breasts with garlic, thyme, oregano and lemon: a weighed dressing, brief chilled marinade and checked internal temperature.",
+      "content_html": "<p>Four chicken breasts with garlic, thyme, oregano and lemon: a weighed dressing, brief chilled marinade and checked internal temperature.</p>",
+      "keywords": [
+        "Oven chicken with herbs and lemon"
+      ],
+      "gallery": [
+        {
+          "url": "/recetas/pollo-al-horno-con-hierbas-y-limon/portada.webp",
+          "alt": "Oven chicken with herbs and lemon"
+        }
+      ],
+      "published": true,
+      "editorial_status": "published"
+    },
+    {
+      "id": "cc000b53-87b1-5b2b-a8a9-1b8f15f76a1c",
+      "recipe_group_id": "224e8e13-f4a9-4077-82b7-43b89b8e35bd",
+      "language": "fr",
+      "slug": "poulet-au-four-aux-herbes-et-au-citron",
+      "public_path": "/fr/poulet-au-four-aux-herbes-et-au-citron",
+      "source_url": null,
+      "title": "Poulet au four aux herbes et au citron",
+      "excerpt": "Quatre blancs de poulet avec ail, thym, origan et citron : assaisonnement pesé, courte marinade au froid et température à cœur vérifiée.",
+      "category": "Plats principaux",
+      "category_slug": "platos-principales",
+      "cuisine": "Cuisine familiale",
+      "difficulty": "Moyenne",
+      "servings": 4,
+      "image_url": "/recetas/pollo-al-horno-con-hierbas-y-limon/portada.webp",
+      "ingredients": [
+        {
+          "amount": 800,
+          "unit": "g",
+          "name": "blanc de poulet cru sans peau ni os",
+          "group": "Ingrédients"
+        },
+        {
+          "amount": 25,
+          "unit": "g",
+          "name": "huile d’olive",
+          "group": "Ingrédients"
+        },
+        {
+          "amount": 40,
+          "unit": "g",
+          "name": "jus de citron sans pépins",
+          "group": "Ingrédients"
+        },
+        {
+          "amount": 8,
+          "unit": "g",
+          "name": "ail épluché",
+          "group": "Ingrédients"
+        },
+        {
+          "amount": 1,
+          "unit": "g",
+          "name": "origan séché",
+          "group": "Ingrédients"
+        },
+        {
+          "amount": 1,
+          "unit": "g",
+          "name": "thym séché",
+          "group": "Ingrédients"
+        },
+        {
+          "amount": 3,
+          "unit": "g",
+          "name": "sel fin",
+          "group": "Ingrédients"
+        },
+        {
+          "amount": 0.5,
+          "unit": "g",
+          "name": "poivre noir moulu",
+          "group": "Ingrédients"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Préparez le plat et pesez",
+          "content": "Préchauffez le four à 200 °C, chaleur traditionnelle. Préparez un plat d’environ 30 × 20 cm, une balance et un thermomètre. Pesez 800 g de blancs crus sans peau ni os, en quatre morceaux d’épaisseur similaire. Ne lavez pas le poulet ; utilisez une planche et des ustensiles réservés aux aliments crus. Lavez le citron avant de le presser.",
+          "image_url": "/recetas/pollo-al-horno-con-hierbas-y-limon/paso-01.webp",
+          "image_alt": "Poulet au four aux herbes et au citron: Préparez le plat et pesez"
+        },
+        {
+          "title": "Mélangez l’assaisonnement",
+          "content": "Mélangez dans un bol 25 g d’huile d’olive, 40 g de jus de citron sans pépins, 8 g d’ail épluché haché, 1 g d’origan séché, 1 g de thym séché, 3 g de sel et 0,5 g de poivre noir moulu. Remuez à la cuillère pour répartir ail et herbes. Ni zeste, ni rondelles de citron, ni quantités supplémentaires ne sont utilisés.",
+          "image_url": "/recetas/pollo-al-horno-con-hierbas-y-limon/paso-02.webp",
+          "image_alt": "Poulet au four aux herbes et au citron: Mélangez l’assaisonnement"
+        },
+        {
+          "title": "Assaisonnez et marinez au froid",
+          "content": "Placez le poulet dans un récipient, ajoutez tout l’assaisonnement et retournez à la pince pour couvrir les deux faces. Couvrez et réfrigérez 20 minutes à 4 °C maximum, sans mariner sur le plan de travail. Lavez mains, planche et ustensiles après contact avec la viande crue ; réservez une pince propre pour servir.",
+          "image_url": "/recetas/pollo-al-horno-con-hierbas-y-limon/paso-03.webp",
+          "image_alt": "Poulet au four aux herbes et au citron: Assaisonnez et marinez au froid"
+        },
+        {
+          "title": "Disposez les morceaux",
+          "content": "Disposez les quatre blancs dans le plat en une seule couche, sans les empiler, et versez l’assaisonnement du récipient dessus. Enfournez immédiatement. L’assaisonnement ayant touché le poulet cru doit cuire avec lui : ne le gardez pas pour le servir cru et ne réutilisez pas le récipient sans le laver.",
+          "image_url": "/recetas/pollo-al-horno-con-hierbas-y-limon/paso-04.webp",
+          "image_alt": "Poulet au four aux herbes et au citron: Disposez les morceaux"
+        },
+        {
+          "title": "Cuisez et vérifiez à cœur",
+          "content": "Cuisez environ 25 minutes à 200 °C. Vérifiez dès 20 minutes en introduisant un thermomètre propre par le côté jusqu’au centre de la partie la plus épaisse de chaque morceau. Tous doivent atteindre 74 °C. Sinon, poursuivez et mesurez de nouveau. La couleur de la chair ou du jus ne remplace pas la mesure. Ajoutez le temps supplémentaire.",
+          "image_url": "/recetas/pollo-al-horno-con-hierbas-y-limon/paso-05.webp",
+          "image_alt": "Poulet au four aux herbes et au citron: Cuisez et vérifiez à cœur"
+        },
+        {
+          "title": "Laissez reposer et portionnez",
+          "content": "Sortez le plat avec des gants et laissez reposer 5 minutes. Utilisez une pince propre et partagez les morceaux au besoin en quatre portions similaires. Les 800 g correspondent au poids cru, pas à un rendement cuit mesuré. La nutrition estime tout l’assaisonnement ; s’il en reste, cela ne signifie pas qu’il a été entièrement consommé.",
+          "image_url": "/recetas/pollo-al-horno-con-hierbas-y-limon/paso-06.webp",
+          "image_alt": "Poulet au four aux herbes et au citron: Laissez reposer et portionnez"
+        },
+        {
+          "title": "Servez et conservez les restes",
+          "content": "Servez quatre portions sans accompagnements inclus. Les 65 minutes prévues comprennent 15 de préparation, 20 de marinade, 25 de cuisson et 5 de repos ; le préchauffage se fait en parallèle. Réfrigérez les restes dans des récipients peu profonds sous 2 heures, ou 1 heure si l’ambiance dépasse 32 °C. Conservez à 4 °C maximum et réchauffez à 74 °C.",
+          "image_url": "/recetas/pollo-al-horno-con-hierbas-y-limon/paso-07.webp",
+          "image_alt": "Poulet au four aux herbes et au citron: Servez et conservez les restes"
+        }
+      ],
+      "notes": "Proposition de recette originale, pas encore testée en cuisine. Utilisez des blancs sans peau ni os ; cuisses, morceaux avec os et poulet entier demandent d’autres temps et calculs. L’assaisonnement ayant touché la viande crue cuit avec elle. Les poids initiaux ne sont pas un rendement cuit mesuré. Aucun accompagnement inclus. Consommez les restes réfrigérés sous 3–4 jours ; l’odeur ne prouve pas leur sécurité. L’estimation compte tout l’assaisonnement, même s’il reste des résidus.",
+      "nutrition": {
+        "calories": 302.1,
+        "protein_g": 45.2,
+        "carbs_g": 1.8,
+        "fat_g": 11.6,
+        "saturated_fat_g": 2.0,
+        "fiber_g": 0.3,
+        "sugar_g": 0.3,
+        "sodium_mg": 381.8,
+        "serving_size": "Une des 4 portions égales",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "method": "Somme des poids comestibles initiaux en grammes × nutriments USDA pour 100 g, divisée par 4. Aucune perte de cuisson non mesurée appliquée. Calcul pour 800 g de blancs crus sans peau ni os et tout l’assaisonnement. Le rendement cuit et les restes n’ont pas été mesurés. Aucun accompagnement inclus.",
+        "note": "Estimation, pas une analyse de laboratoire ni un essai en cuisine. Marques, restes et rendement peuvent varier. Calcul pour 800 g de blancs crus sans peau ni os et tout l’assaisonnement. Le rendement cuit et les restes n’ont pas été mesurés. Aucun accompagnement inclus.",
+        "inputs": [
+          {
+            "fdc_id": 171077,
+            "description": "Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw",
+            "recipe_grams": 800,
+            "edible_grams": 800,
+            "per_100g": {
+              "fat_g": 2.62,
+              "calories": 120,
+              "saturated_fat_g": 0.563,
+              "sodium_mg": 45.0,
+              "protein_g": 22.5,
+              "sugar_g": 0.0,
+              "carbs_g": 0.0,
+              "fiber_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 171413,
+            "description": "Oil, olive, salad or cooking",
+            "recipe_grams": 25,
+            "edible_grams": 25,
+            "per_100g": {
+              "fat_g": 100,
+              "carbs_g": 0.0,
+              "calories": 884,
+              "sodium_mg": 2.0,
+              "protein_g": 0.0,
+              "saturated_fat_g": 13.8,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 167747,
+            "description": "Lemon juice, raw",
+            "recipe_grams": 40,
+            "edible_grams": 40,
+            "per_100g": {
+              "protein_g": 0.35,
+              "saturated_fat_g": 0.04,
+              "fiber_g": 0.3,
+              "sodium_mg": 1.0,
+              "sugar_g": 2.52,
+              "fat_g": 0.24,
+              "carbs_g": 6.9,
+              "calories": 22.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 169230,
+            "description": "Garlic, raw",
+            "recipe_grams": 8,
+            "edible_grams": 8,
+            "per_100g": {
+              "carbs_g": 33.1,
+              "calories": 149,
+              "sugar_g": 1.0,
+              "saturated_fat_g": 0.089,
+              "fiber_g": 2.1,
+              "sodium_mg": 17.0,
+              "protein_g": 6.36,
+              "fat_g": 0.5
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 171328,
+            "description": "Spices, oregano, dried",
+            "recipe_grams": 1,
+            "edible_grams": 1,
+            "per_100g": {
+              "sugar_g": 4.09,
+              "fat_g": 4.28,
+              "carbs_g": 68.9,
+              "calories": 265,
+              "fiber_g": 42.5,
+              "sodium_mg": 25.0,
+              "saturated_fat_g": 1.55,
+              "protein_g": 9.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170938,
+            "description": "Spices, thyme, dried",
+            "recipe_grams": 1,
+            "edible_grams": 1,
+            "per_100g": {
+              "fat_g": 7.43,
+              "carbs_g": 63.9,
+              "calories": 276,
+              "protein_g": 9.11,
+              "sodium_mg": 55.0,
+              "saturated_fat_g": 2.73,
+              "fiber_g": 37.0,
+              "sugar_g": 1.71
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 173468,
+            "description": "Salt, table",
+            "recipe_grams": 3,
+            "edible_grams": 3,
+            "per_100g": {
+              "fiber_g": 0.0,
+              "sodium_mg": 38800.0,
+              "saturated_fat_g": 0.0,
+              "protein_g": 0.0,
+              "fat_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 0.0,
+              "sugar_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170931,
+            "description": "Spices, pepper, black",
+            "recipe_grams": 0.5,
+            "edible_grams": 0.5,
+            "per_100g": {
+              "fat_g": 3.26,
+              "sugar_g": 0.64,
+              "carbs_g": 64.0,
+              "calories": 251,
+              "protein_g": 10.4,
+              "fiber_g": 25.3,
+              "sodium_mg": 20.0,
+              "saturated_fat_g": 1.39
+            },
+            "basis": "initial_edible_formula_grams"
+          }
+        ],
+        "source_url": "https://fdc.nal.usda.gov/"
+      },
+      "seo": {
+        "title": "Poulet au four aux herbes et au citron: recette étape par étape",
+        "description": "Quatre blancs de poulet avec ail, thym, origan et citron : assaisonnement pesé, courte marinade au froid et température à cœur vérifiée.",
+        "about": "Quatre blancs de poulet avec ail, thym, origan et citron : assaisonnement pesé, courte marinade au froid et température à cœur vérifiée.",
+        "faq": [
+          {
+            "q": "Puis-je utiliser des cuisses ou un poulet entier ?",
+            "a": "Il faut d’autres temps et un autre calcul nutritionnel. Cette formule utilise 800 g de blancs sans peau ni os ; vérifiez toujours 74 °C à l’endroit le plus épais."
+          },
+          {
+            "q": "Puis-je servir l’assaisonnement ?",
+            "a": "Celui ayant touché le poulet cru est versé dans le plat et cuit avec lui. Ne le servez pas cru et ne le réutilisez pas sans cuisson."
+          },
+          {
+            "q": "Comment éviter un poulet sec ?",
+            "a": "Choisissez des morceaux d’épaisseur similaire et mesurez dès 20 minutes. Retirez lorsque tous atteignent 74 °C ; prolonger ensuite arbitrairement peut les dessécher."
+          }
+        ],
+        "image_alt": "Poulet au four aux herbes et au citron",
+        "image_variants": [
+          "/recetas/pollo-al-horno-con-hierbas-y-limon/portada-1x1.webp",
+          "/recetas/pollo-al-horno-con-hierbas-y-limon/portada-4x3.webp",
+          "/recetas/pollo-al-horno-con-hierbas-y-limon/portada-16x9.webp"
+        ]
+      },
+      "prep_time_minutes": 15,
+      "cook_time_minutes": 25,
+      "total_time_minutes": 65,
+      "course": "Plats principaux",
+      "summary": "Quatre blancs de poulet avec ail, thym, origan et citron : assaisonnement pesé, courte marinade au froid et température à cœur vérifiée.",
+      "content_html": "<p>Quatre blancs de poulet avec ail, thym, origan et citron : assaisonnement pesé, courte marinade au froid et température à cœur vérifiée.</p>",
+      "keywords": [
+        "Poulet au four aux herbes et au citron"
+      ],
+      "gallery": [
+        {
+          "url": "/recetas/pollo-al-horno-con-hierbas-y-limon/portada.webp",
+          "alt": "Poulet au four aux herbes et au citron"
+        }
+      ],
+      "published": true,
+      "editorial_status": "published"
+    },
+    {
+      "id": "b6b5d1c3-4043-5781-8881-3ba28a942356",
+      "recipe_group_id": "224e8e13-f4a9-4077-82b7-43b89b8e35bd",
+      "language": "it",
+      "slug": "pollo-al-forno-con-erbe-e-limone",
+      "public_path": "/it/pollo-al-forno-con-erbe-e-limone",
+      "source_url": null,
+      "title": "Pollo al forno con erbe e limone",
+      "excerpt": "Quattro petti di pollo con aglio, timo, origano e limone: condimento pesato, breve marinatura in frigorifero e temperatura interna controllata.",
+      "category": "Secondi piatti",
+      "category_slug": "platos-principales",
+      "cuisine": "Cucina casalinga",
+      "difficulty": "Media",
+      "servings": 4,
+      "image_url": "/recetas/pollo-al-horno-con-hierbas-y-limon/portada.webp",
+      "ingredients": [
+        {
+          "amount": 800,
+          "unit": "g",
+          "name": "petto di pollo crudo senza pelle né ossa",
+          "group": "Ingredienti"
+        },
+        {
+          "amount": 25,
+          "unit": "g",
+          "name": "olio d’oliva",
+          "group": "Ingredienti"
+        },
+        {
+          "amount": 40,
+          "unit": "g",
+          "name": "succo di limone senza semi",
+          "group": "Ingredienti"
+        },
+        {
+          "amount": 8,
+          "unit": "g",
+          "name": "aglio sbucciato",
+          "group": "Ingredienti"
+        },
+        {
+          "amount": 1,
+          "unit": "g",
+          "name": "origano secco",
+          "group": "Ingredienti"
+        },
+        {
+          "amount": 1,
+          "unit": "g",
+          "name": "timo secco",
+          "group": "Ingredienti"
+        },
+        {
+          "amount": 3,
+          "unit": "g",
+          "name": "sale fino",
+          "group": "Ingredienti"
+        },
+        {
+          "amount": 0.5,
+          "unit": "g",
+          "name": "pepe nero macinato",
+          "group": "Ingredienti"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepara la teglia e pesa",
+          "content": "Preriscalda il forno a 200 °C statico. Prepara una teglia di circa 30 × 20 cm, bilancia e termometro. Pesa 800 g di petto crudo senza pelle né ossa in quattro pezzi di spessore simile. Non lavare il pollo; usa tagliere e utensili separati per gli alimenti crudi. Lava il limone prima di spremerlo.",
+          "image_url": "/recetas/pollo-al-horno-con-hierbas-y-limon/paso-01.webp",
+          "image_alt": "Pollo al forno con erbe e limone: Prepara la teglia e pesa"
+        },
+        {
+          "title": "Mescola il condimento",
+          "content": "In una ciotola unisci 25 g di olio d’oliva, 40 g di succo di limone senza semi, 8 g di aglio sbucciato tritato, 1 g di origano secco, 1 g di timo secco, 3 g di sale e 0,5 g di pepe nero macinato. Mescola con un cucchiaio per distribuire aglio ed erbe. Non si usano scorza, fette di limone o quantità aggiuntive.",
+          "image_url": "/recetas/pollo-al-horno-con-hierbas-y-limon/paso-02.webp",
+          "image_alt": "Pollo al forno con erbe e limone: Mescola il condimento"
+        },
+        {
+          "title": "Condisci e marina al freddo",
+          "content": "Metti il pollo in un contenitore, versa tutto il condimento e gira con le pinze per rivestire entrambi i lati. Copri e conserva 20 minuti in frigorifero a 4 °C o meno, senza marinare sul piano di lavoro. Lava mani, tagliere e utensili dopo il contatto con carne cruda; prepara pinze pulite per servire.",
+          "image_url": "/recetas/pollo-al-horno-con-hierbas-y-limon/paso-03.webp",
+          "image_alt": "Pollo al forno con erbe e limone: Condisci e marina al freddo"
+        },
+        {
+          "title": "Disponi i pezzi",
+          "content": "Disponi i quattro petti nella teglia in un solo strato, senza sovrapporli, e versa sopra il condimento del contenitore. Inforna subito nel forno caldo. Il condimento che ha toccato pollo crudo deve cuocere con esso: non conservarlo per servirlo crudo e non riutilizzare il contenitore senza lavarlo.",
+          "image_url": "/recetas/pollo-al-horno-con-hierbas-y-limon/paso-04.webp",
+          "image_alt": "Pollo al forno con erbe e limone: Disponi i pezzi"
+        },
+        {
+          "title": "Cuoci e verifica la temperatura",
+          "content": "Cuoci circa 25 minuti a 200 °C. Controlla dal minuto 20: inserisci un termometro pulito lateralmente fino al centro della parte più spessa di ciascun pezzo. Tutti devono raggiungere 74 °C. Se uno non arriva, continua a cuocere e misura di nuovo. Il colore della carne o dei succhi non sostituisce la verifica. Aggiungi il tempo necessario.",
+          "image_url": "/recetas/pollo-al-horno-con-hierbas-y-limon/paso-05.webp",
+          "image_alt": "Pollo al forno con erbe e limone: Cuoci e verifica la temperatura"
+        },
+        {
+          "title": "Lascia riposare e porziona",
+          "content": "Estrai la teglia con guanti da forno e lascia riposare 5 minuti. Usa pinze pulite e dividi i pezzi se necessario in quattro porzioni simili. Gli 800 g sono peso crudo, non una resa cotta misurata. La stima nutrizionale conta tutto il condimento; eventuali residui non implicano che sia stato consumato integralmente.",
+          "image_url": "/recetas/pollo-al-horno-con-hierbas-y-limon/paso-06.webp",
+          "image_alt": "Pollo al forno con erbe e limone: Lascia riposare e porziona"
+        },
+        {
+          "title": "Servi e conserva gli avanzi",
+          "content": "Servi quattro porzioni senza contorni inclusi. I 65 minuti previsti comprendono 15 di preparazione, 20 di marinatura, 25 di forno e 5 di riposo; il preriscaldamento avviene in parallelo. Refrigerare gli avanzi in contenitori poco profondi entro 2 ore, oppure 1 ora sopra 32 °C ambientali. Conserva a 4 °C o meno e riscalda fino a 74 °C.",
+          "image_url": "/recetas/pollo-al-horno-con-hierbas-y-limon/paso-07.webp",
+          "image_alt": "Pollo al forno con erbe e limone: Servi e conserva gli avanzi"
+        }
+      ],
+      "notes": "Ricetta originale proposta, non ancora provata in cucina. Usa petti senza pelle né ossa; cosce, pezzi con osso o un pollo intero richiedono altri tempi e calcoli. Il condimento a contatto con carne cruda cuoce insieme al pollo. I pesi iniziali non sono una resa cotta misurata. Nessun contorno incluso. Consuma gli avanzi refrigerati entro 3–4 giorni; l’odore non ne dimostra la sicurezza. La stima include tutto il condimento anche se rimangono residui.",
+      "nutrition": {
+        "calories": 302.1,
+        "protein_g": 45.2,
+        "carbs_g": 1.8,
+        "fat_g": 11.6,
+        "saturated_fat_g": 2.0,
+        "fiber_g": 0.3,
+        "sugar_g": 0.3,
+        "sodium_mg": 381.8,
+        "serving_size": "Una delle 4 porzioni uguali",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "method": "Somma dei grammi comestibili iniziali × nutrienti USDA per 100 g, divisa per 4. Nessuna perdita di cottura non misurata applicata. Calcolo per 800 g di petto crudo senza pelle né ossa e tutto il condimento. Resa cotta e residui non misurati. Nessun contorno incluso.",
+        "note": "Stima, non analisi di laboratorio né prova in cucina. Marche, residui e resa possono variare. Calcolo per 800 g di petto crudo senza pelle né ossa e tutto il condimento. Resa cotta e residui non misurati. Nessun contorno incluso.",
+        "inputs": [
+          {
+            "fdc_id": 171077,
+            "description": "Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw",
+            "recipe_grams": 800,
+            "edible_grams": 800,
+            "per_100g": {
+              "fat_g": 2.62,
+              "calories": 120,
+              "saturated_fat_g": 0.563,
+              "sodium_mg": 45.0,
+              "protein_g": 22.5,
+              "sugar_g": 0.0,
+              "carbs_g": 0.0,
+              "fiber_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 171413,
+            "description": "Oil, olive, salad or cooking",
+            "recipe_grams": 25,
+            "edible_grams": 25,
+            "per_100g": {
+              "fat_g": 100,
+              "carbs_g": 0.0,
+              "calories": 884,
+              "sodium_mg": 2.0,
+              "protein_g": 0.0,
+              "saturated_fat_g": 13.8,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 167747,
+            "description": "Lemon juice, raw",
+            "recipe_grams": 40,
+            "edible_grams": 40,
+            "per_100g": {
+              "protein_g": 0.35,
+              "saturated_fat_g": 0.04,
+              "fiber_g": 0.3,
+              "sodium_mg": 1.0,
+              "sugar_g": 2.52,
+              "fat_g": 0.24,
+              "carbs_g": 6.9,
+              "calories": 22.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 169230,
+            "description": "Garlic, raw",
+            "recipe_grams": 8,
+            "edible_grams": 8,
+            "per_100g": {
+              "carbs_g": 33.1,
+              "calories": 149,
+              "sugar_g": 1.0,
+              "saturated_fat_g": 0.089,
+              "fiber_g": 2.1,
+              "sodium_mg": 17.0,
+              "protein_g": 6.36,
+              "fat_g": 0.5
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 171328,
+            "description": "Spices, oregano, dried",
+            "recipe_grams": 1,
+            "edible_grams": 1,
+            "per_100g": {
+              "sugar_g": 4.09,
+              "fat_g": 4.28,
+              "carbs_g": 68.9,
+              "calories": 265,
+              "fiber_g": 42.5,
+              "sodium_mg": 25.0,
+              "saturated_fat_g": 1.55,
+              "protein_g": 9.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170938,
+            "description": "Spices, thyme, dried",
+            "recipe_grams": 1,
+            "edible_grams": 1,
+            "per_100g": {
+              "fat_g": 7.43,
+              "carbs_g": 63.9,
+              "calories": 276,
+              "protein_g": 9.11,
+              "sodium_mg": 55.0,
+              "saturated_fat_g": 2.73,
+              "fiber_g": 37.0,
+              "sugar_g": 1.71
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 173468,
+            "description": "Salt, table",
+            "recipe_grams": 3,
+            "edible_grams": 3,
+            "per_100g": {
+              "fiber_g": 0.0,
+              "sodium_mg": 38800.0,
+              "saturated_fat_g": 0.0,
+              "protein_g": 0.0,
+              "fat_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 0.0,
+              "sugar_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170931,
+            "description": "Spices, pepper, black",
+            "recipe_grams": 0.5,
+            "edible_grams": 0.5,
+            "per_100g": {
+              "fat_g": 3.26,
+              "sugar_g": 0.64,
+              "carbs_g": 64.0,
+              "calories": 251,
+              "protein_g": 10.4,
+              "fiber_g": 25.3,
+              "sodium_mg": 20.0,
+              "saturated_fat_g": 1.39
+            },
+            "basis": "initial_edible_formula_grams"
+          }
+        ],
+        "source_url": "https://fdc.nal.usda.gov/"
+      },
+      "seo": {
+        "title": "Pollo al forno con erbe e limone: ricetta passo passo",
+        "description": "Quattro petti di pollo con aglio, timo, origano e limone: condimento pesato, breve marinatura in frigorifero e temperatura interna controllata.",
+        "about": "Quattro petti di pollo con aglio, timo, origano e limone: condimento pesato, breve marinatura in frigorifero e temperatura interna controllata.",
+        "faq": [
+          {
+            "q": "Posso usare cosce o un pollo intero?",
+            "a": "Richiedono tempi e valori diversi. La formula usa 800 g di petto senza pelle né ossa; verifica sempre 74 °C nel punto più spesso."
+          },
+          {
+            "q": "Posso servire il condimento?",
+            "a": "Quello a contatto con pollo crudo va nella teglia e cuoce con esso. Non servirlo crudo né riutilizzarlo senza cottura."
+          },
+          {
+            "q": "Come evito che si asciughi?",
+            "a": "Usa pezzi di spessore simile e misura dal minuto 20. Togli quando tutti raggiungono 74 °C; prolungare arbitrariamente può asciugarli."
+          }
+        ],
+        "image_alt": "Pollo al forno con erbe e limone",
+        "image_variants": [
+          "/recetas/pollo-al-horno-con-hierbas-y-limon/portada-1x1.webp",
+          "/recetas/pollo-al-horno-con-hierbas-y-limon/portada-4x3.webp",
+          "/recetas/pollo-al-horno-con-hierbas-y-limon/portada-16x9.webp"
+        ]
+      },
+      "prep_time_minutes": 15,
+      "cook_time_minutes": 25,
+      "total_time_minutes": 65,
+      "course": "Secondi piatti",
+      "summary": "Quattro petti di pollo con aglio, timo, origano e limone: condimento pesato, breve marinatura in frigorifero e temperatura interna controllata.",
+      "content_html": "<p>Quattro petti di pollo con aglio, timo, origano e limone: condimento pesato, breve marinatura in frigorifero e temperatura interna controllata.</p>",
+      "keywords": [
+        "Pollo al forno con erbe e limone"
+      ],
+      "gallery": [
+        {
+          "url": "/recetas/pollo-al-horno-con-hierbas-y-limon/portada.webp",
+          "alt": "Pollo al forno con erbe e limone"
+        }
+      ],
+      "published": true,
+      "editorial_status": "published"
+    },
+    {
+      "id": "44c24c1c-8310-520f-bacd-308a47bee0ca",
+      "recipe_group_id": "224e8e13-f4a9-4077-82b7-43b89b8e35bd",
+      "language": "ja",
+      "slug": "ハーブとレモンのオーブンチキン",
+      "public_path": "/ja/ハーブとレモンのオーブンチキン",
+      "source_url": null,
+      "title": "ハーブとレモンのオーブンチキン",
+      "excerpt": "にんにく、タイム、オレガノ、レモンで作る鶏むね肉4人分。材料を量り、冷蔵で短時間漬け込み、中心温度を確認します。",
+      "category": "主菜",
+      "category_slug": "platos-principales",
+      "cuisine": "家庭料理",
+      "difficulty": "普通",
+      "servings": 4,
+      "image_url": "/recetas/pollo-al-horno-con-hierbas-y-limon/portada.webp",
+      "ingredients": [
+        {
+          "amount": 800,
+          "unit": "g",
+          "name": "生の鶏むね肉（皮・骨なし）",
+          "group": "材料"
+        },
+        {
+          "amount": 25,
+          "unit": "g",
+          "name": "オリーブオイル",
+          "group": "材料"
+        },
+        {
+          "amount": 40,
+          "unit": "g",
+          "name": "種を除いたレモン果汁",
+          "group": "材料"
+        },
+        {
+          "amount": 8,
+          "unit": "g",
+          "name": "皮をむいたにんにく",
+          "group": "材料"
+        },
+        {
+          "amount": 1,
+          "unit": "g",
+          "name": "乾燥オレガノ",
+          "group": "材料"
+        },
+        {
+          "amount": 1,
+          "unit": "g",
+          "name": "乾燥タイム",
+          "group": "材料"
+        },
+        {
+          "amount": 3,
+          "unit": "g",
+          "name": "細粒の塩",
+          "group": "材料"
+        },
+        {
+          "amount": 0.5,
+          "unit": "g",
+          "name": "黒こしょう（粉）",
+          "group": "材料"
+        }
+      ],
+      "steps": [
+        {
+          "title": "器具と材料を準備する",
+          "content": "オーブンを上下加熱の200 °Cに予熱します。約30 × 20 cmの耐熱皿、はかり、温度計を準備します。皮と骨のない生の鶏むね肉800 gを、厚さが近い4枚に分けて量ります。鶏肉は洗わず、生もの専用のまな板と器具を使います。レモンは搾る前に洗います。",
+          "image_url": "/recetas/pollo-al-horno-con-hierbas-y-limon/paso-01.webp",
+          "image_alt": "ハーブとレモンのオーブンチキン: 器具と材料を準備する"
+        },
+        {
+          "title": "漬けだれを混ぜる",
+          "content": "ボウルでオリーブオイル25 g、種を除いたレモン果汁40 g、皮をむいて刻んだにんにく8 g、乾燥オレガノ1 g、乾燥タイム1 g、塩3 g、黒こしょう0.5 gを混ぜます。スプーンでにんにくとハーブを均等にします。レモンの皮、輪切り、追加の材料は使いません。",
+          "image_url": "/recetas/pollo-al-horno-con-hierbas-y-limon/paso-02.webp",
+          "image_alt": "ハーブとレモンのオーブンチキン: 漬けだれを混ぜる"
+        },
+        {
+          "title": "冷蔵庫で漬け込む",
+          "content": "容器に鶏肉と漬けだれを全量入れ、トングで返して両面になじませます。ふたをして4 °C以下の冷蔵庫で20分漬け込み、室温の台には置きません。生肉に触れた手、まな板、器具を洗い、盛り付け用に清潔なトングを用意します。",
+          "image_url": "/recetas/pollo-al-horno-con-hierbas-y-limon/paso-03.webp",
+          "image_alt": "ハーブとレモンのオーブンチキン: 冷蔵庫で漬け込む"
+        },
+        {
+          "title": "耐熱皿に並べる",
+          "content": "4枚を重ねず一段に並べ、容器の漬けだれをすべてかけます。予熱したオーブンへすぐ入れます。生の鶏肉に触れた漬けだれは肉と一緒に加熱し、生のまま添えるために取り分けません。使った容器は洗ってから再使用します。",
+          "image_url": "/recetas/pollo-al-horno-con-hierbas-y-limon/paso-04.webp",
+          "image_alt": "ハーブとレモンのオーブンチキン: 耐熱皿に並べる"
+        },
+        {
+          "title": "焼いて中心温度を確認する",
+          "content": "200 °Cで約25分焼きます。20分から確認し、清潔な温度計を各肉の横から最も厚い部分の中心まで差し込みます。すべて74 °Cに達する必要があります。足りない肉は加熱を続け、再度測ります。肉や肉汁の色は温度確認の代わりになりません。追加した加熱時間も合計に含めます。",
+          "image_url": "/recetas/pollo-al-horno-con-hierbas-y-limon/paso-05.webp",
+          "image_alt": "ハーブとレモンのオーブンチキン: 焼いて中心温度を確認する"
+        },
+        {
+          "title": "休ませて分ける",
+          "content": "ミトンで皿を取り出し、肉を5分休ませます。清潔なトングを使い、必要なら切り分けて同程度の4人分にします。800 gは生の重量で、実測した調理後の収量ではありません。栄養値は漬けだれ全量を計算しますが、残れば全量食べたという意味にはなりません。",
+          "image_url": "/recetas/pollo-al-horno-con-hierbas-y-limon/paso-06.webp",
+          "image_alt": "ハーブとレモンのオーブンチキン: 休ませて分ける"
+        },
+        {
+          "title": "盛り付けて残りを保存する",
+          "content": "付け合わせを含めず4人分を盛ります。予定の65分は準備15分、漬け込み20分、焼き25分、休ませ5分で、予熱は準備・漬け込みと並行します。残りは浅い容器で2時間以内、室温が32 °Cを超える場合は1時間以内に冷蔵します。4 °C以下で保存し、再加熱は74 °Cまで行います。",
+          "image_url": "/recetas/pollo-al-horno-con-hierbas-y-limon/paso-07.webp",
+          "image_alt": "ハーブとレモンのオーブンチキン: 盛り付けて残りを保存する"
+        }
+      ],
+      "notes": "独自に作成したレシピ案で、調理試験はまだ行っていません。皮・骨なしのむね肉を使用します。もも肉、骨付き肉、丸鶏は加熱時間と栄養計算が異なります。生肉に触れた漬けだれは肉と一緒に加熱します。初期重量は調理後の実測収量ではありません。付け合わせは含みません。冷蔵した残りは3–4日以内に食べ、においだけで安全と判断しないでください。栄養の推定には残る可能性がある漬けだれも全量含めます。",
+      "nutrition": {
+        "calories": 302.1,
+        "protein_g": 45.2,
+        "carbs_g": 1.8,
+        "fat_g": 11.6,
+        "saturated_fat_g": 2.0,
+        "fiber_g": 0.3,
+        "sugar_g": 0.3,
+        "sodium_mg": 381.8,
+        "serving_size": "全量の4分の1",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "method": "可食部の初期重量g × USDAの100 g当たり栄養値を合計し、4人分で割ります。未測定の加熱損失は補正しません。 皮・骨なしの生むね肉800 gと漬けだれ全量を計算します。調理後の収量や残量は未測定です。付け合わせは含みません。",
+        "note": "推定値で、実験室分析や調理試験の値ではありません。製品、残量、調理後の収量で変わります。 皮・骨なしの生むね肉800 gと漬けだれ全量を計算します。調理後の収量や残量は未測定です。付け合わせは含みません。",
+        "inputs": [
+          {
+            "fdc_id": 171077,
+            "description": "Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw",
+            "recipe_grams": 800,
+            "edible_grams": 800,
+            "per_100g": {
+              "fat_g": 2.62,
+              "calories": 120,
+              "saturated_fat_g": 0.563,
+              "sodium_mg": 45.0,
+              "protein_g": 22.5,
+              "sugar_g": 0.0,
+              "carbs_g": 0.0,
+              "fiber_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 171413,
+            "description": "Oil, olive, salad or cooking",
+            "recipe_grams": 25,
+            "edible_grams": 25,
+            "per_100g": {
+              "fat_g": 100,
+              "carbs_g": 0.0,
+              "calories": 884,
+              "sodium_mg": 2.0,
+              "protein_g": 0.0,
+              "saturated_fat_g": 13.8,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 167747,
+            "description": "Lemon juice, raw",
+            "recipe_grams": 40,
+            "edible_grams": 40,
+            "per_100g": {
+              "protein_g": 0.35,
+              "saturated_fat_g": 0.04,
+              "fiber_g": 0.3,
+              "sodium_mg": 1.0,
+              "sugar_g": 2.52,
+              "fat_g": 0.24,
+              "carbs_g": 6.9,
+              "calories": 22.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 169230,
+            "description": "Garlic, raw",
+            "recipe_grams": 8,
+            "edible_grams": 8,
+            "per_100g": {
+              "carbs_g": 33.1,
+              "calories": 149,
+              "sugar_g": 1.0,
+              "saturated_fat_g": 0.089,
+              "fiber_g": 2.1,
+              "sodium_mg": 17.0,
+              "protein_g": 6.36,
+              "fat_g": 0.5
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 171328,
+            "description": "Spices, oregano, dried",
+            "recipe_grams": 1,
+            "edible_grams": 1,
+            "per_100g": {
+              "sugar_g": 4.09,
+              "fat_g": 4.28,
+              "carbs_g": 68.9,
+              "calories": 265,
+              "fiber_g": 42.5,
+              "sodium_mg": 25.0,
+              "saturated_fat_g": 1.55,
+              "protein_g": 9.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170938,
+            "description": "Spices, thyme, dried",
+            "recipe_grams": 1,
+            "edible_grams": 1,
+            "per_100g": {
+              "fat_g": 7.43,
+              "carbs_g": 63.9,
+              "calories": 276,
+              "protein_g": 9.11,
+              "sodium_mg": 55.0,
+              "saturated_fat_g": 2.73,
+              "fiber_g": 37.0,
+              "sugar_g": 1.71
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 173468,
+            "description": "Salt, table",
+            "recipe_grams": 3,
+            "edible_grams": 3,
+            "per_100g": {
+              "fiber_g": 0.0,
+              "sodium_mg": 38800.0,
+              "saturated_fat_g": 0.0,
+              "protein_g": 0.0,
+              "fat_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 0.0,
+              "sugar_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170931,
+            "description": "Spices, pepper, black",
+            "recipe_grams": 0.5,
+            "edible_grams": 0.5,
+            "per_100g": {
+              "fat_g": 3.26,
+              "sugar_g": 0.64,
+              "carbs_g": 64.0,
+              "calories": 251,
+              "protein_g": 10.4,
+              "fiber_g": 25.3,
+              "sodium_mg": 20.0,
+              "saturated_fat_g": 1.39
+            },
+            "basis": "initial_edible_formula_grams"
+          }
+        ],
+        "source_url": "https://fdc.nal.usda.gov/"
+      },
+      "seo": {
+        "title": "ハーブとレモンのオーブンチキン: 作り方",
+        "description": "にんにく、タイム、オレガノ、レモンで作る鶏むね肉4人分。材料を量り、冷蔵で短時間漬け込み、中心温度を確認します。",
+        "about": "にんにく、タイム、オレガノ、レモンで作る鶏むね肉4人分。材料を量り、冷蔵で短時間漬け込み、中心温度を確認します。",
+        "faq": [
+          {
+            "q": "もも肉や丸鶏でも作れますか？",
+            "a": "加熱時間と栄養計算が変わります。この配合は皮・骨なしのむね肉800 g用です。最も厚い部分が74 °Cになることを必ず確認します。"
+          },
+          {
+            "q": "漬けだれをそのまま添えてもよいですか？",
+            "a": "生の鶏肉に触れたたれは耐熱皿に入れて肉と一緒に加熱します。生のまま添えたり、加熱せず再使用したりしません。"
+          },
+          {
+            "q": "肉を乾燥させないコツは？",
+            "a": "厚さが近い肉を使い、20分から温度を測ります。すべて74 °Cになったら取り出し、不要に加熱を延長しないことが大切です。"
+          }
+        ],
+        "image_alt": "ハーブとレモンのオーブンチキン",
+        "image_variants": [
+          "/recetas/pollo-al-horno-con-hierbas-y-limon/portada-1x1.webp",
+          "/recetas/pollo-al-horno-con-hierbas-y-limon/portada-4x3.webp",
+          "/recetas/pollo-al-horno-con-hierbas-y-limon/portada-16x9.webp"
+        ]
+      },
+      "prep_time_minutes": 15,
+      "cook_time_minutes": 25,
+      "total_time_minutes": 65,
+      "course": "主菜",
+      "summary": "にんにく、タイム、オレガノ、レモンで作る鶏むね肉4人分。材料を量り、冷蔵で短時間漬け込み、中心温度を確認します。",
+      "content_html": "<p>にんにく、タイム、オレガノ、レモンで作る鶏むね肉4人分。材料を量り、冷蔵で短時間漬け込み、中心温度を確認します。</p>",
+      "keywords": [
+        "ハーブとレモンのオーブンチキン"
+      ],
+      "gallery": [
+        {
+          "url": "/recetas/pollo-al-horno-con-hierbas-y-limon/portada.webp",
+          "alt": "ハーブとレモンのオーブンチキン"
+        }
+      ],
+      "published": true,
+      "editorial_status": "published"
+    },
+    {
+      "id": "70c752d9-01b7-51e5-bc0b-7093cac8e39e",
+      "recipe_group_id": "224e8e13-f4a9-4077-82b7-43b89b8e35bd",
+      "language": "pt",
+      "slug": "frango-assado-com-ervas-e-limao",
+      "public_path": "/pt/frango-assado-com-ervas-e-limao",
+      "source_url": null,
+      "title": "Frango assado com ervas e limão",
+      "excerpt": "Quatro peitos de frango com alho, tomilho, orégano e limão: tempero pesado, marinada breve na geladeira e temperatura interna conferida.",
+      "category": "Pratos principais",
+      "category_slug": "platos-principales",
+      "cuisine": "Cozinha caseira",
+      "difficulty": "Média",
+      "servings": 4,
+      "image_url": "/recetas/pollo-al-horno-con-hierbas-y-limon/portada.webp",
+      "ingredients": [
+        {
+          "amount": 800,
+          "unit": "g",
+          "name": "peito de frango cru sem pele e sem osso",
+          "group": "Ingredientes"
+        },
+        {
+          "amount": 25,
+          "unit": "g",
+          "name": "azeite",
+          "group": "Ingredientes"
+        },
+        {
+          "amount": 40,
+          "unit": "g",
+          "name": "suco de limão sem sementes",
+          "group": "Ingredientes"
+        },
+        {
+          "amount": 8,
+          "unit": "g",
+          "name": "alho descascado",
+          "group": "Ingredientes"
+        },
+        {
+          "amount": 1,
+          "unit": "g",
+          "name": "orégano seco",
+          "group": "Ingredientes"
+        },
+        {
+          "amount": 1,
+          "unit": "g",
+          "name": "tomilho seco",
+          "group": "Ingredientes"
+        },
+        {
+          "amount": 3,
+          "unit": "g",
+          "name": "sal fino",
+          "group": "Ingredientes"
+        },
+        {
+          "amount": 0.5,
+          "unit": "g",
+          "name": "pimenta-do-reino moída",
+          "group": "Ingredientes"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepare a assadeira e pese",
+          "content": "Preaqueça o forno a 200 °C com calor superior e inferior. Separe uma assadeira de cerca de 30 × 20 cm, balança e termômetro. Pese 800 g de peito cru sem pele e sem osso, em quatro pedaços de espessura semelhante. Não lave o frango; use tábua e utensílios separados para alimentos crus. Lave o limão antes de espremer.",
+          "image_url": "/recetas/pollo-al-horno-con-hierbas-y-limon/paso-01.webp",
+          "image_alt": "Frango assado com ervas e limão: Prepare a assadeira e pese"
+        },
+        {
+          "title": "Misture o tempero",
+          "content": "Em uma tigela misture 25 g de azeite, 40 g de suco de limão sem sementes, 8 g de alho descascado picado, 1 g de orégano seco, 1 g de tomilho seco, 3 g de sal e 0,5 g de pimenta-do-reino. Mexa com colher para distribuir alho e ervas. Não se usam raspas, rodelas de limão nem quantidades extras.",
+          "image_url": "/recetas/pollo-al-horno-con-hierbas-y-limon/paso-02.webp",
+          "image_alt": "Frango assado com ervas e limão: Misture o tempero"
+        },
+        {
+          "title": "Tempere e marine na geladeira",
+          "content": "Coloque o frango em um recipiente, junte todo o tempero e vire com uma pinça para cobrir os dois lados. Tampe e leve à geladeira a 4 °C ou menos por 20 minutos. Não marine na bancada. Lave mãos, tábua e utensílios que tocaram carne crua; reserve uma pinça limpa para servir.",
+          "image_url": "/recetas/pollo-al-horno-con-hierbas-y-limon/paso-03.webp",
+          "image_alt": "Frango assado com ervas e limão: Tempere e marine na geladeira"
+        },
+        {
+          "title": "Distribua os pedaços",
+          "content": "Disponha os quatro peitos em uma única camada, sem empilhar, e despeje o tempero do recipiente sobre eles. Leve diretamente ao forno preaquecido. O tempero que tocou frango cru precisa cozinhar com ele; não o reserve para servir cru nem reutilize o recipiente sem lavar.",
+          "image_url": "/recetas/pollo-al-horno-con-hierbas-y-limon/paso-04.webp",
+          "image_alt": "Frango assado com ervas e limão: Distribua os pedaços"
+        },
+        {
+          "title": "Asse e confira a cocção",
+          "content": "Asse cerca de 25 minutos a 200 °C. Comece a conferir aos 20 minutos: introduza um termômetro limpo pela lateral até o centro da parte mais grossa de cada pedaço. Todos devem atingir 74 °C. Se algum não chegar, continue assando e meça novamente. A cor da carne ou do líquido não substitui a medição. Acrescente o tempo adicional.",
+          "image_url": "/recetas/pollo-al-horno-con-hierbas-y-limon/paso-05.webp",
+          "image_alt": "Frango assado com ervas e limão: Asse e confira a cocção"
+        },
+        {
+          "title": "Descanse e divida",
+          "content": "Retire a assadeira com luvas e deixe o frango descansar 5 minutos. Use pinça limpa e divida os pedaços, se necessário, em quatro porções semelhantes. Os 800 g são peso cru, não rendimento cozido medido. A estimativa nutricional conta todo o tempero; se houver resíduos, isso não significa que tudo tenha sido consumido.",
+          "image_url": "/recetas/pollo-al-horno-con-hierbas-y-limon/paso-06.webp",
+          "image_alt": "Frango assado com ervas e limão: Descanse e divida"
+        },
+        {
+          "title": "Sirva e guarde as sobras",
+          "content": "Sirva quatro porções sem acompanhamentos incluídos. Os 65 minutos previstos somam 15 de preparo, 20 de marinada, 25 de forno e 5 de descanso; o preaquecimento ocorre em paralelo. Refrigere as sobras em recipientes rasos em até 2 horas, ou 1 hora se o ambiente superar 32 °C. Conserve a 4 °C ou menos e reaqueça a 74 °C.",
+          "image_url": "/recetas/pollo-al-horno-con-hierbas-y-limon/paso-07.webp",
+          "image_alt": "Frango assado com ervas e limão: Sirva e guarde as sobras"
+        }
+      ],
+      "notes": "Proposta de receita original, ainda sem teste de cozinha. Use peito sem pele e sem osso; sobrecoxas, pedaços com osso ou frango inteiro exigem outros tempos e cálculos. O tempero que toca carne crua cozinha com ela. Os pesos iniciais não são rendimento cozido medido. Não inclui acompanhamento. Consuma as sobras refrigeradas em 3–4 dias; o cheiro não comprova segurança. A estimativa conta todo o tempero, mesmo que sobrem resíduos.",
+      "nutrition": {
+        "calories": 302.1,
+        "protein_g": 45.2,
+        "carbs_g": 1.8,
+        "fat_g": 11.6,
+        "saturated_fat_g": 2.0,
+        "fiber_g": 0.3,
+        "sugar_g": 0.3,
+        "sodium_mg": 381.8,
+        "serving_size": "Uma de 4 porções iguais",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "method": "Soma dos gramas comestíveis iniciais × nutrientes USDA por 100 g, dividida por 4. Não se aplicam perdas de cocção não medidas. Calculado com 800 g de peito cru sem pele e sem osso e todo o tempero. Rendimento cozido e resíduos não foram medidos. Não inclui acompanhamento.",
+        "note": "Estimativa, não análise de laboratório nem teste de cozinha. Marcas, resíduos e rendimento podem variar. Calculado com 800 g de peito cru sem pele e sem osso e todo o tempero. Rendimento cozido e resíduos não foram medidos. Não inclui acompanhamento.",
+        "inputs": [
+          {
+            "fdc_id": 171077,
+            "description": "Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw",
+            "recipe_grams": 800,
+            "edible_grams": 800,
+            "per_100g": {
+              "fat_g": 2.62,
+              "calories": 120,
+              "saturated_fat_g": 0.563,
+              "sodium_mg": 45.0,
+              "protein_g": 22.5,
+              "sugar_g": 0.0,
+              "carbs_g": 0.0,
+              "fiber_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 171413,
+            "description": "Oil, olive, salad or cooking",
+            "recipe_grams": 25,
+            "edible_grams": 25,
+            "per_100g": {
+              "fat_g": 100,
+              "carbs_g": 0.0,
+              "calories": 884,
+              "sodium_mg": 2.0,
+              "protein_g": 0.0,
+              "saturated_fat_g": 13.8,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 167747,
+            "description": "Lemon juice, raw",
+            "recipe_grams": 40,
+            "edible_grams": 40,
+            "per_100g": {
+              "protein_g": 0.35,
+              "saturated_fat_g": 0.04,
+              "fiber_g": 0.3,
+              "sodium_mg": 1.0,
+              "sugar_g": 2.52,
+              "fat_g": 0.24,
+              "carbs_g": 6.9,
+              "calories": 22.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 169230,
+            "description": "Garlic, raw",
+            "recipe_grams": 8,
+            "edible_grams": 8,
+            "per_100g": {
+              "carbs_g": 33.1,
+              "calories": 149,
+              "sugar_g": 1.0,
+              "saturated_fat_g": 0.089,
+              "fiber_g": 2.1,
+              "sodium_mg": 17.0,
+              "protein_g": 6.36,
+              "fat_g": 0.5
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 171328,
+            "description": "Spices, oregano, dried",
+            "recipe_grams": 1,
+            "edible_grams": 1,
+            "per_100g": {
+              "sugar_g": 4.09,
+              "fat_g": 4.28,
+              "carbs_g": 68.9,
+              "calories": 265,
+              "fiber_g": 42.5,
+              "sodium_mg": 25.0,
+              "saturated_fat_g": 1.55,
+              "protein_g": 9.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170938,
+            "description": "Spices, thyme, dried",
+            "recipe_grams": 1,
+            "edible_grams": 1,
+            "per_100g": {
+              "fat_g": 7.43,
+              "carbs_g": 63.9,
+              "calories": 276,
+              "protein_g": 9.11,
+              "sodium_mg": 55.0,
+              "saturated_fat_g": 2.73,
+              "fiber_g": 37.0,
+              "sugar_g": 1.71
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 173468,
+            "description": "Salt, table",
+            "recipe_grams": 3,
+            "edible_grams": 3,
+            "per_100g": {
+              "fiber_g": 0.0,
+              "sodium_mg": 38800.0,
+              "saturated_fat_g": 0.0,
+              "protein_g": 0.0,
+              "fat_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 0.0,
+              "sugar_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170931,
+            "description": "Spices, pepper, black",
+            "recipe_grams": 0.5,
+            "edible_grams": 0.5,
+            "per_100g": {
+              "fat_g": 3.26,
+              "sugar_g": 0.64,
+              "carbs_g": 64.0,
+              "calories": 251,
+              "protein_g": 10.4,
+              "fiber_g": 25.3,
+              "sodium_mg": 20.0,
+              "saturated_fat_g": 1.39
+            },
+            "basis": "initial_edible_formula_grams"
+          }
+        ],
+        "source_url": "https://fdc.nal.usda.gov/"
+      },
+      "seo": {
+        "title": "Frango assado com ervas e limão: receita passo a passo",
+        "description": "Quatro peitos de frango com alho, tomilho, orégano e limão: tempero pesado, marinada breve na geladeira e temperatura interna conferida.",
+        "about": "Quatro peitos de frango com alho, tomilho, orégano e limão: tempero pesado, marinada breve na geladeira e temperatura interna conferida.",
+        "faq": [
+          {
+            "q": "Posso usar sobrecoxas ou frango inteiro?",
+            "a": "Exigem outros tempos e cálculo nutricional. Esta fórmula usa 800 g de peito sem pele e sem osso; confira sempre 74 °C na parte mais grossa."
+          },
+          {
+            "q": "Posso usar o tempero para servir?",
+            "a": "O que tocou frango cru vai para a assadeira e cozinha com ele. Não sirva cru nem reutilize sem cozinhar."
+          },
+          {
+            "q": "Como evito que resseque?",
+            "a": "Use pedaços de espessura semelhante e comece a medir aos 20 minutos. Retire quando todos atingirem 74 °C; prolongar depois por tempo fixo pode ressecar."
+          }
+        ],
+        "image_alt": "Frango assado com ervas e limão",
+        "image_variants": [
+          "/recetas/pollo-al-horno-con-hierbas-y-limon/portada-1x1.webp",
+          "/recetas/pollo-al-horno-con-hierbas-y-limon/portada-4x3.webp",
+          "/recetas/pollo-al-horno-con-hierbas-y-limon/portada-16x9.webp"
+        ]
+      },
+      "prep_time_minutes": 15,
+      "cook_time_minutes": 25,
+      "total_time_minutes": 65,
+      "course": "Pratos principais",
+      "summary": "Quatro peitos de frango com alho, tomilho, orégano e limão: tempero pesado, marinada breve na geladeira e temperatura interna conferida.",
+      "content_html": "<p>Quatro peitos de frango com alho, tomilho, orégano e limão: tempero pesado, marinada breve na geladeira e temperatura interna conferida.</p>",
+      "keywords": [
+        "Frango assado com ervas e limão"
+      ],
+      "gallery": [
+        {
+          "url": "/recetas/pollo-al-horno-con-hierbas-y-limon/portada.webp",
+          "alt": "Frango assado com ervas e limão"
+        }
+      ],
+      "published": true,
+      "editorial_status": "published"
     }
   ],
   "publication_blockers": [
-    "IMAGES_PENDING",
-    "SIX_LOCALIZATIONS_PENDING",
+    "MEDIA_FINAL_VALIDATION",
     "CI_DEPLOY_DB_CACHE_LIVE_QA_PENDING"
   ],
   "steps_sha256": "299d54f28f6500a7db22b23abfff9cf2bf03297fa19834549f82ccecce5160f4"

@@ -1,6 +1,6 @@
 {
   "scope": "Manual de Cocina lote05; five final candidates only",
-  "state": "ES_FROZEN_NUTRITION_COMPLETE_IMAGES_LOCALIZATIONS_PENDING",
+  "state": "SEVEN_LANGUAGES_READY_MEDIA_AND_PUBLICATION_PENDING",
   "provenance": "Original formula and prose; no WordPress editorial bodies reused.",
   "category_slug": "sopas-y-cremas",
   "steps_frozen": true,
@@ -19,46 +19,50 @@
       "category_slug": "sopas-y-cremas",
       "cuisine": "Cocina casera",
       "difficulty": "Media",
-      "prep_minutes": 15,
-      "cook_minutes": 25,
-      "total_minutes": 40,
       "servings": 4,
       "image_url": "/recetas/receta-crema-de-campinones/portada.webp",
       "ingredients": [
         {
           "amount": 500,
           "unit": "g",
-          "name": "champiñones blancos crudos"
+          "name": "champiñones blancos crudos",
+          "group": "Ingredientes"
         },
         {
           "amount": 100,
           "unit": "g",
-          "name": "cebolla pelada"
+          "name": "cebolla pelada",
+          "group": "Ingredientes"
         },
         {
           "amount": 20,
           "unit": "g",
-          "name": "mantequilla sin sal"
+          "name": "mantequilla sin sal",
+          "group": "Ingredientes"
         },
         {
           "amount": 100,
           "unit": "g",
-          "name": "nata para montar, sin azúcar"
+          "name": "nata para montar, sin azúcar",
+          "group": "Ingredientes"
         },
         {
           "amount": 600,
           "unit": "g",
-          "name": "agua"
+          "name": "agua",
+          "group": "Ingredientes"
         },
         {
           "amount": 3,
           "unit": "g",
-          "name": "sal fina"
+          "name": "sal fina",
+          "group": "Ingredientes"
         },
         {
           "amount": 0.5,
           "unit": "g",
-          "name": "pimienta negra molida"
+          "name": "pimienta negra molida",
+          "group": "Ingredientes"
         }
       ],
       "steps": [
@@ -117,6 +121,12 @@
             "q": "¿Puedo usar una batidora de vaso?",
             "a": "Solo si su fabricante permite líquidos calientes: sigue sus instrucciones y trabaja por tandas. La referencia de esta receta es una batidora de mano con el cabezal sumergido."
           }
+        ],
+        "image_alt": "Crema de champiñones",
+        "image_variants": [
+          "/recetas/receta-crema-de-campinones/portada-1x1.webp",
+          "/recetas/receta-crema-de-campinones/portada-4x3.webp",
+          "/recetas/receta-crema-de-campinones/portada-16x9.webp"
         ]
       },
       "nutrition": {
@@ -130,18 +140,1821 @@
         "sodium_mg": 308.6,
         "serving_size": "Una de 4 raciones iguales",
         "estimated": true,
-        "source": {
-          "label": "USDA FoodData Central — SR Legacy (abril de 2018)",
-          "url": "https://fdc.nal.usda.gov/"
-        },
+        "source": "USDA FoodData Central — SR Legacy (2018)",
         "method": "Suma de gramos de ingredientes × nutrientes USDA por 100 g, dividida entre 4. Pesos iniciales de partes comestibles; rendimiento cocinado no medido. Se incluye toda la fórmula, sin aplicar pérdidas no medidas.",
-        "note": "Estimación, no análisis de laboratorio ni prueba de cocina. Marcas, restos y rendimiento pueden variar. Se incluye la fórmula completa; no se incluyen acompañamientos."
-      }
+        "note": "Estimación, no análisis de laboratorio ni prueba de cocina. Marcas, restos y rendimiento pueden variar. Se incluye la fórmula completa; no se incluyen acompañamientos.",
+        "inputs": [
+          {
+            "fdc_id": 169251,
+            "description": "Mushrooms, white, raw",
+            "recipe_grams": 500,
+            "edible_grams": 500,
+            "per_100g": {
+              "sugar_g": 1.98,
+              "saturated_fat_g": 0.05,
+              "fiber_g": 1.0,
+              "fat_g": 0.34,
+              "sodium_mg": 5.0,
+              "protein_g": 3.09,
+              "carbs_g": 3.26,
+              "calories": 22.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170000,
+            "description": "Onions, raw",
+            "recipe_grams": 100,
+            "edible_grams": 100,
+            "per_100g": {
+              "sugar_g": 4.24,
+              "fat_g": 0.1,
+              "carbs_g": 9.34,
+              "calories": 40.0,
+              "saturated_fat_g": 0.042,
+              "protein_g": 1.1,
+              "fiber_g": 1.7,
+              "sodium_mg": 4.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 173430,
+            "description": "Butter, without salt",
+            "recipe_grams": 20,
+            "edible_grams": 20,
+            "per_100g": {
+              "sugar_g": 0.06,
+              "calories": 717,
+              "saturated_fat_g": 50.5,
+              "fat_g": 81.1,
+              "carbs_g": 0.06,
+              "protein_g": 0.85,
+              "fiber_g": 0.0,
+              "sodium_mg": 11.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170859,
+            "description": "Cream, fluid, heavy whipping",
+            "recipe_grams": 100,
+            "edible_grams": 100,
+            "per_100g": {
+              "fat_g": 36.1,
+              "calories": 340,
+              "sugar_g": 2.92,
+              "sodium_mg": 27.0,
+              "protein_g": 2.84,
+              "saturated_fat_g": 23.0,
+              "fiber_g": 0.0,
+              "carbs_g": 2.84
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 174158,
+            "description": "Water, bottled, generic",
+            "recipe_grams": 600,
+            "edible_grams": 600,
+            "per_100g": {
+              "saturated_fat_g": 0.0,
+              "protein_g": 0.0,
+              "fiber_g": 0.0,
+              "sodium_mg": 2.0,
+              "fat_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 0.0,
+              "sugar_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 173468,
+            "description": "Salt, table",
+            "recipe_grams": 3,
+            "edible_grams": 3,
+            "per_100g": {
+              "fiber_g": 0.0,
+              "sodium_mg": 38800.0,
+              "saturated_fat_g": 0.0,
+              "protein_g": 0.0,
+              "fat_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 0.0,
+              "sugar_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170931,
+            "description": "Spices, pepper, black",
+            "recipe_grams": 0.5,
+            "edible_grams": 0.5,
+            "per_100g": {
+              "fat_g": 3.26,
+              "sugar_g": 0.64,
+              "carbs_g": 64.0,
+              "calories": 251,
+              "protein_g": 10.4,
+              "fiber_g": 25.3,
+              "sodium_mg": 20.0,
+              "saturated_fat_g": 1.39
+            },
+            "basis": "initial_edible_formula_grams"
+          }
+        ],
+        "source_url": "https://fdc.nal.usda.gov/"
+      },
+      "prep_time_minutes": 15,
+      "cook_time_minutes": 25,
+      "total_time_minutes": 40,
+      "course": "Sopas y cremas",
+      "summary": "Crema de champiñones con cebolla, mantequilla y nata, sin harina ni caldo. Cuatro raciones con seis pasos y cantidades pesadas.",
+      "content_html": "<p>Crema de champiñones con cebolla, mantequilla y nata, sin harina ni caldo. Cuatro raciones con seis pasos y cantidades pesadas.</p>",
+      "keywords": [
+        "Crema de champiñones"
+      ],
+      "gallery": [
+        {
+          "url": "/recetas/receta-crema-de-campinones/portada.webp",
+          "alt": "Crema de champiñones"
+        }
+      ],
+      "published": true,
+      "editorial_status": "published"
+    },
+    {
+      "id": "892e88c7-6c97-5210-93cf-57cc2ecd7614",
+      "recipe_group_id": "0976e97c-aabc-4ce2-a07d-6429c0108dbe",
+      "language": "de",
+      "slug": "pilzcremesuppe",
+      "public_path": "/de/pilzcremesuppe",
+      "source_url": null,
+      "title": "Pilzcremesuppe",
+      "excerpt": "Champignoncremesuppe mit Zwiebel, Butter und Sahne, ohne Mehl oder Brühe. Vier Portionen, sechs Schritte und abgewogene Zutaten.",
+      "category": "Suppen und Cremesuppen",
+      "category_slug": "sopas-y-cremas",
+      "cuisine": "Hausmannskost",
+      "difficulty": "Mittel",
+      "servings": 4,
+      "image_url": "/recetas/receta-crema-de-campinones/portada.webp",
+      "ingredients": [
+        {
+          "amount": 500,
+          "unit": "g",
+          "name": "rohe weiße Champignons",
+          "group": "Zutaten"
+        },
+        {
+          "amount": 100,
+          "unit": "g",
+          "name": "geschälte Zwiebel",
+          "group": "Zutaten"
+        },
+        {
+          "amount": 20,
+          "unit": "g",
+          "name": "ungesalzene Butter",
+          "group": "Zutaten"
+        },
+        {
+          "amount": 100,
+          "unit": "g",
+          "name": "ungesüßte Schlagsahne",
+          "group": "Zutaten"
+        },
+        {
+          "amount": 600,
+          "unit": "g",
+          "name": "Wasser",
+          "group": "Zutaten"
+        },
+        {
+          "amount": 3,
+          "unit": "g",
+          "name": "feines Salz",
+          "group": "Zutaten"
+        },
+        {
+          "amount": 0.5,
+          "unit": "g",
+          "name": "gemahlener schwarzer Pfeffer",
+          "group": "Zutaten"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Putzen und abwiegen",
+          "content": "Champignons mit einem feuchten Tuch oder kurzem Abspülen reinigen und trocknen.500 g essbaren Anteil abwiegen und in Scheiben schneiden.100 g geschälte Zwiebel hacken.20 g Butter,100 g ungesüßte Sahne,600 g Wasser,3 g Salz und 0,5 g Pfeffer abwiegen. Es wird Wasser ohne zusätzliche Brühe verwendet.",
+          "image_url": "/recetas/receta-crema-de-campinones/paso-01.webp",
+          "image_alt": "Pilzcremesuppe: Putzen und abwiegen"
+        },
+        {
+          "title": "Zwiebel anschwitzen",
+          "content": "Butter in einem etwa 2 LiterTopf bei mittlerer Hitze schmelzen. Die Zwiebel 5 Minuten unter Rühren weich dünsten, ohne sie zu bräunen. Wird sie zu dunkel, die Hitze reduzieren. Kein zusätzliches Fett verwenden, da es die Berechnung verändert.",
+          "image_url": "/recetas/receta-crema-de-campinones/paso-02.webp",
+          "image_alt": "Pilzcremesuppe: Zwiebel anschwitzen"
+        },
+        {
+          "title": "Champignons garen",
+          "content": "Alle Champignons hinzufügen.8 Minuten bei mittlerer bis hoher Hitze unter Rühren garen, bis sie Wasser abgeben und ein großer Teil verdampft. Keine Scheiben zum Garnieren zurückbehalten: Alle kommen in die Suppe. Beim Garen nimmt das Volumen ab.",
+          "image_url": "/recetas/receta-crema-de-campinones/paso-03.webp",
+          "image_alt": "Pilzcremesuppe: Champignons garen"
+        },
+        {
+          "title": "Wasser hinzufügen und köcheln",
+          "content": "600 g Wasser, Salz und Pfeffer hinzufügen. Zum sanften Köcheln bringen und offen 10 Minuten bei mittlerer bis niedriger Hitze garen. Gelegentlich rühren, bis die Pilze weich sind. Starkes Kochen vermeiden, damit die Menge nicht zu weit reduziert wird.",
+          "image_url": "/recetas/receta-crema-de-campinones/paso-04.webp",
+          "image_alt": "Pilzcremesuppe: Wasser hinzufügen und köcheln"
+        },
+        {
+          "title": "Pürieren und Sahne einrühren",
+          "content": "Vom Herd nehmen. Mit einem Stabmixer vorsichtig glatt pürieren; der Mixkopf bleibt immer untergetaucht. Den Topf nicht kippen und Spritzer vermeiden.100 g Sahne einrühren, dann bei niedriger Hitze 2 Minuten unter Rühren erwärmen, ohne stark zu kochen. Kein Mehl hinzufügen.",
+          "image_url": "/recetas/receta-crema-de-campinones/paso-05.webp",
+          "image_alt": "Pilzcremesuppe: Pürieren und Sahne einrühren"
+        },
+        {
+          "title": "Servieren und aufbewahren",
+          "content": "Die gesamte Suppe auf vier Schalen verteilen. Brot, Croûtons und Toppings sind nicht enthalten.40 Minuten umfassen 15 Vorbereitung und 25 Kochen. Reste innerhalb von 2 Stunden in flachen Behältern bei höchstens 4 °C kühlen; innerhalb von 3–4 Tagen verbrauchen und unter Rühren auf 74 °C erhitzen.",
+          "image_url": "/recetas/receta-crema-de-campinones/paso-06.webp",
+          "image_alt": "Pilzcremesuppe: Servieren und aufbewahren"
+        }
+      ],
+      "notes": "Eigenständiger Rezeptvorschlag, noch nicht in der Küche getestet. Enthält Milch. Nur sicher identifizierte Zuchtchampignons verwenden, keine Wildpilze ohne fachkundige Bestimmung. Die Menge variiert durch Verdampfen: Den gesamten Topf durch vier teilen, ohne einen gemessenen Garertrag zu behaupten. Ohne Brühe, Mehl, Brot oder Toppings. Abseits des Herds vorsichtig pürieren, um Verbrennungen zu vermeiden.",
+      "seo": {
+        "title": "Pilzcremesuppe: Schritt für Schritt",
+        "description": "Champignoncremesuppe mit Zwiebel, Butter und Sahne, ohne Mehl oder Brühe. Vier Portionen, sechs Schritte und abgewogene Zutaten.",
+        "about": "Champignoncremesuppe mit Zwiebel, Butter und Sahne, ohne Mehl oder Brühe. Vier Portionen, sechs Schritte und abgewogene Zutaten.",
+        "faq": [
+          {
+            "q": "Wird die Suppe mit Mehl gebunden?",
+            "a": "Nein. Alle Champignons werden püriert und Sahne hinzugefügt; kein Mehl."
+          },
+          {
+            "q": "Kann ich Brühe verwenden?",
+            "a": "Ja, doch Geschmack und Nährwerte ändern sich, besonders Natrium. Die veröffentlichten Werte gelten für Wasser."
+          },
+          {
+            "q": "Kann ich einen Standmixer benutzen?",
+            "a": "Nur wenn der Hersteller heiße Flüssigkeiten erlaubt. Anleitung beachten und portionsweise arbeiten. Die Referenz ist ein Stabmixer mit untergetauchtem Kopf."
+          }
+        ],
+        "image_alt": "Pilzcremesuppe",
+        "image_variants": [
+          "/recetas/receta-crema-de-campinones/portada-1x1.webp",
+          "/recetas/receta-crema-de-campinones/portada-4x3.webp",
+          "/recetas/receta-crema-de-campinones/portada-16x9.webp"
+        ]
+      },
+      "nutrition": {
+        "calories": 158.7,
+        "protein_g": 4.9,
+        "carbs_g": 7.2,
+        "fat_g": 13.5,
+        "saturated_fat_g": 8.3,
+        "fiber_g": 1.7,
+        "sugar_g": 4.3,
+        "sodium_mg": 308.6,
+        "serving_size": "Eine von 4 gleichen Portionen",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "method": "Summe der essbaren Ausgangsgewichte in Gramm × USDA-Nährwerte je 100 g, geteilt durch 4. Keine ungemessenen Garverluste angewandt. Die ganze Formel mit Wasser wird auf vier Portionen verteilt. Verdampfung und fertiges Portionsgewicht sind nicht gemessen; keine Brühe, kein Brot und keine Toppings enthalten.",
+        "note": "Schätzung, keine Laboranalyse oder Küchenprüfung. Marken, Reste und Garertrag können variieren. Die ganze Formel mit Wasser wird auf vier Portionen verteilt. Verdampfung und fertiges Portionsgewicht sind nicht gemessen; keine Brühe, kein Brot und keine Toppings enthalten.",
+        "inputs": [
+          {
+            "fdc_id": 169251,
+            "description": "Mushrooms, white, raw",
+            "recipe_grams": 500,
+            "edible_grams": 500,
+            "per_100g": {
+              "sugar_g": 1.98,
+              "saturated_fat_g": 0.05,
+              "fiber_g": 1.0,
+              "fat_g": 0.34,
+              "sodium_mg": 5.0,
+              "protein_g": 3.09,
+              "carbs_g": 3.26,
+              "calories": 22.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170000,
+            "description": "Onions, raw",
+            "recipe_grams": 100,
+            "edible_grams": 100,
+            "per_100g": {
+              "sugar_g": 4.24,
+              "fat_g": 0.1,
+              "carbs_g": 9.34,
+              "calories": 40.0,
+              "saturated_fat_g": 0.042,
+              "protein_g": 1.1,
+              "fiber_g": 1.7,
+              "sodium_mg": 4.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 173430,
+            "description": "Butter, without salt",
+            "recipe_grams": 20,
+            "edible_grams": 20,
+            "per_100g": {
+              "sugar_g": 0.06,
+              "calories": 717,
+              "saturated_fat_g": 50.5,
+              "fat_g": 81.1,
+              "carbs_g": 0.06,
+              "protein_g": 0.85,
+              "fiber_g": 0.0,
+              "sodium_mg": 11.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170859,
+            "description": "Cream, fluid, heavy whipping",
+            "recipe_grams": 100,
+            "edible_grams": 100,
+            "per_100g": {
+              "fat_g": 36.1,
+              "calories": 340,
+              "sugar_g": 2.92,
+              "sodium_mg": 27.0,
+              "protein_g": 2.84,
+              "saturated_fat_g": 23.0,
+              "fiber_g": 0.0,
+              "carbs_g": 2.84
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 174158,
+            "description": "Water, bottled, generic",
+            "recipe_grams": 600,
+            "edible_grams": 600,
+            "per_100g": {
+              "saturated_fat_g": 0.0,
+              "protein_g": 0.0,
+              "fiber_g": 0.0,
+              "sodium_mg": 2.0,
+              "fat_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 0.0,
+              "sugar_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 173468,
+            "description": "Salt, table",
+            "recipe_grams": 3,
+            "edible_grams": 3,
+            "per_100g": {
+              "fiber_g": 0.0,
+              "sodium_mg": 38800.0,
+              "saturated_fat_g": 0.0,
+              "protein_g": 0.0,
+              "fat_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 0.0,
+              "sugar_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170931,
+            "description": "Spices, pepper, black",
+            "recipe_grams": 0.5,
+            "edible_grams": 0.5,
+            "per_100g": {
+              "fat_g": 3.26,
+              "sugar_g": 0.64,
+              "carbs_g": 64.0,
+              "calories": 251,
+              "protein_g": 10.4,
+              "fiber_g": 25.3,
+              "sodium_mg": 20.0,
+              "saturated_fat_g": 1.39
+            },
+            "basis": "initial_edible_formula_grams"
+          }
+        ],
+        "source_url": "https://fdc.nal.usda.gov/"
+      },
+      "prep_time_minutes": 15,
+      "cook_time_minutes": 25,
+      "total_time_minutes": 40,
+      "course": "Suppen und Cremesuppen",
+      "summary": "Champignoncremesuppe mit Zwiebel, Butter und Sahne, ohne Mehl oder Brühe. Vier Portionen, sechs Schritte und abgewogene Zutaten.",
+      "content_html": "<p>Champignoncremesuppe mit Zwiebel, Butter und Sahne, ohne Mehl oder Brühe. Vier Portionen, sechs Schritte und abgewogene Zutaten.</p>",
+      "keywords": [
+        "Pilzcremesuppe"
+      ],
+      "gallery": [
+        {
+          "url": "/recetas/receta-crema-de-campinones/portada.webp",
+          "alt": "Pilzcremesuppe"
+        }
+      ],
+      "published": true,
+      "editorial_status": "published"
+    },
+    {
+      "id": "7f46b843-af8e-5f34-90d3-805f14a985d7",
+      "recipe_group_id": "0976e97c-aabc-4ce2-a07d-6429c0108dbe",
+      "language": "en",
+      "slug": "cream-of-mushroom-soup",
+      "public_path": "/en/cream-of-mushroom-soup",
+      "source_url": null,
+      "title": "Cream of mushroom soup",
+      "excerpt": "Mushroom soup with onion, butter and cream, without flour or stock. Four servings, six steps and weighed ingredients.",
+      "category": "Soups & creams",
+      "category_slug": "sopas-y-cremas",
+      "cuisine": "Home cooking",
+      "difficulty": "Medium",
+      "servings": 4,
+      "image_url": "/recetas/receta-crema-de-campinones/portada.webp",
+      "ingredients": [
+        {
+          "amount": 500,
+          "unit": "g",
+          "name": "raw white button mushrooms",
+          "group": "Ingredients"
+        },
+        {
+          "amount": 100,
+          "unit": "g",
+          "name": "peeled onion",
+          "group": "Ingredients"
+        },
+        {
+          "amount": 20,
+          "unit": "g",
+          "name": "unsalted butter",
+          "group": "Ingredients"
+        },
+        {
+          "amount": 100,
+          "unit": "g",
+          "name": "unsweetened heavy cream",
+          "group": "Ingredients"
+        },
+        {
+          "amount": 600,
+          "unit": "g",
+          "name": "water",
+          "group": "Ingredients"
+        },
+        {
+          "amount": 3,
+          "unit": "g",
+          "name": "fine salt",
+          "group": "Ingredients"
+        },
+        {
+          "amount": 0.5,
+          "unit": "g",
+          "name": "ground black pepper",
+          "group": "Ingredients"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Clean and weigh",
+          "content": "Clean mushrooms with a damp cloth or brief rinse and dry them. Weigh 500 g edible portion and slice. Chop 100 g peeled onion. Weigh 20 g butter,100 g unsweetened cream,600 g water,3 g salt and 0.5 g pepper. Use water without added stock.",
+          "image_url": "/recetas/receta-crema-de-campinones/paso-01.webp",
+          "image_alt": "Cream of mushroom soup: Clean and weigh"
+        },
+        {
+          "title": "Soften the onion",
+          "content": "Melt butter in a saucepan about 2 litres over medium heat. Add onion and cook 5 minutes, stirring, until soft but not toasted. Reduce heat if it colours too much. Do not add more fat, as it changes the recipe calculation.",
+          "image_url": "/recetas/receta-crema-de-campinones/paso-02.webp",
+          "image_alt": "Cream of mushroom soup: Soften the onion"
+        },
+        {
+          "title": "Cook the mushrooms",
+          "content": "Add all mushrooms. Cook 8 minutes over medium-high heat, stirring, until they release liquid and much of it evaporates. Do not reserve slices for garnish: all are incorporated into the soup. Their volume reduces as they cook.",
+          "image_url": "/recetas/receta-crema-de-campinones/paso-03.webp",
+          "image_alt": "Cream of mushroom soup: Cook the mushrooms"
+        },
+        {
+          "title": "Add water and simmer",
+          "content": "Add 600 g water, salt and pepper. Bring to a gentle simmer and cook uncovered 10 minutes over medium-low heat. Stir occasionally until mushrooms are tender. Avoid a vigorous boil that reduces the quantity too much.",
+          "image_url": "/recetas/receta-crema-de-campinones/paso-04.webp",
+          "image_alt": "Cream of mushroom soup: Add water and simmer"
+        },
+        {
+          "title": "Blend and add cream",
+          "content": "Take off the heat. Carefully use an immersion blender with the head always submerged until smooth; do not tilt the pan or splash. Stir in 100 g cream. Return to low heat for 2 minutes, stirring, without boiling hard. Do not add flour.",
+          "image_url": "/recetas/receta-crema-de-campinones/paso-05.webp",
+          "image_alt": "Cream of mushroom soup: Blend and add cream"
+        },
+        {
+          "title": "Serve and store",
+          "content": "Divide all soup between four bowls. Bread, croutons and toppings are excluded. The 40-minute total is 15 preparation and 25 cooking. Refrigerate leftovers within 2 hours in shallow containers at 4 °C or below; use within 3–4 days and reheat to 74 °C while stirring.",
+          "image_url": "/recetas/receta-crema-de-campinones/paso-06.webp",
+          "image_alt": "Cream of mushroom soup: Serve and store"
+        }
+      ],
+      "notes": "Original proposed formula, not yet kitchen tested. Contains milk. Use identified cultivated button mushrooms, never wild mushrooms without expert identification. Evaporation changes the final quantity: divide the whole pan into four without claiming a measured cooked weight. No stock, flour, bread or toppings included. Blend carefully off the heat to avoid burns.",
+      "seo": {
+        "title": "Cream of mushroom soup: step-by-step recipe",
+        "description": "Mushroom soup with onion, butter and cream, without flour or stock. Four servings, six steps and weighed ingredients.",
+        "about": "Mushroom soup with onion, butter and cream, without flour or stock. Four servings, six steps and weighed ingredients.",
+        "faq": [
+          {
+            "q": "Is flour used to thicken it?",
+            "a": "No. All mushrooms are blended and cream is added; no flour is used."
+          },
+          {
+            "q": "Can I use stock?",
+            "a": "Yes, but flavour and nutrition change, especially sodium. Published values use water."
+          },
+          {
+            "q": "Can I use a jug blender?",
+            "a": "Only if its manufacturer permits hot liquids: follow its directions and work in batches. This recipe uses an immersion blender with its head submerged."
+          }
+        ],
+        "image_alt": "Cream of mushroom soup",
+        "image_variants": [
+          "/recetas/receta-crema-de-campinones/portada-1x1.webp",
+          "/recetas/receta-crema-de-campinones/portada-4x3.webp",
+          "/recetas/receta-crema-de-campinones/portada-16x9.webp"
+        ]
+      },
+      "nutrition": {
+        "calories": 158.7,
+        "protein_g": 4.9,
+        "carbs_g": 7.2,
+        "fat_g": 13.5,
+        "saturated_fat_g": 8.3,
+        "fiber_g": 1.7,
+        "sugar_g": 4.3,
+        "sodium_mg": 308.6,
+        "serving_size": "One of 4 equal servings",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "method": "Sum of edible starting grams × USDA nutrients per 100 g, divided by 4. No unmeasured cooking losses applied. The complete formula with water is divided into four. Evaporation and cooked portion weight are not measured; stock, bread and toppings are excluded.",
+        "note": "Estimate, not a laboratory analysis or kitchen test. Brands, leftovers and cooked yield can vary. The complete formula with water is divided into four. Evaporation and cooked portion weight are not measured; stock, bread and toppings are excluded.",
+        "inputs": [
+          {
+            "fdc_id": 169251,
+            "description": "Mushrooms, white, raw",
+            "recipe_grams": 500,
+            "edible_grams": 500,
+            "per_100g": {
+              "sugar_g": 1.98,
+              "saturated_fat_g": 0.05,
+              "fiber_g": 1.0,
+              "fat_g": 0.34,
+              "sodium_mg": 5.0,
+              "protein_g": 3.09,
+              "carbs_g": 3.26,
+              "calories": 22.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170000,
+            "description": "Onions, raw",
+            "recipe_grams": 100,
+            "edible_grams": 100,
+            "per_100g": {
+              "sugar_g": 4.24,
+              "fat_g": 0.1,
+              "carbs_g": 9.34,
+              "calories": 40.0,
+              "saturated_fat_g": 0.042,
+              "protein_g": 1.1,
+              "fiber_g": 1.7,
+              "sodium_mg": 4.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 173430,
+            "description": "Butter, without salt",
+            "recipe_grams": 20,
+            "edible_grams": 20,
+            "per_100g": {
+              "sugar_g": 0.06,
+              "calories": 717,
+              "saturated_fat_g": 50.5,
+              "fat_g": 81.1,
+              "carbs_g": 0.06,
+              "protein_g": 0.85,
+              "fiber_g": 0.0,
+              "sodium_mg": 11.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170859,
+            "description": "Cream, fluid, heavy whipping",
+            "recipe_grams": 100,
+            "edible_grams": 100,
+            "per_100g": {
+              "fat_g": 36.1,
+              "calories": 340,
+              "sugar_g": 2.92,
+              "sodium_mg": 27.0,
+              "protein_g": 2.84,
+              "saturated_fat_g": 23.0,
+              "fiber_g": 0.0,
+              "carbs_g": 2.84
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 174158,
+            "description": "Water, bottled, generic",
+            "recipe_grams": 600,
+            "edible_grams": 600,
+            "per_100g": {
+              "saturated_fat_g": 0.0,
+              "protein_g": 0.0,
+              "fiber_g": 0.0,
+              "sodium_mg": 2.0,
+              "fat_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 0.0,
+              "sugar_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 173468,
+            "description": "Salt, table",
+            "recipe_grams": 3,
+            "edible_grams": 3,
+            "per_100g": {
+              "fiber_g": 0.0,
+              "sodium_mg": 38800.0,
+              "saturated_fat_g": 0.0,
+              "protein_g": 0.0,
+              "fat_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 0.0,
+              "sugar_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170931,
+            "description": "Spices, pepper, black",
+            "recipe_grams": 0.5,
+            "edible_grams": 0.5,
+            "per_100g": {
+              "fat_g": 3.26,
+              "sugar_g": 0.64,
+              "carbs_g": 64.0,
+              "calories": 251,
+              "protein_g": 10.4,
+              "fiber_g": 25.3,
+              "sodium_mg": 20.0,
+              "saturated_fat_g": 1.39
+            },
+            "basis": "initial_edible_formula_grams"
+          }
+        ],
+        "source_url": "https://fdc.nal.usda.gov/"
+      },
+      "prep_time_minutes": 15,
+      "cook_time_minutes": 25,
+      "total_time_minutes": 40,
+      "course": "Soups & creams",
+      "summary": "Mushroom soup with onion, butter and cream, without flour or stock. Four servings, six steps and weighed ingredients.",
+      "content_html": "<p>Mushroom soup with onion, butter and cream, without flour or stock. Four servings, six steps and weighed ingredients.</p>",
+      "keywords": [
+        "Cream of mushroom soup"
+      ],
+      "gallery": [
+        {
+          "url": "/recetas/receta-crema-de-campinones/portada.webp",
+          "alt": "Cream of mushroom soup"
+        }
+      ],
+      "published": true,
+      "editorial_status": "published"
+    },
+    {
+      "id": "e417eff1-971b-5834-9635-93d1367f6cad",
+      "recipe_group_id": "0976e97c-aabc-4ce2-a07d-6429c0108dbe",
+      "language": "fr",
+      "slug": "veloute-de-champignons",
+      "public_path": "/fr/veloute-de-champignons",
+      "source_url": null,
+      "title": "Velouté de champignons",
+      "excerpt": "Crème de champignons avec oignon, beurre et crème, sans farine ni bouillon. Quatre portions, six étapes et ingrédients pesés.",
+      "category": "Soupes et crèmes",
+      "category_slug": "sopas-y-cremas",
+      "cuisine": "Cuisine familiale",
+      "difficulty": "Moyenne",
+      "servings": 4,
+      "image_url": "/recetas/receta-crema-de-campinones/portada.webp",
+      "ingredients": [
+        {
+          "amount": 500,
+          "unit": "g",
+          "name": "champignons de Paris blancs crus",
+          "group": "Ingrédients"
+        },
+        {
+          "amount": 100,
+          "unit": "g",
+          "name": "oignon épluché",
+          "group": "Ingrédients"
+        },
+        {
+          "amount": 20,
+          "unit": "g",
+          "name": "beurre doux",
+          "group": "Ingrédients"
+        },
+        {
+          "amount": 100,
+          "unit": "g",
+          "name": "crème entière non sucrée",
+          "group": "Ingrédients"
+        },
+        {
+          "amount": 600,
+          "unit": "g",
+          "name": "eau",
+          "group": "Ingrédients"
+        },
+        {
+          "amount": 3,
+          "unit": "g",
+          "name": "sel fin",
+          "group": "Ingrédients"
+        },
+        {
+          "amount": 0.5,
+          "unit": "g",
+          "name": "poivre noir moulu",
+          "group": "Ingrédients"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Nettoyez et pesez",
+          "content": "Nettoyez les champignons avec un linge humide ou un rinçage bref, puis séchez. Pesez 500 g de partie comestible et émincez. Hachez 100 g d’oignon épluché. Pesez 20 g de beurre,100 g de crème non sucrée,600 g d’eau,3 g de sel et 0,5 g de poivre. Aucun bouillon ajouté.",
+          "image_url": "/recetas/receta-crema-de-campinones/paso-01.webp",
+          "image_alt": "Velouté de champignons: Nettoyez et pesez"
+        },
+        {
+          "title": "Faites revenir l’oignon",
+          "content": "Faites fondre le beurre dans une casserole d’environ 2 litres à feu moyen. Ajoutez l’oignon et cuisez 5 minutes en remuant, jusqu’à ce qu’il soit tendre sans brunir. Baissez le feu s’il colore trop. N’ajoutez pas de matière grasse, ce qui changerait le calcul.",
+          "image_url": "/recetas/receta-crema-de-campinones/paso-02.webp",
+          "image_alt": "Velouté de champignons: Faites revenir l’oignon"
+        },
+        {
+          "title": "Cuisez les champignons",
+          "content": "Ajoutez tous les champignons. Cuisez 8 minutes à feu moyen-vif en remuant, jusqu’à ce qu’ils rendent leur eau et qu’une bonne partie s’évapore. Ne réservez pas de lamelles pour décorer : tout entre dans la crème. Le volume diminue à la cuisson.",
+          "image_url": "/recetas/receta-crema-de-campinones/paso-03.webp",
+          "image_alt": "Velouté de champignons: Cuisez les champignons"
+        },
+        {
+          "title": "Ajoutez l’eau et mijotez",
+          "content": "Versez 600 g d’eau, puis sel et poivre. Portez à frémissement et cuisez 10 minutes sans couvrir à feu moyen-doux. Remuez de temps en temps jusqu’à ce que les champignons soient tendres. Évitez une forte ébullition qui réduirait trop la quantité.",
+          "image_url": "/recetas/receta-crema-de-campinones/paso-04.webp",
+          "image_alt": "Velouté de champignons: Ajoutez l’eau et mijotez"
+        },
+        {
+          "title": "Mixez et ajoutez la crème",
+          "content": "Retirez du feu. Mixez prudemment au mixeur plongeant, tête toujours immergée, jusqu’à obtenir une crème lisse ; n’inclinez pas la casserole et évitez les projections. Incorporez 100 g de crème. Réchauffez 2 minutes à feu doux en remuant, sans forte ébullition. N’ajoutez pas de farine.",
+          "image_url": "/recetas/receta-crema-de-campinones/paso-05.webp",
+          "image_alt": "Velouté de champignons: Mixez et ajoutez la crème"
+        },
+        {
+          "title": "Servez et conservez",
+          "content": "Répartissez toute la crème dans quatre bols. Pain, croûtons et garnitures sont exclus. Les 40 minutes comprennent 15 de préparation et 25 de cuisson. Réfrigérez les restes sous 2 heures dans des récipients peu profonds à 4 °C maximum ; consommez sous 3–4 jours et réchauffez à 74 °C en remuant.",
+          "image_url": "/recetas/receta-crema-de-campinones/paso-06.webp",
+          "image_alt": "Velouté de champignons: Servez et conservez"
+        }
+      ],
+      "notes": "Formule originale proposée, pas encore testée en cuisine. Contient du lait. Utilisez des champignons de culture identifiés, jamais des champignons sauvages sans identification experte. L’évaporation modifie le volume final : répartissez toute la casserole en quatre sans annoncer un poids cuit mesuré. Sans bouillon, farine, pain ni garniture. Mixez hors du feu avec précaution pour éviter les brûlures.",
+      "seo": {
+        "title": "Velouté de champignons: recette étape par étape",
+        "description": "Crème de champignons avec oignon, beurre et crème, sans farine ni bouillon. Quatre portions, six étapes et ingrédients pesés.",
+        "about": "Crème de champignons avec oignon, beurre et crème, sans farine ni bouillon. Quatre portions, six étapes et ingrédients pesés.",
+        "faq": [
+          {
+            "q": "Y a-t-il de la farine pour épaissir ?",
+            "a": "Non. Tous les champignons sont mixés et la crème est ajoutée, sans farine."
+          },
+          {
+            "q": "Puis-je utiliser du bouillon ?",
+            "a": "Oui, mais le goût et la nutrition changent, notamment le sodium. Les valeurs publiées correspondent à l’eau."
+          },
+          {
+            "q": "Puis-je utiliser un blender ?",
+            "a": "Seulement si le fabricant autorise les liquides chauds : suivez ses consignes et travaillez par petites quantités. La recette utilise un mixeur plongeant immergé."
+          }
+        ],
+        "image_alt": "Velouté de champignons",
+        "image_variants": [
+          "/recetas/receta-crema-de-campinones/portada-1x1.webp",
+          "/recetas/receta-crema-de-campinones/portada-4x3.webp",
+          "/recetas/receta-crema-de-campinones/portada-16x9.webp"
+        ]
+      },
+      "nutrition": {
+        "calories": 158.7,
+        "protein_g": 4.9,
+        "carbs_g": 7.2,
+        "fat_g": 13.5,
+        "saturated_fat_g": 8.3,
+        "fiber_g": 1.7,
+        "sugar_g": 4.3,
+        "sodium_mg": 308.6,
+        "serving_size": "Une des 4 portions égales",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "method": "Somme des poids comestibles initiaux en grammes × nutriments USDA pour 100 g, divisée par 4. Aucune perte de cuisson non mesurée appliquée. Toute la formule avec eau est divisée par quatre. Évaporation et poids des portions cuites non mesurés ; bouillon, pain et garnitures exclus.",
+        "note": "Estimation, pas une analyse de laboratoire ni un essai en cuisine. Marques, restes et rendement peuvent varier. Toute la formule avec eau est divisée par quatre. Évaporation et poids des portions cuites non mesurés ; bouillon, pain et garnitures exclus.",
+        "inputs": [
+          {
+            "fdc_id": 169251,
+            "description": "Mushrooms, white, raw",
+            "recipe_grams": 500,
+            "edible_grams": 500,
+            "per_100g": {
+              "sugar_g": 1.98,
+              "saturated_fat_g": 0.05,
+              "fiber_g": 1.0,
+              "fat_g": 0.34,
+              "sodium_mg": 5.0,
+              "protein_g": 3.09,
+              "carbs_g": 3.26,
+              "calories": 22.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170000,
+            "description": "Onions, raw",
+            "recipe_grams": 100,
+            "edible_grams": 100,
+            "per_100g": {
+              "sugar_g": 4.24,
+              "fat_g": 0.1,
+              "carbs_g": 9.34,
+              "calories": 40.0,
+              "saturated_fat_g": 0.042,
+              "protein_g": 1.1,
+              "fiber_g": 1.7,
+              "sodium_mg": 4.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 173430,
+            "description": "Butter, without salt",
+            "recipe_grams": 20,
+            "edible_grams": 20,
+            "per_100g": {
+              "sugar_g": 0.06,
+              "calories": 717,
+              "saturated_fat_g": 50.5,
+              "fat_g": 81.1,
+              "carbs_g": 0.06,
+              "protein_g": 0.85,
+              "fiber_g": 0.0,
+              "sodium_mg": 11.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170859,
+            "description": "Cream, fluid, heavy whipping",
+            "recipe_grams": 100,
+            "edible_grams": 100,
+            "per_100g": {
+              "fat_g": 36.1,
+              "calories": 340,
+              "sugar_g": 2.92,
+              "sodium_mg": 27.0,
+              "protein_g": 2.84,
+              "saturated_fat_g": 23.0,
+              "fiber_g": 0.0,
+              "carbs_g": 2.84
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 174158,
+            "description": "Water, bottled, generic",
+            "recipe_grams": 600,
+            "edible_grams": 600,
+            "per_100g": {
+              "saturated_fat_g": 0.0,
+              "protein_g": 0.0,
+              "fiber_g": 0.0,
+              "sodium_mg": 2.0,
+              "fat_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 0.0,
+              "sugar_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 173468,
+            "description": "Salt, table",
+            "recipe_grams": 3,
+            "edible_grams": 3,
+            "per_100g": {
+              "fiber_g": 0.0,
+              "sodium_mg": 38800.0,
+              "saturated_fat_g": 0.0,
+              "protein_g": 0.0,
+              "fat_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 0.0,
+              "sugar_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170931,
+            "description": "Spices, pepper, black",
+            "recipe_grams": 0.5,
+            "edible_grams": 0.5,
+            "per_100g": {
+              "fat_g": 3.26,
+              "sugar_g": 0.64,
+              "carbs_g": 64.0,
+              "calories": 251,
+              "protein_g": 10.4,
+              "fiber_g": 25.3,
+              "sodium_mg": 20.0,
+              "saturated_fat_g": 1.39
+            },
+            "basis": "initial_edible_formula_grams"
+          }
+        ],
+        "source_url": "https://fdc.nal.usda.gov/"
+      },
+      "prep_time_minutes": 15,
+      "cook_time_minutes": 25,
+      "total_time_minutes": 40,
+      "course": "Soupes et crèmes",
+      "summary": "Crème de champignons avec oignon, beurre et crème, sans farine ni bouillon. Quatre portions, six étapes et ingrédients pesés.",
+      "content_html": "<p>Crème de champignons avec oignon, beurre et crème, sans farine ni bouillon. Quatre portions, six étapes et ingrédients pesés.</p>",
+      "keywords": [
+        "Velouté de champignons"
+      ],
+      "gallery": [
+        {
+          "url": "/recetas/receta-crema-de-campinones/portada.webp",
+          "alt": "Velouté de champignons"
+        }
+      ],
+      "published": true,
+      "editorial_status": "published"
+    },
+    {
+      "id": "c864d197-7d2f-5a1b-8738-eb3735e8e48a",
+      "recipe_group_id": "0976e97c-aabc-4ce2-a07d-6429c0108dbe",
+      "language": "it",
+      "slug": "crema-di-funghi",
+      "public_path": "/it/crema-di-funghi",
+      "source_url": null,
+      "title": "Crema di funghi champignon",
+      "excerpt": "Crema di champignon con cipolla, burro e panna, senza farina o brodo. Quattro porzioni, sei passaggi e ingredienti pesati.",
+      "category": "Zuppe e creme",
+      "category_slug": "sopas-y-cremas",
+      "cuisine": "Cucina casalinga",
+      "difficulty": "Media",
+      "servings": 4,
+      "image_url": "/recetas/receta-crema-de-campinones/portada.webp",
+      "ingredients": [
+        {
+          "amount": 500,
+          "unit": "g",
+          "name": "champignon bianchi crudi",
+          "group": "Ingredienti"
+        },
+        {
+          "amount": 100,
+          "unit": "g",
+          "name": "cipolla pelata",
+          "group": "Ingredienti"
+        },
+        {
+          "amount": 20,
+          "unit": "g",
+          "name": "burro non salato",
+          "group": "Ingredienti"
+        },
+        {
+          "amount": 100,
+          "unit": "g",
+          "name": "panna fresca non zuccherata",
+          "group": "Ingredienti"
+        },
+        {
+          "amount": 600,
+          "unit": "g",
+          "name": "acqua",
+          "group": "Ingredienti"
+        },
+        {
+          "amount": 3,
+          "unit": "g",
+          "name": "sale fino",
+          "group": "Ingredienti"
+        },
+        {
+          "amount": 0.5,
+          "unit": "g",
+          "name": "pepe nero macinato",
+          "group": "Ingredienti"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Pulisci e pesa",
+          "content": "Pulisci i funghi con un panno umido o un rapido risciacquo e asciugali. Pesa 500 g di parte commestibile e affetta. Trita 100 g di cipolla pelata. Pesa 20 g di burro,100 g di panna non zuccherata,600 g di acqua,3 g di sale e 0,5 g di pepe. Si usa acqua senza brodo aggiunto.",
+          "image_url": "/recetas/receta-crema-de-campinones/paso-01.webp",
+          "image_alt": "Crema di funghi champignon: Pulisci e pesa"
+        },
+        {
+          "title": "Fai appassire la cipolla",
+          "content": "Sciogli il burro in una pentola di circa 2 litri a fuoco medio. Aggiungi la cipolla e cuoci 5 minuti mescolando, finché è morbida senza tostarsi. Abbassa il fuoco se prende troppo colore. Non aggiungere grasso: cambierebbe il calcolo della ricetta.",
+          "image_url": "/recetas/receta-crema-de-campinones/paso-02.webp",
+          "image_alt": "Crema di funghi champignon: Fai appassire la cipolla"
+        },
+        {
+          "title": "Cuoci i funghi",
+          "content": "Aggiungi tutti i funghi. Cuoci 8 minuti a fuoco medio-alto mescolando, finché rilasciano liquido e gran parte evapora. Non tenere fette per decorare: tutti vengono incorporati nella crema. Il volume diminuisce durante la cottura.",
+          "image_url": "/recetas/receta-crema-de-campinones/paso-03.webp",
+          "image_alt": "Crema di funghi champignon: Cuoci i funghi"
+        },
+        {
+          "title": "Aggiungi acqua e fai sobbollire",
+          "content": "Versa 600 g di acqua e aggiungi sale e pepe. Porta a lieve bollore e cuoci scoperto 10 minuti a fuoco medio-basso. Mescola ogni tanto finché i funghi sono teneri. Evita un bollore forte che riduca troppo la quantità.",
+          "image_url": "/recetas/receta-crema-de-campinones/paso-04.webp",
+          "image_alt": "Crema di funghi champignon: Aggiungi acqua e fai sobbollire"
+        },
+        {
+          "title": "Frulla e aggiungi la panna",
+          "content": "Togli dal fuoco. Frulla con cautela usando un frullatore a immersione con la testa sempre sommersa; non inclinare la pentola e non schizzare. Aggiungi 100 g di panna e mescola. Rimetti a fuoco basso 2 minuti, mescolando senza bollire forte. Non aggiungere farina.",
+          "image_url": "/recetas/receta-crema-de-campinones/paso-05.webp",
+          "image_alt": "Crema di funghi champignon: Frulla e aggiungi la panna"
+        },
+        {
+          "title": "Servi e conserva",
+          "content": "Dividi tutta la crema in quattro ciotole. Pane, crostini e guarnizioni esclusi. I 40 minuti sono 15 di preparazione e 25 di cottura. Refrigerare gli avanzi entro 2 ore in contenitori poco profondi a 4 °C o meno; consumare entro 3–4 giorni e riscaldare a 74 °C mescolando.",
+          "image_url": "/recetas/receta-crema-de-campinones/paso-06.webp",
+          "image_alt": "Crema di funghi champignon: Servi e conserva"
+        }
+      ],
+      "notes": "Formula originale proposta, non ancora testata in cucina. Contiene latte. Usa champignon coltivati identificati, mai funghi selvatici senza identificazione esperta. La quantità finale varia per evaporazione: dividi tutta la pentola per quattro senza dichiarare un peso cotto misurato. Non include brodo, farina, pane o guarnizioni. Frulla fuori dal fuoco con cautela per evitare ustioni.",
+      "seo": {
+        "title": "Crema di funghi champignon: ricetta passo passo",
+        "description": "Crema di champignon con cipolla, burro e panna, senza farina o brodo. Quattro porzioni, sei passaggi e ingredienti pesati.",
+        "about": "Crema di champignon con cipolla, burro e panna, senza farina o brodo. Quattro porzioni, sei passaggi e ingredienti pesati.",
+        "faq": [
+          {
+            "q": "Si aggiunge farina per addensare?",
+            "a": "No. Si frullano tutti i funghi e si aggiunge panna, senza farina."
+          },
+          {
+            "q": "Posso usare brodo?",
+            "a": "Sì, ma cambiano sapore e nutrizione, soprattutto sodio. I valori pubblicati usano acqua."
+          },
+          {
+            "q": "Posso usare un frullatore da banco?",
+            "a": "Solo se il produttore permette liquidi caldi: segui le istruzioni e lavora in piccole quantità. Il riferimento è un frullatore a immersione con testa sommersa."
+          }
+        ],
+        "image_alt": "Crema di funghi champignon",
+        "image_variants": [
+          "/recetas/receta-crema-de-campinones/portada-1x1.webp",
+          "/recetas/receta-crema-de-campinones/portada-4x3.webp",
+          "/recetas/receta-crema-de-campinones/portada-16x9.webp"
+        ]
+      },
+      "nutrition": {
+        "calories": 158.7,
+        "protein_g": 4.9,
+        "carbs_g": 7.2,
+        "fat_g": 13.5,
+        "saturated_fat_g": 8.3,
+        "fiber_g": 1.7,
+        "sugar_g": 4.3,
+        "sodium_mg": 308.6,
+        "serving_size": "Una delle 4 porzioni uguali",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "method": "Somma dei grammi comestibili iniziali × nutrienti USDA per 100 g, divisa per 4. Nessuna perdita di cottura non misurata applicata. Tutta la formula con acqua divisa per quattro. Evaporazione e peso cotto delle porzioni non misurati; esclusi brodo, pane e guarnizioni.",
+        "note": "Stima, non analisi di laboratorio né prova in cucina. Marche, residui e resa possono variare. Tutta la formula con acqua divisa per quattro. Evaporazione e peso cotto delle porzioni non misurati; esclusi brodo, pane e guarnizioni.",
+        "inputs": [
+          {
+            "fdc_id": 169251,
+            "description": "Mushrooms, white, raw",
+            "recipe_grams": 500,
+            "edible_grams": 500,
+            "per_100g": {
+              "sugar_g": 1.98,
+              "saturated_fat_g": 0.05,
+              "fiber_g": 1.0,
+              "fat_g": 0.34,
+              "sodium_mg": 5.0,
+              "protein_g": 3.09,
+              "carbs_g": 3.26,
+              "calories": 22.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170000,
+            "description": "Onions, raw",
+            "recipe_grams": 100,
+            "edible_grams": 100,
+            "per_100g": {
+              "sugar_g": 4.24,
+              "fat_g": 0.1,
+              "carbs_g": 9.34,
+              "calories": 40.0,
+              "saturated_fat_g": 0.042,
+              "protein_g": 1.1,
+              "fiber_g": 1.7,
+              "sodium_mg": 4.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 173430,
+            "description": "Butter, without salt",
+            "recipe_grams": 20,
+            "edible_grams": 20,
+            "per_100g": {
+              "sugar_g": 0.06,
+              "calories": 717,
+              "saturated_fat_g": 50.5,
+              "fat_g": 81.1,
+              "carbs_g": 0.06,
+              "protein_g": 0.85,
+              "fiber_g": 0.0,
+              "sodium_mg": 11.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170859,
+            "description": "Cream, fluid, heavy whipping",
+            "recipe_grams": 100,
+            "edible_grams": 100,
+            "per_100g": {
+              "fat_g": 36.1,
+              "calories": 340,
+              "sugar_g": 2.92,
+              "sodium_mg": 27.0,
+              "protein_g": 2.84,
+              "saturated_fat_g": 23.0,
+              "fiber_g": 0.0,
+              "carbs_g": 2.84
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 174158,
+            "description": "Water, bottled, generic",
+            "recipe_grams": 600,
+            "edible_grams": 600,
+            "per_100g": {
+              "saturated_fat_g": 0.0,
+              "protein_g": 0.0,
+              "fiber_g": 0.0,
+              "sodium_mg": 2.0,
+              "fat_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 0.0,
+              "sugar_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 173468,
+            "description": "Salt, table",
+            "recipe_grams": 3,
+            "edible_grams": 3,
+            "per_100g": {
+              "fiber_g": 0.0,
+              "sodium_mg": 38800.0,
+              "saturated_fat_g": 0.0,
+              "protein_g": 0.0,
+              "fat_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 0.0,
+              "sugar_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170931,
+            "description": "Spices, pepper, black",
+            "recipe_grams": 0.5,
+            "edible_grams": 0.5,
+            "per_100g": {
+              "fat_g": 3.26,
+              "sugar_g": 0.64,
+              "carbs_g": 64.0,
+              "calories": 251,
+              "protein_g": 10.4,
+              "fiber_g": 25.3,
+              "sodium_mg": 20.0,
+              "saturated_fat_g": 1.39
+            },
+            "basis": "initial_edible_formula_grams"
+          }
+        ],
+        "source_url": "https://fdc.nal.usda.gov/"
+      },
+      "prep_time_minutes": 15,
+      "cook_time_minutes": 25,
+      "total_time_minutes": 40,
+      "course": "Zuppe e creme",
+      "summary": "Crema di champignon con cipolla, burro e panna, senza farina o brodo. Quattro porzioni, sei passaggi e ingredienti pesati.",
+      "content_html": "<p>Crema di champignon con cipolla, burro e panna, senza farina o brodo. Quattro porzioni, sei passaggi e ingredienti pesati.</p>",
+      "keywords": [
+        "Crema di funghi champignon"
+      ],
+      "gallery": [
+        {
+          "url": "/recetas/receta-crema-de-campinones/portada.webp",
+          "alt": "Crema di funghi champignon"
+        }
+      ],
+      "published": true,
+      "editorial_status": "published"
+    },
+    {
+      "id": "08927cda-c809-55ae-a667-976d7fadd512",
+      "recipe_group_id": "0976e97c-aabc-4ce2-a07d-6429c0108dbe",
+      "language": "ja",
+      "slug": "マッシュルームのクリームスープ",
+      "public_path": "/ja/マッシュルームのクリームスープ",
+      "source_url": null,
+      "title": "マッシュルームのクリームスープ",
+      "excerpt": "玉ねぎ、バター、生クリームで作るマッシュルームスープ。粉やブイヨンなしの4人分で、6工程と材料の計量を含みます。",
+      "category": "スープ・ポタージュ",
+      "category_slug": "sopas-y-cremas",
+      "cuisine": "家庭料理",
+      "difficulty": "普通",
+      "servings": 4,
+      "image_url": "/recetas/receta-crema-de-campinones/portada.webp",
+      "ingredients": [
+        {
+          "amount": 500,
+          "unit": "g",
+          "name": "生のホワイトマッシュルーム",
+          "group": "材料"
+        },
+        {
+          "amount": 100,
+          "unit": "g",
+          "name": "皮をむいた玉ねぎ",
+          "group": "材料"
+        },
+        {
+          "amount": 20,
+          "unit": "g",
+          "name": "無塩バター",
+          "group": "材料"
+        },
+        {
+          "amount": 100,
+          "unit": "g",
+          "name": "砂糖なしの生クリーム",
+          "group": "材料"
+        },
+        {
+          "amount": 600,
+          "unit": "g",
+          "name": "水",
+          "group": "材料"
+        },
+        {
+          "amount": 3,
+          "unit": "g",
+          "name": "細粒の塩",
+          "group": "材料"
+        },
+        {
+          "amount": 0.5,
+          "unit": "g",
+          "name": "黒こしょう（粉）",
+          "group": "材料"
+        }
+      ],
+      "steps": [
+        {
+          "title": "洗って量る",
+          "content": "マッシュルームを湿った布で拭くか短くすすぎ、水分をふきます。食用部分500 gを量って薄切りにします。皮をむいた玉ねぎ100 gを刻みます。バター20 g、生クリーム100 g、水600 g、塩3 g、こしょう0.5 gを量ります。水を使い、ブイヨンは加えません。",
+          "image_url": "/recetas/receta-crema-de-campinones/paso-01.webp",
+          "image_alt": "マッシュルームのクリームスープ: 洗って量る"
+        },
+        {
+          "title": "玉ねぎを炒める",
+          "content": "約2リットルの鍋で中火でバターを溶かします。玉ねぎを入れて混ぜながら5分、色を付けず柔らかくします。色が付きすぎるなら火を弱めます。追加の油脂は栄養計算が変わるため加えません。",
+          "image_url": "/recetas/receta-crema-de-campinones/paso-02.webp",
+          "image_alt": "マッシュルームのクリームスープ: 玉ねぎを炒める"
+        },
+        {
+          "title": "マッシュルームを炒める",
+          "content": "マッシュルームを全量加え、中強火で混ぜながら8分、水分が出て大部分が蒸発するまで炒めます。飾り用の薄切りは取り分けません。この配合ではすべてスープに使います。加熱とともにかさが減ります。",
+          "image_url": "/recetas/receta-crema-de-campinones/paso-03.webp",
+          "image_alt": "マッシュルームのクリームスープ: マッシュルームを炒める"
+        },
+        {
+          "title": "水を加えて煮る",
+          "content": "水600 g、塩、こしょうを加えます。穏やかに煮立て、ふたをせず中弱火で10分、時々混ぜてマッシュルームが柔らかくなるまで煮ます。量が減りすぎる強い沸騰は避けます。",
+          "image_url": "/recetas/receta-crema-de-campinones/paso-04.webp",
+          "image_alt": "マッシュルームのクリームスープ: 水を加えて煮る"
+        },
+        {
+          "title": "なめらかにしてクリームを加える",
+          "content": "火から外します。ハンドブレンダーの先端を常に沈めて慎重になめらかにし、鍋を傾けたり飛び散らせたりしません。生クリーム100 gを混ぜ、弱火に戻して2分、強く沸かさず混ぜます。粉は加えません。",
+          "image_url": "/recetas/receta-crema-de-campinones/paso-05.webp",
+          "image_alt": "マッシュルームのクリームスープ: なめらかにしてクリームを加える"
+        },
+        {
+          "title": "盛り付けて保存する",
+          "content": "スープを全量4つの器に分けます。パン、クルトン、トッピングは含みません。40分は準備15分と加熱25分です。残りは2時間以内に浅い容器で4 °C以下へ冷蔵し、3–4日以内に食べます。混ぜながら74 °Cまで再加熱します。",
+          "image_url": "/recetas/receta-crema-de-campinones/paso-06.webp",
+          "image_alt": "マッシュルームのクリームスープ: 盛り付けて保存する"
+        }
+      ],
+      "notes": "独自のレシピ案で調理試験は未実施です。乳を含みます。種類が確認できる栽培マッシュルームを使い、専門家による同定のない野生きのこは使いません。蒸発で最終量が変わるため、鍋全量を4等分し、調理後の実測重量とは表示しません。ブイヨン、粉、パン、トッピングは含みません。やけどを避け、火から外して慎重にブレンドします。",
+      "seo": {
+        "title": "マッシュルームのクリームスープ: 作り方",
+        "description": "玉ねぎ、バター、生クリームで作るマッシュルームスープ。粉やブイヨンなしの4人分で、6工程と材料の計量を含みます。",
+        "about": "玉ねぎ、バター、生クリームで作るマッシュルームスープ。粉やブイヨンなしの4人分で、6工程と材料の計量を含みます。",
+        "faq": [
+          {
+            "q": "とろみ用の粉は入りますか？",
+            "a": "入りません。マッシュルームを全量ブレンドして生クリームを加えます。"
+          },
+          {
+            "q": "ブイヨンを使えますか？",
+            "a": "使えますが、味と栄養、特にナトリウムが変わります。掲載値は水を使った場合です。"
+          },
+          {
+            "q": "据え置きミキサーを使えますか？",
+            "a": "メーカーが熱い液体を認めている場合のみ、説明書に従い少量ずつ使います。基準は先端を沈めるハンドブレンダーです。"
+          }
+        ],
+        "image_alt": "マッシュルームのクリームスープ",
+        "image_variants": [
+          "/recetas/receta-crema-de-campinones/portada-1x1.webp",
+          "/recetas/receta-crema-de-campinones/portada-4x3.webp",
+          "/recetas/receta-crema-de-campinones/portada-16x9.webp"
+        ]
+      },
+      "nutrition": {
+        "calories": 158.7,
+        "protein_g": 4.9,
+        "carbs_g": 7.2,
+        "fat_g": 13.5,
+        "saturated_fat_g": 8.3,
+        "fiber_g": 1.7,
+        "sugar_g": 4.3,
+        "sodium_mg": 308.6,
+        "serving_size": "全量の4分の1",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "method": "可食部の初期重量g × USDAの100 g当たり栄養値を合計し、4人分で割ります。未測定の加熱損失は補正しません。 水を含む全配合を4等分します。蒸発量や加熱後の1人分重量は未測定です。ブイヨン、パン、トッピングは含みません。",
+        "note": "推定値で、実験室分析や調理試験の値ではありません。製品、残量、調理後の収量で変わります。 水を含む全配合を4等分します。蒸発量や加熱後の1人分重量は未測定です。ブイヨン、パン、トッピングは含みません。",
+        "inputs": [
+          {
+            "fdc_id": 169251,
+            "description": "Mushrooms, white, raw",
+            "recipe_grams": 500,
+            "edible_grams": 500,
+            "per_100g": {
+              "sugar_g": 1.98,
+              "saturated_fat_g": 0.05,
+              "fiber_g": 1.0,
+              "fat_g": 0.34,
+              "sodium_mg": 5.0,
+              "protein_g": 3.09,
+              "carbs_g": 3.26,
+              "calories": 22.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170000,
+            "description": "Onions, raw",
+            "recipe_grams": 100,
+            "edible_grams": 100,
+            "per_100g": {
+              "sugar_g": 4.24,
+              "fat_g": 0.1,
+              "carbs_g": 9.34,
+              "calories": 40.0,
+              "saturated_fat_g": 0.042,
+              "protein_g": 1.1,
+              "fiber_g": 1.7,
+              "sodium_mg": 4.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 173430,
+            "description": "Butter, without salt",
+            "recipe_grams": 20,
+            "edible_grams": 20,
+            "per_100g": {
+              "sugar_g": 0.06,
+              "calories": 717,
+              "saturated_fat_g": 50.5,
+              "fat_g": 81.1,
+              "carbs_g": 0.06,
+              "protein_g": 0.85,
+              "fiber_g": 0.0,
+              "sodium_mg": 11.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170859,
+            "description": "Cream, fluid, heavy whipping",
+            "recipe_grams": 100,
+            "edible_grams": 100,
+            "per_100g": {
+              "fat_g": 36.1,
+              "calories": 340,
+              "sugar_g": 2.92,
+              "sodium_mg": 27.0,
+              "protein_g": 2.84,
+              "saturated_fat_g": 23.0,
+              "fiber_g": 0.0,
+              "carbs_g": 2.84
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 174158,
+            "description": "Water, bottled, generic",
+            "recipe_grams": 600,
+            "edible_grams": 600,
+            "per_100g": {
+              "saturated_fat_g": 0.0,
+              "protein_g": 0.0,
+              "fiber_g": 0.0,
+              "sodium_mg": 2.0,
+              "fat_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 0.0,
+              "sugar_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 173468,
+            "description": "Salt, table",
+            "recipe_grams": 3,
+            "edible_grams": 3,
+            "per_100g": {
+              "fiber_g": 0.0,
+              "sodium_mg": 38800.0,
+              "saturated_fat_g": 0.0,
+              "protein_g": 0.0,
+              "fat_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 0.0,
+              "sugar_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170931,
+            "description": "Spices, pepper, black",
+            "recipe_grams": 0.5,
+            "edible_grams": 0.5,
+            "per_100g": {
+              "fat_g": 3.26,
+              "sugar_g": 0.64,
+              "carbs_g": 64.0,
+              "calories": 251,
+              "protein_g": 10.4,
+              "fiber_g": 25.3,
+              "sodium_mg": 20.0,
+              "saturated_fat_g": 1.39
+            },
+            "basis": "initial_edible_formula_grams"
+          }
+        ],
+        "source_url": "https://fdc.nal.usda.gov/"
+      },
+      "prep_time_minutes": 15,
+      "cook_time_minutes": 25,
+      "total_time_minutes": 40,
+      "course": "スープ・ポタージュ",
+      "summary": "玉ねぎ、バター、生クリームで作るマッシュルームスープ。粉やブイヨンなしの4人分で、6工程と材料の計量を含みます。",
+      "content_html": "<p>玉ねぎ、バター、生クリームで作るマッシュルームスープ。粉やブイヨンなしの4人分で、6工程と材料の計量を含みます。</p>",
+      "keywords": [
+        "マッシュルームのクリームスープ"
+      ],
+      "gallery": [
+        {
+          "url": "/recetas/receta-crema-de-campinones/portada.webp",
+          "alt": "マッシュルームのクリームスープ"
+        }
+      ],
+      "published": true,
+      "editorial_status": "published"
+    },
+    {
+      "id": "49475181-18ca-5516-94bf-5d35db2a8bf9",
+      "recipe_group_id": "0976e97c-aabc-4ce2-a07d-6429c0108dbe",
+      "language": "pt",
+      "slug": "creme-de-champignon",
+      "public_path": "/pt/creme-de-champignon",
+      "source_url": null,
+      "title": "Creme de champignon",
+      "excerpt": "Creme de champignon com cebola, manteiga e creme de leite, sem farinha nem caldo. Quatro porções, seis passos e ingredientes pesados.",
+      "category": "Sopas e cremes",
+      "category_slug": "sopas-y-cremas",
+      "cuisine": "Cozinha caseira",
+      "difficulty": "Média",
+      "servings": 4,
+      "image_url": "/recetas/receta-crema-de-campinones/portada.webp",
+      "ingredients": [
+        {
+          "amount": 500,
+          "unit": "g",
+          "name": "champignon branco cru",
+          "group": "Ingredientes"
+        },
+        {
+          "amount": 100,
+          "unit": "g",
+          "name": "cebola descascada",
+          "group": "Ingredientes"
+        },
+        {
+          "amount": 20,
+          "unit": "g",
+          "name": "manteiga sem sal",
+          "group": "Ingredientes"
+        },
+        {
+          "amount": 100,
+          "unit": "g",
+          "name": "creme de leite fresco sem açúcar",
+          "group": "Ingredientes"
+        },
+        {
+          "amount": 600,
+          "unit": "g",
+          "name": "água",
+          "group": "Ingredientes"
+        },
+        {
+          "amount": 3,
+          "unit": "g",
+          "name": "sal fino",
+          "group": "Ingredientes"
+        },
+        {
+          "amount": 0.5,
+          "unit": "g",
+          "name": "pimenta-do-reino moída",
+          "group": "Ingredientes"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Limpe e pese",
+          "content": "Limpe os champignons com pano úmido ou enxágue rápido e seque. Pese 500 g de parte comestível e fatie. Pique 100 g de cebola descascada. Pese 20 g de manteiga,100 g de creme de leite sem açúcar,600 g de água,3 g de sal e 0,5 g de pimenta. Use água sem caldo adicionado.",
+          "image_url": "/recetas/receta-crema-de-campinones/paso-01.webp",
+          "image_alt": "Creme de champignon: Limpe e pese"
+        },
+        {
+          "title": "Refogue a cebola",
+          "content": "Derreta a manteiga em panela de cerca de 2 litros em fogo médio. Junte a cebola e cozinhe 5 minutos mexendo, até amolecer sem tostar. Baixe o fogo se ganhar muita cor. Não adicione gordura, pois mudaria o cálculo da receita.",
+          "image_url": "/recetas/receta-crema-de-campinones/paso-02.webp",
+          "image_alt": "Creme de champignon: Refogue a cebola"
+        },
+        {
+          "title": "Cozinhe os champignons",
+          "content": "Acrescente todos os champignons. Cozinhe 8 minutos em fogo médio-alto mexendo, até soltarem líquido e boa parte evaporar. Não reserve fatias para decorar: todos entram no creme. O volume diminui enquanto cozinham.",
+          "image_url": "/recetas/receta-crema-de-campinones/paso-03.webp",
+          "image_alt": "Creme de champignon: Cozinhe os champignons"
+        },
+        {
+          "title": "Junte água e cozinhe",
+          "content": "Despeje 600 g de água e acrescente sal e pimenta. Leve à fervura suave e cozinhe destampado 10 minutos em fogo médio-baixo. Mexa de vez em quando até ficarem macios. Evite fervura forte que reduza demais a quantidade.",
+          "image_url": "/recetas/receta-crema-de-campinones/paso-04.webp",
+          "image_alt": "Creme de champignon: Junte água e cozinhe"
+        },
+        {
+          "title": "Bata e junte o creme de leite",
+          "content": "Retire do fogo. Use mixer de mão com a cabeça sempre submersa, batendo com cuidado até ficar liso; não incline a panela nem respingue. Misture 100 g de creme de leite. Volte ao fogo baixo 2 minutos mexendo, sem ferver forte. Não acrescente farinha.",
+          "image_url": "/recetas/receta-crema-de-campinones/paso-05.webp",
+          "image_alt": "Creme de champignon: Bata e junte o creme de leite"
+        },
+        {
+          "title": "Sirva e conserve",
+          "content": "Divida todo o creme em quatro tigelas. Não inclui pão, croutons ou toppings. Os 40 minutos somam 15 de preparo e 25 de cocção. Refrigere sobras em até 2 horas em recipientes rasos a 4 °C ou menos; consuma em 3–4 dias e reaqueça a 74 °C mexendo.",
+          "image_url": "/recetas/receta-crema-de-campinones/paso-06.webp",
+          "image_alt": "Creme de champignon: Sirva e conserve"
+        }
+      ],
+      "notes": "Fórmula original proposta, ainda sem teste de cozinha. Contém leite. Use champignons cultivados identificados, nunca cogumelos silvestres sem identificação especializada. A quantidade final varia por evaporação: divida toda a panela em quatro sem afirmar peso cozido medido. Não inclui caldo, farinha, pão ou toppings. Bata fora do fogo com cuidado para evitar queimaduras.",
+      "seo": {
+        "title": "Creme de champignon: receita passo a passo",
+        "description": "Creme de champignon com cebola, manteiga e creme de leite, sem farinha nem caldo. Quatro porções, seis passos e ingredientes pesados.",
+        "about": "Creme de champignon com cebola, manteiga e creme de leite, sem farinha nem caldo. Quatro porções, seis passos e ingredientes pesados.",
+        "faq": [
+          {
+            "q": "Leva farinha para engrossar?",
+            "a": "Não. Todos os champignons são batidos e o creme de leite é acrescentado, sem farinha."
+          },
+          {
+            "q": "Posso usar caldo?",
+            "a": "Sim, mas mudam sabor e nutrição, principalmente sódio. Os valores publicados correspondem à água."
+          },
+          {
+            "q": "Posso usar liquidificador?",
+            "a": "Só se o fabricante permitir líquidos quentes: siga as instruções e trabalhe em pequenas porções. A referência é mixer de mão com a cabeça submersa."
+          }
+        ],
+        "image_alt": "Creme de champignon",
+        "image_variants": [
+          "/recetas/receta-crema-de-campinones/portada-1x1.webp",
+          "/recetas/receta-crema-de-campinones/portada-4x3.webp",
+          "/recetas/receta-crema-de-campinones/portada-16x9.webp"
+        ]
+      },
+      "nutrition": {
+        "calories": 158.7,
+        "protein_g": 4.9,
+        "carbs_g": 7.2,
+        "fat_g": 13.5,
+        "saturated_fat_g": 8.3,
+        "fiber_g": 1.7,
+        "sugar_g": 4.3,
+        "sodium_mg": 308.6,
+        "serving_size": "Uma de 4 porções iguais",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "method": "Soma dos gramas comestíveis iniciais × nutrientes USDA por 100 g, dividida por 4. Não se aplicam perdas de cocção não medidas. Toda a fórmula com água é dividida por quatro. Evaporação e peso cozido das porções não foram medidos; não inclui caldo, pão ou toppings.",
+        "note": "Estimativa, não análise de laboratório nem teste de cozinha. Marcas, resíduos e rendimento podem variar. Toda a fórmula com água é dividida por quatro. Evaporação e peso cozido das porções não foram medidos; não inclui caldo, pão ou toppings.",
+        "inputs": [
+          {
+            "fdc_id": 169251,
+            "description": "Mushrooms, white, raw",
+            "recipe_grams": 500,
+            "edible_grams": 500,
+            "per_100g": {
+              "sugar_g": 1.98,
+              "saturated_fat_g": 0.05,
+              "fiber_g": 1.0,
+              "fat_g": 0.34,
+              "sodium_mg": 5.0,
+              "protein_g": 3.09,
+              "carbs_g": 3.26,
+              "calories": 22.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170000,
+            "description": "Onions, raw",
+            "recipe_grams": 100,
+            "edible_grams": 100,
+            "per_100g": {
+              "sugar_g": 4.24,
+              "fat_g": 0.1,
+              "carbs_g": 9.34,
+              "calories": 40.0,
+              "saturated_fat_g": 0.042,
+              "protein_g": 1.1,
+              "fiber_g": 1.7,
+              "sodium_mg": 4.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 173430,
+            "description": "Butter, without salt",
+            "recipe_grams": 20,
+            "edible_grams": 20,
+            "per_100g": {
+              "sugar_g": 0.06,
+              "calories": 717,
+              "saturated_fat_g": 50.5,
+              "fat_g": 81.1,
+              "carbs_g": 0.06,
+              "protein_g": 0.85,
+              "fiber_g": 0.0,
+              "sodium_mg": 11.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170859,
+            "description": "Cream, fluid, heavy whipping",
+            "recipe_grams": 100,
+            "edible_grams": 100,
+            "per_100g": {
+              "fat_g": 36.1,
+              "calories": 340,
+              "sugar_g": 2.92,
+              "sodium_mg": 27.0,
+              "protein_g": 2.84,
+              "saturated_fat_g": 23.0,
+              "fiber_g": 0.0,
+              "carbs_g": 2.84
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 174158,
+            "description": "Water, bottled, generic",
+            "recipe_grams": 600,
+            "edible_grams": 600,
+            "per_100g": {
+              "saturated_fat_g": 0.0,
+              "protein_g": 0.0,
+              "fiber_g": 0.0,
+              "sodium_mg": 2.0,
+              "fat_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 0.0,
+              "sugar_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 173468,
+            "description": "Salt, table",
+            "recipe_grams": 3,
+            "edible_grams": 3,
+            "per_100g": {
+              "fiber_g": 0.0,
+              "sodium_mg": 38800.0,
+              "saturated_fat_g": 0.0,
+              "protein_g": 0.0,
+              "fat_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 0.0,
+              "sugar_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170931,
+            "description": "Spices, pepper, black",
+            "recipe_grams": 0.5,
+            "edible_grams": 0.5,
+            "per_100g": {
+              "fat_g": 3.26,
+              "sugar_g": 0.64,
+              "carbs_g": 64.0,
+              "calories": 251,
+              "protein_g": 10.4,
+              "fiber_g": 25.3,
+              "sodium_mg": 20.0,
+              "saturated_fat_g": 1.39
+            },
+            "basis": "initial_edible_formula_grams"
+          }
+        ],
+        "source_url": "https://fdc.nal.usda.gov/"
+      },
+      "prep_time_minutes": 15,
+      "cook_time_minutes": 25,
+      "total_time_minutes": 40,
+      "course": "Sopas e cremes",
+      "summary": "Creme de champignon com cebola, manteiga e creme de leite, sem farinha nem caldo. Quatro porções, seis passos e ingredientes pesados.",
+      "content_html": "<p>Creme de champignon com cebola, manteiga e creme de leite, sem farinha nem caldo. Quatro porções, seis passos e ingredientes pesados.</p>",
+      "keywords": [
+        "Creme de champignon"
+      ],
+      "gallery": [
+        {
+          "url": "/recetas/receta-crema-de-campinones/portada.webp",
+          "alt": "Creme de champignon"
+        }
+      ],
+      "published": true,
+      "editorial_status": "published"
     }
   ],
   "publication_blockers": [
-    "IMAGES_PENDING",
-    "SIX_LOCALIZATIONS_PENDING",
+    "MEDIA_FINAL_VALIDATION",
     "CI_DEPLOY_DB_CACHE_LIVE_QA_PENDING"
   ],
   "steps_sha256": "e8cc7ef3bea4dd2c05f51421bbb9accd8332c5df2cb5d4092d95cfb410c6f9c9"

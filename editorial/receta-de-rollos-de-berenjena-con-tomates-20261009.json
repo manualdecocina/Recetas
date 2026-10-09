@@ -1,6 +1,6 @@
 {
   "scope": "Manual de Cocina lote05; five final candidates only",
-  "state": "ES_FROZEN_NUTRITION_COMPLETE_IMAGES_LOCALIZATIONS_PENDING",
+  "state": "SEVEN_LANGUAGES_READY_MEDIA_AND_PUBLICATION_PENDING",
   "provenance": "Original formula and prose; no WordPress editorial bodies reused.",
   "category_slug": "platos-principales",
   "steps_frozen": true,
@@ -19,46 +19,50 @@
       "category_slug": "platos-principales",
       "cuisine": "Inspiración italiana",
       "difficulty": "Media",
-      "prep_minutes": 20,
-      "cook_minutes": 40,
-      "total_minutes": 65,
       "servings": 4,
       "image_url": "/recetas/receta-de-rollos-de-berenjena-con-tomates/portada.webp",
       "ingredients": [
         {
           "amount": 800,
           "unit": "g",
-          "name": "berenjena cruda, parte comestible"
+          "name": "berenjena cruda, parte comestible",
+          "group": "Ingredientes"
         },
         {
           "amount": 500,
           "unit": "g",
-          "name": "tomate maduro"
+          "name": "tomate maduro",
+          "group": "Ingredientes"
         },
         {
           "amount": 200,
           "unit": "g",
-          "name": "queso ricotta de leche entera"
+          "name": "queso ricotta de leche entera",
+          "group": "Ingredientes"
         },
         {
           "amount": 30,
           "unit": "g",
-          "name": "aceite de oliva"
+          "name": "aceite de oliva",
+          "group": "Ingredientes"
         },
         {
           "amount": 8,
           "unit": "g",
-          "name": "ajo pelado"
+          "name": "ajo pelado",
+          "group": "Ingredientes"
         },
         {
           "amount": 2,
           "unit": "g",
-          "name": "orégano seco"
+          "name": "orégano seco",
+          "group": "Ingredientes"
         },
         {
           "amount": 3,
           "unit": "g",
-          "name": "sal fina"
+          "name": "sal fina",
+          "group": "Ingredientes"
         }
       ],
       "steps": [
@@ -123,6 +127,12 @@
             "q": "¿Puedo prepararlo con antelación?",
             "a": "Sí: refrigera el conjunto. El horneado desde frío necesitará más tiempo; calienta completamente antes de servir."
           }
+        ],
+        "image_alt": "Rollos de berenjena con tomate y ricotta",
+        "image_variants": [
+          "/recetas/receta-de-rollos-de-berenjena-con-tomates/portada-1x1.webp",
+          "/recetas/receta-de-rollos-de-berenjena-con-tomates/portada-4x3.webp",
+          "/recetas/receta-de-rollos-de-berenjena-con-tomates/portada-16x9.webp"
         ]
       },
       "nutrition": {
@@ -136,18 +146,1857 @@
         "sodium_mg": 356.9,
         "serving_size": "Una de 4 raciones iguales",
         "estimated": true,
-        "source": {
-          "label": "USDA FoodData Central — SR Legacy (abril de 2018)",
-          "url": "https://fdc.nal.usda.gov/"
-        },
+        "source": "USDA FoodData Central — SR Legacy (2018)",
         "method": "Suma de gramos de ingredientes × nutrientes USDA por 100 g, dividida entre 4. Pesos iniciales de partes comestibles; rendimiento cocinado no medido. Se incluye toda la fórmula, sin aplicar pérdidas no medidas.",
-        "note": "Estimación, no análisis de laboratorio ni prueba de cocina. Marcas, restos y rendimiento pueden variar. Se incluye la fórmula completa; no se incluyen acompañamientos."
-      }
+        "note": "Estimación, no análisis de laboratorio ni prueba de cocina. Marcas, restos y rendimiento pueden variar. Se incluye la fórmula completa; no se incluyen acompañamientos.",
+        "inputs": [
+          {
+            "fdc_id": 169228,
+            "description": "Eggplant, raw",
+            "recipe_grams": 800,
+            "edible_grams": 800,
+            "per_100g": {
+              "saturated_fat_g": 0.034,
+              "sugar_g": 3.53,
+              "fat_g": 0.18,
+              "carbs_g": 5.88,
+              "calories": 25.0,
+              "fiber_g": 3.0,
+              "sodium_mg": 2.0,
+              "protein_g": 0.98
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170457,
+            "description": "Tomatoes, red, ripe, raw, year round average",
+            "recipe_grams": 500,
+            "edible_grams": 500,
+            "per_100g": {
+              "sugar_g": 2.63,
+              "carbs_g": 3.89,
+              "calories": 18.0,
+              "saturated_fat_g": 0.028,
+              "fat_g": 0.2,
+              "fiber_g": 1.2,
+              "sodium_mg": 5.0,
+              "protein_g": 0.88
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170851,
+            "description": "Cheese, ricotta, whole milk",
+            "recipe_grams": 200,
+            "edible_grams": 200,
+            "per_100g": {
+              "saturated_fat_g": 6.42,
+              "protein_g": 7.54,
+              "sodium_mg": 110,
+              "fat_g": 10.2,
+              "carbs_g": 7.27,
+              "calories": 150,
+              "fiber_g": 0.0,
+              "sugar_g": 0.27
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 171413,
+            "description": "Oil, olive, salad or cooking",
+            "recipe_grams": 30,
+            "edible_grams": 30,
+            "per_100g": {
+              "fat_g": 100,
+              "carbs_g": 0.0,
+              "calories": 884,
+              "sodium_mg": 2.0,
+              "protein_g": 0.0,
+              "saturated_fat_g": 13.8,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 169230,
+            "description": "Garlic, raw",
+            "recipe_grams": 8,
+            "edible_grams": 8,
+            "per_100g": {
+              "carbs_g": 33.1,
+              "calories": 149,
+              "sugar_g": 1.0,
+              "saturated_fat_g": 0.089,
+              "fiber_g": 2.1,
+              "sodium_mg": 17.0,
+              "protein_g": 6.36,
+              "fat_g": 0.5
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 171328,
+            "description": "Spices, oregano, dried",
+            "recipe_grams": 2,
+            "edible_grams": 2,
+            "per_100g": {
+              "sugar_g": 4.09,
+              "fat_g": 4.28,
+              "carbs_g": 68.9,
+              "calories": 265,
+              "fiber_g": 42.5,
+              "sodium_mg": 25.0,
+              "saturated_fat_g": 1.55,
+              "protein_g": 9.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 173468,
+            "description": "Salt, table",
+            "recipe_grams": 3,
+            "edible_grams": 3,
+            "per_100g": {
+              "fiber_g": 0.0,
+              "sodium_mg": 38800.0,
+              "saturated_fat_g": 0.0,
+              "protein_g": 0.0,
+              "fat_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 0.0,
+              "sugar_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          }
+        ],
+        "source_url": "https://fdc.nal.usda.gov/"
+      },
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 40,
+      "total_time_minutes": 65,
+      "course": "Platos principales",
+      "summary": "Doce rollos de berenjena asada con ricotta y salsa de tomate casera. Cuatro raciones con dos horneados y reparto medido de aceite, sal y orégano.",
+      "content_html": "<p>Doce rollos de berenjena asada con ricotta y salsa de tomate casera. Cuatro raciones con dos horneados y reparto medido de aceite, sal y orégano.</p>",
+      "keywords": [
+        "Rollos de berenjena con tomate y ricotta"
+      ],
+      "gallery": [
+        {
+          "url": "/recetas/receta-de-rollos-de-berenjena-con-tomates/portada.webp",
+          "alt": "Rollos de berenjena con tomate y ricotta"
+        }
+      ],
+      "published": true,
+      "editorial_status": "published"
+    },
+    {
+      "id": "cc7d30ca-5fa7-58a9-af5a-ec5459d20c9b",
+      "recipe_group_id": "16e07d31-b2fb-47b8-a740-92d66b253ea1",
+      "language": "de",
+      "slug": "rezept-fur-auberginenrollchen-mit-tomaten",
+      "public_path": "/de/rezept-fur-auberginenrollchen-mit-tomaten",
+      "source_url": "https://manualdecocina.com/de/rezept-fur-auberginenrollchen-mit-tomaten/",
+      "title": "Auberginenröllchen mit Tomaten und Ricotta",
+      "excerpt": "Zwölf geröstete Auberginenröllchen mit Ricotta und selbstgemachter Tomatensauce. Vier Portionen, zwei Ofengänge und genau verteilte Zutaten.",
+      "category": "Hauptgerichte",
+      "category_slug": "platos-principales",
+      "cuisine": "Italienisch inspiriert",
+      "difficulty": "Mittel",
+      "servings": 4,
+      "image_url": "/recetas/receta-de-rollos-de-berenjena-con-tomates/portada.webp",
+      "ingredients": [
+        {
+          "amount": 800,
+          "unit": "g",
+          "name": "rohe Aubergine, essbare Scheiben",
+          "group": "Zutaten"
+        },
+        {
+          "amount": 500,
+          "unit": "g",
+          "name": "reife Tomaten",
+          "group": "Zutaten"
+        },
+        {
+          "amount": 200,
+          "unit": "g",
+          "name": "Ricotta aus Vollmilch",
+          "group": "Zutaten"
+        },
+        {
+          "amount": 30,
+          "unit": "g",
+          "name": "Olivenöl",
+          "group": "Zutaten"
+        },
+        {
+          "amount": 8,
+          "unit": "g",
+          "name": "geschälter Knoblauch",
+          "group": "Zutaten"
+        },
+        {
+          "amount": 2,
+          "unit": "g",
+          "name": "getrockneter Oregano",
+          "group": "Zutaten"
+        },
+        {
+          "amount": 3,
+          "unit": "g",
+          "name": "feines Salz",
+          "group": "Zutaten"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Auberginen vorbereiten und schneiden",
+          "content": "Den Ofen auf 200 °C vorheizen. Auberginen waschen und Enden entfernen.800 g essbaren Anteil in etwa zwölf 5 mm dicke Längsscheiben schneiden; Verschnitt anderweitig verwenden und nicht in diese 800 g einrechnen. Tomaten, Ricotta, Öl, Knoblauch, Oregano und Salz abwiegen.",
+          "image_url": "/recetas/receta-de-rollos-de-berenjena-con-tomates/paso-01.webp",
+          "image_alt": "Auberginenröllchen mit Tomaten und Ricotta: Auberginen vorbereiten und schneiden"
+        },
+        {
+          "title": "Scheiben rösten",
+          "content": "Die zwölf Scheiben ohne Überlappung auf zwei mit Backpapier belegte Bleche verteilen. Beide Seiten mit insgesamt 20 g Öl bestreichen und 1 g Salz verteilen. Etwa 20 Minuten backen, die Bleche zur Hälfte tauschen, bis die Scheiben biegsam sind. Nicht knusprig rösten. Den Ofen eingeschaltet lassen.",
+          "image_url": "/recetas/receta-de-rollos-de-berenjena-con-tomates/paso-02.webp",
+          "image_alt": "Auberginenröllchen mit Tomaten und Ricotta: Scheiben rösten"
+        },
+        {
+          "title": "Tomatensauce kochen",
+          "content": "Währenddessen 500 g Tomaten und 8 g Knoblauch hacken. Die übrigen 10 g Öl in einer Pfanne erhitzen und den Knoblauch 30 Sekunden ohne Bräunen anschwitzen. Tomaten,1 g Oregano und 1 g Salz hinzufügen.15 Minuten bei mittlerer Hitze unter Rühren zu einer dicklichen Sauce kochen.",
+          "image_url": "/recetas/receta-de-rollos-de-berenjena-con-tomates/paso-03.webp",
+          "image_alt": "Auberginenröllchen mit Tomaten und Ricotta: Tomatensauce kochen"
+        },
+        {
+          "title": "Füllung vorbereiten",
+          "content": "200 g Ricotta mit dem übrigen 1 g Oregano und 1 g Salz mischen. Kein Ei oder weiteren Käse hinzufügen. Die Scheiben kurz abkühlen lassen, bis sie sich anfassen lassen. Die Füllung gedanklich in zwölf gleiche Portionen teilen, damit alle Röllchen gleichmäßig gefüllt werden.",
+          "image_url": "/recetas/receta-de-rollos-de-berenjena-con-tomates/paso-04.webp",
+          "image_alt": "Auberginenröllchen mit Tomaten und Ricotta: Füllung vorbereiten"
+        },
+        {
+          "title": "Röllchen formen",
+          "content": "Die Hälfte der Sauce in einer etwa 25 × 20 cm großen Form verteilen. Je eine Portion Ricotta auf ein Ende jeder Scheibe setzen und vorsichtig aufrollen. Zwölf Röllchen mit der Naht nach unten dicht nebeneinander in einer Lage einsetzen. Mit der restlichen Sauce bedecken.",
+          "image_url": "/recetas/receta-de-rollos-de-berenjena-con-tomates/paso-05.webp",
+          "image_alt": "Auberginenröllchen mit Tomaten und Ricotta: Röllchen formen"
+        },
+        {
+          "title": "Alles zusammen backen",
+          "content": "Etwa 20 Minuten bei 200 °C backen, bis die Sauce blubbert und die Füllung heiß ist. Die Scheiben sind bereits geröstet; der zweite Ofengang erwärmt das Ganze und verbindet die Aromen. Bei Kühlschranktemperatur ist mehr Zeit nötig;20 Minuten allein sind keine Garantie.",
+          "image_url": "/recetas/receta-de-rollos-de-berenjena-con-tomates/paso-06.webp",
+          "image_alt": "Auberginenröllchen mit Tomaten und Ricotta: Alles zusammen backen"
+        },
+        {
+          "title": "Ruhen lassen und servieren",
+          "content": "Außerhalb des Ofens 5 Minuten ruhen lassen. Je drei Röllchen mit Sauce pro Person servieren, insgesamt vier Portionen.65 Minuten umfassen 20 Vorbereitung,40 Ofen und 5 Ruhe; die 15 Minuten Sauce laufen parallel zum ersten Ofengang. Keine Beilagen oder Dekorationen enthalten.",
+          "image_url": "/recetas/receta-de-rollos-de-berenjena-con-tomates/paso-07.webp",
+          "image_alt": "Auberginenröllchen mit Tomaten und Ricotta: Ruhen lassen und servieren"
+        }
+      ],
+      "notes": "Eigenständiger Rezeptvorschlag, noch nicht in der Küche getestet. Enthält Milch.800 g essbare Scheiben verwenden; für Enden und Verschnitt mehr Aubergine einkaufen. Die Scheiben müssen vor dem Rollen biegsam sein. Nährwerte für die gesamte Formel geteilt durch vier, ohne Beilage. Reste innerhalb von 2 Stunden in flachen Behältern bei höchstens 4 °C kühlen, innerhalb von 3–4 Tagen verbrauchen und auf 74 °C erhitzen.",
+      "seo": {
+        "title": "Auberginenröllchen mit Tomaten und Ricotta: Schritt für Schritt",
+        "description": "Zwölf geröstete Auberginenröllchen mit Ricotta und selbstgemachter Tomatensauce. Vier Portionen, zwei Ofengänge und genau verteilte Zutaten.",
+        "about": "Zwölf geröstete Auberginenröllchen mit Ricotta und selbstgemachter Tomatensauce. Vier Portionen, zwei Ofengänge und genau verteilte Zutaten.",
+        "faq": [
+          {
+            "q": "Kann ich rohe Scheiben aufrollen?",
+            "a": "Für diese Formel werden sie zuerst weich und biegsam geröstet, damit sie nicht brechen."
+          },
+          {
+            "q": "Enthält die Füllung Ei?",
+            "a": "Nein, nur Ricotta, Oregano und Salz in den angegebenen Mengen."
+          },
+          {
+            "q": "Kann ich das Gericht vorbereiten?",
+            "a": "Ja, zusammengestellt kühlen. Aus dem Kühlschrank braucht es länger im Ofen; vor dem Servieren vollständig erhitzen."
+          }
+        ],
+        "image_alt": "Auberginenröllchen mit Tomaten und Ricotta",
+        "image_variants": [
+          "/recetas/receta-de-rollos-de-berenjena-con-tomates/portada-1x1.webp",
+          "/recetas/receta-de-rollos-de-berenjena-con-tomates/portada-4x3.webp",
+          "/recetas/receta-de-rollos-de-berenjena-con-tomates/portada-16x9.webp"
+        ]
+      },
+      "nutrition": {
+        "calories": 218.1,
+        "protein_g": 7.0,
+        "carbs_g": 21.3,
+        "fat_g": 13.2,
+        "saturated_fat_g": 4.4,
+        "fiber_g": 7.8,
+        "sugar_g": 10.5,
+        "sodium_mg": 356.9,
+        "serving_size": "Eine von 4 gleichen Portionen",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "method": "Summe der essbaren Ausgangsgewichte in Gramm × USDA-Nährwerte je 100 g, geteilt durch 4. Keine ungemessenen Garverluste angewandt. 800 g essbare Auberginenscheiben ohne Verschnitt und die gesamte übrige Formel, geteilt durch vier. Keine Beilage enthalten.",
+        "note": "Schätzung, keine Laboranalyse oder Küchenprüfung. Marken, Reste und Garertrag können variieren. 800 g essbare Auberginenscheiben ohne Verschnitt und die gesamte übrige Formel, geteilt durch vier. Keine Beilage enthalten.",
+        "inputs": [
+          {
+            "fdc_id": 169228,
+            "description": "Eggplant, raw",
+            "recipe_grams": 800,
+            "edible_grams": 800,
+            "per_100g": {
+              "saturated_fat_g": 0.034,
+              "sugar_g": 3.53,
+              "fat_g": 0.18,
+              "carbs_g": 5.88,
+              "calories": 25.0,
+              "fiber_g": 3.0,
+              "sodium_mg": 2.0,
+              "protein_g": 0.98
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170457,
+            "description": "Tomatoes, red, ripe, raw, year round average",
+            "recipe_grams": 500,
+            "edible_grams": 500,
+            "per_100g": {
+              "sugar_g": 2.63,
+              "carbs_g": 3.89,
+              "calories": 18.0,
+              "saturated_fat_g": 0.028,
+              "fat_g": 0.2,
+              "fiber_g": 1.2,
+              "sodium_mg": 5.0,
+              "protein_g": 0.88
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170851,
+            "description": "Cheese, ricotta, whole milk",
+            "recipe_grams": 200,
+            "edible_grams": 200,
+            "per_100g": {
+              "saturated_fat_g": 6.42,
+              "protein_g": 7.54,
+              "sodium_mg": 110,
+              "fat_g": 10.2,
+              "carbs_g": 7.27,
+              "calories": 150,
+              "fiber_g": 0.0,
+              "sugar_g": 0.27
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 171413,
+            "description": "Oil, olive, salad or cooking",
+            "recipe_grams": 30,
+            "edible_grams": 30,
+            "per_100g": {
+              "fat_g": 100,
+              "carbs_g": 0.0,
+              "calories": 884,
+              "sodium_mg": 2.0,
+              "protein_g": 0.0,
+              "saturated_fat_g": 13.8,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 169230,
+            "description": "Garlic, raw",
+            "recipe_grams": 8,
+            "edible_grams": 8,
+            "per_100g": {
+              "carbs_g": 33.1,
+              "calories": 149,
+              "sugar_g": 1.0,
+              "saturated_fat_g": 0.089,
+              "fiber_g": 2.1,
+              "sodium_mg": 17.0,
+              "protein_g": 6.36,
+              "fat_g": 0.5
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 171328,
+            "description": "Spices, oregano, dried",
+            "recipe_grams": 2,
+            "edible_grams": 2,
+            "per_100g": {
+              "sugar_g": 4.09,
+              "fat_g": 4.28,
+              "carbs_g": 68.9,
+              "calories": 265,
+              "fiber_g": 42.5,
+              "sodium_mg": 25.0,
+              "saturated_fat_g": 1.55,
+              "protein_g": 9.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 173468,
+            "description": "Salt, table",
+            "recipe_grams": 3,
+            "edible_grams": 3,
+            "per_100g": {
+              "fiber_g": 0.0,
+              "sodium_mg": 38800.0,
+              "saturated_fat_g": 0.0,
+              "protein_g": 0.0,
+              "fat_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 0.0,
+              "sugar_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          }
+        ],
+        "source_url": "https://fdc.nal.usda.gov/"
+      },
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 40,
+      "total_time_minutes": 65,
+      "course": "Hauptgerichte",
+      "summary": "Zwölf geröstete Auberginenröllchen mit Ricotta und selbstgemachter Tomatensauce. Vier Portionen, zwei Ofengänge und genau verteilte Zutaten.",
+      "content_html": "<p>Zwölf geröstete Auberginenröllchen mit Ricotta und selbstgemachter Tomatensauce. Vier Portionen, zwei Ofengänge und genau verteilte Zutaten.</p>",
+      "keywords": [
+        "Auberginenröllchen mit Tomaten und Ricotta"
+      ],
+      "gallery": [
+        {
+          "url": "/recetas/receta-de-rollos-de-berenjena-con-tomates/portada.webp",
+          "alt": "Auberginenröllchen mit Tomaten und Ricotta"
+        }
+      ],
+      "published": true,
+      "editorial_status": "published"
+    },
+    {
+      "id": "575fb915-68c0-5d5e-909d-d9009c802285",
+      "recipe_group_id": "16e07d31-b2fb-47b8-a740-92d66b253ea1",
+      "language": "en",
+      "slug": "eggplant-rolls-with-tomato",
+      "public_path": "/en/eggplant-rolls-with-tomato",
+      "source_url": null,
+      "title": "Eggplant rolls with tomato and ricotta",
+      "excerpt": "Twelve roasted eggplant rolls filled with ricotta and homemade tomato sauce. Four servings, two oven stages and weighed oil, salt and oregano.",
+      "category": "Main dishes",
+      "category_slug": "platos-principales",
+      "cuisine": "Italian-inspired",
+      "difficulty": "Medium",
+      "servings": 4,
+      "image_url": "/recetas/receta-de-rollos-de-berenjena-con-tomates/portada.webp",
+      "ingredients": [
+        {
+          "amount": 800,
+          "unit": "g",
+          "name": "raw eggplant, edible slices",
+          "group": "Ingredients"
+        },
+        {
+          "amount": 500,
+          "unit": "g",
+          "name": "ripe tomatoes",
+          "group": "Ingredients"
+        },
+        {
+          "amount": 200,
+          "unit": "g",
+          "name": "whole-milk ricotta",
+          "group": "Ingredients"
+        },
+        {
+          "amount": 30,
+          "unit": "g",
+          "name": "olive oil",
+          "group": "Ingredients"
+        },
+        {
+          "amount": 8,
+          "unit": "g",
+          "name": "peeled garlic",
+          "group": "Ingredients"
+        },
+        {
+          "amount": 2,
+          "unit": "g",
+          "name": "dried oregano",
+          "group": "Ingredients"
+        },
+        {
+          "amount": 3,
+          "unit": "g",
+          "name": "fine salt",
+          "group": "Ingredients"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepare and slice the eggplant",
+          "content": "Preheat the oven to 200 °C. Wash the eggplant, remove the ends and weigh 800 g edible portion. Cut lengthways into about twelve 5 mm slices; save trimmings for another use and exclude them from this 800 g weight. Weigh tomatoes, ricotta, oil, garlic, oregano and salt.",
+          "image_url": "/recetas/receta-de-rollos-de-berenjena-con-tomates/paso-01.webp",
+          "image_alt": "Eggplant rolls with tomato and ricotta: Prepare and slice the eggplant"
+        },
+        {
+          "title": "Roast the slices",
+          "content": "Arrange twelve slices on two parchment-lined trays without overlapping. Brush both sides with 20 g of the oil in total and distribute 1 g salt. Roast about 20 minutes, swapping trays halfway, until they bend without breaking. Do not make them crisp. Leave the oven on.",
+          "image_url": "/recetas/receta-de-rollos-de-berenjena-con-tomates/paso-02.webp",
+          "image_alt": "Eggplant rolls with tomato and ricotta: Roast the slices"
+        },
+        {
+          "title": "Cook the tomato sauce",
+          "content": "While they roast, chop 500 g tomatoes and 8 g garlic. Heat the remaining 10 g oil in a pan and cook garlic 30 seconds without browning. Add tomatoes,1 g oregano and 1 g salt. Cook 15 minutes over medium heat, stirring, until the sauce thickens.",
+          "image_url": "/recetas/receta-de-rollos-de-berenjena-con-tomates/paso-03.webp",
+          "image_alt": "Eggplant rolls with tomato and ricotta: Cook the tomato sauce"
+        },
+        {
+          "title": "Prepare the filling",
+          "content": "Mix 200 g ricotta with the remaining 1 g oregano and 1 g salt. Do not add egg or other cheese. Let the slices cool for a few minutes until they can be handled. Visually divide the filling into twelve equal portions so every roll receives the same share.",
+          "image_url": "/recetas/receta-de-rollos-de-berenjena-con-tomates/paso-04.webp",
+          "image_alt": "Eggplant rolls with tomato and ricotta: Prepare the filling"
+        },
+        {
+          "title": "Form and arrange the rolls",
+          "content": "Spread half the sauce in a dish about 25 × 20 cm. Place one portion of ricotta at one end of each slice and gently roll up. Arrange twelve rolls seam-side down, close together in a single layer. Cover with the remaining sauce.",
+          "image_url": "/recetas/receta-de-rollos-de-berenjena-con-tomates/paso-05.webp",
+          "image_alt": "Eggplant rolls with tomato and ricotta: Form and arrange the rolls"
+        },
+        {
+          "title": "Bake the assembled dish",
+          "content": "Bake about 20 minutes at 200 °C until the sauce bubbles and the filling is hot. The slices are already roasted; this second oven stage heats the assembled dish and brings flavours together. If refrigerated, it will need longer;20 minutes alone does not guarantee it is heated.",
+          "image_url": "/recetas/receta-de-rollos-de-berenjena-con-tomates/paso-06.webp",
+          "image_alt": "Eggplant rolls with tomato and ricotta: Bake the assembled dish"
+        },
+        {
+          "title": "Rest and serve",
+          "content": "Rest outside the oven for 5 minutes. Serve three rolls with sauce per person, four servings. The 65-minute total includes 20 preparation,40 oven and 5 resting; the 15 minutes for sauce overlap the first roasting. No sides or decorations are included.",
+          "image_url": "/recetas/receta-de-rollos-de-berenjena-con-tomates/paso-07.webp",
+          "image_alt": "Eggplant rolls with tomato and ricotta: Rest and serve"
+        }
+      ],
+      "notes": "Original proposed formula, not yet kitchen tested. Contains milk. Use 800 g edible slices; buy extra eggplant for ends and trimmings. Slices must be flexible before rolling. Nutrition covers the whole formula divided into four, without sides. Refrigerate leftovers within 2 hours in shallow containers at 4 °C or below, use within 3–4 days and reheat to 74 °C.",
+      "seo": {
+        "title": "Eggplant rolls with tomato and ricotta: step-by-step recipe",
+        "description": "Twelve roasted eggplant rolls filled with ricotta and homemade tomato sauce. Four servings, two oven stages and weighed oil, salt and oregano.",
+        "about": "Twelve roasted eggplant rolls filled with ricotta and homemade tomato sauce. Four servings, two oven stages and weighed oil, salt and oregano.",
+        "faq": [
+          {
+            "q": "Can I roll raw eggplant slices?",
+            "a": "Not in this formula: first roast them until flexible so they do not break."
+          },
+          {
+            "q": "Does the filling contain egg?",
+            "a": "No, just ricotta, oregano and salt in the stated amounts."
+          },
+          {
+            "q": "Can I prepare it ahead?",
+            "a": "Yes, refrigerate the assembled dish. Baking from chilled takes longer; heat thoroughly before serving."
+          }
+        ],
+        "image_alt": "Eggplant rolls with tomato and ricotta",
+        "image_variants": [
+          "/recetas/receta-de-rollos-de-berenjena-con-tomates/portada-1x1.webp",
+          "/recetas/receta-de-rollos-de-berenjena-con-tomates/portada-4x3.webp",
+          "/recetas/receta-de-rollos-de-berenjena-con-tomates/portada-16x9.webp"
+        ]
+      },
+      "nutrition": {
+        "calories": 218.1,
+        "protein_g": 7.0,
+        "carbs_g": 21.3,
+        "fat_g": 13.2,
+        "saturated_fat_g": 4.4,
+        "fiber_g": 7.8,
+        "sugar_g": 10.5,
+        "sodium_mg": 356.9,
+        "serving_size": "One of 4 equal servings",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "method": "Sum of edible starting grams × USDA nutrients per 100 g, divided by 4. No unmeasured cooking losses applied. Calculated from 800 g edible eggplant slices without trimmings and the full remaining formula, divided by four. No sides included.",
+        "note": "Estimate, not a laboratory analysis or kitchen test. Brands, leftovers and cooked yield can vary. Calculated from 800 g edible eggplant slices without trimmings and the full remaining formula, divided by four. No sides included.",
+        "inputs": [
+          {
+            "fdc_id": 169228,
+            "description": "Eggplant, raw",
+            "recipe_grams": 800,
+            "edible_grams": 800,
+            "per_100g": {
+              "saturated_fat_g": 0.034,
+              "sugar_g": 3.53,
+              "fat_g": 0.18,
+              "carbs_g": 5.88,
+              "calories": 25.0,
+              "fiber_g": 3.0,
+              "sodium_mg": 2.0,
+              "protein_g": 0.98
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170457,
+            "description": "Tomatoes, red, ripe, raw, year round average",
+            "recipe_grams": 500,
+            "edible_grams": 500,
+            "per_100g": {
+              "sugar_g": 2.63,
+              "carbs_g": 3.89,
+              "calories": 18.0,
+              "saturated_fat_g": 0.028,
+              "fat_g": 0.2,
+              "fiber_g": 1.2,
+              "sodium_mg": 5.0,
+              "protein_g": 0.88
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170851,
+            "description": "Cheese, ricotta, whole milk",
+            "recipe_grams": 200,
+            "edible_grams": 200,
+            "per_100g": {
+              "saturated_fat_g": 6.42,
+              "protein_g": 7.54,
+              "sodium_mg": 110,
+              "fat_g": 10.2,
+              "carbs_g": 7.27,
+              "calories": 150,
+              "fiber_g": 0.0,
+              "sugar_g": 0.27
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 171413,
+            "description": "Oil, olive, salad or cooking",
+            "recipe_grams": 30,
+            "edible_grams": 30,
+            "per_100g": {
+              "fat_g": 100,
+              "carbs_g": 0.0,
+              "calories": 884,
+              "sodium_mg": 2.0,
+              "protein_g": 0.0,
+              "saturated_fat_g": 13.8,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 169230,
+            "description": "Garlic, raw",
+            "recipe_grams": 8,
+            "edible_grams": 8,
+            "per_100g": {
+              "carbs_g": 33.1,
+              "calories": 149,
+              "sugar_g": 1.0,
+              "saturated_fat_g": 0.089,
+              "fiber_g": 2.1,
+              "sodium_mg": 17.0,
+              "protein_g": 6.36,
+              "fat_g": 0.5
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 171328,
+            "description": "Spices, oregano, dried",
+            "recipe_grams": 2,
+            "edible_grams": 2,
+            "per_100g": {
+              "sugar_g": 4.09,
+              "fat_g": 4.28,
+              "carbs_g": 68.9,
+              "calories": 265,
+              "fiber_g": 42.5,
+              "sodium_mg": 25.0,
+              "saturated_fat_g": 1.55,
+              "protein_g": 9.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 173468,
+            "description": "Salt, table",
+            "recipe_grams": 3,
+            "edible_grams": 3,
+            "per_100g": {
+              "fiber_g": 0.0,
+              "sodium_mg": 38800.0,
+              "saturated_fat_g": 0.0,
+              "protein_g": 0.0,
+              "fat_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 0.0,
+              "sugar_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          }
+        ],
+        "source_url": "https://fdc.nal.usda.gov/"
+      },
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 40,
+      "total_time_minutes": 65,
+      "course": "Main dishes",
+      "summary": "Twelve roasted eggplant rolls filled with ricotta and homemade tomato sauce. Four servings, two oven stages and weighed oil, salt and oregano.",
+      "content_html": "<p>Twelve roasted eggplant rolls filled with ricotta and homemade tomato sauce. Four servings, two oven stages and weighed oil, salt and oregano.</p>",
+      "keywords": [
+        "Eggplant rolls with tomato and ricotta"
+      ],
+      "gallery": [
+        {
+          "url": "/recetas/receta-de-rollos-de-berenjena-con-tomates/portada.webp",
+          "alt": "Eggplant rolls with tomato and ricotta"
+        }
+      ],
+      "published": true,
+      "editorial_status": "published"
+    },
+    {
+      "id": "0618318a-c2b7-50bb-910d-0474ab254278",
+      "recipe_group_id": "16e07d31-b2fb-47b8-a740-92d66b253ea1",
+      "language": "fr",
+      "slug": "roules-daubergine-a-la-tomate",
+      "public_path": "/fr/roules-daubergine-a-la-tomate",
+      "source_url": null,
+      "title": "Roulés d’aubergine à la tomate et à la ricotta",
+      "excerpt": "Douze roulés d’aubergine rôtie à la ricotta et sauce tomate maison. Quatre portions, deux cuissons au four et ingrédients pesés.",
+      "category": "Plats principaux",
+      "category_slug": "platos-principales",
+      "cuisine": "Inspiration italienne",
+      "difficulty": "Moyenne",
+      "servings": 4,
+      "image_url": "/recetas/receta-de-rollos-de-berenjena-con-tomates/portada.webp",
+      "ingredients": [
+        {
+          "amount": 800,
+          "unit": "g",
+          "name": "aubergine crue, tranches comestibles",
+          "group": "Ingrédients"
+        },
+        {
+          "amount": 500,
+          "unit": "g",
+          "name": "tomates mûres",
+          "group": "Ingrédients"
+        },
+        {
+          "amount": 200,
+          "unit": "g",
+          "name": "ricotta au lait entier",
+          "group": "Ingrédients"
+        },
+        {
+          "amount": 30,
+          "unit": "g",
+          "name": "huile d’olive",
+          "group": "Ingrédients"
+        },
+        {
+          "amount": 8,
+          "unit": "g",
+          "name": "ail épluché",
+          "group": "Ingrédients"
+        },
+        {
+          "amount": 2,
+          "unit": "g",
+          "name": "origan séché",
+          "group": "Ingrédients"
+        },
+        {
+          "amount": 3,
+          "unit": "g",
+          "name": "sel fin",
+          "group": "Ingrédients"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Préparez et tranchez les aubergines",
+          "content": "Préchauffez le four à 200 °C. Lavez les aubergines, retirez les extrémités et pesez 800 g de partie comestible. Coupez environ douze tranches de 5 mm dans la longueur ; réservez les chutes pour un autre usage et ne les comptez pas dans les 800 g. Pesez les autres ingrédients.",
+          "image_url": "/recetas/receta-de-rollos-de-berenjena-con-tomates/paso-01.webp",
+          "image_alt": "Roulés d’aubergine à la tomate et à la ricotta: Préparez et tranchez les aubergines"
+        },
+        {
+          "title": "Rôtissez les tranches",
+          "content": "Disposez les douze tranches sur deux plaques tapissées de papier cuisson, sans chevauchement. Badigeonnez les deux faces avec 20 g d’huile au total et répartissez 1 g de sel. Cuisez environ 20 minutes, en intervertissant les plaques à mi-cuisson, jusqu’à ce qu’elles se plient sans casser. Ne les rendez pas croustillantes. Gardez le four allumé.",
+          "image_url": "/recetas/receta-de-rollos-de-berenjena-con-tomates/paso-02.webp",
+          "image_alt": "Roulés d’aubergine à la tomate et à la ricotta: Rôtissez les tranches"
+        },
+        {
+          "title": "Cuisez la sauce tomate",
+          "content": "Pendant ce temps, hachez 500 g de tomates et 8 g d’ail. Chauffez les 10 g d’huile restants et faites revenir l’ail 30 secondes sans dorer. Ajoutez tomates,1 g d’origan et 1 g de sel. Cuisez 15 minutes à feu moyen en remuant, jusqu’à obtenir une sauce épaisse.",
+          "image_url": "/recetas/receta-de-rollos-de-berenjena-con-tomates/paso-03.webp",
+          "image_alt": "Roulés d’aubergine à la tomate et à la ricotta: Cuisez la sauce tomate"
+        },
+        {
+          "title": "Préparez la farce",
+          "content": "Mélangez 200 g de ricotta avec le 1 g d’origan et le 1 g de sel restants. N’ajoutez ni œuf ni autre fromage. Laissez les tranches refroidir quelques minutes pour pouvoir les manipuler. Répartissez visuellement la farce en douze parts égales pour garnir chaque roulé.",
+          "image_url": "/recetas/receta-de-rollos-de-berenjena-con-tomates/paso-04.webp",
+          "image_alt": "Roulés d’aubergine à la tomate et à la ricotta: Préparez la farce"
+        },
+        {
+          "title": "Formez et disposez les roulés",
+          "content": "Étalez la moitié de la sauce dans un plat d’environ 25 × 20 cm. Déposez une part de ricotta au bout de chaque tranche et roulez doucement. Disposez les douze roulés, jointure dessous, serrés en une seule couche. Couvrez avec le reste de la sauce.",
+          "image_url": "/recetas/receta-de-rollos-de-berenjena-con-tomates/paso-05.webp",
+          "image_alt": "Roulés d’aubergine à la tomate et à la ricotta: Formez et disposez les roulés"
+        },
+        {
+          "title": "Enfournez l’ensemble",
+          "content": "Cuisez environ 20 minutes à 200 °C, jusqu’à ce que la sauce bouillonne et la farce soit chaude. Les tranches sont déjà rôties ; cette seconde cuisson chauffe l’ensemble et réunit les saveurs. Si le plat sort du réfrigérateur, il faudra davantage de temps ;20 minutes seules ne sont pas une garantie.",
+          "image_url": "/recetas/receta-de-rollos-de-berenjena-con-tomates/paso-06.webp",
+          "image_alt": "Roulés d’aubergine à la tomate et à la ricotta: Enfournez l’ensemble"
+        },
+        {
+          "title": "Laissez reposer et servez",
+          "content": "Laissez reposer 5 minutes hors du four. Servez trois roulés avec sauce par personne, soit quatre portions. Les 65 minutes comprennent 20 de préparation,40 au four et 5 de repos ; les 15 de sauce se font pendant la première cuisson. Aucun accompagnement ou décor inclus.",
+          "image_url": "/recetas/receta-de-rollos-de-berenjena-con-tomates/paso-07.webp",
+          "image_alt": "Roulés d’aubergine à la tomate et à la ricotta: Laissez reposer et servez"
+        }
+      ],
+      "notes": "Formule originale proposée, pas encore testée en cuisine. Contient du lait. Utilisez 800 g de tranches comestibles ; achetez davantage pour compenser extrémités et chutes. Les tranches doivent être souples avant de rouler. Nutrition de toute la formule divisée par quatre, sans accompagnement. Réfrigérez les restes sous 2 heures en récipients peu profonds à 4 °C maximum, consommez sous 3–4 jours et réchauffez à 74 °C.",
+      "seo": {
+        "title": "Roulés d’aubergine à la tomate et à la ricotta: recette étape par étape",
+        "description": "Douze roulés d’aubergine rôtie à la ricotta et sauce tomate maison. Quatre portions, deux cuissons au four et ingrédients pesés.",
+        "about": "Douze roulés d’aubergine rôtie à la ricotta et sauce tomate maison. Quatre portions, deux cuissons au four et ingrédients pesés.",
+        "faq": [
+          {
+            "q": "Puis-je rouler des tranches crues ?",
+            "a": "Non dans cette formule : rôtissez-les d’abord jusqu’à ce qu’elles soient souples et ne cassent pas."
+          },
+          {
+            "q": "La farce contient-elle un œuf ?",
+            "a": "Non, seulement ricotta, origan et sel aux quantités indiquées."
+          },
+          {
+            "q": "Puis-je préparer le plat à l’avance ?",
+            "a": "Oui, puis réfrigérez l’ensemble. Depuis le froid, la cuisson demandera plus longtemps ; chauffez complètement avant de servir."
+          }
+        ],
+        "image_alt": "Roulés d’aubergine à la tomate et à la ricotta",
+        "image_variants": [
+          "/recetas/receta-de-rollos-de-berenjena-con-tomates/portada-1x1.webp",
+          "/recetas/receta-de-rollos-de-berenjena-con-tomates/portada-4x3.webp",
+          "/recetas/receta-de-rollos-de-berenjena-con-tomates/portada-16x9.webp"
+        ]
+      },
+      "nutrition": {
+        "calories": 218.1,
+        "protein_g": 7.0,
+        "carbs_g": 21.3,
+        "fat_g": 13.2,
+        "saturated_fat_g": 4.4,
+        "fiber_g": 7.8,
+        "sugar_g": 10.5,
+        "sodium_mg": 356.9,
+        "serving_size": "Une des 4 portions égales",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "method": "Somme des poids comestibles initiaux en grammes × nutriments USDA pour 100 g, divisée par 4. Aucune perte de cuisson non mesurée appliquée. Calcul pour 800 g de tranches comestibles sans chutes et toute la formule restante, divisée par quatre. Aucun accompagnement inclus.",
+        "note": "Estimation, pas une analyse de laboratoire ni un essai en cuisine. Marques, restes et rendement peuvent varier. Calcul pour 800 g de tranches comestibles sans chutes et toute la formule restante, divisée par quatre. Aucun accompagnement inclus.",
+        "inputs": [
+          {
+            "fdc_id": 169228,
+            "description": "Eggplant, raw",
+            "recipe_grams": 800,
+            "edible_grams": 800,
+            "per_100g": {
+              "saturated_fat_g": 0.034,
+              "sugar_g": 3.53,
+              "fat_g": 0.18,
+              "carbs_g": 5.88,
+              "calories": 25.0,
+              "fiber_g": 3.0,
+              "sodium_mg": 2.0,
+              "protein_g": 0.98
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170457,
+            "description": "Tomatoes, red, ripe, raw, year round average",
+            "recipe_grams": 500,
+            "edible_grams": 500,
+            "per_100g": {
+              "sugar_g": 2.63,
+              "carbs_g": 3.89,
+              "calories": 18.0,
+              "saturated_fat_g": 0.028,
+              "fat_g": 0.2,
+              "fiber_g": 1.2,
+              "sodium_mg": 5.0,
+              "protein_g": 0.88
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170851,
+            "description": "Cheese, ricotta, whole milk",
+            "recipe_grams": 200,
+            "edible_grams": 200,
+            "per_100g": {
+              "saturated_fat_g": 6.42,
+              "protein_g": 7.54,
+              "sodium_mg": 110,
+              "fat_g": 10.2,
+              "carbs_g": 7.27,
+              "calories": 150,
+              "fiber_g": 0.0,
+              "sugar_g": 0.27
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 171413,
+            "description": "Oil, olive, salad or cooking",
+            "recipe_grams": 30,
+            "edible_grams": 30,
+            "per_100g": {
+              "fat_g": 100,
+              "carbs_g": 0.0,
+              "calories": 884,
+              "sodium_mg": 2.0,
+              "protein_g": 0.0,
+              "saturated_fat_g": 13.8,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 169230,
+            "description": "Garlic, raw",
+            "recipe_grams": 8,
+            "edible_grams": 8,
+            "per_100g": {
+              "carbs_g": 33.1,
+              "calories": 149,
+              "sugar_g": 1.0,
+              "saturated_fat_g": 0.089,
+              "fiber_g": 2.1,
+              "sodium_mg": 17.0,
+              "protein_g": 6.36,
+              "fat_g": 0.5
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 171328,
+            "description": "Spices, oregano, dried",
+            "recipe_grams": 2,
+            "edible_grams": 2,
+            "per_100g": {
+              "sugar_g": 4.09,
+              "fat_g": 4.28,
+              "carbs_g": 68.9,
+              "calories": 265,
+              "fiber_g": 42.5,
+              "sodium_mg": 25.0,
+              "saturated_fat_g": 1.55,
+              "protein_g": 9.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 173468,
+            "description": "Salt, table",
+            "recipe_grams": 3,
+            "edible_grams": 3,
+            "per_100g": {
+              "fiber_g": 0.0,
+              "sodium_mg": 38800.0,
+              "saturated_fat_g": 0.0,
+              "protein_g": 0.0,
+              "fat_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 0.0,
+              "sugar_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          }
+        ],
+        "source_url": "https://fdc.nal.usda.gov/"
+      },
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 40,
+      "total_time_minutes": 65,
+      "course": "Plats principaux",
+      "summary": "Douze roulés d’aubergine rôtie à la ricotta et sauce tomate maison. Quatre portions, deux cuissons au four et ingrédients pesés.",
+      "content_html": "<p>Douze roulés d’aubergine rôtie à la ricotta et sauce tomate maison. Quatre portions, deux cuissons au four et ingrédients pesés.</p>",
+      "keywords": [
+        "Roulés d’aubergine à la tomate et à la ricotta"
+      ],
+      "gallery": [
+        {
+          "url": "/recetas/receta-de-rollos-de-berenjena-con-tomates/portada.webp",
+          "alt": "Roulés d’aubergine à la tomate et à la ricotta"
+        }
+      ],
+      "published": true,
+      "editorial_status": "published"
+    },
+    {
+      "id": "71608325-9cb3-583e-ad45-61ac16e13131",
+      "recipe_group_id": "16e07d31-b2fb-47b8-a740-92d66b253ea1",
+      "language": "it",
+      "slug": "ricetta-per-involtini-di-melanzane-con-pomodoro",
+      "public_path": "/it/ricetta-per-involtini-di-melanzane-con-pomodoro",
+      "source_url": "https://manualdecocina.com/it/ricetta-per-involtini-di-melanzane-con-pomodoro/",
+      "title": "Involtini di melanzane con pomodoro e ricotta",
+      "excerpt": "Dodici involtini di melanzane arrostite con ricotta e salsa di pomodoro. Quattro porzioni, due passaggi in forno e ingredienti pesati.",
+      "category": "Secondi piatti",
+      "category_slug": "platos-principales",
+      "cuisine": "Ispirazione italiana",
+      "difficulty": "Media",
+      "servings": 4,
+      "image_url": "/recetas/receta-de-rollos-de-berenjena-con-tomates/portada.webp",
+      "ingredients": [
+        {
+          "amount": 800,
+          "unit": "g",
+          "name": "melanzana cruda, fette commestibili",
+          "group": "Ingredienti"
+        },
+        {
+          "amount": 500,
+          "unit": "g",
+          "name": "pomodoro maturo",
+          "group": "Ingredienti"
+        },
+        {
+          "amount": 200,
+          "unit": "g",
+          "name": "ricotta di latte intero",
+          "group": "Ingredienti"
+        },
+        {
+          "amount": 30,
+          "unit": "g",
+          "name": "olio d’oliva",
+          "group": "Ingredienti"
+        },
+        {
+          "amount": 8,
+          "unit": "g",
+          "name": "aglio sbucciato",
+          "group": "Ingredienti"
+        },
+        {
+          "amount": 2,
+          "unit": "g",
+          "name": "origano secco",
+          "group": "Ingredienti"
+        },
+        {
+          "amount": 3,
+          "unit": "g",
+          "name": "sale fino",
+          "group": "Ingredienti"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepara e affetta le melanzane",
+          "content": "Preriscalda il forno a 200 °C. Lava le melanzane, elimina le estremità e pesa 800 g di parte commestibile. Taglia circa dodici fette longitudinali da 5 mm; conserva i ritagli per altro uso e non contarli negli 800 g. Pesa pomodoro, ricotta, olio, aglio, origano e sale.",
+          "image_url": "/recetas/receta-de-rollos-de-berenjena-con-tomates/paso-01.webp",
+          "image_alt": "Involtini di melanzane con pomodoro e ricotta: Prepara e affetta le melanzane"
+        },
+        {
+          "title": "Arrostisci le fette",
+          "content": "Disponi dodici fette su due teglie con carta forno, senza sovrapporle. Spennella entrambe le facce con 20 g di olio complessivi e distribuisci 1 g di sale. Cuoci circa 20 minuti, scambiando le teglie a metà, finché si piegano senza rompersi. Non renderle croccanti. Mantieni il forno acceso.",
+          "image_url": "/recetas/receta-de-rollos-de-berenjena-con-tomates/paso-02.webp",
+          "image_alt": "Involtini di melanzane con pomodoro e ricotta: Arrostisci le fette"
+        },
+        {
+          "title": "Cuoci la salsa",
+          "content": "Nel frattempo trita 500 g di pomodoro e 8 g di aglio. Scalda i 10 g di olio rimasti e soffriggi l’aglio 30 secondi senza dorarlo. Aggiungi pomodoro,1 g di origano e 1 g di sale. Cuoci 15 minuti a fuoco medio mescolando, finché la salsa si addensa.",
+          "image_url": "/recetas/receta-de-rollos-de-berenjena-con-tomates/paso-03.webp",
+          "image_alt": "Involtini di melanzane con pomodoro e ricotta: Cuoci la salsa"
+        },
+        {
+          "title": "Prepara il ripieno",
+          "content": "Mescola 200 g di ricotta con il restante 1 g di origano e 1 g di sale. Non aggiungere uovo o altro formaggio. Lascia intiepidire le fette finché puoi maneggiarle. Dividi visivamente il ripieno in dodici parti uguali per distribuirlo fra tutti gli involtini.",
+          "image_url": "/recetas/receta-de-rollos-de-berenjena-con-tomates/paso-04.webp",
+          "image_alt": "Involtini di melanzane con pomodoro e ricotta: Prepara il ripieno"
+        },
+        {
+          "title": "Forma gli involtini",
+          "content": "Stendi metà salsa in una pirofila di circa 25 × 20 cm. Metti una porzione di ricotta a un’estremità di ogni fetta e arrotola delicatamente. Disponi dodici involtini con la chiusura sotto, vicini in un solo strato. Copri con la salsa rimasta.",
+          "image_url": "/recetas/receta-de-rollos-de-berenjena-con-tomates/paso-05.webp",
+          "image_alt": "Involtini di melanzane con pomodoro e ricotta: Forma gli involtini"
+        },
+        {
+          "title": "Inforna il piatto",
+          "content": "Cuoci circa 20 minuti a 200 °C, finché la salsa bolle e il ripieno è caldo. Le fette sono già arrostite; il secondo passaggio scalda l’insieme e unisce i sapori. Se il piatto è freddo di frigorifero serve più tempo;20 minuti da soli non garantiscono che sia caldo.",
+          "image_url": "/recetas/receta-de-rollos-de-berenjena-con-tomates/paso-06.webp",
+          "image_alt": "Involtini di melanzane con pomodoro e ricotta: Inforna il piatto"
+        },
+        {
+          "title": "Lascia riposare e servi",
+          "content": "Lascia 5 minuti fuori dal forno. Servi tre involtini con salsa a persona, per quattro porzioni. I 65 minuti comprendono 20 di preparazione,40 di forno e 5 di riposo; i 15 della salsa si sovrappongono alla prima cottura. Nessun contorno o decorazione incluso.",
+          "image_url": "/recetas/receta-de-rollos-de-berenjena-con-tomates/paso-07.webp",
+          "image_alt": "Involtini di melanzane con pomodoro e ricotta: Lascia riposare e servi"
+        }
+      ],
+      "notes": "Formula originale proposta, non ancora testata in cucina. Contiene latte. Usa 800 g di fette commestibili; acquista più melanzana per estremità e ritagli. Le fette devono essere flessibili prima di arrotolarle. Nutrizione dell’intera formula divisa per quattro, senza contorno. Refrigerare gli avanzi entro 2 ore in contenitori poco profondi a 4 °C o meno; consumare entro 3–4 giorni e riscaldare a 74 °C.",
+      "seo": {
+        "title": "Involtini di melanzane con pomodoro e ricotta: ricetta passo passo",
+        "description": "Dodici involtini di melanzane arrostite con ricotta e salsa di pomodoro. Quattro porzioni, due passaggi in forno e ingredienti pesati.",
+        "about": "Dodici involtini di melanzane arrostite con ricotta e salsa di pomodoro. Quattro porzioni, due passaggi in forno e ingredienti pesati.",
+        "faq": [
+          {
+            "q": "Posso arrotolare fette crude?",
+            "a": "Non in questa formula: prima arrostiscile finché diventano flessibili e non si rompono."
+          },
+          {
+            "q": "Il ripieno contiene uovo?",
+            "a": "No, solo ricotta, origano e sale nelle quantità indicate."
+          },
+          {
+            "q": "Posso preparare in anticipo?",
+            "a": "Sì, poi refrigera il piatto assemblato. Da freddo richiederà più tempo in forno; scalda completamente prima di servire."
+          }
+        ],
+        "image_alt": "Involtini di melanzane con pomodoro e ricotta",
+        "image_variants": [
+          "/recetas/receta-de-rollos-de-berenjena-con-tomates/portada-1x1.webp",
+          "/recetas/receta-de-rollos-de-berenjena-con-tomates/portada-4x3.webp",
+          "/recetas/receta-de-rollos-de-berenjena-con-tomates/portada-16x9.webp"
+        ]
+      },
+      "nutrition": {
+        "calories": 218.1,
+        "protein_g": 7.0,
+        "carbs_g": 21.3,
+        "fat_g": 13.2,
+        "saturated_fat_g": 4.4,
+        "fiber_g": 7.8,
+        "sugar_g": 10.5,
+        "sodium_mg": 356.9,
+        "serving_size": "Una delle 4 porzioni uguali",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "method": "Somma dei grammi comestibili iniziali × nutrienti USDA per 100 g, divisa per 4. Nessuna perdita di cottura non misurata applicata. Calcolo su 800 g di fette commestibili senza ritagli e tutta la formula restante, divisa per quattro. Contorni esclusi.",
+        "note": "Stima, non analisi di laboratorio né prova in cucina. Marche, residui e resa possono variare. Calcolo su 800 g di fette commestibili senza ritagli e tutta la formula restante, divisa per quattro. Contorni esclusi.",
+        "inputs": [
+          {
+            "fdc_id": 169228,
+            "description": "Eggplant, raw",
+            "recipe_grams": 800,
+            "edible_grams": 800,
+            "per_100g": {
+              "saturated_fat_g": 0.034,
+              "sugar_g": 3.53,
+              "fat_g": 0.18,
+              "carbs_g": 5.88,
+              "calories": 25.0,
+              "fiber_g": 3.0,
+              "sodium_mg": 2.0,
+              "protein_g": 0.98
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170457,
+            "description": "Tomatoes, red, ripe, raw, year round average",
+            "recipe_grams": 500,
+            "edible_grams": 500,
+            "per_100g": {
+              "sugar_g": 2.63,
+              "carbs_g": 3.89,
+              "calories": 18.0,
+              "saturated_fat_g": 0.028,
+              "fat_g": 0.2,
+              "fiber_g": 1.2,
+              "sodium_mg": 5.0,
+              "protein_g": 0.88
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170851,
+            "description": "Cheese, ricotta, whole milk",
+            "recipe_grams": 200,
+            "edible_grams": 200,
+            "per_100g": {
+              "saturated_fat_g": 6.42,
+              "protein_g": 7.54,
+              "sodium_mg": 110,
+              "fat_g": 10.2,
+              "carbs_g": 7.27,
+              "calories": 150,
+              "fiber_g": 0.0,
+              "sugar_g": 0.27
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 171413,
+            "description": "Oil, olive, salad or cooking",
+            "recipe_grams": 30,
+            "edible_grams": 30,
+            "per_100g": {
+              "fat_g": 100,
+              "carbs_g": 0.0,
+              "calories": 884,
+              "sodium_mg": 2.0,
+              "protein_g": 0.0,
+              "saturated_fat_g": 13.8,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 169230,
+            "description": "Garlic, raw",
+            "recipe_grams": 8,
+            "edible_grams": 8,
+            "per_100g": {
+              "carbs_g": 33.1,
+              "calories": 149,
+              "sugar_g": 1.0,
+              "saturated_fat_g": 0.089,
+              "fiber_g": 2.1,
+              "sodium_mg": 17.0,
+              "protein_g": 6.36,
+              "fat_g": 0.5
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 171328,
+            "description": "Spices, oregano, dried",
+            "recipe_grams": 2,
+            "edible_grams": 2,
+            "per_100g": {
+              "sugar_g": 4.09,
+              "fat_g": 4.28,
+              "carbs_g": 68.9,
+              "calories": 265,
+              "fiber_g": 42.5,
+              "sodium_mg": 25.0,
+              "saturated_fat_g": 1.55,
+              "protein_g": 9.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 173468,
+            "description": "Salt, table",
+            "recipe_grams": 3,
+            "edible_grams": 3,
+            "per_100g": {
+              "fiber_g": 0.0,
+              "sodium_mg": 38800.0,
+              "saturated_fat_g": 0.0,
+              "protein_g": 0.0,
+              "fat_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 0.0,
+              "sugar_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          }
+        ],
+        "source_url": "https://fdc.nal.usda.gov/"
+      },
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 40,
+      "total_time_minutes": 65,
+      "course": "Secondi piatti",
+      "summary": "Dodici involtini di melanzane arrostite con ricotta e salsa di pomodoro. Quattro porzioni, due passaggi in forno e ingredienti pesati.",
+      "content_html": "<p>Dodici involtini di melanzane arrostite con ricotta e salsa di pomodoro. Quattro porzioni, due passaggi in forno e ingredienti pesati.</p>",
+      "keywords": [
+        "Involtini di melanzane con pomodoro e ricotta"
+      ],
+      "gallery": [
+        {
+          "url": "/recetas/receta-de-rollos-de-berenjena-con-tomates/portada.webp",
+          "alt": "Involtini di melanzane con pomodoro e ricotta"
+        }
+      ],
+      "published": true,
+      "editorial_status": "published"
+    },
+    {
+      "id": "1dbe23f6-26ca-531d-bf37-79d61a876e0a",
+      "recipe_group_id": "16e07d31-b2fb-47b8-a740-92d66b253ea1",
+      "language": "ja",
+      "slug": "ナスのトマトロール",
+      "public_path": "/ja/ナスのトマトロール",
+      "source_url": null,
+      "title": "ナスのトマトとリコッタのロール",
+      "excerpt": "焼いたナスでリコッタを巻き、トマトソースと焼く12個のロール。4人分で、2段階のオーブン加熱と材料の計量を含みます。",
+      "category": "主菜",
+      "category_slug": "platos-principales",
+      "cuisine": "イタリア風",
+      "difficulty": "普通",
+      "servings": 4,
+      "image_url": "/recetas/receta-de-rollos-de-berenjena-con-tomates/portada.webp",
+      "ingredients": [
+        {
+          "amount": 800,
+          "unit": "g",
+          "name": "生のナス（食用スライス）",
+          "group": "材料"
+        },
+        {
+          "amount": 500,
+          "unit": "g",
+          "name": "熟したトマト",
+          "group": "材料"
+        },
+        {
+          "amount": 200,
+          "unit": "g",
+          "name": "全乳のリコッタチーズ",
+          "group": "材料"
+        },
+        {
+          "amount": 30,
+          "unit": "g",
+          "name": "オリーブオイル",
+          "group": "材料"
+        },
+        {
+          "amount": 8,
+          "unit": "g",
+          "name": "皮をむいたにんにく",
+          "group": "材料"
+        },
+        {
+          "amount": 2,
+          "unit": "g",
+          "name": "乾燥オレガノ",
+          "group": "材料"
+        },
+        {
+          "amount": 3,
+          "unit": "g",
+          "name": "細粒の塩",
+          "group": "材料"
+        }
+      ],
+      "steps": [
+        {
+          "title": "ナスを準備して切る",
+          "content": "オーブンを200 °Cに予熱します。ナスを洗って端を取り、食用部分800 gを量ります。縦に厚さ5 mmの約12枚に切り、切れ端は別の料理用に取り置いて800 gには含めません。トマト、リコッタ、油、にんにく、オレガノ、塩も量ります。",
+          "image_url": "/recetas/receta-de-rollos-de-berenjena-con-tomates/paso-01.webp",
+          "image_alt": "ナスのトマトとリコッタのロール: ナスを準備して切る"
+        },
+        {
+          "title": "ナスの薄切りを焼く",
+          "content": "シートを敷いた天板2枚に12枚を重ねず並べます。油20 gを両面に塗り、塩1 gを配ります。約20分焼き、途中で天板を入れ替えます。折り曲げても割れない柔らかさにし、ぱりぱりにはしません。オーブンはつけたままにします。",
+          "image_url": "/recetas/receta-de-rollos-de-berenjena-con-tomates/paso-02.webp",
+          "image_alt": "ナスのトマトとリコッタのロール: ナスの薄切りを焼く"
+        },
+        {
+          "title": "トマトソースを煮る",
+          "content": "ナスを焼く間にトマト500 gとにんにく8 gを刻みます。残りの油10 gをフライパンで温め、にんにくを30秒、色を付けずに炒めます。トマト、オレガノ1 g、塩1 gを加え、中火で混ぜながら15分、濃いソースになるまで煮ます。",
+          "image_url": "/recetas/receta-de-rollos-de-berenjena-con-tomates/paso-03.webp",
+          "image_alt": "ナスのトマトとリコッタのロール: トマトソースを煮る"
+        },
+        {
+          "title": "詰め物を準備する",
+          "content": "リコッタ200 gに残りのオレガノ1 gと塩1 gを混ぜます。卵や別のチーズは加えません。ナスは触れる温度まで数分冷まします。詰め物を目分量で12等分し、すべてのロールに均等に使います。",
+          "image_url": "/recetas/receta-de-rollos-de-berenjena-con-tomates/paso-04.webp",
+          "image_alt": "ナスのトマトとリコッタのロール: 詰め物を準備する"
+        },
+        {
+          "title": "巻いて並べる",
+          "content": "約25 × 20 cmの耐熱皿にソースの半量を広げます。各ナスの端に12等分したリコッタを1つずつ置き、優しく巻きます。12個を巻き終わりを下にして一段に寄せて並べ、残りのソースをかけます。",
+          "image_url": "/recetas/receta-de-rollos-de-berenjena-con-tomates/paso-05.webp",
+          "image_alt": "ナスのトマトとリコッタのロール: 巻いて並べる"
+        },
+        {
+          "title": "組み立てた料理を焼く",
+          "content": "200 °Cで約20分、ソースが泡立ち詰め物が熱くなるまで焼きます。ナスはすでに焼いてあるため、2度目は全体を温めて味をまとめる工程です。冷蔵庫から出したばかりならさらに時間が必要で、20分だけでは保証になりません。",
+          "image_url": "/recetas/receta-de-rollos-de-berenjena-con-tomates/paso-06.webp",
+          "image_alt": "ナスのトマトとリコッタのロール: 組み立てた料理を焼く"
+        },
+        {
+          "title": "休ませて盛る",
+          "content": "オーブンの外で5分休ませます。1人3個とソースを盛り、4人分にします。合計65分は準備20分、オーブン40分、休ませ5分です。ソースの15分は最初の焼き時間と並行します。付け合わせや飾りは含みません。",
+          "image_url": "/recetas/receta-de-rollos-de-berenjena-con-tomates/paso-07.webp",
+          "image_alt": "ナスのトマトとリコッタのロール: 休ませて盛る"
+        }
+      ],
+      "notes": "独自のレシピ案で調理試験は未実施です。乳を含みます。食用スライス800 gを使い、端や切れ端を見込んで多めに購入します。巻く前にナスを柔らかくします。全配合を4等分した栄養値で、付け合わせは含みません。残りは2時間以内に浅い容器で4 °C以下へ冷蔵し、3–4日以内に食べ、再加熱は74 °Cまで行います。",
+      "seo": {
+        "title": "ナスのトマトとリコッタのロール: 作り方",
+        "description": "焼いたナスでリコッタを巻き、トマトソースと焼く12個のロール。4人分で、2段階のオーブン加熱と材料の計量を含みます。",
+        "about": "焼いたナスでリコッタを巻き、トマトソースと焼く12個のロール。4人分で、2段階のオーブン加熱と材料の計量を含みます。",
+        "faq": [
+          {
+            "q": "生のナスを巻けますか？",
+            "a": "この配合では先に柔らかく焼きます。巻くときに割れない状態にするためです。"
+          },
+          {
+            "q": "詰め物に卵は入りますか？",
+            "a": "入りません。指定量のリコッタ、オレガノ、塩だけです。"
+          },
+          {
+            "q": "前もって作れますか？",
+            "a": "組み立てた後に冷蔵できます。冷たい状態から焼く場合は時間を延長し、全体が熱くなるまで加熱します。"
+          }
+        ],
+        "image_alt": "ナスのトマトとリコッタのロール",
+        "image_variants": [
+          "/recetas/receta-de-rollos-de-berenjena-con-tomates/portada-1x1.webp",
+          "/recetas/receta-de-rollos-de-berenjena-con-tomates/portada-4x3.webp",
+          "/recetas/receta-de-rollos-de-berenjena-con-tomates/portada-16x9.webp"
+        ]
+      },
+      "nutrition": {
+        "calories": 218.1,
+        "protein_g": 7.0,
+        "carbs_g": 21.3,
+        "fat_g": 13.2,
+        "saturated_fat_g": 4.4,
+        "fiber_g": 7.8,
+        "sugar_g": 10.5,
+        "sodium_mg": 356.9,
+        "serving_size": "全量の4分の1",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "method": "可食部の初期重量g × USDAの100 g当たり栄養値を合計し、4人分で割ります。未測定の加熱損失は補正しません。 切れ端を除いた食用ナス800 gと残りの全配合を4等分して計算します。付け合わせは含みません。",
+        "note": "推定値で、実験室分析や調理試験の値ではありません。製品、残量、調理後の収量で変わります。 切れ端を除いた食用ナス800 gと残りの全配合を4等分して計算します。付け合わせは含みません。",
+        "inputs": [
+          {
+            "fdc_id": 169228,
+            "description": "Eggplant, raw",
+            "recipe_grams": 800,
+            "edible_grams": 800,
+            "per_100g": {
+              "saturated_fat_g": 0.034,
+              "sugar_g": 3.53,
+              "fat_g": 0.18,
+              "carbs_g": 5.88,
+              "calories": 25.0,
+              "fiber_g": 3.0,
+              "sodium_mg": 2.0,
+              "protein_g": 0.98
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170457,
+            "description": "Tomatoes, red, ripe, raw, year round average",
+            "recipe_grams": 500,
+            "edible_grams": 500,
+            "per_100g": {
+              "sugar_g": 2.63,
+              "carbs_g": 3.89,
+              "calories": 18.0,
+              "saturated_fat_g": 0.028,
+              "fat_g": 0.2,
+              "fiber_g": 1.2,
+              "sodium_mg": 5.0,
+              "protein_g": 0.88
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170851,
+            "description": "Cheese, ricotta, whole milk",
+            "recipe_grams": 200,
+            "edible_grams": 200,
+            "per_100g": {
+              "saturated_fat_g": 6.42,
+              "protein_g": 7.54,
+              "sodium_mg": 110,
+              "fat_g": 10.2,
+              "carbs_g": 7.27,
+              "calories": 150,
+              "fiber_g": 0.0,
+              "sugar_g": 0.27
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 171413,
+            "description": "Oil, olive, salad or cooking",
+            "recipe_grams": 30,
+            "edible_grams": 30,
+            "per_100g": {
+              "fat_g": 100,
+              "carbs_g": 0.0,
+              "calories": 884,
+              "sodium_mg": 2.0,
+              "protein_g": 0.0,
+              "saturated_fat_g": 13.8,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 169230,
+            "description": "Garlic, raw",
+            "recipe_grams": 8,
+            "edible_grams": 8,
+            "per_100g": {
+              "carbs_g": 33.1,
+              "calories": 149,
+              "sugar_g": 1.0,
+              "saturated_fat_g": 0.089,
+              "fiber_g": 2.1,
+              "sodium_mg": 17.0,
+              "protein_g": 6.36,
+              "fat_g": 0.5
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 171328,
+            "description": "Spices, oregano, dried",
+            "recipe_grams": 2,
+            "edible_grams": 2,
+            "per_100g": {
+              "sugar_g": 4.09,
+              "fat_g": 4.28,
+              "carbs_g": 68.9,
+              "calories": 265,
+              "fiber_g": 42.5,
+              "sodium_mg": 25.0,
+              "saturated_fat_g": 1.55,
+              "protein_g": 9.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 173468,
+            "description": "Salt, table",
+            "recipe_grams": 3,
+            "edible_grams": 3,
+            "per_100g": {
+              "fiber_g": 0.0,
+              "sodium_mg": 38800.0,
+              "saturated_fat_g": 0.0,
+              "protein_g": 0.0,
+              "fat_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 0.0,
+              "sugar_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          }
+        ],
+        "source_url": "https://fdc.nal.usda.gov/"
+      },
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 40,
+      "total_time_minutes": 65,
+      "course": "主菜",
+      "summary": "焼いたナスでリコッタを巻き、トマトソースと焼く12個のロール。4人分で、2段階のオーブン加熱と材料の計量を含みます。",
+      "content_html": "<p>焼いたナスでリコッタを巻き、トマトソースと焼く12個のロール。4人分で、2段階のオーブン加熱と材料の計量を含みます。</p>",
+      "keywords": [
+        "ナスのトマトとリコッタのロール"
+      ],
+      "gallery": [
+        {
+          "url": "/recetas/receta-de-rollos-de-berenjena-con-tomates/portada.webp",
+          "alt": "ナスのトマトとリコッタのロール"
+        }
+      ],
+      "published": true,
+      "editorial_status": "published"
+    },
+    {
+      "id": "7084402e-d0ed-53b4-a2dc-2e7fc977bdd3",
+      "recipe_group_id": "16e07d31-b2fb-47b8-a740-92d66b253ea1",
+      "language": "pt",
+      "slug": "rolinhos-de-berinjela-com-tomate",
+      "public_path": "/pt/rolinhos-de-berinjela-com-tomate",
+      "source_url": null,
+      "title": "Rolinhos de berinjela com tomate e ricota",
+      "excerpt": "Doze rolinhos de berinjela assada com ricota e molho de tomate caseiro. Quatro porções, duas etapas de forno e ingredientes pesados.",
+      "category": "Pratos principais",
+      "category_slug": "platos-principales",
+      "cuisine": "Inspiração italiana",
+      "difficulty": "Média",
+      "servings": 4,
+      "image_url": "/recetas/receta-de-rollos-de-berenjena-con-tomates/portada.webp",
+      "ingredients": [
+        {
+          "amount": 800,
+          "unit": "g",
+          "name": "berinjela crua, fatias comestíveis",
+          "group": "Ingredientes"
+        },
+        {
+          "amount": 500,
+          "unit": "g",
+          "name": "tomate maduro",
+          "group": "Ingredientes"
+        },
+        {
+          "amount": 200,
+          "unit": "g",
+          "name": "ricota de leite integral",
+          "group": "Ingredientes"
+        },
+        {
+          "amount": 30,
+          "unit": "g",
+          "name": "azeite",
+          "group": "Ingredientes"
+        },
+        {
+          "amount": 8,
+          "unit": "g",
+          "name": "alho descascado",
+          "group": "Ingredientes"
+        },
+        {
+          "amount": 2,
+          "unit": "g",
+          "name": "orégano seco",
+          "group": "Ingredientes"
+        },
+        {
+          "amount": 3,
+          "unit": "g",
+          "name": "sal fino",
+          "group": "Ingredientes"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepare e corte as berinjelas",
+          "content": "Preaqueça o forno a 200 °C. Lave a berinjela, retire as pontas e pese 800 g de parte comestível. Corte cerca de doze fatias longitudinais de 5 mm; reserve aparas para outro uso e não as conte nesses 800 g. Pese tomate, ricota, azeite, alho, orégano e sal.",
+          "image_url": "/recetas/receta-de-rollos-de-berenjena-con-tomates/paso-01.webp",
+          "image_alt": "Rolinhos de berinjela com tomate e ricota: Prepare e corte as berinjelas"
+        },
+        {
+          "title": "Asse as fatias",
+          "content": "Distribua doze fatias em duas assadeiras com papel para forno, sem sobrepor. Pincele os dois lados com 20 g de azeite no total e distribua 1 g de sal. Asse cerca de 20 minutos, trocando as assadeiras na metade, até dobrarem sem quebrar. Não deixe crocantes. Mantenha o forno ligado.",
+          "image_url": "/recetas/receta-de-rollos-de-berenjena-con-tomates/paso-02.webp",
+          "image_alt": "Rolinhos de berinjela com tomate e ricota: Asse as fatias"
+        },
+        {
+          "title": "Cozinhe o molho",
+          "content": "Enquanto assam, pique 500 g de tomate e 8 g de alho. Aqueça os 10 g restantes de azeite e refogue o alho 30 segundos sem dourar. Junte tomate,1 g de orégano e 1 g de sal. Cozinhe 15 minutos em fogo médio, mexendo, até formar molho espesso.",
+          "image_url": "/recetas/receta-de-rollos-de-berenjena-con-tomates/paso-03.webp",
+          "image_alt": "Rolinhos de berinjela com tomate e ricota: Cozinhe o molho"
+        },
+        {
+          "title": "Prepare o recheio",
+          "content": "Misture 200 g de ricota com o 1 g restante de orégano e 1 g de sal. Não acrescente ovo nem outro queijo. Espere as fatias esfriarem alguns minutos para manusear. Divida visualmente o recheio em doze partes iguais, distribuindo por todos os rolinhos.",
+          "image_url": "/recetas/receta-de-rollos-de-berenjena-con-tomates/paso-04.webp",
+          "image_alt": "Rolinhos de berinjela com tomate e ricota: Prepare o recheio"
+        },
+        {
+          "title": "Enrole e distribua",
+          "content": "Espalhe metade do molho em uma travessa de cerca de 25 × 20 cm. Coloque uma porção de ricota na ponta de cada fatia e enrole delicadamente. Disponha doze rolinhos com a emenda para baixo, próximos em uma camada. Cubra com o molho restante.",
+          "image_url": "/recetas/receta-de-rollos-de-berenjena-con-tomates/paso-05.webp",
+          "image_alt": "Rolinhos de berinjela com tomate e ricota: Enrole e distribua"
+        },
+        {
+          "title": "Asse o conjunto",
+          "content": "Asse cerca de 20 minutos a 200 °C até o molho borbulhar e o recheio ficar quente. As fatias já foram assadas; a segunda etapa aquece o conjunto e une os sabores. Se vier da geladeira, precisará de mais tempo;20 minutos sozinhos não garantem o aquecimento.",
+          "image_url": "/recetas/receta-de-rollos-de-berenjena-con-tomates/paso-06.webp",
+          "image_alt": "Rolinhos de berinjela com tomate e ricota: Asse o conjunto"
+        },
+        {
+          "title": "Descanse e sirva",
+          "content": "Deixe 5 minutos fora do forno. Sirva três rolinhos com molho por pessoa, quatro porções. Os 65 minutos incluem 20 de preparo,40 de forno e 5 de descanso; os 15 do molho ocorrem junto da primeira etapa de forno. Não inclui acompanhamentos nem decoração.",
+          "image_url": "/recetas/receta-de-rollos-de-berenjena-con-tomates/paso-07.webp",
+          "image_alt": "Rolinhos de berinjela com tomate e ricota: Descanse e sirva"
+        }
+      ],
+      "notes": "Fórmula original proposta, ainda sem teste de cozinha. Contém leite. Use 800 g de fatias comestíveis; compre mais berinjela para compensar pontas e aparas. As fatias precisam estar flexíveis antes de enrolar. Nutrição da fórmula inteira dividida por quatro, sem acompanhamento. Refrigere sobras em até 2 horas em recipientes rasos a 4 °C ou menos, consuma em 3–4 dias e reaqueça a 74 °C.",
+      "seo": {
+        "title": "Rolinhos de berinjela com tomate e ricota: receita passo a passo",
+        "description": "Doze rolinhos de berinjela assada com ricota e molho de tomate caseiro. Quatro porções, duas etapas de forno e ingredientes pesados.",
+        "about": "Doze rolinhos de berinjela assada com ricota e molho de tomate caseiro. Quatro porções, duas etapas de forno e ingredientes pesados.",
+        "faq": [
+          {
+            "q": "Posso enrolar berinjela crua?",
+            "a": "Não nesta fórmula: primeiro asse até ficar flexível, para não quebrar."
+          },
+          {
+            "q": "O recheio leva ovo?",
+            "a": "Não, apenas ricota, orégano e sal nas quantidades indicadas."
+          },
+          {
+            "q": "Posso preparar antes?",
+            "a": "Sim, refrigere o conjunto montado. Assar desde frio exige mais tempo; aqueça completamente antes de servir."
+          }
+        ],
+        "image_alt": "Rolinhos de berinjela com tomate e ricota",
+        "image_variants": [
+          "/recetas/receta-de-rollos-de-berenjena-con-tomates/portada-1x1.webp",
+          "/recetas/receta-de-rollos-de-berenjena-con-tomates/portada-4x3.webp",
+          "/recetas/receta-de-rollos-de-berenjena-con-tomates/portada-16x9.webp"
+        ]
+      },
+      "nutrition": {
+        "calories": 218.1,
+        "protein_g": 7.0,
+        "carbs_g": 21.3,
+        "fat_g": 13.2,
+        "saturated_fat_g": 4.4,
+        "fiber_g": 7.8,
+        "sugar_g": 10.5,
+        "sodium_mg": 356.9,
+        "serving_size": "Uma de 4 porções iguais",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "method": "Soma dos gramas comestíveis iniciais × nutrientes USDA por 100 g, dividida por 4. Não se aplicam perdas de cocção não medidas. Calculado com 800 g de fatias comestíveis sem aparas e toda a fórmula restante, dividido por quatro. Não inclui acompanhamento.",
+        "note": "Estimativa, não análise de laboratório nem teste de cozinha. Marcas, resíduos e rendimento podem variar. Calculado com 800 g de fatias comestíveis sem aparas e toda a fórmula restante, dividido por quatro. Não inclui acompanhamento.",
+        "inputs": [
+          {
+            "fdc_id": 169228,
+            "description": "Eggplant, raw",
+            "recipe_grams": 800,
+            "edible_grams": 800,
+            "per_100g": {
+              "saturated_fat_g": 0.034,
+              "sugar_g": 3.53,
+              "fat_g": 0.18,
+              "carbs_g": 5.88,
+              "calories": 25.0,
+              "fiber_g": 3.0,
+              "sodium_mg": 2.0,
+              "protein_g": 0.98
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170457,
+            "description": "Tomatoes, red, ripe, raw, year round average",
+            "recipe_grams": 500,
+            "edible_grams": 500,
+            "per_100g": {
+              "sugar_g": 2.63,
+              "carbs_g": 3.89,
+              "calories": 18.0,
+              "saturated_fat_g": 0.028,
+              "fat_g": 0.2,
+              "fiber_g": 1.2,
+              "sodium_mg": 5.0,
+              "protein_g": 0.88
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170851,
+            "description": "Cheese, ricotta, whole milk",
+            "recipe_grams": 200,
+            "edible_grams": 200,
+            "per_100g": {
+              "saturated_fat_g": 6.42,
+              "protein_g": 7.54,
+              "sodium_mg": 110,
+              "fat_g": 10.2,
+              "carbs_g": 7.27,
+              "calories": 150,
+              "fiber_g": 0.0,
+              "sugar_g": 0.27
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 171413,
+            "description": "Oil, olive, salad or cooking",
+            "recipe_grams": 30,
+            "edible_grams": 30,
+            "per_100g": {
+              "fat_g": 100,
+              "carbs_g": 0.0,
+              "calories": 884,
+              "sodium_mg": 2.0,
+              "protein_g": 0.0,
+              "saturated_fat_g": 13.8,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 169230,
+            "description": "Garlic, raw",
+            "recipe_grams": 8,
+            "edible_grams": 8,
+            "per_100g": {
+              "carbs_g": 33.1,
+              "calories": 149,
+              "sugar_g": 1.0,
+              "saturated_fat_g": 0.089,
+              "fiber_g": 2.1,
+              "sodium_mg": 17.0,
+              "protein_g": 6.36,
+              "fat_g": 0.5
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 171328,
+            "description": "Spices, oregano, dried",
+            "recipe_grams": 2,
+            "edible_grams": 2,
+            "per_100g": {
+              "sugar_g": 4.09,
+              "fat_g": 4.28,
+              "carbs_g": 68.9,
+              "calories": 265,
+              "fiber_g": 42.5,
+              "sodium_mg": 25.0,
+              "saturated_fat_g": 1.55,
+              "protein_g": 9.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 173468,
+            "description": "Salt, table",
+            "recipe_grams": 3,
+            "edible_grams": 3,
+            "per_100g": {
+              "fiber_g": 0.0,
+              "sodium_mg": 38800.0,
+              "saturated_fat_g": 0.0,
+              "protein_g": 0.0,
+              "fat_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 0.0,
+              "sugar_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          }
+        ],
+        "source_url": "https://fdc.nal.usda.gov/"
+      },
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 40,
+      "total_time_minutes": 65,
+      "course": "Pratos principais",
+      "summary": "Doze rolinhos de berinjela assada com ricota e molho de tomate caseiro. Quatro porções, duas etapas de forno e ingredientes pesados.",
+      "content_html": "<p>Doze rolinhos de berinjela assada com ricota e molho de tomate caseiro. Quatro porções, duas etapas de forno e ingredientes pesados.</p>",
+      "keywords": [
+        "Rolinhos de berinjela com tomate e ricota"
+      ],
+      "gallery": [
+        {
+          "url": "/recetas/receta-de-rollos-de-berenjena-con-tomates/portada.webp",
+          "alt": "Rolinhos de berinjela com tomate e ricota"
+        }
+      ],
+      "published": true,
+      "editorial_status": "published"
     }
   ],
   "publication_blockers": [
-    "IMAGES_PENDING",
-    "SIX_LOCALIZATIONS_PENDING",
+    "MEDIA_FINAL_VALIDATION",
     "CI_DEPLOY_DB_CACHE_LIVE_QA_PENDING"
   ],
   "steps_sha256": "e6d1763874a5dacaa966da711a3ce3015e42680721477b63674d090b9f6a538b"

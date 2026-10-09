@@ -1,6 +1,6 @@
 {
   "scope": "Manual de Cocina lote05; five final candidates only",
-  "state": "ES_FROZEN_NUTRITION_COMPLETE_IMAGES_LOCALIZATIONS_PENDING",
+  "state": "SEVEN_LANGUAGES_READY_MEDIA_AND_PUBLICATION_PENDING",
   "provenance": "Original formula and prose; no WordPress editorial bodies reused.",
   "category_slug": "platos-principales",
   "steps_frozen": true,
@@ -19,46 +19,50 @@
       "category_slug": "platos-principales",
       "cuisine": "Inspiración del sur de Estados Unidos",
       "difficulty": "Media",
-      "prep_minutes": 20,
-      "cook_minutes": 24,
-      "total_minutes": 69,
       "servings": 4,
       "image_url": "/recetas/receta-de-pollo-frito-sureno/portada.webp",
       "ingredients": [
         {
           "amount": 800,
           "unit": "g",
-          "name": "pechuga de pollo sin piel ni hueso"
+          "name": "pechuga de pollo sin piel ni hueso",
+          "group": "Ingredientes"
         },
         {
           "amount": 100,
           "unit": "g",
-          "name": "buttermilk bajo en grasa"
+          "name": "buttermilk bajo en grasa",
+          "group": "Ingredientes"
         },
         {
           "amount": 120,
           "unit": "g",
-          "name": "harina de trigo común"
+          "name": "harina de trigo común",
+          "group": "Ingredientes"
         },
         {
           "amount": 3,
           "unit": "g",
-          "name": "pimentón dulce"
+          "name": "pimentón dulce",
+          "group": "Ingredientes"
         },
         {
           "amount": 1,
           "unit": "g",
-          "name": "pimienta negra molida"
+          "name": "pimienta negra molida",
+          "group": "Ingredientes"
         },
         {
           "amount": 4,
           "unit": "g",
-          "name": "sal fina"
+          "name": "sal fina",
+          "group": "Ingredientes"
         },
         {
           "amount": 1000,
           "unit": "g",
-          "name": "aceite de canola para freír"
+          "name": "aceite de canola para freír",
+          "group": "Ingredientes"
         }
       ],
       "steps": [
@@ -129,6 +133,12 @@
             "q": "¿Puedo reutilizar harina o marinado sobrantes?",
             "a": "No. Los restos que tocaron pollo crudo se desechan y no se sirven ni se guardan para otra preparación."
           }
+        ],
+        "image_alt": "Pollo frito de inspiración sureña",
+        "image_variants": [
+          "/recetas/receta-de-pollo-frito-sureno/portada-1x1.webp",
+          "/recetas/receta-de-pollo-frito-sureno/portada-4x3.webp",
+          "/recetas/receta-de-pollo-frito-sureno/portada-16x9.webp"
         ]
       },
       "nutrition": {
@@ -142,18 +152,1893 @@
         "sodium_mg": 516.2,
         "serving_size": "Una de 4 raciones iguales",
         "estimated": true,
-        "source": {
-          "label": "USDA FoodData Central — SR Legacy (abril de 2018)",
-          "url": "https://fdc.nal.usda.gov/"
-        },
+        "source": "USDA FoodData Central — SR Legacy (2018)",
         "method": "Suma de gramos de ingredientes × nutrientes USDA por 100 g, dividida entre 4. Pesos iniciales de partes comestibles; rendimiento cocinado no medido. Aceite: 1000 g en la olla, pero se modelan 40 g retenidos en toda la receta (hipótesis, no medición). Se cuenta toda la harina, buttermilk y sal pese al descarte de restos; el recubrimiento real puede ser menor.",
-        "note": "Estimación, no análisis de laboratorio ni prueba de cocina. Marcas, restos y rendimiento pueden variar. Aceite: 1000 g en la olla, pero se modelan 40 g retenidos en toda la receta (hipótesis, no medición). Se cuenta toda la harina, buttermilk y sal pese al descarte de restos; el recubrimiento real puede ser menor."
-      }
+        "note": "Estimación, no análisis de laboratorio ni prueba de cocina. Marcas, restos y rendimiento pueden variar. Aceite: 1000 g en la olla, pero se modelan 40 g retenidos en toda la receta (hipótesis, no medición). Se cuenta toda la harina, buttermilk y sal pese al descarte de restos; el recubrimiento real puede ser menor.",
+        "inputs": [
+          {
+            "fdc_id": 171077,
+            "description": "Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw",
+            "recipe_grams": 800,
+            "edible_grams": 800,
+            "per_100g": {
+              "fat_g": 2.62,
+              "calories": 120,
+              "saturated_fat_g": 0.563,
+              "sodium_mg": 45.0,
+              "protein_g": 22.5,
+              "sugar_g": 0.0,
+              "carbs_g": 0.0,
+              "fiber_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170874,
+            "description": "Milk, buttermilk, fluid, cultured, lowfat",
+            "recipe_grams": 100,
+            "edible_grams": 100,
+            "per_100g": {
+              "calories": 40.0,
+              "sodium_mg": 148,
+              "saturated_fat_g": 0.66,
+              "fat_g": 1.07,
+              "sugar_g": 5.36,
+              "protein_g": 3.31,
+              "fiber_g": 0.0,
+              "carbs_g": 4.79
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 169761,
+            "description": "Wheat flour, white, all-purpose, unenriched",
+            "recipe_grams": 120,
+            "edible_grams": 120,
+            "per_100g": {
+              "fat_g": 0.98,
+              "carbs_g": 76.3,
+              "calories": 364,
+              "fiber_g": 2.7,
+              "sodium_mg": 2.0,
+              "protein_g": 10.3,
+              "saturated_fat_g": 0.155,
+              "sugar_g": 0.27
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 171329,
+            "description": "Spices, paprika",
+            "recipe_grams": 3,
+            "edible_grams": 3,
+            "per_100g": {
+              "sugar_g": 10.3,
+              "fiber_g": 34.9,
+              "sodium_mg": 68.0,
+              "protein_g": 14.1,
+              "fat_g": 12.9,
+              "carbs_g": 54.0,
+              "calories": 282,
+              "saturated_fat_g": 2.14
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170931,
+            "description": "Spices, pepper, black",
+            "recipe_grams": 1,
+            "edible_grams": 1,
+            "per_100g": {
+              "fat_g": 3.26,
+              "sugar_g": 0.64,
+              "carbs_g": 64.0,
+              "calories": 251,
+              "protein_g": 10.4,
+              "fiber_g": 25.3,
+              "sodium_mg": 20.0,
+              "saturated_fat_g": 1.39
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 173468,
+            "description": "Salt, table",
+            "recipe_grams": 4,
+            "edible_grams": 4,
+            "per_100g": {
+              "fiber_g": 0.0,
+              "sodium_mg": 38800.0,
+              "saturated_fat_g": 0.0,
+              "protein_g": 0.0,
+              "fat_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 0.0,
+              "sugar_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 172336,
+            "description": "Oil, canola",
+            "recipe_grams": 1000,
+            "edible_grams": 40,
+            "per_100g": {
+              "fat_g": 100,
+              "saturated_fat_g": 7.36,
+              "protein_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 884,
+              "fiber_g": 0.0,
+              "sodium_mg": 0.0,
+              "sugar_g": 0.0
+            },
+            "basis": "assumed_retained_frying_oil_40g_not_measured"
+          }
+        ],
+        "source_url": "https://fdc.nal.usda.gov/"
+      },
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 24,
+      "total_time_minutes": 69,
+      "course": "Platos principales",
+      "summary": "Pollo sin hueso con buttermilk y harina sazonada, frito en dos tandas. Cuatro raciones, control de temperatura y estimación explícita del aceite retenido.",
+      "content_html": "<p>Pollo sin hueso con buttermilk y harina sazonada, frito en dos tandas. Cuatro raciones, control de temperatura y estimación explícita del aceite retenido.</p>",
+      "keywords": [
+        "Pollo frito de inspiración sureña"
+      ],
+      "gallery": [
+        {
+          "url": "/recetas/receta-de-pollo-frito-sureno/portada.webp",
+          "alt": "Pollo frito de inspiración sureña"
+        }
+      ],
+      "published": true,
+      "editorial_status": "published"
+    },
+    {
+      "id": "442fea4e-ef24-58c8-8942-f8b47698cd25",
+      "recipe_group_id": "8a0876c5-e0e8-4289-a230-c99fa275590b",
+      "language": "de",
+      "slug": "fried-chicken-nach-sudstaatenart",
+      "public_path": "/de/fried-chicken-nach-sudstaatenart",
+      "source_url": null,
+      "title": "Fried Chicken nach Südstaatenart",
+      "excerpt": "Hähnchen ohne Knochen mit Buttermilch und gewürztem Mehl, in zwei Durchgängen frittiert. Vier Portionen mit Temperaturprüfung und erklärter Ölretention.",
+      "category": "Hauptgerichte",
+      "category_slug": "platos-principales",
+      "cuisine": "Südstaaten-inspiriert",
+      "difficulty": "Mittel",
+      "servings": 4,
+      "image_url": "/recetas/receta-de-pollo-frito-sureno/portada.webp",
+      "ingredients": [
+        {
+          "amount": 800,
+          "unit": "g",
+          "name": "Hähnchenbrust ohne Haut und Knochen",
+          "group": "Zutaten"
+        },
+        {
+          "amount": 100,
+          "unit": "g",
+          "name": "fettarme Buttermilch",
+          "group": "Zutaten"
+        },
+        {
+          "amount": 120,
+          "unit": "g",
+          "name": "Weizenmehl",
+          "group": "Zutaten"
+        },
+        {
+          "amount": 3,
+          "unit": "g",
+          "name": "edelsüßes Paprikapulver",
+          "group": "Zutaten"
+        },
+        {
+          "amount": 1,
+          "unit": "g",
+          "name": "gemahlener schwarzer Pfeffer",
+          "group": "Zutaten"
+        },
+        {
+          "amount": 4,
+          "unit": "g",
+          "name": "feines Salz",
+          "group": "Zutaten"
+        },
+        {
+          "amount": 1000,
+          "unit": "g",
+          "name": "Rapsöl zum Frittieren",
+          "group": "Zutaten"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Hähnchen abwiegen und teilen",
+          "content": "800 g rohe Brust ohne Haut und Knochen abwiegen. In acht ähnliche Stücke von etwa 100 g und höchstens 2 cm Dicke teilen; dicke Stellen horizontal aufschneiden. Nicht waschen. Brett für rohes Fleisch, Zangen, tiefen Topf, Gitter sowie Öl- und Fleischthermometer vorbereiten.",
+          "image_url": "/recetas/receta-de-pollo-frito-sureno/paso-01.webp",
+          "image_alt": "Fried Chicken nach Südstaatenart: Hähnchen abwiegen und teilen"
+        },
+        {
+          "title": "Kalt marinieren",
+          "content": "Die Stücke mit 100 g Buttermilch und 2 g Salz in eine Schüssel geben. Zum Überziehen mischen, abdecken und 20 Minuten bei höchstens 4 °C kühlen. Nicht auf der Arbeitsfläche marinieren. Hände und Geräte nach Rohfleischkontakt reinigen; saubere Zangen für gegarte Stücke bereitlegen.",
+          "image_url": "/recetas/receta-de-pollo-frito-sureno/paso-02.webp",
+          "image_alt": "Fried Chicken nach Südstaatenart: Kalt marinieren"
+        },
+        {
+          "title": "Gewürztes Mehl vorbereiten",
+          "content": "120 g Mehl,3 g edelsüßes Paprikapulver,1 g schwarzen Pfeffer und die übrigen 2 g Salz in einer flachen Schale mischen. Gewürze gleichmäßig verteilen. Die Hülle besteht nur aus gewürztem Mehl und Buttermilch; kein Ei, Paniermehl oder weitere Zutaten.",
+          "image_url": "/recetas/receta-de-pollo-frito-sureno/paso-03.webp",
+          "image_alt": "Fried Chicken nach Südstaatenart: Gewürztes Mehl vorbereiten"
+        },
+        {
+          "title": "Stücke in Mehl wenden",
+          "content": "Ein Stück herausnehmen und überschüssige Buttermilch in die Schüssel abtropfen lassen. Im Mehl wenden und beide Seiten andrücken. Überschuss leicht abschütteln und auf ein sauberes, für rohes Hähnchen bestimmtes Blech legen. Mit allen acht wiederholen. Buttermilch- und Mehlreste nach Rohfleischkontakt wegwerfen.",
+          "image_url": "/recetas/receta-de-pollo-frito-sureno/paso-04.webp",
+          "image_alt": "Fried Chicken nach Südstaatenart: Stücke in Mehl wenden"
+        },
+        {
+          "title": "Öl erhitzen",
+          "content": "1000 g Öl in einen geeigneten tiefen Frittiertopf geben; das Öl darf höchstens die Hälfte der Topfkapazität einnehmen. Auf 170 °C erhitzen und mit Thermometer prüfen. Umgebung trocken und Griff sicher halten. Kein Wasser hineingeben, den Topf nicht unbeaufsichtigt lassen und beim Frittieren nicht abdecken.",
+          "image_url": "/recetas/receta-de-pollo-frito-sureno/paso-05.webp",
+          "image_alt": "Fried Chicken nach Südstaatenart: Öl erhitzen"
+        },
+        {
+          "title": "In zwei Durchgängen frittieren und prüfen",
+          "content": "Je vier Stücke ohne Gedränge etwa 12 Minuten frittieren, zur Hälfte mit Zange wenden. Öl ungefähr zwischen 165 und 175 °C halten. Jedes Stück mit sauberem Thermometer an der dicksten Stelle im Zentrum messen:74 °C sind erforderlich. Sonst weitergaren und erneut messen. Eine goldene Hülle beweist den Gargrad nicht.",
+          "image_url": "/recetas/receta-de-pollo-frito-sureno/paso-06.webp",
+          "image_alt": "Fried Chicken nach Südstaatenart: In zwei Durchgängen frittieren und prüfen"
+        },
+        {
+          "title": "Abtropfen und ruhen lassen",
+          "content": "Gegarte Stücke mit sauberen Zangen auf ein Gitter über einem Blech legen, ohne zu stapeln.5 Minuten abtropfen und ruhen lassen; nicht abdecken, damit die Hülle nicht feucht wird.24 Minuten sind eine Schätzung für zwei Durchgänge. Jede zusätzlich nötige Zeit bis 74 °C einrechnen.",
+          "image_url": "/recetas/receta-de-pollo-frito-sureno/paso-07.webp",
+          "image_alt": "Fried Chicken nach Südstaatenart: Abtropfen und ruhen lassen"
+        },
+        {
+          "title": "Servieren und Reste behandeln",
+          "content": "Je zwei Stücke pro Person, vier Portionen ohne Beilage servieren.69 Minuten umfassen 20 Vorbereitung,20 Marinieren,24 Frittieren und 5 Ruhe; Öl erhitzt sich während des Mehlierens. Reste binnen 2 Stunden kühlen, bei über 32 °C binnen 1 Stunde, bei höchstens 4 °C lagern und auf 74 °C erhitzen. Öl vor Entsorgung abkühlen lassen, nicht in den Abfluss gießen.",
+          "image_url": "/recetas/receta-de-pollo-frito-sureno/paso-08.webp",
+          "image_alt": "Fried Chicken nach Südstaatenart: Servieren und Reste behandeln"
+        }
+      ],
+      "notes": "Eigenständige, von den Südstaaten inspirierte Formel, noch nicht in der Küche getestet; keine Variante mit Knochen. Enthält Weizen und Milch. Das Öl im Topf wird nicht vollständig verzehrt. Die Nährwerte nehmen 40 g Ölretention insgesamt an,10 g pro Portion, nicht gemessen. Mehl, Buttermilch und Salz werden trotz weggeworfener Reste vollständig gezählt: konservative Schätzung der Hülle. Tatsächliche Aufnahme kann stark variieren. Keine Beilage enthalten. Gekühlte Reste innerhalb von 3–4 Tagen verbrauchen.",
+      "seo": {
+        "title": "Fried Chicken nach Südstaatenart: Schritt für Schritt",
+        "description": "Hähnchen ohne Knochen mit Buttermilch und gewürztem Mehl, in zwei Durchgängen frittiert. Vier Portionen mit Temperaturprüfung und erklärter Ölretention.",
+        "about": "Hähnchen ohne Knochen mit Buttermilch und gewürztem Mehl, in zwei Durchgängen frittiert. Vier Portionen mit Temperaturprüfung und erklärter Ölretention.",
+        "faq": [
+          {
+            "q": "Kann ich Hähnchen mit Knochen verwenden?",
+            "a": "Die Rezeptzeiten gelten für knochenlose Stücke bis 2 cm Dicke. Mit Knochen braucht es eine andere Methode und Berechnung; jedes Stück auf 74 °C prüfen."
+          },
+          {
+            "q": "Warum zählen nicht alle 1000 g Öl für die Nährwerte?",
+            "a": "Es ist das Frittiermedium. Modelliert werden 40 g Aufnahme insgesamt, eine ungemessene Annahme; die tatsächliche Aufnahme variiert."
+          },
+          {
+            "q": "Kann ich Mehl oder Marinade wiederverwenden?",
+            "a": "Nein. Reste nach Kontakt mit rohem Hähnchen wegwerfen, weder servieren noch für andere Gerichte aufbewahren."
+          }
+        ],
+        "image_alt": "Fried Chicken nach Südstaatenart",
+        "image_variants": [
+          "/recetas/receta-de-pollo-frito-sureno/portada-1x1.webp",
+          "/recetas/receta-de-pollo-frito-sureno/portada-4x3.webp",
+          "/recetas/receta-de-pollo-frito-sureno/portada-16x9.webp"
+        ]
+      },
+      "nutrition": {
+        "calories": 450.3,
+        "protein_g": 49.0,
+        "carbs_g": 24.7,
+        "fat_g": 15.9,
+        "saturated_fat_g": 2.1,
+        "fiber_g": 1.1,
+        "sugar_g": 1.5,
+        "sodium_mg": 516.2,
+        "serving_size": "Eine von 4 gleichen Portionen",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "method": "Summe der essbaren Ausgangsgewichte in Gramm × USDA-Nährwerte je 100 g, geteilt durch 4. Keine ungemessenen Garverluste angewandt. 1000 g Öl im Topf, aber 40 g als insgesamt aufgenommen modelliert,10 g pro Portion: Annahme, keine Messung. Mehl, Buttermilch und Salz werden trotz verworfener Reste vollständig gerechnet; die tatsächlich gegessene Hülle kann kleiner sein.",
+        "note": "Schätzung, keine Laboranalyse oder Küchenprüfung. Marken, Reste und Garertrag können variieren. 1000 g Öl im Topf, aber 40 g als insgesamt aufgenommen modelliert,10 g pro Portion: Annahme, keine Messung. Mehl, Buttermilch und Salz werden trotz verworfener Reste vollständig gerechnet; die tatsächlich gegessene Hülle kann kleiner sein.",
+        "inputs": [
+          {
+            "fdc_id": 171077,
+            "description": "Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw",
+            "recipe_grams": 800,
+            "edible_grams": 800,
+            "per_100g": {
+              "fat_g": 2.62,
+              "calories": 120,
+              "saturated_fat_g": 0.563,
+              "sodium_mg": 45.0,
+              "protein_g": 22.5,
+              "sugar_g": 0.0,
+              "carbs_g": 0.0,
+              "fiber_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170874,
+            "description": "Milk, buttermilk, fluid, cultured, lowfat",
+            "recipe_grams": 100,
+            "edible_grams": 100,
+            "per_100g": {
+              "calories": 40.0,
+              "sodium_mg": 148,
+              "saturated_fat_g": 0.66,
+              "fat_g": 1.07,
+              "sugar_g": 5.36,
+              "protein_g": 3.31,
+              "fiber_g": 0.0,
+              "carbs_g": 4.79
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 169761,
+            "description": "Wheat flour, white, all-purpose, unenriched",
+            "recipe_grams": 120,
+            "edible_grams": 120,
+            "per_100g": {
+              "fat_g": 0.98,
+              "carbs_g": 76.3,
+              "calories": 364,
+              "fiber_g": 2.7,
+              "sodium_mg": 2.0,
+              "protein_g": 10.3,
+              "saturated_fat_g": 0.155,
+              "sugar_g": 0.27
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 171329,
+            "description": "Spices, paprika",
+            "recipe_grams": 3,
+            "edible_grams": 3,
+            "per_100g": {
+              "sugar_g": 10.3,
+              "fiber_g": 34.9,
+              "sodium_mg": 68.0,
+              "protein_g": 14.1,
+              "fat_g": 12.9,
+              "carbs_g": 54.0,
+              "calories": 282,
+              "saturated_fat_g": 2.14
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170931,
+            "description": "Spices, pepper, black",
+            "recipe_grams": 1,
+            "edible_grams": 1,
+            "per_100g": {
+              "fat_g": 3.26,
+              "sugar_g": 0.64,
+              "carbs_g": 64.0,
+              "calories": 251,
+              "protein_g": 10.4,
+              "fiber_g": 25.3,
+              "sodium_mg": 20.0,
+              "saturated_fat_g": 1.39
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 173468,
+            "description": "Salt, table",
+            "recipe_grams": 4,
+            "edible_grams": 4,
+            "per_100g": {
+              "fiber_g": 0.0,
+              "sodium_mg": 38800.0,
+              "saturated_fat_g": 0.0,
+              "protein_g": 0.0,
+              "fat_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 0.0,
+              "sugar_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 172336,
+            "description": "Oil, canola",
+            "recipe_grams": 1000,
+            "edible_grams": 40,
+            "per_100g": {
+              "fat_g": 100,
+              "saturated_fat_g": 7.36,
+              "protein_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 884,
+              "fiber_g": 0.0,
+              "sodium_mg": 0.0,
+              "sugar_g": 0.0
+            },
+            "basis": "assumed_retained_frying_oil_40g_not_measured"
+          }
+        ],
+        "source_url": "https://fdc.nal.usda.gov/"
+      },
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 24,
+      "total_time_minutes": 69,
+      "course": "Hauptgerichte",
+      "summary": "Hähnchen ohne Knochen mit Buttermilch und gewürztem Mehl, in zwei Durchgängen frittiert. Vier Portionen mit Temperaturprüfung und erklärter Ölretention.",
+      "content_html": "<p>Hähnchen ohne Knochen mit Buttermilch und gewürztem Mehl, in zwei Durchgängen frittiert. Vier Portionen mit Temperaturprüfung und erklärter Ölretention.</p>",
+      "keywords": [
+        "Fried Chicken nach Südstaatenart"
+      ],
+      "gallery": [
+        {
+          "url": "/recetas/receta-de-pollo-frito-sureno/portada.webp",
+          "alt": "Fried Chicken nach Südstaatenart"
+        }
+      ],
+      "published": true,
+      "editorial_status": "published"
+    },
+    {
+      "id": "c106632a-55c3-502f-aa81-9dbaf19fa2ab",
+      "recipe_group_id": "8a0876c5-e0e8-4289-a230-c99fa275590b",
+      "language": "en",
+      "slug": "southern-fried-chicken",
+      "public_path": "/en/southern-fried-chicken",
+      "source_url": null,
+      "title": "Southern-inspired fried chicken",
+      "excerpt": "Boneless chicken with buttermilk and seasoned flour, fried in two batches. Four servings, temperature checks and an explicit retained-oil estimate.",
+      "category": "Main dishes",
+      "category_slug": "platos-principales",
+      "cuisine": "Southern US-inspired",
+      "difficulty": "Medium",
+      "servings": 4,
+      "image_url": "/recetas/receta-de-pollo-frito-sureno/portada.webp",
+      "ingredients": [
+        {
+          "amount": 800,
+          "unit": "g",
+          "name": "skinless boneless chicken breast",
+          "group": "Ingredients"
+        },
+        {
+          "amount": 100,
+          "unit": "g",
+          "name": "low-fat buttermilk",
+          "group": "Ingredients"
+        },
+        {
+          "amount": 120,
+          "unit": "g",
+          "name": "plain wheat flour",
+          "group": "Ingredients"
+        },
+        {
+          "amount": 3,
+          "unit": "g",
+          "name": "sweet paprika",
+          "group": "Ingredients"
+        },
+        {
+          "amount": 1,
+          "unit": "g",
+          "name": "ground black pepper",
+          "group": "Ingredients"
+        },
+        {
+          "amount": 4,
+          "unit": "g",
+          "name": "fine salt",
+          "group": "Ingredients"
+        },
+        {
+          "amount": 1000,
+          "unit": "g",
+          "name": "canola oil for frying",
+          "group": "Ingredients"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Weigh and divide the chicken",
+          "content": "Weigh 800 g raw skinless boneless breast. Divide into eight similar pieces about 100 g each and no thicker than 2 cm; split thick sections horizontally. Do not wash chicken. Set out a raw-meat board, tongs, deep pot, rack, and thermometers for oil and meat.",
+          "image_url": "/recetas/receta-de-pollo-frito-sureno/paso-01.webp",
+          "image_alt": "Southern-inspired fried chicken: Weigh and divide the chicken"
+        },
+        {
+          "title": "Marinate in the fridge",
+          "content": "Combine chicken with 100 g buttermilk and 2 g salt in a bowl. Turn to coat, cover and refrigerate 20 minutes at 4 °C or below. Do not marinate on the counter. Wash hands and utensils that touched raw chicken; reserve clean tongs for cooked pieces.",
+          "image_url": "/recetas/receta-de-pollo-frito-sureno/paso-02.webp",
+          "image_alt": "Southern-inspired fried chicken: Marinate in the fridge"
+        },
+        {
+          "title": "Prepare seasoned flour",
+          "content": "Mix 120 g flour,3 g sweet paprika,1 g black pepper and the remaining 2 g salt in a shallow dish. Distribute seasoning well. The coating uses only seasoned flour and buttermilk, without egg, breadcrumbs or additional ingredients.",
+          "image_url": "/recetas/receta-de-pollo-frito-sureno/paso-03.webp",
+          "image_alt": "Southern-inspired fried chicken: Prepare seasoned flour"
+        },
+        {
+          "title": "Dredge the pieces",
+          "content": "Lift one piece and let excess buttermilk drip into its bowl. Press both sides into flour, gently shake off excess and place on a clean tray designated for raw chicken. Repeat with all eight pieces. Discard leftover buttermilk and flour that touched raw meat.",
+          "image_url": "/recetas/receta-de-pollo-frito-sureno/paso-04.webp",
+          "image_alt": "Southern-inspired fried chicken: Dredge the pieces"
+        },
+        {
+          "title": "Heat the oil",
+          "content": "Put 1000 g oil into a suitable deep frying pot; oil must fill no more than half its capacity. Heat to 170 °C and check with a thermometer. Keep the area dry and the handle secure. Do not add water, leave the pot unattended or cover it while frying.",
+          "image_url": "/recetas/receta-de-pollo-frito-sureno/paso-05.webp",
+          "image_alt": "Southern-inspired fried chicken: Heat the oil"
+        },
+        {
+          "title": "Fry in two batches and check",
+          "content": "Fry four pieces at a time without crowding, about 12 minutes per batch, turning halfway with tongs. Keep oil roughly between 165 and 175 °C. Use a clean thermometer in the centre of each piece’s thickest part: it must reach 74 °C. If not, continue cooking and recheck. Browning does not guarantee doneness.",
+          "image_url": "/recetas/receta-de-pollo-frito-sureno/paso-06.webp",
+          "image_alt": "Southern-inspired fried chicken: Fry in two batches and check"
+        },
+        {
+          "title": "Drain and rest",
+          "content": "Remove cooked pieces with clean tongs and place on a rack over a tray without piling them. Drain and rest 5 minutes. Do not cover, which would dampen the coating.24 minutes frying is a forecast for two batches; add any extra time needed to reach 74 °C.",
+          "image_url": "/recetas/receta-de-pollo-frito-sureno/paso-07.webp",
+          "image_alt": "Southern-inspired fried chicken: Drain and rest"
+        },
+        {
+          "title": "Serve and handle leftovers",
+          "content": "Serve two pieces per person, four servings without sides.69 minutes comprise 20 preparation,20 marinating,24 frying and 5 resting; oil heating overlaps dredging. Refrigerate leftovers within 2 hours, or 1 hour above 32 °C ambient temperature, and store at 4 °C or below. Reheat to 74 °C. Cool oil before disposal; never pour it down the drain.",
+          "image_url": "/recetas/receta-de-pollo-frito-sureno/paso-08.webp",
+          "image_alt": "Southern-inspired fried chicken: Serve and handle leftovers"
+        }
+      ],
+      "notes": "Original Southern-inspired formula, not yet kitchen tested, using boneless pieces. Contains wheat and milk. The pot’s oil is not all eaten. Nutrition assumes 40 g retained oil overall,10 g per serving, not measured. All flour, buttermilk and salt are counted despite discarded leftovers: a conservative coating estimate. Actual absorption can vary widely. No sides included. Use refrigerated leftovers within 3–4 days.",
+      "seo": {
+        "title": "Southern-inspired fried chicken: step-by-step recipe",
+        "description": "Boneless chicken with buttermilk and seasoned flour, fried in two batches. Four servings, temperature checks and an explicit retained-oil estimate.",
+        "about": "Boneless chicken with buttermilk and seasoned flour, fried in two batches. Four servings, temperature checks and an explicit retained-oil estimate.",
+        "faq": [
+          {
+            "q": "Can I use bone-in chicken?",
+            "a": "The recipe and timing use boneless pieces no thicker than 2 cm. Bone-in chicken needs a different method and calculation; check 74 °C in every piece."
+          },
+          {
+            "q": "Why does nutrition not count all 1000 g oil?",
+            "a": "It is the frying medium.40 g retained across the recipe is modelled as an unmeasured assumption; actual absorption varies."
+          },
+          {
+            "q": "Can I reuse leftover flour or marinade?",
+            "a": "No. Discard anything that touched raw chicken; do not serve it or keep it for another preparation."
+          }
+        ],
+        "image_alt": "Southern-inspired fried chicken",
+        "image_variants": [
+          "/recetas/receta-de-pollo-frito-sureno/portada-1x1.webp",
+          "/recetas/receta-de-pollo-frito-sureno/portada-4x3.webp",
+          "/recetas/receta-de-pollo-frito-sureno/portada-16x9.webp"
+        ]
+      },
+      "nutrition": {
+        "calories": 450.3,
+        "protein_g": 49.0,
+        "carbs_g": 24.7,
+        "fat_g": 15.9,
+        "saturated_fat_g": 2.1,
+        "fiber_g": 1.1,
+        "sugar_g": 1.5,
+        "sodium_mg": 516.2,
+        "serving_size": "One of 4 equal servings",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "method": "Sum of edible starting grams × USDA nutrients per 100 g, divided by 4. No unmeasured cooking losses applied. 1000 g oil in the pot, but 40 g modelled as retained across the recipe,10 g per serving: an assumption, not measured. All flour, buttermilk and salt are counted despite discarding leftovers; the eaten coating may be smaller.",
+        "note": "Estimate, not a laboratory analysis or kitchen test. Brands, leftovers and cooked yield can vary. 1000 g oil in the pot, but 40 g modelled as retained across the recipe,10 g per serving: an assumption, not measured. All flour, buttermilk and salt are counted despite discarding leftovers; the eaten coating may be smaller.",
+        "inputs": [
+          {
+            "fdc_id": 171077,
+            "description": "Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw",
+            "recipe_grams": 800,
+            "edible_grams": 800,
+            "per_100g": {
+              "fat_g": 2.62,
+              "calories": 120,
+              "saturated_fat_g": 0.563,
+              "sodium_mg": 45.0,
+              "protein_g": 22.5,
+              "sugar_g": 0.0,
+              "carbs_g": 0.0,
+              "fiber_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170874,
+            "description": "Milk, buttermilk, fluid, cultured, lowfat",
+            "recipe_grams": 100,
+            "edible_grams": 100,
+            "per_100g": {
+              "calories": 40.0,
+              "sodium_mg": 148,
+              "saturated_fat_g": 0.66,
+              "fat_g": 1.07,
+              "sugar_g": 5.36,
+              "protein_g": 3.31,
+              "fiber_g": 0.0,
+              "carbs_g": 4.79
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 169761,
+            "description": "Wheat flour, white, all-purpose, unenriched",
+            "recipe_grams": 120,
+            "edible_grams": 120,
+            "per_100g": {
+              "fat_g": 0.98,
+              "carbs_g": 76.3,
+              "calories": 364,
+              "fiber_g": 2.7,
+              "sodium_mg": 2.0,
+              "protein_g": 10.3,
+              "saturated_fat_g": 0.155,
+              "sugar_g": 0.27
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 171329,
+            "description": "Spices, paprika",
+            "recipe_grams": 3,
+            "edible_grams": 3,
+            "per_100g": {
+              "sugar_g": 10.3,
+              "fiber_g": 34.9,
+              "sodium_mg": 68.0,
+              "protein_g": 14.1,
+              "fat_g": 12.9,
+              "carbs_g": 54.0,
+              "calories": 282,
+              "saturated_fat_g": 2.14
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170931,
+            "description": "Spices, pepper, black",
+            "recipe_grams": 1,
+            "edible_grams": 1,
+            "per_100g": {
+              "fat_g": 3.26,
+              "sugar_g": 0.64,
+              "carbs_g": 64.0,
+              "calories": 251,
+              "protein_g": 10.4,
+              "fiber_g": 25.3,
+              "sodium_mg": 20.0,
+              "saturated_fat_g": 1.39
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 173468,
+            "description": "Salt, table",
+            "recipe_grams": 4,
+            "edible_grams": 4,
+            "per_100g": {
+              "fiber_g": 0.0,
+              "sodium_mg": 38800.0,
+              "saturated_fat_g": 0.0,
+              "protein_g": 0.0,
+              "fat_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 0.0,
+              "sugar_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 172336,
+            "description": "Oil, canola",
+            "recipe_grams": 1000,
+            "edible_grams": 40,
+            "per_100g": {
+              "fat_g": 100,
+              "saturated_fat_g": 7.36,
+              "protein_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 884,
+              "fiber_g": 0.0,
+              "sodium_mg": 0.0,
+              "sugar_g": 0.0
+            },
+            "basis": "assumed_retained_frying_oil_40g_not_measured"
+          }
+        ],
+        "source_url": "https://fdc.nal.usda.gov/"
+      },
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 24,
+      "total_time_minutes": 69,
+      "course": "Main dishes",
+      "summary": "Boneless chicken with buttermilk and seasoned flour, fried in two batches. Four servings, temperature checks and an explicit retained-oil estimate.",
+      "content_html": "<p>Boneless chicken with buttermilk and seasoned flour, fried in two batches. Four servings, temperature checks and an explicit retained-oil estimate.</p>",
+      "keywords": [
+        "Southern-inspired fried chicken"
+      ],
+      "gallery": [
+        {
+          "url": "/recetas/receta-de-pollo-frito-sureno/portada.webp",
+          "alt": "Southern-inspired fried chicken"
+        }
+      ],
+      "published": true,
+      "editorial_status": "published"
+    },
+    {
+      "id": "39848584-b2ae-590e-bdd2-a854efac518d",
+      "recipe_group_id": "8a0876c5-e0e8-4289-a230-c99fa275590b",
+      "language": "fr",
+      "slug": "recette-de-poulet-frit-du-sud",
+      "public_path": "/fr/recette-de-poulet-frit-du-sud",
+      "source_url": "https://manualdecocina.com/fr/recette-de-poulet-frit-du-sud/",
+      "title": "Poulet frit d’inspiration du Sud",
+      "excerpt": "Poulet désossé au lait fermenté et à la farine assaisonnée, frit en deux fournées. Quatre portions, contrôle de température et huile retenue estimée.",
+      "category": "Plats principaux",
+      "category_slug": "platos-principales",
+      "cuisine": "Inspiration du Sud des États-Unis",
+      "difficulty": "Moyenne",
+      "servings": 4,
+      "image_url": "/recetas/receta-de-pollo-frito-sureno/portada.webp",
+      "ingredients": [
+        {
+          "amount": 800,
+          "unit": "g",
+          "name": "blanc de poulet sans peau ni os",
+          "group": "Ingrédients"
+        },
+        {
+          "amount": 100,
+          "unit": "g",
+          "name": "babeurre allégé",
+          "group": "Ingrédients"
+        },
+        {
+          "amount": 120,
+          "unit": "g",
+          "name": "farine de blé ordinaire",
+          "group": "Ingrédients"
+        },
+        {
+          "amount": 3,
+          "unit": "g",
+          "name": "paprika doux",
+          "group": "Ingrédients"
+        },
+        {
+          "amount": 1,
+          "unit": "g",
+          "name": "poivre noir moulu",
+          "group": "Ingrédients"
+        },
+        {
+          "amount": 4,
+          "unit": "g",
+          "name": "sel fin",
+          "group": "Ingrédients"
+        },
+        {
+          "amount": 1000,
+          "unit": "g",
+          "name": "huile de colza pour friture",
+          "group": "Ingrédients"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Pesez et divisez le poulet",
+          "content": "Pesez 800 g de blanc cru sans peau ni os. Divisez en huit morceaux similaires d’environ 100 g et 2 cm d’épaisseur maximum ; ouvrez horizontalement les parties épaisses. Ne lavez pas le poulet. Préparez planche pour viande crue, pinces, casserole profonde, grille et thermomètres pour huile et viande.",
+          "image_url": "/recetas/receta-de-pollo-frito-sureno/paso-01.webp",
+          "image_alt": "Poulet frit d’inspiration du Sud: Pesez et divisez le poulet"
+        },
+        {
+          "title": "Marinez au froid",
+          "content": "Mettez le poulet dans un bol avec 100 g de babeurre et 2 g de sel. Mélangez pour enrober, couvrez et réfrigérez 20 minutes à 4 °C maximum. Ne marinez pas sur le plan de travail. Lavez mains et ustensiles après contact avec la viande crue ; réservez une pince propre pour les morceaux cuits.",
+          "image_url": "/recetas/receta-de-pollo-frito-sureno/paso-02.webp",
+          "image_alt": "Poulet frit d’inspiration du Sud: Marinez au froid"
+        },
+        {
+          "title": "Préparez la farine assaisonnée",
+          "content": "Mélangez 120 g de farine,3 g de paprika doux,1 g de poivre et les 2 g de sel restants dans un plat. Répartissez bien les épices. L’enrobage ne contient que farine assaisonnée et babeurre, sans œuf, chapelure ni ingrédient supplémentaire.",
+          "image_url": "/recetas/receta-de-pollo-frito-sureno/paso-03.webp",
+          "image_alt": "Poulet frit d’inspiration du Sud: Préparez la farine assaisonnée"
+        },
+        {
+          "title": "Farinez les morceaux",
+          "content": "Sortez un morceau, laissez l’excès de babeurre s’égoutter dans le bol et pressez ses deux faces dans la farine. Secouez doucement l’excédent et posez sur une plaque propre réservée au poulet cru. Répétez pour les huit morceaux. Jetez les restes de babeurre et farine ayant touché la viande crue.",
+          "image_url": "/recetas/receta-de-pollo-frito-sureno/paso-04.webp",
+          "image_alt": "Poulet frit d’inspiration du Sud: Farinez les morceaux"
+        },
+        {
+          "title": "Chauffez l’huile",
+          "content": "Versez 1000 g d’huile dans une casserole profonde adaptée à la friture ; l’huile ne doit pas dépasser la moitié de sa capacité. Chauffez à 170 °C et vérifiez au thermomètre. Gardez la zone sèche et le manche sûr. N’ajoutez pas d’eau, ne laissez pas sans surveillance et ne couvrez pas pendant la friture.",
+          "image_url": "/recetas/receta-de-pollo-frito-sureno/paso-05.webp",
+          "image_alt": "Poulet frit d’inspiration du Sud: Chauffez l’huile"
+        },
+        {
+          "title": "Faites frire en deux fournées et vérifiez",
+          "content": "Faites frire quatre morceaux à la fois sans les entasser, environ 12 minutes par fournée, en retournant à mi-cuisson avec une pince. Maintenez l’huile entre 165 et 175 °C environ. Vérifiez chaque morceau au centre le plus épais avec un thermomètre propre :74 °C requis. Sinon poursuivez et remesurez. Le doré ne prouve pas la cuisson.",
+          "image_url": "/recetas/receta-de-pollo-frito-sureno/paso-06.webp",
+          "image_alt": "Poulet frit d’inspiration du Sud: Faites frire en deux fournées et vérifiez"
+        },
+        {
+          "title": "Égouttez et laissez reposer",
+          "content": "Sortez les morceaux cuits avec une pince propre et posez-les sur une grille au-dessus d’une plaque, sans empiler. Égouttez et reposez 5 minutes. Ne couvrez pas pour ne pas humidifier l’enrobage. Les 24 minutes de friture sont prévues pour deux fournées ; ajoutez tout temps nécessaire pour 74 °C.",
+          "image_url": "/recetas/receta-de-pollo-frito-sureno/paso-07.webp",
+          "image_alt": "Poulet frit d’inspiration du Sud: Égouttez et laissez reposer"
+        },
+        {
+          "title": "Servez et gérez les restes",
+          "content": "Servez deux morceaux par personne, quatre portions sans accompagnement.69 minutes comprennent 20 de préparation,20 de marinade,24 de friture et 5 de repos ; l’huile chauffe pendant le farinage. Réfrigérez les restes sous 2 heures, ou 1 heure au-dessus de 32 °C ambiants, à 4 °C maximum. Réchauffez à 74 °C. Refroidissez l’huile avant élimination ; ne la versez pas dans l’évier.",
+          "image_url": "/recetas/receta-de-pollo-frito-sureno/paso-08.webp",
+          "image_alt": "Poulet frit d’inspiration du Sud: Servez et gérez les restes"
+        }
+      ],
+      "notes": "Formule originale d’inspiration du Sud, pas encore testée en cuisine, sans os. Contient blé et lait. Toute l’huile de la casserole n’est pas consommée. La nutrition suppose 40 g d’huile retenue au total,10 g par portion, sans mesure. Toute la farine, le babeurre et le sel sont comptés malgré les restes jetés : estimation prudente de l’enrobage. L’absorption réelle peut varier fortement. Aucun accompagnement inclus. Consommez les restes réfrigérés sous 3–4 jours.",
+      "seo": {
+        "title": "Poulet frit d’inspiration du Sud: recette étape par étape",
+        "description": "Poulet désossé au lait fermenté et à la farine assaisonnée, frit en deux fournées. Quatre portions, contrôle de température et huile retenue estimée.",
+        "about": "Poulet désossé au lait fermenté et à la farine assaisonnée, frit en deux fournées. Quatre portions, contrôle de température et huile retenue estimée.",
+        "faq": [
+          {
+            "q": "Puis-je utiliser du poulet avec os ?",
+            "a": "Les temps concernent des morceaux désossés de 2 cm maximum. Avec os, il faut une autre méthode et un autre calcul ; vérifiez 74 °C dans chaque morceau."
+          },
+          {
+            "q": "Pourquoi ne pas compter les 1000 g d’huile ?",
+            "a": "C’est le milieu de friture.40 g retenus dans toute la recette sont modélisés, hypothèse non mesurée ; l’absorption réelle varie."
+          },
+          {
+            "q": "Puis-je réutiliser farine ou marinade restantes ?",
+            "a": "Non. Jetez les restes ayant touché le poulet cru ; ne les servez pas et ne les gardez pas pour une autre préparation."
+          }
+        ],
+        "image_alt": "Poulet frit d’inspiration du Sud",
+        "image_variants": [
+          "/recetas/receta-de-pollo-frito-sureno/portada-1x1.webp",
+          "/recetas/receta-de-pollo-frito-sureno/portada-4x3.webp",
+          "/recetas/receta-de-pollo-frito-sureno/portada-16x9.webp"
+        ]
+      },
+      "nutrition": {
+        "calories": 450.3,
+        "protein_g": 49.0,
+        "carbs_g": 24.7,
+        "fat_g": 15.9,
+        "saturated_fat_g": 2.1,
+        "fiber_g": 1.1,
+        "sugar_g": 1.5,
+        "sodium_mg": 516.2,
+        "serving_size": "Une des 4 portions égales",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "method": "Somme des poids comestibles initiaux en grammes × nutriments USDA pour 100 g, divisée par 4. Aucune perte de cuisson non mesurée appliquée. 1000 g d’huile dans la casserole, mais 40 g retenus modélisés au total,10 g par portion : hypothèse non mesurée. Farine, babeurre et sel sont comptés intégralement malgré les restes jetés ; l’enrobage consommé peut être moindre.",
+        "note": "Estimation, pas une analyse de laboratoire ni un essai en cuisine. Marques, restes et rendement peuvent varier. 1000 g d’huile dans la casserole, mais 40 g retenus modélisés au total,10 g par portion : hypothèse non mesurée. Farine, babeurre et sel sont comptés intégralement malgré les restes jetés ; l’enrobage consommé peut être moindre.",
+        "inputs": [
+          {
+            "fdc_id": 171077,
+            "description": "Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw",
+            "recipe_grams": 800,
+            "edible_grams": 800,
+            "per_100g": {
+              "fat_g": 2.62,
+              "calories": 120,
+              "saturated_fat_g": 0.563,
+              "sodium_mg": 45.0,
+              "protein_g": 22.5,
+              "sugar_g": 0.0,
+              "carbs_g": 0.0,
+              "fiber_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170874,
+            "description": "Milk, buttermilk, fluid, cultured, lowfat",
+            "recipe_grams": 100,
+            "edible_grams": 100,
+            "per_100g": {
+              "calories": 40.0,
+              "sodium_mg": 148,
+              "saturated_fat_g": 0.66,
+              "fat_g": 1.07,
+              "sugar_g": 5.36,
+              "protein_g": 3.31,
+              "fiber_g": 0.0,
+              "carbs_g": 4.79
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 169761,
+            "description": "Wheat flour, white, all-purpose, unenriched",
+            "recipe_grams": 120,
+            "edible_grams": 120,
+            "per_100g": {
+              "fat_g": 0.98,
+              "carbs_g": 76.3,
+              "calories": 364,
+              "fiber_g": 2.7,
+              "sodium_mg": 2.0,
+              "protein_g": 10.3,
+              "saturated_fat_g": 0.155,
+              "sugar_g": 0.27
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 171329,
+            "description": "Spices, paprika",
+            "recipe_grams": 3,
+            "edible_grams": 3,
+            "per_100g": {
+              "sugar_g": 10.3,
+              "fiber_g": 34.9,
+              "sodium_mg": 68.0,
+              "protein_g": 14.1,
+              "fat_g": 12.9,
+              "carbs_g": 54.0,
+              "calories": 282,
+              "saturated_fat_g": 2.14
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170931,
+            "description": "Spices, pepper, black",
+            "recipe_grams": 1,
+            "edible_grams": 1,
+            "per_100g": {
+              "fat_g": 3.26,
+              "sugar_g": 0.64,
+              "carbs_g": 64.0,
+              "calories": 251,
+              "protein_g": 10.4,
+              "fiber_g": 25.3,
+              "sodium_mg": 20.0,
+              "saturated_fat_g": 1.39
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 173468,
+            "description": "Salt, table",
+            "recipe_grams": 4,
+            "edible_grams": 4,
+            "per_100g": {
+              "fiber_g": 0.0,
+              "sodium_mg": 38800.0,
+              "saturated_fat_g": 0.0,
+              "protein_g": 0.0,
+              "fat_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 0.0,
+              "sugar_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 172336,
+            "description": "Oil, canola",
+            "recipe_grams": 1000,
+            "edible_grams": 40,
+            "per_100g": {
+              "fat_g": 100,
+              "saturated_fat_g": 7.36,
+              "protein_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 884,
+              "fiber_g": 0.0,
+              "sodium_mg": 0.0,
+              "sugar_g": 0.0
+            },
+            "basis": "assumed_retained_frying_oil_40g_not_measured"
+          }
+        ],
+        "source_url": "https://fdc.nal.usda.gov/"
+      },
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 24,
+      "total_time_minutes": 69,
+      "course": "Plats principaux",
+      "summary": "Poulet désossé au lait fermenté et à la farine assaisonnée, frit en deux fournées. Quatre portions, contrôle de température et huile retenue estimée.",
+      "content_html": "<p>Poulet désossé au lait fermenté et à la farine assaisonnée, frit en deux fournées. Quatre portions, contrôle de température et huile retenue estimée.</p>",
+      "keywords": [
+        "Poulet frit d’inspiration du Sud"
+      ],
+      "gallery": [
+        {
+          "url": "/recetas/receta-de-pollo-frito-sureno/portada.webp",
+          "alt": "Poulet frit d’inspiration du Sud"
+        }
+      ],
+      "published": true,
+      "editorial_status": "published"
+    },
+    {
+      "id": "bf2a7001-d3c3-575e-afc4-8ef62a7e264a",
+      "recipe_group_id": "8a0876c5-e0e8-4289-a230-c99fa275590b",
+      "language": "it",
+      "slug": "pollo-fritto-del-sud",
+      "public_path": "/it/pollo-fritto-del-sud",
+      "source_url": null,
+      "title": "Pollo fritto ispirato al Sud degli Stati Uniti",
+      "excerpt": "Pollo disossato con latticello e farina speziata, fritto in due turni. Quattro porzioni con controllo della temperatura e stima esplicita dell’olio trattenuto.",
+      "category": "Secondi piatti",
+      "category_slug": "platos-principales",
+      "cuisine": "Ispirazione del Sud degli Stati Uniti",
+      "difficulty": "Media",
+      "servings": 4,
+      "image_url": "/recetas/receta-de-pollo-frito-sureno/portada.webp",
+      "ingredients": [
+        {
+          "amount": 800,
+          "unit": "g",
+          "name": "petto di pollo senza pelle né ossa",
+          "group": "Ingredienti"
+        },
+        {
+          "amount": 100,
+          "unit": "g",
+          "name": "latticello magro",
+          "group": "Ingredienti"
+        },
+        {
+          "amount": 120,
+          "unit": "g",
+          "name": "farina di frumento comune",
+          "group": "Ingredienti"
+        },
+        {
+          "amount": 3,
+          "unit": "g",
+          "name": "paprika dolce",
+          "group": "Ingredienti"
+        },
+        {
+          "amount": 1,
+          "unit": "g",
+          "name": "pepe nero macinato",
+          "group": "Ingredienti"
+        },
+        {
+          "amount": 4,
+          "unit": "g",
+          "name": "sale fino",
+          "group": "Ingredienti"
+        },
+        {
+          "amount": 1000,
+          "unit": "g",
+          "name": "olio di canola per friggere",
+          "group": "Ingredienti"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Pesa e dividi il pollo",
+          "content": "Pesa 800 g di petto crudo senza pelle né ossa. Dividi in otto pezzi simili di circa 100 g e massimo 2 cm di spessore; apri orizzontalmente le parti spesse. Non lavare il pollo. Prepara tagliere per carne cruda, pinze, pentola profonda, griglia e termometri per olio e carne.",
+          "image_url": "/recetas/receta-de-pollo-frito-sureno/paso-01.webp",
+          "image_alt": "Pollo fritto ispirato al Sud degli Stati Uniti: Pesa e dividi il pollo"
+        },
+        {
+          "title": "Marina in frigorifero",
+          "content": "Metti il pollo in una ciotola con 100 g di latticello e 2 g di sale. Mescola per rivestirlo, copri e refrigera 20 minuti a 4 °C o meno. Non marinare sul piano di lavoro. Lava mani e utensili dopo contatto con carne cruda; riserva pinze pulite per i pezzi cotti.",
+          "image_url": "/recetas/receta-de-pollo-frito-sureno/paso-02.webp",
+          "image_alt": "Pollo fritto ispirato al Sud degli Stati Uniti: Marina in frigorifero"
+        },
+        {
+          "title": "Prepara la farina speziata",
+          "content": "Mescola 120 g di farina,3 g di paprika dolce,1 g di pepe nero e i 2 g di sale rimasti in un piatto. Distribuisci bene le spezie. La crosta usa solo farina speziata e latticello, senza uovo, pangrattato o altri ingredienti.",
+          "image_url": "/recetas/receta-de-pollo-frito-sureno/paso-03.webp",
+          "image_alt": "Pollo fritto ispirato al Sud degli Stati Uniti: Prepara la farina speziata"
+        },
+        {
+          "title": "Infarina i pezzi",
+          "content": "Solleva un pezzo, fai sgocciolare il latticello in eccesso nella ciotola e premilo nella farina sui due lati. Scuoti delicatamente l’eccesso e posa su una teglia pulita destinata al pollo crudo. Ripeti per tutti gli otto pezzi. Getta latticello e farina rimasti dopo contatto con carne cruda.",
+          "image_url": "/recetas/receta-de-pollo-frito-sureno/paso-04.webp",
+          "image_alt": "Pollo fritto ispirato al Sud degli Stati Uniti: Infarina i pezzi"
+        },
+        {
+          "title": "Scalda l’olio",
+          "content": "Versa 1000 g di olio in una pentola profonda adatta alla frittura; non deve superare metà della capacità. Scalda a 170 °C e verifica con termometro. Mantieni asciutta la zona e sicuro il manico. Non aggiungere acqua, non lasciare la pentola incustodita e non coprire durante la frittura.",
+          "image_url": "/recetas/receta-de-pollo-frito-sureno/paso-05.webp",
+          "image_alt": "Pollo fritto ispirato al Sud degli Stati Uniti: Scalda l’olio"
+        },
+        {
+          "title": "Friggi in due turni e verifica",
+          "content": "Friggi quattro pezzi alla volta senza affollarli, circa 12 minuti per turno, girando con pinze a metà. Mantieni l’olio circa tra 165 e 175 °C. Controlla ogni pezzo con termometro pulito al centro della parte più spessa: deve raggiungere 74 °C. Altrimenti continua e rimisura. La doratura non garantisce cottura.",
+          "image_url": "/recetas/receta-de-pollo-frito-sureno/paso-06.webp",
+          "image_alt": "Pollo fritto ispirato al Sud degli Stati Uniti: Friggi in due turni e verifica"
+        },
+        {
+          "title": "Scola e lascia riposare",
+          "content": "Togli i pezzi cotti con pinze pulite e disponi su griglia sopra una teglia, senza sovrapporre. Lascia scolare e riposare 5 minuti, senza coprire per non inumidire la crosta. I 24 minuti di frittura sono previsti per due turni; aggiungi il tempo necessario per raggiungere 74 °C.",
+          "image_url": "/recetas/receta-de-pollo-frito-sureno/paso-07.webp",
+          "image_alt": "Pollo fritto ispirato al Sud degli Stati Uniti: Scola e lascia riposare"
+        },
+        {
+          "title": "Servi e gestisci gli avanzi",
+          "content": "Servi due pezzi a persona, quattro porzioni senza contorni.69 minuti comprendono 20 di preparazione,20 di marinatura,24 di frittura e 5 di riposo; l’olio si scalda durante l’infarinatura. Refrigerare gli avanzi entro 2 ore, oppure 1 ora sopra 32 °C ambientali, a 4 °C o meno. Riscalda a 74 °C. Raffredda l’olio prima di smaltirlo; non versarlo nello scarico.",
+          "image_url": "/recetas/receta-de-pollo-frito-sureno/paso-08.webp",
+          "image_alt": "Pollo fritto ispirato al Sud degli Stati Uniti: Servi e gestisci gli avanzi"
+        }
+      ],
+      "notes": "Formula originale ispirata al Sud degli Stati Uniti, non ancora testata in cucina, senza ossa. Contiene frumento e latte. L’olio della pentola non viene consumato tutto. La nutrizione ipotizza 40 g di olio trattenuto complessivi,10 g per porzione, non misurati. Farina, latticello e sale sono contati integralmente nonostante gli scarti: stima prudente del rivestimento. L’assorbimento reale può variare molto. Contorni esclusi. Consuma gli avanzi refrigerati entro 3–4 giorni.",
+      "seo": {
+        "title": "Pollo fritto ispirato al Sud degli Stati Uniti: ricetta passo passo",
+        "description": "Pollo disossato con latticello e farina speziata, fritto in due turni. Quattro porzioni con controllo della temperatura e stima esplicita dell’olio trattenuto.",
+        "about": "Pollo disossato con latticello e farina speziata, fritto in due turni. Quattro porzioni con controllo della temperatura e stima esplicita dell’olio trattenuto.",
+        "faq": [
+          {
+            "q": "Posso usare pollo con osso?",
+            "a": "Tempi e ricetta usano pezzi disossati di massimo 2 cm. Con osso servono altro metodo e calcolo; verifica 74 °C in ogni pezzo."
+          },
+          {
+            "q": "Perché non contare tutti i 1000 g di olio?",
+            "a": "Sono il mezzo di frittura. Si modellano 40 g trattenuti nell’intera ricetta, ipotesi non misurata; l’assorbimento reale varia."
+          },
+          {
+            "q": "Posso riutilizzare farina o marinata?",
+            "a": "No. Getta i residui che hanno toccato pollo crudo; non servirli né conservarli per altre preparazioni."
+          }
+        ],
+        "image_alt": "Pollo fritto ispirato al Sud degli Stati Uniti",
+        "image_variants": [
+          "/recetas/receta-de-pollo-frito-sureno/portada-1x1.webp",
+          "/recetas/receta-de-pollo-frito-sureno/portada-4x3.webp",
+          "/recetas/receta-de-pollo-frito-sureno/portada-16x9.webp"
+        ]
+      },
+      "nutrition": {
+        "calories": 450.3,
+        "protein_g": 49.0,
+        "carbs_g": 24.7,
+        "fat_g": 15.9,
+        "saturated_fat_g": 2.1,
+        "fiber_g": 1.1,
+        "sugar_g": 1.5,
+        "sodium_mg": 516.2,
+        "serving_size": "Una delle 4 porzioni uguali",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "method": "Somma dei grammi comestibili iniziali × nutrienti USDA per 100 g, divisa per 4. Nessuna perdita di cottura non misurata applicata. 1000 g di olio nella pentola, ma 40 g trattenuti modellati complessivamente,10 g per porzione: ipotesi non misurata. Si contano tutta farina, latticello e sale nonostante gli scarti; la crosta consumata può essere minore.",
+        "note": "Stima, non analisi di laboratorio né prova in cucina. Marche, residui e resa possono variare. 1000 g di olio nella pentola, ma 40 g trattenuti modellati complessivamente,10 g per porzione: ipotesi non misurata. Si contano tutta farina, latticello e sale nonostante gli scarti; la crosta consumata può essere minore.",
+        "inputs": [
+          {
+            "fdc_id": 171077,
+            "description": "Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw",
+            "recipe_grams": 800,
+            "edible_grams": 800,
+            "per_100g": {
+              "fat_g": 2.62,
+              "calories": 120,
+              "saturated_fat_g": 0.563,
+              "sodium_mg": 45.0,
+              "protein_g": 22.5,
+              "sugar_g": 0.0,
+              "carbs_g": 0.0,
+              "fiber_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170874,
+            "description": "Milk, buttermilk, fluid, cultured, lowfat",
+            "recipe_grams": 100,
+            "edible_grams": 100,
+            "per_100g": {
+              "calories": 40.0,
+              "sodium_mg": 148,
+              "saturated_fat_g": 0.66,
+              "fat_g": 1.07,
+              "sugar_g": 5.36,
+              "protein_g": 3.31,
+              "fiber_g": 0.0,
+              "carbs_g": 4.79
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 169761,
+            "description": "Wheat flour, white, all-purpose, unenriched",
+            "recipe_grams": 120,
+            "edible_grams": 120,
+            "per_100g": {
+              "fat_g": 0.98,
+              "carbs_g": 76.3,
+              "calories": 364,
+              "fiber_g": 2.7,
+              "sodium_mg": 2.0,
+              "protein_g": 10.3,
+              "saturated_fat_g": 0.155,
+              "sugar_g": 0.27
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 171329,
+            "description": "Spices, paprika",
+            "recipe_grams": 3,
+            "edible_grams": 3,
+            "per_100g": {
+              "sugar_g": 10.3,
+              "fiber_g": 34.9,
+              "sodium_mg": 68.0,
+              "protein_g": 14.1,
+              "fat_g": 12.9,
+              "carbs_g": 54.0,
+              "calories": 282,
+              "saturated_fat_g": 2.14
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170931,
+            "description": "Spices, pepper, black",
+            "recipe_grams": 1,
+            "edible_grams": 1,
+            "per_100g": {
+              "fat_g": 3.26,
+              "sugar_g": 0.64,
+              "carbs_g": 64.0,
+              "calories": 251,
+              "protein_g": 10.4,
+              "fiber_g": 25.3,
+              "sodium_mg": 20.0,
+              "saturated_fat_g": 1.39
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 173468,
+            "description": "Salt, table",
+            "recipe_grams": 4,
+            "edible_grams": 4,
+            "per_100g": {
+              "fiber_g": 0.0,
+              "sodium_mg": 38800.0,
+              "saturated_fat_g": 0.0,
+              "protein_g": 0.0,
+              "fat_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 0.0,
+              "sugar_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 172336,
+            "description": "Oil, canola",
+            "recipe_grams": 1000,
+            "edible_grams": 40,
+            "per_100g": {
+              "fat_g": 100,
+              "saturated_fat_g": 7.36,
+              "protein_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 884,
+              "fiber_g": 0.0,
+              "sodium_mg": 0.0,
+              "sugar_g": 0.0
+            },
+            "basis": "assumed_retained_frying_oil_40g_not_measured"
+          }
+        ],
+        "source_url": "https://fdc.nal.usda.gov/"
+      },
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 24,
+      "total_time_minutes": 69,
+      "course": "Secondi piatti",
+      "summary": "Pollo disossato con latticello e farina speziata, fritto in due turni. Quattro porzioni con controllo della temperatura e stima esplicita dell’olio trattenuto.",
+      "content_html": "<p>Pollo disossato con latticello e farina speziata, fritto in due turni. Quattro porzioni con controllo della temperatura e stima esplicita dell’olio trattenuto.</p>",
+      "keywords": [
+        "Pollo fritto ispirato al Sud degli Stati Uniti"
+      ],
+      "gallery": [
+        {
+          "url": "/recetas/receta-de-pollo-frito-sureno/portada.webp",
+          "alt": "Pollo fritto ispirato al Sud degli Stati Uniti"
+        }
+      ],
+      "published": true,
+      "editorial_status": "published"
+    },
+    {
+      "id": "c89a49d7-d2ea-525e-9d92-3f548ed0cb5f",
+      "recipe_group_id": "8a0876c5-e0e8-4289-a230-c99fa275590b",
+      "language": "ja",
+      "slug": "南部風フライドチキン",
+      "public_path": "/ja/南部風フライドチキン",
+      "source_url": null,
+      "title": "南部風のフライドチキン",
+      "excerpt": "骨なし鶏肉をバターミルクと味付きの粉で衣付けし、2回に分けて揚げます。4人分、温度確認と油の保持量の推定を明記します。",
+      "category": "主菜",
+      "category_slug": "platos-principales",
+      "cuisine": "米国南部風",
+      "difficulty": "普通",
+      "servings": 4,
+      "image_url": "/recetas/receta-de-pollo-frito-sureno/portada.webp",
+      "ingredients": [
+        {
+          "amount": 800,
+          "unit": "g",
+          "name": "鶏むね肉（皮・骨なし）",
+          "group": "材料"
+        },
+        {
+          "amount": 100,
+          "unit": "g",
+          "name": "低脂肪バターミルク",
+          "group": "材料"
+        },
+        {
+          "amount": 120,
+          "unit": "g",
+          "name": "普通小麦粉",
+          "group": "材料"
+        },
+        {
+          "amount": 3,
+          "unit": "g",
+          "name": "辛くないパプリカパウダー",
+          "group": "材料"
+        },
+        {
+          "amount": 1,
+          "unit": "g",
+          "name": "黒こしょう（粉）",
+          "group": "材料"
+        },
+        {
+          "amount": 4,
+          "unit": "g",
+          "name": "細粒の塩",
+          "group": "材料"
+        },
+        {
+          "amount": 1000,
+          "unit": "g",
+          "name": "揚げ油用キャノーラ油",
+          "group": "材料"
+        }
+      ],
+      "steps": [
+        {
+          "title": "鶏肉を量って分ける",
+          "content": "皮・骨なしの生むね肉800 gを量ります。約100 gずつの同程度の8個に分け、厚さは最大2 cmにします。厚い部分は横に開きます。鶏肉は洗いません。生肉用まな板、トング、深鍋、網、油用と肉用の温度計を用意します。",
+          "image_url": "/recetas/receta-de-pollo-frito-sureno/paso-01.webp",
+          "image_alt": "南部風のフライドチキン: 鶏肉を量って分ける"
+        },
+        {
+          "title": "冷蔵庫で漬け込む",
+          "content": "鶏肉をボウルに入れ、バターミルク100 gと塩2 gを加えて全体になじませます。ふたをして4 °C以下で20分冷蔵します。台の上で漬け込みません。生肉に触れた手と器具を洗い、加熱後の肉用に清潔なトングを用意します。",
+          "image_url": "/recetas/receta-de-pollo-frito-sureno/paso-02.webp",
+          "image_alt": "南部風のフライドチキン: 冷蔵庫で漬け込む"
+        },
+        {
+          "title": "味付きの粉を作る",
+          "content": "浅い皿で小麦粉120 g、パプリカ3 g、黒こしょう1 g、残りの塩2 gをよく混ぜます。味を均等にします。衣は味付きの粉とバターミルクのみで、卵、パン粉、追加材料は使いません。",
+          "image_url": "/recetas/receta-de-pollo-frito-sureno/paso-03.webp",
+          "image_alt": "南部風のフライドチキン: 味付きの粉を作る"
+        },
+        {
+          "title": "鶏肉に粉を付ける",
+          "content": "1個取り出し、余分なバターミルクをボウルへ落としてから、粉に両面を押し付けます。余分な粉を軽く落とし、生肉用の清潔なトレーに置きます。8個すべて繰り返します。生肉に触れた残りのバターミルクと粉は捨てます。",
+          "image_url": "/recetas/receta-de-pollo-frito-sureno/paso-04.webp",
+          "image_alt": "南部風のフライドチキン: 鶏肉に粉を付ける"
+        },
+        {
+          "title": "油を温める",
+          "content": "揚げ物用の適切な深鍋に油1000 gを入れます。油は鍋容量の半分を超えないようにします。170 °Cまで温め、温度計で確認します。周囲を乾かし、取っ手を安全な向きにします。水を加えず、鍋を放置せず、揚げる間はふたをしません。",
+          "image_url": "/recetas/receta-de-pollo-frito-sureno/paso-05.webp",
+          "image_alt": "南部風のフライドチキン: 油を温める"
+        },
+        {
+          "title": "2回に分けて揚げて測る",
+          "content": "重ならないよう4個ずつ、1回約12分揚げ、途中でトングで返します。油は約165–175 °Cを保ちます。各肉の最も厚い部分の中心を清潔な温度計で測り、74 °Cにします。達しない場合は加熱を続け再確認します。衣の色だけでは火の通りを保証できません。",
+          "image_url": "/recetas/receta-de-pollo-frito-sureno/paso-06.webp",
+          "image_alt": "南部風のフライドチキン: 2回に分けて揚げて測る"
+        },
+        {
+          "title": "油を切って休ませる",
+          "content": "加熱済みの肉を清潔なトングで取り出し、トレーの上の網に重ねず並べます。5分油を切って休ませます。衣が湿らないよう覆いません。揚げ時間24分は2回分の目安です。74 °Cに達するための追加時間があれば加算します。",
+          "image_url": "/recetas/receta-de-pollo-frito-sureno/paso-07.webp",
+          "image_alt": "南部風のフライドチキン: 油を切って休ませる"
+        },
+        {
+          "title": "盛り付けて残りを扱う",
+          "content": "1人2個、付け合わせなしの4人分を盛ります。69分は準備20分、漬け込み20分、揚げ24分、休ませ5分で、油の加熱は粉付けと並行します。残りは2時間以内、室温32 °C超では1時間以内に冷蔵し、4 °C以下で保存します。74 °Cまで再加熱します。油は冷ましてから処分し、排水口へ流しません。",
+          "image_url": "/recetas/receta-de-pollo-frito-sureno/paso-08.webp",
+          "image_alt": "南部風のフライドチキン: 盛り付けて残りを扱う"
+        }
+      ],
+      "notes": "南部風に独自作成した骨なし肉の配合で、調理試験は未実施です。小麦と乳を含みます。鍋の油は全量食べません。栄養計算では全体に40 g、1人分10 gの油が残ると仮定していますが、実測ではありません。捨てる残りがあっても粉、バターミルク、塩は全量計算した保守的な衣の推定です。実際の吸油量は大きく変わります。付け合わせは含みません。冷蔵した残りは3–4日以内に食べます。",
+      "seo": {
+        "title": "南部風のフライドチキン: 作り方",
+        "description": "骨なし鶏肉をバターミルクと味付きの粉で衣付けし、2回に分けて揚げます。4人分、温度確認と油の保持量の推定を明記します。",
+        "about": "骨なし鶏肉をバターミルクと味付きの粉で衣付けし、2回に分けて揚げます。4人分、温度確認と油の保持量の推定を明記します。",
+        "faq": [
+          {
+            "q": "骨付き肉でも作れますか？",
+            "a": "この方法と時間は厚さ最大2 cmの骨なし肉用です。骨付きでは別の方法と計算が必要です。各肉が74 °Cに達することを確認します。"
+          },
+          {
+            "q": "油1000 gをすべて栄養に計上しないのはなぜですか？",
+            "a": "揚げるための油だからです。料理全体に40 g残るという未測定の仮定を使い、実際の吸油量は変わります。"
+          },
+          {
+            "q": "残った粉や漬け液を再使用できますか？",
+            "a": "できません。生肉に触れた残りは捨て、食べたり別の調理用に保存したりしません。"
+          }
+        ],
+        "image_alt": "南部風のフライドチキン",
+        "image_variants": [
+          "/recetas/receta-de-pollo-frito-sureno/portada-1x1.webp",
+          "/recetas/receta-de-pollo-frito-sureno/portada-4x3.webp",
+          "/recetas/receta-de-pollo-frito-sureno/portada-16x9.webp"
+        ]
+      },
+      "nutrition": {
+        "calories": 450.3,
+        "protein_g": 49.0,
+        "carbs_g": 24.7,
+        "fat_g": 15.9,
+        "saturated_fat_g": 2.1,
+        "fiber_g": 1.1,
+        "sugar_g": 1.5,
+        "sodium_mg": 516.2,
+        "serving_size": "全量の4分の1",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "method": "可食部の初期重量g × USDAの100 g当たり栄養値を合計し、4人分で割ります。未測定の加熱損失は補正しません。 鍋の油1000 gのうち、全体に40 g、1人分10 g残ると仮定します。測定値ではありません。廃棄する残りがあっても粉、バターミルク、塩は全量計算しており、実際の衣は少ない場合があります。",
+        "note": "推定値で、実験室分析や調理試験の値ではありません。製品、残量、調理後の収量で変わります。 鍋の油1000 gのうち、全体に40 g、1人分10 g残ると仮定します。測定値ではありません。廃棄する残りがあっても粉、バターミルク、塩は全量計算しており、実際の衣は少ない場合があります。",
+        "inputs": [
+          {
+            "fdc_id": 171077,
+            "description": "Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw",
+            "recipe_grams": 800,
+            "edible_grams": 800,
+            "per_100g": {
+              "fat_g": 2.62,
+              "calories": 120,
+              "saturated_fat_g": 0.563,
+              "sodium_mg": 45.0,
+              "protein_g": 22.5,
+              "sugar_g": 0.0,
+              "carbs_g": 0.0,
+              "fiber_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170874,
+            "description": "Milk, buttermilk, fluid, cultured, lowfat",
+            "recipe_grams": 100,
+            "edible_grams": 100,
+            "per_100g": {
+              "calories": 40.0,
+              "sodium_mg": 148,
+              "saturated_fat_g": 0.66,
+              "fat_g": 1.07,
+              "sugar_g": 5.36,
+              "protein_g": 3.31,
+              "fiber_g": 0.0,
+              "carbs_g": 4.79
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 169761,
+            "description": "Wheat flour, white, all-purpose, unenriched",
+            "recipe_grams": 120,
+            "edible_grams": 120,
+            "per_100g": {
+              "fat_g": 0.98,
+              "carbs_g": 76.3,
+              "calories": 364,
+              "fiber_g": 2.7,
+              "sodium_mg": 2.0,
+              "protein_g": 10.3,
+              "saturated_fat_g": 0.155,
+              "sugar_g": 0.27
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 171329,
+            "description": "Spices, paprika",
+            "recipe_grams": 3,
+            "edible_grams": 3,
+            "per_100g": {
+              "sugar_g": 10.3,
+              "fiber_g": 34.9,
+              "sodium_mg": 68.0,
+              "protein_g": 14.1,
+              "fat_g": 12.9,
+              "carbs_g": 54.0,
+              "calories": 282,
+              "saturated_fat_g": 2.14
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170931,
+            "description": "Spices, pepper, black",
+            "recipe_grams": 1,
+            "edible_grams": 1,
+            "per_100g": {
+              "fat_g": 3.26,
+              "sugar_g": 0.64,
+              "carbs_g": 64.0,
+              "calories": 251,
+              "protein_g": 10.4,
+              "fiber_g": 25.3,
+              "sodium_mg": 20.0,
+              "saturated_fat_g": 1.39
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 173468,
+            "description": "Salt, table",
+            "recipe_grams": 4,
+            "edible_grams": 4,
+            "per_100g": {
+              "fiber_g": 0.0,
+              "sodium_mg": 38800.0,
+              "saturated_fat_g": 0.0,
+              "protein_g": 0.0,
+              "fat_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 0.0,
+              "sugar_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 172336,
+            "description": "Oil, canola",
+            "recipe_grams": 1000,
+            "edible_grams": 40,
+            "per_100g": {
+              "fat_g": 100,
+              "saturated_fat_g": 7.36,
+              "protein_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 884,
+              "fiber_g": 0.0,
+              "sodium_mg": 0.0,
+              "sugar_g": 0.0
+            },
+            "basis": "assumed_retained_frying_oil_40g_not_measured"
+          }
+        ],
+        "source_url": "https://fdc.nal.usda.gov/"
+      },
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 24,
+      "total_time_minutes": 69,
+      "course": "主菜",
+      "summary": "骨なし鶏肉をバターミルクと味付きの粉で衣付けし、2回に分けて揚げます。4人分、温度確認と油の保持量の推定を明記します。",
+      "content_html": "<p>骨なし鶏肉をバターミルクと味付きの粉で衣付けし、2回に分けて揚げます。4人分、温度確認と油の保持量の推定を明記します。</p>",
+      "keywords": [
+        "南部風のフライドチキン"
+      ],
+      "gallery": [
+        {
+          "url": "/recetas/receta-de-pollo-frito-sureno/portada.webp",
+          "alt": "南部風のフライドチキン"
+        }
+      ],
+      "published": true,
+      "editorial_status": "published"
+    },
+    {
+      "id": "afd51d1b-5772-5fea-a128-bddb91f455ae",
+      "recipe_group_id": "8a0876c5-e0e8-4289-a230-c99fa275590b",
+      "language": "pt",
+      "slug": "frango-frito-estilo-sul",
+      "public_path": "/pt/frango-frito-estilo-sul",
+      "source_url": null,
+      "title": "Frango frito de inspiração sulista",
+      "excerpt": "Frango sem osso com buttermilk e farinha temperada, frito em duas etapas. Quatro porções, controle de temperatura e óleo retido estimado explicitamente.",
+      "category": "Pratos principais",
+      "category_slug": "platos-principales",
+      "cuisine": "Inspiração do sul dos Estados Unidos",
+      "difficulty": "Média",
+      "servings": 4,
+      "image_url": "/recetas/receta-de-pollo-frito-sureno/portada.webp",
+      "ingredients": [
+        {
+          "amount": 800,
+          "unit": "g",
+          "name": "peito de frango sem pele e sem osso",
+          "group": "Ingredientes"
+        },
+        {
+          "amount": 100,
+          "unit": "g",
+          "name": "buttermilk com baixo teor de gordura",
+          "group": "Ingredientes"
+        },
+        {
+          "amount": 120,
+          "unit": "g",
+          "name": "farinha de trigo comum",
+          "group": "Ingredientes"
+        },
+        {
+          "amount": 3,
+          "unit": "g",
+          "name": "páprica doce",
+          "group": "Ingredientes"
+        },
+        {
+          "amount": 1,
+          "unit": "g",
+          "name": "pimenta-do-reino moída",
+          "group": "Ingredientes"
+        },
+        {
+          "amount": 4,
+          "unit": "g",
+          "name": "sal fino",
+          "group": "Ingredientes"
+        },
+        {
+          "amount": 1000,
+          "unit": "g",
+          "name": "óleo de canola para fritar",
+          "group": "Ingredientes"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Pese e divida o frango",
+          "content": "Pese 800 g de peito cru sem pele e sem osso. Divida em oito pedaços semelhantes de cerca de 100 g e no máximo 2 cm de espessura; abra horizontalmente as partes grossas. Não lave o frango. Separe tábua para carne crua, pinças, panela funda, grade e termômetros para óleo e carne.",
+          "image_url": "/recetas/receta-de-pollo-frito-sureno/paso-01.webp",
+          "image_alt": "Frango frito de inspiração sulista: Pese e divida o frango"
+        },
+        {
+          "title": "Marine na geladeira",
+          "content": "Coloque os pedaços em tigela com 100 g de buttermilk e 2 g de sal. Misture para cobrir, tampe e refrigere 20 minutos a 4 °C ou menos. Não marine na bancada. Lave mãos e utensílios que tocaram carne crua; reserve pinças limpas para os pedaços cozidos.",
+          "image_url": "/recetas/receta-de-pollo-frito-sureno/paso-02.webp",
+          "image_alt": "Frango frito de inspiração sulista: Marine na geladeira"
+        },
+        {
+          "title": "Prepare a farinha temperada",
+          "content": "Misture 120 g de farinha,3 g de páprica doce,1 g de pimenta-do-reino e os 2 g restantes de sal em travessa. Distribua bem o tempero. A cobertura usa apenas farinha temperada e buttermilk, sem ovo, farinha de rosca ou ingredientes extras.",
+          "image_url": "/recetas/receta-de-pollo-frito-sureno/paso-03.webp",
+          "image_alt": "Frango frito de inspiração sulista: Prepare a farinha temperada"
+        },
+        {
+          "title": "Empane os pedaços",
+          "content": "Retire um pedaço, deixe escorrer o excesso de buttermilk na tigela e pressione os dois lados na farinha. Sacuda delicadamente o excesso e coloque em bandeja limpa destinada a frango cru. Repita com os oito. Descarte sobras de buttermilk e farinha que tocaram carne crua.",
+          "image_url": "/recetas/receta-de-pollo-frito-sureno/paso-04.webp",
+          "image_alt": "Frango frito de inspiração sulista: Empane os pedaços"
+        },
+        {
+          "title": "Aqueça o óleo",
+          "content": "Coloque 1000 g de óleo em panela funda adequada para fritura; o óleo não deve superar metade da capacidade. Aqueça a 170 °C e confira com termômetro. Mantenha a área seca e o cabo seguro. Não ponha água, não deixe sem vigilância e não tampe enquanto frita.",
+          "image_url": "/recetas/receta-de-pollo-frito-sureno/paso-05.webp",
+          "image_alt": "Frango frito de inspiração sulista: Aqueça o óleo"
+        },
+        {
+          "title": "Frite em duas etapas e confira",
+          "content": "Frite quatro pedaços por vez sem amontoar, cerca de 12 minutos por etapa, virando com pinça na metade. Mantenha o óleo aproximadamente entre 165 e 175 °C. Confira cada pedaço com termômetro limpo no centro da parte mais grossa: deve atingir 74 °C. Caso contrário, continue e meça novamente. Dourar não garante cocção.",
+          "image_url": "/recetas/receta-de-pollo-frito-sureno/paso-06.webp",
+          "image_alt": "Frango frito de inspiração sulista: Frite em duas etapas e confira"
+        },
+        {
+          "title": "Escorra e descanse",
+          "content": "Retire os pedaços cozidos com pinças limpas e coloque em grade sobre bandeja, sem empilhar. Deixe escorrer e descansar 5 minutos; não cubra para não umedecer a crosta. Os 24 minutos de fritura são previsão para duas etapas; acrescente o tempo necessário para atingir 74 °C.",
+          "image_url": "/recetas/receta-de-pollo-frito-sureno/paso-07.webp",
+          "image_alt": "Frango frito de inspiração sulista: Escorra e descanse"
+        },
+        {
+          "title": "Sirva e cuide das sobras",
+          "content": "Sirva dois pedaços por pessoa, quatro porções sem acompanhamento. Os 69 minutos somam 20 de preparo,20 de marinada,24 de fritura e 5 de descanso; aquecer o óleo ocorre junto do empanamento. Refrigere sobras em até 2 horas, ou 1 hora acima de 32 °C ambiente, a 4 °C ou menos. Reaqueça a 74 °C. Esfrie o óleo antes de descartar; não jogue no ralo.",
+          "image_url": "/recetas/receta-de-pollo-frito-sureno/paso-08.webp",
+          "image_alt": "Frango frito de inspiração sulista: Sirva e cuide das sobras"
+        }
+      ],
+      "notes": "Fórmula original de inspiração sulista, ainda sem teste de cozinha, sem osso. Contém trigo e leite. O óleo da panela não é todo consumido. A nutrição supõe 40 g retidos no total,10 g por porção, não medidos. Toda farinha, buttermilk e sal são contados apesar das sobras descartadas: estimativa conservadora da cobertura. A absorção real pode variar bastante. Não inclui acompanhamento. Consuma sobras refrigeradas em 3–4 dias.",
+      "seo": {
+        "title": "Frango frito de inspiração sulista: receita passo a passo",
+        "description": "Frango sem osso com buttermilk e farinha temperada, frito em duas etapas. Quatro porções, controle de temperatura e óleo retido estimado explicitamente.",
+        "about": "Frango sem osso com buttermilk e farinha temperada, frito em duas etapas. Quatro porções, controle de temperatura e óleo retido estimado explicitamente.",
+        "faq": [
+          {
+            "q": "Posso usar frango com osso?",
+            "a": "A receita e os tempos usam pedaços sem osso de no máximo 2 cm. Com osso exige outro método e cálculo; confira 74 °C em cada pedaço."
+          },
+          {
+            "q": "Por que a nutrição não conta os 1000 g de óleo?",
+            "a": "É o meio de fritura. Modelam-se 40 g retidos em toda a receita, hipótese não medida; a absorção real varia."
+          },
+          {
+            "q": "Posso reutilizar farinha ou marinada restantes?",
+            "a": "Não. Descarte sobras que tocaram frango cru; não sirva nem guarde para outra preparação."
+          }
+        ],
+        "image_alt": "Frango frito de inspiração sulista",
+        "image_variants": [
+          "/recetas/receta-de-pollo-frito-sureno/portada-1x1.webp",
+          "/recetas/receta-de-pollo-frito-sureno/portada-4x3.webp",
+          "/recetas/receta-de-pollo-frito-sureno/portada-16x9.webp"
+        ]
+      },
+      "nutrition": {
+        "calories": 450.3,
+        "protein_g": 49.0,
+        "carbs_g": 24.7,
+        "fat_g": 15.9,
+        "saturated_fat_g": 2.1,
+        "fiber_g": 1.1,
+        "sugar_g": 1.5,
+        "sodium_mg": 516.2,
+        "serving_size": "Uma de 4 porções iguais",
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018)",
+        "method": "Soma dos gramas comestíveis iniciais × nutrientes USDA por 100 g, dividida por 4. Não se aplicam perdas de cocção não medidas. 1000 g de óleo na panela, mas 40 g retidos modelados no total,10 g por porção: hipótese não medida. Toda farinha, buttermilk e sal são contados apesar do descarte; a cobertura consumida pode ser menor.",
+        "note": "Estimativa, não análise de laboratório nem teste de cozinha. Marcas, resíduos e rendimento podem variar. 1000 g de óleo na panela, mas 40 g retidos modelados no total,10 g por porção: hipótese não medida. Toda farinha, buttermilk e sal são contados apesar do descarte; a cobertura consumida pode ser menor.",
+        "inputs": [
+          {
+            "fdc_id": 171077,
+            "description": "Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw",
+            "recipe_grams": 800,
+            "edible_grams": 800,
+            "per_100g": {
+              "fat_g": 2.62,
+              "calories": 120,
+              "saturated_fat_g": 0.563,
+              "sodium_mg": 45.0,
+              "protein_g": 22.5,
+              "sugar_g": 0.0,
+              "carbs_g": 0.0,
+              "fiber_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170874,
+            "description": "Milk, buttermilk, fluid, cultured, lowfat",
+            "recipe_grams": 100,
+            "edible_grams": 100,
+            "per_100g": {
+              "calories": 40.0,
+              "sodium_mg": 148,
+              "saturated_fat_g": 0.66,
+              "fat_g": 1.07,
+              "sugar_g": 5.36,
+              "protein_g": 3.31,
+              "fiber_g": 0.0,
+              "carbs_g": 4.79
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 169761,
+            "description": "Wheat flour, white, all-purpose, unenriched",
+            "recipe_grams": 120,
+            "edible_grams": 120,
+            "per_100g": {
+              "fat_g": 0.98,
+              "carbs_g": 76.3,
+              "calories": 364,
+              "fiber_g": 2.7,
+              "sodium_mg": 2.0,
+              "protein_g": 10.3,
+              "saturated_fat_g": 0.155,
+              "sugar_g": 0.27
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 171329,
+            "description": "Spices, paprika",
+            "recipe_grams": 3,
+            "edible_grams": 3,
+            "per_100g": {
+              "sugar_g": 10.3,
+              "fiber_g": 34.9,
+              "sodium_mg": 68.0,
+              "protein_g": 14.1,
+              "fat_g": 12.9,
+              "carbs_g": 54.0,
+              "calories": 282,
+              "saturated_fat_g": 2.14
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 170931,
+            "description": "Spices, pepper, black",
+            "recipe_grams": 1,
+            "edible_grams": 1,
+            "per_100g": {
+              "fat_g": 3.26,
+              "sugar_g": 0.64,
+              "carbs_g": 64.0,
+              "calories": 251,
+              "protein_g": 10.4,
+              "fiber_g": 25.3,
+              "sodium_mg": 20.0,
+              "saturated_fat_g": 1.39
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 173468,
+            "description": "Salt, table",
+            "recipe_grams": 4,
+            "edible_grams": 4,
+            "per_100g": {
+              "fiber_g": 0.0,
+              "sodium_mg": 38800.0,
+              "saturated_fat_g": 0.0,
+              "protein_g": 0.0,
+              "fat_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 0.0,
+              "sugar_g": 0.0
+            },
+            "basis": "initial_edible_formula_grams"
+          },
+          {
+            "fdc_id": 172336,
+            "description": "Oil, canola",
+            "recipe_grams": 1000,
+            "edible_grams": 40,
+            "per_100g": {
+              "fat_g": 100,
+              "saturated_fat_g": 7.36,
+              "protein_g": 0.0,
+              "carbs_g": 0.0,
+              "calories": 884,
+              "fiber_g": 0.0,
+              "sodium_mg": 0.0,
+              "sugar_g": 0.0
+            },
+            "basis": "assumed_retained_frying_oil_40g_not_measured"
+          }
+        ],
+        "source_url": "https://fdc.nal.usda.gov/"
+      },
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 24,
+      "total_time_minutes": 69,
+      "course": "Pratos principais",
+      "summary": "Frango sem osso com buttermilk e farinha temperada, frito em duas etapas. Quatro porções, controle de temperatura e óleo retido estimado explicitamente.",
+      "content_html": "<p>Frango sem osso com buttermilk e farinha temperada, frito em duas etapas. Quatro porções, controle de temperatura e óleo retido estimado explicitamente.</p>",
+      "keywords": [
+        "Frango frito de inspiração sulista"
+      ],
+      "gallery": [
+        {
+          "url": "/recetas/receta-de-pollo-frito-sureno/portada.webp",
+          "alt": "Frango frito de inspiração sulista"
+        }
+      ],
+      "published": true,
+      "editorial_status": "published"
     }
   ],
   "publication_blockers": [
-    "IMAGES_PENDING",
-    "SIX_LOCALIZATIONS_PENDING",
+    "MEDIA_FINAL_VALIDATION",
     "CI_DEPLOY_DB_CACHE_LIVE_QA_PENDING"
   ],
   "steps_sha256": "830980bfa1374cf1e239cc340bab9c53d6f4420e59cf2b751c30acb13aa14ccc"
