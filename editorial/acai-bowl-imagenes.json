@@ -38,10 +38,121 @@
       "prompt": "Use case: photorealistic-natural. Asset type: original culinary recipe photograph, landscape4:3. Pale matte kitchen worktop, soft natural daylight, plain white ceramic bowls, real fruit texture. Deep dark purple acai puree, pale banana, red strawberries, golden oat granola clusters and ivory almond slices. No text,labels,logos,watermark,collage,juice glass,milk,yogurt,honey,syrup,coconut,blueberries,flowers or unrelated ingredients. Thick smooth deep purple acai and banana cream divided between two plain white ceramic bowls on worktop, each half full, with a plain spoon gently leveling surface of front bowl. No toppings yet. Small separate dishes of banana,strawberries,granola,almond slices sit clearly outside bowls in background. The mixture holds spoon ridges and does not look like juice."
     }
   ],
-  "images": [],
-  "originals": [],
-  "state": "ES_FROZEN_GENERATION_PENDING",
+  "images": [
+    {
+      "asset": "portada.webp",
+      "path": "public/recetas/acai-bowl/portada.webp",
+      "sha256": "9680bcd6bb3fa176bf8086786932352d77634fa7772760e6f3a84446e1383a85",
+      "git_blob_sha": "1223fcd8cef234e91fd9c609dfa8e9e7da139e60",
+      "bytes": 124366,
+      "width": 1280,
+      "height": 960,
+      "public_path": "/recetas/acai-bowl/portada.webp",
+      "original": "portada.png",
+      "visual_qa": "PASS"
+    },
+    {
+      "asset": "portada-1x1.webp",
+      "path": "public/recetas/acai-bowl/portada-1x1.webp",
+      "sha256": "7890078e126309939b12de53f27af74b1d4e92da0a9115851adcb0330d352b6f",
+      "git_blob_sha": "0a50c81056c4578396bd3944777c9a7eb4a56d4b",
+      "bytes": 113676,
+      "width": 1024,
+      "height": 1024,
+      "public_path": "/recetas/acai-bowl/portada-1x1.webp",
+      "original": "portada.png",
+      "visual_qa": "PASS"
+    },
+    {
+      "asset": "portada-4x3.webp",
+      "path": "public/recetas/acai-bowl/portada-4x3.webp",
+      "sha256": "9680bcd6bb3fa176bf8086786932352d77634fa7772760e6f3a84446e1383a85",
+      "git_blob_sha": "1223fcd8cef234e91fd9c609dfa8e9e7da139e60",
+      "bytes": 124366,
+      "width": 1280,
+      "height": 960,
+      "public_path": "/recetas/acai-bowl/portada-4x3.webp",
+      "original": "portada.png",
+      "visual_qa": "PASS"
+    },
+    {
+      "asset": "portada-16x9.webp",
+      "path": "public/recetas/acai-bowl/portada-16x9.webp",
+      "sha256": "6b104a4c35f4f12ec22c20d69c50ec209db840fe368518673df81af112b7f140",
+      "git_blob_sha": "170e953226e0a15ba04dfe5f37e54879db4cd304",
+      "bytes": 100744,
+      "width": 1280,
+      "height": 720,
+      "public_path": "/recetas/acai-bowl/portada-16x9.webp",
+      "original": "portada.png",
+      "visual_qa": "PASS"
+    },
+    {
+      "asset": "paso-01.webp",
+      "path": "public/recetas/acai-bowl/paso-01.webp",
+      "sha256": "190caa91de56e6e0dfca43b0a0a1dc7a064eac8ef4eb2c54224cb2508029dd0d",
+      "git_blob_sha": "4c35de848381707ad6cbedd528f9f7927f590ee5",
+      "bytes": 79550,
+      "width": 1280,
+      "height": 960,
+      "public_path": "/recetas/acai-bowl/paso-01.webp",
+      "original": "paso-01.png",
+      "visual_qa": "PASS"
+    },
+    {
+      "asset": "paso-02.webp",
+      "path": "public/recetas/acai-bowl/paso-02.webp",
+      "sha256": "6c1bd6b2ba0606b48f607b286bbae21068fd7f3dae57b13c22c1366fb419b949",
+      "git_blob_sha": "ad1f21073fa9a5fad5cfe53135c495c8960c17c7",
+      "bytes": 109648,
+      "width": 1280,
+      "height": 960,
+      "public_path": "/recetas/acai-bowl/paso-02.webp",
+      "original": "paso-02.png",
+      "visual_qa": "PASS"
+    }
+  ],
+  "originals": [
+    {
+      "asset": "portada.png",
+      "path": "public/recetas/acai-bowl/originals/portada.png",
+      "sha256": "68995a9b55b2902d413bdf5c46401dc3ef199759802a3c57bb8175f96bafa4ca",
+      "git_blob_sha": "e1bbf4c012c9265dcb9a6284a558c12e0241468f",
+      "bytes": 2246637,
+      "width": 1448,
+      "height": 1086,
+      "phase": 6,
+      "visual_qa": "PASS",
+      "source": "built-in ImageGen"
+    },
+    {
+      "asset": "paso-01.png",
+      "path": "public/recetas/acai-bowl/originals/paso-01.png",
+      "sha256": "edb3bfe82378a3f4646d49ca3190898e771610132494b7c13b5f894a34811369",
+      "git_blob_sha": "92c8c7910b94a4dc9ad9e92f3366492191bce1bc",
+      "bytes": 2069339,
+      "width": 1448,
+      "height": 1086,
+      "phase": 1,
+      "visual_qa": "PASS",
+      "source": "built-in ImageGen"
+    },
+    {
+      "asset": "paso-02.png",
+      "path": "public/recetas/acai-bowl/originals/paso-02.png",
+      "sha256": "5331c4c129c2867e4f056824b2aa9f3c1ee7d01aedd8a07377e530905409197e",
+      "git_blob_sha": "5f47d541445d2944a59ea556e2579d9690a16620",
+      "bytes": 2118323,
+      "width": 1448,
+      "height": 1086,
+      "phase": 2,
+      "visual_qa": "PASS",
+      "source": "built-in ImageGen"
+    }
+  ],
+  "state": "IMAGES_PARTIAL",
   "last_step_reuses_cover": true,
   "original_images_required": 6,
-  "published_webp_required": 9
+  "published_webp_required": 9,
+  "cover_variant_visual_qa": "PASS_PRIMARY_FRONT_BOWL_COMPLETE_ALL4_REAR_SECONDARY_PARTLY_CROPPED"
 }
