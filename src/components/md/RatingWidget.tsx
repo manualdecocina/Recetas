@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import type { MdLanguage } from './md-types';
 import { getMdCopy } from '@/lib/copy';
 import { countLabel } from '@/lib/plural';
@@ -45,29 +45,41 @@ export default function RatingWidget({ recipeId, lang, ratingCount, ratingSum }:
   const [myVote, setMyVote] = useState<number | null>(null);
   const [hover, setHover] = useState(0);
   const [sending, setSending] = useState(false);
+  const [error, setError] = useState('');
+  const inFlight = useRef(false);
 
   useEffect(() => { setMyVote(readMyVote(recipeId)); }, [recipeId]);
 
   const average = count > 0 ? sum / count : 0;
 
   async function vote(rating: number) {
-    if (sending || myVote !== null) return;
+    if (inFlight.current || myVote !== null) return;
+    inFlight.current = true;
     setSending(true);
-    setMyVote(rating);
-    saveMyVote(recipeId, rating);
+    setError('');
     try {
       const res = await fetch('/api/rate-recipe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ recipeId, rating }),
       });
-      if (res.ok) {
-        const data = await res.json();
-        if (typeof data.rating_count === 'number') setCount(data.rating_count);
-        if (typeof data.rating_sum === 'number') setSum(data.rating_sum);
+      if (res.status === 409) {
+        setError(t.ratingDuplicate);
+        return;
       }
-    } catch { /* Sin red: el voto queda guardado localmente pero no se contabilizó en el servidor. */ }
-    setSending(false);
+      if (!res.ok) throw new Error('rating rejected');
+      const data = await res.json();
+      if (typeof data.rating_count !== 'number' || typeof data.rating_sum !== 'number') throw new Error('invalid rating response');
+      setMyVote(rating);
+      saveMyVote(recipeId, rating);
+      setCount(data.rating_count);
+      setSum(data.rating_sum);
+    } catch {
+      setError(t.ratingError);
+    } finally {
+      inFlight.current = false;
+      setSending(false);
+    }
   }
 
   const displayValue = hover || myVote || 0;
@@ -75,7 +87,7 @@ export default function RatingWidget({ recipeId, lang, ratingCount, ratingSum }:
   return (
     <div className="md-rating-widget">
       <span className="md-rating-heading">{t.ratingHeading}</span>
-      <div className="md-rating-stars" role={myVote === null ? 'radiogroup' : undefined} aria-label={t.ratingHeading}>
+      <div className="md-rating-stars" role="group" aria-label={t.ratingHeading}>
         {[1, 2, 3, 4, 5].map((n) => (
           <button
             key={n}
@@ -83,7 +95,7 @@ export default function RatingWidget({ recipeId, lang, ratingCount, ratingSum }:
             className="md-rating-star"
             aria-label={`${n} ${t.ratingStarLabel}`}
             aria-pressed={myVote === n}
-            disabled={myVote !== null}
+            disabled={sending || myVote !== null}
             onMouseEnter={() => myVote === null && setHover(n)}
             onMouseLeave={() => setHover(0)}
             onClick={() => vote(n)}
@@ -97,6 +109,7 @@ export default function RatingWidget({ recipeId, lang, ratingCount, ratingSum }:
           ? `${average.toFixed(1)} ${t.ratingAverageOf5} · ${countLabel(lang, count, 'vote')}`
           : t.ratingNoVotesYet}
       </span>
+      {error && <span className="md-rating-error" role="alert">{error}</span>}
       {myVote !== null && <span className="md-rating-thanks">{t.ratingThanks}</span>}
     </div>
   );
