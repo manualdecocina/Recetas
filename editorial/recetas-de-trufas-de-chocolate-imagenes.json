@@ -139,6 +139,30 @@
       "public_path": "/recetas/recetas-de-trufas-de-chocolate/paso-04.webp",
       "original": "paso-04.png",
       "visual_qa": "PASS"
+    },
+    {
+      "asset": "paso-05.webp",
+      "path": "public/recetas/recetas-de-trufas-de-chocolate/paso-05.webp",
+      "sha256": "ef061193239b5ed68720f35d49226d9917fdff53dbcd04969ebe7a488690f846",
+      "git_blob_sha": "35f2a66ec9fa999d4ab9ebc3c0d8302ab42062a1",
+      "bytes": 127812,
+      "width": 1280,
+      "height": 960,
+      "public_path": "/recetas/recetas-de-trufas-de-chocolate/paso-05.webp",
+      "original": "paso-05.png",
+      "visual_qa": "PASS"
+    },
+    {
+      "asset": "paso-06.webp",
+      "path": "public/recetas/recetas-de-trufas-de-chocolate/paso-06.webp",
+      "sha256": "aff9364d3cb83e2d348f57b2befe81ed863d08bb7848b799163908603891244f",
+      "git_blob_sha": "03e4133187910742749cd75ea04c4d2a5b1ab37f",
+      "bytes": 85132,
+      "width": 1280,
+      "height": 960,
+      "public_path": "/recetas/recetas-de-trufas-de-chocolate/paso-06.webp",
+      "original": "paso-06.png",
+      "visual_qa": "PASS"
     }
   ],
   "originals": [
@@ -201,9 +225,33 @@
       "phase": 4,
       "visual_qa": "PASS",
       "source": "built-in ImageGen"
+    },
+    {
+      "asset": "paso-05.png",
+      "path": "public/recetas/recetas-de-trufas-de-chocolate/originals/paso-05.png",
+      "sha256": "b76c271e0ccd04d54966e53368d1368d138346e402f9802175a1f8eb537b0690",
+      "git_blob_sha": "389a1c459bce63e847eb17df16a8bf869a9fefbc",
+      "bytes": 2198836,
+      "width": 1448,
+      "height": 1086,
+      "phase": 5,
+      "visual_qa": "PASS",
+      "source": "built-in ImageGen"
+    },
+    {
+      "asset": "paso-06.png",
+      "path": "public/recetas/recetas-de-trufas-de-chocolate/originals/paso-06.png",
+      "sha256": "351f535765a8a4113e1d2d10a8fda024525c82c01bb8713b098765af51683586",
+      "git_blob_sha": "09f536fd53cbb79898a5aa99cf7a03612ac1ee76",
+      "bytes": 1917221,
+      "width": 1448,
+      "height": 1086,
+      "phase": 6,
+      "visual_qa": "PASS",
+      "source": "built-in ImageGen"
     }
   ],
-  "state": "IMAGES_PARTIAL",
+  "state": "ALL_MEDIA_VISUAL_QA_PASS",
   "last_step_reuses_cover": true,
   "targeted_edits": [
     {
@@ -213,6 +261,22 @@
       "selected_original": "portada.png",
       "rejected_source": "exec-d90d4fc4-b6d9-4857-bf6e-308f75b12c48.png",
       "visual_qa": "PASS20PIECES"
+    },
+    {
+      "phase": 5,
+      "reason": "Original showed20pieces ontray plusone beingcoated.",
+      "edit": "Removedonlybottomrighttraypiece;19trayplus1beingcoated=20.",
+      "selected_original": "paso-05.png",
+      "rejected_source": "exec-7a8427f0-5908-4120-b58d-be61e7bff326.png",
+      "visual_qa": "PASS"
+    },
+    {
+      "phase": 6,
+      "reason": "Initialfridgecontainer cover ambiguous.",
+      "edit": "Addedclearlyclosedtransparentlid only,20pieces unchanged.",
+      "selected_original": "paso-06.png",
+      "rejected_source": "exec-49d9eec7-0a8a-4e04-95c5-1b24af55399c.png",
+      "visual_qa": "PASS"
     }
   ],
   "cover_variant_visual_qa": "PASS_ALL4_CROPS_PRIMARY20_TRUFFLES_AND_PLATE_COMPLETE"
