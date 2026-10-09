@@ -637,21 +637,78 @@
       }
     ],
     "sql_file": "scripts/publish-lote03-20261008.sql",
-    "sql_sha256": "3d28ca783fcdfd2a5ccf1690854faff47de9d3b956594976bcb27e0a93d7f574",
+    "sql_sha256": "48cdf6637ca77bd6962848b05e429851c85d3bb353f78b9d167b57cca526ae44",
     "plan_file": "editorial/lote-03-plan-20261008.json",
     "prepublication_qa": "PASS_METADATA_105_ROWS_174_WEBP_127_PNG_PENDING_CI_FILE_DECODE",
-    "next_action": "Create batch03 PR; require quality and complete media validator CI green. Then merge expected SHA, observe174deployed hashes before atomic SQL, cache and105pages/global QA.",
+    "next_action": "Merge guarded CASE correction after green CI, observe174media again, retry atomicSQL then cache/live QA.",
     "pr_number": 95,
     "pr_url": "https://github.com/manualdecocina/Recetas/pull/95",
-    "pr_head_sha": "810e70ee4d5d13a3df1c129be41be211bd03b199"
+    "pr_head_sha": "810e70ee4d5d13a3df1c129be41be211bd03b199",
+    "ci": {
+      "head_sha": "1449fb544ed468d9bfdf3468684b6af71cf81e6b",
+      "runs": [
+        {
+          "id": 37864292824,
+          "name": "lote02-prepublication",
+          "conclusion": "success"
+        },
+        {
+          "id": 37864292823,
+          "name": "lote03-prepublication",
+          "conclusion": "success"
+        },
+        {
+          "id": 37864292807,
+          "name": "quality",
+          "conclusion": "success"
+        }
+      ],
+      "validation_artifact_id": 11586759774,
+      "verified_at": "2026-10-09T00:23:27.979Z"
+    },
+    "merge_sha": "67eb6034dab046e8ae77f0810e5754b292593365",
+    "database_backup_file": "editorial/backups/lote03-prepublication-db-20261009.json",
+    "database_backup_git_blob": "ed6b5b613cf60e447cfb9fea128c642944e0219e",
+    "database_baseline_recheck": "PASS_ALL15_MD5_EXPECTED_UNPUBLISHED",
+    "deploy": {
+      "merge_sha": "67eb6034dab046e8ae77f0810e5754b292593365",
+      "run_id": 37864529272,
+      "job_id": 113607981039,
+      "artifact_id": 11587089674,
+      "checked_at": "2026-10-09T00:25:48.806780+00:00",
+      "assets": 174,
+      "passed": 174,
+      "errors": 0,
+      "evidence": "Observed HTTP200,image/webp and exact SHA256 for all174; initially404 then confirmed actual deployment."
+    },
+    "before_unrelated": {
+      "unrelated_rows": 938,
+      "unrelated_sha": "77913769e2eaf154e55bc8b36673bfc3",
+      "unrelated_published_es": 124
+    },
+    "error": {
+      "stage": "DB",
+      "code": "42601",
+      "cause": "Unparenthesized CASE expression in initial IF; corrected before any row write.",
+      "rollback_verified": {
+        "batch_rows": 15,
+        "batch_published": 0,
+        "published_es": 124
+      },
+      "resolved_in_source": true,
+      "pending": "Correction PR, CI and observed deployment before retry."
+    },
+    "sql_compilation_qa": "PASS_ALL17_DO_BLOCKS_IN_READ_ONLY_TRANSACTION_ROLLED_BACK_WITH_EARLY_RETURNS",
+    "correction_pr_number": 96,
+    "sql_schema_qa": "PASS_EXPLAIN_UPDATE_AND_INSERT_AGAINST_REAL_SCHEMA_NO_EXECUTION; category_slug remains package metadata, actual category label stored."
   },
   "next_candidate_position": 32,
   "run_lease": {
     "owner": "work-fish-localization-20261008T2334",
     "status": "active",
     "acquired_at": "2026-10-08T23:33:59.326Z",
-    "renewed_at": "2026-10-09T00:20:34.723Z",
-    "expires_at": "2026-10-09T01:50:07.358Z",
+    "renewed_at": "2026-10-09T00:29:31.601Z",
+    "expires_at": "2026-10-09T01:54:07.817Z",
     "previous_owner": "automation-continuation-20261009-fish-and-chips",
     "reason": "Continue six Fish and Chips localizations, then remaining two recipes and full15 publication."
   },
@@ -733,7 +790,7 @@
     "next_action": "Finish remaining four: chocolateflan,fishandchips,tomatosauce,spinachtortilla. Preserve first11packages. Full15CI/deploy/atomicDB/cache/liveQA remains."
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z",
-  "updated_at": "2026-10-09T00:20:34.723Z",
+  "updated_at": "2026-10-09T00:29:31.601Z",
   "completed_batches": [
     {
       "id": "lote-02-20261008",

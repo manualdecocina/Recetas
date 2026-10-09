@@ -193,3 +193,11 @@ Remote media recheck PASS: all21 assets positive (minimum81424 bytes) and exact 
 ## 2026-10-09T00:20:07.357Z — Quince preparadas; publicación pendiente
 
 15/15 paquetes completos en siete idiomas, 0/15 publicados. Se preservan fuentes únicas y medios existentes. Plan: editorial/lote-03-plan-20261008.json; 174 WebP y127 PNG. QA de metadatos pasa105filas, nutrición estimada trazable y rutas; CI debe comprobar los301 archivos por bytes/SHA256/formato/dimensiones. SQL transaccional completo scripts/publish-lote03-20261008.sql SHA2563d28ca783fcdfd2a5ccf1690854faff47de9d3b956594976bcb27e0a93d7f574, no ejecutado. Base real124ESpublicadas, grupos reservados15ESfalse, colisiones[] comprobadas. Siguiente: PR y CI, merge con SHA esperado, observar174medios desplegadosHTTP200+hash; SQL15grupos→105filas y139ES, revalidación/QA105páginas y auditoría global única con recuento real. No abrir04 antes de cerrar03. Lease renovado por productor actual, CAS.
+
+
+## 2026-10-09T00:28:13.883Z — Corrección de SQL antes de publicación
+
+PR95 integrado67eb6034dab046e8ae77f0810e5754b292593365, CI verde con301archivos exactos, artifact11586759774. Despliegue observado run37864529272/artifact11587089674:174/174HTTP200+SHA256 a00:25:48Z. SQL original abortó42601 por CASE sin paréntesis en IF inicial: confirmado15filas/0publicadas y124ES. Correcciónf0ebf272d072ede62f785281007562b56ad7ebcf519c15c4fe1a089b1299714f;17bloquesDO compilan en transacción READONLY+RETURNprevio+ROLLBACK, sin mutación. Respaldo previo editorial/backups/lote03-prepublication-db-20261009.json. Se requiere PR/CI/merge de corrección y nueva observación174 antes del reintento. No ocultar deuda: lote03sigue0/15publicadas.
+
+
+Última corrección en PR96: se contrastaron campos con information_schema y triggers reales. public.recipes no tiene category_slug; queda como metadato editorial validado y se almacena category exacta. EXPLAIN de UPDATE e INSERT pasa sin ejecutarlos. SQL final1930016bytes/SHA25648cdf6637ca77bd6962848b05e429851c85d3bb353f78b9d167b57cca526ae44, sustituyehashes anteriores. No se ha publicado ninguna receta del lote.
