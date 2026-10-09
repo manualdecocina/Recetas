@@ -5,7 +5,7 @@ plan=json.loads((root/'editorial/lote-05-plan-20261009.json').read_text())
 base='https://preview.manualdecocina.com'
 def check(asset):
  try:
-  request=urllib.request.Request(base+asset['path'],headers={'Cache-Control':'no-cache','User-Agent':'ManualDeCocina-Lote04-QA'})
+  request=urllib.request.Request(base+asset['path'],headers={'Cache-Control':'no-cache','User-Agent':'ManualDeCocina-Lote05-QA'})
   with urllib.request.urlopen(request,timeout=45) as response:
    data=response.read();status=response.status;kind=response.headers.get('Content-Type','')
   digest=hashlib.sha256(data).hexdigest()
