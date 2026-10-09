@@ -108,6 +108,30 @@
       "public_path": "/recetas/receta-de-muffins-de-chocolate/paso-01.webp",
       "original": "paso-01.png",
       "visual_qa": "PASS"
+    },
+    {
+      "asset": "paso-02.webp",
+      "path": "public/recetas/receta-de-muffins-de-chocolate/paso-02.webp",
+      "sha256": "049185cfaef59381d3b5dceab69d1696148a63a717cb5e772d9e981b82da9d01",
+      "git_blob_sha": "13c425fd5e8526966e3d1c115a2eeae241762e80",
+      "bytes": 184148,
+      "width": 1280,
+      "height": 960,
+      "public_path": "/recetas/receta-de-muffins-de-chocolate/paso-02.webp",
+      "original": "paso-02.png",
+      "visual_qa": "PASS"
+    },
+    {
+      "asset": "paso-03.webp",
+      "path": "public/recetas/receta-de-muffins-de-chocolate/paso-03.webp",
+      "sha256": "6dac81d7cc22d63a33a6296ec8488aa3708ae3a768ad3cd644a2bb72bd24315d",
+      "git_blob_sha": "c85a1327abb7e4ea913312fba331a422cf734ddb",
+      "bytes": 94196,
+      "width": 1280,
+      "height": 960,
+      "public_path": "/recetas/receta-de-muffins-de-chocolate/paso-03.webp",
+      "original": "paso-03.png",
+      "visual_qa": "PASS"
     }
   ],
   "originals": [
@@ -136,10 +160,54 @@
       "visual_qa": "PASS",
       "source": "built-in ImageGen",
       "review": "PASS: exactly12 lined empty wells and10 separate ingredient types; chocolate split into larger and smaller bowls, scale blank."
+    },
+    {
+      "asset": "paso-02.png",
+      "path": "public/recetas/receta-de-muffins-de-chocolate/originals/paso-02.png",
+      "sha256": "a67c1a4e2c129797122e39bd9085a4dade62884bc2627d39616776dd348f0cfa",
+      "git_blob_sha": "09669be5130e32aee50cb82214fc8b657589d1f3",
+      "bytes": 2580364,
+      "width": 1448,
+      "height": 1086,
+      "phase": 2,
+      "visual_qa": "PASS",
+      "source": "built-in ImageGen"
+    },
+    {
+      "asset": "paso-03.png",
+      "path": "public/recetas/receta-de-muffins-de-chocolate/originals/paso-03.png",
+      "sha256": "93caf92e4e7d8ccb11cd637d256121571e2e4d0a1acc22b77dc119396e97f398",
+      "git_blob_sha": "ebd2716c3c5f98d531297b34be884c0035479d94",
+      "bytes": 1975297,
+      "width": 1448,
+      "height": 1086,
+      "phase": 3,
+      "visual_qa": "PASS",
+      "source": "built-in ImageGen"
     }
   ],
   "state": "IMAGES_PARTIAL",
   "last_step_reuses_cover": true,
   "original_images_required": 8,
-  "published_webp_required": 11
+  "published_webp_required": 11,
+  "edits": [
+    {
+      "phase": 2,
+      "prompt": "Precise object edit. Edit only the left background of this photograph: remove the entire muffin pan with filled paper cases on the left, replace it with the same clean pale countertop. Keep the white bowl with dry flour/cocoa mixture, metal whisk, hand, chocolate pieces in the upper right bowl, lighting and camera angle unchanged. This is recipe phase02 before any liquid or chocolate is mixed in, so no muffin pan, wet batter, filled cases or baked muffins may appear anywhere. No added objects, no text.",
+      "reason": "Removed prematurely filled pan from dry ingredient phase",
+      "qa": "PASS_TARGETED_EDIT_NO_STEP_CHANGE"
+    },
+    {
+      "phase": 3,
+      "prompt": "Precise object edit: remove ONLY every solid chocolate piece/chunk from the dry brown powder in the rear white bowl. The rear bowl must contain a uniform mixture of dry flour, cocoa powder, sugar, baking powder and salt with NO chocolate pieces. Leave front bowl pale yellow wet egg/milk/oil/vanilla mixture, whisk, hand, lighting, bowls, counter and perspective unchanged. The chocolate is not added until a later phase. No new objects.",
+      "reason": "Removed premature chocolate pieces from dry bowl in wet mixing phase",
+      "qa": "PASS_TARGETED_EDIT_NO_STEP_CHANGE"
+    }
+  ],
+  "actual_prompt_supplements": [
+    {
+      "phase": 3,
+      "prompt": "Show only these two bowls on clean counter, no pan, no filled muffin cases, no completed muffins. Phase03 BEFORE combining."
+    }
+  ]
 }
