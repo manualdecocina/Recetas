@@ -1,0 +1,234 @@
+{
+  "batch_id": "lote-04-20261009",
+  "checked_at": "2026-10-09T08:11:24.999Z",
+  "overall_status": "PUBLISHED_TECHNICAL_QA_PASS_VISUAL_QA_BLOCKED",
+  "gate_closed": false,
+  "database": {
+    "checked_at": "2026-10-09T08:08:55.405761+00:00",
+    "published_es": 154,
+    "unpublished_es": 55,
+    "groups": [
+      {
+        "recipe_group_id": "031f1a9c-6240-4ab4-9027-568a18de7ffe",
+        "rows": 7,
+        "languages": 7,
+        "published": 7
+      },
+      {
+        "recipe_group_id": "24263cd3-9851-4aaa-b73f-7d950ad1a303",
+        "rows": 7,
+        "languages": 7,
+        "published": 7
+      },
+      {
+        "recipe_group_id": "3da80dc3-1aef-4412-87b2-c76ba356037f",
+        "rows": 7,
+        "languages": 7,
+        "published": 7
+      },
+      {
+        "recipe_group_id": "6bfee695-84fb-4fbd-b668-7cd34e09474d",
+        "rows": 7,
+        "languages": 7,
+        "published": 7
+      },
+      {
+        "recipe_group_id": "784785d7-5c05-4a55-aabb-0dd318cf789e",
+        "rows": 7,
+        "languages": 7,
+        "published": 7
+      },
+      {
+        "recipe_group_id": "7fdd9be7-e94e-4c80-9107-9fa76af45491",
+        "rows": 7,
+        "languages": 7,
+        "published": 7
+      },
+      {
+        "recipe_group_id": "82a37dfd-c53c-4dd9-968b-aa24976da70f",
+        "rows": 7,
+        "languages": 7,
+        "published": 7
+      },
+      {
+        "recipe_group_id": "8ba3cf9e-47d6-4b27-afdb-9f5b7700b45d",
+        "rows": 7,
+        "languages": 7,
+        "published": 7
+      },
+      {
+        "recipe_group_id": "936136e4-9267-4869-ad7b-eaa3a16a103f",
+        "rows": 7,
+        "languages": 7,
+        "published": 7
+      },
+      {
+        "recipe_group_id": "adf06802-d942-42a6-a0fc-91a23c279198",
+        "rows": 7,
+        "languages": 7,
+        "published": 7
+      },
+      {
+        "recipe_group_id": "b5dc3c62-05ba-4ce6-8748-39570d2271a9",
+        "rows": 7,
+        "languages": 7,
+        "published": 7
+      },
+      {
+        "recipe_group_id": "b6b4397e-f51a-4c05-bf7a-fa285432829b",
+        "rows": 7,
+        "languages": 7,
+        "published": 7
+      },
+      {
+        "recipe_group_id": "eedda558-8253-4132-b009-e59f6569026e",
+        "rows": 7,
+        "languages": 7,
+        "published": 7
+      },
+      {
+        "recipe_group_id": "f1b26b6d-7c77-4c43-ab21-9fab2a7b22fc",
+        "rows": 7,
+        "languages": 7,
+        "published": 7
+      },
+      {
+        "recipe_group_id": "f2371d66-d49e-4092-94d0-7e3e2584aa39",
+        "rows": 7,
+        "languages": 7,
+        "published": 7
+      }
+    ]
+  },
+  "historical_preservation_evidence": "editorial/lote04-db-publication-verification-20261009.json",
+  "sql": {
+    "path": "scripts/publish-lote04-20261009.sql",
+    "sha256": "b0983ad6bbbcf90a43328f5f92cc9a4701a4d64825af91ca8935c564f5873058",
+    "executed": true,
+    "must_not_rerun": true
+  },
+  "publication_pr": 100,
+  "publication_merge": "fa780c12a7ff81a6d4cf84ad8b0c08ef24a00c25",
+  "sitemap_fix": {
+    "pr": 102,
+    "merge_sha": "b29b24f43cbdb23842530498d6daab8cd0dc2f41",
+    "cause": "Unpaginated1000row category query omitted3ptcategories",
+    "observed_deployment_at": "2026-10-09T08:04:52.1680588Z",
+    "previous_errors": 18,
+    "remaining_errors": 0
+  },
+  "cache_qa": {
+    "pr": 101,
+    "merge_sha": "3247291ec8cab54e27492f953792694db52ea5dd",
+    "head_sha": "bf893249a9e2b76b6ccb7219aaa652a2b9c97729",
+    "run": 37902531073,
+    "job": 113728171723,
+    "artifact": 11603445757,
+    "artifact_sha256": "e36c20aafe54381433943a52657bf7127aec546f2478b8762715ad2cc602534b",
+    "batch_pages": {
+      "groups": 15,
+      "pages": 105,
+      "passed": 105,
+      "errors": [],
+      "checked_at": "2026-10-09T08:04:55.966147+00:00"
+    },
+    "global": {
+      "summary": {
+        "sitemap_urls": 1251,
+        "status": {
+          "200": 1251,
+          "403": 0,
+          "404": 0,
+          "3xx": 0,
+          "5xx": 0,
+          "other": 0
+        },
+        "internal_links_outside_sitemap": 7,
+        "internal_link_status": {
+          "200": 7,
+          "403": 0,
+          "404": 0,
+          "3xx": 0,
+          "5xx": 0,
+          "other": 0
+        },
+        "images": 1640,
+        "legacy_redirects": 147,
+        "legacy_redirect_status": {
+          "200": 72,
+          "307": 66,
+          "308": 9
+        },
+        "recipe_pages": 1078,
+        "recipe_schema_valid": 1078,
+        "es_recipes": 154,
+        "breadcrumb_pages": 1172,
+        "breadcrumb_valid": 1172,
+        "hreflang_by_language": {
+          "es": {
+            "pages": 201,
+            "with_hreflang": 175,
+            "with_x_default": 21,
+            "errors": 0
+          },
+          "de": {
+            "pages": 175,
+            "with_hreflang": 175,
+            "with_x_default": 21,
+            "errors": 0
+          },
+          "en": {
+            "pages": 175,
+            "with_hreflang": 175,
+            "with_x_default": 21,
+            "errors": 0
+          },
+          "fr": {
+            "pages": 175,
+            "with_hreflang": 175,
+            "with_x_default": 21,
+            "errors": 0
+          },
+          "it": {
+            "pages": 175,
+            "with_hreflang": 175,
+            "with_x_default": 21,
+            "errors": 0
+          },
+          "ja": {
+            "pages": 175,
+            "with_hreflang": 175,
+            "with_x_default": 21,
+            "errors": 0
+          },
+          "pt-BR": {
+            "pages": 175,
+            "with_hreflang": 175,
+            "with_x_default": 21,
+            "errors": 0
+          }
+        },
+        "orphan_pages": 0,
+        "robots_txt_blocked": true,
+        "pages_noindex_nofollow": 1251,
+        "not_found_probe": 404,
+        "errors": 0,
+        "errors_by_kind": {}
+      },
+      "errors": []
+    }
+  },
+  "media": "editorial/lote04-observed-deployment-20261009.json:163WebP HTTP200exactSHA",
+  "visual_qa_file": "editorial/lote04-live-visual-qa-20261009.json",
+  "ingredient_debt": "editorial/lote04-ingredient-resolution-20261009.json:152ESentries34canonical118pending",
+  "remaining_scope": {
+    "eligible_recipes": 5,
+    "held_recipes": 50,
+    "technical_closure": "ingredient resolution, approved variants/historical map/redirects/SEO and backup/rollback preparation remain aftereligiblebatchclosure"
+  },
+  "automation": {
+    "id": "6ac6fb673c5c8191b3435ae6074ddc63",
+    "is_enabled": false,
+    "reason": "Current batch finalvisualgate blocked by site CAPTCHA requiring human verification; no further batch eligible until04closed. Paused per noninteractive fully-blocked instruction."
+  }
+}

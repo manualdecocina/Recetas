@@ -1,48 +1,86 @@
 {
-  "status": "PARTIAL_PENDING_BROWSER_RECONNECTION",
-  "date": "2026-10-09",
-  "environment_error": "cua environment registry409environment_offline; exec process unavailable. No visualPASS assumed for uninspected pages.",
-  "observed": [
-    {
-      "path": "/es/recetas",
-      "result": "154recipe catalog visible; top6loadedcovers/readable layout inspected"
-    },
+  "status": "PARTIAL_BLOCKED_BY_SITE_HUMAN_VERIFICATION",
+  "checked_at": "2026-10-09T08:11:24.999Z",
+  "viewport": "desktop 1363x936",
+  "es_cover_layout_pass": [
     {
       "path": "/receta-de-muffins-de-chocolate",
-      "result": "PASS loaded matching cover and readable recipe layout"
+      "result": "PASS matching cover fully loaded and readable recipe layout visually inspected"
+    },
+    {
+      "path": "/acai-bowl",
+      "result": "PASS matching cover fully loaded and readable recipe layout visually inspected"
     },
     {
       "path": "/receta-de-garbanzos-com-chorizo",
-      "result": "PASS loaded matching cover and readable recipe layout"
-    }
-  ],
-  "requires_revisit": [
+      "result": "PASS matching cover fully loaded and readable recipe layout visually inspected"
+    },
     {
-      "path": "/acai-bowl",
-      "reason": "Immediate screenshot preceded lazyloaded cover; wait for actual image load and inspect again"
+      "path": "/alitas-bbq",
+      "result": "PASS matching cover fully loaded and readable recipe layout visually inspected"
+    },
+    {
+      "path": "/galletas-de-avena-y-chocolate",
+      "result": "PASS matching cover fully loaded and readable recipe layout visually inspected"
+    },
+    {
+      "path": "/receta-de-donas-glaseadas",
+      "result": "PASS matching cover fully loaded and readable recipe layout visually inspected"
+    },
+    {
+      "path": "/gazpacho-tradicional-espanol",
+      "result": "PASS matching cover fully loaded and readable recipe layout visually inspected"
+    },
+    {
+      "path": "/receta-de-tarta-de-fresa",
+      "result": "PASS matching cover fully loaded and readable recipe layout visually inspected"
+    },
+    {
+      "path": "/rollitos-de-anis",
+      "result": "PASS matching cover fully loaded and readable recipe layout visually inspected"
+    },
+    {
+      "path": "/receta-de-lasagna-de-carne-de-res",
+      "result": "PASS matching cover fully loaded and readable recipe layout visually inspected"
+    },
+    {
+      "path": "/receta-de-tarta-de-queso-cheesecake",
+      "result": "PASS matching cover fully loaded and readable recipe layout visually inspected"
+    },
+    {
+      "path": "/ensalada-de-frijoles-con-salsa-romesco",
+      "result": "PASS matching cover fully loaded and readable recipe layout visually inspected"
     }
   ],
-  "pending_es_covers": [
-    "/acai-bowl",
-    "/alitas-bbq",
-    "/galletas-de-avena-y-chocolate",
-    "/receta-de-donas-glaseadas",
-    "/gazpacho-tradicional-espanol",
-    "/receta-de-tarta-de-fresa",
-    "/rollitos-de-anis",
-    "/receta-de-lasagna-de-carne-de-res",
-    "/receta-de-tarta-de-queso-cheesecake",
-    "/ensalada-de-frijoles-con-salsa-romesco",
+  "es_cover_layout_pending": [
     "/receta-de-galletas-de-jengibre",
     "/receta-de-ensalada-griega",
     "/recetas-de-trufas-de-chocolate"
   ],
-  "pending": [
-    "Six localized page layouts",
-    "Language selector interaction",
-    "Home154catalog",
-    "Missing sugar UI for rollitos/beans"
-  ],
-  "original_media_qa": "All118originals and163WebP variants visually accepted before publication; no regeneration required",
-  "gate": "Do not mark lote04 closed until remaining live visual QA passes."
+  "catalog": {
+    "path": "/es/recetas",
+    "visible_count": 154,
+    "result": "PASS visible154catalog and loaded top6covers before challenge"
+  },
+  "nutrition": {
+    "paths": [
+      "/rollitos-de-anis",
+      "/ensalada-de-frijoles-con-salsa-romesco"
+    ],
+    "result": "PASS rendered nutrition omits missing sugar rather than inventing zero; explanation visible in DOM"
+  },
+  "localized_layouts": "PENDING all6nonES samples",
+  "language_selector": "PENDING interaction",
+  "home": "PENDING updated home visual review",
+  "originals_and_variants": "All118originals and163WebP accepted before publication; do not regenerate.",
+  "blocker": {
+    "title": "Bot Verification",
+    "text": "Verifying that you are not a robot...",
+    "recaptcha_observed": true,
+    "path": "/recetas-de-trufas-de-chocolate",
+    "recovery": "One normal reload did not clear challenge; no CAPTCHA attempted and no alternate network route used.",
+    "browser_report": "challenge_loop",
+    "necessary_next_action": "Resolve human-verification access for authorized live preview QA; then resume the3pending ES covers,6localized layouts,selector and home. Never infer visualPASS from HTTP200."
+  },
+  "gate_closed": false
 }
