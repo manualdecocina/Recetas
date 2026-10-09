@@ -255,5 +255,13 @@
   "last_step_reuses_cover": true,
   "original_images_required": 7,
   "published_webp_required": 10,
-  "cover_variant_visual_qa": "PASS_ALL4_CROPS_PRIMARY_SOUP_GARNISH_VISIBLE_ALL4_BOWL_EDGE16x9_AND_SECONDARY_GLASS_SQUARE_CROPPED"
+  "cover_variant_visual_qa": "PASS_ALL4_CROPS_PRIMARY_SOUP_GARNISH_VISIBLE_ALL4_BOWL_EDGE16x9_AND_SECONDARY_GLASS_SQUARE_CROPPED",
+  "targeted_edits": [
+    {
+      "phase": 3,
+      "reason": "Bread mound too large relative to proposed40g; reduce only bread and expose tomato/airspace",
+      "visual_qa": "PASS_AFTER_EDIT",
+      "prompt": "Reduce bread to a few small soaked pieces, retain closed blender and all vegetables."
+    }
+  ]
 }
