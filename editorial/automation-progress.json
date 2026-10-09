@@ -31,7 +31,7 @@
     "branch": "recetas/lote-04-20261009",
     "target": 15,
     "status": "in_progress",
-    "stage": "identidad",
+    "stage": "imágenes",
     "current_recipe": "gazpacho-tradicional-espanol",
     "started_at": "2026-10-09T00:56:43.882Z",
     "completed_recipes": 0,
@@ -295,14 +295,23 @@
         "editorial_status": "published",
         "position": 39,
         "eligibility": "validate_url_master_before_writing",
-        "status": "reserved",
-        "stage": "identidad",
+        "status": "in_progress",
+        "stage": "imágenes",
         "identity_qa": "PASS",
         "classification": "ELIGIBLE_EXISTING_CULINARY_CANDIDATE",
         "expected_es_row_md5": "88b4299436ba76cde13ea401d6be898d",
         "languages_ready": 0,
         "images_ready": 0,
-        "source_not_reused": true
+        "source_not_reused": true,
+        "es_content_file": "editorial/gazpacho-tradicional-espanol-20261009.json",
+        "image_manifest": "editorial/gazpacho-tradicional-espanol-imagenes.json",
+        "nutrition_evidence_file": "editorial/gazpacho-tradicional-espanol-usda-verificado-20261009.json",
+        "steps_sha256": "4d59f5bbbb24aae3151c55c9b76b5b63c9c1960c2c78659a91fd22788a37a08b",
+        "es_editorial_qa": "PASS_10_VERIFIED_USDA_RECORDS_WHOLEFORMULA_NO_STRAINING_LOSS",
+        "original_images_required": 7,
+        "distinct_images_pending": 7,
+        "next_image": "portada.webp",
+        "next_action": "Generate7new originals from frozenES, inspect phases and4covercrops; localize6 and guardedSQL."
       },
       {
         "id": "2f5db784-9451-4166-9076-fe2dac7a35ca",
@@ -449,7 +458,7 @@
         "source_not_reused": true
       }
     ],
-    "next_action": "Validate gazpacho identity and existing newdraft, prepare original ES with verified USDA before image generation.",
+    "next_action": "Generate7new originals from frozenES, inspect phases and4covercrops; localize6 and guardedSQL.",
     "reservation_pr": 99,
     "reservation_merge_sha": "c6ac9d0b770525ecd02ea6a934cd2a48f94a8325"
   },
@@ -458,8 +467,8 @@
     "owner": "work-lote04-20261009T0059",
     "status": "active",
     "acquired_at": "2026-10-09T00:56:43.882Z",
-    "renewed_at": "2026-10-09T03:17:24.655Z",
-    "expires_at": "2026-10-09T04:47:24.655Z",
+    "renewed_at": "2026-10-09T03:23:00.452Z",
+    "expires_at": "2026-10-09T04:53:00.452Z",
     "base_main_sha": "3c8af0eff7a6e6a5c7bfcaedfedd3590e67d3032",
     "reason": "Single producer after batch03 fully closed; CAS reservation of next15."
   },
@@ -541,18 +550,18 @@
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
   "progress_branch": "recetas/lote-04-20261009",
-  "last_checkpoint_at": "2026-10-09T03:17:24.655Z",
+  "last_checkpoint_at": "2026-10-09T03:23:00.452Z",
   "handoff": {
     "branch": "recetas/lote-04-20261009",
-    "stage": "identidad",
+    "stage": "imágenes",
     "current_recipe": "receta-de-garbanzos-com-chorizo",
     "prepared": 2,
     "published": 0,
-    "next_action": "Validate gazpacho identity and existing newdraft, prepare original ES with verified USDA before image generation.",
+    "next_action": "Generate7new originals from frozenES, inspect phases and4covercrops; localize6 and guardedSQL.",
     "previous_batch_closed": true
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z",
-  "updated_at": "2026-10-09T03:17:24.655Z",
+  "updated_at": "2026-10-09T03:23:00.452Z",
   "completed_batches": [
     {
       "id": "lote-02-20261008",
