@@ -31,7 +31,7 @@
     "branch": "recetas/lote-04-20261009",
     "target": 15,
     "status": "in_progress",
-    "stage": "imágenes",
+    "stage": "localización",
     "current_recipe": "rollitos-de-anis",
     "started_at": "2026-10-09T00:56:43.882Z",
     "completed_recipes": 0,
@@ -378,12 +378,12 @@
         "position": 41,
         "eligibility": "validate_url_master_before_writing",
         "status": "reserved",
-        "stage": "imágenes",
+        "stage": "localización",
         "identity_qa": "PASS",
         "classification": "ELIGIBLE_EXISTING_CULINARY_CANDIDATE",
         "expected_es_row_md5": "dd04eb37a8a376d5c3701c2723c1e06c",
         "languages_ready": 0,
-        "images_ready": 7,
+        "images_ready": 11,
         "source_not_reused": true,
         "es_content_file": "editorial/rollitos-de-anis-20261009.json",
         "image_manifest": "editorial/rollitos-de-anis-imagenes.json",
@@ -391,11 +391,12 @@
         "steps_sha256": "e9b6c4ffa4a4eb0a2a16d557173a81a43281bd0028ad80f676636648406243c7",
         "es_editorial_qa": "PASS_7_EXACT_USDA_FOODS_SUGAR_PENDING_NOT_ZERO",
         "original_images_required": 8,
-        "distinct_images_pending": 4,
-        "next_action": "Generate8distinct originalimages, preservePNG11WebP with visualphaseQA; then6localizations and guardedSQL.",
-        "image_originals": 4,
-        "next_image": "paso-04.webp",
-        "cover_variant_visual_qa": "PASS_ALL4_CROPS_PRIMARY_FRONT_RINGS_COMPLETE_SECONDARY_PLATE_EDGES_CROPPED"
+        "distinct_images_pending": 0,
+        "next_action": "Localize6same quantities,8steps,3FAQ,11media and guarded SQL; preserve frozen ES.",
+        "image_originals": 8,
+        "next_image": null,
+        "cover_variant_visual_qa": "PASS_ALL4_CROPS_PRIMARY_FRONT_RINGS_COMPLETE_SECONDARY_PLATE_EDGES_CROPPED",
+        "image_visual_qa": "PASS_ALL8_ORIGINALS"
       },
       {
         "id": "6d7e6dc1-ac9a-4714-a4a1-eb8be6d0151e",
@@ -506,7 +507,7 @@
         "source_not_reused": true
       }
     ],
-    "next_action": "Generate8distinct originalimages, preservePNG11WebP with visualphaseQA; then6localizations and guardedSQL.",
+    "next_action": "Localize6same quantities,8steps,3FAQ,11media and guarded SQL; preserve frozen ES.",
     "reservation_pr": 99,
     "reservation_merge_sha": "c6ac9d0b770525ecd02ea6a934cd2a48f94a8325"
   },
@@ -515,8 +516,8 @@
     "owner": "work-lote04-20261009T0059",
     "status": "active",
     "acquired_at": "2026-10-09T00:56:43.882Z",
-    "renewed_at": "2026-10-09T04:33:02.837Z",
-    "expires_at": "2026-10-09T06:03:02.837Z",
+    "renewed_at": "2026-10-09T04:35:30.117Z",
+    "expires_at": "2026-10-09T06:05:30.117Z",
     "base_main_sha": "3c8af0eff7a6e6a5c7bfcaedfedd3590e67d3032",
     "reason": "Single producer after batch03 fully closed; CAS reservation of next15."
   },
@@ -598,18 +599,18 @@
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
   "progress_branch": "recetas/lote-04-20261009",
-  "last_checkpoint_at": "2026-10-09T04:33:02.837Z",
+  "last_checkpoint_at": "2026-10-09T04:35:30.117Z",
   "handoff": {
     "branch": "recetas/lote-04-20261009",
-    "stage": "imágenes",
+    "stage": "localización",
     "current_recipe": "receta-de-garbanzos-com-chorizo",
     "prepared": 2,
     "published": 0,
-    "next_action": "Generate8distinct originalimages, preservePNG11WebP with visualphaseQA; then6localizations and guardedSQL.",
+    "next_action": "Localize6same quantities,8steps,3FAQ,11media and guarded SQL; preserve frozen ES.",
     "previous_batch_closed": true
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z",
-  "updated_at": "2026-10-09T04:33:02.837Z",
+  "updated_at": "2026-10-09T04:35:30.117Z",
   "completed_batches": [
     {
       "id": "lote-02-20261008",
