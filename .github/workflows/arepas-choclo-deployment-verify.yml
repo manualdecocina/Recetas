@@ -1,0 +1,29 @@
+name: arepas-choclo-deployment-verify
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'editorial/arepas-de-choclo-con-queso-plan-20261009.json'
+      - 'scripts/verify-arepas-choclo-media-http.py'
+      - 'scripts/publish-arepas-de-choclo-con-queso-20261009.sql'
+      - '.github/workflows/arepas-choclo-deployment-verify.yml'
+permissions:
+  contents: read
+jobs:
+  observe:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Wait for actual media deployment, validating every HTTP response and SHA256
+        run: |
+          for attempt in $(seq 1 30); do
+            if python3 scripts/verify-arepas-choclo-media-http.py; then exit 0; fi
+            sleep 15
+          done
+          exit 1
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: arepas-choclo-media-deployment-verification
+          path: arepas-choclo-media-deployment-verification.json
