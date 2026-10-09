@@ -79,3 +79,8 @@ Cheesecake classic baked plain: source records7, 8 original PNG and11WebP, 19 ha
 ## Checkpoint 2026-10-09T06:22:53.772Z: 12/15 preparados
 
 Ensalada de frijoles con romesco completa7/7,7PNG y10WebP;17hashes y cifras/estructura/medios verificados. SQL protegido no ejecutado. Azúcares omitidos en los7idiomas porque USDA175243 no informa nutrient2000. Portada completa en los4recortes. Fuente única editorial/ensalada-de-frijoles-con-salsa-romesco-20261009.json, SHA256 6799ef5436ea30ec6de7869cfdb12a9bc0c82112406c9a5f8bd23609d6cbb8a6; SQL SHA256 8df843e7151cb6f32daad5c2060c3d4c7cdfb539bd556c613d68699e8c067859. Identidad/fechas/MD5 y7rutas sin colisiones verificados en DB. Siguiente receta: galletas de jengibre. Ninguna del lote04 publicada; mantener gate del lote completo.
+
+
+## Checkpoint 2026-10-09T06:40:53.713Z: 13/15 preparados
+
+Galletas de jengibre y melaza completas7/7,8PNG y11WebP;19hashes y cifras/estructura/medios verificados. Nueve fichas USDA con8nutrientes informados. Fórmula inicial644g,24unidades y159min propuestos sin ensayo. SQL protegido no ejecutado. SHAfuente 72e542ca2072ea6e20f50e5c0704d06c2de68ef5149846297b2d87cbb9ffde93, SQL 6b37c4d1950bc0c0d0f9ae62cfe57787e449810bf674cd11480bed6e465c7d5f. Identidad/fechas/MD5 y7rutas preservados. Siguiente: ensalada griega, después trufas de chocolate. Cero recetas del lote04 publicadas; mantener gates del lote completo.
