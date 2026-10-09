@@ -1,6 +1,6 @@
 {
   "scope": "Manual de Cocina only; lote04",
-  "state": "ES_FROZEN_IMAGES_PENDING",
+  "state": "LOCALIZATION_PARTIAL_IMAGES_COMPLETE",
   "provenance": "Original formula and prose; no WordPress editorial bodies, translations or media reused.",
   "category_slug": "postres",
   "cover": "/recetas/rollitos-de-anis/portada.webp",
@@ -9,7 +9,7 @@
   "published_database": false,
   "time_notes": "25activeprep+10coveredrest+40oven(18+4recovery+18)+30finalcool=105;15preheat overlaps shaping, firsttraycool overlaps secondbake.",
   "publication_blockers": [
-    "IMAGES_6LOCALIZATIONS_SQL_FULL15_CI_DEPLOY_DB_CACHE_QA_PENDING"
+    "FULL15_CI_MERGE_DEPLOY_DB_CACHE_LIVE_QA_PENDING"
   ],
   "sources": [
     {
@@ -326,6 +326,594 @@
         ]
       },
       "content_html": "<p>Pequeños rollitos de anís verde horneados, con aceite de oliva y zumo de naranja, de textura de galleta. Fórmula original propuesta para 18 unidades, sin licor, huevo ni leche añadidos; 105 minutos completos con dos tandas y enfriado, pendientes de ensayo de cocina.</p><p>Propuesta original de aros horneados con anís verde alimentario, aceite de oliva y zumo de naranja; no son pan fermentado ni rosquillas fritas. No contiene huevo, leche ni licor como ingredientes, pero no se afirma ausencia de alérgenos o trazas: contiene trigo/gluten y deben revisarse etiquetas y contaminación cruzada. Usa Pimpinella anisum de uso alimentario; anís estrellado, hinojo y extractos no son sustitutos equivalentes. No se ofrece una equivalencia de dosis para licores o aceites esenciales. Cantidades, 18 unidades y textura están propuestas y pendientes de prueba de cocina. La masa completa suma 561 g crudos; no se afirma peso final, evaporación ni pérdida de manipulación medida. Usa todo el aceite, zumo y anís y no añadas harina para formar ni azúcar para acabar. Cambiar zumo, harina, aceite o azúcar altera hidratación, textura y nutrición; registra y recalcula sin prometer el mismo resultado. El precalentado se solapa con el formado y el enfriado de la primera tanda con el horneado de la segunda; el tiempo completo es 105 minutos. La harina es un alimento crudo: no pruebes la masa, limpia manos y utensilios y hornea hasta que la pieza esté cocida por dentro. Lava la naranja con agua corriente antes de cortarla, sin jabón. Como propuesta de calidad no ensayada, enfría por completo y guarda hasta 3 días en recipiente hermético, fresco y seco; la humedad y el clima pueden acortar ese plazo. Si hay moho o humedad anómala, descarta sin probar. No se establece una vida útil comercial ni congelación verificada. Nutrición estimada con siete fichas USDA, fórmula íntegra dividida entre 18: se publican únicamente nutrientes presentes en todas las fichas. La ficha de anís no informa azúcares totales; quedan pendientes y no se reemplazan por cero.</p>"
+    },
+    {
+      "id": "8eca4166-2974-5f6b-93b2-072a47599f6f",
+      "recipe_group_id": "f2371d66-d49e-4092-94d0-7e3e2584aa39",
+      "slug": "anis-brotchen",
+      "public_path": "/de/anis-brotchen",
+      "source_url": "https://manualdecocina.com/de/anis-brotchen/",
+      "language": "de",
+      "title": "Gebackene Anisringe mit Orangensaft",
+      "excerpt": "Kleine Aniskekse mit Orange und Olivenöl: Zutatenmengen, Ruhezeit, zwei Backdurchgänge und vollständiges Abkühlen mit geschätzten USDA-Nährwerten.",
+      "summary": "Kleine gebackene Keksringe mit grünen Anissamen, Olivenöl und Orangensaft. Eigenständig vorgeschlagene Rezeptur für 18 Stück ohne zugesetzten Likör, Ei oder Milch; 105 Minuten mit zwei Backdurchgängen und Abkühlen, noch nicht in der Küche erprobt.",
+      "category": "Desserts",
+      "category_slug": "postres",
+      "difficulty": "Einfach",
+      "course": "Kekse",
+      "cuisine": "Spanisch inspiriert",
+      "prep_time_minutes": 25,
+      "cook_time_minutes": 40,
+      "total_time_minutes": 105,
+      "servings": 18,
+      "ingredients": [
+        {
+          "name": "Weizenmehl für den allgemeinen Gebrauch",
+          "amount": "300",
+          "unit": "g",
+          "group": "Teig"
+        },
+        {
+          "name": "Olivenöl",
+          "amount": "80",
+          "unit": "g",
+          "group": "Teig"
+        },
+        {
+          "name": "roher, frisch gepresster Orangensaft ohne Kerne",
+          "amount": "100",
+          "unit": "g",
+          "group": "Teig"
+        },
+        {
+          "name": "weißer Kristallzucker",
+          "amount": "70",
+          "unit": "g",
+          "group": "Teig"
+        },
+        {
+          "name": "grüne Anissamen in Lebensmittelqualität (Pimpinella anisum)",
+          "amount": "4",
+          "unit": "g",
+          "group": "Aroma und Backtriebmittel"
+        },
+        {
+          "name": "doppelt wirkendes Backpulver",
+          "amount": "6",
+          "unit": "g",
+          "group": "Aroma und Backtriebmittel"
+        },
+        {
+          "name": "feines Salz",
+          "amount": "1",
+          "unit": "g",
+          "group": "Aroma und Backtriebmittel"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Zutaten und Bleche vorbereiten",
+          "content": "Waage, Schüsseln, Mörser, Teigschaber, Messer und zwei etwa 30 × 40 cm große Bleche mit Backpapier bereitstellen, ohne zusätzliches Fett. Die Orange vor dem Aufschneiden unter fließendem Wasser waschen und auspressen; Kerne entfernen und 100 g Saft abwiegen. Separat 300 g Mehl, 80 g Öl, 70 g Zucker, 4 g grüne Anissamen, 6 g Backpulver und 1 g Salz abwiegen. Grüne Anissamen in Lebensmittelqualität verwenden, keinen Sternanis, Fenchel oder Likör.",
+          "image_url": "/recetas/rollitos-de-anis/paso-01.webp",
+          "image_alt": "Gebackene Anisringe mit Orangensaft: Zutaten und Bleche vorbereiten"
+        },
+        {
+          "title": "Anis zerstoßen und trockene Zutaten mischen",
+          "content": "Die 4 g Anis kurz im Mörser zerstoßen, sodass die Samen aufbrechen; nichts entfernen. In einer Schüssel 300 g Mehl, 6 g Backpulver und 1 g Salz mit einem Löffel gleichmäßig vermischen. Diese Version verwendet chemisches Backtriebmittel, keine Bäckerhefe. Weder rohes Mehl noch rohen Teig probieren, auch wenn kein Ei enthalten ist.",
+          "image_url": "/recetas/rollitos-de-anis/paso-02.webp",
+          "image_alt": "Gebackene Anisringe mit Orangensaft: Anis zerstoßen und trockene Zutaten mischen"
+        },
+        {
+          "title": "Saft, Öl und Zucker verrühren",
+          "content": "In einer zweiten Schüssel 100 g Orangensaft, 80 g Öl und 70 g Zucker verrühren. Mit einem Schneebesen den Zucker verteilen und den gesamten zerstoßenen Anis zugeben. Etwas Zucker kann ungelöst bleiben und das Öl beim Stehen trennen: vor dem Zusammenführen erneut umrühren. Kein Ei, keine Milch, keinen Likör und keine Glasur hinzufügen.",
+          "image_url": "/recetas/rollitos-de-anis/paso-03.webp",
+          "image_alt": "Gebackene Anisringe mit Orangensaft: Saft, Öl und Zucker verrühren"
+        },
+        {
+          "title": "Teig verbinden und ruhen lassen",
+          "content": "Flüssigkeit zu den trockenen Zutaten geben und mit einem Teigschaber mischen, bis kein loses Mehl bleibt. Mit sauberen Händen zusammenfügen, ohne wie Brot zu kneten oder die Arbeitsfläche zu bemehlen. Abdecken und 10 Minuten ruhen lassen, damit das Mehl Feuchtigkeit aufnimmt. Der Teig soll sich ohne Zerbröseln zu einer Rolle formen lassen; gelingt das mit den vorgeschlagenen Mengen nicht, die Abweichung vor Änderung von Wasser oder Mehl dokumentieren und neu berechnen. Den Ofen auf 180 °C Ober-/Unterhitze stellen und etwa 15 Minuten während des Formens vorheizen.",
+          "image_url": "/recetas/rollitos-de-anis/paso-04.webp",
+          "image_alt": "Gebackene Anisringe mit Orangensaft: Teig verbinden und ruhen lassen"
+        },
+        {
+          "title": "Kleine Ringe formen",
+          "content": "Den gesamten Teig in 18 möglichst gleiche Portionen teilen, ungefähr 31 g Rohteig je Stück; die vorgeschlagene Zutatenmenge von 561 g ist kein gemessenes Endgewicht. Jede Portion auf sauberer, unbemehlter Fläche zu einer etwa 16 cm langen Rolle formen und die Enden zusammendrücken. Ringe mit etwa 6 cm Außendurchmesser und offener Mitte formen. Je 9 Stück in drei Reihen mit etwa 3 cm Abstand auf jedes Blech legen; nicht mit Zucker bestreuen.",
+          "image_url": "/recetas/rollitos-de-anis/paso-05.webp",
+          "image_alt": "Gebackene Anisringe mit Orangensaft: Kleine Ringe formen"
+        },
+        {
+          "title": "Nacheinander backen und prüfen",
+          "content": "Das erste Blech auf mittlerer Höhe bei 180 °C etwa 18 Minuten backen, bis die Ringe fest, unten leicht gebräunt und beim Öffnen innen nicht mehr feucht sind. Herausnehmen und den Ofen etwa 4 Minuten wieder auf Temperatur kommen lassen, dann das zweite Blech weitere 18 Minuten backen. Für beide Durchgänge sind 40 Minuten vorgesehen. Bleibt innen feuchter Teig, weiterbacken und die Zeit dokumentieren; nicht allein nach Farbe entscheiden und keinen rohen Teig probieren.",
+          "image_url": "/recetas/rollitos-de-anis/paso-06.webp",
+          "image_alt": "Gebackene Anisringe mit Orangensaft: Nacheinander backen und prüfen"
+        },
+        {
+          "title": "Auf einem Gitter vollständig abkühlen",
+          "content": "Jeden Durchgang etwa 5 Minuten auf dem Blech stehen lassen, dann mit einem Teigschaber auf ein Gitter setzen. Für jeden Durchgang insgesamt etwa 30 Minuten Abkühlen vorsehen, einschließlich dieser 5; der erste kühlt während des zweiten Backdurchgangs, deshalb nur das abschließende Abkühlen nach dem letzten Durchgang zusätzlich zählen. Vor dem Verschließen vollständig abkühlen lassen: kleine Ringe mit Keksstruktur, kein luftiges Brot, ohne Glasur oder zusätzliche Dekoration.",
+          "image_url": "/recetas/rollitos-de-anis/paso-07.webp",
+          "image_alt": "Gebackene Anisringe mit Orangensaft: Auf einem Gitter vollständig abkühlen"
+        },
+        {
+          "title": "Kalt servieren und aufbewahren",
+          "content": "Vorgeschlagen sind 18 Anisringe; ein Stück entspricht der Portion für die Nährwertschätzung. Insgesamt sind 105 Minuten geplant: 25 aktive Vorbereitung, 10 Ruhezeit, 40 Backen in Durchgängen und 30 abschließendes Abkühlen; das Vorheizen läuft während des Formens. Mengen, Ausbeute und Zeiten sind noch nicht in der Küche geprüft. Als ungeprüfter Vorschlag für häusliche Qualität vollständig kalt in einem luftdichten Behälter kühl und trocken bis zu 3 Tage aufbewahren; bei Feuchtigkeit oder Schimmel ohne Probieren entsorgen.",
+          "image_url": "/recetas/rollitos-de-anis/portada.webp",
+          "image_alt": "Gebackene Anisringe mit Orangensaft: Kalt servieren und aufbewahren"
+        }
+      ],
+      "nutrition": {
+        "calories": 118.4,
+        "protein_g": 1.8,
+        "carbs_g": 17.4,
+        "fat_g": 4.7,
+        "saturated_fat_g": 0.6,
+        "fiber_g": 0.5,
+        "sodium_mg": 48.0,
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "inputs": [
+          {
+            "ingredient": "Weizenmehl für den allgemeinen Gebrauch",
+            "edible_grams": 300,
+            "fdc_id": 168936,
+            "fdc_description": "Wheat flour, white, all-purpose, enriched, unbleached",
+            "per_100g": {
+              "calories": 364,
+              "protein_g": 10.3,
+              "carbs_g": 76.3,
+              "fat_g": 0.98,
+              "saturated_fat_g": 0.155,
+              "fiber_g": 2.7,
+              "sugar_g": 0.27,
+              "sodium_mg": 2.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/168936/nutrients"
+          },
+          {
+            "ingredient": "Olivenöl",
+            "edible_grams": 80,
+            "fdc_id": 171413,
+            "fdc_description": "Oil, olive, salad or cooking",
+            "per_100g": {
+              "calories": 884,
+              "protein_g": 0.0,
+              "carbs_g": 0.0,
+              "fat_g": 100,
+              "saturated_fat_g": 13.8,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0,
+              "sodium_mg": 2.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171413/nutrients"
+          },
+          {
+            "ingredient": "roher, frisch gepresster Orangensaft ohne Kerne",
+            "edible_grams": 100,
+            "fdc_id": 169098,
+            "fdc_description": "Orange juice, raw (Includes foods for USDA's Food Distribution Program)",
+            "per_100g": {
+              "calories": 45.0,
+              "protein_g": 0.7,
+              "carbs_g": 10.4,
+              "fat_g": 0.2,
+              "saturated_fat_g": 0.024,
+              "fiber_g": 0.2,
+              "sugar_g": 8.4,
+              "sodium_mg": 1.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169098/nutrients"
+          },
+          {
+            "ingredient": "weißer Kristallzucker",
+            "edible_grams": 70,
+            "fdc_id": 169655,
+            "fdc_description": "Sugars, granulated",
+            "per_100g": {
+              "calories": 387,
+              "protein_g": 0.0,
+              "carbs_g": 100,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "fiber_g": 0.0,
+              "sugar_g": 99.8,
+              "sodium_mg": 1.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169655/nutrients"
+          },
+          {
+            "ingredient": "grüne Anissamen in Lebensmittelqualität (Pimpinella anisum)",
+            "edible_grams": 4,
+            "fdc_id": 171316,
+            "fdc_description": "Spices, anise seed",
+            "per_100g": {
+              "calories": 337,
+              "protein_g": 17.6,
+              "carbs_g": 50.0,
+              "fat_g": 15.9,
+              "saturated_fat_g": 0.586,
+              "fiber_g": 14.6,
+              "sodium_mg": 16.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171316/nutrients"
+          },
+          {
+            "ingredient": "doppelt wirkendes Backpulver",
+            "edible_grams": 6,
+            "fdc_id": 172804,
+            "fdc_description": "Leavening agents, baking powder, double-acting, straight phosphate",
+            "per_100g": {
+              "calories": 51.0,
+              "protein_g": 0.1,
+              "carbs_g": 24.1,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "fiber_g": 0.2,
+              "sugar_g": 0.0,
+              "sodium_mg": 7890.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/172804/nutrients"
+          },
+          {
+            "ingredient": "feines Salz",
+            "edible_grams": 1,
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "calories": 0.0,
+              "protein_g": 0.0,
+              "carbs_g": 0.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0,
+              "sodium_mg": 38800.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients"
+          }
+        ],
+        "serving_size": "Eines der 18 vorgeschlagenen Stück; Endgewicht noch nicht bestätigt",
+        "method": "Für jeden Nährstoff mit Angaben in allen sieben USDA-Datensätzen die ganze Rezeptur summieren und durch 18 teilen. Keine erfundenen Back- oder Formverluste; Gesamtzucker weggelassen, weil im Anisdatensatz keine Angabe steht.",
+        "note": "Rezepturschätzung ohne Küchenversuch oder Laboranalyse. 561 g sind die rohe Summe, kein gemessenes Endgewicht. Gesamtzucker offen: USDA171316 berichtet diesen Nährstoff nicht, kein Ersatz durch null. Backpulvermarke, Saft und tatsächliche Ausbeute können Werte verändern.",
+        "missing_nutrients": [
+          "sugar_g"
+        ]
+      },
+      "image_url": "/recetas/rollitos-de-anis/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/rollitos-de-anis/portada.webp",
+          "alt": "Kleine leicht goldbraune Keksringe mit grünen Anissamen ohne Glasur auf einem weißen Teller"
+        }
+      ],
+      "published": true,
+      "editorial_status": "published",
+      "keywords": [
+        "Anisringe",
+        "Aniskekse mit Orange",
+        "gebackene Aniskekse",
+        "Anis ohne Likör"
+      ],
+      "notes": "Eigenständiger Vorschlag für gebackene Ringe mit grünen Anissamen in Lebensmittelqualität, Olivenöl und Orangensaft; kein fermentiertes Brot und keine frittierten Ringe. Ei, Milch und Likör sind keine Zutaten, dennoch wird keine Allergen- oder Spurenfreiheit behauptet: enthält Weizen/Gluten; Etiketten und Kreuzkontakt prüfen. Pimpinella anisum in Lebensmittelqualität verwenden; Sternanis, Fenchel und Extrakte sind keine gleichwertigen Ersatzstoffe. Keine Dosisequivalenz für Liköre oder ätherische Öle. Mengen, 18 Stück und Konsistenz sind vorgeschlagen und nicht in der Küche erprobt. Der gesamte Teig enthält 561 g rohe Zutaten; Endgewicht, Verdunstung und Formverluste sind nicht gemessen. Alles Öl, allen Saft und Anis verwenden, ohne zusätzliches Mehl zum Formen oder abschließenden Zucker. Änderungen an Saft, Mehl, Öl oder Zucker verändern Feuchtigkeit, Konsistenz und Nährwerte: dokumentieren und neu berechnen, ohne dasselbe Ergebnis zu versprechen. Vorheizen und Formen laufen parallel, ebenso das Abkühlen des ersten und Backen des zweiten Blechs; Gesamtzeit 105 Minuten. Mehl ist ein rohes Lebensmittel: Teig nicht probieren, Hände und Geräte reinigen und innen durchbacken. Orange vor dem Schneiden mit fließendem Wasser ohne Seife waschen. Als ungeprüfter Qualitätsvorschlag vollständig abgekühlt bis zu 3 Tage luftdicht, kühl und trocken lagern; Feuchtigkeit und Klima können die Zeit verkürzen. Bei Schimmel oder ungewöhnlicher Feuchtigkeit ohne Probieren entsorgen. Keine verifizierte gewerbliche Haltbarkeit oder Tiefkühllagerung. Nährwerte anhand sieben USDA-Datensätzen geschätzt, ganze Rezeptur geteilt durch 18: nur Nährstoffe mit Angaben in allen Datensätzen werden berichtet. Der Anisdatensatz enthält keine Gesamtzuckerangabe; diese bleibt offen und wird nicht durch null ersetzt.",
+      "seo": {
+        "title": "Anisringe mit Orange aus dem Ofen: Rezept",
+        "description": "Gebackene Keksringe mit grünen Anissamen, Orange und Öl: 18 vorgeschlagene Stück, zwei Backdurchgänge, vollständiges Abkühlen und geschätzte Nährwerte.",
+        "image_alt": "Kleine leicht goldbraune Keksringe mit grünen Anissamen ohne Glasur auf einem weißen Teller",
+        "image_variants": [
+          "/recetas/rollitos-de-anis/portada-1x1.webp",
+          "/recetas/rollitos-de-anis/portada-4x3.webp",
+          "/recetas/rollitos-de-anis/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Sind diese Anisringe Brot oder frittiertes Gebäck?",
+            "a": "Es sind kleine gebackene Ringe mit Keksstruktur und chemischem Backtriebmittel. Keine Bäckerhefe, kein Frittieren, Likör oder Glasur. Mengen und Konsistenz sind ein eigenständiger Vorschlag, der noch nicht in der Küche erprobt ist."
+          },
+          {
+            "q": "Kann ich grüne Anissamen durch Sternanis oder Likör ersetzen?",
+            "a": "Dafür wird keine Gleichwertigkeit vorgeschlagen. 4 g grüne Anissamen in Lebensmittelqualität verwenden und den gesamten zerstoßenen Samen behalten. Andere Gewürze, Liköre und Extrakte verändern Geschmack, Zusammensetzung und Feuchtigkeit und benötigen eine andere Rezeptur samt Berechnung."
+          },
+          {
+            "q": "Warum fehlt Gesamtzucker und wie lange sind sie haltbar?",
+            "a": "Der USDA-Anisdatensatz berichtet keinen Zuckerwert; weder null noch eine unvollständige Summe wird als Gesamtwert erfunden. Die sieben verfügbaren Nährstoffe werden pro einem der 18 Stück geschätzt. Ungeprüfter Qualitätsvorschlag: bis zu 3 Tage vollständig kalt, luftdicht, kühl und trocken; Feuchtigkeit und Klima können die Zeit verkürzen."
+          }
+        ]
+      },
+      "content_html": "<p>Kleine gebackene Keksringe mit grünen Anissamen, Olivenöl und Orangensaft. Eigenständig vorgeschlagene Rezeptur für 18 Stück ohne zugesetzten Likör, Ei oder Milch; 105 Minuten mit zwei Backdurchgängen und Abkühlen, noch nicht in der Küche erprobt.</p><p>Eigenständiger Vorschlag für gebackene Ringe mit grünen Anissamen in Lebensmittelqualität, Olivenöl und Orangensaft; kein fermentiertes Brot und keine frittierten Ringe. Ei, Milch und Likör sind keine Zutaten, dennoch wird keine Allergen- oder Spurenfreiheit behauptet: enthält Weizen/Gluten; Etiketten und Kreuzkontakt prüfen. Pimpinella anisum in Lebensmittelqualität verwenden; Sternanis, Fenchel und Extrakte sind keine gleichwertigen Ersatzstoffe. Keine Dosisequivalenz für Liköre oder ätherische Öle. Mengen, 18 Stück und Konsistenz sind vorgeschlagen und nicht in der Küche erprobt. Der gesamte Teig enthält 561 g rohe Zutaten; Endgewicht, Verdunstung und Formverluste sind nicht gemessen. Alles Öl, allen Saft und Anis verwenden, ohne zusätzliches Mehl zum Formen oder abschließenden Zucker. Änderungen an Saft, Mehl, Öl oder Zucker verändern Feuchtigkeit, Konsistenz und Nährwerte: dokumentieren und neu berechnen, ohne dasselbe Ergebnis zu versprechen. Vorheizen und Formen laufen parallel, ebenso das Abkühlen des ersten und Backen des zweiten Blechs; Gesamtzeit 105 Minuten. Mehl ist ein rohes Lebensmittel: Teig nicht probieren, Hände und Geräte reinigen und innen durchbacken. Orange vor dem Schneiden mit fließendem Wasser ohne Seife waschen. Als ungeprüfter Qualitätsvorschlag vollständig abgekühlt bis zu 3 Tage luftdicht, kühl und trocken lagern; Feuchtigkeit und Klima können die Zeit verkürzen. Bei Schimmel oder ungewöhnlicher Feuchtigkeit ohne Probieren entsorgen. Keine verifizierte gewerbliche Haltbarkeit oder Tiefkühllagerung. Nährwerte anhand sieben USDA-Datensätzen geschätzt, ganze Rezeptur geteilt durch 18: nur Nährstoffe mit Angaben in allen Datensätzen werden berichtet. Der Anisdatensatz enthält keine Gesamtzuckerangabe; diese bleibt offen und wird nicht durch null ersetzt.</p>"
+    },
+    {
+      "id": "7b0c1510-a5b5-5ae8-991b-a3a90d48958d",
+      "recipe_group_id": "f2371d66-d49e-4092-94d0-7e3e2584aa39",
+      "slug": "anise-rolls",
+      "public_path": "/en/anise-rolls",
+      "source_url": null,
+      "language": "en",
+      "title": "Baked green anise biscuit rings with orange",
+      "excerpt": "Small anise biscuit rings with orange and olive oil: grouped quantities, resting, two oven batches and full cooling, with estimated USDA nutrition and missing data stated.",
+      "summary": "Small baked biscuit rings made with green anise seeds, olive oil and orange juice. An original proposed formula for 18 pieces, with no added liqueur, egg or milk; 105 minutes including two oven batches and cooling, pending a kitchen trial.",
+      "category": "Desserts",
+      "category_slug": "postres",
+      "difficulty": "Easy",
+      "course": "Biscuits",
+      "cuisine": "Spanish inspired",
+      "prep_time_minutes": 25,
+      "cook_time_minutes": 40,
+      "total_time_minutes": 105,
+      "servings": 18,
+      "ingredients": [
+        {
+          "name": "all-purpose wheat flour",
+          "amount": "300",
+          "unit": "g",
+          "group": "Dough"
+        },
+        {
+          "name": "olive oil",
+          "amount": "80",
+          "unit": "g",
+          "group": "Dough"
+        },
+        {
+          "name": "raw freshly squeezed orange juice, seeds removed",
+          "amount": "100",
+          "unit": "g",
+          "group": "Dough"
+        },
+        {
+          "name": "white granulated sugar",
+          "amount": "70",
+          "unit": "g",
+          "group": "Dough"
+        },
+        {
+          "name": "food-grade green anise seeds (Pimpinella anisum)",
+          "amount": "4",
+          "unit": "g",
+          "group": "Flavor and raising agent"
+        },
+        {
+          "name": "double-acting baking powder",
+          "amount": "6",
+          "unit": "g",
+          "group": "Flavor and raising agent"
+        },
+        {
+          "name": "fine salt",
+          "amount": "1",
+          "unit": "g",
+          "group": "Flavor and raising agent"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepare the ingredients and trays",
+          "content": "Set out scales, bowls, a mortar, spatula, knife and two trays about 30 × 40 cm lined with baking parchment, without extra grease. Wash the orange under running water before cutting and squeeze it; remove seeds and weigh 100 g juice. Separately weigh 300 g flour, 80 g oil, 70 g sugar, 4 g green anise seeds, 6 g baking powder and 1 g salt. Use food-grade green anise seeds, not star anise, fennel or liqueur.",
+          "image_url": "/recetas/rollitos-de-anis/paso-01.webp",
+          "image_alt": "Baked green anise biscuit rings with orange: Prepare the ingredients and trays"
+        },
+        {
+          "title": "Crush the anise and combine dry ingredients",
+          "content": "Briefly crush the 4 g anise in the mortar to break the seeds without discarding any part. Use a spoon to distribute the 300 g flour, 6 g baking powder and 1 g salt evenly in a bowl. This version uses a chemical raising agent rather than baker's yeast. Do not taste raw flour or dough even though there is no egg.",
+          "image_url": "/recetas/rollitos-de-anis/paso-02.webp",
+          "image_alt": "Baked green anise biscuit rings with orange: Crush the anise and combine dry ingredients"
+        },
+        {
+          "title": "Mix the juice, oil and sugar",
+          "content": "In another bowl, combine 100 g orange juice, 80 g oil and 70 g sugar. Whisk to disperse the sugar and add all the crushed anise. Some sugar may remain undissolved and the oil may separate when you stop: stir again before combining. Do not add egg, milk, liqueur or a topping.",
+          "image_url": "/recetas/rollitos-de-anis/paso-03.webp",
+          "image_alt": "Baked green anise biscuit rings with orange: Mix the juice, oil and sugar"
+        },
+        {
+          "title": "Bring the dough together and rest it",
+          "content": "Add the liquids to the dry ingredients and mix with a spatula until no loose flour remains. Bring together with clean hands without kneading like bread or flouring the worktop. Cover and rest for 10 minutes to hydrate the flour. The dough should roll into a cord without crumbling; if the proposed amounts do not achieve this, record the deviation before changing water or flour and recalculate. Set the oven to 180 °C, conventional top and bottom heat, to preheat for about 15 minutes while shaping.",
+          "image_url": "/recetas/rollitos-de-anis/paso-04.webp",
+          "image_alt": "Baked green anise biscuit rings with orange: Bring the dough together and rest it"
+        },
+        {
+          "title": "Shape small rings",
+          "content": "Divide all the dough into 18 portions as evenly as possible, about 31 g raw dough each; the proposed total of 561 g ingredients is not a measured finished weight. Roll each portion on a clean unfloured surface into a cord about 16 cm long and press its ends together. Make rings about 6 cm across externally with an open hole. Arrange 9 on each tray in three rows, about 3 cm apart; do not dust with sugar.",
+          "image_url": "/recetas/rollitos-de-anis/paso-05.webp",
+          "image_alt": "Baked green anise biscuit rings with orange: Shape small rings"
+        },
+        {
+          "title": "Bake in batches and check the centers",
+          "content": "Bake the first tray on the middle level at 180 °C for about 18 minutes, until the rings are firm, lightly golden underneath and not wet inside when one is opened. Remove and allow about 4 minutes for the oven to recover its temperature before baking the second tray for another 18 minutes. Allow 40 minutes for both batches. If the center remains wet dough, extend baking and record the time; do not judge only by color or taste raw dough.",
+          "image_url": "/recetas/rollitos-de-anis/paso-06.webp",
+          "image_alt": "Baked green anise biscuit rings with orange: Bake in batches and check the centers"
+        },
+        {
+          "title": "Cool completely on a rack",
+          "content": "Leave each batch on its tray for about 5 minutes, then transfer to a wire rack with a spatula. Allow about 30 minutes total cooling per batch, including those 5; the first cools while the second bakes, so count only the final cooling after the last batch separately. Cool fully before sealing a container: these should be small biscuit-textured rings, not fluffy bread, without icing or added decoration.",
+          "image_url": "/recetas/rollitos-de-anis/paso-07.webp",
+          "image_alt": "Baked green anise biscuit rings with orange: Cool completely on a rack"
+        },
+        {
+          "title": "Serve and store the cooled rings",
+          "content": "The proposed yield is 18 rings; one piece is the serving used for estimated nutrition. The full plan totals 105 minutes: 25 active preparation, 10 resting, 40 baking in batches and 30 final cooling; preheating overlaps shaping. Quantities, yield and timings await a kitchen trial. As an untested home quality suggestion, store completely cool in an airtight container somewhere cool and dry for up to 3 days; discard without tasting if dampness or mold develops.",
+          "image_url": "/recetas/rollitos-de-anis/portada.webp",
+          "image_alt": "Baked green anise biscuit rings with orange: Serve and store the cooled rings"
+        }
+      ],
+      "nutrition": {
+        "calories": 118.4,
+        "protein_g": 1.8,
+        "carbs_g": 17.4,
+        "fat_g": 4.7,
+        "saturated_fat_g": 0.6,
+        "fiber_g": 0.5,
+        "sodium_mg": 48.0,
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "inputs": [
+          {
+            "ingredient": "all-purpose wheat flour",
+            "edible_grams": 300,
+            "fdc_id": 168936,
+            "fdc_description": "Wheat flour, white, all-purpose, enriched, unbleached",
+            "per_100g": {
+              "calories": 364,
+              "protein_g": 10.3,
+              "carbs_g": 76.3,
+              "fat_g": 0.98,
+              "saturated_fat_g": 0.155,
+              "fiber_g": 2.7,
+              "sugar_g": 0.27,
+              "sodium_mg": 2.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/168936/nutrients"
+          },
+          {
+            "ingredient": "olive oil",
+            "edible_grams": 80,
+            "fdc_id": 171413,
+            "fdc_description": "Oil, olive, salad or cooking",
+            "per_100g": {
+              "calories": 884,
+              "protein_g": 0.0,
+              "carbs_g": 0.0,
+              "fat_g": 100,
+              "saturated_fat_g": 13.8,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0,
+              "sodium_mg": 2.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171413/nutrients"
+          },
+          {
+            "ingredient": "raw freshly squeezed orange juice, seeds removed",
+            "edible_grams": 100,
+            "fdc_id": 169098,
+            "fdc_description": "Orange juice, raw (Includes foods for USDA's Food Distribution Program)",
+            "per_100g": {
+              "calories": 45.0,
+              "protein_g": 0.7,
+              "carbs_g": 10.4,
+              "fat_g": 0.2,
+              "saturated_fat_g": 0.024,
+              "fiber_g": 0.2,
+              "sugar_g": 8.4,
+              "sodium_mg": 1.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169098/nutrients"
+          },
+          {
+            "ingredient": "white granulated sugar",
+            "edible_grams": 70,
+            "fdc_id": 169655,
+            "fdc_description": "Sugars, granulated",
+            "per_100g": {
+              "calories": 387,
+              "protein_g": 0.0,
+              "carbs_g": 100,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "fiber_g": 0.0,
+              "sugar_g": 99.8,
+              "sodium_mg": 1.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169655/nutrients"
+          },
+          {
+            "ingredient": "food-grade green anise seeds (Pimpinella anisum)",
+            "edible_grams": 4,
+            "fdc_id": 171316,
+            "fdc_description": "Spices, anise seed",
+            "per_100g": {
+              "calories": 337,
+              "protein_g": 17.6,
+              "carbs_g": 50.0,
+              "fat_g": 15.9,
+              "saturated_fat_g": 0.586,
+              "fiber_g": 14.6,
+              "sodium_mg": 16.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171316/nutrients"
+          },
+          {
+            "ingredient": "double-acting baking powder",
+            "edible_grams": 6,
+            "fdc_id": 172804,
+            "fdc_description": "Leavening agents, baking powder, double-acting, straight phosphate",
+            "per_100g": {
+              "calories": 51.0,
+              "protein_g": 0.1,
+              "carbs_g": 24.1,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "fiber_g": 0.2,
+              "sugar_g": 0.0,
+              "sodium_mg": 7890.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/172804/nutrients"
+          },
+          {
+            "ingredient": "fine salt",
+            "edible_grams": 1,
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "calories": 0.0,
+              "protein_g": 0.0,
+              "carbs_g": 0.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0,
+              "sodium_mg": 38800.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients"
+          }
+        ],
+        "serving_size": "One of the 18 proposed pieces; finished weight not confirmed",
+        "method": "Sum each nutrient reported by all seven USDA records across the whole formula and divide by 18. No invented oven or handling losses; total sugar is omitted because the anise record does not report it.",
+        "note": "Formula estimate without a kitchen trial or laboratory analysis. 561 g is the raw sum, not measured finished weight. Total sugars pending: USDA171316 does not report this nutrient, with no zero substitution. Raising-agent brand, juice and actual yield can change the values.",
+        "missing_nutrients": [
+          "sugar_g"
+        ]
+      },
+      "image_url": "/recetas/rollitos-de-anis/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/rollitos-de-anis/portada.webp",
+          "alt": "Small lightly golden green anise biscuit rings without icing on a white plate"
+        }
+      ],
+      "published": true,
+      "editorial_status": "published",
+      "keywords": [
+        "anise biscuit rings",
+        "baked anise rolls",
+        "orange anise biscuits",
+        "anise without liqueur"
+      ],
+      "notes": "An original proposed baked ring formula with food-grade green anise, olive oil and orange juice; these are biscuit rings rather than fermented bread or fried doughnuts. Egg, milk and liqueur are not ingredients, but freedom from allergens or traces is not claimed: contains wheat/gluten; check labels and cross-contact. Use food-grade Pimpinella anisum; star anise, fennel and extracts are not equivalent replacements. No dose equivalence is given for liqueurs or essential oils. Quantities, 18 pieces and texture are proposed and await a kitchen trial. The full dough comprises 561 g raw ingredients; finished weight, evaporation and handling losses have not been measured. Use all the oil, juice and anise without extra shaping flour or finishing sugar. Changes to juice, flour, oil or sugar alter hydration, texture and nutrition; record and recalculate without promising the same result. Preheating overlaps shaping, and the first tray's cooling overlaps the second tray's baking; full time is 105 minutes. Flour is a raw food: do not taste dough, clean hands and utensils, and bake until cooked inside. Wash the orange in plain running water before cutting, without soap. As an untested quality suggestion, cool completely and store airtight, cool and dry for up to 3 days; humidity and climate can shorten that period. Discard without tasting if there is mold or unusual dampness. No verified commercial shelf life or freezing period is established. Nutrition is estimated from seven USDA records, the whole formula divided by 18: only nutrients reported in every record are published. The anise record does not report total sugars; that value remains pending and is not replaced with zero.",
+      "seo": {
+        "title": "Baked anise rings with orange: step-by-step recipe",
+        "description": "Small baked green anise biscuit rings with orange and oil: 18 proposed pieces, two oven batches, full cooling and estimated nutrition. Kitchen trial pending.",
+        "image_alt": "Small lightly golden green anise biscuit rings without icing on a white plate",
+        "image_variants": [
+          "/recetas/rollitos-de-anis/portada-1x1.webp",
+          "/recetas/rollitos-de-anis/portada-4x3.webp",
+          "/recetas/rollitos-de-anis/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Are these rings bread or fried doughnuts?",
+            "a": "They are small baked rings with biscuit texture and a chemical raising agent. No baker's yeast, frying, liqueur or icing. Quantities and texture form an original proposal awaiting a kitchen trial."
+          },
+          {
+            "q": "Can star anise or liqueur replace green anise?",
+            "a": "No equivalent substitution is proposed. Use 4 g food-grade green anise seeds and retain all the crushed seed. Other spices, liqueurs and extracts change flavor, composition and hydration and require a different formula and calculation."
+          },
+          {
+            "q": "Why is total sugar missing, and how long do they keep?",
+            "a": "The USDA anise record does not report sugar; neither zero nor an incomplete sum is invented as a total. The seven available nutrients are estimated for one of the 18 pieces. The untested quality suggestion is up to 3 days fully cool, airtight, cool and dry; humidity and climate can shorten that time."
+          }
+        ]
+      },
+      "content_html": "<p>Small baked biscuit rings made with green anise seeds, olive oil and orange juice. An original proposed formula for 18 pieces, with no added liqueur, egg or milk; 105 minutes including two oven batches and cooling, pending a kitchen trial.</p><p>An original proposed baked ring formula with food-grade green anise, olive oil and orange juice; these are biscuit rings rather than fermented bread or fried doughnuts. Egg, milk and liqueur are not ingredients, but freedom from allergens or traces is not claimed: contains wheat/gluten; check labels and cross-contact. Use food-grade Pimpinella anisum; star anise, fennel and extracts are not equivalent replacements. No dose equivalence is given for liqueurs or essential oils. Quantities, 18 pieces and texture are proposed and await a kitchen trial. The full dough comprises 561 g raw ingredients; finished weight, evaporation and handling losses have not been measured. Use all the oil, juice and anise without extra shaping flour or finishing sugar. Changes to juice, flour, oil or sugar alter hydration, texture and nutrition; record and recalculate without promising the same result. Preheating overlaps shaping, and the first tray&#x27;s cooling overlaps the second tray&#x27;s baking; full time is 105 minutes. Flour is a raw food: do not taste dough, clean hands and utensils, and bake until cooked inside. Wash the orange in plain running water before cutting, without soap. As an untested quality suggestion, cool completely and store airtight, cool and dry for up to 3 days; humidity and climate can shorten that period. Discard without tasting if there is mold or unusual dampness. No verified commercial shelf life or freezing period is established. Nutrition is estimated from seven USDA records, the whole formula divided by 18: only nutrients reported in every record are published. The anise record does not report total sugars; that value remains pending and is not replaced with zero.</p>"
     }
-  ]
+  ],
+  "portuguese_locale": "pt-BR",
+  "localization_qa": "PASS_SAME_NUMBERS_STRUCTURE_MEDIA_FOR_EXISTING_LANGUAGES"
 }
