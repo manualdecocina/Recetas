@@ -44,3 +44,8 @@ Fuente única `editorial/alitas-bbq-20261009.json`:7idiomas,11ingredientes,7paso
 ## 2026-10-09T02:49:39.073Z — Galletas avena y chocolate completas7/7; lote04 5/15preparado,0/15publicado
 
 Fuente única `editorial/galletas-de-avena-y-chocolate-20261009.json`:7idiomas,10ingredientes,9pasos,3FAQ; ES SHA256`21dda2498f731939b1590b4741fcc30271cacfecb1343be3b595961756ccfcfc`, paquete`5577482ff76104c529e990728dc2a644581ec227fa657bf28c616fe966c6587e`. Nueve originales y doceWebP guardados con hashes exactos; correcciones ImageGenlimitadas a yemaextra y recuento10piezas en dosfases. Todos los números de pasos coinciden; ingredientes/nutrición/tiempos/medios iguales, ptBR y rutas aprobadas. Fórmula669gcrudos para20unidades,118mincon20atemperado+20activo+30frío+28horno+20enfriado, todospropuestos sinensayo. USDA10fichas verificadas. SQL protegido `scripts/publish-galletas-de-avena-y-chocolate-20261009.sql` SHA256`9a121d5f56d87b23a47566fd93031b36fb83ad51d311891815464c2bba708496`, NOejecutado. Siguiente:receta-de-donas-glaseadas. Faltan10recetas del lote y publicación+QA de las15; no publicar parcial.
+
+
+## Checkpoint 2026-10-09T03:17:24.655Z
+
+Donas glaseadas completadas y preparadas7/7,10originales13WebP,23activos con hash exacto y QA visual. ES congelado b4caacc7d75625430b021d7d83ae618c317dc84f76ca8328d908d274577acfb3. Paquete d2a0c10151cabc1140dc091366343958d28b7a08476c92b06c73977cded81c32; SQL protegido c3127cd6052acca0c8314b25a37762b82e5b1c74c2ac51edf9e212ef3383b702, no ejecutado. Nutrición:30gaceite retenido hipótesis NO medida, baño900g excluido. Lote04:6de15preparadas,0publicadas. Siguiente gazpacho-tradicional-espanol en identidad/ES; preservar todas las seis completas. Publicación+QA del lote completo pendiente.
