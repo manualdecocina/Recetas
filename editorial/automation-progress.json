@@ -31,7 +31,7 @@
     "branch": "recetas/lote-03-20261008",
     "target": 15,
     "status": "in_progress",
-    "stage": "deploy",
+    "stage": "DB",
     "current_recipe": null,
     "started_at": "2026-10-08T12:39:02.511Z",
     "completed_recipes": 0,
@@ -640,7 +640,7 @@
     "sql_sha256": "3d28ca783fcdfd2a5ccf1690854faff47de9d3b956594976bcb27e0a93d7f574",
     "plan_file": "editorial/lote-03-plan-20261008.json",
     "prepublication_qa": "PASS_METADATA_105_ROWS_174_WEBP_127_PNG_PENDING_CI_FILE_DECODE",
-    "next_action": "Create batch03 PR; require quality and complete media validator CI green. Then merge expected SHA, observe174deployed hashes before atomic SQL, cache and105pages/global QA.",
+    "next_action": "Execute guarded atomic15 SQL once, verify105rows/15complete7languages,139publishedES and unchanged938outside rows. Then cache/live QA.",
     "pr_number": 95,
     "pr_url": "https://github.com/manualdecocina/Recetas/pull/95",
     "pr_head_sha": "810e70ee4d5d13a3df1c129be41be211bd03b199",
@@ -669,14 +669,30 @@
     "merge_sha": "67eb6034dab046e8ae77f0810e5754b292593365",
     "database_backup_file": "editorial/backups/lote03-prepublication-db-20261009.json",
     "database_backup_git_blob": "ed6b5b613cf60e447cfb9fea128c642944e0219e",
-    "database_baseline_recheck": "PASS_ALL15_MD5_EXPECTED_UNPUBLISHED"
+    "database_baseline_recheck": "PASS_ALL15_MD5_EXPECTED_UNPUBLISHED",
+    "deploy": {
+      "merge_sha": "67eb6034dab046e8ae77f0810e5754b292593365",
+      "run_id": 37864529272,
+      "job_id": 113607981039,
+      "artifact_id": 11587089674,
+      "checked_at": "2026-10-09T00:25:48.806780+00:00",
+      "assets": 174,
+      "passed": 174,
+      "errors": 0,
+      "evidence": "Observed HTTP200,image/webp and exact SHA256 for all174; initially404 then confirmed actual deployment."
+    },
+    "before_unrelated": {
+      "unrelated_rows": 938,
+      "unrelated_sha": "77913769e2eaf154e55bc8b36673bfc3",
+      "unrelated_published_es": 124
+    }
   },
   "next_candidate_position": 32,
   "run_lease": {
     "owner": "work-fish-localization-20261008T2334",
     "status": "active",
     "acquired_at": "2026-10-08T23:33:59.326Z",
-    "renewed_at": "2026-10-09T00:24:06.952Z",
+    "renewed_at": "2026-10-09T00:26:36.688Z",
     "expires_at": "2026-10-09T01:54:07.817Z",
     "previous_owner": "automation-continuation-20261009-fish-and-chips",
     "reason": "Continue six Fish and Chips localizations, then remaining two recipes and full15 publication."
@@ -759,7 +775,7 @@
     "next_action": "Finish remaining four: chocolateflan,fishandchips,tomatosauce,spinachtortilla. Preserve first11packages. Full15CI/deploy/atomicDB/cache/liveQA remains."
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z",
-  "updated_at": "2026-10-09T00:24:06.952Z",
+  "updated_at": "2026-10-09T00:26:36.688Z",
   "completed_batches": [
     {
       "id": "lote-02-20261008",
