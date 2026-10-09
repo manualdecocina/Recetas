@@ -11,3 +11,5 @@ Las estrellas ya existen, traducidas, junto a los datos de cada receta. La produ
 La interfaz confirma y guarda el voto local únicamente tras recibir un resultado válido del servidor. Los fallos de red, servidor o datos permiten reintentar. Durante el envío se bloquean los clics duplicados. El promedio y el JSON-LD se basan exclusivamente en votos reales.
 
 Verificación: typecheck, pruebas de lógica, compilación con valoraciones activas y pruebas de componentes (errores 503, red sin conexión, respuesta inválida, voto aceptado, doble clic, duplicado 409, siete idiomas y apertura asíncrona de Google). En Supabase se comprobó rate_recipe_once como service_role, incluyendo actualización de contadores y rechazo de duplicados, en transacción revertida: no se dejó ningún voto de prueba.
+
+Se retiraron diez reglas category-link--1…10 sin consumidores TSX de la antigua hoja globals.css, que todavía apuntaban a /wp-content/uploads. La hoja solo pertenece al panel; el frontend público usa public-base.css, site.css y consent.css. No se borra contenido editorial ni se cambia ninguna URL histórica de recetas.
