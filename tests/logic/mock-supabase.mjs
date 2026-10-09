@@ -5,7 +5,7 @@ function query(kind) {
     : kind === 'ingredients'
       ? (globalThis.__INGREDIENTS__ ?? [])
       : (globalThis.__ROWS__ ?? [])
-  let from = 0, to = Infinity
+  let from = 0, to = 999
   const q = {
     select() { return q },
     eq() { return q },

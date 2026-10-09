@@ -71,3 +71,26 @@ assert.ok(pt, 'sitemap conserva la barra final del public_path')
 assert.equal(pt.alternates.languages['pt-BR'], pt.url)
 assert.equal(pt.alternates.languages.es, 'https://manualdecocina.com/receta-pan-de-avena/')
 console.log('OK sitemap: ruta exacta y hreflang de Brasil')
+
+
+// The public Data API caps a request at 1000 rows. Categories that first occur
+// on the next page must stay in the sitemap together with their recipe URLs.
+;(globalThis as any).__ROWS__ = [
+  ...Array.from({ length: 1000 }, (_, i) => ({
+    recipe_group_id: 'filler-' + i, language: 'es', category: null,
+    public_path: '/filler-' + i, updated_at: '2026-10-09T00:00:00Z',
+  })),
+  ...['Sobremesas', 'Saladas', 'Sopas e cremes'].map((category, i) => ({
+    recipe_group_id: 'late-pt-' + i, language: 'pt', category,
+    public_path: '/pt/late-' + i, updated_at: '2026-10-09T00:00:00Z',
+  })),
+]
+const paginated: any[] = await sitemap()
+for (const slug of ['postres', 'ensaladas', 'sopas-y-cremas']) {
+  const url = 'https://manualdecocina.com/pt/categorias/' + slug
+  const matches = paginated.filter((entry) => entry.url === url)
+  assert.equal(matches.length, 1, 'category first seen after 1000 rows must occur exactly once')
+  assert.equal(matches[0].alternates.languages['pt-BR'], url)
+}
+assert.ok(paginated.some((entry) => entry.url === 'https://manualdecocina.com/pt/late-2'))
+console.log('OK paginated sitemap: Portuguese category routes after the first 1000 rows are retained')

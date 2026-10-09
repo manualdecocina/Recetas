@@ -794,15 +794,27 @@
       "unpublished_es": 55,
       "es_historical_preserved": true
     },
-    "error": "Global QA run37900942080:18 hreflang_target_not_in_sitemap errors;105batchpagesPASS. Need exact affected routes before fix. Browser environment temporarily disconnected; remaining live visual QA pending."
+    "error": "18 global hreflang errors traced to3Portuguese category routes omitted by sitemap1000row cap. FixPR102 pending green build/merge/deploy. Browser environment offline transiently; remaining visual QA pending.",
+    "sitemap_fix": {
+      "pr": 102,
+      "branch": "fix/sitemap-category-pagination-20261009",
+      "head": "4367870999c9fd9efd8c79e2d24d8d027b3e33a7",
+      "affected_category_routes": [
+        "/pt/categorias/ensaladas",
+        "/pt/categorias/postres",
+        "/pt/categorias/sopas-y-cremas"
+      ],
+      "cause": "Unpaginated category query truncated at1000 while published recipe rows total1078.",
+      "validation": "typecheck and pagination regression PASS; build in progress; observed deployment/global QA pending"
+    }
   },
   "next_candidate_position": 33,
   "run_lease": {
     "owner": "work-lote04-20261009T0059",
     "status": "active",
     "acquired_at": "2026-10-09T00:56:43.882Z",
-    "renewed_at": "2026-10-09T07:42:34.566Z",
-    "expires_at": "2026-10-09T09:27:18.601Z",
+    "renewed_at": "2026-10-09T08:02:18.039Z",
+    "expires_at": "2026-10-09T09:32:18.039Z",
     "base_main_sha": "3c8af0eff7a6e6a5c7bfcaedfedd3590e67d3032",
     "reason": "Single producer after batch03 fully closed; CAS reservation of next15.",
     "heartbeat_at": "2026-10-09T07:57:18.601Z"
@@ -885,10 +897,10 @@
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
   "progress_branch": "recetas/lote-04-20261009",
-  "last_checkpoint_at": "2026-10-09T06:40:53.713Z",
-  "handoff": "Prepare Greek salad after identity/USDA checks; preserve13complete packages.",
+  "last_checkpoint_at": "2026-10-09T08:02:18.039Z",
+  "handoff": "Lote04:15groups published7/7,105pagesPASS,163WebP200exacthash; fixPR102 sitemap pagination then PR101 globalQA, resume incomplete livevisualQA. Do not rerun SQL, regenerate assets or openbatch05.",
   "next_relay_requested_at": "2026-10-08T02:59:04Z",
-  "updated_at": "2026-10-09T07:57:18.601Z",
+  "updated_at": "2026-10-09T08:02:18.039Z",
   "completed_batches": [
     {
       "id": "lote-02-20261008",

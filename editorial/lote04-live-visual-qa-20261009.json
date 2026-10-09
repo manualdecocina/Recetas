@@ -1,0 +1,48 @@
+{
+  "status": "PARTIAL_PENDING_BROWSER_RECONNECTION",
+  "date": "2026-10-09",
+  "environment_error": "cua environment registry409environment_offline; exec process unavailable. No visualPASS assumed for uninspected pages.",
+  "observed": [
+    {
+      "path": "/es/recetas",
+      "result": "154recipe catalog visible; top6loadedcovers/readable layout inspected"
+    },
+    {
+      "path": "/receta-de-muffins-de-chocolate",
+      "result": "PASS loaded matching cover and readable recipe layout"
+    },
+    {
+      "path": "/receta-de-garbanzos-com-chorizo",
+      "result": "PASS loaded matching cover and readable recipe layout"
+    }
+  ],
+  "requires_revisit": [
+    {
+      "path": "/acai-bowl",
+      "reason": "Immediate screenshot preceded lazyloaded cover; wait for actual image load and inspect again"
+    }
+  ],
+  "pending_es_covers": [
+    "/acai-bowl",
+    "/alitas-bbq",
+    "/galletas-de-avena-y-chocolate",
+    "/receta-de-donas-glaseadas",
+    "/gazpacho-tradicional-espanol",
+    "/receta-de-tarta-de-fresa",
+    "/rollitos-de-anis",
+    "/receta-de-lasagna-de-carne-de-res",
+    "/receta-de-tarta-de-queso-cheesecake",
+    "/ensalada-de-frijoles-con-salsa-romesco",
+    "/receta-de-galletas-de-jengibre",
+    "/receta-de-ensalada-griega",
+    "/recetas-de-trufas-de-chocolate"
+  ],
+  "pending": [
+    "Six localized page layouts",
+    "Language selector interaction",
+    "Home154catalog",
+    "Missing sugar UI for rollitos/beans"
+  ],
+  "original_media_qa": "All118originals and163WebP variants visually accepted before publication; no regeneration required",
+  "gate": "Do not mark lote04 closed until remaining live visual QA passes."
+}
