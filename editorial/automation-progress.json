@@ -31,7 +31,7 @@
     "branch": "recetas/lote-04-20261009",
     "target": 15,
     "status": "in_progress",
-    "stage": "identidad",
+    "stage": "imágenes",
     "current_recipe": "receta-de-garbanzos-com-chorizo",
     "started_at": "2026-10-09T00:56:43.882Z",
     "completed_recipes": 0,
@@ -131,14 +131,23 @@
         "editorial_status": "published",
         "position": 35,
         "eligibility": "validate_url_master_before_writing",
-        "status": "reserved",
-        "stage": "identidad",
+        "status": "in_progress",
+        "stage": "imágenes",
         "identity_qa": "PASS",
         "classification": "ELIGIBLE_EXISTING_CULINARY_CANDIDATE",
         "expected_es_row_md5": "111a4ca41da96098423194a566aadf7b",
         "languages_ready": 0,
         "images_ready": 0,
-        "source_not_reused": true
+        "source_not_reused": true,
+        "es_content_file": "editorial/receta-de-garbanzos-com-chorizo-20261009.json",
+        "image_manifest": "editorial/receta-de-garbanzos-com-chorizo-imagenes.json",
+        "nutrition_evidence_file": "editorial/receta-de-garbanzos-com-chorizo-usda-verificado-20261009.json",
+        "steps_sha256": "045680f7380dfd7d95d48f500771c4041adead1d8fe6e64ccb9b19192a09728f",
+        "es_editorial_qa": "PASS_10_VERIFIED_USDA_RECORDS_FRESH_RAW_CHORIZO_71C",
+        "original_images_required": 7,
+        "distinct_images_pending": 7,
+        "next_image": 0,
+        "next_action": "Generate frozen cover+6phaseoriginals with ImageGen; visual QA then preserve originals and10WebP."
       },
       {
         "id": "2d31cabb-b350-4c6f-a444-eec6b03c28eb",
@@ -357,7 +366,7 @@
         "source_not_reused": true
       }
     ],
-    "next_action": "Continue preserved recipe-garbanzos-com-chorizo identity then original ES; preserve2prepared7/7. No publication until all15 gates.",
+    "next_action": "Generate frozen cover+6phaseoriginals with ImageGen; visual QA then preserve originals and10WebP.",
     "reservation_pr": 99,
     "reservation_merge_sha": "c6ac9d0b770525ecd02ea6a934cd2a48f94a8325"
   },
@@ -366,8 +375,8 @@
     "owner": "work-lote04-20261009T0059",
     "status": "active",
     "acquired_at": "2026-10-09T00:56:43.882Z",
-    "renewed_at": "2026-10-09T01:41:24.375Z",
-    "expires_at": "2026-10-09T03:11:24.377Z",
+    "renewed_at": "2026-10-09T01:49:14.611Z",
+    "expires_at": "2026-10-09T03:19:14.611Z",
     "base_main_sha": "3c8af0eff7a6e6a5c7bfcaedfedd3590e67d3032",
     "reason": "Single producer after batch03 fully closed; CAS reservation of next15."
   },
@@ -460,7 +469,7 @@
     "previous_batch_closed": true
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z",
-  "updated_at": "2026-10-09T01:41:24.375Z",
+  "updated_at": "2026-10-09T01:49:14.611Z",
   "completed_batches": [
     {
       "id": "lote-02-20261008",
