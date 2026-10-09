@@ -360,7 +360,7 @@
         "localization_qa_file": "editorial/receta-de-tarta-de-fresa-localization-qa-20261009.json",
         "localizations_pending": [],
         "sql_file": "scripts/publish-receta-de-tarta-de-fresa-20261009.sql",
-        "sql_sha256": "f6e5834b0afc1fc3f7eb58b6535f52de39f4b2e631cc5a9c056de435b2a960fc",
+        "sql_sha256": "7e2daa6a138a5a98662ddca6bbbe791d82c20f4b6b72fedea29008666bcd1426",
         "sql_executed": false,
         "published_database": false,
         "qa_file": "editorial/receta-de-tarta-de-fresa-qa-20261009.json",
@@ -661,18 +661,20 @@
     "prepared_count": 15,
     "publication_sql": {
       "file": "scripts/publish-lote04-20261009.sql",
-      "sha256": "a0ac917092b289df3f2ab8cb5c878f1241760fab146b81e2a8a4836244e04363",
+      "sha256": "b0983ad6bbbcf90a43328f5f92cc9a4701a4d64825af91ca8935c564f5873058",
       "executed": false,
-      "compile_readonly": "PASS_ALL15_BLOCKS"
-    }
+      "compile_readonly": "PASS_ALL15_BLOCKS",
+      "preflight_readonly": "PASS_ALL15_INITIAL_STATE_ROUTES_CONTENTPAGES"
+    },
+    "publication_pr": 100
   },
   "next_candidate_position": 33,
   "run_lease": {
     "owner": "work-lote04-20261009T0059",
     "status": "active",
     "acquired_at": "2026-10-09T00:56:43.882Z",
-    "renewed_at": "2026-10-09T07:35:48.190Z",
-    "expires_at": "2026-10-09T09:05:48.190Z",
+    "renewed_at": "2026-10-09T07:39:40.143Z",
+    "expires_at": "2026-10-09T09:09:40.143Z",
     "base_main_sha": "3c8af0eff7a6e6a5c7bfcaedfedd3590e67d3032",
     "reason": "Single producer after batch03 fully closed; CAS reservation of next15."
   },
