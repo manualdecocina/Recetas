@@ -1,0 +1,19 @@
+name: multilingual-navigation-audit
+on:
+  pull_request:
+    paths: ['.github/workflows/multilingual-navigation-audit.yml']
+permissions:
+  contents: read
+jobs:
+  live-audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Audit deployed pages, language alternates, schemas, links and images
+        run: EXPECTED_ES_RECIPES=160 python3 -u scripts/audit-site-preview.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: multilingual-navigation-live-audit
+          path: site-preview-audit.json
