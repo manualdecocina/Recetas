@@ -31,7 +31,7 @@
     "branch": "recetas/lote-03-20261008",
     "target": 15,
     "status": "in_progress",
-    "stage": "PR/CI",
+    "stage": "deploy",
     "current_recipe": null,
     "started_at": "2026-10-08T12:39:02.511Z",
     "completed_recipes": 0,
@@ -640,7 +640,7 @@
     "sql_sha256": "48cdf6637ca77bd6962848b05e429851c85d3bb353f78b9d167b57cca526ae44",
     "plan_file": "editorial/lote-03-plan-20261008.json",
     "prepublication_qa": "PASS_METADATA_105_ROWS_174_WEBP_127_PNG_PENDING_CI_FILE_DECODE",
-    "next_action": "Merge guarded CASE correction after green CI, observe174media again, retry atomicSQL then cache/live QA.",
+    "next_action": "Observe174media again on correction merge; retry finalSQL48cdf663... Then fresh105rows/139ES, cache/QA.",
     "pr_number": 95,
     "pr_url": "https://github.com/manualdecocina/Recetas/pull/95",
     "pr_head_sha": "810e70ee4d5d13a3df1c129be41be211bd03b199",
@@ -700,7 +700,29 @@
     },
     "sql_compilation_qa": "PASS_ALL17_DO_BLOCKS_IN_READ_ONLY_TRANSACTION_ROLLED_BACK_WITH_EARLY_RETURNS",
     "correction_pr_number": 96,
-    "sql_schema_qa": "PASS_EXPLAIN_UPDATE_AND_INSERT_AGAINST_REAL_SCHEMA_NO_EXECUTION; category_slug remains package metadata, actual category label stored."
+    "sql_schema_qa": "PASS_EXPLAIN_UPDATE_AND_INSERT_AGAINST_REAL_SCHEMA_NO_EXECUTION; category_slug remains package metadata, actual category label stored.",
+    "correction_merge_sha": "52dafa72d8b2aefb054dc58521a9cdac427e23c5",
+    "correction_ci": {
+      "head_sha": "ab3ec189ba18a79c41ffe3cec59d1b45c8ab8d28",
+      "runs": [
+        {
+          "id": 37865056369,
+          "name": "lote02-prepublication",
+          "conclusion": "success"
+        },
+        {
+          "id": 37865056341,
+          "name": "lote03-prepublication",
+          "conclusion": "success"
+        },
+        {
+          "id": 37865056377,
+          "name": "quality",
+          "conclusion": "success"
+        }
+      ],
+      "validation_artifact_id": 11586899171
+    }
   },
   "next_candidate_position": 32,
   "run_lease": {
@@ -790,7 +812,7 @@
     "next_action": "Finish remaining four: chocolateflan,fishandchips,tomatosauce,spinachtortilla. Preserve first11packages. Full15CI/deploy/atomicDB/cache/liveQA remains."
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z",
-  "updated_at": "2026-10-09T00:29:31.601Z",
+  "updated_at": "2026-10-09T00:32:42.365Z",
   "completed_batches": [
     {
       "id": "lote-02-20261008",
