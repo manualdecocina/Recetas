@@ -115,6 +115,30 @@
       "public_path": "/recetas/alitas-bbq/paso-02.webp",
       "original": "paso-02.png",
       "visual_qa": "PASS"
+    },
+    {
+      "asset": "paso-03.webp",
+      "path": "public/recetas/alitas-bbq/paso-03.webp",
+      "sha256": "a4b43f1d72d54d13b74ce850af8c807f4900bf72c142828b613b9870e1d70d94",
+      "git_blob_sha": "471e222865a4cc8039cb7724d70afc348616ea7a",
+      "bytes": 237026,
+      "width": 1280,
+      "height": 960,
+      "public_path": "/recetas/alitas-bbq/paso-03.webp",
+      "original": "paso-03.png",
+      "visual_qa": "PASS"
+    },
+    {
+      "asset": "paso-04.webp",
+      "path": "public/recetas/alitas-bbq/paso-04.webp",
+      "sha256": "6dfdc3dbeb6deae959a5dcdcd184970eec3af012f14767d306fa748439a5e880",
+      "git_blob_sha": "5a81ac845333fad4d8f3ed51ff8f6bb094997365",
+      "bytes": 126968,
+      "width": 1280,
+      "height": 960,
+      "public_path": "/recetas/alitas-bbq/paso-04.webp",
+      "original": "paso-04.png",
+      "visual_qa": "PASS"
     }
   ],
   "originals": [
@@ -153,6 +177,30 @@
       "phase": 2,
       "visual_qa": "PASS",
       "source": "built-in ImageGen"
+    },
+    {
+      "asset": "paso-03.png",
+      "path": "public/recetas/alitas-bbq/originals/paso-03.png",
+      "sha256": "96b122a23990409f2da4bcc5b5fa17b62c1bcfe8453d7872509b23b4a2afce35",
+      "git_blob_sha": "45c7c6103940b560039ae2d0204a7725994804ce",
+      "bytes": 2627005,
+      "width": 1448,
+      "height": 1086,
+      "phase": 3,
+      "visual_qa": "PASS",
+      "source": "built-in ImageGen"
+    },
+    {
+      "asset": "paso-04.png",
+      "path": "public/recetas/alitas-bbq/originals/paso-04.png",
+      "sha256": "e4eae9289f873b3c71eadfe5a273f90bcac204779420103a318e8b0781352e93",
+      "git_blob_sha": "7a97a3eefb4a1716bfdf78b78a7464ad68ebd179",
+      "bytes": 2253903,
+      "width": 1448,
+      "height": 1086,
+      "phase": 4,
+      "visual_qa": "PASS",
+      "source": "built-in ImageGen"
     }
   ],
   "state": "IMAGES_PARTIAL",
@@ -164,6 +212,12 @@
       "phase": 1,
       "prompt": "Edit only the small foreground bowl that currently contains pale beige garlic powder: replace the powder with a small mound of fresh peeled garlic very finely minced, irregular moist ivory pieces. The recipe uses fresh garlic, not powder. Preserve all raw chicken wings, hand drying with paper towel, separate boards/trays, rack, ketchup, brown sugar, paprika, salt and black pepper, background, lighting, framing and every other detail exactly. No new ingredients, no writing.",
       "reason": "Replaced garlic powder with fresh minced garlic matching frozen ES8g",
+      "qa": "PASS_TARGETED_EDIT_ES_UNCHANGED"
+    },
+    {
+      "phase": 4,
+      "prompt": "Edit only the entire chicken-wing baking tray and all chicken wings at the right side: remove that tray, rack and wings completely, replacing their area with clear pale kitchen countertop matching the existing surface. This image illustrates cooking the BBQ sauce before glazing; no chicken should appear in this sauce-preparation scene. Preserve the saucepan of tomato BBQ sauce, wooden spoon, stove, all small ingredient bowls including fresh minced garlic, composition, lighting, colors and every other detail. Do not add objects, garnish, words or labels.",
+      "reason": "Removed prematurely glazed chicken tray from sauce-cooking phase",
       "qa": "PASS_TARGETED_EDIT_ES_UNCHANGED"
     }
   ],
