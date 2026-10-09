@@ -198,3 +198,6 @@ Remote media recheck PASS: all21 assets positive (minimum81424 bytes) and exact 
 ## 2026-10-09T00:28:13.883Z — Corrección de SQL antes de publicación
 
 PR95 integrado67eb6034dab046e8ae77f0810e5754b292593365, CI verde con301archivos exactos, artifact11586759774. Despliegue observado run37864529272/artifact11587089674:174/174HTTP200+SHA256 a00:25:48Z. SQL original abortó42601 por CASE sin paréntesis en IF inicial: confirmado15filas/0publicadas y124ES. Correcciónf0ebf272d072ede62f785281007562b56ad7ebcf519c15c4fe1a089b1299714f;17bloquesDO compilan en transacción READONLY+RETURNprevio+ROLLBACK, sin mutación. Respaldo previo editorial/backups/lote03-prepublication-db-20261009.json. Se requiere PR/CI/merge de corrección y nueva observación174 antes del reintento. No ocultar deuda: lote03sigue0/15publicadas.
+
+
+Última corrección en PR96: se contrastaron campos con information_schema y triggers reales. public.recipes no tiene category_slug; queda como metadato editorial validado y se almacena category exacta. EXPLAIN de UPDATE e INSERT pasa sin ejecutarlos. SQL final1930016bytes/SHA25648cdf6637ca77bd6962848b05e429851c85d3bb353f78b9d167b57cca526ae44, sustituyehashes anteriores. No se ha publicado ninguna receta del lote.

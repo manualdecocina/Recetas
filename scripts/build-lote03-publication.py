@@ -30,10 +30,9 @@ for i,g in enumerate(plan['groups']):
  p=json.loads((R/g['editorial_file']).read_text());assert len(p['records'])==7
  b={k:g['expected_before'][k]for k in ['id','recipe_group_id','slug','public_path','source_url','created_at','published_at','expected_row_md5']}
  block=template.replace('$pizza$',f'$group{i:02d}$').replace('Pizza',g['slug']).replace('pizza ',g['slug']+' ').replace('31a06fe5-2ae5-4451-8ee8-e53376013609',g['recipe_group_id'])
- # Include explicit category slug in mutation/comparison; preserve all historical source URLs.
- block=block.replace('category=x.category,','category=x.category, category_slug=x.category_slug,')
- block=block.replace('steps,category,prep_time_minutes','steps,category,category_slug,prep_time_minutes').replace('x.steps,x.category,x.prep_time_minutes','x.steps,x.category,x.category_slug,x.prep_time_minutes')
- block=block.replace('r.category IS DISTINCT FROM x.category OR','r.category IS DISTINCT FROM x.category OR r.category_slug IS DISTINCT FROM x.category_slug OR')
+ # The real recipes schema stores localized category, not category_slug.
+ # Package category_slug is editorial metadata validated against the closed taxonomy.
+ # Preserve all historical source URLs and schema-backed category labels.
  block=re.sub(r'\$records\$[\s\S]*?\$records\$',lambda m:'$records$'+json.dumps(p['records'],ensure_ascii=False,separators=(',',':'))+'$records$',block)
  block=re.sub(r'\$before\$[\s\S]*?\$before\$',lambda m:'$before$'+json.dumps(b,ensure_ascii=False,separators=(',',':'))+'$before$',block)
  sql+=block+'\n';records+=p['records']

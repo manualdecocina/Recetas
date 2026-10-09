@@ -637,7 +637,7 @@
       }
     ],
     "sql_file": "scripts/publish-lote03-20261008.sql",
-    "sql_sha256": "f0ebf272d072ede62f785281007562b56ad7ebcf519c15c4fe1a089b1299714f",
+    "sql_sha256": "48cdf6637ca77bd6962848b05e429851c85d3bb353f78b9d167b57cca526ae44",
     "plan_file": "editorial/lote-03-plan-20261008.json",
     "prepublication_qa": "PASS_METADATA_105_ROWS_174_WEBP_127_PNG_PENDING_CI_FILE_DECODE",
     "next_action": "Merge guarded CASE correction after green CI, observe174media again, retry atomicSQL then cache/live QA.",
@@ -698,14 +698,16 @@
       "resolved_in_source": true,
       "pending": "Correction PR, CI and observed deployment before retry."
     },
-    "sql_compilation_qa": "PASS_ALL17_DO_BLOCKS_IN_READ_ONLY_TRANSACTION_ROLLED_BACK_WITH_EARLY_RETURNS"
+    "sql_compilation_qa": "PASS_ALL17_DO_BLOCKS_IN_READ_ONLY_TRANSACTION_ROLLED_BACK_WITH_EARLY_RETURNS",
+    "correction_pr_number": 96,
+    "sql_schema_qa": "PASS_EXPLAIN_UPDATE_AND_INSERT_AGAINST_REAL_SCHEMA_NO_EXECUTION; category_slug remains package metadata, actual category label stored."
   },
   "next_candidate_position": 32,
   "run_lease": {
     "owner": "work-fish-localization-20261008T2334",
     "status": "active",
     "acquired_at": "2026-10-08T23:33:59.326Z",
-    "renewed_at": "2026-10-09T00:28:13.883Z",
+    "renewed_at": "2026-10-09T00:29:31.601Z",
     "expires_at": "2026-10-09T01:54:07.817Z",
     "previous_owner": "automation-continuation-20261009-fish-and-chips",
     "reason": "Continue six Fish and Chips localizations, then remaining two recipes and full15 publication."
@@ -788,7 +790,7 @@
     "next_action": "Finish remaining four: chocolateflan,fishandchips,tomatosauce,spinachtortilla. Preserve first11packages. Full15CI/deploy/atomicDB/cache/liveQA remains."
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z",
-  "updated_at": "2026-10-09T00:28:13.883Z",
+  "updated_at": "2026-10-09T00:29:31.601Z",
   "completed_batches": [
     {
       "id": "lote-02-20261008",
