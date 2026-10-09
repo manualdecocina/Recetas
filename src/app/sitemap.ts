@@ -29,6 +29,7 @@ interface Row {
   slug: string
   public_path: string
   updated_at: string
+  category: string | null
 }
 
 interface ContentRow {
@@ -47,7 +48,7 @@ async function fetchAllPublished(): Promise<Row[]> {
   for (let from = 0; ; from += BATCH) {
     const { data, error } = await supabase
       .from('recipes')
-      .select('recipe_group_id, language, slug, public_path, updated_at')
+      .select('recipe_group_id, language, slug, public_path, updated_at, category')
       .eq('published', true)
       .order('id')
       .range(from, from + BATCH - 1)
@@ -105,14 +106,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Herramienta real (gratuita) sin página propia en el sitemap hasta ahora.
   entries.push({ url: `${site}/es/que-puedo-cocinar` })
 
-  const { data: categoryRows, error: categoryError } = await supabase
-    .from('recipes')
-    .select('language, category')
-    .eq('published', true)
-    .not('category', 'is', null)
-  if (categoryError) throw new Error(`Sitemap categorias: ${categoryError.message}`)
+  // Use the same ordered, paginated rows as recipe URLs. A separate unpaginated
+  // query stops at the API row limit and can drop category routes in later languages.
   const seenCategories = new Set<string>()
-  for (const row of (categoryRows ?? []) as { language: string; category: string }[]) {
+  for (const row of rows) {
     const slug = categorySlugFromLabel(row.language as RecipeLanguage, row.category)
     if (!slug) continue
     const key = `${row.language}/${slug}`
