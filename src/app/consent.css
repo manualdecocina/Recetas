@@ -1,0 +1,134 @@
+/* Restore the native Mercado drawer design on Google's consent UI.
+   Google owns the choices, disclosures, focus and consent records. These rules
+   only style its existing DOM; they never hide a choice or force a consent state.
+   If Google changes these hooks, its original usable UI remains the fallback. */
+html body .fc-consent-root {
+  align-items: flex-end !important;
+  justify-content: center !important;
+  padding: 14px !important;
+  box-sizing: border-box !important;
+}
+
+html body .fc-consent-root .fc-dialog-container {
+  width: min(100%, 880px) !important;
+  max-width: 880px !important;
+  min-width: 0 !important;
+}
+
+html body .fc-consent-root .fc-dialog {
+  width: 100% !important;
+  max-width: 880px !important;
+  min-width: 0 !important;
+  max-height: calc(100dvh - 28px) !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+  background: var(--md-white) !important;
+  color: var(--md-ink) !important;
+  border: 2px solid var(--md-stone) !important;
+  border-top: 6px solid var(--md-accent) !important;
+  border-radius: var(--md-radius) !important;
+  box-shadow: 0 18px 44px rgb(0 0 0 / 24%) !important;
+  overflow: hidden !important;
+  font-family: var(--md-sans) !important;
+}
+
+html body .fc-consent-root .fc-dialog-content {
+  width: auto !important;
+  min-height: 0 !important;
+  margin-inline: 20px !important;
+  background: var(--md-white) !important;
+  color: var(--md-ink) !important;
+}
+
+html body .fc-consent-root .fc-dialog-scrollable-content,
+html body .fc-consent-root .fc-dialog-restricted-content {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+html body .fc-consent-root .fc-dialog p,
+html body .fc-consent-root .fc-dialog span,
+html body .fc-consent-root .fc-dialog button,
+html body .fc-consent-root .fc-dialog a {
+  font-family: var(--md-sans) !important;
+}
+
+html body .fc-consent-root .fc-dialog-headline {
+  font-family: var(--md-serif) !important;
+  font-size: clamp(1.15rem, 2.5vw, 1.45rem) !important;
+  font-weight: 800 !important;
+  color: var(--md-ink) !important;
+}
+
+html body .fc-consent-root .fc-header-image {
+  content: url('/brand/logo-manual-de-cocina.png') !important;
+  width: 250px !important;
+  max-width: 100% !important;
+  height: 74px !important;
+  object-fit: contain !important;
+  border-radius: 10px !important;
+  background: var(--md-header-bg) !important;
+}
+
+html body .fc-consent-root .fc-stack-name,
+html body .fc-consent-root .fc-faq-label {
+  color: var(--md-ink) !important;
+}
+
+html body .fc-consent-root .fc-footer,
+html body .fc-consent-root .fc-footer p {
+  color: var(--md-muted) !important;
+}
+
+html body .fc-consent-root .fc-stack-icon {
+  background-color: var(--md-sand) !important;
+}
+
+html body .fc-consent-root .fc-footer-buttons-container {
+  background: var(--md-white) !important;
+  border-top: 1px solid var(--md-stone) !important;
+}
+
+html body .fc-consent-root .fc-button {
+  min-width: 0 !important;
+  border-radius: var(--md-radius-sm) !important;
+  font-weight: 700 !important;
+}
+
+html body .fc-consent-root .fc-button-background {
+  background: transparent !important;
+}
+
+html body .fc-consent-root .fc-primary-button {
+  background: var(--md-accent) !important;
+  color: var(--md-on-accent) !important;
+  border: 1px solid var(--md-accent) !important;
+}
+
+html body .fc-consent-root .fc-secondary-button {
+  background: var(--md-white) !important;
+  color: var(--md-olive-dark) !important;
+  border: 1px solid var(--md-olive) !important;
+}
+
+html body .fc-consent-root .fc-button-label {
+  color: inherit !important;
+  font-weight: 700 !important;
+}
+
+html body .fc-consent-root .fc-cta-manage-options,
+html body .fc-consent-root .fc-manage-options-third-button-label,
+html body .fc-consent-root .fc-footer-link-v2 {
+  color: var(--md-olive-dark) !important;
+}
+
+html body .fc-consent-root button:focus-visible,
+html body .fc-consent-root a:focus-visible {
+  outline: 2px solid var(--md-focus) !important;
+  outline-offset: 3px !important;
+}
+
+@media (min-width: 900px) {
+  html body .fc-consent-root { padding: 20px !important; }
+}

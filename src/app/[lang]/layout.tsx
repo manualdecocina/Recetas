@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import '../public-base.css'
 import '../site.css'
+import '../consent.css'
 import { editorialSerif, uiSans } from '../fonts'
 import ThemeSync from '@/components/md/ThemeSync'
 import AdSenseLoader from '@/components/md/AdSenseLoader'
