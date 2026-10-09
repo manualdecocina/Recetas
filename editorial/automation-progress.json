@@ -382,7 +382,7 @@
         "identity_qa": "PASS",
         "classification": "ELIGIBLE_EXISTING_CULINARY_CANDIDATE",
         "expected_es_row_md5": "dd04eb37a8a376d5c3701c2723c1e06c",
-        "languages_ready": 3,
+        "languages_ready": 5,
         "images_ready": 11,
         "source_not_reused": true,
         "es_content_file": "editorial/rollitos-de-anis-20261009.json",
@@ -392,14 +392,12 @@
         "es_editorial_qa": "PASS_7_EXACT_USDA_FOODS_SUGAR_PENDING_NOT_ZERO",
         "original_images_required": 8,
         "distinct_images_pending": 0,
-        "next_action": "Finish FR IT JA PT; preserve ES DE EN and8originals11WebP, frozen ES and missing sugar status.",
+        "next_action": "Finish JA and PT then QA and guardedSQL. Preserve5languagesandall8originals11WebP.",
         "image_originals": 8,
         "next_image": null,
         "cover_variant_visual_qa": "PASS_ALL4_CROPS_PRIMARY_FRONT_RINGS_COMPLETE_SECONDARY_PLATE_EDGES_CROPPED",
         "image_visual_qa": "PASS_ALL8_ORIGINALS",
         "localizations_pending": [
-          "fr",
-          "it",
           "ja",
           "pt"
         ]
@@ -513,7 +511,7 @@
         "source_not_reused": true
       }
     ],
-    "next_action": "Finish FR IT JA PT; preserve ES DE EN and8originals11WebP, frozen ES and missing sugar status.",
+    "next_action": "Finish JA and PT then QA and guardedSQL. Preserve5languagesandall8originals11WebP.",
     "reservation_pr": 99,
     "reservation_merge_sha": "c6ac9d0b770525ecd02ea6a934cd2a48f94a8325"
   },
@@ -522,8 +520,8 @@
     "owner": "work-lote04-20261009T0059",
     "status": "active",
     "acquired_at": "2026-10-09T00:56:43.882Z",
-    "renewed_at": "2026-10-09T04:44:11.319Z",
-    "expires_at": "2026-10-09T06:14:11.324Z",
+    "renewed_at": "2026-10-09T04:45:55.678Z",
+    "expires_at": "2026-10-09T06:15:55.678Z",
     "base_main_sha": "3c8af0eff7a6e6a5c7bfcaedfedd3590e67d3032",
     "reason": "Single producer after batch03 fully closed; CAS reservation of next15."
   },
@@ -605,7 +603,7 @@
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
   "progress_branch": "recetas/lote-04-20261009",
-  "last_checkpoint_at": "2026-10-09T04:44:11.319Z",
+  "last_checkpoint_at": "2026-10-09T04:45:55.678Z",
   "handoff": {
     "branch": "recetas/lote-04-20261009",
     "stage": "localización",
@@ -616,7 +614,7 @@
     "previous_batch_closed": true
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z",
-  "updated_at": "2026-10-09T04:44:11.319Z",
+  "updated_at": "2026-10-09T04:45:55.678Z",
   "completed_batches": [
     {
       "id": "lote-02-20261008",
