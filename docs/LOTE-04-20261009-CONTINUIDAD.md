@@ -89,3 +89,8 @@ Galletas de jengibre y melaza completas7/7,8PNG y11WebP;19hashes y cifras/estruc
 ## 2026-10-09T07:06:20.178Z — Ensalada griega completa; 14/15 preparadas
 
 Paquete único receta-de-ensalada-griega-20261009.json con7records,10ingredientes,6pasos y3FAQ por idioma. Se conservan6PNG originales y9WebP con15hashes comprobados, cuatro recortes y fases revisadas. Correcciones limitadas a preparación de verduras y retirada de ensalada prematura en fase de aliño. Nutrición8nutrientes/10USDA completos; aceitunas maduras genéricas no Kalamata y feta genérico con limitación de marca explícita. Sin prueba de cocina afirmada. SQL con guardas y SHA 3144840ef7fdce937f5c63bbcc9431b0ea5e7e361116a748db1397006267ae51 no ejecutado. DBESfalseMD5 intacto,0colisiones de recetas/páginas. Siguiente: recetas-de-trufas-de-chocolate. Lote04todavía0publicadas; exige15completas+CI/merge/deploy observado+DB/cache/QA.
+
+
+## 2026-10-09T07:26:30.024Z — Trufas completas; 15/15 preparadas,0publicadas
+
+Último paquete único recetas-de-trufas-de-chocolate-20261009.json con7records,4ingredientes,7pasos y3FAQ por idioma;7PNG10WebP17hashes comprobados,portada20piezas y cuatro recortes correctos. Correcciones puntuales de recuento y tapa documentadas. Ocho nutrientes completos de4fichas USDA; chocolate genérico70–85%, nata y retención de cacao con limitaciones explícitas.202min incluye toda espera/frío; propuestas sin ensayo de cocina. SQLguardado SHA17920b2b7337d12d4c812238c9d4baa313863ab0fc88c615f39139f709c4412f no ejecutado;ESMD5 intacto.15recetas preparadas no equivalen a publicación: siguiente ensamblarSQLtransaccional/validadores/PR/CI→merge→deploy observado con hashes→DB105filas→cache/liveQA/global154ESsiDBconfirma. No abrir05 antesdelcierre04.
