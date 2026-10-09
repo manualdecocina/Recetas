@@ -139,6 +139,30 @@
       "public_path": "/recetas/alitas-bbq/paso-04.webp",
       "original": "paso-04.png",
       "visual_qa": "PASS"
+    },
+    {
+      "asset": "paso-05.webp",
+      "path": "public/recetas/alitas-bbq/paso-05.webp",
+      "sha256": "4dc3748505bc2b5c173d51ddcea534a1580b64ab4d87bce8b01a0a7934288d17",
+      "git_blob_sha": "9aa29a8bb3196575f38aa97b39739f4cad83f21c",
+      "bytes": 200254,
+      "width": 1280,
+      "height": 960,
+      "public_path": "/recetas/alitas-bbq/paso-05.webp",
+      "original": "paso-05.png",
+      "visual_qa": "PASS"
+    },
+    {
+      "asset": "paso-06.webp",
+      "path": "public/recetas/alitas-bbq/paso-06.webp",
+      "sha256": "a45f51fafe3fe6e30efe350973a22aa3ac1497088d9f44ee7301fb4642b5e82c",
+      "git_blob_sha": "621b970ecf21e98a0669b40952e739aa4fdcefa2",
+      "bytes": 248340,
+      "width": 1280,
+      "height": 960,
+      "public_path": "/recetas/alitas-bbq/paso-06.webp",
+      "original": "paso-06.png",
+      "visual_qa": "PASS"
     }
   ],
   "originals": [
@@ -201,9 +225,33 @@
       "phase": 4,
       "visual_qa": "PASS",
       "source": "built-in ImageGen"
+    },
+    {
+      "asset": "paso-05.png",
+      "path": "public/recetas/alitas-bbq/originals/paso-05.png",
+      "sha256": "5f754b3bc00100c58f1fbe0314e30002889f47767ee8e520f2c30948c427b69b",
+      "git_blob_sha": "628c3a28cf119e29eac2dbe8b7bd4c8f456443b1",
+      "bytes": 2609749,
+      "width": 1448,
+      "height": 1086,
+      "phase": 5,
+      "visual_qa": "PASS",
+      "source": "built-in ImageGen"
+    },
+    {
+      "asset": "paso-06.png",
+      "path": "public/recetas/alitas-bbq/originals/paso-06.png",
+      "sha256": "588da52fe83a40b80b249401fc7ce7a885c0986db1f8811a4045e513010374b0",
+      "git_blob_sha": "fc85315597796db0ea479b950b3895fc2f9a3ea6",
+      "bytes": 2731554,
+      "width": 1448,
+      "height": 1086,
+      "phase": 6,
+      "visual_qa": "PASS",
+      "source": "built-in ImageGen"
     }
   ],
-  "state": "IMAGES_PARTIAL",
+  "state": "PASS_ALL7_ORIGINALS_AND10_WEBP",
   "last_step_reuses_cover": true,
   "original_images_required": 7,
   "published_webp_required": 10,
