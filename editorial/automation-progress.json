@@ -502,7 +502,7 @@
         "identity_qa": "PASS",
         "classification": "ELIGIBLE_EXISTING_CULINARY_CANDIDATE",
         "expected_es_row_md5": "07215a71947353d1aeb8faee7a58525c",
-        "languages_ready": 0,
+        "languages_ready": 3,
         "images_ready": 10,
         "source_not_reused": true,
         "es_content_file": "editorial/ensalada-de-frijoles-con-salsa-romesco-20261009.json",
@@ -513,10 +513,18 @@
         "original_images_required": 7,
         "distinct_images_pending": 0,
         "next_image": null,
-        "next_action": "Generate only frozen7phase briefs; preserve11prepared and complete all15 publication gate.",
+        "next_action": "Finish pending localizations then guardedSQL; preserve11prepared and all7originals10WebP.",
         "image_originals": 7,
         "cover_variant_visual_qa": "PASS_ALL4_CROPS_PRIMARY_SERVING_COMPLETE_SECONDARY_DISH_CROPPED",
-        "image_visual_qa": "PASS_ALL7_ORIGINALS"
+        "image_visual_qa": "PASS_ALL7_ORIGINALS",
+        "localizations_pending": [
+          "fr",
+          "it",
+          "ja",
+          "pt"
+        ],
+        "localization_qa": "PASS_EXISTING_LANGUAGE_NUMBERS_STRUCTURE_MEDIA",
+        "localization_qa_file": "editorial/ensalada-de-frijoles-con-salsa-romesco-localization-qa-20261009.json"
       },
       {
         "id": "670af688-3058-4f8c-9070-96eaae0bda4f",
@@ -583,8 +591,8 @@
     "owner": "work-lote04-20261009T0059",
     "status": "active",
     "acquired_at": "2026-10-09T00:56:43.882Z",
-    "renewed_at": "2026-10-09T06:08:49.376Z",
-    "expires_at": "2026-10-09T07:38:49.376Z",
+    "renewed_at": "2026-10-09T06:11:27.685Z",
+    "expires_at": "2026-10-09T07:41:27.685Z",
     "base_main_sha": "3c8af0eff7a6e6a5c7bfcaedfedd3590e67d3032",
     "reason": "Single producer after batch03 fully closed; CAS reservation of next15."
   },
