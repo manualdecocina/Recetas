@@ -1,3 +1,6 @@
+import { ingredientLabel } from '@/lib/ingredient-labels'
+import { getPantryMatchData } from '@/lib/md-data'
+import { getMdCopy } from '@/lib/copy'
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import { supabase } from '@/lib/supabase/public'
@@ -5,7 +8,7 @@ import { IngredientDetailView } from '@/components/md/IngredientViews'
 import type { MdRecipeCardData } from '@/components/md/md-types'
 import { SUPPORTED_LANGUAGES, type RecipeLanguage } from '@/types/recipe'
 import { publicUrl, absoluteUrl } from '@/lib/site'
-import { withSiteName, siteRobots } from '@/lib/seo'
+import { withSiteName, siteRobots, allLanguageAlternates } from '@/lib/seo'
 
 function parseLang(value: string): RecipeLanguage | null {
   return (SUPPORTED_LANGUAGES as string[]).includes(value) ? value as RecipeLanguage : null
@@ -20,6 +23,12 @@ async function getIngredient(lang: RecipeLanguage, slug: string) {
     .maybeSingle()
   if (error) throw new Error('No se pudo cargar el ingrediente')
   if (!data || !data.indexable) return null
+
+  if (lang !== 'es') {
+    const pantry = await getPantryMatchData(lang)
+    return { ingredient: { ...data, name: ingredientLabel(data.slug, data.name, lang), description: null },
+      recipes: pantry.recipes.filter((recipe) => recipe.ingredientIds.includes(data.id)) }
+  }
 
   const { data: relations, error: relationError } = await supabase
     .from('recipe_ingredients')
@@ -47,12 +56,12 @@ async function getIngredient(lang: RecipeLanguage, slug: string) {
 export async function generateMetadata({ params }: { params: Promise<{ lang: string; slug: string }> }): Promise<Metadata> {
   const { lang: rawLang, slug } = await params
   const lang = parseLang(rawLang)
-  if (!lang || lang !== 'es') return {}
+  if (!lang) return {}
   const result = await getIngredient(lang, slug)
   if (!result) return {}
   const title = withSiteName(result.ingredient.name)
-  const description = result.ingredient.description ?? `Recetas con ${result.ingredient.name} en Manual de Cocina.`
-  const url = publicUrl(`/es/ingredientes/${result.ingredient.slug}`)
+  const description = result.ingredient.description ?? `${getMdCopy(lang).recipesWithIngredient}: ${result.ingredient.name}.`
+  const url = publicUrl(`/${lang}/ingredientes/${result.ingredient.slug}`)
   const images = result.ingredient.image_url
     ? [{ url: absoluteUrl(result.ingredient.image_url), alt: result.ingredient.name }]
     : undefined
@@ -60,7 +69,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     title,
     description,
     robots: siteRobots(),
-    alternates: { canonical: url },
+    alternates: allLanguageAlternates(`/${lang}/ingredientes/${result.ingredient.slug}`, (l) => `/${l}/ingredientes/${result.ingredient.slug}`),
     openGraph: {
       type: 'website',
       title,
@@ -80,7 +89,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 export default async function IngredientPage({ params }: { params: Promise<{ lang: string; slug: string }> }) {
   const { lang: rawLang, slug } = await params
   const lang = parseLang(rawLang)
-  if (!lang || lang !== 'es') notFound()
+  if (!lang) notFound()
 
   const result = await getIngredient(lang, slug)
   if (!result) notFound()
@@ -101,6 +110,7 @@ export default async function IngredientPage({ params }: { params: Promise<{ lan
     <>
       {itemListLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListLd).replace(/</g, '\\u003c') }} />}
       <IngredientDetailView
+        lang={lang}
         ingredient={{ slug: ingredient.slug, name: ingredient.name }}
         description={ingredient.description}
         recipes={recipes as MdRecipeCardData[]}

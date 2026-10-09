@@ -179,7 +179,7 @@ export default function RecipeDocumentVisual({ recipe, relatedRecipes = [], note
                 {faq.map((item, i) => <details key={i}><summary>{item.q}</summary><p>{item.a}</p></details>)}
               </section>
             )}
-            {lang === 'es' && <PantryBanner lang="es" headingId="md-recipe-pantry-cta" card />}
+            {<PantryBanner lang={lang} headingId="md-recipe-pantry-cta" card />}
             {notesHtml && <AdSlot placement="after-notes" />}
           </div>
         </div>

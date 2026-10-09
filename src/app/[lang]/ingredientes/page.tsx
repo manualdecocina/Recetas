@@ -3,8 +3,8 @@ import type { Metadata } from 'next'
 import { IngredientsIndexView } from '@/components/md/IngredientViews'
 import { getIngredientSummaries } from '@/lib/md-data'
 import { SUPPORTED_LANGUAGES, type RecipeLanguage } from '@/types/recipe'
-import { publicUrl } from '@/lib/site'
-import { withSiteName } from '@/lib/seo'
+import { getMdCopy } from '@/lib/copy'
+import { withSiteName, allLanguageAlternates } from '@/lib/seo'
 
 function parseLang(value: string): RecipeLanguage | null {
   return (SUPPORTED_LANGUAGES as string[]).includes(value) ? value as RecipeLanguage : null
@@ -15,19 +15,19 @@ function parseLang(value: string): RecipeLanguage | null {
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang: rawLang } = await params
   const lang = parseLang(rawLang)
-  if (!lang || lang !== 'es') return {}
+  if (!lang) return {}
   return {
-    title: withSiteName('Ingredientes'),
-    description: 'Explora ingredientes y las recetas de Manual de Cocina que los utilizan.',
-    alternates: { canonical: publicUrl('/es/ingredientes') },
+    title: withSiteName(getMdCopy(lang).ingredientCatalog),
+    description: getMdCopy(lang).ingredientCatalogIntro,
+    alternates: allLanguageAlternates(`/${lang}/ingredientes`, (l) => `/${l}/ingredientes`),
   }
 }
 
 export default async function IngredientsPage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang: rawLang } = await params
   const lang = parseLang(rawLang)
-  if (!lang || lang !== 'es') notFound()
+  if (!lang) notFound()
 
-  const ingredients = await getIngredientSummaries()
-  return <IngredientsIndexView ingredients={ingredients} />
+  const ingredients = await getIngredientSummaries(undefined, lang)
+  return <IngredientsIndexView lang={lang} ingredients={ingredients} />
 }

@@ -5,6 +5,8 @@ import type { MdCategorySummary } from '@/components/md/CategoryViews'
 import type { MdIngredientSummary } from '@/components/md/IngredientViews'
 import type { MdHomeData } from '@/components/md/HomePageView'
 import { CATEGORY_TAXONOMY } from '@/lib/categories'
+import { ingredientLabel } from '@/lib/ingredient-labels'
+import { localizePantryRecipes } from '@/lib/pantry-localization'
 
 // Solo lectura, con el mismo cliente público y las mismas tablas/filtros que ya usan las
 // demás rutas (recetas publicadas por idioma). No inventa datos: si no hay, devuelve vacío.
@@ -41,7 +43,20 @@ export async function getCategorySummaries(lang: RecipeLanguage): Promise<MdCate
  * mismo criterio que getCategorySummaries). Sin recetas asociadas, count queda en 0 y el
  * llamador decide si lo muestra o no (la página lo filtra, igual que categorías).
  */
-export async function getIngredientSummaries(limit?: number): Promise<MdIngredientSummary[]> {
+export async function getIngredientSummaries(limit?: number, lang: RecipeLanguage = 'es'): Promise<MdIngredientSummary[]> {
+  if (lang !== 'es') {
+    const [{ data, error }, pantry] = await Promise.all([
+      supabase.from('ingredients').select('id, slug, name').eq('status', 'canonical').eq('indexable', true),
+      getPantryMatchData(lang),
+    ])
+    if (error) throw new Error(`No se pudieron cargar los ingredientes: ${error.message}`)
+    const summaries = (data ?? []).map((ingredient) => {
+      const recipes = pantry.recipes.filter((recipe) => recipe.ingredientIds.includes(ingredient.id))
+      return { slug: ingredient.slug, name: ingredientLabel(ingredient.slug, ingredient.name, lang), count: recipes.length,
+        image_url: recipes.find((recipe) => recipe.image_url)?.image_url ?? null }
+    }).sort((a, b) => a.name.localeCompare(b.name, lang))
+    return limit ? summaries.slice(0, limit) : summaries
+  }
   let query = supabase
     .from('ingredients')
     .select('id, slug, name')
@@ -112,7 +127,7 @@ export async function getHomeData(lang: RecipeLanguage): Promise<MdHomeData> {
       .order('ready_at', { ascending: false, nullsFirst: false })
       .limit(10),
     getCategorySummaries(lang),
-    lang === 'es' ? getIngredientSummaries(12) : Promise.resolve([] as MdIngredientSummary[]),
+    getIngredientSummaries(12, lang),
   ])
   if (featuredResult.error) throw new Error(`No se pudo cargar la receta destacada: ${featuredResult.error.message}`)
   if (latestResult.error) throw new Error(`No se pudieron cargar las últimas recetas: ${latestResult.error.message}`)
@@ -132,6 +147,7 @@ export interface MdPantryIngredient {
 }
 
 export interface MdPantryRecipe extends MdRecipeCardData {
+  recipe_group_id: string;
   /** ids canónicos reales de recipe_ingredients; nunca inventados. */
   ingredientIds: string[];
   /** total de ingredientes editoriales reales de la receta. */
@@ -143,13 +159,26 @@ export interface MdPantryRecipe extends MdRecipeCardData {
 }
 
 /**
- * Datos para "¿Qué puedo cocinar?" (/es/que-puedo-cocinar): solo ingredientes canónicos
+ * Datos para "¿Qué puedo cocinar?": solo ingredientes canónicos
  * buscables que realmente estén relacionados con al menos una receta ES publicada, y
  * recetas publicadas que ya tengan ingredientes canonicalizados. El emparejamiento real
  * (qué receta calza con qué ingredientes elegidos) se calcula en el cliente sobre estos
  * datos; aquí solo se leen datos reales, sin inventar coincidencias ni opciones huérfanas.
  */
-export async function getPantryMatchData(): Promise<{ ingredients: MdPantryIngredient[]; recipes: MdPantryRecipe[] }> {
+export async function getPantryMatchData(lang: RecipeLanguage = 'es'): Promise<{ ingredients: MdPantryIngredient[]; recipes: MdPantryRecipe[] }> {
+  if (lang !== 'es') {
+    const [source, { data, error }] = await Promise.all([
+      getPantryMatchData('es'),
+      supabase.from('recipes').select(`${CARD_FIELDS}, recipe_group_id`).eq('language', lang).eq('published', true),
+    ])
+    if (error) throw new Error(`No se pudieron cargar las traducciones: ${error.message}`)
+    const recipes = localizePantryRecipes(source.recipes, (data ?? []) as Array<MdRecipeCardData & { recipe_group_id: string }>)
+    const usedIds = new Set(recipes.flatMap((recipe) => recipe.ingredientIds))
+    const ingredients = source.ingredients.filter((ingredient) => usedIds.has(ingredient.id))
+      .map((ingredient) => ({ ...ingredient, name: ingredientLabel(ingredient.slug, ingredient.name, lang) }))
+      .sort((a, b) => a.name.localeCompare(b.name, lang))
+    return { recipes, ingredients }
+  }
   const { data: ingredientRows, error: ingredientsError } = await supabase
     .from('ingredients')
     .select('id, slug, name')
@@ -160,21 +189,26 @@ export async function getPantryMatchData(): Promise<{ ingredients: MdPantryIngre
 
   const { data: recipeRows, error: recipesError } = await supabase
     .from('recipes')
-    .select(`${CARD_FIELDS}, ingredients`)
+    .select(`${CARD_FIELDS}, recipe_group_id, ingredients`)
     .eq('language', 'es')
     .eq('published', true)
   if (recipesError) throw new Error(`No se pudieron cargar las recetas: ${recipesError.message}`)
 
-  const recipeRowsTyped = (recipeRows ?? []) as Array<MdRecipeCardData & { ingredients?: unknown[] | null }>
-  const recipes = recipeRowsTyped.map(({ ingredients: _ingredients, ...recipe }) => recipe as MdRecipeCardData)
-  if (!recipes.length) return { ingredients: (ingredientRows ?? []) as MdPantryIngredient[], recipes: [] }
+  const recipeRowsTyped = (recipeRows ?? []) as Array<MdRecipeCardData & { recipe_group_id: string; ingredients?: unknown[] | null }>
+  const recipes = recipeRowsTyped.map(({ ingredients: _ingredients, ...recipe }) => recipe)
+  if (!recipes.length) return { ingredients: [], recipes: [] }
 
   const recipeIds = recipes.map((r) => r.id)
-  const { data: linkRows, error: linksError } = await supabase
-    .from('recipe_ingredients')
-    .select('recipe_id, ingredient_id')
-    .in('recipe_id', recipeIds)
-  if (linksError) throw new Error(`No se pudieron cargar los ingredientes de las recetas: ${linksError.message}`)
+  // The graph exceeds PostgREST's default 1000-row cap; read every page.
+  const linkRows: Array<{ recipe_id: string; ingredient_id: string }> = []
+  for (let from = 0; ; from += 1000) {
+    const { data, error } = await supabase.from('recipe_ingredients')
+      .select('recipe_id, ingredient_id').in('recipe_id', recipeIds)
+      .order('id').range(from, from + 999)
+    if (error) throw new Error(`No se pudieron cargar los ingredientes de las recetas: ${error.message}`)
+    linkRows.push(...(data ?? []))
+    if (!data || data.length < 1000) break
+  }
 
   const idsByRecipe = new Map<string, string[]>()
   for (const row of (linkRows ?? []) as Array<{ recipe_id: string; ingredient_id: string }>) {
