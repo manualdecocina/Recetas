@@ -31,7 +31,7 @@
     "branch": "recetas/lote-03-20261008",
     "target": 15,
     "status": "in_progress",
-    "stage": "PR/CI",
+    "stage": "deploy",
     "current_recipe": null,
     "started_at": "2026-10-08T12:39:02.511Z",
     "completed_recipes": 0,
@@ -643,14 +643,37 @@
     "next_action": "Create batch03 PR; require quality and complete media validator CI green. Then merge expected SHA, observe174deployed hashes before atomic SQL, cache and105pages/global QA.",
     "pr_number": 95,
     "pr_url": "https://github.com/manualdecocina/Recetas/pull/95",
-    "pr_head_sha": "810e70ee4d5d13a3df1c129be41be211bd03b199"
+    "pr_head_sha": "810e70ee4d5d13a3df1c129be41be211bd03b199",
+    "ci": {
+      "head_sha": "1449fb544ed468d9bfdf3468684b6af71cf81e6b",
+      "runs": [
+        {
+          "id": 37864292824,
+          "name": "lote02-prepublication",
+          "conclusion": "success"
+        },
+        {
+          "id": 37864292823,
+          "name": "lote03-prepublication",
+          "conclusion": "success"
+        },
+        {
+          "id": 37864292807,
+          "name": "quality",
+          "conclusion": "success"
+        }
+      ],
+      "validation_artifact_id": 11586759774,
+      "verified_at": "2026-10-09T00:23:27.979Z"
+    },
+    "merge_sha": "67eb6034dab046e8ae77f0810e5754b292593365"
   },
   "next_candidate_position": 32,
   "run_lease": {
     "owner": "work-fish-localization-20261008T2334",
     "status": "active",
     "acquired_at": "2026-10-08T23:33:59.326Z",
-    "renewed_at": "2026-10-09T00:20:34.723Z",
+    "renewed_at": "2026-10-09T00:23:39.333Z",
     "expires_at": "2026-10-09T01:50:07.358Z",
     "previous_owner": "automation-continuation-20261009-fish-and-chips",
     "reason": "Continue six Fish and Chips localizations, then remaining two recipes and full15 publication."
@@ -733,7 +756,7 @@
     "next_action": "Finish remaining four: chocolateflan,fishandchips,tomatosauce,spinachtortilla. Preserve first11packages. Full15CI/deploy/atomicDB/cache/liveQA remains."
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z",
-  "updated_at": "2026-10-09T00:20:34.723Z",
+  "updated_at": "2026-10-09T00:23:39.333Z",
   "completed_batches": [
     {
       "id": "lote-02-20261008",
