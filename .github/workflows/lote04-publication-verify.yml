@@ -61,6 +61,16 @@ jobs:
         env:
           EXPECTED_ES_RECIPES: '154'
         run: python3 scripts/audit-site-preview.py
+      - name: Report precise global audit findings
+        if: always()
+        run: |
+          python3 - <<'PY'
+          import json, pathlib
+          path = pathlib.Path('site-preview-audit.json')
+          if path.exists():
+              report = json.loads(path.read_text())
+              print(json.dumps({'summary': report['summary'], 'errors': report['errors']}, ensure_ascii=False))
+          PY
       - uses: actions/upload-artifact@v4
         if: always()
         with:

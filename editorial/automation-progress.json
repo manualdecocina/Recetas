@@ -657,7 +657,7 @@
         "publication_gate": "WAIT_FULL15_CI_MERGE_OBSERVED_DEPLOY_DB_CACHE_LIVE_QA"
       }
     ],
-    "next_action": "Actions authenticated revalidation,105visiblepage comparisons,global154ES audit andlivevisualQA; doNOTopen05 yet.",
+    "next_action": "Obtain precise global audit errors in PR101, correct actual root cause; rerun full QA. Resume pending visual QA when browser reconnects. Do not reopen SQL or batch05.",
     "reservation_pr": 99,
     "reservation_merge_sha": "c6ac9d0b770525ecd02ea6a934cd2a48f94a8325",
     "prepared_count": 15,
@@ -793,7 +793,8 @@
       "outside_count": 1028,
       "unpublished_es": 55,
       "es_historical_preserved": true
-    }
+    },
+    "error": "Global QA run37900942080:18 hreflang_target_not_in_sitemap errors;105batchpagesPASS. Need exact affected routes before fix. Browser environment temporarily disconnected; remaining live visual QA pending."
   },
   "next_candidate_position": 33,
   "run_lease": {
@@ -801,9 +802,10 @@
     "status": "active",
     "acquired_at": "2026-10-09T00:56:43.882Z",
     "renewed_at": "2026-10-09T07:42:34.566Z",
-    "expires_at": "2026-10-09T09:12:34.566Z",
+    "expires_at": "2026-10-09T09:27:18.601Z",
     "base_main_sha": "3c8af0eff7a6e6a5c7bfcaedfedd3590e67d3032",
-    "reason": "Single producer after batch03 fully closed; CAS reservation of next15."
+    "reason": "Single producer after batch03 fully closed; CAS reservation of next15.",
+    "heartbeat_at": "2026-10-09T07:57:18.601Z"
   },
   "blockers": [],
   "debt": [
@@ -886,7 +888,7 @@
   "last_checkpoint_at": "2026-10-09T06:40:53.713Z",
   "handoff": "Prepare Greek salad after identity/USDA checks; preserve13complete packages.",
   "next_relay_requested_at": "2026-10-08T02:59:04Z",
-  "updated_at": "2026-10-09T06:40:53.713Z",
+  "updated_at": "2026-10-09T07:57:18.601Z",
   "completed_batches": [
     {
       "id": "lote-02-20261008",
