@@ -1,0 +1,17 @@
+name: arepas-choclo-prepublication
+on:
+  pull_request:
+    paths:
+      - 'editorial/arepas-de-choclo-con-queso*'
+      - 'public/recetas/arepas-de-choclo-con-queso/**'
+      - 'scripts/*arepas*'
+      - '.github/workflows/arepas-choclo-prepublication.yml'
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 -m pip install pillow
+      - run: python3 scripts/validate-arepas-choclo.py
