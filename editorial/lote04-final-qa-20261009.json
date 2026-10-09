@@ -1,8 +1,8 @@
 {
   "batch_id": "lote-04-20261009",
   "checked_at": "2026-10-09T08:11:24.999Z",
-  "overall_status": "PUBLISHED_TECHNICAL_QA_PASS_VISUAL_QA_BLOCKED",
-  "gate_closed": false,
+  "overall_status": "PASS_PUBLISHED_TECHNICAL_AND_DESKTOP_VISUAL_QA",
+  "gate_closed": true,
   "database": {
     "checked_at": "2026-10-09T08:08:55.405761+00:00",
     "published_es": 154,
@@ -229,6 +229,7 @@
   "automation": {
     "id": "6ac6fb673c5c8191b3435ae6074ddc63",
     "is_enabled": false,
-    "reason": "Current batch finalvisualgate blocked by site CAPTCHA requiring human verification; no further batch eligible until04closed. Paused per noninteractive fully-blocked instruction."
-  }
+    "reason": "Past pause retained; user requests a manual final block of five, caprese excluded."
+  },
+  "closed_at": "2026-10-09T10:02:34.103332+00:00"
 }

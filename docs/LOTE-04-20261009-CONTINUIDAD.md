@@ -105,3 +105,8 @@ PR102 corrige truncamiento de categorías del sitemap al superar1000filas; typec
 **Lote04 NO CERRADO:**12/15portadas ES revisadas cargadas. Faltan galletas de jengibre, ensalada griega y trufas; también6muestras de layouts localizados,selector yhome. Preview sirve“Bot Verification”/reCAPTCHA y“Verifying that you are not a robot...”; una recarga normal no despejó el desafío. No se intentó CAPTCHA ni elusión. Nutrición de rollitos/frijoles comprobada sin convertir azúcar ausente en0. Evidencia editorial/lote04-live-visual-qa-20261009.json.
 
 Automatización 6ac6fb673c5c8191b3435ae6074ddc63 pausada por bloqueo del gatevisual conforme a la regla de ejecución no interactiva para bloqueo total. Lease liberado; no abrir05 hasta completar este gate. La autorización inmediata anterior sigue válida para el trabajo, pero no constituye confirmación específica para resolver un CAPTCHA. Tras acceso legítimo a revisión visual, retomar exactamente lo pendiente y después las5últimas candidatas. Pendiente técnico del lote04:118ingredientes retenidos por resolver contra destinos aprobados, con152entradas contabilizadas34canónicas. No inventar destinos ni modificarclasificación/DNS/noindex.
+
+
+## 2026-10-09T10:02:34.103332+00:00 — Relevo manual: cierre visual verificado
+
+Tres portadas pendientes cargadas y observadas; seis muestras localizadas de ensalada griega, selector PT→ES, home y catálogo154 comprobados. Lote04 cerrado sin repetir SQL ni regenerar medios. Usuario limita el bloque siguiente a las cinco candidatas; caprese permanece retenida. La automatización se conserva pausada: esta es continuación manual.

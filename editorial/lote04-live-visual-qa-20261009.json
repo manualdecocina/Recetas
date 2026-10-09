@@ -1,6 +1,6 @@
 {
-  "status": "PARTIAL_BLOCKED_BY_SITE_HUMAN_VERIFICATION",
-  "checked_at": "2026-10-09T08:11:24.999Z",
+  "status": "PASS_DESKTOP",
+  "checked_at": "2026-10-09T10:02:34.103332+00:00",
   "viewport": "desktop 1363x936",
   "es_cover_layout_pass": [
     {
@@ -50,17 +50,24 @@
     {
       "path": "/ensalada-de-frijoles-con-salsa-romesco",
       "result": "PASS matching cover fully loaded and readable recipe layout visually inspected"
+    },
+    {
+      "path": "/receta-de-galletas-de-jengibre",
+      "result": "PASS_loaded_cover_and_readable_layout_observed_20261009"
+    },
+    {
+      "path": "/receta-de-ensalada-griega",
+      "result": "PASS_loaded_cover_and_readable_layout_observed_20261009"
+    },
+    {
+      "path": "/recetas-de-trufas-de-chocolate",
+      "result": "PASS_loaded_cover_and_readable_layout_observed_20261009"
     }
-  ],
-  "es_cover_layout_pending": [
-    "/receta-de-galletas-de-jengibre",
-    "/receta-de-ensalada-griega",
-    "/recetas-de-trufas-de-chocolate"
   ],
   "catalog": {
     "path": "/es/recetas",
     "visible_count": 154,
-    "result": "PASS visible154catalog and loaded top6covers before challenge"
+    "result": "PASS_visible154_and_loaded_cards_rechecked"
   },
   "nutrition": {
     "paths": [
@@ -69,11 +76,50 @@
     ],
     "result": "PASS rendered nutrition omits missing sugar rather than inventing zero; explanation visible in DOM"
   },
-  "localized_layouts": "PENDING all6nonES samples",
-  "language_selector": "PENDING interaction",
-  "home": "PENDING updated home visual review",
+  "localized_layouts": [
+    {
+      "language": "de",
+      "path": "/de/griechisches-salat-rezept",
+      "result": "PASS_loaded_cover_readable_desktop_layout"
+    },
+    {
+      "language": "en",
+      "path": "/en/greek-salad-recipe",
+      "result": "PASS_loaded_cover_readable_desktop_layout"
+    },
+    {
+      "language": "fr",
+      "path": "/fr/recette-de-salade-grecque",
+      "result": "PASS_loaded_cover_readable_desktop_layout"
+    },
+    {
+      "language": "it",
+      "path": "/it/ricetta-insalata-greca",
+      "result": "PASS_loaded_cover_readable_desktop_layout"
+    },
+    {
+      "language": "ja",
+      "path": "/ja/ギリシャ風サラダ",
+      "result": "PASS_loaded_cover_readable_desktop_layout"
+    },
+    {
+      "language": "pt",
+      "path": "/pt/salada-grega",
+      "result": "PASS_loaded_cover_readable_desktop_layout"
+    }
+  ],
+  "language_selector": {
+    "result": "PASS_PT_TO_ES_same_entity",
+    "from": "/pt/salada-grega",
+    "to": "/receta-de-ensalada-griega"
+  },
+  "home": {
+    "result": "PASS_loaded_garbanzos_cover_and_lote04_cards",
+    "path": "/es"
+  },
   "originals_and_variants": "All118originals and163WebP accepted before publication; do not regenerate.",
-  "blocker": {
+  "gate_closed": true,
+  "previous_blocker": {
     "title": "Bot Verification",
     "text": "Verifying that you are not a robot...",
     "recaptcha_observed": true,
@@ -82,5 +128,10 @@
     "browser_report": "challenge_loop",
     "necessary_next_action": "Resolve human-verification access for authorized live preview QA; then resume the3pending ES covers,6localized layouts,selector and home. Never infer visualPASS from HTTP200."
   },
-  "gate_closed": false
+  "es_cover_layout_pending": [],
+  "notes": [
+    "Previously blocked browser access recovered by ordinary navigation; no CAPTCHA interaction, fingerprint or network changes.",
+    "Lazy cover load inspected after initial screenshot.",
+    "Desktop only; no mobile QA claimed."
+  ]
 }

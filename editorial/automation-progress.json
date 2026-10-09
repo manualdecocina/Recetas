@@ -4,7 +4,7 @@
   "repository": "manualdecocina/Recetas",
   "preview": "https://preview.manualdecocina.com",
   "updated_date": "2026-10-09",
-  "automation_status": "paused_site_human_verification_blocks_final_visual_gate",
+  "automation_status": "manual_continuation_final_five_user_requested",
   "automation_id": "6ac6fb673c5c8191b3435ae6074ddc63",
   "requested_schedule": "RRULE:FREQ=HOURLY",
   "requested_model": "gpt-6.1-sol",
@@ -30,11 +30,11 @@
     "id": "lote-04-20261009",
     "branch": "recetas/lote-04-20261009",
     "target": 15,
-    "status": "published_pending_visual_qa",
+    "status": "closed",
     "stage": "cache/QA",
     "current_recipe": null,
     "started_at": "2026-10-09T00:56:43.882Z",
-    "completed_recipes": 0,
+    "completed_recipes": 15,
     "prepared_recipes": 15,
     "published_recipes": 15,
     "identity_qa": "PASS_15_ENTITIES_105_ROUTES_NO_COLLISIONS",
@@ -673,7 +673,7 @@
         "page_audit": "PASS_7_OF7"
       }
     ],
-    "next_action": "Resolve human-verification access for authorized live preview QA; then resume the3pending ES covers,6localized layouts,selector and home. Never infer visualPASS from HTTP200. Close04onlyaftervisualPASS; thenreserve remaining5.",
+    "next_action": "Prepare final five candidates per current user instruction; caprese remains held.",
     "reservation_pr": 99,
     "reservation_merge_sha": "c6ac9d0b770525ecd02ea6a934cd2a48f94a8325",
     "prepared_count": 15,
@@ -810,7 +810,6 @@
       "unpublished_es": 55,
       "es_historical_preserved": true
     },
-    "error": "Site-served Bot Verification/reCAPTCHA remains after one reload. Live visual QA missing3EScovers,6localized layouts,selector and home. All105batchpages and1251globalURLs technicalQA PASS; no code/DB/media debt.",
     "sitemap_fix": {
       "pr": 102,
       "branch": "fix/sitemap-category-pagination-20261009",
@@ -925,7 +924,8 @@
         "errors": []
       }
     },
-    "visual_qa": "PARTIAL_BLOCKED_BY_SITE_HUMAN_VERIFICATION"
+    "visual_qa": "PASS_DESKTOP",
+    "closed_at": "2026-10-09T10:02:34.103332+00:00"
   },
   "next_candidate_position": 48,
   "run_lease": {
@@ -940,15 +940,7 @@
     "released_at": "2026-10-09T08:11:24.999Z",
     "release_reason": "Checkpointed complete publication/technicalQA; single producer blocked at required livevisual human verification."
   },
-  "blockers": [
-    {
-      "kind": "live_visual_human_verification",
-      "batch": "lote-04-20261009",
-      "evidence_file": "editorial/lote04-live-visual-qa-20261009.json",
-      "description": "Site-served Bot Verification/reCAPTCHA remains after one reload. Live visual QA missing3EScovers,6localized layouts,selector and home. All105batchpages and1251globalURLs technicalQA PASS; no code/DB/media debt.",
-      "next_action": "Resolve human-verification access for authorized live preview QA; then resume the3pending ES covers,6localized layouts,selector and home. Never infer visualPASS from HTTP200. Close04onlyaftervisualPASS; thenreserve remaining5."
-    }
-  ],
+  "blockers": [],
   "debt": [
     {
       "batch": "lote-02-20261008",
@@ -2306,5 +2298,13 @@
     "verified_at": "2026-10-09T08:11:24.999Z",
     "reason": "Site-served Bot Verification/reCAPTCHA remains after one reload. Live visual QA missing3EScovers,6localized layouts,selector and home. All105batchpages and1251globalURLs technicalQA PASS; no code/DB/media debt.",
     "id": "6ac6fb673c5c8191b3435ae6074ddc63"
+  },
+  "manual_request": {
+    "at": "2026-10-09T10:02:34.103332+00:00",
+    "target": 5,
+    "user_choice": "Solo las cinco pendientes",
+    "excluded": "ensalada-caprese",
+    "new_batch": "lote-05-20261009",
+    "published_new": 0
   }
 }
