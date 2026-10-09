@@ -173,6 +173,30 @@
       "public_path": "/recetas/galletas-de-avena-y-chocolate/paso-06.webp",
       "original": "paso-06.png",
       "visual_qa": "PASS"
+    },
+    {
+      "asset": "paso-07.webp",
+      "path": "public/recetas/galletas-de-avena-y-chocolate/paso-07.webp",
+      "sha256": "d6494a99e6b57dd39e47d0cbed2e75338e27ef833b10c176b59011a4dc5f2fe2",
+      "git_blob_sha": "50ab0c50999906c8420ceb655c51ca52d55d8b8c",
+      "bytes": 129840,
+      "width": 1280,
+      "height": 960,
+      "public_path": "/recetas/galletas-de-avena-y-chocolate/paso-07.webp",
+      "original": "paso-07.png",
+      "visual_qa": "PASS"
+    },
+    {
+      "asset": "paso-08.webp",
+      "path": "public/recetas/galletas-de-avena-y-chocolate/paso-08.webp",
+      "sha256": "f53ad82994056fa7f376b77e093b7888f98527bad389f4568553717b3af4f18b",
+      "git_blob_sha": "e3acca60d0dd2db1a9109be819ba653236c893e7",
+      "bytes": 178974,
+      "width": 1280,
+      "height": 960,
+      "public_path": "/recetas/galletas-de-avena-y-chocolate/paso-08.webp",
+      "original": "paso-08.png",
+      "visual_qa": "PASS"
     }
   ],
   "originals": [
@@ -259,9 +283,33 @@
       "phase": 6,
       "visual_qa": "PASS",
       "source": "built-in ImageGen"
+    },
+    {
+      "asset": "paso-07.png",
+      "path": "public/recetas/galletas-de-avena-y-chocolate/originals/paso-07.png",
+      "sha256": "934f1e64d90ace9a73cbc69542ab6d93ae79186c6701488b605a12756e1bd06f",
+      "git_blob_sha": "707a376126be437f72b4e902b23eb399492243d6",
+      "bytes": 2292023,
+      "width": 1448,
+      "height": 1086,
+      "phase": 7,
+      "visual_qa": "PASS",
+      "source": "built-in ImageGen"
+    },
+    {
+      "asset": "paso-08.png",
+      "path": "public/recetas/galletas-de-avena-y-chocolate/originals/paso-08.png",
+      "sha256": "089ae8522e8361f38b0a2b8e892616f591bab0d7602a085674ad5b13ce589fc5",
+      "git_blob_sha": "d574d24bc47fcd68be18cd4e008bd8f3027a0b2b",
+      "bytes": 2461379,
+      "width": 1448,
+      "height": 1086,
+      "phase": 8,
+      "visual_qa": "PASS",
+      "source": "built-in ImageGen"
     }
   ],
-  "state": "IMAGES_PARTIAL",
+  "state": "PASS_ALL9_ORIGINALS_AND12_WEBP",
   "last_step_reuses_cover": true,
   "original_images_required": 9,
   "published_webp_required": 12,
@@ -276,13 +324,13 @@
       "phase": 7,
       "prompt": "Edit this recipe phase photo with one specific correction: the tray currently contains nine raw oatmeal/chocolate dough discs, but each recipe batch must have TEN. Add exactly one additional matching raw pale beige oat/chocolate disc in the empty parchment area near the far upper-left portion of the tray, behind the existing upper-left cookie, keeping all nine existing discs visible, separate, unchanged and not overlapping. The result must show exactly10 on the tray, including the one being flattened by the hand. Keep the tray, parchment, hands, lighting and texture. Do not change the cooking state, do not add text or other objects. If needed make a small perspective adjustment to reveal enough tray area for this tenth piece, but preserve the accepted food appearance.",
       "reason": "Corrected phase tray count to ten pieces matching frozen two ten-cookie batches",
-      "qa": "PENDING_TARGETED_EDIT_NOT_ACCEPTED"
+      "qa": "PASS_TARGETED_EDIT_ES_UNCHANGED"
     },
     {
       "phase": 8,
       "prompt": "Edit this recipe phase photo with one specific correction: the tray currently contains nine baked golden oatmeal chocolate cookies, but each recipe batch must have TEN. Add exactly one additional matching baked golden oat/chocolate cookie in the empty parchment area near the far upper-left portion of the tray, behind the existing upper-left cookie, keeping all nine existing cookies visible, separate, unchanged and not overlapping. The result must show exactly10 on the tray, including the one lifted at its edge by the spatula. Keep the tray, parchment, hands, lighting and texture. Do not change the cooking state, do not add text or other objects. If needed make a small perspective adjustment to reveal enough tray area for this tenth piece, but preserve the accepted food appearance.",
       "reason": "Corrected phase tray count to ten pieces matching frozen two ten-cookie batches",
-      "qa": "PENDING_TARGETED_EDIT_NOT_ACCEPTED"
+      "qa": "PASS_TARGETED_EDIT_ES_UNCHANGED"
     }
   ],
   "cover_variant_visual_qa": "PASS_ALL4_CROPS_PRIMARY_FRONT_COOKIE_AND_BROKEN_HALF_VISIBLE_SECONDARY_EDGE_CROP_SQUARE"
