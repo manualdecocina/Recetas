@@ -1,6 +1,6 @@
 {
   "scope": "Manual de Cocina only; lote03",
-  "state": "MEDIA_COMPLETE_LOCALIZATIONS_IN_PROGRESS_NOT_PUBLISHED",
+  "state": "COMPLETE7_PREPARED_NOT_PUBLISHED",
   "provenance": "Original editorial recipe, no legacy WordPress content or images reused",
   "ai_owner_confirmation": "Owner authorized production; no kitchen test performed",
   "category_slug": "platos-principales",
@@ -9,7 +9,7 @@
   "cover": "/recetas/receta-de-tortilla-de-espinaca/portada.webp",
   "published_database": false,
   "publication_blockers": [
-    "IMAGES_LOCALIZATIONS_FULL15_CI_DEPLOY_DB_CACHE_QA_PENDING"
+    "FULL15_CI_MERGE_DEPLOY_DB_CACHE_LIVE_QA_PENDING"
   ],
   "sources": [
     {
@@ -55,8 +55,8 @@
       "public_path": "/receta-de-tortilla-de-espinaca",
       "source_url": "https://manualdecocina.com/receta-de-tortilla-de-espinaca/",
       "language": "es",
-      "published": false,
-      "editorial_status": "ready",
+      "published": true,
+      "editorial_status": "published",
       "nutrition": {
         "calories": 124.2,
         "protein_g": 8.0,
@@ -295,8 +295,8 @@
       "public_path": "/de/spinat-omelette-rezept",
       "source_url": "https://manualdecocina.com/de/spinat-omelette-rezept/",
       "language": "de",
-      "published": false,
-      "editorial_status": "ready",
+      "published": true,
+      "editorial_status": "published",
       "nutrition": {
         "calories": 124.2,
         "protein_g": 8.0,
@@ -535,8 +535,8 @@
       "public_path": "/en/spinach-omelette-recipe",
       "source_url": "https://manualdecocina.com/en/spinach-omelette-recipe/",
       "language": "en",
-      "published": false,
-      "editorial_status": "ready",
+      "published": true,
+      "editorial_status": "published",
       "nutrition": {
         "calories": 124.2,
         "protein_g": 8.0,
@@ -775,8 +775,8 @@
       "public_path": "/fr/recette-domelette-aux-epinards",
       "source_url": "https://manualdecocina.com/fr/recette-domelette-aux-epinards/",
       "language": "fr",
-      "published": false,
-      "editorial_status": "ready",
+      "published": true,
+      "editorial_status": "published",
       "nutrition": {
         "calories": 124.2,
         "protein_g": 8.0,
@@ -988,6 +988,726 @@
         ]
       },
       "content_html": "<p>Proposition originale d&#x27;omelette ronde aux épinards et à l&#x27;oignon, commencée à la poêle et terminée au four sans la retourner. Quatre petites portions et 36 minutes, repos compris, sont proposées. Quantités, temps et rendement attendent un essai en cuisine; la formule n&#x27;a pas été testée.</p><p>Employer des épinards frais lavés à l&#x27;eau courante, sans détergent, et bien séchés. Les 200 g sont le poids cru nettoyé; ne pas remplacer automatiquement par le même poids cuit ou surgelé. Peser 200 g d&#x27;œuf entier sans coquille; environ quatre gros œufs est une indication, le poids prime. Contient de l&#x27;œuf. La poêle d&#x27;environ 20 cm doit supporter 200°C au four, poignée et revêtement compris; pas de plastique au four. Temps proposés: 10 minutes initiales pour peser, laver et préchauffer en parallèle, 2 pour battre et mélanger, 5 pour l&#x27;oignon, 3 pour les épinards, 1 pour commencer la prise, 12 au four et 3 de repos: préparation 12, cuisson 21, total 36. Préchauffage plus lent, autre poêle ou contrôle de température peuvent prolonger; noter le temps réel. Ne pas retourner. Cuire jusqu&#x27;au centre pris et au moins 71°C mesurés; couleur ou durée seules ne prouvent pas la sécurité. Séparer l&#x27;œuf cru des aliments prêts à manger; nettoyer mains et ustensiles. Les 15 g d&#x27;huile répartis en 10 et 5 et les 2 g de sel sont comptés intégralement; recalculer tout ajout. Ne pas égoutter ni presser les légumes cuits: faire évaporer l&#x27;eau dans la poêle. Fromage, lait, pomme de terre, pain et sauce changent la nutrition. Diviser en quatre parts égales sans poids final mesuré. Conserver dans des récipients peu profonds à 4°C ou moins dans les 2 heures, ou 1 heure si l&#x27;air dépasse 32°C. Consommer sous 3 jours est une proposition prudente non testée; congeler jusqu&#x27;à 1 mois est un repère de qualité non confirmé. Décongeler au réfrigérateur et réchauffer à 74°C. Protéger la poignée chaude et utiliser des maniques.</p>"
+    },
+    {
+      "title": "Frittata di spinaci e cipolla, finita in forno",
+      "excerpt": "Frittata di uova, spinaci e cipolla, senza formaggio né farina. Sette passaggi, almeno 71°C al centro e nutrizione stimata per quattro porzioni proposte.",
+      "summary": "Proposta originale di frittata rotonda con spinaci e cipolla, avviata in padella e finita in forno senza girarla. Si propongono quattro porzioni piccole e 36 minuti, riposo compreso. Quantità, tempi e resa attendono una prova in cucina; la formula non è stata testata.",
+      "difficulty": "Facile",
+      "course": "Frittata",
+      "cuisine": "Cucina casalinga",
+      "category_slug": "platos-principales",
+      "category": "Secondi piatti",
+      "prep_time_minutes": 12,
+      "cook_time_minutes": 21,
+      "total_time_minutes": 36,
+      "servings": 4,
+      "notes": "Usare spinaci freschi lavati sotto acqua corrente senza detergenti e ben asciugati. I 200 g sono peso crudo pulito; non sostituire automaticamente con pari peso cotto o surgelato. Pesare 200 g di uovo intero senza guscio; circa quattro uova grandi è un'indicazione, conta il peso. Contiene uovo. Padella di circa 20 cm completamente adatta al forno a 200°C, manico e rivestimento compresi; niente plastica in forno. Tempi proposti: 10 minuti iniziali per pesare, lavare e preriscaldare in parallelo, 2 per sbattere e mescolare, 5 cipolla, 3 spinaci, 1 per iniziare la presa, 12 in forno e 3 riposo: preparazione 12, cottura 21, totale 36. Preriscaldamento lento, padella diversa e controlli possono allungare: annotare il tempo reale. Non girare. Cuocere fino a centro rappreso e almeno 71°C misurati; colore e tempo non garantiscono sicurezza. Separare uovo crudo da cibi pronti e pulire mani e utensili. Si contano tutti i 15 g di olio, divisi in 10 e 5, e i 2 g di sale; aggiunte da ricalcolare. Non scolare o strizzare verdure cotte: evaporare acqua in padella. Formaggio, latte, patate, pane o salse cambiano nutrizione. Dividere in quattro parti uguali senza peso finale misurato. Conservare in contenitori bassi a non più di 4°C entro 2 ore, oppure 1 ora se l'ambiente supera 32°C. Consumare entro 3 giorni è una proposta prudente non testata; congelare fino a 1 mese è un'indicazione di qualità non confermata. Scongelare in frigorifero e riscaldare a 74°C. Proteggere il manico caldo e usare guanti da forno.",
+      "keywords": [
+        "frittata di spinaci",
+        "frittata al forno",
+        "uova e spinaci",
+        "frittata senza farina"
+      ],
+      "id": "4235411c-d9da-5f72-97d5-d544caeb18d0",
+      "recipe_group_id": "5ec0b548-d9d8-4c42-ab6c-70c32958aad9",
+      "slug": "ricetta-frittata-di-spinaci",
+      "public_path": "/it/ricetta-frittata-di-spinaci",
+      "source_url": null,
+      "language": "it",
+      "published": true,
+      "editorial_status": "published",
+      "nutrition": {
+        "calories": 124.2,
+        "protein_g": 8.0,
+        "carbs_g": 4.0,
+        "fat_g": 8.7,
+        "saturated_fat_g": 2.1,
+        "fiber_g": 1.4,
+        "sugar_g": 1.2,
+        "sodium_mg": 305.0,
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018 JSON)",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "inputs": [
+          {
+            "ingredient": "uovo intero crudo senza guscio",
+            "edible_grams": 200,
+            "fdc_id": 171287,
+            "fdc_description": "Egg, whole, raw, fresh",
+            "per_100g": {
+              "calories": 143,
+              "protein_g": 12.6,
+              "carbs_g": 0.72,
+              "fat_g": 9.51,
+              "saturated_fat_g": 3.13,
+              "fiber_g": 0.0,
+              "sugar_g": 0.37,
+              "sodium_mg": 142
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171287/nutrients"
+          },
+          {
+            "ingredient": "spinaci crudi, peso pulito",
+            "edible_grams": 200,
+            "fdc_id": 168462,
+            "fdc_description": "Spinach, raw",
+            "per_100g": {
+              "calories": 23.0,
+              "protein_g": 2.86,
+              "carbs_g": 3.63,
+              "fat_g": 0.39,
+              "saturated_fat_g": 0.063,
+              "fiber_g": 2.2,
+              "sugar_g": 0.42,
+              "sodium_mg": 79.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/168462/nutrients"
+          },
+          {
+            "ingredient": "cipolla cruda sbucciata",
+            "edible_grams": 80,
+            "fdc_id": 170000,
+            "fdc_description": "Onions, raw",
+            "per_100g": {
+              "calories": 40.0,
+              "protein_g": 1.1,
+              "carbs_g": 9.34,
+              "fat_g": 0.1,
+              "saturated_fat_g": 0.042,
+              "fiber_g": 1.7,
+              "sugar_g": 4.24,
+              "sodium_mg": 4.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170000/nutrients"
+          },
+          {
+            "ingredient": "olio d'oliva totale",
+            "edible_grams": 15,
+            "fdc_id": 171413,
+            "fdc_description": "Oil, olive, salad or cooking",
+            "per_100g": {
+              "calories": 884,
+              "protein_g": 0.0,
+              "carbs_g": 0.0,
+              "fat_g": 100,
+              "saturated_fat_g": 13.8,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0,
+              "sodium_mg": 2.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171413/nutrients"
+          },
+          {
+            "ingredient": "sale da cucina totale",
+            "edible_grams": 2,
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "calories": 0.0,
+              "protein_g": 0.0,
+              "carbs_g": 0.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0,
+              "sodium_mg": 38800.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients"
+          }
+        ],
+        "serving_size": "Un quarto della frittata finita; quattro porzioni piccole proposte senza peso finale misurato",
+        "method": "Sommare nutrienti di 200 g di uovo crudo senza guscio, 200 g di spinaci crudi puliti, 80 g di cipolla cruda sbucciata, 15 g di olio d'oliva e 2 g di sale da cinque schede USDA SR Legacy verificate; dividere per 4. Contare tutto olio, sale e verdure senza scolare liquido di cottura o inventare ritenzione. L'evaporazione cambia il peso; non assegnare resa misurata o valori per 100 g di frittata.",
+        "note": "Stima della formulazione, non analisi del piatto né prova in cucina. Quattro piccole porzioni e quantità proposte. Include tutti gli ingredienti edibili, olio e sale, senza fattori non misurati di perdita o assorbimento. Esclude insalata, pane, salse e varianti con formaggio, latte o patate. Gli otto nutrienti hanno dati di origine; dati assenti non diventano zero."
+      },
+      "image_url": "/recetas/receta-de-tortilla-de-espinaca/portada.webp",
+      "ingredients": [
+        {
+          "name": "uovo intero senza guscio, circa quattro uova grandi; conta il peso",
+          "amount": "200",
+          "unit": "g",
+          "group": "Composto di uova"
+        },
+        {
+          "name": "spinaci freschi puliti, parti danneggiate eliminate",
+          "amount": "200",
+          "unit": "g",
+          "group": "Verdure"
+        },
+        {
+          "name": "cipolla sbucciata",
+          "amount": "80",
+          "unit": "g",
+          "group": "Verdure"
+        },
+        {
+          "name": "olio d'oliva: 10 g per verdure e 5 g per padella",
+          "amount": "15",
+          "unit": "g",
+          "group": "Cottura"
+        },
+        {
+          "name": "sale da cucina",
+          "amount": "2",
+          "unit": "g",
+          "group": "Condimento"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Pesare, lavare e preparare padella e forno",
+          "content": "Preriscaldare il forno a 200°C. Verificare che una padella di circa 20 cm, manico compreso, sia adatta a questa temperatura. Lavare gli spinaci sotto acqua corrente, eliminare parti danneggiate, asciugare e pesare 200 g puliti. Sbucciare e tritare 80 g di cipolla. Dividere 15 g di olio in 10 g per le verdure e 5 g per finire. Preparare 2 g di sale e 200 g di uovo senza guscio, circa 4 uova grandi. Tenere le uova al fresco fino all'uso e separare gli utensili per il crudo. Questi 10 minuti iniziali comprendono il preriscaldamento parallelo; annotare il tempo extra se il forno impiega di più.",
+          "image_url": "/recetas/receta-de-tortilla-de-espinaca/paso-01.webp",
+          "image_alt": "Spinaci crudi, cipolla tritata, uova pesate, olio e sale accanto a padella metallica"
+        },
+        {
+          "title": "Ammorbidire la cipolla senza bruciarla",
+          "content": "Mettere i 10 g di olio per le verdure in padella. Unire 80 g di cipolla e cuocere a fuoco medio-basso per circa 5 minuti, mescolando fino a consistenza morbida e traslucida. Non bruciare; abbassare il fuoco se colora troppo. Non aggiungere olio oltre la quantità pesata né acqua senza annotare la variante.",
+          "image_url": "/recetas/receta-de-tortilla-de-espinaca/paso-02.webp",
+          "image_alt": "Cipolla morbida e traslucida nell'olio pesato"
+        },
+        {
+          "title": "Cuocere gli spinaci ed evaporare l'acqua",
+          "content": "Unire 200 g di spinaci puliti alla cipolla, in più riprese se serve. Cuocere circa 3 minuti mescolando finché le foglie appassiscono e non rimane una pozza di acqua libera. Non scolare o strizzare: mantenere verdure e olio, evaporando acqua con calore moderato. Se ancora umidi, prolungare e registrare la durata reale. Trasferire in una ciotola resistente al calore.",
+          "image_url": "/recetas/receta-de-tortilla-de-espinaca/paso-03.webp",
+          "image_alt": "Spinaci appassiti e cipolla senza acqua libera in padella"
+        },
+        {
+          "title": "Sbattere le uova e unire le verdure",
+          "content": "In un'altra ciotola sbattere 200 g di uovo senza guscio con 2 g di sale fino a unire albume e tuorlo. Incorporare le verdure cotte con tutto il loro olio e mescolare, circa 2 minuti complessivi. Non assaggiare il composto crudo. Pulire mani, piano e utensili che hanno toccato uovo crudo; cuocere subito il composto.",
+          "image_url": "/recetas/receta-de-tortilla-de-espinaca/paso-04.webp",
+          "image_alt": "Uova crude sbattute mescolate a spinaci e cipolla cotti"
+        },
+        {
+          "title": "Avviare la presa in padella",
+          "content": "Distribuire i 5 g di olio tenuti da parte sul fondo e sui bordi della stessa padella adatta al forno. Versare tutto il composto di uova e verdure e livellare delicatamente. Cuocere a fuoco basso 1 minuto per iniziare a fissare la base senza dorarla troppo. Il centro è ancora crudo: non servire né aggiungere altro olio.",
+          "image_url": "/recetas/receta-de-tortilla-de-espinaca/paso-05.webp",
+          "image_alt": "Composto di uova e spinaci che inizia a rapprendersi ai bordi"
+        },
+        {
+          "title": "Finire in forno e controllare il centro",
+          "content": "Con guanti da forno mettere la padella nel forno preriscaldato a 200°C e cuocere circa 12 minuti. Il centro deve essere rappreso senza uovo liquido e raggiungere almeno 71°C misurati con termometro pulito al centro, senza toccare la padella. Se non li raggiunge, continuare e controllare di nuovo; annotare il tempo reale. La doratura non basta per confermare sicurezza. Estrarre con guanti e ricordare che il manico è caldo.",
+          "image_url": "/recetas/receta-de-tortilla-de-espinaca/paso-06.webp",
+          "image_alt": "Frittata rappresa dopo il forno, controllata con termometro"
+        },
+        {
+          "title": "Riposare, dividere e conservare al freddo",
+          "content": "Lasciare riposare 3 minuti su una superficie resistente al calore, facendo attenzione al manico caldo. Dividere in 4 parti uguali; il peso finale non è misurato. Servire con utensili puliti; nutrizione senza accompagnamenti. Conservare in contenitori bassi a non più di 4°C entro 2 ore, oppure 1 ora se l'ambiente supera 32°C. Consumare entro 3 giorni è una proposta prudente non testata; congelare fino a 1 mese è un'indicazione di qualità. Scongelare in frigorifero e riscaldare a 74°C. Non lasciare la frittata a temperatura ambiente fino al giorno dopo.",
+          "image_url": "/recetas/receta-de-tortilla-de-espinaca/portada.webp",
+          "image_alt": "Frittata rotonda di spinaci cotta con una fetta separata su piatto bianco"
+        }
+      ],
+      "gallery": [
+        {
+          "url": "/recetas/receta-de-tortilla-de-espinaca/portada.webp",
+          "alt": "Frittata rotonda di spinaci e cipolla rappresa al forno, con fetta separata, senza formaggio o accompagnamenti"
+        }
+      ],
+      "seo": {
+        "title": "Frittata di spinaci e cipolla al forno: sette passaggi",
+        "description": "Frittata di uova, spinaci e cipolla, senza formaggio né farina. Sette passaggi, almeno 71°C al centro e nutrizione stimata per quattro porzioni proposte.",
+        "image_alt": "Frittata rotonda di spinaci e cipolla rappresa al forno, con fetta separata, senza formaggio o accompagnamenti",
+        "image_variants": [
+          "/recetas/receta-de-tortilla-de-espinaca/portada-1x1.webp",
+          "/recetas/receta-de-tortilla-de-espinaca/portada-4x3.webp",
+          "/recetas/receta-de-tortilla-de-espinaca/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Posso usare spinaci surgelati o già cotti?",
+            "a": "Come variante, non come sostituzione automatica a peso uguale. Si calcolano spinaci freschi crudi puliti; scolatura, umidità e quantità cotta cambiano resa e nutrienti. Verificare il prodotto e ricalcolare."
+          },
+          {
+            "q": "Posso aggiungere formaggio, latte o patate?",
+            "a": "Sì in una variante separata, ma non fanno parte di questa formula o della sua nutrizione. Cambiano quantità, cottura, allergeni e valori per porzione. Registrare e ricalcolare la versione nuova."
+          },
+          {
+            "q": "Devo girarla o lasciare il centro morbido?",
+            "a": "Non si gira: la padella deve essere adatta al forno, dove si finisce la cottura. Servire il centro rappreso e ad almeno 71°C misurati; colore e tempo orientativo non sostituiscono il termometro."
+          }
+        ]
+      },
+      "content_html": "<p>Proposta originale di frittata rotonda con spinaci e cipolla, avviata in padella e finita in forno senza girarla. Si propongono quattro porzioni piccole e 36 minuti, riposo compreso. Quantità, tempi e resa attendono una prova in cucina; la formula non è stata testata.</p><p>Usare spinaci freschi lavati sotto acqua corrente senza detergenti e ben asciugati. I 200 g sono peso crudo pulito; non sostituire automaticamente con pari peso cotto o surgelato. Pesare 200 g di uovo intero senza guscio; circa quattro uova grandi è un&#x27;indicazione, conta il peso. Contiene uovo. Padella di circa 20 cm completamente adatta al forno a 200°C, manico e rivestimento compresi; niente plastica in forno. Tempi proposti: 10 minuti iniziali per pesare, lavare e preriscaldare in parallelo, 2 per sbattere e mescolare, 5 cipolla, 3 spinaci, 1 per iniziare la presa, 12 in forno e 3 riposo: preparazione 12, cottura 21, totale 36. Preriscaldamento lento, padella diversa e controlli possono allungare: annotare il tempo reale. Non girare. Cuocere fino a centro rappreso e almeno 71°C misurati; colore e tempo non garantiscono sicurezza. Separare uovo crudo da cibi pronti e pulire mani e utensili. Si contano tutti i 15 g di olio, divisi in 10 e 5, e i 2 g di sale; aggiunte da ricalcolare. Non scolare o strizzare verdure cotte: evaporare acqua in padella. Formaggio, latte, patate, pane o salse cambiano nutrizione. Dividere in quattro parti uguali senza peso finale misurato. Conservare in contenitori bassi a non più di 4°C entro 2 ore, oppure 1 ora se l&#x27;ambiente supera 32°C. Consumare entro 3 giorni è una proposta prudente non testata; congelare fino a 1 mese è un&#x27;indicazione di qualità non confermata. Scongelare in frigorifero e riscaldare a 74°C. Proteggere il manico caldo e usare guanti da forno.</p>"
+    },
+    {
+      "title": "ほうれん草と玉ねぎのオムレツ、オーブン仕上げ",
+      "excerpt": "チーズや小麦粉を使わない、卵、ほうれん草、玉ねぎのオムレツ。7工程で中心を71°C以上に加熱し、提案する4人分の栄養を推定しています。",
+      "summary": "ほうれん草と玉ねぎを入れた丸いオムレツの新しい提案です。フライパンで焼き始め、裏返さずにオーブンで仕上げます。少量の4人分、休ませる時間を含め36分を提案しています。分量、時間、出来上がり量は調理試験待ちで、検証済みの配合ではありません。",
+      "difficulty": "簡単",
+      "course": "オムレツ",
+      "cuisine": "家庭料理",
+      "category_slug": "platos-principales",
+      "category": "主菜",
+      "prep_time_minutes": 12,
+      "cook_time_minutes": 21,
+      "total_time_minutes": 36,
+      "servings": 4,
+      "notes": "生のほうれん草を洗剤なしの流水で洗い、よく水気を切ります。200 gは下処理した生の重量です。ゆでたものや冷凍品を同じ重量でそのまま置き換えないでください。殻を除いた全卵200 gを量り、大きい卵約4個は目安として重量を優先します。卵を含みます。直径約20 cmのフライパンは柄やコーティングも含め200°Cのオーブン対応品を使い、プラスチックを入れません。提案時間は、最初の計量、洗浄、並行する予熱10分、卵を混ぜる2分、玉ねぎ5分、ほうれん草3分、底を固め始める1分、オーブン12分、休ませる3分です。準備12分、加熱21分、合計36分。予熱の遅いオーブンや異なる器具、温度確認で延びる場合は実測時間を記録します。裏返しません。中心が固まり、温度計で71°C以上になるまで焼きます。色や時間だけでは安全を確認できません。生卵をそのまま食べる食品から離し、手と器具を洗います。油15 gを10 gと5 gに分け、塩2 gも全量計算しています。追加分は再計算が必要です。加熱した野菜を水切りしたり絞ったりせず、フライパンで水を蒸発させます。チーズ、牛乳、じゃがいも、パン、ソースを加えると栄養が変わります。完成重量は未測定なので4等分します。保存は浅い容器で2時間以内、室温が32°Cを超えるときは1時間以内に4°C以下で冷蔵します。3日以内に食べるのは慎重な未検証の提案、1か月までの冷凍は未確認の品質目安です。冷蔵庫で解凍し、74°Cまで再加熱します。熱い柄を保護し、取り出す際はミトンを使います。",
+      "keywords": [
+        "ほうれん草のオムレツ",
+        "オーブン仕上げ",
+        "卵とほうれん草",
+        "小麦粉不使用"
+      ],
+      "id": "cf82eec3-daab-5542-ad50-d1c02a5d890c",
+      "recipe_group_id": "5ec0b548-d9d8-4c42-ab6c-70c32958aad9",
+      "slug": "ほうれん草のオムレツ",
+      "public_path": "/ja/ほうれん草のオムレツ",
+      "source_url": null,
+      "language": "ja",
+      "published": true,
+      "editorial_status": "published",
+      "nutrition": {
+        "calories": 124.2,
+        "protein_g": 8.0,
+        "carbs_g": 4.0,
+        "fat_g": 8.7,
+        "saturated_fat_g": 2.1,
+        "fiber_g": 1.4,
+        "sugar_g": 1.2,
+        "sodium_mg": 305.0,
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018 JSON)",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "inputs": [
+          {
+            "ingredient": "殻を除いた生の全卵",
+            "edible_grams": 200,
+            "fdc_id": 171287,
+            "fdc_description": "Egg, whole, raw, fresh",
+            "per_100g": {
+              "calories": 143,
+              "protein_g": 12.6,
+              "carbs_g": 0.72,
+              "fat_g": 9.51,
+              "saturated_fat_g": 3.13,
+              "fiber_g": 0.0,
+              "sugar_g": 0.37,
+              "sodium_mg": 142
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171287/nutrients"
+          },
+          {
+            "ingredient": "下処理した生のほうれん草",
+            "edible_grams": 200,
+            "fdc_id": 168462,
+            "fdc_description": "Spinach, raw",
+            "per_100g": {
+              "calories": 23.0,
+              "protein_g": 2.86,
+              "carbs_g": 3.63,
+              "fat_g": 0.39,
+              "saturated_fat_g": 0.063,
+              "fiber_g": 2.2,
+              "sugar_g": 0.42,
+              "sodium_mg": 79.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/168462/nutrients"
+          },
+          {
+            "ingredient": "皮をむいた生の玉ねぎ",
+            "edible_grams": 80,
+            "fdc_id": 170000,
+            "fdc_description": "Onions, raw",
+            "per_100g": {
+              "calories": 40.0,
+              "protein_g": 1.1,
+              "carbs_g": 9.34,
+              "fat_g": 0.1,
+              "saturated_fat_g": 0.042,
+              "fiber_g": 1.7,
+              "sugar_g": 4.24,
+              "sodium_mg": 4.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170000/nutrients"
+          },
+          {
+            "ingredient": "オリーブ油の全量",
+            "edible_grams": 15,
+            "fdc_id": 171413,
+            "fdc_description": "Oil, olive, salad or cooking",
+            "per_100g": {
+              "calories": 884,
+              "protein_g": 0.0,
+              "carbs_g": 0.0,
+              "fat_g": 100,
+              "saturated_fat_g": 13.8,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0,
+              "sodium_mg": 2.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171413/nutrients"
+          },
+          {
+            "ingredient": "食塩の全量",
+            "edible_grams": 2,
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "calories": 0.0,
+              "protein_g": 0.0,
+              "carbs_g": 0.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0,
+              "sodium_mg": 38800.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients"
+          }
+        ],
+        "serving_size": "完成したオムレツの4分の1。少量の4人分は提案で、完成重量は未測定",
+        "method": "検証済みUSDA SR Legacyの5食品データで、生の殻なし卵200 g、下処理した生ほうれん草200 g、皮をむいた生玉ねぎ80 g、オリーブ油15 g、塩2 gの栄養を合計し、4で割ります。油、塩、野菜を全量含み、調理液を捨てたり残留率を捏造したりしません。蒸発で重量は変わるため、実測した出来上がり量やオムレツ100 g当たりの値は割り当てません。",
+        "note": "料理の分析や調理試験ではなく、配合からの推定です。少量の4人分と分量は提案値。可食材料、油、塩をすべて含み、未測定の損失率や吸収率は使いません。サラダ、パン、ソースやチーズ、牛乳、じゃがいもを加えた版は含みません。8項目とも元のデータがあり、欠測値をゼロで埋めていません。"
+      },
+      "image_url": "/recetas/receta-de-tortilla-de-espinaca/portada.webp",
+      "ingredients": [
+        {
+          "name": "殻を除いた全卵、大きい卵約4個が目安（重量を優先）",
+          "amount": "200",
+          "unit": "g",
+          "group": "卵液"
+        },
+        {
+          "name": "傷んだ部分を取り除いた生のほうれん草",
+          "amount": "200",
+          "unit": "g",
+          "group": "野菜"
+        },
+        {
+          "name": "皮をむいた玉ねぎ",
+          "amount": "80",
+          "unit": "g",
+          "group": "野菜"
+        },
+        {
+          "name": "オリーブ油（野菜用10 g、フライパン用5 g）",
+          "amount": "15",
+          "unit": "g",
+          "group": "加熱用"
+        },
+        {
+          "name": "食塩",
+          "amount": "2",
+          "unit": "g",
+          "group": "調味料"
+        }
+      ],
+      "steps": [
+        {
+          "title": "計量し、野菜とフライパン、オーブンを準備する",
+          "content": "オーブンを200°Cに予熱します。直径約20 cmのフライパンが柄も含めその温度に対応することを確認します。ほうれん草を流水で洗い、傷んだ部分を除いて乾かし、下処理した200 gを量ります。玉ねぎ80 gの皮をむいて刻みます。油15 gを野菜用10 gと仕上げ用5 gに分けます。塩2 gと殻を除いた卵200 g、大きい卵約4個を準備します。卵は使うまで冷蔵し、生食品用の器具を分けます。最初の10分には並行する予熱を含み、オーブンが遅ければ追加時間を記録します。",
+          "image_url": "/recetas/receta-de-tortilla-de-espinaca/paso-01.webp",
+          "image_alt": "生ほうれん草、刻んだ玉ねぎ、計量した卵、油、塩と金属製フライパン"
+        },
+        {
+          "title": "玉ねぎを焦がさずやわらかくする",
+          "content": "野菜用の油10 gをフライパンに入れます。玉ねぎ80 gを加え、中弱火で約5分、混ぜながらやわらかく半透明になるまで炒めます。焦がさず、早く色づくなら火を弱めてください。計量分以外の油や水を加える場合は変更を記録します。",
+          "image_url": "/recetas/receta-de-tortilla-de-espinaca/paso-02.webp",
+          "image_alt": "計量した油で炒めた半透明のやわらかい玉ねぎ"
+        },
+        {
+          "title": "ほうれん草を加熱して水分を飛ばす",
+          "content": "下処理したほうれん草200 gを玉ねぎに加え、必要なら分けて入れます。約3分混ぜながら加熱し、葉がしんなりして底に余分な水がたまらなくなるまで炒めます。水切りしたり絞ったりせず、野菜と油を残して中程度の火で水を蒸発させます。まだ水っぽければ延長し、実際の時間を記録します。耐熱のボウルに移します。",
+          "image_url": "/recetas/receta-de-tortilla-de-espinaca/paso-03.webp",
+          "image_alt": "余分な水がたまっていない、しんなりしたほうれん草と玉ねぎ"
+        },
+        {
+          "title": "卵を溶き、加熱した野菜を混ぜる",
+          "content": "別のボウルで殻を除いた卵200 gと塩2 gを混ぜ、白身と黄身を一体にします。加熱した野菜とその油をすべて入れて混ぜ、全体で約2分とします。生の卵液を味見しません。生卵が触れた手、台、器具を洗い、卵液はすぐ加熱します。",
+          "image_url": "/recetas/receta-de-tortilla-de-espinaca/paso-04.webp",
+          "image_alt": "ボウルで生卵と加熱したほうれん草、玉ねぎを混ぜた状態"
+        },
+        {
+          "title": "フライパンで底を固め始める",
+          "content": "同じオーブン対応フライパンの底と側面に、残しておいた油5 gを広げます。卵と野菜の全量を流し入れ、やさしく平らにします。弱火で1分、焼き色をつけすぎず底を固め始める程度に加熱します。この段階の中心はまだ生なので、提供せず油も足しません。",
+          "image_url": "/recetas/receta-de-tortilla-de-espinaca/paso-05.webp",
+          "image_alt": "フライパンの縁から固まり始める平らな卵とほうれん草"
+        },
+        {
+          "title": "オーブンで仕上げ、中心温度を確かめる",
+          "content": "ミトンを使い、200°Cに予熱したオーブンにフライパンを入れ、約12分焼きます。中心に液状の卵がなく、清潔な温度計を鍋に触れさせず中心に入れて71°C以上になることを確認します。温度に達していなければ焼き続けて再測定し、実際の時間を記録してください。焼き色だけでは安全を確認できません。ミトンで取り出し、柄が熱いことを忘れないでください。",
+          "image_url": "/recetas/receta-de-tortilla-de-espinaca/paso-06.webp",
+          "image_alt": "オーブンで中心まで固まったオムレツを温度計で確認する状態"
+        },
+        {
+          "title": "休ませて分け、冷蔵保存する",
+          "content": "耐熱面で3分休ませ、熱い柄に注意します。4等分し、完成重量は未測定として扱います。清潔な器具で盛り、栄養は付け合わせを含みません。保存には浅い容器を使い、2時間以内、室温が32°Cを超える場合は1時間以内に4°C以下で冷蔵します。3日以内の使用は慎重な未検証の提案、1か月までの冷凍は品質の目安です。冷蔵庫で解凍し、74°Cまで再加熱します。翌日用に室温に置いたままにしないでください。",
+          "image_url": "/recetas/receta-de-tortilla-de-espinaca/portada.webp",
+          "image_alt": "白い皿の丸いほうれん草オムレツと分けた一切れ"
+        }
+      ],
+      "gallery": [
+        {
+          "url": "/recetas/receta-de-tortilla-de-espinaca/portada.webp",
+          "alt": "オーブンで固めた丸いほうれん草と玉ねぎのオムレツ、一切れを離した状態、チーズや付け合わせなし"
+        }
+      ],
+      "seo": {
+        "title": "ほうれん草と玉ねぎのオムレツをオーブンで作る7工程",
+        "description": "チーズや小麦粉を使わない、卵、ほうれん草、玉ねぎのオムレツ。7工程で中心を71°C以上に加熱し、提案する4人分の栄養を推定しています。",
+        "image_alt": "オーブンで固めた丸いほうれん草と玉ねぎのオムレツ、一切れを離した状態、チーズや付け合わせなし",
+        "image_variants": [
+          "/recetas/receta-de-tortilla-de-espinaca/portada-1x1.webp",
+          "/recetas/receta-de-tortilla-de-espinaca/portada-4x3.webp",
+          "/recetas/receta-de-tortilla-de-espinaca/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "冷凍や加熱済みのほうれん草を使えますか？",
+            "a": "別の配合として可能ですが、同じ重量への自動的な置き換えではありません。この計算は下処理した生のほうれん草です。水切り、水分、加熱後の量で出来上がり量と栄養が変わるので製品を確認し、再計算してください。"
+          },
+          {
+            "q": "チーズ、牛乳、じゃがいもを加えられますか？",
+            "a": "別の配合としては可能ですが、この材料や栄養には含まれていません。分量、加熱、アレルゲン、ひと皿の栄養が変わるので変更を記録し、新しい配合を再計算します。"
+          },
+          {
+            "q": "裏返したり、中心を半熟にしたりしますか？",
+            "a": "裏返しません。オーブン対応のフライパンでオーブン仕上げにします。中心は固めて71°C以上を測定して提供してください。時間の目安や色は温度計の代わりになりません。"
+          }
+        ]
+      },
+      "content_html": "<p>ほうれん草と玉ねぎを入れた丸いオムレツの新しい提案です。フライパンで焼き始め、裏返さずにオーブンで仕上げます。少量の4人分、休ませる時間を含め36分を提案しています。分量、時間、出来上がり量は調理試験待ちで、検証済みの配合ではありません。</p><p>生のほうれん草を洗剤なしの流水で洗い、よく水気を切ります。200 gは下処理した生の重量です。ゆでたものや冷凍品を同じ重量でそのまま置き換えないでください。殻を除いた全卵200 gを量り、大きい卵約4個は目安として重量を優先します。卵を含みます。直径約20 cmのフライパンは柄やコーティングも含め200°Cのオーブン対応品を使い、プラスチックを入れません。提案時間は、最初の計量、洗浄、並行する予熱10分、卵を混ぜる2分、玉ねぎ5分、ほうれん草3分、底を固め始める1分、オーブン12分、休ませる3分です。準備12分、加熱21分、合計36分。予熱の遅いオーブンや異なる器具、温度確認で延びる場合は実測時間を記録します。裏返しません。中心が固まり、温度計で71°C以上になるまで焼きます。色や時間だけでは安全を確認できません。生卵をそのまま食べる食品から離し、手と器具を洗います。油15 gを10 gと5 gに分け、塩2 gも全量計算しています。追加分は再計算が必要です。加熱した野菜を水切りしたり絞ったりせず、フライパンで水を蒸発させます。チーズ、牛乳、じゃがいも、パン、ソースを加えると栄養が変わります。完成重量は未測定なので4等分します。保存は浅い容器で2時間以内、室温が32°Cを超えるときは1時間以内に4°C以下で冷蔵します。3日以内に食べるのは慎重な未検証の提案、1か月までの冷凍は未確認の品質目安です。冷蔵庫で解凍し、74°Cまで再加熱します。熱い柄を保護し、取り出す際はミトンを使います。</p>"
+    },
+    {
+      "title": "Omelete de espinafre e cebola finalizada no forno",
+      "excerpt": "Omelete de ovo, espinafre e cebola, sem queijo nem farinha. Sete etapas, centro a pelo menos 71°C medidos e nutrição estimada para quatro porções propostas.",
+      "summary": "Proposta original de omelete redonda com espinafre e cebola, iniciada na frigideira e finalizada no forno sem virar. São propostas quatro porções pequenas e 36 minutos, incluindo descanso. Quantidades, tempos e rendimento aguardam teste em cozinha; a fórmula não foi testada.",
+      "difficulty": "Fácil",
+      "course": "Omelete",
+      "cuisine": "Cozinha caseira",
+      "category_slug": "platos-principales",
+      "category": "Pratos principais",
+      "prep_time_minutes": 12,
+      "cook_time_minutes": 21,
+      "total_time_minutes": 36,
+      "servings": 4,
+      "notes": "Use espinafre fresco lavado em água corrente, sem detergente, e bem seco. Os 200 g são o peso cru limpo; não substitua automaticamente pelo mesmo peso cozido ou congelado. Pese 200 g de ovo inteiro sem casca; cerca de quatro ovos grandes é orientação, o peso manda. Contém ovo. Frigideira de aproximadamente 20 cm totalmente própria para forno a 200°C, incluindo cabo e revestimento; não coloque plástico no forno. Tempos propostos: 10 minutos iniciais para pesar, lavar e preaquecer em paralelo, 2 para bater e misturar, 5 para cebola, 3 para espinafre, 1 para começar a firmar, 12 no forno e 3 de descanso: preparo 12, cozimento 21, total 36. Forno lento, outra frigideira ou verificações podem prolongar; registre o tempo real. Não precisa virar. Cozinhe até centro firme e pelo menos 71°C medidos com termômetro; cor e tempo sozinhos não comprovam segurança. Separe ovo cru de alimentos prontos e lave mãos e utensílios. Todo o azeite, 15 g divididos em 10 e 5, e os 2 g de sal entram no cálculo; recalcule acréscimos. Não escorra nem esprema vegetais cozidos: evapore água na frigideira. Queijo, leite, batata, pão ou molho mudam a nutrição. Divida em quatro partes iguais sem peso final medido. Guarde em recipientes rasos a 4°C ou menos dentro de 2 horas, ou 1 hora se o ambiente superar 32°C. Consumir em 3 dias é proposta prudente não testada; congelar até 1 mês é orientação de qualidade não confirmada. Descongele na geladeira e reaqueça a 74°C. Proteja o cabo quente e use luvas térmicas para retirar a frigideira.",
+      "keywords": [
+        "omelete de espinafre",
+        "omelete no forno",
+        "ovo e espinafre",
+        "omelete sem farinha"
+      ],
+      "id": "559fade7-dc35-54ae-acce-e6c4910486d4",
+      "recipe_group_id": "5ec0b548-d9d8-4c42-ab6c-70c32958aad9",
+      "slug": "receita-de-omelete-de-espinafre",
+      "public_path": "/pt/receita-de-omelete-de-espinafre",
+      "source_url": null,
+      "language": "pt",
+      "published": true,
+      "editorial_status": "published",
+      "nutrition": {
+        "calories": 124.2,
+        "protein_g": 8.0,
+        "carbs_g": 4.0,
+        "fat_g": 8.7,
+        "saturated_fat_g": 2.1,
+        "fiber_g": 1.4,
+        "sugar_g": 1.2,
+        "sodium_mg": 305.0,
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (2018 JSON)",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "inputs": [
+          {
+            "ingredient": "ovo inteiro cru sem casca",
+            "edible_grams": 200,
+            "fdc_id": 171287,
+            "fdc_description": "Egg, whole, raw, fresh",
+            "per_100g": {
+              "calories": 143,
+              "protein_g": 12.6,
+              "carbs_g": 0.72,
+              "fat_g": 9.51,
+              "saturated_fat_g": 3.13,
+              "fiber_g": 0.0,
+              "sugar_g": 0.37,
+              "sodium_mg": 142
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171287/nutrients"
+          },
+          {
+            "ingredient": "espinafre cru, peso limpo",
+            "edible_grams": 200,
+            "fdc_id": 168462,
+            "fdc_description": "Spinach, raw",
+            "per_100g": {
+              "calories": 23.0,
+              "protein_g": 2.86,
+              "carbs_g": 3.63,
+              "fat_g": 0.39,
+              "saturated_fat_g": 0.063,
+              "fiber_g": 2.2,
+              "sugar_g": 0.42,
+              "sodium_mg": 79.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/168462/nutrients"
+          },
+          {
+            "ingredient": "cebola crua descascada",
+            "edible_grams": 80,
+            "fdc_id": 170000,
+            "fdc_description": "Onions, raw",
+            "per_100g": {
+              "calories": 40.0,
+              "protein_g": 1.1,
+              "carbs_g": 9.34,
+              "fat_g": 0.1,
+              "saturated_fat_g": 0.042,
+              "fiber_g": 1.7,
+              "sugar_g": 4.24,
+              "sodium_mg": 4.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170000/nutrients"
+          },
+          {
+            "ingredient": "azeite de oliva total",
+            "edible_grams": 15,
+            "fdc_id": 171413,
+            "fdc_description": "Oil, olive, salad or cooking",
+            "per_100g": {
+              "calories": 884,
+              "protein_g": 0.0,
+              "carbs_g": 0.0,
+              "fat_g": 100,
+              "saturated_fat_g": 13.8,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0,
+              "sodium_mg": 2.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171413/nutrients"
+          },
+          {
+            "ingredient": "sal de cozinha total",
+            "edible_grams": 2,
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "calories": 0.0,
+              "protein_g": 0.0,
+              "carbs_g": 0.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0,
+              "sodium_mg": 38800.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients"
+          }
+        ],
+        "serving_size": "Um quarto da omelete pronta; quatro porções pequenas propostas sem peso final medido",
+        "method": "Somar nutrientes de 200 g de ovo cru sem casca, 200 g de espinafre cru limpo, 80 g de cebola crua descascada, 15 g de azeite e 2 g de sal a partir de cinco registros USDA SR Legacy verificados; dividir por 4. Contar todo azeite, sal e vegetais, sem escorrer líquido de cozimento nem inventar retenção. Evaporação muda o peso; não se atribui rendimento medido ou valores por 100 g de omelete.",
+        "note": "Estimativa da formulação, não análise do prato nem teste em cozinha. Quatro porções pequenas e quantidades propostas. Inclui todos os ingredientes comestíveis, azeite e sal sem fatores não medidos de perda ou absorção. Exclui salada, pão, molhos e variações com queijo, leite ou batata. Os oito nutrientes têm dados de origem; dados ausentes não são preenchidos com zero."
+      },
+      "image_url": "/recetas/receta-de-tortilla-de-espinaca/portada.webp",
+      "ingredients": [
+        {
+          "name": "ovo inteiro sem casca, cerca de quatro ovos grandes; vale o peso",
+          "amount": "200",
+          "unit": "g",
+          "group": "Mistura de ovos"
+        },
+        {
+          "name": "espinafre fresco limpo, sem partes danificadas",
+          "amount": "200",
+          "unit": "g",
+          "group": "Vegetais"
+        },
+        {
+          "name": "cebola descascada",
+          "amount": "80",
+          "unit": "g",
+          "group": "Vegetais"
+        },
+        {
+          "name": "azeite de oliva: 10 g para vegetais e 5 g para frigideira",
+          "amount": "15",
+          "unit": "g",
+          "group": "Cozimento"
+        },
+        {
+          "name": "sal de cozinha",
+          "amount": "2",
+          "unit": "g",
+          "group": "Tempero"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Pese, lave e prepare frigideira e forno",
+          "content": "Preaqueça o forno a 200°C. Confira se uma frigideira de aproximadamente 20 cm, incluindo o cabo, suporta essa temperatura. Lave o espinafre em água corrente, retire partes danificadas, seque e pese 200 g limpos. Descasque e pique 80 g de cebola. Separe 15 g de azeite em 10 g para vegetais e 5 g para finalizar. Prepare 2 g de sal e 200 g de ovo sem casca, aproximadamente 4 ovos grandes. Mantenha o ovo refrigerado até usar e separe utensílios para alimentos crus. Esses 10 minutos iniciais incluem preaquecimento em paralelo; registre tempo adicional se o forno demorar mais.",
+          "image_url": "/recetas/receta-de-tortilla-de-espinaca/paso-01.webp",
+          "image_alt": "Espinafre cru, cebola picada, ovos pesados, azeite e sal junto à frigideira metálica"
+        },
+        {
+          "title": "Amacie a cebola sem queimar",
+          "content": "Coloque os 10 g de azeite para vegetais na frigideira. Junte 80 g de cebola e cozinhe em fogo médio-baixo por cerca de 5 minutos, mexendo até ficar macia e translúcida. Evite queimar; abaixe o fogo se dourar demais. Não acrescente azeite além do medido nem água sem registrar a variação.",
+          "image_url": "/recetas/receta-de-tortilla-de-espinaca/paso-02.webp",
+          "image_alt": "Cebola macia e translúcida refogando no azeite medido"
+        },
+        {
+          "title": "Cozinhe o espinafre e evapore a água",
+          "content": "Junte os 200 g de espinafre limpo à cebola, em levas se necessário. Cozinhe cerca de 3 minutos, mexendo até murchar e não restar poça de água solta na frigideira. Não escorra nem esprema: conserve vegetais e azeite, evaporando água em calor moderado. Se ainda úmido, prolongue e registre a duração real. Transfira para uma tigela resistente ao calor.",
+          "image_url": "/recetas/receta-de-tortilla-de-espinaca/paso-03.webp",
+          "image_alt": "Espinafre murcho e cebola sem água solta na frigideira"
+        },
+        {
+          "title": "Bata os ovos e misture os vegetais",
+          "content": "Em outra tigela bata os 200 g de ovo sem casca com 2 g de sal até unir clara e gema. Incorpore os vegetais cozidos e todo seu azeite e misture, reservando cerca de 2 minutos no total. Não prove a mistura crua. Limpe mãos, bancada e utensílios que tocaram ovo cru; cozinhe imediatamente.",
+          "image_url": "/recetas/receta-de-tortilla-de-espinaca/paso-04.webp",
+          "image_alt": "Ovo cru batido misturado a espinafre e cebola cozidos em tigela"
+        },
+        {
+          "title": "Comece a firmar na frigideira",
+          "content": "Distribua os 5 g de azeite reservados pelo fundo e pelas laterais da mesma frigideira própria para forno. Despeje toda a mistura de ovo e vegetais e nivele delicadamente. Cozinhe em fogo baixo por 1 minuto, só para começar a firmar a base sem dourar em excesso. O centro continua cru: ainda não sirva nem acrescente azeite.",
+          "image_url": "/recetas/receta-de-tortilla-de-espinaca/paso-05.webp",
+          "image_alt": "Mistura nivelada de ovo e espinafre começando a firmar nas bordas"
+        },
+        {
+          "title": "Finalize no forno e confira o centro",
+          "content": "Com luvas térmicas, coloque a frigideira no forno preaquecido a 200°C e cozinhe aproximadamente 12 minutos. O centro deve estar firme, sem ovo líquido, e atingir pelo menos 71°C medidos com termômetro limpo no centro sem tocar a frigideira. Se não atingir, continue e meça de novo; anote o tempo real. Dourar não comprova segurança. Retire com luvas e lembre-se de que o cabo está quente.",
+          "image_url": "/recetas/receta-de-tortilla-de-espinaca/paso-06.webp",
+          "image_alt": "Omelete firme após o forno, verificada com termômetro"
+        },
+        {
+          "title": "Descanse, divida e conserve no frio",
+          "content": "Descanse por 3 minutos sobre superfície resistente ao calor, mantendo atenção ao cabo quente. Divida em 4 partes iguais; o peso final não foi medido. Sirva com utensílio limpo; nutrição sem acompanhamentos. Guarde em recipientes rasos a 4°C ou menos dentro de 2 horas, ou 1 hora se o ambiente superar 32°C. Consumir em 3 dias é proposta prudente não testada; congelar até 1 mês é orientação de qualidade. Descongele na geladeira e reaqueça a 74°C. Não deixe a omelete à temperatura ambiente para o dia seguinte.",
+          "image_url": "/recetas/receta-de-tortilla-de-espinaca/portada.webp",
+          "image_alt": "Omelete redonda cozida de espinafre com fatia separada em prato branco"
+        }
+      ],
+      "gallery": [
+        {
+          "url": "/recetas/receta-de-tortilla-de-espinaca/portada.webp",
+          "alt": "Omelete redonda de espinafre e cebola finalizada no forno com fatia separada, sem queijo ou acompanhamentos"
+        }
+      ],
+      "seo": {
+        "title": "Omelete de espinafre e cebola no forno: sete etapas",
+        "description": "Omelete de ovo, espinafre e cebola, sem queijo nem farinha. Sete etapas, centro a pelo menos 71°C medidos e nutrição estimada para quatro porções propostas.",
+        "image_alt": "Omelete redonda de espinafre e cebola finalizada no forno com fatia separada, sem queijo ou acompanhamentos",
+        "image_variants": [
+          "/recetas/receta-de-tortilla-de-espinaca/portada-1x1.webp",
+          "/recetas/receta-de-tortilla-de-espinaca/portada-4x3.webp",
+          "/recetas/receta-de-tortilla-de-espinaca/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Posso usar espinafre congelado ou já cozido?",
+            "a": "Como variação, não substituição automática pelo mesmo peso. O cálculo usa espinafre fresco cru limpo; escorrer, umidade e quantidade cozida mudam rendimento e nutrientes. Confira o produto e recalcule."
+          },
+          {
+            "q": "Posso acrescentar queijo, leite ou batata?",
+            "a": "Sim em uma variação separada, mas não estão nesta fórmula nem em sua nutrição. Mudam quantidades, cozimento, alergênicos e valores por porção. Registre e recalcule a nova versão."
+          },
+          {
+            "q": "Preciso virar ou deixar o centro mole?",
+            "a": "Não se vira: a frigideira deve ser própria para forno, onde termina a cocção. Sirva o centro firme e a pelo menos 71°C medidos; tempo aproximado e cor não substituem o termômetro."
+          }
+        ]
+      },
+      "content_html": "<p>Proposta original de omelete redonda com espinafre e cebola, iniciada na frigideira e finalizada no forno sem virar. São propostas quatro porções pequenas e 36 minutos, incluindo descanso. Quantidades, tempos e rendimento aguardam teste em cozinha; a fórmula não foi testada.</p><p>Use espinafre fresco lavado em água corrente, sem detergente, e bem seco. Os 200 g são o peso cru limpo; não substitua automaticamente pelo mesmo peso cozido ou congelado. Pese 200 g de ovo inteiro sem casca; cerca de quatro ovos grandes é orientação, o peso manda. Contém ovo. Frigideira de aproximadamente 20 cm totalmente própria para forno a 200°C, incluindo cabo e revestimento; não coloque plástico no forno. Tempos propostos: 10 minutos iniciais para pesar, lavar e preaquecer em paralelo, 2 para bater e misturar, 5 para cebola, 3 para espinafre, 1 para começar a firmar, 12 no forno e 3 de descanso: preparo 12, cozimento 21, total 36. Forno lento, outra frigideira ou verificações podem prolongar; registre o tempo real. Não precisa virar. Cozinhe até centro firme e pelo menos 71°C medidos com termômetro; cor e tempo sozinhos não comprovam segurança. Separe ovo cru de alimentos prontos e lave mãos e utensílios. Todo o azeite, 15 g divididos em 10 e 5, e os 2 g de sal entram no cálculo; recalcule acréscimos. Não escorra nem esprema vegetais cozidos: evapore água na frigideira. Queijo, leite, batata, pão ou molho mudam a nutrição. Divida em quatro partes iguais sem peso final medido. Guarde em recipientes rasos a 4°C ou menos dentro de 2 horas, ou 1 hora se o ambiente superar 32°C. Consumir em 3 dias é proposta prudente não testada; congelar até 1 mês é orientação de qualidade não confirmada. Descongele na geladeira e reaqueça a 74°C. Proteja o cabo quente e use luvas térmicas para retirar a frigideira.</p>"
     }
   ],
   "portuguese_locale": "pt-BR"
