@@ -125,6 +125,54 @@
       "public_path": "/recetas/galletas-de-avena-y-chocolate/paso-02.webp",
       "original": "paso-02.png",
       "visual_qa": "PASS"
+    },
+    {
+      "asset": "paso-04.webp",
+      "path": "public/recetas/galletas-de-avena-y-chocolate/paso-04.webp",
+      "sha256": "f305adfd105b045c56c0a8642f59a98a9da88942cc26b997420476f3ccd334b1",
+      "git_blob_sha": "7b612585ea2938238f4c3433d1d4f4f4ef4a5567",
+      "bytes": 100884,
+      "width": 1280,
+      "height": 960,
+      "public_path": "/recetas/galletas-de-avena-y-chocolate/paso-04.webp",
+      "original": "paso-04.png",
+      "visual_qa": "PASS"
+    },
+    {
+      "asset": "paso-05.webp",
+      "path": "public/recetas/galletas-de-avena-y-chocolate/paso-05.webp",
+      "sha256": "67992d7a48f872d679df8880382599f68346127a2231f40d2fc2d3bf7a5a8175",
+      "git_blob_sha": "793335a8bf5bf8c9bc8090c138aa10fc74fe9129",
+      "bytes": 151656,
+      "width": 1280,
+      "height": 960,
+      "public_path": "/recetas/galletas-de-avena-y-chocolate/paso-05.webp",
+      "original": "paso-05.png",
+      "visual_qa": "PASS"
+    },
+    {
+      "asset": "paso-03.webp",
+      "path": "public/recetas/galletas-de-avena-y-chocolate/paso-03.webp",
+      "sha256": "ae3e4c9abbaa9cf78fd0deaf212d6e47af0997a62fdfea430792f84680169be9",
+      "git_blob_sha": "e578529de69b1445ff51e0c3ceb22473aee860ba",
+      "bytes": 85200,
+      "width": 1280,
+      "height": 960,
+      "public_path": "/recetas/galletas-de-avena-y-chocolate/paso-03.webp",
+      "original": "paso-03.png",
+      "visual_qa": "PASS"
+    },
+    {
+      "asset": "paso-06.webp",
+      "path": "public/recetas/galletas-de-avena-y-chocolate/paso-06.webp",
+      "sha256": "618469c0e3e93ffb7a7a1f14d76e0544e0abc2788aa28f4a446a1a450f4998b5",
+      "git_blob_sha": "171cba79e3649dda859bdfcb7416170de99bd8aa",
+      "bytes": 77422,
+      "width": 1280,
+      "height": 960,
+      "public_path": "/recetas/galletas-de-avena-y-chocolate/paso-06.webp",
+      "original": "paso-06.png",
+      "visual_qa": "PASS"
     }
   ],
   "originals": [
@@ -163,11 +211,79 @@
       "phase": 2,
       "visual_qa": "PASS",
       "source": "built-in ImageGen"
+    },
+    {
+      "asset": "paso-04.png",
+      "path": "public/recetas/galletas-de-avena-y-chocolate/originals/paso-04.png",
+      "sha256": "4701c75ae26e58be04910f8f9fb76abb8ce615b3eafffe17be58542e716ebc8f",
+      "git_blob_sha": "21ff54e7660bb88f9ed3f3451f318bdf474110a6",
+      "bytes": 2117290,
+      "width": 1448,
+      "height": 1086,
+      "phase": 4,
+      "visual_qa": "PASS",
+      "source": "built-in ImageGen"
+    },
+    {
+      "asset": "paso-05.png",
+      "path": "public/recetas/galletas-de-avena-y-chocolate/originals/paso-05.png",
+      "sha256": "d65c225f115325ac9aa883106046b8fef566c5a4bdd6da8c323a371284e3ab18",
+      "git_blob_sha": "888f18af19167ebb29f19a8ae06bb961584cf48e",
+      "bytes": 2331145,
+      "width": 1448,
+      "height": 1086,
+      "phase": 5,
+      "visual_qa": "PASS",
+      "source": "built-in ImageGen"
+    },
+    {
+      "asset": "paso-03.png",
+      "path": "public/recetas/galletas-de-avena-y-chocolate/originals/paso-03.png",
+      "sha256": "387ef992cf5d0d506f05812f85b707a6787bfa2d836ae4de697e0e2d898bd37d",
+      "git_blob_sha": "a784d6c77906876fb3af1d46648cd6f84b28dc16",
+      "bytes": 1893743,
+      "width": 1448,
+      "height": 1086,
+      "phase": 3,
+      "visual_qa": "PASS",
+      "source": "built-in ImageGen"
+    },
+    {
+      "asset": "paso-06.png",
+      "path": "public/recetas/galletas-de-avena-y-chocolate/originals/paso-06.png",
+      "sha256": "733823bb8fa51ef9e52a971bc45a02eae86e97f2fcc637b82e7411935cc1919f",
+      "git_blob_sha": "cc67a0e97087499bd0da15176fd203c5ee06ff61",
+      "bytes": 1947308,
+      "width": 1448,
+      "height": 1086,
+      "phase": 6,
+      "visual_qa": "PASS",
+      "source": "built-in ImageGen"
     }
   ],
   "state": "IMAGES_PARTIAL",
   "last_step_reuses_cover": true,
   "original_images_required": 9,
   "published_webp_required": 12,
+  "edits": [
+    {
+      "phase": 3,
+      "prompt": "Edit only the extra egg already present in the mixing bowl: remove the distinct egg yolk and clear egg white pooled in the butter-sugar cream. The bowl must contain only pale butter-sugar cream with a small amber vanilla streak. Keep exactly ONE cracked egg being poured from the small cup, its one yolk still in the cup and its white flowing into the bowl. This is a50g whole-egg addition phase, not two eggs. Preserve the natural hands, bowl, cream texture, resting mixer, kitchen lighting and composition. No text or other changes.",
+      "reason": "Removed extra egg yolk to match frozen50g whole egg addition",
+      "qa": "PASS_TARGETED_EDIT_ES_UNCHANGED"
+    },
+    {
+      "phase": 7,
+      "prompt": "Edit this recipe phase photo with one specific correction: the tray currently contains nine raw oatmeal/chocolate dough discs, but each recipe batch must have TEN. Add exactly one additional matching raw pale beige oat/chocolate disc in the empty parchment area near the far upper-left portion of the tray, behind the existing upper-left cookie, keeping all nine existing discs visible, separate, unchanged and not overlapping. The result must show exactly10 on the tray, including the one being flattened by the hand. Keep the tray, parchment, hands, lighting and texture. Do not change the cooking state, do not add text or other objects. If needed make a small perspective adjustment to reveal enough tray area for this tenth piece, but preserve the accepted food appearance.",
+      "reason": "Corrected phase tray count to ten pieces matching frozen two ten-cookie batches",
+      "qa": "PASS_TARGETED_EDIT_ES_UNCHANGED"
+    },
+    {
+      "phase": 8,
+      "prompt": "Edit this recipe phase photo with one specific correction: the tray currently contains nine baked golden oatmeal chocolate cookies, but each recipe batch must have TEN. Add exactly one additional matching baked golden oat/chocolate cookie in the empty parchment area near the far upper-left portion of the tray, behind the existing upper-left cookie, keeping all nine existing cookies visible, separate, unchanged and not overlapping. The result must show exactly10 on the tray, including the one lifted at its edge by the spatula. Keep the tray, parchment, hands, lighting and texture. Do not change the cooking state, do not add text or other objects. If needed make a small perspective adjustment to reveal enough tray area for this tenth piece, but preserve the accepted food appearance.",
+      "reason": "Corrected phase tray count to ten pieces matching frozen two ten-cookie batches",
+      "qa": "PASS_TARGETED_EDIT_ES_UNCHANGED"
+    }
+  ],
   "cover_variant_visual_qa": "PASS_ALL4_CROPS_PRIMARY_FRONT_COOKIE_AND_BROKEN_HALF_VISIBLE_SECONDARY_EDGE_CROP_SQUARE"
 }
