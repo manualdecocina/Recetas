@@ -31,7 +31,7 @@
     "branch": "recetas/lote-04-20261009",
     "target": 15,
     "status": "in_progress",
-    "stage": "identidad",
+    "stage": "imágenes",
     "current_recipe": "receta-de-lasagna-de-carne-de-res",
     "started_at": "2026-10-09T00:56:43.882Z",
     "completed_recipes": 0,
@@ -418,14 +418,24 @@
         "editorial_status": "published",
         "position": 42,
         "eligibility": "validate_url_master_before_writing",
-        "status": "reserved",
-        "stage": "identidad",
+        "status": "in_progress",
+        "stage": "imágenes",
         "identity_qa": "PASS",
         "classification": "ELIGIBLE_EXISTING_CULINARY_CANDIDATE",
         "expected_es_row_md5": "e2dbe855364a568db1b6108a7ae697a1",
-        "languages_ready": 0,
+        "languages_ready": 1,
         "images_ready": 0,
-        "source_not_reused": true
+        "source_not_reused": true,
+        "es_content_file": "editorial/receta-de-lasagna-de-carne-de-res-20261009.json",
+        "image_manifest": "editorial/receta-de-lasagna-de-carne-de-res-imagenes.json",
+        "nutrition_evidence_file": "editorial/receta-de-lasagna-de-carne-de-res-usda-verificado-20261009.json",
+        "steps_sha256": "1a295311e2638dc0dbb9879fed88a508ec666787b452cc453c551b5eaee60135",
+        "es_editorial_qa": "PASS_16_ENTRIES_15_EXACT_USDAFOODS_PROPOSED6_TIMELINE146",
+        "original_images_required": 10,
+        "distinct_images_pending": 10,
+        "image_originals": 0,
+        "next_image": "portada.webp",
+        "next_action": "Generate10distinctoriginals only from frozenbrief; preserve9prepared. Then6localizations,guardedSQL,whole15gates."
       },
       {
         "id": "ccefbbfa-ce29-4fe7-90af-2af48d3b2683",
@@ -527,8 +537,8 @@
     "owner": "work-lote04-20261009T0059",
     "status": "active",
     "acquired_at": "2026-10-09T00:56:43.882Z",
-    "renewed_at": "2026-10-09T04:50:19.472Z",
-    "expires_at": "2026-10-09T06:20:19.472Z",
+    "renewed_at": "2026-10-09T05:00:12.509Z",
+    "expires_at": "2026-10-09T06:30:12.509Z",
     "base_main_sha": "3c8af0eff7a6e6a5c7bfcaedfedd3590e67d3032",
     "reason": "Single producer after batch03 fully closed; CAS reservation of next15."
   },
@@ -621,7 +631,7 @@
     "previous_batch_closed": true
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z",
-  "updated_at": "2026-10-09T04:50:19.472Z",
+  "updated_at": "2026-10-09T05:00:12.509Z",
   "completed_batches": [
     {
       "id": "lote-02-20261008",

@@ -1,0 +1,562 @@
+{
+  "scope": "Manual de Cocina only; lote04",
+  "state": "ES_FROZEN_MEDIA_AND_LOCALIZATIONS_PENDING",
+  "provenance": "Original formula and prose; no WordPress editorial bodies, translations or media reused.",
+  "category_slug": "pastas",
+  "cover": "/recetas/receta-de-lasagna-de-carne-de-res/portada.webp",
+  "steps_frozen": true,
+  "steps_sha256": "1a295311e2638dc0dbb9879fed88a508ec666787b452cc453c551b5eaee60135",
+  "published_database": false,
+  "time_notes": "35prep(20initial+15assembly)+96criticalcook(8saute+8beef+35ragu+45oven)+15rest=146;10bechamel and15preheat inside final15ragu; extend actual extra times.",
+  "publication_blockers": [
+    "Original media pending",
+    "Six localizations pending",
+    "FULL15_CI_MERGE_DEPLOY_DB_CACHE_LIVE_QA_PENDING"
+  ],
+  "sources": [
+    {
+      "url": "https://www.giallozafferano.com/recipes/Lasagne-alla-Bolognese.html",
+      "purpose": "First-party culinary identity and layering technique only; independent beef/drypasta formula, original prose. No source quantities, prose, media or nutrition reused.",
+      "accessed": "2026-10-09"
+    },
+    {
+      "url": "https://www.giallozafferano.com/recipes/white-lasagna.html",
+      "purpose": "First-party drypasta/bechamel layering and covered/uncovered technique only; no source recipe or media reuse.",
+      "accessed": "2026-10-09"
+    },
+    {
+      "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures",
+      "purpose": "Official groundbeef71C, casseroles74C and reheating74C endpoints.",
+      "accessed": "2026-10-09"
+    },
+    {
+      "url": "https://www.foodsafety.gov/blog/warm-safely-slow-cooked-meal",
+      "purpose": "Official prompt shallow refrigeration within2h or1h above32C; proposed24hquality not tested shelf-life.",
+      "accessed": "2026-10-09"
+    },
+    {
+      "url": "https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_sr_legacy_food_json_2018-04.zip",
+      "purpose": "Fifteen exact SRLegacy foods, sixteen entries and eight present nutrients; generic enriched drypasta reference explicitly not exact brand ovenready sheets.",
+      "accessed": "2026-10-09"
+    }
+  ],
+  "records": [
+    {
+      "id": "6d7e6dc1-ac9a-4714-a4a1-eb8be6d0151e",
+      "recipe_group_id": "3da80dc3-1aef-4412-87b2-c76ba356037f",
+      "slug": "receta-de-lasagna-de-carne-de-res",
+      "public_path": "/receta-de-lasagna-de-carne-de-res",
+      "source_url": "https://manualdecocina.com/receta-de-lasagna-de-carne-de-res/",
+      "language": "es",
+      "title": "Lasaña de carne de res con bechamel",
+      "excerpt": "Ragú de res, bechamel y parmesano en tres capas de pasta: cantidades, montaje y controles para seis porciones propuestas.",
+      "summary": "Lasaña de carne de res con ragú húmedo de tomate, bechamel y parmesano, montada en tres capas de placas secas aptas para horno directo. Se proponen 6 raciones y 146 minutos con bechamel y precalentado durante el ragú. Cantidades, tiempos y rendimiento pendientes de confirmación en cocina.",
+      "category": "Pastas",
+      "category_slug": "pastas",
+      "difficulty": "Media",
+      "course": "Plato principal",
+      "cuisine": "Inspiración italiana",
+      "prep_time_minutes": 35,
+      "cook_time_minutes": 96,
+      "total_time_minutes": 146,
+      "servings": 6,
+      "ingredients": [
+        {
+          "name": "carne de res molida cruda, 90 % magra y 10 % grasa",
+          "amount": "500",
+          "unit": "g",
+          "group": "Ragú"
+        },
+        {
+          "name": "cebolla pelada, picada fina",
+          "amount": "120",
+          "unit": "g",
+          "group": "Ragú"
+        },
+        {
+          "name": "zanahoria pelada, picada fina",
+          "amount": "80",
+          "unit": "g",
+          "group": "Ragú"
+        },
+        {
+          "name": "ajo pelado, picado",
+          "amount": "8",
+          "unit": "g",
+          "group": "Ragú"
+        },
+        {
+          "name": "aceite de oliva",
+          "amount": "20",
+          "unit": "g",
+          "group": "Ragú"
+        },
+        {
+          "name": "tomate triturado en conserva, con todo su líquido",
+          "amount": "800",
+          "unit": "g",
+          "group": "Ragú"
+        },
+        {
+          "name": "agua",
+          "amount": "200",
+          "unit": "g",
+          "group": "Ragú"
+        },
+        {
+          "name": "sal para el ragú",
+          "amount": "3",
+          "unit": "g",
+          "group": "Ragú"
+        },
+        {
+          "name": "pimienta negra molida",
+          "amount": "1",
+          "unit": "g",
+          "group": "Ragú"
+        },
+        {
+          "name": "leche entera pasteurizada",
+          "amount": "800",
+          "unit": "g",
+          "group": "Bechamel"
+        },
+        {
+          "name": "mantequilla sin sal",
+          "amount": "60",
+          "unit": "g",
+          "group": "Bechamel"
+        },
+        {
+          "name": "harina de trigo de uso general",
+          "amount": "60",
+          "unit": "g",
+          "group": "Bechamel"
+        },
+        {
+          "name": "sal para la bechamel",
+          "amount": "3",
+          "unit": "g",
+          "group": "Bechamel"
+        },
+        {
+          "name": "nuez moscada molida",
+          "amount": "0,5",
+          "unit": "g",
+          "group": "Bechamel"
+        },
+        {
+          "name": "placas secas de lasaña de trigo sin huevo, aptas para horno directo según etiqueta",
+          "amount": "250",
+          "unit": "g",
+          "group": "Montaje"
+        },
+        {
+          "name": "queso parmesano duro, rallado",
+          "amount": "60",
+          "unit": "g",
+          "group": "Montaje"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Pesa los ingredientes y prepara el equipo",
+          "content": "Pesa 500 g de carne de res molida con 10 % de grasa y mantenla refrigerada a 4 °C o menos hasta cocinar. Pica 120 g de cebolla, 80 g de zanahoria y 8 g de ajo, después de lavar y pelar las verduras. Separa 20 g de aceite, 800 g de tomate con su líquido, 200 g de agua, 3 g de sal y 1 g de pimienta para el ragú. Para la bechamel pesa 800 g de leche entera pasteurizada, 60 g de mantequilla sin sal, 60 g de harina, otros 3 g de sal y 0,5 g de nuez moscada. Reserva 250 g de placas secas y 60 g de parmesano rallado. Usa una fuente de unos 30 × 20 cm y al menos 7 cm de profundidad, una sartén amplia, un cazo, una báscula, una varilla y una sonda. Comprueba antes de empezar que las placas admiten horno directo a 180 °C durante aproximadamente 45 minutos; esta planificación no sirve sin cambios para pasta que exige cocción previa. La preparación inicial se estima en 20 minutos. Separa utensilios de carne cruda y verduras listas para cocinar.",
+          "image_url": "/recetas/receta-de-lasagna-de-carne-de-res/paso-01.webp",
+          "image_alt": "Lasaña de carne de res: Pesa los ingredientes y prepara el equipo"
+        },
+        {
+          "title": "Ablanda las verduras del ragú",
+          "content": "Calienta los 20 g de aceite en la sartén a fuego medio. Añade los 120 g de cebolla y los 80 g de zanahoria; remueve unos 7 minutos, hasta que ablanden sin quemarse. Incorpora los 8 g de ajo y cocina 1 minuto más. Son 8 minutos de sofrito previstos, incluido el ajo. No añadas más aceite ni sal en este paso.",
+          "image_url": "/recetas/receta-de-lasagna-de-carne-de-res/paso-02.webp",
+          "image_alt": "Lasaña de carne de res: Ablanda las verduras del ragú"
+        },
+        {
+          "title": "Cocina la carne sin desechar su grasa",
+          "content": "Añade los 500 g de carne a las verduras y sube a fuego medio alto. Deshaz los grumos con una espátula y remueve unos 8 minutos, hasta que la carne quede cocinada y empiece a dorar. Comprueba con una sonda limpia al menos 71 °C en varias zonas; el color no sustituye la medición. Mantén en la sartén la grasa y los jugos, incluidos en la nutrición estimada. Si necesita más tiempo, añádelo al total. Lava manos y material que hayan tocado carne cruda.",
+          "image_url": "/recetas/receta-de-lasagna-de-carne-de-res/paso-03.webp",
+          "image_alt": "Lasaña de carne de res: Cocina la carne sin desechar su grasa"
+        },
+        {
+          "title": "Cuece un ragú húmedo",
+          "content": "Incorpora los 800 g de tomate con su líquido, los 200 g de agua, los 3 g de sal para ragú y el 1 g de pimienta. Lleva a hervor suave, tapa parcialmente y cocina unos 35 minutos a fuego bajo, removiendo de vez en cuando. Debe quedar una salsa húmeda que se extienda fácilmente, con carne repartida; no la reduzcas hasta una pasta seca porque las placas absorberán líquido. Usa todo el ragú al montar. No añadas agua, caldo, azúcar o aceite sin registrar el cambio y revisar cantidades y nutrición. En los últimos 15 minutos de este hervor prepara la bechamel y precalienta el horno, como se indica a continuación; si haces esas tareas después, suma el tiempo real.",
+          "image_url": "/recetas/receta-de-lasagna-de-carne-de-res/paso-04.webp",
+          "image_alt": "Lasaña de carne de res: Cuece un ragú húmedo"
+        },
+        {
+          "title": "Prepara la bechamel mientras termina el ragú",
+          "content": "Durante los últimos 15 minutos del ragú, funde los 60 g de mantequilla en el cazo a fuego medio bajo. Añade los 60 g de harina y remueve unos 3 minutos sin dorarla demasiado. Vierte poco a poco los 800 g de leche, sin precalentarla aparte, batiendo para deshacer grumos. Añade los 3 g de sal para bechamel y los 0,5 g de nuez moscada. Sube a fuego medio y remueve hasta que burbujee suavemente y espese; continúa hasta completar unos 7 minutos desde que empezaste a añadir la leche, unos 10 minutos en total para la bechamel. Debe ser lisa y vertible, no una masa rígida. Si tarda más en hervir y espesar, prolonga la cocción y suma el exceso al horario. Usa toda la salsa y evita que se agarre al fondo.",
+          "image_url": "/recetas/receta-de-lasagna-de-carne-de-res/paso-05.webp",
+          "image_alt": "Lasaña de carne de res: Prepara la bechamel mientras termina el ragú"
+        },
+        {
+          "title": "Precalienta y reparte los componentes",
+          "content": "Precalienta el horno a 180 °C con calor arriba y abajo durante los mismos últimos 15 minutos del ragú, mientras haces la bechamel en otro fuego. Revisa de nuevo la etiqueta de las placas: deben ser de trigo sin huevo y admitir horno directo con una pauta compatible con 180 °C y unos 45 minutos; otra marca o formato puede exigir más líquido, otra temperatura o cocción previa. Divide los 250 g de placas en 3 partes similares para 3 capas, usando fragmentos para cubrir huecos sin amontonarlos. Separa los 60 g de parmesano en 3 partes de 20 g. Reserva 100 g de la bechamel ya cocinada para el fondo y divide el resto en 3 partes iguales; divide todo el ragú en otras 3 partes. El peso cocinado de las salsas depende de la evaporación y no se afirma un rendimiento medido. Manipula los recipientes calientes con protección.",
+          "image_url": "/recetas/receta-de-lasagna-de-carne-de-res/paso-06.webp",
+          "image_alt": "Lasaña de carne de res: Precalienta y reparte los componentes"
+        },
+        {
+          "title": "Monta tres capas de pasta con sus salsas",
+          "content": "Extiende los 100 g de bechamel reservados en el fondo de la fuente de 30 × 20 × 7 cm, sin grasa adicional. Coloca la primera de las 3 partes de placas y cubre con una parte de ragú, una del resto de bechamel y 20 g de parmesano. Repite el mismo orden con la segunda y la tercera parte de placas. Acaba con ragú, bechamel y los últimos 20 g de queso, sin una cuarta capa de pasta. Usa todos los componentes y cubre bien los bordes de las placas, que no deben quedar secos y expuestos. Deja espacio hasta el borde de la fuente para evitar desbordes. Esta distribución y montaje se estiman en 15 minutos, incluidos en la preparación.",
+          "image_url": "/recetas/receta-de-lasagna-de-carne-de-res/paso-07.webp",
+          "image_alt": "Lasaña de carne de res: Monta tres capas de pasta con sus salsas"
+        },
+        {
+          "title": "Hornea y comprueba pasta y centro",
+          "content": "Cubre la fuente con aluminio a modo de techo, sin apoyarlo sobre la superficie, y hornea en la zona media a 180 °C durante 30 minutos. Retíralo con guantes, alejando el vapor, y hornea unos 15 minutos más: 45 minutos previstos en total. Comprueba que una punta entre sin resistencia en las placas y que el centro alcance al menos 74 °C con una sonda limpia, en varios puntos. El dorado y la fotografía no confirman esos controles. Si falta temperatura o la pasta está dura, continúa horneando y añade el tiempo real; protege la superficie si ya está dorada. No sirvas basándote solo en los 45 minutos.",
+          "image_url": "/recetas/receta-de-lasagna-de-carne-de-res/paso-08.webp",
+          "image_alt": "Lasaña de carne de res: Hornea y comprueba pasta y centro"
+        },
+        {
+          "title": "Deja reposar antes de cortar",
+          "content": "Apoya la fuente caliente sobre un salvamanteles y deja reposar unos 15 minutos antes de cortar, sin tocar la cerámica sin guantes. El reposo facilita dividir las capas, pero no se promete una firmeza probada en cocina. La planificación suma 20 minutos de preparación inicial, 8 de sofrito, 8 de carne, 35 de ragú, 15 de montaje, 45 de horno y 15 de reposo: 146 minutos estimados. La bechamel de 10 minutos y el precalentado de 15 se realizan dentro de los últimos 15 del ragú; si no puedes hacerlas en paralelo, suma su tiempo. Cualquier prolongación de cocción también cambia el total.",
+          "image_url": "/recetas/receta-de-lasagna-de-carne-de-res/paso-09.webp",
+          "image_alt": "Lasaña de carne de res: Deja reposar antes de cortar"
+        },
+        {
+          "title": "Sirve seis porciones y enfría las sobras con cuidado",
+          "content": "Divide la fuente en 6 porciones similares y sirve con una espátula, sin añadir acompañamientos al cálculo. Las seis porciones, las cantidades y los tiempos son propuestas pendientes de confirmación en cocina; no se afirma peso cocinado por ración. Reparte las sobras en recipientes poco profundos y refrigera a 4 °C o menos dentro de 2 horas desde que sale del horno, o 1 hora si el ambiente supera 32 °C. No esperes a que la fuente grande se enfríe por completo sobre la mesa. Como propuesta conservadora de calidad, consúmelas en 24 horas; no es una vida útil ensayada. Recalienta solo las porciones necesarias hasta al menos 74 °C en el centro.",
+          "image_url": "/recetas/receta-de-lasagna-de-carne-de-res/portada.webp",
+          "image_alt": "Lasaña de carne de res: Sirve seis porciones y enfría las sobras con cuidado"
+        }
+      ],
+      "nutrition": {
+        "calories": 618.3,
+        "protein_g": 33.6,
+        "carbs_g": 58.9,
+        "fat_g": 27.8,
+        "saturated_fat_g": 13.0,
+        "fiber_g": 4.9,
+        "sugar_g": 15.3,
+        "sodium_mg": 881.8,
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (abril de 2018)",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "inputs": [
+          {
+            "ingredient": "carne de res molida cruda 90% magra10% grasa",
+            "edible_grams": 500,
+            "fdc_id": 174030,
+            "fdc_description": "Beef, ground, 90% lean meat / 10% fat, raw",
+            "per_100g": {
+              "calories": 176,
+              "protein_g": 20.0,
+              "carbs_g": 0.0,
+              "fat_g": 10.0,
+              "saturated_fat_g": 3.93,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0,
+              "sodium_mg": 66.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/174030/nutrients"
+          },
+          {
+            "ingredient": "cebolla pelada",
+            "edible_grams": 120,
+            "fdc_id": 170000,
+            "fdc_description": "Onions, raw",
+            "per_100g": {
+              "calories": 40.0,
+              "protein_g": 1.1,
+              "carbs_g": 9.34,
+              "fat_g": 0.1,
+              "saturated_fat_g": 0.042,
+              "fiber_g": 1.7,
+              "sugar_g": 4.24,
+              "sodium_mg": 4.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170000/nutrients"
+          },
+          {
+            "ingredient": "zanahoria cruda limpia",
+            "edible_grams": 80,
+            "fdc_id": 170393,
+            "fdc_description": "Carrots, raw",
+            "per_100g": {
+              "calories": 41.0,
+              "protein_g": 0.93,
+              "carbs_g": 9.58,
+              "fat_g": 0.24,
+              "saturated_fat_g": 0.032,
+              "fiber_g": 2.8,
+              "sugar_g": 4.74,
+              "sodium_mg": 69.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170393/nutrients"
+          },
+          {
+            "ingredient": "ajo pelado",
+            "edible_grams": 8,
+            "fdc_id": 169230,
+            "fdc_description": "Garlic, raw",
+            "per_100g": {
+              "calories": 149,
+              "protein_g": 6.36,
+              "carbs_g": 33.1,
+              "fat_g": 0.5,
+              "saturated_fat_g": 0.089,
+              "fiber_g": 2.1,
+              "sugar_g": 1.0,
+              "sodium_mg": 17.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169230/nutrients"
+          },
+          {
+            "ingredient": "aceite de oliva",
+            "edible_grams": 20,
+            "fdc_id": 171413,
+            "fdc_description": "Oil, olive, salad or cooking",
+            "per_100g": {
+              "calories": 884,
+              "protein_g": 0.0,
+              "carbs_g": 0.0,
+              "fat_g": 100,
+              "saturated_fat_g": 13.8,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0,
+              "sodium_mg": 2.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171413/nutrients"
+          },
+          {
+            "ingredient": "tomate triturado en conserva",
+            "edible_grams": 800,
+            "fdc_id": 170501,
+            "fdc_description": "Tomatoes, crushed, canned",
+            "per_100g": {
+              "calories": 32.0,
+              "protein_g": 1.64,
+              "carbs_g": 7.29,
+              "fat_g": 0.28,
+              "saturated_fat_g": 0.04,
+              "fiber_g": 1.9,
+              "sugar_g": 4.4,
+              "sodium_mg": 186
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170501/nutrients"
+          },
+          {
+            "ingredient": "agua potable",
+            "edible_grams": 200,
+            "fdc_id": 173647,
+            "fdc_description": "Beverages, water, tap, drinking",
+            "per_100g": {
+              "calories": 0.0,
+              "protein_g": 0.0,
+              "carbs_g": 0.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0,
+              "sodium_mg": 4.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173647/nutrients"
+          },
+          {
+            "ingredient": "sal fina para la salsa",
+            "edible_grams": 3,
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "calories": 0.0,
+              "protein_g": 0.0,
+              "carbs_g": 0.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0,
+              "sodium_mg": 38800.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients"
+          },
+          {
+            "ingredient": "pimienta negra molida",
+            "edible_grams": 1,
+            "fdc_id": 170931,
+            "fdc_description": "Spices, pepper, black",
+            "per_100g": {
+              "calories": 251,
+              "protein_g": 10.4,
+              "carbs_g": 64.0,
+              "fat_g": 3.26,
+              "saturated_fat_g": 1.39,
+              "fiber_g": 25.3,
+              "sugar_g": 0.64,
+              "sodium_mg": 20.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170931/nutrients"
+          },
+          {
+            "ingredient": "leche entera",
+            "edible_grams": 800,
+            "fdc_id": 171265,
+            "fdc_description": "Milk, whole, 3.25% milkfat, with added vitamin D",
+            "per_100g": {
+              "calories": 61.0,
+              "protein_g": 3.15,
+              "carbs_g": 4.8,
+              "fat_g": 3.25,
+              "saturated_fat_g": 1.86,
+              "fiber_g": 0.0,
+              "sugar_g": 5.05,
+              "sodium_mg": 43.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171265/nutrients"
+          },
+          {
+            "ingredient": "mantequilla sin sal",
+            "edible_grams": 60,
+            "fdc_id": 173430,
+            "fdc_description": "Butter, without salt",
+            "per_100g": {
+              "calories": 717,
+              "protein_g": 0.85,
+              "carbs_g": 0.06,
+              "fat_g": 81.1,
+              "saturated_fat_g": 50.5,
+              "fiber_g": 0.0,
+              "sugar_g": 0.06,
+              "sodium_mg": 11.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173430/nutrients"
+          },
+          {
+            "ingredient": "harina de trigo de uso común",
+            "edible_grams": 60,
+            "fdc_id": 168936,
+            "fdc_description": "Wheat flour, white, all-purpose, enriched, unbleached",
+            "per_100g": {
+              "calories": 364,
+              "protein_g": 10.3,
+              "carbs_g": 76.3,
+              "fat_g": 0.98,
+              "saturated_fat_g": 0.155,
+              "fiber_g": 2.7,
+              "sugar_g": 0.27,
+              "sodium_mg": 2.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/168936/nutrients"
+          },
+          {
+            "ingredient": "sal fina para la bechamel",
+            "edible_grams": 3,
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "calories": 0.0,
+              "protein_g": 0.0,
+              "carbs_g": 0.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0,
+              "sodium_mg": 38800.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients"
+          },
+          {
+            "ingredient": "nuez moscada molida",
+            "edible_grams": 0.5,
+            "fdc_id": 171326,
+            "fdc_description": "Spices, nutmeg, ground",
+            "per_100g": {
+              "calories": 525,
+              "protein_g": 5.84,
+              "carbs_g": 49.3,
+              "fat_g": 36.3,
+              "saturated_fat_g": 25.9,
+              "fiber_g": 20.8,
+              "sugar_g": 2.99,
+              "sodium_mg": 16.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171326/nutrients"
+          },
+          {
+            "ingredient": "láminas secas de lasaña de trigo sin huevo aptas para horno",
+            "edible_grams": 250,
+            "fdc_id": 169736,
+            "fdc_description": "Pasta, dry, enriched",
+            "per_100g": {
+              "calories": 371,
+              "protein_g": 13.0,
+              "carbs_g": 74.7,
+              "fat_g": 1.51,
+              "saturated_fat_g": 0.277,
+              "fiber_g": 3.2,
+              "sugar_g": 2.67,
+              "sodium_mg": 6.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169736/nutrients"
+          },
+          {
+            "ingredient": "queso parmesano duro rallado",
+            "edible_grams": 60,
+            "fdc_id": 170848,
+            "fdc_description": "Cheese, parmesan, hard",
+            "per_100g": {
+              "calories": 392,
+              "protein_g": 35.8,
+              "carbs_g": 3.22,
+              "fat_g": 25.0,
+              "saturated_fat_g": 14.8,
+              "fiber_g": 0.0,
+              "sugar_g": 0.11,
+              "sodium_mg": 1180.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170848/nutrients"
+          }
+        ],
+        "serving_size": "Una sexta parte de la fuente; 6 raciones propuestas",
+        "method": "Suma de gramos por nutrientes USDA por 100 g, dividida entre 6. Dieciséis entradas de ingredientes y quince alimentos distintos verificados; la sal figura dos veces para las dos salsas. Se supone consumir todos los ingredientes, incluida la grasa de la carne, las salsas, los 20 g de aceite y los 6 g de sal.",
+        "note": "Estimación pendiente de confirmación, no análisis ni prueba de cocina. Los 2965,5 g son el peso inicial de ingredientes, no el peso cocinado ni por ración. La evaporación no se trata como un rendimiento medido. La pasta USDA 169736 es una referencia genérica de pasta seca enriquecida, no el producto exacto de placas para horno directo: su marca y la sal de tomate y queso modifican las cifras. La ficha de leche contiene vitamina D añadida, sin afirmar que la receta use leche fortificada. No se modelan pérdidas específicas con el calor ni se incluyen acompañamientos. Los ocho nutrientes están presentes en las fichas; un dato ausente no se reemplaza por cero."
+      },
+      "image_url": "/recetas/receta-de-lasagna-de-carne-de-res/portada.webp",
+      "gallery": [],
+      "published": false,
+      "editorial_status": "draft",
+      "keywords": [
+        "lasaña de carne de res",
+        "lasaña con bechamel",
+        "ragú de res",
+        "lasaña al horno"
+      ],
+      "notes": "Propuesta de lasaña de res con ragú de tomate, bechamel y parmesano, en tres capas de pasta; no se presenta como una fórmula boloñesa auténtica ni como receta probada en cocina. Contiene trigo y leche. Revisa etiquetas de pasta, harina, mantequilla y queso, y posibles trazas; no se afirma aptitud para alergias. Usa únicamente placas de trigo sin huevo que indiquen horno directo con una pauta compatible con 180 °C y unos 45 minutos: las placas que requieren cocción previa necesitan otra planificación de agua, sal, tiempo y líquido, y revisar la nutrición. No cambies entre formatos como si fueran equivalentes. Si sustituyes la carne por otra proporción de grasa, el queso o la leche, recalcula la nutrición y revisa textura y cocción. No deseches grasa de la carne dentro de esta fórmula calculada. Mantén carne y lácteos a 4 °C o menos y separados de utensilios limpios. Cocina la carne molida hasta 71 °C y comprueba 74 °C en el centro de la fuente y al recalentar. Lava las verduras con agua corriente antes de pelarlas. Enfría las sobras en recipientes poco profundos dentro de 2 horas, o 1 hora por encima de 32 °C; propuesta conservadora de consumo en 24 horas, sin vida útil ensayada. No dejes la fuente montada toda la noche fuera del frigorífico. Si horneas componentes fríos o cambias fuente o marca de pasta, cuenta el tiempo real y comprueba pasta y temperatura; no se promete el mismo horario. Usa guantes, evita quemaduras de vapor y comprueba que la fuente y el aluminio sean aptos para horno.",
+      "seo": {
+        "title": "Lasaña de carne de res con bechamel, paso a paso",
+        "description": "Prepara una lasaña de res con ragú de tomate, bechamel y parmesano: tres capas de pasta, cantidades, horno y controles para seis porciones propuestas.",
+        "image_alt": "Porción de lasaña con tres capas de pasta, ragú de carne de res y bechamel, con parmesano dorado junto a la fuente",
+        "image_variants": [
+          "/recetas/receta-de-lasagna-de-carne-de-res/portada-1x1.webp",
+          "/recetas/receta-de-lasagna-de-carne-de-res/portada-4x3.webp",
+          "/recetas/receta-de-lasagna-de-carne-de-res/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "¿Tengo que hervir las placas antes de montar?",
+            "a": "Esta propuesta usa 250 g de placas secas de trigo sin huevo aptas para horno directo, con una etiqueta compatible con 180 °C y unos 45 minutos. No las hiervas si esa etiqueta indica horno directo. Si tu paquete exige cocción previa, cambia la planificación de agua, sal, tiempo y líquido y recalcula; no lo introduzcas sin más en estas cantidades."
+          },
+          {
+            "q": "¿Por qué el tiempo total no suma aparte la bechamel?",
+            "a": "Los 146 minutos estimados cuentan 20 de preparación inicial, 8 de sofrito, 8 de carne, 35 de ragú, 15 de montaje, 45 de horno y 15 de reposo. Los 10 de bechamel y los 15 de precalentado coinciden con los últimos 15 del ragú. Si no haces esas tareas en paralelo o necesitas más cocción, añade el tiempo real."
+          },
+          {
+            "q": "¿Cómo compruebo que está lista y guardo lo que sobra?",
+            "a": "Las placas deben estar tiernas y el centro alcanzar al menos 74 °C con una sonda limpia; la carne molida se cocina previamente hasta 71 °C. Tras los 15 minutos de reposo, sirve y refrigera sobras en recipientes poco profundos a 4 °C o menos dentro de 2 horas, o 1 hora si hace más de 32 °C. Propón consumirlas en 24 horas y recalienta a 74 °C; esa conservación no es una vida útil probada."
+          }
+        ]
+      },
+      "content_html": "<p>Lasaña de carne de res con ragú húmedo de tomate, bechamel y parmesano, montada en tres capas de placas secas aptas para horno directo. Se proponen 6 raciones y 146 minutos con bechamel y precalentado durante el ragú. Cantidades, tiempos y rendimiento pendientes de confirmación en cocina.</p><p>Propuesta de lasaña de res con ragú de tomate, bechamel y parmesano, en tres capas de pasta; no se presenta como una fórmula boloñesa auténtica ni como receta probada en cocina. Contiene trigo y leche. Revisa etiquetas de pasta, harina, mantequilla y queso, y posibles trazas; no se afirma aptitud para alergias. Usa únicamente placas de trigo sin huevo que indiquen horno directo con una pauta compatible con 180 °C y unos 45 minutos: las placas que requieren cocción previa necesitan otra planificación de agua, sal, tiempo y líquido, y revisar la nutrición. No cambies entre formatos como si fueran equivalentes. Si sustituyes la carne por otra proporción de grasa, el queso o la leche, recalcula la nutrición y revisa textura y cocción. No deseches grasa de la carne dentro de esta fórmula calculada. Mantén carne y lácteos a 4 °C o menos y separados de utensilios limpios. Cocina la carne molida hasta 71 °C y comprueba 74 °C en el centro de la fuente y al recalentar. Lava las verduras con agua corriente antes de pelarlas. Enfría las sobras en recipientes poco profundos dentro de 2 horas, o 1 hora por encima de 32 °C; propuesta conservadora de consumo en 24 horas, sin vida útil ensayada. No dejes la fuente montada toda la noche fuera del frigorífico. Si horneas componentes fríos o cambias fuente o marca de pasta, cuenta el tiempo real y comprueba pasta y temperatura; no se promete el mismo horario. Usa guantes, evita quemaduras de vapor y comprueba que la fuente y el aluminio sean aptos para horno.</p>"
+    }
+  ],
+  "yield_proposal": {
+    "servings": 6,
+    "dish_cm": [
+      30,
+      20
+    ],
+    "minimum_depth_cm": 7,
+    "raw_formula_grams": 2965.5,
+    "cooked_weight_measured": false,
+    "confirmed": false
+  }
+}
