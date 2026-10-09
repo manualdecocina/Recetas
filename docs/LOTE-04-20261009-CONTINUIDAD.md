@@ -27,3 +27,10 @@ SQL SHA256: 5f04d9f69843aef49eaf11ead0c5a0fc38f956e0ba892b39b3c35f9d25f5e393. Pa
 Açaí bowl completo7/7 para publicación: fuente única editorial/acai-bowl-20261009.json,6pasos ES congelados SHA256 843d0e897be761f13668a469a65452cd0f658e26507000242339dae97e83d0a7;6originales y9WebP con hashes exactos y QA visual. Dos ediciones puntuales eliminaron cobertura prematura de las fases3y4; no se modificaron pasos ni se regeneraron los otros medios. Ficha USDA Branded2653289 obtenida directamente de API oficial y comprobada frente al fabricante; otras entradas extraídas del archivo SRLegacy verificado. SQL protegido NO ejecutado. Lote04:2/15preparadas,0publicadas. Próxima: receta-de-garbanzos-com-chorizo, conservar `com` del slug histórico.
 
 SQLSHA256 eb942ef418fe078a51f43580a62ff97f127b61ade5b2aaa025c02cc032688edc; paqueteSHA256 2995d108e461214b627ba548ba5fc7723115f5994e0947b9df56351c6154b218. Conservar ambos paquetes y medios, seguir la primera etapa pendiente sin abrir otro lote.
+
+
+## Checkpoint 2026-10-09T02:02:39.593Z
+
+Garbanzos con chorizo completos7/7, fuente única editorial/receta-de-garbanzos-com-chorizo-20261009.json, ES congelado SHA256 045680f7380dfd7d95d48f500771c4041adead1d8fe6e64ccb9b19192a09728f. Siete originales y diez WebP con hashes exactos y revisión visual; temperatura se ilustra con sonda lateral sin lectura inventada. Nutrición estimada por cuatro raciones con diez fichas USDA verificadas: chorizo fresco de cerdo crudo, no curado. SQL protegido preparado y NO ejecutado. Lote04:3/15preparadas,0publicadas. Conservar muffins,açaí,garbanzos. Próxima alitas-bbq, distinta de alitas con miel/soja ya publicadas.
+
+SQL SHA256 959228916fce5431082915727e3176725781e00794bb4e323755240206c96535; paquete SHA256 58623ad24fc16a6c07b1391503ebfc9ed676070fd933733e067eb1db15646fff. Mantener slug histórico `com`, siete rutas autorizadas y gate de lote completo.
