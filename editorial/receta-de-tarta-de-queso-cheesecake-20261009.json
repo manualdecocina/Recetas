@@ -1,6 +1,6 @@
 {
   "scope": "Manual de Cocina only; lote04",
-  "state": "ES_FROZEN_MEDIA_AND_LOCALIZATIONS_PENDING",
+  "state": "LOCALIZATION_PARTIAL_IMAGES_COMPLETE",
   "provenance": "Original formula and prose; no WordPress editorial bodies, translations or media reused.",
   "category_slug": "postres",
   "cover": "/recetas/receta-de-tarta-de-queso-cheesecake/portada.webp",
@@ -9,8 +9,6 @@
   "published_database": false,
   "time_notes": "20initialprep+10basebake+15basecool(10fillingprepwithin)+55fillingbake+45rackcool+360chill=505. Numeric fields30prep+65cook+410effectivewait=505;20softening15preheat withininitial20. Extend actualextraoven/chill.",
   "publication_blockers": [
-    "Original media pending",
-    "Six localizations pending",
     "FULL15_CI_MERGE_DEPLOY_DB_CACHE_LIVE_QA_PENDING"
   ],
   "sources": [
@@ -355,6 +353,636 @@
         ]
       },
       "content_html": "<p>Cheesecake clásico propuesto al horno, con base de galleta graham, queso crema entero y crema agria, sin cobertura ni baño maría. Se proponen 8 raciones y 505 minutos completos, incluido el frío. Cantidades, tiempos y rendimiento pendientes de confirmación en cocina.</p><p>Cheesecake propuesto al horno con base de galleta graham y relleno de queso crema, huevo y crema agria, sin baño maría ni cobertura. Se diferencia de las versiones de Oreo sin horno y de agraz con cobertura, sin reutilizar su contenido. No se afirma un ensayo ni una superficie sin grietas. Contiene leche, huevo y trigo; revisa etiquetas de galletas, queso, crema agria y vainilla y posibles trazas, sin garantizar aptitud para alergias. Usa lácteos pasteurizados y huevos íntegros; desecha huevos rotos o sucios y no pruebes el relleno crudo. Mantén ingredientes perecederos a 4 °C o menos; ablanda el queso solo durante la preparación breve, no durante horas. El queso debe ser entero en bloque y la crema agria cultivada, no nata montada. Sustituir galletas, queso, lácteos o huevos cambia estructura, humedad y nutrición: recalcula y adapta, sin prometer equivalencia. El extracto de vainilla puede contener alcohol; no se promete su eliminación por hornear. No engrases además el molde: el fondo se forra y se usan todos los 70 g de mantequilla en la base. El centro debe alcanzar al menos 71 °C; una tarta de color bonito puede seguir insuficientemente cocida. Refrigera después del templado breve, dentro de 2 horas desde el horno, o 1 hora por encima de 32 °C. Enfría por completo antes de desmoldar y conserva cubierta a 4 °C o menos. El consumo en 24 horas tras enfriar es una propuesta conservadora de calidad sin ensayo, no vida útil validada. No se fija conservación congelada. Usa guantes, evita quemaduras y añade tiempo real si cambias molde, altura de relleno u horno.</p>"
+    },
+    {
+      "id": "8e15f4eb-5e62-5aea-9a39-2907ddec0498",
+      "recipe_group_id": "24263cd3-9851-4aaa-b73f-7d950ad1a303",
+      "slug": "kasekuchen-rezept-kasekuchen",
+      "public_path": "/de/kasekuchen-rezept-kasekuchen",
+      "source_url": "https://manualdecocina.com/de/kasekuchen-rezept-kasekuchen/",
+      "language": "de",
+      "title": "Klassischer gebackener Cheesecake mit Keksboden",
+      "excerpt": "Frischkäse, saure Sahne und ein kompakter Boden: vollständige Back- und Kühlanleitung für acht vorgeschlagene Portionen.",
+      "summary": "Vorgeschlagener klassischer Cheesecake aus dem Ofen mit Graham-Keksboden, vollfettem Frischkäse und saurer Sahne, ohne Belag oder Wasserbad. Vorgesehen sind 8 Portionen und insgesamt 505 Minuten einschließlich Kühlung. Mengen, Zeiten und Ausbeute sind noch nicht durch einen Küchenversuch bestätigt.",
+      "category": "Desserts",
+      "category_slug": "postres",
+      "difficulty": "Mittel",
+      "course": "Dessert",
+      "cuisine": "Amerikanisch inspiriert",
+      "prep_time_minutes": 30,
+      "cook_time_minutes": 65,
+      "total_time_minutes": 505,
+      "servings": 8,
+      "ingredients": [
+        {
+          "name": "schlichte, bereits gebackene Graham-Kekse ohne Überzug oder Füllung",
+          "amount": "180",
+          "unit": "g",
+          "group": "Boden"
+        },
+        {
+          "name": "ungesalzene Butter",
+          "amount": "70",
+          "unit": "g",
+          "group": "Boden"
+        },
+        {
+          "name": "pasteurisierter vollfetter Frischkäse in Blockform, keine Light-Variante",
+          "amount": "600",
+          "unit": "g",
+          "group": "Füllung"
+        },
+        {
+          "name": "weißer Kristallzucker",
+          "amount": "140",
+          "unit": "g",
+          "group": "Füllung"
+        },
+        {
+          "name": "rohes Vollei, ohne Schale gewogen",
+          "amount": "150",
+          "unit": "g",
+          "group": "Füllung"
+        },
+        {
+          "name": "pasteurisierte vollfette kultivierte saure Sahne, keine Schlagsahne",
+          "amount": "120",
+          "unit": "g",
+          "group": "Füllung"
+        },
+        {
+          "name": "Vanilleextrakt",
+          "amount": "5",
+          "unit": "g",
+          "group": "Füllung"
+        },
+        {
+          "name": "feines Salz",
+          "amount": "1",
+          "unit": "g",
+          "group": "Füllung"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Zutaten abwiegen und Form vorbereiten",
+          "content": "Hände waschen und Waage, Schüsseln, Teigspatel, Mixer mit Flachrührer oder Handmixer auf niedriger Stufe, saubere Temperatursonde und eine beschichtete Springform mit 20 cm Durchmesser und mindestens 6 cm Höhe bereitstellen. Nur den Boden mit Backpapier auslegen; keine zusätzliche Butter zum Einfetten verwenden. 180 g schlichte Graham-Kekse und 70 g ungesalzene Butter abwiegen. Für die Füllung 600 g vollfetten Frischkäse, 140 g Zucker, 150 g Ei ohne Schale, 120 g saure Sahne, 5 g Vanilleextrakt und 1 g Salz abwiegen. Das Ei entspricht ungefähr 3 großen Eiern, maßgeblich ist jedoch das Gewicht: in einer separaten Schüssel aufschlagen, vorsichtig mischen und die benötigte Menge abwiegen. Ei und saure Sahne bis zum Vermischen bei höchstens 4 °C halten. Frischkäse in Stücke schneiden und etwa 20 Minuten weich werden lassen, während Zutaten und Boden vorbereitet werden; dies ist keine zusätzliche Wartezeit, und er darf nicht stundenlang draußen bleiben. Den Ofen während der letzten 15 Minuten dieser anfänglichen 20 Minuten Vorbereitung mit Ober- und Unterhitze auf 170 °C vorheizen. Nach Kontakt mit rohem Ei Hände und Geräte reinigen und ungebackene Füllung nicht probieren.",
+          "image_url": "/recetas/receta-de-tarta-de-queso-cheesecake/paso-01.webp",
+          "image_alt": "Klassischer gebackener Cheesecake mit Keksboden: Zutaten abwiegen und Form vorbereiten"
+        },
+        {
+          "title": "Kekse zerkleinern und Boden festdrücken",
+          "content": "Die 180 g Kekse in einem stabilen Beutel mit dem Nudelholz oder im Zerkleinerer zu feinen Krümeln ohne große Stücke mahlen. Die 70 g Butter in einem Topf bei niedriger Hitze etwa 3 Minuten schmelzen; dies gehört zur anfänglichen Vorbereitung. Nicht bräunen. Alle Krümel mit der gesamten Butter gleichmäßig befeuchten. In die ausgelegte Form mit 20 cm Durchmesser geben und mit dem Boden eines sauberen Glases ausschließlich auf dem Formboden zu einer ebenen Schicht drücken. Keinen Krümelrand hochziehen und weder Zucker noch Fett ergänzen. Die ganze Mischung verwenden und lose Stellen vermeiden.",
+          "image_url": "/recetas/receta-de-tarta-de-queso-cheesecake/paso-02.webp",
+          "image_alt": "Klassischer gebackener Cheesecake mit Keksboden: Kekse zerkleinern und Boden festdrücken"
+        },
+        {
+          "title": "Boden vorbacken und kurz abkühlen",
+          "content": "Die Form auf ein Metallblech stellen, um mögliche Leckagen aufzufangen, und den Boden auf mittlerer Schiene 10 Minuten bei 170 °C backen, bis er geröstet riecht, ohne zu verbrennen. Mit Ofenhandschuhen herausnehmen und etwa 15 Minuten auf einem Gitter abkühlen lassen. Währenddessen den Ofen auf 160 °C reduzieren; keine weitere Vorheizzeit addieren. In den ersten 10 Minuten dieser Abkühlzeit die Füllung nach den folgenden zwei Schritten vorbereiten; netto bleiben 5 Minuten Wartezeit. Die vorgeschlagenen Back- und Kühlzeiten bei Bedarf verlängern.",
+          "image_url": "/recetas/receta-de-tarta-de-queso-cheesecake/paso-03.webp",
+          "image_alt": "Klassischer gebackener Cheesecake mit Keksboden: Boden vorbacken und kurz abkühlen"
+        },
+        {
+          "title": "Frischkäse, Zucker und Salz ohne Luft mischen",
+          "content": "Die 600 g weich gewordenen Frischkäse, 140 g Zucker und 1 g Salz in eine Schüssel geben. Auf niedriger Stufe etwa 2 Minuten mischen, zwischendurch mit einem Spatel Schüsselwand und Boden abschaben, bis keine großen Klumpen bleiben. Nicht aufschlagen oder auf hoher Stufe rühren: Ziel ist eine dichte Creme, kein Schaum. Dieses Mischen und der nächste Schritt beanspruchen ungefähr 10 Minuten innerhalb der 15 Minuten Abkühlzeit des Bodens. Ist der Käse noch zu fest, vorsichtig weitermischen und die tatsächliche zusätzliche Zeit berücksichtigen; Milchprodukte nicht stundenlang ungekühlt lassen.",
+          "image_url": "/recetas/receta-de-tarta-de-queso-cheesecake/paso-04.webp",
+          "image_alt": "Klassischer gebackener Cheesecake mit Keksboden: Frischkäse, Zucker und Salz ohne Luft mischen"
+        },
+        {
+          "title": "Ei, saure Sahne und Vanille einarbeiten",
+          "content": "Die abgewogenen 150 g Ei in 3 Portionen zu 50 g aufteilen. Jede Portion auf niedriger Stufe nur bis zur Verbindung einarbeiten, dann die nächste zugeben. Die 120 g saure Sahne und 5 g Vanilleextrakt zufügen und vorsichtig glatt mischen. Schüsselwand und Boden abschaben, damit alle Zutaten einbezogen werden, ohne Luftblasen einzuschlagen. Dieser Vorschlag enthält keine Schlagsahne, kein Mehl, keine Gelatine, keinen Saft und keinen Belag. Rohe Mischung nicht probieren; Geräte nach Eikontakt reinigen und zum Einfüllen einen sauberen Spatel nutzen.",
+          "image_url": "/recetas/receta-de-tarta-de-queso-cheesecake/paso-05.webp",
+          "image_alt": "Klassischer gebackener Cheesecake mit Keksboden: Ei, saure Sahne und Vanille einarbeiten"
+        },
+        {
+          "title": "Einfüllen, backen und Kerntemperatur prüfen",
+          "content": "Die gesamte Füllung auf den abgekühlten Boden geben, vorsichtig glätten und die Form auf ihrem Blech auf mittlerer Schiene bei 160 °C backen. Etwa 55 Minuten vorsehen und ab 45 Minuten prüfen, ohne ständig den Ofen zu öffnen. Dieser Vorschlag verwendet kein Wasserbad. Die Ränder sollen fest sein, die Mitte soll als zusammenhängende Masse sanft wackeln, nicht frei flüssig bleiben. Mit sauberer Sonde in der Mitte mindestens 71 °C prüfen; Bewegung, Farbe oder Foto ersetzen diese Messung nicht. Bei niedrigerer Temperatur weiterbacken und tatsächliche Zeit addieren. Bei zu starker Bräunung die Oberfläche schützen. Mit Ofenhandschuhen herausnehmen und den heißen Ring nicht öffnen; eine rissfreie Oberfläche oder eine Bräunung wie auf dem Bild wird nicht versprochen.",
+          "image_url": "/recetas/receta-de-tarta-de-queso-cheesecake/paso-06.webp",
+          "image_alt": "Klassischer gebackener Cheesecake mit Keksboden: Einfüllen, backen und Kerntemperatur prüfen"
+        },
+        {
+          "title": "Kurz abkühlen und vollständig kühlen",
+          "content": "Den Kuchen nach dem Backen etwa 45 Minuten in der Form auf einem Gitter stehen lassen und anschließend bei höchstens 4 °C in den Kühlschrank stellen; nicht auf vollständiges Abkühlen auf der Arbeitsfläche warten. Eine hitzebeständige Unterlage verwenden und Platz für Luftzirkulation lassen. Mit einer sauberen lockeren Abdeckung vor Verunreinigung schützen, ohne den heißen Kuchen zu berühren. Nach dem Ofen insgesamt höchstens 2 Stunden ungekühlt lassen, bei Umgebungstemperaturen über 32 °C höchstens 1 Stunde; dann früher kühlen. Als Richtwert 360 Minuten kühlen, bis die Mitte kalt ist; nötigenfalls verlängern und zusätzliche Zeit addieren. Sobald kein Dampf mehr aufsteigt, abdecken, ohne die Oberfläche zu drücken. Die Planung umfasst 20 Minuten anfängliche Vorbereitung, 10 Minuten Bodenbacken, 15 Minuten Abkühlen mit überlappenden 10 Minuten Füllungsvorbereitung, 55 Minuten Füllungsbacken, 45 Minuten abschließendes Abkühlen und 360 Minuten Kühlung: geschätzte 505 Minuten. Weichwerden des Käses und Vorheizen sind in der anfänglichen Vorbereitung enthalten. Tatsächliches Abkühlen wird nicht abgezogen; ein Küchenversuch wird nicht behauptet.",
+          "image_url": "/recetas/receta-de-tarta-de-queso-cheesecake/paso-07.webp",
+          "image_alt": "Klassischer gebackener Cheesecake mit Keksboden: Kurz abkühlen und vollständig kühlen"
+        },
+        {
+          "title": "Kalt ausformen und in acht Portionen teilen",
+          "content": "Wenn der Kuchen gut durchgekühlt ist, mit einem dünnen Spatel vorsichtig den Rand lösen, den Ring öffnen und beim Umsetzen auf einen Teller das Bodenpapier entfernen. Mit einem sauberen Messer in 8 ähnliche Portionen schneiden und es zwischen den Schnitten abwischen. Ohne Obst, Sauce oder zusätzliche Kekse servieren; diese sind nicht berechnet. Die 1266 g sind das anfängliche Zutatengewicht, weder fertiges Kuchengewicht noch Portionsgewicht. Mengen, Zeiten und acht Portionen sind noch in der Küche zu bestätigende Vorschläge. Abgedeckt bei höchstens 4 °C lagern. Als vorsichtiger, ungeprüfter Qualitätsvorschlag innerhalb von 24 Stunden nach dem Kühlen verzehren. Nur benötigte Portionen herausnehmen und den Rest zügig zurückstellen. Tellerreste nicht wiederverwenden und Haltbarkeit nicht anhand des Geruchs festlegen.",
+          "image_url": "/recetas/receta-de-tarta-de-queso-cheesecake/portada.webp",
+          "image_alt": "Klassischer gebackener Cheesecake mit Keksboden: Kalt ausformen und in acht Portionen teilen"
+        }
+      ],
+      "nutrition": {
+        "calories": 548.0,
+        "protein_g": 8.9,
+        "carbs_g": 40.0,
+        "fat_g": 40.0,
+        "saturated_fat_g": 22.0,
+        "fiber_g": 0.8,
+        "sugar_g": 26.5,
+        "sodium_mg": 432.6,
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "inputs": [
+          {
+            "ingredient": "schlichte, bereits gebackene Graham-Kekse ohne Überzug oder Füllung",
+            "edible_grams": 180,
+            "fdc_id": 174957,
+            "fdc_description": "Cookies, graham crackers, plain or honey (includes cinnamon)",
+            "per_100g": {
+              "calories": 430,
+              "protein_g": 6.69,
+              "carbs_g": 77.7,
+              "fat_g": 10.6,
+              "saturated_fat_g": 1.63,
+              "fiber_g": 3.4,
+              "sugar_g": 24.8,
+              "sodium_mg": 516
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/174957/nutrients"
+          },
+          {
+            "ingredient": "ungesalzene Butter",
+            "edible_grams": 70,
+            "fdc_id": 173430,
+            "fdc_description": "Butter, without salt",
+            "per_100g": {
+              "calories": 717,
+              "protein_g": 0.85,
+              "carbs_g": 0.06,
+              "fat_g": 81.1,
+              "saturated_fat_g": 50.5,
+              "fiber_g": 0.0,
+              "sugar_g": 0.06,
+              "sodium_mg": 11.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173430/nutrients"
+          },
+          {
+            "ingredient": "pasteurisierter vollfetter Frischkäse in Blockform, keine Light-Variante",
+            "edible_grams": 600,
+            "fdc_id": 173418,
+            "fdc_description": "Cheese, cream",
+            "per_100g": {
+              "calories": 350,
+              "protein_g": 6.15,
+              "carbs_g": 5.52,
+              "fat_g": 34.4,
+              "saturated_fat_g": 20.2,
+              "fiber_g": 0.0,
+              "sugar_g": 3.76,
+              "sodium_mg": 314
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173418/nutrients"
+          },
+          {
+            "ingredient": "weißer Kristallzucker",
+            "edible_grams": 140,
+            "fdc_id": 169655,
+            "fdc_description": "Sugars, granulated",
+            "per_100g": {
+              "calories": 387,
+              "protein_g": 0.0,
+              "carbs_g": 100,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "fiber_g": 0.0,
+              "sugar_g": 99.8,
+              "sodium_mg": 1.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169655/nutrients"
+          },
+          {
+            "ingredient": "rohes Vollei, ohne Schale gewogen",
+            "edible_grams": 150,
+            "fdc_id": 171287,
+            "fdc_description": "Egg, whole, raw, fresh",
+            "per_100g": {
+              "calories": 143,
+              "protein_g": 12.6,
+              "carbs_g": 0.72,
+              "fat_g": 9.51,
+              "saturated_fat_g": 3.13,
+              "fiber_g": 0.0,
+              "sugar_g": 0.37,
+              "sodium_mg": 142
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171287/nutrients"
+          },
+          {
+            "ingredient": "pasteurisierte vollfette kultivierte saure Sahne, keine Schlagsahne",
+            "edible_grams": 120,
+            "fdc_id": 171257,
+            "fdc_description": "Cream, sour, cultured",
+            "per_100g": {
+              "calories": 198,
+              "protein_g": 2.44,
+              "carbs_g": 4.63,
+              "fat_g": 19.4,
+              "saturated_fat_g": 10.1,
+              "fiber_g": 0.0,
+              "sugar_g": 3.41,
+              "sodium_mg": 31.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171257/nutrients"
+          },
+          {
+            "ingredient": "Vanilleextrakt",
+            "edible_grams": 5,
+            "fdc_id": 173471,
+            "fdc_description": "Vanilla extract",
+            "per_100g": {
+              "calories": 288,
+              "protein_g": 0.06,
+              "carbs_g": 12.6,
+              "fat_g": 0.06,
+              "saturated_fat_g": 0.01,
+              "fiber_g": 0.0,
+              "sugar_g": 12.6,
+              "sodium_mg": 9.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173471/nutrients"
+          },
+          {
+            "ingredient": "feines Salz",
+            "edible_grams": 1,
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "calories": 0.0,
+              "protein_g": 0.0,
+              "carbs_g": 0.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0,
+              "sodium_mg": 38800.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients"
+          }
+        ],
+        "serving_size": "Ein Achtel des Kuchens; 8 vorgeschlagene Portionen",
+        "method": "Summe der essbaren Gramm multipliziert mit USDA-Nährwerten je 100 g, geteilt durch 8. Acht exakte Lebensmittel geprüft, alle acht Nährwerte vorhanden. Vollständiger Verzehr von Boden und Füllung einschließlich 70 g Butter angenommen; kein zusätzliches Formfett oder Belag.",
+        "note": "Noch zu bestätigende Schätzung, keine Analyse oder Küchenprüfung. 1266 g bezeichnet Anfangsgewicht, keine gemessene gebackene Ausbeute. USDA 174957 fasst einfache oder honighaltige Graham-Kekse einschließlich Zimt zusammen: allgemeine Referenz, keine Markenbestätigung. Referenzen sind vollfetter Frischkäse und kultivierte saure Sahne, keine Light-Produkte oder Schlagsahne. Referenz-Vanilleextrakt enthält Alkohol; vollständige Entfernung beim Backen wird nicht angenommen. Marke, Feuchtigkeit und Salz ändern Werte. Spezifische Hitze- oder Handhabungsverluste werden nicht berechnet; Obst, Saucen und Beilagen sind ausgeschlossen. Fehlende Daten werden niemals durch Null ersetzt."
+      },
+      "image_url": "/recetas/receta-de-tarta-de-queso-cheesecake/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/receta-de-tarta-de-queso-cheesecake/portada.webp",
+          "alt": "Gebackener Cheesecake mit leicht goldener elfenbeinfarbener Oberfläche und Keksboden, ein Stück neben dem Kuchen ohne Belag"
+        }
+      ],
+      "published": false,
+      "editorial_status": "draft",
+      "keywords": [
+        "klassischer Cheesecake",
+        "gebackener Käsekuchen",
+        "Cheesecake mit Keksboden",
+        "Cheesecake mit saurer Sahne"
+      ],
+      "notes": "Vorgeschlagener gebackener Cheesecake mit Graham-Keksboden und Frischkäse-Ei-Sauerrahm-Füllung, ohne Wasserbad oder Belag. Er unterscheidet sich von ungebackenen Oreo- und beerenbelegten Varianten; deren Inhalte werden nicht übernommen. Kein Küchenversuch und keine rissfreie Oberfläche werden behauptet. Enthält Milch, Ei und Weizen: Zutatenetiketten und mögliche Spuren prüfen, ohne Allergieverträglichkeit zu garantieren. Pasteurisierte Milchprodukte und unbeschädigte Eier nutzen; beschädigte oder verschmutzte Eier verwerfen und rohe Füllung nicht probieren. Verderbliche Zutaten bei höchstens 4 °C halten, Frischkäse nur kurz während der Vorbereitung weich werden lassen. Vollfetten Blockfrischkäse und kultivierte saure Sahne verwenden, keine Schlagsahne. Austausch verändert Struktur, Feuchtigkeit und Nährwerte; neu berechnen und anpassen, ohne Gleichwertigkeit zu versprechen. Vanilleextrakt kann Alkohol enthalten; vollständige Entfernung durch Backen wird nicht zugesichert. Die Form nicht zusätzlich fetten: Boden auslegen und alle 70 g Butter für die Kruste nutzen. In der Mitte mindestens 71 °C prüfen. Nach kurzem Abkühlen innerhalb von 2 Stunden ab Ofenentnahme kühlen, bei mehr als 32 °C innerhalb von 1 Stunde. Vor dem Ausformen vollständig kühlen und abgedeckt bei höchstens 4 °C lagern. Die vorgeschlagenen 24 Stunden nach dem Kühlen dienen ungeprüfter Qualität, sind keine validierte Haltbarkeit. Keine Gefrierlagerdauer festgelegt. Ofenhandschuhe nutzen und bei geändertem Ofen, Form oder Füllhöhe tatsächliche Zusatzzeit berücksichtigen.",
+      "seo": {
+        "title": "Klassischer Cheesecake aus dem Ofen: Schritt für Schritt",
+        "description": "Cheesecake mit Graham-Keksboden, Frischkäse und saurer Sahne: Mengen, Backen und vollständiges Kühlen für acht vorgeschlagene Portionen.",
+        "image_alt": "Gebackener Cheesecake mit leicht goldener elfenbeinfarbener Oberfläche und Keksboden, ein Stück neben dem Kuchen ohne Belag",
+        "image_variants": [
+          "/recetas/receta-de-tarta-de-queso-cheesecake/portada-1x1.webp",
+          "/recetas/receta-de-tarta-de-queso-cheesecake/portada-4x3.webp",
+          "/recetas/receta-de-tarta-de-queso-cheesecake/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Kann ich Frischkäse oder saure Sahne austauschen?",
+            "a": "Vorgesehen sind pasteurisierter vollfetter Blockfrischkäse und kultivierte saure Sahne, keine Light-Produkte oder Schlagsahne. Andere Milchprodukte verändern Wasser, Fett und Konsistenz. Mengen, Backen und Nährwerte vor dem Austausch anpassen; nicht dasselbe Ergebnis voraussetzen."
+          },
+          {
+            "q": "Warum ist die Gesamtzeit so lang?",
+            "a": "505 Minuten umfassen 20 Minuten anfängliche Vorbereitung, 10 Minuten Bodenbacken, 15 Minuten Abkühlen mit 10 Minuten überlappender Füllungsvorbereitung, 55 Minuten Füllungsbacken, 45 Minuten abschließendes Abkühlen und 360 Minuten Kühlung. Käse weich werden lassen und Ofen vorheizen geschieht während der Vorbereitung. Tatsächliche zusätzliche Back- oder Kühlzeit addieren; es geht nicht nur um aktive Arbeit."
+          },
+          {
+            "q": "Wie prüfe ich den Garzustand und wann forme ich aus?",
+            "a": "Die Ränder müssen fest werden und die Mitte mit sauberer Sonde mindestens 71 °C erreichen; leichtes Wackeln ersetzt die Temperaturprüfung nicht. Kurz abkühlen und innerhalb von 2 Stunden kühlen, über 32 °C innerhalb von 1 Stunde. Vor dem Öffnen des Rings auf eine kalte Mitte warten, mit 360 Minuten Kühlung als Richtwert; bei Bedarf verlängern."
+          }
+        ]
+      },
+      "content_html": "<p>Vorgeschlagener klassischer Cheesecake aus dem Ofen mit Graham-Keksboden, vollfettem Frischkäse und saurer Sahne, ohne Belag oder Wasserbad. Vorgesehen sind 8 Portionen und insgesamt 505 Minuten einschließlich Kühlung. Mengen, Zeiten und Ausbeute sind noch nicht durch einen Küchenversuch bestätigt.</p><p>Vorgeschlagener gebackener Cheesecake mit Graham-Keksboden und Frischkäse-Ei-Sauerrahm-Füllung, ohne Wasserbad oder Belag. Er unterscheidet sich von ungebackenen Oreo- und beerenbelegten Varianten; deren Inhalte werden nicht übernommen. Kein Küchenversuch und keine rissfreie Oberfläche werden behauptet. Enthält Milch, Ei und Weizen: Zutatenetiketten und mögliche Spuren prüfen, ohne Allergieverträglichkeit zu garantieren. Pasteurisierte Milchprodukte und unbeschädigte Eier nutzen; beschädigte oder verschmutzte Eier verwerfen und rohe Füllung nicht probieren. Verderbliche Zutaten bei höchstens 4 °C halten, Frischkäse nur kurz während der Vorbereitung weich werden lassen. Vollfetten Blockfrischkäse und kultivierte saure Sahne verwenden, keine Schlagsahne. Austausch verändert Struktur, Feuchtigkeit und Nährwerte; neu berechnen und anpassen, ohne Gleichwertigkeit zu versprechen. Vanilleextrakt kann Alkohol enthalten; vollständige Entfernung durch Backen wird nicht zugesichert. Die Form nicht zusätzlich fetten: Boden auslegen und alle 70 g Butter für die Kruste nutzen. In der Mitte mindestens 71 °C prüfen. Nach kurzem Abkühlen innerhalb von 2 Stunden ab Ofenentnahme kühlen, bei mehr als 32 °C innerhalb von 1 Stunde. Vor dem Ausformen vollständig kühlen und abgedeckt bei höchstens 4 °C lagern. Die vorgeschlagenen 24 Stunden nach dem Kühlen dienen ungeprüfter Qualität, sind keine validierte Haltbarkeit. Keine Gefrierlagerdauer festgelegt. Ofenhandschuhe nutzen und bei geändertem Ofen, Form oder Füllhöhe tatsächliche Zusatzzeit berücksichtigen.</p>"
+    },
+    {
+      "id": "456d8694-be80-57f7-a462-da17e11ce57c",
+      "recipe_group_id": "24263cd3-9851-4aaa-b73f-7d950ad1a303",
+      "slug": "classic-cheesecake-recipe",
+      "public_path": "/en/classic-cheesecake-recipe",
+      "source_url": null,
+      "language": "en",
+      "title": "Classic baked cheesecake with a graham crust",
+      "excerpt": "Cream cheese, cultured sour cream and a compact crust, with complete baking and chilling instructions for eight proposed servings.",
+      "summary": "A proposed classic baked cheesecake with a graham cracker crust, full-fat cream cheese and cultured sour cream, without topping or a water bath. The proposal makes 8 servings and takes 505 minutes including chilling. Quantities, timings and yield await kitchen confirmation.",
+      "category": "Desserts",
+      "category_slug": "postres",
+      "difficulty": "Medium",
+      "course": "Dessert",
+      "cuisine": "American-inspired",
+      "prep_time_minutes": 30,
+      "cook_time_minutes": 65,
+      "total_time_minutes": 505,
+      "servings": 8,
+      "ingredients": [
+        {
+          "name": "plain baked graham crackers, without coating or filling",
+          "amount": "180",
+          "unit": "g",
+          "group": "Crust"
+        },
+        {
+          "name": "unsalted butter",
+          "amount": "70",
+          "unit": "g",
+          "group": "Crust"
+        },
+        {
+          "name": "pasteurized full-fat block cream cheese, not light",
+          "amount": "600",
+          "unit": "g",
+          "group": "Filling"
+        },
+        {
+          "name": "white granulated sugar",
+          "amount": "140",
+          "unit": "g",
+          "group": "Filling"
+        },
+        {
+          "name": "raw whole egg, weighed without shell",
+          "amount": "150",
+          "unit": "g",
+          "group": "Filling"
+        },
+        {
+          "name": "pasteurized full-fat cultured sour cream, not whipping cream",
+          "amount": "120",
+          "unit": "g",
+          "group": "Filling"
+        },
+        {
+          "name": "vanilla extract",
+          "amount": "5",
+          "unit": "g",
+          "group": "Filling"
+        },
+        {
+          "name": "fine salt",
+          "amount": "1",
+          "unit": "g",
+          "group": "Filling"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Weigh the ingredients and prepare the pan",
+          "content": "Wash your hands and prepare scales, bowls, a spatula, a paddle or hand mixer on low speed, a clean probe and a nonstick springform pan 20 cm in diameter and at least 6 cm high. Line only the bottom with baking parchment; do not add butter for greasing. Weigh 180 g plain graham crackers and 70 g unsalted butter. For the filling, weigh 600 g full-fat cream cheese, 140 g sugar, 150 g egg without shell, 120 g sour cream, 5 g vanilla extract and 1 g salt. The egg is approximately 3 large eggs, but weight takes priority: break them into a separate bowl, mix gently and weigh the portion to use. Keep egg and sour cream at 4 °C or below until mixing. Cut the cheese into pieces and let it soften for about 20 minutes while preparing the ingredients and crust; this is not an additional wait and it must not remain out for hours. Preheat the oven to 170 °C with conventional top and bottom heat during the last 15 minutes of this initial 20-minute preparation. Wash hands and utensils after handling raw egg and do not taste the unbaked filling.",
+          "image_url": "/recetas/receta-de-tarta-de-queso-cheesecake/paso-01.webp",
+          "image_alt": "Classic baked cheesecake with a graham crust: Weigh the ingredients and prepare the pan"
+        },
+        {
+          "title": "Crush and press the crust",
+          "content": "Crush the 180 g crackers in a sturdy bag with a rolling pin or in a food processor into fine crumbs without large lumps. Melt the 70 g butter in a saucepan over low heat for about 3 minutes, included in the initial preparation, without browning it. Mix all the crumbs with all the butter until evenly moistened. Transfer to the lined 20 cm pan and press with the bottom of a clean glass to make a level layer only on the bottom; do not build a crumb wall or add sugar or fat. Use the entire mixture and check for loose areas.",
+          "image_url": "/recetas/receta-de-tarta-de-queso-cheesecake/paso-02.webp",
+          "image_alt": "Classic baked cheesecake with a graham crust: Crush and press the crust"
+        },
+        {
+          "title": "Bake the crust and let it cool briefly",
+          "content": "Place the pan on a metal baking tray to catch possible leaks and bake the crust for 10 minutes at 170 °C on the middle shelf, until it smells toasted without burning. Remove with oven gloves and let it cool on a rack for about 15 minutes. Lower the oven to 160 °C during that interval; do not add another preheating period. Prepare the filling during the first 10 minutes of this cooling period using the next two steps; this leaves 5 minutes of net waiting. The proposed crust and cooling times must be extended if your oven requires it.",
+          "image_url": "/recetas/receta-de-tarta-de-queso-cheesecake/paso-03.webp",
+          "image_alt": "Classic baked cheesecake with a graham crust: Bake the crust and let it cool briefly"
+        },
+        {
+          "title": "Mix cheese, sugar and salt without aerating",
+          "content": "Put the 600 g softened cream cheese, 140 g sugar and 1 g salt in a bowl. Mix on low speed for about 2 minutes, stopping to scrape the sides and bottom with a spatula, until no large lumps remain. Do not whip or use high speed: aim for a dense cream, not foam. This mixing and the next step take about 10 minutes within the 15-minute crust cooling period. If the cheese is still too firm, continue gently and add the actual extra time, without leaving dairy out of refrigeration for hours.",
+          "image_url": "/recetas/receta-de-tarta-de-queso-cheesecake/paso-04.webp",
+          "image_alt": "Classic baked cheesecake with a graham crust: Mix cheese, sugar and salt without aerating"
+        },
+        {
+          "title": "Incorporate egg, sour cream and vanilla",
+          "content": "Divide the weighed 150 g egg into 3 portions of 50 g. Mix each portion in on low speed just until incorporated before adding the next. Add the 120 g sour cream and 5 g vanilla extract; mix gently until uniform. Scrape the sides and bottom to include all ingredients without beating in bubbles. This proposal contains no whipped cream, flour, gelatin, juice or topping. Do not taste the raw mixture; clean utensils that touched egg and use a clean spatula when filling the pan.",
+          "image_url": "/recetas/receta-de-tarta-de-queso-cheesecake/paso-05.webp",
+          "image_alt": "Classic baked cheesecake with a graham crust: Incorporate egg, sour cream and vanilla"
+        },
+        {
+          "title": "Fill and bake, checking the center",
+          "content": "Pour all the filling over the cooled crust, level gently and place the pan on its tray on the middle oven shelf at 160 °C. Bake for about 55 minutes, beginning checks at 45 without repeatedly opening the oven. This proposal uses no water bath. Look for set edges and a center that moves gently as one piece, not as free liquid. Check that the center reaches at least 71 °C with a clean probe; movement, color and photographs do not replace that measurement. If it has not reached temperature, continue and add the actual time. Protect the surface if it browns too much. Remove with oven gloves without opening the hot ring; a crack-free surface or browning identical to the image is not promised.",
+          "image_url": "/recetas/receta-de-tarta-de-queso-cheesecake/paso-06.webp",
+          "image_alt": "Classic baked cheesecake with a graham crust: Fill and bake, checking the center"
+        },
+        {
+          "title": "Cool briefly, then chill completely",
+          "content": "Leave the cake in its pan on a rack for about 45 minutes after baking, then transfer to a refrigerator at 4 °C or below without waiting for it to cool completely on the counter. Use a heat-resistant surface and leave room for air circulation; protect from contamination with a clean loose cover that does not touch the hot cake. Do not accumulate more than 2 hours out of refrigeration after baking, or 1 hour if the surroundings exceed 32 °C; refrigerate earlier in that case. Allow a reference 360 minutes of chilling until the center is cold; extend and add that time if needed. Once it stops steaming, cover without pressing the surface. The plan adds 20 minutes initial preparation, 10 crust baking, 15 cooling with 10 filling preparation overlapping, 55 filling baking, 45 final cooling and 360 chilling: 505 estimated minutes. Cheese softening and preheating are included in the initial preparation; actual cooling is not deducted and no kitchen trial is claimed.",
+          "image_url": "/recetas/receta-de-tarta-de-queso-cheesecake/paso-07.webp",
+          "image_alt": "Classic baked cheesecake with a graham crust: Cool briefly, then chill completely"
+        },
+        {
+          "title": "Unmold cold and divide into eight portions",
+          "content": "When thoroughly cold, carefully run a thin spatula around the edge, open the ring and remove the bottom parchment while moving the cake to a plate. Divide into 8 similar portions with a clean knife, wiping it between cuts. Serve without fruit, sauce or extra crackers: these are outside the calculation. The 1266 g is the initial ingredient weight, not the finished cake weight or the weight per portion. Quantities, timings and eight portions are proposals awaiting kitchen confirmation. Store covered at 4 °C or below; as a conservative, untested quality proposal, consume within 24 hours after chilling. Remove only what you will serve and promptly return the rest to the refrigerator. Do not reuse plate leftovers or establish shelf life by smell.",
+          "image_url": "/recetas/receta-de-tarta-de-queso-cheesecake/portada.webp",
+          "image_alt": "Classic baked cheesecake with a graham crust: Unmold cold and divide into eight portions"
+        }
+      ],
+      "nutrition": {
+        "calories": 548.0,
+        "protein_g": 8.9,
+        "carbs_g": 40.0,
+        "fat_g": 40.0,
+        "saturated_fat_g": 22.0,
+        "fiber_g": 0.8,
+        "sugar_g": 26.5,
+        "sodium_mg": 432.6,
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "inputs": [
+          {
+            "ingredient": "plain baked graham crackers, without coating or filling",
+            "edible_grams": 180,
+            "fdc_id": 174957,
+            "fdc_description": "Cookies, graham crackers, plain or honey (includes cinnamon)",
+            "per_100g": {
+              "calories": 430,
+              "protein_g": 6.69,
+              "carbs_g": 77.7,
+              "fat_g": 10.6,
+              "saturated_fat_g": 1.63,
+              "fiber_g": 3.4,
+              "sugar_g": 24.8,
+              "sodium_mg": 516
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/174957/nutrients"
+          },
+          {
+            "ingredient": "unsalted butter",
+            "edible_grams": 70,
+            "fdc_id": 173430,
+            "fdc_description": "Butter, without salt",
+            "per_100g": {
+              "calories": 717,
+              "protein_g": 0.85,
+              "carbs_g": 0.06,
+              "fat_g": 81.1,
+              "saturated_fat_g": 50.5,
+              "fiber_g": 0.0,
+              "sugar_g": 0.06,
+              "sodium_mg": 11.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173430/nutrients"
+          },
+          {
+            "ingredient": "pasteurized full-fat block cream cheese, not light",
+            "edible_grams": 600,
+            "fdc_id": 173418,
+            "fdc_description": "Cheese, cream",
+            "per_100g": {
+              "calories": 350,
+              "protein_g": 6.15,
+              "carbs_g": 5.52,
+              "fat_g": 34.4,
+              "saturated_fat_g": 20.2,
+              "fiber_g": 0.0,
+              "sugar_g": 3.76,
+              "sodium_mg": 314
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173418/nutrients"
+          },
+          {
+            "ingredient": "white granulated sugar",
+            "edible_grams": 140,
+            "fdc_id": 169655,
+            "fdc_description": "Sugars, granulated",
+            "per_100g": {
+              "calories": 387,
+              "protein_g": 0.0,
+              "carbs_g": 100,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "fiber_g": 0.0,
+              "sugar_g": 99.8,
+              "sodium_mg": 1.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169655/nutrients"
+          },
+          {
+            "ingredient": "raw whole egg, weighed without shell",
+            "edible_grams": 150,
+            "fdc_id": 171287,
+            "fdc_description": "Egg, whole, raw, fresh",
+            "per_100g": {
+              "calories": 143,
+              "protein_g": 12.6,
+              "carbs_g": 0.72,
+              "fat_g": 9.51,
+              "saturated_fat_g": 3.13,
+              "fiber_g": 0.0,
+              "sugar_g": 0.37,
+              "sodium_mg": 142
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171287/nutrients"
+          },
+          {
+            "ingredient": "pasteurized full-fat cultured sour cream, not whipping cream",
+            "edible_grams": 120,
+            "fdc_id": 171257,
+            "fdc_description": "Cream, sour, cultured",
+            "per_100g": {
+              "calories": 198,
+              "protein_g": 2.44,
+              "carbs_g": 4.63,
+              "fat_g": 19.4,
+              "saturated_fat_g": 10.1,
+              "fiber_g": 0.0,
+              "sugar_g": 3.41,
+              "sodium_mg": 31.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171257/nutrients"
+          },
+          {
+            "ingredient": "vanilla extract",
+            "edible_grams": 5,
+            "fdc_id": 173471,
+            "fdc_description": "Vanilla extract",
+            "per_100g": {
+              "calories": 288,
+              "protein_g": 0.06,
+              "carbs_g": 12.6,
+              "fat_g": 0.06,
+              "saturated_fat_g": 0.01,
+              "fiber_g": 0.0,
+              "sugar_g": 12.6,
+              "sodium_mg": 9.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173471/nutrients"
+          },
+          {
+            "ingredient": "fine salt",
+            "edible_grams": 1,
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "calories": 0.0,
+              "protein_g": 0.0,
+              "carbs_g": 0.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0,
+              "sodium_mg": 38800.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients"
+          }
+        ],
+        "serving_size": "One eighth of the cake; 8 proposed servings",
+        "method": "Sum of edible grams multiplied by USDA nutrients per 100 g, divided by 8. Eight exact foods verified, with all eight nutrients present. Assumes consumption of all crust and filling including 70 g butter; no extra pan grease or topping.",
+        "note": "Estimate awaiting confirmation, not analysis or a kitchen trial. The 1266 g is initial weight, not measured cooked yield. USDA 174957 groups plain or honey graham crackers including cinnamon: a generic reference, not confirmation of a specific brand. References are full-fat cream cheese and cultured sour cream, not light products or whipping cream. Reference vanilla extract contains alcohol; complete removal during baking is not assumed. Brands, moisture and salt alter values. Specific heat or handling losses are not calculated, and fruit, sauces and accompaniments are excluded. Missing data is never replaced by zero."
+      },
+      "image_url": "/recetas/receta-de-tarta-de-queso-cheesecake/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/receta-de-tarta-de-queso-cheesecake/portada.webp",
+          "alt": "Plain baked cheesecake with an ivory lightly golden surface and graham crust, a cut slice beside the untopped cake"
+        }
+      ],
+      "published": false,
+      "editorial_status": "draft",
+      "keywords": [
+        "classic cheesecake",
+        "baked cheesecake",
+        "graham crust cheesecake",
+        "sour cream cheesecake"
+      ],
+      "notes": "Proposed baked cheesecake with a graham crust and cream cheese, egg and cultured sour cream filling, without a water bath or topping. It differs from no-bake Oreo and berry-topped versions; their content is not reused. No kitchen trial or crack-free surface is claimed. Contains milk, egg and wheat: check crackers, cheese, sour cream and vanilla labels and possible traces without guaranteeing suitability for allergies. Use pasteurized dairy and intact eggs; discard cracked or dirty eggs and never taste raw filling. Keep perishables at 4 °C or below and soften cheese only during brief preparation. Use full-fat block cheese and cultured sour cream, not whipped cream. Ingredient substitutions change structure, moisture and nutrition: recalculate and adapt without promising equivalence. Vanilla extract may contain alcohol; baking is not claimed to remove it completely. Do not grease the pan additionally; line its bottom and use all 70 g butter in the crust. Check at least 71 °C in the center. Refrigerate after brief cooling within 2 hours of baking, or 1 hour above 32 °C. Chill completely before unmolding and store covered at 4 °C or below. The 24-hour quality proposal after chilling is untested, not a validated shelf life. No frozen storage duration is set. Wear oven gloves and add actual time when changing the pan, filling depth or oven.",
+      "seo": {
+        "title": "Classic baked cheesecake: crust, filling and chilling",
+        "description": "Make a plain baked cheesecake with a graham crust, cream cheese and sour cream, with quantities and full cooling instructions for eight proposed servings.",
+        "image_alt": "Plain baked cheesecake with an ivory lightly golden surface and graham crust, a cut slice beside the untopped cake",
+        "image_variants": [
+          "/recetas/receta-de-tarta-de-queso-cheesecake/portada-1x1.webp",
+          "/recetas/receta-de-tarta-de-queso-cheesecake/portada-4x3.webp",
+          "/recetas/receta-de-tarta-de-queso-cheesecake/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Can I replace the cream cheese or sour cream?",
+            "a": "This formula proposes pasteurized full-fat block cream cheese and cultured sour cream, not light products or whipping cream. Other dairy changes water, fat and texture; adapt quantities, baking and nutrition before substituting without assuming the same result."
+          },
+          {
+            "q": "Why is the complete time so long?",
+            "a": "The 505 minutes include 20 initial preparation, 10 crust baking, 15 cooling with 10 filling preparation overlapping, 55 filling baking, 45 final cooling and 360 chilling. Cheese softening and preheating happen during initial preparation. Add actual extra baking or cooling time; this is more than active work."
+          },
+          {
+            "q": "How do I check doneness and when do I unmold?",
+            "a": "The edges should set and the center should reach at least 71 °C with a clean probe; slight movement does not replace a temperature check. Cool briefly and refrigerate within 2 hours, or 1 hour above 32 °C. Wait until the center is cold, allowing 360 minutes refrigeration as a reference, before opening the ring; extend if necessary."
+          }
+        ]
+      },
+      "content_html": "<p>A proposed classic baked cheesecake with a graham cracker crust, full-fat cream cheese and cultured sour cream, without topping or a water bath. The proposal makes 8 servings and takes 505 minutes including chilling. Quantities, timings and yield await kitchen confirmation.</p><p>Proposed baked cheesecake with a graham crust and cream cheese, egg and cultured sour cream filling, without a water bath or topping. It differs from no-bake Oreo and berry-topped versions; their content is not reused. No kitchen trial or crack-free surface is claimed. Contains milk, egg and wheat: check crackers, cheese, sour cream and vanilla labels and possible traces without guaranteeing suitability for allergies. Use pasteurized dairy and intact eggs; discard cracked or dirty eggs and never taste raw filling. Keep perishables at 4 °C or below and soften cheese only during brief preparation. Use full-fat block cheese and cultured sour cream, not whipped cream. Ingredient substitutions change structure, moisture and nutrition: recalculate and adapt without promising equivalence. Vanilla extract may contain alcohol; baking is not claimed to remove it completely. Do not grease the pan additionally; line its bottom and use all 70 g butter in the crust. Check at least 71 °C in the center. Refrigerate after brief cooling within 2 hours of baking, or 1 hour above 32 °C. Chill completely before unmolding and store covered at 4 °C or below. The 24-hour quality proposal after chilling is untested, not a validated shelf life. No frozen storage duration is set. Wear oven gloves and add actual time when changing the pan, filling depth or oven.</p>"
     }
   ],
   "yield_proposal": {
@@ -364,5 +992,7 @@
     "raw_formula_grams": 1266,
     "cooked_weight_measured": false,
     "confirmed": false
-  }
+  },
+  "portuguese_locale": "pt-BR",
+  "localization_qa": "PASS_SAME_NUMBERS_STRUCTURE_MEDIA_FOR_EXISTING_LANGUAGES"
 }
