@@ -655,18 +655,24 @@
         "publication_gate": "WAIT_FULL15_CI_MERGE_OBSERVED_DEPLOY_DB_CACHE_LIVE_QA"
       }
     ],
-    "next_action": "All15prepared7/7; assemble atomicSQL and validators/CI, merge with expectedSHA, observeallmedia200exacthashes, publishDB then cache/liveQA. Do not open batch05.",
+    "next_action": "PR/CI then merge, observed163HTTP200SHA256, atomicSQL105rows, cache/live105pages/global154ESQA.",
     "reservation_pr": 99,
     "reservation_merge_sha": "c6ac9d0b770525ecd02ea6a934cd2a48f94a8325",
-    "prepared_count": 15
+    "prepared_count": 15,
+    "publication_sql": {
+      "file": "scripts/publish-lote04-20261009.sql",
+      "sha256": "a0ac917092b289df3f2ab8cb5c878f1241760fab146b81e2a8a4836244e04363",
+      "executed": false,
+      "compile_readonly": "PASS_ALL15_BLOCKS"
+    }
   },
   "next_candidate_position": 33,
   "run_lease": {
     "owner": "work-lote04-20261009T0059",
     "status": "active",
     "acquired_at": "2026-10-09T00:56:43.882Z",
-    "renewed_at": "2026-10-09T07:26:30.024Z",
-    "expires_at": "2026-10-09T08:56:30.024Z",
+    "renewed_at": "2026-10-09T07:35:48.190Z",
+    "expires_at": "2026-10-09T09:05:48.190Z",
     "base_main_sha": "3c8af0eff7a6e6a5c7bfcaedfedd3590e67d3032",
     "reason": "Single producer after batch03 fully closed; CAS reservation of next15."
   },
