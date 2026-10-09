@@ -4,7 +4,7 @@
   "repository": "manualdecocina/Recetas",
   "preview": "https://preview.manualdecocina.com",
   "updated_date": "2026-10-09",
-  "automation_status": "manual_continuation_final_five_user_requested",
+  "automation_status": "paused_eligible_candidates_complete",
   "automation_id": "6ac6fb673c5c8191b3435ae6074ddc63",
   "requested_schedule": "RRULE:FREQ=HOURLY",
   "requested_model": "gpt-6.1-sol",
@@ -30,12 +30,12 @@
     "id": "lote-05-20261009",
     "branch": "recetas/lote-05-produccion-20261009",
     "target": 5,
-    "status": "in_progress",
-    "stage": "CI/deploy",
+    "status": "closed",
+    "stage": "QA complete",
     "started_at": "2026-10-09T10:25:50.510549+00:00",
     "prepared_recipes": 5,
-    "completed_recipes": 0,
-    "published_recipes": 0,
+    "completed_recipes": 5,
+    "published_recipes": 5,
     "identity_qa": "PASS_5_ES_EXISTING_AND_30_NEW_ROUTES_NO_COLLISIONS",
     "identity_file": "editorial/lote05-identidades-rutas-20261009.json",
     "recipes": [
@@ -43,8 +43,8 @@
         "id": "0253a03f-0678-4508-8e14-c9bacc209ed1",
         "recipe_group_id": "0976e97c-aabc-4ce2-a07d-6429c0108dbe",
         "slug": "receta-crema-de-campinones",
-        "status": "ready_prepublication",
-        "stage": "CI/deploy",
+        "status": "closed",
+        "stage": "QA complete",
         "languages_ready": 7,
         "images_ready": 10,
         "image_originals": 6,
@@ -53,19 +53,20 @@
         "nutrition_evidence_file": "editorial/receta-crema-de-campinones-usda-verificado-20261009.json",
         "image_manifest": "editorial/receta-crema-de-campinones-imagenes.json",
         "steps_sha256": "e8cc7ef3bea4dd2c05f51421bbb9accd8332c5df2cb5d4092d95cfb410c6f9c9",
-        "published_database": false,
-        "sql_executed": false,
+        "published_database": true,
+        "sql_executed": true,
         "package_sha256": "9c309ff8062ca06dc21b64ef758f54c7cd76090e3c47487c5dcb87d205c5e016",
         "image_visual_qa": "PASS",
         "localization_qa": "PASS",
-        "publication_gate": "GREEN_CI_MERGE_OBSERVED_MEDIA_SQL_CACHE_QA_PENDING"
+        "publication_gate": "PASS_CI_DEPLOY_SQL_CACHE_TECHNICAL_AND_DESKTOP_VISUAL_QA",
+        "qa_run": 37925162942
       },
       {
         "id": "64ce5de9-2235-43f2-914b-1c5519776d56",
         "recipe_group_id": "16e07d31-b2fb-47b8-a740-92d66b253ea1",
         "slug": "receta-de-rollos-de-berenjena-con-tomates",
-        "status": "ready_prepublication",
-        "stage": "CI/deploy",
+        "status": "closed",
+        "stage": "QA complete",
         "languages_ready": 7,
         "images_ready": 11,
         "image_originals": 7,
@@ -74,19 +75,20 @@
         "nutrition_evidence_file": "editorial/receta-de-rollos-de-berenjena-con-tomates-usda-verificado-20261009.json",
         "image_manifest": "editorial/receta-de-rollos-de-berenjena-con-tomates-imagenes.json",
         "steps_sha256": "e6d1763874a5dacaa966da711a3ce3015e42680721477b63674d090b9f6a538b",
-        "published_database": false,
-        "sql_executed": false,
+        "published_database": true,
+        "sql_executed": true,
         "package_sha256": "b6c6265826ee926197613c8225b05eeb02243e1d5c33f247c4ba3701164875d3",
         "image_visual_qa": "PASS",
         "localization_qa": "PASS",
-        "publication_gate": "GREEN_CI_MERGE_OBSERVED_MEDIA_SQL_CACHE_QA_PENDING"
+        "publication_gate": "PASS_CI_DEPLOY_SQL_CACHE_TECHNICAL_AND_DESKTOP_VISUAL_QA",
+        "qa_run": 37925162942
       },
       {
         "id": "edbe35d4-ab42-41c5-84db-4e035a5333fe",
         "recipe_group_id": "224e8e13-f4a9-4077-82b7-43b89b8e35bd",
         "slug": "pollo-al-horno-con-hierbas-y-limon",
-        "status": "ready_prepublication",
-        "stage": "CI/deploy",
+        "status": "closed",
+        "stage": "QA complete",
         "languages_ready": 7,
         "images_ready": 11,
         "image_originals": 7,
@@ -95,19 +97,20 @@
         "nutrition_evidence_file": "editorial/pollo-al-horno-con-hierbas-y-limon-usda-verificado-20261009.json",
         "image_manifest": "editorial/pollo-al-horno-con-hierbas-y-limon-imagenes.json",
         "steps_sha256": "299d54f28f6500a7db22b23abfff9cf2bf03297fa19834549f82ccecce5160f4",
-        "published_database": false,
-        "sql_executed": false,
+        "published_database": true,
+        "sql_executed": true,
         "package_sha256": "099e5a77126ef91277362c3b6ddb19bce4c25fb272e789020219defeaf1d9efb",
         "image_visual_qa": "PASS",
         "localization_qa": "PASS",
-        "publication_gate": "GREEN_CI_MERGE_OBSERVED_MEDIA_SQL_CACHE_QA_PENDING"
+        "publication_gate": "PASS_CI_DEPLOY_SQL_CACHE_TECHNICAL_AND_DESKTOP_VISUAL_QA",
+        "qa_run": 37925162942
       },
       {
         "id": "1a975f88-17fd-49b2-a807-0850ad2827ff",
         "recipe_group_id": "8a0876c5-e0e8-4289-a230-c99fa275590b",
         "slug": "receta-de-pollo-frito-sureno",
-        "status": "ready_prepublication",
-        "stage": "CI/deploy",
+        "status": "closed",
+        "stage": "QA complete",
         "languages_ready": 7,
         "images_ready": 12,
         "image_originals": 8,
@@ -116,19 +119,20 @@
         "nutrition_evidence_file": "editorial/receta-de-pollo-frito-sureno-usda-verificado-20261009.json",
         "image_manifest": "editorial/receta-de-pollo-frito-sureno-imagenes.json",
         "steps_sha256": "830980bfa1374cf1e239cc340bab9c53d6f4420e59cf2b751c30acb13aa14ccc",
-        "published_database": false,
-        "sql_executed": false,
+        "published_database": true,
+        "sql_executed": true,
         "package_sha256": "cb4d4756443924631603589c18bb1e8f4df18280c8abb7e1ae5e6a1f0380a5b7",
         "image_visual_qa": "PASS",
         "localization_qa": "PASS",
-        "publication_gate": "GREEN_CI_MERGE_OBSERVED_MEDIA_SQL_CACHE_QA_PENDING"
+        "publication_gate": "PASS_CI_DEPLOY_SQL_CACHE_TECHNICAL_AND_DESKTOP_VISUAL_QA",
+        "qa_run": 37925162942
       },
       {
         "id": "1eda6abc-48cd-42bb-a64d-2c785df6ea4e",
         "recipe_group_id": "de2ec78c-3533-49db-92f0-db85d9884015",
         "slug": "receta-torta-de-zanahoria",
-        "status": "ready_prepublication",
-        "stage": "CI/deploy",
+        "status": "closed",
+        "stage": "QA complete",
         "languages_ready": 7,
         "images_ready": 12,
         "image_originals": 8,
@@ -137,28 +141,313 @@
         "nutrition_evidence_file": "editorial/receta-torta-de-zanahoria-usda-verificado-20261009.json",
         "image_manifest": "editorial/receta-torta-de-zanahoria-imagenes.json",
         "steps_sha256": "7398aea57ed4d405c2f40953d37438a70c16bb8516ddaeca9de71df02f0bffba",
-        "published_database": false,
-        "sql_executed": false,
+        "published_database": true,
+        "sql_executed": true,
         "package_sha256": "a76763a8f15434ba465e306c18d39c41b1cbb8f32b578a7badc3618e7408d115",
         "image_visual_qa": "PASS",
         "localization_qa": "PASS",
-        "publication_gate": "GREEN_CI_MERGE_OBSERVED_MEDIA_SQL_CACHE_QA_PENDING"
+        "publication_gate": "PASS_CI_DEPLOY_SQL_CACHE_TECHNICAL_AND_DESKTOP_VISUAL_QA",
+        "qa_run": 37925162942
       }
     ],
     "sql_file": "scripts/publish-lote05-20261009.sql",
     "plan_file": "editorial/lote-05-plan-20261009.json",
     "originals": 36,
-    "webp": 56
+    "webp": 56,
+    "closed_at": "2026-10-09T11:45:28.623Z",
+    "production_pr": 105,
+    "production_merge_sha": "e632fef55b1fa6f237bc9278e2fbacd6695cad7f",
+    "sql": {
+      "file": "scripts/publish-lote05-20261009.sql",
+      "sha256": "e398dade7374ac0fce199def0ac66e2ea40e917762150a2bea2728fab6a5975d",
+      "github_blob_sha": "767d2dcf4ddf09e9a14adcc4cff3f02a609a9cdb",
+      "executed_once": true,
+      "executed_at": "2026-10-09T11:39:39.023Z",
+      "result": "COMMITTED_AND_POSTQUERY_VERIFIED"
+    },
+    "media_deployment": {
+      "run": 37924745686,
+      "job": 113800877101,
+      "head_sha": "e632fef55b1fa6f237bc9278e2fbacd6695cad7f",
+      "checked_at": "2026-10-09T11:38:41.609235+00:00",
+      "assets": 56,
+      "passed": 56,
+      "errors": [],
+      "artifact": {
+        "id": 11613063998,
+        "node_id": "MDg6QXJ0aWZhY3QxMTYxMzA2Mzk5OA==",
+        "name": "lote05-media-deployment-verification",
+        "size_in_bytes": 2717,
+        "url": "https://api.github.com/repos/manualdecocina/Recetas/actions/artifacts/11613063998",
+        "archive_download_url": "https://api.github.com/repos/manualdecocina/Recetas/actions/artifacts/11613063998/zip",
+        "expired": false,
+        "digest": "sha256:b4d54273739e1a40070a2c0781edc16f4330f9f177bb0b4f29c59bbac06f336e",
+        "created_at": "2026-10-09T11:38:42Z",
+        "updated_at": "2026-10-09T11:38:42Z",
+        "expires_at": "2027-01-07T11:36:10Z",
+        "workflow_run": {
+          "id": 37924745686,
+          "repository_id": 1382499570,
+          "head_repository_id": 1382499570,
+          "head_branch": "main",
+          "head_sha": "e632fef55b1fa6f237bc9278e2fbacd6695cad7f"
+        }
+      }
+    },
+    "database": {
+      "groups": [
+        {
+          "rows": 7,
+          "languages": 7,
+          "published": 7,
+          "recipe_group_id": "0976e97c-aabc-4ce2-a07d-6429c0108dbe"
+        },
+        {
+          "rows": 7,
+          "languages": 7,
+          "published": 7,
+          "recipe_group_id": "16e07d31-b2fb-47b8-a740-92d66b253ea1"
+        },
+        {
+          "rows": 7,
+          "languages": 7,
+          "published": 7,
+          "recipe_group_id": "224e8e13-f4a9-4077-82b7-43b89b8e35bd"
+        },
+        {
+          "rows": 7,
+          "languages": 7,
+          "published": 7,
+          "recipe_group_id": "8a0876c5-e0e8-4289-a230-c99fa275590b"
+        },
+        {
+          "rows": 7,
+          "languages": 7,
+          "published": 7,
+          "recipe_group_id": "de2ec78c-3533-49db-92f0-db85d9884015"
+        }
+      ],
+      "checked_at": "2026-10-09T11:40:03.937865+00:00",
+      "outside_md5": "08fa427ce2b8d1263b970f18255df6a5",
+      "published_es": 159,
+      "es_identities": [
+        {
+          "id": "0253a03f-0678-4508-8e14-c9bacc209ed1",
+          "slug": "receta-crema-de-campinones",
+          "created_at": "2026-09-23T20:50:30.015432+00:00",
+          "source_url": "https://manualdecocina.com/receta-crema-de-campinones/",
+          "public_path": "/receta-crema-de-campinones",
+          "published_at": "2026-09-23T20:50:30.015432+00:00",
+          "recipe_group_id": "0976e97c-aabc-4ce2-a07d-6429c0108dbe"
+        },
+        {
+          "id": "64ce5de9-2235-43f2-914b-1c5519776d56",
+          "slug": "receta-de-rollos-de-berenjena-con-tomates",
+          "created_at": "2026-09-23T20:50:30.10332+00:00",
+          "source_url": "https://manualdecocina.com/receta-de-rollos-de-berenjena-con-tomates/",
+          "public_path": "/receta-de-rollos-de-berenjena-con-tomates",
+          "published_at": "2026-09-23T20:50:30.10332+00:00",
+          "recipe_group_id": "16e07d31-b2fb-47b8-a740-92d66b253ea1"
+        },
+        {
+          "id": "edbe35d4-ab42-41c5-84db-4e035a5333fe",
+          "slug": "pollo-al-horno-con-hierbas-y-limon",
+          "created_at": "2026-09-23T20:50:30.371317+00:00",
+          "source_url": "https://manualdecocina.com/pollo-al-horno-con-hierbas-y-limon/",
+          "public_path": "/pollo-al-horno-con-hierbas-y-limon",
+          "published_at": "2026-09-23T20:50:30.371317+00:00",
+          "recipe_group_id": "224e8e13-f4a9-4077-82b7-43b89b8e35bd"
+        },
+        {
+          "id": "1a975f88-17fd-49b2-a807-0850ad2827ff",
+          "slug": "receta-de-pollo-frito-sureno",
+          "created_at": "2026-09-23T20:50:30.274106+00:00",
+          "source_url": "https://manualdecocina.com/receta-de-pollo-frito-sureno/",
+          "public_path": "/receta-de-pollo-frito-sureno",
+          "published_at": "2026-09-23T20:50:30.274106+00:00",
+          "recipe_group_id": "8a0876c5-e0e8-4289-a230-c99fa275590b"
+        },
+        {
+          "id": "1eda6abc-48cd-42bb-a64d-2c785df6ea4e",
+          "slug": "receta-torta-de-zanahoria",
+          "created_at": "2026-09-23T20:50:30.015432+00:00",
+          "source_url": "https://manualdecocina.com/receta-torta-de-zanahoria/",
+          "public_path": "/receta-torta-de-zanahoria",
+          "published_at": "2026-09-23T20:50:30.015432+00:00",
+          "recipe_group_id": "de2ec78c-3533-49db-92f0-db85d9884015"
+        }
+      ],
+      "outside_count": 1128,
+      "unpublished_es": 50,
+      "ingredient_entries": [
+        {
+          "id": "0253a03f-0678-4508-8e14-c9bacc209ed1",
+          "slug": "receta-crema-de-campinones",
+          "pending_entries": 3,
+          "canonical_matches": 4,
+          "editorial_entries": 7
+        },
+        {
+          "id": "64ce5de9-2235-43f2-914b-1c5519776d56",
+          "slug": "receta-de-rollos-de-berenjena-con-tomates",
+          "pending_entries": 4,
+          "canonical_matches": 3,
+          "editorial_entries": 7
+        },
+        {
+          "id": "edbe35d4-ab42-41c5-84db-4e035a5333fe",
+          "slug": "pollo-al-horno-con-hierbas-y-limon",
+          "pending_entries": 4,
+          "canonical_matches": 4,
+          "editorial_entries": 8
+        },
+        {
+          "id": "1a975f88-17fd-49b2-a807-0850ad2827ff",
+          "slug": "receta-de-pollo-frito-sureno",
+          "pending_entries": 4,
+          "canonical_matches": 3,
+          "editorial_entries": 7
+        },
+        {
+          "id": "1eda6abc-48cd-42bb-a64d-2c785df6ea4e",
+          "slug": "receta-torta-de-zanahoria",
+          "pending_entries": 6,
+          "canonical_matches": 2,
+          "editorial_entries": 8
+        }
+      ]
+    },
+    "qa": {
+      "pr": 106,
+      "head_sha": "4fd863de0277ab3a691eb69ce965d045f61dafba",
+      "run": 37925162942,
+      "job": 113802226591,
+      "artifact": {
+        "id": 11613502340,
+        "node_id": "MDg6QXJ0aWZhY3QxMTYxMzUwMjM0MA==",
+        "name": "lote05-site-preview-audit",
+        "size_in_bytes": 232042,
+        "url": "https://api.github.com/repos/manualdecocina/Recetas/actions/artifacts/11613502340",
+        "archive_download_url": "https://api.github.com/repos/manualdecocina/Recetas/actions/artifacts/11613502340/zip",
+        "expired": false,
+        "digest": "sha256:a8f6a906c586c02297e5bfe8077fe2eda439847af8b48f2e74ce764414dfe7f5",
+        "created_at": "2026-10-09T11:42:34Z",
+        "updated_at": "2026-10-09T11:42:34Z",
+        "expires_at": "2027-01-07T11:40:11Z",
+        "workflow_run": {
+          "id": 37925162942,
+          "repository_id": 1382499570,
+          "head_repository_id": 1382499570,
+          "head_branch": "recetas/lote-05-cierre-20261009",
+          "head_sha": "4fd863de0277ab3a691eb69ce965d045f61dafba"
+        }
+      },
+      "batch_pages": {
+        "checked_at": "2026-10-09T11:41:29.481536+00:00",
+        "groups": 5,
+        "pages": 35,
+        "passed": 35,
+        "errors": []
+      },
+      "global": {
+        "summary": {
+          "sitemap_urls": 1286,
+          "status": {
+            "200": 1286,
+            "403": 0,
+            "404": 0,
+            "3xx": 0,
+            "5xx": 0,
+            "other": 0
+          },
+          "internal_links_outside_sitemap": 7,
+          "internal_link_status": {
+            "200": 7,
+            "403": 0,
+            "404": 0,
+            "3xx": 0,
+            "5xx": 0,
+            "other": 0
+          },
+          "images": 1696,
+          "legacy_redirects": 147,
+          "legacy_redirect_status": {
+            "200": 77,
+            "307": 61,
+            "308": 9
+          },
+          "recipe_pages": 1113,
+          "recipe_schema_valid": 1113,
+          "es_recipes": 159,
+          "breadcrumb_pages": 1207,
+          "breadcrumb_valid": 1207,
+          "hreflang_by_language": {
+            "es": {
+              "pages": 206,
+              "with_hreflang": 180,
+              "with_x_default": 21,
+              "errors": 0
+            },
+            "de": {
+              "pages": 180,
+              "with_hreflang": 180,
+              "with_x_default": 21,
+              "errors": 0
+            },
+            "en": {
+              "pages": 180,
+              "with_hreflang": 180,
+              "with_x_default": 21,
+              "errors": 0
+            },
+            "fr": {
+              "pages": 180,
+              "with_hreflang": 180,
+              "with_x_default": 21,
+              "errors": 0
+            },
+            "it": {
+              "pages": 180,
+              "with_hreflang": 180,
+              "with_x_default": 21,
+              "errors": 0
+            },
+            "ja": {
+              "pages": 180,
+              "with_hreflang": 180,
+              "with_x_default": 21,
+              "errors": 0
+            },
+            "pt-BR": {
+              "pages": 180,
+              "with_hreflang": 180,
+              "with_x_default": 21,
+              "errors": 0
+            }
+          },
+          "orphan_pages": 0,
+          "robots_txt_blocked": true,
+          "pages_noindex_nofollow": 1286,
+          "not_found_probe": 404,
+          "errors": 0,
+          "errors_by_kind": {}
+        },
+        "errors": []
+      }
+    },
+    "visual_qa": "PASS_DESKTOP",
+    "final_qa_file": "editorial/lote05-final-qa-20261009.json"
   },
-  "next_candidate_position": 48,
+  "next_candidate_position": null,
   "run_lease": {
     "owner": "manual-final-five-20261009",
-    "status": "active",
+    "status": "released",
     "acquired_at": "2026-10-09T10:25:50.510549+00:00",
     "renewed_at": "2026-10-09T11:04:21.693585+00:00",
     "expires_at": "2026-10-09T13:04:21.693585+00:00",
     "base_main_sha": "fdb264837d01b88c4e2eaf879a06e9136a071478",
-    "reason": "User authorized exactly five final candidates; automation paused; single manual producer."
+    "reason": "Authorized final five published and technical plus desktop visual QA passed.",
+    "released_at": "2026-10-09T11:45:28.623Z"
   },
   "blockers": [],
   "debt": [
@@ -193,6 +482,17 @@
       "evidence_file": "editorial/lote04-ingredient-resolution-20261009.json",
       "publication_blocking": false,
       "reason": "All152entries retained;118pending canonical resolution after eligible recipes. No aliases/destinations invented."
+    },
+    {
+      "batch": "lote-05-20261009",
+      "kind": "ingredient_normalization",
+      "stage": "final_pre_migration_technical_closure",
+      "editorial_entries": 37,
+      "canonical_matches": 16,
+      "pending_entries": 21,
+      "evidence_file": "editorial/lote05-ingredient-resolution-20261009.json",
+      "publication_blocking": false,
+      "reason": "All37entries retained by existing trigger;21pending canonical resolution. No aliases or destinations invented."
     }
   ],
   "stop_condition": "All eligible pending recipes published and QA passed, held entities accounted for, pre-migration technical gates closed; production migration still not executed",
@@ -235,6 +535,16 @@
       "images": 1304,
       "errors": 0,
       "robots_blocked": true
+    },
+    "lote05_global_qa": {
+      "run_id": 37925162942,
+      "artifact_id": 11613502340,
+      "pages": 1286,
+      "recipe_pages": 1113,
+      "es_recipes": 159,
+      "images": 1696,
+      "errors": 0,
+      "robots_blocked": true
     }
   },
   "schedule_verified": true,
@@ -248,14 +558,15 @@
     }
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
-  "progress_branch": "recetas/lote-05-produccion-20261009",
-  "last_checkpoint_at": "2026-10-09T08:11:24.999Z",
+  "progress_branch": "recetas/lote-05-cierre-20261009",
+  "last_checkpoint_at": "2026-10-09T11:45:28.623Z",
   "handoff": {
-    "next_action": "Complete images, six localizations, guarded SQL, green CI, observed deployed hashes, atomic35row publication, cache and liveQA. Caprese remains held.",
-    "new_published": 0
+    "next_action": "Five requested candidates published and QA passed. Remaining50entities held. Keep automation paused; production migration remains unexecuted. Ingredient normalization debt retained for the separate final technical closure.",
+    "new_published": 5,
+    "eligible_remaining": 0
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z",
-  "updated_at": "2026-10-09T11:21:39.865052+00:00",
+  "updated_at": "2026-10-09T11:45:28.623Z",
   "completed_batches": [
     {
       "id": "lote-02-20261008",
@@ -270,24 +581,31 @@
       "language_rows": 105,
       "closed_at": "2026-10-09T00:46:05.137Z",
       "qa": "editorial/lote03-final-qa-20261009.json"
+    },
+    {
+      "id": "lote-05-20261009",
+      "recipes": 5,
+      "language_rows": 35,
+      "closed_at": "2026-10-09T11:45:28.623Z",
+      "qa": "editorial/lote05-final-qa-20261009.json"
     }
   ],
   "observed_catalog": {
-    "published_groups": 154,
+    "published_groups": 159,
     "published_rows_by_language": {
-      "es": 154,
-      "de": 154,
-      "en": 154,
-      "fr": 154,
-      "it": 154,
-      "ja": 154,
-      "pt": 154
+      "es": 159,
+      "de": 159,
+      "en": 159,
+      "fr": 159,
+      "it": 159,
+      "ja": 159,
+      "pt": 159
     },
-    "unpublished_es_groups": 55,
-    "checked_at": "2026-10-09T08:08:55.405761+00:00",
-    "published_es": 154,
-    "unpublished_es": 55,
-    "verified_at": "2026-10-09T08:08:55.405761+00:00"
+    "unpublished_es_groups": 50,
+    "checked_at": "2026-10-09T11:40:03.937865+00:00",
+    "published_es": 159,
+    "unpublished_es": 50,
+    "verified_at": "2026-10-09T11:40:03.937865+00:00"
   },
   "previous_batch": {
     "id": "lote-04-20261009",
@@ -1204,8 +1522,8 @@
     }
   ],
   "automation_pause": {
-    "verified_at": "2026-10-09T08:11:24.999Z",
-    "reason": "Site-served Bot Verification/reCAPTCHA remains after one reload. Live visual QA missing3EScovers,6localized layouts,selector and home. All105batchpages and1251globalURLs technicalQA PASS; no code/DB/media debt.",
+    "verified_at": "2026-10-09T11:45:28.623Z",
+    "reason": "Pause retained after the authorized manual continuation; all five eligible candidates are complete, remaining50entities held. Browser visual QA now passed.",
     "id": "6ac6fb673c5c8191b3435ae6074ddc63"
   },
   "manual_request": {
@@ -1214,6 +1532,8 @@
     "user_choice": "Solo las cinco pendientes",
     "excluded": "ensalada-caprese",
     "new_batch": "lote-05-20261009",
-    "published_new": 0
+    "published_new": 5,
+    "completed_at": "2026-10-09T11:45:28.623Z",
+    "status": "completed"
   }
 }
