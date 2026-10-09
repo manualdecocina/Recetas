@@ -31,8 +31,8 @@
     "branch": "recetas/lote-04-20261009",
     "target": 15,
     "status": "in_progress",
-    "stage": "localización",
-    "current_recipe": "receta-de-tarta-de-queso-cheesecake",
+    "stage": "identidad",
+    "current_recipe": "ensalada-de-frijoles-con-salsa-romesco",
     "started_at": "2026-10-09T00:56:43.882Z",
     "completed_recipes": 0,
     "prepared_recipes": 10,
@@ -459,8 +459,8 @@
         "editorial_status": "published",
         "position": 43,
         "eligibility": "validate_url_master_before_writing",
-        "status": "in_progress",
-        "stage": "localización",
+        "status": "prepared",
+        "stage": "PR/CI",
         "identity_qa": "PASS",
         "classification": "ELIGIBLE_EXISTING_CULINARY_CANDIDATE",
         "expected_es_row_md5": "6629dbba0c15d30a1ea0fedf9ab5d62e",
@@ -476,12 +476,17 @@
         "distinct_images_pending": 0,
         "image_originals": 8,
         "next_image": null,
-        "next_action": "Finish pending localizations then guardedSQL; preserve10prepared and all8originals11WebP.",
+        "next_action": "Preserve complete source/media/SQL; publish with all15 only after CI/merge/observed deploy hashes.",
         "cover_variant_visual_qa": "PASS_ALL4_CROPS_PRIMARY_SERVING_COMPLETE_SECONDARY_DISH_CROPPED",
         "image_visual_qa": "PASS_ALL8_ORIGINALS",
         "localizations_pending": [],
-        "localization_qa": "PASS_EXISTING_LANGUAGE_NUMBERS_STRUCTURE_MEDIA",
-        "localization_qa_file": "editorial/receta-de-tarta-de-queso-cheesecake-localization-qa-20261009.json"
+        "localization_qa": "PASS7_SAME_NUMBERS_STRUCTURE_MEDIA",
+        "localization_qa_file": "editorial/receta-de-tarta-de-queso-cheesecake-localization-qa-20261009.json",
+        "prepared": true,
+        "package_sha256": "69a118e1fa5b3d3b19be9fd60057053a26da394c3eaa3fc99613d388e742e2c0",
+        "sql_file": "scripts/publish-receta-de-tarta-de-queso-cheesecake-20261009.sql",
+        "sql_sha256": "a2baf8eaf210a9a03226f05a9871b4cf956352df1f9095bbc9b52355fa80861f",
+        "qa_file": "editorial/receta-de-tarta-de-queso-cheesecake-qa-20261009.json"
       },
       {
         "id": "418fb144-a8bd-4643-9d8e-ab7b0d742d55",
@@ -556,17 +561,18 @@
         "source_not_reused": true
       }
     ],
-    "next_action": "Validate beef lasagna identity and distinctness, originalES USDA before imagefreeze; preserve9ready packages.",
+    "next_action": "Continue bean salad with romesco identity→ES→images→localization; preserve eleven prepared, no DB publication until full15 gate.",
     "reservation_pr": 99,
-    "reservation_merge_sha": "c6ac9d0b770525ecd02ea6a934cd2a48f94a8325"
+    "reservation_merge_sha": "c6ac9d0b770525ecd02ea6a934cd2a48f94a8325",
+    "prepared_count": 11
   },
   "next_candidate_position": 33,
   "run_lease": {
     "owner": "work-lote04-20261009T0059",
     "status": "active",
     "acquired_at": "2026-10-09T00:56:43.882Z",
-    "renewed_at": "2026-10-09T05:55:09.225Z",
-    "expires_at": "2026-10-09T07:25:09.225Z",
+    "renewed_at": "2026-10-09T05:56:15.265Z",
+    "expires_at": "2026-10-09T07:26:15.265Z",
     "base_main_sha": "3c8af0eff7a6e6a5c7bfcaedfedd3590e67d3032",
     "reason": "Single producer after batch03 fully closed; CAS reservation of next15."
   },
