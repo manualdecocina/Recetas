@@ -137,7 +137,7 @@
         "classification": "ELIGIBLE_EXISTING_CULINARY_CANDIDATE",
         "expected_es_row_md5": "111a4ca41da96098423194a566aadf7b",
         "languages_ready": 0,
-        "images_ready": 0,
+        "images_ready": 6,
         "source_not_reused": true,
         "es_content_file": "editorial/receta-de-garbanzos-com-chorizo-20261009.json",
         "image_manifest": "editorial/receta-de-garbanzos-com-chorizo-imagenes.json",
@@ -145,9 +145,11 @@
         "steps_sha256": "045680f7380dfd7d95d48f500771c4041adead1d8fe6e64ccb9b19192a09728f",
         "es_editorial_qa": "PASS_10_VERIFIED_USDA_RECORDS_FRESH_RAW_CHORIZO_71C",
         "original_images_required": 7,
-        "distinct_images_pending": 7,
-        "next_image": 0,
-        "next_action": "Generate frozen cover+6phaseoriginals with ImageGen; visual QA then preserve originals and10WebP."
+        "distinct_images_pending": 4,
+        "next_image": "paso-03.webp",
+        "next_action": "Generate frozen cover+6phaseoriginals with ImageGen; visual QA then preserve originals and10WebP.",
+        "image_originals": 3,
+        "cover_variant_visual_qa": "PASS_ALL4_CROPS_PRIMARY_STEW_VISIBLE"
       },
       {
         "id": "2d31cabb-b350-4c6f-a444-eec6b03c28eb",
@@ -375,8 +377,8 @@
     "owner": "work-lote04-20261009T0059",
     "status": "active",
     "acquired_at": "2026-10-09T00:56:43.882Z",
-    "renewed_at": "2026-10-09T01:49:14.611Z",
-    "expires_at": "2026-10-09T03:19:14.611Z",
+    "renewed_at": "2026-10-09T01:52:07.761Z",
+    "expires_at": "2026-10-09T03:22:07.761Z",
     "base_main_sha": "3c8af0eff7a6e6a5c7bfcaedfedd3590e67d3032",
     "reason": "Single producer after batch03 fully closed; CAS reservation of next15."
   },
@@ -458,18 +460,18 @@
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
   "progress_branch": "recetas/lote-04-20261009",
-  "last_checkpoint_at": "2026-10-09T01:41:24.375Z",
+  "last_checkpoint_at": "2026-10-09T01:52:07.761Z",
   "handoff": {
     "branch": "recetas/lote-04-20261009",
-    "stage": "identidad",
+    "stage": "imágenes",
     "current_recipe": "receta-de-garbanzos-com-chorizo",
     "prepared": 2,
     "published": 0,
-    "next_action": "Continue preserved recipe-garbanzos-com-chorizo identity then original ES; preserve2prepared7/7. No publication until all15 gates.",
+    "next_action": "Generate frozen cover+6phaseoriginals with ImageGen; visual QA then preserve originals and10WebP.",
     "previous_batch_closed": true
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z",
-  "updated_at": "2026-10-09T01:49:14.611Z",
+  "updated_at": "2026-10-09T01:52:07.761Z",
   "completed_batches": [
     {
       "id": "lote-02-20261008",
