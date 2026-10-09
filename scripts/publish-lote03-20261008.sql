@@ -12,7 +12,7 @@ BEGIN
  SELECT count(*) INTO n FROM public.recipes WHERE recipe_group_id=ANY(gs);
  IF n NOT IN (15,105) THEN RAISE EXCEPTION 'Batch03 partial/divergent state: % rows',n;END IF;
  IF (SELECT count(*) FROM public.recipes WHERE language='es' AND published)<>
-    CASE WHEN n=15 THEN 124 ELSE 139 END THEN
+    (CASE WHEN n=15 THEN 124 ELSE 139 END) THEN
   RAISE EXCEPTION 'Catalog changed after prepublication baseline; reconcile';END IF;
  PERFORM set_config('manualdecocina.lote03_outside_hash',
   (SELECT md5(coalesce(string_agg(md5(to_jsonb(r)::text),'' ORDER BY r.id),'')) FROM public.recipes r WHERE NOT(r.recipe_group_id=ANY(gs))),true);
