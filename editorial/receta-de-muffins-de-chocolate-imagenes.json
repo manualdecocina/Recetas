@@ -48,9 +48,97 @@
       "prompt": "Use case: photorealistic-natural. Asset type: culinary recipe photograph, landscape 4:3. Clean pale kitchen, soft natural daylight, matte white bowls, gray standard metal twelve-well muffin pan with plain brown paper cases, dark cocoa batter and small dark chocolate pieces. Real food texture. No text, labels, logos, watermarks, collage, frosting, fruit, nuts or unrelated ingredients. Just baked dark cocoa muffins in gray metal twelve-well pan lined with12 brown paper cases on a heat-safe countertop. Domed firm tops with small melted chocolate spots. One hand uses clean wooden toothpick at center of a muffin away from chocolate; toothpick shows a few fine cooked crumbs, no runny batter. Dry oven mitt rests beside pan. No flames or open oven."
     }
   ],
-  "images": [],
-  "originals": [],
-  "state": "ES_FROZEN_GENERATION_PENDING",
+  "images": [
+    {
+      "asset": "portada.webp",
+      "path": "public/recetas/receta-de-muffins-de-chocolate/portada.webp",
+      "sha256": "6a239128fdf779ff25f2e19c1e23576210417300e36e548362cb9ea0992addbe",
+      "git_blob_sha": "9a6aab4b96787de5f9d8307225e939026b7d853d",
+      "bytes": 171190,
+      "width": 1280,
+      "height": 960,
+      "public_path": "/recetas/receta-de-muffins-de-chocolate/portada.webp",
+      "original": "portada.png",
+      "visual_qa": "PASS"
+    },
+    {
+      "asset": "portada-1x1.webp",
+      "path": "public/recetas/receta-de-muffins-de-chocolate/portada-1x1.webp",
+      "sha256": "f02dd2f454f73b8cbbce591596fe3a6898bcb3f4663cf78096d5c4cbc9938d6d",
+      "git_blob_sha": "2b033da6c73b3614f5f427174b407ab36f8fba9d",
+      "bytes": 158562,
+      "width": 1024,
+      "height": 1024,
+      "public_path": "/recetas/receta-de-muffins-de-chocolate/portada-1x1.webp",
+      "original": "portada.png",
+      "visual_qa": "PASS"
+    },
+    {
+      "asset": "portada-4x3.webp",
+      "path": "public/recetas/receta-de-muffins-de-chocolate/portada-4x3.webp",
+      "sha256": "6a239128fdf779ff25f2e19c1e23576210417300e36e548362cb9ea0992addbe",
+      "git_blob_sha": "9a6aab4b96787de5f9d8307225e939026b7d853d",
+      "bytes": 171190,
+      "width": 1280,
+      "height": 960,
+      "public_path": "/recetas/receta-de-muffins-de-chocolate/portada-4x3.webp",
+      "original": "portada.png",
+      "visual_qa": "PASS"
+    },
+    {
+      "asset": "portada-16x9.webp",
+      "path": "public/recetas/receta-de-muffins-de-chocolate/portada-16x9.webp",
+      "sha256": "9074634c839172b5cf61950d9a430cbba4a5f74dc9628f5c83cd60b8f3d8a907",
+      "git_blob_sha": "17b98674ef69c85747751e8b45d21d13f3c75df2",
+      "bytes": 166128,
+      "width": 1280,
+      "height": 720,
+      "public_path": "/recetas/receta-de-muffins-de-chocolate/portada-16x9.webp",
+      "original": "portada.png",
+      "visual_qa": "PASS"
+    },
+    {
+      "asset": "paso-01.webp",
+      "path": "public/recetas/receta-de-muffins-de-chocolate/paso-01.webp",
+      "sha256": "f6879c87fb7168692daf3e85fc785ba6002bda825395abf28d4ab9b1b00fd0d3",
+      "git_blob_sha": "5481bcc5ed3d4c0c986de712288a661323b4c4da",
+      "bytes": 169432,
+      "width": 1280,
+      "height": 960,
+      "public_path": "/recetas/receta-de-muffins-de-chocolate/paso-01.webp",
+      "original": "paso-01.png",
+      "visual_qa": "PASS"
+    }
+  ],
+  "originals": [
+    {
+      "asset": "portada.png",
+      "path": "public/recetas/receta-de-muffins-de-chocolate/originals/portada.png",
+      "sha256": "7f7e7b2906e2c99b13e14f46869d6e63b8a19d69a88beb54919e12649383e72f",
+      "git_blob_sha": "64b247fa3d7604f9bfd81d845a3133fb0464789c",
+      "bytes": 2416191,
+      "width": 1448,
+      "height": 1086,
+      "phase": 8,
+      "visual_qa": "PASS",
+      "source": "built-in ImageGen",
+      "review": "PASS: cooked cocoa crumb with chocolate pockets, no frosting, original and all4 cover crops inspected. Square focuses complete central cut muffin and rear muffin; secondary edge muffins are cropped."
+    },
+    {
+      "asset": "paso-01.png",
+      "path": "public/recetas/receta-de-muffins-de-chocolate/originals/paso-01.png",
+      "sha256": "6a2d285c659ddbc615680f2f54b5aadf75338e3bc0c0f60d2ef1d56b4ae57468",
+      "git_blob_sha": "316c9cf6ba517ec289b271ac21e825141e93fd37",
+      "bytes": 2574631,
+      "width": 1448,
+      "height": 1086,
+      "phase": 1,
+      "visual_qa": "PASS",
+      "source": "built-in ImageGen",
+      "review": "PASS: exactly12 lined empty wells and10 separate ingredient types; chocolate split into larger and smaller bowls, scale blank."
+    }
+  ],
+  "state": "IMAGES_PARTIAL",
   "last_step_reuses_cover": true,
   "original_images_required": 8,
   "published_webp_required": 11
