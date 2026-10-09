@@ -201,3 +201,8 @@ PR95 integrado67eb6034dab046e8ae77f0810e5754b292593365, CI verde con301archivos 
 
 
 Última corrección en PR96: se contrastaron campos con information_schema y triggers reales. public.recipes no tiene category_slug; queda como metadato editorial validado y se almacena category exacta. EXPLAIN de UPDATE e INSERT pasa sin ejecutarlos. SQL final1930016bytes/SHA25648cdf6637ca77bd6962848b05e429851c85d3bb353f78b9d167b57cca526ae44, sustituyehashes anteriores. No se ha publicado ninguna receta del lote.
+
+
+## 2026-10-09T00:35:51.719Z — Publicación DB confirmada; caché/QA pendiente
+
+Corrección PR96 integrada52dafa72d8b2aefb054dc58521a9cdac427e23c5 con CI verde y artifact11586899171. Observación posterior run37865324726/artifact11588121193:174mediosHTTP200+SHA exacto,0errores. SQL final48cdf663... ejecutado transaccionalmente sin error. Consulta fresca confirma15grupos7/7=105publicadas,139ESpublicadas y70ESpendientes. Identidad/fechasESpreservadas;938filas ajenas inalteradas (MD577913769e2eaf154e55bc8b36673bfc3). Estado:15publicadas en DB pero0cerradas hasta caché+QA105páginas+auditoría global139ES+QAvisual. No reejecutarSQL ni regenerar imágenes. Siguiente: workflow PR de verificación posterior autorizado, secreto solo en Actions.rstripCRLF; inspeccionar y corregir gate final.
