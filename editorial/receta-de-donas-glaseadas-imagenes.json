@@ -342,5 +342,19 @@
   "last_step_reuses_cover": true,
   "original_images_required": 10,
   "published_webp_required": 13,
-  "cover_variant_visual_qa": "PASS_ALL4_CROPS_PRIMARY_FRONT_RING_WHOLE_CUT_CRUMB_VISIBLE_SECONDARY_RIGHT_EDGE_CROP_SQUARE"
+  "cover_variant_visual_qa": "PASS_ALL4_CROPS_PRIMARY_FRONT_RING_WHOLE_CUT_CRUMB_VISIBLE_SECONDARY_RIGHT_EDGE_CROP_SQUARE",
+  "targeted_edits": [
+    {
+      "phase": 3,
+      "reason": "Remove premature shaped rings and tray from kneading background only",
+      "prompt": "Change only the upper-left background rings and tray to clean countertop; keep kneading and butter.",
+      "visual_qa": "PASS_AFTER_EDIT"
+    },
+    {
+      "phase": 7,
+      "reason": "Oil originally appeared above one third pot height",
+      "prompt": "Increase upper empty pot wall; keep oil and exactly two rings low so oil visibly below one third internal height.",
+      "visual_qa": "PASS_AFTER_EDIT"
+    }
+  ]
 }
