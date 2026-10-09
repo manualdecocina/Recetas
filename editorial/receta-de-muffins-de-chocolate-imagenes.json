@@ -156,6 +156,30 @@
       "public_path": "/recetas/receta-de-muffins-de-chocolate/paso-05.webp",
       "original": "paso-05.png",
       "visual_qa": "PASS"
+    },
+    {
+      "asset": "paso-06.webp",
+      "path": "public/recetas/receta-de-muffins-de-chocolate/paso-06.webp",
+      "sha256": "389eaf3a184144c2c46db3fbe47c515b80947ff37b6cf9bbcd28322f6a21fe66",
+      "git_blob_sha": "16d5e205a929568a4947af35090e9dd4eafa8156",
+      "bytes": 288580,
+      "width": 1280,
+      "height": 960,
+      "public_path": "/recetas/receta-de-muffins-de-chocolate/paso-06.webp",
+      "original": "paso-06.png",
+      "visual_qa": "PASS"
+    },
+    {
+      "asset": "paso-07.webp",
+      "path": "public/recetas/receta-de-muffins-de-chocolate/paso-07.webp",
+      "sha256": "a08bf2ee6c8d86332587c313b51e9c3463174cb252bce3ac90b18f80c2f00268",
+      "git_blob_sha": "1f70722581c3729312871fdb841c59b9bf0fc7c9",
+      "bytes": 181198,
+      "width": 1280,
+      "height": 960,
+      "public_path": "/recetas/receta-de-muffins-de-chocolate/paso-07.webp",
+      "original": "paso-07.png",
+      "visual_qa": "PASS"
     }
   ],
   "originals": [
@@ -232,9 +256,33 @@
       "phase": 5,
       "visual_qa": "PASS",
       "source": "built-in ImageGen"
+    },
+    {
+      "asset": "paso-06.png",
+      "path": "public/recetas/receta-de-muffins-de-chocolate/originals/paso-06.png",
+      "sha256": "b667caf72c7fbcfc2f8cebd5b6a777d9d4585c0baf788da16def8ebfe7dfef8a",
+      "git_blob_sha": "3ab8f837c379ac674e9c7b261ff585db0d8e0fc6",
+      "bytes": 3142021,
+      "width": 1448,
+      "height": 1086,
+      "phase": 6,
+      "visual_qa": "PASS",
+      "source": "built-in ImageGen"
+    },
+    {
+      "asset": "paso-07.png",
+      "path": "public/recetas/receta-de-muffins-de-chocolate/originals/paso-07.png",
+      "sha256": "58805a1d8af36a059ae909996116afc3d1155ac786e677cf5df062e11a631cf9",
+      "git_blob_sha": "5382bbf97a920ab9bf84da60bb1f1685172a8afb",
+      "bytes": 2580408,
+      "width": 1448,
+      "height": 1086,
+      "phase": 7,
+      "visual_qa": "PASS",
+      "source": "built-in ImageGen"
     }
   ],
-  "state": "IMAGES_PARTIAL",
+  "state": "PASS_ALL8_ORIGINALS_AND11_WEBP",
   "last_step_reuses_cover": true,
   "original_images_required": 8,
   "published_webp_required": 11,
