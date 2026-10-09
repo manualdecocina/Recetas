@@ -31,7 +31,7 @@
     "branch": "recetas/lote-04-20261009",
     "target": 15,
     "status": "in_progress",
-    "stage": "identidad",
+    "stage": "imágenes",
     "current_recipe": "galletas-de-avena-y-chocolate",
     "started_at": "2026-10-09T00:56:43.882Z",
     "completed_recipes": 0,
@@ -213,14 +213,23 @@
         "editorial_status": "published",
         "position": 37,
         "eligibility": "validate_url_master_before_writing",
-        "status": "reserved",
-        "stage": "identidad",
+        "status": "in_progress",
+        "stage": "imágenes",
         "identity_qa": "PASS",
         "classification": "ELIGIBLE_EXISTING_CULINARY_CANDIDATE",
         "expected_es_row_md5": "2ae17c636c0c35acb7db37d8c79ccba1",
         "languages_ready": 0,
         "images_ready": 0,
-        "source_not_reused": true
+        "source_not_reused": true,
+        "es_content_file": "editorial/galletas-de-avena-y-chocolate-20261009.json",
+        "image_manifest": "editorial/galletas-de-avena-y-chocolate-imagenes.json",
+        "nutrition_evidence_file": "editorial/galletas-de-avena-y-chocolate-usda-verificado-20261009.json",
+        "steps_sha256": "21dda2498f731939b1590b4741fcc30271cacfecb1343be3b595961756ccfcfc",
+        "es_editorial_qa": "PASS_10_VERIFIED_USDA_RECORDS_PROPOSED20_COOKIES_TIMELINE118MIN",
+        "original_images_required": 9,
+        "distinct_images_pending": 9,
+        "next_image": "portada.webp",
+        "next_action": "Generate9originals from frozen phases, inspect each and4covercrops; then localize6+guardedSQL."
       },
       {
         "id": "4787f207-a430-4c20-a112-4c665092de81",
@@ -403,7 +412,7 @@
         "source_not_reused": true
       }
     ],
-    "next_action": "Prepare originalES galletas-de-avena-y-chocolate, verifyUSDA, freeze steps+manifest before images; preserve four prepared7/7.",
+    "next_action": "Generate9originals from frozen phases, inspect each and4covercrops; then localize6+guardedSQL.",
     "reservation_pr": 99,
     "reservation_merge_sha": "c6ac9d0b770525ecd02ea6a934cd2a48f94a8325"
   },
@@ -412,8 +421,8 @@
     "owner": "work-lote04-20261009T0059",
     "status": "active",
     "acquired_at": "2026-10-09T00:56:43.882Z",
-    "renewed_at": "2026-10-09T02:25:20.069Z",
-    "expires_at": "2026-10-09T03:55:20.072Z",
+    "renewed_at": "2026-10-09T02:29:03.795Z",
+    "expires_at": "2026-10-09T03:59:03.795Z",
     "base_main_sha": "3c8af0eff7a6e6a5c7bfcaedfedd3590e67d3032",
     "reason": "Single producer after batch03 fully closed; CAS reservation of next15."
   },
@@ -506,7 +515,7 @@
     "previous_batch_closed": true
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z",
-  "updated_at": "2026-10-09T02:25:20.069Z",
+  "updated_at": "2026-10-09T02:29:03.795Z",
   "completed_batches": [
     {
       "id": "lote-02-20261008",
