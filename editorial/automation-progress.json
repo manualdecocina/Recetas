@@ -4,7 +4,7 @@
   "repository": "manualdecocina/Recetas",
   "preview": "https://preview.manualdecocina.com",
   "updated_date": "2026-10-09",
-  "automation_status": "enabled_user_requested_immediate_start",
+  "automation_status": "paused_site_human_verification_blocks_final_visual_gate",
   "automation_id": "6ac6fb673c5c8191b3435ae6074ddc63",
   "requested_schedule": "RRULE:FREQ=HOURLY",
   "requested_model": "gpt-6.1-sol",
@@ -30,7 +30,7 @@
     "id": "lote-04-20261009",
     "branch": "recetas/lote-04-20261009",
     "target": 15,
-    "status": "in_progress",
+    "status": "published_pending_visual_qa",
     "stage": "cache/QA",
     "current_recipe": null,
     "started_at": "2026-10-09T00:56:43.882Z",
@@ -64,7 +64,7 @@
         "es_editorial_qa": "PASS_10_VERIFIED_USDA_RECORDS_AND_ORIGINAL_COOKABLE_STEPS",
         "original_images_required": 8,
         "distinct_images_pending": 0,
-        "next_action": "Preserve prepared7/7; publish only inside whole15batch after gates.",
+        "next_action": "Preserve frozen package and media; finish lote04 livevisualgate without republishing SQL.",
         "image_originals": 8,
         "cover_variant_visual_qa": "PASS_ALL4_CROPS_PRIMARY_FOOD_VISIBLE",
         "next_image": null,
@@ -79,7 +79,8 @@
         "qa_file": "editorial/receta-de-muffins-de-chocolate-qa-20261009.json",
         "editorial_qa": "PASS_PREPARED_NOT_PUBLISHED",
         "package_sha256": "b8938e27b160a98111b832bf5e50f86e5df42efee7afdc19a92c0bb1da373e48",
-        "publication_gate": "WAIT_ALL15_CI_MERGE_OBSERVED_DEPLOY_DB_CACHE_LIVE_QA"
+        "publication_gate": "PUBLISHED_TECHNICAL_QA_PASS_LIVE_VISUAL_PENDING",
+        "page_audit": "PASS_7_OF7"
       },
       {
         "id": "c9b69094-9cd5-4b3c-b33b-a988f326b009",
@@ -106,7 +107,7 @@
         "original_images_required": 6,
         "distinct_images_pending": 0,
         "image_originals": 6,
-        "next_action": "Preserve7/7,6originals9WebP; publish with whole15batch only.",
+        "next_action": "Preserve frozen package and media; finish lote04 livevisualgate without republishing SQL.",
         "next_image": null,
         "cover_variant_visual_qa": "PASS_PRIMARY_FRONT_BOWL_COMPLETE_ALL4_REAR_SECONDARY_PARTLY_CROPPED",
         "image_visual_qa": "PASS_ALL6_ORIGINALS",
@@ -120,7 +121,8 @@
         "qa_file": "editorial/acai-bowl-qa-20261009.json",
         "editorial_qa": "PASS_PREPARED_NOT_PUBLISHED",
         "package_sha256": "2995d108e461214b627ba548ba5fc7723115f5994e0947b9df56351c6154b218",
-        "publication_gate": "WAIT_FULL15_CI_MERGE_OBSERVED_DEPLOY_DB_CACHE_LIVE_QA"
+        "publication_gate": "PUBLISHED_TECHNICAL_QA_PASS_LIVE_VISUAL_PENDING",
+        "page_audit": "PASS_7_OF7"
       },
       {
         "id": "ac78d4c8-b04c-4ccb-96c4-5b9d36ee8cd2",
@@ -147,7 +149,7 @@
         "original_images_required": 7,
         "distinct_images_pending": 0,
         "next_image": null,
-        "next_action": "Preserve7/7,7originals10WebP; publish only with full15batch after gates.",
+        "next_action": "Preserve frozen package and media; finish lote04 livevisualgate without republishing SQL.",
         "image_originals": 7,
         "cover_variant_visual_qa": "PASS_ALL4_CROPS_PRIMARY_STEW_VISIBLE",
         "image_visual_qa": "PASS_ALL7_ORIGINALS",
@@ -161,7 +163,8 @@
         "qa_file": "editorial/receta-de-garbanzos-com-chorizo-qa-20261009.json",
         "editorial_qa": "PASS_PREPARED_NOT_PUBLISHED",
         "package_sha256": "58623ad24fc16a6c07b1391503ebfc9ed676070fd933733e067eb1db15646fff",
-        "publication_gate": "WAIT_FULL15_CI_MERGE_OBSERVED_DEPLOY_DB_CACHE_LIVE_QA"
+        "publication_gate": "PUBLISHED_TECHNICAL_QA_PASS_LIVE_VISUAL_PENDING",
+        "page_audit": "PASS_7_OF7"
       },
       {
         "id": "2d31cabb-b350-4c6f-a444-eec6b03c28eb",
@@ -188,7 +191,7 @@
         "original_images_required": 7,
         "distinct_images_pending": 0,
         "next_image": null,
-        "next_action": "Preserve7/7,7originals10WebP; publish only with full15batch after gates.",
+        "next_action": "Preserve frozen package and media; finish lote04 livevisualgate without republishing SQL.",
         "image_originals": 7,
         "cover_variant_visual_qa": "PASS_ALL4_CROPS_PRIMARY_WINGS_VISIBLE",
         "image_visual_qa": "PASS_ALL7_ORIGINALS",
@@ -202,7 +205,8 @@
         "qa_file": "editorial/alitas-bbq-qa-20261009.json",
         "editorial_qa": "PASS_PREPARED_NOT_PUBLISHED",
         "package_sha256": "995ba6f6f6beb1b56550f48f9f742106ab71fc93a75eb1e0b31eebbf061edea3",
-        "publication_gate": "WAIT_FULL15_CI_MERGE_OBSERVED_DEPLOY_DB_CACHE_LIVE_QA"
+        "publication_gate": "PUBLISHED_TECHNICAL_QA_PASS_LIVE_VISUAL_PENDING",
+        "page_audit": "PASS_7_OF7"
       },
       {
         "id": "8e3b0f6a-5263-420c-b665-3889ab1358e6",
@@ -229,7 +233,7 @@
         "original_images_required": 9,
         "distinct_images_pending": 0,
         "next_image": null,
-        "next_action": "Preserve7/7,9originals12WebP; publish only with full15batch after gates.",
+        "next_action": "Preserve frozen package and media; finish lote04 livevisualgate without republishing SQL.",
         "image_originals": 9,
         "cover_variant_visual_qa": "PASS_ALL4_CROPS_PRIMARY_FRONT_COOKIE_AND_BROKEN_HALF_VISIBLE_SECONDARY_EDGE_CROP_SQUARE",
         "image_visual_qa": "PASS_ALL9_ORIGINALS",
@@ -243,7 +247,8 @@
         "qa_file": "editorial/galletas-de-avena-y-chocolate-qa-20261009.json",
         "editorial_qa": "PASS_PREPARED_NOT_PUBLISHED",
         "package_sha256": "5577482ff76104c529e990728dc2a644581ec227fa657bf28c616fe966c6587e",
-        "publication_gate": "WAIT_FULL15_CI_MERGE_OBSERVED_DEPLOY_DB_CACHE_LIVE_QA"
+        "publication_gate": "PUBLISHED_TECHNICAL_QA_PASS_LIVE_VISUAL_PENDING",
+        "page_audit": "PASS_7_OF7"
       },
       {
         "id": "4787f207-a430-4c20-a112-4c665092de81",
@@ -270,7 +275,7 @@
         "original_images_required": 10,
         "distinct_images_pending": 0,
         "next_image": null,
-        "next_action": "Preserve7/7,10originals13WebP; publish only with full15batch after gates.",
+        "next_action": "Preserve frozen package and media; finish lote04 livevisualgate without republishing SQL.",
         "image_originals": 10,
         "cover_variant_visual_qa": "PASS_ALL4_CROPS_PRIMARY_FRONT_RING_WHOLE_CUT_CRUMB_VISIBLE_SECONDARY_RIGHT_EDGE_CROP_SQUARE",
         "image_visual_qa": "PASS_ALL10_ORIGINALS",
@@ -284,7 +289,8 @@
         "qa_file": "editorial/receta-de-donas-glaseadas-qa-20261009.json",
         "editorial_qa": "PASS_PREPARED_NOT_PUBLISHED",
         "package_sha256": "d2a0c10151cabc1140dc091366343958d28b7a08476c92b06c73977cded81c32",
-        "publication_gate": "WAIT_FULL15_CI_MERGE_OBSERVED_DEPLOY_DB_CACHE_LIVE_QA"
+        "publication_gate": "PUBLISHED_TECHNICAL_QA_PASS_LIVE_VISUAL_PENDING",
+        "page_audit": "PASS_7_OF7"
       },
       {
         "id": "6f5ad062-368f-4c0a-b615-ae563017fec4",
@@ -311,7 +317,7 @@
         "original_images_required": 7,
         "distinct_images_pending": 0,
         "next_image": null,
-        "next_action": "Preserve7/7,7originals10WebP; publish only with whole15batch.",
+        "next_action": "Preserve frozen package and media; finish lote04 livevisualgate without republishing SQL.",
         "image_originals": 7,
         "cover_variant_visual_qa": "PASS_ALL4_CROPS_PRIMARY_SOUP_GARNISH_VISIBLE_ALL4_BOWL_EDGE16x9_AND_SECONDARY_GLASS_SQUARE_CROPPED",
         "image_visual_qa": "PASS_ALL7_ORIGINALS",
@@ -325,7 +331,8 @@
         "qa_file": "editorial/gazpacho-tradicional-espanol-qa-20261009.json",
         "editorial_qa": "PASS_PREPARED_NOT_PUBLISHED",
         "package_sha256": "7a38f86cd07e3220dacf4f4730d858460a1334487d013311ef117195f0061f5d",
-        "publication_gate": "WAIT_FULL15_CI_MERGE_OBSERVED_DEPLOY_DB_CACHE_LIVE_QA"
+        "publication_gate": "PUBLISHED_TECHNICAL_QA_PASS_LIVE_VISUAL_PENDING",
+        "page_audit": "PASS_7_OF7"
       },
       {
         "id": "2f5db784-9451-4166-9076-fe2dac7a35ca",
@@ -352,7 +359,7 @@
         "original_images_required": 10,
         "distinct_images_pending": 0,
         "next_image": null,
-        "next_action": "Preserve7/7,10originals13WebP; publish only with whole15batch.",
+        "next_action": "Preserve frozen package and media; finish lote04 livevisualgate without republishing SQL.",
         "image_originals": 10,
         "cover_variant_visual_qa": "PASS_ALL4_CROPS_MAIN_TART_VISIBLE_SECONDARY_SLICE_PARTLY_CROPPED",
         "image_visual_qa": "PASS_ALL10_ORIGINALS",
@@ -366,7 +373,8 @@
         "qa_file": "editorial/receta-de-tarta-de-fresa-qa-20261009.json",
         "editorial_qa": "PASS_PREPARED_NOT_PUBLISHED",
         "package_sha256": "58b89ae7de5687a8c37929f4d9fe82860cf5eaf059116bf441a05eef787ec589",
-        "publication_gate": "WAIT_FULL15_CI_MERGE_OBSERVED_DEPLOY_DB_CACHE_LIVE_QA"
+        "publication_gate": "PUBLISHED_TECHNICAL_QA_PASS_LIVE_VISUAL_PENDING",
+        "page_audit": "PASS_7_OF7"
       },
       {
         "id": "75a42c9e-6fe6-474f-8657-dde10e3f96c1",
@@ -392,7 +400,7 @@
         "es_editorial_qa": "PASS_7_EXACT_USDA_FOODS_SUGAR_PENDING_NOT_ZERO",
         "original_images_required": 8,
         "distinct_images_pending": 0,
-        "next_action": "Preserve7/7,8originals11WebP and guardedSQL; publish only with all15 after gates.",
+        "next_action": "Preserve frozen package and media; finish lote04 livevisualgate without republishing SQL.",
         "image_originals": 8,
         "next_image": null,
         "cover_variant_visual_qa": "PASS_ALL4_CROPS_PRIMARY_FRONT_RINGS_COMPLETE_SECONDARY_PLATE_EDGES_CROPPED",
@@ -407,7 +415,8 @@
         "qa_file": "editorial/rollitos-de-anis-qa-20261009.json",
         "editorial_qa": "PASS_PREPARED_NOT_PUBLISHED",
         "package_sha256": "997fa65d79f0ad5a0256c7e552a759e70587fa0ab6ef3dbf25607db3f76b2544",
-        "publication_gate": "FULL15_CI_MERGE_OBSERVED_DEPLOY_ATOMIC_DB_CACHE_LIVE_QA"
+        "publication_gate": "PUBLISHED_TECHNICAL_QA_PASS_LIVE_VISUAL_PENDING",
+        "page_audit": "PASS_7_OF7"
       },
       {
         "id": "6d7e6dc1-ac9a-4714-a4a1-eb8be6d0151e",
@@ -435,7 +444,7 @@
         "distinct_images_pending": 0,
         "image_originals": 10,
         "next_image": null,
-        "next_action": "Preserve7/7,10originals13WebP; publish only with whole15batch.",
+        "next_action": "Preserve frozen package and media; finish lote04 livevisualgate without republishing SQL.",
         "cover_variant_visual_qa": "PASS_ALL4_CROPS_PRIMARY_SERVING_COMPLETE_SECONDARY_DISH_CROPPED",
         "image_visual_qa": "PASS_ALL10_ORIGINALS",
         "localizations_pending": [],
@@ -448,7 +457,8 @@
         "qa_file": "editorial/receta-de-lasagna-de-carne-de-res-qa-20261009.json",
         "editorial_qa": "PASS_PREPARED_NOT_PUBLISHED",
         "package_sha256": "84acd1f44ae0f971d1ef939d3e59c5ec637f9cf3560ba66f8bbd50ea65d848a2",
-        "publication_gate": "WAIT_FULL15_CI_MERGE_OBSERVED_DEPLOY_DB_CACHE_LIVE_QA"
+        "publication_gate": "PUBLISHED_TECHNICAL_QA_PASS_LIVE_VISUAL_PENDING",
+        "page_audit": "PASS_7_OF7"
       },
       {
         "id": "ccefbbfa-ce29-4fe7-90af-2af48d3b2683",
@@ -476,7 +486,7 @@
         "distinct_images_pending": 0,
         "image_originals": 8,
         "next_image": null,
-        "next_action": "Preserve complete source/media/SQL; publish with all15 only after CI/merge/observed deploy hashes.",
+        "next_action": "Preserve frozen package and media; finish lote04 livevisualgate without republishing SQL.",
         "cover_variant_visual_qa": "PASS_ALL4_CROPS_PRIMARY_SERVING_COMPLETE_SECONDARY_DISH_CROPPED",
         "image_visual_qa": "PASS_ALL8_ORIGINALS",
         "localizations_pending": [],
@@ -488,7 +498,9 @@
         "sql_sha256": "a2baf8eaf210a9a03226f05a9871b4cf956352df1f9095bbc9b52355fa80861f",
         "qa_file": "editorial/receta-de-tarta-de-queso-cheesecake-qa-20261009.json",
         "sql_executed": true,
-        "published_database": true
+        "published_database": true,
+        "publication_gate": "PUBLISHED_TECHNICAL_QA_PASS_LIVE_VISUAL_PENDING",
+        "page_audit": "PASS_7_OF7"
       },
       {
         "id": "418fb144-a8bd-4643-9d8e-ab7b0d742d55",
@@ -515,7 +527,7 @@
         "original_images_required": 7,
         "distinct_images_pending": 0,
         "next_image": null,
-        "next_action": "Preserve7/7,7originals10WebP; publish only with whole15batch after gates.",
+        "next_action": "Preserve frozen package and media; finish lote04 livevisualgate without republishing SQL.",
         "image_originals": 7,
         "cover_variant_visual_qa": "PASS_ALL4_CROPS_PRIMARY_BOWL_COMPLETE",
         "image_visual_qa": "PASS_ALL7_ORIGINALS",
@@ -529,7 +541,8 @@
         "qa_file": "editorial/ensalada-de-frijoles-con-salsa-romesco-qa-20261009.json",
         "editorial_qa": "PASS_PREPARED_NOT_PUBLISHED",
         "package_sha256": "6799ef5436ea30ec6de7869cfdb12a9bc0c82112406c9a5f8bd23609d6cbb8a6",
-        "publication_gate": "WAIT_FULL15_CI_MERGE_OBSERVED_DEPLOY_DB_CACHE_LIVE_QA"
+        "publication_gate": "PUBLISHED_TECHNICAL_QA_PASS_LIVE_VISUAL_PENDING",
+        "page_audit": "PASS_7_OF7"
       },
       {
         "id": "670af688-3058-4f8c-9070-96eaae0bda4f",
@@ -556,7 +569,7 @@
         "original_images_required": 8,
         "distinct_images_pending": 0,
         "next_image": null,
-        "next_action": "Preserve7/7,8originals11WebP; publish only with whole15batch after gates.",
+        "next_action": "Preserve frozen package and media; finish lote04 livevisualgate without republishing SQL.",
         "image_originals": 8,
         "cover_variant_visual_qa": "PASS_ALL4_CROPS_PRIMARY_COOKIES_AND_PLATE_COMPLETE",
         "image_visual_qa": "PASS_ALL8_ORIGINALS",
@@ -570,7 +583,8 @@
         "qa_file": "editorial/receta-de-galletas-de-jengibre-qa-20261009.json",
         "editorial_qa": "PASS_PREPARED_NOT_PUBLISHED",
         "package_sha256": "72e542ca2072ea6e20f50e5c0704d06c2de68ef5149846297b2d87cbb9ffde93",
-        "publication_gate": "WAIT_FULL15_CI_MERGE_OBSERVED_DEPLOY_DB_CACHE_LIVE_QA"
+        "publication_gate": "PUBLISHED_TECHNICAL_QA_PASS_LIVE_VISUAL_PENDING",
+        "page_audit": "PASS_7_OF7"
       },
       {
         "id": "fb8402a9-e0f5-4636-865a-1a7b3a92d5bf",
@@ -597,7 +611,7 @@
         "original_images_required": 6,
         "distinct_images_pending": 0,
         "next_image": null,
-        "next_action": "Preserve7/7,6originals9WebP; publish only with whole15batch after gates.",
+        "next_action": "Preserve frozen package and media; finish lote04 livevisualgate without republishing SQL.",
         "image_originals": 6,
         "cover_variant_visual_qa": "PASS_ALL4_CROPS_PRIMARY_SALAD_BOWL_COMPLETE",
         "image_visual_qa": "PASS_ALL6_ORIGINALS",
@@ -612,7 +626,8 @@
         "published_database": true,
         "qa_file": "editorial/receta-de-ensalada-griega-qa-20261009.json",
         "editorial_qa": "PASS_PREPARED_NOT_PUBLISHED",
-        "publication_gate": "WAIT_FULL15_CI_MERGE_OBSERVED_DEPLOY_DB_CACHE_LIVE_QA"
+        "publication_gate": "PUBLISHED_TECHNICAL_QA_PASS_LIVE_VISUAL_PENDING",
+        "page_audit": "PASS_7_OF7"
       },
       {
         "id": "0f9407eb-d658-433d-9bff-477f17ab273f",
@@ -639,7 +654,7 @@
         "original_images_required": 7,
         "distinct_images_pending": 0,
         "next_image": null,
-        "next_action": "Preserve7/7,7originals10WebP; full15prepared now, advancePR/CI observeddeploy and atomicDB/cacheQA.",
+        "next_action": "Preserve frozen package and media; finish lote04 livevisualgate without republishing SQL.",
         "image_originals": 7,
         "cover_variant_visual_qa": "PASS_ALL4_CROPS_PRIMARY20_TRUFFLES_AND_PLATE_COMPLETE",
         "image_visual_qa": "PASS_ALL7_ORIGINALS",
@@ -654,10 +669,11 @@
         "published_database": true,
         "qa_file": "editorial/recetas-de-trufas-de-chocolate-qa-20261009.json",
         "editorial_qa": "PASS_PREPARED_NOT_PUBLISHED",
-        "publication_gate": "WAIT_FULL15_CI_MERGE_OBSERVED_DEPLOY_DB_CACHE_LIVE_QA"
+        "publication_gate": "PUBLISHED_TECHNICAL_QA_PASS_LIVE_VISUAL_PENDING",
+        "page_audit": "PASS_7_OF7"
       }
     ],
-    "next_action": "Obtain precise global audit errors in PR101, correct actual root cause; rerun full QA. Resume pending visual QA when browser reconnects. Do not reopen SQL or batch05.",
+    "next_action": "Resolve human-verification access for authorized live preview QA; then resume the3pending ES covers,6localized layouts,selector and home. Never infer visualPASS from HTTP200. Close04onlyaftervisualPASS; thenreserve remaining5.",
     "reservation_pr": 99,
     "reservation_merge_sha": "c6ac9d0b770525ecd02ea6a934cd2a48f94a8325",
     "prepared_count": 15,
@@ -794,7 +810,7 @@
       "unpublished_es": 55,
       "es_historical_preserved": true
     },
-    "error": "18 global hreflang errors traced to3Portuguese category routes omitted by sitemap1000row cap. FixPR102 pending green build/merge/deploy. Browser environment offline transiently; remaining visual QA pending.",
+    "error": "Site-served Bot Verification/reCAPTCHA remains after one reload. Live visual QA missing3EScovers,6localized layouts,selector and home. All105batchpages and1251globalURLs technicalQA PASS; no code/DB/media debt.",
     "sitemap_fix": {
       "pr": 102,
       "branch": "fix/sitemap-category-pagination-20261009",
@@ -805,21 +821,134 @@
         "/pt/categorias/sopas-y-cremas"
       ],
       "cause": "Unpaginated category query truncated at1000 while published recipe rows total1078.",
-      "validation": "typecheck and pagination regression PASS; build in progress; observed deployment/global QA pending"
-    }
+      "validation": "PASS_CI_DEPLOY_OBSERVED_AND_ZERO_GLOBAL_HREFLANG_ERRORS",
+      "merge_sha": "b29b24f43cbdb23842530498d6daab8cd0dc2f41"
+    },
+    "qa": {
+      "pr": 101,
+      "merge_sha": "3247291ec8cab54e27492f953792694db52ea5dd",
+      "head_sha": "bf893249a9e2b76b6ccb7219aaa652a2b9c97729",
+      "run": 37902531073,
+      "job": 113728171723,
+      "artifact": 11603445757,
+      "artifact_sha256": "e36c20aafe54381433943a52657bf7127aec546f2478b8762715ad2cc602534b",
+      "batch_pages": {
+        "groups": 15,
+        "pages": 105,
+        "passed": 105,
+        "errors": [],
+        "checked_at": "2026-10-09T08:04:55.966147+00:00"
+      },
+      "global": {
+        "summary": {
+          "sitemap_urls": 1251,
+          "status": {
+            "200": 1251,
+            "403": 0,
+            "404": 0,
+            "3xx": 0,
+            "5xx": 0,
+            "other": 0
+          },
+          "internal_links_outside_sitemap": 7,
+          "internal_link_status": {
+            "200": 7,
+            "403": 0,
+            "404": 0,
+            "3xx": 0,
+            "5xx": 0,
+            "other": 0
+          },
+          "images": 1640,
+          "legacy_redirects": 147,
+          "legacy_redirect_status": {
+            "200": 72,
+            "307": 66,
+            "308": 9
+          },
+          "recipe_pages": 1078,
+          "recipe_schema_valid": 1078,
+          "es_recipes": 154,
+          "breadcrumb_pages": 1172,
+          "breadcrumb_valid": 1172,
+          "hreflang_by_language": {
+            "es": {
+              "pages": 201,
+              "with_hreflang": 175,
+              "with_x_default": 21,
+              "errors": 0
+            },
+            "de": {
+              "pages": 175,
+              "with_hreflang": 175,
+              "with_x_default": 21,
+              "errors": 0
+            },
+            "en": {
+              "pages": 175,
+              "with_hreflang": 175,
+              "with_x_default": 21,
+              "errors": 0
+            },
+            "fr": {
+              "pages": 175,
+              "with_hreflang": 175,
+              "with_x_default": 21,
+              "errors": 0
+            },
+            "it": {
+              "pages": 175,
+              "with_hreflang": 175,
+              "with_x_default": 21,
+              "errors": 0
+            },
+            "ja": {
+              "pages": 175,
+              "with_hreflang": 175,
+              "with_x_default": 21,
+              "errors": 0
+            },
+            "pt-BR": {
+              "pages": 175,
+              "with_hreflang": 175,
+              "with_x_default": 21,
+              "errors": 0
+            }
+          },
+          "orphan_pages": 0,
+          "robots_txt_blocked": true,
+          "pages_noindex_nofollow": 1251,
+          "not_found_probe": 404,
+          "errors": 0,
+          "errors_by_kind": {}
+        },
+        "errors": []
+      }
+    },
+    "visual_qa": "PARTIAL_BLOCKED_BY_SITE_HUMAN_VERIFICATION"
   },
-  "next_candidate_position": 33,
+  "next_candidate_position": 48,
   "run_lease": {
     "owner": "work-lote04-20261009T0059",
-    "status": "active",
+    "status": "released",
     "acquired_at": "2026-10-09T00:56:43.882Z",
     "renewed_at": "2026-10-09T08:02:18.039Z",
-    "expires_at": "2026-10-09T09:32:18.039Z",
+    "expires_at": "2026-10-09T08:11:24.999Z",
     "base_main_sha": "3c8af0eff7a6e6a5c7bfcaedfedd3590e67d3032",
     "reason": "Single producer after batch03 fully closed; CAS reservation of next15.",
-    "heartbeat_at": "2026-10-09T07:57:18.601Z"
+    "heartbeat_at": "2026-10-09T07:57:18.601Z",
+    "released_at": "2026-10-09T08:11:24.999Z",
+    "release_reason": "Checkpointed complete publication/technicalQA; single producer blocked at required livevisual human verification."
   },
-  "blockers": [],
+  "blockers": [
+    {
+      "kind": "live_visual_human_verification",
+      "batch": "lote-04-20261009",
+      "evidence_file": "editorial/lote04-live-visual-qa-20261009.json",
+      "description": "Site-served Bot Verification/reCAPTCHA remains after one reload. Live visual QA missing3EScovers,6localized layouts,selector and home. All105batchpages and1251globalURLs technicalQA PASS; no code/DB/media debt.",
+      "next_action": "Resolve human-verification access for authorized live preview QA; then resume the3pending ES covers,6localized layouts,selector and home. Never infer visualPASS from HTTP200. Close04onlyaftervisualPASS; thenreserve remaining5."
+    }
+  ],
   "debt": [
     {
       "batch": "lote-02-20261008",
@@ -841,6 +970,17 @@
       "evidence_file": "editorial/lote03-ingredient-resolution-20261009.json",
       "publication_blocking": false,
       "reason": "Existing trigger retained unresolved entries; resolve only approved canonical ingredient matches during final pre-migration technical closure. No aliases or destinations invented."
+    },
+    {
+      "batch": "lote-04-20261009",
+      "kind": "ingredient_normalization",
+      "stage": "final_pre_migration_technical_closure",
+      "editorial_entries": 152,
+      "canonical_matches": 34,
+      "pending_entries": 118,
+      "evidence_file": "editorial/lote04-ingredient-resolution-20261009.json",
+      "publication_blocking": false,
+      "reason": "All152entries retained;118pending canonical resolution after eligible recipes. No aliases/destinations invented."
     }
   ],
   "stop_condition": "All eligible pending recipes published and QA passed, held entities accounted for, pre-migration technical gates closed; production migration still not executed",
@@ -888,7 +1028,7 @@
   "schedule_verified": true,
   "schedule": "BEGIN:VEVENT\nDTSTART:20261008T025904Z\nRRULE:FREQ=HOURLY\nEND:VEVENT",
   "default_timezone": "Europe/Berlin",
-  "is_enabled": true,
+  "is_enabled": false,
   "configuration_notes": [
     {
       "code": "MODEL_SETTING_UNVERIFIED",
@@ -897,10 +1037,10 @@
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
   "progress_branch": "recetas/lote-04-20261009",
-  "last_checkpoint_at": "2026-10-09T08:02:18.039Z",
-  "handoff": "Lote04:15groups published7/7,105pagesPASS,163WebP200exacthash; fixPR102 sitemap pagination then PR101 globalQA, resume incomplete livevisualQA. Do not rerun SQL, regenerate assets or openbatch05.",
+  "last_checkpoint_at": "2026-10-09T08:11:24.999Z",
+  "handoff": "Resolve human-verification access for authorized live preview QA; then resume the3pending ES covers,6localized layouts,selector and home. Never infer visualPASS from HTTP200. Close04onlyaftervisualPASS; thenreserve remaining5.",
   "next_relay_requested_at": "2026-10-08T02:59:04Z",
-  "updated_at": "2026-10-09T08:02:18.039Z",
+  "updated_at": "2026-10-09T08:11:24.999Z",
   "completed_batches": [
     {
       "id": "lote-02-20261008",
@@ -918,21 +1058,21 @@
     }
   ],
   "observed_catalog": {
-    "published_groups": 139,
+    "published_groups": 154,
     "published_rows_by_language": {
-      "es": 139,
-      "de": 139,
-      "en": 139,
-      "fr": 139,
-      "it": 139,
-      "ja": 139,
-      "pt": 139
+      "es": 154,
+      "de": 154,
+      "en": 154,
+      "fr": 154,
+      "it": 154,
+      "ja": 154,
+      "pt": 154
     },
-    "unpublished_es_groups": 70,
-    "checked_at": "2026-10-09T00:46:05.137Z",
-    "published_es": 139,
-    "unpublished_es": 70,
-    "verified_at": "2026-10-09T00:56:43.882Z"
+    "unpublished_es_groups": 55,
+    "checked_at": "2026-10-09T08:08:55.405761+00:00",
+    "published_es": 154,
+    "unpublished_es": 55,
+    "verified_at": "2026-10-09T08:08:55.405761+00:00"
   },
   "previous_batch": {
     "id": "lote-03-20261008",
@@ -2161,5 +2301,10 @@
       "recovery_authority": "User: Continúa lo que estaba haciendo work su mesa de trabajo llena de muchos errores.",
       "last_old_head": "810c07fee23244326a1cc35816de85c428b0b227"
     }
-  ]
+  ],
+  "automation_pause": {
+    "verified_at": "2026-10-09T08:11:24.999Z",
+    "reason": "Site-served Bot Verification/reCAPTCHA remains after one reload. Live visual QA missing3EScovers,6localized layouts,selector and home. All105batchpages and1251globalURLs technicalQA PASS; no code/DB/media debt.",
+    "id": "6ac6fb673c5c8191b3435ae6074ddc63"
+  }
 }
