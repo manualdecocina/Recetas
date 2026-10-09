@@ -260,7 +260,7 @@
         "classification": "ELIGIBLE_EXISTING_CULINARY_CANDIDATE",
         "expected_es_row_md5": "feefd2bae9a0ebf7b1b7a5105949f914",
         "languages_ready": 0,
-        "images_ready": 0,
+        "images_ready": 6,
         "source_not_reused": true,
         "es_content_file": "editorial/receta-de-donas-glaseadas-20261009.json",
         "image_manifest": "editorial/receta-de-donas-glaseadas-imagenes.json",
@@ -268,9 +268,11 @@
         "steps_sha256": "b4caacc7d75625430b021d7d83ae618c317dc84f76ca8328d908d274577acfb3",
         "es_editorial_qa": "PASS_12_INGREDIENT_ENTRIES_11_EXACT_USDAFOODS_RETAINEDOIL30G_PROPOSED_UNMEASURED",
         "original_images_required": 10,
-        "distinct_images_pending": 10,
-        "next_image": "portada.webp",
-        "next_action": "Generate10originals from frozen phases, inspect each+cover4variants; localize6+guardedSQL preserving proposed30g oiluptake."
+        "distinct_images_pending": 7,
+        "next_image": "paso-03.webp",
+        "next_action": "Generate10originals from frozen phases, inspect each+cover4variants; localize6+guardedSQL preserving proposed30g oiluptake.",
+        "image_originals": 3,
+        "cover_variant_visual_qa": "PASS_ALL4_CROPS_PRIMARY_FRONT_RING_WHOLE_CUT_CRUMB_VISIBLE_SECONDARY_RIGHT_EDGE_CROP_SQUARE"
       },
       {
         "id": "6f5ad062-368f-4c0a-b615-ae563017fec4",
@@ -444,8 +446,8 @@
     "owner": "work-lote04-20261009T0059",
     "status": "active",
     "acquired_at": "2026-10-09T00:56:43.882Z",
-    "renewed_at": "2026-10-09T02:54:53.922Z",
-    "expires_at": "2026-10-09T04:24:53.922Z",
+    "renewed_at": "2026-10-09T03:01:41.875Z",
+    "expires_at": "2026-10-09T04:31:41.875Z",
     "base_main_sha": "3c8af0eff7a6e6a5c7bfcaedfedd3590e67d3032",
     "reason": "Single producer after batch03 fully closed; CAS reservation of next15."
   },
@@ -527,18 +529,18 @@
   ],
   "activation_authority": "User: Inicia desde ya. (2026-10-08 Europe/Berlin)",
   "progress_branch": "recetas/lote-04-20261009",
-  "last_checkpoint_at": "2026-10-09T02:54:53.922Z",
+  "last_checkpoint_at": "2026-10-09T03:01:41.875Z",
   "handoff": {
     "branch": "recetas/lote-04-20261009",
-    "stage": "identidad",
+    "stage": "imágenes",
     "current_recipe": "receta-de-garbanzos-com-chorizo",
     "prepared": 2,
     "published": 0,
-    "next_action": "Prepare original ES donasglaseadas, verifyUSDA and complete timelog; freeze steps+manifest beforeimages, preserve5complete.",
+    "next_action": "Generate10originals from frozen phases, inspect each+cover4variants; localize6+guardedSQL preserving proposed30g oiluptake.",
     "previous_batch_closed": true
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z",
-  "updated_at": "2026-10-09T02:54:53.922Z",
+  "updated_at": "2026-10-09T03:01:41.875Z",
   "completed_batches": [
     {
       "id": "lote-02-20261008",
