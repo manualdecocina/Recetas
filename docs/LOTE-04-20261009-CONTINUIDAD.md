@@ -74,3 +74,8 @@ Fuente única `editorial/receta-de-lasagna-de-carne-de-res-20261009.json`:16 ing
 ## Checkpoint — cheesecake complete7/7, eleven prepared
 
 Cheesecake classic baked plain: source records7, 8 original PNG and11WebP, 19 hashes decoded/verified, eight USDA foods/eight nutrients. Steps hash 6dac3ca1d082e87cd7330cd175a7b33c3a0c639ab806b636eaf0192aa908a5c0. Proposed eight portions and505minutes including complete chilling; no kitchen trial claimed. Preserved seven approved paths; fresh DB single ES unpublished unchanged MD5, no route collisions. SQL protected by full15 deployed gate and NOT executed. Phase1 butter corrected only; two local empty WebP restored to identical recorded hashes from accepted originals. Next recipe ensalada-de-frijoles-con-salsa-romesco; eleven prepared, zero batch04 published. Preserve all completed work.
+
+
+## Checkpoint 2026-10-09T06:22:53.772Z: 12/15 preparados
+
+Ensalada de frijoles con romesco completa7/7,7PNG y10WebP;17hashes y cifras/estructura/medios verificados. SQL protegido no ejecutado. Azúcares omitidos en los7idiomas porque USDA175243 no informa nutrient2000. Portada completa en los4recortes. Fuente única editorial/ensalada-de-frijoles-con-salsa-romesco-20261009.json, SHA256 6799ef5436ea30ec6de7869cfdb12a9bc0c82112406c9a5f8bd23609d6cbb8a6; SQL SHA256 8df843e7151cb6f32daad5c2060c3d4c7cdfb539bd556c613d68699e8c067859. Identidad/fechas/MD5 y7rutas sin colisiones verificados en DB. Siguiente receta: galletas de jengibre. Ninguna del lote04 publicada; mantener gate del lote completo.
