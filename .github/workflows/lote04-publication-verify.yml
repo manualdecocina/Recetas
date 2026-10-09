@@ -1,0 +1,87 @@
+name: lote04-publication-verify
+# Postpublication verification after observed media deployment and atomic batch04 SQL.
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - '.github/workflows/lote04-publication-verify.yml'
+      - 'scripts/audit-lote04-published.py'
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Revalidate preview and observe all 105 published routes in the sitemap
+        env:
+          REVALIDATE_SECRET: ${{ secrets.REVALIDATE_SECRET }}
+        run: |
+          python3 - <<'PY'
+          import json, os, pathlib, time, urllib.parse, urllib.request, xml.etree.ElementTree as ET
+          base = 'https://preview.manualdecocina.com'
+          secret = (os.environ.get('REVALIDATE_SECRET') or '').rstrip('\r\n')
+          if not secret:
+              raise SystemExit('REVALIDATE_SECRET is missing from GitHub secrets')
+          request = urllib.request.Request(base + '/api/revalidate', data=b'{}', method='POST',
+              headers={'x-revalidate-secret': secret, 'Content-Type': 'application/json'})
+          request_revalidate = request
+          with urllib.request.urlopen(request, timeout=40) as response:
+              result = json.load(response)
+          if result.get('revalidated') is not True:
+              raise SystemExit('Preview did not confirm cache invalidation')
+          print('Preview confirmed cache invalidation')
+          root = pathlib.Path('.')
+          batch = json.loads((root / 'editorial/lote-04-plan-20261009.json').read_text())
+          expected = set()
+          for group in batch['groups']:
+              package = json.loads((root / group['editorial_file']).read_text())
+              expected.update(base + record['public_path'] for record in package['records'])
+          if len(expected) != 105:
+              raise SystemExit('Batch must have exactly 105 unique language routes')
+          required_categories = {base + '/pt/categorias/' + slug for slug in
+              ('ensaladas', 'postres', 'sopas-y-cremas')}
+          for attempt in range(60):
+              if attempt:
+                  with urllib.request.urlopen(request_revalidate, timeout=40) as response:
+                      if json.load(response).get('revalidated') is not True:
+                          raise SystemExit('Preview did not confirm cache invalidation')
+              request = urllib.request.Request(base + '/sitemap.xml', headers={'Cache-Control': 'no-cache'})
+              with urllib.request.urlopen(request, timeout=40) as response:
+                  sitemap = ET.fromstring(response.read())
+              found = {urllib.parse.unquote(element.text or '') for element in
+                  sitemap.findall('.//{http://www.sitemaps.org/schemas/sitemap/0.9}loc')}
+              if (expected | required_categories) <= found:
+                  print('Observed sitemap contains all105 batch URLs and the3 previously missing Portuguese category routes')
+                  break
+              time.sleep(15)
+          else:
+              raise SystemExit('Sitemap is missing %d published batch URLs' % len((expected | required_categories) - found))
+          PY
+      - name: Compare all 105 visible pages with the frozen editorial packages
+        run: python3 scripts/audit-lote04-published.py
+      - name: Audit the entire preview catalog, links, images, schema and noindex
+        env:
+          EXPECTED_ES_RECIPES: '154'
+        run: python3 scripts/audit-site-preview.py
+      - name: Report precise global audit findings
+        if: always()
+        run: |
+          python3 - <<'PY'
+          import json, pathlib
+          path = pathlib.Path('site-preview-audit.json')
+          if path.exists():
+              report = json.loads(path.read_text())
+              print(json.dumps({'summary': report['summary'], 'errors': report['errors']}, ensure_ascii=False))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: lote04-site-preview-audit
+          path: |
+            lote04-published-page-audit.json
+            site-preview-audit.json
