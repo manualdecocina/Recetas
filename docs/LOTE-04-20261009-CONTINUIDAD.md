@@ -20,3 +20,10 @@ Cola: 20 candidatas pendientes (15 reservadas +5 siguientes), 50 retenidas, 70 E
 Muffins de chocolate completos para publicación: fuente única editorial/receta-de-muffins-de-chocolate-20261009.json con records[7], ES congelado sin cambios; 8 originales y 11 WebP revisados visualmente y comprobados por hashes Git. Nutrición estimada con diez fichas USDA verificadas. SQL protegido preparado y NO ejecutado. Lote04: 1/15 preparada, 0 publicadas. Próxima receta: acai-bowl, etapa identidad→ES. Conservar todos los medios y localizaciones correctos.
 
 SQL SHA256: 5f04d9f69843aef49eaf11ead0c5a0fc38f956e0ba892b39b3c35f9d25f5e393. Paquete SHA256: b8938e27b160a98111b832bf5e50f86e5df42efee7afdc19a92c0bb1da373e48. El cierre requiere las15, CI, merge, despliegue observado, publicación, caché y QA; no confundir preparación con publicación.
+
+
+## Checkpoint 2026-10-09T01:41:24.375Z
+
+Açaí bowl completo7/7 para publicación: fuente única editorial/acai-bowl-20261009.json,6pasos ES congelados SHA256 843d0e897be761f13668a469a65452cd0f658e26507000242339dae97e83d0a7;6originales y9WebP con hashes exactos y QA visual. Dos ediciones puntuales eliminaron cobertura prematura de las fases3y4; no se modificaron pasos ni se regeneraron los otros medios. Ficha USDA Branded2653289 obtenida directamente de API oficial y comprobada frente al fabricante; otras entradas extraídas del archivo SRLegacy verificado. SQL protegido NO ejecutado. Lote04:2/15preparadas,0publicadas. Próxima: receta-de-garbanzos-com-chorizo, conservar `com` del slug histórico.
+
+SQLSHA256 eb942ef418fe078a51f43580a62ff97f127b61ade5b2aaa025c02cc032688edc; paqueteSHA256 2995d108e461214b627ba548ba5fc7723115f5994e0947b9df56351c6154b218. Conservar ambos paquetes y medios, seguir la primera etapa pendiente sin abrir otro lote.
