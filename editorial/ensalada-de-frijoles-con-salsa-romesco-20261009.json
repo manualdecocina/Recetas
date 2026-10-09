@@ -1,0 +1,3343 @@
+{
+  "scope": "Manual de Cocina only; lote04",
+  "state": "COMPLETE7_PREPARED_NOT_PUBLISHED",
+  "provenance": "Original formula and prose; no WordPress editorial bodies, translations or media reused.",
+  "category_slug": "ensaladas",
+  "cover": "/recetas/ensalada-de-frijoles-con-salsa-romesco/portada.webp",
+  "steps_frozen": true,
+  "steps_sha256": "8869c218c189b8f1f479bbcd01f4c9a5866281e02c6870dbf9a6c3c1e3696399",
+  "published_database": false,
+  "time_notes": "15initialprep/preheat+25roast(toast5/cool5overlap)+10roastedvegcool(bean/vegprep10overlap)+5sauce+5mix+30chill+2serve=92. Prep37+cookcritical25+chill30=92. Extend actualextraheat/cold.",
+  "publication_blockers": [
+    "FULL15_CI_MERGE_DEPLOY_DB_CACHE_LIVE_QA_PENDING"
+  ],
+  "sources": [
+    {
+      "url": "https://nutritionsource.hsph.harvard.edu/spanish-romesco-sauce/",
+      "purpose": "JoyceGoldstein authored method only: roastedpepper/tomato, nuts, vinegar, oil, pulsegrainysauce. Independent salad/formula/prose. Historical sixmonths storage claim NOT adopted.",
+      "accessed": "2026-10-09"
+    },
+    {
+      "url": "https://www.greatbritishchefs.com/recipes/romesco-sauce-recipe",
+      "purpose": "SallyAbé authored technique only: toastnuts/bread and coarseblend. Independentpanmethod/formula, no sourceprose/images/nutrition reused.",
+      "accessed": "2026-10-09"
+    },
+    {
+      "url": "https://www.foodsafety.gov/keep-food-safe/4-steps-to-food-safety",
+      "purpose": "Official produc washing, hygiene,4C refrigeration and2h/1h above32C. Proposed24hqualitynotvalidatedshelflife.",
+      "accessed": "2026-10-09"
+    },
+    {
+      "url": "https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_sr_legacy_food_json_2018-04.zip",
+      "purpose": "Fifteen exactfoods; allseven reportednutrients; beans175243sugarabsentomittednotzero.",
+      "accessed": "2026-10-09"
+    }
+  ],
+  "yield_proposal": {
+    "servings": 4,
+    "raw_formula_grams": 1379,
+    "cooked_weight_measured": false,
+    "confirmed": false
+  },
+  "records": [
+    {
+      "id": "418fb144-a8bd-4643-9d8e-ab7b0d742d55",
+      "recipe_group_id": "8ba3cf9e-47d6-4b27-afdb-9f5b7700b45d",
+      "slug": "ensalada-de-frijoles-con-salsa-romesco",
+      "public_path": "/ensalada-de-frijoles-con-salsa-romesco",
+      "source_url": "https://manualdecocina.com/ensalada-de-frijoles-con-salsa-romesco/",
+      "language": "es",
+      "title": "Ensalada de frijoles rojos con romesco propuesto",
+      "excerpt": "Frijoles cocidos, pepino y verduras frescas con una salsa de pimiento asado, tomate, frutos secos y pan para cuatro raciones propuestas.",
+      "summary": "Ensalada fría propuesta de frijoles rojos cocidos, pepino, cebolla y perejil con un romesco de pimiento y tomate asados, frutos secos y pan. Se proponen 4 raciones y 92 minutos completos, incluido el frío. Cantidades, tiempos y rendimiento pendientes de confirmación en cocina.",
+      "category": "Ensaladas",
+      "category_slug": "ensaladas",
+      "difficulty": "Media",
+      "course": "Ensalada",
+      "cuisine": "Inspiración mediterránea",
+      "prep_time_minutes": 37,
+      "cook_time_minutes": 25,
+      "total_time_minutes": 92,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "frijoles rojos en conserva, ya cocidos, escurridos y enjuagados",
+          "amount": "600",
+          "unit": "g",
+          "group": "Ensalada"
+        },
+        {
+          "name": "pepino con piel, limpio",
+          "amount": "200",
+          "unit": "g",
+          "group": "Ensalada"
+        },
+        {
+          "name": "cebolla roja pelada",
+          "amount": "60",
+          "unit": "g",
+          "group": "Ensalada"
+        },
+        {
+          "name": "perejil fresco limpio",
+          "amount": "10",
+          "unit": "g",
+          "group": "Ensalada"
+        },
+        {
+          "name": "pimiento rojo fresco sin tallo ni semillas, peso antes de asar",
+          "amount": "200",
+          "unit": "g",
+          "group": "Romesco propuesto"
+        },
+        {
+          "name": "tomate rojo maduro, sin pedúnculo, peso antes de asar",
+          "amount": "150",
+          "unit": "g",
+          "group": "Romesco propuesto"
+        },
+        {
+          "name": "ajo pelado",
+          "amount": "4",
+          "unit": "g",
+          "group": "Romesco propuesto"
+        },
+        {
+          "name": "almendras crudas sin sal, con piel",
+          "amount": "30",
+          "unit": "g",
+          "group": "Romesco propuesto"
+        },
+        {
+          "name": "avellanas crudas sin sal, con piel",
+          "amount": "20",
+          "unit": "g",
+          "group": "Romesco propuesto"
+        },
+        {
+          "name": "pan blanco comercial ya horneado, sin moho",
+          "amount": "20",
+          "unit": "g",
+          "group": "Romesco propuesto"
+        },
+        {
+          "name": "aceite de oliva",
+          "amount": "30",
+          "unit": "g",
+          "group": "Romesco propuesto"
+        },
+        {
+          "name": "vinagre de vino tinto",
+          "amount": "20",
+          "unit": "g",
+          "group": "Romesco propuesto"
+        },
+        {
+          "name": "pimentón dulce",
+          "amount": "2",
+          "unit": "g",
+          "group": "Romesco propuesto"
+        },
+        {
+          "name": "sal fina",
+          "amount": "3",
+          "unit": "g",
+          "group": "Romesco propuesto"
+        },
+        {
+          "name": "agua potable para la salsa",
+          "amount": "30",
+          "unit": "g",
+          "group": "Romesco propuesto"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepara y pesa los ingredientes",
+          "content": "Lávate las manos y prepara báscula, tabla limpia, colador, sartén seca, bandeja con papel apto para horno y un procesador con tapa. Lava pimiento, tomate, pepino y perejil bajo agua corriente sin jabón y seca. Pesa 200 g de pimiento después de quitar tallo y semillas, 150 g de tomate sin pedúnculo y 4 g de ajo pelado. Conserva la piel comestible del pimiento y del tomate; no se prevé pelarlos tras asar. Pesa 30 g de almendras, 20 g de avellanas, 20 g de pan ya cocido, 30 g de aceite, 20 g de vinagre, 2 g de pimentón, 3 g de sal y 30 g de agua para la salsa. Reserva 200 g de pepino con piel, 60 g de cebolla roja pelada y 10 g de perejil. Los frijoles serán 600 g después de escurrir y enjuagar, no el peso de la lata cerrada. Usa conservas comerciales cocidas aptas para consumo directo según etiqueta, nunca frijoles secos o crudos. Precalienta el horno a 220 °C con calor arriba y abajo durante estos 15 minutos de preparación inicial; el precalentado no es una espera adicional.",
+          "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/paso-01.webp",
+          "image_alt": "Ensalada de frijoles con romesco: Prepara y pesa los ingredientes"
+        },
+        {
+          "title": "Asa las verduras para la salsa",
+          "content": "Corta el pimiento en tiras amplias y el tomate en cuartos. Pon junto al ajo en la bandeja, en una capa y sin añadir aceite: todo el aceite pesado se usará al triturar. Asa unos 25 minutos a 220 °C en la zona media, revisando a los 15. Deben ablandarse y tener zonas tostadas, no ceniza ni piel negra. Si el ajo dora antes, retíralo a un cuenco limpio sin descartar su peso del cálculo. Al sacar con guantes, conserva toda la pulpa, la piel comestible y los jugos recogidos. Deja templar unos 10 minutos antes de triturar; prepara los frijoles y las verduras frescas durante ese intervalo. Si tu horno requiere más tiempo, añádelo al total.",
+          "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/paso-02.webp",
+          "image_alt": "Ensalada de frijoles con romesco: Asa las verduras para la salsa"
+        },
+        {
+          "title": "Tuesta frutos secos y pan durante el asado",
+          "content": "Mientras las verduras están en el horno, pon los 30 g de almendras, los 20 g de avellanas y los 20 g de pan cortado en dados en una sartén seca a fuego medio-bajo. Tuesta unos 5 minutos, moviendo con frecuencia hasta que huela a tostado suave, sin quemar ni añadir aceite. Retira a un plato limpio y deja enfriar unos 5 minutos antes de procesar. Conserva las pieles y todos los trozos; no se reserva una guarnición extra. Este tostado y su enfriado ocurren dentro de los 25 minutos del asado y no se suman como otra espera. Vigila ambos recipientes y no dejes el fuego sin supervisión.",
+          "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/paso-03.webp",
+          "image_alt": "Ensalada de frijoles con romesco: Tuesta frutos secos y pan durante el asado"
+        },
+        {
+          "title": "Escurre los frijoles y corta la ensalada",
+          "content": "Revisa las conservas: descarta envases abombados, con fugas o dañados y sigue la etiqueta después de abrir. Escurre los frijoles, enjuaga con agua potable en un colador limpio y deja escurrir bien antes de pesar 600 g de sólidos listos para comer. No calcules con el líquido de conserva ni vuelvas a añadirlo. Corta los 200 g de pepino con piel en dados pequeños, los 60 g de cebolla en trozos finos y pica los 10 g de perejil. Junta en un cuenco amplio sin machacar los frijoles. Esta preparación ocupa unos 10 minutos durante el templado de las verduras asadas; mantén el cuenco a 4 °C o menos si debes esperar más.",
+          "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/paso-04.webp",
+          "image_alt": "Ensalada de frijoles con romesco: Escurre los frijoles y corta la ensalada"
+        },
+        {
+          "title": "Tritura el romesco sin añadir ingredientes ocultos",
+          "content": "Con las verduras templadas, pon en el procesador todo el pimiento, tomate, ajo y sus jugos, todos los frutos secos y el pan tostados. Añade los 20 g de vinagre, los 2 g de pimentón, los 3 g de sal y los 30 g de agua pesados. Tapa y pulsa; después incorpora los 30 g de aceite en varias tandas hasta obtener una salsa espesa y algo granulosa que se pueda repartir. Raspa el recipiente con una espátula limpia, con el aparato desconectado. Dedica unos 5 minutos; no tritures ingredientes muy calientes en un vaso hermético. Usa toda la salsa y no ajustes con aceite, sal o agua sin medir: cualquier cambio requiere revisar cantidades y cálculo. Es una versión propuesta de romesco, no una afirmación de fórmula tradicional única.",
+          "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/paso-05.webp",
+          "image_alt": "Ensalada de frijoles con romesco: Tritura el romesco sin añadir ingredientes ocultos"
+        },
+        {
+          "title": "Mezcla y enfría tapada",
+          "content": "Reparte toda la salsa sobre los frijoles, pepino, cebolla y perejil. Mezcla delicadamente con dos cucharas limpias durante unos 5 minutos, de modo que los frijoles queden enteros y todas las porciones reciban salsa. Pasa a un recipiente poco profundo, tapa y refrigera a 4 °C o menos unos 30 minutos, hasta que la ensalada esté fría; prolonga y suma el tiempo si lo necesita. Refrigera los alimentos perecederos dentro de 2 horas de preparación, o 1 hora si el ambiente supera 32 °C. La planificación incluye 15 minutos de preparación inicial, 25 de asado con tostado y enfriado de frutos secos solapados, 10 de templado con corte y escurrido solapados, 5 de salsa, 5 de mezcla, 30 de frío y 2 de reparto: 92 minutos propuestos.",
+          "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/paso-06.webp",
+          "image_alt": "Ensalada de frijoles con romesco: Mezcla y enfría tapada"
+        },
+        {
+          "title": "Sirve cuatro porciones y conserva en frío",
+          "content": "Dedica unos 2 minutos a dividir en 4 porciones semejantes, incluyendo frijoles, verduras y salsa en cada una. Sirve fría sin queso, aceitunas, frutos secos extra ni pan adicional: no están en el cálculo. Los 1379 g son la suma inicial de ingredientes comestibles pesados, no un rendimiento final medido ni el peso por ración. Las cantidades, los tiempos y cuatro porciones son propuestas pendientes de confirmación en cocina. Guarda tapada a 4 °C o menos y, como propuesta conservadora de calidad no ensayada, consume en 24 horas tras preparar. Saca solo lo que servirás y devuelve pronto el resto al frío. No reutilices sobras del plato ni establezcas conservación por el olor. La cifra de azúcar queda pendiente porque la ficha de frijoles usada no la informa; dato ausente no significa cero.",
+          "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/portada.webp",
+          "image_alt": "Ensalada de frijoles con romesco: Sirve cuatro porciones y conserva en frío"
+        }
+      ],
+      "nutrition": {
+        "calories": 373.9,
+        "protein_g": 16.5,
+        "carbs_g": 44.6,
+        "fat_g": 16.2,
+        "saturated_fat_g": 2.1,
+        "fiber_g": 12.8,
+        "sodium_mg": 635.8,
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (abril de 2018)",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "inputs": [
+          {
+            "ingredient": "frijoles rojos en conserva escurridos y enjuagados",
+            "edible_grams": 600,
+            "fdc_id": 175243,
+            "fdc_description": "Beans, kidney, red, mature seeds, canned, drained solids, rinsed in tap water",
+            "per_100g": {
+              "calories": 121,
+              "protein_g": 8.12,
+              "carbs_g": 20.8,
+              "fat_g": 0.93,
+              "saturated_fat_g": 0.328,
+              "fiber_g": 6.0,
+              "sodium_mg": 208
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/175243/nutrients"
+          },
+          {
+            "ingredient": "pepino con piel crudo",
+            "edible_grams": 200,
+            "fdc_id": 168409,
+            "fdc_description": "Cucumber, with peel, raw",
+            "per_100g": {
+              "calories": 15.0,
+              "protein_g": 0.65,
+              "carbs_g": 3.63,
+              "fat_g": 0.11,
+              "saturated_fat_g": 0.037,
+              "fiber_g": 0.5,
+              "sugar_g": 1.67,
+              "sodium_mg": 2.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/168409/nutrients"
+          },
+          {
+            "ingredient": "cebolla cruda",
+            "edible_grams": 60,
+            "fdc_id": 170000,
+            "fdc_description": "Onions, raw",
+            "per_100g": {
+              "calories": 40.0,
+              "protein_g": 1.1,
+              "carbs_g": 9.34,
+              "fat_g": 0.1,
+              "saturated_fat_g": 0.042,
+              "fiber_g": 1.7,
+              "sugar_g": 4.24,
+              "sodium_mg": 4.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170000/nutrients"
+          },
+          {
+            "ingredient": "perejil fresco",
+            "edible_grams": 10,
+            "fdc_id": 170416,
+            "fdc_description": "Parsley, fresh",
+            "per_100g": {
+              "calories": 36.0,
+              "protein_g": 2.97,
+              "carbs_g": 6.33,
+              "fat_g": 0.79,
+              "saturated_fat_g": 0.132,
+              "fiber_g": 3.3,
+              "sugar_g": 0.85,
+              "sodium_mg": 56.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170416/nutrients"
+          },
+          {
+            "ingredient": "pimiento rojo crudo parte comestible para asar",
+            "edible_grams": 200,
+            "fdc_id": 170108,
+            "fdc_description": "Peppers, sweet, red, raw",
+            "per_100g": {
+              "calories": 26.0,
+              "protein_g": 0.99,
+              "carbs_g": 6.03,
+              "fat_g": 0.3,
+              "saturated_fat_g": 0.059,
+              "fiber_g": 2.1,
+              "sugar_g": 4.2,
+              "sodium_mg": 4.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170108/nutrients"
+          },
+          {
+            "ingredient": "tomate rojo crudo para asar",
+            "edible_grams": 150,
+            "fdc_id": 170457,
+            "fdc_description": "Tomatoes, red, ripe, raw, year round average",
+            "per_100g": {
+              "calories": 18.0,
+              "protein_g": 0.88,
+              "carbs_g": 3.89,
+              "fat_g": 0.2,
+              "saturated_fat_g": 0.028,
+              "fiber_g": 1.2,
+              "sugar_g": 2.63,
+              "sodium_mg": 5.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170457/nutrients"
+          },
+          {
+            "ingredient": "ajo crudo pelado para asar",
+            "edible_grams": 4,
+            "fdc_id": 169230,
+            "fdc_description": "Garlic, raw",
+            "per_100g": {
+              "calories": 149,
+              "protein_g": 6.36,
+              "carbs_g": 33.1,
+              "fat_g": 0.5,
+              "saturated_fat_g": 0.089,
+              "fiber_g": 2.1,
+              "sugar_g": 1.0,
+              "sodium_mg": 17.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169230/nutrients"
+          },
+          {
+            "ingredient": "almendras crudas sin sal",
+            "edible_grams": 30,
+            "fdc_id": 170567,
+            "fdc_description": "Nuts, almonds",
+            "per_100g": {
+              "calories": 579,
+              "protein_g": 21.2,
+              "carbs_g": 21.6,
+              "fat_g": 49.9,
+              "saturated_fat_g": 3.8,
+              "fiber_g": 12.5,
+              "sugar_g": 4.35,
+              "sodium_mg": 1.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170567/nutrients"
+          },
+          {
+            "ingredient": "avellanas crudas sin sal",
+            "edible_grams": 20,
+            "fdc_id": 170581,
+            "fdc_description": "Nuts, hazelnuts or filberts",
+            "per_100g": {
+              "calories": 628,
+              "protein_g": 15.0,
+              "carbs_g": 16.7,
+              "fat_g": 60.8,
+              "saturated_fat_g": 4.46,
+              "fiber_g": 9.7,
+              "sugar_g": 4.34,
+              "sodium_mg": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170581/nutrients"
+          },
+          {
+            "ingredient": "pan blanco comercial ya cocido",
+            "edible_grams": 20,
+            "fdc_id": 174924,
+            "fdc_description": "Bread, white, commercially prepared (includes soft bread crumbs)",
+            "per_100g": {
+              "calories": 266,
+              "protein_g": 8.85,
+              "carbs_g": 49.4,
+              "fat_g": 3.33,
+              "saturated_fat_g": 0.698,
+              "fiber_g": 2.7,
+              "sugar_g": 5.67,
+              "sodium_mg": 490
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/174924/nutrients"
+          },
+          {
+            "ingredient": "aceite de oliva",
+            "edible_grams": 30,
+            "fdc_id": 171413,
+            "fdc_description": "Oil, olive, salad or cooking",
+            "per_100g": {
+              "calories": 884,
+              "protein_g": 0.0,
+              "carbs_g": 0.0,
+              "fat_g": 100,
+              "saturated_fat_g": 13.8,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0,
+              "sodium_mg": 2.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171413/nutrients"
+          },
+          {
+            "ingredient": "vinagre de vino tinto",
+            "edible_grams": 20,
+            "fdc_id": 172240,
+            "fdc_description": "Vinegar, red wine",
+            "per_100g": {
+              "calories": 19.0,
+              "protein_g": 0.04,
+              "carbs_g": 0.27,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0,
+              "sodium_mg": 8.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/172240/nutrients"
+          },
+          {
+            "ingredient": "pimentón dulce",
+            "edible_grams": 2,
+            "fdc_id": 171329,
+            "fdc_description": "Spices, paprika",
+            "per_100g": {
+              "calories": 282,
+              "protein_g": 14.1,
+              "carbs_g": 54.0,
+              "fat_g": 12.9,
+              "saturated_fat_g": 2.14,
+              "fiber_g": 34.9,
+              "sugar_g": 10.3,
+              "sodium_mg": 68.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171329/nutrients"
+          },
+          {
+            "ingredient": "sal fina",
+            "edible_grams": 3,
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "calories": 0.0,
+              "protein_g": 0.0,
+              "carbs_g": 0.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0,
+              "sodium_mg": 38800.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients"
+          },
+          {
+            "ingredient": "agua potable para salsa",
+            "edible_grams": 30,
+            "fdc_id": 173647,
+            "fdc_description": "Beverages, water, tap, drinking",
+            "per_100g": {
+              "calories": 0.0,
+              "protein_g": 0.0,
+              "carbs_g": 0.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0,
+              "sodium_mg": 4.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173647/nutrients"
+          }
+        ],
+        "missing_nutrients": [
+          "sugar_g"
+        ],
+        "serving_size": "Una cuarta parte de la ensalada con toda su salsa; 4 raciones propuestas",
+        "method": "Suma de gramos comestibles por valores USDA por 100 g, dividida entre 4. Quince alimentos exactos verificados; siete nutrientes presentes en todos. Solo se suman nutrientes completos. Azúcar total omitido por ausencia en la ficha 175243 de frijoles escurridos y enjuagados.",
+        "note": "Estimación pendiente de confirmación, no análisis ni prueba de cocina. Los 1379 g son peso inicial, no rendimiento final medido. La ficha 175243 corresponde exactamente a frijoles rojos comerciales escurridos y enjuagados; no informa azúcar, que queda pendiente, no cero. Verduras para asar se calculan con referencia cruda, reteniendo piel comestible y jugos; frutos secos con referencia cruda antes de tostado suave sin aceite añadido. Cebolla USDA genérica, no análisis de una variedad roja concreta. Pan blanco comercial puede variar de marca y contener leche. Se incluyen toda la salsa, aceite, sal y agua pesados; no se inventan pérdidas de evaporación o manipulación ni reducción adicional de sodio por enjuague. Marcas, peso escurrido y humedad cambian valores. No incluye acompañamientos y datos ausentes nunca se sustituyen por cero."
+      },
+      "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/portada.webp",
+          "alt": "Ensalada de frijoles rojos enteros con dados de pepino, cebolla y perejil, cubierta con salsa romesco roja granulosa sin guarniciones extra"
+        }
+      ],
+      "published": false,
+      "editorial_status": "draft",
+      "keywords": [
+        "ensalada de frijoles",
+        "romesco propuesto",
+        "frijoles rojos cocidos",
+        "ensalada fría con frutos secos"
+      ],
+      "notes": "Ensalada propuesta con frijoles rojos comerciales ya cocidos y romesco de verduras asadas, almendras, avellanas y pan; no se presenta como fórmula tradicional única. Nunca uses frijoles rojos secos, remojados o insuficientemente cocidos en lugar de la conserva lista para comer: necesitan un procedimiento seguro completo distinto y otro cálculo de tiempos y pesos. Contiene almendras, avellanas y trigo; el pan puede contener leche, soja u otros alérgenos según etiqueta. Revisa ingredientes y trazas de todos los productos; no garantiza aptitud para alergias ni una etiqueta vegana. Cambiar frutos secos, pan o frijoles modifica textura, cantidades y nutrición: adapta y recalcula, sin suponer equivalencia. No deseches piel comestible ni jugos del asado en esta propuesta; toda la salsa y los 30 g de aceite se incluyen. El vinagre no convierte la ensalada ni la salsa en una conserva estable a temperatura ambiente. No se propone embotar ni guardar la salsa durante meses. Lava verduras con agua corriente sin jabón, usa utensilios limpios, guantes para el horno y desconecta el procesador antes de raspar. Evita procesar ingredientes muy calientes en un vaso cerrado. Mantén a 4 °C o menos; refrigera dentro de 2 horas o 1 hora por encima de 32 °C. Los 24 horas propuestos tras preparar son una sugerencia conservadora de calidad sin ensayo, no vida útil validada. No se fija congelación. No se afirma prueba de cocina ni beneficio de salud.",
+      "seo": {
+        "title": "Ensalada de frijoles con romesco, paso a paso",
+        "description": "Frijoles rojos cocidos, pepino y romesco de verduras asadas: cantidades, tostado, enfriado y conservación para cuatro raciones propuestas.",
+        "image_alt": "Ensalada de frijoles rojos enteros con dados de pepino, cebolla y perejil, cubierta con salsa romesco roja granulosa sin guarniciones extra",
+        "image_variants": [
+          "/recetas/ensalada-de-frijoles-con-salsa-romesco/portada-1x1.webp",
+          "/recetas/ensalada-de-frijoles-con-salsa-romesco/portada-4x3.webp",
+          "/recetas/ensalada-de-frijoles-con-salsa-romesco/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "¿Puedo usar frijoles secos o recién cocidos?",
+            "a": "Esta propuesta calcula frijoles rojos comerciales ya cocidos, escurridos y enjuagados. Los secos no se sustituyen directamente: exigen remojo y cocción segura completa según instrucciones fiables, otra planificación y un peso cocido real. No basta con ablandarlos o usarlos remojados."
+          },
+          {
+            "q": "¿Es un romesco tradicional y puedo cambiar los frutos secos?",
+            "a": "Es una versión propuesta para esta ensalada, con pimiento y tomate asados, almendras, avellanas, pan y vinagre. No afirma una única fórmula tradicional. Cambiar o retirar frutos secos o pan modifica sabor, consistencia, alérgenos y cálculo; adapta cantidades y no prometas el mismo resultado."
+          },
+          {
+            "q": "¿Cuánto tiempo necesita y cómo se conserva?",
+            "a": "Se proponen 92 minutos completos, incluidos asado, tareas solapadas y 30 minutos de frío. Si necesita más asado o enfriado, suma el tiempo real. Mantén a 4 °C o menos y refrigera dentro de 2 horas, o 1 hora por encima de 32 °C. Consumir en 24 horas tras preparar es una propuesta no ensayada de calidad, no conservación validada; el vinagre no permite dejarla a temperatura ambiente."
+          }
+        ]
+      },
+      "content_html": "<p>Ensalada fría propuesta de frijoles rojos cocidos, pepino, cebolla y perejil con un romesco de pimiento y tomate asados, frutos secos y pan. Se proponen 4 raciones y 92 minutos completos, incluido el frío. Cantidades, tiempos y rendimiento pendientes de confirmación en cocina.</p><p>Ensalada propuesta con frijoles rojos comerciales ya cocidos y romesco de verduras asadas, almendras, avellanas y pan; no se presenta como fórmula tradicional única. Nunca uses frijoles rojos secos, remojados o insuficientemente cocidos en lugar de la conserva lista para comer: necesitan un procedimiento seguro completo distinto y otro cálculo de tiempos y pesos. Contiene almendras, avellanas y trigo; el pan puede contener leche, soja u otros alérgenos según etiqueta. Revisa ingredientes y trazas de todos los productos; no garantiza aptitud para alergias ni una etiqueta vegana. Cambiar frutos secos, pan o frijoles modifica textura, cantidades y nutrición: adapta y recalcula, sin suponer equivalencia. No deseches piel comestible ni jugos del asado en esta propuesta; toda la salsa y los 30 g de aceite se incluyen. El vinagre no convierte la ensalada ni la salsa en una conserva estable a temperatura ambiente. No se propone embotar ni guardar la salsa durante meses. Lava verduras con agua corriente sin jabón, usa utensilios limpios, guantes para el horno y desconecta el procesador antes de raspar. Evita procesar ingredientes muy calientes en un vaso cerrado. Mantén a 4 °C o menos; refrigera dentro de 2 horas o 1 hora por encima de 32 °C. Los 24 horas propuestos tras preparar son una sugerencia conservadora de calidad sin ensayo, no vida útil validada. No se fija congelación. No se afirma prueba de cocina ni beneficio de salud.</p>"
+    },
+    {
+      "id": "6115a675-c370-5c02-ba44-d8991a36ece8",
+      "recipe_group_id": "8ba3cf9e-47d6-4b27-afdb-9f5b7700b45d",
+      "slug": "bohnensalat-mit-romesco-sauce",
+      "public_path": "/de/bohnensalat-mit-romesco-sauce",
+      "source_url": "https://manualdecocina.com/de/bohnensalat-mit-romesco-sauce/",
+      "language": "de",
+      "title": "Roter Bohnensalat mit vorgeschlagener Romesco-Sauce",
+      "excerpt": "Gekochte Bohnen, Gurke und frisches Gemüse mit Sauce aus gerösteter Paprika, Tomate, Nüssen und Brot für vier vorgeschlagene Portionen.",
+      "summary": "Vorgeschlagener kalter Salat aus gekochten roten Kidneybohnen, Gurke, Zwiebel und Petersilie mit Romesco aus gerösteter Paprika und Tomate, Nüssen und Brot. Vorgesehen sind 4 Portionen und insgesamt 92 Minuten einschließlich Kühlung. Mengen, Zeiten und Ausbeute müssen noch in der Küche bestätigt werden.",
+      "category": "Salate",
+      "category_slug": "ensaladas",
+      "difficulty": "Mittel",
+      "course": "Salat",
+      "cuisine": "Mediterran inspiriert",
+      "prep_time_minutes": 37,
+      "cook_time_minutes": 25,
+      "total_time_minutes": 92,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "rote Kidneybohnen aus der Dose, bereits gekocht, abgetropft und abgespült",
+          "amount": "600",
+          "unit": "g",
+          "group": "Salat"
+        },
+        {
+          "name": "saubere Gurke mit Schale",
+          "amount": "200",
+          "unit": "g",
+          "group": "Salat"
+        },
+        {
+          "name": "geschälte rote Zwiebel",
+          "amount": "60",
+          "unit": "g",
+          "group": "Salat"
+        },
+        {
+          "name": "saubere frische Petersilie",
+          "amount": "10",
+          "unit": "g",
+          "group": "Salat"
+        },
+        {
+          "name": "frische rote Paprika ohne Stiel und Samen, vor dem Rösten gewogen",
+          "amount": "200",
+          "unit": "g",
+          "group": "Vorgeschlagene Romesco-Sauce"
+        },
+        {
+          "name": "reife rote Tomate ohne Stielansatz, vor dem Rösten gewogen",
+          "amount": "150",
+          "unit": "g",
+          "group": "Vorgeschlagene Romesco-Sauce"
+        },
+        {
+          "name": "geschälter Knoblauch",
+          "amount": "4",
+          "unit": "g",
+          "group": "Vorgeschlagene Romesco-Sauce"
+        },
+        {
+          "name": "rohe ungesalzene Mandeln mit Haut",
+          "amount": "30",
+          "unit": "g",
+          "group": "Vorgeschlagene Romesco-Sauce"
+        },
+        {
+          "name": "rohe ungesalzene Haselnüsse mit Haut",
+          "amount": "20",
+          "unit": "g",
+          "group": "Vorgeschlagene Romesco-Sauce"
+        },
+        {
+          "name": "bereits gebackenes handelsübliches Weißbrot ohne Schimmel",
+          "amount": "20",
+          "unit": "g",
+          "group": "Vorgeschlagene Romesco-Sauce"
+        },
+        {
+          "name": "Olivenöl",
+          "amount": "30",
+          "unit": "g",
+          "group": "Vorgeschlagene Romesco-Sauce"
+        },
+        {
+          "name": "Rotweinessig",
+          "amount": "20",
+          "unit": "g",
+          "group": "Vorgeschlagene Romesco-Sauce"
+        },
+        {
+          "name": "edelsüßes Paprikapulver",
+          "amount": "2",
+          "unit": "g",
+          "group": "Vorgeschlagene Romesco-Sauce"
+        },
+        {
+          "name": "feines Salz",
+          "amount": "3",
+          "unit": "g",
+          "group": "Vorgeschlagene Romesco-Sauce"
+        },
+        {
+          "name": "Trinkwasser für die Sauce",
+          "amount": "30",
+          "unit": "g",
+          "group": "Vorgeschlagene Romesco-Sauce"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Zutaten vorbereiten und abwiegen",
+          "content": "Hände waschen und Waage, sauberes Brett, Sieb, trockene Pfanne, Blech mit Backpapier und Küchenmaschine mit Deckel vorbereiten. Paprika, Tomate, Gurke und Petersilie unter fließendem Wasser ohne Seife waschen und trocknen. 200 g Paprika nach Entfernen von Stiel und Samen, 150 g Tomate ohne Stielansatz und 4 g geschälten Knoblauch abwiegen. Essbare Paprika- und Tomatenhaut behalten; nach dem Rösten wird nicht geschält. Für die Sauce 30 g Mandeln, 20 g Haselnüsse, 20 g gebackenes Brot, 30 g Öl, 20 g Essig, 2 g Paprikapulver, 3 g Salz und 30 g Wasser abwiegen. 200 g Gurke mit Schale, 60 g geschälte rote Zwiebel und 10 g Petersilie zurücklegen. Die Bohnen wiegen nach Abtropfen und Abspülen 600 g, nicht als geschlossene Dose. Handelsübliche gekochte Konserven nutzen, die laut Etikett direkt verzehrbar sind; niemals trockene oder rohe Bohnen. Den Ofen während dieser 15 Minuten Anfangsvorbereitung mit Ober- und Unterhitze auf 220 °C vorheizen; dies ist keine zusätzliche Wartezeit.",
+          "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/paso-01.webp",
+          "image_alt": "Roter Bohnensalat mit vorgeschlagener Romesco-Sauce: Zutaten vorbereiten und abwiegen"
+        },
+        {
+          "title": "Gemüse für die Sauce rösten",
+          "content": "Paprika in breite Streifen und Tomate in Viertel schneiden. Mit dem Knoblauch in einer Lage auf das Blech geben, ohne Öl: das gesamte abgewogene Öl wird beim Pürieren verwendet. Auf mittlerer Schiene etwa 25 Minuten bei 220 °C rösten, nach 15 prüfen. Das Gemüse soll weich werden und geröstete Stellen bekommen, keine Asche oder schwarze Haut. Bräunt Knoblauch früher, in eine saubere Schüssel legen, ohne sein Gewicht aus der Berechnung zu streichen. Mit Ofenhandschuhen herausnehmen und sämtliches Fruchtfleisch, essbare Haut und aufgefangene Säfte behalten. Vor dem Pürieren etwa 10 Minuten kurz abkühlen; währenddessen Bohnen und frisches Gemüse vorbereiten. Tatsächliche zusätzliche Ofenzeit addieren.",
+          "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/paso-02.webp",
+          "image_alt": "Roter Bohnensalat mit vorgeschlagener Romesco-Sauce: Gemüse für die Sauce rösten"
+        },
+        {
+          "title": "Nüsse und Brot während des Röstens toasten",
+          "content": "Während das Gemüse im Ofen ist, 30 g Mandeln, 20 g Haselnüsse und 20 g gewürfeltes Brot in einer trockenen Pfanne bei mittlerer bis niedriger Hitze etwa 5 Minuten rösten. Häufig bewegen, bis es leicht geröstet duftet, ohne Anbrennen oder zusätzliches Öl. Auf einem sauberen Teller etwa 5 Minuten vor dem Pürieren abkühlen. Häute und alle Stücke behalten; keine zusätzliche Garnitur zurücklegen. Rösten und Abkühlen überlappen die 25 Minuten Ofenzeit und bilden keine weitere Wartezeit. Beide Gefäße beaufsichtigen und Hitze nicht unbeaufsichtigt lassen.",
+          "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/paso-03.webp",
+          "image_alt": "Roter Bohnensalat mit vorgeschlagener Romesco-Sauce: Nüsse und Brot während des Röstens toasten"
+        },
+        {
+          "title": "Bohnen abtropfen lassen und Gemüse schneiden",
+          "content": "Konserven prüfen: gewölbte, undichte oder beschädigte Behälter verwerfen und nach dem Öffnen Etikett befolgen. Bohnen abgießen, in sauberem Sieb mit Trinkwasser abspülen und gut abtropfen lassen, dann 600 g verzehrfertige feste Bestandteile wiegen. Dosenflüssigkeit weder berechnen noch zurückgeben. 200 g Gurke mit Schale klein würfeln, 60 g Zwiebel fein schneiden und 10 g Petersilie hacken. In einer großen Schüssel verbinden, ohne Bohnen zu zerdrücken. Dies beansprucht etwa 10 Minuten während des Abkühlens des Ofengemüses. Bei längerer Wartezeit die Schüssel bei höchstens 4 °C halten.",
+          "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/paso-04.webp",
+          "image_alt": "Roter Bohnensalat mit vorgeschlagener Romesco-Sauce: Bohnen abtropfen lassen und Gemüse schneiden"
+        },
+        {
+          "title": "Romesco ohne versteckte Zusätze pürieren",
+          "content": "Das kurz abgekühlte Gemüse vollständig samt Paprika, Tomate, Knoblauch und Säften mit allen gerösteten Nüssen und dem Brot in die Küchenmaschine geben. Abgewogene 20 g Essig, 2 g Paprikapulver, 3 g Salz und 30 g Wasser zufügen. Deckel schließen und pulsierend verarbeiten, dann 30 g Öl portionsweise einarbeiten, bis eine dicke, leicht körnige verteilbare Sauce entsteht. Nur bei gezogenem Stecker mit sauberem Spatel abschaben. Etwa 5 Minuten vorsehen; sehr heiße Zutaten nicht in luftdichtem Gefäß pürieren. Ganze Sauce nutzen und nicht mit ungemessenem Öl, Salz oder Wasser korrigieren. Änderungen erfordern eine neue Mengen- und Nährwertprüfung. Es ist ein Romesco-Vorschlag, kein Anspruch auf eine einzige traditionelle Rezeptur.",
+          "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/paso-05.webp",
+          "image_alt": "Roter Bohnensalat mit vorgeschlagener Romesco-Sauce: Romesco ohne versteckte Zusätze pürieren"
+        },
+        {
+          "title": "Vermischen und abgedeckt kühlen",
+          "content": "Die gesamte Sauce über Bohnen, Gurke, Zwiebel und Petersilie verteilen. Mit zwei sauberen Löffeln etwa 5 Minuten vorsichtig mischen, damit Bohnen ganz bleiben und jede Portion Sauce erhält. In einen flachen Behälter geben, abdecken und bei höchstens 4 °C etwa 30 Minuten bis zum kalten Zustand kühlen; bei Bedarf verlängern und Zeit addieren. Verderbliche Lebensmittel binnen 2 Stunden ab Vorbereitung kühlen, bei Umgebungstemperaturen über 32 °C binnen 1 Stunde. Die Planung umfasst 15 Minuten Anfangsvorbereitung, 25 Minuten Ofenrösten mit überlappendem Nussrösten und Abkühlen, 10 Minuten Abkühlen mit überlappendem Schneiden und Abtropfen, 5 Minuten Sauce, 5 Minuten Mischen, 30 Minuten Kühlung und 2 Minuten Portionieren: vorgeschlagene 92 Minuten.",
+          "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/paso-06.webp",
+          "image_alt": "Roter Bohnensalat mit vorgeschlagener Romesco-Sauce: Vermischen und abgedeckt kühlen"
+        },
+        {
+          "title": "Vier Portionen servieren und kalt lagern",
+          "content": "Etwa 2 Minuten für das Aufteilen in 4 ähnliche Portionen mit Bohnen, Gemüse und Sauce einplanen. Kalt ohne Käse, Oliven, zusätzliche Nüsse oder weiteres Brot servieren; diese sind nicht berechnet. 1379 g bezeichnet die Summe der anfänglich gewogenen essbaren Zutaten, keine gemessene fertige Ausbeute oder Portionsmasse. Mengen, Zeiten und vier Portionen sind noch zu bestätigende Küchenvorschläge. Abgedeckt bei höchstens 4 °C lagern und als vorsichtigen, ungeprüften Qualitätsvorschlag innerhalb von 24 Stunden nach der Zubereitung essen. Nur benötigte Mengen herausnehmen und den Rest schnell zurückkühlen. Tellerreste nicht wiederverwenden oder Lagerdauer am Geruch festmachen. Zucker bleibt offen, weil die Bohnenreferenz ihn nicht ausweist; fehlend bedeutet nicht null.",
+          "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/portada.webp",
+          "image_alt": "Roter Bohnensalat mit vorgeschlagener Romesco-Sauce: Vier Portionen servieren und kalt lagern"
+        }
+      ],
+      "nutrition": {
+        "calories": 373.9,
+        "protein_g": 16.5,
+        "carbs_g": 44.6,
+        "fat_g": 16.2,
+        "saturated_fat_g": 2.1,
+        "fiber_g": 12.8,
+        "sodium_mg": 635.8,
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "inputs": [
+          {
+            "ingredient": "rote Kidneybohnen aus der Dose, bereits gekocht, abgetropft und abgespült",
+            "edible_grams": 600,
+            "fdc_id": 175243,
+            "fdc_description": "Beans, kidney, red, mature seeds, canned, drained solids, rinsed in tap water",
+            "per_100g": {
+              "calories": 121,
+              "protein_g": 8.12,
+              "carbs_g": 20.8,
+              "fat_g": 0.93,
+              "saturated_fat_g": 0.328,
+              "fiber_g": 6.0,
+              "sodium_mg": 208
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/175243/nutrients"
+          },
+          {
+            "ingredient": "saubere Gurke mit Schale",
+            "edible_grams": 200,
+            "fdc_id": 168409,
+            "fdc_description": "Cucumber, with peel, raw",
+            "per_100g": {
+              "calories": 15.0,
+              "protein_g": 0.65,
+              "carbs_g": 3.63,
+              "fat_g": 0.11,
+              "saturated_fat_g": 0.037,
+              "fiber_g": 0.5,
+              "sugar_g": 1.67,
+              "sodium_mg": 2.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/168409/nutrients"
+          },
+          {
+            "ingredient": "geschälte rote Zwiebel",
+            "edible_grams": 60,
+            "fdc_id": 170000,
+            "fdc_description": "Onions, raw",
+            "per_100g": {
+              "calories": 40.0,
+              "protein_g": 1.1,
+              "carbs_g": 9.34,
+              "fat_g": 0.1,
+              "saturated_fat_g": 0.042,
+              "fiber_g": 1.7,
+              "sugar_g": 4.24,
+              "sodium_mg": 4.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170000/nutrients"
+          },
+          {
+            "ingredient": "saubere frische Petersilie",
+            "edible_grams": 10,
+            "fdc_id": 170416,
+            "fdc_description": "Parsley, fresh",
+            "per_100g": {
+              "calories": 36.0,
+              "protein_g": 2.97,
+              "carbs_g": 6.33,
+              "fat_g": 0.79,
+              "saturated_fat_g": 0.132,
+              "fiber_g": 3.3,
+              "sugar_g": 0.85,
+              "sodium_mg": 56.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170416/nutrients"
+          },
+          {
+            "ingredient": "frische rote Paprika ohne Stiel und Samen, vor dem Rösten gewogen",
+            "edible_grams": 200,
+            "fdc_id": 170108,
+            "fdc_description": "Peppers, sweet, red, raw",
+            "per_100g": {
+              "calories": 26.0,
+              "protein_g": 0.99,
+              "carbs_g": 6.03,
+              "fat_g": 0.3,
+              "saturated_fat_g": 0.059,
+              "fiber_g": 2.1,
+              "sugar_g": 4.2,
+              "sodium_mg": 4.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170108/nutrients"
+          },
+          {
+            "ingredient": "reife rote Tomate ohne Stielansatz, vor dem Rösten gewogen",
+            "edible_grams": 150,
+            "fdc_id": 170457,
+            "fdc_description": "Tomatoes, red, ripe, raw, year round average",
+            "per_100g": {
+              "calories": 18.0,
+              "protein_g": 0.88,
+              "carbs_g": 3.89,
+              "fat_g": 0.2,
+              "saturated_fat_g": 0.028,
+              "fiber_g": 1.2,
+              "sugar_g": 2.63,
+              "sodium_mg": 5.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170457/nutrients"
+          },
+          {
+            "ingredient": "geschälter Knoblauch",
+            "edible_grams": 4,
+            "fdc_id": 169230,
+            "fdc_description": "Garlic, raw",
+            "per_100g": {
+              "calories": 149,
+              "protein_g": 6.36,
+              "carbs_g": 33.1,
+              "fat_g": 0.5,
+              "saturated_fat_g": 0.089,
+              "fiber_g": 2.1,
+              "sugar_g": 1.0,
+              "sodium_mg": 17.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169230/nutrients"
+          },
+          {
+            "ingredient": "rohe ungesalzene Mandeln mit Haut",
+            "edible_grams": 30,
+            "fdc_id": 170567,
+            "fdc_description": "Nuts, almonds",
+            "per_100g": {
+              "calories": 579,
+              "protein_g": 21.2,
+              "carbs_g": 21.6,
+              "fat_g": 49.9,
+              "saturated_fat_g": 3.8,
+              "fiber_g": 12.5,
+              "sugar_g": 4.35,
+              "sodium_mg": 1.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170567/nutrients"
+          },
+          {
+            "ingredient": "rohe ungesalzene Haselnüsse mit Haut",
+            "edible_grams": 20,
+            "fdc_id": 170581,
+            "fdc_description": "Nuts, hazelnuts or filberts",
+            "per_100g": {
+              "calories": 628,
+              "protein_g": 15.0,
+              "carbs_g": 16.7,
+              "fat_g": 60.8,
+              "saturated_fat_g": 4.46,
+              "fiber_g": 9.7,
+              "sugar_g": 4.34,
+              "sodium_mg": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170581/nutrients"
+          },
+          {
+            "ingredient": "bereits gebackenes handelsübliches Weißbrot ohne Schimmel",
+            "edible_grams": 20,
+            "fdc_id": 174924,
+            "fdc_description": "Bread, white, commercially prepared (includes soft bread crumbs)",
+            "per_100g": {
+              "calories": 266,
+              "protein_g": 8.85,
+              "carbs_g": 49.4,
+              "fat_g": 3.33,
+              "saturated_fat_g": 0.698,
+              "fiber_g": 2.7,
+              "sugar_g": 5.67,
+              "sodium_mg": 490
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/174924/nutrients"
+          },
+          {
+            "ingredient": "Olivenöl",
+            "edible_grams": 30,
+            "fdc_id": 171413,
+            "fdc_description": "Oil, olive, salad or cooking",
+            "per_100g": {
+              "calories": 884,
+              "protein_g": 0.0,
+              "carbs_g": 0.0,
+              "fat_g": 100,
+              "saturated_fat_g": 13.8,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0,
+              "sodium_mg": 2.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171413/nutrients"
+          },
+          {
+            "ingredient": "Rotweinessig",
+            "edible_grams": 20,
+            "fdc_id": 172240,
+            "fdc_description": "Vinegar, red wine",
+            "per_100g": {
+              "calories": 19.0,
+              "protein_g": 0.04,
+              "carbs_g": 0.27,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0,
+              "sodium_mg": 8.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/172240/nutrients"
+          },
+          {
+            "ingredient": "edelsüßes Paprikapulver",
+            "edible_grams": 2,
+            "fdc_id": 171329,
+            "fdc_description": "Spices, paprika",
+            "per_100g": {
+              "calories": 282,
+              "protein_g": 14.1,
+              "carbs_g": 54.0,
+              "fat_g": 12.9,
+              "saturated_fat_g": 2.14,
+              "fiber_g": 34.9,
+              "sugar_g": 10.3,
+              "sodium_mg": 68.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171329/nutrients"
+          },
+          {
+            "ingredient": "feines Salz",
+            "edible_grams": 3,
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "calories": 0.0,
+              "protein_g": 0.0,
+              "carbs_g": 0.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0,
+              "sodium_mg": 38800.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients"
+          },
+          {
+            "ingredient": "Trinkwasser für die Sauce",
+            "edible_grams": 30,
+            "fdc_id": 173647,
+            "fdc_description": "Beverages, water, tap, drinking",
+            "per_100g": {
+              "calories": 0.0,
+              "protein_g": 0.0,
+              "carbs_g": 0.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0,
+              "sodium_mg": 4.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173647/nutrients"
+          }
+        ],
+        "missing_nutrients": [
+          "sugar_g"
+        ],
+        "serving_size": "Ein Viertel des Salats mit seiner gesamten Sauce; 4 vorgeschlagene Portionen",
+        "method": "Summe der essbaren Gramm multipliziert mit USDA-Nährwerten je 100 g, geteilt durch 4. Fünfzehn exakte Lebensmittel geprüft; sieben Nährwerte in allen vorhanden. Nur vollständige Nährwerte werden summiert. Zucker entfällt, weil Bohnenreferenz 175243 für abgetropfte abgespülte Bohnen ihn nicht berichtet.",
+        "note": "Noch zu bestätigende Schätzung, keine Analyse oder Küchenprüfung. 1379 g ist Anfangsgewicht, keine gemessene fertige Ausbeute. Referenz 175243 entspricht roten Konservenbohnen, abgetropft und abgespült; Zucker bleibt offen, nicht null. Ofengemüse wird anhand roher Werte mit erhaltener essbarer Haut und Säften gerechnet; Nüsse anhand roher Werte vor leichtem trockenem Rösten. Zwiebelreferenz ist allgemein, keine Analyse einer roten Sorte. Handelsübliches Weißbrot variiert und kann Milch enthalten. Gesamte abgewogene Sauce, Öl, Salz und Wasser sind enthalten; keine erfundenen Verdampfungs- oder Handhabungsverluste oder zusätzliche Natriumreduktion durch Spülen. Marke, Abtropfgewicht und Feuchtigkeit ändern Werte. Beilagen ausgeschlossen; fehlende Daten nie durch Null ersetzt."
+      },
+      "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/portada.webp",
+          "alt": "Ganze rote Kidneybohnen mit Gurkenwürfeln, Zwiebel und Petersilie, umhüllt von körniger roter Romesco-Sauce ohne zusätzliche Garnitur"
+        }
+      ],
+      "published": false,
+      "editorial_status": "draft",
+      "keywords": [
+        "roter Bohnensalat",
+        "Romesco-Vorschlag",
+        "gekochte Kidneybohnen",
+        "kalter Salat mit Nüssen"
+      ],
+      "notes": "Vorgeschlagener Salat mit handelsüblichen bereits gekochten roten Kidneybohnen und Romesco aus Ofengemüse, Mandeln, Haselnüssen und Brot, ohne Anspruch auf eine einzige traditionelle Formel. Trockene, eingeweichte oder unzureichend gekochte rote Bohnen ersetzen keine verzehrfertige Konserve: dafür sind ein eigenes vollständiges sicheres Verfahren und neue Gewichts- und Zeitplanung nötig. Enthält Mandeln, Haselnüsse und Weizen; Brot kann Milch, Soja oder weitere Allergene enthalten. Sämtliche Etiketten und Spuren prüfen, ohne Allergieverträglichkeit oder vegane Kennzeichnung zu garantieren. Austausch verändert Konsistenz, Mengen und Nährwerte: anpassen und neu berechnen. Essbare Haut und Säfte behalten; gesamte Sauce und 30 g Öl einrechnen. Essig macht weder Salat noch Sauce bei Raumtemperatur haltbar. Einkochen oder monatelanges Lagern wird nicht vorgeschlagen. Gemüse ohne Seife waschen, saubere Geräte und Ofenhandschuhe nutzen und vor dem Abschaben Stecker ziehen. Sehr heiße Zutaten nicht geschlossen pürieren. Bei höchstens 4 °C halten und binnen 2 Stunden kühlen, über 32 °C binnen 1 Stunde. Vorgeschlagene 24 Stunden nach Zubereitung sind ein ungeprüfter Qualitätshinweis, keine validierte Haltbarkeit. Keine Gefrierdauer, Küchenprüfung oder Gesundheitswirkung behauptet.",
+      "seo": {
+        "title": "Bohnensalat mit Romesco: Vorbereitung und Kühlung",
+        "description": "Gekochte rote Bohnen, Gurke und Romesco aus Ofengemüse: Mengen, Nussrösten, Kühlung und Aufbewahrung für vier vorgeschlagene Portionen.",
+        "image_alt": "Ganze rote Kidneybohnen mit Gurkenwürfeln, Zwiebel und Petersilie, umhüllt von körniger roter Romesco-Sauce ohne zusätzliche Garnitur",
+        "image_variants": [
+          "/recetas/ensalada-de-frijoles-con-salsa-romesco/portada-1x1.webp",
+          "/recetas/ensalada-de-frijoles-con-salsa-romesco/portada-4x3.webp",
+          "/recetas/ensalada-de-frijoles-con-salsa-romesco/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Kann ich trockene oder frisch gekochte Bohnen verwenden?",
+            "a": "Berechnet sind handelsübliche bereits gekochte, abgetropfte und abgespülte rote Kidneybohnen. Trockene Bohnen sind kein direkter Ersatz: Einweichen und vollständiges sicheres Kochen nach verlässlicher Anleitung sowie neue Planung und reales gekochtes Gewicht sind nötig. Bloßes Weichwerden oder Einweichen reicht nicht."
+          },
+          {
+            "q": "Ist dies traditionelle Romesco und kann ich Nüsse ändern?",
+            "a": "Es ist ein Vorschlag für diesen Salat mit gerösteter Paprika und Tomate, Mandeln, Haselnüssen, Brot und Essig, kein Anspruch auf eine einzige traditionelle Formel. Austausch oder Weglassen von Nüssen oder Brot ändert Geschmack, Konsistenz, Allergene und Berechnung; Mengen anpassen und kein gleiches Ergebnis versprechen."
+          },
+          {
+            "q": "Wie lange dauert es und wie wird gelagert?",
+            "a": "Vorgesehen sind insgesamt 92 Minuten einschließlich Rösten, überlappender Aufgaben und 30 Minuten Kühlung. Reale Zusatzzeit addieren. Bei höchstens 4 °C halten und binnen 2 Stunden kühlen, über 32 °C binnen 1 Stunde. Verzehr binnen 24 Stunden nach Zubereitung ist ein ungeprüfter Qualitätsvorschlag, keine validierte Haltbarkeit; Essig erlaubt keine Lagerung bei Raumtemperatur."
+          }
+        ]
+      },
+      "content_html": "<p>Vorgeschlagener kalter Salat aus gekochten roten Kidneybohnen, Gurke, Zwiebel und Petersilie mit Romesco aus gerösteter Paprika und Tomate, Nüssen und Brot. Vorgesehen sind 4 Portionen und insgesamt 92 Minuten einschließlich Kühlung. Mengen, Zeiten und Ausbeute müssen noch in der Küche bestätigt werden.</p><p>Vorgeschlagener Salat mit handelsüblichen bereits gekochten roten Kidneybohnen und Romesco aus Ofengemüse, Mandeln, Haselnüssen und Brot, ohne Anspruch auf eine einzige traditionelle Formel. Trockene, eingeweichte oder unzureichend gekochte rote Bohnen ersetzen keine verzehrfertige Konserve: dafür sind ein eigenes vollständiges sicheres Verfahren und neue Gewichts- und Zeitplanung nötig. Enthält Mandeln, Haselnüsse und Weizen; Brot kann Milch, Soja oder weitere Allergene enthalten. Sämtliche Etiketten und Spuren prüfen, ohne Allergieverträglichkeit oder vegane Kennzeichnung zu garantieren. Austausch verändert Konsistenz, Mengen und Nährwerte: anpassen und neu berechnen. Essbare Haut und Säfte behalten; gesamte Sauce und 30 g Öl einrechnen. Essig macht weder Salat noch Sauce bei Raumtemperatur haltbar. Einkochen oder monatelanges Lagern wird nicht vorgeschlagen. Gemüse ohne Seife waschen, saubere Geräte und Ofenhandschuhe nutzen und vor dem Abschaben Stecker ziehen. Sehr heiße Zutaten nicht geschlossen pürieren. Bei höchstens 4 °C halten und binnen 2 Stunden kühlen, über 32 °C binnen 1 Stunde. Vorgeschlagene 24 Stunden nach Zubereitung sind ein ungeprüfter Qualitätshinweis, keine validierte Haltbarkeit. Keine Gefrierdauer, Küchenprüfung oder Gesundheitswirkung behauptet.</p>"
+    },
+    {
+      "id": "6c98558f-b329-5ebf-8845-1525bb54284a",
+      "recipe_group_id": "8ba3cf9e-47d6-4b27-afdb-9f5b7700b45d",
+      "slug": "bean-salad-with-romesco-sauce",
+      "public_path": "/en/bean-salad-with-romesco-sauce",
+      "source_url": "https://manualdecocina.com/en/bean-salad-with-romesco-sauce/",
+      "language": "en",
+      "title": "Red kidney bean salad with a proposed romesco",
+      "excerpt": "Cooked beans, cucumber and fresh vegetables with roasted pepper, tomato, nut and bread sauce for four proposed servings.",
+      "summary": "A proposed cold salad of cooked red kidney beans, cucumber, onion and parsley with a roasted pepper and tomato romesco containing nuts and bread. Makes a proposed 4 servings in 92 complete minutes including chilling. Quantities, timings and yield await kitchen confirmation.",
+      "category": "Salads",
+      "category_slug": "ensaladas",
+      "difficulty": "Medium",
+      "course": "Salad",
+      "cuisine": "Mediterranean-inspired",
+      "prep_time_minutes": 37,
+      "cook_time_minutes": 25,
+      "total_time_minutes": 92,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "canned red kidney beans, already cooked, drained and rinsed",
+          "amount": "600",
+          "unit": "g",
+          "group": "Salad"
+        },
+        {
+          "name": "clean cucumber with peel",
+          "amount": "200",
+          "unit": "g",
+          "group": "Salad"
+        },
+        {
+          "name": "peeled red onion",
+          "amount": "60",
+          "unit": "g",
+          "group": "Salad"
+        },
+        {
+          "name": "clean fresh parsley",
+          "amount": "10",
+          "unit": "g",
+          "group": "Salad"
+        },
+        {
+          "name": "fresh red pepper without stem or seeds, weighed before roasting",
+          "amount": "200",
+          "unit": "g",
+          "group": "Proposed romesco"
+        },
+        {
+          "name": "ripe red tomato without stem, weighed before roasting",
+          "amount": "150",
+          "unit": "g",
+          "group": "Proposed romesco"
+        },
+        {
+          "name": "peeled garlic",
+          "amount": "4",
+          "unit": "g",
+          "group": "Proposed romesco"
+        },
+        {
+          "name": "raw unsalted almonds with skins",
+          "amount": "30",
+          "unit": "g",
+          "group": "Proposed romesco"
+        },
+        {
+          "name": "raw unsalted hazelnuts with skins",
+          "amount": "20",
+          "unit": "g",
+          "group": "Proposed romesco"
+        },
+        {
+          "name": "commercial white bread, already baked and free of mold",
+          "amount": "20",
+          "unit": "g",
+          "group": "Proposed romesco"
+        },
+        {
+          "name": "olive oil",
+          "amount": "30",
+          "unit": "g",
+          "group": "Proposed romesco"
+        },
+        {
+          "name": "red wine vinegar",
+          "amount": "20",
+          "unit": "g",
+          "group": "Proposed romesco"
+        },
+        {
+          "name": "sweet paprika",
+          "amount": "2",
+          "unit": "g",
+          "group": "Proposed romesco"
+        },
+        {
+          "name": "fine salt",
+          "amount": "3",
+          "unit": "g",
+          "group": "Proposed romesco"
+        },
+        {
+          "name": "drinking water for the sauce",
+          "amount": "30",
+          "unit": "g",
+          "group": "Proposed romesco"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepare and weigh the ingredients",
+          "content": "Wash your hands and prepare scales, a clean board, colander, dry frying pan, tray lined with baking parchment and a lidded food processor. Wash pepper, tomato, cucumber and parsley under running water without soap, then dry. Weigh 200 g pepper after removing stem and seeds, 150 g tomato without stem and 4 g peeled garlic. Keep the edible pepper and tomato skins; they are not peeled after roasting. Weigh 30 g almonds, 20 g hazelnuts, 20 g already baked bread, 30 g oil, 20 g vinegar, 2 g paprika, 3 g salt and 30 g water for the sauce. Set aside 200 g cucumber with peel, 60 g peeled red onion and 10 g parsley. Beans will weigh 600 g after draining and rinsing, not as an unopened can. Use commercially canned cooked beans labeled ready to eat, never dry or raw beans. Preheat the conventional oven to 220 °C during these 15 minutes of initial preparation; preheating is not an additional wait.",
+          "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/paso-01.webp",
+          "image_alt": "Red kidney bean salad with a proposed romesco: Prepare and weigh the ingredients"
+        },
+        {
+          "title": "Roast the vegetables for the sauce",
+          "content": "Cut pepper into broad strips and tomato into quarters. Arrange with the garlic in one layer on the tray without adding oil: all weighed oil goes into the sauce when blending. Roast about 25 minutes at 220 °C on the middle shelf, checking at 15. They should soften and show toasted areas, not ash or black skin. If garlic browns first, move it to a clean bowl without excluding its weight from the calculation. Remove with oven gloves and retain all flesh, edible skin and collected juices. Let cool briefly for about 10 minutes before processing; prepare beans and fresh vegetables during this interval. Add actual extra time if your oven needs longer.",
+          "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/paso-02.webp",
+          "image_alt": "Red kidney bean salad with a proposed romesco: Roast the vegetables for the sauce"
+        },
+        {
+          "title": "Toast nuts and bread during roasting",
+          "content": "While the vegetables roast, put the 30 g almonds, 20 g hazelnuts and 20 g cubed bread in a dry pan over medium-low heat. Toast about 5 minutes, stirring frequently until lightly fragrant without burning or adding oil. Transfer to a clean plate and cool about 5 minutes before processing. Keep skins and all pieces; none is reserved as extra garnish. Toasting and cooling overlap the 25-minute roast and are not added as another wait. Watch both pans and never leave the heat unattended.",
+          "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/paso-03.webp",
+          "image_alt": "Red kidney bean salad with a proposed romesco: Toast nuts and bread during roasting"
+        },
+        {
+          "title": "Drain beans and chop the salad vegetables",
+          "content": "Check cans: discard bulging, leaking or damaged containers and follow the label after opening. Drain beans, rinse with drinking water in a clean colander and drain thoroughly before weighing 600 g ready-to-eat solids. Do not calculate with the canning liquid or add it back. Dice the 200 g cucumber with peel, finely chop 60 g onion and chop 10 g parsley. Combine in a large bowl without crushing beans. This takes about 10 minutes during cooling of the roasted vegetables; keep the bowl at 4 °C or below if waiting longer.",
+          "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/paso-04.webp",
+          "image_alt": "Red kidney bean salad with a proposed romesco: Drain beans and chop the salad vegetables"
+        },
+        {
+          "title": "Blend the romesco without hidden additions",
+          "content": "Once the roasted vegetables have cooled briefly, put all pepper, tomato, garlic and their juices in the processor with all toasted nuts and bread. Add the weighed 20 g vinegar, 2 g paprika, 3 g salt and 30 g water. Close the lid and pulse, then add 30 g oil in several batches to make a thick, slightly grainy sauce that spreads easily. Scrape with a clean spatula only when the appliance is unplugged. Allow about 5 minutes; never blend very hot ingredients in an airtight vessel. Use all sauce without unmeasured oil, salt or water adjustments: changes require reviewing quantities and nutrition. This is a proposed romesco version, not a claim to one unique traditional formula.",
+          "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/paso-05.webp",
+          "image_alt": "Red kidney bean salad with a proposed romesco: Blend the romesco without hidden additions"
+        },
+        {
+          "title": "Mix and chill covered",
+          "content": "Distribute all sauce over the beans, cucumber, onion and parsley. Fold gently with two clean spoons for about 5 minutes so beans stay intact and every portion gets sauce. Transfer to a shallow container, cover and refrigerate at 4 °C or below about 30 minutes until cold; extend and add actual time if necessary. Refrigerate perishables within 2 hours of preparation, or 1 hour if surroundings exceed 32 °C. The plan includes 15 minutes initial preparation, 25 roasting with nut toasting and cooling overlapping, 10 cooling with draining and chopping overlapping, 5 sauce preparation, 5 mixing, 30 chilling and 2 portioning: 92 proposed minutes.",
+          "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/paso-06.webp",
+          "image_alt": "Red kidney bean salad with a proposed romesco: Mix and chill covered"
+        },
+        {
+          "title": "Serve four portions and keep refrigerated",
+          "content": "Allow about 2 minutes to divide into 4 similar portions, with beans, vegetables and sauce in each. Serve cold without cheese, olives, extra nuts or additional bread: these are excluded. The 1379 g is the sum of initial weighed edible ingredients, not measured final yield or portion weight. Quantities, timings and four portions are proposals awaiting kitchen confirmation. Store covered at 4 °C or below and, as a conservative untested quality proposal, consume within 24 hours after preparation. Remove only what will be served and promptly return the rest to refrigeration. Never reuse plate leftovers or decide storage duration by smell. Sugar remains pending because the bean reference does not report it; missing does not mean zero.",
+          "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/portada.webp",
+          "image_alt": "Red kidney bean salad with a proposed romesco: Serve four portions and keep refrigerated"
+        }
+      ],
+      "nutrition": {
+        "calories": 373.9,
+        "protein_g": 16.5,
+        "carbs_g": 44.6,
+        "fat_g": 16.2,
+        "saturated_fat_g": 2.1,
+        "fiber_g": 12.8,
+        "sodium_mg": 635.8,
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "inputs": [
+          {
+            "ingredient": "canned red kidney beans, already cooked, drained and rinsed",
+            "edible_grams": 600,
+            "fdc_id": 175243,
+            "fdc_description": "Beans, kidney, red, mature seeds, canned, drained solids, rinsed in tap water",
+            "per_100g": {
+              "calories": 121,
+              "protein_g": 8.12,
+              "carbs_g": 20.8,
+              "fat_g": 0.93,
+              "saturated_fat_g": 0.328,
+              "fiber_g": 6.0,
+              "sodium_mg": 208
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/175243/nutrients"
+          },
+          {
+            "ingredient": "clean cucumber with peel",
+            "edible_grams": 200,
+            "fdc_id": 168409,
+            "fdc_description": "Cucumber, with peel, raw",
+            "per_100g": {
+              "calories": 15.0,
+              "protein_g": 0.65,
+              "carbs_g": 3.63,
+              "fat_g": 0.11,
+              "saturated_fat_g": 0.037,
+              "fiber_g": 0.5,
+              "sugar_g": 1.67,
+              "sodium_mg": 2.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/168409/nutrients"
+          },
+          {
+            "ingredient": "peeled red onion",
+            "edible_grams": 60,
+            "fdc_id": 170000,
+            "fdc_description": "Onions, raw",
+            "per_100g": {
+              "calories": 40.0,
+              "protein_g": 1.1,
+              "carbs_g": 9.34,
+              "fat_g": 0.1,
+              "saturated_fat_g": 0.042,
+              "fiber_g": 1.7,
+              "sugar_g": 4.24,
+              "sodium_mg": 4.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170000/nutrients"
+          },
+          {
+            "ingredient": "clean fresh parsley",
+            "edible_grams": 10,
+            "fdc_id": 170416,
+            "fdc_description": "Parsley, fresh",
+            "per_100g": {
+              "calories": 36.0,
+              "protein_g": 2.97,
+              "carbs_g": 6.33,
+              "fat_g": 0.79,
+              "saturated_fat_g": 0.132,
+              "fiber_g": 3.3,
+              "sugar_g": 0.85,
+              "sodium_mg": 56.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170416/nutrients"
+          },
+          {
+            "ingredient": "fresh red pepper without stem or seeds, weighed before roasting",
+            "edible_grams": 200,
+            "fdc_id": 170108,
+            "fdc_description": "Peppers, sweet, red, raw",
+            "per_100g": {
+              "calories": 26.0,
+              "protein_g": 0.99,
+              "carbs_g": 6.03,
+              "fat_g": 0.3,
+              "saturated_fat_g": 0.059,
+              "fiber_g": 2.1,
+              "sugar_g": 4.2,
+              "sodium_mg": 4.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170108/nutrients"
+          },
+          {
+            "ingredient": "ripe red tomato without stem, weighed before roasting",
+            "edible_grams": 150,
+            "fdc_id": 170457,
+            "fdc_description": "Tomatoes, red, ripe, raw, year round average",
+            "per_100g": {
+              "calories": 18.0,
+              "protein_g": 0.88,
+              "carbs_g": 3.89,
+              "fat_g": 0.2,
+              "saturated_fat_g": 0.028,
+              "fiber_g": 1.2,
+              "sugar_g": 2.63,
+              "sodium_mg": 5.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170457/nutrients"
+          },
+          {
+            "ingredient": "peeled garlic",
+            "edible_grams": 4,
+            "fdc_id": 169230,
+            "fdc_description": "Garlic, raw",
+            "per_100g": {
+              "calories": 149,
+              "protein_g": 6.36,
+              "carbs_g": 33.1,
+              "fat_g": 0.5,
+              "saturated_fat_g": 0.089,
+              "fiber_g": 2.1,
+              "sugar_g": 1.0,
+              "sodium_mg": 17.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169230/nutrients"
+          },
+          {
+            "ingredient": "raw unsalted almonds with skins",
+            "edible_grams": 30,
+            "fdc_id": 170567,
+            "fdc_description": "Nuts, almonds",
+            "per_100g": {
+              "calories": 579,
+              "protein_g": 21.2,
+              "carbs_g": 21.6,
+              "fat_g": 49.9,
+              "saturated_fat_g": 3.8,
+              "fiber_g": 12.5,
+              "sugar_g": 4.35,
+              "sodium_mg": 1.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170567/nutrients"
+          },
+          {
+            "ingredient": "raw unsalted hazelnuts with skins",
+            "edible_grams": 20,
+            "fdc_id": 170581,
+            "fdc_description": "Nuts, hazelnuts or filberts",
+            "per_100g": {
+              "calories": 628,
+              "protein_g": 15.0,
+              "carbs_g": 16.7,
+              "fat_g": 60.8,
+              "saturated_fat_g": 4.46,
+              "fiber_g": 9.7,
+              "sugar_g": 4.34,
+              "sodium_mg": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170581/nutrients"
+          },
+          {
+            "ingredient": "commercial white bread, already baked and free of mold",
+            "edible_grams": 20,
+            "fdc_id": 174924,
+            "fdc_description": "Bread, white, commercially prepared (includes soft bread crumbs)",
+            "per_100g": {
+              "calories": 266,
+              "protein_g": 8.85,
+              "carbs_g": 49.4,
+              "fat_g": 3.33,
+              "saturated_fat_g": 0.698,
+              "fiber_g": 2.7,
+              "sugar_g": 5.67,
+              "sodium_mg": 490
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/174924/nutrients"
+          },
+          {
+            "ingredient": "olive oil",
+            "edible_grams": 30,
+            "fdc_id": 171413,
+            "fdc_description": "Oil, olive, salad or cooking",
+            "per_100g": {
+              "calories": 884,
+              "protein_g": 0.0,
+              "carbs_g": 0.0,
+              "fat_g": 100,
+              "saturated_fat_g": 13.8,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0,
+              "sodium_mg": 2.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171413/nutrients"
+          },
+          {
+            "ingredient": "red wine vinegar",
+            "edible_grams": 20,
+            "fdc_id": 172240,
+            "fdc_description": "Vinegar, red wine",
+            "per_100g": {
+              "calories": 19.0,
+              "protein_g": 0.04,
+              "carbs_g": 0.27,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0,
+              "sodium_mg": 8.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/172240/nutrients"
+          },
+          {
+            "ingredient": "sweet paprika",
+            "edible_grams": 2,
+            "fdc_id": 171329,
+            "fdc_description": "Spices, paprika",
+            "per_100g": {
+              "calories": 282,
+              "protein_g": 14.1,
+              "carbs_g": 54.0,
+              "fat_g": 12.9,
+              "saturated_fat_g": 2.14,
+              "fiber_g": 34.9,
+              "sugar_g": 10.3,
+              "sodium_mg": 68.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171329/nutrients"
+          },
+          {
+            "ingredient": "fine salt",
+            "edible_grams": 3,
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "calories": 0.0,
+              "protein_g": 0.0,
+              "carbs_g": 0.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0,
+              "sodium_mg": 38800.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients"
+          },
+          {
+            "ingredient": "drinking water for the sauce",
+            "edible_grams": 30,
+            "fdc_id": 173647,
+            "fdc_description": "Beverages, water, tap, drinking",
+            "per_100g": {
+              "calories": 0.0,
+              "protein_g": 0.0,
+              "carbs_g": 0.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0,
+              "sodium_mg": 4.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173647/nutrients"
+          }
+        ],
+        "missing_nutrients": [
+          "sugar_g"
+        ],
+        "serving_size": "One quarter of the salad with all its sauce; 4 proposed servings",
+        "method": "Sum of edible grams multiplied by USDA nutrients per 100 g, divided by 4. Fifteen exact foods verified; seven nutrients present in every food. Only complete nutrients are totaled. Sugar total omitted because drained/rinsed bean reference 175243 does not report it.",
+        "note": "Estimate awaiting confirmation, not analysis or a kitchen trial. The 1379 g is initial weight, not measured finished yield. Reference 175243 matches commercially canned, drained and rinsed red beans; missing sugar remains pending, not zero. Roasting vegetables use raw references with edible skins and juices retained; nuts use raw references before light dry toasting. Onion reference is generic, not analysis of a particular red variety. Commercial white bread varies by brand and may contain milk. All weighed sauce, oil, salt and water are included without invented evaporation or handling losses or further sodium reductions from rinsing. Brands, drained weight and moisture change values. Accompaniments excluded; missing data never replaced by zero."
+      },
+      "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/portada.webp",
+          "alt": "Intact red kidney beans, diced cucumber, onion and parsley coated with a grainy red romesco, without extra garnishes"
+        }
+      ],
+      "published": false,
+      "editorial_status": "draft",
+      "keywords": [
+        "kidney bean salad",
+        "proposed romesco",
+        "cooked red beans",
+        "cold salad with nuts"
+      ],
+      "notes": "Proposed salad using commercially cooked red kidney beans and a roasted vegetable, almond, hazelnut and bread romesco; no claim to one unique traditional formula. Never replace ready-to-eat cans with dry, soaked or insufficiently cooked red kidney beans: they need a separate complete safe procedure and a new weight/time calculation. Contains almonds, hazelnuts and wheat; bread may contain milk, soy or other allergens. Check all labels and traces without guaranteeing allergy suitability or a vegan label. Substitutions change texture, quantities and nutrition: adapt and recalculate without assuming equivalence. Retain edible roasted skins and juices and include all sauce and 30 g oil. Vinegar does not make salad or sauce shelf-stable; bottling or months of storage are not proposed. Wash produce without soap, use clean utensils, oven gloves and unplug the processor before scraping. Avoid processing very hot ingredients in a sealed vessel. Keep at 4 °C or below and refrigerate within 2 hours, or 1 hour above 32 °C. The proposed 24 hours after preparation is an untested quality suggestion, not validated shelf life. No freezing duration, kitchen trial or health benefit is claimed.",
+      "seo": {
+        "title": "Kidney bean salad with romesco: preparation and chilling",
+        "description": "Cooked red kidney beans, cucumber and roasted vegetable romesco: measured ingredients, nut toasting, chilling and storage for four proposed servings.",
+        "image_alt": "Intact red kidney beans, diced cucumber, onion and parsley coated with a grainy red romesco, without extra garnishes",
+        "image_variants": [
+          "/recetas/ensalada-de-frijoles-con-salsa-romesco/portada-1x1.webp",
+          "/recetas/ensalada-de-frijoles-con-salsa-romesco/portada-4x3.webp",
+          "/recetas/ensalada-de-frijoles-con-salsa-romesco/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Can I use dry or freshly cooked beans?",
+            "a": "This proposal calculates commercially cooked, drained and rinsed red kidney beans. Dry beans cannot be substituted directly: they need soaking and complete safe cooking according to reliable instructions, revised planning and actual cooked weight. Merely softening or soaking them is insufficient."
+          },
+          {
+            "q": "Is this traditional romesco and can I change the nuts?",
+            "a": "This is a proposed version for this salad using roasted pepper and tomato, almonds, hazelnuts, bread and vinegar, not a claim to a unique traditional formula. Replacing or removing nuts or bread changes flavor, consistency, allergens and calculation; adapt quantities without promising identical results."
+          },
+          {
+            "q": "How long does it take and how is it stored?",
+            "a": "The proposed 92 complete minutes include roasting, overlapping tasks and 30 minutes chilling. Add actual extra roasting or cooling time. Keep at 4 °C or below and refrigerate within 2 hours, or 1 hour above 32 °C. Consumption within 24 hours after preparation is an untested quality proposal, not validated shelf life; vinegar does not permit room-temperature storage."
+          }
+        ]
+      },
+      "content_html": "<p>A proposed cold salad of cooked red kidney beans, cucumber, onion and parsley with a roasted pepper and tomato romesco containing nuts and bread. Makes a proposed 4 servings in 92 complete minutes including chilling. Quantities, timings and yield await kitchen confirmation.</p><p>Proposed salad using commercially cooked red kidney beans and a roasted vegetable, almond, hazelnut and bread romesco; no claim to one unique traditional formula. Never replace ready-to-eat cans with dry, soaked or insufficiently cooked red kidney beans: they need a separate complete safe procedure and a new weight/time calculation. Contains almonds, hazelnuts and wheat; bread may contain milk, soy or other allergens. Check all labels and traces without guaranteeing allergy suitability or a vegan label. Substitutions change texture, quantities and nutrition: adapt and recalculate without assuming equivalence. Retain edible roasted skins and juices and include all sauce and 30 g oil. Vinegar does not make salad or sauce shelf-stable; bottling or months of storage are not proposed. Wash produce without soap, use clean utensils, oven gloves and unplug the processor before scraping. Avoid processing very hot ingredients in a sealed vessel. Keep at 4 °C or below and refrigerate within 2 hours, or 1 hour above 32 °C. The proposed 24 hours after preparation is an untested quality suggestion, not validated shelf life. No freezing duration, kitchen trial or health benefit is claimed.</p>"
+    },
+    {
+      "id": "bd35db6d-0b02-584d-8998-0cc6c086da0d",
+      "recipe_group_id": "8ba3cf9e-47d6-4b27-afdb-9f5b7700b45d",
+      "slug": "salade-de-haricots-a-la-sauce-romesco",
+      "public_path": "/fr/salade-de-haricots-a-la-sauce-romesco",
+      "source_url": "https://manualdecocina.com/fr/salade-de-haricots-a-la-sauce-romesco/",
+      "language": "fr",
+      "title": "Salade de haricots rouges au romesco proposé",
+      "excerpt": "Haricots cuits, concombre et légumes frais, sauce de poivron rôti, tomate, fruits à coque et pain pour quatre portions proposées.",
+      "summary": "Proposition de salade froide de haricots rouges cuits, concombre, oignon et persil avec romesco de poivron et tomate rôtis, fruits à coque et pain. Elle prévoit 4 portions et 92 minutes complètes, froid compris. Quantités, durées et rendement restent à confirmer en cuisine.",
+      "category": "Salades",
+      "category_slug": "ensaladas",
+      "difficulty": "Moyenne",
+      "course": "Salade",
+      "cuisine": "Inspiration méditerranéenne",
+      "prep_time_minutes": 37,
+      "cook_time_minutes": 25,
+      "total_time_minutes": 92,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "haricots rouges en conserve, déjà cuits, égouttés et rincés",
+          "amount": "600",
+          "unit": "g",
+          "group": "Salade"
+        },
+        {
+          "name": "concombre propre avec peau",
+          "amount": "200",
+          "unit": "g",
+          "group": "Salade"
+        },
+        {
+          "name": "oignon rouge pelé",
+          "amount": "60",
+          "unit": "g",
+          "group": "Salade"
+        },
+        {
+          "name": "persil frais propre",
+          "amount": "10",
+          "unit": "g",
+          "group": "Salade"
+        },
+        {
+          "name": "poivron rouge frais sans pédoncule ni graines, pesé avant cuisson",
+          "amount": "200",
+          "unit": "g",
+          "group": "Romesco proposé"
+        },
+        {
+          "name": "tomate rouge mûre sans pédoncule, pesée avant cuisson",
+          "amount": "150",
+          "unit": "g",
+          "group": "Romesco proposé"
+        },
+        {
+          "name": "ail pelé",
+          "amount": "4",
+          "unit": "g",
+          "group": "Romesco proposé"
+        },
+        {
+          "name": "amandes crues non salées avec peau",
+          "amount": "30",
+          "unit": "g",
+          "group": "Romesco proposé"
+        },
+        {
+          "name": "noisettes crues non salées avec peau",
+          "amount": "20",
+          "unit": "g",
+          "group": "Romesco proposé"
+        },
+        {
+          "name": "pain blanc du commerce déjà cuit, sans moisissure",
+          "amount": "20",
+          "unit": "g",
+          "group": "Romesco proposé"
+        },
+        {
+          "name": "huile d’olive",
+          "amount": "30",
+          "unit": "g",
+          "group": "Romesco proposé"
+        },
+        {
+          "name": "vinaigre de vin rouge",
+          "amount": "20",
+          "unit": "g",
+          "group": "Romesco proposé"
+        },
+        {
+          "name": "paprika doux",
+          "amount": "2",
+          "unit": "g",
+          "group": "Romesco proposé"
+        },
+        {
+          "name": "sel fin",
+          "amount": "3",
+          "unit": "g",
+          "group": "Romesco proposé"
+        },
+        {
+          "name": "eau potable pour la sauce",
+          "amount": "30",
+          "unit": "g",
+          "group": "Romesco proposé"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Préparer et peser les ingrédients",
+          "content": "Lavez-vous les mains et préparez balance, planche propre, passoire, poêle sèche, plaque chemisée de papier cuisson et robot avec couvercle. Lavez poivron, tomate, concombre et persil sous l’eau courante sans savon puis séchez. Pesez 200 g de poivron sans pédoncule ni graines, 150 g de tomate sans pédoncule et 4 g d’ail pelé. Gardez les peaux comestibles du poivron et de la tomate ; aucun pelage après cuisson n’est prévu. Pesez 30 g d’amandes, 20 g de noisettes, 20 g de pain déjà cuit, 30 g d’huile, 20 g de vinaigre, 2 g de paprika, 3 g de sel et 30 g d’eau pour la sauce. Réservez 200 g de concombre avec peau, 60 g d’oignon rouge pelé et 10 g de persil. Les haricots doivent peser 600 g après égouttage et rinçage, pas comme boîte fermée. Utilisez une conserve commerciale cuite prête à manger selon l’étiquette, jamais des haricots secs ou crus. Préchauffez le four traditionnel à 220 °C pendant ces 15 minutes de préparation initiale ; ce n’est pas une attente supplémentaire.",
+          "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/paso-01.webp",
+          "image_alt": "Salade de haricots rouges au romesco proposé: Préparer et peser les ingrédients"
+        },
+        {
+          "title": "Rôtir les légumes pour la sauce",
+          "content": "Coupez le poivron en larges lanières et la tomate en quartiers. Disposez avec l’ail sur la plaque en une couche sans huile : toute l’huile pesée sera ajoutée au mixage. Faites rôtir environ 25 minutes à 220 °C au milieu du four, en vérifiant à 15. Ils doivent s’attendrir avec des zones grillées, sans cendre ni peau noire. Si l’ail colore avant, placez-le dans un bol propre sans exclure son poids du calcul. Sortez avec des gants et gardez toute la chair, la peau comestible et les jus recueillis. Laissez tiédir environ 10 minutes avant de mixer ; préparez haricots et légumes frais pendant cet intervalle. Ajoutez le temps réel si le four exige davantage.",
+          "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/paso-02.webp",
+          "image_alt": "Salade de haricots rouges au romesco proposé: Rôtir les légumes pour la sauce"
+        },
+        {
+          "title": "Griller les fruits à coque et le pain pendant la cuisson",
+          "content": "Pendant la cuisson des légumes, mettez les 30 g d’amandes, les 20 g de noisettes et les 20 g de pain en dés dans une poêle sèche à feu moyen-doux. Faites griller environ 5 minutes en remuant souvent jusqu’à une légère odeur grillée, sans brûler ni ajouter d’huile. Transférez sur une assiette propre et laissez refroidir environ 5 minutes avant de mixer. Gardez les peaux et tous les morceaux ; aucune garniture supplémentaire n’est réservée. Ces tâches se déroulent pendant les 25 minutes de cuisson et ne sont pas une attente en plus. Surveillez les deux récipients et ne laissez pas le feu sans surveillance.",
+          "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/paso-03.webp",
+          "image_alt": "Salade de haricots rouges au romesco proposé: Griller les fruits à coque et le pain pendant la cuisson"
+        },
+        {
+          "title": "Égoutter les haricots et couper la salade",
+          "content": "Vérifiez les conserves : écartez celles gonflées, fuyantes ou abîmées et suivez l’étiquette après ouverture. Égouttez, rincez à l’eau potable dans une passoire propre et laissez bien égoutter avant de peser 600 g de solides prêts à manger. N’utilisez pas le liquide de conserve dans le calcul et ne le remettez pas. Coupez les 200 g de concombre avec peau en petits dés, émincez les 60 g d’oignon et hachez les 10 g de persil. Réunissez dans un grand bol sans écraser les haricots. Cette préparation prend environ 10 minutes pendant le refroidissement des légumes rôtis ; gardez le bol à 4 °C ou moins si l’attente se prolonge.",
+          "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/paso-04.webp",
+          "image_alt": "Salade de haricots rouges au romesco proposé: Égoutter les haricots et couper la salade"
+        },
+        {
+          "title": "Mixer le romesco sans ajouts cachés",
+          "content": "Avec les légumes tiédis, mettez dans le robot tout le poivron, la tomate, l’ail et leurs jus, tous les fruits à coque et le pain grillés. Ajoutez les 20 g de vinaigre, les 2 g de paprika, les 3 g de sel et les 30 g d’eau pesés. Fermez et mixez par impulsions, puis incorporez les 30 g d’huile en plusieurs fois pour une sauce épaisse légèrement granuleuse facile à répartir. Raclez avec une spatule propre seulement appareil débranché. Comptez environ 5 minutes ; ne mixez pas d’ingrédients très chauds dans un récipient hermétique. Utilisez toute la sauce sans ajuster à l’huile, au sel ou à l’eau non mesurés : tout changement nécessite de revoir quantités et calcul. C’est une version proposée, pas une formule traditionnelle unique revendiquée.",
+          "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/paso-05.webp",
+          "image_alt": "Salade de haricots rouges au romesco proposé: Mixer le romesco sans ajouts cachés"
+        },
+        {
+          "title": "Mélanger et refroidir couvert",
+          "content": "Répartissez toute la sauce sur les haricots, concombre, oignon et persil. Mélangez délicatement avec deux cuillères propres environ 5 minutes pour garder les haricots entiers et donner de la sauce à chaque portion. Transférez dans un récipient peu profond, couvrez et réfrigérez à 4 °C ou moins environ 30 minutes jusqu’à refroidissement ; prolongez et ajoutez le temps réel si nécessaire. Réfrigérez les aliments périssables dans les 2 heures de préparation, ou 1 heure si l’ambiance dépasse 32 °C. Le planning comprend 15 minutes initiales, 25 de cuisson avec grillage et refroidissement des fruits à coque en parallèle, 10 de tiédissement avec découpe et égouttage en parallèle, 5 de sauce, 5 de mélange, 30 de froid et 2 de partage : 92 minutes proposées.",
+          "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/paso-06.webp",
+          "image_alt": "Salade de haricots rouges au romesco proposé: Mélanger et refroidir couvert"
+        },
+        {
+          "title": "Servir quatre portions et garder au froid",
+          "content": "Comptez environ 2 minutes pour répartir en 4 portions semblables avec haricots, légumes et sauce dans chacune. Servez froid sans fromage, olives, fruits à coque ou pain supplémentaires : ils ne sont pas calculés. Les 1379 g sont la somme initiale des ingrédients comestibles pesés, pas un rendement final mesuré ni un poids par portion. Quantités, durées et quatre portions restent des propositions à confirmer en cuisine. Conservez couvert à 4 °C ou moins et, comme proposition prudente de qualité sans essai, consommez dans les 24 heures après préparation. Sortez seulement ce qui sera servi et remettez vite le reste au froid. Ne réutilisez pas de restes d’assiette et ne déterminez pas la conservation par l’odeur. Le sucre reste en attente car la fiche des haricots ne le rapporte pas ; une donnée absente ne signifie pas zéro.",
+          "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/portada.webp",
+          "image_alt": "Salade de haricots rouges au romesco proposé: Servir quatre portions et garder au froid"
+        }
+      ],
+      "nutrition": {
+        "calories": 373.9,
+        "protein_g": 16.5,
+        "carbs_g": 44.6,
+        "fat_g": 16.2,
+        "saturated_fat_g": 2.1,
+        "fiber_g": 12.8,
+        "sodium_mg": 635.8,
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "inputs": [
+          {
+            "ingredient": "haricots rouges en conserve, déjà cuits, égouttés et rincés",
+            "edible_grams": 600,
+            "fdc_id": 175243,
+            "fdc_description": "Beans, kidney, red, mature seeds, canned, drained solids, rinsed in tap water",
+            "per_100g": {
+              "calories": 121,
+              "protein_g": 8.12,
+              "carbs_g": 20.8,
+              "fat_g": 0.93,
+              "saturated_fat_g": 0.328,
+              "fiber_g": 6.0,
+              "sodium_mg": 208
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/175243/nutrients"
+          },
+          {
+            "ingredient": "concombre propre avec peau",
+            "edible_grams": 200,
+            "fdc_id": 168409,
+            "fdc_description": "Cucumber, with peel, raw",
+            "per_100g": {
+              "calories": 15.0,
+              "protein_g": 0.65,
+              "carbs_g": 3.63,
+              "fat_g": 0.11,
+              "saturated_fat_g": 0.037,
+              "fiber_g": 0.5,
+              "sugar_g": 1.67,
+              "sodium_mg": 2.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/168409/nutrients"
+          },
+          {
+            "ingredient": "oignon rouge pelé",
+            "edible_grams": 60,
+            "fdc_id": 170000,
+            "fdc_description": "Onions, raw",
+            "per_100g": {
+              "calories": 40.0,
+              "protein_g": 1.1,
+              "carbs_g": 9.34,
+              "fat_g": 0.1,
+              "saturated_fat_g": 0.042,
+              "fiber_g": 1.7,
+              "sugar_g": 4.24,
+              "sodium_mg": 4.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170000/nutrients"
+          },
+          {
+            "ingredient": "persil frais propre",
+            "edible_grams": 10,
+            "fdc_id": 170416,
+            "fdc_description": "Parsley, fresh",
+            "per_100g": {
+              "calories": 36.0,
+              "protein_g": 2.97,
+              "carbs_g": 6.33,
+              "fat_g": 0.79,
+              "saturated_fat_g": 0.132,
+              "fiber_g": 3.3,
+              "sugar_g": 0.85,
+              "sodium_mg": 56.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170416/nutrients"
+          },
+          {
+            "ingredient": "poivron rouge frais sans pédoncule ni graines, pesé avant cuisson",
+            "edible_grams": 200,
+            "fdc_id": 170108,
+            "fdc_description": "Peppers, sweet, red, raw",
+            "per_100g": {
+              "calories": 26.0,
+              "protein_g": 0.99,
+              "carbs_g": 6.03,
+              "fat_g": 0.3,
+              "saturated_fat_g": 0.059,
+              "fiber_g": 2.1,
+              "sugar_g": 4.2,
+              "sodium_mg": 4.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170108/nutrients"
+          },
+          {
+            "ingredient": "tomate rouge mûre sans pédoncule, pesée avant cuisson",
+            "edible_grams": 150,
+            "fdc_id": 170457,
+            "fdc_description": "Tomatoes, red, ripe, raw, year round average",
+            "per_100g": {
+              "calories": 18.0,
+              "protein_g": 0.88,
+              "carbs_g": 3.89,
+              "fat_g": 0.2,
+              "saturated_fat_g": 0.028,
+              "fiber_g": 1.2,
+              "sugar_g": 2.63,
+              "sodium_mg": 5.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170457/nutrients"
+          },
+          {
+            "ingredient": "ail pelé",
+            "edible_grams": 4,
+            "fdc_id": 169230,
+            "fdc_description": "Garlic, raw",
+            "per_100g": {
+              "calories": 149,
+              "protein_g": 6.36,
+              "carbs_g": 33.1,
+              "fat_g": 0.5,
+              "saturated_fat_g": 0.089,
+              "fiber_g": 2.1,
+              "sugar_g": 1.0,
+              "sodium_mg": 17.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169230/nutrients"
+          },
+          {
+            "ingredient": "amandes crues non salées avec peau",
+            "edible_grams": 30,
+            "fdc_id": 170567,
+            "fdc_description": "Nuts, almonds",
+            "per_100g": {
+              "calories": 579,
+              "protein_g": 21.2,
+              "carbs_g": 21.6,
+              "fat_g": 49.9,
+              "saturated_fat_g": 3.8,
+              "fiber_g": 12.5,
+              "sugar_g": 4.35,
+              "sodium_mg": 1.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170567/nutrients"
+          },
+          {
+            "ingredient": "noisettes crues non salées avec peau",
+            "edible_grams": 20,
+            "fdc_id": 170581,
+            "fdc_description": "Nuts, hazelnuts or filberts",
+            "per_100g": {
+              "calories": 628,
+              "protein_g": 15.0,
+              "carbs_g": 16.7,
+              "fat_g": 60.8,
+              "saturated_fat_g": 4.46,
+              "fiber_g": 9.7,
+              "sugar_g": 4.34,
+              "sodium_mg": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170581/nutrients"
+          },
+          {
+            "ingredient": "pain blanc du commerce déjà cuit, sans moisissure",
+            "edible_grams": 20,
+            "fdc_id": 174924,
+            "fdc_description": "Bread, white, commercially prepared (includes soft bread crumbs)",
+            "per_100g": {
+              "calories": 266,
+              "protein_g": 8.85,
+              "carbs_g": 49.4,
+              "fat_g": 3.33,
+              "saturated_fat_g": 0.698,
+              "fiber_g": 2.7,
+              "sugar_g": 5.67,
+              "sodium_mg": 490
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/174924/nutrients"
+          },
+          {
+            "ingredient": "huile d’olive",
+            "edible_grams": 30,
+            "fdc_id": 171413,
+            "fdc_description": "Oil, olive, salad or cooking",
+            "per_100g": {
+              "calories": 884,
+              "protein_g": 0.0,
+              "carbs_g": 0.0,
+              "fat_g": 100,
+              "saturated_fat_g": 13.8,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0,
+              "sodium_mg": 2.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171413/nutrients"
+          },
+          {
+            "ingredient": "vinaigre de vin rouge",
+            "edible_grams": 20,
+            "fdc_id": 172240,
+            "fdc_description": "Vinegar, red wine",
+            "per_100g": {
+              "calories": 19.0,
+              "protein_g": 0.04,
+              "carbs_g": 0.27,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0,
+              "sodium_mg": 8.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/172240/nutrients"
+          },
+          {
+            "ingredient": "paprika doux",
+            "edible_grams": 2,
+            "fdc_id": 171329,
+            "fdc_description": "Spices, paprika",
+            "per_100g": {
+              "calories": 282,
+              "protein_g": 14.1,
+              "carbs_g": 54.0,
+              "fat_g": 12.9,
+              "saturated_fat_g": 2.14,
+              "fiber_g": 34.9,
+              "sugar_g": 10.3,
+              "sodium_mg": 68.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171329/nutrients"
+          },
+          {
+            "ingredient": "sel fin",
+            "edible_grams": 3,
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "calories": 0.0,
+              "protein_g": 0.0,
+              "carbs_g": 0.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0,
+              "sodium_mg": 38800.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients"
+          },
+          {
+            "ingredient": "eau potable pour la sauce",
+            "edible_grams": 30,
+            "fdc_id": 173647,
+            "fdc_description": "Beverages, water, tap, drinking",
+            "per_100g": {
+              "calories": 0.0,
+              "protein_g": 0.0,
+              "carbs_g": 0.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0,
+              "sodium_mg": 4.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173647/nutrients"
+          }
+        ],
+        "missing_nutrients": [
+          "sugar_g"
+        ],
+        "serving_size": "Un quart de la salade avec toute sa sauce ; 4 portions proposées",
+        "method": "Somme des grammes comestibles multipliés par les nutriments USDA pour 100 g, divisée par 4. Quinze aliments exacts vérifiés ; sept nutriments présents dans chacun. Seuls les nutriments complets sont totalisés. Sucre total omis car la fiche 175243 des haricots égouttés et rincés ne le rapporte pas.",
+        "note": "Estimation à confirmer, sans analyse ni essai en cuisine. Les 1379 g sont un poids initial, pas un rendement mesuré. Fiche 175243 correspondant exactement aux haricots rouges commerciaux égouttés et rincés ; sucre manquant en attente, pas zéro. Références crues pour légumes rôtis, avec peaux comestibles et jus conservés, et pour fruits à coque avant grillage sec léger. Référence d’oignon générique, pas analyse d’une variété rouge particulière. Le pain blanc commercial varie et peut contenir du lait. Toute la sauce, huile, sel et eau pesés sont inclus, sans pertes d’évaporation ou manipulation inventées ni baisse supplémentaire de sodium par rinçage. Marques, poids égoutté et humidité modifient les valeurs. Accompagnements exclus, données absentes jamais remplacées par zéro."
+      },
+      "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/portada.webp",
+          "alt": "Haricots rouges entiers, dés de concombre, oignon et persil enrobés de romesco rouge granuleux sans garniture supplémentaire"
+        }
+      ],
+      "published": false,
+      "editorial_status": "draft",
+      "keywords": [
+        "salade de haricots rouges",
+        "romesco proposé",
+        "haricots rouges cuits",
+        "salade froide aux fruits à coque"
+      ],
+      "notes": "Proposition de salade aux haricots rouges commerciaux déjà cuits et romesco de légumes rôtis, amandes, noisettes et pain, sans prétendre à une formule traditionnelle unique. Ne remplacez jamais une conserve prête à manger par des haricots rouges secs, trempés ou insuffisamment cuits : ils nécessitent une procédure sûre complète distincte et un nouveau calcul de poids et durée. Contient amandes, noisettes et blé ; le pain peut contenir lait, soja ou autres allergènes. Vérifiez étiquettes et traces sans garantir adaptation aux allergies ou caractère végétalien. Les substitutions changent texture, quantités et nutrition : adaptez et recalculez. Conservez peau comestible et jus rôtis ; toute la sauce et les 30 g d’huile sont inclus. Le vinaigre ne rend pas cette préparation stable à température ambiante. Aucune mise en bocal ni conservation de plusieurs mois n’est proposée. Lavez les légumes sans savon, utilisez des ustensiles propres et des gants et débranchez avant de racler. Évitez le mixage très chaud en récipient fermé. Maintenez à 4 °C ou moins et réfrigérez dans les 2 heures, ou 1 heure au-dessus de 32 °C. Les 24 heures après préparation sont une suggestion de qualité non testée, pas une conservation validée. Aucune durée de congélation, preuve de cuisine ou bénéfice de santé n’est revendiqué.",
+      "seo": {
+        "title": "Salade de haricots au romesco : préparation et froid",
+        "description": "Haricots rouges cuits, concombre et romesco de légumes rôtis : quantités, grillage, refroidissement et conservation pour quatre portions proposées.",
+        "image_alt": "Haricots rouges entiers, dés de concombre, oignon et persil enrobés de romesco rouge granuleux sans garniture supplémentaire",
+        "image_variants": [
+          "/recetas/ensalada-de-frijoles-con-salsa-romesco/portada-1x1.webp",
+          "/recetas/ensalada-de-frijoles-con-salsa-romesco/portada-4x3.webp",
+          "/recetas/ensalada-de-frijoles-con-salsa-romesco/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Peut-on utiliser des haricots secs ou fraîchement cuits ?",
+            "a": "Le calcul prévoit des haricots rouges commerciaux déjà cuits, égouttés et rincés. Les secs ne se remplacent pas directement : trempage et cuisson sûre complète selon des instructions fiables, planning différent et poids cuit réel sont nécessaires. Les attendrir ou les tremper ne suffit pas."
+          },
+          {
+            "q": "Est-ce un romesco traditionnel et peut-on changer les fruits à coque ?",
+            "a": "C’est une version proposée pour cette salade, avec poivron et tomate rôtis, amandes, noisettes, pain et vinaigre, sans affirmer une formule traditionnelle unique. Modifier ou retirer fruits à coque ou pain change goût, consistance, allergènes et calcul ; adaptez sans promettre le même résultat."
+          },
+          {
+            "q": "Combien de temps et comment conserver ?",
+            "a": "Les 92 minutes complètes comprennent cuisson, tâches parallèles et 30 minutes de froid. Ajoutez tout supplément réel. Maintenez à 4 °C ou moins et réfrigérez dans les 2 heures, ou 1 heure au-dessus de 32 °C. Les 24 heures après préparation sont un repère de qualité non testé, pas une conservation validée ; le vinaigre ne permet pas de laisser à température ambiante."
+          }
+        ]
+      },
+      "content_html": "<p>Proposition de salade froide de haricots rouges cuits, concombre, oignon et persil avec romesco de poivron et tomate rôtis, fruits à coque et pain. Elle prévoit 4 portions et 92 minutes complètes, froid compris. Quantités, durées et rendement restent à confirmer en cuisine.</p><p>Proposition de salade aux haricots rouges commerciaux déjà cuits et romesco de légumes rôtis, amandes, noisettes et pain, sans prétendre à une formule traditionnelle unique. Ne remplacez jamais une conserve prête à manger par des haricots rouges secs, trempés ou insuffisamment cuits : ils nécessitent une procédure sûre complète distincte et un nouveau calcul de poids et durée. Contient amandes, noisettes et blé ; le pain peut contenir lait, soja ou autres allergènes. Vérifiez étiquettes et traces sans garantir adaptation aux allergies ou caractère végétalien. Les substitutions changent texture, quantités et nutrition : adaptez et recalculez. Conservez peau comestible et jus rôtis ; toute la sauce et les 30 g d’huile sont inclus. Le vinaigre ne rend pas cette préparation stable à température ambiante. Aucune mise en bocal ni conservation de plusieurs mois n’est proposée. Lavez les légumes sans savon, utilisez des ustensiles propres et des gants et débranchez avant de racler. Évitez le mixage très chaud en récipient fermé. Maintenez à 4 °C ou moins et réfrigérez dans les 2 heures, ou 1 heure au-dessus de 32 °C. Les 24 heures après préparation sont une suggestion de qualité non testée, pas une conservation validée. Aucune durée de congélation, preuve de cuisine ou bénéfice de santé n’est revendiqué.</p>"
+    },
+    {
+      "id": "7b65a0a2-76af-54a4-a665-fa3604971be7",
+      "recipe_group_id": "8ba3cf9e-47d6-4b27-afdb-9f5b7700b45d",
+      "slug": "insalata-di-fagioli-con-salsa-romesco",
+      "public_path": "/it/insalata-di-fagioli-con-salsa-romesco",
+      "source_url": "https://manualdecocina.com/it/insalata-di-fagioli-con-salsa-romesco/",
+      "language": "it",
+      "title": "Insalata di fagioli rossi con romesco proposto",
+      "excerpt": "Fagioli cotti, cetriolo e verdure fresche con salsa di peperone arrosto, pomodoro, frutta a guscio e pane per quattro porzioni proposte.",
+      "summary": "Insalata fredda proposta con fagioli rossi cotti, cetriolo, cipolla e prezzemolo, con romesco di peperone e pomodoro arrostiti, frutta a guscio e pane. Sono previste 4 porzioni e 92 minuti completi, compreso il freddo. Quantità, tempi e resa attendono conferma in cucina.",
+      "category": "Insalate",
+      "category_slug": "ensaladas",
+      "difficulty": "Media",
+      "course": "Insalata",
+      "cuisine": "Ispirazione mediterranea",
+      "prep_time_minutes": 37,
+      "cook_time_minutes": 25,
+      "total_time_minutes": 92,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "fagioli rossi in scatola, già cotti, scolati e sciacquati",
+          "amount": "600",
+          "unit": "g",
+          "group": "Insalata"
+        },
+        {
+          "name": "cetriolo pulito con buccia",
+          "amount": "200",
+          "unit": "g",
+          "group": "Insalata"
+        },
+        {
+          "name": "cipolla rossa sbucciata",
+          "amount": "60",
+          "unit": "g",
+          "group": "Insalata"
+        },
+        {
+          "name": "prezzemolo fresco pulito",
+          "amount": "10",
+          "unit": "g",
+          "group": "Insalata"
+        },
+        {
+          "name": "peperone rosso fresco senza picciolo o semi, pesato prima di arrostire",
+          "amount": "200",
+          "unit": "g",
+          "group": "Romesco proposto"
+        },
+        {
+          "name": "pomodoro rosso maturo senza picciolo, pesato prima di arrostire",
+          "amount": "150",
+          "unit": "g",
+          "group": "Romesco proposto"
+        },
+        {
+          "name": "aglio sbucciato",
+          "amount": "4",
+          "unit": "g",
+          "group": "Romesco proposto"
+        },
+        {
+          "name": "mandorle crude non salate con pelle",
+          "amount": "30",
+          "unit": "g",
+          "group": "Romesco proposto"
+        },
+        {
+          "name": "nocciole crude non salate con pelle",
+          "amount": "20",
+          "unit": "g",
+          "group": "Romesco proposto"
+        },
+        {
+          "name": "pane bianco commerciale già cotto, senza muffa",
+          "amount": "20",
+          "unit": "g",
+          "group": "Romesco proposto"
+        },
+        {
+          "name": "olio d’oliva",
+          "amount": "30",
+          "unit": "g",
+          "group": "Romesco proposto"
+        },
+        {
+          "name": "aceto di vino rosso",
+          "amount": "20",
+          "unit": "g",
+          "group": "Romesco proposto"
+        },
+        {
+          "name": "paprika dolce",
+          "amount": "2",
+          "unit": "g",
+          "group": "Romesco proposto"
+        },
+        {
+          "name": "sale fino",
+          "amount": "3",
+          "unit": "g",
+          "group": "Romesco proposto"
+        },
+        {
+          "name": "acqua potabile per la salsa",
+          "amount": "30",
+          "unit": "g",
+          "group": "Romesco proposto"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Preparare e pesare gli ingredienti",
+          "content": "Lavati le mani e prepara bilancia, tagliere pulito, colino, padella asciutta, teglia con carta da forno e robot con coperchio. Lava peperone, pomodoro, cetriolo e prezzemolo sotto acqua corrente senza sapone e asciuga. Pesa 200 g di peperone senza picciolo o semi, 150 g di pomodoro senza picciolo e 4 g di aglio sbucciato. Mantieni la buccia commestibile di peperone e pomodoro; non è prevista la rimozione dopo il forno. Pesa 30 g di mandorle, 20 g di nocciole, 20 g di pane già cotto, 30 g di olio, 20 g di aceto, 2 g di paprika, 3 g di sale e 30 g di acqua per la salsa. Tieni 200 g di cetriolo con buccia, 60 g di cipolla rossa sbucciata e 10 g di prezzemolo. I fagioli saranno 600 g dopo aver scolato e sciacquato, non il peso della scatola chiusa. Usa conserve commerciali cotte pronte al consumo secondo etichetta, mai fagioli secchi o crudi. Preriscalda il forno statico a 220 °C durante questi 15 minuti iniziali; non è un’attesa aggiuntiva.",
+          "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/paso-01.webp",
+          "image_alt": "Insalata di fagioli rossi con romesco proposto: Preparare e pesare gli ingredienti"
+        },
+        {
+          "title": "Arrostire le verdure per la salsa",
+          "content": "Taglia il peperone a strisce larghe e il pomodoro in quarti. Disponi con l’aglio sulla teglia in un unico strato senza olio: tutto quello pesato andrà nel frullatore. Arrostisci circa 25 minuti a 220 °C al centro, controllando a 15. Devono ammorbidirsi con zone tostate, non cenere o buccia nera. Se l’aglio scurisce prima, spostalo in una ciotola pulita senza escluderne il peso dal calcolo. Estrai con guanti e conserva tutta la polpa, la buccia commestibile e i succhi raccolti. Lascia intiepidire circa 10 minuti prima di frullare; prepara fagioli e verdure fresche nel frattempo. Aggiungi il tempo effettivo se il forno richiede di più.",
+          "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/paso-02.webp",
+          "image_alt": "Insalata di fagioli rossi con romesco proposto: Arrostire le verdure per la salsa"
+        },
+        {
+          "title": "Tostare frutta a guscio e pane durante il forno",
+          "content": "Mentre le verdure cuociono, metti 30 g di mandorle, 20 g di nocciole e 20 g di pane a cubetti in una padella asciutta a fuoco medio-basso. Tosta circa 5 minuti, muovendo spesso fino a leggero profumo tostato, senza bruciare o aggiungere olio. Trasferisci su piatto pulito e lascia raffreddare circa 5 minuti prima di frullare. Conserva pelli e tutti i pezzi; nessuna guarnizione aggiuntiva è tenuta da parte. Tostatura e raffreddamento rientrano nei 25 minuti del forno e non diventano altra attesa. Sorveglia entrambi i recipienti e non lasciare il fuoco incustodito.",
+          "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/paso-03.webp",
+          "image_alt": "Insalata di fagioli rossi con romesco proposto: Tostare frutta a guscio e pane durante il forno"
+        },
+        {
+          "title": "Scolare i fagioli e tagliare le verdure",
+          "content": "Verifica le conserve: scarta contenitori gonfi, con perdite o danneggiati e segui l’etichetta dopo apertura. Scola, sciacqua con acqua potabile in colino pulito e lascia sgocciolare bene prima di pesare 600 g di solidi pronti da mangiare. Non calcolare con il liquido della scatola e non rimetterlo. Taglia 200 g di cetriolo con buccia a piccoli cubetti, trita finemente 60 g di cipolla e 10 g di prezzemolo. Riunisci in una ciotola ampia senza schiacciare i fagioli. Occorrono circa 10 minuti durante il raffreddamento delle verdure arrosto; conserva a 4 °C o meno se l’attesa si prolunga.",
+          "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/paso-04.webp",
+          "image_alt": "Insalata di fagioli rossi con romesco proposto: Scolare i fagioli e tagliare le verdure"
+        },
+        {
+          "title": "Frullare il romesco senza aggiunte nascoste",
+          "content": "Quando le verdure sono tiepide, metti nel robot tutto peperone, pomodoro, aglio e succhi, tutta la frutta a guscio e il pane tostati. Aggiungi i 20 g di aceto, 2 g di paprika, 3 g di sale e 30 g di acqua pesati. Chiudi e aziona a impulsi, poi unisci 30 g di olio in più riprese fino a salsa densa, leggermente granulosa e distribuibile. Raschia con spatola pulita solo con apparecchio scollegato. Prevedi circa 5 minuti; non frullare ingredienti molto caldi in recipiente ermetico. Usa tutta la salsa senza aggiustare con olio, sale o acqua non misurati: ogni modifica richiede revisione delle quantità e del calcolo. È una versione proposta, non l’affermazione di un’unica formula tradizionale.",
+          "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/paso-05.webp",
+          "image_alt": "Insalata di fagioli rossi con romesco proposto: Frullare il romesco senza aggiunte nascoste"
+        },
+        {
+          "title": "Mescolare e refrigerare coperta",
+          "content": "Distribuisci tutta la salsa sui fagioli, cetriolo, cipolla e prezzemolo. Mescola delicatamente con due cucchiai puliti per circa 5 minuti mantenendo i fagioli interi e dando salsa a tutte le porzioni. Trasferisci in un recipiente poco profondo, copri e refrigera a 4 °C o meno circa 30 minuti fino a raffreddamento; prolunga e somma il tempo effettivo se necessario. Refrigera i deperibili entro 2 ore dalla preparazione, o 1 ora se l’ambiente supera 32 °C. Il piano include 15 minuti iniziali, 25 di forno con tostatura e raffreddamento della frutta a guscio sovrapposti, 10 di intiepidimento con taglio e scolatura sovrapposti, 5 di salsa, 5 di mescolatura, 30 di freddo e 2 di divisione: 92 minuti proposti.",
+          "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/paso-06.webp",
+          "image_alt": "Insalata di fagioli rossi con romesco proposto: Mescolare e refrigerare coperta"
+        },
+        {
+          "title": "Servire quattro porzioni e conservare al freddo",
+          "content": "Prevedi circa 2 minuti per dividere in 4 porzioni simili con fagioli, verdure e salsa in ciascuna. Servi fredda senza formaggio, olive, frutta a guscio o pane aggiuntivi: non sono nel calcolo. I 1379 g sono la somma iniziale degli ingredienti commestibili pesati, non una resa finale misurata o un peso per porzione. Quantità, tempi e quattro porzioni restano proposte da confermare in cucina. Conserva coperta a 4 °C o meno e, come proposta prudente di qualità senza prova, consuma entro 24 ore dalla preparazione. Estrai solo ciò che servirai e rimetti presto il resto al freddo. Non riutilizzare avanzi del piatto né stabilire durata tramite odore. Gli zuccheri restano in attesa perché la scheda dei fagioli non li riporta; dato assente non significa zero.",
+          "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/portada.webp",
+          "image_alt": "Insalata di fagioli rossi con romesco proposto: Servire quattro porzioni e conservare al freddo"
+        }
+      ],
+      "nutrition": {
+        "calories": 373.9,
+        "protein_g": 16.5,
+        "carbs_g": 44.6,
+        "fat_g": 16.2,
+        "saturated_fat_g": 2.1,
+        "fiber_g": 12.8,
+        "sodium_mg": 635.8,
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "inputs": [
+          {
+            "ingredient": "fagioli rossi in scatola, già cotti, scolati e sciacquati",
+            "edible_grams": 600,
+            "fdc_id": 175243,
+            "fdc_description": "Beans, kidney, red, mature seeds, canned, drained solids, rinsed in tap water",
+            "per_100g": {
+              "calories": 121,
+              "protein_g": 8.12,
+              "carbs_g": 20.8,
+              "fat_g": 0.93,
+              "saturated_fat_g": 0.328,
+              "fiber_g": 6.0,
+              "sodium_mg": 208
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/175243/nutrients"
+          },
+          {
+            "ingredient": "cetriolo pulito con buccia",
+            "edible_grams": 200,
+            "fdc_id": 168409,
+            "fdc_description": "Cucumber, with peel, raw",
+            "per_100g": {
+              "calories": 15.0,
+              "protein_g": 0.65,
+              "carbs_g": 3.63,
+              "fat_g": 0.11,
+              "saturated_fat_g": 0.037,
+              "fiber_g": 0.5,
+              "sugar_g": 1.67,
+              "sodium_mg": 2.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/168409/nutrients"
+          },
+          {
+            "ingredient": "cipolla rossa sbucciata",
+            "edible_grams": 60,
+            "fdc_id": 170000,
+            "fdc_description": "Onions, raw",
+            "per_100g": {
+              "calories": 40.0,
+              "protein_g": 1.1,
+              "carbs_g": 9.34,
+              "fat_g": 0.1,
+              "saturated_fat_g": 0.042,
+              "fiber_g": 1.7,
+              "sugar_g": 4.24,
+              "sodium_mg": 4.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170000/nutrients"
+          },
+          {
+            "ingredient": "prezzemolo fresco pulito",
+            "edible_grams": 10,
+            "fdc_id": 170416,
+            "fdc_description": "Parsley, fresh",
+            "per_100g": {
+              "calories": 36.0,
+              "protein_g": 2.97,
+              "carbs_g": 6.33,
+              "fat_g": 0.79,
+              "saturated_fat_g": 0.132,
+              "fiber_g": 3.3,
+              "sugar_g": 0.85,
+              "sodium_mg": 56.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170416/nutrients"
+          },
+          {
+            "ingredient": "peperone rosso fresco senza picciolo o semi, pesato prima di arrostire",
+            "edible_grams": 200,
+            "fdc_id": 170108,
+            "fdc_description": "Peppers, sweet, red, raw",
+            "per_100g": {
+              "calories": 26.0,
+              "protein_g": 0.99,
+              "carbs_g": 6.03,
+              "fat_g": 0.3,
+              "saturated_fat_g": 0.059,
+              "fiber_g": 2.1,
+              "sugar_g": 4.2,
+              "sodium_mg": 4.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170108/nutrients"
+          },
+          {
+            "ingredient": "pomodoro rosso maturo senza picciolo, pesato prima di arrostire",
+            "edible_grams": 150,
+            "fdc_id": 170457,
+            "fdc_description": "Tomatoes, red, ripe, raw, year round average",
+            "per_100g": {
+              "calories": 18.0,
+              "protein_g": 0.88,
+              "carbs_g": 3.89,
+              "fat_g": 0.2,
+              "saturated_fat_g": 0.028,
+              "fiber_g": 1.2,
+              "sugar_g": 2.63,
+              "sodium_mg": 5.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170457/nutrients"
+          },
+          {
+            "ingredient": "aglio sbucciato",
+            "edible_grams": 4,
+            "fdc_id": 169230,
+            "fdc_description": "Garlic, raw",
+            "per_100g": {
+              "calories": 149,
+              "protein_g": 6.36,
+              "carbs_g": 33.1,
+              "fat_g": 0.5,
+              "saturated_fat_g": 0.089,
+              "fiber_g": 2.1,
+              "sugar_g": 1.0,
+              "sodium_mg": 17.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169230/nutrients"
+          },
+          {
+            "ingredient": "mandorle crude non salate con pelle",
+            "edible_grams": 30,
+            "fdc_id": 170567,
+            "fdc_description": "Nuts, almonds",
+            "per_100g": {
+              "calories": 579,
+              "protein_g": 21.2,
+              "carbs_g": 21.6,
+              "fat_g": 49.9,
+              "saturated_fat_g": 3.8,
+              "fiber_g": 12.5,
+              "sugar_g": 4.35,
+              "sodium_mg": 1.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170567/nutrients"
+          },
+          {
+            "ingredient": "nocciole crude non salate con pelle",
+            "edible_grams": 20,
+            "fdc_id": 170581,
+            "fdc_description": "Nuts, hazelnuts or filberts",
+            "per_100g": {
+              "calories": 628,
+              "protein_g": 15.0,
+              "carbs_g": 16.7,
+              "fat_g": 60.8,
+              "saturated_fat_g": 4.46,
+              "fiber_g": 9.7,
+              "sugar_g": 4.34,
+              "sodium_mg": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170581/nutrients"
+          },
+          {
+            "ingredient": "pane bianco commerciale già cotto, senza muffa",
+            "edible_grams": 20,
+            "fdc_id": 174924,
+            "fdc_description": "Bread, white, commercially prepared (includes soft bread crumbs)",
+            "per_100g": {
+              "calories": 266,
+              "protein_g": 8.85,
+              "carbs_g": 49.4,
+              "fat_g": 3.33,
+              "saturated_fat_g": 0.698,
+              "fiber_g": 2.7,
+              "sugar_g": 5.67,
+              "sodium_mg": 490
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/174924/nutrients"
+          },
+          {
+            "ingredient": "olio d’oliva",
+            "edible_grams": 30,
+            "fdc_id": 171413,
+            "fdc_description": "Oil, olive, salad or cooking",
+            "per_100g": {
+              "calories": 884,
+              "protein_g": 0.0,
+              "carbs_g": 0.0,
+              "fat_g": 100,
+              "saturated_fat_g": 13.8,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0,
+              "sodium_mg": 2.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171413/nutrients"
+          },
+          {
+            "ingredient": "aceto di vino rosso",
+            "edible_grams": 20,
+            "fdc_id": 172240,
+            "fdc_description": "Vinegar, red wine",
+            "per_100g": {
+              "calories": 19.0,
+              "protein_g": 0.04,
+              "carbs_g": 0.27,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0,
+              "sodium_mg": 8.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/172240/nutrients"
+          },
+          {
+            "ingredient": "paprika dolce",
+            "edible_grams": 2,
+            "fdc_id": 171329,
+            "fdc_description": "Spices, paprika",
+            "per_100g": {
+              "calories": 282,
+              "protein_g": 14.1,
+              "carbs_g": 54.0,
+              "fat_g": 12.9,
+              "saturated_fat_g": 2.14,
+              "fiber_g": 34.9,
+              "sugar_g": 10.3,
+              "sodium_mg": 68.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171329/nutrients"
+          },
+          {
+            "ingredient": "sale fino",
+            "edible_grams": 3,
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "calories": 0.0,
+              "protein_g": 0.0,
+              "carbs_g": 0.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0,
+              "sodium_mg": 38800.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients"
+          },
+          {
+            "ingredient": "acqua potabile per la salsa",
+            "edible_grams": 30,
+            "fdc_id": 173647,
+            "fdc_description": "Beverages, water, tap, drinking",
+            "per_100g": {
+              "calories": 0.0,
+              "protein_g": 0.0,
+              "carbs_g": 0.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0,
+              "sodium_mg": 4.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173647/nutrients"
+          }
+        ],
+        "missing_nutrients": [
+          "sugar_g"
+        ],
+        "serving_size": "Un quarto dell’insalata con tutta la salsa; 4 porzioni proposte",
+        "method": "Somma dei grammi commestibili moltiplicati per i nutrienti USDA per 100 g, divisa per 4. Quindici alimenti esatti verificati; sette nutrienti presenti in tutti. Solo nutrienti completi totalizzati. Zuccheri totali omessi perché la scheda 175243 dei fagioli scolati e sciacquati non li riporta.",
+        "note": "Stima da confermare, non analisi o prova in cucina. I 1379 g sono peso iniziale, non resa finale misurata. Scheda 175243 corrispondente ai fagioli rossi commerciali scolati e sciacquati; zuccheri mancanti in attesa, non zero. Riferimenti crudi per verdure arrosto con bucce commestibili e succhi mantenuti, e per frutta a guscio prima della lieve tostatura asciutta. Cipolla USDA generica, non analisi di una varietà rossa specifica. Pane bianco commerciale variabile per marca e possibile latte. Tutta salsa, olio, sale e acqua pesati inclusi, senza perdite inventate per evaporazione o manipolazione o ulteriore riduzione del sodio da risciacquo. Marche, peso scolato e umidità cambiano valori. Accompagnamenti esclusi; dati assenti mai sostituiti con zero."
+      },
+      "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/portada.webp",
+          "alt": "Fagioli rossi interi con cetriolo a cubetti, cipolla e prezzemolo rivestiti da salsa romesco rossa granulosa senza guarnizioni extra"
+        }
+      ],
+      "published": false,
+      "editorial_status": "draft",
+      "keywords": [
+        "insalata di fagioli rossi",
+        "romesco proposto",
+        "fagioli rossi cotti",
+        "insalata fredda con frutta a guscio"
+      ],
+      "notes": "Insalata proposta con fagioli rossi commerciali già cotti e romesco di verdure arrosto, mandorle, nocciole e pane, senza dichiarare una formula tradizionale unica. Mai sostituire una conserva pronta con fagioli rossi secchi, ammollati o insufficientemente cotti: richiedono un procedimento sicuro completo distinto e nuovi tempi e pesi. Contiene mandorle, nocciole e frumento; il pane può contenere latte, soia o altri allergeni. Controlla etichette e tracce senza garantire idoneità alle allergie o etichetta vegana. Le sostituzioni cambiano consistenza, quantità e nutrienti: adatta e ricalcola. Mantieni bucce commestibili e succhi e includi tutta la salsa e 30 g di olio. L’aceto non rende insalata o salsa conservabili a temperatura ambiente. Non si propone invasare o conservare per mesi. Lava verdure senza sapone, usa utensili puliti e guanti e scollega il robot prima di raschiare. Evita ingredienti molto caldi in un vaso chiuso. Conserva a 4 °C o meno; refrigera entro 2 ore, o 1 ora sopra 32 °C. Le 24 ore dopo preparazione sono una proposta di qualità non testata, non durata validata. Nessun periodo di congelamento, prova in cucina o beneficio salutistico dichiarato.",
+      "seo": {
+        "title": "Insalata di fagioli con romesco: preparazione e freddo",
+        "description": "Fagioli rossi cotti, cetriolo e romesco di verdure arrosto: quantità, tostatura, raffreddamento e conservazione per quattro porzioni proposte.",
+        "image_alt": "Fagioli rossi interi con cetriolo a cubetti, cipolla e prezzemolo rivestiti da salsa romesco rossa granulosa senza guarnizioni extra",
+        "image_variants": [
+          "/recetas/ensalada-de-frijoles-con-salsa-romesco/portada-1x1.webp",
+          "/recetas/ensalada-de-frijoles-con-salsa-romesco/portada-4x3.webp",
+          "/recetas/ensalada-de-frijoles-con-salsa-romesco/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Posso usare fagioli secchi o appena cotti?",
+            "a": "Il calcolo prevede fagioli rossi commerciali già cotti, scolati e sciacquati. I secchi non si sostituiscono direttamente: servono ammollo e cottura sicura completa secondo istruzioni affidabili, altra pianificazione e peso cotto reale. Non basta ammorbidirli o ammollarli."
+          },
+          {
+            "q": "È un romesco tradizionale e posso cambiare la frutta a guscio?",
+            "a": "È una versione proposta per questa insalata con peperone e pomodoro arrosto, mandorle, nocciole, pane e aceto, senza affermare un’unica formula tradizionale. Cambiare o togliere frutta a guscio o pane modifica sapore, consistenza, allergeni e calcolo; adatta senza promettere risultato identico."
+          },
+          {
+            "q": "Quanto tempo e come conservare?",
+            "a": "I 92 minuti completi includono forno, attività sovrapposte e 30 minuti di freddo. Somma qualsiasi tempo reale aggiuntivo. Conserva a 4 °C o meno e refrigera entro 2 ore, o 1 ora sopra 32 °C. Le 24 ore dopo preparazione sono un suggerimento di qualità non testato, non durata validata; l’aceto non permette conservazione a temperatura ambiente."
+          }
+        ]
+      },
+      "content_html": "<p>Insalata fredda proposta con fagioli rossi cotti, cetriolo, cipolla e prezzemolo, con romesco di peperone e pomodoro arrostiti, frutta a guscio e pane. Sono previste 4 porzioni e 92 minuti completi, compreso il freddo. Quantità, tempi e resa attendono conferma in cucina.</p><p>Insalata proposta con fagioli rossi commerciali già cotti e romesco di verdure arrosto, mandorle, nocciole e pane, senza dichiarare una formula tradizionale unica. Mai sostituire una conserva pronta con fagioli rossi secchi, ammollati o insufficientemente cotti: richiedono un procedimento sicuro completo distinto e nuovi tempi e pesi. Contiene mandorle, nocciole e frumento; il pane può contenere latte, soia o altri allergeni. Controlla etichette e tracce senza garantire idoneità alle allergie o etichetta vegana. Le sostituzioni cambiano consistenza, quantità e nutrienti: adatta e ricalcola. Mantieni bucce commestibili e succhi e includi tutta la salsa e 30 g di olio. L’aceto non rende insalata o salsa conservabili a temperatura ambiente. Non si propone invasare o conservare per mesi. Lava verdure senza sapone, usa utensili puliti e guanti e scollega il robot prima di raschiare. Evita ingredienti molto caldi in un vaso chiuso. Conserva a 4 °C o meno; refrigera entro 2 ore, o 1 ora sopra 32 °C. Le 24 ore dopo preparazione sono una proposta di qualità non testata, non durata validata. Nessun periodo di congelamento, prova in cucina o beneficio salutistico dichiarato.</p>"
+    },
+    {
+      "id": "4124ded3-eec0-57d8-a3ca-5be7524e2bb4",
+      "recipe_group_id": "8ba3cf9e-47d6-4b27-afdb-9f5b7700b45d",
+      "slug": "豆のサラダとロメスコソース",
+      "public_path": "/ja/豆のサラダとロメスコソース",
+      "source_url": null,
+      "language": "ja",
+      "title": "赤いんげん豆のサラダとロメスコ風ソース",
+      "excerpt": "調理済みの豆、きゅうり、野菜に、焼きパプリカ、トマト、ナッツ、パンのソースを合わせる4人分の提案です。",
+      "summary": "調理済み赤いんげん豆、きゅうり、玉ねぎ、パセリの冷たいサラダに、焼きパプリカとトマト、ナッツ、パンを使うロメスコ風ソースを合わせる提案です。4人分、冷却を含め合計92分を想定しています。分量、時間、出来上がり量は実際の調理で未確認です。",
+      "category": "サラダ",
+      "category_slug": "ensaladas",
+      "difficulty": "中級",
+      "course": "サラダ",
+      "cuisine": "地中海風",
+      "prep_time_minutes": 37,
+      "cook_time_minutes": 25,
+      "total_time_minutes": 92,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "缶詰の調理済み赤いんげん豆（水を切ってすすぐ）",
+          "amount": "600",
+          "unit": "g",
+          "group": "サラダ"
+        },
+        {
+          "name": "洗った皮付ききゅうり",
+          "amount": "200",
+          "unit": "g",
+          "group": "サラダ"
+        },
+        {
+          "name": "皮を除いた赤玉ねぎ",
+          "amount": "60",
+          "unit": "g",
+          "group": "サラダ"
+        },
+        {
+          "name": "洗った生のパセリ",
+          "amount": "10",
+          "unit": "g",
+          "group": "サラダ"
+        },
+        {
+          "name": "へたと種を除いた生の赤パプリカ（焼く前に計量）",
+          "amount": "200",
+          "unit": "g",
+          "group": "ロメスコ風ソース"
+        },
+        {
+          "name": "へたを除いた熟した赤いトマト（焼く前に計量）",
+          "amount": "150",
+          "unit": "g",
+          "group": "ロメスコ風ソース"
+        },
+        {
+          "name": "皮を除いたにんにく",
+          "amount": "4",
+          "unit": "g",
+          "group": "ロメスコ風ソース"
+        },
+        {
+          "name": "生の無塩アーモンド（薄皮付き）",
+          "amount": "30",
+          "unit": "g",
+          "group": "ロメスコ風ソース"
+        },
+        {
+          "name": "生の無塩ヘーゼルナッツ（薄皮付き）",
+          "amount": "20",
+          "unit": "g",
+          "group": "ロメスコ風ソース"
+        },
+        {
+          "name": "市販の焼成済み白いパン（かびのないもの）",
+          "amount": "20",
+          "unit": "g",
+          "group": "ロメスコ風ソース"
+        },
+        {
+          "name": "オリーブ油",
+          "amount": "30",
+          "unit": "g",
+          "group": "ロメスコ風ソース"
+        },
+        {
+          "name": "赤ワインビネガー",
+          "amount": "20",
+          "unit": "g",
+          "group": "ロメスコ風ソース"
+        },
+        {
+          "name": "甘口パプリカパウダー",
+          "amount": "2",
+          "unit": "g",
+          "group": "ロメスコ風ソース"
+        },
+        {
+          "name": "細粒塩",
+          "amount": "3",
+          "unit": "g",
+          "group": "ロメスコ風ソース"
+        },
+        {
+          "name": "ソース用の飲用水",
+          "amount": "30",
+          "unit": "g",
+          "group": "ロメスコ風ソース"
+        }
+      ],
+      "steps": [
+        {
+          "title": "材料を準備して量る",
+          "content": "手を洗い、はかり、清潔なまな板、ざる、乾いたフライパン、オーブン用紙を敷いた天板、ふた付きフードプロセッサーを用意する。パプリカ、トマト、きゅうり、パセリを流水で洗い、せっけんは使わず水分を拭く。へたと種を除いたパプリカ200 g、へたなしのトマト150 g、皮をむいたにんにく4 gを量る。パプリカとトマトの食べられる皮は残し、焼いた後もむかない。ソース用にアーモンド30 g、ヘーゼルナッツ20 g、焼成済みパン20 g、油30 g、酢20 g、パプリカパウダー2 g、塩3 g、水30 gを量る。皮付ききゅうり200 g、皮を除いた赤玉ねぎ60 g、パセリ10 gを用意する。豆600 gは水を切りすすいだ後の重量であり、未開封の缶の重量ではない。表示上そのまま食べられる市販の調理済み缶詰を使い、乾燥豆や生豆は使わない。最初の準備15分の間に上下加熱のオーブンを220 °Cに予熱する。追加の待ち時間ではない。",
+          "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/paso-01.webp",
+          "image_alt": "赤いんげん豆のサラダとロメスコ風ソース: 材料を準備して量る"
+        },
+        {
+          "title": "ソース用の野菜を焼く",
+          "content": "パプリカを幅広い帯状に、トマトを四つ割りにする。にんにくと一緒に天板に重ならないように並べ、油は加えない。量った油はすべてソースを作る際に使う。中段で220 °C、約25分焼き、15分で確認する。柔らかく軽い焼き色がつく状態とし、灰や黒い皮になるまで焼かない。にんにくが先に色づいたら清潔な器に移し、重量を計算から除外しない。ミトンで取り出し、果肉、食べられる皮、たまった汁をすべて残す。フードプロセッサーに入れる前に約10分粗熱を取り、この間に豆と生野菜を準備する。オーブンに応じて実際の追加時間を加える。",
+          "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/paso-02.webp",
+          "image_alt": "赤いんげん豆のサラダとロメスコ風ソース: ソース用の野菜を焼く"
+        },
+        {
+          "title": "野菜の焼成中にナッツとパンを煎る",
+          "content": "野菜を焼いている間に、アーモンド30 g、ヘーゼルナッツ20 g、角切りパン20 gを乾いたフライパンに入れ、中弱火で約5分煎る。よく動かし、軽く香ばしくなる程度にして焦がさず、油も加えない。清潔な皿に移して約5分冷ましてから使う。薄皮とすべてのかけらを残し、追加の飾りは取り分けない。煎る時間と冷却は野菜の焼成25分の中で行い、別の待ち時間として加算しない。両方の容器を見守り、火をつけたまま離れない。",
+          "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/paso-03.webp",
+          "image_alt": "赤いんげん豆のサラダとロメスコ風ソース: 野菜の焼成中にナッツとパンを煎る"
+        },
+        {
+          "title": "豆の水を切り、サラダ野菜を切る",
+          "content": "缶詰を確認し、膨らみ、漏れ、損傷のあるものは除く。開封後は表示に従う。豆の水を切り、清潔なざるで飲用水ですすぎ、十分に水を切ってからそのまま食べられる固形分600 gを量る。缶の液体は計算に使わず、再び加えない。皮付ききゅうり200 gを小さな角切りにし、玉ねぎ60 gを細かく切り、パセリ10 gを刻む。大きなボウルに合わせ、豆をつぶさない。この準備約10分は焼いた野菜の粗熱取りと並行する。さらに待つ場合はボウルを4 °C以下に置く。",
+          "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/paso-04.webp",
+          "image_alt": "赤いんげん豆のサラダとロメスコ風ソース: 豆の水を切り、サラダ野菜を切る"
+        },
+        {
+          "title": "計量外の材料を足さずにソースを作る",
+          "content": "野菜の粗熱が取れたら、パプリカ、トマト、にんにくと汁、煎ったナッツとパンをすべてフードプロセッサーに入れる。量った酢20 g、パプリカパウダー2 g、塩3 g、水30 gを加える。ふたをして短く回し、油30 gを数回に分けて入れ、配りやすい濃厚で少し粒感のあるソースにする。清潔なへらでこそげる際は必ず電源プラグを抜く。約5分を見込む。非常に熱い材料を密閉容器で処理しない。ソースを全量使い、量らない油、塩、水で調整しない。変更したら分量と栄養を見直す。ロメスコの提案版であり、唯一の伝統的配合とは主張しない。",
+          "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/paso-05.webp",
+          "image_alt": "赤いんげん豆のサラダとロメスコ風ソース: 計量外の材料を足さずにソースを作る"
+        },
+        {
+          "title": "混ぜて覆い、冷やす",
+          "content": "豆、きゅうり、玉ねぎ、パセリにソースを全量かける。清潔なスプーン二つで約5分静かに混ぜ、豆の形を保ち各取り分にソースが行き渡るようにする。浅い容器に入れて覆い、4 °C以下で約30分、サラダが冷たくなるまで冷やす。必要なら延長し実際の時間を加える。傷みやすい食品は準備から2時間以内、室温が32 °Cを超える場合は1時間以内に冷蔵する。計画は最初の準備15分、野菜の焼成25分（ナッツを煎って冷ます作業を並行）、粗熱取り10分（水切りと切る作業を並行）、ソース作り5分、混ぜる作業5分、冷蔵30分、取り分け2分で、提案上の合計92分となる。",
+          "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/paso-06.webp",
+          "image_alt": "赤いんげん豆のサラダとロメスコ風ソース: 混ぜて覆い、冷やす"
+        },
+        {
+          "title": "4人分に分け、冷蔵で保管する",
+          "content": "約2分で同程度の4人分に分け、豆、野菜、ソースをそれぞれに入れる。冷たい状態で提供し、チーズ、オリーブ、追加ナッツ、追加パンは付けない。これらは計算に含まれない。1379 gは計量した食べられる材料の初期重量の合計であり、測定した出来上がり量や一人分の重量ではない。分量、時間、四人分という設定は実際の調理で確認前の提案である。覆って4 °C以下で保管し、未試験の保守的な品質の提案として準備後24時間以内に食べる。提供する分だけ出し、残りは速やかに冷蔵庫へ戻す。皿の食べ残しを再利用せず、においで保存期間を決めない。使用した豆の資料に糖類がないため総糖類は確認待ちとなる。欠損はゼロという意味ではない。",
+          "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/portada.webp",
+          "image_alt": "赤いんげん豆のサラダとロメスコ風ソース: 4人分に分け、冷蔵で保管する"
+        }
+      ],
+      "nutrition": {
+        "calories": 373.9,
+        "protein_g": 16.5,
+        "carbs_g": 44.6,
+        "fat_g": 16.2,
+        "saturated_fat_g": 2.1,
+        "fiber_g": 12.8,
+        "sodium_mg": 635.8,
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "inputs": [
+          {
+            "ingredient": "缶詰の調理済み赤いんげん豆（水を切ってすすぐ）",
+            "edible_grams": 600,
+            "fdc_id": 175243,
+            "fdc_description": "Beans, kidney, red, mature seeds, canned, drained solids, rinsed in tap water",
+            "per_100g": {
+              "calories": 121,
+              "protein_g": 8.12,
+              "carbs_g": 20.8,
+              "fat_g": 0.93,
+              "saturated_fat_g": 0.328,
+              "fiber_g": 6.0,
+              "sodium_mg": 208
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/175243/nutrients"
+          },
+          {
+            "ingredient": "洗った皮付ききゅうり",
+            "edible_grams": 200,
+            "fdc_id": 168409,
+            "fdc_description": "Cucumber, with peel, raw",
+            "per_100g": {
+              "calories": 15.0,
+              "protein_g": 0.65,
+              "carbs_g": 3.63,
+              "fat_g": 0.11,
+              "saturated_fat_g": 0.037,
+              "fiber_g": 0.5,
+              "sugar_g": 1.67,
+              "sodium_mg": 2.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/168409/nutrients"
+          },
+          {
+            "ingredient": "皮を除いた赤玉ねぎ",
+            "edible_grams": 60,
+            "fdc_id": 170000,
+            "fdc_description": "Onions, raw",
+            "per_100g": {
+              "calories": 40.0,
+              "protein_g": 1.1,
+              "carbs_g": 9.34,
+              "fat_g": 0.1,
+              "saturated_fat_g": 0.042,
+              "fiber_g": 1.7,
+              "sugar_g": 4.24,
+              "sodium_mg": 4.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170000/nutrients"
+          },
+          {
+            "ingredient": "洗った生のパセリ",
+            "edible_grams": 10,
+            "fdc_id": 170416,
+            "fdc_description": "Parsley, fresh",
+            "per_100g": {
+              "calories": 36.0,
+              "protein_g": 2.97,
+              "carbs_g": 6.33,
+              "fat_g": 0.79,
+              "saturated_fat_g": 0.132,
+              "fiber_g": 3.3,
+              "sugar_g": 0.85,
+              "sodium_mg": 56.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170416/nutrients"
+          },
+          {
+            "ingredient": "へたと種を除いた生の赤パプリカ（焼く前に計量）",
+            "edible_grams": 200,
+            "fdc_id": 170108,
+            "fdc_description": "Peppers, sweet, red, raw",
+            "per_100g": {
+              "calories": 26.0,
+              "protein_g": 0.99,
+              "carbs_g": 6.03,
+              "fat_g": 0.3,
+              "saturated_fat_g": 0.059,
+              "fiber_g": 2.1,
+              "sugar_g": 4.2,
+              "sodium_mg": 4.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170108/nutrients"
+          },
+          {
+            "ingredient": "へたを除いた熟した赤いトマト（焼く前に計量）",
+            "edible_grams": 150,
+            "fdc_id": 170457,
+            "fdc_description": "Tomatoes, red, ripe, raw, year round average",
+            "per_100g": {
+              "calories": 18.0,
+              "protein_g": 0.88,
+              "carbs_g": 3.89,
+              "fat_g": 0.2,
+              "saturated_fat_g": 0.028,
+              "fiber_g": 1.2,
+              "sugar_g": 2.63,
+              "sodium_mg": 5.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170457/nutrients"
+          },
+          {
+            "ingredient": "皮を除いたにんにく",
+            "edible_grams": 4,
+            "fdc_id": 169230,
+            "fdc_description": "Garlic, raw",
+            "per_100g": {
+              "calories": 149,
+              "protein_g": 6.36,
+              "carbs_g": 33.1,
+              "fat_g": 0.5,
+              "saturated_fat_g": 0.089,
+              "fiber_g": 2.1,
+              "sugar_g": 1.0,
+              "sodium_mg": 17.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169230/nutrients"
+          },
+          {
+            "ingredient": "生の無塩アーモンド（薄皮付き）",
+            "edible_grams": 30,
+            "fdc_id": 170567,
+            "fdc_description": "Nuts, almonds",
+            "per_100g": {
+              "calories": 579,
+              "protein_g": 21.2,
+              "carbs_g": 21.6,
+              "fat_g": 49.9,
+              "saturated_fat_g": 3.8,
+              "fiber_g": 12.5,
+              "sugar_g": 4.35,
+              "sodium_mg": 1.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170567/nutrients"
+          },
+          {
+            "ingredient": "生の無塩ヘーゼルナッツ（薄皮付き）",
+            "edible_grams": 20,
+            "fdc_id": 170581,
+            "fdc_description": "Nuts, hazelnuts or filberts",
+            "per_100g": {
+              "calories": 628,
+              "protein_g": 15.0,
+              "carbs_g": 16.7,
+              "fat_g": 60.8,
+              "saturated_fat_g": 4.46,
+              "fiber_g": 9.7,
+              "sugar_g": 4.34,
+              "sodium_mg": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170581/nutrients"
+          },
+          {
+            "ingredient": "市販の焼成済み白いパン（かびのないもの）",
+            "edible_grams": 20,
+            "fdc_id": 174924,
+            "fdc_description": "Bread, white, commercially prepared (includes soft bread crumbs)",
+            "per_100g": {
+              "calories": 266,
+              "protein_g": 8.85,
+              "carbs_g": 49.4,
+              "fat_g": 3.33,
+              "saturated_fat_g": 0.698,
+              "fiber_g": 2.7,
+              "sugar_g": 5.67,
+              "sodium_mg": 490
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/174924/nutrients"
+          },
+          {
+            "ingredient": "オリーブ油",
+            "edible_grams": 30,
+            "fdc_id": 171413,
+            "fdc_description": "Oil, olive, salad or cooking",
+            "per_100g": {
+              "calories": 884,
+              "protein_g": 0.0,
+              "carbs_g": 0.0,
+              "fat_g": 100,
+              "saturated_fat_g": 13.8,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0,
+              "sodium_mg": 2.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171413/nutrients"
+          },
+          {
+            "ingredient": "赤ワインビネガー",
+            "edible_grams": 20,
+            "fdc_id": 172240,
+            "fdc_description": "Vinegar, red wine",
+            "per_100g": {
+              "calories": 19.0,
+              "protein_g": 0.04,
+              "carbs_g": 0.27,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0,
+              "sodium_mg": 8.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/172240/nutrients"
+          },
+          {
+            "ingredient": "甘口パプリカパウダー",
+            "edible_grams": 2,
+            "fdc_id": 171329,
+            "fdc_description": "Spices, paprika",
+            "per_100g": {
+              "calories": 282,
+              "protein_g": 14.1,
+              "carbs_g": 54.0,
+              "fat_g": 12.9,
+              "saturated_fat_g": 2.14,
+              "fiber_g": 34.9,
+              "sugar_g": 10.3,
+              "sodium_mg": 68.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171329/nutrients"
+          },
+          {
+            "ingredient": "細粒塩",
+            "edible_grams": 3,
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "calories": 0.0,
+              "protein_g": 0.0,
+              "carbs_g": 0.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0,
+              "sodium_mg": 38800.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients"
+          },
+          {
+            "ingredient": "ソース用の飲用水",
+            "edible_grams": 30,
+            "fdc_id": 173647,
+            "fdc_description": "Beverages, water, tap, drinking",
+            "per_100g": {
+              "calories": 0.0,
+              "protein_g": 0.0,
+              "carbs_g": 0.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0,
+              "sodium_mg": 4.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173647/nutrients"
+          }
+        ],
+        "missing_nutrients": [
+          "sugar_g"
+        ],
+        "serving_size": "全ソースを含むサラダの4分の1；提案上の4人分",
+        "method": "可食部グラムにUSDAの100 g当たりの栄養値を掛けて合計し4で割る。正確な15食品を確認し、7項目が全食品にある。完全な項目だけ合計する。水切り・すすぎ済み豆の資料175243に糖類がないため、総糖類は掲載しない。",
+        "note": "確認待ちの推定で、分析や調理試験ではない。1379 gは初期重量で、測定した完成品重量ではない。175243は市販赤いんげん豆を水切りしてすすいだ状態に合致するが、糖類の欠損は確認待ちでゼロではない。焼く野菜は生の参考値を使い、食べられる皮と汁を残す。ナッツは油なしで軽く煎る前の生の参考値である。玉ねぎは一般的資料で、特定の赤い品種の分析ではない。市販白パンはブランドにより異なり乳を含む場合がある。量った全ソース、油、塩、水を含み、蒸発・取り扱い損失やすすぎによる追加のナトリウム低下を仮定しない。ブランド、水切り重量、水分で変わる。付け合わせは含めず、欠損値をゼロで埋めない。"
+      },
+      "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/portada.webp",
+          "alt": "赤いんげん豆、皮付ききゅうりの角切り、玉ねぎ、パセリを粒感のある赤いロメスコ風ソースで和えたサラダ、追加の飾りなし"
+        }
+      ],
+      "published": false,
+      "editorial_status": "draft",
+      "keywords": [
+        "赤いんげん豆のサラダ",
+        "ロメスコ風ソース",
+        "調理済み赤いんげん豆",
+        "ナッツ入り冷たいサラダ"
+      ],
+      "notes": "調理済み市販赤いんげん豆と、焼き野菜、アーモンド、ヘーゼルナッツ、パンのロメスコ風ソースを使う提案で、唯一の伝統的配合とは主張しない。そのまま食べられる缶詰を、乾燥、浸水だけ、加熱不足の赤いんげん豆で代用しない。別の完全な安全な手順と重量・時間計算が必要になる。アーモンド、ヘーゼルナッツ、小麦を含み、パンは乳、大豆などを含む場合がある。全表示と混入を確認し、アレルギー適合やヴィーガン表示を保証しない。代用は食感、量、栄養を変えるため調整して再計算する。焼き野菜の食べられる皮と汁を残し、全ソースと油30 gを計算に含める。酢はサラダやソースを常温保存可能な食品にはしない。瓶詰めや数か月の保存は提案しない。野菜はせっけんなしで洗い、清潔な道具とミトンを使い、へらを入れる前に電源を抜く。高温の材料を密閉容器で処理しない。4 °C以下を保ち、2時間以内、32 °Cを超える環境では1時間以内に冷蔵する。準備後24時間は未試験の品質目安であり、検証済み保存期間ではない。冷凍期間、調理試験、健康効果は記載しない。",
+      "seo": {
+        "title": "赤いんげん豆のサラダとロメスコ風ソースの作り方",
+        "description": "調理済み赤いんげん豆、きゅうり、焼き野菜のロメスコ風ソース。4人分の提案に必要な分量、ナッツの加熱、冷却、保存を紹介。",
+        "image_alt": "赤いんげん豆、皮付ききゅうりの角切り、玉ねぎ、パセリを粒感のある赤いロメスコ風ソースで和えたサラダ、追加の飾りなし",
+        "image_variants": [
+          "/recetas/ensalada-de-frijoles-con-salsa-romesco/portada-1x1.webp",
+          "/recetas/ensalada-de-frijoles-con-salsa-romesco/portada-4x3.webp",
+          "/recetas/ensalada-de-frijoles-con-salsa-romesco/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "乾燥豆や家庭で煮た豆を使えますか？",
+            "a": "計算は市販の調理済み赤いんげん豆を水切りしてすすいだ状態です。乾燥豆は直接代用できません。信頼できる手順による浸水と完全な安全な加熱、別の計画、実測の調理後重量が必要です。柔らかくするだけ、浸すだけでは足りません。"
+          },
+          {
+            "q": "伝統的ロメスコですか？ナッツを変えてもよいですか？",
+            "a": "焼きパプリカ、トマト、アーモンド、ヘーゼルナッツ、パン、酢を使うこのサラダ向けの提案で、唯一の伝統的配合とは主張しません。ナッツやパンを変更、除外すると味、食感、アレルゲン、計算が変わります。分量を調整し、同じ結果を保証しないでください。"
+          },
+          {
+            "q": "所要時間と保存方法は？",
+            "a": "提案上の合計92分には焼成、並行作業、冷蔵30分を含みます。追加の焼成や冷却は実際の時間を加えます。4 °C以下を保ち、2時間以内、32 °Cを超える環境では1時間以内に冷蔵します。準備後24時間は未試験の品質目安で検証済み期間ではなく、酢で常温保存が可能になるわけではありません。"
+          }
+        ]
+      },
+      "content_html": "<p>調理済み赤いんげん豆、きゅうり、玉ねぎ、パセリの冷たいサラダに、焼きパプリカとトマト、ナッツ、パンを使うロメスコ風ソースを合わせる提案です。4人分、冷却を含め合計92分を想定しています。分量、時間、出来上がり量は実際の調理で未確認です。</p><p>調理済み市販赤いんげん豆と、焼き野菜、アーモンド、ヘーゼルナッツ、パンのロメスコ風ソースを使う提案で、唯一の伝統的配合とは主張しない。そのまま食べられる缶詰を、乾燥、浸水だけ、加熱不足の赤いんげん豆で代用しない。別の完全な安全な手順と重量・時間計算が必要になる。アーモンド、ヘーゼルナッツ、小麦を含み、パンは乳、大豆などを含む場合がある。全表示と混入を確認し、アレルギー適合やヴィーガン表示を保証しない。代用は食感、量、栄養を変えるため調整して再計算する。焼き野菜の食べられる皮と汁を残し、全ソースと油30 gを計算に含める。酢はサラダやソースを常温保存可能な食品にはしない。瓶詰めや数か月の保存は提案しない。野菜はせっけんなしで洗い、清潔な道具とミトンを使い、へらを入れる前に電源を抜く。高温の材料を密閉容器で処理しない。4 °C以下を保ち、2時間以内、32 °Cを超える環境では1時間以内に冷蔵する。準備後24時間は未試験の品質目安であり、検証済み保存期間ではない。冷凍期間、調理試験、健康効果は記載しない。</p>"
+    },
+    {
+      "id": "f408a4d0-0a96-53cb-8481-7c7c63778cbf",
+      "recipe_group_id": "8ba3cf9e-47d6-4b27-afdb-9f5b7700b45d",
+      "slug": "salada-de-feijao-com-molho-romesco",
+      "public_path": "/pt/salada-de-feijao-com-molho-romesco",
+      "source_url": null,
+      "language": "pt",
+      "title": "Salada de feijão vermelho com romesco proposto",
+      "excerpt": "Feijão cozido, pepino e vegetais frescos com molho de pimentão assado, tomate, oleaginosas e pão para quatro porções propostas.",
+      "summary": "Salada fria proposta de feijão vermelho cozido, pepino, cebola e salsinha com romesco de pimentão e tomate assados, oleaginosas e pão. São propostas 4 porções e 92 minutos completos, incluindo refrigeração. Quantidades, tempos e rendimento aguardam confirmação na cozinha.",
+      "category": "Saladas",
+      "category_slug": "ensaladas",
+      "difficulty": "Média",
+      "course": "Salada",
+      "cuisine": "Inspiração mediterrânea",
+      "prep_time_minutes": 37,
+      "cook_time_minutes": 25,
+      "total_time_minutes": 92,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "feijão vermelho em conserva, já cozido, escorrido e enxaguado",
+          "amount": "600",
+          "unit": "g",
+          "group": "Salada"
+        },
+        {
+          "name": "pepino limpo com casca",
+          "amount": "200",
+          "unit": "g",
+          "group": "Salada"
+        },
+        {
+          "name": "cebola roxa descascada",
+          "amount": "60",
+          "unit": "g",
+          "group": "Salada"
+        },
+        {
+          "name": "salsinha fresca limpa",
+          "amount": "10",
+          "unit": "g",
+          "group": "Salada"
+        },
+        {
+          "name": "pimentão vermelho fresco sem talo ou sementes, pesado antes de assar",
+          "amount": "200",
+          "unit": "g",
+          "group": "Romesco proposto"
+        },
+        {
+          "name": "tomate vermelho maduro sem pedúnculo, pesado antes de assar",
+          "amount": "150",
+          "unit": "g",
+          "group": "Romesco proposto"
+        },
+        {
+          "name": "alho descascado",
+          "amount": "4",
+          "unit": "g",
+          "group": "Romesco proposto"
+        },
+        {
+          "name": "amêndoas cruas sem sal, com pele",
+          "amount": "30",
+          "unit": "g",
+          "group": "Romesco proposto"
+        },
+        {
+          "name": "avelãs cruas sem sal, com pele",
+          "amount": "20",
+          "unit": "g",
+          "group": "Romesco proposto"
+        },
+        {
+          "name": "pão branco comercial já assado, sem mofo",
+          "amount": "20",
+          "unit": "g",
+          "group": "Romesco proposto"
+        },
+        {
+          "name": "azeite de oliva",
+          "amount": "30",
+          "unit": "g",
+          "group": "Romesco proposto"
+        },
+        {
+          "name": "vinagre de vinho tinto",
+          "amount": "20",
+          "unit": "g",
+          "group": "Romesco proposto"
+        },
+        {
+          "name": "páprica doce",
+          "amount": "2",
+          "unit": "g",
+          "group": "Romesco proposto"
+        },
+        {
+          "name": "sal fino",
+          "amount": "3",
+          "unit": "g",
+          "group": "Romesco proposto"
+        },
+        {
+          "name": "água potável para o molho",
+          "amount": "30",
+          "unit": "g",
+          "group": "Romesco proposto"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepare e pese os ingredientes",
+          "content": "Lave as mãos e prepare balança, tábua limpa, escorredor, frigideira seca, assadeira com papel próprio para forno e processador com tampa. Lave pimentão, tomate, pepino e salsinha sob água corrente sem sabão e seque. Pese 200 g de pimentão sem talo e sementes, 150 g de tomate sem pedúnculo e 4 g de alho descascado. Mantenha as cascas comestíveis do pimentão e tomate; não se prevê descascar após assar. Pese 30 g de amêndoas, 20 g de avelãs, 20 g de pão já assado, 30 g de azeite, 20 g de vinagre, 2 g de páprica, 3 g de sal e 30 g de água para o molho. Reserve 200 g de pepino com casca, 60 g de cebola roxa descascada e 10 g de salsinha. O feijão será 600 g depois de escorrer e enxaguar, não o peso da lata fechada. Use conserva comercial cozida pronta para consumo conforme rótulo, nunca feijão seco ou cru. Preaqueça o forno a 220 °C com calor superior e inferior durante estes 15 minutos iniciais; não é espera adicional.",
+          "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/paso-01.webp",
+          "image_alt": "Salada de feijão vermelho com romesco proposto: Prepare e pese os ingredientes"
+        },
+        {
+          "title": "Asse os vegetais para o molho",
+          "content": "Corte o pimentão em tiras largas e o tomate em quartos. Distribua com o alho na assadeira em uma camada sem azeite: todo o azeite pesado será usado ao triturar. Asse cerca de 25 minutos a 220 °C no centro, verificando aos 15. Devem amolecer com áreas tostadas, não cinzas ou casca preta. Se o alho dourar antes, retire para uma tigela limpa sem excluir seu peso do cálculo. Retire com luvas e mantenha toda a polpa, casca comestível e sucos recolhidos. Deixe amornar cerca de 10 minutos antes de triturar; prepare feijão e vegetais frescos nesse intervalo. Acrescente tempo real se seu forno exigir mais.",
+          "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/paso-02.webp",
+          "image_alt": "Salada de feijão vermelho com romesco proposto: Asse os vegetais para o molho"
+        },
+        {
+          "title": "Toste oleaginosas e pão durante o forno",
+          "content": "Enquanto os vegetais assam, coloque os 30 g de amêndoas, 20 g de avelãs e 20 g de pão em cubos numa frigideira seca em fogo médio-baixo. Toste cerca de 5 minutos, mexendo sempre até aroma levemente tostado, sem queimar nem acrescentar azeite. Retire para prato limpo e deixe esfriar cerca de 5 minutos antes de processar. Mantenha peles e todos os pedaços; nenhuma guarnição adicional é reservada. Tostagem e resfriamento acontecem dentro dos 25 minutos de forno e não são outra espera. Vigie ambos os recipientes e não deixe o fogo sem supervisão.",
+          "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/paso-03.webp",
+          "image_alt": "Salada de feijão vermelho com romesco proposto: Toste oleaginosas e pão durante o forno"
+        },
+        {
+          "title": "Escorra o feijão e corte a salada",
+          "content": "Confira as conservas: descarte recipientes estufados, com vazamentos ou danificados e siga o rótulo após abrir. Escorra, enxágue com água potável em escorredor limpo e deixe drenar bem antes de pesar 600 g de sólidos prontos para comer. Não calcule com o líquido da conserva nem volte a colocá-lo. Corte os 200 g de pepino com casca em cubinhos, pique finamente os 60 g de cebola e os 10 g de salsinha. Junte numa tigela ampla sem amassar o feijão. Este preparo ocupa cerca de 10 minutos durante o resfriamento dos vegetais assados; mantenha a tigela a 4 °C ou menos se precisar esperar mais.",
+          "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/paso-04.webp",
+          "image_alt": "Salada de feijão vermelho com romesco proposto: Escorra o feijão e corte a salada"
+        },
+        {
+          "title": "Triture o romesco sem adições ocultas",
+          "content": "Com os vegetais mornos, coloque no processador todo pimentão, tomate, alho e seus sucos, todas as oleaginosas e o pão tostados. Junte os 20 g de vinagre, 2 g de páprica, 3 g de sal e 30 g de água pesados. Tampe e pulse; depois acrescente 30 g de azeite em etapas até um molho espesso, levemente granuloso e fácil de distribuir. Raspe com espátula limpa somente com aparelho desconectado. Dedique cerca de 5 minutos; não processe ingredientes muito quentes em recipiente hermético. Use todo o molho sem ajustar com azeite, sal ou água não medidos: mudanças exigem revisão das quantidades e do cálculo. É uma versão proposta de romesco, não uma alegação de fórmula tradicional única.",
+          "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/paso-05.webp",
+          "image_alt": "Salada de feijão vermelho com romesco proposto: Triture o romesco sem adições ocultas"
+        },
+        {
+          "title": "Misture e refrigere tampada",
+          "content": "Distribua todo o molho sobre feijão, pepino, cebola e salsinha. Misture delicadamente com duas colheres limpas por cerca de 5 minutos para manter os grãos inteiros e molho em todas as porções. Passe para recipiente raso, tampe e refrigere a 4 °C ou menos cerca de 30 minutos até ficar fria; prolongue e some tempo real se necessário. Refrigere perecíveis dentro de 2 horas do preparo, ou 1 hora se o ambiente ultrapassar 32 °C. O planejamento inclui 15 minutos iniciais, 25 de forno com tostagem e resfriamento das oleaginosas sobrepostos, 10 de resfriamento com corte e drenagem sobrepostos, 5 de molho, 5 de mistura, 30 de geladeira e 2 de divisão: 92 minutos propostos.",
+          "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/paso-06.webp",
+          "image_alt": "Salada de feijão vermelho com romesco proposto: Misture e refrigere tampada"
+        },
+        {
+          "title": "Sirva quatro porções e conserve refrigerada",
+          "content": "Dedique cerca de 2 minutos para dividir em 4 porções semelhantes com feijão, vegetais e molho em cada uma. Sirva fria sem queijo, azeitonas, oleaginosas extras ou pão adicional: não estão no cálculo. Os 1379 g são a soma inicial dos ingredientes comestíveis pesados, não rendimento final medido ou peso por porção. Quantidades, tempos e quatro porções são propostas aguardando confirmação na cozinha. Conserve tampada a 4 °C ou menos e, como proposta conservadora de qualidade sem teste, consuma em 24 horas após preparar. Retire apenas o que servir e devolva logo o restante à geladeira. Não reutilize sobras do prato nem estabeleça prazo pelo cheiro. Açúcar fica pendente porque a ficha do feijão não o informa; dado ausente não significa zero.",
+          "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/portada.webp",
+          "image_alt": "Salada de feijão vermelho com romesco proposto: Sirva quatro porções e conserve refrigerada"
+        }
+      ],
+      "nutrition": {
+        "calories": 373.9,
+        "protein_g": 16.5,
+        "carbs_g": 44.6,
+        "fat_g": 16.2,
+        "saturated_fat_g": 2.1,
+        "fiber_g": 12.8,
+        "sodium_mg": 635.8,
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "inputs": [
+          {
+            "ingredient": "feijão vermelho em conserva, já cozido, escorrido e enxaguado",
+            "edible_grams": 600,
+            "fdc_id": 175243,
+            "fdc_description": "Beans, kidney, red, mature seeds, canned, drained solids, rinsed in tap water",
+            "per_100g": {
+              "calories": 121,
+              "protein_g": 8.12,
+              "carbs_g": 20.8,
+              "fat_g": 0.93,
+              "saturated_fat_g": 0.328,
+              "fiber_g": 6.0,
+              "sodium_mg": 208
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/175243/nutrients"
+          },
+          {
+            "ingredient": "pepino limpo com casca",
+            "edible_grams": 200,
+            "fdc_id": 168409,
+            "fdc_description": "Cucumber, with peel, raw",
+            "per_100g": {
+              "calories": 15.0,
+              "protein_g": 0.65,
+              "carbs_g": 3.63,
+              "fat_g": 0.11,
+              "saturated_fat_g": 0.037,
+              "fiber_g": 0.5,
+              "sugar_g": 1.67,
+              "sodium_mg": 2.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/168409/nutrients"
+          },
+          {
+            "ingredient": "cebola roxa descascada",
+            "edible_grams": 60,
+            "fdc_id": 170000,
+            "fdc_description": "Onions, raw",
+            "per_100g": {
+              "calories": 40.0,
+              "protein_g": 1.1,
+              "carbs_g": 9.34,
+              "fat_g": 0.1,
+              "saturated_fat_g": 0.042,
+              "fiber_g": 1.7,
+              "sugar_g": 4.24,
+              "sodium_mg": 4.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170000/nutrients"
+          },
+          {
+            "ingredient": "salsinha fresca limpa",
+            "edible_grams": 10,
+            "fdc_id": 170416,
+            "fdc_description": "Parsley, fresh",
+            "per_100g": {
+              "calories": 36.0,
+              "protein_g": 2.97,
+              "carbs_g": 6.33,
+              "fat_g": 0.79,
+              "saturated_fat_g": 0.132,
+              "fiber_g": 3.3,
+              "sugar_g": 0.85,
+              "sodium_mg": 56.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170416/nutrients"
+          },
+          {
+            "ingredient": "pimentão vermelho fresco sem talo ou sementes, pesado antes de assar",
+            "edible_grams": 200,
+            "fdc_id": 170108,
+            "fdc_description": "Peppers, sweet, red, raw",
+            "per_100g": {
+              "calories": 26.0,
+              "protein_g": 0.99,
+              "carbs_g": 6.03,
+              "fat_g": 0.3,
+              "saturated_fat_g": 0.059,
+              "fiber_g": 2.1,
+              "sugar_g": 4.2,
+              "sodium_mg": 4.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170108/nutrients"
+          },
+          {
+            "ingredient": "tomate vermelho maduro sem pedúnculo, pesado antes de assar",
+            "edible_grams": 150,
+            "fdc_id": 170457,
+            "fdc_description": "Tomatoes, red, ripe, raw, year round average",
+            "per_100g": {
+              "calories": 18.0,
+              "protein_g": 0.88,
+              "carbs_g": 3.89,
+              "fat_g": 0.2,
+              "saturated_fat_g": 0.028,
+              "fiber_g": 1.2,
+              "sugar_g": 2.63,
+              "sodium_mg": 5.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170457/nutrients"
+          },
+          {
+            "ingredient": "alho descascado",
+            "edible_grams": 4,
+            "fdc_id": 169230,
+            "fdc_description": "Garlic, raw",
+            "per_100g": {
+              "calories": 149,
+              "protein_g": 6.36,
+              "carbs_g": 33.1,
+              "fat_g": 0.5,
+              "saturated_fat_g": 0.089,
+              "fiber_g": 2.1,
+              "sugar_g": 1.0,
+              "sodium_mg": 17.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169230/nutrients"
+          },
+          {
+            "ingredient": "amêndoas cruas sem sal, com pele",
+            "edible_grams": 30,
+            "fdc_id": 170567,
+            "fdc_description": "Nuts, almonds",
+            "per_100g": {
+              "calories": 579,
+              "protein_g": 21.2,
+              "carbs_g": 21.6,
+              "fat_g": 49.9,
+              "saturated_fat_g": 3.8,
+              "fiber_g": 12.5,
+              "sugar_g": 4.35,
+              "sodium_mg": 1.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170567/nutrients"
+          },
+          {
+            "ingredient": "avelãs cruas sem sal, com pele",
+            "edible_grams": 20,
+            "fdc_id": 170581,
+            "fdc_description": "Nuts, hazelnuts or filberts",
+            "per_100g": {
+              "calories": 628,
+              "protein_g": 15.0,
+              "carbs_g": 16.7,
+              "fat_g": 60.8,
+              "saturated_fat_g": 4.46,
+              "fiber_g": 9.7,
+              "sugar_g": 4.34,
+              "sodium_mg": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170581/nutrients"
+          },
+          {
+            "ingredient": "pão branco comercial já assado, sem mofo",
+            "edible_grams": 20,
+            "fdc_id": 174924,
+            "fdc_description": "Bread, white, commercially prepared (includes soft bread crumbs)",
+            "per_100g": {
+              "calories": 266,
+              "protein_g": 8.85,
+              "carbs_g": 49.4,
+              "fat_g": 3.33,
+              "saturated_fat_g": 0.698,
+              "fiber_g": 2.7,
+              "sugar_g": 5.67,
+              "sodium_mg": 490
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/174924/nutrients"
+          },
+          {
+            "ingredient": "azeite de oliva",
+            "edible_grams": 30,
+            "fdc_id": 171413,
+            "fdc_description": "Oil, olive, salad or cooking",
+            "per_100g": {
+              "calories": 884,
+              "protein_g": 0.0,
+              "carbs_g": 0.0,
+              "fat_g": 100,
+              "saturated_fat_g": 13.8,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0,
+              "sodium_mg": 2.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171413/nutrients"
+          },
+          {
+            "ingredient": "vinagre de vinho tinto",
+            "edible_grams": 20,
+            "fdc_id": 172240,
+            "fdc_description": "Vinegar, red wine",
+            "per_100g": {
+              "calories": 19.0,
+              "protein_g": 0.04,
+              "carbs_g": 0.27,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0,
+              "sodium_mg": 8.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/172240/nutrients"
+          },
+          {
+            "ingredient": "páprica doce",
+            "edible_grams": 2,
+            "fdc_id": 171329,
+            "fdc_description": "Spices, paprika",
+            "per_100g": {
+              "calories": 282,
+              "protein_g": 14.1,
+              "carbs_g": 54.0,
+              "fat_g": 12.9,
+              "saturated_fat_g": 2.14,
+              "fiber_g": 34.9,
+              "sugar_g": 10.3,
+              "sodium_mg": 68.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171329/nutrients"
+          },
+          {
+            "ingredient": "sal fino",
+            "edible_grams": 3,
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "calories": 0.0,
+              "protein_g": 0.0,
+              "carbs_g": 0.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0,
+              "sodium_mg": 38800.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients"
+          },
+          {
+            "ingredient": "água potável para o molho",
+            "edible_grams": 30,
+            "fdc_id": 173647,
+            "fdc_description": "Beverages, water, tap, drinking",
+            "per_100g": {
+              "calories": 0.0,
+              "protein_g": 0.0,
+              "carbs_g": 0.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0,
+              "sodium_mg": 4.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173647/nutrients"
+          }
+        ],
+        "missing_nutrients": [
+          "sugar_g"
+        ],
+        "serving_size": "Um quarto da salada com todo seu molho; 4 porções propostas",
+        "method": "Soma dos gramas comestíveis multiplicados pelos nutrientes USDA por 100 g, dividida por 4. Quinze alimentos exatos verificados; sete nutrientes presentes em todos. Somente nutrientes completos totalizados. Açúcar total omitido porque a ficha 175243 do feijão escorrido e enxaguado não o informa.",
+        "note": "Estimativa aguardando confirmação, não análise nem teste de cozinha. Os 1379 g são peso inicial, não rendimento final medido. Ficha 175243 corresponde ao feijão vermelho comercial escorrido e enxaguado; açúcar ausente fica pendente, não zero. Referências cruas para vegetais assados com cascas comestíveis e sucos mantidos, e para oleaginosas antes de leve tostagem sem azeite. Cebola USDA genérica, não análise de uma variedade roxa específica. Pão branco comercial varia por marca e pode conter leite. Todo molho, azeite, sal e água pesados incluídos, sem perdas inventadas de evaporação ou manuseio ou redução adicional do sódio pelo enxágue. Marcas, peso drenado e umidade mudam valores. Acompanhamentos excluídos; dados ausentes nunca substituídos por zero."
+      },
+      "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/portada.webp",
+          "alt": "Feijões vermelhos inteiros com cubos de pepino, cebola e salsinha envolvidos em romesco vermelho granuloso sem guarnições extras"
+        }
+      ],
+      "published": false,
+      "editorial_status": "draft",
+      "keywords": [
+        "salada de feijão vermelho",
+        "romesco proposto",
+        "feijão vermelho cozido",
+        "salada fria com oleaginosas"
+      ],
+      "notes": "Salada proposta com feijão vermelho comercial já cozido e romesco de vegetais assados, amêndoas, avelãs e pão, sem apresentar fórmula tradicional única. Nunca substitua conserva pronta por feijão vermelho seco, demolhado ou insuficientemente cozido: precisa de procedimento seguro completo distinto e novo cálculo de pesos e tempos. Contém amêndoas, avelãs e trigo; pão pode conter leite, soja ou outros alérgenos. Verifique rótulos e traços sem garantir adequação para alergias ou rótulo vegano. Substituições mudam textura, quantidades e nutrição: adapte e recalcule. Mantenha cascas comestíveis e sucos dos assados, incluindo todo molho e 30 g de azeite. Vinagre não torna salada ou molho estáveis em temperatura ambiente. Não se propõe envasar nem guardar por meses. Lave vegetais sem sabão, use utensílios limpos e luvas e desligue o processador antes de raspar. Evite ingredientes muito quentes em recipiente fechado. Mantenha a 4 °C ou menos e refrigere dentro de 2 horas, ou 1 hora acima de 32 °C. As 24 horas após preparo são sugestão de qualidade sem teste, não validade comprovada. Sem prazo de congelamento, teste de cozinha ou benefício de saúde alegado.",
+      "seo": {
+        "title": "Salada de feijão com romesco: preparo e refrigeração",
+        "description": "Feijão vermelho cozido, pepino e romesco de vegetais assados: quantidades, tostagem, resfriamento e conservação para quatro porções propostas.",
+        "image_alt": "Feijões vermelhos inteiros com cubos de pepino, cebola e salsinha envolvidos em romesco vermelho granuloso sem guarnições extras",
+        "image_variants": [
+          "/recetas/ensalada-de-frijoles-con-salsa-romesco/portada-1x1.webp",
+          "/recetas/ensalada-de-frijoles-con-salsa-romesco/portada-4x3.webp",
+          "/recetas/ensalada-de-frijoles-con-salsa-romesco/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Posso usar feijão seco ou recém-cozido?",
+            "a": "O cálculo prevê feijão vermelho comercial já cozido, escorrido e enxaguado. Secos não são substituídos diretamente: exigem demolho e cocção segura completa com instruções confiáveis, outra programação e peso cozido real. Apenas amolecer ou deixar de molho não basta."
+          },
+          {
+            "q": "É um romesco tradicional e posso trocar as oleaginosas?",
+            "a": "É uma versão proposta para esta salada com pimentão e tomate assados, amêndoas, avelãs, pão e vinagre, sem alegar uma fórmula tradicional única. Trocar ou retirar oleaginosas ou pão muda sabor, consistência, alérgenos e cálculo; adapte sem prometer o mesmo resultado."
+          },
+          {
+            "q": "Quanto tempo leva e como conservar?",
+            "a": "Os 92 minutos completos incluem forno, tarefas sobrepostas e 30 minutos de geladeira. Some qualquer tempo real adicional de forno ou resfriamento. Mantenha a 4 °C ou menos e refrigere dentro de 2 horas, ou 1 hora acima de 32 °C. As 24 horas após preparo são proposta de qualidade sem teste, não conservação validada; vinagre não permite deixar em temperatura ambiente."
+          }
+        ]
+      },
+      "content_html": "<p>Salada fria proposta de feijão vermelho cozido, pepino, cebola e salsinha com romesco de pimentão e tomate assados, oleaginosas e pão. São propostas 4 porções e 92 minutos completos, incluindo refrigeração. Quantidades, tempos e rendimento aguardam confirmação na cozinha.</p><p>Salada proposta com feijão vermelho comercial já cozido e romesco de vegetais assados, amêndoas, avelãs e pão, sem apresentar fórmula tradicional única. Nunca substitua conserva pronta por feijão vermelho seco, demolhado ou insuficientemente cozido: precisa de procedimento seguro completo distinto e novo cálculo de pesos e tempos. Contém amêndoas, avelãs e trigo; pão pode conter leite, soja ou outros alérgenos. Verifique rótulos e traços sem garantir adequação para alergias ou rótulo vegano. Substituições mudam textura, quantidades e nutrição: adapte e recalcule. Mantenha cascas comestíveis e sucos dos assados, incluindo todo molho e 30 g de azeite. Vinagre não torna salada ou molho estáveis em temperatura ambiente. Não se propõe envasar nem guardar por meses. Lave vegetais sem sabão, use utensílios limpos e luvas e desligue o processador antes de raspar. Evite ingredientes muito quentes em recipiente fechado. Mantenha a 4 °C ou menos e refrigere dentro de 2 horas, ou 1 hora acima de 32 °C. As 24 horas após preparo são sugestão de qualidade sem teste, não validade comprovada. Sem prazo de congelamento, teste de cozinha ou benefício de saúde alegado.</p>"
+    }
+  ],
+  "portuguese_locale": "pt-BR",
+  "localization_qa": "PASS_SAME_NUMBERS_STRUCTURE_MEDIA_FOR_EXISTING_LANGUAGES"
+}
