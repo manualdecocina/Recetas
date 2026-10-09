@@ -22,7 +22,7 @@ export const COOKIES_CONTENT: LegalPageContentMap = {
       },
       {
         heading: '4. Gestión del consentimiento',
-        html: "<p>Antes de cargar cualquier anuncio, el sitio muestra un banner de cookies con dos opciones: <strong>personalizar anuncios</strong> según tu navegación, o ver <strong>solo anuncios básicos</strong>, sin personalizar. En ambos casos verás publicidad de Google AdSense; lo único que cambia es cuánto se usa tu actividad de navegación para elegirla. Puedes cambiar tu elección cuando quieras desde «Preferencias de cookies», en el pie de página.</p><p>También puedes gestionar la personalización de anuncios de Google de forma general desde <a href='https://adssettings.google.com' target='_blank' rel='noopener noreferrer'>adssettings.google.com</a>.</p>",
+        html: "<p>El consentimiento publicitario se gestiona mediante la plataforma certificada de Google. Cuando corresponde a tu región y aún no has elegido, Google muestra su mensaje para aceptar, rechazar o gestionar las opciones. Puedes volver a abrirlo desde «Preferencias de cookies» en el pie de página cuando la plataforma esté disponible. Si no se puede abrir, el sitio te lo indica sin registrar una elección.</p>",
       },
       {
         heading: '5. Cómo borrar cookies y almacenamiento local desde tu navegador',
@@ -51,7 +51,7 @@ export const COOKIES_CONTENT: LegalPageContentMap = {
       },
       {
         heading: '4. Managing consent',
-        html: "<p>Before loading any ad, the site shows a cookie banner with two choices: <strong>personalize ads</strong> based on your browsing, or see <strong>basic ads only</strong>, without personalization. Either way you'll see Google AdSense advertising; the only difference is how much your browsing activity is used to choose it. You can change your choice anytime from \"Cookie preferences\" in the footer.</p><p>You can also manage Google ad personalization in general at <a href='https://adssettings.google.com' target='_blank' rel='noopener noreferrer'>adssettings.google.com</a>.</p>",
+        html: "<p>Advertising consent is managed by Google’s certified consent platform. Where applicable to your region and before you have made a choice, Google displays its message to accept, reject or manage options. You can reopen it from “Cookie preferences” in the footer when the platform is available. If it cannot be opened, the site tells you without recording a choice.</p>",
       },
       {
         heading: '5. How to clear cookies and local storage from your browser',
@@ -80,7 +80,7 @@ export const COOKIES_CONTENT: LegalPageContentMap = {
       },
       {
         heading: '4. Einwilligungsverwaltung',
-        html: "<p>Bevor eine Anzeige geladen wird, zeigt die Website einen Cookie-Banner mit zwei Optionen: <strong>Anzeigen personalisieren</strong> anhand deines Surfverhaltens, oder nur <strong>einfache Anzeigen</strong> ohne Personalisierung sehen. In beiden Fällen siehst du Werbung von Google AdSense; es ändert sich nur, wie stark dein Surfverhalten für die Auswahl genutzt wird. Du kannst deine Wahl jederzeit über „Cookie-Einstellungen“ im Footer ändern.</p><p>Die Personalisierung von Google-Anzeigen kannst du außerdem allgemein unter <a href='https://adssettings.google.com' target='_blank' rel='noopener noreferrer'>adssettings.google.com</a> verwalten.</p>",
+        html: "<p>Die Werbeeinwilligung wird über die zertifizierte Plattform von Google verwaltet. Wenn dies für deine Region gilt und du noch keine Wahl getroffen hast, zeigt Google eine Meldung zum Zustimmen, Ablehnen oder Verwalten der Optionen. Über „Cookie-Einstellungen“ in der Fußzeile kannst du die Meldung erneut öffnen, sobald die Plattform verfügbar ist. Wenn sie nicht geöffnet werden kann, zeigt die Website einen Hinweis, ohne eine Auswahl zu speichern.</p>",
       },
       {
         heading: '5. Cookies und lokalen Speicher im Browser löschen',
@@ -109,7 +109,7 @@ export const COOKIES_CONTENT: LegalPageContentMap = {
       },
       {
         heading: '4. Gestion du consentement',
-        html: "<p>Avant de charger la moindre annonce, le site affiche un bandeau de cookies avec deux choix : <strong>personnaliser les annonces</strong> selon ta navigation, ou voir uniquement des <strong>annonces basiques</strong>, non personnalisées. Dans les deux cas, tu verras de la publicité Google AdSense ; seule change la part de ton activité de navigation utilisée pour la choisir. Tu peux modifier ton choix à tout moment depuis « Préférences de cookies », dans le pied de page.</p><p>Tu peux aussi gérer la personnalisation des annonces Google de façon générale sur <a href='https://adssettings.google.com' target='_blank' rel='noopener noreferrer'>adssettings.google.com</a>.</p>",
+        html: "<p>Le consentement publicitaire est géré par la plateforme certifiée de Google. Lorsque cela s’applique à votre région et avant votre choix, Google affiche son message pour accepter, refuser ou gérer les options. Vous pouvez le rouvrir depuis « Préférences de cookies » dans le pied de page lorsque la plateforme est disponible. Si le message ne peut pas être ouvert, le site vous en informe sans enregistrer de choix.</p>",
       },
       {
         heading: '5. Comment effacer les cookies et le stockage local depuis ton navigateur',
@@ -138,7 +138,7 @@ export const COOKIES_CONTENT: LegalPageContentMap = {
       },
       {
         heading: '4. Gestione del consenso',
-        html: "<p>Prima di caricare qualsiasi annuncio, il sito mostra un banner cookie con due opzioni: <strong>personalizzare gli annunci</strong> in base alla tua navigazione, oppure vedere solo <strong>annunci di base</strong>, senza personalizzazione. In entrambi i casi vedrai pubblicità di Google AdSense; cambia solo quanto viene usata la tua attività di navigazione per sceglierla. Puoi modificare la tua scelta in qualsiasi momento da «Preferenze cookie», nel footer.</p><p>Puoi anche gestire la personalizzazione degli annunci Google in generale su <a href='https://adssettings.google.com' target='_blank' rel='noopener noreferrer'>adssettings.google.com</a>.</p>",
+        html: "<p>Il consenso pubblicitario è gestito dalla piattaforma certificata di Google. Quando previsto nella tua regione e prima della tua scelta, Google mostra un messaggio per accettare, rifiutare o gestire le opzioni. Puoi riaprirlo da «Preferenze cookie» nel piè di pagina quando la piattaforma è disponibile. Se non è possibile aprirlo, il sito ti avvisa senza registrare una scelta.</p>",
       },
       {
         heading: '5. Come cancellare cookie e archiviazione locale dal browser',
@@ -167,7 +167,7 @@ export const COOKIES_CONTENT: LegalPageContentMap = {
       },
       {
         heading: '4. 同意の管理',
-        html: "<p>広告を読み込む前に、サイトはクッキーバナーを表示し、閲覧履歴に基づいて<strong>広告をパーソナライズする</strong>か、パーソナライズしない<strong>基本的な広告のみ</strong>を表示するかをお選びいただけます。どちらを選んでもGoogle AdSenseの広告が表示され、違いは閲覧履歴をどの程度利用するかだけです。選択はフッターの「クッキー設定」からいつでも変更できます。</p><p>Google広告のパーソナライズ設定全般は<a href='https://adssettings.google.com' target='_blank' rel='noopener noreferrer'>adssettings.google.com</a>からも管理できます。</p>",
+        html: "<p>広告への同意はGoogleの認定プラットフォームで管理されます。お住まいの地域に適用され、まだ選択していない場合、Googleが同意・拒否・設定変更のメッセージを表示します。プラットフォームが利用可能な場合、ページ下部の「Cookie設定」から再度開けます。開けない場合は、選択を記録せずにお知らせします。</p>",
       },
       {
         heading: '5. ブラウザでクッキーとローカルストレージを削除する方法',
@@ -196,7 +196,7 @@ export const COOKIES_CONTENT: LegalPageContentMap = {
       },
       {
         heading: '4. Gerenciamento de consentimento',
-        html: "<p>Antes de carregar qualquer anúncio, o site mostra um banner de cookies com duas opções: <strong>personalizar anúncios</strong> com base na sua navegação, ou ver apenas <strong>anúncios básicos</strong>, sem personalização. Em ambos os casos você verá publicidade do Google AdSense; o que muda é apenas o quanto sua atividade de navegação é usada para escolhê-la. Você pode mudar sua escolha a qualquer momento em \"Preferências de cookies\", no rodapé.</p><p>Você também pode gerenciar a personalização de anúncios do Google de forma geral em <a href='https://adssettings.google.com' target='_blank' rel='noopener noreferrer'>adssettings.google.com</a>.</p>",
+        html: "<p>O consentimento para publicidade é gerenciado pela plataforma certificada do Google. Quando aplicável à sua região e antes da sua escolha, o Google exibe uma mensagem para aceitar, recusar ou gerenciar as opções. Você pode reabri-la em «Preferências de cookies» no rodapé quando a plataforma estiver disponível. Se não for possível abrir a mensagem, o site avisa sem registrar uma escolha.</p>",
       },
       {
         heading: '5. Como apagar cookies e armazenamento local no seu navegador',

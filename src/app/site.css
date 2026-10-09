@@ -140,6 +140,10 @@
 .md-footer-links { display: grid; gap: 10px; }
 .md-footer-links a { width: fit-content; color: var(--md-footer-fg); font-size: .92rem; text-decoration: none; }
 .md-footer-links a:hover { color: var(--md-accent); text-decoration: underline; }
+.md-footer-cookie-btn { display: block; width: fit-content; background: transparent; border: 0; padding: 0; color: var(--md-footer-fg); font: inherit; font-size: .92rem; text-align: start; cursor: pointer; }
+.md-footer-cookie-btn:hover { color: var(--md-accent); text-decoration: underline; }
+.md-footer-cookie-btn:focus-visible { outline: 2px solid var(--md-accent); outline-offset: 4px; }
+.md-consent-preferences p { margin: 8px 0 0; max-width: 30ch; font-size: .85rem; color: var(--md-footer-fg); }
 .md-footer-bottom { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 16px; border-top: 1px solid rgb(255 255 255 / 18%); color: var(--md-footer-fg); opacity: .8; font-size: .82rem; padding-top: 19px; margin-top: 40px; }
 
 /* Portada */
@@ -296,6 +300,7 @@
 .md-rating-star:hover:not(:disabled) { transform: scale(1.12); }
 .md-rating-star:disabled { cursor: default; }
 .md-rating-summary { font-size: .86rem; font-weight: 700; color: var(--md-ink); }
+.md-rating-error { flex-basis: 100%; font-size: .86rem; color: var(--md-ink); }
 .md-rating-thanks { font-size: .82rem; color: var(--md-olive-dark); font-weight: 700; }
 .md-article-toc { display: none; }
 .md-recipe-wrap { padding-top: 40px; }

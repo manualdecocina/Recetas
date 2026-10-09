@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import ConsentPreferences from './ConsentPreferences';
 import Image from 'next/image';
 import type { MdLanguage } from './md-types';
 import { getMdCopy } from '@/lib/copy';
@@ -34,6 +35,7 @@ export default function SiteFooter({ lang }: { lang: MdLanguage }) {
           </nav>
           <nav className="md-footer-links" aria-label={t.legal}>
             <strong className="md-footer-heading">{t.legal}</strong>
+            <ConsentPreferences lang={lang} />
             {legal.map((item) => <Link key={item.slug} href={`${base}/${item.slug}`}>{item.label}</Link>)}
           </nav>
         </div>
