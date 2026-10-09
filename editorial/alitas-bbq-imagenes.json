@@ -43,10 +43,129 @@
       "prompt": "Use case: photorealistic-natural. Asset type: original culinary recipe photograph, landscape4:3. Pale matte worktop, soft natural daylight, plain rimmed metal oven tray with oven-safe stainless wire rack. Chicken wing sections are small drumettes and flats with skin and bone, no wing tips, no leg drumsticks. Tomato BBQ sauce dark glossy brick red. No text,labels,logos,watermark,collage,honey,soy,sesame,herb garnish,lemon,fries or unrelated ingredients. Cooked golden chicken wing flats and small drumettes on rack over metal tray being lightly brushed with glossy brick-red tomato BBQ sauce. One natural adult hand holds clean silicone pastry brush, another small bowl of brushing sauce beside. Separate untouched clean serving sauce bowl clearly farther away. Some wings coated and others awaiting brushing, no raw chicken or burnt black crust."
     }
   ],
-  "images": [],
-  "originals": [],
-  "state": "ES_FROZEN_GENERATION_PENDING",
+  "images": [
+    {
+      "asset": "portada.webp",
+      "path": "public/recetas/alitas-bbq/portada.webp",
+      "sha256": "fc7c27d6109323f2f0ca1d869bb105145d1dcbfd1b32440cd628000af47e0310",
+      "git_blob_sha": "6c57d547b0935ce6b4a4cdba8c68fc22ae1ccae0",
+      "bytes": 175658,
+      "width": 1280,
+      "height": 960,
+      "public_path": "/recetas/alitas-bbq/portada.webp",
+      "original": "portada.png",
+      "visual_qa": "PASS"
+    },
+    {
+      "asset": "portada-1x1.webp",
+      "path": "public/recetas/alitas-bbq/portada-1x1.webp",
+      "sha256": "58388821ea04ebc26dd1e213a60b01485ddf3f1187e44c4bd48e7f3aebd0dfcc",
+      "git_blob_sha": "84d541aede7a8c0bc01bf969ef485ae6ff1e8c77",
+      "bytes": 174878,
+      "width": 1024,
+      "height": 1024,
+      "public_path": "/recetas/alitas-bbq/portada-1x1.webp",
+      "original": "portada.png",
+      "visual_qa": "PASS"
+    },
+    {
+      "asset": "portada-4x3.webp",
+      "path": "public/recetas/alitas-bbq/portada-4x3.webp",
+      "sha256": "fc7c27d6109323f2f0ca1d869bb105145d1dcbfd1b32440cd628000af47e0310",
+      "git_blob_sha": "6c57d547b0935ce6b4a4cdba8c68fc22ae1ccae0",
+      "bytes": 175658,
+      "width": 1280,
+      "height": 960,
+      "public_path": "/recetas/alitas-bbq/portada-4x3.webp",
+      "original": "portada.png",
+      "visual_qa": "PASS"
+    },
+    {
+      "asset": "portada-16x9.webp",
+      "path": "public/recetas/alitas-bbq/portada-16x9.webp",
+      "sha256": "441d6a6c67069275fefafc258f4aa5b7a8878699824baacfa74344ae7b902e67",
+      "git_blob_sha": "a0e23e0bc41958aef11911c77aab8d17632aad02",
+      "bytes": 168818,
+      "width": 1280,
+      "height": 720,
+      "public_path": "/recetas/alitas-bbq/portada-16x9.webp",
+      "original": "portada.png",
+      "visual_qa": "PASS"
+    },
+    {
+      "asset": "paso-01.webp",
+      "path": "public/recetas/alitas-bbq/paso-01.webp",
+      "sha256": "131963694370a84b2e7d997926280943c706bdbb0156886d00f40080a7022850",
+      "git_blob_sha": "91955a57fcb930a8e8da5abb885d2cadc59e7287",
+      "bytes": 148544,
+      "width": 1280,
+      "height": 960,
+      "public_path": "/recetas/alitas-bbq/paso-01.webp",
+      "original": "paso-01.png",
+      "visual_qa": "PASS"
+    },
+    {
+      "asset": "paso-02.webp",
+      "path": "public/recetas/alitas-bbq/paso-02.webp",
+      "sha256": "3c6fe0765fea732e635e78c922fd3f62b2cedabc2a372ee083a848878613e589",
+      "git_blob_sha": "9809b7dd7590d209993892ac333a5f0fbee0bf5d",
+      "bytes": 233830,
+      "width": 1280,
+      "height": 960,
+      "public_path": "/recetas/alitas-bbq/paso-02.webp",
+      "original": "paso-02.png",
+      "visual_qa": "PASS"
+    }
+  ],
+  "originals": [
+    {
+      "asset": "portada.png",
+      "path": "public/recetas/alitas-bbq/originals/portada.png",
+      "sha256": "bf19acf781954d7dcc19db8a7fc741f73f7c617234de8329e44fde0ea6f985f3",
+      "git_blob_sha": "e818a8ebfd7056b1da0a62e22178df4f12d2501b",
+      "bytes": 2445222,
+      "width": 1448,
+      "height": 1086,
+      "phase": 7,
+      "visual_qa": "PASS",
+      "source": "built-in ImageGen"
+    },
+    {
+      "asset": "paso-01.png",
+      "path": "public/recetas/alitas-bbq/originals/paso-01.png",
+      "sha256": "f84d3dbd1201cc2a5d4e24b2992e9e503b1f633679f3dc8679e61431aa855cfd",
+      "git_blob_sha": "b9467265d989c473abe8c2506b8b8bb55d048057",
+      "bytes": 2370537,
+      "width": 1448,
+      "height": 1086,
+      "phase": 1,
+      "visual_qa": "PASS",
+      "source": "built-in ImageGen"
+    },
+    {
+      "asset": "paso-02.png",
+      "path": "public/recetas/alitas-bbq/originals/paso-02.png",
+      "sha256": "cb335a39bb0d780ae352419e1440ae31173f5d3117a55890e3d5f36c21bb6053",
+      "git_blob_sha": "b4483cbc4fc950b90e8f1b413b2ed3855a2e72aa",
+      "bytes": 2764258,
+      "width": 1448,
+      "height": 1086,
+      "phase": 2,
+      "visual_qa": "PASS",
+      "source": "built-in ImageGen"
+    }
+  ],
+  "state": "IMAGES_PARTIAL",
   "last_step_reuses_cover": true,
   "original_images_required": 7,
-  "published_webp_required": 10
+  "published_webp_required": 10,
+  "edits": [
+    {
+      "phase": 1,
+      "prompt": "Edit only the small foreground bowl that currently contains pale beige garlic powder: replace the powder with a small mound of fresh peeled garlic very finely minced, irregular moist ivory pieces. The recipe uses fresh garlic, not powder. Preserve all raw chicken wings, hand drying with paper towel, separate boards/trays, rack, ketchup, brown sugar, paprika, salt and black pepper, background, lighting, framing and every other detail exactly. No new ingredients, no writing.",
+      "reason": "Replaced garlic powder with fresh minced garlic matching frozen ES8g",
+      "qa": "PASS_TARGETED_EDIT_ES_UNCHANGED"
+    }
+  ],
+  "cover_variant_visual_qa": "PASS_ALL4_CROPS_PRIMARY_STEW_VISIBLE"
 }
