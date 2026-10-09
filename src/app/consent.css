@@ -132,3 +132,18 @@ html body .fc-consent-root a:focus-visible {
 @media (min-width: 900px) {
   html body .fc-consent-root { padding: 20px !important; }
 }
+
+/* Google's button-label rules have greater specificity than its card rules. */
+html body .fc-consent-root .fc-dialog .fc-button.fc-primary-button .fc-button-label {
+  color: var(--md-on-accent) !important;
+  font-family: var(--md-sans) !important;
+  font-weight: 700 !important;
+}
+html body .fc-consent-root .fc-dialog .fc-button.fc-secondary-button .fc-button-label {
+  color: var(--md-olive-dark) !important;
+  font-family: var(--md-sans) !important;
+  font-weight: 700 !important;
+}
+html body .fc-consent-root .fc-dialog .fc-button:is(.fc-primary-button, .fc-secondary-button) .fc-button-background {
+  background: transparent !important;
+}
