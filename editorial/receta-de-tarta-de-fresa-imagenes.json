@@ -58,10 +58,37 @@
       "prompt": "Use case: photorealistic-natural. Original culinary landscape4:3 photo, bright clean home pastry kitchen, pale counter, daylight, white bowls and 22cm round fluted removablebase metal tarttin. Sweet pastry shell, pale ivoryyellow cooked wholeegg pastrycream and fresh red strawberry slices ONLY. No text/logos/watermarks/collage, no blueberries/raspberries/mint/powdered sugar/jam/glaze/whippedcream/chocolate/creamcheese. Show only stated phase; no prematurely assembled finished tart. Completed plainfreshstrawberrysliced pastrycream tart onwhiteplatter, goldenlowshortcrustrim, in cleanrefrigerator with tall clearfoodcover protectingtart withoutcrushingfruit. No cut wedge yet, no extratoppings, no openstorage or meat."
     }
   ],
-  "images": [],
-  "originals": [],
-  "state": "ES_FROZEN_GENERATION_PENDING",
+  "images": [
+    {
+      "asset": "paso-02.webp",
+      "path": "public/recetas/receta-de-tarta-de-fresa/paso-02.webp",
+      "sha256": "c349ac771a99b6d46753adb345108a04af1fade4deea453bc9d9cedfae2b4900",
+      "git_blob_sha": "1972583db97802c2fc0196bd9f9ff8ca32099cbf",
+      "bytes": 80744,
+      "width": 1280,
+      "height": 960,
+      "public_path": "/recetas/receta-de-tarta-de-fresa/paso-02.webp",
+      "original": "paso-02.png",
+      "visual_qa": "PASS"
+    }
+  ],
+  "originals": [
+    {
+      "asset": "paso-02.png",
+      "path": "public/recetas/receta-de-tarta-de-fresa/originals/paso-02.png",
+      "sha256": "a5959dccce35cd484612ca191b42fedfd41f6b8021ae61b5f98c8cb77a9e5f30",
+      "git_blob_sha": "e531536224f34f7cfd921c1905067ddc20e9ef7c",
+      "bytes": 1987150,
+      "width": 1448,
+      "height": 1086,
+      "phase": 2,
+      "visual_qa": "PASS",
+      "source": "built-in ImageGen"
+    }
+  ],
+  "state": "IMAGES_PARTIAL",
   "last_step_reuses_cover": true,
   "original_images_required": 10,
-  "published_webp_required": 13
+  "published_webp_required": 13,
+  "cover_variant_visual_qa": "PENDING_COVER_GENERATION"
 }
