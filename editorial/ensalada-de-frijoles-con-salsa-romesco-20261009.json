@@ -1,0 +1,515 @@
+{
+  "scope": "Manual de Cocina only; lote04",
+  "state": "ES_FROZEN_IMAGES_PENDING",
+  "provenance": "Original formula and prose; no WordPress editorial bodies, translations or media reused.",
+  "category_slug": "ensaladas",
+  "cover": "/recetas/ensalada-de-frijoles-con-salsa-romesco/portada.webp",
+  "steps_frozen": true,
+  "steps_sha256": "8869c218c189b8f1f479bbcd01f4c9a5866281e02c6870dbf9a6c3c1e3696399",
+  "published_database": false,
+  "time_notes": "15initialprep/preheat+25roast(toast5/cool5overlap)+10roastedvegcool(bean/vegprep10overlap)+5sauce+5mix+30chill+2serve=92. Prep37+cookcritical25+chill30=92. Extend actualextraheat/cold.",
+  "publication_blockers": [
+    "IMAGES_LOCALIZATIONS_FULL15_CI_MERGE_DEPLOY_DB_CACHE_QA_PENDING"
+  ],
+  "sources": [
+    {
+      "url": "https://nutritionsource.hsph.harvard.edu/spanish-romesco-sauce/",
+      "purpose": "JoyceGoldstein authored method only: roastedpepper/tomato, nuts, vinegar, oil, pulsegrainysauce. Independent salad/formula/prose. Historical sixmonths storage claim NOT adopted.",
+      "accessed": "2026-10-09"
+    },
+    {
+      "url": "https://www.greatbritishchefs.com/recipes/romesco-sauce-recipe",
+      "purpose": "SallyAbé authored technique only: toastnuts/bread and coarseblend. Independentpanmethod/formula, no sourceprose/images/nutrition reused.",
+      "accessed": "2026-10-09"
+    },
+    {
+      "url": "https://www.foodsafety.gov/keep-food-safe/4-steps-to-food-safety",
+      "purpose": "Official produc washing, hygiene,4C refrigeration and2h/1h above32C. Proposed24hqualitynotvalidatedshelflife.",
+      "accessed": "2026-10-09"
+    },
+    {
+      "url": "https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_sr_legacy_food_json_2018-04.zip",
+      "purpose": "Fifteen exactfoods; allseven reportednutrients; beans175243sugarabsentomittednotzero.",
+      "accessed": "2026-10-09"
+    }
+  ],
+  "yield_proposal": {
+    "servings": 4,
+    "raw_formula_grams": 1379,
+    "cooked_weight_measured": false,
+    "confirmed": false
+  },
+  "records": [
+    {
+      "id": "418fb144-a8bd-4643-9d8e-ab7b0d742d55",
+      "recipe_group_id": "8ba3cf9e-47d6-4b27-afdb-9f5b7700b45d",
+      "slug": "ensalada-de-frijoles-con-salsa-romesco",
+      "public_path": "/ensalada-de-frijoles-con-salsa-romesco",
+      "source_url": "https://manualdecocina.com/ensalada-de-frijoles-con-salsa-romesco/",
+      "language": "es",
+      "title": "Ensalada de frijoles rojos con romesco propuesto",
+      "excerpt": "Frijoles cocidos, pepino y verduras frescas con una salsa de pimiento asado, tomate, frutos secos y pan para cuatro raciones propuestas.",
+      "summary": "Ensalada fría propuesta de frijoles rojos cocidos, pepino, cebolla y perejil con un romesco de pimiento y tomate asados, frutos secos y pan. Se proponen 4 raciones y 92 minutos completos, incluido el frío. Cantidades, tiempos y rendimiento pendientes de confirmación en cocina.",
+      "category": "Ensaladas",
+      "category_slug": "ensaladas",
+      "difficulty": "Media",
+      "course": "Ensalada",
+      "cuisine": "Inspiración mediterránea",
+      "prep_time_minutes": 37,
+      "cook_time_minutes": 25,
+      "total_time_minutes": 92,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "frijoles rojos en conserva, ya cocidos, escurridos y enjuagados",
+          "amount": "600",
+          "unit": "g",
+          "group": "Ensalada"
+        },
+        {
+          "name": "pepino con piel, limpio",
+          "amount": "200",
+          "unit": "g",
+          "group": "Ensalada"
+        },
+        {
+          "name": "cebolla roja pelada",
+          "amount": "60",
+          "unit": "g",
+          "group": "Ensalada"
+        },
+        {
+          "name": "perejil fresco limpio",
+          "amount": "10",
+          "unit": "g",
+          "group": "Ensalada"
+        },
+        {
+          "name": "pimiento rojo fresco sin tallo ni semillas, peso antes de asar",
+          "amount": "200",
+          "unit": "g",
+          "group": "Romesco propuesto"
+        },
+        {
+          "name": "tomate rojo maduro, sin pedúnculo, peso antes de asar",
+          "amount": "150",
+          "unit": "g",
+          "group": "Romesco propuesto"
+        },
+        {
+          "name": "ajo pelado",
+          "amount": "4",
+          "unit": "g",
+          "group": "Romesco propuesto"
+        },
+        {
+          "name": "almendras crudas sin sal, con piel",
+          "amount": "30",
+          "unit": "g",
+          "group": "Romesco propuesto"
+        },
+        {
+          "name": "avellanas crudas sin sal, con piel",
+          "amount": "20",
+          "unit": "g",
+          "group": "Romesco propuesto"
+        },
+        {
+          "name": "pan blanco comercial ya horneado, sin moho",
+          "amount": "20",
+          "unit": "g",
+          "group": "Romesco propuesto"
+        },
+        {
+          "name": "aceite de oliva",
+          "amount": "30",
+          "unit": "g",
+          "group": "Romesco propuesto"
+        },
+        {
+          "name": "vinagre de vino tinto",
+          "amount": "20",
+          "unit": "g",
+          "group": "Romesco propuesto"
+        },
+        {
+          "name": "pimentón dulce",
+          "amount": "2",
+          "unit": "g",
+          "group": "Romesco propuesto"
+        },
+        {
+          "name": "sal fina",
+          "amount": "3",
+          "unit": "g",
+          "group": "Romesco propuesto"
+        },
+        {
+          "name": "agua potable para la salsa",
+          "amount": "30",
+          "unit": "g",
+          "group": "Romesco propuesto"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepara y pesa los ingredientes",
+          "content": "Lávate las manos y prepara báscula, tabla limpia, colador, sartén seca, bandeja con papel apto para horno y un procesador con tapa. Lava pimiento, tomate, pepino y perejil bajo agua corriente sin jabón y seca. Pesa 200 g de pimiento después de quitar tallo y semillas, 150 g de tomate sin pedúnculo y 4 g de ajo pelado. Conserva la piel comestible del pimiento y del tomate; no se prevé pelarlos tras asar. Pesa 30 g de almendras, 20 g de avellanas, 20 g de pan ya cocido, 30 g de aceite, 20 g de vinagre, 2 g de pimentón, 3 g de sal y 30 g de agua para la salsa. Reserva 200 g de pepino con piel, 60 g de cebolla roja pelada y 10 g de perejil. Los frijoles serán 600 g después de escurrir y enjuagar, no el peso de la lata cerrada. Usa conservas comerciales cocidas aptas para consumo directo según etiqueta, nunca frijoles secos o crudos. Precalienta el horno a 220 °C con calor arriba y abajo durante estos 15 minutos de preparación inicial; el precalentado no es una espera adicional.",
+          "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/paso-01.webp",
+          "image_alt": "Ensalada de frijoles con romesco: Prepara y pesa los ingredientes"
+        },
+        {
+          "title": "Asa las verduras para la salsa",
+          "content": "Corta el pimiento en tiras amplias y el tomate en cuartos. Pon junto al ajo en la bandeja, en una capa y sin añadir aceite: todo el aceite pesado se usará al triturar. Asa unos 25 minutos a 220 °C en la zona media, revisando a los 15. Deben ablandarse y tener zonas tostadas, no ceniza ni piel negra. Si el ajo dora antes, retíralo a un cuenco limpio sin descartar su peso del cálculo. Al sacar con guantes, conserva toda la pulpa, la piel comestible y los jugos recogidos. Deja templar unos 10 minutos antes de triturar; prepara los frijoles y las verduras frescas durante ese intervalo. Si tu horno requiere más tiempo, añádelo al total.",
+          "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/paso-02.webp",
+          "image_alt": "Ensalada de frijoles con romesco: Asa las verduras para la salsa"
+        },
+        {
+          "title": "Tuesta frutos secos y pan durante el asado",
+          "content": "Mientras las verduras están en el horno, pon los 30 g de almendras, los 20 g de avellanas y los 20 g de pan cortado en dados en una sartén seca a fuego medio-bajo. Tuesta unos 5 minutos, moviendo con frecuencia hasta que huela a tostado suave, sin quemar ni añadir aceite. Retira a un plato limpio y deja enfriar unos 5 minutos antes de procesar. Conserva las pieles y todos los trozos; no se reserva una guarnición extra. Este tostado y su enfriado ocurren dentro de los 25 minutos del asado y no se suman como otra espera. Vigila ambos recipientes y no dejes el fuego sin supervisión.",
+          "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/paso-03.webp",
+          "image_alt": "Ensalada de frijoles con romesco: Tuesta frutos secos y pan durante el asado"
+        },
+        {
+          "title": "Escurre los frijoles y corta la ensalada",
+          "content": "Revisa las conservas: descarta envases abombados, con fugas o dañados y sigue la etiqueta después de abrir. Escurre los frijoles, enjuaga con agua potable en un colador limpio y deja escurrir bien antes de pesar 600 g de sólidos listos para comer. No calcules con el líquido de conserva ni vuelvas a añadirlo. Corta los 200 g de pepino con piel en dados pequeños, los 60 g de cebolla en trozos finos y pica los 10 g de perejil. Junta en un cuenco amplio sin machacar los frijoles. Esta preparación ocupa unos 10 minutos durante el templado de las verduras asadas; mantén el cuenco a 4 °C o menos si debes esperar más.",
+          "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/paso-04.webp",
+          "image_alt": "Ensalada de frijoles con romesco: Escurre los frijoles y corta la ensalada"
+        },
+        {
+          "title": "Tritura el romesco sin añadir ingredientes ocultos",
+          "content": "Con las verduras templadas, pon en el procesador todo el pimiento, tomate, ajo y sus jugos, todos los frutos secos y el pan tostados. Añade los 20 g de vinagre, los 2 g de pimentón, los 3 g de sal y los 30 g de agua pesados. Tapa y pulsa; después incorpora los 30 g de aceite en varias tandas hasta obtener una salsa espesa y algo granulosa que se pueda repartir. Raspa el recipiente con una espátula limpia, con el aparato desconectado. Dedica unos 5 minutos; no tritures ingredientes muy calientes en un vaso hermético. Usa toda la salsa y no ajustes con aceite, sal o agua sin medir: cualquier cambio requiere revisar cantidades y cálculo. Es una versión propuesta de romesco, no una afirmación de fórmula tradicional única.",
+          "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/paso-05.webp",
+          "image_alt": "Ensalada de frijoles con romesco: Tritura el romesco sin añadir ingredientes ocultos"
+        },
+        {
+          "title": "Mezcla y enfría tapada",
+          "content": "Reparte toda la salsa sobre los frijoles, pepino, cebolla y perejil. Mezcla delicadamente con dos cucharas limpias durante unos 5 minutos, de modo que los frijoles queden enteros y todas las porciones reciban salsa. Pasa a un recipiente poco profundo, tapa y refrigera a 4 °C o menos unos 30 minutos, hasta que la ensalada esté fría; prolonga y suma el tiempo si lo necesita. Refrigera los alimentos perecederos dentro de 2 horas de preparación, o 1 hora si el ambiente supera 32 °C. La planificación incluye 15 minutos de preparación inicial, 25 de asado con tostado y enfriado de frutos secos solapados, 10 de templado con corte y escurrido solapados, 5 de salsa, 5 de mezcla, 30 de frío y 2 de reparto: 92 minutos propuestos.",
+          "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/paso-06.webp",
+          "image_alt": "Ensalada de frijoles con romesco: Mezcla y enfría tapada"
+        },
+        {
+          "title": "Sirve cuatro porciones y conserva en frío",
+          "content": "Dedica unos 2 minutos a dividir en 4 porciones semejantes, incluyendo frijoles, verduras y salsa en cada una. Sirve fría sin queso, aceitunas, frutos secos extra ni pan adicional: no están en el cálculo. Los 1379 g son la suma inicial de ingredientes comestibles pesados, no un rendimiento final medido ni el peso por ración. Las cantidades, los tiempos y cuatro porciones son propuestas pendientes de confirmación en cocina. Guarda tapada a 4 °C o menos y, como propuesta conservadora de calidad no ensayada, consume en 24 horas tras preparar. Saca solo lo que servirás y devuelve pronto el resto al frío. No reutilices sobras del plato ni establezcas conservación por el olor. La cifra de azúcar queda pendiente porque la ficha de frijoles usada no la informa; dato ausente no significa cero.",
+          "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/portada.webp",
+          "image_alt": "Ensalada de frijoles con romesco: Sirve cuatro porciones y conserva en frío"
+        }
+      ],
+      "nutrition": {
+        "calories": 373.9,
+        "protein_g": 16.5,
+        "carbs_g": 44.6,
+        "fat_g": 16.2,
+        "saturated_fat_g": 2.1,
+        "fiber_g": 12.8,
+        "sodium_mg": 635.8,
+        "estimated": true,
+        "source": "USDA FoodData Central — SR Legacy (abril de 2018)",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "inputs": [
+          {
+            "ingredient": "frijoles rojos en conserva escurridos y enjuagados",
+            "edible_grams": 600,
+            "fdc_id": 175243,
+            "fdc_description": "Beans, kidney, red, mature seeds, canned, drained solids, rinsed in tap water",
+            "per_100g": {
+              "calories": 121,
+              "protein_g": 8.12,
+              "carbs_g": 20.8,
+              "fat_g": 0.93,
+              "saturated_fat_g": 0.328,
+              "fiber_g": 6.0,
+              "sodium_mg": 208
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/175243/nutrients"
+          },
+          {
+            "ingredient": "pepino con piel crudo",
+            "edible_grams": 200,
+            "fdc_id": 168409,
+            "fdc_description": "Cucumber, with peel, raw",
+            "per_100g": {
+              "calories": 15.0,
+              "protein_g": 0.65,
+              "carbs_g": 3.63,
+              "fat_g": 0.11,
+              "saturated_fat_g": 0.037,
+              "fiber_g": 0.5,
+              "sugar_g": 1.67,
+              "sodium_mg": 2.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/168409/nutrients"
+          },
+          {
+            "ingredient": "cebolla cruda",
+            "edible_grams": 60,
+            "fdc_id": 170000,
+            "fdc_description": "Onions, raw",
+            "per_100g": {
+              "calories": 40.0,
+              "protein_g": 1.1,
+              "carbs_g": 9.34,
+              "fat_g": 0.1,
+              "saturated_fat_g": 0.042,
+              "fiber_g": 1.7,
+              "sugar_g": 4.24,
+              "sodium_mg": 4.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170000/nutrients"
+          },
+          {
+            "ingredient": "perejil fresco",
+            "edible_grams": 10,
+            "fdc_id": 170416,
+            "fdc_description": "Parsley, fresh",
+            "per_100g": {
+              "calories": 36.0,
+              "protein_g": 2.97,
+              "carbs_g": 6.33,
+              "fat_g": 0.79,
+              "saturated_fat_g": 0.132,
+              "fiber_g": 3.3,
+              "sugar_g": 0.85,
+              "sodium_mg": 56.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170416/nutrients"
+          },
+          {
+            "ingredient": "pimiento rojo crudo parte comestible para asar",
+            "edible_grams": 200,
+            "fdc_id": 170108,
+            "fdc_description": "Peppers, sweet, red, raw",
+            "per_100g": {
+              "calories": 26.0,
+              "protein_g": 0.99,
+              "carbs_g": 6.03,
+              "fat_g": 0.3,
+              "saturated_fat_g": 0.059,
+              "fiber_g": 2.1,
+              "sugar_g": 4.2,
+              "sodium_mg": 4.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170108/nutrients"
+          },
+          {
+            "ingredient": "tomate rojo crudo para asar",
+            "edible_grams": 150,
+            "fdc_id": 170457,
+            "fdc_description": "Tomatoes, red, ripe, raw, year round average",
+            "per_100g": {
+              "calories": 18.0,
+              "protein_g": 0.88,
+              "carbs_g": 3.89,
+              "fat_g": 0.2,
+              "saturated_fat_g": 0.028,
+              "fiber_g": 1.2,
+              "sugar_g": 2.63,
+              "sodium_mg": 5.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170457/nutrients"
+          },
+          {
+            "ingredient": "ajo crudo pelado para asar",
+            "edible_grams": 4,
+            "fdc_id": 169230,
+            "fdc_description": "Garlic, raw",
+            "per_100g": {
+              "calories": 149,
+              "protein_g": 6.36,
+              "carbs_g": 33.1,
+              "fat_g": 0.5,
+              "saturated_fat_g": 0.089,
+              "fiber_g": 2.1,
+              "sugar_g": 1.0,
+              "sodium_mg": 17.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/169230/nutrients"
+          },
+          {
+            "ingredient": "almendras crudas sin sal",
+            "edible_grams": 30,
+            "fdc_id": 170567,
+            "fdc_description": "Nuts, almonds",
+            "per_100g": {
+              "calories": 579,
+              "protein_g": 21.2,
+              "carbs_g": 21.6,
+              "fat_g": 49.9,
+              "saturated_fat_g": 3.8,
+              "fiber_g": 12.5,
+              "sugar_g": 4.35,
+              "sodium_mg": 1.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170567/nutrients"
+          },
+          {
+            "ingredient": "avellanas crudas sin sal",
+            "edible_grams": 20,
+            "fdc_id": 170581,
+            "fdc_description": "Nuts, hazelnuts or filberts",
+            "per_100g": {
+              "calories": 628,
+              "protein_g": 15.0,
+              "carbs_g": 16.7,
+              "fat_g": 60.8,
+              "saturated_fat_g": 4.46,
+              "fiber_g": 9.7,
+              "sugar_g": 4.34,
+              "sodium_mg": 0.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/170581/nutrients"
+          },
+          {
+            "ingredient": "pan blanco comercial ya cocido",
+            "edible_grams": 20,
+            "fdc_id": 174924,
+            "fdc_description": "Bread, white, commercially prepared (includes soft bread crumbs)",
+            "per_100g": {
+              "calories": 266,
+              "protein_g": 8.85,
+              "carbs_g": 49.4,
+              "fat_g": 3.33,
+              "saturated_fat_g": 0.698,
+              "fiber_g": 2.7,
+              "sugar_g": 5.67,
+              "sodium_mg": 490
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/174924/nutrients"
+          },
+          {
+            "ingredient": "aceite de oliva",
+            "edible_grams": 30,
+            "fdc_id": 171413,
+            "fdc_description": "Oil, olive, salad or cooking",
+            "per_100g": {
+              "calories": 884,
+              "protein_g": 0.0,
+              "carbs_g": 0.0,
+              "fat_g": 100,
+              "saturated_fat_g": 13.8,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0,
+              "sodium_mg": 2.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171413/nutrients"
+          },
+          {
+            "ingredient": "vinagre de vino tinto",
+            "edible_grams": 20,
+            "fdc_id": 172240,
+            "fdc_description": "Vinegar, red wine",
+            "per_100g": {
+              "calories": 19.0,
+              "protein_g": 0.04,
+              "carbs_g": 0.27,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0,
+              "sodium_mg": 8.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/172240/nutrients"
+          },
+          {
+            "ingredient": "pimentón dulce",
+            "edible_grams": 2,
+            "fdc_id": 171329,
+            "fdc_description": "Spices, paprika",
+            "per_100g": {
+              "calories": 282,
+              "protein_g": 14.1,
+              "carbs_g": 54.0,
+              "fat_g": 12.9,
+              "saturated_fat_g": 2.14,
+              "fiber_g": 34.9,
+              "sugar_g": 10.3,
+              "sodium_mg": 68.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/171329/nutrients"
+          },
+          {
+            "ingredient": "sal fina",
+            "edible_grams": 3,
+            "fdc_id": 173468,
+            "fdc_description": "Salt, table",
+            "per_100g": {
+              "calories": 0.0,
+              "protein_g": 0.0,
+              "carbs_g": 0.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0,
+              "sodium_mg": 38800.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients"
+          },
+          {
+            "ingredient": "agua potable para salsa",
+            "edible_grams": 30,
+            "fdc_id": 173647,
+            "fdc_description": "Beverages, water, tap, drinking",
+            "per_100g": {
+              "calories": 0.0,
+              "protein_g": 0.0,
+              "carbs_g": 0.0,
+              "fat_g": 0.0,
+              "saturated_fat_g": 0.0,
+              "fiber_g": 0.0,
+              "sugar_g": 0.0,
+              "sodium_mg": 4.0
+            },
+            "source_url": "https://fdc.nal.usda.gov/food-details/173647/nutrients"
+          }
+        ],
+        "missing_nutrients": [
+          "sugar_g"
+        ],
+        "serving_size": "Una cuarta parte de la ensalada con toda su salsa; 4 raciones propuestas",
+        "method": "Suma de gramos comestibles por valores USDA por 100 g, dividida entre 4. Quince alimentos exactos verificados; siete nutrientes presentes en todos. Solo se suman nutrientes completos. Azúcar total omitido por ausencia en la ficha 175243 de frijoles escurridos y enjuagados.",
+        "note": "Estimación pendiente de confirmación, no análisis ni prueba de cocina. Los 1379 g son peso inicial, no rendimiento final medido. La ficha 175243 corresponde exactamente a frijoles rojos comerciales escurridos y enjuagados; no informa azúcar, que queda pendiente, no cero. Verduras para asar se calculan con referencia cruda, reteniendo piel comestible y jugos; frutos secos con referencia cruda antes de tostado suave sin aceite añadido. Cebolla USDA genérica, no análisis de una variedad roja concreta. Pan blanco comercial puede variar de marca y contener leche. Se incluyen toda la salsa, aceite, sal y agua pesados; no se inventan pérdidas de evaporación o manipulación ni reducción adicional de sodio por enjuague. Marcas, peso escurrido y humedad cambian valores. No incluye acompañamientos y datos ausentes nunca se sustituyen por cero."
+      },
+      "image_url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/ensalada-de-frijoles-con-salsa-romesco/portada.webp",
+          "alt": "Ensalada de frijoles rojos enteros con dados de pepino, cebolla y perejil, cubierta con salsa romesco roja granulosa sin guarniciones extra"
+        }
+      ],
+      "published": false,
+      "editorial_status": "draft",
+      "keywords": [
+        "ensalada de frijoles",
+        "romesco propuesto",
+        "frijoles rojos cocidos",
+        "ensalada fría con frutos secos"
+      ],
+      "notes": "Ensalada propuesta con frijoles rojos comerciales ya cocidos y romesco de verduras asadas, almendras, avellanas y pan; no se presenta como fórmula tradicional única. Nunca uses frijoles rojos secos, remojados o insuficientemente cocidos en lugar de la conserva lista para comer: necesitan un procedimiento seguro completo distinto y otro cálculo de tiempos y pesos. Contiene almendras, avellanas y trigo; el pan puede contener leche, soja u otros alérgenos según etiqueta. Revisa ingredientes y trazas de todos los productos; no garantiza aptitud para alergias ni una etiqueta vegana. Cambiar frutos secos, pan o frijoles modifica textura, cantidades y nutrición: adapta y recalcula, sin suponer equivalencia. No deseches piel comestible ni jugos del asado en esta propuesta; toda la salsa y los 30 g de aceite se incluyen. El vinagre no convierte la ensalada ni la salsa en una conserva estable a temperatura ambiente. No se propone embotar ni guardar la salsa durante meses. Lava verduras con agua corriente sin jabón, usa utensilios limpios, guantes para el horno y desconecta el procesador antes de raspar. Evita procesar ingredientes muy calientes en un vaso cerrado. Mantén a 4 °C o menos; refrigera dentro de 2 horas o 1 hora por encima de 32 °C. Los 24 horas propuestos tras preparar son una sugerencia conservadora de calidad sin ensayo, no vida útil validada. No se fija congelación. No se afirma prueba de cocina ni beneficio de salud.",
+      "seo": {
+        "title": "Ensalada de frijoles con romesco, paso a paso",
+        "description": "Frijoles rojos cocidos, pepino y romesco de verduras asadas: cantidades, tostado, enfriado y conservación para cuatro raciones propuestas.",
+        "image_alt": "Ensalada de frijoles rojos enteros con dados de pepino, cebolla y perejil, cubierta con salsa romesco roja granulosa sin guarniciones extra",
+        "image_variants": [
+          "/recetas/ensalada-de-frijoles-con-salsa-romesco/portada-1x1.webp",
+          "/recetas/ensalada-de-frijoles-con-salsa-romesco/portada-4x3.webp",
+          "/recetas/ensalada-de-frijoles-con-salsa-romesco/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "¿Puedo usar frijoles secos o recién cocidos?",
+            "a": "Esta propuesta calcula frijoles rojos comerciales ya cocidos, escurridos y enjuagados. Los secos no se sustituyen directamente: exigen remojo y cocción segura completa según instrucciones fiables, otra planificación y un peso cocido real. No basta con ablandarlos o usarlos remojados."
+          },
+          {
+            "q": "¿Es un romesco tradicional y puedo cambiar los frutos secos?",
+            "a": "Es una versión propuesta para esta ensalada, con pimiento y tomate asados, almendras, avellanas, pan y vinagre. No afirma una única fórmula tradicional. Cambiar o retirar frutos secos o pan modifica sabor, consistencia, alérgenos y cálculo; adapta cantidades y no prometas el mismo resultado."
+          },
+          {
+            "q": "¿Cuánto tiempo necesita y cómo se conserva?",
+            "a": "Se proponen 92 minutos completos, incluidos asado, tareas solapadas y 30 minutos de frío. Si necesita más asado o enfriado, suma el tiempo real. Mantén a 4 °C o menos y refrigera dentro de 2 horas, o 1 hora por encima de 32 °C. Consumir en 24 horas tras preparar es una propuesta no ensayada de calidad, no conservación validada; el vinagre no permite dejarla a temperatura ambiente."
+          }
+        ]
+      },
+      "content_html": "<p>Ensalada fría propuesta de frijoles rojos cocidos, pepino, cebolla y perejil con un romesco de pimiento y tomate asados, frutos secos y pan. Se proponen 4 raciones y 92 minutos completos, incluido el frío. Cantidades, tiempos y rendimiento pendientes de confirmación en cocina.</p><p>Ensalada propuesta con frijoles rojos comerciales ya cocidos y romesco de verduras asadas, almendras, avellanas y pan; no se presenta como fórmula tradicional única. Nunca uses frijoles rojos secos, remojados o insuficientemente cocidos en lugar de la conserva lista para comer: necesitan un procedimiento seguro completo distinto y otro cálculo de tiempos y pesos. Contiene almendras, avellanas y trigo; el pan puede contener leche, soja u otros alérgenos según etiqueta. Revisa ingredientes y trazas de todos los productos; no garantiza aptitud para alergias ni una etiqueta vegana. Cambiar frutos secos, pan o frijoles modifica textura, cantidades y nutrición: adapta y recalcula, sin suponer equivalencia. No deseches piel comestible ni jugos del asado en esta propuesta; toda la salsa y los 30 g de aceite se incluyen. El vinagre no convierte la ensalada ni la salsa en una conserva estable a temperatura ambiente. No se propone embotar ni guardar la salsa durante meses. Lava verduras con agua corriente sin jabón, usa utensilios limpios, guantes para el horno y desconecta el procesador antes de raspar. Evita procesar ingredientes muy calientes en un vaso cerrado. Mantén a 4 °C o menos; refrigera dentro de 2 horas o 1 hora por encima de 32 °C. Los 24 horas propuestos tras preparar son una sugerencia conservadora de calidad sin ensayo, no vida útil validada. No se fija congelación. No se afirma prueba de cocina ni beneficio de salud.</p>"
+    }
+  ]
+}
