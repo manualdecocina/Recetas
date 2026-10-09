@@ -1,0 +1,391 @@
+{
+  "batch_id": "lote-05-20261009",
+  "status": "CLOSED_PUBLISHED_QA_PASS",
+  "closed_at": "2026-10-09T11:45:28.623Z",
+  "requested_recipes": 5,
+  "published_recipes": 5,
+  "language_rows": 35,
+  "production_migration_executed": false,
+  "caprese": "HELD_UNCHANGED",
+  "automation_enabled": false,
+  "packages": "Original prepublication editorial packages remain frozen; this report records the actual publication outcome.",
+  "production_pr": 105,
+  "production_head": "769fb33a430c4455f524d940719a903baddacef4",
+  "production_merge": "e632fef55b1fa6f237bc9278e2fbacd6695cad7f",
+  "production_ci": "PASS_5_CHECKS_AT_EXACT_HEAD",
+  "media": {
+    "run": 37924745686,
+    "job": 113800877101,
+    "head_sha": "e632fef55b1fa6f237bc9278e2fbacd6695cad7f",
+    "checked_at": "2026-10-09T11:38:41.609235+00:00",
+    "assets": 56,
+    "passed": 56,
+    "errors": [],
+    "artifact": {
+      "id": 11613063998,
+      "node_id": "MDg6QXJ0aWZhY3QxMTYxMzA2Mzk5OA==",
+      "name": "lote05-media-deployment-verification",
+      "size_in_bytes": 2717,
+      "url": "https://api.github.com/repos/manualdecocina/Recetas/actions/artifacts/11613063998",
+      "archive_download_url": "https://api.github.com/repos/manualdecocina/Recetas/actions/artifacts/11613063998/zip",
+      "expired": false,
+      "digest": "sha256:b4d54273739e1a40070a2c0781edc16f4330f9f177bb0b4f29c59bbac06f336e",
+      "created_at": "2026-10-09T11:38:42Z",
+      "updated_at": "2026-10-09T11:38:42Z",
+      "expires_at": "2027-01-07T11:36:10Z",
+      "workflow_run": {
+        "id": 37924745686,
+        "repository_id": 1382499570,
+        "head_repository_id": 1382499570,
+        "head_branch": "main",
+        "head_sha": "e632fef55b1fa6f237bc9278e2fbacd6695cad7f"
+      }
+    }
+  },
+  "sql": {
+    "file": "scripts/publish-lote05-20261009.sql",
+    "sha256": "e398dade7374ac0fce199def0ac66e2ea40e917762150a2bea2728fab6a5975d",
+    "github_blob_sha": "767d2dcf4ddf09e9a14adcc4cff3f02a609a9cdb",
+    "executed_once": true,
+    "executed_at": "2026-10-09T11:39:39.023Z",
+    "result": "COMMITTED_AND_POSTQUERY_VERIFIED"
+  },
+  "database": {
+    "groups": [
+      {
+        "rows": 7,
+        "languages": 7,
+        "published": 7,
+        "recipe_group_id": "0976e97c-aabc-4ce2-a07d-6429c0108dbe"
+      },
+      {
+        "rows": 7,
+        "languages": 7,
+        "published": 7,
+        "recipe_group_id": "16e07d31-b2fb-47b8-a740-92d66b253ea1"
+      },
+      {
+        "rows": 7,
+        "languages": 7,
+        "published": 7,
+        "recipe_group_id": "224e8e13-f4a9-4077-82b7-43b89b8e35bd"
+      },
+      {
+        "rows": 7,
+        "languages": 7,
+        "published": 7,
+        "recipe_group_id": "8a0876c5-e0e8-4289-a230-c99fa275590b"
+      },
+      {
+        "rows": 7,
+        "languages": 7,
+        "published": 7,
+        "recipe_group_id": "de2ec78c-3533-49db-92f0-db85d9884015"
+      }
+    ],
+    "checked_at": "2026-10-09T11:40:03.937865+00:00",
+    "outside_md5": "08fa427ce2b8d1263b970f18255df6a5",
+    "published_es": 159,
+    "es_identities": [
+      {
+        "id": "0253a03f-0678-4508-8e14-c9bacc209ed1",
+        "slug": "receta-crema-de-campinones",
+        "created_at": "2026-09-23T20:50:30.015432+00:00",
+        "source_url": "https://manualdecocina.com/receta-crema-de-campinones/",
+        "public_path": "/receta-crema-de-campinones",
+        "published_at": "2026-09-23T20:50:30.015432+00:00",
+        "recipe_group_id": "0976e97c-aabc-4ce2-a07d-6429c0108dbe"
+      },
+      {
+        "id": "64ce5de9-2235-43f2-914b-1c5519776d56",
+        "slug": "receta-de-rollos-de-berenjena-con-tomates",
+        "created_at": "2026-09-23T20:50:30.10332+00:00",
+        "source_url": "https://manualdecocina.com/receta-de-rollos-de-berenjena-con-tomates/",
+        "public_path": "/receta-de-rollos-de-berenjena-con-tomates",
+        "published_at": "2026-09-23T20:50:30.10332+00:00",
+        "recipe_group_id": "16e07d31-b2fb-47b8-a740-92d66b253ea1"
+      },
+      {
+        "id": "edbe35d4-ab42-41c5-84db-4e035a5333fe",
+        "slug": "pollo-al-horno-con-hierbas-y-limon",
+        "created_at": "2026-09-23T20:50:30.371317+00:00",
+        "source_url": "https://manualdecocina.com/pollo-al-horno-con-hierbas-y-limon/",
+        "public_path": "/pollo-al-horno-con-hierbas-y-limon",
+        "published_at": "2026-09-23T20:50:30.371317+00:00",
+        "recipe_group_id": "224e8e13-f4a9-4077-82b7-43b89b8e35bd"
+      },
+      {
+        "id": "1a975f88-17fd-49b2-a807-0850ad2827ff",
+        "slug": "receta-de-pollo-frito-sureno",
+        "created_at": "2026-09-23T20:50:30.274106+00:00",
+        "source_url": "https://manualdecocina.com/receta-de-pollo-frito-sureno/",
+        "public_path": "/receta-de-pollo-frito-sureno",
+        "published_at": "2026-09-23T20:50:30.274106+00:00",
+        "recipe_group_id": "8a0876c5-e0e8-4289-a230-c99fa275590b"
+      },
+      {
+        "id": "1eda6abc-48cd-42bb-a64d-2c785df6ea4e",
+        "slug": "receta-torta-de-zanahoria",
+        "created_at": "2026-09-23T20:50:30.015432+00:00",
+        "source_url": "https://manualdecocina.com/receta-torta-de-zanahoria/",
+        "public_path": "/receta-torta-de-zanahoria",
+        "published_at": "2026-09-23T20:50:30.015432+00:00",
+        "recipe_group_id": "de2ec78c-3533-49db-92f0-db85d9884015"
+      }
+    ],
+    "outside_count": 1128,
+    "unpublished_es": 50,
+    "ingredient_entries": [
+      {
+        "id": "0253a03f-0678-4508-8e14-c9bacc209ed1",
+        "slug": "receta-crema-de-campinones",
+        "pending_entries": 3,
+        "canonical_matches": 4,
+        "editorial_entries": 7
+      },
+      {
+        "id": "64ce5de9-2235-43f2-914b-1c5519776d56",
+        "slug": "receta-de-rollos-de-berenjena-con-tomates",
+        "pending_entries": 4,
+        "canonical_matches": 3,
+        "editorial_entries": 7
+      },
+      {
+        "id": "edbe35d4-ab42-41c5-84db-4e035a5333fe",
+        "slug": "pollo-al-horno-con-hierbas-y-limon",
+        "pending_entries": 4,
+        "canonical_matches": 4,
+        "editorial_entries": 8
+      },
+      {
+        "id": "1a975f88-17fd-49b2-a807-0850ad2827ff",
+        "slug": "receta-de-pollo-frito-sureno",
+        "pending_entries": 4,
+        "canonical_matches": 3,
+        "editorial_entries": 7
+      },
+      {
+        "id": "1eda6abc-48cd-42bb-a64d-2c785df6ea4e",
+        "slug": "receta-torta-de-zanahoria",
+        "pending_entries": 6,
+        "canonical_matches": 2,
+        "editorial_entries": 8
+      }
+    ]
+  },
+  "qa": {
+    "pr": 106,
+    "head_sha": "4fd863de0277ab3a691eb69ce965d045f61dafba",
+    "run": 37925162942,
+    "job": 113802226591,
+    "artifact": {
+      "id": 11613502340,
+      "node_id": "MDg6QXJ0aWZhY3QxMTYxMzUwMjM0MA==",
+      "name": "lote05-site-preview-audit",
+      "size_in_bytes": 232042,
+      "url": "https://api.github.com/repos/manualdecocina/Recetas/actions/artifacts/11613502340",
+      "archive_download_url": "https://api.github.com/repos/manualdecocina/Recetas/actions/artifacts/11613502340/zip",
+      "expired": false,
+      "digest": "sha256:a8f6a906c586c02297e5bfe8077fe2eda439847af8b48f2e74ce764414dfe7f5",
+      "created_at": "2026-10-09T11:42:34Z",
+      "updated_at": "2026-10-09T11:42:34Z",
+      "expires_at": "2027-01-07T11:40:11Z",
+      "workflow_run": {
+        "id": 37925162942,
+        "repository_id": 1382499570,
+        "head_repository_id": 1382499570,
+        "head_branch": "recetas/lote-05-cierre-20261009",
+        "head_sha": "4fd863de0277ab3a691eb69ce965d045f61dafba"
+      }
+    },
+    "batch_pages": {
+      "checked_at": "2026-10-09T11:41:29.481536+00:00",
+      "groups": 5,
+      "pages": 35,
+      "passed": 35,
+      "errors": []
+    },
+    "global": {
+      "summary": {
+        "sitemap_urls": 1286,
+        "status": {
+          "200": 1286,
+          "403": 0,
+          "404": 0,
+          "3xx": 0,
+          "5xx": 0,
+          "other": 0
+        },
+        "internal_links_outside_sitemap": 7,
+        "internal_link_status": {
+          "200": 7,
+          "403": 0,
+          "404": 0,
+          "3xx": 0,
+          "5xx": 0,
+          "other": 0
+        },
+        "images": 1696,
+        "legacy_redirects": 147,
+        "legacy_redirect_status": {
+          "200": 77,
+          "307": 61,
+          "308": 9
+        },
+        "recipe_pages": 1113,
+        "recipe_schema_valid": 1113,
+        "es_recipes": 159,
+        "breadcrumb_pages": 1207,
+        "breadcrumb_valid": 1207,
+        "hreflang_by_language": {
+          "es": {
+            "pages": 206,
+            "with_hreflang": 180,
+            "with_x_default": 21,
+            "errors": 0
+          },
+          "de": {
+            "pages": 180,
+            "with_hreflang": 180,
+            "with_x_default": 21,
+            "errors": 0
+          },
+          "en": {
+            "pages": 180,
+            "with_hreflang": 180,
+            "with_x_default": 21,
+            "errors": 0
+          },
+          "fr": {
+            "pages": 180,
+            "with_hreflang": 180,
+            "with_x_default": 21,
+            "errors": 0
+          },
+          "it": {
+            "pages": 180,
+            "with_hreflang": 180,
+            "with_x_default": 21,
+            "errors": 0
+          },
+          "ja": {
+            "pages": 180,
+            "with_hreflang": 180,
+            "with_x_default": 21,
+            "errors": 0
+          },
+          "pt-BR": {
+            "pages": 180,
+            "with_hreflang": 180,
+            "with_x_default": 21,
+            "errors": 0
+          }
+        },
+        "orphan_pages": 0,
+        "robots_txt_blocked": true,
+        "pages_noindex_nofollow": 1286,
+        "not_found_probe": 404,
+        "errors": 0,
+        "errors_by_kind": {}
+      },
+      "errors": []
+    }
+  },
+  "visual_qa": {
+    "checked_at": "2026-10-09T11:45:28.623Z",
+    "status": "PASS_DESKTOP",
+    "es_cover_pages": 5,
+    "localized_layout_samples": 6,
+    "sampled_group": "receta-de-pollo-frito-sureno",
+    "languages": [
+      "de",
+      "en",
+      "fr",
+      "it",
+      "ja",
+      "pt"
+    ],
+    "selector": "PASS_ES_TO_EN_AND_PT_TO_SAME_ES_GROUP",
+    "home": "PASS_LOTE05_EGGPLANT_FEATURED_COVER_LOADED",
+    "catalog": "PASS_159_RECIPES_AND_NEW_FIVE_CARDS_IMAGES_LOADED",
+    "device_scope": "Desktop viewport only. No mobile-browser QA claimed.",
+    "notes": "Five ES covers inspected after images finished loading. Primary plated portions intact; secondary background food or plate edges may be cropped. Six localized recipe headers, covers and start of method inspected; complete35page text equality covered by technical audit.",
+    "recipes": [
+      {
+        "slug": "receta-crema-de-campinones",
+        "url": "https://preview.manualdecocina.com/receta-crema-de-campinones",
+        "cover": "PASS"
+      },
+      {
+        "slug": "receta-de-rollos-de-berenjena-con-tomates",
+        "url": "https://preview.manualdecocina.com/receta-de-rollos-de-berenjena-con-tomates",
+        "cover": "PASS"
+      },
+      {
+        "slug": "pollo-al-horno-con-hierbas-y-limon",
+        "url": "https://preview.manualdecocina.com/pollo-al-horno-con-hierbas-y-limon",
+        "cover": "PASS"
+      },
+      {
+        "slug": "receta-de-pollo-frito-sureno",
+        "url": "https://preview.manualdecocina.com/receta-de-pollo-frito-sureno",
+        "cover": "PASS"
+      },
+      {
+        "slug": "receta-torta-de-zanahoria",
+        "url": "https://preview.manualdecocina.com/receta-torta-de-zanahoria",
+        "cover": "PASS"
+      }
+    ]
+  },
+  "ingredient_resolution": {
+    "batch_id": "lote-05-20261009",
+    "checked_at": "2026-10-09T11:40:03.937865+00:00",
+    "status": "PASS_ALL_ES_ENTRIES_ACCOUNTED_FOR",
+    "es_entries": 37,
+    "canonical_matches": 16,
+    "pending": 21,
+    "rows": [
+      {
+        "id": "0253a03f-0678-4508-8e14-c9bacc209ed1",
+        "slug": "receta-crema-de-campinones",
+        "pending_entries": 3,
+        "canonical_matches": 4,
+        "editorial_entries": 7
+      },
+      {
+        "id": "64ce5de9-2235-43f2-914b-1c5519776d56",
+        "slug": "receta-de-rollos-de-berenjena-con-tomates",
+        "pending_entries": 4,
+        "canonical_matches": 3,
+        "editorial_entries": 7
+      },
+      {
+        "id": "edbe35d4-ab42-41c5-84db-4e035a5333fe",
+        "slug": "pollo-al-horno-con-hierbas-y-limon",
+        "pending_entries": 4,
+        "canonical_matches": 4,
+        "editorial_entries": 8
+      },
+      {
+        "id": "1a975f88-17fd-49b2-a807-0850ad2827ff",
+        "slug": "receta-de-pollo-frito-sureno",
+        "pending_entries": 4,
+        "canonical_matches": 3,
+        "editorial_entries": 7
+      },
+      {
+        "id": "1eda6abc-48cd-42bb-a64d-2c785df6ea4e",
+        "slug": "receta-torta-de-zanahoria",
+        "pending_entries": 6,
+        "canonical_matches": 2,
+        "editorial_entries": 8
+      }
+    ],
+    "next_action": "Resolve pending entries only against approved canonical ingredient identities during final pre-migration technical closure; do not invent aliases or destinations."
+  },
+  "remaining": {
+    "eligible_candidates": 0,
+    "held_es_groups": 50
+  }
+}
