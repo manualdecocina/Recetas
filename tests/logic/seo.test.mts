@@ -159,3 +159,13 @@ check('ItemList respeta canonical WordPress KEEP y posición absoluta al paginar
   assert.equal(recipeListItem({ public_path: '/pt/pandebono-caseiro' }, 1).url,
     'https://manualdecocina.com/pt/pandebono-caseiro')
 })
+
+
+const { RECIPE_LISTING_DESCRIPTIONS } = await import('@/lib/recipe-list-seo')
+check('catálogo: descripciones SEO específicas en 7 idiomas', () => {
+  for (const lang of ['es','en','de','fr','it','ja','pt'] as const) {
+    const description = RECIPE_LISTING_DESCRIPTIONS[lang]
+    assert(description.length >= (lang === 'ja' ? 60 : 110))
+    assert(description.length <= 170)
+  }
+})
