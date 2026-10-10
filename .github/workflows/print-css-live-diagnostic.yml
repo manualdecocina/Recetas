@@ -19,7 +19,8 @@ jobs:
           with urllib.request.urlopen(req,timeout=35) as r:
               body=r.read().decode('utf-8','replace')
               print('HTML_STATUS=',r.status,'HTML_BYTES=',len(body))
-          css_urls=list(dict.fromkeys(re.findall(r'href="([^"]+\\.css(?:\\?[^"]*)?)"',body)))
+          css_urls=list(dict.fromkeys(x for x in re.findall('href="([^" ]+)',body) if '.css' in x))
+          print('CSS_HTML_SAMPLE=',repr(body[max(0,body.find('.css')-140):body.find('.css')+90]))
           print('CSS_STYLESHEETS=',len(css_urls))
           found=[]
           for url in css_urls:
