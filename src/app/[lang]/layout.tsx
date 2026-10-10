@@ -75,7 +75,8 @@ export default async function LanguageRootLayout({
       {/* AdSense queda desactivado por defecto. Además del client ID, producción debe declarar
           NEXT_PUBLIC_GOOGLE_CMP_READY="true" solo después de configurar una CMP certificada/TCF.
           La CMP certificada es la única fuente de verdad para consentimiento publicitario. */}
-      <body>
+      {/* Disable AdSense ad intent anchors (floating search pills), links and chips. Standard display ads stay enabled. Official Google opt-out: google-anno-skip on body. */}
+      <body className="google-anno-skip">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(entityGraph).replace(/</g, '\\u003c') }} />
         <ThemeSync />
         {children}
