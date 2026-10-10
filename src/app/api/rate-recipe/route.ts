@@ -1,6 +1,7 @@
 import { createHmac, randomUUID } from 'node:crypto'
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
+import { readRatingsSecrets } from '@/lib/ratings-config'
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL ?? 'https://eqbdtctxbpepbeickhqi.supabase.co'
 const ratingsEnabled = process.env.NEXT_PUBLIC_RATINGS_ENABLED === 'true'
@@ -12,14 +13,11 @@ function disabled() {
 export async function POST(request: NextRequest) {
   if (!ratingsEnabled) return disabled()
 
-  const serviceKey =
-    process.env.SUPABASE_SERVICE_ROLE_KEY?.trim() ??
-    process.env.SUPABASE_SECRET_KEY?.trim()
-  const hashSecret = process.env.RATINGS_HASH_SECRET?.trim()
+  const { serviceKey, hashSecret } = readRatingsSecrets(process.env)
 
   // Fail closed: nunca usar anon/publishable para una escritura privilegiada.
   if (!serviceKey || !hashSecret) {
-    console.error('[ratings] faltan secretos server-side')
+    console.error('[ratings] configuración incompleta', { serviceKeyConfigured: Boolean(serviceKey), hashSecretConfigured: Boolean(hashSecret) })
     return NextResponse.json({ error: 'Valoraciones temporalmente no disponibles.' }, { status: 503 })
   }
 
