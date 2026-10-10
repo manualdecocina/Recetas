@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { notFound, permanentRedirect, redirect } from 'next/navigation'
 import { getContentRedirect, getContentPageByPublicPath, getRecipeByPublicPath, getRecipeTranslations, getRelatedRecipes, getPublishedPublicPaths } from '@/lib/public-content'
 import { recipeAlternates, recipeMetaText, recipeSocialImages, withSiteName } from '@/lib/seo'
-import { publicUrl, absoluteUrl } from '@/lib/site'
+import { publicUrl, recipeCanonicalUrl, absoluteUrl } from '@/lib/site'
 import { SUPPORTED_LANGUAGES } from '@/types/recipe'
 import { RecipeDocument } from '@/components/RecipeDocument'
 import { InstitutionalPage } from '@/components/InstitutionalPage'
@@ -57,7 +57,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         type: 'article',
         title: meta.title,
         description: meta.description,
-        url: publicUrl(recipe.public_path),
+        url: recipeCanonicalUrl(recipe),
         images,
       },
       twitter: {
