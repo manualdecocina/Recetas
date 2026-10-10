@@ -11,6 +11,7 @@ import { RECIPE_LISTING_TITLES, RECIPE_LISTING_DESCRIPTIONS, recipeListItem } fr
 import { getSiteUrl, languageTag } from '@/lib/site'
 import { SUPPORTED_LANGUAGES, type RecipeLanguage } from '@/types/recipe'
 import { categoryLabel } from '@/lib/categories'
+import { parseRecipePage, isUnsatisfiableRecipePage } from '@/lib/catalog-pagination'
 
 const PAGE_SIZE = 24
 const CARD_FIELDS = 'id, language, slug, public_path, source_url, title, excerpt, category, image_url'
@@ -33,11 +34,6 @@ function parseLang(value: string): RecipeLanguage | null {
   return (SUPPORTED_LANGUAGES as string[]).includes(value) ? (value as RecipeLanguage) : null
 }
 
-function parsePage(value?: string): number {
-  const n = Number.parseInt(value ?? '1', 10)
-  return Number.isFinite(n) && n >= 1 ? n : 1
-}
-
 function clean(value?: string) {
   return value?.trim().slice(0, 100) || ''
 }
@@ -48,7 +44,7 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
   const lang = parseLang(rawLang)
   if (!lang) return {}
   const text = UI_TEXT[lang]
-  const page = parsePage(query.page)
+  const page = parseRecipePage(query.page)
 
   return {
     title: withSiteName(page === 1 ? RECIPE_LISTING_TITLES[lang] : `${RECIPE_LISTING_TITLES[lang]} — ${text.page} ${page}`),
@@ -66,7 +62,7 @@ export default async function RecipesListPage({ params, searchParams }: Props) {
   if (!lang) notFound()
 
   const text = UI_TEXT[lang]
-  const page = parsePage(search.page)
+  const page = parseRecipePage(search.page)
   const q = clean(search.q)
   const categoria = clean(search.categoria)
   const cocina = clean(search.cocina)
@@ -147,6 +143,9 @@ export default async function RecipesListPage({ params, searchParams }: Props) {
   query = query.range(from, from + PAGE_SIZE - 1)
 
   const { data: recipes, count, error } = await query
+  // PostgREST returns HTTP 416 when the requested offset exceeds the result
+  // count; that is a missing catalog page (404), not a server error (500).
+  if (isUnsatisfiableRecipePage(error)) notFound()
   if (error) throw new Error(`No se pudieron cargar las recetas: ${error.message}`)
 
   const total = count ?? 0
