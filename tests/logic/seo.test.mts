@@ -256,30 +256,3 @@ check('buscador: la puntuación es dato y no divide la gramática OR de PostgRES
   const slash = recipeSearchOrFilter(String.raw`arroz\sopa`)
   assert.equal([...slash].filter(ch => ch.charCodeAt(0) === 92).length, 4)
 })
-
-
-const { uniqueCuisineGroupIds } = await import('@/lib/cuisine-filter-groups')
-check('cocina: un vínculo en español incluye las siete traducciones del mismo grupo', () => {
-  const colombianGroup = '11111111-1111-4111-8111-111111111111'
-  const mexicanGroup = '22222222-2222-4222-8222-222222222222'
-  const assignedSourceRecipes = [
-    { recipe_group_id: colombianGroup }, // relación de cocina en es
-    { recipe_group_id: colombianGroup }, // relación duplicada del mismo grupo
-    { recipe_group_id: mexicanGroup },
-    { recipe_group_id: null },
-  ]
-  const groups = uniqueCuisineGroupIds(assignedSourceRecipes)
-  assert.deepEqual(groups, [colombianGroup, mexicanGroup])
-  const translatedRows = ['es', 'de', 'en', 'fr', 'it', 'ja', 'pt'].map((language) => ({
-    language,
-    id: `translated-row-${language}`,
-    recipe_group_id: colombianGroup,
-  }))
-  assert.deepEqual(
-    translatedRows.filter((row) => groups.includes(row.recipe_group_id)).map((row) => row.language),
-    ['es', 'de', 'en', 'fr', 'it', 'ja', 'pt'],
-  )
-  assert.equal(groups.includes('33333333-3333-4333-8333-333333333333'), false)
-  assert.deepEqual(uniqueCuisineGroupIds([]), [])
-  assert.deepEqual(uniqueCuisineGroupIds([{ recipe_group_id: null }]), [])
-})

@@ -14,7 +14,6 @@ import { categoryLabel } from '@/lib/categories'
 import { parseRecipePage, isUnsatisfiableRecipePage } from '@/lib/catalog-pagination'
 import { cuisineFilterLabel, difficultyFilterOptions, storedDifficultyValues, timeFilterOptions } from '@/lib/listing-filter-localization'
 import { recipeSearchOrFilter } from '@/lib/recipe-search-filter'
-import { uniqueCuisineGroupIds } from '@/lib/cuisine-filter-groups'
 
 const PAGE_SIZE = 24
 const CARD_FIELDS = 'id, language, slug, public_path, source_url, title, excerpt, category, image_url'
@@ -102,27 +101,14 @@ export default async function RecipesListPage({ params, searchParams }: Props) {
       .eq('slug', cocina)
       .eq('status', 'canonical')
       .maybeSingle()
-    if (!cuisine) query = query.in('recipe_group_id', ['00000000-0000-0000-0000-000000000000'])
+    if (!cuisine) query = query.in('id', ['00000000-0000-0000-0000-000000000000'])
     else {
-      const { data: cuisineRelations, error: relationsError } = await supabase
+      const { data: cuisineRelations } = await supabase
         .from('recipe_cuisines')
         .select('recipe_id')
         .eq('cuisine_id', cuisine.id)
-      if (relationsError) throw new Error(`No se pudieron cargar las relaciones de cocina: ${relationsError.message}`)
-      const sourceIds = [...new Set((cuisineRelations ?? []).map((row) => row.recipe_id))]
-      if (!sourceIds.length) {
-        query = query.in('recipe_group_id', ['00000000-0000-0000-0000-000000000000'])
-      } else {
-        // Las relaciones de cocina pueden apuntar solo a la receta española:
-        // usar el grupo incluye las siete traducciones sin modificar sus IDs.
-        const { data: sourceRecipes, error: groupsError } = await supabase
-          .from('recipes')
-          .select('recipe_group_id')
-          .in('id', sourceIds)
-        if (groupsError) throw new Error(`No se pudieron cargar los grupos de cocina: ${groupsError.message}`)
-        const groupIds = uniqueCuisineGroupIds(sourceRecipes ?? [])
-        query = query.in('recipe_group_id', groupIds.length ? groupIds : ['00000000-0000-0000-0000-000000000000'])
-      }
+      const ids = [...new Set((cuisineRelations ?? []).map((row) => row.recipe_id))]
+      query = query.in('id', ids.length ? ids : ['00000000-0000-0000-0000-000000000000'])
     }
   }
   if (dificultad) {
