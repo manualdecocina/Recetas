@@ -7,7 +7,7 @@ import RecipeListingView, { type MdListingFilters, type MdListingOptions } from 
 import type { MdRecipeCardData } from '@/components/md/md-types'
 import { UI_TEXT } from '@/lib/i18n'
 import { allLanguageAlternates, withSiteName } from '@/lib/seo'
-import { RECIPE_LISTING_TITLES, recipeListItem } from '@/lib/recipe-list-seo'
+import { RECIPE_LISTING_TITLES, RECIPE_LISTING_DESCRIPTIONS, recipeListItem } from '@/lib/recipe-list-seo'
 import { getSiteUrl, languageTag } from '@/lib/site'
 import { SUPPORTED_LANGUAGES, type RecipeLanguage } from '@/types/recipe'
 import { categoryLabel } from '@/lib/categories'
@@ -52,7 +52,7 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
 
   return {
     title: withSiteName(page === 1 ? RECIPE_LISTING_TITLES[lang] : `${RECIPE_LISTING_TITLES[lang]} — ${text.page} ${page}`),
-    description: text.recipesDescription,
+    description: RECIPE_LISTING_DESCRIPTIONS[lang],
     alternates: page === 1
       ? allLanguageAlternates(`/${lang}/recetas`, (l) => `/${l}/recetas`)
       : { canonical: `${getSiteUrl()}/${lang}/recetas?page=${page}` },
