@@ -121,3 +121,19 @@ check('robots: solo "true" exacto habilita indexación', () => {
 console.log(`\n${n} pruebas OK`)
 
 // Recipe time markup is emitted only when prep and cook times are both known.
+
+
+const { readRatingsSecrets } = await import('@/lib/ratings-config')
+check('ratings: blank legacy service key falls back to configured Supabase secret', () => {
+  const c = readRatingsSecrets({
+    SUPABASE_SERVICE_ROLE_KEY: '   ',
+    SUPABASE_SECRET_KEY: '  sb_secret_test  ',
+    RATINGS_HASH_SECRET: '  local-test-hmac-key  ',
+  })
+  assert.equal(c.serviceKey, 'sb_secret_test')
+  assert.equal(c.hashSecret, 'local-test-hmac-key')
+})
+check('ratings: missing both private keys fails closed, without anon fallback', () => {
+  const c = readRatingsSecrets({ SUPABASE_SERVICE_ROLE_KEY: '', SUPABASE_SECRET_KEY: '', RATINGS_HASH_SECRET: 'hmac' })
+  assert.equal(c.serviceKey, '')
+})
