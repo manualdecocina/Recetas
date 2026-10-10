@@ -1,0 +1,40 @@
+name: sitemap-googlebot-diagnostic
+on:
+  push:
+    branches: [fix/sitemap-googlebot-20261010]
+    paths: ['.github/workflows/sitemap-googlebot-diagnostic.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  http-sitemap:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Check public response for normal and Googlebot clients
+        shell: bash
+        run: |
+          set -u
+          for url in "https://manualdecocina.com/sitemap.xml" "https://manualdecocina.com/sitemap_index.xml" "https://manualdecocina.com/robots.txt"; do
+            for agent in "Mozilla/5.0" "Googlebot/2.1 (+http://www.google.com/bot.html)"; do
+              echo "::group::$url ($agent)"
+              curl -sS --retry 1 --connect-timeout 10 --max-time 35 --compressed -A "$agent" -D /tmp/headers -o /tmp/sitemap-body -w 'http=%{http_code} dns=%{time_namelookup}s connect=%{time_connect}s tls=%{time_appconnect}s ttfb=%{time_starttransfer}s total=%{time_total}s bytes=%{size_download} remote=%{remote_ip} redirected=%{num_redirects}\n' "$url" || true
+              head -n 25 /tmp/headers || true
+              if [[ "$url" == *sitemap.xml ]] && [[ -s /tmp/sitemap-body ]]; then
+                python3 - <<'PY'
+import xml.etree.ElementTree as ET
+try:
+  raw=open('/tmp/sitemap-body','rb').read()
+  tree=ET.fromstring(raw)
+  print('XML_VALID=YES', 'root=', tree.tag, 'LOC_COUNT=', len(tree.findall('.//{*}loc')), 'UNCOMPRESSED_BYTES=', len(raw))
+except Exception as ex:
+  print('XML_VALID=NO', repr(ex), 'sample=', open('/tmp/sitemap-body','rb').read(160))
+PY
+              fi
+              echo "::endgroup::"
+            done
+          done
+      - name: Test IPv6 Googlebot access if available
+        shell: bash
+        run: |
+          curl -6 -sS --connect-timeout 5 --max-time 20 -A 'Googlebot/2.1 (+http://www.google.com/bot.html)' -o /dev/null -w 'ipv6_http=%{http_code} remote=%{remote_ip}\n' 'https://manualdecocina.com/sitemap.xml' || true
