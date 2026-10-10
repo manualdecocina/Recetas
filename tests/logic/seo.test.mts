@@ -137,3 +137,25 @@ check('ratings: missing both private keys fails closed, without anon fallback', 
   const c = readRatingsSecrets({ SUPABASE_SERVICE_ROLE_KEY: '', SUPABASE_SECRET_KEY: '', RATINGS_HASH_SECRET: 'hmac' })
   assert.equal(c.serviceKey, '')
 })
+
+
+const { RECIPE_LISTING_TITLES, recipeListItem } = await import('@/lib/recipe-list-seo')
+process.env.NEXT_PUBLIC_ALLOW_INDEXING = 'true'
+check('catálogo: títulos descriptivos y traducidos a siete idiomas', () => {
+  for (const lang of ['es', 'en', 'de', 'fr', 'it', 'ja', 'pt'] as const) {
+    assert(RECIPE_LISTING_TITLES[lang].length >= 12)
+  }
+  assert.notEqual(RECIPE_LISTING_TITLES.es, RECIPE_LISTING_TITLES.pt)
+})
+check('ItemList respeta canonical WordPress KEEP y posición absoluta al paginar', () => {
+  assert.deepEqual(recipeListItem({
+    public_path: '/receta-de-lechona-colombiana',
+    source_url: 'https://manualdecocina.com/receta-de-lechona-colombiana/',
+  }, 25), {
+    '@type': 'ListItem',
+    position: 25,
+    url: 'https://manualdecocina.com/receta-de-lechona-colombiana/',
+  })
+  assert.equal(recipeListItem({ public_path: '/pt/pandebono-caseiro' }, 1).url,
+    'https://manualdecocina.com/pt/pandebono-caseiro')
+})
