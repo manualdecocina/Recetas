@@ -13,6 +13,7 @@ import { SUPPORTED_LANGUAGES, type RecipeLanguage } from '@/types/recipe'
 import { categoryLabel } from '@/lib/categories'
 import { parseRecipePage, isUnsatisfiableRecipePage } from '@/lib/catalog-pagination'
 import { cuisineFilterLabel, difficultyFilterOptions, storedDifficultyValues, timeFilterOptions } from '@/lib/listing-filter-localization'
+import { recipeSearchOrFilter } from '@/lib/recipe-search-filter'
 
 const PAGE_SIZE = 24
 const CARD_FIELDS = 'id, language, slug, public_path, source_url, title, excerpt, category, image_url'
@@ -84,7 +85,7 @@ export default async function RecipesListPage({ params, searchParams }: Props) {
     .eq('language', lang)
     .eq('published', true)
 
-  if (q) query = query.or(`title.ilike.%${q}%,excerpt.ilike.%${q}%`)
+  if (q) query = query.or(recipeSearchOrFilter(q))
   if (categoria) {
     // `category` está traducido por idioma en la base de datos: hay que buscar la
     // etiqueta de ESTE idioma (antes comparaba siempre con la española y el filtro

@@ -243,3 +243,16 @@ check('filtros: cada valor de dificultad publicado coincide con su clase semánt
   }
   assert.deepEqual(storedDifficultyValues('de','valor-inválido'), [])
 })
+
+
+const { recipeSearchOrFilter } = await import('@/lib/recipe-search-filter')
+check('buscador: la puntuación es dato y no divide la gramática OR de PostgREST', () => {
+  const comma = recipeSearchOrFilter('pollo, cebolla')
+  assert.equal(comma, 'title.ilike."%pollo, cebolla%",excerpt.ilike."%pollo, cebolla%"')
+  const accented = recipeSearchOrFilter('¿Pollo (al horno)?')
+  assert.equal(accented, 'title.ilike."%¿Pollo (al horno)?%",excerpt.ilike."%¿Pollo (al horno)?%"')
+  const escaped = recipeSearchOrFilter('pollo "asado"')
+  assert.equal([...escaped].filter((ch, i, chars) => ch === '"' && chars[i-1]?.charCodeAt(0) === 92).length, 4)
+  const slash = recipeSearchOrFilter(String.raw`arroz\sopa`)
+  assert.equal([...slash].filter(ch => ch.charCodeAt(0) === 92).length, 4)
+})
