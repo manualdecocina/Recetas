@@ -37,7 +37,21 @@ const nextConfig = {
   },
   async headers() {
     const assetCache = 'public, max-age=86400, stale-while-revalidate=604800'
+    // Safe security baseline: these directives do not restrict AdSense scripts,
+    // CMP integrations or Next.js inline runtime code. A nonce-based script-src
+    // policy / Trusted Types require a separate compatibility review.
+    const safePageHeaders = [
+      { key: 'X-Content-Type-Options', value: 'nosniff' },
+      { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+      { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
+      { key: 'Content-Security-Policy', value: "object-src 'none'; base-uri 'self'; frame-ancestors 'self'" },
+      { key: 'Cross-Origin-Opener-Policy', value: 'same-origin-allow-popups' },
+      // Start HSTS with a short max-age. Do not force subdomains or preload
+      // until all hostnames and certificate renewal have been verified.
+      { key: 'Strict-Transport-Security', value: 'max-age=86400' },
+    ]
     return [
+      { source: '/:path*', headers: safePageHeaders },
       { source: '/recetas/:path*', headers: [{ key: 'Cache-Control', value: assetCache }] },
       { source: '/brand/:path*', headers: [{ key: 'Cache-Control', value: assetCache }] },
       { source: '/autor/:path*', headers: [{ key: 'Cache-Control', value: assetCache }] },
