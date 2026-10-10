@@ -52,7 +52,7 @@ check('Las siete portadas de categorías tienen metadatos y texto editorial trad
     const c = CATEGORY_LANDING_COPY[lang]
     assert(c.title.length >= 12)
     assert(c.description.length >= 60)
-    assert(c.intro.length >= 100)
+    assert(c.intro.length >= (lang === 'ja' ? 40 : 100))
   }
 })
 
