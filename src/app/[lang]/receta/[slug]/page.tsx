@@ -4,7 +4,7 @@ import type { Metadata } from 'next'
 import { supabase } from '@/lib/supabase/public'
 import { getContentRedirect, getRelatedRecipes } from '@/lib/public-content'
 import { recipeAlternates, recipeMetaText, recipeSocialImages } from '@/lib/seo'
-import { normalizePublicPath, recipePath, publicUrl, publicPathHref } from '@/lib/site'
+import { normalizePublicPath, recipePath, publicUrl, recipeCanonicalUrl, publicPathHref } from '@/lib/site'
 import { RecipeDocument } from '@/components/RecipeDocument'
 import type { RecipeIngredient } from '@/types/recipe'
 import { SUPPORTED_LANGUAGES, type Recipe, type RecipeLanguage } from '@/types/recipe'
@@ -54,7 +54,7 @@ const getRecipe = cache(async (lang: string, slug: string): Promise<Recipe | nul
 const getTranslations = cache(async (recipeGroupId: string) => {
   const { data, error } = await supabase
     .from('recipes')
-    .select('language, public_path')
+    .select('language, public_path, source_url')
     .eq('recipe_group_id', recipeGroupId)
     .eq('published', true)
   if (error) throw new Error(`No se pudieron cargar las traducciones: ${error.message}`)
@@ -82,7 +82,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: 'article',
       title: meta.title,
       description: meta.description,
-      url: publicUrl(recipe.public_path),
+      url: recipeCanonicalUrl(recipe),
       images,
     },
     twitter: {
