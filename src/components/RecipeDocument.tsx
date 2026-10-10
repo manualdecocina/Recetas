@@ -1,6 +1,6 @@
 import type { Recipe } from '@/types/recipe'
 import { parseVideo, isoDuration } from '@/lib/video'
-import { publicUrl, absoluteUrl, getSiteUrl, RECIPE_AUTHOR, authorUrl, languageTag } from '@/lib/site'
+import { publicUrl, recipeCanonicalUrl, absoluteUrl, getSiteUrl, RECIPE_AUTHOR, authorUrl, languageTag } from '@/lib/site'
 import { getMdCopy } from '@/lib/copy'
 import { categorySlugFromLabel } from '@/lib/categories'
 import { breadcrumbJsonLd } from '@/lib/breadcrumbs'
@@ -100,12 +100,12 @@ export async function RecipeDocument({ recipe, relatedRecipes = [] }: { recipe: 
     image: galleryImages.length ? galleryImages : undefined,
     author: { '@type': 'Person', '@id': `${authorUrl(recipe.language)}/#person`, name: RECIPE_AUTHOR.name, url: authorUrl(recipe.language) },
     publisher: { '@type': 'Organization', '@id': `${getSiteUrl()}/#organization`, name: 'Manual de Cocina', url: getSiteUrl() },
-    mainEntityOfPage: publicUrl(recipe.public_path),
+    mainEntityOfPage: recipeCanonicalUrl(recipe),
     aggregateRating: aggregateRatingLd,
     nutrition: nutritionLd,
     video: videoLd,
     inLanguage: languageTag(recipe.language),
-    url: publicUrl(recipe.public_path),
+    url: recipeCanonicalUrl(recipe),
     datePublished: recipe.published_at ?? undefined,
     dateModified: recipe.updated_at,
     recipeIngredient: recipe.ingredients.map((i) => [i.amount, i.unit, i.name].filter(Boolean).join(' ')),
