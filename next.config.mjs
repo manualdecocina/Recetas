@@ -25,6 +25,13 @@ const nextConfig = {
   async redirects() {
     // La categoría "Desayunos y brunch" se eliminó (7 oct 2026): sus recetas pasaron a categorías canónicas.
     return [
+      // One canonical host: preserve path and query; never serve two indexable hosts.
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'www.manualdecocina.com' }],
+        destination: 'https://manualdecocina.com/:path*',
+        permanent: true,
+      },
       { source: '/:lang(es|de|en|fr|it|ja|pt)/categorias/desayunos-y-brunch', destination: '/:lang/categorias', permanent: true },
     ]
   },
