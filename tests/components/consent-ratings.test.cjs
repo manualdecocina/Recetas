@@ -94,18 +94,31 @@ function text(tree) {
 
   for (const lang of ['es', 'en', 'de', 'it', 'fr', 'ja', 'pt']) {
     const c = harness('src/components/md/ConsentPreferences.tsx');
+    assert.equal(c.render({ lang }), null, 'do not show a dead preference button before Google loads');
+    c.win.googlefc.showRevocationMessage = () => {};
+    c.win.googlefc.callbackQueue[0].CONSENT_API_READY();
     assert(text(c.render({ lang })).trim().length > 0);
   }
-  for (const timeout of [false, true]) {
+  {
+    const c = harness('src/components/md/ConsentPreferences.tsx');
+    c.render({ lang: 'es' });
+    c.win.googlefc.callbackQueue[0].CONSENT_API_READY();
+    assert.equal(c.render({ lang: 'es' }), null, 'missing CMP must not present a broken action');
+    assert.equal(c.stored.size, 0);
+  }
+  {
     const c = harness('src/components/md/ConsentPreferences.tsx');
     let opened = 0;
-    elements(c.render({ lang: 'es' }), node => node.type === 'button')[0].props.onClick();
+    c.render({ lang: 'es' });
     c.win.googlefc.showRevocationMessage = () => { opened++; };
-    if (timeout) for (const fn of c.timers.values()) fn();
     c.win.googlefc.callbackQueue[0].CONSENT_API_READY();
-    assert.equal(opened, timeout ? 0 : 1);
-    assert.equal(c.stored.size, 0);
-    if (timeout) assert.match(text(c.render({ lang: 'es' })), /No se pudieron abrir/);
+    const button = elements(c.render({ lang: 'es' }), node => node.type === 'button')[0];
+    button.props.onClick();
+    assert.equal(opened, 1);
+    assert.equal(c.stored.size, 0, 'do not invent consent records');
+    delete c.win.googlefc.showRevocationMessage;
+    button.props.onClick();
+    assert.match(text(c.render({ lang: 'es' })), /No se pudieron abrir/);
   }
-  console.log('OK: failed/offline/malformed ratings remain retryable; successful votes persist once; duplicate clicks and votes; 7 consent labels; Google callback and late-load failure.');
+  console.log('OK: failed/offline/malformed ratings remain retryable; successful votes persist once; duplicate clicks and votes; 7 consent labels; hide missing CMP control; Google ready callback and revocation.');
 })().catch(error => { console.error(error); process.exitCode = 1; });
