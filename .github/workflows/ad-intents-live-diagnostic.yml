@@ -1,0 +1,30 @@
+name: ad-intents-live-diagnostic
+on:
+  push:
+    branches: [diagnostics/ad-intents-live-20261010]
+    paths: ['.github/workflows/ad-intents-live-diagnostic.yml']
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Confirm production serves Google's ad intents opt-out
+        run: |
+          set -euo pipefail
+          curl -sSL --connect-timeout 10 --max-time 30 -H 'Cache-Control: no-cache' \
+            'https://manualdecocina.com/es?verify=e764c5592b902990a4abfa44e215ad1e99f2f482' \
+            -D /tmp/headers -o /tmp/page.html \
+            -w 'http=%{http_code} total=%{time_total}s bytes=%{size_download}\n'
+          grep -E -o '<body[^>]+>' /tmp/page.html | head -c 350 || true
+          echo
+          if grep -Eq '<body[^>]*class="[^"]*google-anno-skip' /tmp/page.html; then
+            echo 'LIVE_AD_INTENTS_OPTOUT=YES'
+          else
+            echo 'LIVE_AD_INTENTS_OPTOUT=NO'
+          fi
+          if grep -q 'adsbygoogle.js' /tmp/page.html; then
+            echo 'NORMAL_ADSENSE_SCRIPT=YES'
+          else
+            echo 'NORMAL_ADSENSE_SCRIPT=NO_OR_CLIENT_INJECTED'
+          fi
