@@ -9,6 +9,7 @@ export default function robots(): MetadataRoute.Robots {
   }
   return {
     rules: [{ userAgent: '*', allow: '/', disallow: '/admin/' }],
-    sitemap: `${getSiteUrl()}/sitemap.xml`,
+    // Advertise the small, always-valid sitemap index. The index links to /sitemap.xml.
+    sitemap: `${getSiteUrl()}/sitemap_index.xml`,
   }
 }
