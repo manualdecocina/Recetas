@@ -1,0 +1,36 @@
+name: print-css-live-diagnostic
+on:
+  push:
+    branches: [diagnostics/print-css-live-20261010]
+    paths: ['.github/workflows/print-css-live-diagnostic.yml']
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check production CSS after deployment
+        run: |
+          python3 - <<'PY'
+          import re,urllib.request
+          base='https://manualdecocina.com'
+          req=urllib.request.Request(base+'/es?print-css-verification=e56e191ab147aa85',headers={'Cache-Control':'no-cache','User-Agent':'Mozilla/5.0'})
+          with urllib.request.urlopen(req,timeout=35) as r:
+              body=r.read().decode('utf-8','replace')
+              print('HTML_STATUS=',r.status,'HTML_BYTES=',len(body))
+          css_urls=list(dict.fromkeys(re.findall(r'href="([^"]+\\.css(?:\\?[^"]*)?)"',body)))
+          print('CSS_STYLESHEETS=',len(css_urls))
+          found=[]
+          for url in css_urls:
+              full=base+url if url.startswith('/') else url
+              try:
+                  with urllib.request.urlopen(urllib.request.Request(full,headers={'Cache-Control':'no-cache'}),timeout=25) as r:
+                      css=r.read().decode('utf-8','replace')
+                      if '.google-auto-placed' in css and '.md-article' in css and '@media print' in css:
+                          found.append(full)
+                      print('CSS_FETCHED=',r.status,'BYTES=',len(css),'NEW_PRINT_AD_RULE=',('.google-auto-placed' in css and '.md-article' in css and '@media print' in css))
+              except Exception as exc:
+                  print('CSS_FETCH_ERROR=',str(exc)[:150])
+          print('LIVE_PRINT_AD_OPTOUT=', 'YES' if found else 'NO')
+          PY
