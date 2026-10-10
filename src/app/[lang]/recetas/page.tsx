@@ -6,13 +6,14 @@ import SiteFooter from '@/components/md/SiteFooter'
 import RecipeListingView, { type MdListingFilters, type MdListingOptions } from '@/components/md/RecipeListingView'
 import type { MdRecipeCardData } from '@/components/md/md-types'
 import { UI_TEXT } from '@/lib/i18n'
-import { allLanguageAlternates } from '@/lib/seo'
+import { allLanguageAlternates, withSiteName } from '@/lib/seo'
+import { RECIPE_LISTING_TITLES, recipeListItem } from '@/lib/recipe-list-seo'
 import { getSiteUrl, languageTag } from '@/lib/site'
 import { SUPPORTED_LANGUAGES, type RecipeLanguage } from '@/types/recipe'
 import { categoryLabel } from '@/lib/categories'
 
 const PAGE_SIZE = 24
-const CARD_FIELDS = 'id, language, slug, public_path, title, excerpt, category, image_url'
+const CARD_FIELDS = 'id, language, slug, public_path, source_url, title, excerpt, category, image_url'
 
 interface Props {
   params: Promise<{ lang: string }>
@@ -50,7 +51,7 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
   const page = parsePage(query.page)
 
   return {
-    title: page === 1 ? text.recipesTitle : `${text.recipesTitle} — ${text.page} ${page}`,
+    title: withSiteName(page === 1 ? RECIPE_LISTING_TITLES[lang] : `${RECIPE_LISTING_TITLES[lang]} — ${text.page} ${page}`),
     description: text.recipesDescription,
     alternates: page === 1
       ? allLanguageAlternates(`/${lang}/recetas`, (l) => `/${l}/recetas`)
@@ -175,11 +176,7 @@ export default async function RecipesListPage({ params, searchParams }: Props) {
   const itemListJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    itemListElement: cardRecipes.map((recipe, index) => ({
-      '@type': 'ListItem',
-      position: index + 1,
-      url: getSiteUrl() + recipe.public_path,
-    })),
+    itemListElement: cardRecipes.map((recipe, index) => recipeListItem(recipe, from + index + 1)),
   }
 
   const headerAlternates = Object.fromEntries(SUPPORTED_LANGUAGES.map((l) => [l, `/${l}/recetas`]))
