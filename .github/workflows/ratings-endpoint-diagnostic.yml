@@ -1,4 +1,5 @@
 name: ratings-endpoint-diagnostic
+# recheck production after user confirmed ratings env configured
 on:
   push:
     branches: [diagnostics/rating-endpoint-20261010]
