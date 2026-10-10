@@ -1,0 +1,39 @@
+name: live-production-audit
+on:
+  push:
+    branches: [diagnostics/live-lighthouse-20261010]
+    paths: ['.github/workflows/live-production-audit.yml']
+permissions:
+  contents: read
+jobs:
+  live:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/setup-node@v4
+        with: {node-version: 22}
+      - name: Check response codes and redirects
+        shell: bash
+        run: |
+          for url in \
+            https://manualdecocina.com/es \
+            'https://manualdecocina.com/es/recetas?page=7' \
+            'https://manualdecocina.com/es/recetas?page=8' \
+            'https://manualdecocina.com/es/recetas?page=999' \
+            https://www.manualdecocina.com/es \
+            https://manualdecocina.com/arepas-de-choclo-con-queso; do
+            echo "URL: $url"
+            curl -sS -L -o /dev/null -w 'HTTP:%{http_code} final:%{url_effective} redirect_count:%{num_redirects} time_total:%{time_total}\n' --max-time 35 "$url" || true
+          done
+      - name: Lighthouse mobile from live production without localhost cache warming
+        shell: bash
+        run: |
+          set -uo pipefail
+          npm install --no-save lighthouse@13.5.0
+          for entry in "home https://manualdecocina.com/es" "recipe https://manualdecocina.com/arepas-de-choclo-con-queso" "catalog https://manualdecocina.com/es/recetas"; do
+            name="${entry%% *}"
+            url="${entry#* }"
+            echo "=== $name ==="
+            npx lighthouse "$url" --quiet --chrome-flags="--headless --no-sandbox" --form-factor=mobile --output=json --output-path="/tmp/${name}.json" --max-wait-for-load=45000 || true
+            node -e "const fs=require('fs');const p='/tmp/'+process.argv[1]+'.json';if(!fs.existsSync(p)){console.log('AUDIT FAILED');process.exit(0)}const j=JSON.parse(fs.readFileSync(p));let scores={};for(const c of ['performance','accessibility','best-practices','seo'])scores[c]=Math.round((j.categories?.[c]?.score||0)*100);let metrics={};for(const k of ['largest-contentful-paint','first-contentful-paint','total-blocking-time','cumulative-layout-shift','speed-index','server-response-time'])metrics[k]=j.audits?.[k]?.displayValue;const opp=Object.values(j.audits||{}).filter(x=>x.details?.type==='opportunity'&&x.numericValue>0).sort((a,b)=>(b.details?.overallSavingsMs||0)-(a.details?.overallSavingsMs||0)).slice(0,8).map(x=>({id:x.id,title:x.title,saveMs:x.details?.overallSavingsMs}));console.log(JSON.stringify({page:process.argv[1],url:j.finalUrl,scores,metrics,opportunities:opp},null,2));" "$name"
+          done
