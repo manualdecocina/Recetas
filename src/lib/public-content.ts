@@ -76,7 +76,7 @@ export const getContentPageByPublicPath = cache(async (path: string): Promise<Co
 export const getRecipeTranslations = cache(async (recipeGroupId: string) => {
   const { data, error } = await supabase
     .from('recipes')
-    .select('language, public_path')
+    .select('language, public_path, source_url')
     .eq('recipe_group_id', recipeGroupId)
     .eq('published', true)
     .order('language')
