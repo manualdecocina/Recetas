@@ -205,3 +205,41 @@ check('cabeceras: protegen navegación sin bloquear scripts de terceros', () => 
   assert(csp.includes("frame-ancestors 'self'"))
   assert(!csp.includes('script-src'), 'script-src necesita compatibilidad separada con AdSense y consentimiento')
 })
+
+
+const { difficultyFilterOptions, storedDifficultyValues, cuisineFilterLabel, timeFilterOptions } =
+  await import('@/lib/listing-filter-localization')
+check('filtros: etiquetas traducidas para 7 idiomas, sin modificar parámetros de URL', () => {
+  for (const lang of ['es','en','de','fr','it','ja','pt'] as const) {
+    const difficulty = difficultyFilterOptions(lang)
+    assert.deepEqual(difficulty.map(x => x.value), ['Fácil', 'Media', 'Difícil'])
+    assert.equal(new Set(difficulty.map(x => x.label)).size, 3)
+    const times = timeFilterOptions(lang)
+    assert.deepEqual(times.map(x => x.value), ['0-20','21-40','41-60','61-120','121+'])
+    assert(times.every(x => x.label.length >= 3))
+    const col = cuisineFilterLabel(lang, 'cocina-colombiana', 'Cocina colombiana')
+    assert(col.length >= 6)
+    if (lang !== 'es') assert.notEqual(col, 'Cocina colombiana')
+  }
+  assert.deepEqual(difficultyFilterOptions('de').map(x => x.label), ['Einfach','Mittel','Schwer'])
+  assert.deepEqual(difficultyFilterOptions('ja').map(x => x.label), ['簡単','普通','難しい'])
+  assert.equal(cuisineFilterLabel('de', 'cocina-gallega', 'Cocina gallega'), 'Galicische Küche')
+})
+check('filtros: cada valor de dificultad publicado coincide con su clase semántica', () => {
+  const stored: Record<string, [string[],string[],string[]]> = {
+    es: [['Baja','Fácil'],['Media','Intermedia'],['Alta']],
+    en: [['Easy'],['Medium','Intermediate'],['High']],
+    de: [['Einfach'],['Mittel'],['Hoch']],
+    fr: [['Facile'],['Moyenne','Intermédiaire'],['Élevée']],
+    it: [['Facile'],['Media'],['Alta']],
+    ja: [['簡単','初級','やさしい'],['普通','中級','中程度'],['高']],
+    pt: [['Fácil'],['Média','Media','Intermédia'],['Alta']],
+  }
+  const keys = ['Fácil','Media','Difícil']
+  for (const [lang,groups] of Object.entries(stored)) {
+    for (let i=0;i<3;i++) for (const value of groups[i]) {
+      assert(storedDifficultyValues(lang as 'es', keys[i]).includes(value), `${lang} ${value}`)
+    }
+  }
+  assert.deepEqual(storedDifficultyValues('de','valor-inválido'), [])
+})

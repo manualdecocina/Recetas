@@ -12,6 +12,7 @@ import { getSiteUrl, languageTag } from '@/lib/site'
 import { SUPPORTED_LANGUAGES, type RecipeLanguage } from '@/types/recipe'
 import { categoryLabel } from '@/lib/categories'
 import { parseRecipePage, isUnsatisfiableRecipePage } from '@/lib/catalog-pagination'
+import { cuisineFilterLabel, difficultyFilterOptions, storedDifficultyValues, timeFilterOptions } from '@/lib/listing-filter-localization'
 
 const PAGE_SIZE = 24
 const CARD_FIELDS = 'id, language, slug, public_path, source_url, title, excerpt, category, image_url'
@@ -109,7 +110,11 @@ export default async function RecipesListPage({ params, searchParams }: Props) {
       query = query.in('id', ids.length ? ids : ['00000000-0000-0000-0000-000000000000'])
     }
   }
-  if (dificultad) query = query.eq('difficulty', dificultad)
+  if (dificultad) {
+    const matchingValues = storedDifficultyValues(lang, dificultad)
+    if (!matchingValues.length) notFound()
+    query = query.in('difficulty', [...matchingValues])
+  }
 
   if (ingrediente) {
     const { data: ingredient } = await supabase
@@ -160,16 +165,10 @@ export default async function RecipesListPage({ params, searchParams }: Props) {
     ordenar: ordenar === 'antiguas' ? 'antiguas' : undefined,
   }
   const options: MdListingOptions = {
-    cuisines: (cuisineOptions ?? []).map((item) => ({ value: item.slug, label: item.name })),
-    difficulties: ['Fácil', 'Media', 'Difícil'].map((value) => ({ value, label: value })),
+    cuisines: (cuisineOptions ?? []).map((item) => ({ value: item.slug, label: cuisineFilterLabel(lang, item.slug, item.name) })),
+    difficulties: difficultyFilterOptions(lang),
     ingredients: (ingredientOptions ?? []).map((item) => ({ value: item.slug, label: item.name })),
-    times: [
-      { value: '0-20', label: 'Hasta 20 min' },
-      { value: '21-40', label: '21–40 min' },
-      { value: '41-60', label: '41–60 min' },
-      { value: '61-120', label: '61–120 min' },
-      { value: '121+', label: 'Más de 120 min' },
-    ],
+    times: timeFilterOptions(lang),
   }
 
   const itemListJsonLd = {
