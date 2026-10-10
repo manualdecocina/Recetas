@@ -15,7 +15,7 @@ import { parseVideo } from '@/lib/video';
 import VideoFacade from './VideoFacade';
 import StepPhoto from './StepPhoto';
 import PantryBanner from './PantryBanner';
-import { RECIPE_AUTHOR, publicUrl } from '@/lib/site';
+import { RECIPE_AUTHOR, recipeCanonicalUrl } from '@/lib/site';
 
 const LOCALES: Record<string, string> = { es: 'es-ES', en: 'en-GB', de: 'de-DE', it: 'it-IT', fr: 'fr-FR', ja: 'ja-JP', pt: 'pt-BR' };
 
@@ -185,7 +185,7 @@ export default function RecipeDocumentVisual({ recipe, relatedRecipes = [], note
         </div>
         <div className="md-print-foot" aria-hidden="true">
           <span>{recipe.title} · {RECIPE_AUTHOR.name}</span>
-          <span>{publicUrl(recipe.public_path)}</span>
+          <span>{recipeCanonicalUrl(recipe)}</span>
         </div>
       </article>
       <RelatedRecipes lang={lang} recipes={relatedRecipes} />

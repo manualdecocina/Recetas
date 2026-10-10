@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { SUPPORTED_LANGUAGES } from '@/types/recipe'
-import { getSiteUrl, normalizePublicPath, publicUrl, absoluteUrl, languageTag, isIndexingAllowed } from '@/lib/site'
+import { getSiteUrl, normalizePublicPath, publicUrl, recipeCanonicalUrl, absoluteUrl, languageTag, isIndexingAllowed } from '@/lib/site'
 
 export const SITE_NAME = 'Manual de Cocina'
 const TITLE_SUFFIX = ` | ${SITE_NAME}`
@@ -51,17 +51,18 @@ export function withXDefault(map: Record<string, string>): Record<string, string
 export interface RecipeSeoPath {
   language: string
   public_path: string
+  source_url?: string | null
 }
 
 export function recipeAlternates(
   current: RecipeSeoPath,
   translations: RecipeSeoPath[]
 ): Metadata['alternates'] {
-  const canonical = publicUrl(current.public_path)
+  const canonical = recipeCanonicalUrl(current)
   if (translations.length <= 1) return { canonical }
 
   const map: Record<string, string> = {}
-  for (const t of translations) map[languageTag(t.language)] = publicUrl(t.public_path)
+  for (const t of translations) map[languageTag(t.language)] = recipeCanonicalUrl(t)
   // Cada versión enlaza a todas las traducciones publicadas, incluida ella misma.
   map[languageTag(current.language)] = canonical
 

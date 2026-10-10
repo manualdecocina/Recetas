@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next'
 import { supabase } from '@/lib/supabase/public'
-import { getSiteUrl, normalizePublicPath, publicUrl, languageTag } from '@/lib/site'
+import { getSiteUrl, normalizePublicPath, publicUrl, recipeCanonicalUrl, languageTag } from '@/lib/site'
 import { SUPPORTED_LANGUAGES, type RecipeLanguage } from '@/types/recipe'
 import { categorySlugFromLabel } from '@/lib/categories'
 import { withXDefault } from '@/lib/seo'
@@ -28,6 +28,7 @@ interface Row {
   language: string
   slug: string
   public_path: string
+  source_url: string | null
   updated_at: string
   category: string | null
 }
@@ -48,7 +49,7 @@ async function fetchAllPublished(): Promise<Row[]> {
   for (let from = 0; ; from += BATCH) {
     const { data, error } = await supabase
       .from('recipes')
-      .select('recipe_group_id, language, slug, public_path, updated_at, category')
+      .select('recipe_group_id, language, slug, public_path, source_url, updated_at, category')
       .eq('published', true)
       .order('id')
       .range(from, from + BATCH - 1)
@@ -140,13 +141,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   for (const row of rows) {
     const siblings = groups.get(row.recipe_group_id) ?? [row]
     const entry: Entry = {
-      url: publicUrl(row.public_path),
+      url: recipeCanonicalUrl(row),
       lastModified: row.updated_at,
     }
 
     if (siblings.length > 1) {
       const map: Record<string, string> = {}
-      for (const s of siblings) map[languageTag(s.language)] = publicUrl(s.public_path)
+      for (const s of siblings) map[languageTag(s.language)] = recipeCanonicalUrl(s)
       entry.alternates = { languages: map as SitemapLanguages }
     }
 
