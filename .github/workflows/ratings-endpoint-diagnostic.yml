@@ -1,5 +1,5 @@
 name: ratings-endpoint-diagnostic
-# recheck production after user confirmed ratings env configured
+# recheck after PR121: service-role empty string no longer shadows configured secret
 on:
   push:
     branches: [diagnostics/rating-endpoint-20261010]
