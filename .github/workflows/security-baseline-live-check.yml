@@ -16,3 +16,5 @@ jobs:
             curl -sS --max-time 30 -o /dev/null -D - -H 'Cache-Control: no-cache' "$url" | grep -iE '^(HTTP/|content-security-policy:|strict-transport-security:|cross-origin-opener-policy:|x-frame-options:|x-content-type-options:|referrer-policy:|location:|server:)' || true
             echo '---'
           done
+
+# Post-merge recheck after security headers PR #127
