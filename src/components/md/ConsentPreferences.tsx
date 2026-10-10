@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import type { MdLanguage } from './md-types';
 
 const copy: Record<MdLanguage, { label: string; opening: string; unavailable: string }> = {
@@ -21,50 +21,46 @@ type GoogleFc = {
 /** Reopens Google's certified CMP; never records an advertising decision itself. */
 export default function ConsentPreferences({ lang }: { lang: MdLanguage }) {
   const t = copy[lang];
-  const [status, setStatus] = useState<'idle' | 'opening' | 'unavailable'>('idle');
-  const request = useRef(0);
-  const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const [ready, setReady] = useState(false);
+  const [unavailable, setUnavailable] = useState(false);
 
-  useEffect(() => () => {
-    request.current += 1;
-    if (timer.current) clearTimeout(timer.current);
-  }, []);
-
-  function openPreferences() {
-    if (status === 'opening') return;
-    const current = ++request.current;
-    setStatus('opening');
+  useEffect(() => {
+    // Google recommends exposing the revocation control only after its consent
+    // API is ready. A missing CMP must not leave a dead button in the footer.
+    let mounted = true;
     const consentWindow = window as Window & { googlefc?: GoogleFc };
     const googlefc = consentWindow.googlefc ?? (consentWindow.googlefc = {});
     const queue = googlefc.callbackQueue ?? (googlefc.callbackQueue = [] as Array<Record<string, () => void>>);
-    timer.current = setTimeout(() => {
-      request.current += 1; // Do not open a late dialog after reporting failure.
-      setStatus('unavailable');
-    }, 8000);
     queue.push({
       CONSENT_API_READY: () => {
-        if (request.current !== current) return;
-        if (timer.current) clearTimeout(timer.current);
-        try {
-          if (!consentWindow.googlefc?.showRevocationMessage) {
-            setStatus('unavailable');
-            return;
-          }
-          consentWindow.googlefc.showRevocationMessage();
-          setStatus('idle');
-        } catch {
-          setStatus('unavailable');
-        }
+        if (mounted) setReady(typeof consentWindow.googlefc?.showRevocationMessage === 'function');
       },
     });
+    return () => { mounted = false; };
+  }, []);
+
+  function openPreferences() {
+    try {
+      const consentWindow = window as Window & { googlefc?: GoogleFc };
+      if (!consentWindow.googlefc?.showRevocationMessage) {
+        setUnavailable(true);
+        return;
+      }
+      consentWindow.googlefc.showRevocationMessage();
+      setUnavailable(false);
+    } catch {
+      setUnavailable(true);
+    }
   }
+
+  if (!ready) return null;
 
   return (
     <div className="md-consent-preferences">
-      <button type="button" className="md-footer-cookie-btn" onClick={openPreferences} disabled={status === 'opening'}>
+      <button type="button" className="md-footer-cookie-btn" onClick={openPreferences}>
         {t.label}
       </button>
-      {status !== 'idle' && <p role="status">{status === 'opening' ? t.opening : t.unavailable}</p>}
+      {unavailable && <p role="status">{t.unavailable}</p>}
     </div>
   );
 }
