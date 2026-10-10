@@ -1,0 +1,28 @@
+name: recipe-print-no-ads
+on:
+  push:
+    branches: [fix/print-recipe-hide-third-party-ads-20261010]
+    paths:
+      - 'src/app/site.css'
+      - 'scripts/test-print-no-ads.sh'
+      - '.github/workflows/recipe-print-no-ads.yml'
+  pull_request:
+    paths:
+      - 'src/app/site.css'
+      - 'scripts/test-print-no-ads.sh'
+permissions:
+  contents: read
+jobs:
+  pdf-qa:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install pdftotext if missing
+        run: |
+          if ! command -v pdftotext >/dev/null; then
+            sudo apt-get update -qq
+            sudo apt-get install -y -qq poppler-utils
+          fi
+      - name: Print recipe with Chromium and assert no ads
+        run: bash scripts/test-print-no-ads.sh
