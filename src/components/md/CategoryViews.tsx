@@ -8,6 +8,7 @@ import SiteFooter from './SiteFooter';
 import RecipeCard from './RecipeCard';
 import { SUPPORTED_LANGUAGES } from '@/types/recipe';
 import { languageTag } from '@/lib/site';
+import { CATEGORY_LANDING_COPY } from '@/lib/category-landing-copy';
 import Breadcrumbs from './Breadcrumbs';
 
 /** Alternates de una ruta con el mismo slug en los 7 idiomas (categorías: el slug es
@@ -58,7 +59,7 @@ export function CategoriesIndexView({ lang, categories }: {
     <div className="md-site" lang={languageTag(lang)}>
       <SiteHeader lang={lang} alternates={alternates} />
       <main className="md-container" id="md-main">
-        <header className="md-page-head"><h1 className="md-display">{t.categoryCatalog}</h1></header>
+        <header className="md-page-head"><h1 className="md-display">{t.categoryCatalog}</h1><p className="md-page-intro md-lead">{CATEGORY_LANDING_COPY[lang].intro}</p></header>
         <section className="md-section">
           {categories.length > 0
             ? <CategoryGrid lang={lang} categories={categories} />
