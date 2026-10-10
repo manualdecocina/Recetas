@@ -102,7 +102,7 @@ process.env.NEXT_PUBLIC_ALLOW_INDEXING = 'true'
 check('robots con permiso: permite /, bloquea /admin/, declara sitemap', () => {
   const r: any = robots()
   assert.deepEqual((robots() as any).rules, [{ userAgent: '*', allow: '/', disallow: '/admin/' }])
-  assert.equal(r.sitemap, 'https://manualdecocina.com/sitemap.xml')
+  assert.equal(r.sitemap, 'https://manualdecocina.com/sitemap_index.xml')
 })
 process.env.NEXT_PUBLIC_ALLOW_INDEXING = 'TRUE'
 check('robots: solo "true" exacto habilita indexación', () => {
