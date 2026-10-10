@@ -35,3 +35,5 @@ jobs:
                   print('CSS_FETCH_ERROR=',str(exc)[:150])
           print('LIVE_PRINT_AD_OPTOUT=', 'YES' if found else 'NO')
           PY
+
+# refresh after production build completed
