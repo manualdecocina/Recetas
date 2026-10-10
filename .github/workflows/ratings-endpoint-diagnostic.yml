@@ -1,0 +1,31 @@
+name: ratings-endpoint-diagnostic
+on:
+  push:
+    branches: [diagnostics/rating-endpoint-20261010]
+    paths: ['.github/workflows/ratings-endpoint-diagnostic.yml']
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Probe live rating endpoint with invalid UUID (never registers vote)
+        run: |
+          set -euo pipefail
+          for request in invalid-json invalid-uuid; do
+            if [[ "$request" = invalid-json ]]; then
+              payload='not-json'
+            else
+              payload='{"recipeId":"invalid","rating":5}'
+            fi
+            echo "=== $request ==="
+            curl -sS --connect-timeout 10 --max-time 30 --retry 1 --compressed \
+              -H 'Content-Type: application/json' -A 'Mozilla/5.0 (ratings-qa)' \
+              -X POST -d "$payload" \
+              -D /tmp/rating-headers -o /tmp/rating-response \
+              -w 'http=%{http_code} total=%{time_total}s redirect=%{num_redirects} ip=%{remote_ip}\n' \
+              'https://manualdecocina.com/api/rate-recipe' || true
+            head -n 18 /tmp/rating-headers || true
+            head -c 500 /tmp/rating-response || true
+            echo
+          done
