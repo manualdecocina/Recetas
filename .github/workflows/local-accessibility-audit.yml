@@ -1,0 +1,31 @@
+name: local-accessibility-audit
+on:
+  push:
+    branches: [diagnostics/local-accessibility-20261010]
+    paths: ['.github/workflows/local-accessibility-audit.yml']
+permissions: {contents: read}
+jobs:
+  accessibility:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: 22}
+      - name: Build site and run local service
+        run: |
+          npm install
+          npm run build
+          nohup npm run start -- -p 3000 > /tmp/site.log 2>&1 &
+          for i in {1..60}; do curl -fsS http://127.0.0.1:3000/es >/dev/null && break; sleep 1; done
+          curl -fsS http://127.0.0.1:3000/es >/dev/null
+      - name: Lighthouse full category scores and failed accessibility audits
+        shell: bash
+        run: |
+          set -uo pipefail
+          npm install --no-save lighthouse@13.5.0
+          for entry in "home http://127.0.0.1:3000/es" "recipe http://127.0.0.1:3000/arepas-de-choclo-con-queso" "catalog http://127.0.0.1:3000/es/recetas" "pantry http://127.0.0.1:3000/es/que-puedo-cocinar"; do
+            name="${entry%% *}"; url="${entry#* }";
+            npx lighthouse "$url" --quiet --chrome-flags="--headless --no-sandbox" --form-factor=mobile --output=json --output-path="/tmp/${name}.json" || true
+            node -e "const f=require('fs'),p='/tmp/'+process.argv[1]+'.json';if(!f.existsSync(p)){console.log('MISSING',p);process.exit(0)}const j=JSON.parse(f.readFileSync(p));const c=Object.fromEntries(Object.entries(j.categories||{}).map(([k,v])=>[k,Math.round((v.score||0)*100)]));const failures=Object.values(j.audits||{}).filter(x=>x.score!==null&&x.score<0.99&&(x.details?.items||[]).length&&(x.id==='color-contrast'||x.id==='image-alt'||x.id==='link-name'||x.id==='button-name'||x.id==='label'||x.id==='aria-valid-attr'||x.id==='heading-order'||x.id==='meta-description'||x.id==='document-title')).map(x=>({id:x.id,title:x.title,score:x.score,examples:x.details?.items?.slice(0,3)}));console.log('A11Y_AUDIT',JSON.stringify({page:process.argv[1],categories:c,failed:failures,errors:j.runtimeError||null}));" "$name"
+          done
