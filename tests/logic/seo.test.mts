@@ -188,3 +188,20 @@ check('catálogo: números de página se interpretan sin parseInt parcial', () =
   assert.equal(parseRecipePage('0002'), 1)
   assert.equal(parseRecipePage('9999999999999999'), 1)
 })
+
+
+const securityConfig = (await import('../../next.config.mjs')).default
+const securityHeaderRules = await securityConfig.headers()
+check('cabeceras: protegen navegación sin bloquear scripts de terceros', () => {
+  const globalHeaders = securityHeaderRules.find((rule: any) => rule.source === '/:path*')?.headers ?? []
+  const headers = new Map<string, string>(globalHeaders.map((h: any) => [h.key, h.value]))
+  assert.equal(headers.get('X-Frame-Options'), 'SAMEORIGIN')
+  assert.equal(headers.get('X-Content-Type-Options'), 'nosniff')
+  assert.equal(headers.get('Strict-Transport-Security'), 'max-age=86400')
+  assert.equal(headers.get('Cross-Origin-Opener-Policy'), 'same-origin-allow-popups')
+  assert.equal(headers.get('Referrer-Policy'), 'strict-origin-when-cross-origin')
+  const csp = headers.get('Content-Security-Policy') ?? ''
+  assert(csp.includes("object-src 'none'"))
+  assert(csp.includes("frame-ancestors 'self'"))
+  assert(!csp.includes('script-src'), 'script-src necesita compatibilidad separada con AdSense y consentimiento')
+})
