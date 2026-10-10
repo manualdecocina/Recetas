@@ -62,6 +62,17 @@ export function languageTag(language: string): string {
   return language === 'pt' ? 'pt-BR' : language
 }
 
+/** Keep the original WordPress trailing slash only for a verified historical URL.
+ * source_url is an audit fact, not a redirect target; never rewrite slugs/domains.
+ * The canonical host follows getSiteUrl(), so preview remains preview/noindex.
+ */
+export function recipeCanonicalUrl(recipe: { public_path: string; source_url?: string | null }): string {
+  const current = publicUrl(recipe.public_path)
+  const historical = recipe.source_url?.trim()
+  const exactWordPressUrl = `https://manualdecocina.com${normalizePublicPath(recipe.public_path)}/`
+  return historical === exactWordPressUrl ? `${current}/` : current
+}
+
 export function recipeUrl(language: RecipeLanguage | string, slug: string): string {
   return `${getSiteUrl()}${recipePath(language, slug)}`
 }
