@@ -15,6 +15,15 @@ check('canonical conserva la barra histórica y la ruta japonesa exactas', () =>
   assert.equal(site.publicUrl(path), 'https://manualdecocina.com' + path)
   assert.equal(site.publicPathHref(path), path)
 })
+check('WordPress KEEP: las URL históricas mantienen la barra final en canonical/hreflang sin cambiar public_path', () => {
+  const old = { language: 'es', public_path: '/receta-de-lechona-colombiana', source_url: 'https://manualdecocina.com/receta-de-lechona-colombiana/' }
+  const newer = { language: 'ja', public_path: '/ja/コロンビアのレチョナレシピ', source_url: null }
+  const a: any = recipeAlternates(old, [old, newer])
+  assert.equal(a.canonical, old.source_url)
+  assert.equal(a.languages.es, old.source_url)
+  assert.equal(a.languages.ja, site.publicUrl(newer.public_path))
+  assert.equal(site.recipeCanonicalUrl({public_path: old.public_path, source_url: 'https://othersite.invalid/receta-de-lechona-colombiana/'}), site.publicUrl(old.public_path))
+})
 check('Brasil usa pt-BR y enlaza la ruta localizada autorreferente', () => {
   const current = { language: 'pt', public_path: '/pt/pao-de-aveia-caseiro/' }
   const a: any = recipeAlternates(current, [current, { language: 'es', public_path: '/receta-pan-de-avena/' }])
