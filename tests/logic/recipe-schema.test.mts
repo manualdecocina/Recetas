@@ -1,4 +1,7 @@
 import assert from 'node:assert/strict'
+import { recipePublisher, recipeStepAnchor } from '@/lib/recipe-schema'
+import { CATEGORY_LANDING_COPY } from '@/lib/category-landing-copy'
+import { SUPPORTED_LANGUAGES } from '@/types/recipe'
 
 type RecipeLike = {
   cuisine?: string | null
@@ -29,6 +32,28 @@ check('keywords se serializan separados por comas', () => {
 
 check('keywords vacíos se omiten', () => {
   assert.equal(schemaExtras({ keywords: [] }).keywords, undefined)
+})
+
+check('Publisher Recipe incluye el logo público y usa el mismo @id que Organization en layout', () => {
+  process.env.NEXT_PUBLIC_ALLOW_INDEXING = 'true'
+  const publisher = recipePublisher()
+  assert.equal(publisher['@id'], 'https://manualdecocina.com/#organization')
+  assert.equal(publisher.logo.url, 'https://manualdecocina.com/brand/logo-manual-de-cocina.png')
+})
+
+check('Anclas HowToStep usan canonical KEEP para URL histórica', () => {
+  process.env.NEXT_PUBLIC_ALLOW_INDEXING = 'true'
+  assert.equal(recipeStepAnchor({ public_path: '/receta-de-lechona-colombiana', source_url: 'https://manualdecocina.com/receta-de-lechona-colombiana/' }, 2), 'https://manualdecocina.com/receta-de-lechona-colombiana/#paso-2')
+  assert.equal(recipeStepAnchor({ public_path: '/pt/pandebono-caseiro' }, 1), 'https://manualdecocina.com/pt/pandebono-caseiro#paso-1')
+})
+
+check('Las siete portadas de categorías tienen metadatos y texto editorial traducidos', () => {
+  for (const lang of SUPPORTED_LANGUAGES) {
+    const c = CATEGORY_LANDING_COPY[lang]
+    assert(c.title.length >= 12)
+    assert(c.description.length >= 60)
+    assert(c.intro.length >= 100)
+  }
 })
 
 console.log(`\\n${n} pruebas OK`)
