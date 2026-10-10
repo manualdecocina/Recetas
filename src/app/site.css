@@ -603,3 +603,29 @@ a.md-lang-item:hover { background: var(--md-sand); }
   content-visibility: auto;
   contain-intrinsic-size: auto 900px;
 }
+
+
+/* Impresión de recetas: aislar el artículo del documento y de los anuncios
+ * automáticos que AdSense inserta fuera de los placeholders .md-ad-slot.
+ * Solo actúa al imprimir; los anuncios siguen visibles en pantalla.
+ * El filtro de hijos directos también excluye overlays/portales ajenos al sitio. */
+@media print {
+  body:has(.md-article) > :not(.md-site):not(script):not(style),
+  body:has(.md-article) .md-site > :not(main),
+  body:has(.md-article) #md-main > :not(.md-article),
+  body:has(.md-article) :is(
+    .md-ad-slot,
+    ins.adsbygoogle,
+    .google-auto-placed,
+    .adsbygoogle-noablate,
+    [data-ad-client],
+    [data-ad-slot],
+    [data-google-query-id],
+    [id^="google_ads_iframe"],
+    [id^="aswift_"],
+    iframe,
+    .fc-consent-root
+  ) {
+    display: none !important;
+  }
+}
