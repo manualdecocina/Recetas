@@ -169,3 +169,22 @@ check('catálogo: descripciones SEO específicas en 7 idiomas', () => {
     assert(description.length <= 170)
   }
 })
+
+
+const { isUnsatisfiableRecipePage, parseRecipePage } = await import('@/lib/catalog-pagination')
+check('catálogo: rango excedido devuelve estado de página inexistente', () => {
+  assert.equal(isUnsatisfiableRecipePage({code: 'PGRST103'}), true)
+  assert.equal(isUnsatisfiableRecipePage({code: 'PGRST301'}), false)
+  assert.equal(isUnsatisfiableRecipePage({code: '08006'}), false)
+  assert.equal(isUnsatisfiableRecipePage(null), false)
+})
+check('catálogo: números de página se interpretan sin parseInt parcial', () => {
+  assert.equal(parseRecipePage('2'), 2)
+  assert.equal(parseRecipePage('8'), 8)
+  assert.equal(parseRecipePage('999'), 999)
+  assert.equal(parseRecipePage('2abc'), 1)
+  assert.equal(parseRecipePage('1e5'), 1)
+  assert.equal(parseRecipePage('-1'), 1)
+  assert.equal(parseRecipePage('0002'), 1)
+  assert.equal(parseRecipePage('9999999999999999'), 1)
+})
