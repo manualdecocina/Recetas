@@ -7,7 +7,7 @@ import ThemeSync from '@/components/md/ThemeSync'
 import AdSenseLoader from '@/components/md/AdSenseLoader'
 import { getSiteUrl, adsenseClientId, adsenseCmpReady, absoluteUrl, languageTag } from '@/lib/site'
 import { DEFAULT_LANGUAGE, SUPPORTED_LANGUAGES } from '@/types/recipe'
-import { siteRobots } from '@/lib/seo'
+import { siteRobots, SOCIAL_LOCALE, SITE_NAME } from '@/lib/seo'
 
 // Layout RAÍZ del sitio público (patrón i18n oficial de Next.js App Router).
 // Cada idioma produce su propio <html lang>: /es → lang="es", /de → lang="de", etc.
@@ -17,10 +17,15 @@ import { siteRobots } from '@/lib/seo'
 
 // Seguro anti-duplicado: sin NEXT_PUBLIC_ALLOW_INDEXING="true" todo el sitio es noindex (siteRobots).
 
-export const metadata: Metadata = {
-  metadataBase: new URL(getSiteUrl()),
-  title: 'Manual de Cocina',
-  robots: siteRobots(),
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = await params
+  const locale = SOCIAL_LOCALE[lang] ?? SOCIAL_LOCALE.es
+  return {
+    metadataBase: new URL(getSiteUrl()),
+    title: SITE_NAME,
+    robots: siteRobots(),
+    openGraph: { siteName: SITE_NAME, locale, type: 'website' },
+  }
 }
 
 export function generateStaticParams() {
