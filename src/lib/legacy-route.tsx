@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound, permanentRedirect, redirect } from 'next/navigation'
 import { getContentRedirect, getContentPageByPublicPath, getRecipeByPublicPath, getRecipeTranslations, getRelatedRecipes } from '@/lib/public-content'
-import { recipeAlternates, recipeMetaText, recipeSocialImages, withSiteName } from '@/lib/seo'
+import { recipeAlternates, recipeMetaText, recipeSocialImages, withSiteName, SITE_NAME, SOCIAL_LOCALE } from '@/lib/seo'
 import { publicUrl, recipeCanonicalUrl, absoluteUrl } from '@/lib/site'
 import { SUPPORTED_LANGUAGES } from '@/types/recipe'
 import { RecipeDocument } from '@/components/RecipeDocument'
@@ -39,6 +39,8 @@ export async function legacyMetadata(path: string): Promise<Metadata> {
       alternates: recipeAlternates(recipe, translations),
       openGraph: {
         type: 'article',
+        siteName: SITE_NAME,
+        locale: SOCIAL_LOCALE[recipe.language] ?? SOCIAL_LOCALE.es,
         title: meta.title,
         description: meta.description,
         url: recipeCanonicalUrl(recipe),
@@ -64,6 +66,8 @@ export async function legacyMetadata(path: string): Promise<Metadata> {
     alternates: { canonical: publicUrl(page.public_path) },
     openGraph: {
       type: 'article',
+        siteName: SITE_NAME,
+        locale: SOCIAL_LOCALE['es'] ?? SOCIAL_LOCALE.es,
       title: pageTitle,
       description: page.excerpt ?? undefined,
       url: publicUrl(page.public_path),
