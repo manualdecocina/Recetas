@@ -78,6 +78,7 @@ export function CategoryDetailView({ lang, category, recipes }: {
 }) {
   const t = getMdCopy(lang);
   const alternates = samePathAlternates((l) => `/${l}/categorias/${category.slug}`);
+  const isSpanishDessert = lang === 'es' && category.slug === 'postres';
   return (
     <div className="md-site" lang={languageTag(lang)}>
       <SiteHeader lang={lang} alternates={alternates} />
@@ -88,7 +89,13 @@ export function CategoryDetailView({ lang, category, recipes }: {
             { name: t.navCategories, path: `/${lang}/categorias` },
             { name: category.label, path: `/${lang}/categorias/${category.slug}` },
           ]} />
-          <p className="md-eyebrow">{t.recipesInCategory}</p><h1 className="md-display">{category.label}</h1></header>
+          <p className="md-eyebrow">{t.recipesInCategory}</p><h1 className="md-display">{category.label}</h1>
+          {isSpanishDessert && <div className="md-page-intro md-rich">
+            <p>En esta sección encontrarás {category.count} recetas de postres para preparar en casa, desde dulces tradicionales hasta ideas para compartir en una celebración. Cada receta incluye cantidades de ingredientes, tiempos orientativos y una preparación explicada por pasos. Puedes elegir entre opciones horneadas, cremas, tartas y otros postres según el tiempo que tengas y los utensilios disponibles.</p>
+            <p>Antes de empezar, revisa el número de porciones, los tiempos de enfriado o reposo y la lista completa de ingredientes. Algunos postres requieren paciencia más que técnicas difíciles: respetar la temperatura, mezclar en el orden adecuado y dejar enfriar pueden marcar la diferencia. Las fotografías ayudan a reconocer las fases del proceso, pero cada horno y cada ingrediente puede comportarse de forma distinta. Explora las propuestas y consulta también sus consejos de conservación y preguntas frecuentes antes de cocinar.</p>
+          </div>}
+        </header>
+        <h2 className="md-subtitle md-section">{lang === 'es' ? `${category.count} recetas de ${category.label.toLowerCase()}` : category.label}</h2>
         {recipes.length > 0 ? (
           <div className="md-card-grid md-section">{recipes.map((recipe, index) => <RecipeCard key={recipe.id} recipe={recipe} priority={index === 0} />)}</div>
         ) : (
