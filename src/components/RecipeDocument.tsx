@@ -75,7 +75,7 @@ export async function RecipeDocument({ recipe, relatedRecipes = [] }: { recipe: 
   const ratingsEnabled = process.env.NEXT_PUBLIC_RATINGS_ENABLED === 'true'
   const ratingCount = recipe.rating_count ?? 0
   const ratingSum = recipe.rating_sum ?? 0
-  const aggregateRatingLd = ratingsEnabled && ratingCount > 0 ? {
+  const aggregateRatingLd = ratingsEnabled && ratingCount >= 2 ? {
     '@type': 'AggregateRating',
     ratingValue: (ratingSum / ratingCount).toFixed(1),
     ratingCount,
