@@ -73,6 +73,7 @@ export function IngredientDetailView({ lang, ingredient, description, recipes }:
   recipes: MdRecipeCardData[];
 }) {
   const t = getMdCopy(lang);
+  const isSpanishGarlic = lang === 'es' && ingredient.slug === 'ajo';
   return (
     <div className="md-site" lang={languageTag(lang)}>
       <SiteHeader lang={lang} alternates={Object.fromEntries(SUPPORTED_LANGUAGES.map((l) => [l, `/${l}/ingredientes/${ingredient.slug}`]))} />
@@ -84,7 +85,13 @@ export function IngredientDetailView({ lang, ingredient, description, recipes }:
             { name: ingredient.name, path: `/${lang}/ingredientes/${ingredient.slug}` },
           ]} />
           <p className="md-eyebrow">{t.recipesWithIngredient}</p><h1 className="md-display">{ingredient.name}</h1>
-          {description && <p className="md-lead md-page-intro">{description}</p>}</header>
+          {description && !isSpanishGarlic && <p className="md-lead md-page-intro">{description}</p>}
+          {isSpanishGarlic && <div className="md-page-intro md-rich">
+            <p>El ajo es un ingrediente habitual en guisos, sofritos, salsas, sopas y adobos. En esta selección encontrarás {recipes.length} recetas publicadas que lo incluyen expresamente entre sus ingredientes. Consulta cada ficha para saber cuánto necesitas y si debes picarlo, machacarlo, dorarlo o incorporarlo entero. La intensidad del ajo depende de su cantidad, del tiempo de cocción y de cómo lo prepares.</p>
+            <p>Para usar estas recetas, empieza por revisar los ingredientes y las porciones: una preparación para dos personas no utiliza necesariamente la misma cantidad que una para seis. Cuando una receta indique sofreír ajo, vigila la temperatura para evitar que se queme y amargue. Si lo incorporas crudo, sigue las cantidades y recomendaciones de la receta elegida. Aquí puedes comparar platos diferentes, seguir sus pasos y consultar los consejos de conservación correspondientes. Estas recetas están enlazadas con el ingrediente ajo en el catálogo, no son resultados obtenidos únicamente por coincidencias de palabras.</p>
+          </div>}
+        </header>
+        <h2 className="md-subtitle md-section">{lang === 'es' ? `${recipes.length} recetas con ${ingredient.name.toLowerCase()}` : ingredient.name}</h2>
         {recipes.length > 0 ? (
           <div className="md-card-grid md-section">{recipes.map((recipe, index) => <RecipeCard key={recipe.id} recipe={recipe} priority={index === 0} />)}</div>
         ) : (
