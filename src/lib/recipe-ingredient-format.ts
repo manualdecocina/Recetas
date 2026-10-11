@@ -33,8 +33,8 @@ export function ingredientDisplayPrefix(
   if (language !== 'es') return [rawAmount, rawUnit].filter(Boolean).join(' ')
 
   // Spanish decimal punctuation is only a presentation change (e.g. 1.5 -> 1,5).
-  const amount = rawAmount.replace(/^(\\d+)\\.(\\d+)$/, '$1,$2')
-  const numericAmount = /^\\d+(?:[.,]\\d+)?$/.test(rawAmount)
+  const amount = rawAmount.replace(/^(\d+)\.(\d+)$/, '$1,$2')
+  const numericAmount = /^\d+(?:[.,]\d+)?$/.test(rawAmount)
     ? Number(rawAmount.replace(',', '.')) : NaN
   const plural = Number.isFinite(numericAmount) && numericAmount > 1
   const unit = rawUnit.toLocaleLowerCase('es')
@@ -47,6 +47,6 @@ export function ingredientDisplayPrefix(
 export function ingredientDisplayText(ingredient: RecipeIngredientText, language: string): string {
   const prefix = ingredientDisplayPrefix(ingredient, language)
   const name = ingredient.name.trim()
-  return [prefix, prefix.endsWith(' de') ? name.replace(/^de\\s+/i, '') : name]
+  return [prefix, prefix.endsWith(' de') ? name.replace(/^de\s+/i, '') : name]
     .filter(Boolean).join(' ')
 }
