@@ -1222,18 +1222,19 @@
       "title_requested": "Hojuelas colombianas: receta crujiente con canela y azúcar",
       "slug_suggested": "hojuelas-colombianas",
       "slug_exact": false,
-      "status": "pending",
-      "execution_attempts": 0,
-      "historical_url_status": "to_verify",
+      "status": "in_progress",
+      "execution_attempts": 1,
+      "historical_url_status": "no_verificado",
       "historical_url": null,
       "historical_url_sources": [],
-      "url_collision_check": "pending",
+      "url_collision_check": "PASS_7_CANDIDATE_PATHS",
       "publication_gate": "not_started",
       "language_count_required": 7,
       "original_png_required": 8,
       "webp_required": 12,
       "steps_required": 8,
-      "faq_per_language_required": 5
+      "faq_per_language_required": 5,
+      "working_branch": "recetas/priority-hojuelas-20261011"
     },
     {
       "priority_position": 2,
@@ -1411,7 +1412,7 @@
   "priority_next_position": 1,
   "priority_pending_total": 10,
   "priority_precedes_legacy_candidates": true,
-  "priority_status": "queued",
+  "priority_status": "in_progress",
   "priority_created_date": "2026-10-11",
   "priority_notes": "One recipe per hourly run. Historical URL identity validation per recipe; preserve existing candidates and held lists. Skip only after two failed execution attempts and document debt. User permission renewed 2026-10-11."
 }
