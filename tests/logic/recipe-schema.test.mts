@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict'
-import { recipePublisher, recipeStepAnchor } from '@/lib/recipe-schema'
+import { recipePublisher, recipeStepAnchor, shouldPublishAggregateRating } from '@/lib/recipe-schema'
+import { ingredientDisplayPrefix, ingredientDisplayText } from '@/lib/recipe-ingredient-format'
 import { CATEGORY_LANDING_COPY } from '@/lib/category-landing-copy'
 import { SUPPORTED_LANGUAGES } from '@/types/recipe'
 
@@ -57,3 +58,24 @@ check('Las siete portadas de categorías tienen metadatos y texto editorial trad
 })
 
 console.log(`\\n${n} pruebas OK`)
+
+check('Ingredientes españoles: singular, plural y contracción de unidad', () => {
+  assert.equal(ingredientDisplayText({ amount: '2', unit: 'cucharada', name: 'cacao amargo en polvo' }, 'es'), '2 cucharadas de cacao amargo en polvo')
+  assert.equal(ingredientDisplayText({ amount: '1', unit: 'cucharada', name: 'miel' }, 'es'), '1 cucharada de miel')
+  assert.equal(ingredientDisplayText({ amount: '3', unit: 'cucharadita', name: 'azúcar' }, 'es'), '3 cucharaditas de azúcar')
+  assert.equal(ingredientDisplayText({ amount: '4', unit: 'unidad', name: 'huevos' }, 'es'), '4 huevos')
+  assert.equal(ingredientDisplayText({ amount: '4', unit: 'rebanada', name: 'pan crujiente' }, 'es'), '4 rebanadas de pan crujiente')
+  assert.equal(ingredientDisplayPrefix({ amount: '1.5', unit: 'g' }, 'es'), '1,5 g')
+})
+check('El mismo formateador alimenta el listado visible y Recipe JSON-LD sin tocar datos originales', () => {
+  const sample = { amount: '2', unit: 'cucharada', name: 'cacao amargo' }
+  assert.equal(ingredientDisplayPrefix(sample, 'es') + ' ' + sample.name, ingredientDisplayText(sample, 'es'))
+  assert.equal(ingredientDisplayText(sample, 'en'), '2 cucharada cacao amargo')
+})
+check('AggregateRating se omite si hay menos de cinco votos reales', () => {
+  assert.equal(shouldPublishAggregateRating(true, 0), false)
+  assert.equal(shouldPublishAggregateRating(true, 1), false)
+  assert.equal(shouldPublishAggregateRating(true, 4), false)
+  assert.equal(shouldPublishAggregateRating(true, 5), true)
+  assert.equal(shouldPublishAggregateRating(false, 5), false)
+})
