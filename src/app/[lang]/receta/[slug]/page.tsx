@@ -3,7 +3,7 @@ import { cache } from 'react'
 import type { Metadata } from 'next'
 import { supabase } from '@/lib/supabase/public'
 import { getContentRedirect, getRelatedRecipes } from '@/lib/public-content'
-import { recipeAlternates, recipeMetaText, recipeSocialImages } from '@/lib/seo'
+import { recipeAlternates, recipeMetaText, recipeSocialImages, SITE_NAME, SOCIAL_LOCALE } from '@/lib/seo'
 import { normalizePublicPath, recipePath, publicUrl, recipeCanonicalUrl, publicPathHref } from '@/lib/site'
 import { RecipeDocument } from '@/components/RecipeDocument'
 import type { RecipeIngredient } from '@/types/recipe'
@@ -80,6 +80,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     alternates: recipeAlternates(recipe, translations),
     openGraph: {
       type: 'article',
+        siteName: SITE_NAME,
+        locale: SOCIAL_LOCALE[lang] ?? SOCIAL_LOCALE.es,
       title: meta.title,
       description: meta.description,
       url: recipeCanonicalUrl(recipe),
