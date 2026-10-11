@@ -46,7 +46,14 @@ export default function RecipeDocumentVisual({ recipe, relatedRecipes = [], note
   // `recipe.category` está traducido a este idioma; buscar el slug con la etiqueta
   // española fija fallaba siempre fuera de /es (categorySlug quedaba undefined).
   const categorySlug = categorySlugFromLabel(lang, recipe.category);
-  const updated = new Intl.DateTimeFormat(LOCALES[lang] ?? 'es-ES', { dateStyle: 'long', timeZone: 'UTC' }).format(new Date(recipe.updated_at));
+  const formatter = new Intl.DateTimeFormat(LOCALES[lang] ?? 'es-ES', { dateStyle: 'long', timeZone: 'UTC' });
+  const updated = formatter.format(new Date(recipe.updated_at));
+  const published = recipe.published_at ? formatter.format(new Date(recipe.published_at)) : null;
+  const publishedLabels: Record<string, string> = {
+    es: 'Publicada el', en: 'Published on', de: 'Veröffentlicht am',
+    fr: 'Publiée le', it: 'Pubblicata il', ja: '公開日', pt: 'Publicada em',
+  };
+  const displayNumber = (value: number) => new Intl.NumberFormat(LOCALES[lang] ?? 'es-ES', { maximumFractionDigits: 2 }).format(value);
   const seo = (recipe.seo ?? {}) as Record<string, unknown>;
   const faq = Array.isArray(seo.faq) ? (seo.faq as Array<{ q?: string; a?: string }>).filter((f) => f?.q && f?.a) : [];
   const video = parseVideo(recipe.video_urls?.[0]);
@@ -82,7 +89,7 @@ export default function RecipeDocumentVisual({ recipe, relatedRecipes = [], note
             {recipe.category && <p className="md-eyebrow">{recipe.category}</p>}
             <h1 className="md-display">{recipe.title}</h1>
             {recipe.excerpt && <p className="md-lead">{recipe.excerpt}</p>}
-            <p className="md-byline">{t.writtenBy} <Link href={`/${lang}/quienes-somos`} rel="author">{RECIPE_AUTHOR.name}</Link> · {t.updatedOn} <time dateTime={recipe.updated_at}>{updated}</time></p>
+            <p className="md-byline">{t.writtenBy} <Link href={`/${lang}/quienes-somos`} rel="author">{RECIPE_AUTHOR.name}</Link>{published && <> · {publishedLabels[lang] ?? publishedLabels.es} <time dateTime={recipe.published_at!}>{published}</time></>} · {t.updatedOn} <time dateTime={recipe.updated_at}>{updated}</time></p>
             {facts.length > 0 && <dl className="md-recipe-facts">{facts.map((fact) => (
               <div className="md-recipe-fact" key={fact.label}><dt>{fact.label}</dt><dd>{fact.value}</dd></div>
             ))}</dl>}
@@ -142,10 +149,10 @@ export default function RecipeDocumentVisual({ recipe, relatedRecipes = [], note
                   <p className="md-nutrition-serving">{typeof nutrition.serving_size === 'string' ? nutrition.serving_size : t.perServing}</p>
                 </div>
                 <div className="md-nutrition-body">
-                  <div className="md-nutrition-cal"><strong>{calories}</strong><span>{t.calories} · kcal</span></div>
+                  <div className="md-nutrition-cal"><strong>{displayNumber(calories)}</strong><span>{t.calories} · kcal</span></div>
                   <dl className="md-nutrition-grid">
                     {nutritionRows.map(([label, value, unit]) => (
-                      <div key={label}><dt>{label}</dt><dd>{value} {unit}</dd></div>
+                      <div key={label}><dt>{label}</dt><dd>{displayNumber(value)} {unit}</dd></div>
                     ))}
                   </dl>
                 </div>
