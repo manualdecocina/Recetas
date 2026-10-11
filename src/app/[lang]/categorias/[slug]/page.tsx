@@ -19,9 +19,17 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   if (!lang || !exists) return {}
   const label = categoryLabel(lang, slug)!
   const t = getMdCopy(lang)
+  const { count, error } = await supabase.from('recipes').select('id', { count: 'exact', head: true })
+    .eq('language', lang).eq('published', true).eq('category', label)
+  if (error) throw new Error('No se pudo contar la categoría')
+  const number = count ?? 0
+  const title = lang === 'es' ? `Recetas de ${label.toLowerCase()}: ${number} ideas paso a paso` : label
+  const description = lang === 'es'
+    ? `${number} recetas de ${label.toLowerCase()} con ingredientes pesados, tiempos y pasos claros.`
+    : `${t.recipesInCategory}: ${label}.`
   return {
-    title: withSiteName(label),
-    description: `${t.recipesInCategory}: ${label}.`,
+    title: withSiteName(title),
+    description,
     alternates: allLanguageAlternates(`/${lang}/categorias/${slug}`, (l) => `/${l}/categorias/${slug}`),
   }
 }
