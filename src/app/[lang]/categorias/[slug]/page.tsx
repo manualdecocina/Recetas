@@ -19,9 +19,20 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   if (!lang || !exists) return {}
   const label = categoryLabel(lang, slug)!
   const t = getMdCopy(lang)
+  let title = label
+  let description = `${t.recipesInCategory}: ${label}.`
+  if (lang === 'es' && slug === 'postres') {
+    const { count, error } = await supabase.from('recipes')
+      .select('id', { count: 'exact', head: true })
+      .eq('language', lang).eq('published', true).eq('category', label)
+    if (error) throw new Error('No se pudo calcular el total publicado de postres')
+    const total = count ?? 0
+    title = `Recetas de postres: ${total} ideas paso a paso`
+    description = `${total} recetas de postres con ingredientes pesados, tiempos y pasos claros.`
+  }
   return {
-    title: withSiteName(label),
-    description: `${t.recipesInCategory}: ${label}.`,
+    title: withSiteName(title),
+    description,
     alternates: allLanguageAlternates(`/${lang}/categorias/${slug}`, (l) => `/${l}/categorias/${slug}`),
   }
 }
