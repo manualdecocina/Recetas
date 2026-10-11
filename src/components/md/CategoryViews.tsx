@@ -78,6 +78,9 @@ export function CategoryDetailView({ lang, category, recipes }: {
 }) {
   const t = getMdCopy(lang);
   const alternates = samePathAlternates((l) => `/${l}/categorias/${category.slug}`);
+  const postresIntro = lang === 'es' && category.slug === 'postres'
+    ? `Explora ${category.count} recetas de postres para preparar en casa, desde tortas y bizcochos hasta cremas, galletas y opciones frías. En cada receta encontrarás las cantidades de los ingredientes, el tiempo estimado, el número de porciones y una preparación explicada paso a paso. Puedes comparar propuestas sencillas para una merienda con elaboraciones que necesitan horno, reposo o refrigeración. Antes de comenzar, lee la receta completa y comprueba qué utensilios necesitas, especialmente si incluye batidos, almíbares o tiempos de enfriado. Las fotografías ilustran las preparaciones, pero los tiempos pueden variar según el equipo y el tamaño de las porciones. También encontrarás recomendaciones de conservación cuando correspondan. Elige un postre que se ajuste a tu tiempo, revisa sus ingredientes y sigue las instrucciones en orden para obtener el mejor resultado posible.`
+    : null;
   return (
     <div className="md-site" lang={languageTag(lang)}>
       <SiteHeader lang={lang} alternates={alternates} />
@@ -88,7 +91,10 @@ export function CategoryDetailView({ lang, category, recipes }: {
             { name: t.navCategories, path: `/${lang}/categorias` },
             { name: category.label, path: `/${lang}/categorias/${category.slug}` },
           ]} />
-          <p className="md-eyebrow">{t.recipesInCategory}</p><h1 className="md-display">{category.label}</h1></header>
+          <p className="md-eyebrow">{t.recipesInCategory}</p><h1 className="md-display">{category.label}</h1>
+          {postresIntro && <p className="md-page-intro md-lead">{postresIntro}</p>}
+        </header>
+        {postresIntro && <h2 className="md-subtitle">{`Explora las ${category.count} recetas de postres`}</h2>}
         {recipes.length > 0 ? (
           <div className="md-card-grid md-section">{recipes.map((recipe, index) => <RecipeCard key={recipe.id} recipe={recipe} priority={index === 0} />)}</div>
         ) : (
