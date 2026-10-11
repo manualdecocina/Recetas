@@ -12,6 +12,7 @@ import RecipeCard from './RecipeCard';
 import PantryBanner from './PantryBanner';
 import Breadcrumbs from './Breadcrumbs';
 import { countLabel } from '@/lib/plural';
+import { taxonomyLanding } from '@/lib/taxonomy-landing-seo';
 
 /** Canonical ingredient routes, with localized labels and published recipes. */
 export interface MdIngredientSummary {
@@ -73,6 +74,7 @@ export function IngredientDetailView({ lang, ingredient, description, recipes }:
   recipes: MdRecipeCardData[];
 }) {
   const t = getMdCopy(lang);
+  const landing = taxonomyLanding('ingredient', lang, ingredient.name, recipes.length);
   return (
     <div className="md-site" lang={languageTag(lang)}>
       <SiteHeader lang={lang} alternates={Object.fromEntries(SUPPORTED_LANGUAGES.map((l) => [l, `/${l}/ingredientes/${ingredient.slug}`]))} />
@@ -84,7 +86,10 @@ export function IngredientDetailView({ lang, ingredient, description, recipes }:
             { name: ingredient.name, path: `/${lang}/ingredientes/${ingredient.slug}` },
           ]} />
           <p className="md-eyebrow">{t.recipesWithIngredient}</p><h1 className="md-display">{ingredient.name}</h1>
-          {description && <p className="md-lead md-page-intro">{description}</p>}</header>
+          {description && <p className="md-lead md-page-intro">{description}</p>}
+          <p className="md-lead md-page-intro">{landing.intro}</p>
+        </header>
+        <h2 className="md-subtitle">{landing.heading}</h2>
         {recipes.length > 0 ? (
           <div className="md-card-grid md-section">{recipes.map((recipe, index) => <RecipeCard key={recipe.id} recipe={recipe} priority={index === 0} />)}</div>
         ) : (

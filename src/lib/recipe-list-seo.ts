@@ -3,7 +3,7 @@ import type { RecipeLanguage } from '@/types/recipe'
 
 /** Titles describe the same recipe catalog in each supported language. */
 export const RECIPE_LISTING_TITLES: Record<RecipeLanguage, string> = {
-  es: 'Recetas caseras e internacionales',
+  es: 'Todas las recetas paso a paso',
   en: 'Home cooking recipes from around the world',
   de: 'Rezepte aus aller Welt zum Nachkochen',
   fr: 'Recettes maison du monde entier',

@@ -283,3 +283,34 @@ check('cocina: un vínculo en español incluye las siete traducciones del mismo 
   assert.deepEqual(uniqueCuisineGroupIds([]), [])
   assert.deepEqual(uniqueCuisineGroupIds([{ recipe_group_id: null }]), [])
 })
+
+
+const { taxonomyLanding } = await import('@/lib/taxonomy-landing-seo')
+check('postres: title/meta precisos con conteo real, sin hardcode', () => {
+  const page = taxonomyLanding('category', 'es', 'Postres', 28)
+  assert.equal(page.title, 'Recetas de postres: 28 ideas paso a paso')
+  assert.equal(page.description, '28 recetas de postres con ingredientes pesados, tiempos y pasos claros. Encuentra opciones para cocinar en casa.')
+  assert.match(page.heading, /28/)
+  assert.match(taxonomyLanding('category', 'es', 'Postres', 29).title, /29/)
+})
+check('ajo: title y meta con 44 recetas registradas', () => {
+  const page = taxonomyLanding('ingredient', 'es', 'Ajo', 44)
+  assert.equal(page.title, 'Recetas con ajo: 44 ideas')
+  assert.match(page.description, /^44 recetas que usan ajo/)
+  assert.match(page.heading, /44/)
+})
+check('siete idiomas: taxonomía localizada con H2 e introducción', () => {
+  const languages = ['es', 'en', 'de', 'fr', 'it', 'pt', 'ja'] as const
+  for (const lang of languages) {
+    for (const kind of ['category', 'ingredient'] as const) {
+      const page = taxonomyLanding(kind, lang, lang === 'ja' ? 'デザート' : 'Desserts', 28)
+      assert.match(page.title, /28/, `${kind}/${lang} must include real count`)
+      assert.match(page.description, /28/, `${kind}/${lang} must include real count`)
+      assert.match(page.heading, /28/, `${kind}/${lang} H2`)
+      assert.ok(page.intro.length > 180, `${kind}/${lang} should have substantial introduction`)
+      assert.equal(page.intro.includes('{count}'), false)
+      assert.equal(page.intro.includes('{label}'), false)
+      assert.equal(page.intro.includes('{subject}'), false)
+    }
+  }
+})

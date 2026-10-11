@@ -1,6 +1,6 @@
 import { ingredientLabel } from '@/lib/ingredient-labels'
 import { getPantryMatchData } from '@/lib/md-data'
-import { getMdCopy } from '@/lib/copy'
+import { taxonomyLanding } from '@/lib/taxonomy-landing-seo'
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import { supabase } from '@/lib/supabase/public'
@@ -59,8 +59,9 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   if (!lang) return {}
   const result = await getIngredient(lang, slug)
   if (!result) return {}
-  const title = withSiteName(result.ingredient.name)
-  const description = result.ingredient.description ?? `${getMdCopy(lang).recipesWithIngredient}: ${result.ingredient.name}.`
+  const landing = taxonomyLanding('ingredient', lang, result.ingredient.name, result.recipes.length)
+  const title = withSiteName(landing.title)
+  const description = landing.description
   const url = publicUrl(`/${lang}/ingredientes/${result.ingredient.slug}`)
   const images = result.ingredient.image_url
     ? [{ url: absoluteUrl(result.ingredient.image_url), alt: result.ingredient.name }]

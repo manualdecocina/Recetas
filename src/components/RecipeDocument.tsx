@@ -6,7 +6,8 @@ import { categorySlugFromLabel } from '@/lib/categories'
 import { breadcrumbJsonLd } from '@/lib/breadcrumbs'
 import { getRecipeTranslations } from '@/lib/public-content'
 import { publicPathHref } from '@/lib/site'
-import { recipePublisher, recipeStepAnchor } from '@/lib/recipe-schema'
+import { recipePublisher, recipeStepAnchor, shouldPublishAggregateRating } from '@/lib/recipe-schema'
+import { ingredientDisplayText } from '@/lib/recipe-ingredient-format'
 import SiteHeader from '@/components/md/SiteHeader'
 import SiteFooter from '@/components/md/SiteFooter'
 import RecipeDocumentVisual from '@/components/md/RecipeDocumentVisual'
@@ -75,7 +76,7 @@ export async function RecipeDocument({ recipe, relatedRecipes = [] }: { recipe: 
   const ratingsEnabled = process.env.NEXT_PUBLIC_RATINGS_ENABLED === 'true'
   const ratingCount = recipe.rating_count ?? 0
   const ratingSum = recipe.rating_sum ?? 0
-  const aggregateRatingLd = ratingsEnabled && ratingCount > 0 ? {
+  const aggregateRatingLd = shouldPublishAggregateRating(ratingsEnabled, ratingCount) ? {
     '@type': 'AggregateRating',
     ratingValue: (ratingSum / ratingCount).toFixed(1),
     ratingCount,
@@ -109,7 +110,7 @@ export async function RecipeDocument({ recipe, relatedRecipes = [] }: { recipe: 
     url: recipeCanonicalUrl(recipe),
     datePublished: recipe.published_at ?? undefined,
     dateModified: recipe.updated_at,
-    recipeIngredient: recipe.ingredients.map((i) => [i.amount, i.unit, i.name].filter(Boolean).join(' ')),
+    recipeIngredient: recipe.ingredients.map((i) => ingredientDisplayText(i, recipe.language)),
     recipeInstructions: recipe.steps.map((s, i) => ({ '@type': 'HowToStep', position: i + 1, name: s.title || undefined, text: s.content, image: s.image_url ? absoluteUrl(s.image_url) : undefined, url: recipeStepAnchor(recipe, i + 1) })),
     // Solo tiempos reales y positivos; un 0 (p. ej. bebidas sin cocción) se omite en vez de publicar PT0M.
     prepTime: recipe.prep_time_minutes != null && recipe.prep_time_minutes > 0 ? `PT${recipe.prep_time_minutes}M` : undefined,

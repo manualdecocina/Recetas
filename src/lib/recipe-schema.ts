@@ -21,3 +21,11 @@ export function recipePublisher() {
 export function recipeStepAnchor(recipe: { public_path: string; source_url?: string | null }, position: number): string {
   return `${recipeCanonicalUrl(recipe)}#paso-${position}`
 }
+
+/** A real, small sample remains visible in the rating widget but does not produce
+ * AggregateRating structured data until at least five genuine votes exist. */
+export const MIN_AGGREGATE_RATING_VOTES = 5
+
+export function shouldPublishAggregateRating(enabled: boolean, voteCount: number): boolean {
+  return enabled && Number.isInteger(voteCount) && voteCount >= MIN_AGGREGATE_RATING_VOTES
+}
