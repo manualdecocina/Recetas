@@ -32,7 +32,18 @@
     "target": 10,
     "status": "in_progress",
     "stage": "identity",
-    "recipe_active": null,
+    "recipe_active": {
+      "priority_position": 2,
+      "name": "Puré de papa cremoso",
+      "slug": "pure-de-papa-cremoso",
+      "branch": "recetas/priority-pure-de-papa-cremoso-20261011",
+      "stage": "identity",
+      "attempts": 1,
+      "publication_gate": "not_started",
+      "historical_url_status": "to_verify",
+      "next_action": "Verificar y preservar la fila archivada, el 302 exacto y las siete rutas antes de redactar.",
+      "status": "in_progress"
+    },
     "processed": 1,
     "published_verified": 1,
     "skipped_debt": 0,
@@ -143,13 +154,16 @@
   },
   "next_candidate_position": null,
   "run_lease": {
-    "owner": "automation-priority-hojuelas-20261011-0511",
-    "status": "released",
-    "recipe": "hojuelas-colombianas",
-    "released_at": "2026-10-11T05:53:00Z",
-    "reason": "published_and_verified",
-    "content_merge_sha": "f9afd5c8ac0e27bad9d645011a794090ec725ce8",
-    "qa_merge_sha": "0057d74fb08cc87e88b02617594b703ed3a8afb9"
+    "owner": "automation-priority-pure-20261011-1107",
+    "status": "active",
+    "recipe": "pure-de-papa-cremoso",
+    "branch": "recetas/priority-pure-de-papa-cremoso-20261011",
+    "acquired_at": "2026-10-11T11:07:00Z",
+    "expires_at": "2026-10-11T13:07:00Z",
+    "base_main_sha": "c7b1563e1c3c58a9b0b7004c08690a83113ff640",
+    "expected_branch_sha": "c7b1563e1c3c58a9b0b7004c08690a83113ff640",
+    "stage": "identity",
+    "reason": "Procesar exclusivamente prioridad 2; reactivar fila histórica y retirar solo el redirect verificado."
   },
   "blockers": [],
   "debt": [
@@ -275,15 +289,15 @@
     }
   ],
   "activation_authority": "Usuario 2026-10-11: Reactiva tarea horaria con 10 recetas prioritarias; reitera autorización 2026-10-08.",
-  "progress_branch": null,
-  "last_checkpoint_at": "2026-10-11T05:53:00Z",
+  "progress_branch": "recetas/priority-pure-de-papa-cremoso-20261011",
+  "last_checkpoint_at": "2026-10-11T11:07:00Z",
   "handoff": {
-    "next_action": "En la próxima ejecución, adquirir lease nuevo y procesar únicamente la prioridad 2: pure-de-papa-cremoso; verificar/reactivar la fila archivada y eliminar solo su 302 confirmado.",
+    "next_action": "Completar identidad y colisiones de pure-de-papa-cremoso; no iniciar prioridad 3.",
     "new_published_priority": 1,
     "priority_remaining": 9
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z",
-  "updated_at": "2026-10-11T05:53:00Z",
+  "updated_at": "2026-10-11T11:07:00Z",
   "completed_batches": [
     {
       "id": "lote-02-20261008",
