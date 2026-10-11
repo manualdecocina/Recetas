@@ -31,13 +31,13 @@
     "source": "user_priority_20261011",
     "target": 10,
     "status": "in_progress",
-    "stage": "editorial_es",
+    "stage": "images",
     "recipe_active": {
       "priority_position": 1,
       "name": "Hojuelas colombianas",
       "slug": "hojuelas-colombianas",
       "branch": "recetas/priority-hojuelas-20261011",
-      "stage": "historical_identity_checked",
+      "stage": "images_incomplete",
       "attempts": 1,
       "publication_gate": "not_started",
       "historical_url_status": "no_verificado",
@@ -47,7 +47,15 @@
         "https://colanta.com/recetas/hojuelas/",
         "https://mycolombiancocina.com/hojaldras/"
       ],
-      "next_action": "Close ES ingredients and 8 unmerged steps; generate 8 individual PNG photographs; localize and PR before any SQL."
+      "next_action": "Regenerate independent paso-02..07 with precise process images, QA each; derive 12 WebP; complete 6 translations with five FAQ, implement FAQPage, PR/CI/merge/media HTTP hash/SQL/revalidate/7 URLs QA.",
+      "branch_sha": "4bc76853d6695f27378f42142783a4bbdbe4e337",
+      "editorial_file": "editorial/hojuelas-colombianas-20261011.json",
+      "images_manifest": "editorial/hojuelas-colombianas-imagenes.json",
+      "originals_accepted": 2,
+      "originals_missing": 6,
+      "webp_ready": 0,
+      "current_blocker": "Step-02 image generation repeatedly produced finished dish instead of the specified action; cannot publish or mislabel",
+      "status": "in_progress"
     },
     "processed": 0,
     "published_verified": 0,
@@ -61,13 +69,14 @@
   "next_candidate_position": null,
   "run_lease": {
     "owner": "manual-now-hojuelas-20261011",
-    "status": "active",
+    "status": "released",
     "recipe": "hojuelas-colombianas",
     "branch": "recetas/priority-hojuelas-20261011",
     "acquired_at": "2026-10-11T04:14:26Z",
     "expires_at": "2026-10-11T05:06:00Z",
     "base_main_sha": "3f971d1ba68f083b978a3525c06ccd9ea6f0402e",
-    "reason": "Starting first priority recipe; prevent overlapping hourly run"
+    "reason": "Current manual execution checkpoint complete; next hourly run must resume unfinished Hojuelas, NOT open second recipe.",
+    "released_at": "2026-10-11T04:21:00Z"
   },
   "blockers": [],
   "debt": [
@@ -178,8 +187,8 @@
     }
   ],
   "activation_authority": "Usuario 2026-10-11: Reactiva tarea horaria con 10 recetas prioritarias; reitera autorización 2026-10-08.",
-  "progress_branch": null,
-  "last_checkpoint_at": "2026-10-09T11:45:28.623Z",
+  "progress_branch": "recetas/priority-hojuelas-20261011",
+  "last_checkpoint_at": "2026-10-11T04:21:00Z",
   "handoff": {
     "next_action": "At next hourly run, acquire lease and validate historical URL plus collisions for Hojuelas colombianas; then produce only that recipe until full publication/QA. Preserve old candidates as deferred.",
     "new_published_priority": 0,
