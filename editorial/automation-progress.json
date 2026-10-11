@@ -31,37 +31,112 @@
     "source": "user_priority_20261011",
     "target": 10,
     "status": "in_progress",
-    "stage": "localization",
-    "recipe_active": {
-      "priority_position": 1,
-      "name": "Hojuelas colombianas",
-      "slug": "hojuelas-colombianas",
-      "branch": "recetas/priority-hojuelas-20261011",
-      "stage": "localization",
-      "attempts": 1,
-      "publication_gate": "not_started",
-      "historical_url_status": "no_verificado",
-      "source_findings": "GSC page regex returned zero rows, URL Master repository text search no hit, historical WordPress Google indexed search no hit; not proof of absence",
-      "db_collision": "PASS_7_CANDIDATE_PATHS_20261011",
-      "source_confirmations": [
-        "https://colanta.com/recetas/hojuelas/",
-        "https://mycolombiancocina.com/hojaldras/"
-      ],
-      "next_action": "Completar DE/EN/FR/IT/JA/PT con cinco FAQ por idioma, añadir FAQPage y SQL; validar y abrir PR.",
-      "branch_sha": "36675e9a603a1fd4c4246af820b635a8d6edbba7",
-      "editorial_file": "editorial/hojuelas-colombianas-20261011.json",
-      "images_manifest": "editorial/hojuelas-colombianas-imagenes.json",
-      "originals_accepted": 8,
-      "originals_missing": 0,
-      "webp_ready": 12,
-      "current_blocker": null,
-      "status": "in_progress"
-    },
-    "processed": 0,
-    "published_verified": 0,
+    "stage": "identity",
+    "recipe_active": null,
+    "processed": 1,
+    "published_verified": 1,
     "skipped_debt": 0,
-    "next_priority_position": 1,
-    "recipes": [],
+    "next_priority_position": 2,
+    "recipes": [
+      {
+        "priority_position": 1,
+        "name": "Hojuelas colombianas",
+        "slug": "hojuelas-colombianas",
+        "recipe_group_id": "2ee52a3f-1824-5ed2-9e69-a390c120f096",
+        "status": "published_and_verified",
+        "stage": "closed",
+        "attempts": 1,
+        "languages_ready": 7,
+        "originals_ready": 8,
+        "webp_ready": 12,
+        "steps_per_language": 8,
+        "faq_per_language": 5,
+        "historical_url_status": "no_verificado",
+        "historical_evidence": "GSC query, repository URL Master text and public indexed search found no route; absence not asserted",
+        "collision_check": "PASS_7_PATHS",
+        "editorial_file": "editorial/hojuelas-colombianas-20261011.json",
+        "images_manifest": "editorial/hojuelas-colombianas-imagenes.json",
+        "sql_file": "scripts/publish-hojuelas-colombianas-20261011.sql",
+        "sql_sha256": "b06ebbc959ed01044da3795b7034d4163fbbb13b6e6168adce5c309b83f6bbd3",
+        "sql_executed": true,
+        "published_database": true,
+        "content_pr": 139,
+        "content_merge_sha": "f9afd5c8ac0e27bad9d645011a794090ec725ce8",
+        "content_ci_runs": [
+          38115242830,
+          38115243064,
+          38115242827,
+          38115242849,
+          38115242843
+        ],
+        "qa_pr": 140,
+        "qa_merge_sha": "0057d74fb08cc87e88b02617594b703ed3a8afb9",
+        "revalidation_run": 38116116685,
+        "qa_artifact_id": 11693565856,
+        "qa": "PASS_7_OF_7_HTTP_VISIBLE_RECIPE_FAQPAGE_BREADCRUMB_CANONICAL_HREFLANG_OG_HOME_CATALOG_SITEMAP",
+        "media_http_sha256": "PASS_12_OF_12",
+        "webp_sha256": [
+          {
+            "path": "/recetas/hojuelas-colombianas/paso-01.webp",
+            "sha256": "7d96d6270c8b782f868d23fcd09d24e269f7269b3b71cefa1936e9c87fe81a5f"
+          },
+          {
+            "path": "/recetas/hojuelas-colombianas/paso-02.webp",
+            "sha256": "e81c700e4a232e27d6ab3141e7780c6a0fe1e7237d2962751b13665d8d08a47b"
+          },
+          {
+            "path": "/recetas/hojuelas-colombianas/paso-03.webp",
+            "sha256": "de5561eb834950e414f4e2e03bbe38229abb1aa0dab2dfce5e33b79f13d6f9c9"
+          },
+          {
+            "path": "/recetas/hojuelas-colombianas/paso-04.webp",
+            "sha256": "feb881f275b889cce6b53e56a7560c856fc54290ba9d67aee3efc403388f99f8"
+          },
+          {
+            "path": "/recetas/hojuelas-colombianas/paso-05.webp",
+            "sha256": "3e65129265adba51b5eebb12f9cc5ddd8ef405e27b1bf1c17586aa53964e04ea"
+          },
+          {
+            "path": "/recetas/hojuelas-colombianas/paso-06.webp",
+            "sha256": "f95bfb1f1f4674664db5360c0b375d0342d4ad64160b29a2e6a8ebacedf6a6f0"
+          },
+          {
+            "path": "/recetas/hojuelas-colombianas/paso-07.webp",
+            "sha256": "0391b5cbaab003f40e20b105a94373f108028922edab92938d3d41681c748596"
+          },
+          {
+            "path": "/recetas/hojuelas-colombianas/paso-08.webp",
+            "sha256": "33beaaa116e61d6cb7e279684a17dc1a6cd391f744a033461e271c04f820e325"
+          },
+          {
+            "path": "/recetas/hojuelas-colombianas/portada.webp",
+            "sha256": "33beaaa116e61d6cb7e279684a17dc1a6cd391f744a033461e271c04f820e325"
+          },
+          {
+            "path": "/recetas/hojuelas-colombianas/portada-1x1.webp",
+            "sha256": "60e6d4f089d2041e9dab6ab15d0924bd4f9f364919e052140ab03bddacd38d11"
+          },
+          {
+            "path": "/recetas/hojuelas-colombianas/portada-4x3.webp",
+            "sha256": "33beaaa116e61d6cb7e279684a17dc1a6cd391f744a033461e271c04f820e325"
+          },
+          {
+            "path": "/recetas/hojuelas-colombianas/portada-16x9.webp",
+            "sha256": "33b30b11c6f059b9e4bcc2c3cb00f3cf4f46f877f3b8df43cc3bd5b2bc9e581c"
+          }
+        ],
+        "urls": [
+          "https://manualdecocina.com/hojuelas-colombianas",
+          "https://manualdecocina.com/de/kolumbianische-hojuelas",
+          "https://manualdecocina.com/en/colombian-hojuelas",
+          "https://manualdecocina.com/fr/hojuelas-colombiennes",
+          "https://manualdecocina.com/it/hojuelas-colombiane",
+          "https://manualdecocina.com/ja/コロンビアのホフエラス",
+          "https://manualdecocina.com/pt/hojuelas-colombianas-receita"
+        ],
+        "closed_at": "2026-10-11T05:53:00Z"
+      }
+    ],
     "queued_at": "2026-10-11",
     "queue_key": "priority_queue",
     "allowed_site": "https://manualdecocina.com"
@@ -69,16 +144,12 @@
   "next_candidate_position": null,
   "run_lease": {
     "owner": "automation-priority-hojuelas-20261011-0511",
-    "status": "active",
+    "status": "released",
     "recipe": "hojuelas-colombianas",
-    "branch": "recetas/priority-hojuelas-20261011",
-    "acquired_at": "2026-10-11T05:11:00Z",
-    "expires_at": "2026-10-11T07:23:00Z",
-    "base_main_sha": "a3cf02c470120aad76dd5afbe0d066f4705f9154",
-    "expected_branch_sha": "36675e9a603a1fd4c4246af820b635a8d6edbba7",
-    "stage": "localization",
-    "reason": "Reanudación horaria exclusiva de Hojuelas colombianas; conservar 2 originales aprobados y completar paso-02..07 antes de localización/publicación.",
-    "renewed_at": "2026-10-11T05:23:00Z"
+    "released_at": "2026-10-11T05:53:00Z",
+    "reason": "published_and_verified",
+    "content_merge_sha": "f9afd5c8ac0e27bad9d645011a794090ec725ce8",
+    "qa_merge_sha": "0057d74fb08cc87e88b02617594b703ed3a8afb9"
   },
   "blockers": [],
   "debt": [
@@ -176,6 +247,21 @@
       "images": 1696,
       "errors": 0,
       "robots_blocked": true
+    },
+    "priority_hojuelas": {
+      "content_pr": 139,
+      "content_merge_sha": "f9afd5c8ac0e27bad9d645011a794090ec725ce8",
+      "media_http_sha256": "PASS_12_OF_12",
+      "database_rows": "PASS_7_OF_7",
+      "revalidation_run": 38116116685,
+      "qa_pr": 140,
+      "qa_merge_sha": "0057d74fb08cc87e88b02617594b703ed3a8afb9",
+      "qa_artifact_id": 11693565856,
+      "pages": 7,
+      "passed": 7,
+      "home_catalog_sitemap": true,
+      "visual_qa": "PASS",
+      "checked_at": "2026-10-11T05:53:00Z"
     }
   },
   "schedule_verified": true,
@@ -189,15 +275,15 @@
     }
   ],
   "activation_authority": "Usuario 2026-10-11: Reactiva tarea horaria con 10 recetas prioritarias; reitera autorización 2026-10-08.",
-  "progress_branch": "recetas/priority-hojuelas-20261011",
-  "last_checkpoint_at": "2026-10-11T05:23:00Z",
+  "progress_branch": null,
+  "last_checkpoint_at": "2026-10-11T05:53:00Z",
   "handoff": {
-    "next_action": "Completar DE/EN/FR/IT/JA/PT con cinco FAQ por idioma, añadir FAQPage y SQL; validar y abrir PR.",
-    "new_published_priority": 0,
-    "priority_remaining": 10
+    "next_action": "En la próxima ejecución, adquirir lease nuevo y procesar únicamente la prioridad 2: pure-de-papa-cremoso; verificar/reactivar la fila archivada y eliminar solo su 302 confirmado.",
+    "new_published_priority": 1,
+    "priority_remaining": 9
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z",
-  "updated_at": "2026-10-09T11:45:28.623Z",
+  "updated_at": "2026-10-11T05:53:00Z",
   "completed_batches": [
     {
       "id": "lote-02-20261008",
@@ -222,21 +308,21 @@
     }
   ],
   "observed_catalog": {
-    "published_groups": 159,
+    "published_groups": 164,
     "published_rows_by_language": {
-      "es": 159,
-      "de": 159,
-      "en": 159,
-      "fr": 159,
-      "it": 159,
-      "ja": 159,
-      "pt": 159
+      "es": 164,
+      "de": 164,
+      "en": 164,
+      "fr": 164,
+      "it": 164,
+      "ja": 164,
+      "pt": 164
     },
     "unpublished_es_groups": 50,
-    "checked_at": "2026-10-09T11:40:03.937865+00:00",
-    "published_es": 159,
+    "checked_at": "2026-10-11T05:53:00Z",
+    "published_es": 164,
     "unpublished_es": 50,
-    "verified_at": "2026-10-09T11:40:03.937865+00:00"
+    "verified_at": "2026-10-11T05:53:00Z"
   },
   "previous_batch": {
     "id": "lote-04-20261009",
