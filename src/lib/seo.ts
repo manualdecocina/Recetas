@@ -3,6 +3,7 @@ import { SUPPORTED_LANGUAGES } from '@/types/recipe'
 import { getSiteUrl, normalizePublicPath, publicUrl, recipeCanonicalUrl, absoluteUrl, languageTag, isIndexingAllowed } from '@/lib/site'
 
 export const SITE_NAME = 'Manual de Cocina'
+export const SOCIAL_LOCALE: Record<string, string> = { es: 'es_ES', en: 'en_GB', de: 'de_DE', fr: 'fr_FR', it: 'it_IT', ja: 'ja_JP', pt: 'pt_BR' }
 const TITLE_SUFFIX = ` | ${SITE_NAME}`
 
 /** Añade " | Manual de Cocina" una única vez, aunque el título ya lo traiga (SQL manual, etc.). */
@@ -74,7 +75,13 @@ export function recipeMetaText(recipe: { title: string; excerpt: string | null; 
   const seo = recipe.seo ?? {}
   const rawTitle = typeof seo.title === 'string' && seo.title.trim() ? seo.title.trim() : recipe.title
   const description = typeof seo.description === 'string' && seo.description.trim() ? seo.description.trim() : (recipe.excerpt ?? undefined)
-  return { title: withSiteName(rawTitle), description }
+  // Máximo aproximado de 60 caracteres para títulos de recetas. Primero quitamos
+  // la marca; si aún excede 60, reducimos por palabra sin alterar el H1 de la receta.
+  const branded = withSiteName(rawTitle)
+  const title = branded.length <= 60 ? branded
+    : rawTitle.length <= 60 ? rawTitle
+    : rawTitle.slice(0, 61).replace(/\s+\S*$/, '').trim() || rawTitle.slice(0, 60)
+  return { title, description }
 }
 
 
