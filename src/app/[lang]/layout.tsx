@@ -9,6 +9,11 @@ import { getSiteUrl, adsenseClientId, adsenseCmpReady, absoluteUrl, languageTag 
 import { DEFAULT_LANGUAGE, SUPPORTED_LANGUAGES } from '@/types/recipe'
 import { siteRobots } from '@/lib/seo'
 
+// Open Graph requires underscore-separated locale identifiers (unlike hreflang).
+const OG_LOCALES: Record<string, string> = {
+  es: 'es_ES', en: 'en_US', de: 'de_DE', fr: 'fr_FR', it: 'it_IT', pt: 'pt_BR', ja: 'ja_JP',
+}
+
 // Layout RAÍZ del sitio público (patrón i18n oficial de Next.js App Router).
 // Cada idioma produce su propio <html lang>: /es → lang="es", /de → lang="de", etc.
 // El panel /admin tiene su propio layout raíz (src/app/admin/layout.tsx).
@@ -70,6 +75,7 @@ export default async function LanguageRootLayout({
   return (
     <html lang={languageTag(lang)} className={`${editorialSerif.variable} ${uiSans.variable}`} suppressHydrationWarning>
       <head>
+        <meta property="og:locale" content={OG_LOCALES[lang] ?? OG_LOCALES.es} />
         <script dangerouslySetInnerHTML={{ __html: "try{var t=localStorage.getItem('md-theme');if(t==='dark'||t==='light')document.documentElement.dataset.theme=t}catch(e){}" }} />
       </head>
       {/* AdSense queda desactivado por defecto. Además del client ID, producción debe declarar
