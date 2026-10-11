@@ -4,6 +4,7 @@ import datetime
 import json
 import pathlib
 import re
+import time
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -167,20 +168,23 @@ def check(record):
 with concurrent.futures.ThreadPoolExecutor(max_workers=7) as pool:
     rows = list(pool.map(check, records))
 
-_, _, sitemap_raw = fetch(BASE + "/sitemap.xml")
-sitemap = ET.fromstring(sitemap_raw)
-found = {urllib.parse.unquote(node.text or "") for node in sitemap.findall(".//{http://www.sitemaps.org/schemas/sitemap/0.9}loc")}
-missing_sitemap = sorted(set(alternates.values()) - found)
-
-surface_checks = {}
-for path in ("/", "/es/recetas"):
-    status, final, raw = fetch(BASE + path)
-    text = raw.decode("utf-8")
-    surface_checks[path] = {
-        "http": status,
-        "final": final,
-        "contains_es_path": "/hojuelas-colombianas" in text,
-    }
+for attempt in range(20):
+    _, _, sitemap_raw = fetch(BASE + "/sitemap.xml")
+    sitemap = ET.fromstring(sitemap_raw)
+    found = {urllib.parse.unquote(node.text or "") for node in sitemap.findall(".//{http://www.sitemaps.org/schemas/sitemap/0.9}loc")}
+    missing_sitemap = sorted(set(alternates.values()) - found)
+    surface_checks = {}
+    for path in ("/es", "/es/recetas"):
+        status, final, raw = fetch(BASE + path)
+        text = raw.decode("utf-8")
+        surface_checks[path] = {
+            "http": status,
+            "final": final,
+            "contains_es_path": "/hojuelas-colombianas" in text,
+        }
+    if not missing_sitemap and all(item["http"] == 200 and item["contains_es_path"] for item in surface_checks.values()):
+        break
+    time.sleep(10)
 
 report = {
     "checked_at": datetime.datetime.now(datetime.timezone.utc).isoformat(),
