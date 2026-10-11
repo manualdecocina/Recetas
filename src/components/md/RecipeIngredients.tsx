@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import type { MdIngredient, MdLanguage } from './md-types';
 import { getMdCopy } from '@/lib/copy';
+import { ingredientDisplayPrefix } from '@/lib/recipe-ingredient-format';
 
 /**
  * Persistencia compatible con la versión anterior del sitio: misma clave
@@ -77,7 +78,7 @@ export default function RecipeIngredients({ recipeId, lang, ingredients }: {
       <h2 className="md-title" id="md-ingredients-heading">{t.ingredients}</h2>
       <ul className="md-ingredient-checks">
         {ingredients.map((item, index) => {
-          const amount = [item.amount, item.unit].filter(Boolean).join(' ');
+          const amount = ingredientDisplayPrefix(item, lang);
           const showGroup = item.group && item.group !== ingredients[index - 1]?.group;
           return (
             <li key={`${recipeId}-ingredient-${index}`} className={showGroup ? 'md-ingredient-has-group' : undefined}>
