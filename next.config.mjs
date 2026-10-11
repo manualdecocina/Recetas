@@ -25,6 +25,15 @@ const nextConfig = {
   async redirects() {
     // La categoría "Desayunos y brunch" se eliminó (7 oct 2026): sus recetas pasaron a categorías canónicas.
     return [
+      // Cuatro correcciones aprobadas de URLs históricas: HTTP 301 explícito, no 308.
+      { source: '/receta-crema-de-campinones', destination: '/receta-crema-de-champinones', statusCode: 301 },
+      { source: '/receta-crema-de-campinones/', destination: '/receta-crema-de-champinones', statusCode: 301 },
+      { source: '/receta-de-garbanzos-com-chorizo', destination: '/receta-de-garbanzos-con-chorizo', statusCode: 301 },
+      { source: '/receta-de-garbanzos-com-chorizo/', destination: '/receta-de-garbanzos-con-chorizo', statusCode: 301 },
+      { source: '/casuela-de-frijoles-colombianos', destination: '/cazuela-de-frijoles-colombianos', statusCode: 301 },
+      { source: '/casuela-de-frijoles-colombianos/', destination: '/cazuela-de-frijoles-colombianos', statusCode: 301 },
+      { source: '/creep-stroganoff', destination: '/crepes-stroganoff', statusCode: 301 },
+      { source: '/creep-stroganoff/', destination: '/crepes-stroganoff', statusCode: 301 },
       // One canonical host: preserve path and query; never serve two indexable hosts.
       {
         source: '/:path*',
