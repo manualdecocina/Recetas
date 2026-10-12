@@ -364,8 +364,6 @@ for lang in LANGS:
         new_links = {l for l in lp.links if l in sitemap} - seen_on_lang
         dbg.append({"page": page_no, "status": status, "links": len(lp.links), "in_sitemap": len(new_links),
                     "sample_not_in_sitemap": sorted(l for l in lp.links if l not in sitemap and "/recetas" not in l)[:3]})
-        if not new_links:
-            break
         seen_on_lang |= new_links
     listing_links |= seen_on_lang
 print("recipe links found on paginated listings:", len(listing_links), flush=True)
