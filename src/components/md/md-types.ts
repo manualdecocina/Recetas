@@ -55,6 +55,6 @@ export interface MdRecipe {
 export type MdRecipeCardData = Pick<
   MdRecipe,
   'id' | 'language' | 'slug' | 'public_path' | 'title' | 'excerpt' | 'category' | 'image_url'
->;
+> & { source_url?: string | null };
 
 export { MD_CATEGORIES } from '@/lib/categories';

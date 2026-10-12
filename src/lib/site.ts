@@ -73,6 +73,14 @@ export function recipeCanonicalUrl(recipe: { public_path: string; source_url?: s
   return historical === exactWordPressUrl ? `${current}/` : current
 }
 
+/** Internal link to a recipe: the same path as its canonical URL (keeps the
+ * historical WordPress trailing slash), so links never point at a non-canonical variant. */
+export function recipeHref(recipe: { public_path: string; source_url?: string | null }): string {
+  const path = publicPathHref(recipe.public_path)
+  const exactWordPressUrl = `https://manualdecocina.com${normalizePublicPath(recipe.public_path)}/`
+  return recipe.source_url?.trim() === exactWordPressUrl && !path.endsWith('/') ? `${path}/` : path
+}
+
 export function recipeUrl(language: RecipeLanguage | string, slug: string): string {
   return `${getSiteUrl()}${recipePath(language, slug)}`
 }
