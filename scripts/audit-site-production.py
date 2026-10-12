@@ -350,15 +350,20 @@ for p in pages:
 # Las páginas 2..N del listado de recetas no están en el sitemap pero son
 # indexables y Google las rastrea, así que también cuentan como origen.
 listing_links = set()
+listing_debug = {}
 for lang in LANGS:
     seen_on_lang = set()
     for page_no in range(2, 40):
         status, _, html = fetch("%s/%s/recetas?page=%d" % (BASE, lang, page_no))
+        dbg = listing_debug.setdefault(lang, [])
         if status != 200:
+            dbg.append({"page": page_no, "status": status})
             break
         lp = Page("%s/%s/recetas?page=%d" % (BASE, lang, page_no))
         lp.feed(html)
         new_links = {l for l in lp.links if l in sitemap} - seen_on_lang
+        dbg.append({"page": page_no, "status": status, "links": len(lp.links), "in_sitemap": len(new_links),
+                    "sample_not_in_sitemap": sorted(l for l in lp.links if l not in sitemap and "/recetas" not in l)[:3]})
         if not new_links:
             break
         seen_on_lang |= new_links
@@ -490,6 +495,7 @@ summary = {
     "breadcrumb_valid": sum(1 for p in pages if p.get("breadcrumb_valid")),
     "hreflang_by_language": hreflang_by_lang,
     "orphan_pages": len(orphans),
+    "listing_debug": listing_debug,
     "robots_txt_blocks_all": robots_blocked,
     "pages_noindex": sum(1 for p in pages if "noindex" in (p.get("robots") or "") or "noindex" in (p.get("googlebot") or "")),
     "not_found_probe": status_404,
