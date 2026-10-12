@@ -1,0 +1,71 @@
+name: production-audit
+# Auditoría de solo lectura del sitio en producción (manualdecocina.com):
+# sitemap, estados HTTP, canonical, hreflang, JSON-LD Recipe/BreadcrumbList,
+# imágenes, enlaces internos, redirecciones históricas y las 70 rutas del lote 1.
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - '.github/workflows/production-audit.yml'
+      - 'scripts/audit-site-production.py'
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - name: Audit production
+        id: audit
+        continue-on-error: true
+        env:
+          AUDIT_BASE: https://manualdecocina.com
+          EXPECTED_URLS: >-
+            /tacos-al-pastor-mexico /de/tacos-al-pastor-rezept /en/homemade-tacos-al-pastor /fr/recette-tacos-al-pastor /it/ricetta-tacos-al-pastor /ja/タコスアルパストールのレシピ /pt/receita-de-tacos-al-pastor
+            /pure-de-papa-cremoso /de/cremiges-kartoffelpueree /en/creamy-mashed-potatoes /fr/puree-de-pommes-de-terre-cremeuse /it/pure-di-patate-cremoso /ja/なめらかマッシュポテトのレシピ /pt/pure-de-batata-cremoso
+            /receta-ensalada-caprese /de/caprese-salat /en/caprese-salad /fr/salade-caprese /it/insalata-caprese /ja/カプレーゼのレシピ /pt/salada-caprese
+            /receta-facil-de-pasta-al-pesto-casera /de/pasta-mit-pesto-genovese /en/homemade-pesto-pasta /fr/pates-au-pesto-maison /it/pasta-al-pesto-alla-genovese /ja/ジェノベーゼパスタのレシピ /pt/macarrao-ao-pesto-caseiro
+            /salmon-a-la-parrilla-con-salsa-de-limon-y-hierbas /de/gegrillter-lachs-zitronen-kraeuter-sauce /en/grilled-salmon-lemon-herb-sauce /fr/saumon-grille-sauce-citron-herbes /it/salmone-alla-griglia-salsa-limone-erbe /ja/サーモンのグリルレモンハーブソース /pt/salmao-grelhado-molho-limao-ervas
+            /receta-de-pan-de-platano-clasico /de/klassisches-bananenbrot /en/classic-banana-bread /fr/banana-bread-classique /it/banana-bread-classico /ja/バナナブレッドのレシピ /pt/pao-de-banana-classico
+            /receta-clasica-de-galletas-toll-house /de/klassische-toll-house-chocolate-chip-cookies /en/classic-toll-house-chocolate-chip-cookies /fr/cookies-toll-house-classiques /it/biscotti-toll-house-gocce-di-cioccolato /ja/トールハウスのチョコチップクッキー /pt/cookies-toll-house-classicos
+            /sangria-cacera /de/sangria-selber-machen /en/homemade-spanish-sangria /fr/sangria-maison /it/sangria-fatta-in-casa /ja/自家製サングリアのレシピ /pt/sangria-caseira
+            /hamburguesas-caseras /de/selbstgemachte-burger /en/homemade-burgers /fr/burgers-maison /it/hamburger-fatti-in-casa /ja/手作りハンバーガーのレシピ /pt/hamburguer-caseiro
+            /receta-sopa-minestrone-saludable /de/gesunde-minestrone /en/healthy-minestrone-soup /fr/soupe-minestrone-saine /it/minestrone-di-verdure-sano /ja/ミネストローネスープのレシピ /pt/sopa-minestrone-saudavel
+        run: python3 scripts/audit-site-production.py
+      - name: Publish findings on the pull request
+        if: always() && github.event_name == 'pull_request'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR: ${{ github.event.pull_request.number }}
+        run: |
+          python3 - <<'PY'
+          import json, os, pathlib, subprocess, collections
+          path = pathlib.Path('site-production-audit.json')
+          if not path.exists():
+              body = 'production-audit: no report was produced (the script crashed). See the job log.'
+          else:
+              report = json.loads(path.read_text())
+              errors = report['errors']
+              grouped = collections.OrderedDict()
+              for e in errors:
+                  grouped.setdefault(e['kind'], []).append(e)
+              lines = ['## production-audit', '', '```json', json.dumps(report['summary'], ensure_ascii=False, indent=1), '```', '']
+              for kind, items in grouped.items():
+                  lines.append('### %s (%d)' % (kind, len(items)))
+                  for e in items[:40]:
+                      lines.append('- `%s` %s' % (e['url'], json.dumps(e.get('detail'), ensure_ascii=False)[:300]))
+                  if len(items) > 40:
+                      lines.append('- … %d more' % (len(items) - 40))
+                  lines.append('')
+              body = '\n'.join(lines)[:64000]
+          pathlib.Path('comment.md').write_text(body)
+          subprocess.run(['gh', 'pr', 'comment', os.environ['PR'], '--body-file', 'comment.md'], check=True)
+          PY
+      - name: Fail when the audit found errors
+        if: steps.audit.outcome == 'failure'
+        run: exit 1
