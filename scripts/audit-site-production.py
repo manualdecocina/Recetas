@@ -284,7 +284,8 @@ def audit_page(url):
         err("html_lang", url, p.html_lang)
     if "noindex" in (p.robots or "") or "noindex" in (p.googlebot or "") or "noindex" in (headers.get("x-robots-tag") or ""):
         err("page_noindex", url, {"robots": p.robots, "googlebot": p.googlebot, "x-robots-tag": headers.get("x-robots-tag")})
-    if p.description and not (50 <= len(p.description) <= 170):
+    min_desc = 25 if expected_lang(path) == "ja" else 50
+    if p.description and not (min_desc <= len(p.description) <= 170):
         err("meta_description_length", url, len(p.description))
     if row["title"] and len(row["title"]) > 75 and expected_lang(path) != "ja":
         err("title_too_long", url, len(row["title"]))
@@ -345,12 +346,31 @@ for p in pages:
         if p["url"] not in back.values():
             err("hreflang_not_reciprocal", p["url"], alt)
 
-# Enlaces internos entrantes (páginas huérfanas dentro del sitemap)
+# Enlaces internos entrantes (páginas huérfanas dentro del sitemap).
+# Las páginas 2..N del listado de recetas no están en el sitemap pero son
+# indexables y Google las rastrea, así que también cuentan como origen.
+listing_links = set()
+for lang in LANGS:
+    seen_on_lang = set()
+    for page_no in range(2, 40):
+        status, _, html = fetch("%s/%s/recetas?page=%d" % (BASE, lang, page_no))
+        if status != 200:
+            break
+        lp = Page("%s/%s/recetas?page=%d" % (BASE, lang, page_no))
+        lp.feed(html)
+        new_links = {l for l in lp.links if l in sitemap} - seen_on_lang
+        if not new_links:
+            break
+        seen_on_lang |= new_links
+    listing_links |= seen_on_lang
+print("recipe links found on paginated listings:", len(listing_links), flush=True)
 inbound = {u: 0 for u in sitemap}
 for p in pages:
     for l in p["links"]:
         if l in inbound and l != p["url"]:
             inbound[l] += 1
+for l in listing_links:
+    inbound[l] += 1
 for p in pages:
     p["inbound_links"] = inbound.get(p["url"], 0)
 orphans = [u for u, n in inbound.items() if n == 0]
