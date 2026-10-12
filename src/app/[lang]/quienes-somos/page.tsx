@@ -69,7 +69,7 @@ const CONTENT: Record<RecipeLanguage, QuienesSomosContent> = {
   de: {
     metaTitle: 'Über uns — Néstor Bastidas | Manual de Cocina',
     metaDescription:
-      'Manual de Cocina wird von Néstor Bastidas geleitet, einem kolumbianischen Koch mit über 15 Jahren Berufserfahrung in der professionellen Küche in Lateinamerika, den USA und Spanien.',
+      'Manual de Cocina wird von Néstor Bastidas geleitet, einem kolumbianischen Koch mit über 15 Jahren Berufserfahrung in Lateinamerika, den USA und Spanien.',
     eyebrow: 'Manual de Cocina',
     title: 'Über uns',
     intro: 'Ein kulinarisches Redaktionsprojekt, um besser zu kochen – mit klaren Rezepten und nützlichen Werkzeugen.',
@@ -92,7 +92,7 @@ const CONTENT: Record<RecipeLanguage, QuienesSomosContent> = {
   fr: {
     metaTitle: 'Qui sommes-nous — Néstor Bastidas | Manual de Cocina',
     metaDescription:
-      "Manual de Cocina est dirigé par Néstor Bastidas, chef colombien avec plus de 15 ans d'expérience en cuisine professionnelle en Amérique latine, aux États-Unis et en Espagne.",
+      "Manual de Cocina est dirigé par Néstor Bastidas, chef colombien avec plus de 15 ans d'expérience en Amérique latine, aux États-Unis et en Espagne.",
     eyebrow: 'Manual de Cocina',
     title: 'Qui sommes-nous',
     intro: 'Un projet éditorial gastronomique pour mieux cuisiner, avec des recettes claires et des outils utiles.',
