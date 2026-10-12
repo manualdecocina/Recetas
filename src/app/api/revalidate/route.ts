@@ -2,6 +2,12 @@ import { NextRequest, NextResponse } from 'next/server'
 import { revalidateTag } from 'next/cache'
 import { RECIPES_CACHE_TAG } from '@/lib/cache'
 
+// Nunca cachear esta ruta: la CDN de Hostinger devolvía una respuesta GET guardada y
+// la invalidación no se ejecutaba en llamadas posteriores.
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
+const NO_STORE = { 'Cache-Control': 'private, no-store, no-cache, max-age=0, must-revalidate', 'CDN-Cache-Control': 'no-store' }
+
 // Ruta de revalidación bajo demanda, protegida por secreto compartido.
 //
 // Por qué existe: todas las lecturas públicas de recetas se sirven desde el Data
@@ -26,17 +32,17 @@ function handleRevalidate(request: NextRequest) {
   if (!secret) {
     return NextResponse.json(
       { error: 'REVALIDATE_SECRET no está configurado en el servidor.' },
-      { status: 500 },
+      { status: 500, headers: NO_STORE },
     )
   }
 
   const provided = request.headers.get('x-revalidate-secret') ?? request.nextUrl.searchParams.get('secret')
   if (provided !== secret) {
-    return NextResponse.json({ error: 'No autorizado.' }, { status: 401 })
+    return NextResponse.json({ error: 'No autorizado.' }, { status: 401, headers: NO_STORE })
   }
 
   revalidateTag(RECIPES_CACHE_TAG, 'max')
-  return NextResponse.json({ revalidated: true, tag: RECIPES_CACHE_TAG, at: new Date().toISOString() })
+  return NextResponse.json({ revalidated: true, tag: RECIPES_CACHE_TAG, at: new Date().toISOString() }, { headers: NO_STORE })
 }
 
 export async function POST(request: NextRequest) {
