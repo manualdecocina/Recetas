@@ -10,7 +10,7 @@ import { localizePantryRecipes, pantryIngredientCoverage } from '@/lib/pantry-lo
 
 // Solo lectura, con el mismo cliente público y las mismas tablas/filtros que ya usan las
 // demás rutas (recetas publicadas por idioma). No inventa datos: si no hay, devuelve vacío.
-const CARD_FIELDS = 'id, language, slug, public_path, title, excerpt, category, image_url'
+const CARD_FIELDS = 'id, language, slug, public_path, source_url, title, excerpt, category, image_url'
 
 /** Una sola consulta: conteo real por categoría y una foto real de una receta de esa categoría.
  *  `category` se guarda traducido por idioma, así que la comparación usa la etiqueta de ese

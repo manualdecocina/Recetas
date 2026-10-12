@@ -43,7 +43,7 @@ async function getIngredient(lang: RecipeLanguage, slug: string) {
 
   const { data: recipes, error: recipesError } = await supabase
     .from('recipes')
-    .select('id, language, slug, public_path, title, excerpt, category, image_url')
+    .select('id, language, slug, public_path, source_url, title, excerpt, category, image_url')
     .in('id', ids)
     .eq('language', lang)
     .eq('published', true)

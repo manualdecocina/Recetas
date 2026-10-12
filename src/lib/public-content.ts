@@ -85,7 +85,7 @@ export const getRecipeTranslations = cache(async (recipeGroupId: string) => {
 })
 
 
-type RelatedRecipeCard = Pick<Recipe, 'id' | 'language' | 'slug' | 'public_path' | 'title' | 'excerpt' | 'category' | 'image_url'>
+type RelatedRecipeCard = Pick<Recipe, 'id' | 'language' | 'slug' | 'public_path' | 'source_url' | 'title' | 'excerpt' | 'category' | 'image_url'>
 
 export const getRelatedRecipes = cache(async (recipe: Pick<Recipe, 'id' | 'language' | 'category' | 'cuisine'>): Promise<RelatedRecipeCard[]> => {
   const selected: RelatedRecipeCard[] = []
@@ -95,7 +95,7 @@ export const getRelatedRecipes = cache(async (recipe: Pick<Recipe, 'id' | 'langu
   // y luego con recetas recientes evita dejar sin enlaces las URLs históricas.
   async function collect(filter?: { column: 'category' | 'cuisine'; value: string }) {
     let query = supabase.from('recipes')
-      .select('id, language, slug, public_path, title, excerpt, category, image_url')
+      .select('id, language, slug, public_path, source_url, title, excerpt, category, image_url')
       .eq('language', recipe.language)
       .eq('published', true)
       .neq('id', recipe.id)

@@ -41,7 +41,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ lang:
   const label = categoryLabel(lang, slug)!
 
   const { data: recipes, error } = await supabase.from('recipes')
-    .select('id, language, slug, public_path, title, excerpt, category, image_url')
+    .select('id, language, slug, public_path, source_url, title, excerpt, category, image_url')
     .eq('language', lang).eq('published', true).eq('category', label)
     .order('ready_at', { ascending: false, nullsFirst: false })
 

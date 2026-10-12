@@ -5,7 +5,7 @@ import { getMdCopy } from '@/lib/copy'
 import { categorySlugFromLabel } from '@/lib/categories'
 import { breadcrumbJsonLd } from '@/lib/breadcrumbs'
 import { getRecipeTranslations } from '@/lib/public-content'
-import { publicPathHref } from '@/lib/site'
+import { recipeHref } from '@/lib/site'
 import { recipePublisher, recipeStepAnchor, shouldPublishAggregateRating } from '@/lib/recipe-schema'
 import { ingredientDisplayText } from '@/lib/recipe-ingredient-format'
 import SiteHeader from '@/components/md/SiteHeader'
@@ -24,10 +24,10 @@ function cleanHtml(html: string): string {
 // Solo cambió la presentación (src/components/md/*). Este componente ahora también
 // pinta cabecera y pie, para que las rutas que lo usan no tengan que hacerlo.
 
-export async function RecipeDocument({ recipe, relatedRecipes = [] }: { recipe: Recipe; relatedRecipes?: Array<Pick<Recipe, 'id' | 'language' | 'slug' | 'public_path' | 'title' | 'excerpt' | 'category' | 'image_url'>> }) {
+export async function RecipeDocument({ recipe, relatedRecipes = [] }: { recipe: Recipe; relatedRecipes?: Array<Pick<Recipe, 'id' | 'language' | 'slug' | 'public_path' | 'source_url' | 'title' | 'excerpt' | 'category' | 'image_url'>> }) {
   const translations = recipe.recipe_group_id ? await getRecipeTranslations(recipe.recipe_group_id) : []
   const alternates = Object.fromEntries(
-    translations.filter((t) => t.language !== recipe.language).map((t) => [t.language, publicPathHref(t.public_path)])
+    translations.filter((t) => t.language !== recipe.language).map((t) => [t.language, recipeHref(t)])
   )
   const notesHtml = recipe.notes ? cleanHtml(recipe.notes) : ''
   const totalMinutes = recipe.total_time_minutes ??
