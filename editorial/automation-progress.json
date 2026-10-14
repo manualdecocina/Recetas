@@ -32,7 +32,19 @@
     "target": 10,
     "status": "in_progress",
     "stage": "identity",
-    "recipe_active": null,
+    "recipe_active": {
+      "priority_position": 3,
+      "name": "Patacones con hogao",
+      "slug": "patacones-con-hogao",
+      "branch": "recetas/priority-patacones-con-hogao-20261014",
+      "stage": "identity",
+      "attempts": 1,
+      "status": "in_progress",
+      "historical_url_status": "no_verificado",
+      "historical_evidence": "URL Master en repositorio, búsqueda pública y GSC Analytics sin ruta; ausencia histórica no afirmada",
+      "collision_check": "PASS_NO_EXISTING_PATACON_OR_HOGAO_IN_RECIPES_CONTENT_PAGES_REDIRECTS",
+      "next_action": "Cerrar ES con fuentes culinarias y nutrición USDA, luego ocho imágenes y seis localizaciones; no publicar antes de validar medios y CI."
+    },
     "processed": 2,
     "published_verified": 2,
     "skipped_debt": 0,
@@ -180,7 +192,17 @@
     "allowed_site": "https://manualdecocina.com"
   },
   "next_candidate_position": null,
-  "run_lease": null,
+  "run_lease": {
+    "owner": "manual-continuation-20261014",
+    "status": "active",
+    "recipe": "patacones-con-hogao",
+    "branch": "recetas/priority-patacones-con-hogao-20261014",
+    "acquired_at": "2026-10-14T00:45:51.372Z",
+    "expires_at": "2026-10-14T02:45:51.372Z",
+    "base_main_sha": "6f1fc374ecdc9158114d4b46d9ed0b37cd57b247",
+    "stage": "identity",
+    "reason": "Prioridad 3, una receta activa"
+  },
   "blockers": [],
   "debt": [
     {
@@ -305,15 +327,15 @@
     }
   ],
   "activation_authority": "Usuario 2026-10-11: Reactiva tarea horaria con 10 recetas prioritarias; reitera autorización 2026-10-08.",
-  "progress_branch": "main",
-  "last_checkpoint_at": "2026-10-14T00:38:30.218Z",
+  "progress_branch": "recetas/priority-patacones-con-hogao-20261014",
+  "last_checkpoint_at": "2026-10-14T00:45:51.372Z",
   "handoff": {
     "next_action": "Prioridad 3: patacones con hogao; verificar identidad y URL Master antes de crear contenido. No repetir puré ni sus medios.",
     "new_published_priority": 2,
     "priority_remaining": 8
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z",
-  "updated_at": "2026-10-14T00:38:30.218Z",
+  "updated_at": "2026-10-14T00:45:51.372Z",
   "completed_batches": [
     {
       "id": "lote-02-20261008",
