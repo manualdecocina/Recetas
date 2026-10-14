@@ -4,7 +4,7 @@
   "repository": "manualdecocina/Recetas",
   "preview": "https://preview.manualdecocina.com",
   "updated_date": "2026-10-14",
-  "automation_status": "active_priority_10",
+  "automation_status": "paused_priority_10_manual_continuation",
   "automation_id": "6ac6fb673c5c8191b3435ae6074ddc63",
   "requested_schedule": "RRULE:FREQ=HOURLY",
   "requested_model": "gpt-6.1-sol",
@@ -143,7 +143,7 @@
         "branch": "recetas/priority-pure-de-papa-cremoso-20261011",
         "stage": "closed",
         "attempts": 1,
-        "publication_gate": "editorial_and_media_ready_pending_validation_pr",
+        "publication_gate": "PUBLISHED_VERIFIED_7_URLS_12_MEDIA",
         "historical_url_status": "yes_keep_rebuild",
         "historical_url": "https://manualdecocina.com/pure-de-papa-cremoso",
         "identity": {
@@ -297,7 +297,7 @@
   "schedule_verified": true,
   "schedule": "BEGIN:VEVENT\nRRULE:FREQ=HOURLY\nEND:VEVENT",
   "default_timezone": "Europe/Berlin",
-  "is_enabled": true,
+  "is_enabled": false,
   "configuration_notes": [
     {
       "code": "MODEL_SETTING_UNVERIFIED",
@@ -305,7 +305,7 @@
     }
   ],
   "activation_authority": "Usuario 2026-10-11: Reactiva tarea horaria con 10 recetas prioritarias; reitera autorización 2026-10-08.",
-  "progress_branch": "fix/pure-manifest-continuity-20261014",
+  "progress_branch": "main",
   "last_checkpoint_at": "2026-10-14T00:38:30.218Z",
   "handoff": {
     "next_action": "Prioridad 3: patacones con hogao; verificar identidad y URL Master antes de crear contenido. No repetir puré ni sus medios.",
@@ -350,7 +350,9 @@
       "ja": 188,
       "pt": 188
     },
-    "checked_at": "2026-10-14T00:38:30.218Z"
+    "checked_at": "2026-10-14T00:38:30.218Z",
+    "unpublished_es_groups": 27,
+    "verified_at": "2026-10-14T00:38:30.218Z"
   },
   "previous_batch": {
     "id": "lote-04-20261009",
