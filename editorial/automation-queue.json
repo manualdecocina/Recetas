@@ -1293,18 +1293,42 @@
       "title_requested": "Patacones con hogao",
       "slug_suggested": "patacones-con-hogao",
       "slug_exact": false,
-      "status": "pending",
-      "execution_attempts": 0,
-      "historical_url_status": "to_verify",
+      "status": "published_and_verified",
+      "execution_attempts": 1,
+      "historical_url_status": "no_verificado",
       "historical_url": null,
-      "historical_url_sources": [],
-      "url_collision_check": "pending",
-      "publication_gate": "not_started",
+      "historical_url_sources": [
+        "URL Master repository search: no match",
+        "GSC page performance patacon|hogao: no rows",
+        "Public indexed search: no exact recipe URL"
+      ],
+      "url_collision_check": "PASS_7_PATHS_RECIPES_CONTENT_PAGES_REDIRECTS",
+      "publication_gate": "PASS_7_URLS_12_MEDIA_DB_HOME_CATALOG_SITEMAP",
       "language_count_required": 7,
       "original_png_required": 8,
       "webp_required": 12,
       "steps_required": 8,
-      "faq_per_language_required": 5
+      "faq_per_language_required": 5,
+      "working_branch": "recetas/priority-patacones-con-hogao-20261014",
+      "images_verified": 8,
+      "webp_verified": 12,
+      "recipe_group_id": "2d311f01-3a8d-52fa-b900-8329ba2ddec8",
+      "content_pr": 176,
+      "content_merge_sha": "4145539da7f9de352f5ab176971e2d67603466f6",
+      "qa_pr": 177,
+      "qa_merge_sha": "cd39d01e6e24b8cc8964a3fab892f3628c147333",
+      "revalidation_run": 38495288407,
+      "qa_artifact_id": 11862734064,
+      "urls": [
+        "https://manualdecocina.com/patacones-con-hogao",
+        "https://manualdecocina.com/de/kolumbianische-patacones-mit-hogao",
+        "https://manualdecocina.com/en/colombian-patacones-with-hogao",
+        "https://manualdecocina.com/fr/patacones-colombiens-au-hogao",
+        "https://manualdecocina.com/it/patacones-colombiani-con-hogao",
+        "https://manualdecocina.com/ja/パタコンとオガオ",
+        "https://manualdecocina.com/pt/patacones-com-hogao"
+      ],
+      "closed_at": "2026-10-14T01:26:07Z"
     },
     {
       "priority_position": 4,
@@ -1440,11 +1464,11 @@
       "faq_per_language_required": 5
     }
   ],
-  "priority_next_position": 3,
-  "priority_pending_total": 8,
+  "priority_next_position": 4,
+  "priority_pending_total": 7,
   "priority_precedes_legacy_candidates": true,
   "priority_status": "in_progress",
   "priority_created_date": "2026-10-11",
   "priority_notes": "One recipe per hourly run. Historical URL identity validation per recipe; preserve existing candidates and held lists. Skip only after two failed execution attempts and document debt. User permission renewed 2026-10-11.",
-  "priority_last_reconciled_at": "2026-10-14T00:39:35.415Z"
+  "priority_last_reconciled_at": "2026-10-14T01:26:07Z"
 }
