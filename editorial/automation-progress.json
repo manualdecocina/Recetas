@@ -3,8 +3,8 @@
   "project": "Manual de Cocina",
   "repository": "manualdecocina/Recetas",
   "preview": "https://preview.manualdecocina.com",
-  "updated_date": "2026-10-11",
-  "automation_status": "active_priority_10",
+  "updated_date": "2026-10-14",
+  "automation_status": "paused_priority_10_manual_continuation",
   "automation_id": "6ac6fb673c5c8191b3435ae6074ddc63",
   "requested_schedule": "RRULE:FREQ=HOURLY",
   "requested_model": "gpt-6.1-sol",
@@ -31,41 +31,12 @@
     "source": "user_priority_20261011",
     "target": 10,
     "status": "in_progress",
-    "stage": "localization",
-    "recipe_active": {
-      "priority_position": 2,
-      "name": "Puré de papa cremoso",
-      "slug": "pure-de-papa-cremoso",
-      "branch": "recetas/priority-pure-de-papa-cremoso-20261011",
-      "stage": "localization",
-      "attempts": 1,
-      "publication_gate": "editorial_and_media_ready_pending_validation_pr",
-      "historical_url_status": "yes_keep_rebuild",
-      "historical_url": "https://manualdecocina.com/pure-de-papa-cremoso",
-      "identity": {
-        "id": "6772864b-94f8-4ff9-8b65-f84c6c47753b",
-        "recipe_group_id": "8f6dc75e-321e-4e96-8047-57f95a7c17a7",
-        "created_at": "2026-09-25T00:03:11.941373+00:00",
-        "archived_state_verified": true,
-        "gsc": "URL is unknown to Google; no canonical reported on 2026-10-11",
-        "redirect": "5a77b77c-f570-42d2-8598-d0a13928ff6e /pure-de-papa-cremoso -> /es/recetas 302"
-      },
-      "collision_check": "PASS_7_PATHS_RECIPES_CONTENT_PAGES_REDIRECTS",
-      "languages_ready": 7,
-      "originals_ready": 8,
-      "webp_ready": 12,
-      "steps_per_language": 8,
-      "faq_per_language": 5,
-      "editorial_file": "editorial/pure-de-papa-cremoso-20261011.json",
-      "images_manifest": "editorial/pure-de-papa-cremoso-imagenes.json",
-      "sql_file": "scripts/publish-pure-de-papa-cremoso-20261011.sql",
-      "next_action": "Validar paquete/SQL, ejecutar typecheck/tests/build, abrir PR único y esperar CI verde; no ejecutar SQL antes del deploy verificado.",
-      "status": "in_progress"
-    },
-    "processed": 1,
-    "published_verified": 1,
+    "stage": "identity",
+    "recipe_active": null,
+    "processed": 2,
+    "published_verified": 2,
     "skipped_debt": 0,
-    "next_priority_position": 2,
+    "next_priority_position": 3,
     "recipes": [
       {
         "priority_position": 1,
@@ -164,6 +135,44 @@
           "https://manualdecocina.com/pt/hojuelas-colombianas-receita"
         ],
         "closed_at": "2026-10-11T05:53:00Z"
+      },
+      {
+        "priority_position": 2,
+        "name": "Puré de papa cremoso",
+        "slug": "pure-de-papa-cremoso",
+        "branch": "recetas/priority-pure-de-papa-cremoso-20261011",
+        "stage": "closed",
+        "attempts": 1,
+        "publication_gate": "PUBLISHED_VERIFIED_7_URLS_12_MEDIA",
+        "historical_url_status": "yes_keep_rebuild",
+        "historical_url": "https://manualdecocina.com/pure-de-papa-cremoso",
+        "identity": {
+          "id": "6772864b-94f8-4ff9-8b65-f84c6c47753b",
+          "recipe_group_id": "8f6dc75e-321e-4e96-8047-57f95a7c17a7",
+          "created_at": "2026-09-25T00:03:11.941373+00:00",
+          "archived_state_verified": true,
+          "gsc": "URL is unknown to Google; no canonical reported on 2026-10-11",
+          "redirect": "5a77b77c-f570-42d2-8598-d0a13928ff6e /pure-de-papa-cremoso -> /es/recetas 302"
+        },
+        "collision_check": "PASS_7_PATHS_RECIPES_CONTENT_PAGES_REDIRECTS",
+        "languages_ready": 7,
+        "originals_ready": 8,
+        "webp_ready": 12,
+        "steps_per_language": 8,
+        "faq_per_language": 5,
+        "editorial_file": "editorial/pure-de-papa-cremoso-20261011.json",
+        "images_manifest": "editorial/pure-de-papa-cremoso-imagenes.json",
+        "sql_file": "scripts/publish-pure-de-papa-cremoso-20261011.sql",
+        "next_action": null,
+        "status": "published_and_verified",
+        "content_pr": 142,
+        "content_merge_sha": "08f3f686e3c93a8a19d547f1e7f080f7634f28b7",
+        "nutrition_fix_pr": 143,
+        "media_replacement_pr": 149,
+        "published_database": true,
+        "qa": "PASS_7_OF_7_HTTP_RECIPE_FAQPAGE_BREADCRUMB_CANONICAL_HREFLANG;_12_OF_12_MEDIA_MATCH_MAIN;_HOME_CATALOG_SITEMAP_VISIBLE",
+        "media_manifest": "editorial/pure-de-papa-cremoso-imagenes.json",
+        "closed_at": "2026-10-14T00:38:30.218Z"
       }
     ],
     "queued_at": "2026-10-11",
@@ -171,18 +180,7 @@
     "allowed_site": "https://manualdecocina.com"
   },
   "next_candidate_position": null,
-  "run_lease": {
-    "owner": "automation-priority-pure-20261011-1107",
-    "status": "active",
-    "recipe": "pure-de-papa-cremoso",
-    "branch": "recetas/priority-pure-de-papa-cremoso-20261011",
-    "acquired_at": "2026-10-11T11:07:00Z",
-    "expires_at": "2026-10-11T13:07:00Z",
-    "base_main_sha": "c7b1563e1c3c58a9b0b7004c08690a83113ff640",
-    "expected_branch_sha": "c7b1563e1c3c58a9b0b7004c08690a83113ff640",
-    "stage": "localization",
-    "reason": "Procesar exclusivamente prioridad 2; reactivar fila histórica y retirar solo el redirect verificado."
-  },
+  "run_lease": null,
   "blockers": [],
   "debt": [
     {
@@ -299,7 +297,7 @@
   "schedule_verified": true,
   "schedule": "BEGIN:VEVENT\nRRULE:FREQ=HOURLY\nEND:VEVENT",
   "default_timezone": "Europe/Berlin",
-  "is_enabled": true,
+  "is_enabled": false,
   "configuration_notes": [
     {
       "code": "MODEL_SETTING_UNVERIFIED",
@@ -307,15 +305,15 @@
     }
   ],
   "activation_authority": "Usuario 2026-10-11: Reactiva tarea horaria con 10 recetas prioritarias; reitera autorización 2026-10-08.",
-  "progress_branch": "recetas/priority-pure-de-papa-cremoso-20261011",
-  "last_checkpoint_at": "2026-10-11T12:20:00Z",
+  "progress_branch": "main",
+  "last_checkpoint_at": "2026-10-14T00:38:30.218Z",
   "handoff": {
-    "next_action": "Validar y publicar exclusivamente pure-de-papa-cremoso desde la rama activa; no iniciar prioridad 3.",
-    "new_published_priority": 1,
-    "priority_remaining": 9
+    "next_action": "Prioridad 3: patacones con hogao; verificar identidad y URL Master antes de crear contenido. No repetir puré ni sus medios.",
+    "new_published_priority": 2,
+    "priority_remaining": 8
   },
   "next_relay_requested_at": "2026-10-08T02:59:04Z",
-  "updated_at": "2026-10-11T11:07:00Z",
+  "updated_at": "2026-10-14T00:38:30.218Z",
   "completed_batches": [
     {
       "id": "lote-02-20261008",
@@ -340,21 +338,21 @@
     }
   ],
   "observed_catalog": {
-    "published_groups": 164,
+    "published_groups": 188,
+    "published_es": 188,
+    "unpublished_es": 27,
     "published_rows_by_language": {
-      "es": 164,
-      "de": 164,
-      "en": 164,
-      "fr": 164,
-      "it": 164,
-      "ja": 164,
-      "pt": 164
+      "es": 188,
+      "de": 188,
+      "en": 188,
+      "fr": 188,
+      "it": 188,
+      "ja": 188,
+      "pt": 188
     },
-    "unpublished_es_groups": 50,
-    "checked_at": "2026-10-11T05:53:00Z",
-    "published_es": 164,
-    "unpublished_es": 50,
-    "verified_at": "2026-10-11T05:53:00Z"
+    "checked_at": "2026-10-14T00:38:30.218Z",
+    "unpublished_es_groups": 27,
+    "verified_at": "2026-10-14T00:38:30.218Z"
   },
   "previous_batch": {
     "id": "lote-04-20261009",
@@ -1697,9 +1695,9 @@
     "id": "priority-10-20261011",
     "queue_key": "priority_queue",
     "target": 10,
-    "completed": 0,
+    "completed": 2,
     "debts": 0,
-    "next_position": 1,
+    "next_position": 3,
     "completion_rule": "7_urls_and_12_media_verified_per_recipe",
     "schedule": "FREQ=HOURLY",
     "max_concurrent_recipes": 1
