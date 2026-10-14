@@ -1263,7 +1263,7 @@
       "title_requested": "Puré de papa cremoso",
       "slug_suggested": "pure-de-papa-cremoso",
       "slug_exact": true,
-      "status": "in_progress",
+      "status": "published_and_verified",
       "execution_attempts": 1,
       "historical_url_status": "yes_keep_rebuild",
       "historical_url": "https://manualdecocina.com/pure-de-papa-cremoso",
@@ -1273,14 +1273,19 @@
         "GSC URL Inspection 2026-10-11: URL unknown to Google"
       ],
       "url_collision_check": "PASS_7_PATHS_RECIPES_CONTENT_PAGES_REDIRECTS",
-      "publication_gate": "EDITORIAL_AND_MEDIA_READY_PENDING_VALIDATION_PR_DEPLOY_DB_QA",
+      "publication_gate": "PASS_7_URLS_12_MEDIA_DB_HOME_CATALOG_SITEMAP",
       "language_count_required": 7,
       "original_png_required": 8,
       "webp_required": 12,
       "steps_required": 8,
       "faq_per_language_required": 5,
       "recovery": "reactivate_existing_archived_recipe_and_remove_verified_302_to_/es/recetas",
-      "working_branch": "recetas/priority-pure-de-papa-cremoso-20261011"
+      "working_branch": "recetas/priority-pure-de-papa-cremoso-20261011",
+      "content_pr": 142,
+      "nutrition_fix_pr": 143,
+      "media_replacement_pr": 149,
+      "manifest_reconciliation_pr": 175,
+      "closed_at": "2026-10-14T00:38:30.218Z"
     },
     {
       "priority_position": 3,
@@ -1435,10 +1440,11 @@
       "faq_per_language_required": 5
     }
   ],
-  "priority_next_position": 2,
-  "priority_pending_total": 9,
+  "priority_next_position": 3,
+  "priority_pending_total": 8,
   "priority_precedes_legacy_candidates": true,
   "priority_status": "in_progress",
   "priority_created_date": "2026-10-11",
-  "priority_notes": "One recipe per hourly run. Historical URL identity validation per recipe; preserve existing candidates and held lists. Skip only after two failed execution attempts and document debt. User permission renewed 2026-10-11."
+  "priority_notes": "One recipe per hourly run. Historical URL identity validation per recipe; preserve existing candidates and held lists. Skip only after two failed execution attempts and document debt. User permission renewed 2026-10-11.",
+  "priority_last_reconciled_at": "2026-10-14T00:39:35.415Z"
 }
