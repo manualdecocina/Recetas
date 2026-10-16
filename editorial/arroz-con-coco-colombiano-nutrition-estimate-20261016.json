@@ -1,0 +1,174 @@
+{
+  "status": "PREPUBLICATION_ESTIMATE_NOT_LAB_VALIDATED",
+  "date": "2026-10-16",
+  "recipe": "arroz-con-coco-colombiano",
+  "servings": 6,
+  "method": "Sum([reference nutrient / 100g] × weighed ingredient grams × assumed retention) / 6",
+  "foods": [
+    {
+      "item": "arroz blanco largo crudo",
+      "fdc_id": 169756,
+      "grams": 380,
+      "source": "https://batchbase.com.au/usda-foods/169756",
+      "per_100g": {
+        "calories": 365,
+        "protein_g": 7.13,
+        "fat_g": 0.66,
+        "saturated_fat_g": 0.18,
+        "carbs_g": 79.95,
+        "sugars_g": 0.12,
+        "fiber_g": 1.3,
+        "sodium_mg": 5
+      }
+    },
+    {
+      "item": "pulpa de coco fresca",
+      "fdc_id": 170169,
+      "grams": 300,
+      "source": "https://batchbase.com.au/usda-foods/170169",
+      "per_100g": {
+        "calories": 354,
+        "protein_g": 3.33,
+        "fat_g": 33.5,
+        "saturated_fat_g": 29.7,
+        "carbs_g": 15.2,
+        "sugars_g": 6.23,
+        "fiber_g": 9,
+        "sodium_mg": 20
+      },
+      "extraction_assumption": 0.7,
+      "remark": "70% is an illustrative recovery assumption, not a laboratory measurement. Coconut fiber largely stays in the squeezed pulp and is set to zero in this approximation."
+    },
+    {
+      "item": "azúcar moreno USDA, sustituto cuantitativo de la panela",
+      "fdc_id": 168833,
+      "grams": 30,
+      "source": "https://batchbase.com.au/usda-foods/168833",
+      "per_100g": {
+        "calories": 380,
+        "protein_g": 0.12,
+        "fat_g": 0,
+        "saturated_fat_g": 0,
+        "carbs_g": 98.1,
+        "sugars_g": 97,
+        "fiber_g": 0,
+        "sodium_mg": 28
+      },
+      "remark": "Brown sugar is used as a proxy, not identical to panela."
+    },
+    {
+      "item": "sal fina",
+      "fdc_id": 173468,
+      "grams": 5,
+      "source": "https://batchbase.com.au/usda-foods/173468",
+      "per_100g": {
+        "calories": 0,
+        "protein_g": 0,
+        "fat_g": 0,
+        "saturated_fat_g": 0,
+        "carbs_g": 0,
+        "sugars_g": 0,
+        "fiber_g": 0,
+        "sodium_mg": 38800
+      }
+    },
+    {
+      "item": "pasas negras opcionales",
+      "fdc_id": 168165,
+      "grams": 50,
+      "source": "https://batchbase.com.au/usda-foods/168165",
+      "per_100g": {
+        "calories": 299,
+        "protein_g": 3.3,
+        "fat_g": 0.25,
+        "saturated_fat_g": 0.09,
+        "carbs_g": 79.3,
+        "sugars_g": 65.2,
+        "fiber_g": 4.5,
+        "sodium_mg": 26
+      },
+      "optional": true
+    }
+  ],
+  "caveats": [
+    "The raw coconut flesh is squeezed and discarded; coconut milk has unmeasured nutrient extraction yield. 70% non-fiber recovery is a hypothetical calculation scenario, not empirically verified.",
+    "No dietary fiber is credited from the squeezed coconut. The true content may be higher.",
+    "Brown sugar from USDA is used as a proxy for Colombian panela.",
+    "Water adds zero energy. Cooked rice mass changes with water absorption but not the total raw-ingredient energy.",
+    "Values vary if raisins are added. This cannot be presented as measured nutrition."
+  ],
+  "model_base_with_raisins": {
+    "servings": 6,
+    "with_optional_raisins": true,
+    "assumed_coconut_recovery": 0.7,
+    "per_serving": {
+      "calories": 399,
+      "protein_g": 6,
+      "fat_g": 12.2,
+      "saturated_fat_g": 10.5,
+      "carbs_g": 67.5,
+      "sugars_g": 12.5,
+      "fiber_g": 1.2,
+      "sodium_mg": 337.1
+    },
+    "recipe_total": {
+      "calories": 2393.9,
+      "protein_g": 35.8,
+      "fat_g": 73,
+      "saturated_fat_g": 63.1,
+      "carbs_g": 404.8,
+      "sugars_g": 75.2,
+      "fiber_g": 7.2,
+      "sodium_mg": 2022.4
+    }
+  },
+  "model_base_without_raisins": {
+    "servings": 6,
+    "with_optional_raisins": false,
+    "assumed_coconut_recovery": 0.7,
+    "per_serving": {
+      "calories": 374.1,
+      "protein_g": 5.7,
+      "fat_g": 12.1,
+      "saturated_fat_g": 10.5,
+      "carbs_g": 60.9,
+      "sugars_g": 7.1,
+      "fiber_g": 0.8,
+      "sodium_mg": 334.9
+    },
+    "recipe_total": {
+      "calories": 2244.4,
+      "protein_g": 34.1,
+      "fat_g": 72.9,
+      "saturated_fat_g": 63.1,
+      "carbs_g": 365.2,
+      "sugars_g": 42.6,
+      "fiber_g": 4.9,
+      "sodium_mg": 2009.4
+    }
+  },
+  "sensitivity_with_raisins": {
+    "retention_50_percent": {
+      "calories": 363.6,
+      "protein_g": 5.6,
+      "fat_g": 8.8,
+      "saturated_fat_g": 7.5,
+      "carbs_g": 65.9,
+      "sugars_g": 11.9,
+      "fiber_g": 1.2,
+      "sodium_mg": 335.1
+    },
+    "retention_100_percent": {
+      "calories": 452.1,
+      "protein_g": 6.5,
+      "fat_g": 17.2,
+      "saturated_fat_g": 15,
+      "carbs_g": 69.7,
+      "sugars_g": 13.5,
+      "fiber_g": 1.2,
+      "sodium_mg": 340.1
+    }
+  },
+  "quality_gate": "Needs formal editorial acceptance of the declared extraction assumption or measured extraction yield before publishing nutrition as a definitive value.",
+  "culinary_primary_source": "https://www.cancilleria.gov.co/libros/CatalogoBibliograficoRecetasColombia.pdf"
+}
