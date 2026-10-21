@@ -17,7 +17,7 @@ jobs:
             "https://manualdecocina.com/it/ricetta-colombiana-lechona/" \
             "https://manualdecocina.com/empanada-peruana-de-pollo/" \
             "https://manualdecocina.com/de/ajiaco-rezept/"; do
-            echo "=== $u"
-            curl -sS -D - -o page.html -A "Mozilla/5.0 diag" "$u" | grep -iE '^(HTTP|cache-control|age|x-|cf-|server|date|last-modified|etag|vary|platform|panel)' || true
-            grep -o '<link rel="canonical"[^>]*>' page.html || echo "no canonical"
+            h=$(curl -sS -D - -o page.html -A "Mozilla/5.0 diag" "$u" | grep -iE '^(HTTP|cache-control|age|x-|cf-|server|date|last-modified|etag|vary|platform|panel)' | tr -d '\r' | tr '\n' ' ')
+            c=$(grep -o '<link rel="canonical"[^>]*>' page.html | head -1)
+            echo "::notice title=$u::$h || $c"
           done
