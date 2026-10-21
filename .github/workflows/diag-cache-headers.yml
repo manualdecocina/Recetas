@@ -1,0 +1,23 @@
+name: diag-cache-headers
+# Diagnóstico temporal de solo lectura: cabeceras de caché de páginas en producción.
+on:
+  push:
+    branches: [diag/cache-headers]
+permissions:
+  contents: read
+jobs:
+  headers:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Headers
+        run: |
+          for u in \
+            "https://manualdecocina.com/de/kolumbianisches-lechona-rezept/" \
+            "https://manualdecocina.com/de/kolumbianisches-lechona-rezept/?nocache=$RANDOM$RANDOM" \
+            "https://manualdecocina.com/it/ricetta-colombiana-lechona/" \
+            "https://manualdecocina.com/empanada-peruana-de-pollo/" \
+            "https://manualdecocina.com/de/ajiaco-rezept/"; do
+            echo "=== $u"
+            curl -sS -D - -o page.html -A "Mozilla/5.0 diag" "$u" | grep -iE '^(HTTP|cache-control|age|x-|cf-|server|date|last-modified|etag|vary|platform|panel)' || true
+            grep -o '<link rel="canonical"[^>]*>' page.html || echo "no canonical"
+          done
