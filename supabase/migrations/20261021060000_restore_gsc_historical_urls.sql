@@ -8,7 +8,7 @@
 -- 2) Alias históricos adicionales del mismo contenido: 308 hacia la URL servida.
 -- 3) (en 20261021060100) source_url = URL WordPress exacta para recetas que Search Console
 --    registró con barra final, para que recipeCanonicalUrl() conserve esa barra.
--- No se tocan E005 (jugo anticancerígeno), E106 (sopa para enfermos) ni contenido descartado.
+-- No se toca contenido descartado (jugo anticancerígeno, sopa para enfermos, etc.).
 -- Estado previo: docs/GSC-URLS-HISTORICAS-20261021-BEFORE.json
 
 -- 1. Restaurar public_path histórico

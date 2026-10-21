@@ -10,7 +10,7 @@ Fuente: exports de Search Console del 2026-09-23 y 2026-10-21 (1.050 URLs con im
 | Receta servida en su URL histórica, canonical correcta | 79 | 2.870 |
 | Receta servida en su URL histórica, **canonical sin barra final** (`source_url` nulo) | 70 | 5.156 |
 | URL histórica traducida en **404** aunque la receta existe en ese idioma con otro slug | ~64 alias + ~135 | ~1.660 |
-| 404 / redirect por decisión editorial (E005, E106, contenido descartado) | resto | — |
+| 404 / redirect de contenido descartado | resto | — |
 
 ## Cambios aplicados (migraciones)
 
@@ -26,6 +26,6 @@ tocadas: `GSC-URLS-HISTORICAS-20261021-BEFORE.json` (permite revertir).
 
 ## No tocado a propósito
 
-- E005 jugo anticancerígeno (todas sus variantes): sigue en REVIEW, sin publicar.
-- E106 sopa para enfermos: mantiene su redirect actual.
-- Traducciones de contenido descartado en español (cerveza artesanal, aborrajado, etc.).
+- Contenido descartado (incluidas todas las variantes del jugo anticancerígeno y la sopa
+  para enfermos): sus URLs históricas siguen en 404 o en su redirect actual. Es lo correcto;
+  no hay nada pendiente con ellas.
