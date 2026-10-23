@@ -1,7 +1,7 @@
 {
   "date": "2026-10-22",
   "target": "https://manualdecocina.com",
-  "state": "60_WEBP_UPLOADED_35_DRAFTS_PENDING_DEPLOY_AND_PUBLISH",
+  "state": "published_pending_http_qa",
   "publication_verified": false,
   "pr": 180,
   "project_id": "eqbdtctxbpepbeickhqi",
@@ -30,7 +30,7 @@
         "/ja/pesto-cheese-puff-pastry-tree",
         "/pt/arvore-massa-folhada-pesto-queijo"
       ],
-      "published": false,
+      "published": true,
       "photos": {
         "1": "/workspace/scratch/12e0dc6a08a7/generated_images/exec-2ae4725f-16ab-48d7-85d2-e2f83bcc782d.png",
         "2": "/workspace/scratch/12e0dc6a08a7/generated_images/exec-0fec2f5b-21bf-4691-a8bf-88fbcdc87f75.png",
@@ -106,7 +106,7 @@
         "/ja/cranberry-brie-puff-pastry-bites",
         "/pt/folhadinhos-brie-cranberry"
       ],
-      "published": false,
+      "published": true,
       "photos": {
         "1": "/workspace/scratch/12e0dc6a08a7/generated_images/exec-ec51d2fb-dbde-4cf9-a1ae-b8d109bc9728.png",
         "2": "/workspace/scratch/12e0dc6a08a7/generated_images/exec-4a90617b-b8e4-47c0-a89b-12f035c3f23e.png",
@@ -182,7 +182,7 @@
         "/ja/goat-cheese-bacon-wrapped-dates",
         "/pt/tamaras-recheadas-queijo-cabra-bacon"
       ],
-      "published": false,
+      "published": true,
       "photos": {
         "1": "/workspace/scratch/12e0dc6a08a7/generated_images/exec-d371a12a-7290-4604-b068-0879cb9f8063.png",
         "2": "/workspace/scratch/12e0dc6a08a7/generated_images/exec-a30df4ae-f440-4970-b93e-76dc2f7aadef.png",
@@ -258,7 +258,7 @@
         "/ja/almond-turron-tiramisu-cups",
         "/pt/tiramisu-turron-amendoas-copinhos"
       ],
-      "published": false,
+      "published": true,
       "photos": {
         "1": "/workspace/scratch/12e0dc6a08a7/generated_images/exec-3442bdbd-993e-4da3-bb37-cb5ba24cb7d0.png",
         "2": "/workspace/scratch/12e0dc6a08a7/generated_images/exec-a0fba52e-d812-498f-b425-dcd506b1f511.png",
@@ -334,7 +334,7 @@
         "/ja/pistachio-chocolate-cheesecake-cups",
         "/pt/copinhos-cheesecake-pistache-chocolate"
       ],
-      "published": false,
+      "published": true,
       "photos": {
         "1": "/workspace/scratch/12e0dc6a08a7/generated_images/exec-a8ef2ebe-e624-40cd-a20f-6484cb2e43ba.png",
         "2": "/workspace/scratch/12e0dc6a08a7/generated_images/exec-57fbf9ca-3971-414b-8442-a345e3c7d2de.png",
@@ -389,5 +389,12 @@
       ]
     }
   ],
-  "blocker": null
+  "blocker": null,
+  "publication_at": "2026-10-23T12:47:59.669345+00:00",
+  "media_qa": {
+    "passed": 60,
+    "total": 60,
+    "storage_bucket": "recetas",
+    "importer": "sealed HTTP 410, JWT remains enabled"
+  }
 }
