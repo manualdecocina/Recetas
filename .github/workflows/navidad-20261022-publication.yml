@@ -1,0 +1,50 @@
+name: navidad-20261022-publication
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/navidad-20261022-publication.yml'
+      - 'scripts/audit-navidad-20261022.py'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Wait for production assets and published groups
+        env:
+          REVALIDATE_SECRET: ${{ secrets.REVALIDATE_SECRET }}
+        run: |
+          python3 - <<'PY'
+          import json,os,pathlib,time,urllib.request
+          root=pathlib.Path('editorial')
+          recipes=json.loads((root/'navidad-20261022-checkpoint.json').read_text())['recipes']
+          secret=(os.environ.get('REVALIDATE_SECRET') or '').rstrip('\r\n')
+          if not secret:raise SystemExit('Missing production cache secret')
+          for attempt in range(90):
+              ready=True
+              try:
+                  req=urllib.request.Request('https://manualdecocina.com/api/revalidate',data=b'{}',headers={'x-revalidate-secret':secret,'Content-Type':'application/json'})
+                  with urllib.request.urlopen(req,timeout=30) as response:
+                      if json.load(response).get('revalidated') is not True:raise RuntimeError('Cache not invalidated')
+                  for r in recipes:
+                      for path in ['/recetas/'+r['slug']+'/portada.webp',r['public_paths'][0]]:
+                          with urllib.request.urlopen('https://manualdecocina.com'+path,timeout=30) as response:
+                              if response.status!=200:ready=False
+              except Exception:
+                  ready=False
+              if ready:break
+              print('Waiting for five groups and deployed assets',attempt+1,flush=True)
+              time.sleep(10)
+          else:raise SystemExit('Production is not ready')
+          PY
+      - name: Audit 35 localized pages and 60 images
+        run: python3 scripts/audit-navidad-20261022.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: navidad-20261022-production-qa
+          path: navidad-20261022-production-qa.json
