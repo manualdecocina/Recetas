@@ -1,8 +1,8 @@
 {
   "date": "2026-10-22",
   "target": "https://manualdecocina.com",
-  "state": "published_pending_http_qa",
-  "publication_verified": false,
+  "state": "published_verified",
+  "publication_verified": true,
   "pr": 180,
   "project_id": "eqbdtctxbpepbeickhqi",
   "records": 35,
@@ -396,5 +396,28 @@
     "total": 60,
     "storage_bucket": "recetas",
     "importer": "sealed HTTP 410, JWT remains enabled"
-  }
+  },
+  "production_qa": {
+    "checked_at": "2026-10-23T12:51:34.844757+00:00",
+    "pages_passed": 35,
+    "media_passed": 60,
+    "sitemap_missing": 0,
+    "catalog_missing": 0,
+    "home_origin_missing": 0,
+    "home_cdn_pending": false,
+    "report": "editorial/navidad-20261022-production-qa.json",
+    "media_importer_sealed": true,
+    "ci_pages_passed": 35,
+    "ci_media_passed": 60,
+    "ci_sitemap_missing": 0,
+    "ci_home_missing": 0,
+    "ci_catalog_missing": 0,
+    "ci_report": "editorial/navidad-20261022-ci-qa.json",
+    "ci_run": "https://github.com/manualdecocina/Recetas/actions/runs/39956155623",
+    "quality_run": "https://github.com/manualdecocina/Recetas/actions/runs/39956155613",
+    "ci_conclusion": "success",
+    "quality_conclusion": "success"
+  },
+  "remaining": null,
+  "cache_observation": "The local CDN edge briefly served an older /es response; independent production CI verified the canonical home with all five recipes."
 }
