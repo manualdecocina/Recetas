@@ -31,8 +31,9 @@ jobs:
                   with urllib.request.urlopen(req,timeout=30) as response:
                       if json.load(response).get('revalidated') is not True:raise RuntimeError('Cache not invalidated')
                   for r in recipes:
-                      for path in ['/recetas/'+r['slug']+'/portada.webp',r['public_paths'][0]]:
-                          with urllib.request.urlopen('https://manualdecocina.com'+path,timeout=30) as response:
+                      bundle=json.loads((root/(r['slug']+'-20261022.json')).read_text())
+                      for path in [bundle['records'][0]['image_url'],r['public_paths'][0]]:
+                          with urllib.request.urlopen(path if path.startswith('https://') else 'https://manualdecocina.com'+path,timeout=30) as response:
                               if response.status!=200:ready=False
               except Exception:
                   ready=False
