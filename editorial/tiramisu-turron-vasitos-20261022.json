@@ -1,0 +1,1245 @@
+{
+  "slug": "tiramisu-turron-vasitos",
+  "key": "turron",
+  "date": "2026-10-22",
+  "target": "https://manualdecocina.com",
+  "state": "SEVEN_LANGUAGES_DRAFT_AWAITING_MEDIA_QA",
+  "languages": [
+    "es",
+    "de",
+    "en",
+    "fr",
+    "it",
+    "ja",
+    "pt"
+  ],
+  "steps_es_sha256": "6f4e412db9e972ef85e3819809e721896da3c079d9471cf96e73f4a482b71fa8",
+  "physical_kitchen_test": false,
+  "category_slug": "postres",
+  "nutrition_calculation": {
+    "servings": 6,
+    "foods": [
+      {
+        "description": "El Almendro Cosecha Propia soft almond turrón reference label",
+        "source_url": "https://elalmendro.com/tienda/turron-tradicional/cosecha-propia/turron-blando/",
+        "per_100g": {
+          "calories": 535.2,
+          "protein_g": 15,
+          "carbs_g": 34,
+          "fat_g": 36,
+          "saturated_fat_g": 2.8,
+          "fiber_g": 7.6,
+          "sugar_g": 30,
+          "sodium_mg": 12
+        },
+        "assumptions": "Energy not declared on retrieved page: calculated as 4 × protein + 4 × carbohydrate + 9 × fat + 2 × fibre (EU label factors), not a quoted label energy. Salt 0.03 g / 2.5 × 1000 = 12 mg sodium. Brand labels differ.",
+        "grams": 150
+      },
+      {
+        "description": "Galbani mascarpone reference label",
+        "source_url": "https://www.galbani.co.uk/products/mascarpone/galbani-mascarpone-250g",
+        "per_100g": {
+          "calories": 403,
+          "protein_g": 4.5,
+          "carbs_g": 4,
+          "fat_g": 41,
+          "saturated_fat_g": 28,
+          "fiber_g": null,
+          "sugar_g": 3,
+          "sodium_mg": 32
+        },
+        "assumptions": "Fibre not declared: not treated as zero. Salt 0.08 g / 2.5 × 1000 = 32 mg sodium.",
+        "grams": 250
+      },
+      {
+        "description": "Cream, fluid, heavy whipping",
+        "fdc_id": 170859,
+        "per_100g": {
+          "fat_g": 36.1,
+          "calories": 340,
+          "sugar_g": 2.92,
+          "sodium_mg": 27.0,
+          "protein_g": 2.84,
+          "saturated_fat_g": 23.0,
+          "fiber_g": 0.0,
+          "carbs_g": 2.84
+        },
+        "source_url": "https://fdc.nal.usda.gov/food-details/170859/nutrients",
+        "grams": 200
+      },
+      {
+        "description": "Cookies, ladyfingers, without lemon juice and rind",
+        "fdc_id": 172821,
+        "per_100g": {
+          "calories": 363,
+          "saturated_fat_g": 3.02,
+          "protein_g": 10.6,
+          "sodium_mg": 147,
+          "fat_g": 9.1,
+          "carbs_g": 59.7,
+          "fiber_g": 1.0
+        },
+        "source_url": "https://fdc.nal.usda.gov/food-details/172821/nutrients",
+        "grams": 120
+      },
+      {
+        "description": "Beverages, coffee, brewed, prepared with tap water",
+        "fdc_id": 171890,
+        "per_100g": {
+          "sugar_g": 0.0,
+          "calories": 1.0,
+          "protein_g": 0.12,
+          "saturated_fat_g": 0.002,
+          "fat_g": 0.02,
+          "carbs_g": 0.0,
+          "fiber_g": 0.0,
+          "sodium_mg": 2.0
+        },
+        "source_url": "https://fdc.nal.usda.gov/food-details/171890/nutrients",
+        "grams": 180
+      },
+      {
+        "description": "Cocoa, dry powder, unsweetened",
+        "fdc_id": 169593,
+        "per_100g": {
+          "sugar_g": 1.75,
+          "carbs_g": 57.9,
+          "calories": 228,
+          "fiber_g": 37.0,
+          "saturated_fat_g": 8.07,
+          "sodium_mg": 21.0,
+          "protein_g": 19.6,
+          "fat_g": 13.7
+        },
+        "source_url": "https://fdc.nal.usda.gov/food-details/169593/nutrients",
+        "grams": 8
+      }
+    ],
+    "result": {
+      "calories": 491,
+      "protein_g": 9.0,
+      "carbs_g": 23.8,
+      "fat_g": 40.1,
+      "saturated_fat_g": 20.7,
+      "sodium_mg": 55.6
+    },
+    "archive_sha256": "0fe8ae486a2c8eb42cb96413f058deb51863a46c8fb8eeb4b1fb45006dd338ef",
+    "assumptions": [
+      "All recipe inputs counted, including pastry offcuts and all brushing egg.",
+      "Pure pistachio paste approximated by unsalted dry-roasted pistachio nuts.",
+      "Cream 35% approximated by USDA heavy whipping cream.",
+      "Full 180 ml unsweetened coffee counted, though some dipping coffee may remain.",
+      "All bacon counted; rendered fat is not subtracted.",
+      "Manufacturer label reference foods vary by market; this is not a brand-specific requirement."
+    ]
+  },
+  "pantry_slugs": [
+    "turron-blando-almendra",
+    "queso-mascarpone",
+    "crema-de-leche",
+    "bizcochos-soletilla",
+    "cafe-preparado",
+    "cacao-en-polvo"
+  ],
+  "records": [
+    {
+      "language": "es",
+      "slug": "tiramisu-turron-vasitos",
+      "public_path": "/tiramisu-turron-vasitos",
+      "title": "Tiramisú de turrón en vasitos, sin huevo crudo",
+      "excerpt": "Una versión navideña de tiramisú con crema de mascarpone y turrón blando de almendra, café y bizcochos de soletilla. Se monta en vasos y no lleva huevo crudo añadido.",
+      "summary": "Una versión navideña de tiramisú con crema de mascarpone y turrón blando de almendra, café y bizcochos de soletilla. Se monta en vasos y no lleva huevo crudo añadido.",
+      "notes": "Usa turrón blando de almendra tipo Jijona, no turrón duro. Los bizcochos y el turrón pueden contener huevo cocinado: esta receta no es apta para alérgicos al huevo. También contiene leche, almendra y trigo. Usa lácteos pasteurizados y conserva a 4 °C o menos, tapado, hasta 2 días. Puedes usar café descafeinado. La formulación no añade alcohol ni huevo crudo y está pendiente de prueba física en cocina.",
+      "content_html": "<p>Una versión navideña de tiramisú con crema de mascarpone y turrón blando de almendra, café y bizcochos de soletilla. Se monta en vasos y no lleva huevo crudo añadido.</p><p>Usa turrón blando de almendra tipo Jijona, no turrón duro. Los bizcochos y el turrón pueden contener huevo cocinado: esta receta no es apta para alérgicos al huevo. También contiene leche, almendra y trigo. Usa lácteos pasteurizados y conserva a 4 °C o menos, tapado, hasta 2 días. Puedes usar café descafeinado. La formulación no añade alcohol ni huevo crudo y está pendiente de prueba física en cocina.</p>",
+      "ingredients": [
+        {
+          "name": "turrón blando de almendra tipo Jijona",
+          "amount": "150",
+          "unit": "g"
+        },
+        {
+          "name": "queso mascarpone",
+          "amount": "250",
+          "unit": "g"
+        },
+        {
+          "name": "crema de leche para montar con 35 % de grasa, bien fría",
+          "amount": "200",
+          "unit": "g"
+        },
+        {
+          "name": "bizcochos de soletilla o savoiardi",
+          "amount": "120",
+          "unit": "g"
+        },
+        {
+          "name": "café preparado y frío, sin azúcar",
+          "amount": "180",
+          "unit": "ml"
+        },
+        {
+          "name": "cacao puro sin azúcar",
+          "amount": "8",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepara el café y los vasos",
+          "content": "Prepara 180 ml de café sin azúcar y deja enfriar por completo. Coloca 6 vasos de unos 200 ml sobre una bandeja.",
+          "image_url": "/recetas/tiramisu-turron-vasitos/paso-01.webp",
+          "image_alt": "Tiramisú de turrón en vasitos, sin huevo crudo: Prepara el café y los vasos"
+        },
+        {
+          "title": "Desmenuza el turrón",
+          "content": "Desmenuza finamente 150 g de turrón blando de almendra. Reserva 20 g para el acabado y pon los otros 130 g en un bol.",
+          "image_url": "/recetas/tiramisu-turron-vasitos/paso-02.webp",
+          "image_alt": "Tiramisú de turrón en vasitos, sin huevo crudo: Desmenuza el turrón"
+        },
+        {
+          "title": "Alisa la crema de turrón",
+          "content": "Añade 250 g de mascarpone al turrón del bol. Bate brevemente a velocidad baja hasta obtener una mezcla uniforme; no batas de más.",
+          "image_url": "/recetas/tiramisu-turron-vasitos/paso-03.webp",
+          "image_alt": "Tiramisú de turrón en vasitos, sin huevo crudo: Alisa la crema de turrón"
+        },
+        {
+          "title": "Incorpora la crema montada",
+          "content": "Monta 200 g de crema de leche bien fría a picos suaves y mézclala con el mascarpone y el turrón con movimientos envolventes.",
+          "image_url": "/recetas/tiramisu-turron-vasitos/paso-04.webp",
+          "image_alt": "Tiramisú de turrón en vasitos, sin huevo crudo: Incorpora la crema montada"
+        },
+        {
+          "title": "Forma la primera capa",
+          "content": "Parte los 120 g de bizcochos para adaptarlos a los vasos. Humedece rápidamente la mitad en el café frío y repártela como primera capa, sin empapar.",
+          "image_url": "/recetas/tiramisu-turron-vasitos/paso-05.webp",
+          "image_alt": "Tiramisú de turrón en vasitos, sin huevo crudo: Forma la primera capa"
+        },
+        {
+          "title": "Alterna las capas",
+          "content": "Cubre con la mitad de la crema. Repite con los bizcochos restantes humedecidos y termina con el resto de la crema. No es necesario consumir todo el café.",
+          "image_url": "/recetas/tiramisu-turron-vasitos/paso-06.webp",
+          "image_alt": "Tiramisú de turrón en vasitos, sin huevo crudo: Alterna las capas"
+        },
+        {
+          "title": "Refrigera para asentar",
+          "content": "Tapa los vasos sin tocar la crema y refrigera al menos 4 horas para que las capas se asienten.",
+          "image_url": "/recetas/tiramisu-turron-vasitos/paso-07.webp",
+          "image_alt": "Tiramisú de turrón en vasitos, sin huevo crudo: Refrigera para asentar"
+        },
+        {
+          "title": "Decora al servir",
+          "content": "Tamiza 8 g de cacao entre los 6 vasos y reparte los 20 g de turrón reservados. Sirve frío y mantén las porciones restantes refrigeradas.",
+          "image_url": "/recetas/tiramisu-turron-vasitos/paso-08.webp",
+          "image_alt": "Tiramisú de turrón en vasitos, sin huevo crudo: Decora al servir"
+        }
+      ],
+      "category": "Postres",
+      "course": "Postre",
+      "cuisine": "Internacional",
+      "difficulty": "Fácil",
+      "prep_time_minutes": 30,
+      "cook_time_minutes": 0,
+      "total_time_minutes": 270,
+      "servings": 6,
+      "image_url": "/recetas/tiramisu-turron-vasitos/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/tiramisu-turron-vasitos/portada.webp",
+          "alt": "Tiramisú de turrón en vasitos, sin huevo crudo"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "Tiramisú de turrón en vasitos, sin huevo crudo",
+        "turrón blando de almendra tipo Jijona",
+        "queso mascarpone",
+        "crema de leche para montar con 35 % de grasa, bien fría"
+      ],
+      "nutrition": {
+        "calories": 491,
+        "protein_g": 9.0,
+        "carbs_g": 23.8,
+        "fat_g": 40.1,
+        "saturated_fat_g": 20.7,
+        "sodium_mg": 55.6,
+        "estimated": true,
+        "serving_size": "1 de los 6 vasitos",
+        "source": "USDA FoodData Central SR Legacy + manufacturer reference labels",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Suma de nutrientes por 100 g × peso de cada ingrediente / 100, dividida por las porciones.",
+        "note": "Estimación de la formulación; cambia según marcas, porción real y pérdidas de cocción. No es un análisis de laboratorio."
+      },
+      "seo": {
+        "title": "Tiramisú de turrón en vasitos, sin huevo crudo | Manual de Cocina",
+        "description": "Una versión navideña de tiramisú con crema de mascarpone y turrón blando de almendra, café y bizcochos de soletilla. Se monta en vasos y no lleva huevo crudo añadido.",
+        "image_alt": "Tiramisú de turrón en vasitos, sin huevo crudo",
+        "image_variants": [
+          "/recetas/tiramisu-turron-vasitos/portada-1x1.webp",
+          "/recetas/tiramisu-turron-vasitos/portada-4x3.webp",
+          "/recetas/tiramisu-turron-vasitos/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "¿Esta receta no tiene huevo?",
+            "a": "No se añade huevo crudo, pero los bizcochos y algunos turrones sí llevan huevo cocinado. Revisa las etiquetas si hay alergia."
+          },
+          {
+            "q": "¿Qué turrón se utiliza?",
+            "a": "Turrón blando de almendra tipo Jijona, que se desmenuza y mezcla con el mascarpone."
+          },
+          {
+            "q": "¿Cuánto tiempo necesita en la nevera?",
+            "a": "Al menos 4 horas. Puedes prepararlo el día anterior y añadir el cacao y el turrón final justo antes de servir."
+          }
+        ],
+        "rest_time_minutes": 240
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "source_url": null,
+      "source_post_id": null
+    },
+    {
+      "language": "de",
+      "slug": "turron-tiramisu-im-glas",
+      "public_path": "/de/turron-tiramisu-im-glas",
+      "title": "Turrón-Tiramisu im Glas ohne rohes Ei",
+      "excerpt": "Eine weihnachtliche Tiramisu-Variante mit weichem spanischem Mandel-Turrón, Mascarpone und Sahne. Mit kaffeefeuchten Löffelbiskuits in Gläser schichten und mindestens vier Stunden kühlen.",
+      "summary": "Eine weihnachtliche Tiramisu-Variante mit weichem spanischem Mandel-Turrón, Mascarpone und Sahne. Mit kaffeefeuchten Löffelbiskuits in Gläser schichten und mindestens vier Stunden kühlen.",
+      "notes": "Weichen Mandel-Turrón nach Jijona-Art verwenden, keinen harten weißen Nougat. Es wird kein rohes Ei zugegeben; Biskuits und Turrón können jedoch gegartes Ei enthalten. Nicht für Eierallergiker geeignet. Enthält Milch, Mandeln und Weizen. Pasteurisierte Milchprodukte verwenden, zugedeckt bei höchstens 4 °C bis zu 2 Tage kühlen. Entkoffeinierter Kaffee ist möglich. Die Rezeptur wurde nicht praktisch getestet.",
+      "content_html": "<p>Eine weihnachtliche Tiramisu-Variante mit weichem spanischem Mandel-Turrón, Mascarpone und Sahne. Mit kaffeefeuchten Löffelbiskuits in Gläser schichten und mindestens vier Stunden kühlen.</p><p>Weichen Mandel-Turrón nach Jijona-Art verwenden, keinen harten weißen Nougat. Es wird kein rohes Ei zugegeben; Biskuits und Turrón können jedoch gegartes Ei enthalten. Nicht für Eierallergiker geeignet. Enthält Milch, Mandeln und Weizen. Pasteurisierte Milchprodukte verwenden, zugedeckt bei höchstens 4 °C bis zu 2 Tage kühlen. Entkoffeinierter Kaffee ist möglich. Die Rezeptur wurde nicht praktisch getestet.</p>",
+      "ingredients": [
+        {
+          "name": "weicher spanischer Mandel-Turrón nach Jijona-Art",
+          "amount": "150",
+          "unit": "g"
+        },
+        {
+          "name": "Mascarpone",
+          "amount": "250",
+          "unit": "g"
+        },
+        {
+          "name": "kalte Schlagsahne mit 35 % Fett",
+          "amount": "200",
+          "unit": "g"
+        },
+        {
+          "name": "Löffelbiskuits oder Savoiardi",
+          "amount": "120",
+          "unit": "g"
+        },
+        {
+          "name": "kalter ungesüßter Kaffee",
+          "amount": "180",
+          "unit": "ml"
+        },
+        {
+          "name": "ungesüßtes Kakaopulver",
+          "amount": "8",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Kaffee und Gläser vorbereiten",
+          "content": "180 ml ungesüßten Kaffee kochen und vollständig abkühlen lassen. Sechs Gläser mit je etwa 200 ml auf ein Tablett stellen.",
+          "image_url": "/recetas/tiramisu-turron-vasitos/paso-01.webp",
+          "image_alt": "Turrón-Tiramisu im Glas ohne rohes Ei: Kaffee und Gläser vorbereiten"
+        },
+        {
+          "title": "Turrón zerbröseln",
+          "content": "150 g weichen Mandel-Turrón fein zerbröseln. 20 g für später zurückstellen, 130 g in eine Schüssel geben.",
+          "image_url": "/recetas/tiramisu-turron-vasitos/paso-02.webp",
+          "image_alt": "Turrón-Tiramisu im Glas ohne rohes Ei: Turrón zerbröseln"
+        },
+        {
+          "title": "Turróncreme rühren",
+          "content": "250 g Mascarpone zugeben und auf niedriger Stufe kurz gleichmäßig verrühren. Nicht zu lange schlagen.",
+          "image_url": "/recetas/tiramisu-turron-vasitos/paso-03.webp",
+          "image_alt": "Turrón-Tiramisu im Glas ohne rohes Ei: Turróncreme rühren"
+        },
+        {
+          "title": "Sahne unterheben",
+          "content": "200 g kalte Sahne bis zu weichen Spitzen schlagen und behutsam unter die Mascarpone-Turrón-Mischung heben.",
+          "image_url": "/recetas/tiramisu-turron-vasitos/paso-04.webp",
+          "image_alt": "Turrón-Tiramisu im Glas ohne rohes Ei: Sahne unterheben"
+        },
+        {
+          "title": "Erste Schicht legen",
+          "content": "120 g Biskuits passend brechen. Die Hälfte kurz in kalten Kaffee tauchen und in die Gläser legen, ohne sie durchzuweichen.",
+          "image_url": "/recetas/tiramisu-turron-vasitos/paso-05.webp",
+          "image_alt": "Turrón-Tiramisu im Glas ohne rohes Ei: Erste Schicht legen"
+        },
+        {
+          "title": "Schichten wiederholen",
+          "content": "Die Hälfte der Creme darauf verteilen. Übrige angefeuchtete Biskuits und restliche Creme einschichten. Nicht der gesamte Kaffee muss verbraucht werden.",
+          "image_url": "/recetas/tiramisu-turron-vasitos/paso-06.webp",
+          "image_alt": "Turrón-Tiramisu im Glas ohne rohes Ei: Schichten wiederholen"
+        },
+        {
+          "title": "Kalt stellen",
+          "content": "Gläser ohne Kontakt zur Creme abdecken und mindestens 4 Stunden kühlen.",
+          "image_url": "/recetas/tiramisu-turron-vasitos/paso-07.webp",
+          "image_alt": "Turrón-Tiramisu im Glas ohne rohes Ei: Kalt stellen"
+        },
+        {
+          "title": "Vor dem Servieren garnieren",
+          "content": "8 g Kakao über die sechs Gläser sieben und mit den übrigen 20 g Turrón bestreuen. Kalt servieren und verbleibende Portionen gekühlt halten.",
+          "image_url": "/recetas/tiramisu-turron-vasitos/paso-08.webp",
+          "image_alt": "Turrón-Tiramisu im Glas ohne rohes Ei: Vor dem Servieren garnieren"
+        }
+      ],
+      "category": "Desserts",
+      "course": "Dessert",
+      "cuisine": "International",
+      "difficulty": "Einfach",
+      "prep_time_minutes": 30,
+      "cook_time_minutes": 0,
+      "total_time_minutes": 270,
+      "servings": 6,
+      "image_url": "/recetas/tiramisu-turron-vasitos/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/tiramisu-turron-vasitos/portada.webp",
+          "alt": "Turrón-Tiramisu im Glas ohne rohes Ei"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "Turrón-Tiramisu im Glas ohne rohes Ei",
+        "weicher spanischer Mandel-Turrón nach Jijona-Art",
+        "Mascarpone",
+        "kalte Schlagsahne mit 35 % Fett"
+      ],
+      "nutrition": {
+        "calories": 491,
+        "protein_g": 9.0,
+        "carbs_g": 23.8,
+        "fat_g": 40.1,
+        "saturated_fat_g": 20.7,
+        "sodium_mg": 55.6,
+        "estimated": true,
+        "serving_size": "1 von 6 Tiramisu-Gläsern",
+        "source": "USDA FoodData Central SR Legacy + manufacturer reference labels",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Summe der Nährwerte je 100 g × Zutatengewicht / 100, geteilt durch die Portionenzahl.",
+        "note": "Schätzung aus der Rezeptur; Marke, tatsächliche Portion und Garverluste verändern die Werte. Keine Laboranalyse."
+      },
+      "seo": {
+        "title": "Turrón-Tiramisu im Glas ohne rohes Ei | Manual de Cocina",
+        "description": "Eine weihnachtliche Tiramisu-Variante mit weichem spanischem Mandel-Turrón, Mascarpone und Sahne. Mit kaffeefeuchten Löffelbiskuits in Gläser schichten und mindestens vier Stunden kühlen.",
+        "image_alt": "Turrón-Tiramisu im Glas ohne rohes Ei",
+        "image_variants": [
+          "/recetas/tiramisu-turron-vasitos/portada-1x1.webp",
+          "/recetas/tiramisu-turron-vasitos/portada-4x3.webp",
+          "/recetas/tiramisu-turron-vasitos/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Ist das Dessert eifrei?",
+            "a": "Nein. Es wird zwar kein rohes Ei zugegeben, aber Biskuits und manche Turrónsorten enthalten gegartes Ei. Etiketten prüfen."
+          },
+          {
+            "q": "Welcher Turrón passt?",
+            "a": "Weicher Mandel-Turrón nach Jijona-Art. Er lässt sich zerbröseln und mit Mascarpone vermischen."
+          },
+          {
+            "q": "Wie lange muss es kühlen?",
+            "a": "Mindestens 4 Stunden. Am Vortag zubereiten und Kakao sowie die letzten Turrónbrösel erst vor dem Servieren zugeben."
+          }
+        ],
+        "rest_time_minutes": 240
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "source_url": null,
+      "source_post_id": null
+    },
+    {
+      "language": "en",
+      "slug": "almond-turron-tiramisu-cups",
+      "public_path": "/en/almond-turron-tiramisu-cups",
+      "title": "Almond turrón tiramisu cups without raw egg",
+      "excerpt": "This Christmas variation layers coffee-dipped ladyfingers with mascarpone, whipped cream and soft Spanish almond turrón. Serve in glasses after at least four hours in the fridge.",
+      "summary": "This Christmas variation layers coffee-dipped ladyfingers with mascarpone, whipped cream and soft Spanish almond turrón. Serve in glasses after at least four hours in the fridge.",
+      "notes": "Use soft almond turrón, Jijona style, not hard white nougat. No raw egg is added, but the biscuits and turrón may contain cooked egg, so this is not egg-allergy safe. Contains milk, almonds and wheat. Use pasteurised dairy; refrigerate covered at 4 °C or below for up to 2 days. Decaffeinated coffee works. This editorial formulation has not been physically kitchen-tested.",
+      "content_html": "<p>This Christmas variation layers coffee-dipped ladyfingers with mascarpone, whipped cream and soft Spanish almond turrón. Serve in glasses after at least four hours in the fridge.</p><p>Use soft almond turrón, Jijona style, not hard white nougat. No raw egg is added, but the biscuits and turrón may contain cooked egg, so this is not egg-allergy safe. Contains milk, almonds and wheat. Use pasteurised dairy; refrigerate covered at 4 °C or below for up to 2 days. Decaffeinated coffee works. This editorial formulation has not been physically kitchen-tested.</p>",
+      "ingredients": [
+        {
+          "name": "soft Spanish almond turrón, Jijona style",
+          "amount": "150",
+          "unit": "g"
+        },
+        {
+          "name": "mascarpone",
+          "amount": "250",
+          "unit": "g"
+        },
+        {
+          "name": "cold whipping cream, 35% fat",
+          "amount": "200",
+          "unit": "g"
+        },
+        {
+          "name": "ladyfinger biscuits or savoiardi",
+          "amount": "120",
+          "unit": "g"
+        },
+        {
+          "name": "cold brewed coffee, unsweetened",
+          "amount": "180",
+          "unit": "ml"
+        },
+        {
+          "name": "unsweetened cocoa powder",
+          "amount": "8",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepare coffee and glasses",
+          "content": "Make 180 ml unsweetened coffee and let it cool completely. Arrange six 200 ml glasses on a tray.",
+          "image_url": "/recetas/tiramisu-turron-vasitos/paso-01.webp",
+          "image_alt": "Almond turrón tiramisu cups without raw egg: Prepare coffee and glasses"
+        },
+        {
+          "title": "Crumble the turrón",
+          "content": "Finely crumble 150 g soft almond turrón. Reserve 20 g for finishing and put the remaining 130 g in a bowl.",
+          "image_url": "/recetas/tiramisu-turron-vasitos/paso-02.webp",
+          "image_alt": "Almond turrón tiramisu cups without raw egg: Crumble the turrón"
+        },
+        {
+          "title": "Mix the nougat cream",
+          "content": "Add 250 g mascarpone to the bowl. Beat briefly on low speed until evenly mixed; do not overbeat.",
+          "image_url": "/recetas/tiramisu-turron-vasitos/paso-03.webp",
+          "image_alt": "Almond turrón tiramisu cups without raw egg: Mix the nougat cream"
+        },
+        {
+          "title": "Fold in whipped cream",
+          "content": "Whip 200 g cold cream to soft peaks and gently fold into the mascarpone and turrón.",
+          "image_url": "/recetas/tiramisu-turron-vasitos/paso-04.webp",
+          "image_alt": "Almond turrón tiramisu cups without raw egg: Fold in whipped cream"
+        },
+        {
+          "title": "Make the first layer",
+          "content": "Break 120 g ladyfingers to fit the glasses. Quickly dip half in the cold coffee and place in the bottoms without soaking.",
+          "image_url": "/recetas/tiramisu-turron-vasitos/paso-05.webp",
+          "image_alt": "Almond turrón tiramisu cups without raw egg: Make the first layer"
+        },
+        {
+          "title": "Alternate the layers",
+          "content": "Add half the cream. Repeat with the remaining dipped biscuits and finish with the remaining cream. You may not need all the coffee.",
+          "image_url": "/recetas/tiramisu-turron-vasitos/paso-06.webp",
+          "image_alt": "Almond turrón tiramisu cups without raw egg: Alternate the layers"
+        },
+        {
+          "title": "Chill to set",
+          "content": "Cover the glasses without touching the cream and refrigerate for at least 4 hours.",
+          "image_url": "/recetas/tiramisu-turron-vasitos/paso-07.webp",
+          "image_alt": "Almond turrón tiramisu cups without raw egg: Chill to set"
+        },
+        {
+          "title": "Finish before serving",
+          "content": "Sift 8 g cocoa over the six glasses and scatter over the reserved 20 g turrón. Serve cold and keep remaining portions refrigerated.",
+          "image_url": "/recetas/tiramisu-turron-vasitos/paso-08.webp",
+          "image_alt": "Almond turrón tiramisu cups without raw egg: Finish before serving"
+        }
+      ],
+      "category": "Desserts",
+      "course": "Dessert",
+      "cuisine": "International",
+      "difficulty": "Easy",
+      "prep_time_minutes": 30,
+      "cook_time_minutes": 0,
+      "total_time_minutes": 270,
+      "servings": 6,
+      "image_url": "/recetas/tiramisu-turron-vasitos/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/tiramisu-turron-vasitos/portada.webp",
+          "alt": "Almond turrón tiramisu cups without raw egg"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "Almond turrón tiramisu cups without raw egg",
+        "soft Spanish almond turrón, Jijona style",
+        "mascarpone",
+        "cold whipping cream, 35% fat"
+      ],
+      "nutrition": {
+        "calories": 491,
+        "protein_g": 9.0,
+        "carbs_g": 23.8,
+        "fat_g": 40.1,
+        "saturated_fat_g": 20.7,
+        "sodium_mg": 55.6,
+        "estimated": true,
+        "serving_size": "1 of 6 tiramisu cups",
+        "source": "USDA FoodData Central SR Legacy + manufacturer reference labels",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Sum of nutrients per 100 g × each ingredient weight / 100, divided by the number of servings.",
+        "note": "Recipe-based estimate; brands, actual portions and cooking losses affect the values. Not a laboratory analysis."
+      },
+      "seo": {
+        "title": "Almond turrón tiramisu cups without raw egg | Manual de Cocina",
+        "description": "This Christmas variation layers coffee-dipped ladyfingers with mascarpone, whipped cream and soft Spanish almond turrón. Serve in glasses after at least four hours in the fridge.",
+        "image_alt": "Almond turrón tiramisu cups without raw egg",
+        "image_variants": [
+          "/recetas/tiramisu-turron-vasitos/portada-1x1.webp",
+          "/recetas/tiramisu-turron-vasitos/portada-4x3.webp",
+          "/recetas/tiramisu-turron-vasitos/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Is this egg-free?",
+            "a": "No raw egg is added, but the biscuits and some turrón contain cooked egg. Check labels for allergies."
+          },
+          {
+            "q": "Which turrón should I use?",
+            "a": "Soft Spanish almond turrón, Jijona style, which crumbles easily and blends into mascarpone."
+          },
+          {
+            "q": "How long should it chill?",
+            "a": "At least 4 hours. Make it the day before and add the cocoa and final turrón just before serving."
+          }
+        ],
+        "rest_time_minutes": 240
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "source_url": null,
+      "source_post_id": null
+    },
+    {
+      "language": "fr",
+      "slug": "tiramisu-touron-amande-verrines",
+      "public_path": "/fr/tiramisu-touron-amande-verrines",
+      "title": "Tiramisu au touron en verrines, sans œuf cru",
+      "excerpt": "Une version de Noël au touron mou espagnol aux amandes, au mascarpone et à la crème fouettée. Alternez avec des biscuits imbibés de café puis réfrigérez au moins quatre heures.",
+      "summary": "Une version de Noël au touron mou espagnol aux amandes, au mascarpone et à la crème fouettée. Alternez avec des biscuits imbibés de café puis réfrigérez au moins quatre heures.",
+      "notes": "Choisissez du turrón mou aux amandes de type Jijona, pas du nougat dur. Aucun œuf cru n’est ajouté, mais les biscuits et le touron peuvent contenir de l’œuf cuit : ce dessert ne convient pas à l’allergie à l’œuf. Contient lait, amandes et blé. Utilisez des laitages pasteurisés et conservez couvert à 4 °C maximum jusqu’à 2 jours. Le café décaféiné convient. Formulation non testée physiquement en cuisine.",
+      "content_html": "<p>Une version de Noël au touron mou espagnol aux amandes, au mascarpone et à la crème fouettée. Alternez avec des biscuits imbibés de café puis réfrigérez au moins quatre heures.</p><p>Choisissez du turrón mou aux amandes de type Jijona, pas du nougat dur. Aucun œuf cru n’est ajouté, mais les biscuits et le touron peuvent contenir de l’œuf cuit : ce dessert ne convient pas à l’allergie à l’œuf. Contient lait, amandes et blé. Utilisez des laitages pasteurisés et conservez couvert à 4 °C maximum jusqu’à 2 jours. Le café décaféiné convient. Formulation non testée physiquement en cuisine.</p>",
+      "ingredients": [
+        {
+          "name": "touron mou espagnol aux amandes, type Jijona",
+          "amount": "150",
+          "unit": "g"
+        },
+        {
+          "name": "mascarpone",
+          "amount": "250",
+          "unit": "g"
+        },
+        {
+          "name": "crème liquide entière à 35 % de matière grasse, très froide",
+          "amount": "200",
+          "unit": "g"
+        },
+        {
+          "name": "biscuits à la cuillère ou savoiardi",
+          "amount": "120",
+          "unit": "g"
+        },
+        {
+          "name": "café préparé froid et non sucré",
+          "amount": "180",
+          "unit": "ml"
+        },
+        {
+          "name": "cacao pur non sucré",
+          "amount": "8",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Préparer café et verres",
+          "content": "Préparez 180 ml de café non sucré et laissez refroidir complètement. Posez six verres de 200 ml sur un plateau.",
+          "image_url": "/recetas/tiramisu-turron-vasitos/paso-01.webp",
+          "image_alt": "Tiramisu au touron en verrines, sans œuf cru: Préparer café et verres"
+        },
+        {
+          "title": "Émietter le touron",
+          "content": "Émiettez finement 150 g de touron mou. Réservez 20 g pour la décoration et mettez les 130 g restants dans un bol.",
+          "image_url": "/recetas/tiramisu-turron-vasitos/paso-02.webp",
+          "image_alt": "Tiramisu au touron en verrines, sans œuf cru: Émietter le touron"
+        },
+        {
+          "title": "Lisser la crème",
+          "content": "Ajoutez 250 g de mascarpone et fouettez brièvement à petite vitesse pour homogénéiser, sans trop battre.",
+          "image_url": "/recetas/tiramisu-turron-vasitos/paso-03.webp",
+          "image_alt": "Tiramisu au touron en verrines, sans œuf cru: Lisser la crème"
+        },
+        {
+          "title": "Incorporer la crème montée",
+          "content": "Montez 200 g de crème très froide en pics souples et incorporez délicatement au mascarpone et au touron.",
+          "image_url": "/recetas/tiramisu-turron-vasitos/paso-04.webp",
+          "image_alt": "Tiramisu au touron en verrines, sans œuf cru: Incorporer la crème montée"
+        },
+        {
+          "title": "Former la première couche",
+          "content": "Cassez 120 g de biscuits pour les adapter aux verres. Trempez rapidement la moitié dans le café froid et répartissez au fond sans détremper.",
+          "image_url": "/recetas/tiramisu-turron-vasitos/paso-05.webp",
+          "image_alt": "Tiramisu au touron en verrines, sans œuf cru: Former la première couche"
+        },
+        {
+          "title": "Alterner les couches",
+          "content": "Ajoutez la moitié de la crème, puis les biscuits restants rapidement trempés et le reste de crème. Tout le café ne sera pas forcément utilisé.",
+          "image_url": "/recetas/tiramisu-turron-vasitos/paso-06.webp",
+          "image_alt": "Tiramisu au touron en verrines, sans œuf cru: Alterner les couches"
+        },
+        {
+          "title": "Réfrigérer",
+          "content": "Couvrez sans toucher la crème et laissez au moins 4 heures au réfrigérateur.",
+          "image_url": "/recetas/tiramisu-turron-vasitos/paso-07.webp",
+          "image_alt": "Tiramisu au touron en verrines, sans œuf cru: Réfrigérer"
+        },
+        {
+          "title": "Décorer au dernier moment",
+          "content": "Tamisez 8 g de cacao sur les six verres et ajoutez les 20 g de touron réservés. Servez froid et gardez les portions restantes réfrigérées.",
+          "image_url": "/recetas/tiramisu-turron-vasitos/paso-08.webp",
+          "image_alt": "Tiramisu au touron en verrines, sans œuf cru: Décorer au dernier moment"
+        }
+      ],
+      "category": "Desserts",
+      "course": "Dessert",
+      "cuisine": "Internationale",
+      "difficulty": "Facile",
+      "prep_time_minutes": 30,
+      "cook_time_minutes": 0,
+      "total_time_minutes": 270,
+      "servings": 6,
+      "image_url": "/recetas/tiramisu-turron-vasitos/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/tiramisu-turron-vasitos/portada.webp",
+          "alt": "Tiramisu au touron en verrines, sans œuf cru"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "Tiramisu au touron en verrines, sans œuf cru",
+        "touron mou espagnol aux amandes, type Jijona",
+        "mascarpone",
+        "crème liquide entière à 35 % de matière grasse, très froide"
+      ],
+      "nutrition": {
+        "calories": 491,
+        "protein_g": 9.0,
+        "carbs_g": 23.8,
+        "fat_g": 40.1,
+        "saturated_fat_g": 20.7,
+        "sodium_mg": 55.6,
+        "estimated": true,
+        "serving_size": "1 verrine de tiramisu sur 6",
+        "source": "USDA FoodData Central SR Legacy + manufacturer reference labels",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Somme des nutriments pour 100 g × poids de chaque ingrédient / 100, divisée par le nombre de portions.",
+        "note": "Estimation selon la formulation ; les marques, les portions réelles et les pertes de cuisson modifient les valeurs. Pas une analyse de laboratoire."
+      },
+      "seo": {
+        "title": "Tiramisu au touron en verrines, sans œuf cru | Manual de Cocina",
+        "description": "Une version de Noël au touron mou espagnol aux amandes, au mascarpone et à la crème fouettée. Alternez avec des biscuits imbibés de café puis réfrigérez au moins quatre heures.",
+        "image_alt": "Tiramisu au touron en verrines, sans œuf cru",
+        "image_variants": [
+          "/recetas/tiramisu-turron-vasitos/portada-1x1.webp",
+          "/recetas/tiramisu-turron-vasitos/portada-4x3.webp",
+          "/recetas/tiramisu-turron-vasitos/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Est-ce un dessert sans œuf ?",
+            "a": "Aucun œuf cru n’est ajouté, mais les biscuits et certains tourons contiennent de l’œuf cuit. Vérifiez les étiquettes."
+          },
+          {
+            "q": "Quel touron choisir ?",
+            "a": "Un touron mou espagnol aux amandes, type Jijona, qui s’émiette et se mélange au mascarpone."
+          },
+          {
+            "q": "Combien de temps faut-il le refroidir ?",
+            "a": "Au moins 4 heures. Préparez-le la veille et ajoutez le cacao et le dernier touron juste avant de servir."
+          }
+        ],
+        "rest_time_minutes": 240
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "source_url": null,
+      "source_post_id": null
+    },
+    {
+      "language": "it",
+      "slug": "tiramisu-turron-mandorle-bicchiere",
+      "public_path": "/it/tiramisu-turron-mandorle-bicchiere",
+      "title": "Tiramisù al turrón in bicchiere senza uova crude",
+      "excerpt": "Una variante natalizia con turrón spagnolo morbido alle mandorle, mascarpone e panna montata. Alterna la crema ai savoiardi al caffè e raffredda almeno quattro ore.",
+      "summary": "Una variante natalizia con turrón spagnolo morbido alle mandorle, mascarpone e panna montata. Alterna la crema ai savoiardi al caffè e raffredda almeno quattro ore.",
+      "notes": "Usa turrón spagnolo morbido alle mandorle tipo Jijona, non torrone duro. Non si aggiunge uovo crudo, ma savoiardi e turrón possono contenere uovo cotto: non è adatto all’allergia all’uovo. Contiene latte, mandorle e frumento. Scegli latticini pastorizzati e conserva coperto a massimo 4 °C per 2 giorni. Va bene anche il caffè decaffeinato. Formulazione non provata fisicamente in cucina.",
+      "content_html": "<p>Una variante natalizia con turrón spagnolo morbido alle mandorle, mascarpone e panna montata. Alterna la crema ai savoiardi al caffè e raffredda almeno quattro ore.</p><p>Usa turrón spagnolo morbido alle mandorle tipo Jijona, non torrone duro. Non si aggiunge uovo crudo, ma savoiardi e turrón possono contenere uovo cotto: non è adatto all’allergia all’uovo. Contiene latte, mandorle e frumento. Scegli latticini pastorizzati e conserva coperto a massimo 4 °C per 2 giorni. Va bene anche il caffè decaffeinato. Formulazione non provata fisicamente in cucina.</p>",
+      "ingredients": [
+        {
+          "name": "turrón spagnolo morbido alle mandorle, tipo Jijona",
+          "amount": "150",
+          "unit": "g"
+        },
+        {
+          "name": "mascarpone",
+          "amount": "250",
+          "unit": "g"
+        },
+        {
+          "name": "panna da montare al 35 % di grassi, fredda",
+          "amount": "200",
+          "unit": "g"
+        },
+        {
+          "name": "savoiardi",
+          "amount": "120",
+          "unit": "g"
+        },
+        {
+          "name": "caffè preparato freddo senza zucchero",
+          "amount": "180",
+          "unit": "ml"
+        },
+        {
+          "name": "cacao amaro",
+          "amount": "8",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepara caffè e bicchieri",
+          "content": "Prepara 180 ml di caffè senza zucchero e fallo raffreddare completamente. Disponi sei bicchieri da circa 200 ml su un vassoio.",
+          "image_url": "/recetas/tiramisu-turron-vasitos/paso-01.webp",
+          "image_alt": "Tiramisù al turrón in bicchiere senza uova crude: Prepara caffè e bicchieri"
+        },
+        {
+          "title": "Sbriciola il turrón",
+          "content": "Sbriciola finemente 150 g di turrón morbido. Tieni da parte 20 g e metti gli altri 130 g in una ciotola.",
+          "image_url": "/recetas/tiramisu-turron-vasitos/paso-02.webp",
+          "image_alt": "Tiramisù al turrón in bicchiere senza uova crude: Sbriciola il turrón"
+        },
+        {
+          "title": "Lavora la crema",
+          "content": "Aggiungi 250 g di mascarpone e mescola brevemente a bassa velocità fino a uniformare, senza lavorare troppo.",
+          "image_url": "/recetas/tiramisu-turron-vasitos/paso-03.webp",
+          "image_alt": "Tiramisù al turrón in bicchiere senza uova crude: Lavora la crema"
+        },
+        {
+          "title": "Incorpora la panna",
+          "content": "Monta 200 g di panna fredda a picchi morbidi e incorporala delicatamente al mascarpone e al turrón.",
+          "image_url": "/recetas/tiramisu-turron-vasitos/paso-04.webp",
+          "image_alt": "Tiramisù al turrón in bicchiere senza uova crude: Incorpora la panna"
+        },
+        {
+          "title": "Forma il primo strato",
+          "content": "Spezza 120 g di savoiardi per adattarli ai bicchieri. Bagna rapidamente metà dei biscotti nel caffè freddo e distribuiscili sul fondo senza inzupparli troppo.",
+          "image_url": "/recetas/tiramisu-turron-vasitos/paso-05.webp",
+          "image_alt": "Tiramisù al turrón in bicchiere senza uova crude: Forma il primo strato"
+        },
+        {
+          "title": "Alterna gli strati",
+          "content": "Aggiungi metà della crema. Ripeti con i savoiardi rimasti appena bagnati e termina con il resto della crema. Potrebbe avanzare del caffè.",
+          "image_url": "/recetas/tiramisu-turron-vasitos/paso-06.webp",
+          "image_alt": "Tiramisù al turrón in bicchiere senza uova crude: Alterna gli strati"
+        },
+        {
+          "title": "Lascia riposare in frigo",
+          "content": "Copri senza toccare la crema e refrigera per almeno 4 ore.",
+          "image_url": "/recetas/tiramisu-turron-vasitos/paso-07.webp",
+          "image_alt": "Tiramisù al turrón in bicchiere senza uova crude: Lascia riposare in frigo"
+        },
+        {
+          "title": "Decora e servi",
+          "content": "Setaccia 8 g di cacao sui sei bicchieri e aggiungi i 20 g di turrón tenuti da parte. Servi freddo e conserva in frigo le altre porzioni.",
+          "image_url": "/recetas/tiramisu-turron-vasitos/paso-08.webp",
+          "image_alt": "Tiramisù al turrón in bicchiere senza uova crude: Decora e servi"
+        }
+      ],
+      "category": "Dolci",
+      "course": "Dessert",
+      "cuisine": "Internazionale",
+      "difficulty": "Facile",
+      "prep_time_minutes": 30,
+      "cook_time_minutes": 0,
+      "total_time_minutes": 270,
+      "servings": 6,
+      "image_url": "/recetas/tiramisu-turron-vasitos/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/tiramisu-turron-vasitos/portada.webp",
+          "alt": "Tiramisù al turrón in bicchiere senza uova crude"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "Tiramisù al turrón in bicchiere senza uova crude",
+        "turrón spagnolo morbido alle mandorle, tipo Jijona",
+        "mascarpone",
+        "panna da montare al 35 % di grassi, fredda"
+      ],
+      "nutrition": {
+        "calories": 491,
+        "protein_g": 9.0,
+        "carbs_g": 23.8,
+        "fat_g": 40.1,
+        "saturated_fat_g": 20.7,
+        "sodium_mg": 55.6,
+        "estimated": true,
+        "serving_size": "1 dei 6 bicchierini di tiramisù",
+        "source": "USDA FoodData Central SR Legacy + manufacturer reference labels",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Somma dei nutrienti per 100 g × peso di ogni ingrediente / 100, divisa per il numero di porzioni.",
+        "note": "Stima della formulazione: marche, porzioni reali e perdite di cottura cambiano i valori. Non è un’analisi di laboratorio."
+      },
+      "seo": {
+        "title": "Tiramisù al turrón in bicchiere senza uova crude | Manual de Cocina",
+        "description": "Una variante natalizia con turrón spagnolo morbido alle mandorle, mascarpone e panna montata. Alterna la crema ai savoiardi al caffè e raffredda almeno quattro ore.",
+        "image_alt": "Tiramisù al turrón in bicchiere senza uova crude",
+        "image_variants": [
+          "/recetas/tiramisu-turron-vasitos/portada-1x1.webp",
+          "/recetas/tiramisu-turron-vasitos/portada-4x3.webp",
+          "/recetas/tiramisu-turron-vasitos/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "È un dolce senza uova?",
+            "a": "Non si aggiungono uova crude, ma savoiardi e alcuni turrón contengono uovo cotto. Controlla le etichette."
+          },
+          {
+            "q": "Quale turrón serve?",
+            "a": "Quello spagnolo morbido alle mandorle tipo Jijona, che si sbriciola e si amalgama al mascarpone."
+          },
+          {
+            "q": "Quanto deve stare in frigo?",
+            "a": "Almeno 4 ore. Puoi prepararlo il giorno prima e aggiungere cacao e turrón finale al momento di servire."
+          }
+        ],
+        "rest_time_minutes": 240
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "source_url": null,
+      "source_post_id": null
+    },
+    {
+      "language": "ja",
+      "slug": "almond-turron-tiramisu-cups",
+      "public_path": "/ja/almond-turron-tiramisu-cups",
+      "title": "アーモンドトゥロンのカップティラミス・生卵不使用",
+      "excerpt": "柔らかいスペインのアーモンド菓子トゥロンを、マスカルポーネと生クリームに混ぜるクリスマス風ティラミスです。コーヒーを含ませたビスケットと重ね、4時間以上冷蔵します。",
+      "summary": "柔らかいスペインのアーモンド菓子トゥロンを、マスカルポーネと生クリームに混ぜるクリスマス風ティラミスです。コーヒーを含ませたビスケットと重ね、4時間以上冷蔵します。",
+      "notes": "ヒホナ風の柔らかいアーモンドトゥロンを使い、硬いヌガーとは区別します。生卵は加えませんが、ビスケットやトゥロンには加熱済み卵が含まれる場合があり、卵アレルギーには適しません。乳、アーモンド、小麦を含みます。殺菌済み乳製品を使い、覆って4 ℃以下で2日以内に保存します。デカフェでも作れます。実際の調理試験は行っていません。",
+      "content_html": "<p>柔らかいスペインのアーモンド菓子トゥロンを、マスカルポーネと生クリームに混ぜるクリスマス風ティラミスです。コーヒーを含ませたビスケットと重ね、4時間以上冷蔵します。</p><p>ヒホナ風の柔らかいアーモンドトゥロンを使い、硬いヌガーとは区別します。生卵は加えませんが、ビスケットやトゥロンには加熱済み卵が含まれる場合があり、卵アレルギーには適しません。乳、アーモンド、小麦を含みます。殺菌済み乳製品を使い、覆って4 ℃以下で2日以内に保存します。デカフェでも作れます。実際の調理試験は行っていません。</p>",
+      "ingredients": [
+        {
+          "name": "スペインの柔らかいアーモンドトゥロン（ヒホナ風）",
+          "amount": "150",
+          "unit": "g"
+        },
+        {
+          "name": "マスカルポーネ",
+          "amount": "250",
+          "unit": "g"
+        },
+        {
+          "name": "乳脂肪分35％のよく冷やした生クリーム",
+          "amount": "200",
+          "unit": "g"
+        },
+        {
+          "name": "フィンガービスケットまたはサヴォイアルディ",
+          "amount": "120",
+          "unit": "g"
+        },
+        {
+          "name": "抽出して冷ました無糖コーヒー",
+          "amount": "180",
+          "unit": "ml"
+        },
+        {
+          "name": "無糖ココアパウダー",
+          "amount": "8",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "コーヒーとグラスを用意する",
+          "content": "無糖コーヒー180 mlを用意し、完全に冷まします。約200 mlのグラス6個をトレーに並べます。",
+          "image_url": "/recetas/tiramisu-turron-vasitos/paso-01.webp",
+          "image_alt": "アーモンドトゥロンのカップティラミス・生卵不使用: コーヒーとグラスを用意する"
+        },
+        {
+          "title": "トゥロンを崩す",
+          "content": "柔らかいトゥロン150 gを細かく崩します。仕上げ用に20 gを取り分け、残り130 gをボウルに入れます。",
+          "image_url": "/recetas/tiramisu-turron-vasitos/paso-02.webp",
+          "image_alt": "アーモンドトゥロンのカップティラミス・生卵不使用: トゥロンを崩す"
+        },
+        {
+          "title": "クリームを混ぜる",
+          "content": "マスカルポーネ250 gを加え、低速で短時間混ぜて均一にします。混ぜすぎないでください。",
+          "image_url": "/recetas/tiramisu-turron-vasitos/paso-03.webp",
+          "image_alt": "アーモンドトゥロンのカップティラミス・生卵不使用: クリームを混ぜる"
+        },
+        {
+          "title": "泡立てた生クリームを加える",
+          "content": "冷たい生クリーム200 gを柔らかい角が立つまで泡立て、マスカルポーネとトゥロンに優しく混ぜ込みます。",
+          "image_url": "/recetas/tiramisu-turron-vasitos/paso-04.webp",
+          "image_alt": "アーモンドトゥロンのカップティラミス・生卵不使用: 泡立てた生クリームを加える"
+        },
+        {
+          "title": "最初の層を作る",
+          "content": "ビスケット120 gをグラスに合う大きさに割ります。半量を冷たいコーヒーにさっとくぐらせ、浸しすぎず底に分けます。",
+          "image_url": "/recetas/tiramisu-turron-vasitos/paso-05.webp",
+          "image_alt": "アーモンドトゥロンのカップティラミス・生卵不使用: 最初の層を作る"
+        },
+        {
+          "title": "交互に重ねる",
+          "content": "クリームの半量をのせます。残りのビスケットをさっと湿らせて重ね、残りのクリームで仕上げます。コーヒーは全部使わなくても構いません。",
+          "image_url": "/recetas/tiramisu-turron-vasitos/paso-06.webp",
+          "image_alt": "アーモンドトゥロンのカップティラミス・生卵不使用: 交互に重ねる"
+        },
+        {
+          "title": "冷蔵庫でなじませる",
+          "content": "クリームに触れないよう覆い、4時間以上冷蔵して層をなじませます。",
+          "image_url": "/recetas/tiramisu-turron-vasitos/paso-07.webp",
+          "image_alt": "アーモンドトゥロンのカップティラミス・生卵不使用: 冷蔵庫でなじませる"
+        },
+        {
+          "title": "食べる直前に飾る",
+          "content": "ココア8 gを6個に分けてふるい、取り分けたトゥロン20 gを散らします。冷たくして出し、残りは冷蔵します。",
+          "image_url": "/recetas/tiramisu-turron-vasitos/paso-08.webp",
+          "image_alt": "アーモンドトゥロンのカップティラミス・生卵不使用: 食べる直前に飾る"
+        }
+      ],
+      "category": "デザート",
+      "course": "デザート",
+      "cuisine": "各国料理",
+      "difficulty": "簡単",
+      "prep_time_minutes": 30,
+      "cook_time_minutes": 0,
+      "total_time_minutes": 270,
+      "servings": 6,
+      "image_url": "/recetas/tiramisu-turron-vasitos/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/tiramisu-turron-vasitos/portada.webp",
+          "alt": "アーモンドトゥロンのカップティラミス・生卵不使用"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "アーモンドトゥロンのカップティラミス・生卵不使用",
+        "スペインの柔らかいアーモンドトゥロン（ヒホナ風）",
+        "マスカルポーネ",
+        "乳脂肪分35％のよく冷やした生クリーム"
+      ],
+      "nutrition": {
+        "calories": 491,
+        "protein_g": 9.0,
+        "carbs_g": 23.8,
+        "fat_g": 40.1,
+        "saturated_fat_g": 20.7,
+        "sodium_mg": 55.6,
+        "estimated": true,
+        "serving_size": "全6個のうちティラミス1個",
+        "source": "USDA FoodData Central SR Legacy + manufacturer reference labels",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "材料100 gあたりの栄養価×各使用重量÷100を合計し、人数で割って算出。",
+        "note": "配合からの推定値です。製品、実際の盛り付け量、加熱による損失で変わります。検査機関での分析値ではありません。"
+      },
+      "seo": {
+        "title": "アーモンドトゥロンのカップティラミス・生卵不使用 | Manual de Cocina",
+        "description": "柔らかいスペインのアーモンド菓子トゥロンを、マスカルポーネと生クリームに混ぜるクリスマス風ティラミスです。コーヒーを含ませたビスケットと重ね、4時間以上冷蔵します。",
+        "image_alt": "アーモンドトゥロンのカップティラミス・生卵不使用",
+        "image_variants": [
+          "/recetas/tiramisu-turron-vasitos/portada-1x1.webp",
+          "/recetas/tiramisu-turron-vasitos/portada-4x3.webp",
+          "/recetas/tiramisu-turron-vasitos/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "卵を一切含まないのですか？",
+            "a": "生卵は加えませんが、ビスケットや一部のトゥロンには加熱済み卵が入っています。表示を確認してください。"
+          },
+          {
+            "q": "どのトゥロンを使いますか？",
+            "a": "ヒホナ風の柔らかいアーモンドトゥロンです。細かく崩せてマスカルポーネと混ざるものを使います。"
+          },
+          {
+            "q": "冷やす時間はどれくらいですか？",
+            "a": "最低4時間です。前日に作り、ココアと仕上げのトゥロンは食べる直前に加えます。"
+          }
+        ],
+        "rest_time_minutes": 240
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "source_url": null,
+      "source_post_id": null
+    },
+    {
+      "language": "pt",
+      "slug": "tiramisu-turron-amendoas-copinhos",
+      "public_path": "/pt/tiramisu-turron-amendoas-copinhos",
+      "title": "Tiramisù de turrón em copinhos, sem ovo cru",
+      "excerpt": "Uma versão natalina com turrón espanhol macio de amêndoas, mascarpone e creme batido. Monte camadas com biscoitos embebidos em café e leve à geladeira por pelo menos quatro horas.",
+      "summary": "Uma versão natalina com turrón espanhol macio de amêndoas, mascarpone e creme batido. Monte camadas com biscoitos embebidos em café e leve à geladeira por pelo menos quatro horas.",
+      "notes": "Use turrón espanhol macio de amêndoas tipo Jijona, não torrone duro. Não se adiciona ovo cru, mas os biscoitos e o turrón podem conter ovo cozido: não serve para alérgicos a ovo. Contém leite, amêndoas e trigo. Use laticínios pasteurizados e guarde coberto a 4 °C ou menos por até 2 dias. Pode usar café descafeinado. Formulação não testada fisicamente na cozinha.",
+      "content_html": "<p>Uma versão natalina com turrón espanhol macio de amêndoas, mascarpone e creme batido. Monte camadas com biscoitos embebidos em café e leve à geladeira por pelo menos quatro horas.</p><p>Use turrón espanhol macio de amêndoas tipo Jijona, não torrone duro. Não se adiciona ovo cru, mas os biscoitos e o turrón podem conter ovo cozido: não serve para alérgicos a ovo. Contém leite, amêndoas e trigo. Use laticínios pasteurizados e guarde coberto a 4 °C ou menos por até 2 dias. Pode usar café descafeinado. Formulação não testada fisicamente na cozinha.</p>",
+      "ingredients": [
+        {
+          "name": "turrón espanhol macio de amêndoas, tipo Jijona",
+          "amount": "150",
+          "unit": "g"
+        },
+        {
+          "name": "queijo mascarpone",
+          "amount": "250",
+          "unit": "g"
+        },
+        {
+          "name": "creme de leite fresco para bater com 35 % de gordura, gelado",
+          "amount": "200",
+          "unit": "g"
+        },
+        {
+          "name": "biscoitos champagne ou savoiardi",
+          "amount": "120",
+          "unit": "g"
+        },
+        {
+          "name": "café preparado frio sem açúcar",
+          "amount": "180",
+          "unit": "ml"
+        },
+        {
+          "name": "cacau em pó puro sem açúcar",
+          "amount": "8",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepare café e copos",
+          "content": "Prepare 180 ml de café sem açúcar e deixe esfriar completamente. Separe seis copos de cerca de 200 ml em uma bandeja.",
+          "image_url": "/recetas/tiramisu-turron-vasitos/paso-01.webp",
+          "image_alt": "Tiramisù de turrón em copinhos, sem ovo cru: Prepare café e copos"
+        },
+        {
+          "title": "Esfarele o turrón",
+          "content": "Esfarele finamente 150 g de turrón macio. Reserve 20 g para decorar e coloque os outros 130 g em uma tigela.",
+          "image_url": "/recetas/tiramisu-turron-vasitos/paso-02.webp",
+          "image_alt": "Tiramisù de turrón em copinhos, sem ovo cru: Esfarele o turrón"
+        },
+        {
+          "title": "Misture o creme",
+          "content": "Junte 250 g de mascarpone e bata rapidamente em velocidade baixa até homogeneizar, sem bater demais.",
+          "image_url": "/recetas/tiramisu-turron-vasitos/paso-03.webp",
+          "image_alt": "Tiramisù de turrón em copinhos, sem ovo cru: Misture o creme"
+        },
+        {
+          "title": "Incorpore o creme batido",
+          "content": "Bata 200 g de creme de leite gelado até picos suaves e incorpore delicadamente ao mascarpone com turrón.",
+          "image_url": "/recetas/tiramisu-turron-vasitos/paso-04.webp",
+          "image_alt": "Tiramisù de turrón em copinhos, sem ovo cru: Incorpore o creme batido"
+        },
+        {
+          "title": "Faça a primeira camada",
+          "content": "Quebre 120 g de biscoitos para caber nos copos. Umedeça rapidamente metade no café frio e distribua no fundo, sem encharcar.",
+          "image_url": "/recetas/tiramisu-turron-vasitos/paso-05.webp",
+          "image_alt": "Tiramisù de turrón em copinhos, sem ovo cru: Faça a primeira camada"
+        },
+        {
+          "title": "Alterne as camadas",
+          "content": "Cubra com metade do creme. Repita com os biscoitos restantes umedecidos e finalize com o restante do creme. Não é preciso usar todo o café.",
+          "image_url": "/recetas/tiramisu-turron-vasitos/paso-06.webp",
+          "image_alt": "Tiramisù de turrón em copinhos, sem ovo cru: Alterne as camadas"
+        },
+        {
+          "title": "Leve à geladeira",
+          "content": "Cubra sem encostar no creme e refrigere por pelo menos 4 horas para firmar as camadas.",
+          "image_url": "/recetas/tiramisu-turron-vasitos/paso-07.webp",
+          "image_alt": "Tiramisù de turrón em copinhos, sem ovo cru: Leve à geladeira"
+        },
+        {
+          "title": "Decore ao servir",
+          "content": "Peneire 8 g de cacau sobre os seis copos e espalhe os 20 g de turrón reservados. Sirva gelado e mantenha as outras porções refrigeradas.",
+          "image_url": "/recetas/tiramisu-turron-vasitos/paso-08.webp",
+          "image_alt": "Tiramisù de turrón em copinhos, sem ovo cru: Decore ao servir"
+        }
+      ],
+      "category": "Sobremesas",
+      "course": "Sobremesa",
+      "cuisine": "Internacional",
+      "difficulty": "Fácil",
+      "prep_time_minutes": 30,
+      "cook_time_minutes": 0,
+      "total_time_minutes": 270,
+      "servings": 6,
+      "image_url": "/recetas/tiramisu-turron-vasitos/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/tiramisu-turron-vasitos/portada.webp",
+          "alt": "Tiramisù de turrón em copinhos, sem ovo cru"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "Tiramisù de turrón em copinhos, sem ovo cru",
+        "turrón espanhol macio de amêndoas, tipo Jijona",
+        "queijo mascarpone",
+        "creme de leite fresco para bater com 35 % de gordura, gelado"
+      ],
+      "nutrition": {
+        "calories": 491,
+        "protein_g": 9.0,
+        "carbs_g": 23.8,
+        "fat_g": 40.1,
+        "saturated_fat_g": 20.7,
+        "sodium_mg": 55.6,
+        "estimated": true,
+        "serving_size": "1 dos 6 copinhos de tiramisù",
+        "source": "USDA FoodData Central SR Legacy + manufacturer reference labels",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Soma dos nutrientes por 100 g × peso de cada ingrediente / 100, dividida pelo número de porções.",
+        "note": "Estimativa pela formulação; marcas, porções reais e perdas no cozimento alteram os valores. Não é análise laboratorial."
+      },
+      "seo": {
+        "title": "Tiramisù de turrón em copinhos, sem ovo cru | Manual de Cocina",
+        "description": "Uma versão natalina com turrón espanhol macio de amêndoas, mascarpone e creme batido. Monte camadas com biscoitos embebidos em café e leve à geladeira por pelo menos quatro horas.",
+        "image_alt": "Tiramisù de turrón em copinhos, sem ovo cru",
+        "image_variants": [
+          "/recetas/tiramisu-turron-vasitos/portada-1x1.webp",
+          "/recetas/tiramisu-turron-vasitos/portada-4x3.webp",
+          "/recetas/tiramisu-turron-vasitos/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "É uma receita sem ovo?",
+            "a": "Não se acrescenta ovo cru, mas os biscoitos e alguns turróns contêm ovo cozido. Confira os rótulos."
+          },
+          {
+            "q": "Qual turrón devo usar?",
+            "a": "O espanhol macio de amêndoas tipo Jijona, que se esfarela e mistura ao mascarpone."
+          },
+          {
+            "q": "Quanto tempo precisa gelar?",
+            "a": "Pelo menos 4 horas. Prepare na véspera e acrescente o cacau e o turrón final pouco antes de servir."
+          }
+        ],
+        "rest_time_minutes": 240
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "source_url": null,
+      "source_post_id": null
+    }
+  ]
+}

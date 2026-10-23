@@ -1,0 +1,1366 @@
+{
+  "slug": "vasitos-cheesecake-pistacho-chocolate",
+  "key": "pistacho",
+  "date": "2026-10-22",
+  "target": "https://manualdecocina.com",
+  "state": "SEVEN_LANGUAGES_DRAFT_AWAITING_MEDIA_QA",
+  "languages": [
+    "es",
+    "de",
+    "en",
+    "fr",
+    "it",
+    "ja",
+    "pt"
+  ],
+  "steps_es_sha256": "a29f0a46d8c7839c6ee2e7f0f4d8ba7258b7268b717e722ac8fb1d7ee1685db9",
+  "physical_kitchen_test": false,
+  "category_slug": "postres",
+  "nutrition_calculation": {
+    "servings": 6,
+    "foods": [
+      {
+        "description": "McVitie’s Digestive Original reference label",
+        "source_url": "https://www.mcvities.se/mcvities-digestive-original/",
+        "per_100g": {
+          "calories": 483,
+          "protein_g": 7.1,
+          "carbs_g": 63.7,
+          "fat_g": 21.3,
+          "saturated_fat_g": 10.1,
+          "fiber_g": 3.7,
+          "sugar_g": 15.1,
+          "sodium_mg": 520
+        },
+        "assumptions": "Salt 1.3 g / 2.5 × 1000 = 520 mg sodium per 100 g.",
+        "grams": 120
+      },
+      {
+        "description": "Butter, without salt",
+        "fdc_id": 173430,
+        "per_100g": {
+          "sugar_g": 0.06,
+          "calories": 717,
+          "saturated_fat_g": 50.5,
+          "fat_g": 81.1,
+          "carbs_g": 0.06,
+          "protein_g": 0.85,
+          "fiber_g": 0.0,
+          "sodium_mg": 11.0
+        },
+        "source_url": "https://fdc.nal.usda.gov/food-details/173430/nutrients",
+        "grams": 40
+      },
+      {
+        "description": "Cheese, cream",
+        "fdc_id": 173418,
+        "per_100g": {
+          "protein_g": 6.15,
+          "saturated_fat_g": 20.2,
+          "fat_g": 34.4,
+          "carbs_g": 5.52,
+          "calories": 350,
+          "sugar_g": 3.76,
+          "sodium_mg": 314,
+          "fiber_g": 0.0
+        },
+        "source_url": "https://fdc.nal.usda.gov/food-details/173418/nutrients",
+        "grams": 300
+      },
+      {
+        "description": "Nuts, pistachio nuts, dry roasted, without salt added",
+        "fdc_id": 170185,
+        "per_100g": {
+          "saturated_fat_g": 5.64,
+          "protein_g": 21.0,
+          "fiber_g": 10.3,
+          "fat_g": 45.8,
+          "carbs_g": 28.3,
+          "calories": 572,
+          "sodium_mg": 6.0,
+          "sugar_g": 7.74
+        },
+        "source_url": "https://fdc.nal.usda.gov/food-details/170185/nutrients",
+        "grams": 90
+      },
+      {
+        "description": "Sugars, powdered",
+        "fdc_id": 169656,
+        "per_100g": {
+          "fat_g": 0.0,
+          "calories": 389,
+          "saturated_fat_g": 0.0,
+          "protein_g": 0.0,
+          "sodium_mg": 2.0,
+          "carbs_g": 99.8,
+          "sugar_g": 97.8,
+          "fiber_g": 0.0
+        },
+        "source_url": "https://fdc.nal.usda.gov/food-details/169656/nutrients",
+        "grams": 45
+      },
+      {
+        "description": "Cream, fluid, heavy whipping",
+        "fdc_id": 170859,
+        "per_100g": {
+          "fat_g": 36.1,
+          "calories": 340,
+          "sugar_g": 2.92,
+          "sodium_mg": 27.0,
+          "protein_g": 2.84,
+          "saturated_fat_g": 23.0,
+          "fiber_g": 0.0,
+          "carbs_g": 2.84
+        },
+        "source_url": "https://fdc.nal.usda.gov/food-details/170859/nutrients",
+        "grams": 200
+      },
+      {
+        "description": "Chocolate, dark, 60-69% cacao solids",
+        "fdc_id": 170272,
+        "per_100g": {
+          "fat_g": 38.3,
+          "carbs_g": 52.4,
+          "calories": 579,
+          "protein_g": 6.12,
+          "fiber_g": 8.0,
+          "sodium_mg": 10.0,
+          "saturated_fat_g": 22.0,
+          "sugar_g": 36.7
+        },
+        "source_url": "https://fdc.nal.usda.gov/food-details/170272/nutrients",
+        "grams": 90
+      },
+      {
+        "description": "Nuts, pistachio nuts, dry roasted, without salt added",
+        "fdc_id": 170185,
+        "per_100g": {
+          "saturated_fat_g": 5.64,
+          "protein_g": 21.0,
+          "fiber_g": 10.3,
+          "fat_g": 45.8,
+          "carbs_g": 28.3,
+          "calories": 572,
+          "sodium_mg": 6.0,
+          "sugar_g": 7.74
+        },
+        "source_url": "https://fdc.nal.usda.gov/food-details/170185/nutrients",
+        "grams": 20
+      }
+    ],
+    "result": {
+      "calories": 654,
+      "protein_g": 10.3,
+      "carbs_g": 37.0,
+      "fat_g": 53.0,
+      "saturated_fat_g": 27.5,
+      "fiber_g": 3.8,
+      "sugar_g": 20.1,
+      "sodium_mg": 273.5
+    },
+    "archive_sha256": "0fe8ae486a2c8eb42cb96413f058deb51863a46c8fb8eeb4b1fb45006dd338ef",
+    "assumptions": [
+      "All recipe inputs counted, including pastry offcuts and all brushing egg.",
+      "Pure pistachio paste approximated by unsalted dry-roasted pistachio nuts.",
+      "Cream 35% approximated by USDA heavy whipping cream.",
+      "Full 180 ml unsweetened coffee counted, though some dipping coffee may remain.",
+      "All bacon counted; rendered fat is not subtracted.",
+      "Manufacturer label reference foods vary by market; this is not a brand-specific requirement."
+    ]
+  },
+  "pantry_slugs": [
+    "galletas-digestive",
+    "mantequilla",
+    "queso-crema",
+    "pasta-pistacho-pura",
+    "azucar-glas",
+    "crema-de-leche",
+    "chocolate-negro",
+    "pistachos"
+  ],
+  "records": [
+    {
+      "language": "es",
+      "slug": "vasitos-cheesecake-pistacho-chocolate",
+      "public_path": "/vasitos-cheesecake-pistacho-chocolate",
+      "title": "Vasitos de cheesecake de pistacho y chocolate sin horno",
+      "excerpt": "Un postre en vasos con base de galleta, crema suave de queso y pistacho puro, y una capa fina de chocolate. Se prepara sin horno y se enfría antes de servir.",
+      "summary": "Un postre en vasos con base de galleta, crema suave de queso y pistacho puro, y una capa fina de chocolate. Se prepara sin horno y se enfría antes de servir.",
+      "notes": "Usa pasta de pistacho 100 % sin azúcar; una crema dulce cambia el dulzor y la firmeza. La textura es de postre para cuchara, no de tarta para desmoldar. Refrigera a 4 °C o menos durante 4 horas y conserva tapado hasta 2 días. Contiene leche, pistacho y gluten; revisa también la etiqueta del chocolate. No es una receta probada físicamente en cocina.",
+      "content_html": "<p>Un postre en vasos con base de galleta, crema suave de queso y pistacho puro, y una capa fina de chocolate. Se prepara sin horno y se enfría antes de servir.</p><p>Usa pasta de pistacho 100 % sin azúcar; una crema dulce cambia el dulzor y la firmeza. La textura es de postre para cuchara, no de tarta para desmoldar. Refrigera a 4 °C o menos durante 4 horas y conserva tapado hasta 2 días. Contiene leche, pistacho y gluten; revisa también la etiqueta del chocolate. No es una receta probada físicamente en cocina.</p>",
+      "ingredients": [
+        {
+          "name": "galletas tipo digestive",
+          "amount": "120",
+          "unit": "g"
+        },
+        {
+          "name": "mantequilla sin sal",
+          "amount": "40",
+          "unit": "g"
+        },
+        {
+          "name": "queso crema entero",
+          "amount": "300",
+          "unit": "g"
+        },
+        {
+          "name": "pasta de pistacho 100 % sin azúcar",
+          "amount": "90",
+          "unit": "g"
+        },
+        {
+          "name": "azúcar glas",
+          "amount": "45",
+          "unit": "g"
+        },
+        {
+          "name": "crema de leche para montar con 35 % de grasa, bien fría",
+          "amount": "200",
+          "unit": "g"
+        },
+        {
+          "name": "chocolate negro con 60–70 % de cacao",
+          "amount": "90",
+          "unit": "g"
+        },
+        {
+          "name": "pistachos pelados sin sal, picados",
+          "amount": "20",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepara los vasos",
+          "content": "Dispón 6 vasos de 200 ml. Tritura 120 g de galletas hasta obtener migas finas.",
+          "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/paso-01.webp",
+          "image_alt": "Vasitos de cheesecake de pistacho y chocolate sin horno: Prepara los vasos"
+        },
+        {
+          "title": "Forma la base",
+          "content": "Derrite 40 g de mantequilla, mezcla con las migas y reparte entre los 6 vasos. Presiona suavemente con una cuchara y refrigera.",
+          "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/paso-02.webp",
+          "image_alt": "Vasitos de cheesecake de pistacho y chocolate sin horno: Forma la base"
+        },
+        {
+          "title": "Mezcla queso y pistacho",
+          "content": "Bate brevemente 300 g de queso crema con 90 g de pasta de pistacho y 45 g de azúcar glas hasta alisar, sin calentar la mezcla.",
+          "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/paso-03.webp",
+          "image_alt": "Vasitos de cheesecake de pistacho y chocolate sin horno: Mezcla queso y pistacho"
+        },
+        {
+          "title": "Monta parte de la crema",
+          "content": "Reserva 60 g de crema de leche para la cobertura. Bate los otros 140 g, bien fríos, hasta obtener picos suaves.",
+          "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/paso-04.webp",
+          "image_alt": "Vasitos de cheesecake de pistacho y chocolate sin horno: Monta parte de la crema"
+        },
+        {
+          "title": "Rellena los vasos",
+          "content": "Incorpora la crema montada a la mezcla de pistacho en dos tandas con espátula. Reparte sobre las bases y alisa.",
+          "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/paso-05.webp",
+          "image_alt": "Vasitos de cheesecake de pistacho y chocolate sin horno: Rellena los vasos"
+        },
+        {
+          "title": "Prepara el chocolate",
+          "content": "Calienta los 60 g de crema reservada hasta que humee suavemente, sin hervir fuerte. Vierte sobre 90 g de chocolate picado, espera 2 minutos y remueve hasta emulsionar.",
+          "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/paso-06.webp",
+          "image_alt": "Vasitos de cheesecake de pistacho y chocolate sin horno: Prepara el chocolate"
+        },
+        {
+          "title": "Cubre y enfría",
+          "content": "Deja templar el chocolate hasta que esté fluido y apenas tibio. Distribuye una capa fina sobre los vasos. Tapa sin tocar la superficie y refrigera al menos 4 horas.",
+          "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/paso-07.webp",
+          "image_alt": "Vasitos de cheesecake de pistacho y chocolate sin horno: Cubre y enfría"
+        },
+        {
+          "title": "Decora y sirve",
+          "content": "Reparte 20 g de pistachos picados sobre los 6 vasos y sirve frío. La base, la crema verde suave y el chocolate deben quedar visibles por el vidrio.",
+          "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/paso-08.webp",
+          "image_alt": "Vasitos de cheesecake de pistacho y chocolate sin horno: Decora y sirve"
+        }
+      ],
+      "category": "Postres",
+      "course": "Postre",
+      "cuisine": "Internacional",
+      "difficulty": "Fácil",
+      "prep_time_minutes": 30,
+      "cook_time_minutes": 5,
+      "total_time_minutes": 275,
+      "servings": 6,
+      "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/vasitos-cheesecake-pistacho-chocolate/portada.webp",
+          "alt": "Vasitos de cheesecake de pistacho y chocolate sin horno"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "Vasitos de cheesecake de pistacho y chocolate sin horno",
+        "galletas tipo digestive",
+        "mantequilla sin sal",
+        "queso crema entero"
+      ],
+      "nutrition": {
+        "calories": 654,
+        "protein_g": 10.3,
+        "carbs_g": 37.0,
+        "fat_g": 53.0,
+        "saturated_fat_g": 27.5,
+        "fiber_g": 3.8,
+        "sugar_g": 20.1,
+        "sodium_mg": 273.5,
+        "estimated": true,
+        "serving_size": "1 de 6 vasitos",
+        "source": "USDA FoodData Central SR Legacy + manufacturer reference labels",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Suma de nutrientes por 100 g × peso de cada ingrediente / 100, dividida por las porciones.",
+        "note": "Estimación de la formulación; cambia según marcas, porción real y pérdidas de cocción. No es un análisis de laboratorio."
+      },
+      "seo": {
+        "title": "Vasitos de cheesecake de pistacho y chocolate sin horno | Manual de Cocina",
+        "description": "Un postre en vasos con base de galleta, crema suave de queso y pistacho puro, y una capa fina de chocolate. Se prepara sin horno y se enfría antes de servir.",
+        "image_alt": "Vasitos de cheesecake de pistacho y chocolate sin horno",
+        "image_variants": [
+          "/recetas/vasitos-cheesecake-pistacho-chocolate/portada-1x1.webp",
+          "/recetas/vasitos-cheesecake-pistacho-chocolate/portada-4x3.webp",
+          "/recetas/vasitos-cheesecake-pistacho-chocolate/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "¿Puedo usar crema dulce de pistacho?",
+            "a": "La fórmula usa pasta 100 % pistacho. Una crema azucarada cambia la receta; no se sustituye gramo por gramo sin ajustar azúcar y textura."
+          },
+          {
+            "q": "¿Necesita gelatina?",
+            "a": "No: se sirve en vaso y mantiene una textura cremosa para comer con cuchara."
+          },
+          {
+            "q": "¿Se puede preparar el día anterior?",
+            "a": "Sí. Refrigera tapado a 4 °C o menos, hasta 2 días, y añade los pistachos al servir."
+          }
+        ],
+        "rest_time_minutes": 240
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "source_url": null,
+      "source_post_id": null
+    },
+    {
+      "language": "de",
+      "slug": "pistazien-schoko-cheesecake-im-glas",
+      "public_path": "/de/pistazien-schoko-cheesecake-im-glas",
+      "title": "Pistazien-Schoko-Cheesecake im Glas ohne Backen",
+      "excerpt": "Keksboden, eine weiche Frischkäsecreme mit reinem Pistazienmus und eine dünne Schokoschicht ergeben sechs Desserts zum Löffeln. Vor dem Servieren mindestens vier Stunden kühlen.",
+      "summary": "Keksboden, eine weiche Frischkäsecreme mit reinem Pistazienmus und eine dünne Schokoschicht ergeben sechs Desserts zum Löffeln. Vor dem Servieren mindestens vier Stunden kühlen.",
+      "notes": "Ungesüßtes Mus aus 100 % Pistazien verwenden, keine süße Pistaziencreme. Das Dessert bleibt weich und wird nicht gestürzt. Zugedeckt bei höchstens 4 °C bis zu 2 Tage lagern. Enthält Milch, Pistazien und Weizen; auch die Schokoladenpackung prüfen. Die redaktionelle Rezeptur wurde nicht praktisch in der Küche getestet.",
+      "content_html": "<p>Keksboden, eine weiche Frischkäsecreme mit reinem Pistazienmus und eine dünne Schokoschicht ergeben sechs Desserts zum Löffeln. Vor dem Servieren mindestens vier Stunden kühlen.</p><p>Ungesüßtes Mus aus 100 % Pistazien verwenden, keine süße Pistaziencreme. Das Dessert bleibt weich und wird nicht gestürzt. Zugedeckt bei höchstens 4 °C bis zu 2 Tage lagern. Enthält Milch, Pistazien und Weizen; auch die Schokoladenpackung prüfen. Die redaktionelle Rezeptur wurde nicht praktisch in der Küche getestet.</p>",
+      "ingredients": [
+        {
+          "name": "Digestive-Kekse",
+          "amount": "120",
+          "unit": "g"
+        },
+        {
+          "name": "ungesalzene Butter",
+          "amount": "40",
+          "unit": "g"
+        },
+        {
+          "name": "Doppelrahmfrischkäse",
+          "amount": "300",
+          "unit": "g"
+        },
+        {
+          "name": "ungesüßtes Pistazienmus aus 100 % Pistazien",
+          "amount": "90",
+          "unit": "g"
+        },
+        {
+          "name": "Puderzucker",
+          "amount": "45",
+          "unit": "g"
+        },
+        {
+          "name": "kalte Schlagsahne mit 35 % Fett",
+          "amount": "200",
+          "unit": "g"
+        },
+        {
+          "name": "Zartbitterschokolade mit 60–70 % Kakao",
+          "amount": "90",
+          "unit": "g"
+        },
+        {
+          "name": "gehackte ungesalzene Pistazienkerne",
+          "amount": "20",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Gläser vorbereiten",
+          "content": "Sechs Gläser mit je 200 ml bereitstellen. 120 g Kekse fein zerbröseln.",
+          "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/paso-01.webp",
+          "image_alt": "Pistazien-Schoko-Cheesecake im Glas ohne Backen: Gläser vorbereiten"
+        },
+        {
+          "title": "Böden formen",
+          "content": "40 g Butter schmelzen und mit den Bröseln mischen. Auf die Gläser verteilen, leicht andrücken und kalt stellen.",
+          "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/paso-02.webp",
+          "image_alt": "Pistazien-Schoko-Cheesecake im Glas ohne Backen: Böden formen"
+        },
+        {
+          "title": "Pistaziencreme mischen",
+          "content": "300 g Frischkäse mit 90 g Pistazienmus und 45 g Puderzucker kurz glatt rühren. Die Masse nicht erwärmen.",
+          "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/paso-03.webp",
+          "image_alt": "Pistazien-Schoko-Cheesecake im Glas ohne Backen: Pistaziencreme mischen"
+        },
+        {
+          "title": "Sahne schlagen",
+          "content": "60 g Sahne für den Guss zurückstellen. Die übrigen 140 g kalte Sahne bis zu weichen Spitzen schlagen.",
+          "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/paso-04.webp",
+          "image_alt": "Pistazien-Schoko-Cheesecake im Glas ohne Backen: Sahne schlagen"
+        },
+        {
+          "title": "Gläser füllen",
+          "content": "Die geschlagene Sahne in zwei Portionen unter die Pistazienmasse heben. Auf den Keksböden verteilen und glatt streichen.",
+          "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/paso-05.webp",
+          "image_alt": "Pistazien-Schoko-Cheesecake im Glas ohne Backen: Gläser füllen"
+        },
+        {
+          "title": "Schokolade schmelzen",
+          "content": "Die zurückgestellten 60 g Sahne sanft erhitzen, bis sie dampft. Über 90 g gehackte Schokolade gießen, 2 Minuten warten und glatt rühren.",
+          "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/paso-06.webp",
+          "image_alt": "Pistazien-Schoko-Cheesecake im Glas ohne Backen: Schokolade schmelzen"
+        },
+        {
+          "title": "Überziehen und kühlen",
+          "content": "Den Guss lauwarm und noch flüssig werden lassen. Dünn auf die Gläser verteilen, ohne Oberflächenkontakt abdecken und mindestens 4 Stunden kühlen.",
+          "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/paso-07.webp",
+          "image_alt": "Pistazien-Schoko-Cheesecake im Glas ohne Backen: Überziehen und kühlen"
+        },
+        {
+          "title": "Garnieren und servieren",
+          "content": "20 g gehackte Pistazien auf die sechs Gläser verteilen. Kalt servieren; Keksboden, hellgrüne Creme und Schokolade sollen sichtbar bleiben.",
+          "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/paso-08.webp",
+          "image_alt": "Pistazien-Schoko-Cheesecake im Glas ohne Backen: Garnieren und servieren"
+        }
+      ],
+      "category": "Desserts",
+      "course": "Dessert",
+      "cuisine": "International",
+      "difficulty": "Einfach",
+      "prep_time_minutes": 30,
+      "cook_time_minutes": 5,
+      "total_time_minutes": 275,
+      "servings": 6,
+      "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/vasitos-cheesecake-pistacho-chocolate/portada.webp",
+          "alt": "Pistazien-Schoko-Cheesecake im Glas ohne Backen"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "Pistazien-Schoko-Cheesecake im Glas ohne Backen",
+        "Digestive-Kekse",
+        "ungesalzene Butter",
+        "Doppelrahmfrischkäse"
+      ],
+      "nutrition": {
+        "calories": 654,
+        "protein_g": 10.3,
+        "carbs_g": 37.0,
+        "fat_g": 53.0,
+        "saturated_fat_g": 27.5,
+        "fiber_g": 3.8,
+        "sugar_g": 20.1,
+        "sodium_mg": 273.5,
+        "estimated": true,
+        "serving_size": "1 von 6 Dessertgläsern",
+        "source": "USDA FoodData Central SR Legacy + manufacturer reference labels",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Summe der Nährwerte je 100 g × Zutatengewicht / 100, geteilt durch die Portionenzahl.",
+        "note": "Schätzung aus der Rezeptur; Marke, tatsächliche Portion und Garverluste verändern die Werte. Keine Laboranalyse."
+      },
+      "seo": {
+        "title": "Pistazien-Schoko-Cheesecake im Glas ohne Backen | Manual de Cocina",
+        "description": "Keksboden, eine weiche Frischkäsecreme mit reinem Pistazienmus und eine dünne Schokoschicht ergeben sechs Desserts zum Löffeln. Vor dem Servieren mindestens vier Stunden kühlen.",
+        "image_alt": "Pistazien-Schoko-Cheesecake im Glas ohne Backen",
+        "image_variants": [
+          "/recetas/vasitos-cheesecake-pistacho-chocolate/portada-1x1.webp",
+          "/recetas/vasitos-cheesecake-pistacho-chocolate/portada-4x3.webp",
+          "/recetas/vasitos-cheesecake-pistacho-chocolate/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Geht auch süße Pistaziencreme?",
+            "a": "Das Rezept verwendet reines Pistazienmus. Eine gesüßte Creme verändert Süße und Festigkeit und ist kein direkter Ersatz."
+          },
+          {
+            "q": "Braucht man Gelatine?",
+            "a": "Nein. Die weiche Creme wird direkt aus dem Glas gelöffelt."
+          },
+          {
+            "q": "Kann ich das Dessert vorbereiten?",
+            "a": "Ja. Zugedeckt bei höchstens 4 °C bis zu 2 Tage kühlen und die Pistazien erst beim Servieren zugeben."
+          }
+        ],
+        "rest_time_minutes": 240
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "source_url": null,
+      "source_post_id": null
+    },
+    {
+      "language": "en",
+      "slug": "pistachio-chocolate-cheesecake-cups",
+      "public_path": "/en/pistachio-chocolate-cheesecake-cups",
+      "title": "No-bake pistachio and chocolate cheesecake cups",
+      "excerpt": "Biscuit crumbs, a soft cream cheese and pure pistachio filling, and a thin chocolate topping make six spoonable desserts. Prepare them ahead and chill for at least four hours.",
+      "summary": "Biscuit crumbs, a soft cream cheese and pure pistachio filling, and a thin chocolate topping make six spoonable desserts. Prepare them ahead and chill for at least four hours.",
+      "notes": "Use unsweetened 100% pistachio paste, not sweet pistachio spread. These are soft desserts served in glasses, not a cheesecake for unmoulding. Refrigerate covered at 4 °C or below for up to 2 days. Contains milk, pistachios and wheat; check the chocolate label too. This editorial formulation has not been physically kitchen-tested.",
+      "content_html": "<p>Biscuit crumbs, a soft cream cheese and pure pistachio filling, and a thin chocolate topping make six spoonable desserts. Prepare them ahead and chill for at least four hours.</p><p>Use unsweetened 100% pistachio paste, not sweet pistachio spread. These are soft desserts served in glasses, not a cheesecake for unmoulding. Refrigerate covered at 4 °C or below for up to 2 days. Contains milk, pistachios and wheat; check the chocolate label too. This editorial formulation has not been physically kitchen-tested.</p>",
+      "ingredients": [
+        {
+          "name": "digestive biscuits",
+          "amount": "120",
+          "unit": "g"
+        },
+        {
+          "name": "unsalted butter",
+          "amount": "40",
+          "unit": "g"
+        },
+        {
+          "name": "full-fat cream cheese",
+          "amount": "300",
+          "unit": "g"
+        },
+        {
+          "name": "unsweetened 100% pistachio paste",
+          "amount": "90",
+          "unit": "g"
+        },
+        {
+          "name": "icing sugar",
+          "amount": "45",
+          "unit": "g"
+        },
+        {
+          "name": "cold whipping cream, 35% fat",
+          "amount": "200",
+          "unit": "g"
+        },
+        {
+          "name": "dark chocolate, 60–70% cocoa",
+          "amount": "90",
+          "unit": "g"
+        },
+        {
+          "name": "chopped unsalted shelled pistachios",
+          "amount": "20",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepare the glasses",
+          "content": "Set out six 200 ml glasses. Crush 120 g biscuits into fine crumbs.",
+          "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/paso-01.webp",
+          "image_alt": "No-bake pistachio and chocolate cheesecake cups: Prepare the glasses"
+        },
+        {
+          "title": "Make the bases",
+          "content": "Melt 40 g butter and mix with the crumbs. Divide between the glasses, press lightly with a spoon and refrigerate.",
+          "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/paso-02.webp",
+          "image_alt": "No-bake pistachio and chocolate cheesecake cups: Make the bases"
+        },
+        {
+          "title": "Mix cheese and pistachio",
+          "content": "Briefly beat 300 g cream cheese with 90 g pistachio paste and 45 g icing sugar until smooth. Do not warm the mixture.",
+          "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/paso-03.webp",
+          "image_alt": "No-bake pistachio and chocolate cheesecake cups: Mix cheese and pistachio"
+        },
+        {
+          "title": "Whip the cream",
+          "content": "Reserve 60 g cream for the topping. Whip the remaining 140 g cold cream to soft peaks.",
+          "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/paso-04.webp",
+          "image_alt": "No-bake pistachio and chocolate cheesecake cups: Whip the cream"
+        },
+        {
+          "title": "Fill the glasses",
+          "content": "Fold the whipped cream into the pistachio mixture in two additions. Spoon over the biscuit bases and level the tops.",
+          "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/paso-05.webp",
+          "image_alt": "No-bake pistachio and chocolate cheesecake cups: Fill the glasses"
+        },
+        {
+          "title": "Make the chocolate topping",
+          "content": "Heat the reserved 60 g cream until steaming gently. Pour over 90 g chopped chocolate, wait 2 minutes and stir until smooth.",
+          "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/paso-06.webp",
+          "image_alt": "No-bake pistachio and chocolate cheesecake cups: Make the chocolate topping"
+        },
+        {
+          "title": "Top and chill",
+          "content": "Let the chocolate cool until barely warm and still fluid. Spread a thin layer over each cup, cover without touching the surface and refrigerate for at least 4 hours.",
+          "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/paso-07.webp",
+          "image_alt": "No-bake pistachio and chocolate cheesecake cups: Top and chill"
+        },
+        {
+          "title": "Finish and serve",
+          "content": "Divide 20 g chopped pistachios between the six cups. Serve cold, with the biscuit, pale green filling and chocolate layers visible.",
+          "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/paso-08.webp",
+          "image_alt": "No-bake pistachio and chocolate cheesecake cups: Finish and serve"
+        }
+      ],
+      "category": "Desserts",
+      "course": "Dessert",
+      "cuisine": "International",
+      "difficulty": "Easy",
+      "prep_time_minutes": 30,
+      "cook_time_minutes": 5,
+      "total_time_minutes": 275,
+      "servings": 6,
+      "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/vasitos-cheesecake-pistacho-chocolate/portada.webp",
+          "alt": "No-bake pistachio and chocolate cheesecake cups"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "No-bake pistachio and chocolate cheesecake cups",
+        "digestive biscuits",
+        "unsalted butter",
+        "full-fat cream cheese"
+      ],
+      "nutrition": {
+        "calories": 654,
+        "protein_g": 10.3,
+        "carbs_g": 37.0,
+        "fat_g": 53.0,
+        "saturated_fat_g": 27.5,
+        "fiber_g": 3.8,
+        "sugar_g": 20.1,
+        "sodium_mg": 273.5,
+        "estimated": true,
+        "serving_size": "1 of 6 dessert cups",
+        "source": "USDA FoodData Central SR Legacy + manufacturer reference labels",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Sum of nutrients per 100 g × each ingredient weight / 100, divided by the number of servings.",
+        "note": "Recipe-based estimate; brands, actual portions and cooking losses affect the values. Not a laboratory analysis."
+      },
+      "seo": {
+        "title": "No-bake pistachio and chocolate cheesecake cups | Manual de Cocina",
+        "description": "Biscuit crumbs, a soft cream cheese and pure pistachio filling, and a thin chocolate topping make six spoonable desserts. Prepare them ahead and chill for at least four hours.",
+        "image_alt": "No-bake pistachio and chocolate cheesecake cups",
+        "image_variants": [
+          "/recetas/vasitos-cheesecake-pistacho-chocolate/portada-1x1.webp",
+          "/recetas/vasitos-cheesecake-pistacho-chocolate/portada-4x3.webp",
+          "/recetas/vasitos-cheesecake-pistacho-chocolate/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Can I use sweet pistachio spread?",
+            "a": "The recipe uses 100% pistachio paste. Sweet spread changes the sweetness and firmness and is not a direct replacement."
+          },
+          {
+            "q": "Does it need gelatine?",
+            "a": "No. The filling stays soft and is eaten with a spoon from the glass."
+          },
+          {
+            "q": "Can I make it ahead?",
+            "a": "Yes. Keep covered at 4 °C or below for up to 2 days and add the chopped pistachios just before serving."
+          }
+        ],
+        "rest_time_minutes": 240
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "source_url": null,
+      "source_post_id": null
+    },
+    {
+      "language": "fr",
+      "slug": "verrines-cheesecake-pistache-chocolat",
+      "public_path": "/fr/verrines-cheesecake-pistache-chocolat",
+      "title": "Verrines de cheesecake pistache et chocolat sans cuisson",
+      "excerpt": "Une base biscuitée, une crème au fromage frais et à la pistache pure, puis une fine couche de chocolat. Six desserts à la cuillère à préparer au moins quatre heures avant de servir.",
+      "summary": "Une base biscuitée, une crème au fromage frais et à la pistache pure, puis une fine couche de chocolat. Six desserts à la cuillère à préparer au moins quatre heures avant de servir.",
+      "notes": "Choisissez une purée de pistache 100 % sans sucre, pas une pâte à tartiner sucrée. La crème reste souple et ne se démoule pas. Conservez les verrines couvertes à 4 °C maximum pendant 2 jours au plus. Contient lait, pistache et blé ; vérifiez aussi le chocolat. Cette formulation éditoriale n’a pas été testée physiquement en cuisine.",
+      "content_html": "<p>Une base biscuitée, une crème au fromage frais et à la pistache pure, puis une fine couche de chocolat. Six desserts à la cuillère à préparer au moins quatre heures avant de servir.</p><p>Choisissez une purée de pistache 100 % sans sucre, pas une pâte à tartiner sucrée. La crème reste souple et ne se démoule pas. Conservez les verrines couvertes à 4 °C maximum pendant 2 jours au plus. Contient lait, pistache et blé ; vérifiez aussi le chocolat. Cette formulation éditoriale n’a pas été testée physiquement en cuisine.</p>",
+      "ingredients": [
+        {
+          "name": "biscuits type digestive",
+          "amount": "120",
+          "unit": "g"
+        },
+        {
+          "name": "beurre doux",
+          "amount": "40",
+          "unit": "g"
+        },
+        {
+          "name": "fromage frais entier à tartiner",
+          "amount": "300",
+          "unit": "g"
+        },
+        {
+          "name": "purée de pistache 100 % sans sucre",
+          "amount": "90",
+          "unit": "g"
+        },
+        {
+          "name": "sucre glace",
+          "amount": "45",
+          "unit": "g"
+        },
+        {
+          "name": "crème liquide entière à 35 % de matière grasse, très froide",
+          "amount": "200",
+          "unit": "g"
+        },
+        {
+          "name": "chocolat noir à 60–70 % de cacao",
+          "amount": "90",
+          "unit": "g"
+        },
+        {
+          "name": "pistaches décortiquées non salées et hachées",
+          "amount": "20",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Préparer les verres",
+          "content": "Disposez six verres de 200 ml. Réduisez 120 g de biscuits en miettes fines.",
+          "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/paso-01.webp",
+          "image_alt": "Verrines de cheesecake pistache et chocolat sans cuisson: Préparer les verres"
+        },
+        {
+          "title": "Former les bases",
+          "content": "Faites fondre 40 g de beurre et mélangez avec les miettes. Répartissez dans les verres, tassez légèrement et réfrigérez.",
+          "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/paso-02.webp",
+          "image_alt": "Verrines de cheesecake pistache et chocolat sans cuisson: Former les bases"
+        },
+        {
+          "title": "Mélanger fromage et pistache",
+          "content": "Fouettez brièvement 300 g de fromage frais avec 90 g de purée de pistache et 45 g de sucre glace. Lissez sans réchauffer le mélange.",
+          "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/paso-03.webp",
+          "image_alt": "Verrines de cheesecake pistache et chocolat sans cuisson: Mélanger fromage et pistache"
+        },
+        {
+          "title": "Monter la crème",
+          "content": "Réservez 60 g de crème pour le chocolat. Fouettez les 140 g restants, bien froids, jusqu’à obtenir des pics souples.",
+          "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/paso-04.webp",
+          "image_alt": "Verrines de cheesecake pistache et chocolat sans cuisson: Monter la crème"
+        },
+        {
+          "title": "Garnir les verres",
+          "content": "Incorporez la crème fouettée au mélange pistache en deux fois, à la spatule. Répartissez sur les bases et lissez.",
+          "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/paso-05.webp",
+          "image_alt": "Verrines de cheesecake pistache et chocolat sans cuisson: Garnir les verres"
+        },
+        {
+          "title": "Préparer le chocolat",
+          "content": "Chauffez doucement les 60 g de crème réservée jusqu’à légère vapeur. Versez sur 90 g de chocolat haché, attendez 2 minutes puis mélangez pour émulsionner.",
+          "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/paso-06.webp",
+          "image_alt": "Verrines de cheesecake pistache et chocolat sans cuisson: Préparer le chocolat"
+        },
+        {
+          "title": "Couvrir et refroidir",
+          "content": "Laissez le chocolat devenir à peine tiède et encore fluide. Étalez une fine couche sur chaque verrine, couvrez sans toucher le dessus et réfrigérez au moins 4 heures.",
+          "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/paso-07.webp",
+          "image_alt": "Verrines de cheesecake pistache et chocolat sans cuisson: Couvrir et refroidir"
+        },
+        {
+          "title": "Décorer et servir",
+          "content": "Répartissez 20 g de pistaches hachées sur les six verrines. Servez froid, avec les couches de biscuit, crème vert pâle et chocolat visibles.",
+          "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/paso-08.webp",
+          "image_alt": "Verrines de cheesecake pistache et chocolat sans cuisson: Décorer et servir"
+        }
+      ],
+      "category": "Desserts",
+      "course": "Dessert",
+      "cuisine": "Internationale",
+      "difficulty": "Facile",
+      "prep_time_minutes": 30,
+      "cook_time_minutes": 5,
+      "total_time_minutes": 275,
+      "servings": 6,
+      "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/vasitos-cheesecake-pistacho-chocolate/portada.webp",
+          "alt": "Verrines de cheesecake pistache et chocolat sans cuisson"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "Verrines de cheesecake pistache et chocolat sans cuisson",
+        "biscuits type digestive",
+        "beurre doux",
+        "fromage frais entier à tartiner"
+      ],
+      "nutrition": {
+        "calories": 654,
+        "protein_g": 10.3,
+        "carbs_g": 37.0,
+        "fat_g": 53.0,
+        "saturated_fat_g": 27.5,
+        "fiber_g": 3.8,
+        "sugar_g": 20.1,
+        "sodium_mg": 273.5,
+        "estimated": true,
+        "serving_size": "1 verrine sur 6",
+        "source": "USDA FoodData Central SR Legacy + manufacturer reference labels",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Somme des nutriments pour 100 g × poids de chaque ingrédient / 100, divisée par le nombre de portions.",
+        "note": "Estimation selon la formulation ; les marques, les portions réelles et les pertes de cuisson modifient les valeurs. Pas une analyse de laboratoire."
+      },
+      "seo": {
+        "title": "Verrines de cheesecake pistache et chocolat sans cuisson | Manual de Cocina",
+        "description": "Une base biscuitée, une crème au fromage frais et à la pistache pure, puis une fine couche de chocolat. Six desserts à la cuillère à préparer au moins quatre heures avant de servir.",
+        "image_alt": "Verrines de cheesecake pistache et chocolat sans cuisson",
+        "image_variants": [
+          "/recetas/vasitos-cheesecake-pistacho-chocolate/portada-1x1.webp",
+          "/recetas/vasitos-cheesecake-pistacho-chocolate/portada-4x3.webp",
+          "/recetas/vasitos-cheesecake-pistacho-chocolate/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Puis-je utiliser une crème de pistache sucrée ?",
+            "a": "La recette utilise de la pistache pure. Une pâte sucrée modifie le goût et la tenue et ne se remplace pas à poids égal."
+          },
+          {
+            "q": "Faut-il de la gélatine ?",
+            "a": "Non. Le dessert reste crémeux et se mange à la cuillère dans son verre."
+          },
+          {
+            "q": "Puis-je le préparer la veille ?",
+            "a": "Oui. Gardez-le couvert à 4 °C maximum jusqu’à 2 jours et ajoutez les pistaches au moment de servir."
+          }
+        ],
+        "rest_time_minutes": 240
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "source_url": null,
+      "source_post_id": null
+    },
+    {
+      "language": "it",
+      "slug": "bicchierini-cheesecake-pistacchio-cioccolato",
+      "public_path": "/it/bicchierini-cheesecake-pistacchio-cioccolato",
+      "title": "Cheesecake al pistacchio e cioccolato in bicchiere senza cottura",
+      "excerpt": "Una base di biscotti, una morbida crema di formaggio e pistacchio puro e un sottile strato di cioccolato. Sei dessert al cucchiaio da far riposare in frigorifero almeno quattro ore.",
+      "summary": "Una base di biscotti, una morbida crema di formaggio e pistacchio puro e un sottile strato di cioccolato. Sei dessert al cucchiaio da far riposare in frigorifero almeno quattro ore.",
+      "notes": "Usa pasta di pistacchio pura al 100 % non zuccherata, non crema spalmabile dolce. Il dessert rimane morbido e non va sformato. Conservalo coperto a 4 °C o meno per massimo 2 giorni. Contiene latte, pistacchi e frumento; controlla anche il cioccolato. Questa formulazione editoriale non è stata provata fisicamente in cucina.",
+      "content_html": "<p>Una base di biscotti, una morbida crema di formaggio e pistacchio puro e un sottile strato di cioccolato. Sei dessert al cucchiaio da far riposare in frigorifero almeno quattro ore.</p><p>Usa pasta di pistacchio pura al 100 % non zuccherata, non crema spalmabile dolce. Il dessert rimane morbido e non va sformato. Conservalo coperto a 4 °C o meno per massimo 2 giorni. Contiene latte, pistacchi e frumento; controlla anche il cioccolato. Questa formulazione editoriale non è stata provata fisicamente in cucina.</p>",
+      "ingredients": [
+        {
+          "name": "biscotti tipo digestive",
+          "amount": "120",
+          "unit": "g"
+        },
+        {
+          "name": "burro non salato",
+          "amount": "40",
+          "unit": "g"
+        },
+        {
+          "name": "formaggio fresco spalmabile intero",
+          "amount": "300",
+          "unit": "g"
+        },
+        {
+          "name": "pasta di pistacchio 100 % senza zucchero",
+          "amount": "90",
+          "unit": "g"
+        },
+        {
+          "name": "zucchero a velo",
+          "amount": "45",
+          "unit": "g"
+        },
+        {
+          "name": "panna fresca da montare al 35 % di grassi, fredda",
+          "amount": "200",
+          "unit": "g"
+        },
+        {
+          "name": "cioccolato fondente al 60–70 % di cacao",
+          "amount": "90",
+          "unit": "g"
+        },
+        {
+          "name": "pistacchi sgusciati non salati, tritati",
+          "amount": "20",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepara i bicchieri",
+          "content": "Disponi sei bicchieri da 200 ml. Riduci 120 g di biscotti in briciole fini.",
+          "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/paso-01.webp",
+          "image_alt": "Cheesecake al pistacchio e cioccolato in bicchiere senza cottura: Prepara i bicchieri"
+        },
+        {
+          "title": "Forma le basi",
+          "content": "Sciogli 40 g di burro e mescolalo alle briciole. Dividi nei bicchieri, premi leggermente con un cucchiaio e metti in frigo.",
+          "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/paso-02.webp",
+          "image_alt": "Cheesecake al pistacchio e cioccolato in bicchiere senza cottura: Forma le basi"
+        },
+        {
+          "title": "Mescola formaggio e pistacchio",
+          "content": "Lavora brevemente 300 g di formaggio con 90 g di pasta di pistacchio e 45 g di zucchero a velo, senza scaldare il composto.",
+          "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/paso-03.webp",
+          "image_alt": "Cheesecake al pistacchio e cioccolato in bicchiere senza cottura: Mescola formaggio e pistacchio"
+        },
+        {
+          "title": "Monta la panna",
+          "content": "Tieni da parte 60 g di panna per la copertura. Monta i restanti 140 g ben freddi fino a ottenere picchi morbidi.",
+          "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/paso-04.webp",
+          "image_alt": "Cheesecake al pistacchio e cioccolato in bicchiere senza cottura: Monta la panna"
+        },
+        {
+          "title": "Riempi i bicchieri",
+          "content": "Incorpora la panna montata al pistacchio in due volte con una spatola. Distribuisci sulle basi e livella.",
+          "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/paso-05.webp",
+          "image_alt": "Cheesecake al pistacchio e cioccolato in bicchiere senza cottura: Riempi i bicchieri"
+        },
+        {
+          "title": "Prepara il cioccolato",
+          "content": "Scalda delicatamente i 60 g di panna fino a farla fumare appena. Versala su 90 g di cioccolato tritato, attendi 2 minuti e mescola fino a emulsionare.",
+          "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/paso-06.webp",
+          "image_alt": "Cheesecake al pistacchio e cioccolato in bicchiere senza cottura: Prepara il cioccolato"
+        },
+        {
+          "title": "Copri e raffredda",
+          "content": "Lascia intiepidire il cioccolato mantenendolo fluido. Stendine uno strato sottile sui bicchieri, copri senza toccare la superficie e refrigera almeno 4 ore.",
+          "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/paso-07.webp",
+          "image_alt": "Cheesecake al pistacchio e cioccolato in bicchiere senza cottura: Copri e raffredda"
+        },
+        {
+          "title": "Decora e servi",
+          "content": "Dividi 20 g di pistacchi tritati sui sei dessert e servi freddo, lasciando visibili gli strati di biscotto, crema verde chiaro e cioccolato.",
+          "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/paso-08.webp",
+          "image_alt": "Cheesecake al pistacchio e cioccolato in bicchiere senza cottura: Decora e servi"
+        }
+      ],
+      "category": "Dolci",
+      "course": "Dessert",
+      "cuisine": "Internazionale",
+      "difficulty": "Facile",
+      "prep_time_minutes": 30,
+      "cook_time_minutes": 5,
+      "total_time_minutes": 275,
+      "servings": 6,
+      "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/vasitos-cheesecake-pistacho-chocolate/portada.webp",
+          "alt": "Cheesecake al pistacchio e cioccolato in bicchiere senza cottura"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "Cheesecake al pistacchio e cioccolato in bicchiere senza cottura",
+        "biscotti tipo digestive",
+        "burro non salato",
+        "formaggio fresco spalmabile intero"
+      ],
+      "nutrition": {
+        "calories": 654,
+        "protein_g": 10.3,
+        "carbs_g": 37.0,
+        "fat_g": 53.0,
+        "saturated_fat_g": 27.5,
+        "fiber_g": 3.8,
+        "sugar_g": 20.1,
+        "sodium_mg": 273.5,
+        "estimated": true,
+        "serving_size": "1 dei 6 bicchierini",
+        "source": "USDA FoodData Central SR Legacy + manufacturer reference labels",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Somma dei nutrienti per 100 g × peso di ogni ingrediente / 100, divisa per il numero di porzioni.",
+        "note": "Stima della formulazione: marche, porzioni reali e perdite di cottura cambiano i valori. Non è un’analisi di laboratorio."
+      },
+      "seo": {
+        "title": "Cheesecake al pistacchio e cioccolato in bicchiere senza cottura | Manual de Cocina",
+        "description": "Una base di biscotti, una morbida crema di formaggio e pistacchio puro e un sottile strato di cioccolato. Sei dessert al cucchiaio da far riposare in frigorifero almeno quattro ore.",
+        "image_alt": "Cheesecake al pistacchio e cioccolato in bicchiere senza cottura",
+        "image_variants": [
+          "/recetas/vasitos-cheesecake-pistacho-chocolate/portada-1x1.webp",
+          "/recetas/vasitos-cheesecake-pistacho-chocolate/portada-4x3.webp",
+          "/recetas/vasitos-cheesecake-pistacho-chocolate/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Posso usare crema dolce al pistacchio?",
+            "a": "La ricetta usa pistacchio puro. La crema zuccherata cambia dolcezza e consistenza e non è un sostituto diretto."
+          },
+          {
+            "q": "Serve gelatina?",
+            "a": "No. È un dessert morbido da mangiare al cucchiaio nel bicchiere."
+          },
+          {
+            "q": "Si prepara il giorno prima?",
+            "a": "Sì. Conservalo coperto a massimo 4 °C fino a 2 giorni e aggiungi i pistacchi al momento di servire."
+          }
+        ],
+        "rest_time_minutes": 240
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "source_url": null,
+      "source_post_id": null
+    },
+    {
+      "language": "ja",
+      "slug": "pistachio-chocolate-cheesecake-cups",
+      "public_path": "/ja/pistachio-chocolate-cheesecake-cups",
+      "title": "焼かないピスタチオとチョコのカップチーズケーキ",
+      "excerpt": "ビスケットの土台に、純粋なピスタチオペースト入りのクリームチーズを重ね、薄いチョコレートの層で仕上げます。6個分のスプーンで食べるデザートです。冷蔵庫で4時間以上冷やします。",
+      "summary": "ビスケットの土台に、純粋なピスタチオペースト入りのクリームチーズを重ね、薄いチョコレートの層で仕上げます。6個分のスプーンで食べるデザートです。冷蔵庫で4時間以上冷やします。",
+      "notes": "無糖のピスタチオ100％ペーストを使用します。加糖スプレッドとは別物です。柔らかいカップデザートなので型抜きしません。ふたをして4 ℃以下で冷蔵し、2日以内に食べてください。乳、ピスタチオ、小麦を含みます。チョコレートの表示も確認してください。この配合は編集上の提案で、実際の調理試験は行っていません。",
+      "content_html": "<p>ビスケットの土台に、純粋なピスタチオペースト入りのクリームチーズを重ね、薄いチョコレートの層で仕上げます。6個分のスプーンで食べるデザートです。冷蔵庫で4時間以上冷やします。</p><p>無糖のピスタチオ100％ペーストを使用します。加糖スプレッドとは別物です。柔らかいカップデザートなので型抜きしません。ふたをして4 ℃以下で冷蔵し、2日以内に食べてください。乳、ピスタチオ、小麦を含みます。チョコレートの表示も確認してください。この配合は編集上の提案で、実際の調理試験は行っていません。</p>",
+      "ingredients": [
+        {
+          "name": "ダイジェスティブビスケット",
+          "amount": "120",
+          "unit": "g"
+        },
+        {
+          "name": "食塩不使用バター",
+          "amount": "40",
+          "unit": "g"
+        },
+        {
+          "name": "全脂肪クリームチーズ",
+          "amount": "300",
+          "unit": "g"
+        },
+        {
+          "name": "無糖ピスタチオ100％ペースト",
+          "amount": "90",
+          "unit": "g"
+        },
+        {
+          "name": "粉砂糖",
+          "amount": "45",
+          "unit": "g"
+        },
+        {
+          "name": "乳脂肪分35％のよく冷やした生クリーム",
+          "amount": "200",
+          "unit": "g"
+        },
+        {
+          "name": "カカオ分60〜70％のダークチョコレート",
+          "amount": "90",
+          "unit": "g"
+        },
+        {
+          "name": "殻を除いた無塩ピスタチオ（刻む）",
+          "amount": "20",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "グラスを用意する",
+          "content": "200 mlのグラスを6個用意します。ビスケット120 gを細かく砕きます。",
+          "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/paso-01.webp",
+          "image_alt": "焼かないピスタチオとチョコのカップチーズケーキ: グラスを用意する"
+        },
+        {
+          "title": "土台を作る",
+          "content": "バター40 gを溶かしてビスケットと混ぜます。6個のグラスに分け、スプーンで軽く押さえて冷蔵します。",
+          "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/paso-02.webp",
+          "image_alt": "焼かないピスタチオとチョコのカップチーズケーキ: 土台を作る"
+        },
+        {
+          "title": "チーズとピスタチオを混ぜる",
+          "content": "クリームチーズ300 g、ピスタチオペースト90 g、粉砂糖45 gを短時間混ぜて滑らかにします。温まるほど混ぜ続けないでください。",
+          "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/paso-03.webp",
+          "image_alt": "焼かないピスタチオとチョコのカップチーズケーキ: チーズとピスタチオを混ぜる"
+        },
+        {
+          "title": "生クリームを泡立てる",
+          "content": "生クリーム60 gをチョコ用に取り分けます。残り140 gを冷たい状態で、柔らかい角が立つまで泡立てます。",
+          "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/paso-04.webp",
+          "image_alt": "焼かないピスタチオとチョコのカップチーズケーキ: 生クリームを泡立てる"
+        },
+        {
+          "title": "グラスに詰める",
+          "content": "泡立てた生クリームを2回に分けてピスタチオの生地にへらで混ぜ込みます。土台の上に分け入れ、表面をならします。",
+          "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/paso-05.webp",
+          "image_alt": "焼かないピスタチオとチョコのカップチーズケーキ: グラスに詰める"
+        },
+        {
+          "title": "チョコを準備する",
+          "content": "取り分けた生クリーム60 gを穏やかに湯気が出るまで温めます。刻んだチョコ90 gに注いで2分待ち、滑らかに乳化するまで混ぜます。",
+          "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/paso-06.webp",
+          "image_alt": "焼かないピスタチオとチョコのカップチーズケーキ: チョコを準備する"
+        },
+        {
+          "title": "表面を覆って冷やす",
+          "content": "チョコを、流動性があり、わずかに温かい程度まで冷まします。各カップに薄く広げ、表面に触れないよう覆い、4時間以上冷蔵します。",
+          "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/paso-07.webp",
+          "image_alt": "焼かないピスタチオとチョコのカップチーズケーキ: 表面を覆って冷やす"
+        },
+        {
+          "title": "飾って食べる",
+          "content": "刻んだピスタチオ20 gを6個に分けてのせます。ビスケット、淡い緑色のクリーム、チョコの層が見える状態で冷たくして出します。",
+          "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/paso-08.webp",
+          "image_alt": "焼かないピスタチオとチョコのカップチーズケーキ: 飾って食べる"
+        }
+      ],
+      "category": "デザート",
+      "course": "デザート",
+      "cuisine": "各国料理",
+      "difficulty": "簡単",
+      "prep_time_minutes": 30,
+      "cook_time_minutes": 5,
+      "total_time_minutes": 275,
+      "servings": 6,
+      "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/vasitos-cheesecake-pistacho-chocolate/portada.webp",
+          "alt": "焼かないピスタチオとチョコのカップチーズケーキ"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "焼かないピスタチオとチョコのカップチーズケーキ",
+        "ダイジェスティブビスケット",
+        "食塩不使用バター",
+        "全脂肪クリームチーズ"
+      ],
+      "nutrition": {
+        "calories": 654,
+        "protein_g": 10.3,
+        "carbs_g": 37.0,
+        "fat_g": 53.0,
+        "saturated_fat_g": 27.5,
+        "fiber_g": 3.8,
+        "sugar_g": 20.1,
+        "sodium_mg": 273.5,
+        "estimated": true,
+        "serving_size": "全6個のうち1個",
+        "source": "USDA FoodData Central SR Legacy + manufacturer reference labels",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "材料100 gあたりの栄養価×各使用重量÷100を合計し、人数で割って算出。",
+        "note": "配合からの推定値です。製品、実際の盛り付け量、加熱による損失で変わります。検査機関での分析値ではありません。"
+      },
+      "seo": {
+        "title": "焼かないピスタチオとチョコのカップチーズケーキ | Manual de Cocina",
+        "description": "ビスケットの土台に、純粋なピスタチオペースト入りのクリームチーズを重ね、薄いチョコレートの層で仕上げます。6個分のスプーンで食べるデザートです。冷蔵庫で4時間以上冷やします。",
+        "image_alt": "焼かないピスタチオとチョコのカップチーズケーキ",
+        "image_variants": [
+          "/recetas/vasitos-cheesecake-pistacho-chocolate/portada-1x1.webp",
+          "/recetas/vasitos-cheesecake-pistacho-chocolate/portada-4x3.webp",
+          "/recetas/vasitos-cheesecake-pistacho-chocolate/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "加糖ピスタチオスプレッドでも作れますか？",
+            "a": "この配合は無糖の純粋なペースト用です。加糖品では甘さと固さが変わるため、同量での単純な置き換えはできません。"
+          },
+          {
+            "q": "ゼラチンは必要ですか？",
+            "a": "不要です。柔らかいクリームをグラスからスプーンで食べます。"
+          },
+          {
+            "q": "前日に作れますか？",
+            "a": "はい。覆って4 ℃以下で2日以内を目安に保存し、刻んだピスタチオは食べる直前に加えます。"
+          }
+        ],
+        "rest_time_minutes": 240
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "source_url": null,
+      "source_post_id": null
+    },
+    {
+      "language": "pt",
+      "slug": "copinhos-cheesecake-pistache-chocolate",
+      "public_path": "/pt/copinhos-cheesecake-pistache-chocolate",
+      "title": "Cheesecake de pistache e chocolate no copinho, sem forno",
+      "excerpt": "Base de biscoito, creme macio de queijo com pasta pura de pistache e uma camada fina de chocolate. São seis sobremesas de colher que precisam de pelo menos quatro horas de geladeira.",
+      "summary": "Base de biscoito, creme macio de queijo com pasta pura de pistache e uma camada fina de chocolate. São seis sobremesas de colher que precisam de pelo menos quatro horas de geladeira.",
+      "notes": "Use pasta 100 % pistache sem açúcar, não creme doce de pistache. A sobremesa fica cremosa e não deve ser desenformada. Guarde coberta a 4 °C ou menos por até 2 dias. Contém leite, pistache e trigo; confira também o rótulo do chocolate. Esta formulação editorial não foi testada fisicamente na cozinha.",
+      "content_html": "<p>Base de biscoito, creme macio de queijo com pasta pura de pistache e uma camada fina de chocolate. São seis sobremesas de colher que precisam de pelo menos quatro horas de geladeira.</p><p>Use pasta 100 % pistache sem açúcar, não creme doce de pistache. A sobremesa fica cremosa e não deve ser desenformada. Guarde coberta a 4 °C ou menos por até 2 dias. Contém leite, pistache e trigo; confira também o rótulo do chocolate. Esta formulação editorial não foi testada fisicamente na cozinha.</p>",
+      "ingredients": [
+        {
+          "name": "biscoitos tipo digestive",
+          "amount": "120",
+          "unit": "g"
+        },
+        {
+          "name": "manteiga sem sal",
+          "amount": "40",
+          "unit": "g"
+        },
+        {
+          "name": "cream cheese integral",
+          "amount": "300",
+          "unit": "g"
+        },
+        {
+          "name": "pasta 100 % pistache sem açúcar",
+          "amount": "90",
+          "unit": "g"
+        },
+        {
+          "name": "açúcar de confeiteiro",
+          "amount": "45",
+          "unit": "g"
+        },
+        {
+          "name": "creme de leite fresco para bater com 35 % de gordura, bem gelado",
+          "amount": "200",
+          "unit": "g"
+        },
+        {
+          "name": "chocolate amargo com 60–70 % de cacau",
+          "amount": "90",
+          "unit": "g"
+        },
+        {
+          "name": "pistaches sem casca e sem sal, picados",
+          "amount": "20",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepare os copos",
+          "content": "Separe seis copos de 200 ml. Triture 120 g de biscoitos até obter uma farofa fina.",
+          "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/paso-01.webp",
+          "image_alt": "Cheesecake de pistache e chocolate no copinho, sem forno: Prepare os copos"
+        },
+        {
+          "title": "Faça as bases",
+          "content": "Derreta 40 g de manteiga e misture à farofa. Divida entre os copos, pressione levemente com uma colher e leve à geladeira.",
+          "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/paso-02.webp",
+          "image_alt": "Cheesecake de pistache e chocolate no copinho, sem forno: Faça as bases"
+        },
+        {
+          "title": "Misture queijo e pistache",
+          "content": "Bata rapidamente 300 g de cream cheese com 90 g de pasta de pistache e 45 g de açúcar de confeiteiro, até alisar sem aquecer a mistura.",
+          "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/paso-03.webp",
+          "image_alt": "Cheesecake de pistache e chocolate no copinho, sem forno: Misture queijo e pistache"
+        },
+        {
+          "title": "Bata parte do creme",
+          "content": "Reserve 60 g de creme de leite para a cobertura. Bata os 140 g restantes, bem gelados, até formar picos suaves.",
+          "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/paso-04.webp",
+          "image_alt": "Cheesecake de pistache e chocolate no copinho, sem forno: Bata parte do creme"
+        },
+        {
+          "title": "Recheie os copos",
+          "content": "Incorpore o creme batido à mistura de pistache em duas adições, com espátula. Divida sobre as bases e alise.",
+          "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/paso-05.webp",
+          "image_alt": "Cheesecake de pistache e chocolate no copinho, sem forno: Recheie os copos"
+        },
+        {
+          "title": "Prepare o chocolate",
+          "content": "Aqueça os 60 g de creme reservados até soltar vapor suave. Despeje sobre 90 g de chocolate picado, espere 2 minutos e mexa até emulsionar.",
+          "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/paso-06.webp",
+          "image_alt": "Cheesecake de pistache e chocolate no copinho, sem forno: Prepare o chocolate"
+        },
+        {
+          "title": "Cubra e gele",
+          "content": "Deixe o chocolate ficar apenas morno, ainda fluido. Espalhe uma camada fina em cada copo, cubra sem tocar a superfície e gele por pelo menos 4 horas.",
+          "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/paso-07.webp",
+          "image_alt": "Cheesecake de pistache e chocolate no copinho, sem forno: Cubra e gele"
+        },
+        {
+          "title": "Decore e sirva",
+          "content": "Divida 20 g de pistaches picados entre os seis copos. Sirva gelado, com as camadas de biscoito, creme verde-claro e chocolate visíveis.",
+          "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/paso-08.webp",
+          "image_alt": "Cheesecake de pistache e chocolate no copinho, sem forno: Decore e sirva"
+        }
+      ],
+      "category": "Sobremesas",
+      "course": "Sobremesa",
+      "cuisine": "Internacional",
+      "difficulty": "Fácil",
+      "prep_time_minutes": 30,
+      "cook_time_minutes": 5,
+      "total_time_minutes": 275,
+      "servings": 6,
+      "image_url": "/recetas/vasitos-cheesecake-pistacho-chocolate/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/vasitos-cheesecake-pistacho-chocolate/portada.webp",
+          "alt": "Cheesecake de pistache e chocolate no copinho, sem forno"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "Cheesecake de pistache e chocolate no copinho, sem forno",
+        "biscoitos tipo digestive",
+        "manteiga sem sal",
+        "cream cheese integral"
+      ],
+      "nutrition": {
+        "calories": 654,
+        "protein_g": 10.3,
+        "carbs_g": 37.0,
+        "fat_g": 53.0,
+        "saturated_fat_g": 27.5,
+        "fiber_g": 3.8,
+        "sugar_g": 20.1,
+        "sodium_mg": 273.5,
+        "estimated": true,
+        "serving_size": "1 dos 6 copinhos",
+        "source": "USDA FoodData Central SR Legacy + manufacturer reference labels",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Soma dos nutrientes por 100 g × peso de cada ingrediente / 100, dividida pelo número de porções.",
+        "note": "Estimativa pela formulação; marcas, porções reais e perdas no cozimento alteram os valores. Não é análise laboratorial."
+      },
+      "seo": {
+        "title": "Cheesecake de pistache e chocolate no copinho, sem forno | Manual de Cocina",
+        "description": "Base de biscoito, creme macio de queijo com pasta pura de pistache e uma camada fina de chocolate. São seis sobremesas de colher que precisam de pelo menos quatro horas de geladeira.",
+        "image_alt": "Cheesecake de pistache e chocolate no copinho, sem forno",
+        "image_variants": [
+          "/recetas/vasitos-cheesecake-pistacho-chocolate/portada-1x1.webp",
+          "/recetas/vasitos-cheesecake-pistacho-chocolate/portada-4x3.webp",
+          "/recetas/vasitos-cheesecake-pistacho-chocolate/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Posso usar creme doce de pistache?",
+            "a": "A receita usa pasta pura. O creme açucarado muda a doçura e a firmeza e não é uma substituição direta."
+          },
+          {
+            "q": "Precisa de gelatina?",
+            "a": "Não. A textura é cremosa e a sobremesa é servida de colher no copo."
+          },
+          {
+            "q": "Posso preparar na véspera?",
+            "a": "Sim. Guarde coberto a no máximo 4 °C por até 2 dias e acrescente os pistaches ao servir."
+          }
+        ],
+        "rest_time_minutes": 240
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "source_url": null,
+      "source_post_id": null
+    }
+  ]
+}
