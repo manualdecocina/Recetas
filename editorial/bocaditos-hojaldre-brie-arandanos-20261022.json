@@ -1,0 +1,1260 @@
+{
+  "slug": "bocaditos-hojaldre-brie-arandanos",
+  "key": "brie",
+  "date": "2026-10-22",
+  "target": "https://manualdecocina.com",
+  "state": "READY_AWAITING_PRODUCTION_DEPLOY_AND_PUBLICATION",
+  "languages": [
+    "es",
+    "de",
+    "en",
+    "fr",
+    "it",
+    "ja",
+    "pt"
+  ],
+  "steps_es_sha256": "0ca61494511bd914947ca4f0e500f8922ddb412fcc6321395ae0d274ad3eaf0a",
+  "physical_kitchen_test": false,
+  "category_slug": "entrantes-y-aperitivos",
+  "nutrition_calculation": {
+    "servings": 6,
+    "foods": [
+      {
+        "description": "Jus-Rol chilled puff pastry sheet reference label",
+        "source_url": "https://www.jusrol.co.uk/products/puff-pastry-sheets/",
+        "per_100g": {
+          "calories": 362,
+          "protein_g": 5.4,
+          "carbs_g": 35.7,
+          "fat_g": 20,
+          "saturated_fat_g": 9.9,
+          "fiber_g": 1.9,
+          "sugar_g": 0.3,
+          "sodium_mg": 312
+        },
+        "assumptions": "Salt 0.78 g / 2.5 × 1000 = 312 mg sodium. Reference composition only, pack shape not mandated.",
+        "grams": 250
+      },
+      {
+        "description": "Cheese, brie",
+        "fdc_id": 172177,
+        "per_100g": {
+          "sugar_g": 0.45,
+          "calories": 334,
+          "fiber_g": 0.0,
+          "sodium_mg": 629,
+          "protein_g": 20.8,
+          "saturated_fat_g": 17.4,
+          "fat_g": 27.7,
+          "carbs_g": 0.45
+        },
+        "source_url": "https://fdc.nal.usda.gov/food-details/172177/nutrients",
+        "grams": 180
+      },
+      {
+        "description": "Cranberry sauce, whole, canned, OCEAN SPRAY",
+        "fdc_id": 167803,
+        "per_100g": {
+          "fat_g": 0.05,
+          "carbs_g": 40.4,
+          "calories": 158,
+          "sugar_g": 31.3,
+          "protein_g": 0.75,
+          "fiber_g": 1.2,
+          "sodium_mg": 5.0,
+          "saturated_fat_g": 0.007
+        },
+        "source_url": "https://fdc.nal.usda.gov/food-details/167803/nutrients",
+        "grams": 120
+      },
+      {
+        "description": "Nuts, walnuts, english",
+        "fdc_id": 170187,
+        "per_100g": {
+          "carbs_g": 13.7,
+          "calories": 654,
+          "saturated_fat_g": 6.13,
+          "sugar_g": 2.61,
+          "protein_g": 15.2,
+          "fiber_g": 6.7,
+          "sodium_mg": 2.0,
+          "fat_g": 65.2
+        },
+        "source_url": "https://fdc.nal.usda.gov/food-details/170187/nutrients",
+        "grams": 30
+      },
+      {
+        "description": "Oil, canola",
+        "fdc_id": 172336,
+        "per_100g": {
+          "fat_g": 100,
+          "saturated_fat_g": 7.36,
+          "protein_g": 0.0,
+          "carbs_g": 0.0,
+          "calories": 884,
+          "fiber_g": 0.0,
+          "sodium_mg": 0.0,
+          "sugar_g": 0.0
+        },
+        "source_url": "https://fdc.nal.usda.gov/food-details/172336/nutrients",
+        "grams": 5
+      },
+      {
+        "description": "Rosemary, fresh",
+        "fdc_id": 173473,
+        "per_100g": {
+          "fat_g": 5.86,
+          "carbs_g": 20.7,
+          "calories": 131,
+          "protein_g": 3.31,
+          "fiber_g": 14.1,
+          "sodium_mg": 26.0,
+          "saturated_fat_g": 2.84
+        },
+        "source_url": "https://fdc.nal.usda.gov/food-details/173473/nutrients",
+        "grams": 2
+      }
+    ],
+    "result": {
+      "calories": 323,
+      "protein_g": 9.4,
+      "carbs_g": 23.8,
+      "fat_g": 20.8,
+      "saturated_fat_g": 9.7,
+      "fiber_g": 1.4,
+      "sodium_mg": 319.9
+    },
+    "archive_sha256": "0fe8ae486a2c8eb42cb96413f058deb51863a46c8fb8eeb4b1fb45006dd338ef",
+    "assumptions": [
+      "All recipe inputs counted, including pastry offcuts and all brushing egg.",
+      "Pure pistachio paste approximated by unsalted dry-roasted pistachio nuts.",
+      "Cream 35% approximated by USDA heavy whipping cream.",
+      "Full 180 ml unsweetened coffee counted, though some dipping coffee may remain.",
+      "All bacon counted; rendered fat is not subtracted.",
+      "Manufacturer label reference foods vary by market; this is not a brand-specific requirement."
+    ]
+  },
+  "pantry_slugs": [
+    "hojaldre",
+    "queso-brie",
+    "salsa-arandanos-rojos",
+    "nueces",
+    "aceite-de-canola",
+    "romero"
+  ],
+  "records": [
+    {
+      "language": "es",
+      "slug": "bocaditos-hojaldre-brie-arandanos",
+      "public_path": "/bocaditos-hojaldre-brie-arandanos",
+      "title": "Bocaditos de hojaldre con brie y arándanos rojos",
+      "excerpt": "Doce canastitas de hojaldre con brie fundido, salsa de arándanos rojos y nuez. Un aperitivo de contraste dulce y salado que se hornea en molde de muffins.",
+      "summary": "Doce canastitas de hojaldre con brie fundido, salsa de arándanos rojos y nuez. Un aperitivo de contraste dulce y salado que se hornea en molde de muffins.",
+      "notes": "Utiliza salsa o mermelada espesa de arándanos rojos (cranberry), no arándanos azules frescos. Una lámina de unos 24 × 32 cm permite cortar 12 cuadrados de 8 cm sin desperdicio. Usa un molde metálico de 12 muffins estándar y no lo llenes hasta el borde. Contiene trigo, leche y nueces. Refrigera las sobras dentro de 2 horas, hasta 2 días; recalienta en horno hasta que estén calientes. Los tiempos son orientativos y dependen de la masa y el molde.",
+      "content_html": "<p>Doce canastitas de hojaldre con brie fundido, salsa de arándanos rojos y nuez. Un aperitivo de contraste dulce y salado que se hornea en molde de muffins.</p><p>Utiliza salsa o mermelada espesa de arándanos rojos (cranberry), no arándanos azules frescos. Una lámina de unos 24 × 32 cm permite cortar 12 cuadrados de 8 cm sin desperdicio. Usa un molde metálico de 12 muffins estándar y no lo llenes hasta el borde. Contiene trigo, leche y nueces. Refrigera las sobras dentro de 2 horas, hasta 2 días; recalienta en horno hasta que estén calientes. Los tiempos son orientativos y dependen de la masa y el molde.</p>",
+      "ingredients": [
+        {
+          "name": "hojaldre refrigerado rectangular, unos 24 × 32 cm",
+          "amount": "250",
+          "unit": "g"
+        },
+        {
+          "name": "queso brie con corteza comestible",
+          "amount": "180",
+          "unit": "g"
+        },
+        {
+          "name": "salsa espesa de arándanos rojos",
+          "amount": "120",
+          "unit": "g"
+        },
+        {
+          "name": "nueces peladas picadas",
+          "amount": "30",
+          "unit": "g"
+        },
+        {
+          "name": "aceite para engrasar el molde",
+          "amount": "5",
+          "unit": "g"
+        },
+        {
+          "name": "romero fresco, solo las hojas picadas",
+          "amount": "2",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepara el molde",
+          "content": "Precalienta el horno a 200 °C, calor arriba y abajo. Engrasa ligeramente con 5 g de aceite un molde metálico de 12 muffins estándar.",
+          "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/paso-01.webp",
+          "image_alt": "Bocaditos de hojaldre con brie y arándanos rojos: Prepara el molde"
+        },
+        {
+          "title": "Corta los cuadrados",
+          "content": "Desenrolla 250 g de hojaldre frío en un rectángulo de unos 24 × 32 cm. Corta una cuadrícula de 3 × 4 para obtener 12 cuadrados de 8 cm.",
+          "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/paso-02.webp",
+          "image_alt": "Bocaditos de hojaldre con brie y arándanos rojos: Corta los cuadrados"
+        },
+        {
+          "title": "Forma las canastitas",
+          "content": "Acomoda un cuadrado en cada cavidad del molde y presiona suavemente el fondo, dejando las puntas hacia arriba.",
+          "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/paso-03.webp",
+          "image_alt": "Bocaditos de hojaldre con brie y arándanos rojos: Forma las canastitas"
+        },
+        {
+          "title": "Reparte el brie",
+          "content": "Corta 180 g de brie en 12 porciones iguales de unos 15 g y coloca una en cada base. La corteza comestible puede quedarse.",
+          "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/paso-04.webp",
+          "image_alt": "Bocaditos de hojaldre con brie y arándanos rojos: Reparte el brie"
+        },
+        {
+          "title": "Añade los arándanos",
+          "content": "Pon 10 g de salsa espesa de arándanos rojos sobre cada trozo de brie, sin llenar la cavidad hasta arriba.",
+          "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/paso-05.webp",
+          "image_alt": "Bocaditos de hojaldre con brie y arándanos rojos: Añade los arándanos"
+        },
+        {
+          "title": "Termina con nuez",
+          "content": "Reparte 30 g de nueces picadas y 2 g de hojas de romero sobre las 12 canastitas.",
+          "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/paso-06.webp",
+          "image_alt": "Bocaditos de hojaldre con brie y arándanos rojos: Termina con nuez"
+        },
+        {
+          "title": "Hornea las canastitas",
+          "content": "Hornea 18–20 minutos, hasta que los bordes estén bien dorados y la base cocida. Si la parte superior se dora demasiado, cubre flojamente con aluminio al final.",
+          "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/paso-07.webp",
+          "image_alt": "Bocaditos de hojaldre con brie y arándanos rojos: Hornea las canastitas"
+        },
+        {
+          "title": "Desmolda y sirve",
+          "content": "Espera 5 minutos antes de sacar las canastitas con una cuchara pequeña. Sirve 2 bocaditos tibios por persona; el queso caliente puede quemar.",
+          "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/paso-08.webp",
+          "image_alt": "Bocaditos de hojaldre con brie y arándanos rojos: Desmolda y sirve"
+        }
+      ],
+      "category": "Entrantes y aperitivos",
+      "course": "Entrada",
+      "cuisine": "Internacional",
+      "difficulty": "Fácil",
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 20,
+      "total_time_minutes": 45,
+      "servings": 6,
+      "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/bocaditos-hojaldre-brie-arandanos/portada.webp",
+          "alt": "Bocaditos de hojaldre con brie y arándanos rojos"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "Bocaditos de hojaldre con brie y arándanos rojos",
+        "hojaldre refrigerado rectangular, unos 24 × 32 cm",
+        "queso brie con corteza comestible",
+        "salsa espesa de arándanos rojos"
+      ],
+      "nutrition": {
+        "calories": 323,
+        "protein_g": 9.4,
+        "carbs_g": 23.8,
+        "fat_g": 20.8,
+        "saturated_fat_g": 9.7,
+        "fiber_g": 1.4,
+        "sodium_mg": 319.9,
+        "estimated": true,
+        "serving_size": "2 de los 12 bocaditos",
+        "source": "USDA FoodData Central SR Legacy + manufacturer reference labels",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Suma de nutrientes por 100 g × peso de cada ingrediente / 100, dividida por las porciones.",
+        "note": "Estimación de la formulación; cambia según marcas, porción real y pérdidas de cocción. No es un análisis de laboratorio."
+      },
+      "seo": {
+        "title": "Bocaditos de hojaldre con brie y arándanos rojos | Manual de Cocina",
+        "description": "Doce canastitas de hojaldre con brie fundido, salsa de arándanos rojos y nuez. Un aperitivo de contraste dulce y salado que se hornea en molde de muffins.",
+        "image_alt": "Bocaditos de hojaldre con brie y arándanos rojos",
+        "image_variants": [
+          "/recetas/bocaditos-hojaldre-brie-arandanos/portada-1x1.webp",
+          "/recetas/bocaditos-hojaldre-brie-arandanos/portada-4x3.webp",
+          "/recetas/bocaditos-hojaldre-brie-arandanos/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "¿Son arándanos azules o rojos?",
+            "a": "Rojos, también llamados cranberry, en salsa espesa o mermelada. El arándano azul produce otro sabor."
+          },
+          {
+            "q": "¿Se quita la corteza del brie?",
+            "a": "No hace falta: es comestible y ayuda a contener el queso. Retírala solo si lo prefieres."
+          },
+          {
+            "q": "¿Puedo omitir las nueces?",
+            "a": "Sí. Omítelas si hay alergia y revisa el resto de las etiquetas; la nutrición publicada corresponde a la versión con nueces."
+          }
+        ],
+        "rest_time_minutes": 5
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "source_url": null,
+      "source_post_id": null
+    },
+    {
+      "language": "de",
+      "slug": "blaetterteig-haeppchen-brie-cranberry",
+      "public_path": "/de/blaetterteig-haeppchen-brie-cranberry",
+      "title": "Blätterteig-Häppchen mit Brie und Cranberrys",
+      "excerpt": "Zwölf kleine Blätterteigkörbchen mit geschmolzenem Brie, dickem Cranberrykompott und Walnüssen. Sie werden in einer normalen Muffinform gebacken und warm serviert.",
+      "summary": "Zwölf kleine Blätterteigkörbchen mit geschmolzenem Brie, dickem Cranberrykompott und Walnüssen. Sie werden in einer normalen Muffinform gebacken und warm serviert.",
+      "notes": "Dickes Kompott aus roten Cranberrys verwenden, keine frischen Heidelbeeren. Eine 24 × 32 cm große Platte ergibt zwölf Quadrate ohne Verschnitt. Eine Metallform für zwölf normale Muffins verwenden und nicht überfüllen. Enthält Weizen, Milch und Walnüsse. Reste innerhalb von 2 Stunden kühlen, bis zu 2 Tage lagern und im Ofen erwärmen. Die Backzeit hängt von Teig und Form ab.",
+      "content_html": "<p>Zwölf kleine Blätterteigkörbchen mit geschmolzenem Brie, dickem Cranberrykompott und Walnüssen. Sie werden in einer normalen Muffinform gebacken und warm serviert.</p><p>Dickes Kompott aus roten Cranberrys verwenden, keine frischen Heidelbeeren. Eine 24 × 32 cm große Platte ergibt zwölf Quadrate ohne Verschnitt. Eine Metallform für zwölf normale Muffins verwenden und nicht überfüllen. Enthält Weizen, Milch und Walnüsse. Reste innerhalb von 2 Stunden kühlen, bis zu 2 Tage lagern und im Ofen erwärmen. Die Backzeit hängt von Teig und Form ab.</p>",
+      "ingredients": [
+        {
+          "name": "gekühlter rechteckiger Blätterteig, etwa 24 × 32 cm",
+          "amount": "250",
+          "unit": "g"
+        },
+        {
+          "name": "Brie mit essbarer Rinde",
+          "amount": "180",
+          "unit": "g"
+        },
+        {
+          "name": "dickes Cranberrykompott",
+          "amount": "120",
+          "unit": "g"
+        },
+        {
+          "name": "gehackte Walnusskerne",
+          "amount": "30",
+          "unit": "g"
+        },
+        {
+          "name": "Öl für die Form",
+          "amount": "5",
+          "unit": "g"
+        },
+        {
+          "name": "fein gehackte frische Rosmarinnadeln",
+          "amount": "2",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Form vorbereiten",
+          "content": "Ofen auf 200 °C Ober-/Unterhitze vorheizen. Eine Metallform für zwölf normale Muffins mit 5 g Öl dünn einfetten.",
+          "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/paso-01.webp",
+          "image_alt": "Blätterteig-Häppchen mit Brie und Cranberrys: Form vorbereiten"
+        },
+        {
+          "title": "Quadrate schneiden",
+          "content": "250 g kalten Blätterteig auf etwa 24 × 32 cm ausrollen. In einem Raster von 3 × 4 zwölf Quadrate von 8 cm schneiden.",
+          "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/paso-02.webp",
+          "image_alt": "Blätterteig-Häppchen mit Brie und Cranberrys: Quadrate schneiden"
+        },
+        {
+          "title": "Körbchen formen",
+          "content": "Je ein Quadrat vorsichtig in jede Vertiefung drücken. Die Ecken zeigen nach oben.",
+          "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/paso-03.webp",
+          "image_alt": "Blätterteig-Häppchen mit Brie und Cranberrys: Körbchen formen"
+        },
+        {
+          "title": "Brie verteilen",
+          "content": "180 g Brie in zwölf gleich große Stücke von etwa 15 g schneiden und je eines hineinlegen. Die essbare Rinde darf bleiben.",
+          "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/paso-04.webp",
+          "image_alt": "Blätterteig-Häppchen mit Brie und Cranberrys: Brie verteilen"
+        },
+        {
+          "title": "Cranberrys zugeben",
+          "content": "Je 10 g dickes Cranberrykompott auf den Brie geben. Die Vertiefungen nicht randvoll füllen.",
+          "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/paso-05.webp",
+          "image_alt": "Blätterteig-Häppchen mit Brie und Cranberrys: Cranberrys zugeben"
+        },
+        {
+          "title": "Mit Nüssen ergänzen",
+          "content": "30 g gehackte Walnüsse und 2 g gehackten Rosmarin auf die Körbchen verteilen.",
+          "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/paso-06.webp",
+          "image_alt": "Blätterteig-Häppchen mit Brie und Cranberrys: Mit Nüssen ergänzen"
+        },
+        {
+          "title": "Körbchen backen",
+          "content": "18–20 Minuten backen, bis die Ränder goldbraun und die Böden durchgebacken sind. Bei zu starker Bräunung zum Schluss locker mit Alufolie abdecken.",
+          "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/paso-07.webp",
+          "image_alt": "Blätterteig-Häppchen mit Brie und Cranberrys: Körbchen backen"
+        },
+        {
+          "title": "Herausnehmen und servieren",
+          "content": "5 Minuten warten, dann mit einem kleinen Löffel aus der Form heben. Je zwei lauwarme Häppchen servieren; der Käse kann sehr heiß sein.",
+          "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/paso-08.webp",
+          "image_alt": "Blätterteig-Häppchen mit Brie und Cranberrys: Herausnehmen und servieren"
+        }
+      ],
+      "category": "Vorspeisen",
+      "course": "Vorspeise",
+      "cuisine": "International",
+      "difficulty": "Einfach",
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 20,
+      "total_time_minutes": 45,
+      "servings": 6,
+      "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/bocaditos-hojaldre-brie-arandanos/portada.webp",
+          "alt": "Blätterteig-Häppchen mit Brie und Cranberrys"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "Blätterteig-Häppchen mit Brie und Cranberrys",
+        "gekühlter rechteckiger Blätterteig, etwa 24 × 32 cm",
+        "Brie mit essbarer Rinde",
+        "dickes Cranberrykompott"
+      ],
+      "nutrition": {
+        "calories": 323,
+        "protein_g": 9.4,
+        "carbs_g": 23.8,
+        "fat_g": 20.8,
+        "saturated_fat_g": 9.7,
+        "fiber_g": 1.4,
+        "sodium_mg": 319.9,
+        "estimated": true,
+        "serving_size": "2 von 12 Blätterteig-Häppchen",
+        "source": "USDA FoodData Central SR Legacy + manufacturer reference labels",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Summe der Nährwerte je 100 g × Zutatengewicht / 100, geteilt durch die Portionenzahl.",
+        "note": "Schätzung aus der Rezeptur; Marke, tatsächliche Portion und Garverluste verändern die Werte. Keine Laboranalyse."
+      },
+      "seo": {
+        "title": "Blätterteig-Häppchen mit Brie und Cranberrys | Manual de Cocina",
+        "description": "Zwölf kleine Blätterteigkörbchen mit geschmolzenem Brie, dickem Cranberrykompott und Walnüssen. Sie werden in einer normalen Muffinform gebacken und warm serviert.",
+        "image_alt": "Blätterteig-Häppchen mit Brie und Cranberrys",
+        "image_variants": [
+          "/recetas/bocaditos-hojaldre-brie-arandanos/portada-1x1.webp",
+          "/recetas/bocaditos-hojaldre-brie-arandanos/portada-4x3.webp",
+          "/recetas/bocaditos-hojaldre-brie-arandanos/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Sind Heidelbeeren gemeint?",
+            "a": "Nein. Benötigt werden rote Cranberrys als dickes Kompott oder Konfitüre."
+          },
+          {
+            "q": "Muss die Brie-Rinde weg?",
+            "a": "Nein. Sie ist essbar und hilft, den Käse zusammenzuhalten. Nur nach Geschmack entfernen."
+          },
+          {
+            "q": "Kann ich die Walnüsse weglassen?",
+            "a": "Ja. Bei Allergien weglassen und alle Etiketten prüfen. Die angegebenen Nährwerte enthalten Walnüsse."
+          }
+        ],
+        "rest_time_minutes": 5
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "source_url": null,
+      "source_post_id": null
+    },
+    {
+      "language": "en",
+      "slug": "cranberry-brie-puff-pastry-bites",
+      "public_path": "/en/cranberry-brie-puff-pastry-bites",
+      "title": "Cranberry and brie puff pastry bites",
+      "excerpt": "Twelve little pastry cups hold melted brie, thick cranberry sauce and walnuts. Bake them in a standard muffin tin for an easy sweet and savoury party appetiser.",
+      "summary": "Twelve little pastry cups hold melted brie, thick cranberry sauce and walnuts. Bake them in a standard muffin tin for an easy sweet and savoury party appetiser.",
+      "notes": "Use thick red cranberry sauce, not fresh blueberries. A 24 × 32 cm sheet makes twelve 8 cm squares without waste. Use a metal tin for 12 standard muffins and avoid overfilling. Contains wheat, milk and walnuts. Refrigerate leftovers within 2 hours for up to 2 days, then reheat in the oven. Baking time depends on the pastry and tin.",
+      "content_html": "<p>Twelve little pastry cups hold melted brie, thick cranberry sauce and walnuts. Bake them in a standard muffin tin for an easy sweet and savoury party appetiser.</p><p>Use thick red cranberry sauce, not fresh blueberries. A 24 × 32 cm sheet makes twelve 8 cm squares without waste. Use a metal tin for 12 standard muffins and avoid overfilling. Contains wheat, milk and walnuts. Refrigerate leftovers within 2 hours for up to 2 days, then reheat in the oven. Baking time depends on the pastry and tin.</p>",
+      "ingredients": [
+        {
+          "name": "chilled rectangular puff pastry, about 24 × 32 cm",
+          "amount": "250",
+          "unit": "g"
+        },
+        {
+          "name": "brie with edible rind",
+          "amount": "180",
+          "unit": "g"
+        },
+        {
+          "name": "thick cranberry sauce",
+          "amount": "120",
+          "unit": "g"
+        },
+        {
+          "name": "chopped shelled walnuts",
+          "amount": "30",
+          "unit": "g"
+        },
+        {
+          "name": "oil for greasing",
+          "amount": "5",
+          "unit": "g"
+        },
+        {
+          "name": "finely chopped fresh rosemary leaves",
+          "amount": "2",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepare the tin",
+          "content": "Heat the conventional oven to 200 °C. Lightly grease a metal 12-hole standard muffin tin with 5 g oil.",
+          "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/paso-01.webp",
+          "image_alt": "Cranberry and brie puff pastry bites: Prepare the tin"
+        },
+        {
+          "title": "Cut the squares",
+          "content": "Unroll 250 g cold pastry into a rectangle about 24 × 32 cm. Cut a 3 × 4 grid to make twelve 8 cm squares.",
+          "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/paso-02.webp",
+          "image_alt": "Cranberry and brie puff pastry bites: Cut the squares"
+        },
+        {
+          "title": "Line the holes",
+          "content": "Press one square gently into each hole, leaving the corners pointing upwards.",
+          "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/paso-03.webp",
+          "image_alt": "Cranberry and brie puff pastry bites: Line the holes"
+        },
+        {
+          "title": "Add the brie",
+          "content": "Cut 180 g brie into twelve equal pieces of about 15 g. Put one in each pastry cup; the edible rind can stay.",
+          "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/paso-04.webp",
+          "image_alt": "Cranberry and brie puff pastry bites: Add the brie"
+        },
+        {
+          "title": "Add cranberry sauce",
+          "content": "Spoon 10 g thick cranberry sauce over the brie in each cup. Do not fill the holes to the brim.",
+          "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/paso-05.webp",
+          "image_alt": "Cranberry and brie puff pastry bites: Add cranberry sauce"
+        },
+        {
+          "title": "Add walnuts",
+          "content": "Divide 30 g chopped walnuts and 2 g chopped rosemary leaves between the cups.",
+          "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/paso-06.webp",
+          "image_alt": "Cranberry and brie puff pastry bites: Add walnuts"
+        },
+        {
+          "title": "Bake the cups",
+          "content": "Bake for 18–20 minutes until the edges are golden and the bases cooked. Cover loosely with foil near the end if the tops brown too quickly.",
+          "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/paso-07.webp",
+          "image_alt": "Cranberry and brie puff pastry bites: Bake the cups"
+        },
+        {
+          "title": "Unmould and serve",
+          "content": "Wait 5 minutes before lifting the bites out with a small spoon. Serve two warm bites per person; the melted cheese will be hot.",
+          "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/paso-08.webp",
+          "image_alt": "Cranberry and brie puff pastry bites: Unmould and serve"
+        }
+      ],
+      "category": "Starters & appetizers",
+      "course": "Starter",
+      "cuisine": "International",
+      "difficulty": "Easy",
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 20,
+      "total_time_minutes": 45,
+      "servings": 6,
+      "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/bocaditos-hojaldre-brie-arandanos/portada.webp",
+          "alt": "Cranberry and brie puff pastry bites"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "Cranberry and brie puff pastry bites",
+        "chilled rectangular puff pastry, about 24 × 32 cm",
+        "brie with edible rind",
+        "thick cranberry sauce"
+      ],
+      "nutrition": {
+        "calories": 323,
+        "protein_g": 9.4,
+        "carbs_g": 23.8,
+        "fat_g": 20.8,
+        "saturated_fat_g": 9.7,
+        "fiber_g": 1.4,
+        "sodium_mg": 319.9,
+        "estimated": true,
+        "serving_size": "2 of 12 pastry bites",
+        "source": "USDA FoodData Central SR Legacy + manufacturer reference labels",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Sum of nutrients per 100 g × each ingredient weight / 100, divided by the number of servings.",
+        "note": "Recipe-based estimate; brands, actual portions and cooking losses affect the values. Not a laboratory analysis."
+      },
+      "seo": {
+        "title": "Cranberry and brie puff pastry bites | Manual de Cocina",
+        "description": "Twelve little pastry cups hold melted brie, thick cranberry sauce and walnuts. Bake them in a standard muffin tin for an easy sweet and savoury party appetiser.",
+        "image_alt": "Cranberry and brie puff pastry bites",
+        "image_variants": [
+          "/recetas/bocaditos-hojaldre-brie-arandanos/portada-1x1.webp",
+          "/recetas/bocaditos-hojaldre-brie-arandanos/portada-4x3.webp",
+          "/recetas/bocaditos-hojaldre-brie-arandanos/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Are these made with blueberries?",
+            "a": "No. Use red cranberries in a thick sauce or preserve; blueberries make a different recipe."
+          },
+          {
+            "q": "Must I remove the brie rind?",
+            "a": "No. The rind is edible and helps contain the cheese. Remove it only if you prefer."
+          },
+          {
+            "q": "Can I leave out the walnuts?",
+            "a": "Yes. Omit them for a nut-free adaptation and check every label. The published nutrition includes the walnuts."
+          }
+        ],
+        "rest_time_minutes": 5
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "source_url": null,
+      "source_post_id": null
+    },
+    {
+      "language": "fr",
+      "slug": "bouchees-feuilletees-brie-cranberries",
+      "public_path": "/fr/bouchees-feuilletees-brie-cranberries",
+      "title": "Bouchées feuilletées au brie et aux cranberries",
+      "excerpt": "Douze petits paniers feuilletés garnis de brie fondant, de sauce épaisse aux cranberries et de noix. Ils cuisent dans un moule à muffins standard pour un apéritif sucré-salé.",
+      "summary": "Douze petits paniers feuilletés garnis de brie fondant, de sauce épaisse aux cranberries et de noix. Ils cuisent dans un moule à muffins standard pour un apéritif sucré-salé.",
+      "notes": "Utilisez des cranberries rouges en sauce épaisse, pas des myrtilles fraîches. Une pâte de 24 × 32 cm donne douze carrés de 8 cm sans chute. Choisissez un moule métallique pour douze muffins standards et ne remplissez pas à ras bord. Contient blé, lait et noix. Réfrigérez les restes sous 2 heures jusqu’à 2 jours, puis réchauffez au four. Adaptez la cuisson à la pâte et au moule.",
+      "content_html": "<p>Douze petits paniers feuilletés garnis de brie fondant, de sauce épaisse aux cranberries et de noix. Ils cuisent dans un moule à muffins standard pour un apéritif sucré-salé.</p><p>Utilisez des cranberries rouges en sauce épaisse, pas des myrtilles fraîches. Une pâte de 24 × 32 cm donne douze carrés de 8 cm sans chute. Choisissez un moule métallique pour douze muffins standards et ne remplissez pas à ras bord. Contient blé, lait et noix. Réfrigérez les restes sous 2 heures jusqu’à 2 jours, puis réchauffez au four. Adaptez la cuisson à la pâte et au moule.</p>",
+      "ingredients": [
+        {
+          "name": "pâte feuilletée rectangulaire réfrigérée, environ 24 × 32 cm",
+          "amount": "250",
+          "unit": "g"
+        },
+        {
+          "name": "brie avec croûte comestible",
+          "amount": "180",
+          "unit": "g"
+        },
+        {
+          "name": "sauce épaisse aux cranberries rouges",
+          "amount": "120",
+          "unit": "g"
+        },
+        {
+          "name": "cerneaux de noix hachés",
+          "amount": "30",
+          "unit": "g"
+        },
+        {
+          "name": "huile pour le moule",
+          "amount": "5",
+          "unit": "g"
+        },
+        {
+          "name": "feuilles de romarin frais finement hachées",
+          "amount": "2",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Préparer le moule",
+          "content": "Préchauffez le four à 200 °C en chaleur statique. Huilez légèrement avec 5 g d’huile un moule métallique à douze muffins standards.",
+          "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/paso-01.webp",
+          "image_alt": "Bouchées feuilletées au brie et aux cranberries: Préparer le moule"
+        },
+        {
+          "title": "Découper les carrés",
+          "content": "Déroulez 250 g de pâte froide en rectangle d’environ 24 × 32 cm. Découpez une grille de 3 × 4 pour obtenir douze carrés de 8 cm.",
+          "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/paso-02.webp",
+          "image_alt": "Bouchées feuilletées au brie et aux cranberries: Découper les carrés"
+        },
+        {
+          "title": "Former les paniers",
+          "content": "Placez un carré dans chaque empreinte et pressez doucement le fond, pointes relevées.",
+          "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/paso-03.webp",
+          "image_alt": "Bouchées feuilletées au brie et aux cranberries: Former les paniers"
+        },
+        {
+          "title": "Répartir le brie",
+          "content": "Coupez 180 g de brie en douze morceaux d’environ 15 g. Déposez-en un par panier, avec sa croûte comestible.",
+          "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/paso-04.webp",
+          "image_alt": "Bouchées feuilletées au brie et aux cranberries: Répartir le brie"
+        },
+        {
+          "title": "Ajouter les cranberries",
+          "content": "Déposez 10 g de sauce épaisse aux cranberries sur chaque morceau de brie, sans remplir jusqu’en haut.",
+          "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/paso-05.webp",
+          "image_alt": "Bouchées feuilletées au brie et aux cranberries: Ajouter les cranberries"
+        },
+        {
+          "title": "Ajouter noix et romarin",
+          "content": "Répartissez 30 g de noix hachées et 2 g de feuilles de romarin sur les douze paniers.",
+          "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/paso-06.webp",
+          "image_alt": "Bouchées feuilletées au brie et aux cranberries: Ajouter noix et romarin"
+        },
+        {
+          "title": "Cuire les bouchées",
+          "content": "Enfournez 18–20 minutes, jusqu’à ce que les bords soient dorés et les fonds cuits. Couvrez lâchement d’aluminium en fin de cuisson si le dessus colore trop.",
+          "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/paso-07.webp",
+          "image_alt": "Bouchées feuilletées au brie et aux cranberries: Cuire les bouchées"
+        },
+        {
+          "title": "Démouler et servir",
+          "content": "Attendez 5 minutes puis soulevez les bouchées avec une petite cuillère. Servez deux bouchées tièdes par personne ; le fromage peut être brûlant.",
+          "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/paso-08.webp",
+          "image_alt": "Bouchées feuilletées au brie et aux cranberries: Démouler et servir"
+        }
+      ],
+      "category": "Entrées et apéritifs",
+      "course": "Entrée",
+      "cuisine": "Internationale",
+      "difficulty": "Facile",
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 20,
+      "total_time_minutes": 45,
+      "servings": 6,
+      "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/bocaditos-hojaldre-brie-arandanos/portada.webp",
+          "alt": "Bouchées feuilletées au brie et aux cranberries"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "Bouchées feuilletées au brie et aux cranberries",
+        "pâte feuilletée rectangulaire réfrigérée, environ 24 × 32 cm",
+        "brie avec croûte comestible",
+        "sauce épaisse aux cranberries rouges"
+      ],
+      "nutrition": {
+        "calories": 323,
+        "protein_g": 9.4,
+        "carbs_g": 23.8,
+        "fat_g": 20.8,
+        "saturated_fat_g": 9.7,
+        "fiber_g": 1.4,
+        "sodium_mg": 319.9,
+        "estimated": true,
+        "serving_size": "2 bouchées sur 12",
+        "source": "USDA FoodData Central SR Legacy + manufacturer reference labels",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Somme des nutriments pour 100 g × poids de chaque ingrédient / 100, divisée par le nombre de portions.",
+        "note": "Estimation selon la formulation ; les marques, les portions réelles et les pertes de cuisson modifient les valeurs. Pas une analyse de laboratoire."
+      },
+      "seo": {
+        "title": "Bouchées feuilletées au brie et aux cranberries | Manual de Cocina",
+        "description": "Douze petits paniers feuilletés garnis de brie fondant, de sauce épaisse aux cranberries et de noix. Ils cuisent dans un moule à muffins standard pour un apéritif sucré-salé.",
+        "image_alt": "Bouchées feuilletées au brie et aux cranberries",
+        "image_variants": [
+          "/recetas/bocaditos-hojaldre-brie-arandanos/portada-1x1.webp",
+          "/recetas/bocaditos-hojaldre-brie-arandanos/portada-4x3.webp",
+          "/recetas/bocaditos-hojaldre-brie-arandanos/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "S’agit-il de myrtilles ?",
+            "a": "Non. Il faut des cranberries rouges en sauce épaisse ou confiture. Les myrtilles donnent une autre saveur."
+          },
+          {
+            "q": "Faut-il retirer la croûte du brie ?",
+            "a": "Non. Elle est comestible et aide à contenir le fromage. Retirez-la seulement selon votre goût."
+          },
+          {
+            "q": "Peut-on omettre les noix ?",
+            "a": "Oui. En cas d’allergie, supprimez-les et vérifiez tous les emballages. Les valeurs publiées comprennent les noix."
+          }
+        ],
+        "rest_time_minutes": 5
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "source_url": null,
+      "source_post_id": null
+    },
+    {
+      "language": "it",
+      "slug": "bocconcini-sfoglia-brie-mirtilli-rossi",
+      "public_path": "/it/bocconcini-sfoglia-brie-mirtilli-rossi",
+      "title": "Bocconcini di sfoglia con brie e mirtilli rossi",
+      "excerpt": "Dodici cestini di sfoglia con brie fuso, salsa densa di cranberry e noci. Si cuociono in uno stampo da muffin standard per un antipasto dolce e salato.",
+      "summary": "Dodici cestini di sfoglia con brie fuso, salsa densa di cranberry e noci. Si cuociono in uno stampo da muffin standard per un antipasto dolce e salato.",
+      "notes": "Usa salsa densa di cranberry rossi, non mirtilli blu freschi. Una sfoglia di 24 × 32 cm dà dodici quadrati da 8 cm senza scarti. Scegli uno stampo metallico da dodici muffin standard e non riempire fino al bordo. Contiene frumento, latte e noci. Refrigera gli avanzi entro 2 ore per massimo 2 giorni e riscalda in forno. La cottura dipende da sfoglia e stampo.",
+      "content_html": "<p>Dodici cestini di sfoglia con brie fuso, salsa densa di cranberry e noci. Si cuociono in uno stampo da muffin standard per un antipasto dolce e salato.</p><p>Usa salsa densa di cranberry rossi, non mirtilli blu freschi. Una sfoglia di 24 × 32 cm dà dodici quadrati da 8 cm senza scarti. Scegli uno stampo metallico da dodici muffin standard e non riempire fino al bordo. Contiene frumento, latte e noci. Refrigera gli avanzi entro 2 ore per massimo 2 giorni e riscalda in forno. La cottura dipende da sfoglia e stampo.</p>",
+      "ingredients": [
+        {
+          "name": "pasta sfoglia rettangolare refrigerata, circa 24 × 32 cm",
+          "amount": "250",
+          "unit": "g"
+        },
+        {
+          "name": "brie con crosta edibile",
+          "amount": "180",
+          "unit": "g"
+        },
+        {
+          "name": "salsa densa di cranberry o mirtilli rossi americani",
+          "amount": "120",
+          "unit": "g"
+        },
+        {
+          "name": "gherigli di noce tritati",
+          "amount": "30",
+          "unit": "g"
+        },
+        {
+          "name": "olio per lo stampo",
+          "amount": "5",
+          "unit": "g"
+        },
+        {
+          "name": "foglioline di rosmarino fresco tritate",
+          "amount": "2",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepara lo stampo",
+          "content": "Preriscalda il forno statico a 200 °C. Ungi leggermente con 5 g di olio uno stampo metallico per dodici muffin standard.",
+          "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/paso-01.webp",
+          "image_alt": "Bocconcini di sfoglia con brie e mirtilli rossi: Prepara lo stampo"
+        },
+        {
+          "title": "Taglia i quadrati",
+          "content": "Srotola 250 g di sfoglia fredda in un rettangolo di circa 24 × 32 cm. Taglia una griglia di 3 × 4 ottenendo dodici quadrati da 8 cm.",
+          "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/paso-02.webp",
+          "image_alt": "Bocconcini di sfoglia con brie e mirtilli rossi: Taglia i quadrati"
+        },
+        {
+          "title": "Forma i cestini",
+          "content": "Sistema un quadrato in ogni cavità, premendo piano sul fondo e lasciando le punte verso l’alto.",
+          "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/paso-03.webp",
+          "image_alt": "Bocconcini di sfoglia con brie e mirtilli rossi: Forma i cestini"
+        },
+        {
+          "title": "Aggiungi il brie",
+          "content": "Taglia 180 g di brie in dodici pezzi da circa 15 g e mettine uno in ogni cestino. Puoi lasciare la crosta edibile.",
+          "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/paso-04.webp",
+          "image_alt": "Bocconcini di sfoglia con brie e mirtilli rossi: Aggiungi il brie"
+        },
+        {
+          "title": "Unisci i cranberry",
+          "content": "Metti 10 g di salsa densa di cranberry su ogni pezzo di brie, senza riempire la cavità fino al bordo.",
+          "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/paso-05.webp",
+          "image_alt": "Bocconcini di sfoglia con brie e mirtilli rossi: Unisci i cranberry"
+        },
+        {
+          "title": "Completa con le noci",
+          "content": "Distribuisci 30 g di noci tritate e 2 g di foglioline di rosmarino sui dodici cestini.",
+          "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/paso-06.webp",
+          "image_alt": "Bocconcini di sfoglia con brie e mirtilli rossi: Completa con le noci"
+        },
+        {
+          "title": "Cuoci i cestini",
+          "content": "Inforna 18–20 minuti, finché i bordi sono dorati e il fondo cotto. Se la superficie scurisce troppo, copri morbidamente con alluminio alla fine.",
+          "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/paso-07.webp",
+          "image_alt": "Bocconcini di sfoglia con brie e mirtilli rossi: Cuoci i cestini"
+        },
+        {
+          "title": "Sforma e servi",
+          "content": "Attendi 5 minuti, poi solleva con un cucchiaino. Servi due bocconcini tiepidi a persona; il formaggio può scottare.",
+          "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/paso-08.webp",
+          "image_alt": "Bocconcini di sfoglia con brie e mirtilli rossi: Sforma e servi"
+        }
+      ],
+      "category": "Antipasti",
+      "course": "Antipasto",
+      "cuisine": "Internazionale",
+      "difficulty": "Facile",
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 20,
+      "total_time_minutes": 45,
+      "servings": 6,
+      "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/bocaditos-hojaldre-brie-arandanos/portada.webp",
+          "alt": "Bocconcini di sfoglia con brie e mirtilli rossi"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "Bocconcini di sfoglia con brie e mirtilli rossi",
+        "pasta sfoglia rettangolare refrigerata, circa 24 × 32 cm",
+        "brie con crosta edibile",
+        "salsa densa di cranberry o mirtilli rossi americani"
+      ],
+      "nutrition": {
+        "calories": 323,
+        "protein_g": 9.4,
+        "carbs_g": 23.8,
+        "fat_g": 20.8,
+        "saturated_fat_g": 9.7,
+        "fiber_g": 1.4,
+        "sodium_mg": 319.9,
+        "estimated": true,
+        "serving_size": "2 dei 12 bocconcini",
+        "source": "USDA FoodData Central SR Legacy + manufacturer reference labels",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Somma dei nutrienti per 100 g × peso di ogni ingrediente / 100, divisa per il numero di porzioni.",
+        "note": "Stima della formulazione: marche, porzioni reali e perdite di cottura cambiano i valori. Non è un’analisi di laboratorio."
+      },
+      "seo": {
+        "title": "Bocconcini di sfoglia con brie e mirtilli rossi | Manual de Cocina",
+        "description": "Dodici cestini di sfoglia con brie fuso, salsa densa di cranberry e noci. Si cuociono in uno stampo da muffin standard per un antipasto dolce e salato.",
+        "image_alt": "Bocconcini di sfoglia con brie e mirtilli rossi",
+        "image_variants": [
+          "/recetas/bocaditos-hojaldre-brie-arandanos/portada-1x1.webp",
+          "/recetas/bocaditos-hojaldre-brie-arandanos/portada-4x3.webp",
+          "/recetas/bocaditos-hojaldre-brie-arandanos/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Si usano mirtilli blu?",
+            "a": "No. Servono cranberry rossi in salsa densa o confettura. I mirtilli blu danno un sapore diverso."
+          },
+          {
+            "q": "Va tolta la crosta del brie?",
+            "a": "Non è necessario: è edibile e aiuta a contenere il formaggio. Toglila solo se preferisci."
+          },
+          {
+            "q": "Posso omettere le noci?",
+            "a": "Sì. In caso di allergia eliminale e controlla tutte le etichette. La nutrizione pubblicata include le noci."
+          }
+        ],
+        "rest_time_minutes": 5
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "source_url": null,
+      "source_post_id": null
+    },
+    {
+      "language": "ja",
+      "slug": "cranberry-brie-puff-pastry-bites",
+      "public_path": "/ja/cranberry-brie-puff-pastry-bites",
+      "title": "ブリーとクランベリーのひと口パイ",
+      "excerpt": "パイ生地の小さなカップ12個に、溶けるブリー、濃いクランベリーソース、くるみを詰めます。標準サイズのマフィン型で焼く、甘みと塩味の前菜です。",
+      "summary": "パイ生地の小さなカップ12個に、溶けるブリー、濃いクランベリーソース、くるみを詰めます。標準サイズのマフィン型で焼く、甘みと塩味の前菜です。",
+      "notes": "赤いクランベリーの濃いソースを使い、生のブルーベリーとは区別します。24 × 32 cmの生地を8 cm角12枚に切れば切れ端が出ません。金属製の標準マフィン型12個分を使い、詰めすぎないでください。小麦、乳、くるみを含みます。残りは2時間以内に冷蔵し、2日以内にオーブンで温め直します。焼き時間は生地と型で調整します。",
+      "content_html": "<p>パイ生地の小さなカップ12個に、溶けるブリー、濃いクランベリーソース、くるみを詰めます。標準サイズのマフィン型で焼く、甘みと塩味の前菜です。</p><p>赤いクランベリーの濃いソースを使い、生のブルーベリーとは区別します。24 × 32 cmの生地を8 cm角12枚に切れば切れ端が出ません。金属製の標準マフィン型12個分を使い、詰めすぎないでください。小麦、乳、くるみを含みます。残りは2時間以内に冷蔵し、2日以内にオーブンで温め直します。焼き時間は生地と型で調整します。</p>",
+      "ingredients": [
+        {
+          "name": "冷蔵の長方形パイシート（約24 × 32 cm）",
+          "amount": "250",
+          "unit": "g"
+        },
+        {
+          "name": "食べられる白い皮付きブリーチーズ",
+          "amount": "180",
+          "unit": "g"
+        },
+        {
+          "name": "濃いクランベリーソース",
+          "amount": "120",
+          "unit": "g"
+        },
+        {
+          "name": "殻を除いて刻んだくるみ",
+          "amount": "30",
+          "unit": "g"
+        },
+        {
+          "name": "型用の油",
+          "amount": "5",
+          "unit": "g"
+        },
+        {
+          "name": "細かく刻んだ生ローズマリーの葉",
+          "amount": "2",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "型を用意する",
+          "content": "上下加熱のオーブンを200 ℃に予熱します。金属製の標準マフィン型12個分に、油5 gを薄く塗ります。",
+          "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/paso-01.webp",
+          "image_alt": "ブリーとクランベリーのひと口パイ: 型を用意する"
+        },
+        {
+          "title": "正方形に切る",
+          "content": "冷たいパイ生地250 gを約24 × 32 cmに広げます。3 × 4の格子状に切り、8 cm角を12枚作ります。",
+          "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/paso-02.webp",
+          "image_alt": "ブリーとクランベリーのひと口パイ: 正方形に切る"
+        },
+        {
+          "title": "カップ状にする",
+          "content": "各くぼみに1枚ずつ入れ、底を軽く押さえます。四隅は上向きに残します。",
+          "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/paso-03.webp",
+          "image_alt": "ブリーとクランベリーのひと口パイ: カップ状にする"
+        },
+        {
+          "title": "ブリーを入れる",
+          "content": "ブリー180 gを約15 gずつ12等分し、各カップに1個入れます。食べられる皮は付いたままで構いません。",
+          "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/paso-04.webp",
+          "image_alt": "ブリーとクランベリーのひと口パイ: ブリーを入れる"
+        },
+        {
+          "title": "ソースを加える",
+          "content": "各チーズに濃いクランベリーソース10 gをのせます。型の上まで詰めないでください。",
+          "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/paso-05.webp",
+          "image_alt": "ブリーとクランベリーのひと口パイ: ソースを加える"
+        },
+        {
+          "title": "くるみを散らす",
+          "content": "刻んだくるみ30 gとローズマリーの葉2 gを12個に分けます。",
+          "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/paso-06.webp",
+          "image_alt": "ブリーとクランベリーのひと口パイ: くるみを散らす"
+        },
+        {
+          "title": "パイを焼く",
+          "content": "18〜20分、縁がきつね色になり底まで焼けるまで加熱します。上だけ色づきすぎる場合は最後にアルミホイルをふんわりかぶせます。",
+          "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/paso-07.webp",
+          "image_alt": "ブリーとクランベリーのひと口パイ: パイを焼く"
+        },
+        {
+          "title": "型から出して盛る",
+          "content": "5分置いてから小さなスプーンで取り出します。1人2個を温かい状態で出します。溶けたチーズの熱さに注意してください。",
+          "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/paso-08.webp",
+          "image_alt": "ブリーとクランベリーのひと口パイ: 型から出して盛る"
+        }
+      ],
+      "category": "前菜・おつまみ",
+      "course": "前菜",
+      "cuisine": "各国料理",
+      "difficulty": "簡単",
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 20,
+      "total_time_minutes": 45,
+      "servings": 6,
+      "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/bocaditos-hojaldre-brie-arandanos/portada.webp",
+          "alt": "ブリーとクランベリーのひと口パイ"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "ブリーとクランベリーのひと口パイ",
+        "冷蔵の長方形パイシート（約24 × 32 cm）",
+        "食べられる白い皮付きブリーチーズ",
+        "濃いクランベリーソース"
+      ],
+      "nutrition": {
+        "calories": 323,
+        "protein_g": 9.4,
+        "carbs_g": 23.8,
+        "fat_g": 20.8,
+        "saturated_fat_g": 9.7,
+        "fiber_g": 1.4,
+        "sodium_mg": 319.9,
+        "estimated": true,
+        "serving_size": "全12個のうち2個",
+        "source": "USDA FoodData Central SR Legacy + manufacturer reference labels",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "材料100 gあたりの栄養価×各使用重量÷100を合計し、人数で割って算出。",
+        "note": "配合からの推定値です。製品、実際の盛り付け量、加熱による損失で変わります。検査機関での分析値ではありません。"
+      },
+      "seo": {
+        "title": "ブリーとクランベリーのひと口パイ | Manual de Cocina",
+        "description": "パイ生地の小さなカップ12個に、溶けるブリー、濃いクランベリーソース、くるみを詰めます。標準サイズのマフィン型で焼く、甘みと塩味の前菜です。",
+        "image_alt": "ブリーとクランベリーのひと口パイ",
+        "image_variants": [
+          "/recetas/bocaditos-hojaldre-brie-arandanos/portada-1x1.webp",
+          "/recetas/bocaditos-hojaldre-brie-arandanos/portada-4x3.webp",
+          "/recetas/bocaditos-hojaldre-brie-arandanos/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "ブルーベリーを使うのですか？",
+            "a": "いいえ。赤いクランベリーの濃いソースやジャムを使います。ブルーベリーでは味が変わります。"
+          },
+          {
+            "q": "ブリーの皮は取りますか？",
+            "a": "必須ではありません。食べられる皮で、チーズを包む役割もあります。好みで取り除けます。"
+          },
+          {
+            "q": "くるみを抜いてもよいですか？",
+            "a": "はい。アレルギーがあれば省き、他の材料表示も確認します。掲載の栄養価はくるみ入りです。"
+          }
+        ],
+        "rest_time_minutes": 5
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "source_url": null,
+      "source_post_id": null
+    },
+    {
+      "language": "pt",
+      "slug": "folhadinhos-brie-cranberry",
+      "public_path": "/pt/folhadinhos-brie-cranberry",
+      "title": "Folhadinhos de brie com cranberry e nozes",
+      "excerpt": "Doze cestinhas de massa folhada com brie derretido, molho espesso de cranberry e nozes. Um aperitivo agridoce assado em forma de muffins padrão.",
+      "summary": "Doze cestinhas de massa folhada com brie derretido, molho espesso de cranberry e nozes. Um aperitivo agridoce assado em forma de muffins padrão.",
+      "notes": "Use cranberry vermelho em molho espesso, não mirtilos azuis frescos. Uma folha de 24 × 32 cm rende doze quadrados de 8 cm sem sobras. Use forma metálica para doze muffins padrão e não encha até a borda. Contém trigo, leite e nozes. Refrigere as sobras em até 2 horas por no máximo 2 dias e reaqueça no forno. Ajuste o tempo à massa e à forma.",
+      "content_html": "<p>Doze cestinhas de massa folhada com brie derretido, molho espesso de cranberry e nozes. Um aperitivo agridoce assado em forma de muffins padrão.</p><p>Use cranberry vermelho em molho espesso, não mirtilos azuis frescos. Uma folha de 24 × 32 cm rende doze quadrados de 8 cm sem sobras. Use forma metálica para doze muffins padrão e não encha até a borda. Contém trigo, leite e nozes. Refrigere as sobras em até 2 horas por no máximo 2 dias e reaqueça no forno. Ajuste o tempo à massa e à forma.</p>",
+      "ingredients": [
+        {
+          "name": "massa folhada retangular refrigerada, cerca de 24 × 32 cm",
+          "amount": "250",
+          "unit": "g"
+        },
+        {
+          "name": "queijo brie com casca comestível",
+          "amount": "180",
+          "unit": "g"
+        },
+        {
+          "name": "molho espesso de cranberry vermelho",
+          "amount": "120",
+          "unit": "g"
+        },
+        {
+          "name": "nozes sem casca picadas",
+          "amount": "30",
+          "unit": "g"
+        },
+        {
+          "name": "óleo para untar",
+          "amount": "5",
+          "unit": "g"
+        },
+        {
+          "name": "folhas de alecrim fresco picadas",
+          "amount": "2",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepare a forma",
+          "content": "Preaqueça o forno a 200 °C, com calor superior e inferior. Unte levemente com 5 g de óleo uma forma metálica para doze muffins padrão.",
+          "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/paso-01.webp",
+          "image_alt": "Folhadinhos de brie com cranberry e nozes: Prepare a forma"
+        },
+        {
+          "title": "Corte os quadrados",
+          "content": "Abra 250 g de massa fria em um retângulo de cerca de 24 × 32 cm. Corte uma grade de 3 × 4 para obter doze quadrados de 8 cm.",
+          "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/paso-02.webp",
+          "image_alt": "Folhadinhos de brie com cranberry e nozes: Corte os quadrados"
+        },
+        {
+          "title": "Modele as cestinhas",
+          "content": "Acomode um quadrado em cada cavidade, pressionando de leve o fundo e deixando as pontas para cima.",
+          "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/paso-03.webp",
+          "image_alt": "Folhadinhos de brie com cranberry e nozes: Modele as cestinhas"
+        },
+        {
+          "title": "Distribua o brie",
+          "content": "Corte 180 g de brie em doze pedaços iguais de cerca de 15 g. Coloque um em cada base; a casca comestível pode ficar.",
+          "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/paso-04.webp",
+          "image_alt": "Folhadinhos de brie com cranberry e nozes: Distribua o brie"
+        },
+        {
+          "title": "Acrescente o cranberry",
+          "content": "Coloque 10 g de molho espesso de cranberry sobre cada pedaço de queijo, sem encher a cavidade até a borda.",
+          "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/paso-05.webp",
+          "image_alt": "Folhadinhos de brie com cranberry e nozes: Acrescente o cranberry"
+        },
+        {
+          "title": "Finalize com nozes",
+          "content": "Divida 30 g de nozes picadas e 2 g de folhas de alecrim entre as doze cestinhas.",
+          "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/paso-06.webp",
+          "image_alt": "Folhadinhos de brie com cranberry e nozes: Finalize com nozes"
+        },
+        {
+          "title": "Asse as cestinhas",
+          "content": "Asse por 18–20 minutos, até as bordas dourarem e o fundo cozinhar. Se dourar demais em cima, cubra frouxamente com alumínio no final.",
+          "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/paso-07.webp",
+          "image_alt": "Folhadinhos de brie com cranberry e nozes: Asse as cestinhas"
+        },
+        {
+          "title": "Desenforme e sirva",
+          "content": "Espere 5 minutos e retire com uma colher pequena. Sirva dois folhadinhos mornos por pessoa; o queijo quente pode queimar.",
+          "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/paso-08.webp",
+          "image_alt": "Folhadinhos de brie com cranberry e nozes: Desenforme e sirva"
+        }
+      ],
+      "category": "Entradas e aperitivos",
+      "course": "Entrada",
+      "cuisine": "Internacional",
+      "difficulty": "Fácil",
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 20,
+      "total_time_minutes": 45,
+      "servings": 6,
+      "image_url": "/recetas/bocaditos-hojaldre-brie-arandanos/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/bocaditos-hojaldre-brie-arandanos/portada.webp",
+          "alt": "Folhadinhos de brie com cranberry e nozes"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "Folhadinhos de brie com cranberry e nozes",
+        "massa folhada retangular refrigerada, cerca de 24 × 32 cm",
+        "queijo brie com casca comestível",
+        "molho espesso de cranberry vermelho"
+      ],
+      "nutrition": {
+        "calories": 323,
+        "protein_g": 9.4,
+        "carbs_g": 23.8,
+        "fat_g": 20.8,
+        "saturated_fat_g": 9.7,
+        "fiber_g": 1.4,
+        "sodium_mg": 319.9,
+        "estimated": true,
+        "serving_size": "2 dos 12 folhadinhos",
+        "source": "USDA FoodData Central SR Legacy + manufacturer reference labels",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Soma dos nutrientes por 100 g × peso de cada ingrediente / 100, dividida pelo número de porções.",
+        "note": "Estimativa pela formulação; marcas, porções reais e perdas no cozimento alteram os valores. Não é análise laboratorial."
+      },
+      "seo": {
+        "title": "Folhadinhos de brie com cranberry e nozes | Manual de Cocina",
+        "description": "Doze cestinhas de massa folhada com brie derretido, molho espesso de cranberry e nozes. Um aperitivo agridoce assado em forma de muffins padrão.",
+        "image_alt": "Folhadinhos de brie com cranberry e nozes",
+        "image_variants": [
+          "/recetas/bocaditos-hojaldre-brie-arandanos/portada-1x1.webp",
+          "/recetas/bocaditos-hojaldre-brie-arandanos/portada-4x3.webp",
+          "/recetas/bocaditos-hojaldre-brie-arandanos/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "É feito com mirtilo azul?",
+            "a": "Não. Use cranberry vermelho em molho espesso ou geleia. O mirtilo azul dá outro sabor."
+          },
+          {
+            "q": "Preciso retirar a casca do brie?",
+            "a": "Não. É comestível e ajuda a conter o queijo. Retire apenas se preferir."
+          },
+          {
+            "q": "Posso retirar as nozes?",
+            "a": "Sim. Em caso de alergia, omita e confira todos os rótulos. A nutrição publicada inclui as nozes."
+          }
+        ],
+        "rest_time_minutes": 5
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "source_url": null,
+      "source_post_id": null
+    }
+  ],
+  "recipe_group_id": "daddeae8-2ab1-4d51-9cfc-094408c5c918",
+  "visual_assets": {
+    "originals_ready": 8,
+    "webp_ready": 12,
+    "manifest": "bocaditos-hojaldre-brie-arandanos-imagenes-20261022.json",
+    "visual_qa": "PASS_40_DISTINCT_PHASES_REVIEWED_2026-10-23"
+  }
+}

@@ -1,0 +1,1217 @@
+{
+  "slug": "arbol-hojaldre-pesto-queso",
+  "key": "arbol",
+  "date": "2026-10-22",
+  "target": "https://manualdecocina.com",
+  "state": "READY_AWAITING_PRODUCTION_DEPLOY_AND_PUBLICATION",
+  "languages": [
+    "es",
+    "de",
+    "en",
+    "fr",
+    "it",
+    "ja",
+    "pt"
+  ],
+  "steps_es_sha256": "4a3b9b90b2d644ec8d1abd9287979413063b17b0fd533bdef8367ccc773f5eb3",
+  "physical_kitchen_test": false,
+  "category_slug": "entrantes-y-aperitivos",
+  "nutrition_calculation": {
+    "servings": 8,
+    "foods": [
+      {
+        "description": "Jus-Rol chilled puff pastry sheet reference label",
+        "source_url": "https://www.jusrol.co.uk/products/puff-pastry-sheets/",
+        "per_100g": {
+          "calories": 362,
+          "protein_g": 5.4,
+          "carbs_g": 35.7,
+          "fat_g": 20,
+          "saturated_fat_g": 9.9,
+          "fiber_g": 1.9,
+          "sugar_g": 0.3,
+          "sodium_mg": 312
+        },
+        "assumptions": "Salt 0.78 g / 2.5 × 1000 = 312 mg sodium. Reference composition only, pack shape not mandated.",
+        "grams": 500
+      },
+      {
+        "description": "Barilla Pesto alla Genovese reference label",
+        "source_url": "https://www.barilla.com/en-gb/products/pesto/pesto/pesto-alla-genovese",
+        "per_100g": {
+          "calories": 492,
+          "protein_g": 4.7,
+          "carbs_g": 11,
+          "fat_g": 47,
+          "saturated_fat_g": 5.3,
+          "fiber_g": 3,
+          "sugar_g": 5,
+          "sodium_mg": 1280
+        },
+        "assumptions": "Salt 3.2 g / 2.5 × 1000 = 1280 mg sodium.",
+        "grams": 80
+      },
+      {
+        "description": "Cheese, mozzarella, low moisture, part-skim",
+        "fdc_id": 171244,
+        "per_100g": {
+          "sodium_mg": 666,
+          "fiber_g": 0.0,
+          "protein_g": 23.8,
+          "saturated_fat_g": 11.3,
+          "fat_g": 19.8,
+          "carbs_g": 5.58,
+          "calories": 295,
+          "sugar_g": 1.9
+        },
+        "source_url": "https://fdc.nal.usda.gov/food-details/171244/nutrients",
+        "grams": 100
+      },
+      {
+        "description": "Cheese, parmesan, hard",
+        "fdc_id": 170848,
+        "per_100g": {
+          "sodium_mg": 1180.0,
+          "saturated_fat_g": 14.8,
+          "sugar_g": 0.11,
+          "fat_g": 25.0,
+          "fiber_g": 0.0,
+          "protein_g": 35.8,
+          "carbs_g": 3.22,
+          "calories": 392
+        },
+        "source_url": "https://fdc.nal.usda.gov/food-details/170848/nutrients",
+        "grams": 25
+      },
+      {
+        "description": "Egg, whole, raw, fresh",
+        "fdc_id": 171287,
+        "per_100g": {
+          "calories": 143,
+          "saturated_fat_g": 3.13,
+          "protein_g": 12.6,
+          "sodium_mg": 142,
+          "sugar_g": 0.37,
+          "fat_g": 9.51,
+          "carbs_g": 0.72,
+          "fiber_g": 0.0
+        },
+        "source_url": "https://fdc.nal.usda.gov/food-details/171287/nutrients",
+        "grams": 50
+      }
+    ],
+    "result": {
+      "calories": 334,
+      "protein_g": 8.7,
+      "carbs_g": 24.3,
+      "fat_g": 21.1,
+      "saturated_fat_g": 8.8,
+      "fiber_g": 1.5,
+      "sugar_g": 1.0,
+      "sodium_mg": 452.0
+    },
+    "archive_sha256": "0fe8ae486a2c8eb42cb96413f058deb51863a46c8fb8eeb4b1fb45006dd338ef",
+    "assumptions": [
+      "All recipe inputs counted, including pastry offcuts and all brushing egg.",
+      "Pure pistachio paste approximated by unsalted dry-roasted pistachio nuts.",
+      "Cream 35% approximated by USDA heavy whipping cream.",
+      "Full 180 ml unsweetened coffee counted, though some dipping coffee may remain.",
+      "All bacon counted; rendered fat is not subtracted.",
+      "Manufacturer label reference foods vary by market; this is not a brand-specific requirement."
+    ]
+  },
+  "pantry_slugs": [
+    "hojaldre",
+    "pesto-albahaca",
+    "queso-mozzarella",
+    "queso-parmesano",
+    "huevo"
+  ],
+  "records": [
+    {
+      "language": "es",
+      "slug": "arbol-hojaldre-pesto-queso",
+      "public_path": "/arbol-hojaldre-pesto-queso",
+      "title": "Árbol de hojaldre con pesto y queso para Navidad",
+      "excerpt": "Dos láminas de hojaldre guardan una capa de pesto y queso. Los cortes laterales se retuercen para crear las ramas de un árbol navideño que se comparte con las manos.",
+      "summary": "Dos láminas de hojaldre guardan una capa de pesto y queso. Los cortes laterales se retuercen para crear las ramas de un árbol navideño que se comparte con las manos.",
+      "notes": "Mantén el hojaldre frío y usa pesto espeso para que no se salga. Conserva un eje central sin cortar. Hornea también los recortes y sírvelos: están incluidos en el rendimiento y la nutrición. El huevo se usa para pincelar y se calcula entero, aunque pueda sobrar. Contiene trigo, leche, huevo y los frutos secos que lleve el pesto. Refrigera las sobras dentro de 2 horas, hasta 2 días, y recalienta en horno. La forma y el tiempo final dependen del hojaldre y del horno.",
+      "content_html": "<p>Dos láminas de hojaldre guardan una capa de pesto y queso. Los cortes laterales se retuercen para crear las ramas de un árbol navideño que se comparte con las manos.</p><p>Mantén el hojaldre frío y usa pesto espeso para que no se salga. Conserva un eje central sin cortar. Hornea también los recortes y sírvelos: están incluidos en el rendimiento y la nutrición. El huevo se usa para pincelar y se calcula entero, aunque pueda sobrar. Contiene trigo, leche, huevo y los frutos secos que lleve el pesto. Refrigera las sobras dentro de 2 horas, hasta 2 días, y recalienta en horno. La forma y el tiempo final dependen del hojaldre y del horno.</p>",
+      "ingredients": [
+        {
+          "name": "hojaldre refrigerado rectangular, dos láminas de unos 25 × 35 cm",
+          "amount": "500",
+          "unit": "g"
+        },
+        {
+          "name": "pesto de albahaca espeso",
+          "amount": "80",
+          "unit": "g"
+        },
+        {
+          "name": "mozzarella de baja humedad rallada",
+          "amount": "100",
+          "unit": "g"
+        },
+        {
+          "name": "parmesano rallado",
+          "amount": "25",
+          "unit": "g"
+        },
+        {
+          "name": "huevo batido para pincelar",
+          "amount": "50",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepara el hojaldre",
+          "content": "Precalienta el horno a 200 °C, calor arriba y abajo. Coloca una lámina de hojaldre de unos 25 × 35 cm sobre papel de horno en una bandeja.",
+          "image_url": "/recetas/arbol-hojaldre-pesto-queso/paso-01.webp",
+          "image_alt": "Árbol de hojaldre con pesto y queso para Navidad: Prepara el hojaldre"
+        },
+        {
+          "title": "Extiende el relleno",
+          "content": "Unta 80 g de pesto en una capa fina sobre la lámina, dejando 1 cm de borde. Reparte 100 g de mozzarella y 25 g de parmesano.",
+          "image_url": "/recetas/arbol-hojaldre-pesto-queso/paso-02.webp",
+          "image_alt": "Árbol de hojaldre con pesto y queso para Navidad: Extiende el relleno"
+        },
+        {
+          "title": "Cubre y enfría",
+          "content": "Coloca la segunda lámina encima y presiona suavemente. Refrigera 15 minutos para cortar la masa fría.",
+          "image_url": "/recetas/arbol-hojaldre-pesto-queso/paso-03.webp",
+          "image_alt": "Árbol de hojaldre con pesto y queso para Navidad: Cubre y enfría"
+        },
+        {
+          "title": "Recorta el árbol",
+          "content": "Corta un triángulo alto con un pequeño tronco en la base. Reserva todos los recortes para hornearlos junto al árbol, en otra bandeja si hace falta.",
+          "image_url": "/recetas/arbol-hojaldre-pesto-queso/paso-04.webp",
+          "image_alt": "Árbol de hojaldre con pesto y queso para Navidad: Recorta el árbol"
+        },
+        {
+          "title": "Marca las ramas",
+          "content": "Haz cortes horizontales a ambos lados cada 2 cm, dejando intacta una franja central de unos 3 cm. No cortes el tronco.",
+          "image_url": "/recetas/arbol-hojaldre-pesto-queso/paso-05.webp",
+          "image_alt": "Árbol de hojaldre con pesto y queso para Navidad: Marca las ramas"
+        },
+        {
+          "title": "Retuerce y pincela",
+          "content": "Gira cada tira lateral una o dos veces, sin arrancarla del centro. Pincela la superficie con huevo batido; pincela también los recortes.",
+          "image_url": "/recetas/arbol-hojaldre-pesto-queso/paso-06.webp",
+          "image_alt": "Árbol de hojaldre con pesto y queso para Navidad: Retuerce y pincela"
+        },
+        {
+          "title": "Hornea hasta dorar",
+          "content": "Hornea 20–25 minutos hasta que el hojaldre esté bien levantado, dorado y cocido en la base. Los recortes pequeños pueden estar antes: retíralos cuando se doren.",
+          "image_url": "/recetas/arbol-hojaldre-pesto-queso/paso-07.webp",
+          "image_alt": "Árbol de hojaldre con pesto y queso para Navidad: Hornea hasta dorar"
+        },
+        {
+          "title": "Sirve para compartir",
+          "content": "Deja reposar 5 minutos fuera del horno y pasa el árbol a una tabla. Sirve tibio con todos los recortes horneados para repartirlo entre 8 personas.",
+          "image_url": "/recetas/arbol-hojaldre-pesto-queso/paso-08.webp",
+          "image_alt": "Árbol de hojaldre con pesto y queso para Navidad: Sirve para compartir"
+        }
+      ],
+      "category": "Entrantes y aperitivos",
+      "course": "Entrada",
+      "cuisine": "Internacional",
+      "difficulty": "Fácil",
+      "prep_time_minutes": 25,
+      "cook_time_minutes": 25,
+      "total_time_minutes": 70,
+      "servings": 8,
+      "image_url": "/recetas/arbol-hojaldre-pesto-queso/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/arbol-hojaldre-pesto-queso/portada.webp",
+          "alt": "Árbol de hojaldre con pesto y queso para Navidad"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "Árbol de hojaldre con pesto y queso para Navidad",
+        "hojaldre refrigerado rectangular, dos láminas de unos 25 × 35 cm",
+        "pesto de albahaca espeso",
+        "mozzarella de baja humedad rallada"
+      ],
+      "nutrition": {
+        "calories": 334,
+        "protein_g": 8.7,
+        "carbs_g": 24.3,
+        "fat_g": 21.1,
+        "saturated_fat_g": 8.8,
+        "fiber_g": 1.5,
+        "sugar_g": 1.0,
+        "sodium_mg": 452.0,
+        "estimated": true,
+        "serving_size": "1/8 del árbol y de todos los recortes horneados",
+        "source": "USDA FoodData Central SR Legacy + manufacturer reference labels",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Suma de nutrientes por 100 g × peso de cada ingrediente / 100, dividida por las porciones.",
+        "note": "Estimación de la formulación; cambia según marcas, porción real y pérdidas de cocción. No es un análisis de laboratorio."
+      },
+      "seo": {
+        "title": "Árbol de hojaldre con pesto y queso para Navidad | Manual de Cocina",
+        "description": "Dos láminas de hojaldre guardan una capa de pesto y queso. Los cortes laterales se retuercen para crear las ramas de un árbol navideño que se comparte con las manos.",
+        "image_alt": "Árbol de hojaldre con pesto y queso para Navidad",
+        "image_variants": [
+          "/recetas/arbol-hojaldre-pesto-queso/portada-1x1.webp",
+          "/recetas/arbol-hojaldre-pesto-queso/portada-4x3.webp",
+          "/recetas/arbol-hojaldre-pesto-queso/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "¿Puedo formarlo antes de la cena?",
+            "a": "Sí: guárdalo formado y sin hornear, bien tapado, en la nevera hasta 12 horas. Pincela y hornea al servir."
+          },
+          {
+            "q": "¿Por qué se enfría antes de cortarlo?",
+            "a": "El hojaldre frío conserva mejor sus capas y permite retorcer las ramas sin deformarlas."
+          },
+          {
+            "q": "¿Qué hago con los recortes?",
+            "a": "Hornéalos como bocaditos. No se descartan: las cantidades y la nutrición incluyen toda la masa y el relleno."
+          }
+        ],
+        "rest_time_minutes": 20
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "source_url": null,
+      "source_post_id": null
+    },
+    {
+      "language": "de",
+      "slug": "blaetterteig-weihnachtsbaum-pesto-kaese",
+      "public_path": "/de/blaetterteig-weihnachtsbaum-pesto-kaese",
+      "title": "Blätterteig-Weihnachtsbaum mit Pesto und Käse",
+      "excerpt": "Zwischen zwei Blätterteigplatten liegen Basilikumpesto, Mozzarella und Parmesan. Gedrehte Seitenstreifen bilden die Zweige dieses Weihnachtsgebäcks zum Teilen.",
+      "summary": "Zwischen zwei Blätterteigplatten liegen Basilikumpesto, Mozzarella und Parmesan. Gedrehte Seitenstreifen bilden die Zweige dieses Weihnachtsgebäcks zum Teilen.",
+      "notes": "Blätterteig kalt halten, dickes Pesto verwenden und den Mittelsteg nicht durchschneiden. Alle Abschnitte mitbacken und servieren: Menge und Nährwerte schließen sie ein. Das ganze Ei zum Bestreichen wird mitgerechnet, auch wenn etwas übrig bleibt. Enthält Weizen, Milch, Ei und gegebenenfalls Nüsse im Pesto. Reste innerhalb von 2 Stunden kühlen, bis zu 2 Tage aufbewahren und im Ofen erwärmen.",
+      "content_html": "<p>Zwischen zwei Blätterteigplatten liegen Basilikumpesto, Mozzarella und Parmesan. Gedrehte Seitenstreifen bilden die Zweige dieses Weihnachtsgebäcks zum Teilen.</p><p>Blätterteig kalt halten, dickes Pesto verwenden und den Mittelsteg nicht durchschneiden. Alle Abschnitte mitbacken und servieren: Menge und Nährwerte schließen sie ein. Das ganze Ei zum Bestreichen wird mitgerechnet, auch wenn etwas übrig bleibt. Enthält Weizen, Milch, Ei und gegebenenfalls Nüsse im Pesto. Reste innerhalb von 2 Stunden kühlen, bis zu 2 Tage aufbewahren und im Ofen erwärmen.</p>",
+      "ingredients": [
+        {
+          "name": "gekühlter rechteckiger Blätterteig, zwei Platten von etwa 25 × 35 cm",
+          "amount": "500",
+          "unit": "g"
+        },
+        {
+          "name": "dickes Basilikumpesto",
+          "amount": "80",
+          "unit": "g"
+        },
+        {
+          "name": "geriebener schnittfester Mozzarella",
+          "amount": "100",
+          "unit": "g"
+        },
+        {
+          "name": "geriebener Parmesan",
+          "amount": "25",
+          "unit": "g"
+        },
+        {
+          "name": "verquirltes Ei zum Bestreichen",
+          "amount": "50",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Teig vorbereiten",
+          "content": "Ofen auf 200 °C Ober-/Unterhitze vorheizen. Eine etwa 25 × 35 cm große Teigplatte auf Backpapier auf ein Blech legen.",
+          "image_url": "/recetas/arbol-hojaldre-pesto-queso/paso-01.webp",
+          "image_alt": "Blätterteig-Weihnachtsbaum mit Pesto und Käse: Teig vorbereiten"
+        },
+        {
+          "title": "Füllung verteilen",
+          "content": "80 g Pesto dünn verstreichen, dabei 1 cm Rand lassen. Mit 100 g Mozzarella und 25 g Parmesan bestreuen.",
+          "image_url": "/recetas/arbol-hojaldre-pesto-queso/paso-02.webp",
+          "image_alt": "Blätterteig-Weihnachtsbaum mit Pesto und Käse: Füllung verteilen"
+        },
+        {
+          "title": "Abdecken und kühlen",
+          "content": "Zweite Teigplatte auflegen und leicht andrücken. Vor dem Schneiden 15 Minuten kühlen.",
+          "image_url": "/recetas/arbol-hojaldre-pesto-queso/paso-03.webp",
+          "image_alt": "Blätterteig-Weihnachtsbaum mit Pesto und Käse: Abdecken und kühlen"
+        },
+        {
+          "title": "Baum ausschneiden",
+          "content": "Ein hohes Dreieck mit kleinem Stamm unten ausschneiden. Alle Abschnitte zum Mitbacken aufbewahren, bei Bedarf auf einem zweiten Blech.",
+          "image_url": "/recetas/arbol-hojaldre-pesto-queso/paso-04.webp",
+          "image_alt": "Blätterteig-Weihnachtsbaum mit Pesto und Käse: Baum ausschneiden"
+        },
+        {
+          "title": "Zweige einschneiden",
+          "content": "Beide Seiten alle 2 cm waagerecht einschneiden. Einen etwa 3 cm breiten Mittelsteg und den Stamm unversehrt lassen.",
+          "image_url": "/recetas/arbol-hojaldre-pesto-queso/paso-05.webp",
+          "image_alt": "Blätterteig-Weihnachtsbaum mit Pesto und Käse: Zweige einschneiden"
+        },
+        {
+          "title": "Drehen und bestreichen",
+          "content": "Jeden Seitenstreifen ein- bis zweimal drehen, ohne ihn abzureißen. Baum und Abschnitte mit Ei bestreichen.",
+          "image_url": "/recetas/arbol-hojaldre-pesto-queso/paso-06.webp",
+          "image_alt": "Blätterteig-Weihnachtsbaum mit Pesto und Käse: Drehen und bestreichen"
+        },
+        {
+          "title": "Goldbraun backen",
+          "content": "20–25 Minuten backen, bis der Teig aufgegangen, goldbraun und auch unten durchgebacken ist. Kleine Abschnitte gegebenenfalls früher herausnehmen.",
+          "image_url": "/recetas/arbol-hojaldre-pesto-queso/paso-07.webp",
+          "image_alt": "Blätterteig-Weihnachtsbaum mit Pesto und Käse: Goldbraun backen"
+        },
+        {
+          "title": "Gemeinsam genießen",
+          "content": "5 Minuten ruhen lassen und auf ein Brett setzen. Lauwarm samt sämtlichen Abschnitten auf acht Personen verteilen.",
+          "image_url": "/recetas/arbol-hojaldre-pesto-queso/paso-08.webp",
+          "image_alt": "Blätterteig-Weihnachtsbaum mit Pesto und Käse: Gemeinsam genießen"
+        }
+      ],
+      "category": "Vorspeisen",
+      "course": "Vorspeise",
+      "cuisine": "International",
+      "difficulty": "Einfach",
+      "prep_time_minutes": 25,
+      "cook_time_minutes": 25,
+      "total_time_minutes": 70,
+      "servings": 8,
+      "image_url": "/recetas/arbol-hojaldre-pesto-queso/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/arbol-hojaldre-pesto-queso/portada.webp",
+          "alt": "Blätterteig-Weihnachtsbaum mit Pesto und Käse"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "Blätterteig-Weihnachtsbaum mit Pesto und Käse",
+        "gekühlter rechteckiger Blätterteig, zwei Platten von etwa 25 × 35 cm",
+        "dickes Basilikumpesto",
+        "geriebener schnittfester Mozzarella"
+      ],
+      "nutrition": {
+        "calories": 334,
+        "protein_g": 8.7,
+        "carbs_g": 24.3,
+        "fat_g": 21.1,
+        "saturated_fat_g": 8.8,
+        "fiber_g": 1.5,
+        "sugar_g": 1.0,
+        "sodium_mg": 452.0,
+        "estimated": true,
+        "serving_size": "1/8 des Baums samt gebackenen Abschnitten",
+        "source": "USDA FoodData Central SR Legacy + manufacturer reference labels",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Summe der Nährwerte je 100 g × Zutatengewicht / 100, geteilt durch die Portionenzahl.",
+        "note": "Schätzung aus der Rezeptur; Marke, tatsächliche Portion und Garverluste verändern die Werte. Keine Laboranalyse."
+      },
+      "seo": {
+        "title": "Blätterteig-Weihnachtsbaum mit Pesto und Käse | Manual de Cocina",
+        "description": "Zwischen zwei Blätterteigplatten liegen Basilikumpesto, Mozzarella und Parmesan. Gedrehte Seitenstreifen bilden die Zweige dieses Weihnachtsgebäcks zum Teilen.",
+        "image_alt": "Blätterteig-Weihnachtsbaum mit Pesto und Käse",
+        "image_variants": [
+          "/recetas/arbol-hojaldre-pesto-queso/portada-1x1.webp",
+          "/recetas/arbol-hojaldre-pesto-queso/portada-4x3.webp",
+          "/recetas/arbol-hojaldre-pesto-queso/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Kann ich den Baum vorher formen?",
+            "a": "Ja. Ungebacken abgedeckt bis zu 12 Stunden kühlen. Erst vor dem Backen mit Ei bestreichen."
+          },
+          {
+            "q": "Warum wird der Teig gekühlt?",
+            "a": "Kalter Blätterteig hält seine Schichten und lässt sich leichter zu Zweigen drehen."
+          },
+          {
+            "q": "Was mache ich mit den Abschnitten?",
+            "a": "Als kleine Snacks mitbacken. Die Nährwerte berücksichtigen den gesamten Teig und die gesamte Füllung."
+          }
+        ],
+        "rest_time_minutes": 20
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "source_url": null,
+      "source_post_id": null
+    },
+    {
+      "language": "en",
+      "slug": "pesto-cheese-puff-pastry-christmas-tree",
+      "public_path": "/en/pesto-cheese-puff-pastry-christmas-tree",
+      "title": "Pesto and cheese puff pastry Christmas tree",
+      "excerpt": "Two sheets of puff pastry enclose basil pesto, mozzarella and Parmesan. Twist the side strips into branches for a warm Christmas centrepiece to share.",
+      "summary": "Two sheets of puff pastry enclose basil pesto, mozzarella and Parmesan. Twist the side strips into branches for a warm Christmas centrepiece to share.",
+      "notes": "Keep the pastry cold and use thick pesto. Leave the centre spine intact. Bake and serve every offcut: the yield and nutrition include all the pastry and filling. The calculation includes a whole brushing egg even if some is left. Contains wheat, milk, egg and any nuts in the pesto. Refrigerate leftovers within 2 hours, keep up to 2 days and reheat in the oven.",
+      "content_html": "<p>Two sheets of puff pastry enclose basil pesto, mozzarella and Parmesan. Twist the side strips into branches for a warm Christmas centrepiece to share.</p><p>Keep the pastry cold and use thick pesto. Leave the centre spine intact. Bake and serve every offcut: the yield and nutrition include all the pastry and filling. The calculation includes a whole brushing egg even if some is left. Contains wheat, milk, egg and any nuts in the pesto. Refrigerate leftovers within 2 hours, keep up to 2 days and reheat in the oven.</p>",
+      "ingredients": [
+        {
+          "name": "chilled rectangular puff pastry, two sheets about 25 × 35 cm",
+          "amount": "500",
+          "unit": "g"
+        },
+        {
+          "name": "thick basil pesto",
+          "amount": "80",
+          "unit": "g"
+        },
+        {
+          "name": "grated low-moisture mozzarella",
+          "amount": "100",
+          "unit": "g"
+        },
+        {
+          "name": "grated Parmesan",
+          "amount": "25",
+          "unit": "g"
+        },
+        {
+          "name": "beaten egg for brushing",
+          "amount": "50",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepare the pastry",
+          "content": "Heat the oven to 200 °C, conventional heat. Put one sheet of pastry, about 25 × 35 cm, on baking parchment on a tray.",
+          "image_url": "/recetas/arbol-hojaldre-pesto-queso/paso-01.webp",
+          "image_alt": "Pesto and cheese puff pastry Christmas tree: Prepare the pastry"
+        },
+        {
+          "title": "Spread the filling",
+          "content": "Spread over 80 g pesto, leaving a 1 cm border. Scatter over 100 g mozzarella and 25 g Parmesan.",
+          "image_url": "/recetas/arbol-hojaldre-pesto-queso/paso-02.webp",
+          "image_alt": "Pesto and cheese puff pastry Christmas tree: Spread the filling"
+        },
+        {
+          "title": "Cover and chill",
+          "content": "Lay the second sheet on top and press gently. Refrigerate for 15 minutes so the pastry is cold for cutting.",
+          "image_url": "/recetas/arbol-hojaldre-pesto-queso/paso-03.webp",
+          "image_alt": "Pesto and cheese puff pastry Christmas tree: Cover and chill"
+        },
+        {
+          "title": "Cut the tree",
+          "content": "Cut a tall triangle with a small trunk at the bottom. Keep all the offcuts to bake alongside, using another tray if needed.",
+          "image_url": "/recetas/arbol-hojaldre-pesto-queso/paso-04.webp",
+          "image_alt": "Pesto and cheese puff pastry Christmas tree: Cut the tree"
+        },
+        {
+          "title": "Cut the branches",
+          "content": "Make horizontal cuts every 2 cm on both sides, leaving an uncut centre spine about 3 cm wide. Do not cut the trunk.",
+          "image_url": "/recetas/arbol-hojaldre-pesto-queso/paso-05.webp",
+          "image_alt": "Pesto and cheese puff pastry Christmas tree: Cut the branches"
+        },
+        {
+          "title": "Twist and brush",
+          "content": "Twist each side strip once or twice without detaching it. Brush the tree and the offcuts with beaten egg.",
+          "image_url": "/recetas/arbol-hojaldre-pesto-queso/paso-06.webp",
+          "image_alt": "Pesto and cheese puff pastry Christmas tree: Twist and brush"
+        },
+        {
+          "title": "Bake until golden",
+          "content": "Bake for 20–25 minutes until risen, golden and cooked underneath. Smaller offcuts may be ready earlier; remove them when golden.",
+          "image_url": "/recetas/arbol-hojaldre-pesto-queso/paso-07.webp",
+          "image_alt": "Pesto and cheese puff pastry Christmas tree: Bake until golden"
+        },
+        {
+          "title": "Serve to share",
+          "content": "Rest for 5 minutes, then move the tree onto a board. Serve warm with all the baked offcuts, divided between eight people.",
+          "image_url": "/recetas/arbol-hojaldre-pesto-queso/paso-08.webp",
+          "image_alt": "Pesto and cheese puff pastry Christmas tree: Serve to share"
+        }
+      ],
+      "category": "Starters & appetizers",
+      "course": "Starter",
+      "cuisine": "International",
+      "difficulty": "Easy",
+      "prep_time_minutes": 25,
+      "cook_time_minutes": 25,
+      "total_time_minutes": 70,
+      "servings": 8,
+      "image_url": "/recetas/arbol-hojaldre-pesto-queso/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/arbol-hojaldre-pesto-queso/portada.webp",
+          "alt": "Pesto and cheese puff pastry Christmas tree"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "Pesto and cheese puff pastry Christmas tree",
+        "chilled rectangular puff pastry, two sheets about 25 × 35 cm",
+        "thick basil pesto",
+        "grated low-moisture mozzarella"
+      ],
+      "nutrition": {
+        "calories": 334,
+        "protein_g": 8.7,
+        "carbs_g": 24.3,
+        "fat_g": 21.1,
+        "saturated_fat_g": 8.8,
+        "fiber_g": 1.5,
+        "sugar_g": 1.0,
+        "sodium_mg": 452.0,
+        "estimated": true,
+        "serving_size": "1/8 of the tree and baked offcuts",
+        "source": "USDA FoodData Central SR Legacy + manufacturer reference labels",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Sum of nutrients per 100 g × each ingredient weight / 100, divided by the number of servings.",
+        "note": "Recipe-based estimate; brands, actual portions and cooking losses affect the values. Not a laboratory analysis."
+      },
+      "seo": {
+        "title": "Pesto and cheese puff pastry Christmas tree | Manual de Cocina",
+        "description": "Two sheets of puff pastry enclose basil pesto, mozzarella and Parmesan. Twist the side strips into branches for a warm Christmas centrepiece to share.",
+        "image_alt": "Pesto and cheese puff pastry Christmas tree",
+        "image_variants": [
+          "/recetas/arbol-hojaldre-pesto-queso/portada-1x1.webp",
+          "/recetas/arbol-hojaldre-pesto-queso/portada-4x3.webp",
+          "/recetas/arbol-hojaldre-pesto-queso/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Can I shape it ahead?",
+            "a": "Yes. Cover the unbaked tree and refrigerate for up to 12 hours. Brush with egg and bake before serving."
+          },
+          {
+            "q": "Why chill before cutting?",
+            "a": "Cold pastry holds its layers and is easier to twist without distorting the branches."
+          },
+          {
+            "q": "What happens to the offcuts?",
+            "a": "Bake them as snacks. The yield and nutrition count all the pastry and filling, with nothing discarded."
+          }
+        ],
+        "rest_time_minutes": 20
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "source_url": null,
+      "source_post_id": null
+    },
+    {
+      "language": "fr",
+      "slug": "sapin-feuillete-pesto-fromage",
+      "public_path": "/fr/sapin-feuillete-pesto-fromage",
+      "title": "Sapin feuilleté au pesto et au fromage",
+      "excerpt": "Deux pâtes feuilletées renferment du pesto de basilic, de la mozzarella et du parmesan. Les bandes latérales torsadées forment les branches d’un sapin de Noël à partager tiède.",
+      "summary": "Deux pâtes feuilletées renferment du pesto de basilic, de la mozzarella et du parmesan. Les bandes latérales torsadées forment les branches d’un sapin de Noël à partager tiède.",
+      "notes": "Gardez la pâte froide, utilisez un pesto épais et ne coupez pas la bande centrale. Faites cuire et servez toutes les chutes : elles sont comprises dans les portions et la nutrition. Le calcul inclut un œuf entier de dorure, même s’il en reste. Contient blé, lait, œuf et les fruits à coque du pesto. Réfrigérez les restes sous 2 heures, jusqu’à 2 jours, puis réchauffez au four.",
+      "content_html": "<p>Deux pâtes feuilletées renferment du pesto de basilic, de la mozzarella et du parmesan. Les bandes latérales torsadées forment les branches d’un sapin de Noël à partager tiède.</p><p>Gardez la pâte froide, utilisez un pesto épais et ne coupez pas la bande centrale. Faites cuire et servez toutes les chutes : elles sont comprises dans les portions et la nutrition. Le calcul inclut un œuf entier de dorure, même s’il en reste. Contient blé, lait, œuf et les fruits à coque du pesto. Réfrigérez les restes sous 2 heures, jusqu’à 2 jours, puis réchauffez au four.</p>",
+      "ingredients": [
+        {
+          "name": "pâte feuilletée rectangulaire réfrigérée, deux plaques d’environ 25 × 35 cm",
+          "amount": "500",
+          "unit": "g"
+        },
+        {
+          "name": "pesto de basilic épais",
+          "amount": "80",
+          "unit": "g"
+        },
+        {
+          "name": "mozzarella peu humide râpée",
+          "amount": "100",
+          "unit": "g"
+        },
+        {
+          "name": "parmesan râpé",
+          "amount": "25",
+          "unit": "g"
+        },
+        {
+          "name": "œuf battu pour dorer",
+          "amount": "50",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Préparer la pâte",
+          "content": "Préchauffez le four à 200 °C en chaleur statique. Posez une plaque de pâte d’environ 25 × 35 cm sur du papier cuisson, sur une plaque de four.",
+          "image_url": "/recetas/arbol-hojaldre-pesto-queso/paso-01.webp",
+          "image_alt": "Sapin feuilleté au pesto et au fromage: Préparer la pâte"
+        },
+        {
+          "title": "Étaler la garniture",
+          "content": "Étalez 80 g de pesto en laissant 1 cm de bord. Parsemez de 100 g de mozzarella et 25 g de parmesan.",
+          "image_url": "/recetas/arbol-hojaldre-pesto-queso/paso-02.webp",
+          "image_alt": "Sapin feuilleté au pesto et au fromage: Étaler la garniture"
+        },
+        {
+          "title": "Recouvrir et refroidir",
+          "content": "Posez la deuxième pâte dessus et pressez doucement. Réfrigérez 15 minutes avant de découper.",
+          "image_url": "/recetas/arbol-hojaldre-pesto-queso/paso-03.webp",
+          "image_alt": "Sapin feuilleté au pesto et au fromage: Recouvrir et refroidir"
+        },
+        {
+          "title": "Découper le sapin",
+          "content": "Découpez un grand triangle avec un petit tronc à la base. Conservez toutes les chutes pour les cuire à côté, sur une autre plaque si nécessaire.",
+          "image_url": "/recetas/arbol-hojaldre-pesto-queso/paso-04.webp",
+          "image_alt": "Sapin feuilleté au pesto et au fromage: Découper le sapin"
+        },
+        {
+          "title": "Tracer les branches",
+          "content": "Faites des incisions horizontales tous les 2 cm de chaque côté, sans couper une bande centrale d’environ 3 cm ni le tronc.",
+          "image_url": "/recetas/arbol-hojaldre-pesto-queso/paso-05.webp",
+          "image_alt": "Sapin feuilleté au pesto et au fromage: Tracer les branches"
+        },
+        {
+          "title": "Torsader et dorer",
+          "content": "Tournez chaque bande une ou deux fois sans la détacher. Badigeonnez d’œuf le sapin et les chutes.",
+          "image_url": "/recetas/arbol-hojaldre-pesto-queso/paso-06.webp",
+          "image_alt": "Sapin feuilleté au pesto et au fromage: Torsader et dorer"
+        },
+        {
+          "title": "Cuire jusqu’à dorure",
+          "content": "Enfournez 20–25 minutes : la pâte doit être gonflée, dorée et cuite dessous. Retirez les petites chutes plus tôt si elles sont déjà dorées.",
+          "image_url": "/recetas/arbol-hojaldre-pesto-queso/paso-07.webp",
+          "image_alt": "Sapin feuilleté au pesto et au fromage: Cuire jusqu’à dorure"
+        },
+        {
+          "title": "Servir à partager",
+          "content": "Laissez reposer 5 minutes puis transférez sur une planche. Servez tiède avec toutes les chutes cuites, pour huit personnes.",
+          "image_url": "/recetas/arbol-hojaldre-pesto-queso/paso-08.webp",
+          "image_alt": "Sapin feuilleté au pesto et au fromage: Servir à partager"
+        }
+      ],
+      "category": "Entrées et apéritifs",
+      "course": "Entrée",
+      "cuisine": "Internationale",
+      "difficulty": "Facile",
+      "prep_time_minutes": 25,
+      "cook_time_minutes": 25,
+      "total_time_minutes": 70,
+      "servings": 8,
+      "image_url": "/recetas/arbol-hojaldre-pesto-queso/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/arbol-hojaldre-pesto-queso/portada.webp",
+          "alt": "Sapin feuilleté au pesto et au fromage"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "Sapin feuilleté au pesto et au fromage",
+        "pâte feuilletée rectangulaire réfrigérée, deux plaques d’environ 25 × 35 cm",
+        "pesto de basilic épais",
+        "mozzarella peu humide râpée"
+      ],
+      "nutrition": {
+        "calories": 334,
+        "protein_g": 8.7,
+        "carbs_g": 24.3,
+        "fat_g": 21.1,
+        "saturated_fat_g": 8.8,
+        "fiber_g": 1.5,
+        "sugar_g": 1.0,
+        "sodium_mg": 452.0,
+        "estimated": true,
+        "serving_size": "1/8 du sapin et des chutes cuites",
+        "source": "USDA FoodData Central SR Legacy + manufacturer reference labels",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Somme des nutriments pour 100 g × poids de chaque ingrédient / 100, divisée par le nombre de portions.",
+        "note": "Estimation selon la formulation ; les marques, les portions réelles et les pertes de cuisson modifient les valeurs. Pas une analyse de laboratoire."
+      },
+      "seo": {
+        "title": "Sapin feuilleté au pesto et au fromage | Manual de Cocina",
+        "description": "Deux pâtes feuilletées renferment du pesto de basilic, de la mozzarella et du parmesan. Les bandes latérales torsadées forment les branches d’un sapin de Noël à partager tiède.",
+        "image_alt": "Sapin feuilleté au pesto et au fromage",
+        "image_variants": [
+          "/recetas/arbol-hojaldre-pesto-queso/portada-1x1.webp",
+          "/recetas/arbol-hojaldre-pesto-queso/portada-4x3.webp",
+          "/recetas/arbol-hojaldre-pesto-queso/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Peut-on le façonner à l’avance ?",
+            "a": "Oui. Gardez le sapin cru couvert au réfrigérateur jusqu’à 12 heures. Dorez puis enfournez avant de servir."
+          },
+          {
+            "q": "Pourquoi refroidir la pâte ?",
+            "a": "Froide, elle garde mieux ses couches et se torsade sans déformer les branches."
+          },
+          {
+            "q": "Que faire des chutes ?",
+            "a": "Faites-les cuire en petits feuilletés. Les portions et la nutrition comptent toute la pâte et toute la garniture."
+          }
+        ],
+        "rest_time_minutes": 20
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "source_url": null,
+      "source_post_id": null
+    },
+    {
+      "language": "it",
+      "slug": "albero-pasta-sfoglia-pesto-formaggio",
+      "public_path": "/it/albero-pasta-sfoglia-pesto-formaggio",
+      "title": "Albero di pasta sfoglia con pesto e formaggio",
+      "excerpt": "Due rettangoli di sfoglia racchiudono pesto di basilico, mozzarella e parmigiano. Le strisce laterali attorcigliate formano i rami di un albero natalizio da condividere tiepido.",
+      "summary": "Due rettangoli di sfoglia racchiudono pesto di basilico, mozzarella e parmigiano. Le strisce laterali attorcigliate formano i rami di un albero natalizio da condividere tiepido.",
+      "notes": "Mantieni la sfoglia fredda, usa pesto denso e lascia intatta la fascia centrale. Cuoci e servi anche tutti i ritagli: porzioni e nutrizione li comprendono. Il calcolo include l’uovo intero della spennellatura anche se avanza. Contiene frumento, latte, uovo e l’eventuale frutta a guscio del pesto. Refrigera gli avanzi entro 2 ore per massimo 2 giorni e riscalda in forno.",
+      "content_html": "<p>Due rettangoli di sfoglia racchiudono pesto di basilico, mozzarella e parmigiano. Le strisce laterali attorcigliate formano i rami di un albero natalizio da condividere tiepido.</p><p>Mantieni la sfoglia fredda, usa pesto denso e lascia intatta la fascia centrale. Cuoci e servi anche tutti i ritagli: porzioni e nutrizione li comprendono. Il calcolo include l’uovo intero della spennellatura anche se avanza. Contiene frumento, latte, uovo e l’eventuale frutta a guscio del pesto. Refrigera gli avanzi entro 2 ore per massimo 2 giorni e riscalda in forno.</p>",
+      "ingredients": [
+        {
+          "name": "pasta sfoglia rettangolare refrigerata, due fogli di circa 25 × 35 cm",
+          "amount": "500",
+          "unit": "g"
+        },
+        {
+          "name": "pesto di basilico denso",
+          "amount": "80",
+          "unit": "g"
+        },
+        {
+          "name": "mozzarella poco umida grattugiata",
+          "amount": "100",
+          "unit": "g"
+        },
+        {
+          "name": "parmigiano grattugiato",
+          "amount": "25",
+          "unit": "g"
+        },
+        {
+          "name": "uovo sbattuto per spennellare",
+          "amount": "50",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepara la sfoglia",
+          "content": "Preriscalda il forno statico a 200 °C. Posa un foglio di sfoglia di circa 25 × 35 cm su carta da forno in una teglia.",
+          "image_url": "/recetas/arbol-hojaldre-pesto-queso/paso-01.webp",
+          "image_alt": "Albero di pasta sfoglia con pesto e formaggio: Prepara la sfoglia"
+        },
+        {
+          "title": "Distribuisci il ripieno",
+          "content": "Spalma 80 g di pesto lasciando 1 cm di bordo. Aggiungi 100 g di mozzarella e 25 g di parmigiano.",
+          "image_url": "/recetas/arbol-hojaldre-pesto-queso/paso-02.webp",
+          "image_alt": "Albero di pasta sfoglia con pesto e formaggio: Distribuisci il ripieno"
+        },
+        {
+          "title": "Copri e raffredda",
+          "content": "Appoggia il secondo foglio e premi delicatamente. Metti in frigorifero per 15 minuti prima di tagliare.",
+          "image_url": "/recetas/arbol-hojaldre-pesto-queso/paso-03.webp",
+          "image_alt": "Albero di pasta sfoglia con pesto e formaggio: Copri e raffredda"
+        },
+        {
+          "title": "Ritaglia l’albero",
+          "content": "Taglia un triangolo alto con un piccolo tronco alla base. Conserva tutti i ritagli da cuocere accanto, usando un’altra teglia se serve.",
+          "image_url": "/recetas/arbol-hojaldre-pesto-queso/paso-04.webp",
+          "image_alt": "Albero di pasta sfoglia con pesto e formaggio: Ritaglia l’albero"
+        },
+        {
+          "title": "Incidi i rami",
+          "content": "Pratica tagli orizzontali ogni 2 cm su entrambi i lati, lasciando una fascia centrale intatta larga circa 3 cm. Non tagliare il tronco.",
+          "image_url": "/recetas/arbol-hojaldre-pesto-queso/paso-05.webp",
+          "image_alt": "Albero di pasta sfoglia con pesto e formaggio: Incidi i rami"
+        },
+        {
+          "title": "Attorciglia e spennella",
+          "content": "Gira ogni striscia laterale una o due volte senza staccarla. Spennella albero e ritagli con uovo sbattuto.",
+          "image_url": "/recetas/arbol-hojaldre-pesto-queso/paso-06.webp",
+          "image_alt": "Albero di pasta sfoglia con pesto e formaggio: Attorciglia e spennella"
+        },
+        {
+          "title": "Cuoci fino a doratura",
+          "content": "Inforna per 20–25 minuti, finché la sfoglia è gonfia, dorata e cotta sul fondo. Togli prima i ritagli piccoli se sono già dorati.",
+          "image_url": "/recetas/arbol-hojaldre-pesto-queso/paso-07.webp",
+          "image_alt": "Albero di pasta sfoglia con pesto e formaggio: Cuoci fino a doratura"
+        },
+        {
+          "title": "Servi da condividere",
+          "content": "Lascia riposare 5 minuti e trasferisci su un tagliere. Servi tiepido con tutti i ritagli cotti, dividendoli tra otto persone.",
+          "image_url": "/recetas/arbol-hojaldre-pesto-queso/paso-08.webp",
+          "image_alt": "Albero di pasta sfoglia con pesto e formaggio: Servi da condividere"
+        }
+      ],
+      "category": "Antipasti",
+      "course": "Antipasto",
+      "cuisine": "Internazionale",
+      "difficulty": "Facile",
+      "prep_time_minutes": 25,
+      "cook_time_minutes": 25,
+      "total_time_minutes": 70,
+      "servings": 8,
+      "image_url": "/recetas/arbol-hojaldre-pesto-queso/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/arbol-hojaldre-pesto-queso/portada.webp",
+          "alt": "Albero di pasta sfoglia con pesto e formaggio"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "Albero di pasta sfoglia con pesto e formaggio",
+        "pasta sfoglia rettangolare refrigerata, due fogli di circa 25 × 35 cm",
+        "pesto di basilico denso",
+        "mozzarella poco umida grattugiata"
+      ],
+      "nutrition": {
+        "calories": 334,
+        "protein_g": 8.7,
+        "carbs_g": 24.3,
+        "fat_g": 21.1,
+        "saturated_fat_g": 8.8,
+        "fiber_g": 1.5,
+        "sugar_g": 1.0,
+        "sodium_mg": 452.0,
+        "estimated": true,
+        "serving_size": "1/8 dell’albero e dei ritagli cotti",
+        "source": "USDA FoodData Central SR Legacy + manufacturer reference labels",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Somma dei nutrienti per 100 g × peso di ogni ingrediente / 100, divisa per il numero di porzioni.",
+        "note": "Stima della formulazione: marche, porzioni reali e perdite di cottura cambiano i valori. Non è un’analisi di laboratorio."
+      },
+      "seo": {
+        "title": "Albero di pasta sfoglia con pesto e formaggio | Manual de Cocina",
+        "description": "Due rettangoli di sfoglia racchiudono pesto di basilico, mozzarella e parmigiano. Le strisce laterali attorcigliate formano i rami di un albero natalizio da condividere tiepido.",
+        "image_alt": "Albero di pasta sfoglia con pesto e formaggio",
+        "image_variants": [
+          "/recetas/arbol-hojaldre-pesto-queso/portada-1x1.webp",
+          "/recetas/arbol-hojaldre-pesto-queso/portada-4x3.webp",
+          "/recetas/arbol-hojaldre-pesto-queso/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Posso formarlo in anticipo?",
+            "a": "Sì. Conserva l’albero crudo coperto in frigo fino a 12 ore. Spennella con uovo e cuoci prima di servire."
+          },
+          {
+            "q": "Perché raffreddare la sfoglia?",
+            "a": "Da fredda mantiene gli strati e permette di attorcigliare i rami senza deformarli."
+          },
+          {
+            "q": "Che cosa faccio con i ritagli?",
+            "a": "Cuocili come piccoli salatini. Le porzioni e la nutrizione includono tutta la sfoglia e tutto il ripieno."
+          }
+        ],
+        "rest_time_minutes": 20
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "source_url": null,
+      "source_post_id": null
+    },
+    {
+      "language": "ja",
+      "slug": "pesto-cheese-puff-pastry-tree",
+      "public_path": "/ja/pesto-cheese-puff-pastry-tree",
+      "title": "ペストとチーズのクリスマスツリーパイ",
+      "excerpt": "2枚のパイシートにバジルペスト、モッツァレラ、パルメザンをはさみます。左右の切り込みをねじって枝にした、温かいまま分け合うクリスマス向けの前菜です。",
+      "summary": "2枚のパイシートにバジルペスト、モッツァレラ、パルメザンをはさみます。左右の切り込みをねじって枝にした、温かいまま分け合うクリスマス向けの前菜です。",
+      "notes": "パイ生地は冷たいまま扱い、水分の少ないペストを使います。中心の帯は切り離しません。切れ端もすべて焼いて出し、分量と栄養価に含めます。塗り卵は余っても全量を計算しています。小麦、乳、卵と、ペストに使われるナッツ類を含みます。残りは2時間以内に冷蔵し、2日以内にオーブンで温め直して食べます。",
+      "content_html": "<p>2枚のパイシートにバジルペスト、モッツァレラ、パルメザンをはさみます。左右の切り込みをねじって枝にした、温かいまま分け合うクリスマス向けの前菜です。</p><p>パイ生地は冷たいまま扱い、水分の少ないペストを使います。中心の帯は切り離しません。切れ端もすべて焼いて出し、分量と栄養価に含めます。塗り卵は余っても全量を計算しています。小麦、乳、卵と、ペストに使われるナッツ類を含みます。残りは2時間以内に冷蔵し、2日以内にオーブンで温め直して食べます。</p>",
+      "ingredients": [
+        {
+          "name": "冷蔵の長方形パイシート（約25 × 35 cmを2枚）",
+          "amount": "500",
+          "unit": "g"
+        },
+        {
+          "name": "濃いバジルペスト",
+          "amount": "80",
+          "unit": "g"
+        },
+        {
+          "name": "水分の少ないモッツァレラチーズ（すりおろす）",
+          "amount": "100",
+          "unit": "g"
+        },
+        {
+          "name": "パルメザンチーズ（すりおろす）",
+          "amount": "25",
+          "unit": "g"
+        },
+        {
+          "name": "表面用の溶き卵",
+          "amount": "50",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "パイシートを用意する",
+          "content": "上下加熱のオーブンを200 ℃に予熱します。約25 × 35 cmのシート1枚を、オーブン用シートを敷いた天板に置きます。",
+          "image_url": "/recetas/arbol-hojaldre-pesto-queso/paso-01.webp",
+          "image_alt": "ペストとチーズのクリスマスツリーパイ: パイシートを用意する"
+        },
+        {
+          "title": "具を広げる",
+          "content": "縁を1 cm残してペスト80 gを薄く広げ、モッツァレラ100 gとパルメザン25 gを散らします。",
+          "image_url": "/recetas/arbol-hojaldre-pesto-queso/paso-02.webp",
+          "image_alt": "ペストとチーズのクリスマスツリーパイ: 具を広げる"
+        },
+        {
+          "title": "重ねて冷やす",
+          "content": "もう1枚を重ねて軽く押さえます。切る前に冷蔵庫で15分冷やします。",
+          "image_url": "/recetas/arbol-hojaldre-pesto-queso/paso-03.webp",
+          "image_alt": "ペストとチーズのクリスマスツリーパイ: 重ねて冷やす"
+        },
+        {
+          "title": "ツリーを切り抜く",
+          "content": "下に小さな幹を残した縦長の三角形に切ります。切れ端はすべて取っておき、必要なら別の天板で一緒に焼きます。",
+          "image_url": "/recetas/arbol-hojaldre-pesto-queso/paso-04.webp",
+          "image_alt": "ペストとチーズのクリスマスツリーパイ: ツリーを切り抜く"
+        },
+        {
+          "title": "枝に切り込みを入れる",
+          "content": "両側から2 cm間隔で水平に切り込みを入れ、中心約3 cmの帯と幹は切らずに残します。",
+          "image_url": "/recetas/arbol-hojaldre-pesto-queso/paso-05.webp",
+          "image_alt": "ペストとチーズのクリスマスツリーパイ: 枝に切り込みを入れる"
+        },
+        {
+          "title": "ねじって卵を塗る",
+          "content": "左右の帯をそれぞれ1〜2回ねじります。中心から外さないようにし、ツリーと切れ端に溶き卵を塗ります。",
+          "image_url": "/recetas/arbol-hojaldre-pesto-queso/paso-06.webp",
+          "image_alt": "ペストとチーズのクリスマスツリーパイ: ねじって卵を塗る"
+        },
+        {
+          "title": "きつね色に焼く",
+          "content": "20〜25分、膨らんできつね色になり底まで焼けるまで加熱します。小さい切れ端は早く焼けるので、色づいたら先に取り出します。",
+          "image_url": "/recetas/arbol-hojaldre-pesto-queso/paso-07.webp",
+          "image_alt": "ペストとチーズのクリスマスツリーパイ: きつね色に焼く"
+        },
+        {
+          "title": "分け合って食べる",
+          "content": "取り出して5分置き、木のボードに移します。焼いた切れ端もすべて添え、温かいうちに8人で分けます。",
+          "image_url": "/recetas/arbol-hojaldre-pesto-queso/paso-08.webp",
+          "image_alt": "ペストとチーズのクリスマスツリーパイ: 分け合って食べる"
+        }
+      ],
+      "category": "前菜・おつまみ",
+      "course": "前菜",
+      "cuisine": "各国料理",
+      "difficulty": "簡単",
+      "prep_time_minutes": 25,
+      "cook_time_minutes": 25,
+      "total_time_minutes": 70,
+      "servings": 8,
+      "image_url": "/recetas/arbol-hojaldre-pesto-queso/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/arbol-hojaldre-pesto-queso/portada.webp",
+          "alt": "ペストとチーズのクリスマスツリーパイ"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "ペストとチーズのクリスマスツリーパイ",
+        "冷蔵の長方形パイシート（約25 × 35 cmを2枚）",
+        "濃いバジルペスト",
+        "水分の少ないモッツァレラチーズ（すりおろす）"
+      ],
+      "nutrition": {
+        "calories": 334,
+        "protein_g": 8.7,
+        "carbs_g": 24.3,
+        "fat_g": 21.1,
+        "saturated_fat_g": 8.8,
+        "fiber_g": 1.5,
+        "sugar_g": 1.0,
+        "sodium_mg": 452.0,
+        "estimated": true,
+        "serving_size": "ツリーと焼いた切れ端の8分の1",
+        "source": "USDA FoodData Central SR Legacy + manufacturer reference labels",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "材料100 gあたりの栄養価×各使用重量÷100を合計し、人数で割って算出。",
+        "note": "配合からの推定値です。製品、実際の盛り付け量、加熱による損失で変わります。検査機関での分析値ではありません。"
+      },
+      "seo": {
+        "title": "ペストとチーズのクリスマスツリーパイ | Manual de Cocina",
+        "description": "2枚のパイシートにバジルペスト、モッツァレラ、パルメザンをはさみます。左右の切り込みをねじって枝にした、温かいまま分け合うクリスマス向けの前菜です。",
+        "image_alt": "ペストとチーズのクリスマスツリーパイ",
+        "image_variants": [
+          "/recetas/arbol-hojaldre-pesto-queso/portada-1x1.webp",
+          "/recetas/arbol-hojaldre-pesto-queso/portada-4x3.webp",
+          "/recetas/arbol-hojaldre-pesto-queso/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "先に成形しておけますか？",
+            "a": "はい。焼く前の状態で覆い、冷蔵庫で12時間まで保存できます。卵を塗って食べる前に焼きます。"
+          },
+          {
+            "q": "切る前に冷やす理由は？",
+            "a": "冷たい生地の方が層を保ちやすく、枝をねじっても形が崩れにくいためです。"
+          },
+          {
+            "q": "切れ端はどうしますか？",
+            "a": "小さなパイとして焼きます。分量と栄養価には生地と具の全量を含めています。"
+          }
+        ],
+        "rest_time_minutes": 20
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "source_url": null,
+      "source_post_id": null
+    },
+    {
+      "language": "pt",
+      "slug": "arvore-massa-folhada-pesto-queijo",
+      "public_path": "/pt/arvore-massa-folhada-pesto-queijo",
+      "title": "Árvore de massa folhada com pesto e queijo para o Natal",
+      "excerpt": "Duas folhas de massa folhada envolvem pesto de manjericão, muçarela e parmesão. As tiras laterais torcidas formam os galhos de uma árvore natalina para compartilhar morna.",
+      "summary": "Duas folhas de massa folhada envolvem pesto de manjericão, muçarela e parmesão. As tiras laterais torcidas formam os galhos de uma árvore natalina para compartilhar morna.",
+      "notes": "Mantenha a massa fria, use pesto espesso e deixe a faixa central intacta. Asse e sirva todas as aparas: elas entram no rendimento e na nutrição. O cálculo inclui o ovo inteiro usado para pincelar, mesmo que sobre. Contém trigo, leite, ovo e as oleaginosas presentes no pesto. Refrigere as sobras em até 2 horas, guarde por até 2 dias e reaqueça no forno.",
+      "content_html": "<p>Duas folhas de massa folhada envolvem pesto de manjericão, muçarela e parmesão. As tiras laterais torcidas formam os galhos de uma árvore natalina para compartilhar morna.</p><p>Mantenha a massa fria, use pesto espesso e deixe a faixa central intacta. Asse e sirva todas as aparas: elas entram no rendimento e na nutrição. O cálculo inclui o ovo inteiro usado para pincelar, mesmo que sobre. Contém trigo, leite, ovo e as oleaginosas presentes no pesto. Refrigere as sobras em até 2 horas, guarde por até 2 dias e reaqueça no forno.</p>",
+      "ingredients": [
+        {
+          "name": "massa folhada retangular refrigerada, duas folhas de cerca de 25 × 35 cm",
+          "amount": "500",
+          "unit": "g"
+        },
+        {
+          "name": "pesto de manjericão espesso",
+          "amount": "80",
+          "unit": "g"
+        },
+        {
+          "name": "muçarela de baixa umidade ralada",
+          "amount": "100",
+          "unit": "g"
+        },
+        {
+          "name": "parmesão ralado",
+          "amount": "25",
+          "unit": "g"
+        },
+        {
+          "name": "ovo batido para pincelar",
+          "amount": "50",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepare a massa",
+          "content": "Preaqueça o forno a 200 °C, com calor superior e inferior. Coloque uma folha de massa de cerca de 25 × 35 cm sobre papel-manteiga em uma assadeira.",
+          "image_url": "/recetas/arbol-hojaldre-pesto-queso/paso-01.webp",
+          "image_alt": "Árvore de massa folhada com pesto e queijo para o Natal: Prepare a massa"
+        },
+        {
+          "title": "Espalhe o recheio",
+          "content": "Passe 80 g de pesto, deixando 1 cm de borda. Distribua 100 g de muçarela e 25 g de parmesão.",
+          "image_url": "/recetas/arbol-hojaldre-pesto-queso/paso-02.webp",
+          "image_alt": "Árvore de massa folhada com pesto e queijo para o Natal: Espalhe o recheio"
+        },
+        {
+          "title": "Cubra e esfrie",
+          "content": "Coloque a segunda folha por cima e pressione suavemente. Leve à geladeira por 15 minutos antes de cortar.",
+          "image_url": "/recetas/arbol-hojaldre-pesto-queso/paso-03.webp",
+          "image_alt": "Árvore de massa folhada com pesto e queijo para o Natal: Cubra e esfrie"
+        },
+        {
+          "title": "Recorte a árvore",
+          "content": "Corte um triângulo alto com um pequeno tronco na base. Reserve todas as aparas para assar junto, em outra assadeira se necessário.",
+          "image_url": "/recetas/arbol-hojaldre-pesto-queso/paso-04.webp",
+          "image_alt": "Árvore de massa folhada com pesto e queijo para o Natal: Recorte a árvore"
+        },
+        {
+          "title": "Corte os galhos",
+          "content": "Faça cortes horizontais a cada 2 cm dos dois lados, deixando uma faixa central de cerca de 3 cm intacta. Não corte o tronco.",
+          "image_url": "/recetas/arbol-hojaldre-pesto-queso/paso-05.webp",
+          "image_alt": "Árvore de massa folhada com pesto e queijo para o Natal: Corte os galhos"
+        },
+        {
+          "title": "Torça e pincele",
+          "content": "Gire cada tira lateral uma ou duas vezes, sem soltá-la do centro. Pincele a árvore e as aparas com ovo batido.",
+          "image_url": "/recetas/arbol-hojaldre-pesto-queso/paso-06.webp",
+          "image_alt": "Árvore de massa folhada com pesto e queijo para o Natal: Torça e pincele"
+        },
+        {
+          "title": "Asse até dourar",
+          "content": "Asse por 20–25 minutos, até crescer, dourar e cozinhar por baixo. As aparas pequenas podem ficar prontas antes: retire quando dourarem.",
+          "image_url": "/recetas/arbol-hojaldre-pesto-queso/paso-07.webp",
+          "image_alt": "Árvore de massa folhada com pesto e queijo para o Natal: Asse até dourar"
+        },
+        {
+          "title": "Sirva para compartilhar",
+          "content": "Deixe descansar por 5 minutos e transfira para uma tábua. Sirva morna com todas as aparas assadas, dividindo entre oito pessoas.",
+          "image_url": "/recetas/arbol-hojaldre-pesto-queso/paso-08.webp",
+          "image_alt": "Árvore de massa folhada com pesto e queijo para o Natal: Sirva para compartilhar"
+        }
+      ],
+      "category": "Entradas e aperitivos",
+      "course": "Entrada",
+      "cuisine": "Internacional",
+      "difficulty": "Fácil",
+      "prep_time_minutes": 25,
+      "cook_time_minutes": 25,
+      "total_time_minutes": 70,
+      "servings": 8,
+      "image_url": "/recetas/arbol-hojaldre-pesto-queso/portada.webp",
+      "gallery": [
+        {
+          "url": "/recetas/arbol-hojaldre-pesto-queso/portada.webp",
+          "alt": "Árvore de massa folhada com pesto e queijo para o Natal"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "Árvore de massa folhada com pesto e queijo para o Natal",
+        "massa folhada retangular refrigerada, duas folhas de cerca de 25 × 35 cm",
+        "pesto de manjericão espesso",
+        "muçarela de baixa umidade ralada"
+      ],
+      "nutrition": {
+        "calories": 334,
+        "protein_g": 8.7,
+        "carbs_g": 24.3,
+        "fat_g": 21.1,
+        "saturated_fat_g": 8.8,
+        "fiber_g": 1.5,
+        "sugar_g": 1.0,
+        "sodium_mg": 452.0,
+        "estimated": true,
+        "serving_size": "1/8 da árvore e das aparas assadas",
+        "source": "USDA FoodData Central SR Legacy + manufacturer reference labels",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Soma dos nutrientes por 100 g × peso de cada ingrediente / 100, dividida pelo número de porções.",
+        "note": "Estimativa pela formulação; marcas, porções reais e perdas no cozimento alteram os valores. Não é análise laboratorial."
+      },
+      "seo": {
+        "title": "Árvore de massa folhada com pesto e queijo para o Natal | Manual de Cocina",
+        "description": "Duas folhas de massa folhada envolvem pesto de manjericão, muçarela e parmesão. As tiras laterais torcidas formam os galhos de uma árvore natalina para compartilhar morna.",
+        "image_alt": "Árvore de massa folhada com pesto e queijo para o Natal",
+        "image_variants": [
+          "/recetas/arbol-hojaldre-pesto-queso/portada-1x1.webp",
+          "/recetas/arbol-hojaldre-pesto-queso/portada-4x3.webp",
+          "/recetas/arbol-hojaldre-pesto-queso/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Posso montar antes da ceia?",
+            "a": "Sim. Guarde a árvore crua coberta na geladeira por até 12 horas. Pincele e asse na hora de servir."
+          },
+          {
+            "q": "Por que gelar antes de cortar?",
+            "a": "A massa fria preserva as camadas e facilita torcer os galhos sem deformá-los."
+          },
+          {
+            "q": "O que faço com as aparas?",
+            "a": "Asse como pequenos salgados. O rendimento e a nutrição consideram toda a massa e todo o recheio."
+          }
+        ],
+        "rest_time_minutes": 20
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "source_url": null,
+      "source_post_id": null
+    }
+  ],
+  "recipe_group_id": "75d5b43f-07dd-4320-9456-a6949c2ca182",
+  "visual_assets": {
+    "originals_ready": 8,
+    "webp_ready": 12,
+    "manifest": "arbol-hojaldre-pesto-queso-imagenes-20261022.json",
+    "visual_qa": "PASS_40_DISTINCT_PHASES_REVIEWED_2026-10-23"
+  }
+}
