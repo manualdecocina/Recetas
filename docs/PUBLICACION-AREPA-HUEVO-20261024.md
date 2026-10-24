@@ -13,3 +13,7 @@ Las siete versiones se crearon como borradores del mismo grupo y se publicaron j
 Validación editorial local aprobada. La auditoría de producción comprueba siete páginas con HTTP 200, contenido, fotos, FAQ, nutrición, Recipe JSON-LD, canonical autorreferente, hreflang recíproco, enlaces internos, catálogo y sitemap. La invalidación usa la ruta autenticada existente y su secreto de GitHub Actions, sin extraer credenciales.
 
 También se revisó el lote anterior: sus cinco recetas, 35 páginas y 60 imágenes pasaron la auditoría final del 24/10/2026; catálogo y sitemap completos.
+
+## Cierre verificado
+
+Auditoría HTTP del 2026-10-24T22:42:42.832890+00:00: siete páginas aprobadas, doce WebP públicos con hash correcto, todos los enlaces internos accesibles, sitemap completo y presencia en `/es` y `/es/recetas`. Sin fallos de canonical, hreflang, contenido, fotos, FAQ ni Recipe JSON-LD. El control de calidad del commit de publicación `2f22e000fdcebd586f1e604fe1e0e1fdccb68d53` terminó aprobado (GitHub Actions 40139347178). PR #183 fusionada.
