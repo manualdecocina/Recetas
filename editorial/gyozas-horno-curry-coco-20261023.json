@@ -1,0 +1,1460 @@
+{
+  "slug": "gyozas-horno-curry-coco",
+  "key": "gyozas",
+  "date": "2026-10-23",
+  "target": "https://manualdecocina.com",
+  "state": "seven_languages_draft",
+  "languages": [
+    "es",
+    "de",
+    "en",
+    "fr",
+    "it",
+    "ja",
+    "pt"
+  ],
+  "category_slug": "platos-principales",
+  "steps_es_sha256": "51cda9053c6d52aded3886f1ca9c4ed5c3cde5751f2657ca2fa9336a23d570e6",
+  "physical_kitchen_test": false,
+  "nutrition_calculation": {
+    "foods": [
+      {
+        "description": "Itsu vegetable fusion gyoza reference label",
+        "source_url": "https://www.itsu.com/grocery/products/gyoza-and-bao/vegetable-fusion-gyoza/",
+        "per_100g": {
+          "calories": 173,
+          "protein_g": 9.4,
+          "carbs_g": 25,
+          "fat_g": 3.5,
+          "saturated_fat_g": 0.5,
+          "fiber_g": 2.6,
+          "sugar_g": 3.8,
+          "sodium_mg": 440
+        },
+        "assumptions": "Salt 1.1 g / 2.5 × 1000 = 440 mg sodium. Nutrition reference, not a brand requirement; follow the actual product cooking/storage label.",
+        "grams": 600.0,
+        "ingredient": "gyozas vegetales congeladas completamente precocinadas"
+      },
+      {
+        "description": "Nuts, coconut milk, canned (liquid expressed from grated meat and water)",
+        "fdc_id": 170173,
+        "source_url": "https://fdc.nal.usda.gov/food-details/170173/nutrients",
+        "per_100g": {
+          "fat_g": 21.3,
+          "carbs_g": 2.81,
+          "calories": 197,
+          "protein_g": 2.02,
+          "sodium_mg": 13.0,
+          "saturated_fat_g": 18.9
+        },
+        "grams": 400.0,
+        "ingredient": "leche de coco en lata, sin azúcar"
+      },
+      {
+        "description": "Water",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "per_100g": {
+          "calories": 0,
+          "protein_g": 0,
+          "carbs_g": 0,
+          "fat_g": 0,
+          "saturated_fat_g": 0,
+          "fiber_g": 0,
+          "sugar_g": 0,
+          "sodium_mg": 0
+        },
+        "assumptions": "Cooking water; does not add macronutrients. Mineral composition not modelled.",
+        "grams": 150.0,
+        "ingredient": "agua"
+      },
+      {
+        "description": "Thai Kitchen red curry paste Canadian reference label",
+        "source_url": "https://www.clubhouse.ca/en-ca/thai-kitchen/products/pastes-dips-and-sauces/red-curry-paste",
+        "per_100g": {
+          "calories": 62.5,
+          "protein_g": 2.5,
+          "carbs_g": 18.75,
+          "fat_g": 0,
+          "saturated_fat_g": 0,
+          "fiber_g": 6.25,
+          "sugar_g": 6.25,
+          "sodium_mg": 2062.5
+        },
+        "assumptions": "Label per 16 g scaled × 100/16. Values and sodium vary considerably by product.",
+        "grams": 25.0,
+        "ingredient": "pasta de curry rojo"
+      },
+      {
+        "description": "Soy sauce made from soy and wheat (shoyu)",
+        "fdc_id": 174277,
+        "source_url": "https://fdc.nal.usda.gov/food-details/174277/nutrients",
+        "per_100g": {
+          "fat_g": 0.57,
+          "carbs_g": 4.93,
+          "sugar_g": 0.4,
+          "protein_g": 8.14,
+          "sodium_mg": 5490.0,
+          "saturated_fat_g": 0.073,
+          "calories": 53.0,
+          "fiber_g": 0.8
+        },
+        "grams": 15.0,
+        "ingredient": "salsa de soja"
+      },
+      {
+        "description": "Ginger root, raw",
+        "fdc_id": 169231,
+        "source_url": "https://fdc.nal.usda.gov/food-details/169231/nutrients",
+        "per_100g": {
+          "sugar_g": 1.7,
+          "fat_g": 0.75,
+          "sodium_mg": 13.0,
+          "protein_g": 1.82,
+          "carbs_g": 17.8,
+          "calories": 80.0,
+          "fiber_g": 2.0,
+          "saturated_fat_g": 0.203
+        },
+        "grams": 10.0,
+        "ingredient": "jengibre fresco rallado"
+      },
+      {
+        "description": "Garlic, raw",
+        "fdc_id": 169230,
+        "source_url": "https://fdc.nal.usda.gov/food-details/169230/nutrients",
+        "per_100g": {
+          "carbs_g": 33.1,
+          "calories": 149,
+          "sugar_g": 1.0,
+          "saturated_fat_g": 0.089,
+          "fiber_g": 2.1,
+          "sodium_mg": 17.0,
+          "protein_g": 6.36,
+          "fat_g": 0.5
+        },
+        "grams": 5.0,
+        "ingredient": "ajo rallado"
+      },
+      {
+        "description": "Spinach, raw",
+        "fdc_id": 168462,
+        "source_url": "https://fdc.nal.usda.gov/food-details/168462/nutrients",
+        "per_100g": {
+          "protein_g": 2.86,
+          "sodium_mg": 79.0,
+          "fiber_g": 2.2,
+          "sugar_g": 0.42,
+          "fat_g": 0.39,
+          "carbs_g": 3.63,
+          "calories": 23.0,
+          "saturated_fat_g": 0.063
+        },
+        "grams": 120.0,
+        "ingredient": "espinacas frescas"
+      },
+      {
+        "description": "Lime juice, raw",
+        "fdc_id": 168156,
+        "source_url": "https://fdc.nal.usda.gov/food-details/168156/nutrients",
+        "per_100g": {
+          "protein_g": 0.42,
+          "fiber_g": 0.4,
+          "sodium_mg": 2.0,
+          "fat_g": 0.07,
+          "sugar_g": 1.69,
+          "saturated_fat_g": 0.008,
+          "carbs_g": 8.42,
+          "calories": 25.0
+        },
+        "grams": 25.0,
+        "ingredient": "jugo de lima"
+      },
+      {
+        "description": "Onions, spring or scallions (includes tops and bulb), raw",
+        "fdc_id": 170005,
+        "source_url": "https://fdc.nal.usda.gov/food-details/170005/nutrients",
+        "per_100g": {
+          "sugar_g": 2.33,
+          "calories": 32.0,
+          "fat_g": 0.19,
+          "protein_g": 1.83,
+          "fiber_g": 2.6,
+          "sodium_mg": 16.0,
+          "saturated_fat_g": 0.032,
+          "carbs_g": 7.34
+        },
+        "grams": 20.0,
+        "ingredient": "cebolleta"
+      }
+    ],
+    "servings": 4,
+    "result": {
+      "calories": 476,
+      "protein_g": 17.7,
+      "carbs_g": 44.5,
+      "fat_g": 26.7,
+      "saturated_fat_g": 19.7,
+      "sodium_mg": 1032.9
+    },
+    "archive_sha256": "70d4235ae3a2bdf48a7b9eaa1286a83fa67b6f3270436c9ce8b008213f500129",
+    "assumptions": [
+      "All ingredient inputs counted; cooking losses are not subtracted.",
+      "Generic USDA miso models white miso and varies by product.",
+      "Dried chilli flakes approximated by USDA red/cayenne pepper.",
+      "Manufacturer reference values vary by market; use actual labels for personal calculations."
+    ]
+  },
+  "pantry_slugs": [
+    null,
+    null,
+    "agua",
+    null,
+    "salsa-de-soja",
+    "jengibre",
+    "ajo",
+    "espinacas",
+    null,
+    "cebolleta"
+  ],
+  "records": [
+    {
+      "language": "es",
+      "slug": "gyozas-horno-curry-coco",
+      "public_path": "/gyozas-horno-curry-coco",
+      "title": "Gyozas al horno con curry de coco en una fuente",
+      "excerpt": "Gyozas vegetales congeladas que se calientan en una salsa de leche de coco, curry rojo y espinacas. Una cena en una fuente, con bordes tiernos y salsa para recoger con la cuchara.",
+      "summary": "Gyozas vegetales congeladas que se calientan en una salsa de leche de coco, curry rojo y espinacas. Una cena en una fuente, con bordes tiernos y salsa para recoger con la cuchara.",
+      "notes": "Usa gyozas vegetales comerciales completamente precocinadas y aptas para recalentar; no esta pauta para piezas crudas de carne o marisco. Respeta siempre las instrucciones del envase si exigen más tiempo. La pasta de curry puede contener marisco: elige una sin él si quieres mantener la receta vegetal. Contiene trigo y soja; revisa gyozas y curry por otros alérgenos. Sigue al fabricante para conservar y recalentar: si prohíbe volver a calentar, sirve recién hecho y no guardes para recalentarlo.",
+      "content_html": "<p>Gyozas vegetales congeladas que se calientan en una salsa de leche de coco, curry rojo y espinacas. Una cena en una fuente, con bordes tiernos y salsa para recoger con la cuchara.</p><p>Usa gyozas vegetales comerciales completamente precocinadas y aptas para recalentar; no esta pauta para piezas crudas de carne o marisco. Respeta siempre las instrucciones del envase si exigen más tiempo. La pasta de curry puede contener marisco: elige una sin él si quieres mantener la receta vegetal. Contiene trigo y soja; revisa gyozas y curry por otros alérgenos. Sigue al fabricante para conservar y recalentar: si prohíbe volver a calentar, sirve recién hecho y no guardes para recalentarlo.</p><h2>También puedes preparar</h2><ul><li><a href=\"/arroz-blanco-perfecto\">Arroz blanco suelto por absorción</a></li><li><a href=\"/bulgogi-carne-marinada-coreana\">Bulgogi, carne marinada coreana</a></li><li><a href=\"/repollo-asado-mantequilla-miso\">Repollo asado con mantequilla de miso y limón</a></li></ul>",
+      "ingredients": [
+        {
+          "name": "gyozas vegetales congeladas completamente precocinadas",
+          "amount": "600",
+          "unit": "g"
+        },
+        {
+          "name": "leche de coco en lata, sin azúcar",
+          "amount": "400",
+          "unit": "g"
+        },
+        {
+          "name": "agua",
+          "amount": "150",
+          "unit": "ml"
+        },
+        {
+          "name": "pasta de curry rojo",
+          "amount": "25",
+          "unit": "g"
+        },
+        {
+          "name": "salsa de soja",
+          "amount": "15",
+          "unit": "g"
+        },
+        {
+          "name": "jengibre fresco rallado",
+          "amount": "10",
+          "unit": "g"
+        },
+        {
+          "name": "ajo rallado",
+          "amount": "5",
+          "unit": "g"
+        },
+        {
+          "name": "espinacas frescas",
+          "amount": "120",
+          "unit": "g"
+        },
+        {
+          "name": "jugo de lima",
+          "amount": "25",
+          "unit": "g"
+        },
+        {
+          "name": "cebolleta",
+          "amount": "20",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepara la fuente",
+          "content": "Precalienta el horno a 200 °C, calor arriba y abajo. Usa una fuente de horno de unos 30 × 22 cm y al menos 5 cm de profundidad.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/paso-01.webp",
+          "image_alt": "Gyozas al horno con curry de coco en una fuente: Prepara la fuente"
+        },
+        {
+          "title": "Mezcla la salsa",
+          "content": "Bate en la fuente 400 g de leche de coco, 150 ml de agua, 25 g de pasta de curry rojo, 15 g de salsa de soja, 10 g de jengibre y 5 g de ajo.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/paso-02.webp",
+          "image_alt": "Gyozas al horno con curry de coco en una fuente: Mezcla la salsa"
+        },
+        {
+          "title": "Añade las espinacas",
+          "content": "Lava y escurre muy bien 120 g de espinacas. Distribúyelas sobre la salsa y presiónalas suavemente para humedecerlas.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/paso-03.webp",
+          "image_alt": "Gyozas al horno con curry de coco en una fuente: Añade las espinacas"
+        },
+        {
+          "title": "Acomoda las gyozas",
+          "content": "Coloca 600 g de gyozas vegetales precocinadas, sin descongelar, en una sola capa. Hunde la base en la salsa y deja los pliegues superiores visibles.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/paso-04.webp",
+          "image_alt": "Gyozas al horno con curry de coco en una fuente: Acomoda las gyozas"
+        },
+        {
+          "title": "Hornea tapado",
+          "content": "Cubre bien con aluminio y hornea 25 minutos. La salsa debe calentarse y producir vapor para que las envolturas queden tiernas.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/paso-05.webp",
+          "image_alt": "Gyozas al horno con curry de coco en una fuente: Hornea tapado"
+        },
+        {
+          "title": "Destapa y comprueba",
+          "content": "Retira el aluminio con cuidado y hornea otros 10 minutos. Comprueba que el centro de una gyoza alcance 74 °C; si el envase indica más tiempo, respétalo. Si aún está fría, tapa y continúa en intervalos de 5 minutos.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/paso-06.webp",
+          "image_alt": "Gyozas al horno con curry de coco en una fuente: Destapa y comprueba"
+        },
+        {
+          "title": "Termina con lima",
+          "content": "Saca la fuente del horno y añade 25 g de jugo de lima a la salsa, sin romper las gyozas. Corta 20 g de cebolleta en rodajas finas.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/paso-07.webp",
+          "image_alt": "Gyozas al horno con curry de coco en una fuente: Termina con lima"
+        },
+        {
+          "title": "Reparte y sirve",
+          "content": "Reparte las gyozas, las espinacas y la salsa entre 4 platos hondos. Añade la cebolleta y sirve caliente; la salsa queda fluida, no gratinada.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/paso-08.webp",
+          "image_alt": "Gyozas al horno con curry de coco en una fuente: Reparte y sirve"
+        }
+      ],
+      "category": "Platos principales",
+      "course": "Plato principal",
+      "cuisine": "Internacional",
+      "difficulty": "Fácil",
+      "prep_time_minutes": 15,
+      "cook_time_minutes": 35,
+      "total_time_minutes": 50,
+      "servings": 4,
+      "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/portada.webp",
+      "gallery": [
+        {
+          "url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/portada.webp",
+          "alt": "Gyozas al horno con curry de coco en una fuente"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "Gyozas al horno con curry de coco en una fuente",
+        "gyozas vegetales congeladas completamente precocinadas",
+        "leche de coco en lata, sin azúcar"
+      ],
+      "nutrition": {
+        "calories": 476,
+        "protein_g": 17.7,
+        "carbs_g": 44.5,
+        "fat_g": 26.7,
+        "saturated_fat_g": 19.7,
+        "sodium_mg": 1032.9,
+        "estimated": true,
+        "serving_size": "un cuarto de las gyozas, espinacas y salsa",
+        "source": "USDA FoodData Central SR Legacy + manufacturer reference labels",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Suma de nutrientes por 100 g × peso de cada ingrediente / 100, dividida por las porciones.",
+        "note": "Estimación de la formulación; cambia según marcas, porción real y pérdidas de cocción. No es un análisis de laboratorio."
+      },
+      "seo": {
+        "title": "Gyozas al horno con curry de coco en una fuente | Manual de Cocina",
+        "description": "Gyozas vegetales congeladas que se calientan en una salsa de leche de coco, curry rojo y espinacas. Una cena en una fuente, con bordes tiernos y salsa para recoger con la cuchara.",
+        "image_alt": "Gyozas al horno con curry de coco en una fuente",
+        "image_variants": [
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/portada-1x1.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/portada-4x3.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "¿Puedo usar gyozas crudas?",
+            "a": "Esta receta se plantea con gyozas vegetales totalmente precocinadas. Las piezas crudas, especialmente de carne o marisco, necesitan las instrucciones específicas de su fabricante."
+          },
+          {
+            "q": "¿Se puede cambiar la leche de coco por bebida de coco?",
+            "a": "No directamente: la bebida es mucho más diluida. Usa leche de coco culinaria en lata y sin azúcar."
+          },
+          {
+            "q": "¿Puedo bajar el picante?",
+            "a": "Sí. La intensidad de las pastas varía; empieza con menos curry y ajusta. La nutrición corresponde a los 25 g indicados."
+          }
+        ],
+        "rest_time_minutes": 0
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "source_url": null,
+      "source_post_id": null
+    },
+    {
+      "language": "de",
+      "slug": "gyoza-auflauf-kokos-curry",
+      "public_path": "/de/gyoza-auflauf-kokos-curry",
+      "title": "Gyoza aus dem Ofen mit Kokos-Curry-Sauce",
+      "excerpt": "Tiefgekühlte Gemüse-Gyoza werden in einer Sauce aus Kokosmilch, roter Currypaste und Spinat erhitzt. Ein Abendessen aus einer Form mit zarten Teighüllen und reichlich Sauce.",
+      "summary": "Tiefgekühlte Gemüse-Gyoza werden in einer Sauce aus Kokosmilch, roter Currypaste und Spinat erhitzt. Ein Abendessen aus einer Form mit zarten Teighüllen und reichlich Sauce.",
+      "notes": "Vollständig vorgegarte Gemüse-Gyoza verwenden, die zum Erhitzen geeignet sind, keine rohen Fleisch- oder Meeresfrüchte-Teigtaschen. Längere Packungsangaben beachten. Currypaste kann Krebstiere enthalten; für die pflanzliche Variante eine ohne wählen. Enthält Weizen und Soja; weitere Allergene prüfen. Lager- und Aufwärmhinweise des Herstellers beachten. Ist erneutes Aufwärmen untersagt, frisch servieren und nicht dafür aufbewahren.",
+      "content_html": "<p>Tiefgekühlte Gemüse-Gyoza werden in einer Sauce aus Kokosmilch, roter Currypaste und Spinat erhitzt. Ein Abendessen aus einer Form mit zarten Teighüllen und reichlich Sauce.</p><p>Vollständig vorgegarte Gemüse-Gyoza verwenden, die zum Erhitzen geeignet sind, keine rohen Fleisch- oder Meeresfrüchte-Teigtaschen. Längere Packungsangaben beachten. Currypaste kann Krebstiere enthalten; für die pflanzliche Variante eine ohne wählen. Enthält Weizen und Soja; weitere Allergene prüfen. Lager- und Aufwärmhinweise des Herstellers beachten. Ist erneutes Aufwärmen untersagt, frisch servieren und nicht dafür aufbewahren.</p><h2>Dazu passen</h2><ul><li><a href=\"/de/lockerer-weisser-reis\">Lockerer weißer Reis nach der Quellmethode</a></li><li><a href=\"/de/bulgogi-koreanisches-rindfleisch\">Bulgogi mit mariniertem Rindfleisch</a></li><li><a href=\"/de/ofenkohl-miso-zitronenbutter\">Ofenkohl mit Miso-Zitronenbutter</a></li></ul>",
+      "ingredients": [
+        {
+          "name": "tiefgekühlte vollständig vorgegarte Gemüse-Gyoza",
+          "amount": "600",
+          "unit": "g"
+        },
+        {
+          "name": "ungesüßte Kokosmilch aus der Dose",
+          "amount": "400",
+          "unit": "g"
+        },
+        {
+          "name": "Wasser",
+          "amount": "150",
+          "unit": "ml"
+        },
+        {
+          "name": "rote Currypaste",
+          "amount": "25",
+          "unit": "g"
+        },
+        {
+          "name": "Sojasauce",
+          "amount": "15",
+          "unit": "g"
+        },
+        {
+          "name": "frischer geriebener Ingwer",
+          "amount": "10",
+          "unit": "g"
+        },
+        {
+          "name": "geriebener Knoblauch",
+          "amount": "5",
+          "unit": "g"
+        },
+        {
+          "name": "frischer Spinat",
+          "amount": "120",
+          "unit": "g"
+        },
+        {
+          "name": "Limettensaft",
+          "amount": "25",
+          "unit": "g"
+        },
+        {
+          "name": "Frühlingszwiebel",
+          "amount": "20",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Form vorbereiten",
+          "content": "Ofen auf 200 °C Ober-/Unterhitze vorheizen. Eine etwa 30 × 22 cm große, mindestens 5 cm tiefe Auflaufform verwenden.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/paso-01.webp",
+          "image_alt": "Gyoza aus dem Ofen mit Kokos-Curry-Sauce: Form vorbereiten"
+        },
+        {
+          "title": "Sauce mischen",
+          "content": "400 g Kokosmilch, 150 ml Wasser, 25 g rote Currypaste, 15 g Sojasauce, 10 g Ingwer und 5 g Knoblauch direkt in der Form verrühren.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/paso-02.webp",
+          "image_alt": "Gyoza aus dem Ofen mit Kokos-Curry-Sauce: Sauce mischen"
+        },
+        {
+          "title": "Spinat zugeben",
+          "content": "120 g Spinat waschen und gut abtropfen lassen. Auf der Sauce verteilen und leicht hineindrücken, damit er feucht wird.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/paso-03.webp",
+          "image_alt": "Gyoza aus dem Ofen mit Kokos-Curry-Sauce: Spinat zugeben"
+        },
+        {
+          "title": "Gyoza einsetzen",
+          "content": "600 g vorgegarte Gemüse-Gyoza ohne Auftauen in einer Lage einsetzen. Die Unterseiten sollen in der Sauce liegen, die oberen Falten sichtbar bleiben.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/paso-04.webp",
+          "image_alt": "Gyoza aus dem Ofen mit Kokos-Curry-Sauce: Gyoza einsetzen"
+        },
+        {
+          "title": "Abgedeckt backen",
+          "content": "Fest mit Alufolie abdecken und 25 Minuten backen. Die Sauce soll heiß werden und Dampf bilden, damit die Hüllen weich werden.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/paso-05.webp",
+          "image_alt": "Gyoza aus dem Ofen mit Kokos-Curry-Sauce: Abgedeckt backen"
+        },
+        {
+          "title": "Öffnen und prüfen",
+          "content": "Folie vorsichtig entfernen und weitere 10 Minuten backen. Die Mitte eines Gyoza muss 74 °C erreichen; längere Packungsangaben beachten. Ist sie noch kalt, abdecken und in 5-Minuten-Schritten weitergaren.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/paso-06.webp",
+          "image_alt": "Gyoza aus dem Ofen mit Kokos-Curry-Sauce: Öffnen und prüfen"
+        },
+        {
+          "title": "Mit Limette abschließen",
+          "content": "Form herausnehmen und 25 g Limettensaft vorsichtig in die Sauce rühren, ohne Gyoza zu zerbrechen. 20 g Frühlingszwiebel fein schneiden.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/paso-07.webp",
+          "image_alt": "Gyoza aus dem Ofen mit Kokos-Curry-Sauce: Mit Limette abschließen"
+        },
+        {
+          "title": "Aufteilen und servieren",
+          "content": "Gyoza, Spinat und Sauce auf 4 tiefe Teller verteilen. Frühlingszwiebel zugeben und heiß servieren. Die Sauce bleibt flüssig und wird nicht überbacken.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/paso-08.webp",
+          "image_alt": "Gyoza aus dem Ofen mit Kokos-Curry-Sauce: Aufteilen und servieren"
+        }
+      ],
+      "category": "Hauptgerichte",
+      "course": "Hauptgericht",
+      "cuisine": "International",
+      "difficulty": "Einfach",
+      "prep_time_minutes": 15,
+      "cook_time_minutes": 35,
+      "total_time_minutes": 50,
+      "servings": 4,
+      "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/portada.webp",
+      "gallery": [
+        {
+          "url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/portada.webp",
+          "alt": "Gyoza aus dem Ofen mit Kokos-Curry-Sauce"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "Gyoza aus dem Ofen mit Kokos-Curry-Sauce",
+        "tiefgekühlte vollständig vorgegarte Gemüse-Gyoza",
+        "ungesüßte Kokosmilch aus der Dose"
+      ],
+      "nutrition": {
+        "calories": 476,
+        "protein_g": 17.7,
+        "carbs_g": 44.5,
+        "fat_g": 26.7,
+        "saturated_fat_g": 19.7,
+        "sodium_mg": 1032.9,
+        "estimated": true,
+        "serving_size": "ein Viertel von Gyoza, Spinat und Sauce",
+        "source": "USDA FoodData Central SR Legacy + manufacturer reference labels",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Summe der Nährwerte je 100 g × Zutatengewicht / 100, geteilt durch die Portionenzahl.",
+        "note": "Schätzung aus der Rezeptur; Marke, tatsächliche Portion und Garverluste verändern die Werte. Keine Laboranalyse."
+      },
+      "seo": {
+        "title": "Gyoza aus dem Ofen mit Kokos-Curry-Sauce | Manual de Cocina",
+        "description": "Tiefgekühlte Gemüse-Gyoza werden in einer Sauce aus Kokosmilch, roter Currypaste und Spinat erhitzt. Ein Abendessen aus einer Form mit zarten Teighüllen und reichlich Sauce.",
+        "image_alt": "Gyoza aus dem Ofen mit Kokos-Curry-Sauce",
+        "image_variants": [
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/portada-1x1.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/portada-4x3.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Kann ich rohe Gyoza verwenden?",
+            "a": "Dieses Rezept ist für vollständig vorgegarte Gemüse-Gyoza. Rohe Teigtaschen, besonders mit Fleisch oder Meeresfrüchten, benötigen die speziellen Herstellerangaben."
+          },
+          {
+            "q": "Geht Kokosdrink statt Kokosmilch?",
+            "a": "Nicht direkt: Er ist deutlich dünner. Ungesüßte Kokosmilch zum Kochen aus der Dose verwenden."
+          },
+          {
+            "q": "Kann ich die Schärfe verringern?",
+            "a": "Ja. Currypasten sind unterschiedlich scharf; zunächst weniger nehmen und abschmecken. Die Nährwerte beziehen sich auf 25 g."
+          }
+        ],
+        "rest_time_minutes": 0
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "source_url": null,
+      "source_post_id": null
+    },
+    {
+      "language": "en",
+      "slug": "coconut-curry-gyoza-bake",
+      "public_path": "/en/coconut-curry-gyoza-bake",
+      "title": "One-dish coconut curry gyoza bake",
+      "excerpt": "Frozen vegetable gyoza heated in coconut milk, red curry and spinach sauce. A one-dish dinner with tender wrappers and plenty of sauce to spoon up.",
+      "summary": "Frozen vegetable gyoza heated in coconut milk, red curry and spinach sauce. A one-dish dinner with tender wrappers and plenty of sauce to spoon up.",
+      "notes": "Use commercially prepared, fully precooked vegetable gyoza suitable for reheating, not raw meat or seafood dumplings. Follow the packet if it requires longer cooking. Curry paste may contain shellfish; choose one without it to keep the recipe plant-based. Contains wheat and soy; check all labels for other allergens. Follow the manufacturer's storage and reheating instructions; if reheating is prohibited, serve freshly cooked and do not save for reheating.",
+      "content_html": "<p>Frozen vegetable gyoza heated in coconut milk, red curry and spinach sauce. A one-dish dinner with tender wrappers and plenty of sauce to spoon up.</p><p>Use commercially prepared, fully precooked vegetable gyoza suitable for reheating, not raw meat or seafood dumplings. Follow the packet if it requires longer cooking. Curry paste may contain shellfish; choose one without it to keep the recipe plant-based. Contains wheat and soy; check all labels for other allergens. Follow the manufacturer&#x27;s storage and reheating instructions; if reheating is prohibited, serve freshly cooked and do not save for reheating.</p><h2>You may also like</h2><ul><li><a href=\"/en/perfect-white-rice\">Fluffy white rice by the absorption method</a></li><li><a href=\"/en/bulgogi-korean-marinated-beef\">Bulgogi (Korean Marinated Beef)</a></li><li><a href=\"/en/roasted-cabbage-miso-lemon-butter\">Roasted cabbage with miso and lemon butter</a></li></ul>",
+      "ingredients": [
+        {
+          "name": "fully precooked frozen vegetable gyoza",
+          "amount": "600",
+          "unit": "g"
+        },
+        {
+          "name": "unsweetened canned coconut milk",
+          "amount": "400",
+          "unit": "g"
+        },
+        {
+          "name": "water",
+          "amount": "150",
+          "unit": "ml"
+        },
+        {
+          "name": "red curry paste",
+          "amount": "25",
+          "unit": "g"
+        },
+        {
+          "name": "soy sauce",
+          "amount": "15",
+          "unit": "g"
+        },
+        {
+          "name": "fresh grated ginger",
+          "amount": "10",
+          "unit": "g"
+        },
+        {
+          "name": "grated garlic",
+          "amount": "5",
+          "unit": "g"
+        },
+        {
+          "name": "fresh spinach",
+          "amount": "120",
+          "unit": "g"
+        },
+        {
+          "name": "lime juice",
+          "amount": "25",
+          "unit": "g"
+        },
+        {
+          "name": "spring onion",
+          "amount": "20",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepare the dish",
+          "content": "Preheat a conventional oven to 200 °C. Use a baking dish about 30 × 22 cm and at least 5 cm deep.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/paso-01.webp",
+          "image_alt": "One-dish coconut curry gyoza bake: Prepare the dish"
+        },
+        {
+          "title": "Mix the sauce",
+          "content": "Whisk 400 g coconut milk, 150 ml water, 25 g red curry paste, 15 g soy sauce, 10 g ginger and 5 g garlic directly in the dish.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/paso-02.webp",
+          "image_alt": "One-dish coconut curry gyoza bake: Mix the sauce"
+        },
+        {
+          "title": "Add spinach",
+          "content": "Wash and thoroughly drain 120 g spinach. Spread over the sauce and press down lightly to moisten.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/paso-03.webp",
+          "image_alt": "One-dish coconut curry gyoza bake: Add spinach"
+        },
+        {
+          "title": "Arrange the gyoza",
+          "content": "Arrange 600 g fully precooked vegetable gyoza in one layer, still frozen. Submerge their bases in sauce and leave the upper pleats visible.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/paso-04.webp",
+          "image_alt": "One-dish coconut curry gyoza bake: Arrange the gyoza"
+        },
+        {
+          "title": "Bake covered",
+          "content": "Cover tightly with foil and bake for 25 minutes. The sauce should heat and create steam to soften the wrappers.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/paso-05.webp",
+          "image_alt": "One-dish coconut curry gyoza bake: Bake covered"
+        },
+        {
+          "title": "Uncover and check",
+          "content": "Carefully remove foil and bake another 10 minutes. Check that a gyoza's centre reaches 74 °C; follow any longer packet timing. If still cold, cover and continue in 5-minute intervals.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/paso-06.webp",
+          "image_alt": "One-dish coconut curry gyoza bake: Uncover and check"
+        },
+        {
+          "title": "Finish with lime",
+          "content": "Remove from the oven and stir 25 g lime juice into the sauce without breaking the gyoza. Thinly slice 20 g spring onion.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/paso-07.webp",
+          "image_alt": "One-dish coconut curry gyoza bake: Finish with lime"
+        },
+        {
+          "title": "Divide and serve",
+          "content": "Divide gyoza, spinach and sauce between 4 deep plates. Add spring onion and serve hot. The sauce stays fluid rather than forming a gratin.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/paso-08.webp",
+          "image_alt": "One-dish coconut curry gyoza bake: Divide and serve"
+        }
+      ],
+      "category": "Main dishes",
+      "course": "Main course",
+      "cuisine": "International",
+      "difficulty": "Easy",
+      "prep_time_minutes": 15,
+      "cook_time_minutes": 35,
+      "total_time_minutes": 50,
+      "servings": 4,
+      "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/portada.webp",
+      "gallery": [
+        {
+          "url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/portada.webp",
+          "alt": "One-dish coconut curry gyoza bake"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "One-dish coconut curry gyoza bake",
+        "fully precooked frozen vegetable gyoza",
+        "unsweetened canned coconut milk"
+      ],
+      "nutrition": {
+        "calories": 476,
+        "protein_g": 17.7,
+        "carbs_g": 44.5,
+        "fat_g": 26.7,
+        "saturated_fat_g": 19.7,
+        "sodium_mg": 1032.9,
+        "estimated": true,
+        "serving_size": "one quarter of the gyoza, spinach and sauce",
+        "source": "USDA FoodData Central SR Legacy + manufacturer reference labels",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Sum of nutrients per 100 g × each ingredient weight / 100, divided by the number of servings.",
+        "note": "Recipe-based estimate; brands, actual portions and cooking losses affect the values. Not a laboratory analysis."
+      },
+      "seo": {
+        "title": "One-dish coconut curry gyoza bake | Manual de Cocina",
+        "description": "Frozen vegetable gyoza heated in coconut milk, red curry and spinach sauce. A one-dish dinner with tender wrappers and plenty of sauce to spoon up.",
+        "image_alt": "One-dish coconut curry gyoza bake",
+        "image_variants": [
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/portada-1x1.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/portada-4x3.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Can I use raw gyoza?",
+            "a": "This recipe uses fully precooked vegetable gyoza. Raw dumplings, especially meat or seafood ones, require their manufacturer's specific cooking instructions."
+          },
+          {
+            "q": "Can I use coconut drink instead?",
+            "a": "Not directly: it is much more diluted. Use unsweetened culinary canned coconut milk."
+          },
+          {
+            "q": "Can I reduce the heat?",
+            "a": "Yes. Pastes vary in strength; start with less curry and adjust. Nutrition is calculated using the stated 25 g."
+          }
+        ],
+        "rest_time_minutes": 0
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "source_url": null,
+      "source_post_id": null
+    },
+    {
+      "language": "fr",
+      "slug": "gyozas-four-curry-lait-coco",
+      "public_path": "/fr/gyozas-four-curry-lait-coco",
+      "title": "Gyozas au four au curry de coco, dans un seul plat",
+      "excerpt": "Des gyozas de légumes surgelés chauffés dans une sauce au lait de coco, curry rouge et épinards. Un dîner dans un seul plat, à la pâte tendre et à la sauce généreuse.",
+      "summary": "Des gyozas de légumes surgelés chauffés dans une sauce au lait de coco, curry rouge et épinards. Un dîner dans un seul plat, à la pâte tendre et à la sauce généreuse.",
+      "notes": "Utilisez des gyozas de légumes du commerce entièrement précuits et adaptés au réchauffage, pas des raviolis crus de viande ou de fruits de mer. Respectez l'emballage s'il demande plus de cuisson. Certaines pâtes de curry contiennent des crustacés : choisissez-en une sans pour rester végétal. Contient blé et soja ; vérifiez les autres allergènes. Suivez les consignes du fabricant pour la conservation et le réchauffage ; si ce dernier est interdit, servez immédiatement et ne gardez pas pour réchauffer.",
+      "content_html": "<p>Des gyozas de légumes surgelés chauffés dans une sauce au lait de coco, curry rouge et épinards. Un dîner dans un seul plat, à la pâte tendre et à la sauce généreuse.</p><p>Utilisez des gyozas de légumes du commerce entièrement précuits et adaptés au réchauffage, pas des raviolis crus de viande ou de fruits de mer. Respectez l&#x27;emballage s&#x27;il demande plus de cuisson. Certaines pâtes de curry contiennent des crustacés : choisissez-en une sans pour rester végétal. Contient blé et soja ; vérifiez les autres allergènes. Suivez les consignes du fabricant pour la conservation et le réchauffage ; si ce dernier est interdit, servez immédiatement et ne gardez pas pour réchauffer.</p><h2>À préparer aussi</h2><ul><li><a href=\"/fr/riz-blanc-parfait\">Riz blanc aux grains séparés par absorption</a></li><li><a href=\"/fr/bulgogi-boeuf-marine-coreen\">Bulgogi, bœuf mariné coréen</a></li><li><a href=\"/fr/chou-roti-beurre-miso-citron\">Chou rôti au beurre de miso et citron</a></li></ul>",
+      "ingredients": [
+        {
+          "name": "gyozas de légumes surgelés entièrement précuits",
+          "amount": "600",
+          "unit": "g"
+        },
+        {
+          "name": "lait de coco en conserve sans sucre",
+          "amount": "400",
+          "unit": "g"
+        },
+        {
+          "name": "eau",
+          "amount": "150",
+          "unit": "ml"
+        },
+        {
+          "name": "pâte de curry rouge",
+          "amount": "25",
+          "unit": "g"
+        },
+        {
+          "name": "sauce soja",
+          "amount": "15",
+          "unit": "g"
+        },
+        {
+          "name": "gingembre frais râpé",
+          "amount": "10",
+          "unit": "g"
+        },
+        {
+          "name": "ail râpé",
+          "amount": "5",
+          "unit": "g"
+        },
+        {
+          "name": "épinards frais",
+          "amount": "120",
+          "unit": "g"
+        },
+        {
+          "name": "jus de citron vert",
+          "amount": "25",
+          "unit": "g"
+        },
+        {
+          "name": "oignon nouveau",
+          "amount": "20",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Préparez le plat",
+          "content": "Préchauffez le four à 200 °C, chaleur statique. Prenez un plat d'environ 30 × 22 cm, profond d'au moins 5 cm.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/paso-01.webp",
+          "image_alt": "Gyozas au four au curry de coco, dans un seul plat: Préparez le plat"
+        },
+        {
+          "title": "Mélangez la sauce",
+          "content": "Fouettez dans le plat 400 g de lait de coco, 150 ml d'eau, 25 g de pâte de curry rouge, 15 g de sauce soja, 10 g de gingembre et 5 g d'ail.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/paso-02.webp",
+          "image_alt": "Gyozas au four au curry de coco, dans un seul plat: Mélangez la sauce"
+        },
+        {
+          "title": "Ajoutez les épinards",
+          "content": "Lavez et égouttez soigneusement 120 g d'épinards. Répartissez-les sur la sauce et pressez légèrement pour les humidifier.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/paso-03.webp",
+          "image_alt": "Gyozas au four au curry de coco, dans un seul plat: Ajoutez les épinards"
+        },
+        {
+          "title": "Disposez les gyozas",
+          "content": "Rangez 600 g de gyozas de légumes précuits encore surgelés en une seule couche. Plongez leur base dans la sauce en laissant les plis supérieurs visibles.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/paso-04.webp",
+          "image_alt": "Gyozas au four au curry de coco, dans un seul plat: Disposez les gyozas"
+        },
+        {
+          "title": "Cuisez couvert",
+          "content": "Couvrez hermétiquement d'aluminium et enfournez 25 minutes. La sauce doit chauffer et produire de la vapeur pour attendrir les enveloppes.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/paso-05.webp",
+          "image_alt": "Gyozas au four au curry de coco, dans un seul plat: Cuisez couvert"
+        },
+        {
+          "title": "Découvrez et vérifiez",
+          "content": "Retirez l'aluminium avec précaution et cuisez encore 10 minutes. Le centre d'un gyoza doit atteindre 74 °C ; respectez tout temps plus long indiqué sur l'emballage. S'il est encore froid, couvrez et poursuivez par tranches de 5 minutes.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/paso-06.webp",
+          "image_alt": "Gyozas au four au curry de coco, dans un seul plat: Découvrez et vérifiez"
+        },
+        {
+          "title": "Terminez au citron vert",
+          "content": "Sortez le plat et incorporez 25 g de jus de citron vert dans la sauce sans casser les gyozas. Émincez 20 g d'oignon nouveau.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/paso-07.webp",
+          "image_alt": "Gyozas au four au curry de coco, dans un seul plat: Terminez au citron vert"
+        },
+        {
+          "title": "Répartissez et servez",
+          "content": "Répartissez gyozas, épinards et sauce dans 4 assiettes creuses. Ajoutez l'oignon nouveau et servez chaud. La sauce reste fluide, sans gratiner.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/paso-08.webp",
+          "image_alt": "Gyozas au four au curry de coco, dans un seul plat: Répartissez et servez"
+        }
+      ],
+      "category": "Plats principaux",
+      "course": "Plat principal",
+      "cuisine": "Internationale",
+      "difficulty": "Facile",
+      "prep_time_minutes": 15,
+      "cook_time_minutes": 35,
+      "total_time_minutes": 50,
+      "servings": 4,
+      "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/portada.webp",
+      "gallery": [
+        {
+          "url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/portada.webp",
+          "alt": "Gyozas au four au curry de coco, dans un seul plat"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "Gyozas au four au curry de coco, dans un seul plat",
+        "gyozas de légumes surgelés entièrement précuits",
+        "lait de coco en conserve sans sucre"
+      ],
+      "nutrition": {
+        "calories": 476,
+        "protein_g": 17.7,
+        "carbs_g": 44.5,
+        "fat_g": 26.7,
+        "saturated_fat_g": 19.7,
+        "sodium_mg": 1032.9,
+        "estimated": true,
+        "serving_size": "un quart des gyozas, épinards et sauce",
+        "source": "USDA FoodData Central SR Legacy + manufacturer reference labels",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Somme des nutriments pour 100 g × poids de chaque ingrédient / 100, divisée par le nombre de portions.",
+        "note": "Estimation selon la formulation ; les marques, les portions réelles et les pertes de cuisson modifient les valeurs. Pas une analyse de laboratoire."
+      },
+      "seo": {
+        "title": "Gyozas au four au curry de coco, dans un seul plat | Manual de Cocina",
+        "description": "Des gyozas de légumes surgelés chauffés dans une sauce au lait de coco, curry rouge et épinards. Un dîner dans un seul plat, à la pâte tendre et à la sauce généreuse.",
+        "image_alt": "Gyozas au four au curry de coco, dans un seul plat",
+        "image_variants": [
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/portada-1x1.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/portada-4x3.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Puis-je utiliser des gyozas crus ?",
+            "a": "Cette recette utilise des gyozas de légumes entièrement précuits. Les raviolis crus, surtout à la viande ou aux fruits de mer, nécessitent les instructions spécifiques du fabricant."
+          },
+          {
+            "q": "Puis-je utiliser une boisson au coco ?",
+            "a": "Pas directement : elle est beaucoup plus diluée. Utilisez du lait de coco culinaire en conserve, sans sucre."
+          },
+          {
+            "q": "Puis-je réduire le piquant ?",
+            "a": "Oui. Les pâtes varient en intensité ; commencez avec moins de curry et ajustez. Le calcul nutritionnel correspond aux 25 g indiqués."
+          }
+        ],
+        "rest_time_minutes": 0
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "source_url": null,
+      "source_post_id": null
+    },
+    {
+      "language": "it",
+      "slug": "gyoza-forno-curry-cocco",
+      "public_path": "/it/gyoza-forno-curry-cocco",
+      "title": "Gyoza al forno con curry di cocco in una teglia",
+      "excerpt": "Gyoza vegetali surgelati riscaldati in una salsa di latte di cocco, curry rosso e spinaci. Una cena in un solo recipiente, con involucri teneri e salsa da raccogliere al cucchiaio.",
+      "summary": "Gyoza vegetali surgelati riscaldati in una salsa di latte di cocco, curry rosso e spinaci. Una cena in un solo recipiente, con involucri teneri e salsa da raccogliere al cucchiaio.",
+      "notes": "Usa gyoza vegetali commerciali completamente precotti e adatti a essere riscaldati, non ravioli crudi di carne o frutti di mare. Rispetta tempi maggiori indicati sulla confezione. La pasta di curry può contenere crostacei: scegline una senza per mantenere la ricetta vegetale. Contiene frumento e soia; controlla gli altri allergeni. Segui le istruzioni del produttore per conservazione e riscaldamento; se vieta di riscaldare nuovamente, servi subito e non conservare a tale scopo.",
+      "content_html": "<p>Gyoza vegetali surgelati riscaldati in una salsa di latte di cocco, curry rosso e spinaci. Una cena in un solo recipiente, con involucri teneri e salsa da raccogliere al cucchiaio.</p><p>Usa gyoza vegetali commerciali completamente precotti e adatti a essere riscaldati, non ravioli crudi di carne o frutti di mare. Rispetta tempi maggiori indicati sulla confezione. La pasta di curry può contenere crostacei: scegline una senza per mantenere la ricetta vegetale. Contiene frumento e soia; controlla gli altri allergeni. Segui le istruzioni del produttore per conservazione e riscaldamento; se vieta di riscaldare nuovamente, servi subito e non conservare a tale scopo.</p><h2>Da provare anche</h2><ul><li><a href=\"/it/riso-bianco-perfetto\">Riso bianco sgranato con cottura per assorbimento</a></li><li><a href=\"/it/bulgogi-manzo-marinato-coreano\">Bulgogi, manzo marinato coreano</a></li><li><a href=\"/it/cavolo-arrosto-burro-miso-limone\">Cavolo arrosto con burro al miso e limone</a></li></ul>",
+      "ingredients": [
+        {
+          "name": "gyoza vegetali surgelati completamente precotti",
+          "amount": "600",
+          "unit": "g"
+        },
+        {
+          "name": "latte di cocco in lattina senza zucchero",
+          "amount": "400",
+          "unit": "g"
+        },
+        {
+          "name": "acqua",
+          "amount": "150",
+          "unit": "ml"
+        },
+        {
+          "name": "pasta di curry rosso",
+          "amount": "25",
+          "unit": "g"
+        },
+        {
+          "name": "salsa di soia",
+          "amount": "15",
+          "unit": "g"
+        },
+        {
+          "name": "zenzero fresco grattugiato",
+          "amount": "10",
+          "unit": "g"
+        },
+        {
+          "name": "aglio grattugiato",
+          "amount": "5",
+          "unit": "g"
+        },
+        {
+          "name": "spinaci freschi",
+          "amount": "120",
+          "unit": "g"
+        },
+        {
+          "name": "succo di lime",
+          "amount": "25",
+          "unit": "g"
+        },
+        {
+          "name": "cipollotto",
+          "amount": "20",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepara la teglia",
+          "content": "Preriscalda il forno statico a 200 °C. Usa una pirofila di circa 30 × 22 cm e profonda almeno 5 cm.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/paso-01.webp",
+          "image_alt": "Gyoza al forno con curry di cocco in una teglia: Prepara la teglia"
+        },
+        {
+          "title": "Mescola la salsa",
+          "content": "Sbatti nella pirofila 400 g di latte di cocco, 150 ml d'acqua, 25 g di pasta di curry rosso, 15 g di salsa di soia, 10 g di zenzero e 5 g d'aglio.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/paso-02.webp",
+          "image_alt": "Gyoza al forno con curry di cocco in una teglia: Mescola la salsa"
+        },
+        {
+          "title": "Aggiungi gli spinaci",
+          "content": "Lava e scola bene 120 g di spinaci. Distribuiscili sulla salsa e premi leggermente per inumidirli.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/paso-03.webp",
+          "image_alt": "Gyoza al forno con curry di cocco in una teglia: Aggiungi gli spinaci"
+        },
+        {
+          "title": "Disponi i gyoza",
+          "content": "Sistema 600 g di gyoza vegetali precotti ancora surgelati in un solo strato. Immergi la base nella salsa lasciando visibili le pieghe superiori.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/paso-04.webp",
+          "image_alt": "Gyoza al forno con curry di cocco in una teglia: Disponi i gyoza"
+        },
+        {
+          "title": "Cuoci coperto",
+          "content": "Copri bene con alluminio e cuoci 25 minuti. La salsa deve scaldarsi e produrre vapore per ammorbidire gli involucri.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/paso-05.webp",
+          "image_alt": "Gyoza al forno con curry di cocco in una teglia: Cuoci coperto"
+        },
+        {
+          "title": "Scopri e controlla",
+          "content": "Togli l'alluminio con cautela e cuoci altri 10 minuti. Il centro di un gyoza deve raggiungere 74 °C; rispetta eventuali tempi maggiori sulla confezione. Se ancora freddo, copri e continua a intervalli di 5 minuti.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/paso-06.webp",
+          "image_alt": "Gyoza al forno con curry di cocco in una teglia: Scopri e controlla"
+        },
+        {
+          "title": "Completa con lime",
+          "content": "Sforna e incorpora 25 g di succo di lime nella salsa senza rompere i gyoza. Affetta finemente 20 g di cipollotto.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/paso-07.webp",
+          "image_alt": "Gyoza al forno con curry di cocco in una teglia: Completa con lime"
+        },
+        {
+          "title": "Dividi e servi",
+          "content": "Dividi gyoza, spinaci e salsa in 4 piatti fondi. Aggiungi il cipollotto e servi caldo. La salsa resta fluida e non gratinata.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/paso-08.webp",
+          "image_alt": "Gyoza al forno con curry di cocco in una teglia: Dividi e servi"
+        }
+      ],
+      "category": "Secondi piatti",
+      "course": "Secondo piatto",
+      "cuisine": "Internazionale",
+      "difficulty": "Facile",
+      "prep_time_minutes": 15,
+      "cook_time_minutes": 35,
+      "total_time_minutes": 50,
+      "servings": 4,
+      "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/portada.webp",
+      "gallery": [
+        {
+          "url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/portada.webp",
+          "alt": "Gyoza al forno con curry di cocco in una teglia"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "Gyoza al forno con curry di cocco in una teglia",
+        "gyoza vegetali surgelati completamente precotti",
+        "latte di cocco in lattina senza zucchero"
+      ],
+      "nutrition": {
+        "calories": 476,
+        "protein_g": 17.7,
+        "carbs_g": 44.5,
+        "fat_g": 26.7,
+        "saturated_fat_g": 19.7,
+        "sodium_mg": 1032.9,
+        "estimated": true,
+        "serving_size": "un quarto di gyoza, spinaci e salsa",
+        "source": "USDA FoodData Central SR Legacy + manufacturer reference labels",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Somma dei nutrienti per 100 g × peso di ogni ingrediente / 100, divisa per il numero di porzioni.",
+        "note": "Stima della formulazione: marche, porzioni reali e perdite di cottura cambiano i valori. Non è un’analisi di laboratorio."
+      },
+      "seo": {
+        "title": "Gyoza al forno con curry di cocco in una teglia | Manual de Cocina",
+        "description": "Gyoza vegetali surgelati riscaldati in una salsa di latte di cocco, curry rosso e spinaci. Una cena in un solo recipiente, con involucri teneri e salsa da raccogliere al cucchiaio.",
+        "image_alt": "Gyoza al forno con curry di cocco in una teglia",
+        "image_variants": [
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/portada-1x1.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/portada-4x3.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Posso usare gyoza crudi?",
+            "a": "Questa ricetta usa gyoza vegetali completamente precotti. I ravioli crudi, soprattutto di carne o frutti di mare, richiedono le indicazioni specifiche del produttore."
+          },
+          {
+            "q": "Posso usare bevanda al cocco?",
+            "a": "Non direttamente: è molto più diluita. Usa latte di cocco da cucina in lattina, senza zucchero."
+          },
+          {
+            "q": "Posso ridurre il piccante?",
+            "a": "Sì. L'intensità delle paste varia: inizia con meno curry e regola. La nutrizione corrisponde ai 25 g indicati."
+          }
+        ],
+        "rest_time_minutes": 0
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "source_url": null,
+      "source_post_id": null
+    },
+    {
+      "language": "ja",
+      "slug": "coconut-curry-gyoza-bake",
+      "public_path": "/ja/coconut-curry-gyoza-bake",
+      "title": "野菜餃子のオーブン焼き ココナッツカレーソース",
+      "excerpt": "冷凍の野菜餃子を、ココナッツミルク、レッドカレー、ほうれん草のソースで温めます。やわらかな皮とたっぷりのソースを楽しむ、一皿仕立ての夕食です。",
+      "summary": "冷凍の野菜餃子を、ココナッツミルク、レッドカレー、ほうれん草のソースで温めます。やわらかな皮とたっぷりのソースを楽しむ、一皿仕立ての夕食です。",
+      "notes": "完全に加熱済みで再加熱に適した市販の野菜餃子を使います。生の肉・魚介入り餃子にはこの加熱方法を適用しません。表示がより長い加熱を指定している場合は従ってください。カレーペーストにえびなどが入ることがあるため、植物性にする場合は原材料を確認します。小麦・大豆を含み、その他のアレルゲンも表示を確認してください。保存と再加熱はメーカーの指示を優先し、再加熱不可なら作りたてを食べ、温め直し用には保存しません。",
+      "content_html": "<p>冷凍の野菜餃子を、ココナッツミルク、レッドカレー、ほうれん草のソースで温めます。やわらかな皮とたっぷりのソースを楽しむ、一皿仕立ての夕食です。</p><p>完全に加熱済みで再加熱に適した市販の野菜餃子を使います。生の肉・魚介入り餃子にはこの加熱方法を適用しません。表示がより長い加熱を指定している場合は従ってください。カレーペーストにえびなどが入ることがあるため、植物性にする場合は原材料を確認します。小麦・大豆を含み、その他のアレルゲンも表示を確認してください。保存と再加熱はメーカーの指示を優先し、再加熱不可なら作りたてを食べ、温め直し用には保存しません。</p><h2>こちらのレシピも</h2><ul><li><a href=\"/ja/完璧な白米\">吸水法で炊く、粒がほぐれる白米</a></li><li><a href=\"/ja/プルコギ\">プルコギ（韓国風牛肉の甘辛炒め）</a></li><li><a href=\"/ja/roasted-cabbage-miso-lemon-butter\">キャベツのロースト 白みそレモンバター</a></li></ul>",
+      "ingredients": [
+        {
+          "name": "完全加熱済みの冷凍野菜餃子",
+          "amount": "600",
+          "unit": "g"
+        },
+        {
+          "name": "無糖の缶入りココナッツミルク",
+          "amount": "400",
+          "unit": "g"
+        },
+        {
+          "name": "水",
+          "amount": "150",
+          "unit": "ml"
+        },
+        {
+          "name": "レッドカレーペースト",
+          "amount": "25",
+          "unit": "g"
+        },
+        {
+          "name": "しょうゆ",
+          "amount": "15",
+          "unit": "g"
+        },
+        {
+          "name": "生のすりおろししょうが",
+          "amount": "10",
+          "unit": "g"
+        },
+        {
+          "name": "すりおろしにんにく",
+          "amount": "5",
+          "unit": "g"
+        },
+        {
+          "name": "生のほうれん草",
+          "amount": "120",
+          "unit": "g"
+        },
+        {
+          "name": "ライム汁",
+          "amount": "25",
+          "unit": "g"
+        },
+        {
+          "name": "青ねぎ",
+          "amount": "20",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "器を準備する",
+          "content": "オーブンを上下加熱200 ℃に予熱します。約30 × 22 cm、深さ5 cm以上の耐熱皿を使います。",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/paso-01.webp",
+          "image_alt": "野菜餃子のオーブン焼き ココナッツカレーソース: 器を準備する"
+        },
+        {
+          "title": "ソースを混ぜる",
+          "content": "皿の中でココナッツミルク400 g、水150 ml、レッドカレーペースト25 g、しょうゆ15 g、しょうが10 g、にんにく5 gを混ぜます。",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/paso-02.webp",
+          "image_alt": "野菜餃子のオーブン焼き ココナッツカレーソース: ソースを混ぜる"
+        },
+        {
+          "title": "ほうれん草を加える",
+          "content": "ほうれん草120 gを洗い、水気をよく切ります。ソースに広げ、軽く押して湿らせます。",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/paso-03.webp",
+          "image_alt": "野菜餃子のオーブン焼き ココナッツカレーソース: ほうれん草を加える"
+        },
+        {
+          "title": "餃子を並べる",
+          "content": "加熱済み野菜餃子600 gを凍ったまま一段に並べます。底をソースに浸し、上のひだは見えるようにします。",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/paso-04.webp",
+          "image_alt": "野菜餃子のオーブン焼き ココナッツカレーソース: 餃子を並べる"
+        },
+        {
+          "title": "覆って焼く",
+          "content": "アルミホイルでしっかり覆い、25分焼きます。ソースを熱して蒸気を発生させ、皮をやわらかくします。",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/paso-05.webp",
+          "image_alt": "野菜餃子のオーブン焼き ココナッツカレーソース: 覆って焼く"
+        },
+        {
+          "title": "覆いを外して確認する",
+          "content": "蒸気に注意してホイルを外し、さらに10分焼きます。餃子の中心が74 ℃になったか確認し、パッケージがより長い時間を指定していれば従います。まだ冷たければ覆い、5分ずつ追加加熱します。",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/paso-06.webp",
+          "image_alt": "野菜餃子のオーブン焼き ココナッツカレーソース: 覆いを外して確認する"
+        },
+        {
+          "title": "ライムで仕上げる",
+          "content": "オーブンから出し、餃子を崩さないようソースにライム汁25 gを加えます。青ねぎ20 gを薄切りにします。",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/paso-07.webp",
+          "image_alt": "野菜餃子のオーブン焼き ココナッツカレーソース: ライムで仕上げる"
+        },
+        {
+          "title": "取り分けて食べる",
+          "content": "餃子、ほうれん草、ソースを4つの深皿に分けます。青ねぎを加えて熱いうちに食べます。ソースはグラタン状ではなく、流れる状態に仕上がります。",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/paso-08.webp",
+          "image_alt": "野菜餃子のオーブン焼き ココナッツカレーソース: 取り分けて食べる"
+        }
+      ],
+      "category": "主菜",
+      "course": "主菜",
+      "cuisine": "各国料理",
+      "difficulty": "簡単",
+      "prep_time_minutes": 15,
+      "cook_time_minutes": 35,
+      "total_time_minutes": 50,
+      "servings": 4,
+      "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/portada.webp",
+      "gallery": [
+        {
+          "url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/portada.webp",
+          "alt": "野菜餃子のオーブン焼き ココナッツカレーソース"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "野菜餃子のオーブン焼き ココナッツカレーソース",
+        "完全加熱済みの冷凍野菜餃子",
+        "無糖の缶入りココナッツミルク"
+      ],
+      "nutrition": {
+        "calories": 476,
+        "protein_g": 17.7,
+        "carbs_g": 44.5,
+        "fat_g": 26.7,
+        "saturated_fat_g": 19.7,
+        "sodium_mg": 1032.9,
+        "estimated": true,
+        "serving_size": "餃子・ほうれん草・ソース全量の4分の1",
+        "source": "USDA FoodData Central SR Legacy + manufacturer reference labels",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "材料100 gあたりの栄養価×各使用重量÷100を合計し、人数で割って算出。",
+        "note": "配合からの推定値です。製品、実際の盛り付け量、加熱による損失で変わります。検査機関での分析値ではありません。"
+      },
+      "seo": {
+        "title": "野菜餃子のオーブン焼き ココナッツカレーソース | Manual de Cocina",
+        "description": "冷凍の野菜餃子を、ココナッツミルク、レッドカレー、ほうれん草のソースで温めます。やわらかな皮とたっぷりのソースを楽しむ、一皿仕立ての夕食です。",
+        "image_alt": "野菜餃子のオーブン焼き ココナッツカレーソース",
+        "image_variants": [
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/portada-1x1.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/portada-4x3.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "生餃子でも作れますか？",
+            "a": "完全加熱済みの野菜餃子を使うレシピです。生の餃子、とくに肉や魚介入りは、メーカーの専用の加熱指示に従ってください。"
+          },
+          {
+            "q": "ココナッツ飲料で代用できますか？",
+            "a": "そのままの代用はできません。飲料はかなり薄いため、無糖の料理用缶入りココナッツミルクを使います。"
+          },
+          {
+            "q": "辛さを控えられますか？",
+            "a": "はい。ペーストの辛さは製品によるため、少なめから調整します。栄養計算は記載の25 gを使用しています。"
+          }
+        ],
+        "rest_time_minutes": 0
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "source_url": null,
+      "source_post_id": null
+    },
+    {
+      "language": "pt",
+      "slug": "guiozas-forno-curry-coco",
+      "public_path": "/pt/guiozas-forno-curry-coco",
+      "title": "Guiozas ao forno com curry de coco numa travessa",
+      "excerpt": "Guiozas vegetais congelados aquecidos num molho de leite de coco, curry vermelho e espinafre. Um jantar numa travessa, com massa macia e molho para colherar.",
+      "summary": "Guiozas vegetais congelados aquecidos num molho de leite de coco, curry vermelho e espinafre. Um jantar numa travessa, com massa macia e molho para colherar.",
+      "notes": "Use guiozas vegetais comerciais totalmente pré-cozidos e adequados para aquecer, não peças cruas de carne ou frutos do mar. Respeite tempos maiores da embalagem. A pasta de curry pode conter crustáceos: escolha uma sem eles para manter a receita vegetal. Contém trigo e soja; confira outros alergênicos. Siga o fabricante para conservação e reaquecimento; se proibir novo aquecimento, sirva recém-preparado e não guarde para reaquecer.",
+      "content_html": "<p>Guiozas vegetais congelados aquecidos num molho de leite de coco, curry vermelho e espinafre. Um jantar numa travessa, com massa macia e molho para colherar.</p><p>Use guiozas vegetais comerciais totalmente pré-cozidos e adequados para aquecer, não peças cruas de carne ou frutos do mar. Respeite tempos maiores da embalagem. A pasta de curry pode conter crustáceos: escolha uma sem eles para manter a receita vegetal. Contém trigo e soja; confira outros alergênicos. Siga o fabricante para conservação e reaquecimento; se proibir novo aquecimento, sirva recém-preparado e não guarde para reaquecer.</p><h2>Prepare também</h2><ul><li><a href=\"/pt/arroz-branco-soltinho\">Arroz branco soltinho pelo método de absorção</a></li><li><a href=\"/pt/bulgogi-carne-marinada-coreana\">Bulgogi, carne bovina marinada coreana</a></li><li><a href=\"/pt/repolho-assado-manteiga-misso-limao\">Repolho assado com manteiga de missô e limão</a></li></ul>",
+      "ingredients": [
+        {
+          "name": "guiozas vegetais congelados totalmente pré-cozidos",
+          "amount": "600",
+          "unit": "g"
+        },
+        {
+          "name": "leite de coco em lata sem açúcar",
+          "amount": "400",
+          "unit": "g"
+        },
+        {
+          "name": "água",
+          "amount": "150",
+          "unit": "ml"
+        },
+        {
+          "name": "pasta de curry vermelho",
+          "amount": "25",
+          "unit": "g"
+        },
+        {
+          "name": "molho de soja",
+          "amount": "15",
+          "unit": "g"
+        },
+        {
+          "name": "gengibre fresco ralado",
+          "amount": "10",
+          "unit": "g"
+        },
+        {
+          "name": "alho ralado",
+          "amount": "5",
+          "unit": "g"
+        },
+        {
+          "name": "espinafre fresco",
+          "amount": "120",
+          "unit": "g"
+        },
+        {
+          "name": "suco de limão-taiti",
+          "amount": "25",
+          "unit": "g"
+        },
+        {
+          "name": "cebolinha",
+          "amount": "20",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepare a travessa",
+          "content": "Preaqueça o forno a 200 °C, calor superior e inferior. Use uma travessa de cerca de 30 × 22 cm, com pelo menos 5 cm de profundidade.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/paso-01.webp",
+          "image_alt": "Guiozas ao forno com curry de coco numa travessa: Prepare a travessa"
+        },
+        {
+          "title": "Misture o molho",
+          "content": "Bata na travessa 400 g de leite de coco, 150 ml de água, 25 g de pasta de curry vermelho, 15 g de molho de soja, 10 g de gengibre e 5 g de alho.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/paso-02.webp",
+          "image_alt": "Guiozas ao forno com curry de coco numa travessa: Misture o molho"
+        },
+        {
+          "title": "Junte o espinafre",
+          "content": "Lave e escorra muito bem 120 g de espinafre. Espalhe sobre o molho e pressione levemente para umedecer.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/paso-03.webp",
+          "image_alt": "Guiozas ao forno com curry de coco numa travessa: Junte o espinafre"
+        },
+        {
+          "title": "Acomode os guiozas",
+          "content": "Disponha 600 g de guiozas vegetais pré-cozidos ainda congelados numa só camada. Mergulhe a base no molho, deixando as pregas superiores visíveis.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/paso-04.webp",
+          "image_alt": "Guiozas ao forno com curry de coco numa travessa: Acomode os guiozas"
+        },
+        {
+          "title": "Asse coberto",
+          "content": "Cubra bem com papel-alumínio e asse por 25 minutos. O molho deve aquecer e produzir vapor para amaciar a massa.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/paso-05.webp",
+          "image_alt": "Guiozas ao forno com curry de coco numa travessa: Asse coberto"
+        },
+        {
+          "title": "Descubra e confira",
+          "content": "Retire o alumínio com cuidado e asse mais 10 minutos. O centro de um guioza deve atingir 74 °C; respeite qualquer tempo maior da embalagem. Se ainda estiver frio, cubra e continue em intervalos de 5 minutos.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/paso-06.webp",
+          "image_alt": "Guiozas ao forno com curry de coco numa travessa: Descubra e confira"
+        },
+        {
+          "title": "Finalize com limão",
+          "content": "Retire do forno e acrescente 25 g de suco de limão-taiti ao molho sem romper os guiozas. Corte 20 g de cebolinha em rodelas finas.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/paso-07.webp",
+          "image_alt": "Guiozas ao forno com curry de coco numa travessa: Finalize com limão"
+        },
+        {
+          "title": "Divida e sirva",
+          "content": "Divida guiozas, espinafre e molho em 4 pratos fundos. Junte a cebolinha e sirva quente. O molho fica fluido, sem gratinar.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/paso-08.webp",
+          "image_alt": "Guiozas ao forno com curry de coco numa travessa: Divida e sirva"
+        }
+      ],
+      "category": "Pratos principais",
+      "course": "Prato principal",
+      "cuisine": "Internacional",
+      "difficulty": "Fácil",
+      "prep_time_minutes": 15,
+      "cook_time_minutes": 35,
+      "total_time_minutes": 50,
+      "servings": 4,
+      "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/portada.webp",
+      "gallery": [
+        {
+          "url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/portada.webp",
+          "alt": "Guiozas ao forno com curry de coco numa travessa"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "Guiozas ao forno com curry de coco numa travessa",
+        "guiozas vegetais congelados totalmente pré-cozidos",
+        "leite de coco em lata sem açúcar"
+      ],
+      "nutrition": {
+        "calories": 476,
+        "protein_g": 17.7,
+        "carbs_g": 44.5,
+        "fat_g": 26.7,
+        "saturated_fat_g": 19.7,
+        "sodium_mg": 1032.9,
+        "estimated": true,
+        "serving_size": "um quarto dos guiozas, espinafre e molho",
+        "source": "USDA FoodData Central SR Legacy + manufacturer reference labels",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Soma dos nutrientes por 100 g × peso de cada ingrediente / 100, dividida pelo número de porções.",
+        "note": "Estimativa pela formulação; marcas, porções reais e perdas no cozimento alteram os valores. Não é análise laboratorial."
+      },
+      "seo": {
+        "title": "Guiozas ao forno com curry de coco numa travessa | Manual de Cocina",
+        "description": "Guiozas vegetais congelados aquecidos num molho de leite de coco, curry vermelho e espinafre. Um jantar numa travessa, com massa macia e molho para colherar.",
+        "image_alt": "Guiozas ao forno com curry de coco numa travessa",
+        "image_variants": [
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/portada-1x1.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/portada-4x3.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/gyozas-horno-curry-coco/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Posso usar guiozas crus?",
+            "a": "Esta receita usa guiozas vegetais totalmente pré-cozidos. Peças cruas, principalmente de carne ou frutos do mar, exigem as instruções específicas do fabricante."
+          },
+          {
+            "q": "Posso usar bebida de coco?",
+            "a": "Não diretamente: ela é muito mais diluída. Use leite de coco culinário em lata e sem açúcar."
+          },
+          {
+            "q": "Posso reduzir a ardência?",
+            "a": "Sim. A intensidade das pastas varia: comece com menos curry e ajuste. A nutrição corresponde aos 25 g indicados."
+          }
+        ],
+        "rest_time_minutes": 0
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "source_url": null,
+      "source_post_id": null
+    }
+  ],
+  "recipe_group_id": "c83f81d3-0524-4c00-b326-007e3cc54f0f",
+  "visual_assets": {
+    "originals": 8,
+    "webp": 12,
+    "manifest": "gyozas-horno-curry-coco-imagenes-20261023.json",
+    "visual_qa": "PASS"
+  }
+}
