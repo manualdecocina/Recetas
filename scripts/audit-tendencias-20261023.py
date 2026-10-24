@@ -21,13 +21,14 @@ def nodes(o,kind):
   for v in o:yield from nodes(v,kind)
 class Page(HTMLParser):
  def __init__(self):
-  super().__init__();self.text=[];self.h1=[];self.in_h1=False;self.skip=0;self.buffer=None;self.ld=[];self.canonical=[];self.alternates={};self.images=set();self.steps=0;self.lang=None;self.meta={}
+  super().__init__();self.text=[];self.h1=[];self.in_h1=False;self.skip=0;self.buffer=None;self.ld=[];self.canonical=[];self.alternates={};self.images=set();self.links=set();self.steps=0;self.lang=None;self.meta={}
  def handle_starttag(self,tag,attrs):
   a=dict(attrs)
   if tag in ('script','style'):
    self.skip+=1
    if a.get('type')=='application/ld+json':self.buffer=''
   if tag=='html':self.lang=a.get('lang')
+  if tag=='a' and a.get('href','').startswith('/'):self.links.add(absolute(a['href']))
   if tag=='h1':self.in_h1=True
   if tag=='li' and 'md-step-item' in a.get('class',''):self.steps+=1
   if tag=='meta':self.meta[a.get('name') or a.get('property')]=a.get('content','')
@@ -73,6 +74,8 @@ def check_page(pair):
    if schema.get('totalTime')!=f"PT{r['total_time_minutes']}M":errors.append('schema total time')
   expected_images={absolute(r['image_url']),*[absolute(s['image_url']) for s in r['steps']]}
   if not expected_images<=p.images:errors.append('visible photos')
+  expected_links={absolute(x) for x in re.findall(r'<a href="([^"]+)"',r['content_html'])}
+  if not expected_links<=p.links:errors.append('contextual internal links')
   if 'noindex' in p.meta.get('robots',''):errors.append('robots noindex')
   if absolute(p.meta.get('og:url',''))!=url or not p.meta.get('og:image'):errors.append('Open Graph')
   return {'url':url,'language':r['language'],'ok':not errors,'errors':errors}
@@ -83,6 +86,10 @@ def check_media(item):
   good=status==200 and data[:4]==b'RIFF' and data[8:12]==b'WEBP' and hashlib.sha256(data).hexdigest()==item['sha256']
   return {'path':item['public_path'],'ok':good}
  except Exception as e:return {'path':item['public_path'],'ok':False,'error':str(e)}
+def check_link(path):
+ try:
+  status,final,_=fetch(path);return {'path':path,'ok':status==200 and final==absolute(path)}
+ except Exception as e:return {'path':path,'ok':False,'error':str(e)}
 def main():
  parser=argparse.ArgumentParser();parser.add_argument('--media-only',action='store_true');args=parser.parse_args()
  media=[x for b in BUNDLES for x in json.loads((ROOT/'editorial'/f"{b['slug']}-imagenes-20261023.json").read_text())['images']]
@@ -97,9 +104,11 @@ def main():
   for route in ['/es','/es/recetas']:
    status,_,raw=fetch(route);text=urllib.parse.unquote(raw.decode());surfaces[route]={'http':status,'missing':[b['records'][0]['public_path'] for b in BUNDLES if b['records'][0]['public_path'] not in text]}
   report['surfaces']=surfaces
+  links=sorted({x for r in RECORDS for x in re.findall(r'<a href="([^"]+)"',r['content_html'])})
+  with concurrent.futures.ThreadPoolExecutor(max_workers=7) as pool:report['internal_links']=list(pool.map(check_link,links))
  out=ROOT/'tendencias-20261023-production-qa.json';out.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
  print(json.dumps(report,ensure_ascii=False))
  ok=report['media_passed']==60
- if not args.media_only:ok=ok and report['pages_passed']==35 and not report['missing_sitemap'] and all(x['http']==200 and not x['missing'] for x in report['surfaces'].values())
+ if not args.media_only:ok=ok and report['pages_passed']==35 and not report['missing_sitemap'] and all(x['http']==200 and not x['missing'] for x in report['surfaces'].values()) and all(x['ok'] for x in report['internal_links'])
  raise SystemExit(0 if ok else 1)
 if __name__=='__main__':main()
