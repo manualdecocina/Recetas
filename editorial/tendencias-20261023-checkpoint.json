@@ -2,8 +2,8 @@
   "date": "2026-10-23",
   "target": "https://manualdecocina.com",
   "project_id": "eqbdtctxbpepbeickhqi",
-  "state": "published_pending_http_qa",
-  "publication_verified": false,
+  "state": "published_verified",
+  "publication_verified": true,
   "recipes": [
     {
       "key": "repollo",
@@ -131,5 +131,47 @@
   "published_at": "2026-10-24T05:08:21.533344+00:00",
   "media_verified": 60,
   "media_importer_sealed": true,
-  "media_source_commit": "6521aae410a1b15a2b651fd1341184c71410e95e"
+  "media_source_commit": "6521aae410a1b15a2b651fd1341184c71410e95e",
+  "pr": 182,
+  "production_qa": {
+    "checked_at": "2026-10-24T05:15:46.137263+00:00",
+    "pages_passed": 35,
+    "media_passed": 60,
+    "internal_link_placements": 105,
+    "internal_link_destinations": 84,
+    "internal_link_destinations_passed": 84,
+    "sitemap_missing": 0,
+    "home_missing": 0,
+    "catalog_missing": 0,
+    "report": "editorial/tendencias-20261023-production-qa.json",
+    "qa_run": "https://github.com/manualdecocina/Recetas/actions/runs/40065414430",
+    "quality_run": "https://github.com/manualdecocina/Recetas/actions/runs/40065414402",
+    "conclusion": "success"
+  },
+  "deliverables": [
+    {
+      "slug": "repollo-asado-mantequilla-miso",
+      "library_file_id": "libfile_7008186d61a88191b9663ae2b552d667"
+    },
+    {
+      "slug": "ensalada-arroz-crujiente-garbanzos",
+      "library_file_id": "libfile_5c048fb1c73481918204cdcb7f7d0a72"
+    },
+    {
+      "slug": "coliflor-crujiente-miel-picante",
+      "library_file_id": "libfile_04d7fa66654481919c627127a886614a"
+    },
+    {
+      "slug": "gyozas-horno-curry-coco",
+      "library_file_id": "libfile_94dad6a0c85c8191b60026472431b6bf"
+    },
+    {
+      "slug": "vasitos-yogur-galletas-fresas",
+      "library_file_id": "libfile_5dfe4576d4d08191983f3d8df163970c"
+    },
+    {
+      "filename": "analisis-tendencias-manual-de-cocina.md",
+      "library_file_id": "libfile_3fee7fbcf2fc8191b785d3f29440da99"
+    }
+  ]
 }
