@@ -1,0 +1,1471 @@
+{
+  "slug": "coliflor-crujiente-miel-picante",
+  "key": "coliflor",
+  "date": "2026-10-23",
+  "target": "https://manualdecocina.com",
+  "state": "published",
+  "languages": [
+    "es",
+    "de",
+    "en",
+    "fr",
+    "it",
+    "ja",
+    "pt"
+  ],
+  "category_slug": "entrantes-y-aperitivos",
+  "steps_es_sha256": "02c0d0d001dc96517946afe2c09469b07cedec0a7b747849f846964eca503552",
+  "physical_kitchen_test": false,
+  "nutrition_calculation": {
+    "foods": [
+      {
+        "description": "Cauliflower, raw",
+        "fdc_id": 169986,
+        "source_url": "https://fdc.nal.usda.gov/food-details/169986/nutrients",
+        "per_100g": {
+          "carbs_g": 4.97,
+          "calories": 25.0,
+          "saturated_fat_g": 0.13,
+          "protein_g": 1.92,
+          "fiber_g": 2.0,
+          "sugar_g": 1.91,
+          "sodium_mg": 30.0,
+          "fat_g": 0.28
+        },
+        "grams": 600.0,
+        "ingredient": "coliflor, peso limpio en floretes"
+      },
+      {
+        "description": "Wheat flour, white, all-purpose, unenriched",
+        "fdc_id": 169761,
+        "source_url": "https://fdc.nal.usda.gov/food-details/169761/nutrients",
+        "per_100g": {
+          "fat_g": 0.98,
+          "carbs_g": 76.3,
+          "calories": 364,
+          "fiber_g": 2.7,
+          "sodium_mg": 2.0,
+          "protein_g": 10.3,
+          "saturated_fat_g": 0.155,
+          "sugar_g": 0.27
+        },
+        "grams": 70.0,
+        "ingredient": "harina de trigo"
+      },
+      {
+        "description": "Water",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "per_100g": {
+          "calories": 0,
+          "protein_g": 0,
+          "carbs_g": 0,
+          "fat_g": 0,
+          "saturated_fat_g": 0,
+          "fiber_g": 0,
+          "sugar_g": 0,
+          "sodium_mg": 0
+        },
+        "assumptions": "Cooking water; does not add macronutrients. Mineral composition not modelled.",
+        "grams": 110.0,
+        "ingredient": "agua"
+      },
+      {
+        "description": "Kikkoman Panko reference label",
+        "source_url": "https://www.kikkoman.eu/food-service/products/detail/fs-kikkoman-panko-japanese-style-crispy-bread-crumbs",
+        "per_100g": {
+          "calories": 369,
+          "protein_g": 14,
+          "carbs_g": 72,
+          "fat_g": 1.9,
+          "saturated_fat_g": 0.5,
+          "fiber_g": null,
+          "sugar_g": 4.9,
+          "sodium_mg": 120
+        },
+        "assumptions": "Salt 0.3 g / 2.5 × 1000 = 120 mg sodium. Fibre not stated, not assumed zero.",
+        "grams": 80.0,
+        "ingredient": "pan rallado panko"
+      },
+      {
+        "description": "Oil, olive, salad or cooking",
+        "fdc_id": 171413,
+        "source_url": "https://fdc.nal.usda.gov/food-details/171413/nutrients",
+        "per_100g": {
+          "fat_g": 100,
+          "carbs_g": 0.0,
+          "calories": 884,
+          "sodium_mg": 2.0,
+          "protein_g": 0.0,
+          "saturated_fat_g": 13.8,
+          "fiber_g": 0.0,
+          "sugar_g": 0.0
+        },
+        "grams": 25.0,
+        "ingredient": "aceite de oliva"
+      },
+      {
+        "description": "Spices, paprika",
+        "fdc_id": 171329,
+        "source_url": "https://fdc.nal.usda.gov/food-details/171329/nutrients",
+        "per_100g": {
+          "sugar_g": 10.3,
+          "fiber_g": 34.9,
+          "sodium_mg": 68.0,
+          "protein_g": 14.1,
+          "fat_g": 12.9,
+          "carbs_g": 54.0,
+          "calories": 282,
+          "saturated_fat_g": 2.14
+        },
+        "grams": 3.0,
+        "ingredient": "pimentón dulce"
+      },
+      {
+        "description": "Salt, table",
+        "fdc_id": 173468,
+        "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients",
+        "per_100g": {
+          "fiber_g": 0.0,
+          "sodium_mg": 38800.0,
+          "saturated_fat_g": 0.0,
+          "protein_g": 0.0,
+          "fat_g": 0.0,
+          "carbs_g": 0.0,
+          "calories": 0.0,
+          "sugar_g": 0.0
+        },
+        "grams": 3.0,
+        "ingredient": "sal"
+      },
+      {
+        "description": "Honey",
+        "fdc_id": 169640,
+        "source_url": "https://fdc.nal.usda.gov/food-details/169640/nutrients",
+        "per_100g": {
+          "saturated_fat_g": 0.0,
+          "protein_g": 0.3,
+          "fiber_g": 0.2,
+          "sodium_mg": 4.0,
+          "fat_g": 0.0,
+          "carbs_g": 82.4,
+          "calories": 304,
+          "sugar_g": 82.1
+        },
+        "grams": 45.0,
+        "ingredient": "miel"
+      },
+      {
+        "description": "Spices, pepper, red or cayenne",
+        "fdc_id": 170932,
+        "source_url": "https://fdc.nal.usda.gov/food-details/170932/nutrients",
+        "per_100g": {
+          "fat_g": 17.3,
+          "carbs_g": 56.6,
+          "calories": 318,
+          "protein_g": 12.0,
+          "sodium_mg": 30.0,
+          "saturated_fat_g": 3.26,
+          "fiber_g": 27.2,
+          "sugar_g": 10.3
+        },
+        "grams": 1.0,
+        "ingredient": "chile seco en hojuelas"
+      },
+      {
+        "description": "Lemon juice, raw",
+        "fdc_id": 167747,
+        "source_url": "https://fdc.nal.usda.gov/food-details/167747/nutrients",
+        "per_100g": {
+          "protein_g": 0.35,
+          "saturated_fat_g": 0.04,
+          "fiber_g": 0.3,
+          "sodium_mg": 1.0,
+          "sugar_g": 2.52,
+          "fat_g": 0.24,
+          "carbs_g": 6.9,
+          "calories": 22.0
+        },
+        "grams": 15.0,
+        "ingredient": "jugo de limón"
+      }
+    ],
+    "servings": 4,
+    "result": {
+      "calories": 268,
+      "protein_g": 7.7,
+      "carbs_g": 45.3,
+      "fat_g": 7.4,
+      "saturated_fat_g": 1.2,
+      "sugar_g": 13.3,
+      "sodium_mg": 361.5
+    },
+    "archive_sha256": "70d4235ae3a2bdf48a7b9eaa1286a83fa67b6f3270436c9ce8b008213f500129",
+    "assumptions": [
+      "All ingredient inputs counted; cooking losses are not subtracted.",
+      "Generic USDA miso models white miso and varies by product.",
+      "Dried chilli flakes approximated by USDA red/cayenne pepper.",
+      "Manufacturer reference values vary by market; use actual labels for personal calculations."
+    ]
+  },
+  "pantry_slugs": [
+    null,
+    "harina-de-trigo",
+    "agua",
+    "pan-rallado",
+    "aceite-de-oliva",
+    "pimenton-dulce",
+    "sal",
+    "miel",
+    "chile-molido",
+    "limon"
+  ],
+  "records": [
+    {
+      "language": "es",
+      "slug": "coliflor-crujiente-miel-picante",
+      "public_path": "/coliflor-crujiente-miel-picante",
+      "title": "Coliflor crujiente al horno con miel picante",
+      "excerpt": "Bocados de coliflor con rebozado fino y panko, horneados hasta dorar. La miel con chile y limón se añade al final para que el exterior conserve mejor su textura.",
+      "summary": "Bocados de coliflor con rebozado fino y panko, horneados hasta dorar. La miel con chile y limón se añade al final para que el exterior conserve mejor su textura.",
+      "notes": "Corta floretes de unos 4 cm y deja espacio entre ellos. La receta incluye todo el rebozado; si sobra algo, la nutrición real servida será menor. Contiene trigo; comprueba las etiquetas del panko. El picante depende del chile. La miel no es adecuada para menores de 12 meses. Sirve recién hecha; al guardarla se ablanda y puede recalentarse en horno.",
+      "content_html": "<p>Bocados de coliflor con rebozado fino y panko, horneados hasta dorar. La miel con chile y limón se añade al final para que el exterior conserve mejor su textura.</p><p>Corta floretes de unos 4 cm y deja espacio entre ellos. La receta incluye todo el rebozado; si sobra algo, la nutrición real servida será menor. Contiene trigo; comprueba las etiquetas del panko. El picante depende del chile. La miel no es adecuada para menores de 12 meses. Sirve recién hecha; al guardarla se ablanda y puede recalentarse en horno.</p><h2>También puedes preparar</h2><ul><li><a href=\"/receta-de-hummus\">Hummus casero con tahini y limón</a></li><li><a href=\"/receta-guacamole\">Guacamole casero con tomate y cilantro</a></li><li><a href=\"/ensalada-arroz-crujiente-garbanzos\">Ensalada de arroz crujiente con garbanzos y pepino</a></li></ul>",
+      "ingredients": [
+        {
+          "name": "coliflor, peso limpio en floretes",
+          "amount": "600",
+          "unit": "g"
+        },
+        {
+          "name": "harina de trigo",
+          "amount": "70",
+          "unit": "g"
+        },
+        {
+          "name": "agua",
+          "amount": "110",
+          "unit": "ml"
+        },
+        {
+          "name": "pan rallado panko",
+          "amount": "80",
+          "unit": "g"
+        },
+        {
+          "name": "aceite de oliva",
+          "amount": "25",
+          "unit": "g"
+        },
+        {
+          "name": "pimentón dulce",
+          "amount": "3",
+          "unit": "g"
+        },
+        {
+          "name": "sal",
+          "amount": "3",
+          "unit": "g"
+        },
+        {
+          "name": "miel",
+          "amount": "45",
+          "unit": "g"
+        },
+        {
+          "name": "chile seco en hojuelas",
+          "amount": "1",
+          "unit": "g"
+        },
+        {
+          "name": "jugo de limón",
+          "amount": "15",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Corta y seca",
+          "content": "Precalienta el horno a 220 °C, calor arriba y abajo. Lava y seca muy bien 600 g de coliflor limpia, cortada en floretes de unos 4 cm.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/paso-01.webp",
+          "image_alt": "Coliflor crujiente al horno con miel picante: Corta y seca"
+        },
+        {
+          "title": "Prepara el rebozado",
+          "content": "Bate 70 g de harina con 110 ml de agua, 3 g de pimentón dulce y 3 g de sal. Debe quedar una mezcla fluida que cubra ligeramente la coliflor.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/paso-02.webp",
+          "image_alt": "Coliflor crujiente al horno con miel picante: Prepara el rebozado"
+        },
+        {
+          "title": "Cubre los floretes",
+          "content": "Pasa los floretes por la mezcla y deja escurrir el exceso sobre el bol. Reparte el rebozado entre todas las piezas, evitando pegotes gruesos.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/paso-03.webp",
+          "image_alt": "Coliflor crujiente al horno con miel picante: Cubre los floretes"
+        },
+        {
+          "title": "Añade el panko",
+          "content": "Pon 80 g de panko en una fuente y presiona suavemente cada florete para adherirlo por todos los lados.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/paso-04.webp",
+          "image_alt": "Coliflor crujiente al horno con miel picante: Añade el panko"
+        },
+        {
+          "title": "Acomoda y aceita",
+          "content": "Distribuye las piezas en una bandeja grande con papel de horno. Reparte 25 g de aceite en hilo fino por encima, sin apilar los floretes.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/paso-05.webp",
+          "image_alt": "Coliflor crujiente al horno con miel picante: Acomoda y aceita"
+        },
+        {
+          "title": "Hornea hasta dorar",
+          "content": "Hornea 15 minutos, gira las piezas con cuidado y hornea otros 10–15 minutos, hasta que el panko esté dorado y el tallo se deje pinchar con facilidad.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/paso-06.webp",
+          "image_alt": "Coliflor crujiente al horno con miel picante: Hornea hasta dorar"
+        },
+        {
+          "title": "Prepara la miel picante",
+          "content": "Mezcla 45 g de miel con 1 g de chile en hojuelas y 15 g de jugo de limón. Si la miel está muy espesa, templa la mezcla suavemente sin hervir.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/paso-07.webp",
+          "image_alt": "Coliflor crujiente al horno con miel picante: Prepara la miel picante"
+        },
+        {
+          "title": "Glasea al servir",
+          "content": "Pasa la coliflor caliente a una fuente y reparte la miel picante en hilo fino justo antes de comer. Sirve inmediatamente, con el resto de la salsa recogido de la fuente.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/paso-08.webp",
+          "image_alt": "Coliflor crujiente al horno con miel picante: Glasea al servir"
+        }
+      ],
+      "category": "Entrantes y aperitivos",
+      "course": "Entrada",
+      "cuisine": "Internacional",
+      "difficulty": "Fácil",
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 30,
+      "total_time_minutes": 50,
+      "servings": 4,
+      "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/portada.webp",
+      "gallery": [
+        {
+          "url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/portada.webp",
+          "alt": "Coliflor crujiente al horno con miel picante"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "Coliflor crujiente al horno con miel picante",
+        "coliflor, peso limpio en floretes",
+        "harina de trigo"
+      ],
+      "nutrition": {
+        "calories": 268,
+        "protein_g": 7.7,
+        "carbs_g": 45.3,
+        "fat_g": 7.4,
+        "saturated_fat_g": 1.2,
+        "sugar_g": 13.3,
+        "sodium_mg": 361.5,
+        "estimated": true,
+        "serving_size": "un cuarto de la coliflor y la salsa",
+        "source": "USDA FoodData Central SR Legacy + manufacturer reference labels",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Suma de nutrientes por 100 g × peso de cada ingrediente / 100, dividida por las porciones.",
+        "note": "Estimación de la formulación; cambia según marcas, porción real y pérdidas de cocción. No es un análisis de laboratorio."
+      },
+      "seo": {
+        "title": "Coliflor crujiente al horno con miel picante | Manual de Cocina",
+        "description": "Bocados de coliflor con rebozado fino y panko, horneados hasta dorar. La miel con chile y limón se añade al final para que el exterior conserve mejor su textura.",
+        "image_alt": "Coliflor crujiente al horno con miel picante",
+        "image_variants": [
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/portada-1x1.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/portada-4x3.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "¿La miel va al horno?",
+            "a": "No. Se añade al final para evitar que se queme y humedezca el rebozado durante la cocción."
+          },
+          {
+            "q": "¿Puedo usar pan rallado fino?",
+            "a": "Sí, pero la superficie quedará menos aireada y el tiempo de dorado puede cambiar. La versión descrita usa panko."
+          },
+          {
+            "q": "¿Por qué no queda crujiente?",
+            "a": "El agua superficial, las piezas amontonadas y el exceso de rebozado dificultan el dorado. Seca bien y deja espacio entre piezas."
+          }
+        ],
+        "rest_time_minutes": 0
+      },
+      "published": true,
+      "editorial_status": "published",
+      "source_url": null,
+      "source_post_id": null
+    },
+    {
+      "language": "de",
+      "slug": "knuspriger-ofenblumenkohl-chili-honig",
+      "public_path": "/de/knuspriger-ofenblumenkohl-chili-honig",
+      "title": "Knuspriger Ofenblumenkohl mit Chili-Honig",
+      "excerpt": "Blumenkohlhappen mit dünnem Teigmantel und Panko, im Ofen goldbraun gebacken. Chili-Zitronen-Honig kommt erst zum Schluss darüber, damit die Oberfläche knusprig bleibt.",
+      "summary": "Blumenkohlhappen mit dünnem Teigmantel und Panko, im Ofen goldbraun gebacken. Chili-Zitronen-Honig kommt erst zum Schluss darüber, damit die Oberfläche knusprig bleibt.",
+      "notes": "Etwa 4 cm große Röschen schneiden und mit Abstand backen. Die Nährwertberechnung berücksichtigt den gesamten Teig und Panko; bei Resten sind die tatsächlich verzehrten Werte geringer. Enthält Weizen; Panko-Etikett prüfen. Die Schärfe hängt vom Chili ab. Honig ist für Kinder unter 12 Monaten ungeeignet. Frisch servieren; beim Lagern wird die Kruste weich und kann im Ofen aufgebacken werden.",
+      "content_html": "<p>Blumenkohlhappen mit dünnem Teigmantel und Panko, im Ofen goldbraun gebacken. Chili-Zitronen-Honig kommt erst zum Schluss darüber, damit die Oberfläche knusprig bleibt.</p><p>Etwa 4 cm große Röschen schneiden und mit Abstand backen. Die Nährwertberechnung berücksichtigt den gesamten Teig und Panko; bei Resten sind die tatsächlich verzehrten Werte geringer. Enthält Weizen; Panko-Etikett prüfen. Die Schärfe hängt vom Chili ab. Honig ist für Kinder unter 12 Monaten ungeeignet. Frisch servieren; beim Lagern wird die Kruste weich und kann im Ofen aufgebacken werden.</p><h2>Dazu passen</h2><ul><li><a href=\"/de/hummus-rezept\">Hummus mit Tahini und Zitrone selber machen</a></li><li><a href=\"/de/guacamole-mit-tomate-und-koriander\">Guacamole mit Tomate und frischem Koriander</a></li><li><a href=\"/de/knusperreis-salat-kichererbsen-gurke\">Knusperreis-Salat mit Kichererbsen und Gurke</a></li></ul>",
+      "ingredients": [
+        {
+          "name": "Blumenkohlröschen, geputztes Gewicht",
+          "amount": "600",
+          "unit": "g"
+        },
+        {
+          "name": "Weizenmehl",
+          "amount": "70",
+          "unit": "g"
+        },
+        {
+          "name": "Wasser",
+          "amount": "110",
+          "unit": "ml"
+        },
+        {
+          "name": "Panko-Paniermehl",
+          "amount": "80",
+          "unit": "g"
+        },
+        {
+          "name": "Olivenöl",
+          "amount": "25",
+          "unit": "g"
+        },
+        {
+          "name": "edelsüßes Paprikapulver",
+          "amount": "3",
+          "unit": "g"
+        },
+        {
+          "name": "Salz",
+          "amount": "3",
+          "unit": "g"
+        },
+        {
+          "name": "Honig",
+          "amount": "45",
+          "unit": "g"
+        },
+        {
+          "name": "getrocknete Chiliflocken",
+          "amount": "1",
+          "unit": "g"
+        },
+        {
+          "name": "Zitronensaft",
+          "amount": "15",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Schneiden und trocknen",
+          "content": "Ofen auf 220 °C Ober-/Unterhitze vorheizen. 600 g geputzten Blumenkohl in etwa 4 cm große Röschen teilen, waschen und sehr gut trocknen.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/paso-01.webp",
+          "image_alt": "Knuspriger Ofenblumenkohl mit Chili-Honig: Schneiden und trocknen"
+        },
+        {
+          "title": "Teig anrühren",
+          "content": "70 g Mehl mit 110 ml Wasser, 3 g Paprikapulver und 3 g Salz verrühren. Der flüssige Teig soll den Blumenkohl dünn überziehen.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/paso-02.webp",
+          "image_alt": "Knuspriger Ofenblumenkohl mit Chili-Honig: Teig anrühren"
+        },
+        {
+          "title": "Röschen überziehen",
+          "content": "Röschen in den Teig tauchen und Überschuss über der Schüssel abtropfen lassen. Den Teig gleichmäßig verteilen und dicke Klumpen vermeiden.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/paso-03.webp",
+          "image_alt": "Knuspriger Ofenblumenkohl mit Chili-Honig: Röschen überziehen"
+        },
+        {
+          "title": "Mit Panko panieren",
+          "content": "80 g Panko in eine flache Schale geben. Jedes Röschen vorsichtig von allen Seiten hineindrücken.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/paso-04.webp",
+          "image_alt": "Knuspriger Ofenblumenkohl mit Chili-Honig: Mit Panko panieren"
+        },
+        {
+          "title": "Verteilen und ölen",
+          "content": "Mit Abstand auf ein großes Blech mit Backpapier legen. 25 g Öl in dünnem Strahl darübergeben, ohne die Stücke zu stapeln.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/paso-05.webp",
+          "image_alt": "Knuspriger Ofenblumenkohl mit Chili-Honig: Verteilen und ölen"
+        },
+        {
+          "title": "Goldbraun backen",
+          "content": "15 Minuten backen, vorsichtig wenden und weitere 10–15 Minuten backen, bis Panko goldbraun und der Stiel leicht einzustechen ist.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/paso-06.webp",
+          "image_alt": "Knuspriger Ofenblumenkohl mit Chili-Honig: Goldbraun backen"
+        },
+        {
+          "title": "Chili-Honig mischen",
+          "content": "45 g Honig mit 1 g Chiliflocken und 15 g Zitronensaft mischen. Bei sehr dickem Honig sanft erwärmen, nicht kochen.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/paso-07.webp",
+          "image_alt": "Knuspriger Ofenblumenkohl mit Chili-Honig: Chili-Honig mischen"
+        },
+        {
+          "title": "Glasieren und servieren",
+          "content": "Heißen Blumenkohl auf eine Platte geben und unmittelbar vor dem Essen dünn mit Chili-Honig beträufeln. Sofort mit der auf der Platte gesammelten Sauce servieren.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/paso-08.webp",
+          "image_alt": "Knuspriger Ofenblumenkohl mit Chili-Honig: Glasieren und servieren"
+        }
+      ],
+      "category": "Vorspeisen",
+      "course": "Vorspeise",
+      "cuisine": "International",
+      "difficulty": "Einfach",
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 30,
+      "total_time_minutes": 50,
+      "servings": 4,
+      "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/portada.webp",
+      "gallery": [
+        {
+          "url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/portada.webp",
+          "alt": "Knuspriger Ofenblumenkohl mit Chili-Honig"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "Knuspriger Ofenblumenkohl mit Chili-Honig",
+        "Blumenkohlröschen, geputztes Gewicht",
+        "Weizenmehl"
+      ],
+      "nutrition": {
+        "calories": 268,
+        "protein_g": 7.7,
+        "carbs_g": 45.3,
+        "fat_g": 7.4,
+        "saturated_fat_g": 1.2,
+        "sugar_g": 13.3,
+        "sodium_mg": 361.5,
+        "estimated": true,
+        "serving_size": "ein Viertel von Blumenkohl und Sauce",
+        "source": "USDA FoodData Central SR Legacy + manufacturer reference labels",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Summe der Nährwerte je 100 g × Zutatengewicht / 100, geteilt durch die Portionenzahl.",
+        "note": "Schätzung aus der Rezeptur; Marke, tatsächliche Portion und Garverluste verändern die Werte. Keine Laboranalyse."
+      },
+      "seo": {
+        "title": "Knuspriger Ofenblumenkohl mit Chili-Honig | Manual de Cocina",
+        "description": "Blumenkohlhappen mit dünnem Teigmantel und Panko, im Ofen goldbraun gebacken. Chili-Zitronen-Honig kommt erst zum Schluss darüber, damit die Oberfläche knusprig bleibt.",
+        "image_alt": "Knuspriger Ofenblumenkohl mit Chili-Honig",
+        "image_variants": [
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/portada-1x1.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/portada-4x3.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Kommt der Honig mit in den Ofen?",
+            "a": "Nein. Er kommt erst zum Schluss dazu, damit er nicht verbrennt oder die Panade beim Backen durchweicht."
+          },
+          {
+            "q": "Geht feines Paniermehl?",
+            "a": "Ja, aber die Kruste wird weniger luftig und die Bräunungszeit kann sich ändern. Diese Version verwendet Panko."
+          },
+          {
+            "q": "Warum wird es nicht knusprig?",
+            "a": "Oberflächenwasser, zu dicht liegende Stücke und zu viel Teig erschweren die Bräunung. Gut trocknen und Abstand lassen."
+          }
+        ],
+        "rest_time_minutes": 0
+      },
+      "published": true,
+      "editorial_status": "published",
+      "source_url": null,
+      "source_post_id": null
+    },
+    {
+      "language": "en",
+      "slug": "crispy-baked-cauliflower-hot-honey",
+      "public_path": "/en/crispy-baked-cauliflower-hot-honey",
+      "title": "Crispy baked cauliflower with hot honey",
+      "excerpt": "Cauliflower bites in a thin batter and panko coating, baked until golden. Add the chilli and lemon honey at the end to help preserve the crisp surface.",
+      "summary": "Cauliflower bites in a thin batter and panko coating, baked until golden. Add the chilli and lemon honey at the end to help preserve the crisp surface.",
+      "notes": "Cut florets about 4 cm across and leave space between them. Nutrition includes all the batter and crumbs; actual values are lower if some remain unused. Contains wheat; check panko labels. Heat varies with the chilli. Honey is unsuitable for babies under 12 months. Serve freshly baked; storage softens the coating and leftovers can be reheated in the oven.",
+      "content_html": "<p>Cauliflower bites in a thin batter and panko coating, baked until golden. Add the chilli and lemon honey at the end to help preserve the crisp surface.</p><p>Cut florets about 4 cm across and leave space between them. Nutrition includes all the batter and crumbs; actual values are lower if some remain unused. Contains wheat; check panko labels. Heat varies with the chilli. Honey is unsuitable for babies under 12 months. Serve freshly baked; storage softens the coating and leftovers can be reheated in the oven.</p><h2>You may also like</h2><ul><li><a href=\"/en/hummus-recipe\">Homemade hummus with tahini and lemon</a></li><li><a href=\"/en/homemade-guacamole\">Homemade guacamole with tomato and cilantro</a></li><li><a href=\"/en/crispy-rice-chickpea-cucumber-salad\">Crispy rice salad with chickpeas and cucumber</a></li></ul>",
+      "ingredients": [
+        {
+          "name": "cauliflower florets, trimmed weight",
+          "amount": "600",
+          "unit": "g"
+        },
+        {
+          "name": "plain wheat flour",
+          "amount": "70",
+          "unit": "g"
+        },
+        {
+          "name": "water",
+          "amount": "110",
+          "unit": "ml"
+        },
+        {
+          "name": "panko breadcrumbs",
+          "amount": "80",
+          "unit": "g"
+        },
+        {
+          "name": "olive oil",
+          "amount": "25",
+          "unit": "g"
+        },
+        {
+          "name": "sweet paprika",
+          "amount": "3",
+          "unit": "g"
+        },
+        {
+          "name": "salt",
+          "amount": "3",
+          "unit": "g"
+        },
+        {
+          "name": "honey",
+          "amount": "45",
+          "unit": "g"
+        },
+        {
+          "name": "dried chilli flakes",
+          "amount": "1",
+          "unit": "g"
+        },
+        {
+          "name": "lemon juice",
+          "amount": "15",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Cut and dry",
+          "content": "Preheat a conventional oven to 220 °C. Wash and thoroughly dry 600 g trimmed cauliflower, cut into florets about 4 cm across.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/paso-01.webp",
+          "image_alt": "Crispy baked cauliflower with hot honey: Cut and dry"
+        },
+        {
+          "title": "Make the batter",
+          "content": "Whisk 70 g flour with 110 ml water, 3 g sweet paprika and 3 g salt. The flowing batter should coat the cauliflower lightly.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/paso-02.webp",
+          "image_alt": "Crispy baked cauliflower with hot honey: Make the batter"
+        },
+        {
+          "title": "Coat the florets",
+          "content": "Dip florets in the batter and let excess drip into the bowl. Distribute batter over all pieces, avoiding thick clumps.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/paso-03.webp",
+          "image_alt": "Crispy baked cauliflower with hot honey: Coat the florets"
+        },
+        {
+          "title": "Add panko",
+          "content": "Put 80 g panko in a shallow dish and press each floret gently into the crumbs to coat all sides.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/paso-04.webp",
+          "image_alt": "Crispy baked cauliflower with hot honey: Add panko"
+        },
+        {
+          "title": "Arrange and oil",
+          "content": "Space pieces on a large parchment-lined baking tray. Drizzle 25 g oil thinly over them without piling them up.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/paso-05.webp",
+          "image_alt": "Crispy baked cauliflower with hot honey: Arrange and oil"
+        },
+        {
+          "title": "Bake until golden",
+          "content": "Bake for 15 minutes, carefully turn and bake another 10–15 minutes, until panko is golden and a knife enters the stalk easily.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/paso-06.webp",
+          "image_alt": "Crispy baked cauliflower with hot honey: Bake until golden"
+        },
+        {
+          "title": "Mix the hot honey",
+          "content": "Mix 45 g honey with 1 g chilli flakes and 15 g lemon juice. If very thick, warm gently without boiling.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/paso-07.webp",
+          "image_alt": "Crispy baked cauliflower with hot honey: Mix the hot honey"
+        },
+        {
+          "title": "Glaze and serve",
+          "content": "Transfer hot cauliflower to a platter and drizzle thinly with hot honey immediately before eating. Serve at once, collecting the remaining sauce from the platter.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/paso-08.webp",
+          "image_alt": "Crispy baked cauliflower with hot honey: Glaze and serve"
+        }
+      ],
+      "category": "Starters & appetizers",
+      "course": "Starter",
+      "cuisine": "International",
+      "difficulty": "Easy",
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 30,
+      "total_time_minutes": 50,
+      "servings": 4,
+      "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/portada.webp",
+      "gallery": [
+        {
+          "url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/portada.webp",
+          "alt": "Crispy baked cauliflower with hot honey"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "Crispy baked cauliflower with hot honey",
+        "cauliflower florets, trimmed weight",
+        "plain wheat flour"
+      ],
+      "nutrition": {
+        "calories": 268,
+        "protein_g": 7.7,
+        "carbs_g": 45.3,
+        "fat_g": 7.4,
+        "saturated_fat_g": 1.2,
+        "sugar_g": 13.3,
+        "sodium_mg": 361.5,
+        "estimated": true,
+        "serving_size": "one quarter of the cauliflower and sauce",
+        "source": "USDA FoodData Central SR Legacy + manufacturer reference labels",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Sum of nutrients per 100 g × each ingredient weight / 100, divided by the number of servings.",
+        "note": "Recipe-based estimate; brands, actual portions and cooking losses affect the values. Not a laboratory analysis."
+      },
+      "seo": {
+        "title": "Crispy baked cauliflower with hot honey | Manual de Cocina",
+        "description": "Cauliflower bites in a thin batter and panko coating, baked until golden. Add the chilli and lemon honey at the end to help preserve the crisp surface.",
+        "image_alt": "Crispy baked cauliflower with hot honey",
+        "image_variants": [
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/portada-1x1.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/portada-4x3.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Does the honey go in the oven?",
+            "a": "No. Add it at the end so it does not burn or soak the coating while cooking."
+          },
+          {
+            "q": "Can I use fine breadcrumbs?",
+            "a": "Yes, but the surface will be less airy and browning time may differ. This version uses panko."
+          },
+          {
+            "q": "Why is it not crisp?",
+            "a": "Surface water, crowded pieces and too much batter hinder browning. Dry well and leave space between pieces."
+          }
+        ],
+        "rest_time_minutes": 0
+      },
+      "published": true,
+      "editorial_status": "published",
+      "source_url": null,
+      "source_post_id": null
+    },
+    {
+      "language": "fr",
+      "slug": "chou-fleur-croustillant-four-miel-pimente",
+      "public_path": "/fr/chou-fleur-croustillant-four-miel-pimente",
+      "title": "Chou-fleur croustillant au four et miel pimenté",
+      "excerpt": "Des bouchées de chou-fleur en pâte légère et chapelure panko, dorées au four. Le miel au piment et au citron s'ajoute à la fin pour préserver la texture.",
+      "summary": "Des bouchées de chou-fleur en pâte légère et chapelure panko, dorées au four. Le miel au piment et au citron s'ajoute à la fin pour préserver la texture.",
+      "notes": "Coupez des fleurettes de 4 cm environ et espacez-les. Le calcul nutritionnel inclut toute la pâte et la chapelure ; les valeurs servies diminuent s'il en reste. Contient du blé ; vérifiez le panko. Le piquant dépend du piment. Le miel ne convient pas aux moins de 12 mois. Servez à la sortie du four ; la conservation ramollit l'enrobage, qui peut être réchauffé au four.",
+      "content_html": "<p>Des bouchées de chou-fleur en pâte légère et chapelure panko, dorées au four. Le miel au piment et au citron s&#x27;ajoute à la fin pour préserver la texture.</p><p>Coupez des fleurettes de 4 cm environ et espacez-les. Le calcul nutritionnel inclut toute la pâte et la chapelure ; les valeurs servies diminuent s&#x27;il en reste. Contient du blé ; vérifiez le panko. Le piquant dépend du piment. Le miel ne convient pas aux moins de 12 mois. Servez à la sortie du four ; la conservation ramollit l&#x27;enrobage, qui peut être réchauffé au four.</p><h2>À préparer aussi</h2><ul><li><a href=\"/fr/recette-dhoummous\">Houmous maison au tahini et au citron</a></li><li><a href=\"/fr/recette-guacamole\">Guacamole maison à la tomate et à la coriandre</a></li><li><a href=\"/fr/salade-riz-croustillant-pois-chiches-concombre\">Salade de riz croustillant, pois chiches et concombre</a></li></ul>",
+      "ingredients": [
+        {
+          "name": "chou-fleur en fleurettes, poids net",
+          "amount": "600",
+          "unit": "g"
+        },
+        {
+          "name": "farine de blé",
+          "amount": "70",
+          "unit": "g"
+        },
+        {
+          "name": "eau",
+          "amount": "110",
+          "unit": "ml"
+        },
+        {
+          "name": "chapelure panko",
+          "amount": "80",
+          "unit": "g"
+        },
+        {
+          "name": "huile d'olive",
+          "amount": "25",
+          "unit": "g"
+        },
+        {
+          "name": "paprika doux",
+          "amount": "3",
+          "unit": "g"
+        },
+        {
+          "name": "sel",
+          "amount": "3",
+          "unit": "g"
+        },
+        {
+          "name": "miel",
+          "amount": "45",
+          "unit": "g"
+        },
+        {
+          "name": "flocons de piment séché",
+          "amount": "1",
+          "unit": "g"
+        },
+        {
+          "name": "jus de citron",
+          "amount": "15",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Coupez et séchez",
+          "content": "Préchauffez le four à 220 °C, chaleur statique. Lavez puis séchez soigneusement 600 g de chou-fleur nettoyé en fleurettes de 4 cm environ.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/paso-01.webp",
+          "image_alt": "Chou-fleur croustillant au four et miel pimenté: Coupez et séchez"
+        },
+        {
+          "title": "Préparez la pâte",
+          "content": "Fouettez 70 g de farine, 110 ml d'eau, 3 g de paprika doux et 3 g de sel. La pâte fluide doit couvrir légèrement le chou-fleur.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/paso-02.webp",
+          "image_alt": "Chou-fleur croustillant au four et miel pimenté: Préparez la pâte"
+        },
+        {
+          "title": "Enrobez les fleurettes",
+          "content": "Passez les fleurettes dans la pâte et laissez égoutter l'excédent au-dessus du bol. Répartissez la pâte sans former de paquets épais.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/paso-03.webp",
+          "image_alt": "Chou-fleur croustillant au four et miel pimenté: Enrobez les fleurettes"
+        },
+        {
+          "title": "Ajoutez le panko",
+          "content": "Mettez 80 g de panko dans un plat creux et pressez doucement chaque fleurette pour l'enrober de tous les côtés.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/paso-04.webp",
+          "image_alt": "Chou-fleur croustillant au four et miel pimenté: Ajoutez le panko"
+        },
+        {
+          "title": "Disposez et huilez",
+          "content": "Espacez les morceaux sur une grande plaque recouverte de papier cuisson. Répartissez 25 g d'huile en filet fin sans empiler les fleurettes.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/paso-05.webp",
+          "image_alt": "Chou-fleur croustillant au four et miel pimenté: Disposez et huilez"
+        },
+        {
+          "title": "Faites dorer",
+          "content": "Cuisez 15 minutes, retournez délicatement puis cuisez encore 10–15 minutes. Le panko doit être doré et la tige facile à piquer.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/paso-06.webp",
+          "image_alt": "Chou-fleur croustillant au four et miel pimenté: Faites dorer"
+        },
+        {
+          "title": "Préparez le miel pimenté",
+          "content": "Mélangez 45 g de miel, 1 g de flocons de piment et 15 g de jus de citron. Si le miel est épais, tiédissez doucement sans faire bouillir.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/paso-07.webp",
+          "image_alt": "Chou-fleur croustillant au four et miel pimenté: Préparez le miel pimenté"
+        },
+        {
+          "title": "Nappez et servez",
+          "content": "Transférez le chou-fleur chaud sur un plat et versez un fin filet de miel pimenté juste avant de manger. Servez immédiatement avec la sauce recueillie dans le plat.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/paso-08.webp",
+          "image_alt": "Chou-fleur croustillant au four et miel pimenté: Nappez et servez"
+        }
+      ],
+      "category": "Entrées et apéritifs",
+      "course": "Entrée",
+      "cuisine": "Internationale",
+      "difficulty": "Facile",
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 30,
+      "total_time_minutes": 50,
+      "servings": 4,
+      "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/portada.webp",
+      "gallery": [
+        {
+          "url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/portada.webp",
+          "alt": "Chou-fleur croustillant au four et miel pimenté"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "Chou-fleur croustillant au four et miel pimenté",
+        "chou-fleur en fleurettes, poids net",
+        "farine de blé"
+      ],
+      "nutrition": {
+        "calories": 268,
+        "protein_g": 7.7,
+        "carbs_g": 45.3,
+        "fat_g": 7.4,
+        "saturated_fat_g": 1.2,
+        "sugar_g": 13.3,
+        "sodium_mg": 361.5,
+        "estimated": true,
+        "serving_size": "un quart du chou-fleur et de la sauce",
+        "source": "USDA FoodData Central SR Legacy + manufacturer reference labels",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Somme des nutriments pour 100 g × poids de chaque ingrédient / 100, divisée par le nombre de portions.",
+        "note": "Estimation selon la formulation ; les marques, les portions réelles et les pertes de cuisson modifient les valeurs. Pas une analyse de laboratoire."
+      },
+      "seo": {
+        "title": "Chou-fleur croustillant au four et miel pimenté | Manual de Cocina",
+        "description": "Des bouchées de chou-fleur en pâte légère et chapelure panko, dorées au four. Le miel au piment et au citron s'ajoute à la fin pour préserver la texture.",
+        "image_alt": "Chou-fleur croustillant au four et miel pimenté",
+        "image_variants": [
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/portada-1x1.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/portada-4x3.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Le miel passe-t-il au four ?",
+            "a": "Non. Ajoutez-le à la fin pour éviter de le brûler et de détremper l'enrobage pendant la cuisson."
+          },
+          {
+            "q": "Puis-je utiliser une chapelure fine ?",
+            "a": "Oui, mais le résultat sera moins aérien et le temps de coloration peut varier. Cette version utilise du panko."
+          },
+          {
+            "q": "Pourquoi le résultat n'est-il pas croustillant ?",
+            "a": "L'eau en surface, les morceaux serrés et l'excès de pâte freinent la coloration. Séchez bien et espacez les morceaux."
+          }
+        ],
+        "rest_time_minutes": 0
+      },
+      "published": true,
+      "editorial_status": "published",
+      "source_url": null,
+      "source_post_id": null
+    },
+    {
+      "language": "it",
+      "slug": "cavolfiore-croccante-forno-miele-piccante",
+      "public_path": "/it/cavolfiore-croccante-forno-miele-piccante",
+      "title": "Cavolfiore croccante al forno con miele piccante",
+      "excerpt": "Bocconcini di cavolfiore con pastella sottile e panko, cotti al forno fino a doratura. Il miele al peperoncino e limone si aggiunge alla fine per mantenere la superficie croccante.",
+      "summary": "Bocconcini di cavolfiore con pastella sottile e panko, cotti al forno fino a doratura. Il miele al peperoncino e limone si aggiunge alla fine per mantenere la superficie croccante.",
+      "notes": "Taglia cimette di circa 4 cm e distanziale. La nutrizione include tutta la pastella e il panko: se ne avanza, i valori consumati saranno inferiori. Contiene frumento; controlla il panko. Il piccante dipende dal peperoncino. Il miele non è adatto ai bambini sotto i 12 mesi. Servi appena cotto: conservandolo, la crosta si ammorbidisce e può essere riscaldata in forno.",
+      "content_html": "<p>Bocconcini di cavolfiore con pastella sottile e panko, cotti al forno fino a doratura. Il miele al peperoncino e limone si aggiunge alla fine per mantenere la superficie croccante.</p><p>Taglia cimette di circa 4 cm e distanziale. La nutrizione include tutta la pastella e il panko: se ne avanza, i valori consumati saranno inferiori. Contiene frumento; controlla il panko. Il piccante dipende dal peperoncino. Il miele non è adatto ai bambini sotto i 12 mesi. Servi appena cotto: conservandolo, la crosta si ammorbidisce e può essere riscaldata in forno.</p><h2>Da provare anche</h2><ul><li><a href=\"/it/ricetta-dellhummus\">Hummus fatto in casa con tahina e limone</a></li><li><a href=\"/it/ricetta-guacamole\">Guacamole fatto in casa con pomodoro e coriandolo</a></li><li><a href=\"/it/insalata-riso-croccante-ceci-cetriolo\">Insalata di riso croccante con ceci e cetriolo</a></li></ul>",
+      "ingredients": [
+        {
+          "name": "cavolfiore in cimette, peso pulito",
+          "amount": "600",
+          "unit": "g"
+        },
+        {
+          "name": "farina di frumento",
+          "amount": "70",
+          "unit": "g"
+        },
+        {
+          "name": "acqua",
+          "amount": "110",
+          "unit": "ml"
+        },
+        {
+          "name": "pangrattato panko",
+          "amount": "80",
+          "unit": "g"
+        },
+        {
+          "name": "olio d'oliva",
+          "amount": "25",
+          "unit": "g"
+        },
+        {
+          "name": "paprika dolce",
+          "amount": "3",
+          "unit": "g"
+        },
+        {
+          "name": "sale",
+          "amount": "3",
+          "unit": "g"
+        },
+        {
+          "name": "miele",
+          "amount": "45",
+          "unit": "g"
+        },
+        {
+          "name": "peperoncino secco in fiocchi",
+          "amount": "1",
+          "unit": "g"
+        },
+        {
+          "name": "succo di limone",
+          "amount": "15",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Taglia e asciuga",
+          "content": "Preriscalda il forno statico a 220 °C. Lava e asciuga molto bene 600 g di cavolfiore pulito, diviso in cimette di circa 4 cm.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/paso-01.webp",
+          "image_alt": "Cavolfiore croccante al forno con miele piccante: Taglia e asciuga"
+        },
+        {
+          "title": "Prepara la pastella",
+          "content": "Sbatti 70 g di farina con 110 ml d'acqua, 3 g di paprika dolce e 3 g di sale. La pastella fluida deve velare leggermente il cavolfiore.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/paso-02.webp",
+          "image_alt": "Cavolfiore croccante al forno con miele piccante: Prepara la pastella"
+        },
+        {
+          "title": "Rivesti le cimette",
+          "content": "Passa le cimette nella pastella e lascia colare l'eccesso nella ciotola. Distribuiscila tra tutti i pezzi evitando grumi spessi.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/paso-03.webp",
+          "image_alt": "Cavolfiore croccante al forno con miele piccante: Rivesti le cimette"
+        },
+        {
+          "title": "Aggiungi il panko",
+          "content": "Versa 80 g di panko in un piatto fondo e premi delicatamente ogni cimetta per rivestirla su tutti i lati.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/paso-04.webp",
+          "image_alt": "Cavolfiore croccante al forno con miele piccante: Aggiungi il panko"
+        },
+        {
+          "title": "Disponi e olia",
+          "content": "Distanzia i pezzi su una teglia grande con carta forno. Distribuisci 25 g d'olio a filo sottile, senza sovrapporre le cimette.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/paso-05.webp",
+          "image_alt": "Cavolfiore croccante al forno con miele piccante: Disponi e olia"
+        },
+        {
+          "title": "Cuoci fino a doratura",
+          "content": "Cuoci 15 minuti, gira delicatamente e cuoci altri 10–15 minuti. Il panko deve essere dorato e il gambo facile da infilzare.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/paso-06.webp",
+          "image_alt": "Cavolfiore croccante al forno con miele piccante: Cuoci fino a doratura"
+        },
+        {
+          "title": "Prepara il miele piccante",
+          "content": "Mescola 45 g di miele con 1 g di peperoncino in fiocchi e 15 g di succo di limone. Se troppo denso, intiepidisci dolcemente senza bollire.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/paso-07.webp",
+          "image_alt": "Cavolfiore croccante al forno con miele piccante: Prepara il miele piccante"
+        },
+        {
+          "title": "Glassa e servi",
+          "content": "Trasferisci il cavolfiore caldo su un piatto e aggiungi un filo sottile di miele piccante appena prima di mangiare. Servi subito con la salsa raccolta nel piatto.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/paso-08.webp",
+          "image_alt": "Cavolfiore croccante al forno con miele piccante: Glassa e servi"
+        }
+      ],
+      "category": "Antipasti",
+      "course": "Antipasto",
+      "cuisine": "Internazionale",
+      "difficulty": "Facile",
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 30,
+      "total_time_minutes": 50,
+      "servings": 4,
+      "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/portada.webp",
+      "gallery": [
+        {
+          "url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/portada.webp",
+          "alt": "Cavolfiore croccante al forno con miele piccante"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "Cavolfiore croccante al forno con miele piccante",
+        "cavolfiore in cimette, peso pulito",
+        "farina di frumento"
+      ],
+      "nutrition": {
+        "calories": 268,
+        "protein_g": 7.7,
+        "carbs_g": 45.3,
+        "fat_g": 7.4,
+        "saturated_fat_g": 1.2,
+        "sugar_g": 13.3,
+        "sodium_mg": 361.5,
+        "estimated": true,
+        "serving_size": "un quarto del cavolfiore e della salsa",
+        "source": "USDA FoodData Central SR Legacy + manufacturer reference labels",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Somma dei nutrienti per 100 g × peso di ogni ingrediente / 100, divisa per il numero di porzioni.",
+        "note": "Stima della formulazione: marche, porzioni reali e perdite di cottura cambiano i valori. Non è un’analisi di laboratorio."
+      },
+      "seo": {
+        "title": "Cavolfiore croccante al forno con miele piccante | Manual de Cocina",
+        "description": "Bocconcini di cavolfiore con pastella sottile e panko, cotti al forno fino a doratura. Il miele al peperoncino e limone si aggiunge alla fine per mantenere la superficie croccante.",
+        "image_alt": "Cavolfiore croccante al forno con miele piccante",
+        "image_variants": [
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/portada-1x1.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/portada-4x3.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Il miele va in forno?",
+            "a": "No. Si aggiunge alla fine per evitare che bruci o inumidisca la panatura durante la cottura."
+          },
+          {
+            "q": "Posso usare pangrattato fine?",
+            "a": "Sì, ma la crosta sarà meno ariosa e il tempo di doratura può cambiare. Questa versione usa panko."
+          },
+          {
+            "q": "Perché non è croccante?",
+            "a": "Acqua sulla superficie, pezzi ammassati e troppa pastella ostacolano la doratura. Asciuga bene e lascia spazio tra i pezzi."
+          }
+        ],
+        "rest_time_minutes": 0
+      },
+      "published": true,
+      "editorial_status": "published",
+      "source_url": null,
+      "source_post_id": null
+    },
+    {
+      "language": "ja",
+      "slug": "crispy-baked-cauliflower-hot-honey",
+      "public_path": "/ja/crispy-baked-cauliflower-hot-honey",
+      "title": "カリフラワーのカリカリ焼き ホットハニーがけ",
+      "excerpt": "薄い衣とパン粉をまとわせたカリフラワーをオーブンで香ばしく焼きます。唐辛子とレモン入りのはちみつは最後にかけ、食感を保ちます。",
+      "summary": "薄い衣とパン粉をまとわせたカリフラワーをオーブンで香ばしく焼きます。唐辛子とレモン入りのはちみつは最後にかけ、食感を保ちます。",
+      "notes": "小房は約4 cmにそろえ、間隔を空けます。栄養計算には衣とパン粉の全量を含むため、余った場合の実際の摂取量は少なくなります。小麦を含みます。パン粉の表示も確認してください。辛さは唐辛子によります。はちみつは1歳未満の乳児に与えないでください。焼きたてを食べます。保存すると衣がやわらかくなり、オーブンで温め直せます。",
+      "content_html": "<p>薄い衣とパン粉をまとわせたカリフラワーをオーブンで香ばしく焼きます。唐辛子とレモン入りのはちみつは最後にかけ、食感を保ちます。</p><p>小房は約4 cmにそろえ、間隔を空けます。栄養計算には衣とパン粉の全量を含むため、余った場合の実際の摂取量は少なくなります。小麦を含みます。パン粉の表示も確認してください。辛さは唐辛子によります。はちみつは1歳未満の乳児に与えないでください。焼きたてを食べます。保存すると衣がやわらかくなり、オーブンで温め直せます。</p><h2>こちらのレシピも</h2><ul><li><a href=\"/ja/フムスのレシピ\">タヒニとレモンの手作りフムス</a></li><li><a href=\"/ja/レシピ-ワカモレ\">トマトとパクチーで作る自家製ワカモレ</a></li><li><a href=\"/ja/crispy-rice-chickpea-cucumber-salad\">カリカリご飯とひよこ豆、きゅうりのサラダ</a></li></ul>",
+      "ingredients": [
+        {
+          "name": "カリフラワーの小房（下処理後の重量）",
+          "amount": "600",
+          "unit": "g"
+        },
+        {
+          "name": "小麦粉",
+          "amount": "70",
+          "unit": "g"
+        },
+        {
+          "name": "水",
+          "amount": "110",
+          "unit": "ml"
+        },
+        {
+          "name": "粗めのパン粉（panko）",
+          "amount": "80",
+          "unit": "g"
+        },
+        {
+          "name": "オリーブオイル",
+          "amount": "25",
+          "unit": "g"
+        },
+        {
+          "name": "パプリカパウダー",
+          "amount": "3",
+          "unit": "g"
+        },
+        {
+          "name": "塩",
+          "amount": "3",
+          "unit": "g"
+        },
+        {
+          "name": "はちみつ",
+          "amount": "45",
+          "unit": "g"
+        },
+        {
+          "name": "乾燥唐辛子フレーク",
+          "amount": "1",
+          "unit": "g"
+        },
+        {
+          "name": "レモン汁",
+          "amount": "15",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "切って乾かす",
+          "content": "オーブンを上下加熱220 ℃に予熱します。下処理したカリフラワー600 gを約4 cmの小房に分け、洗って水気を十分に拭きます。",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/paso-01.webp",
+          "image_alt": "カリフラワーのカリカリ焼き ホットハニーがけ: 切って乾かす"
+        },
+        {
+          "title": "衣を作る",
+          "content": "小麦粉70 g、水110 ml、パプリカ3 g、塩3 gを混ぜます。カリフラワーを薄く包む、流動性のある衣にします。",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/paso-02.webp",
+          "image_alt": "カリフラワーのカリカリ焼き ホットハニーがけ: 衣を作る"
+        },
+        {
+          "title": "衣をつける",
+          "content": "小房を衣にくぐらせ、余分をボウルの上で落とします。厚いかたまりを作らず、全体に衣を分けます。",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/paso-03.webp",
+          "image_alt": "カリフラワーのカリカリ焼き ホットハニーがけ: 衣をつける"
+        },
+        {
+          "title": "パン粉をつける",
+          "content": "パン粉80 gを浅い器に入れ、小房をやさしく押し当てて全面につけます。",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/paso-04.webp",
+          "image_alt": "カリフラワーのカリカリ焼き ホットハニーがけ: パン粉をつける"
+        },
+        {
+          "title": "並べて油をかける",
+          "content": "オーブンシートを敷いた大きな天板に、重ならないよう並べます。オイル25 gを細く回しかけます。",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/paso-05.webp",
+          "image_alt": "カリフラワーのカリカリ焼き ホットハニーがけ: 並べて油をかける"
+        },
+        {
+          "title": "きつね色に焼く",
+          "content": "15分焼き、そっと返してさらに10～15分焼きます。パン粉が色づき、茎にナイフがすっと入れば焼き上がりです。",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/paso-06.webp",
+          "image_alt": "カリフラワーのカリカリ焼き ホットハニーがけ: きつね色に焼く"
+        },
+        {
+          "title": "ホットハニーを作る",
+          "content": "はちみつ45 g、唐辛子1 g、レモン汁15 gを混ぜます。はちみつが硬ければ、沸騰させずに軽く温めます。",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/paso-07.webp",
+          "image_alt": "カリフラワーのカリカリ焼き ホットハニーがけ: ホットハニーを作る"
+        },
+        {
+          "title": "かけてすぐ盛る",
+          "content": "熱いカリフラワーを器に移し、食べる直前にホットハニーを細くかけます。器に残ったソースも添え、すぐに食べます。",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/paso-08.webp",
+          "image_alt": "カリフラワーのカリカリ焼き ホットハニーがけ: かけてすぐ盛る"
+        }
+      ],
+      "category": "前菜・おつまみ",
+      "course": "前菜",
+      "cuisine": "各国料理",
+      "difficulty": "簡単",
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 30,
+      "total_time_minutes": 50,
+      "servings": 4,
+      "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/portada.webp",
+      "gallery": [
+        {
+          "url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/portada.webp",
+          "alt": "カリフラワーのカリカリ焼き ホットハニーがけ"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "カリフラワーのカリカリ焼き ホットハニーがけ",
+        "カリフラワーの小房（下処理後の重量）",
+        "小麦粉"
+      ],
+      "nutrition": {
+        "calories": 268,
+        "protein_g": 7.7,
+        "carbs_g": 45.3,
+        "fat_g": 7.4,
+        "saturated_fat_g": 1.2,
+        "sugar_g": 13.3,
+        "sodium_mg": 361.5,
+        "estimated": true,
+        "serving_size": "カリフラワーとソースの4分の1",
+        "source": "USDA FoodData Central SR Legacy + manufacturer reference labels",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "材料100 gあたりの栄養価×各使用重量÷100を合計し、人数で割って算出。",
+        "note": "配合からの推定値です。製品、実際の盛り付け量、加熱による損失で変わります。検査機関での分析値ではありません。"
+      },
+      "seo": {
+        "title": "カリフラワーのカリカリ焼き ホットハニーがけ | Manual de Cocina",
+        "description": "薄い衣とパン粉をまとわせたカリフラワーをオーブンで香ばしく焼きます。唐辛子とレモン入りのはちみつは最後にかけ、食感を保ちます。",
+        "image_alt": "カリフラワーのカリカリ焼き ホットハニーがけ",
+        "image_variants": [
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/portada-1x1.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/portada-4x3.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "はちみつも一緒に焼きますか？",
+            "a": "いいえ。焦げたり、焼いている間に衣が湿ったりしないよう、最後にかけます。"
+          },
+          {
+            "q": "細かいパン粉でも使えますか？",
+            "a": "使えますが、軽さや焼き色がつく時間は変わります。この配合は粗めのpanko用です。"
+          },
+          {
+            "q": "カリッとしないのはなぜですか？",
+            "a": "表面の水分、詰め込みすぎ、厚すぎる衣は焼き色を妨げます。よく乾かして間隔を空けます。"
+          }
+        ],
+        "rest_time_minutes": 0
+      },
+      "published": true,
+      "editorial_status": "published",
+      "source_url": null,
+      "source_post_id": null
+    },
+    {
+      "language": "pt",
+      "slug": "couve-flor-crocante-forno-mel-picante",
+      "public_path": "/pt/couve-flor-crocante-forno-mel-picante",
+      "title": "Couve-flor crocante no forno com mel picante",
+      "excerpt": "Bocados de couve-flor com massa fina e panko, assados até dourar. O mel com pimenta e limão entra no final para ajudar a manter a superfície crocante.",
+      "summary": "Bocados de couve-flor com massa fina e panko, assados até dourar. O mel com pimenta e limão entra no final para ajudar a manter a superfície crocante.",
+      "notes": "Corte floretes de cerca de 4 cm e deixe espaço entre eles. A nutrição inclui toda a massa e o panko; se sobrar cobertura, o valor servido será menor. Contém trigo; confira o panko. A ardência depende da pimenta. Mel não é adequado para menores de 12 meses. Sirva recém-assada; ao guardar, a crosta amolece e pode ser reaquecida no forno.",
+      "content_html": "<p>Bocados de couve-flor com massa fina e panko, assados até dourar. O mel com pimenta e limão entra no final para ajudar a manter a superfície crocante.</p><p>Corte floretes de cerca de 4 cm e deixe espaço entre eles. A nutrição inclui toda a massa e o panko; se sobrar cobertura, o valor servido será menor. Contém trigo; confira o panko. A ardência depende da pimenta. Mel não é adequado para menores de 12 meses. Sirva recém-assada; ao guardar, a crosta amolece e pode ser reaquecida no forno.</p><h2>Prepare também</h2><ul><li><a href=\"/pt/receita-de-homus\">Homus caseiro com tahine e limão</a></li><li><a href=\"/pt/guacamole-caseiro\">Guacamole caseiro com tomate e coentro</a></li><li><a href=\"/pt/salada-arroz-crocante-grao-bico-pepino\">Salada de arroz crocante com grão-de-bico e pepino</a></li></ul>",
+      "ingredients": [
+        {
+          "name": "couve-flor em floretes, peso limpo",
+          "amount": "600",
+          "unit": "g"
+        },
+        {
+          "name": "farinha de trigo",
+          "amount": "70",
+          "unit": "g"
+        },
+        {
+          "name": "água",
+          "amount": "110",
+          "unit": "ml"
+        },
+        {
+          "name": "farinha panko",
+          "amount": "80",
+          "unit": "g"
+        },
+        {
+          "name": "azeite de oliva",
+          "amount": "25",
+          "unit": "g"
+        },
+        {
+          "name": "páprica doce",
+          "amount": "3",
+          "unit": "g"
+        },
+        {
+          "name": "sal",
+          "amount": "3",
+          "unit": "g"
+        },
+        {
+          "name": "mel",
+          "amount": "45",
+          "unit": "g"
+        },
+        {
+          "name": "pimenta seca em flocos",
+          "amount": "1",
+          "unit": "g"
+        },
+        {
+          "name": "suco de limão-siciliano",
+          "amount": "15",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Corte e seque",
+          "content": "Preaqueça o forno a 220 °C, calor superior e inferior. Lave e seque muito bem 600 g de couve-flor limpa em floretes de cerca de 4 cm.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/paso-01.webp",
+          "image_alt": "Couve-flor crocante no forno com mel picante: Corte e seque"
+        },
+        {
+          "title": "Prepare a massa",
+          "content": "Bata 70 g de farinha com 110 ml de água, 3 g de páprica doce e 3 g de sal. A massa fluida deve cobrir levemente a couve-flor.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/paso-02.webp",
+          "image_alt": "Couve-flor crocante no forno com mel picante: Prepare a massa"
+        },
+        {
+          "title": "Cubra os floretes",
+          "content": "Passe os floretes na massa e deixe escorrer o excesso sobre a tigela. Distribua a massa entre todas as peças, evitando camadas grossas.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/paso-03.webp",
+          "image_alt": "Couve-flor crocante no forno com mel picante: Cubra os floretes"
+        },
+        {
+          "title": "Acrescente o panko",
+          "content": "Coloque 80 g de panko num prato fundo e pressione cada florete delicadamente para cobrir todos os lados.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/paso-04.webp",
+          "image_alt": "Couve-flor crocante no forno com mel picante: Acrescente o panko"
+        },
+        {
+          "title": "Acomode e regue",
+          "content": "Distribua numa assadeira grande com papel-manteiga, sem amontoar. Espalhe 25 g de azeite em fio fino por cima.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/paso-05.webp",
+          "image_alt": "Couve-flor crocante no forno com mel picante: Acomode e regue"
+        },
+        {
+          "title": "Asse até dourar",
+          "content": "Asse 15 minutos, vire com cuidado e asse mais 10–15 minutos, até o panko dourar e o talo ficar fácil de espetar.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/paso-06.webp",
+          "image_alt": "Couve-flor crocante no forno com mel picante: Asse até dourar"
+        },
+        {
+          "title": "Prepare o mel picante",
+          "content": "Misture 45 g de mel com 1 g de pimenta em flocos e 15 g de suco de limão-siciliano. Se estiver muito espesso, aqueça suavemente sem ferver.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/paso-07.webp",
+          "image_alt": "Couve-flor crocante no forno com mel picante: Prepare o mel picante"
+        },
+        {
+          "title": "Finalize e sirva",
+          "content": "Passe a couve-flor quente para uma travessa e regue com um fio fino de mel picante imediatamente antes de comer. Sirva logo com o molho recolhido da travessa.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/paso-08.webp",
+          "image_alt": "Couve-flor crocante no forno com mel picante: Finalize e sirva"
+        }
+      ],
+      "category": "Entradas e aperitivos",
+      "course": "Entrada",
+      "cuisine": "Internacional",
+      "difficulty": "Fácil",
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 30,
+      "total_time_minutes": 50,
+      "servings": 4,
+      "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/portada.webp",
+      "gallery": [
+        {
+          "url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/portada.webp",
+          "alt": "Couve-flor crocante no forno com mel picante"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "Couve-flor crocante no forno com mel picante",
+        "couve-flor em floretes, peso limpo",
+        "farinha de trigo"
+      ],
+      "nutrition": {
+        "calories": 268,
+        "protein_g": 7.7,
+        "carbs_g": 45.3,
+        "fat_g": 7.4,
+        "saturated_fat_g": 1.2,
+        "sugar_g": 13.3,
+        "sodium_mg": 361.5,
+        "estimated": true,
+        "serving_size": "um quarto da couve-flor e do molho",
+        "source": "USDA FoodData Central SR Legacy + manufacturer reference labels",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Soma dos nutrientes por 100 g × peso de cada ingrediente / 100, dividida pelo número de porções.",
+        "note": "Estimativa pela formulação; marcas, porções reais e perdas no cozimento alteram os valores. Não é análise laboratorial."
+      },
+      "seo": {
+        "title": "Couve-flor crocante no forno com mel picante | Manual de Cocina",
+        "description": "Bocados de couve-flor com massa fina e panko, assados até dourar. O mel com pimenta e limão entra no final para ajudar a manter a superfície crocante.",
+        "image_alt": "Couve-flor crocante no forno com mel picante",
+        "image_variants": [
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/portada-1x1.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/portada-4x3.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/coliflor-crujiente-miel-picante/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "O mel vai ao forno?",
+            "a": "Não. Ele entra no final para não queimar nem umedecer a cobertura durante a cocção."
+          },
+          {
+            "q": "Posso usar farinha de rosca fina?",
+            "a": "Sim, mas a superfície ficará menos aerada e o tempo para dourar pode mudar. Esta versão usa panko."
+          },
+          {
+            "q": "Por que não fica crocante?",
+            "a": "Água na superfície, peças amontoadas e excesso de massa dificultam a douração. Seque bem e deixe espaço entre as peças."
+          }
+        ],
+        "rest_time_minutes": 0
+      },
+      "published": true,
+      "editorial_status": "published",
+      "source_url": null,
+      "source_post_id": null
+    }
+  ],
+  "recipe_group_id": "7cf38b5f-d31c-4856-8b63-c7b9c74068ff",
+  "visual_assets": {
+    "originals": 8,
+    "webp": 12,
+    "manifest": "coliflor-crujiente-miel-picante-imagenes-20261023.json",
+    "visual_qa": "PASS"
+  },
+  "published_at": "2026-10-24T05:08:21.533344+00:00"
+}
