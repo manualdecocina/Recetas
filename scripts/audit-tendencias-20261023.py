@@ -1,4 +1,4 @@
-"""Read-only production QA for five Christmas recipes and their 35 localizations."""
+"""Read-only production QA for five trend-led recipes, 35 localizations and contextual links."""
 import argparse,concurrent.futures,datetime,hashlib,json,re,urllib.request,urllib.parse
 from pathlib import Path
 from html.parser import HTMLParser

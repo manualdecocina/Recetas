@@ -5,6 +5,8 @@ on:
     paths:
       - '.github/workflows/tendencias-20261023-publication.yml'
       - 'scripts/audit-tendencias-20261023.py'
+      - 'editorial/tendencias-20261023-checkpoint.json'
+      - 'editorial/*-20261023.json'
   workflow_dispatch:
 permissions:
   contents: read
