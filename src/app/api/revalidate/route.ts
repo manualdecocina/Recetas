@@ -41,10 +41,11 @@ function handleRevalidate(request: NextRequest) {
     return NextResponse.json({ error: 'No autorizado.' }, { status: 401, headers: NO_STORE })
   }
 
-  revalidateTag(RECIPES_CACHE_TAG, 'max')
+  // External publication must not serve old data while a background refresh runs.
+  revalidateTag(RECIPES_CACHE_TAG, { expire: 0 })
   // Also expire rendered pages, including home/catalogue and historical recipe routes.
   revalidatePath('/', 'layout')
-  return NextResponse.json({ revalidated: true, tag: RECIPES_CACHE_TAG, at: new Date().toISOString() }, { headers: NO_STORE })
+  return NextResponse.json({ revalidated: true, cacheMode: 'expire-now', tag: RECIPES_CACHE_TAG, at: new Date().toISOString() }, { headers: NO_STORE })
 }
 
 export async function POST(request: NextRequest) {

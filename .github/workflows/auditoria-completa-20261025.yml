@@ -52,7 +52,7 @@ jobs:
         env:
           EXPECTED_ES_RECIPES: '205'
         run: python3 scripts/audit-site-full-20261025.py
-      - name: Summarize verification results
+      - name: Summarize verification results and enforce all checks
         if: always()
         run: |
           python3 - <<'PY'
@@ -63,6 +63,12 @@ jobs:
           p=pathlib.Path('site-full-20261025-audit.json')
           if p.exists():
               j=json.loads(p.read_text());print('AUDIT_SUMMARY_JSON '+json.dumps(j['summary']));print('AUDIT_ERRORS_JSON '+json.dumps(j['errors'],ensure_ascii=False))
+          required=['cinco-recetas-20261024-production-qa.json','seo-snippet-readback.json','site-full-20261025-audit.json']
+          if not all(pathlib.Path(p).exists() for p in required):raise SystemExit('Missing required audit report')
+          pub=json.load(open(required[0]));seo=json.load(open(required[1]));full=json.load(open(required[2]))
+          valid=pub.get('pages_passed')==35 and pub.get('media_passed')==60 and not pub.get('missing_sitemap') and all(x['http']==200 and not x['missing'] for x in pub['surfaces'].values()) and all(x['ok'] for x in pub['internal_links']) and len(seo)==150 and all(x['ok'] for x in seo) and not full['errors']
+          if not valid:raise SystemExit('Production verification found unresolved errors; inspect reports')
+          print('ALL_PRODUCTION_CHECKS_PASSED')
           PY
       - uses: actions/upload-artifact@v4
         if: always()
