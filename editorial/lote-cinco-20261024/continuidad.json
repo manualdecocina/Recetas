@@ -2,7 +2,7 @@
   "date": "2026-10-24",
   "target": "https://manualdecocina.com",
   "request": "Select five distinct SEO recipe opportunities, create eight coherent photos each, translate and publish seven languages; then audit all published site content and repair verified errors; save report to Drive.",
-  "status": "five_published_global_audit_in_progress",
+  "status": "five_recipes_published_audit_completed_hosting_cache_pending",
   "selected": [
     "pan-de-jamon-venezolano",
     "focaccia-sin-amasado-romero",
@@ -40,43 +40,50 @@
   "done": [
     {
       "slug": "pan-de-jamon-venezolano",
-      "group": "3ebfec8f-fe2b-4e0d-806e-94f22d2df00d",
+      "recipe_group_id": "3ebfec8f-fe2b-4e0d-806e-94f22d2df00d",
       "published": true,
-      "assets": 12,
       "languages": 7,
-      "pending": "batch cache invalidation/index verification"
+      "images": 8,
+      "public_assets": 12
     },
     {
       "slug": "focaccia-sin-amasado-romero",
-      "group": "22aacf72-78f8-4196-85c0-59fed8bc7df1",
+      "recipe_group_id": "22aacf72-78f8-4196-85c0-59fed8bc7df1",
       "published": true,
-      "assets": 12,
       "languages": 7,
-      "pending": "batch cache/index verification"
+      "images": 8,
+      "public_assets": 12
     },
     {
       "slug": "tteokbokki-coreano-picante",
-      "group": "8c522e34-5b85-4e43-9a9f-76f062ce9f04",
+      "recipe_group_id": "8c522e34-5b85-4e43-9a9f-76f062ce9f04",
       "published": true,
-      "assets": 12,
-      "languages": 7
+      "languages": 7,
+      "images": 8,
+      "public_assets": 12
     },
     {
       "slug": "mango-sago-coco",
-      "group": "e56af460-49b0-4f11-8b88-edca30f1f5a6",
+      "recipe_group_id": "e56af460-49b0-4f11-8b88-edca30f1f5a6",
       "published": true,
-      "assets": 12,
-      "languages": 7
+      "languages": 7,
+      "images": 8,
+      "public_assets": 12
     },
     {
       "slug": "pavlova-frutos-rojos",
-      "group": "adbb3bd2-83ad-45d5-ad8f-391020b5ea7a",
+      "recipe_group_id": "adbb3bd2-83ad-45d5-ad8f-391020b5ea7a",
       "published": true,
-      "assets": 12,
-      "languages": 7
+      "languages": 7,
+      "images": 8,
+      "public_assets": 12
     }
   ],
-  "next": "Tteokbokki Spanish freeze, photos, translations and publication; then mango sago/pavlova; batch Git/cache refresh; whole-site audit/fixes; Drive report",
+  "next": [
+    "Deploy main on Hostinger",
+    "Purge CDN and call updated protected revalidation",
+    "Rerun auditoria-completa-20261025 and require every final gate to pass"
+  ],
   "notes": [
     "Pan7/7 and focaccia7/7 public pages passed specific content/schema/canonical/hreflang QA.",
     "Tteokbokki images all generated and visually approved; step1 raw1447x1087 has tiny format normalization to1444x1083; raw source retained.",
@@ -84,5 +91,17 @@
     "Uploader allows24 previous files; needs redeployment with36 after packing tteokbokki, then upload, stage, publish.",
     "No Git sync for new batch yet; latest base main7412706. All work files in lote-nuevo; previousarepa remains own checkout."
   ],
-  "uploader": "sealed verify_jwt=true version6"
+  "uploader": "Sealed; verify_jwt=true; version 6",
+  "drive_report": {
+    "id": "1kGFcvAddyT8zMoMrGqqpRX33pAeha--kVEnkkGG51lw",
+    "url": "https://docs.google.com/document/d/1kGFcvAddyT8zMoMrGqqpRX33pAeha--kVEnkkGG51lw/edit?usp=drivesdk"
+  },
+  "latest_production_audit": 40164384680,
+  "blocking_dependency": "Hosting deployment/purge unavailable: execution environment became unavailable; available Hostinger service provides mail only. Source correction merged and quality tests passed; CDN/origin still return pre-fix route (cacheMode absent).",
+  "metadata_adjustments": {
+    "titles": 120,
+    "descriptions": 35,
+    "unique_records": 150,
+    "backup": "editorial/lote-cinco-20261024/seo-snippet-patches.json"
+  }
 }
