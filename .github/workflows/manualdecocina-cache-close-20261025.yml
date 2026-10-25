@@ -1,0 +1,38 @@
+name: manualdecocina-cache-close-20261025
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/manualdecocina-cache-close-20261025.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - name: Probe actual deployment and invoke protected revalidation
+        env:
+          REVALIDATE_SECRET: ${{ secrets.REVALIDATE_SECRET }}
+        run: |
+          python3 - <<'PY'
+          import urllib.request,urllib.error,os,json,time,datetime
+          base='https://manualdecocina.com'
+          def marker():
+              url=base+'/.well-known/manualdecocina-cache-close-20261025.txt?probe='+str(time.time_ns())
+              try:
+                  with urllib.request.urlopen(urllib.request.Request(url,headers={'Cache-Control':'no-cache'}),timeout=25) as r:return r.status==200 and r.read().decode()=='manualdecocina-cache-close-20261025-v1\n'
+              except urllib.error.HTTPError:return False
+          found=False
+          for attempt in range(12):
+              if marker():found=True;break
+              print('Deployment marker not present; attempt',attempt+1,flush=True)
+              if attempt<11:time.sleep(15)
+          secret=(os.environ.get('REVALIDATE_SECRET') or '').rstrip('\r\n')
+          if not secret:raise SystemExit('Missing cache secret')
+          req=urllib.request.Request(base+'/api/revalidate?close='+str(time.time_ns()),data=b'{}',headers={'x-revalidate-secret':secret,'Content-Type':'application/json','Cache-Control':'no-cache'})
+          with urllib.request.urlopen(req,timeout=35) as r:info=json.load(r)
+          print('CACHE_CLOSE_JSON '+json.dumps({'checked_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'deployment_marker':found,'cache_mode':info.get('cacheMode'),'revalidated':info.get('revalidated'),'at':info.get('at')},ensure_ascii=False))
+          if not found or info.get('cacheMode')!='expire-now' or info.get('revalidated') is not True:raise SystemExit('Hosting has not confirmed the current application deployment')
+          PY
