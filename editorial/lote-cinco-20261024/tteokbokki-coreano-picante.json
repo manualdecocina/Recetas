@@ -3,7 +3,7 @@
   "key": "tteokbokki",
   "date": "2026-10-24",
   "target": "https://manualdecocina.com",
-  "state": "complete_seven_languages",
+  "state": "published_seven_languages",
   "languages": [
     "es",
     "de",
@@ -55,8 +55,8 @@
           "calories": 222.22222222222223,
           "protein_g": 5.555555555555555,
           "carbs_g": 44.44444444444444,
-          "fat_g": 0.0,
-          "saturated_fat_g": 0.0,
+          "fat_g": 0,
+          "saturated_fat_g": 0,
           "fiber_g": 5.555555555555555,
           "sugar_g": 27.77777777777778,
           "sodium_mg": 2666.666666666667
@@ -74,9 +74,9 @@
           "carbs_g": 4.93,
           "sugar_g": 0.4,
           "protein_g": 8.14,
-          "sodium_mg": 5490.0,
+          "sodium_mg": 5490,
           "saturated_fat_g": 0.073,
-          "calories": 53.0,
+          "calories": 53,
           "fiber_g": 0.8
         },
         "grams": 15,
@@ -87,14 +87,14 @@
         "fdc_id": 169655,
         "source_url": "https://fdc.nal.usda.gov/food-details/169655/nutrients",
         "per_100g": {
-          "protein_g": 0.0,
-          "sodium_mg": 1.0,
-          "fat_g": 0.0,
+          "protein_g": 0,
+          "sodium_mg": 1,
+          "fat_g": 0,
           "calories": 387,
-          "saturated_fat_g": 0.0,
+          "saturated_fat_g": 0,
           "sugar_g": 99.8,
           "carbs_g": 100,
-          "fiber_g": 0.0
+          "fiber_g": 0
         },
         "grams": 15,
         "ingredient": "azúcar"
@@ -106,10 +106,10 @@
         "per_100g": {
           "carbs_g": 33.1,
           "calories": 149,
-          "sugar_g": 1.0,
+          "sugar_g": 1,
           "saturated_fat_g": 0.089,
           "fiber_g": 2.1,
-          "sodium_mg": 17.0,
+          "sodium_mg": 17,
           "protein_g": 6.36,
           "fat_g": 0.5
         },
@@ -122,11 +122,11 @@
         "source_url": "https://fdc.nal.usda.gov/food-details/170005/nutrients",
         "per_100g": {
           "sugar_g": 2.33,
-          "calories": 32.0,
+          "calories": 32,
           "fat_g": 0.19,
           "protein_g": 1.83,
           "fiber_g": 2.6,
-          "sodium_mg": 16.0,
+          "sodium_mg": 16,
           "saturated_fat_g": 0.032,
           "carbs_g": 7.34
         },
@@ -141,7 +141,7 @@
           "sugar_g": 0.3,
           "protein_g": 17.7,
           "fiber_g": 11.8,
-          "sodium_mg": 11.0,
+          "sodium_mg": 11,
           "saturated_fat_g": 6.96,
           "fat_g": 49.7,
           "carbs_g": 23.4,
@@ -315,27 +315,27 @@
         "note": "Estimación de la formulación; cambia según marcas, porción real y pérdidas de cocción. No es un análisis de laboratorio."
       },
       "seo": {
+        "faq": [
+          {
+            "a": "No. Necesitas tteok cilíndricos y compactos para cocinar, hechos de masa de arroz; las tortitas crujientes se deshacen.",
+            "q": "¿Puedo usar tortitas de arroz inflado?"
+          },
+          {
+            "a": "Depende del gochujang. Elige uno suave si lo necesitas; reducir la cantidad cambia la formulación y la intensidad de la salsa.",
+            "q": "¿Es muy picante?"
+          },
+          {
+            "a": "El producto puede necesitar más hidratación o cocción. Sigue el envase y añade un poco de agua para prolongar el hervor sin secar la salsa.",
+            "q": "¿Por qué queda un centro duro?"
+          }
+        ],
         "title": "Tteokbokki coreano: pastelitos de arroz en salsa picante | Manual de Cocina",
-        "description": "Pastelitos de arroz coreanos, suaves y elásticos, cocidos en una salsa de gochujang dulce y picante. Versión casera sencilla con agua, cebolleta y sésamo, lista en unos 35 minutos.",
         "image_alt": "Tteokbokki coreano: pastelitos de arroz en salsa picante",
+        "description": "Tteokbokki coreano con salsa dulce y picante de gochujang, cebolleta y sésamo. Pastelitos de arroz suaves, listos en unos 35 minutos.",
         "image_variants": [
           "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/portada-1x1.webp",
           "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/portada-4x3.webp",
           "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/portada-16x9.webp"
-        ],
-        "faq": [
-          {
-            "q": "¿Puedo usar tortitas de arroz inflado?",
-            "a": "No. Necesitas tteok cilíndricos y compactos para cocinar, hechos de masa de arroz; las tortitas crujientes se deshacen."
-          },
-          {
-            "q": "¿Es muy picante?",
-            "a": "Depende del gochujang. Elige uno suave si lo necesitas; reducir la cantidad cambia la formulación y la intensidad de la salsa."
-          },
-          {
-            "q": "¿Por qué queda un centro duro?",
-            "a": "El producto puede necesitar más hidratación o cocción. Sigue el envase y añade un poco de agua para prolongar el hervor sin secar la salsa."
-          }
         ],
         "rest_time_minutes": 10
       },
@@ -813,27 +813,27 @@
         "note": "Estimation selon la formulation ; les marques, les portions réelles et les pertes de cuisson modifient les valeurs. Pas une analyse de laboratoire."
       },
       "seo": {
+        "faq": [
+          {
+            "a": "Non. Il faut des cylindres compacts de pâte de riz à cuire ; les galettes croustillantes se défont.",
+            "q": "Peut-on utiliser des galettes de riz soufflé ?"
+          },
+          {
+            "a": "Cela dépend du gochujang. Choisissez une version douce si nécessaire ; en diminuer la quantité change la formulation et l’intensité de la sauce.",
+            "q": "Est-ce très piquant ?"
+          },
+          {
+            "a": "Le produit peut demander plus de trempage ou de cuisson. Suivez l’emballage et ajoutez un peu d’eau pour prolonger le frémissement sans dessécher la sauce.",
+            "q": "Pourquoi le cœur reste-t-il dur ?"
+          }
+        ],
         "title": "Tteokbokki coréen : gâteaux de riz en sauce piquante | Manual de Cocina",
-        "description": "Des gâteaux de riz coréens tendres et élastiques dans une sauce au gochujang douce et piquante. Une version maison à l’eau, à la cébette et au sésame, prête en environ 35 minutes.",
         "image_alt": "Tteokbokki coréen : gâteaux de riz en sauce piquante",
+        "description": "Tteokbokki coréen en sauce douce et piquante au gochujang, à la cébette et au sésame. Une version maison prête en environ 35 minutes.",
         "image_variants": [
           "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/portada-1x1.webp",
           "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/portada-4x3.webp",
           "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/portada-16x9.webp"
-        ],
-        "faq": [
-          {
-            "q": "Peut-on utiliser des galettes de riz soufflé ?",
-            "a": "Non. Il faut des cylindres compacts de pâte de riz à cuire ; les galettes croustillantes se défont."
-          },
-          {
-            "q": "Est-ce très piquant ?",
-            "a": "Cela dépend du gochujang. Choisissez une version douce si nécessaire ; en diminuer la quantité change la formulation et l’intensité de la sauce."
-          },
-          {
-            "q": "Pourquoi le cœur reste-t-il dur ?",
-            "a": "Le produit peut demander plus de trempage ou de cuisson. Suivez l’emballage et ajoutez un peu d’eau pour prolonger le frémissement sans dessécher la sauce."
-          }
         ],
         "rest_time_minutes": 10
       },
@@ -979,27 +979,27 @@
         "note": "Stima della formulazione: marche, porzioni reali e perdite di cottura cambiano i valori. Non è un’analisi di laboratorio."
       },
       "seo": {
+        "faq": [
+          {
+            "a": "No. Servono cilindretti compatti di impasto di riso da cuocere; le gallette croccanti si sfaldano.",
+            "q": "Posso usare gallette di riso soffiato?"
+          },
+          {
+            "a": "Dipende dal gochujang. Scegline uno delicato se necessario; ridurne la quantità cambia la formulazione e l’intensità della salsa.",
+            "q": "Quanto sono piccanti?"
+          },
+          {
+            "a": "Il prodotto può richiedere più ammollo o cottura. Segui la confezione e aggiungi poca acqua per prolungare il bollore senza asciugare la salsa.",
+            "q": "Perché resta un centro duro?"
+          }
+        ],
         "title": "Tteokbokki coreani: gnocchi di riso in salsa piccante | Manual de Cocina",
-        "description": "Cilindretti di riso coreani morbidi ed elastici, cotti in salsa dolce e piccante al gochujang. Una versione casalinga con acqua, cipollotto e sesamo, pronta in circa 35 minuti.",
         "image_alt": "Tteokbokki coreani: gnocchi di riso in salsa piccante",
+        "description": "Tteokbokki coreani in salsa dolce e piccante al gochujang, con cipollotto e sesamo. Gnocchi di riso morbidi, pronti in circa 35 minuti.",
         "image_variants": [
           "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/portada-1x1.webp",
           "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/portada-4x3.webp",
           "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/portada-16x9.webp"
-        ],
-        "faq": [
-          {
-            "q": "Posso usare gallette di riso soffiato?",
-            "a": "No. Servono cilindretti compatti di impasto di riso da cuocere; le gallette croccanti si sfaldano."
-          },
-          {
-            "q": "Quanto sono piccanti?",
-            "a": "Dipende dal gochujang. Scegline uno delicato se necessario; ridurne la quantità cambia la formulazione e l’intensità della salsa."
-          },
-          {
-            "q": "Perché resta un centro duro?",
-            "a": "Il prodotto può richiedere più ammollo o cottura. Segui la confezione e aggiungi poca acqua per prolungare il bollore senza asciugare la salsa."
-          }
         ],
         "rest_time_minutes": 10
       },

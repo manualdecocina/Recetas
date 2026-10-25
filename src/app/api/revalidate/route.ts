@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { revalidateTag } from 'next/cache'
+import { revalidatePath, revalidateTag } from 'next/cache'
 import { RECIPES_CACHE_TAG } from '@/lib/cache'
 
 // Nunca cachear esta ruta: la CDN de Hostinger devolvía una respuesta GET guardada y
@@ -42,6 +42,8 @@ function handleRevalidate(request: NextRequest) {
   }
 
   revalidateTag(RECIPES_CACHE_TAG, 'max')
+  // Also expire rendered pages, including home/catalogue and historical recipe routes.
+  revalidatePath('/', 'layout')
   return NextResponse.json({ revalidated: true, tag: RECIPES_CACHE_TAG, at: new Date().toISOString() }, { headers: NO_STORE })
 }
 

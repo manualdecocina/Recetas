@@ -1,0 +1,74 @@
+name: auditoria-completa-20261025
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/auditoria-completa-20261025.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            scripts
+            editorial
+            .github
+      - name: Refresh and warm current production content
+        env:
+          REVALIDATE_SECRET: ${{ secrets.REVALIDATE_SECRET }}
+        run: |
+          python3 - <<'PY'
+          import json,os,pathlib,urllib.request,concurrent.futures,time
+          secret=(os.environ.get('REVALIDATE_SECRET') or '').rstrip('\r\n')
+          if not secret:raise SystemExit('Missing cache secret')
+          req=urllib.request.Request('https://manualdecocina.com/api/revalidate',data=b'{}',headers={'x-revalidate-secret':secret,'Content-Type':'application/json'})
+          with urllib.request.urlopen(req,timeout=40) as r:assert json.load(r).get('revalidated') is True
+          urls=set(['/sitemap.xml'])
+          for lang in ['es','de','en','fr','it','ja','pt']:urls.update(['/'+lang,'/'+lang+'/recetas'])
+          D=pathlib.Path('editorial/lote-cinco-20261024')
+          urls.update(x['public_path'] for x in json.load(open(D/'seo-snippet-patches.json')))
+          for p in D.glob('*.json'):
+              b=json.loads(p.read_text())
+              if isinstance(b,dict) and b.get('records'):urls.update(x['public_path'] for x in b['records'])
+          def warm(u):
+              with urllib.request.urlopen(urllib.request.Request('https://manualdecocina.com'+u,headers={'Cache-Control':'no-cache'}),timeout=45) as r:r.read()
+          with concurrent.futures.ThreadPoolExecutor(max_workers=8) as ex:list(ex.map(warm,sorted(urls)))
+          time.sleep(10)
+          print('Warm requests complete')
+          PY
+      - name: Verify five publications
+        continue-on-error: true
+        run: python3 scripts/audit-cinco-recetas-20261024.py
+      - name: Verify 150 adjusted snippets
+        continue-on-error: true
+        run: python3 scripts/audit-seo-snippets-20261025.py
+      - name: Audit all production sitemap pages
+        continue-on-error: true
+        env:
+          EXPECTED_ES_RECIPES: '205'
+        run: python3 scripts/audit-site-full-20261025.py
+      - name: Summarize verification results
+        if: always()
+        run: |
+          python3 - <<'PY'
+          import json,pathlib
+          p=pathlib.Path('cinco-recetas-20261024-production-qa.json')
+          if p.exists():
+              j=json.loads(p.read_text());print('PUBLICATION_SUMMARY_JSON '+json.dumps({k:v for k,v in j.items() if k not in ['media','pages','internal_links']}))
+          p=pathlib.Path('site-full-20261025-audit.json')
+          if p.exists():
+              j=json.loads(p.read_text());print('AUDIT_SUMMARY_JSON '+json.dumps(j['summary']));print('AUDIT_ERRORS_JSON '+json.dumps(j['errors'],ensure_ascii=False))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: auditoria-completa-20261025
+          path: |
+            cinco-recetas-20261024-production-qa.json
+            seo-snippet-readback.json
+            site-full-20261025-audit.json
