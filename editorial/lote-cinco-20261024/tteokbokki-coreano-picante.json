@@ -1,0 +1,1347 @@
+{
+  "slug": "tteokbokki-coreano-picante",
+  "key": "tteokbokki",
+  "date": "2026-10-24",
+  "target": "https://manualdecocina.com",
+  "state": "complete_seven_languages",
+  "languages": [
+    "es",
+    "de",
+    "en",
+    "fr",
+    "it",
+    "ja",
+    "pt"
+  ],
+  "category_slug": "entrantes-y-aperitivos",
+  "steps_es_sha256": "fd27274face339a0ea671160c11cfbb251bbe813112c213d01cb92f8c96e3025",
+  "physical_kitchen_test": false,
+  "nutrition_calculation": {
+    "foods": [
+      {
+        "description": "Plain refrigerated rice cake sticks, GUNG JEON BANG retailer-declared label",
+        "source_url": "https://www.okashigroup.com/catalog/gung-jeon-bang-rice-cake-sticks-tteokbokki-500g",
+        "per_100g": {
+          "calories": 230,
+          "protein_g": 4,
+          "carbs_g": 49,
+          "fat_g": 2,
+          "sodium_mg": 160
+        },
+        "assumptions": "Direct product information from retailer; salt0.4g /2.5*1000=160mg sodium. Fibre, saturated fat and sugars not declared, omitted rather than treated as zero. Reference product, not a brand requirement.",
+        "grams": 400,
+        "ingredient": "pastelitos de arroz tteok cilíndricos, refrigerados y sin salsa"
+      },
+      {
+        "description": "Water",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "per_100g": {
+          "calories": 0,
+          "protein_g": 0,
+          "carbs_g": 0,
+          "fat_g": 0,
+          "saturated_fat_g": 0,
+          "fiber_g": 0,
+          "sugar_g": 0,
+          "sodium_mg": 0
+        },
+        "grams": 500,
+        "ingredient": "agua para la salsa, más agua adicional para remojar"
+      },
+      {
+        "description": "Sempio Gochujang Classic manufacturer reference label,18g serving",
+        "source_url": "https://en.sempio.com/product/jangpaste/view/622",
+        "per_100g": {
+          "calories": 222.22222222222223,
+          "protein_g": 5.555555555555555,
+          "carbs_g": 44.44444444444444,
+          "fat_g": 0.0,
+          "saturated_fat_g": 0.0,
+          "fiber_g": 5.555555555555555,
+          "sugar_g": 27.77777777777778,
+          "sodium_mg": 2666.666666666667
+        },
+        "assumptions": "Label per18g scaled to100g; actual brands and spice intensity vary.",
+        "grams": 50,
+        "ingredient": "gochujang, pasta coreana de chile"
+      },
+      {
+        "description": "Soy sauce made from soy and wheat (shoyu)",
+        "fdc_id": 174277,
+        "source_url": "https://fdc.nal.usda.gov/food-details/174277/nutrients",
+        "per_100g": {
+          "fat_g": 0.57,
+          "carbs_g": 4.93,
+          "sugar_g": 0.4,
+          "protein_g": 8.14,
+          "sodium_mg": 5490.0,
+          "saturated_fat_g": 0.073,
+          "calories": 53.0,
+          "fiber_g": 0.8
+        },
+        "grams": 15,
+        "ingredient": "salsa de soja"
+      },
+      {
+        "description": "Sugars, granulated",
+        "fdc_id": 169655,
+        "source_url": "https://fdc.nal.usda.gov/food-details/169655/nutrients",
+        "per_100g": {
+          "protein_g": 0.0,
+          "sodium_mg": 1.0,
+          "fat_g": 0.0,
+          "calories": 387,
+          "saturated_fat_g": 0.0,
+          "sugar_g": 99.8,
+          "carbs_g": 100,
+          "fiber_g": 0.0
+        },
+        "grams": 15,
+        "ingredient": "azúcar"
+      },
+      {
+        "description": "Garlic, raw",
+        "fdc_id": 169230,
+        "source_url": "https://fdc.nal.usda.gov/food-details/169230/nutrients",
+        "per_100g": {
+          "carbs_g": 33.1,
+          "calories": 149,
+          "sugar_g": 1.0,
+          "saturated_fat_g": 0.089,
+          "fiber_g": 2.1,
+          "sodium_mg": 17.0,
+          "protein_g": 6.36,
+          "fat_g": 0.5
+        },
+        "grams": 5,
+        "ingredient": "ajo rallado"
+      },
+      {
+        "description": "Onions, spring or scallions (includes tops and bulb), raw",
+        "fdc_id": 170005,
+        "source_url": "https://fdc.nal.usda.gov/food-details/170005/nutrients",
+        "per_100g": {
+          "sugar_g": 2.33,
+          "calories": 32.0,
+          "fat_g": 0.19,
+          "protein_g": 1.83,
+          "fiber_g": 2.6,
+          "sodium_mg": 16.0,
+          "saturated_fat_g": 0.032,
+          "carbs_g": 7.34
+        },
+        "grams": 30,
+        "ingredient": "cebolleta"
+      },
+      {
+        "description": "Seeds, sesame seeds, whole, dried",
+        "fdc_id": 170150,
+        "source_url": "https://fdc.nal.usda.gov/food-details/170150/nutrients",
+        "per_100g": {
+          "sugar_g": 0.3,
+          "protein_g": 17.7,
+          "fiber_g": 11.8,
+          "sodium_mg": 11.0,
+          "saturated_fat_g": 6.96,
+          "fat_g": 49.7,
+          "carbs_g": 23.4,
+          "calories": 573
+        },
+        "grams": 3,
+        "ingredient": "semillas de sésamo"
+      }
+    ],
+    "servings": 4,
+    "result": {
+      "calories": 283,
+      "protein_g": 5.3,
+      "carbs_g": 59.6,
+      "fat_g": 2.4,
+      "sodium_mg": 700.7
+    },
+    "assumptions": [
+      "Generic USDA ingredient composition; flour strength and brands vary.",
+      "All ingredient inputs counted, cooking/draining losses not subtracted.",
+      "Millilitres of milk and water treated as equal grams for approximate calculation."
+    ]
+  },
+  "pantry_slugs": [
+    null,
+    "agua",
+    null,
+    "salsa-de-soja",
+    "azucar",
+    "ajo",
+    "cebolleta",
+    "semillas-de-sesamo"
+  ],
+  "sources": [
+    "https://www.maangchi.com/recipe/tteokbokki"
+  ],
+  "records": [
+    {
+      "language": "es",
+      "slug": "tteokbokki-coreano-picante",
+      "public_path": "/tteokbokki-coreano-picante",
+      "title": "Tteokbokki coreano: pastelitos de arroz en salsa picante",
+      "excerpt": "Pastelitos de arroz coreanos, suaves y elásticos, cocidos en una salsa de gochujang dulce y picante. Versión casera sencilla con agua, cebolleta y sésamo, lista en unos 35 minutos.",
+      "summary": "Pastelitos de arroz coreanos, suaves y elásticos, cocidos en una salsa de gochujang dulce y picante. Versión casera sencilla con agua, cebolleta y sésamo, lista en unos 35 minutos.",
+      "notes": "<p>Compra tteok cilíndricos para tteokbokki sin salsa incluida; no son las tortitas de arroz inflado. Esta versión usa agua como base, sin caldo de anchoas ni pasteles de pescado. Parte de producto refrigerado: si está congelado, descongélalo según el envase antes de empezar; ese tiempo no está incluido. El remojo de 10 minutos forma parte del tiempo total. Sigue las instrucciones de cocción del fabricante y comprueba que el centro quede tierno. El picante varía con el gochujang. Contiene soja y sésamo; el gochujang y la salsa de soja suelen contener trigo. Refrigera las sobras a 4 °C o menos dentro de 2 horas y consúmelas en 2 días, recalentadas con un poco de agua.</p><h2>También puedes preparar</h2><ul><li><a href=\"/bulgogi-carne-marinada-coreana\">Bulgogi, carne marinada coreana</a></li><li><a href=\"/receta-de-hummus\">Hummus casero con tahini y limón</a></li></ul>",
+      "content_html": "<p>Pastelitos de arroz coreanos, suaves y elásticos, cocidos en una salsa de gochujang dulce y picante. Versión casera sencilla con agua, cebolleta y sésamo, lista en unos 35 minutos.</p><p>Compra tteok cilíndricos para tteokbokki sin salsa incluida; no son las tortitas de arroz inflado. Esta versión usa agua como base, sin caldo de anchoas ni pasteles de pescado. Parte de producto refrigerado: si está congelado, descongélalo según el envase antes de empezar; ese tiempo no está incluido. El remojo de 10 minutos forma parte del tiempo total. Sigue las instrucciones de cocción del fabricante y comprueba que el centro quede tierno. El picante varía con el gochujang. Contiene soja y sésamo; el gochujang y la salsa de soja suelen contener trigo. Refrigera las sobras a 4 °C o menos dentro de 2 horas y consúmelas en 2 días, recalentadas con un poco de agua.</p><h2>También puedes preparar</h2><ul><li><a href=\"/bulgogi-carne-marinada-coreana\">Bulgogi, carne marinada coreana</a></li><li><a href=\"/receta-de-hummus\">Hummus casero con tahini y limón</a></li></ul>",
+      "ingredients": [
+        {
+          "name": "pastelitos de arroz tteok cilíndricos, refrigerados y sin salsa",
+          "amount": "400",
+          "unit": "g"
+        },
+        {
+          "name": "agua para la salsa, más agua adicional para remojar",
+          "amount": "500",
+          "unit": "ml"
+        },
+        {
+          "name": "gochujang, pasta coreana de chile",
+          "amount": "50",
+          "unit": "g"
+        },
+        {
+          "name": "salsa de soja",
+          "amount": "15",
+          "unit": "g"
+        },
+        {
+          "name": "azúcar",
+          "amount": "15",
+          "unit": "g"
+        },
+        {
+          "name": "ajo rallado",
+          "amount": "5",
+          "unit": "g"
+        },
+        {
+          "name": "cebolleta",
+          "amount": "30",
+          "unit": "g"
+        },
+        {
+          "name": "semillas de sésamo",
+          "amount": "3",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Remoja los pastelitos",
+          "content": "Enjuaga 400 g de tteok refrigerados y sepáralos suavemente. Cúbrelos con agua tibia adicional y deja remojar 10 minutos mientras preparas el resto. Si el envase indica otro tratamiento, sigue sus instrucciones.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/paso-01.webp",
+          "image_alt": "Tteokbokki coreano: pastelitos de arroz en salsa picante: Remoja los pastelitos"
+        },
+        {
+          "title": "Pica los aromáticos",
+          "content": "Pica 30 g de cebolleta y separa la parte blanca de la verde. Ralla 5 g de ajo. Reserva la parte verde para el acabado.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/paso-02.webp",
+          "image_alt": "Tteokbokki coreano: pastelitos de arroz en salsa picante: Pica los aromáticos"
+        },
+        {
+          "title": "Disuelve el gochujang",
+          "content": "Mezcla 50 g de gochujang, 15 g de salsa de soja y 15 g de azúcar con 100 ml de los 500 ml de agua para la salsa, hasta que no queden grumos grandes.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/paso-03.webp",
+          "image_alt": "Tteokbokki coreano: pastelitos de arroz en salsa picante: Disuelve el gochujang"
+        },
+        {
+          "title": "Calienta la base",
+          "content": "Pon los 400 ml de agua restantes en una sartén honda de unos 28 cm. Añade la mezcla de gochujang, el ajo y la parte blanca de la cebolleta. Lleva a un hervor suave.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/paso-04.webp",
+          "image_alt": "Tteokbokki coreano: pastelitos de arroz en salsa picante: Calienta la base"
+        },
+        {
+          "title": "Cuece los tteok",
+          "content": "Escurre los pastelitos remojados y añádelos a la salsa. Cocina a hervor suave 8–12 minutos, removiendo con una espátula para que no se peguen, hasta que estén tiernos y elásticos. Respeta también el tiempo del envase.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/paso-05.webp",
+          "image_alt": "Tteokbokki coreano: pastelitos de arroz en salsa picante: Cuece los tteok"
+        },
+        {
+          "title": "Espesa la salsa",
+          "content": "Cocina 2–3 minutos más, removiendo, hasta que la salsa cubra los tteok y siga fluyendo. Si espesa demasiado antes de que estén tiernos, añade agua adicional de cucharada en cucharada.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/paso-06.webp",
+          "image_alt": "Tteokbokki coreano: pastelitos de arroz en salsa picante: Espesa la salsa"
+        },
+        {
+          "title": "Comprueba la textura",
+          "content": "Abre un pastelito con una cuchara: el centro debe estar tierno, sin un núcleo duro. Apaga el fuego cuando estén cocidos y la salsa brillante; no sigas reduciendo hasta secarlos.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/paso-07.webp",
+          "image_alt": "Tteokbokki coreano: pastelitos de arroz en salsa picante: Comprueba la textura"
+        },
+        {
+          "title": "Termina y sirve",
+          "content": "Reparte en 4 cuencos y termina con la parte verde de la cebolleta y 3 g de sésamo. Sirve caliente, con la salsa todavía fluida; al enfriarse, los pastelitos se endurecen.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/paso-08.webp",
+          "image_alt": "Tteokbokki coreano: pastelitos de arroz en salsa picante: Termina y sirve"
+        }
+      ],
+      "category": "Entrantes y aperitivos",
+      "course": "Entrantes y aperitivos",
+      "cuisine": "Coreana",
+      "difficulty": "Fácil",
+      "prep_time_minutes": 10,
+      "cook_time_minutes": 15,
+      "total_time_minutes": 35,
+      "servings": 4,
+      "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/portada.webp",
+      "gallery": [
+        {
+          "url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/portada.webp",
+          "alt": "Tteokbokki coreano: pastelitos de arroz en salsa picante"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "Tteokbokki coreano: pastelitos de arroz en salsa picante",
+        "pastelitos de arroz tteok cilíndricos, refrigerados y sin salsa",
+        "agua para la salsa, más agua adicional para remojar"
+      ],
+      "nutrition": {
+        "calories": 283,
+        "protein_g": 5.3,
+        "carbs_g": 59.6,
+        "fat_g": 2.4,
+        "sodium_mg": 700.7,
+        "estimated": true,
+        "serving_size": "1 de los 4 cuencos",
+        "source": "USDA FoodData Central SR Legacy + documented reference labels",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Suma de nutrientes por 100 g × peso de cada ingrediente / 100, dividida por las porciones.",
+        "note": "Estimación de la formulación; cambia según marcas, porción real y pérdidas de cocción. No es un análisis de laboratorio."
+      },
+      "seo": {
+        "title": "Tteokbokki coreano: pastelitos de arroz en salsa picante | Manual de Cocina",
+        "description": "Pastelitos de arroz coreanos, suaves y elásticos, cocidos en una salsa de gochujang dulce y picante. Versión casera sencilla con agua, cebolleta y sésamo, lista en unos 35 minutos.",
+        "image_alt": "Tteokbokki coreano: pastelitos de arroz en salsa picante",
+        "image_variants": [
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/portada-1x1.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/portada-4x3.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "¿Puedo usar tortitas de arroz inflado?",
+            "a": "No. Necesitas tteok cilíndricos y compactos para cocinar, hechos de masa de arroz; las tortitas crujientes se deshacen."
+          },
+          {
+            "q": "¿Es muy picante?",
+            "a": "Depende del gochujang. Elige uno suave si lo necesitas; reducir la cantidad cambia la formulación y la intensidad de la salsa."
+          },
+          {
+            "q": "¿Por qué queda un centro duro?",
+            "a": "El producto puede necesitar más hidratación o cocción. Sigue el envase y añade un poco de agua para prolongar el hervor sin secar la salsa."
+          }
+        ],
+        "rest_time_minutes": 10
+      },
+      "published": true,
+      "editorial_status": "published",
+      "source_url": null,
+      "source_post_id": null,
+      "recipe_group_id": "8c522e34-5b85-4e43-9a9f-76f062ce9f04"
+    },
+    {
+      "language": "de",
+      "slug": "scharfe-koreanische-tteokbokki",
+      "public_path": "/de/scharfe-koreanische-tteokbokki",
+      "title": "Scharfe koreanische Tteokbokki mit Gochujang-Sauce",
+      "excerpt": "Weiche, elastische koreanische Reiskuchen in süß-scharfer Gochujang-Sauce. Ein einfaches Hausrezept mit Wasser, Frühlingszwiebeln und Sesam, fertig in etwa 35 Minuten.",
+      "summary": "Weiche, elastische koreanische Reiskuchen in süß-scharfer Gochujang-Sauce. Ein einfaches Hausrezept mit Wasser, Frühlingszwiebeln und Sesam, fertig in etwa 35 Minuten.",
+      "notes": "<p>Ungewürzte zylindrische Tteok für Tteokbokki ohne Sauce verwenden, keine gepufften Reiswaffeln. Diese Version verwendet Wasser statt Sardellenbrühe und Fischkuchen. Mit gekühlten Tteok beginnen; gefrorene vorher nach Packungsanweisung auftauen, die Auftauzeit ist nicht eingerechnet. 10 Minuten Einweichen sind enthalten. Garhinweise der Packung befolgen und einen weichen Kern prüfen. Die Schärfe hängt vom Gochujang ab. Enthält Soja und Sesam; Gochujang und Sojasauce enthalten oft Weizen. Reste innerhalb von 2 Stunden bei höchstens 4 °C kühlen und innerhalb von 2 Tagen mit etwas Wasser gründlich erhitzt essen.</p><h2>Dazu passen</h2><ul><li><a href=\"/de/bulgogi-koreanisches-rindfleisch\">Bulgogi mit mariniertem Rindfleisch</a></li><li><a href=\"/de/hummus-rezept\">Hummus mit Tahini und Zitrone selber machen</a></li></ul>",
+      "content_html": "<p>Weiche, elastische koreanische Reiskuchen in süß-scharfer Gochujang-Sauce. Ein einfaches Hausrezept mit Wasser, Frühlingszwiebeln und Sesam, fertig in etwa 35 Minuten.</p><p>Ungewürzte zylindrische Tteok für Tteokbokki ohne Sauce verwenden, keine gepufften Reiswaffeln. Diese Version verwendet Wasser statt Sardellenbrühe und Fischkuchen. Mit gekühlten Tteok beginnen; gefrorene vorher nach Packungsanweisung auftauen, die Auftauzeit ist nicht eingerechnet. 10 Minuten Einweichen sind enthalten. Garhinweise der Packung befolgen und einen weichen Kern prüfen. Die Schärfe hängt vom Gochujang ab. Enthält Soja und Sesam; Gochujang und Sojasauce enthalten oft Weizen. Reste innerhalb von 2 Stunden bei höchstens 4 °C kühlen und innerhalb von 2 Tagen mit etwas Wasser gründlich erhitzt essen.</p><h2>Dazu passen</h2><ul><li><a href=\"/de/bulgogi-koreanisches-rindfleisch\">Bulgogi mit mariniertem Rindfleisch</a></li><li><a href=\"/de/hummus-rezept\">Hummus mit Tahini und Zitrone selber machen</a></li></ul>",
+      "ingredients": [
+        {
+          "name": "gekühlte zylindrische Tteok-Reiskuchen ohne Sauce",
+          "amount": "400",
+          "unit": "g"
+        },
+        {
+          "name": "Wasser für die Sauce sowie zusätzliches Einweichwasser",
+          "amount": "500",
+          "unit": "ml"
+        },
+        {
+          "name": "Gochujang, koreanische Chilipaste",
+          "amount": "50",
+          "unit": "g"
+        },
+        {
+          "name": "Sojasauce",
+          "amount": "15",
+          "unit": "g"
+        },
+        {
+          "name": "Zucker",
+          "amount": "15",
+          "unit": "g"
+        },
+        {
+          "name": "geriebener Knoblauch",
+          "amount": "5",
+          "unit": "g"
+        },
+        {
+          "name": "Frühlingszwiebel",
+          "amount": "30",
+          "unit": "g"
+        },
+        {
+          "name": "Sesamsamen",
+          "amount": "3",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Reiskuchen einweichen",
+          "content": "400 g gekühlte Tteok abspülen und vorsichtig trennen. Mit zusätzlichem lauwarmem Wasser bedecken und während der Vorbereitung 10 Minuten einweichen. Abweichende Packungsangaben beachten.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/paso-01.webp",
+          "image_alt": "Scharfe koreanische Tteokbokki mit Gochujang-Sauce: Reiskuchen einweichen"
+        },
+        {
+          "title": "Aromaten schneiden",
+          "content": "30 g Frühlingszwiebel hacken und weiße und grüne Teile trennen. 5 g Knoblauch reiben. Das Grün für den Abschluss zurücklegen.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/paso-02.webp",
+          "image_alt": "Scharfe koreanische Tteokbokki mit Gochujang-Sauce: Aromaten schneiden"
+        },
+        {
+          "title": "Gochujang auflösen",
+          "content": "50 g Gochujang, 15 g Sojasauce und 15 g Zucker mit 100 ml der insgesamt 500 ml Saucenwasser verrühren, bis keine großen Klumpen bleiben.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/paso-03.webp",
+          "image_alt": "Scharfe koreanische Tteokbokki mit Gochujang-Sauce: Gochujang auflösen"
+        },
+        {
+          "title": "Saucenbasis erhitzen",
+          "content": "Die übrigen 400 ml Wasser in eine tiefe, etwa 28 cm breite Pfanne geben. Gochujang-Mischung, Knoblauch und weiße Frühlingszwiebel zugeben und sanft aufkochen.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/paso-04.webp",
+          "image_alt": "Scharfe koreanische Tteokbokki mit Gochujang-Sauce: Saucenbasis erhitzen"
+        },
+        {
+          "title": "Tteok garen",
+          "content": "Die eingeweichten Reiskuchen abgießen und in die Sauce geben. Unter Rühren mit einem Pfannenwender 8–12 Minuten sanft köcheln, bis sie weich und elastisch sind. Auch die Garzeit auf der Packung beachten.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/paso-05.webp",
+          "image_alt": "Scharfe koreanische Tteokbokki mit Gochujang-Sauce: Tteok garen"
+        },
+        {
+          "title": "Sauce eindicken",
+          "content": "Weitere 2–3 Minuten rührend garen, bis die Sauce an den Tteok haftet, aber noch fließt. Wird sie vorzeitig dick, zusätzliches Wasser esslöffelweise zugeben.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/paso-06.webp",
+          "image_alt": "Scharfe koreanische Tteokbokki mit Gochujang-Sauce: Sauce eindicken"
+        },
+        {
+          "title": "Konsistenz prüfen",
+          "content": "Einen Reiskuchen mit einem Löffel öffnen: die Mitte soll weich sein, ohne harten Kern. Sobald alles gar und glänzend ist, den Herd ausschalten; nicht trocken einkochen.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/paso-07.webp",
+          "image_alt": "Scharfe koreanische Tteokbokki mit Gochujang-Sauce: Konsistenz prüfen"
+        },
+        {
+          "title": "Anrichten und servieren",
+          "content": "Auf 4 Schalen verteilen und mit dem Frühlingszwiebelgrün und 3 g Sesam bestreuen. Heiß mit noch fließender Sauce servieren; beim Abkühlen werden die Reiskuchen fester.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/paso-08.webp",
+          "image_alt": "Scharfe koreanische Tteokbokki mit Gochujang-Sauce: Anrichten und servieren"
+        }
+      ],
+      "category": "Vorspeisen",
+      "course": "Vorspeisen",
+      "cuisine": "Koreanisch",
+      "difficulty": "Einfach",
+      "prep_time_minutes": 10,
+      "cook_time_minutes": 15,
+      "total_time_minutes": 35,
+      "servings": 4,
+      "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/portada.webp",
+      "gallery": [
+        {
+          "url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/portada.webp",
+          "alt": "Scharfe koreanische Tteokbokki mit Gochujang-Sauce"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "Scharfe koreanische Tteokbokki mit Gochujang-Sauce",
+        "gekühlte zylindrische Tteok-Reiskuchen ohne Sauce",
+        "Wasser für die Sauce sowie zusätzliches Einweichwasser"
+      ],
+      "nutrition": {
+        "calories": 283,
+        "protein_g": 5.3,
+        "carbs_g": 59.6,
+        "fat_g": 2.4,
+        "sodium_mg": 700.7,
+        "estimated": true,
+        "serving_size": "1 von 4 Schalen",
+        "source": "USDA FoodData Central SR Legacy + documented reference labels",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Summe der Nährwerte je 100 g × Zutatengewicht / 100, geteilt durch die Portionenzahl.",
+        "note": "Schätzung aus der Rezeptur; Marke, tatsächliche Portion und Garverluste verändern die Werte. Keine Laboranalyse."
+      },
+      "seo": {
+        "title": "Scharfe koreanische Tteokbokki mit Gochujang-Sauce | Manual de Cocina",
+        "description": "Weiche, elastische koreanische Reiskuchen in süß-scharfer Gochujang-Sauce. Ein einfaches Hausrezept mit Wasser, Frühlingszwiebeln und Sesam, fertig in etwa 35 Minuten.",
+        "image_alt": "Scharfe koreanische Tteokbokki mit Gochujang-Sauce",
+        "image_variants": [
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/portada-1x1.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/portada-4x3.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Kann ich gepuffte Reiswaffeln nehmen?",
+            "a": "Nein. Erforderlich sind kompakte zylindrische Reisteigstücke zum Kochen; knusprige Reiswaffeln zerfallen."
+          },
+          {
+            "q": "Wie scharf ist das Gericht?",
+            "a": "Das hängt vom Gochujang ab. Bei Bedarf eine milde Sorte wählen; weniger Paste verändert Rezeptur und Saucenintensität."
+          },
+          {
+            "q": "Warum bleibt ein harter Kern?",
+            "a": "Das Produkt braucht möglicherweise mehr Einweich- oder Garzeit. Packung beachten und etwas Wasser zugeben, um weiterzuköcheln, ohne die Sauce auszutrocknen."
+          }
+        ],
+        "rest_time_minutes": 10
+      },
+      "published": true,
+      "editorial_status": "published",
+      "source_url": null,
+      "source_post_id": null,
+      "recipe_group_id": "8c522e34-5b85-4e43-9a9f-76f062ce9f04"
+    },
+    {
+      "language": "en",
+      "slug": "spicy-korean-tteokbokki",
+      "public_path": "/en/spicy-korean-tteokbokki",
+      "title": "Spicy Korean tteokbokki with gochujang sauce",
+      "excerpt": "Soft, chewy Korean rice cakes simmered in a sweet-spicy gochujang sauce. A simple home version with water, spring onion and sesame, ready in about 35 minutes.",
+      "summary": "Soft, chewy Korean rice cakes simmered in a sweet-spicy gochujang sauce. A simple home version with water, spring onion and sesame, ready in about 35 minutes.",
+      "notes": "<p>Use plain cylindrical tteokbokki rice cakes without sauce, not puffed rice crackers. This version uses water rather than anchovy stock or fish cakes. Start with refrigerated rice cakes; thaw frozen ones according to the pack before starting, as thawing is not included. The 10-minute soak is included. Follow pack cooking directions and check the centre is tender. Heat varies by gochujang. Contains soy and sesame; gochujang and soy sauce often contain wheat. Refrigerate leftovers at 4 °C or below within 2 hours; eat within 2 days, reheated with a little water.</p><h2>You may also like</h2><ul><li><a href=\"/en/bulgogi-korean-marinated-beef\">Bulgogi (Korean Marinated Beef)</a></li><li><a href=\"/en/hummus-recipe\">Homemade hummus with tahini and lemon</a></li></ul>",
+      "content_html": "<p>Soft, chewy Korean rice cakes simmered in a sweet-spicy gochujang sauce. A simple home version with water, spring onion and sesame, ready in about 35 minutes.</p><p>Use plain cylindrical tteokbokki rice cakes without sauce, not puffed rice crackers. This version uses water rather than anchovy stock or fish cakes. Start with refrigerated rice cakes; thaw frozen ones according to the pack before starting, as thawing is not included. The 10-minute soak is included. Follow pack cooking directions and check the centre is tender. Heat varies by gochujang. Contains soy and sesame; gochujang and soy sauce often contain wheat. Refrigerate leftovers at 4 °C or below within 2 hours; eat within 2 days, reheated with a little water.</p><h2>You may also like</h2><ul><li><a href=\"/en/bulgogi-korean-marinated-beef\">Bulgogi (Korean Marinated Beef)</a></li><li><a href=\"/en/hummus-recipe\">Homemade hummus with tahini and lemon</a></li></ul>",
+      "ingredients": [
+        {
+          "name": "plain refrigerated cylindrical tteok rice cakes",
+          "amount": "400",
+          "unit": "g"
+        },
+        {
+          "name": "water for the sauce, plus extra for soaking",
+          "amount": "500",
+          "unit": "ml"
+        },
+        {
+          "name": "gochujang Korean chilli paste",
+          "amount": "50",
+          "unit": "g"
+        },
+        {
+          "name": "soy sauce",
+          "amount": "15",
+          "unit": "g"
+        },
+        {
+          "name": "sugar",
+          "amount": "15",
+          "unit": "g"
+        },
+        {
+          "name": "grated garlic",
+          "amount": "5",
+          "unit": "g"
+        },
+        {
+          "name": "spring onion",
+          "amount": "30",
+          "unit": "g"
+        },
+        {
+          "name": "sesame seeds",
+          "amount": "3",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Soak the rice cakes",
+          "content": "Rinse 400 g refrigerated rice cakes and gently separate them. Cover with extra lukewarm water and soak for 10 minutes while preparing the rest. Follow the pack if it specifies a different treatment.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/paso-01.webp",
+          "image_alt": "Spicy Korean tteokbokki with gochujang sauce: Soak the rice cakes"
+        },
+        {
+          "title": "Chop the aromatics",
+          "content": "Chop 30 g spring onion, separating white and green parts. Grate 5 g garlic. Reserve the green parts for finishing.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/paso-02.webp",
+          "image_alt": "Spicy Korean tteokbokki with gochujang sauce: Chop the aromatics"
+        },
+        {
+          "title": "Dissolve the gochujang",
+          "content": "Mix 50 g gochujang, 15 g soy sauce and 15 g sugar with 100 ml of the 500 ml sauce water until no large lumps remain.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/paso-03.webp",
+          "image_alt": "Spicy Korean tteokbokki with gochujang sauce: Dissolve the gochujang"
+        },
+        {
+          "title": "Heat the sauce base",
+          "content": "Put the remaining 400 ml water in a deep pan about 28 cm wide. Add the gochujang mixture, garlic and white spring onion. Bring to a gentle boil.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/paso-04.webp",
+          "image_alt": "Spicy Korean tteokbokki with gochujang sauce: Heat the sauce base"
+        },
+        {
+          "title": "Cook the rice cakes",
+          "content": "Drain the soaked rice cakes and add to the sauce. Simmer for 8–12 minutes, stirring with a spatula to prevent sticking, until tender and chewy. Also follow the pack cooking time.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/paso-05.webp",
+          "image_alt": "Spicy Korean tteokbokki with gochujang sauce: Cook the rice cakes"
+        },
+        {
+          "title": "Thicken the sauce",
+          "content": "Cook for another 2–3 minutes, stirring, until the sauce coats the rice cakes but still flows. If it thickens before the cakes soften, add extra water a tablespoon at a time.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/paso-06.webp",
+          "image_alt": "Spicy Korean tteokbokki with gochujang sauce: Thicken the sauce"
+        },
+        {
+          "title": "Check the texture",
+          "content": "Cut one rice cake open with a spoon: the centre should be tender, without a hard core. Turn off the heat once cooked and glossy; do not reduce until dry.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/paso-07.webp",
+          "image_alt": "Spicy Korean tteokbokki with gochujang sauce: Check the texture"
+        },
+        {
+          "title": "Finish and serve",
+          "content": "Divide between 4 bowls and top with the green spring onion and 3 g sesame seeds. Serve hot while the sauce is fluid; rice cakes firm up as they cool.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/paso-08.webp",
+          "image_alt": "Spicy Korean tteokbokki with gochujang sauce: Finish and serve"
+        }
+      ],
+      "category": "Starters & appetizers",
+      "course": "Starters & appetizers",
+      "cuisine": "Korean",
+      "difficulty": "Easy",
+      "prep_time_minutes": 10,
+      "cook_time_minutes": 15,
+      "total_time_minutes": 35,
+      "servings": 4,
+      "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/portada.webp",
+      "gallery": [
+        {
+          "url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/portada.webp",
+          "alt": "Spicy Korean tteokbokki with gochujang sauce"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "Spicy Korean tteokbokki with gochujang sauce",
+        "plain refrigerated cylindrical tteok rice cakes",
+        "water for the sauce, plus extra for soaking"
+      ],
+      "nutrition": {
+        "calories": 283,
+        "protein_g": 5.3,
+        "carbs_g": 59.6,
+        "fat_g": 2.4,
+        "sodium_mg": 700.7,
+        "estimated": true,
+        "serving_size": "1 of 4 bowls",
+        "source": "USDA FoodData Central SR Legacy + documented reference labels",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Sum of nutrients per 100 g × each ingredient weight / 100, divided by the number of servings.",
+        "note": "Recipe-based estimate; brands, actual portions and cooking losses affect the values. Not a laboratory analysis."
+      },
+      "seo": {
+        "title": "Spicy Korean tteokbokki with gochujang sauce | Manual de Cocina",
+        "description": "Soft, chewy Korean rice cakes simmered in a sweet-spicy gochujang sauce. A simple home version with water, spring onion and sesame, ready in about 35 minutes.",
+        "image_alt": "Spicy Korean tteokbokki with gochujang sauce",
+        "image_variants": [
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/portada-1x1.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/portada-4x3.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Can I use puffed rice crackers?",
+            "a": "No. You need compact cylindrical rice-dough cakes made for cooking. Crisp rice crackers will fall apart."
+          },
+          {
+            "q": "How spicy is it?",
+            "a": "It depends on the gochujang. Choose a mild one if needed; using less changes the formulation and sauce intensity."
+          },
+          {
+            "q": "Why is the centre hard?",
+            "a": "The product may need more soaking or cooking. Follow the pack and add a little water to extend simmering without drying out the sauce."
+          }
+        ],
+        "rest_time_minutes": 10
+      },
+      "published": true,
+      "editorial_status": "published",
+      "source_url": null,
+      "source_post_id": null,
+      "recipe_group_id": "8c522e34-5b85-4e43-9a9f-76f062ce9f04"
+    },
+    {
+      "language": "fr",
+      "slug": "tteokbokki-coreen-piquant",
+      "public_path": "/fr/tteokbokki-coreen-piquant",
+      "title": "Tteokbokki coréen : gâteaux de riz en sauce piquante",
+      "excerpt": "Des gâteaux de riz coréens tendres et élastiques dans une sauce au gochujang douce et piquante. Une version maison à l’eau, à la cébette et au sésame, prête en environ 35 minutes.",
+      "summary": "Des gâteaux de riz coréens tendres et élastiques dans une sauce au gochujang douce et piquante. Une version maison à l’eau, à la cébette et au sésame, prête en environ 35 minutes.",
+      "notes": "<p>Utilisez des tteok cylindriques nature sans sauce, pas des galettes de riz soufflé. Cette version utilise de l’eau, sans bouillon d’anchois ni gâteaux de poisson. Partez d’un produit réfrigéré ; décongelez le produit surgelé selon l’emballage avant de commencer, hors temps indiqué. Les 10 minutes de trempage sont incluses. Respectez la cuisson indiquée et vérifiez un cœur tendre. Le piquant varie selon le gochujang. Contient soja et sésame ; gochujang et sauce soja contiennent souvent du blé. Réfrigérez les restes à 4 °C maximum sous 2 heures et consommez sous 2 jours, bien réchauffés avec un peu d’eau.</p><h2>À préparer aussi</h2><ul><li><a href=\"/fr/bulgogi-boeuf-marine-coreen\">Bulgogi, bœuf mariné coréen</a></li><li><a href=\"/fr/recette-dhoummous\">Houmous maison au tahini et au citron</a></li></ul>",
+      "content_html": "<p>Des gâteaux de riz coréens tendres et élastiques dans une sauce au gochujang douce et piquante. Une version maison à l’eau, à la cébette et au sésame, prête en environ 35 minutes.</p><p>Utilisez des tteok cylindriques nature sans sauce, pas des galettes de riz soufflé. Cette version utilise de l’eau, sans bouillon d’anchois ni gâteaux de poisson. Partez d’un produit réfrigéré ; décongelez le produit surgelé selon l’emballage avant de commencer, hors temps indiqué. Les 10 minutes de trempage sont incluses. Respectez la cuisson indiquée et vérifiez un cœur tendre. Le piquant varie selon le gochujang. Contient soja et sésame ; gochujang et sauce soja contiennent souvent du blé. Réfrigérez les restes à 4 °C maximum sous 2 heures et consommez sous 2 jours, bien réchauffés avec un peu d’eau.</p><h2>À préparer aussi</h2><ul><li><a href=\"/fr/bulgogi-boeuf-marine-coreen\">Bulgogi, bœuf mariné coréen</a></li><li><a href=\"/fr/recette-dhoummous\">Houmous maison au tahini et au citron</a></li></ul>",
+      "ingredients": [
+        {
+          "name": "tteok cylindriques nature réfrigérés",
+          "amount": "400",
+          "unit": "g"
+        },
+        {
+          "name": "eau pour la sauce, plus de l’eau pour le trempage",
+          "amount": "500",
+          "unit": "ml"
+        },
+        {
+          "name": "gochujang, pâte de piment coréenne",
+          "amount": "50",
+          "unit": "g"
+        },
+        {
+          "name": "sauce soja",
+          "amount": "15",
+          "unit": "g"
+        },
+        {
+          "name": "sucre",
+          "amount": "15",
+          "unit": "g"
+        },
+        {
+          "name": "ail râpé",
+          "amount": "5",
+          "unit": "g"
+        },
+        {
+          "name": "cébette",
+          "amount": "30",
+          "unit": "g"
+        },
+        {
+          "name": "graines de sésame",
+          "amount": "3",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Faites tremper les tteok",
+          "content": "Rincez 400 g de tteok réfrigérés et séparez-les délicatement. Couvrez d’eau tiède supplémentaire et laissez tremper 10 minutes pendant la préparation. Suivez l’emballage s’il prévoit un autre traitement.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/paso-01.webp",
+          "image_alt": "Tteokbokki coréen : gâteaux de riz en sauce piquante: Faites tremper les tteok"
+        },
+        {
+          "title": "Préparez les aromates",
+          "content": "Hachez 30 g de cébette en séparant blanc et vert. Râpez 5 g d’ail. Réservez le vert pour la finition.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/paso-02.webp",
+          "image_alt": "Tteokbokki coréen : gâteaux de riz en sauce piquante: Préparez les aromates"
+        },
+        {
+          "title": "Délayez le gochujang",
+          "content": "Mélangez 50 g de gochujang, 15 g de sauce soja et 15 g de sucre avec 100 ml des 500 ml d’eau prévus pour la sauce, sans gros grumeaux.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/paso-03.webp",
+          "image_alt": "Tteokbokki coréen : gâteaux de riz en sauce piquante: Délayez le gochujang"
+        },
+        {
+          "title": "Chauffez la base",
+          "content": "Versez les 400 ml d’eau restants dans une sauteuse profonde d’environ 28 cm. Ajoutez la préparation au gochujang, l’ail et le blanc de cébette. Portez à petite ébullition.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/paso-04.webp",
+          "image_alt": "Tteokbokki coréen : gâteaux de riz en sauce piquante: Chauffez la base"
+        },
+        {
+          "title": "Faites cuire les tteok",
+          "content": "Égouttez les tteok et ajoutez-les à la sauce. Laissez frémir 8–12 minutes en remuant à la spatule pour éviter qu’ils collent, jusqu’à ce qu’ils soient tendres et élastiques. Respectez aussi le temps de l’emballage.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/paso-05.webp",
+          "image_alt": "Tteokbokki coréen : gâteaux de riz en sauce piquante: Faites cuire les tteok"
+        },
+        {
+          "title": "Épaississez la sauce",
+          "content": "Poursuivez 2–3 minutes en remuant, jusqu’à une sauce nappante mais encore fluide. Si elle épaissit avant que les tteok soient tendres, ajoutez de l’eau par cuillères à soupe.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/paso-06.webp",
+          "image_alt": "Tteokbokki coréen : gâteaux de riz en sauce piquante: Épaississez la sauce"
+        },
+        {
+          "title": "Vérifiez la texture",
+          "content": "Ouvrez un tteok avec une cuillère : son centre doit être tendre, sans noyau dur. Coupez le feu dès qu’ils sont cuits et la sauce brillante, sans laisser sécher.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/paso-07.webp",
+          "image_alt": "Tteokbokki coréen : gâteaux de riz en sauce piquante: Vérifiez la texture"
+        },
+        {
+          "title": "Terminez et servez",
+          "content": "Répartissez dans 4 bols et ajoutez le vert de cébette et 3 g de sésame. Servez chaud avec la sauce encore fluide ; les tteok se raffermissent en refroidissant.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/paso-08.webp",
+          "image_alt": "Tteokbokki coréen : gâteaux de riz en sauce piquante: Terminez et servez"
+        }
+      ],
+      "category": "Entrées et apéritifs",
+      "course": "Entrées et apéritifs",
+      "cuisine": "Coréenne",
+      "difficulty": "Facile",
+      "prep_time_minutes": 10,
+      "cook_time_minutes": 15,
+      "total_time_minutes": 35,
+      "servings": 4,
+      "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/portada.webp",
+      "gallery": [
+        {
+          "url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/portada.webp",
+          "alt": "Tteokbokki coréen : gâteaux de riz en sauce piquante"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "Tteokbokki coréen : gâteaux de riz en sauce piquante",
+        "tteok cylindriques nature réfrigérés",
+        "eau pour la sauce, plus de l’eau pour le trempage"
+      ],
+      "nutrition": {
+        "calories": 283,
+        "protein_g": 5.3,
+        "carbs_g": 59.6,
+        "fat_g": 2.4,
+        "sodium_mg": 700.7,
+        "estimated": true,
+        "serving_size": "1 des 4 bols",
+        "source": "USDA FoodData Central SR Legacy + documented reference labels",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Somme des nutriments pour 100 g × poids de chaque ingrédient / 100, divisée par le nombre de portions.",
+        "note": "Estimation selon la formulation ; les marques, les portions réelles et les pertes de cuisson modifient les valeurs. Pas une analyse de laboratoire."
+      },
+      "seo": {
+        "title": "Tteokbokki coréen : gâteaux de riz en sauce piquante | Manual de Cocina",
+        "description": "Des gâteaux de riz coréens tendres et élastiques dans une sauce au gochujang douce et piquante. Une version maison à l’eau, à la cébette et au sésame, prête en environ 35 minutes.",
+        "image_alt": "Tteokbokki coréen : gâteaux de riz en sauce piquante",
+        "image_variants": [
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/portada-1x1.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/portada-4x3.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Peut-on utiliser des galettes de riz soufflé ?",
+            "a": "Non. Il faut des cylindres compacts de pâte de riz à cuire ; les galettes croustillantes se défont."
+          },
+          {
+            "q": "Est-ce très piquant ?",
+            "a": "Cela dépend du gochujang. Choisissez une version douce si nécessaire ; en diminuer la quantité change la formulation et l’intensité de la sauce."
+          },
+          {
+            "q": "Pourquoi le cœur reste-t-il dur ?",
+            "a": "Le produit peut demander plus de trempage ou de cuisson. Suivez l’emballage et ajoutez un peu d’eau pour prolonger le frémissement sans dessécher la sauce."
+          }
+        ],
+        "rest_time_minutes": 10
+      },
+      "published": true,
+      "editorial_status": "published",
+      "source_url": null,
+      "source_post_id": null,
+      "recipe_group_id": "8c522e34-5b85-4e43-9a9f-76f062ce9f04"
+    },
+    {
+      "language": "it",
+      "slug": "tteokbokki-coreani-piccanti",
+      "public_path": "/it/tteokbokki-coreani-piccanti",
+      "title": "Tteokbokki coreani: gnocchi di riso in salsa piccante",
+      "excerpt": "Cilindretti di riso coreani morbidi ed elastici, cotti in salsa dolce e piccante al gochujang. Una versione casalinga con acqua, cipollotto e sesamo, pronta in circa 35 minuti.",
+      "summary": "Cilindretti di riso coreani morbidi ed elastici, cotti in salsa dolce e piccante al gochujang. Una versione casalinga con acqua, cipollotto e sesamo, pronta in circa 35 minuti.",
+      "notes": "<p>Compra tteok cilindrici al naturale senza salsa, non gallette di riso soffiato. Questa versione usa acqua, senza brodo di acciughe né tortini di pesce. Parti da prodotto refrigerato; scongela quello surgelato secondo l’etichetta prima di iniziare, fuori dal tempo indicato. I 10 minuti d’ammollo sono inclusi. Segui la cottura della confezione e controlla che il centro sia morbido. Il piccante varia con il gochujang. Contiene soia e sesamo; gochujang e salsa di soia spesso contengono frumento. Metti gli avanzi a non più di 4 °C entro 2 ore e consumali entro 2 giorni, ben riscaldati con poca acqua.</p><h2>Da provare anche</h2><ul><li><a href=\"/it/bulgogi-manzo-marinato-coreano\">Bulgogi, manzo marinato coreano</a></li><li><a href=\"/it/ricetta-dellhummus\">Hummus fatto in casa con tahina e limone</a></li></ul>",
+      "content_html": "<p>Cilindretti di riso coreani morbidi ed elastici, cotti in salsa dolce e piccante al gochujang. Una versione casalinga con acqua, cipollotto e sesamo, pronta in circa 35 minuti.</p><p>Compra tteok cilindrici al naturale senza salsa, non gallette di riso soffiato. Questa versione usa acqua, senza brodo di acciughe né tortini di pesce. Parti da prodotto refrigerato; scongela quello surgelato secondo l’etichetta prima di iniziare, fuori dal tempo indicato. I 10 minuti d’ammollo sono inclusi. Segui la cottura della confezione e controlla che il centro sia morbido. Il piccante varia con il gochujang. Contiene soia e sesamo; gochujang e salsa di soia spesso contengono frumento. Metti gli avanzi a non più di 4 °C entro 2 ore e consumali entro 2 giorni, ben riscaldati con poca acqua.</p><h2>Da provare anche</h2><ul><li><a href=\"/it/bulgogi-manzo-marinato-coreano\">Bulgogi, manzo marinato coreano</a></li><li><a href=\"/it/ricetta-dellhummus\">Hummus fatto in casa con tahina e limone</a></li></ul>",
+      "ingredients": [
+        {
+          "name": "tteok di riso cilindrici refrigerati, senza salsa",
+          "amount": "400",
+          "unit": "g"
+        },
+        {
+          "name": "acqua per la salsa, più altra per l’ammollo",
+          "amount": "500",
+          "unit": "ml"
+        },
+        {
+          "name": "gochujang, pasta coreana di peperoncino",
+          "amount": "50",
+          "unit": "g"
+        },
+        {
+          "name": "salsa di soia",
+          "amount": "15",
+          "unit": "g"
+        },
+        {
+          "name": "zucchero",
+          "amount": "15",
+          "unit": "g"
+        },
+        {
+          "name": "aglio grattugiato",
+          "amount": "5",
+          "unit": "g"
+        },
+        {
+          "name": "cipollotto",
+          "amount": "30",
+          "unit": "g"
+        },
+        {
+          "name": "semi di sesamo",
+          "amount": "3",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Metti in ammollo i tteok",
+          "content": "Sciacqua 400 g di tteok refrigerati e separali delicatamente. Copri con altra acqua tiepida e lascia in ammollo 10 minuti mentre prepari il resto. Se la confezione indica un trattamento diverso, seguilo.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/paso-01.webp",
+          "image_alt": "Tteokbokki coreani: gnocchi di riso in salsa piccante: Metti in ammollo i tteok"
+        },
+        {
+          "title": "Trita gli aromi",
+          "content": "Trita 30 g di cipollotto separando parte bianca e verde. Grattugia 5 g d’aglio. Tieni il verde per la finitura.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/paso-02.webp",
+          "image_alt": "Tteokbokki coreani: gnocchi di riso in salsa piccante: Trita gli aromi"
+        },
+        {
+          "title": "Sciogli il gochujang",
+          "content": "Mescola 50 g di gochujang, 15 g di salsa di soia e 15 g di zucchero con 100 ml dei 500 ml d’acqua per la salsa, eliminando i grumi grandi.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/paso-03.webp",
+          "image_alt": "Tteokbokki coreani: gnocchi di riso in salsa piccante: Sciogli il gochujang"
+        },
+        {
+          "title": "Scalda la base",
+          "content": "Versa i 400 ml d’acqua restanti in una padella profonda di circa 28 cm. Aggiungi composto al gochujang, aglio e parte bianca del cipollotto. Porta a lieve bollore.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/paso-04.webp",
+          "image_alt": "Tteokbokki coreani: gnocchi di riso in salsa piccante: Scalda la base"
+        },
+        {
+          "title": "Cuoci i tteok",
+          "content": "Scola i tteok e aggiungili alla salsa. Fai sobbollire per 8–12 minuti, mescolando con una spatola perché non si attacchino, finché sono teneri ed elastici. Rispetta anche il tempo della confezione.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/paso-05.webp",
+          "image_alt": "Tteokbokki coreani: gnocchi di riso in salsa piccante: Cuoci i tteok"
+        },
+        {
+          "title": "Addensa la salsa",
+          "content": "Cuoci altri 2–3 minuti mescolando, finché la salsa avvolge i tteok ma resta fluida. Se addensa prima che siano teneri, aggiungi altra acqua un cucchiaio alla volta.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/paso-06.webp",
+          "image_alt": "Tteokbokki coreani: gnocchi di riso in salsa piccante: Addensa la salsa"
+        },
+        {
+          "title": "Controlla la consistenza",
+          "content": "Apri un tteok con un cucchiaio: il centro deve essere tenero, senza nucleo duro. Spegni quando sono cotti e la salsa è lucida, senza farli asciugare.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/paso-07.webp",
+          "image_alt": "Tteokbokki coreani: gnocchi di riso in salsa piccante: Controlla la consistenza"
+        },
+        {
+          "title": "Completa e servi",
+          "content": "Dividi in 4 ciotole e aggiungi il verde del cipollotto e 3 g di sesamo. Servi caldo, con salsa ancora fluida; raffreddandosi i tteok induriscono.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/paso-08.webp",
+          "image_alt": "Tteokbokki coreani: gnocchi di riso in salsa piccante: Completa e servi"
+        }
+      ],
+      "category": "Antipasti",
+      "course": "Antipasti",
+      "cuisine": "Coreana",
+      "difficulty": "Facile",
+      "prep_time_minutes": 10,
+      "cook_time_minutes": 15,
+      "total_time_minutes": 35,
+      "servings": 4,
+      "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/portada.webp",
+      "gallery": [
+        {
+          "url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/portada.webp",
+          "alt": "Tteokbokki coreani: gnocchi di riso in salsa piccante"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "Tteokbokki coreani: gnocchi di riso in salsa piccante",
+        "tteok di riso cilindrici refrigerati, senza salsa",
+        "acqua per la salsa, più altra per l’ammollo"
+      ],
+      "nutrition": {
+        "calories": 283,
+        "protein_g": 5.3,
+        "carbs_g": 59.6,
+        "fat_g": 2.4,
+        "sodium_mg": 700.7,
+        "estimated": true,
+        "serving_size": "1 delle 4 ciotole",
+        "source": "USDA FoodData Central SR Legacy + documented reference labels",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Somma dei nutrienti per 100 g × peso di ogni ingrediente / 100, divisa per il numero di porzioni.",
+        "note": "Stima della formulazione: marche, porzioni reali e perdite di cottura cambiano i valori. Non è un’analisi di laboratorio."
+      },
+      "seo": {
+        "title": "Tteokbokki coreani: gnocchi di riso in salsa piccante | Manual de Cocina",
+        "description": "Cilindretti di riso coreani morbidi ed elastici, cotti in salsa dolce e piccante al gochujang. Una versione casalinga con acqua, cipollotto e sesamo, pronta in circa 35 minuti.",
+        "image_alt": "Tteokbokki coreani: gnocchi di riso in salsa piccante",
+        "image_variants": [
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/portada-1x1.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/portada-4x3.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Posso usare gallette di riso soffiato?",
+            "a": "No. Servono cilindretti compatti di impasto di riso da cuocere; le gallette croccanti si sfaldano."
+          },
+          {
+            "q": "Quanto sono piccanti?",
+            "a": "Dipende dal gochujang. Scegline uno delicato se necessario; ridurne la quantità cambia la formulazione e l’intensità della salsa."
+          },
+          {
+            "q": "Perché resta un centro duro?",
+            "a": "Il prodotto può richiedere più ammollo o cottura. Segui la confezione e aggiungi poca acqua per prolungare il bollore senza asciugare la salsa."
+          }
+        ],
+        "rest_time_minutes": 10
+      },
+      "published": true,
+      "editorial_status": "published",
+      "source_url": null,
+      "source_post_id": null,
+      "recipe_group_id": "8c522e34-5b85-4e43-9a9f-76f062ce9f04"
+    },
+    {
+      "language": "ja",
+      "slug": "spicy-korean-tteokbokki",
+      "public_path": "/ja/spicy-korean-tteokbokki",
+      "title": "韓国のトッポッキ：コチュジャンの甘辛ソース",
+      "excerpt": "やわらかく弾力のある韓国の棒状の餅を、甘辛いコチュジャンソースで煮ます。水、ねぎ、ごまを使う家庭向けの簡単な配合で、約35分で作れます。",
+      "summary": "やわらかく弾力のある韓国の棒状の餅を、甘辛いコチュジャンソースで煮ます。水、ねぎ、ごまを使う家庭向けの簡単な配合で、約35分で作れます。",
+      "notes": "<p>ソースの付いていない棒状のトッポッキ用トックを使います。膨らませたライスクラッカーではありません。いりこだしや練り物を使わず、水をベースにする配合です。冷蔵品から始め、冷凍品は表示に従って先に解凍してください。解凍時間は含みません。浸水10分は含みます。製品の加熱表示を守り、中心までやわらかくなったことを確認します。辛さはコチュジャンで変わります。大豆とごまを含み、コチュジャンやしょうゆは小麦を含む場合があります。残りは2時間以内に4 °C以下で冷蔵し、2日以内に少量の水を加えて十分再加熱して食べてください。</p><h2>こちらのレシピも</h2><ul><li><a href=\"/ja/プルコギ\">プルコギ（韓国風牛肉の甘辛炒め）</a></li><li><a href=\"/ja/フムスのレシピ\">タヒニとレモンの手作りフムス</a></li></ul>",
+      "content_html": "<p>やわらかく弾力のある韓国の棒状の餅を、甘辛いコチュジャンソースで煮ます。水、ねぎ、ごまを使う家庭向けの簡単な配合で、約35分で作れます。</p><p>ソースの付いていない棒状のトッポッキ用トックを使います。膨らませたライスクラッカーではありません。いりこだしや練り物を使わず、水をベースにする配合です。冷蔵品から始め、冷凍品は表示に従って先に解凍してください。解凍時間は含みません。浸水10分は含みます。製品の加熱表示を守り、中心までやわらかくなったことを確認します。辛さはコチュジャンで変わります。大豆とごまを含み、コチュジャンやしょうゆは小麦を含む場合があります。残りは2時間以内に4 °C以下で冷蔵し、2日以内に少量の水を加えて十分再加熱して食べてください。</p><h2>こちらのレシピも</h2><ul><li><a href=\"/ja/プルコギ\">プルコギ（韓国風牛肉の甘辛炒め）</a></li><li><a href=\"/ja/フムスのレシピ\">タヒニとレモンの手作りフムス</a></li></ul>",
+      "ingredients": [
+        {
+          "name": "冷蔵の棒状トック（トッポッキ用、ソースなし）",
+          "amount": "400",
+          "unit": "g"
+        },
+        {
+          "name": "ソース用の水（浸水用は別途）",
+          "amount": "500",
+          "unit": "ml"
+        },
+        {
+          "name": "コチュジャン",
+          "amount": "50",
+          "unit": "g"
+        },
+        {
+          "name": "しょうゆ",
+          "amount": "15",
+          "unit": "g"
+        },
+        {
+          "name": "砂糖",
+          "amount": "15",
+          "unit": "g"
+        },
+        {
+          "name": "すりおろしにんにく",
+          "amount": "5",
+          "unit": "g"
+        },
+        {
+          "name": "青ねぎ",
+          "amount": "30",
+          "unit": "g"
+        },
+        {
+          "name": "ごま",
+          "amount": "3",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "餅を水に浸す",
+          "content": "冷蔵のトック400 gを洗い、やさしく離します。別途用意したぬるま湯をかぶるまで注ぎ、ほかの準備をしながら10分浸します。製品表示が異なる場合はそちらを優先します。",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/paso-01.webp",
+          "image_alt": "韓国のトッポッキ：コチュジャンの甘辛ソース: 餅を水に浸す"
+        },
+        {
+          "title": "香味野菜を切る",
+          "content": "青ねぎ30 gを刻み、白い部分と緑の部分を分けます。にんにく5 gをすりおろし、ねぎの緑の部分は仕上げ用に取っておきます。",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/paso-02.webp",
+          "image_alt": "韓国のトッポッキ：コチュジャンの甘辛ソース: 香味野菜を切る"
+        },
+        {
+          "title": "コチュジャンを溶く",
+          "content": "コチュジャン50 g、しょうゆ15 g、砂糖15 gを、ソース用の水500 mlのうち100 mlで混ぜ、大きなだまをなくします。",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/paso-03.webp",
+          "image_alt": "韓国のトッポッキ：コチュジャンの甘辛ソース: コチュジャンを溶く"
+        },
+        {
+          "title": "ソースを温める",
+          "content": "直径約28 cmの深いフライパンに残りの水400 mlを入れます。コチュジャンの混合物、にんにく、ねぎの白い部分を加え、穏やかに沸騰させます。",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/paso-04.webp",
+          "image_alt": "韓国のトッポッキ：コチュジャンの甘辛ソース: ソースを温める"
+        },
+        {
+          "title": "トックを煮る",
+          "content": "浸したトックの水を切って加えます。へらで焦げ付かないよう混ぜながら8〜12分、やわらかく弾力が出るまで穏やかに煮ます。製品の指定加熱時間も守ってください。",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/paso-05.webp",
+          "image_alt": "韓国のトッポッキ：コチュジャンの甘辛ソース: トックを煮る"
+        },
+        {
+          "title": "ソースを煮詰める",
+          "content": "さらに2〜3分混ぜながら煮て、餅に絡みながら流れる濃度にします。餅がやわらかくなる前に濃くなったら、別途の水を大さじ1ずつ足します。",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/paso-06.webp",
+          "image_alt": "韓国のトッポッキ：コチュジャンの甘辛ソース: ソースを煮詰める"
+        },
+        {
+          "title": "食感を確かめる",
+          "content": "スプーンで1本を切り、中心に硬い芯がなく、やわらかいことを確認します。火が通ってソースにつやが出たら火を止め、乾くまで煮詰めないでください。",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/paso-07.webp",
+          "image_alt": "韓国のトッポッキ：コチュジャンの甘辛ソース: 食感を確かめる"
+        },
+        {
+          "title": "仕上げて出す",
+          "content": "4つの器へ分け、ねぎの緑の部分とごま3 gを散らします。ソースがまだ流れる熱いうちに食べます。冷めると餅は硬くなります。",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/paso-08.webp",
+          "image_alt": "韓国のトッポッキ：コチュジャンの甘辛ソース: 仕上げて出す"
+        }
+      ],
+      "category": "前菜・おつまみ",
+      "course": "前菜・おつまみ",
+      "cuisine": "韓国料理",
+      "difficulty": "簡単",
+      "prep_time_minutes": 10,
+      "cook_time_minutes": 15,
+      "total_time_minutes": 35,
+      "servings": 4,
+      "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/portada.webp",
+      "gallery": [
+        {
+          "url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/portada.webp",
+          "alt": "韓国のトッポッキ：コチュジャンの甘辛ソース"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "韓国のトッポッキ：コチュジャンの甘辛ソース",
+        "冷蔵の棒状トック（トッポッキ用、ソースなし）",
+        "ソース用の水（浸水用は別途）"
+      ],
+      "nutrition": {
+        "calories": 283,
+        "protein_g": 5.3,
+        "carbs_g": 59.6,
+        "fat_g": 2.4,
+        "sodium_mg": 700.7,
+        "estimated": true,
+        "serving_size": "4つの器のうち1つ",
+        "source": "USDA FoodData Central SR Legacy + documented reference labels",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "材料100 gあたりの栄養価×各使用重量÷100を合計し、人数で割って算出。",
+        "note": "配合からの推定値です。製品、実際の盛り付け量、加熱による損失で変わります。検査機関での分析値ではありません。"
+      },
+      "seo": {
+        "title": "韓国のトッポッキ：コチュジャンの甘辛ソース | Manual de Cocina",
+        "description": "やわらかく弾力のある韓国の棒状の餅を、甘辛いコチュジャンソースで煮ます。水、ねぎ、ごまを使う家庭向けの簡単な配合で、約35分で作れます。",
+        "image_alt": "韓国のトッポッキ：コチュジャンの甘辛ソース",
+        "image_variants": [
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/portada-1x1.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/portada-4x3.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "膨らんだライスクラッカーで作れますか？",
+            "a": "いいえ。調理用の米の生地を棒状に固めたトックが必要です。カリカリのライスクラッカーは崩れます。"
+          },
+          {
+            "q": "とても辛いですか？",
+            "a": "コチュジャンによって変わります。必要なら辛さの弱い製品を選んでください。量を減らすと配合とソースの濃さが変わります。"
+          },
+          {
+            "q": "中心が硬いのはなぜですか？",
+            "a": "浸水や加熱がさらに必要な場合があります。製品表示に従い、少量の水を足してソースを乾かさずに煮続けます。"
+          }
+        ],
+        "rest_time_minutes": 10
+      },
+      "published": true,
+      "editorial_status": "published",
+      "source_url": null,
+      "source_post_id": null,
+      "recipe_group_id": "8c522e34-5b85-4e43-9a9f-76f062ce9f04"
+    },
+    {
+      "language": "pt",
+      "slug": "tteokbokki-coreano-picante",
+      "public_path": "/pt/tteokbokki-coreano-picante",
+      "title": "Tteokbokki coreano: bolinhos de arroz em molho picante",
+      "excerpt": "Bolinhos de arroz coreanos macios e elásticos, cozidos em molho agridoce de gochujang. Versão caseira com água, cebolinha e gergelim, pronta em cerca de 35 minutos.",
+      "summary": "Bolinhos de arroz coreanos macios e elásticos, cozidos em molho agridoce de gochujang. Versão caseira com água, cebolinha e gergelim, pronta em cerca de 35 minutos.",
+      "notes": "<p>Compre tteok cilíndricos sem molho, não bolachas de arroz tufado. Esta versão usa água, sem caldo de anchovas nem bolinhos de peixe. Comece com produto refrigerado; descongele os congelados conforme a embalagem antes de começar, fora do tempo indicado. Os 10 minutos de molho estão incluídos. Siga o cozimento da embalagem e confira se o centro está macio. A ardência varia com o gochujang. Contém soja e gergelim; gochujang e molho de soja costumam conter trigo. Guarde as sobras a 4 °C ou menos em até 2 horas e consuma em 2 dias, bem reaquecidas com um pouco de água.</p><h2>Prepare também</h2><ul><li><a href=\"/pt/bulgogi-carne-marinada-coreana\">Bulgogi, carne bovina marinada coreana</a></li><li><a href=\"/pt/receita-de-homus\">Homus caseiro com tahine e limão</a></li></ul>",
+      "content_html": "<p>Bolinhos de arroz coreanos macios e elásticos, cozidos em molho agridoce de gochujang. Versão caseira com água, cebolinha e gergelim, pronta em cerca de 35 minutos.</p><p>Compre tteok cilíndricos sem molho, não bolachas de arroz tufado. Esta versão usa água, sem caldo de anchovas nem bolinhos de peixe. Comece com produto refrigerado; descongele os congelados conforme a embalagem antes de começar, fora do tempo indicado. Os 10 minutos de molho estão incluídos. Siga o cozimento da embalagem e confira se o centro está macio. A ardência varia com o gochujang. Contém soja e gergelim; gochujang e molho de soja costumam conter trigo. Guarde as sobras a 4 °C ou menos em até 2 horas e consuma em 2 dias, bem reaquecidas com um pouco de água.</p><h2>Prepare também</h2><ul><li><a href=\"/pt/bulgogi-carne-marinada-coreana\">Bulgogi, carne bovina marinada coreana</a></li><li><a href=\"/pt/receita-de-homus\">Homus caseiro com tahine e limão</a></li></ul>",
+      "ingredients": [
+        {
+          "name": "tteok de arroz cilíndricos refrigerados e sem molho",
+          "amount": "400",
+          "unit": "g"
+        },
+        {
+          "name": "água para o molho, mais água para deixar de molho",
+          "amount": "500",
+          "unit": "ml"
+        },
+        {
+          "name": "gochujang, pasta coreana de pimenta",
+          "amount": "50",
+          "unit": "g"
+        },
+        {
+          "name": "molho de soja",
+          "amount": "15",
+          "unit": "g"
+        },
+        {
+          "name": "açúcar",
+          "amount": "15",
+          "unit": "g"
+        },
+        {
+          "name": "alho ralado",
+          "amount": "5",
+          "unit": "g"
+        },
+        {
+          "name": "cebolinha",
+          "amount": "30",
+          "unit": "g"
+        },
+        {
+          "name": "sementes de gergelim",
+          "amount": "3",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Deixe os tteok de molho",
+          "content": "Enxágue 400 g de tteok refrigerados e separe delicadamente. Cubra com água morna adicional e deixe de molho por 10 minutos enquanto prepara o restante. Se a embalagem indicar outro tratamento, siga as instruções.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/paso-01.webp",
+          "image_alt": "Tteokbokki coreano: bolinhos de arroz em molho picante: Deixe os tteok de molho"
+        },
+        {
+          "title": "Pique os aromáticos",
+          "content": "Pique 30 g de cebolinha, separando as partes branca e verde. Rale 5 g de alho. Reserve a parte verde para finalizar.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/paso-02.webp",
+          "image_alt": "Tteokbokki coreano: bolinhos de arroz em molho picante: Pique os aromáticos"
+        },
+        {
+          "title": "Dissolva o gochujang",
+          "content": "Misture 50 g de gochujang, 15 g de molho de soja e 15 g de açúcar com 100 ml dos 500 ml de água para o molho, sem deixar grumos grandes.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/paso-03.webp",
+          "image_alt": "Tteokbokki coreano: bolinhos de arroz em molho picante: Dissolva o gochujang"
+        },
+        {
+          "title": "Aqueça a base",
+          "content": "Coloque os 400 ml de água restantes em uma frigideira funda de cerca de 28 cm. Junte a mistura de gochujang, o alho e a parte branca da cebolinha. Leve à fervura suave.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/paso-04.webp",
+          "image_alt": "Tteokbokki coreano: bolinhos de arroz em molho picante: Aqueça a base"
+        },
+        {
+          "title": "Cozinhe os tteok",
+          "content": "Escorra os bolinhos e coloque no molho. Ferva suavemente por 8–12 minutos, mexendo com espátula para não grudar, até ficarem macios e elásticos. Respeite também o tempo da embalagem.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/paso-05.webp",
+          "image_alt": "Tteokbokki coreano: bolinhos de arroz em molho picante: Cozinhe os tteok"
+        },
+        {
+          "title": "Engrosse o molho",
+          "content": "Cozinhe mais 2–3 minutos, mexendo, até o molho cobrir os tteok e ainda escorrer. Se engrossar antes de amaciarem, junte água adicional de colher de sopa em colher de sopa.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/paso-06.webp",
+          "image_alt": "Tteokbokki coreano: bolinhos de arroz em molho picante: Engrosse o molho"
+        },
+        {
+          "title": "Confira a textura",
+          "content": "Abra um bolinho com uma colher: o centro deve estar macio, sem núcleo duro. Desligue quando estiverem cozidos e o molho brilhante, sem deixar secar.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/paso-07.webp",
+          "image_alt": "Tteokbokki coreano: bolinhos de arroz em molho picante: Confira a textura"
+        },
+        {
+          "title": "Finalize e sirva",
+          "content": "Divida em 4 tigelas e termine com a parte verde da cebolinha e 3 g de gergelim. Sirva quente com molho ainda fluido; os bolinhos endurecem ao esfriar.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/paso-08.webp",
+          "image_alt": "Tteokbokki coreano: bolinhos de arroz em molho picante: Finalize e sirva"
+        }
+      ],
+      "category": "Entradas e aperitivos",
+      "course": "Entradas e aperitivos",
+      "cuisine": "Coreana",
+      "difficulty": "Fácil",
+      "prep_time_minutes": 10,
+      "cook_time_minutes": 15,
+      "total_time_minutes": 35,
+      "servings": 4,
+      "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/portada.webp",
+      "gallery": [
+        {
+          "url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/portada.webp",
+          "alt": "Tteokbokki coreano: bolinhos de arroz em molho picante"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "Tteokbokki coreano: bolinhos de arroz em molho picante",
+        "tteok de arroz cilíndricos refrigerados e sem molho",
+        "água para o molho, mais água para deixar de molho"
+      ],
+      "nutrition": {
+        "calories": 283,
+        "protein_g": 5.3,
+        "carbs_g": 59.6,
+        "fat_g": 2.4,
+        "sodium_mg": 700.7,
+        "estimated": true,
+        "serving_size": "1 das 4 tigelas",
+        "source": "USDA FoodData Central SR Legacy + documented reference labels",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Soma dos nutrientes por 100 g × peso de cada ingrediente / 100, dividida pelo número de porções.",
+        "note": "Estimativa pela formulação; marcas, porções reais e perdas no cozimento alteram os valores. Não é análise laboratorial."
+      },
+      "seo": {
+        "title": "Tteokbokki coreano: bolinhos de arroz em molho picante | Manual de Cocina",
+        "description": "Bolinhos de arroz coreanos macios e elásticos, cozidos em molho agridoce de gochujang. Versão caseira com água, cebolinha e gergelim, pronta em cerca de 35 minutos.",
+        "image_alt": "Tteokbokki coreano: bolinhos de arroz em molho picante",
+        "image_variants": [
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/portada-1x1.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/portada-4x3.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/tteokbokki-coreano-picante/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Posso usar bolachas de arroz tufado?",
+            "a": "Não. São necessários tteok cilíndricos e compactos feitos de massa de arroz para cozinhar; bolachas crocantes se desfazem."
+          },
+          {
+            "q": "Fica muito picante?",
+            "a": "Depende do gochujang. Escolha um suave se precisar; reduzir a quantidade muda a formulação e a intensidade do molho."
+          },
+          {
+            "q": "Por que fica um centro duro?",
+            "a": "O produto pode precisar de mais hidratação ou cozimento. Siga a embalagem e acrescente um pouco de água para prolongar a fervura sem secar o molho."
+          }
+        ],
+        "rest_time_minutes": 10
+      },
+      "published": true,
+      "editorial_status": "published",
+      "source_url": null,
+      "source_post_id": null,
+      "recipe_group_id": "8c522e34-5b85-4e43-9a9f-76f062ce9f04"
+    }
+  ],
+  "recipe_group_id": "8c522e34-5b85-4e43-9a9f-76f062ce9f04",
+  "status": "published_pending_index_refresh"
+}

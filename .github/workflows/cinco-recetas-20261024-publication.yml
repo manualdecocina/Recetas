@@ -1,0 +1,42 @@
+name: cinco-recetas-20261024-publication
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/cinco-recetas-20261024-publication.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Refresh production and warm published pages
+        env:
+          REVALIDATE_SECRET: ${{ secrets.REVALIDATE_SECRET }}
+        run: |
+          python3 - <<'PYTHON'
+          import os,json,urllib.request,time,concurrent.futures,pathlib
+          secret=(os.environ.get('REVALIDATE_SECRET') or '').rstrip('\r\n')
+          if not secret:raise SystemExit('Missing cache secret')
+          req=urllib.request.Request('https://manualdecocina.com/api/revalidate',data=b'{}',headers={'x-revalidate-secret':secret,'Content-Type':'application/json'})
+          with urllib.request.urlopen(req,timeout=30) as r:assert json.load(r).get('revalidated') is True
+          urls=['/es','/es/recetas','/sitemap.xml']
+          for p in pathlib.Path('editorial/lote-cinco-20261024').glob('*.json'):
+              b=json.loads(p.read_text())
+              if isinstance(b,dict) and b.get('records'):urls += [r['public_path'] for r in b['records']]
+          def warm(u):
+              with urllib.request.urlopen('https://manualdecocina.com'+u,timeout=45) as r:assert r.status==200;r.read()
+          with concurrent.futures.ThreadPoolExecutor(max_workers=6) as ex:list(ex.map(warm,urls))
+          time.sleep(8)
+          print('Production refreshed and publication pages warmed')
+          PYTHON
+      - name: Verify 35 localized pages and 60 image assets
+        run: python3 scripts/audit-cinco-recetas-20261024.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: cinco-recetas-20261024-production-qa
+          path: cinco-recetas-20261024-production-qa.json
