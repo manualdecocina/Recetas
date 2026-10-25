@@ -1,0 +1,97 @@
+import json
+from pathlib import Path
+L={}
+def add(l,slug,title,summary,notes,ing,steps,faq,serving):
+ L[l]=dict(slug=slug,title=title,summary=summary,notes=notes,ingredients=ing.split('|'),steps=[s.split('::',1) for s in steps.strip().split('\n')],faq=[s.split('::',1) for s in faq.strip().split('\n')],serving_size=serving)
+add('en','venezuelan-ham-bread','Venezuelan pan de jamón: Christmas ham bread',
+'Soft Venezuelan Christmas bread rolled with cooked ham, bacon, olives and raisins. Includes both rises and the cooling time before slicing.',
+'Use fully cooked ham and cool the bacon before filling. The 130-minute rest includes a 75-minute first rise, 40-minute second rise and 15-minute cooling period; a cold kitchen can extend proving. Avoid excess flour: the dough should be soft and slightly tacky. Contains wheat, milk and egg; the filling contains pork. Refrigerate leftovers covered at 4 °C or below within 2 hours, eat within 2 days and reheat thoroughly.',
+'bread flour|lukewarm whole milk|lukewarm water|whole egg without shell, for the dough|soft unsalted butter|sugar|instant dry baker’s yeast|salt|sliced cooked ham|smoked bacon|drained pitted green olives|raisins|beaten egg for brushing',
+'''Mix the dough::Mix 500 g flour, 7 g instant yeast, 35 g sugar and 8 g salt. Add 200 ml milk, 50 ml water, both lukewarm and no hotter than 38 °C, and 50 g egg. Mix until no dry flour remains.
+Work in the butter::Knead for 8 minutes. Gradually add 50 g soft butter and knead for another 4 minutes, until smooth and elastic and lifting away from the worktop as you work. Avoid drying it out with extra flour.
+Let it double::Place in a bowl, cover and prove for about 75 minutes at 24–26 °C until doubled. Judge by the volume: a colder kitchen needs longer.
+Prepare the filling::Cook 80 g bacon in a frying pan for about 5 minutes, until it no longer looks raw. Drain and cool. Drain and pat dry 80 g olives. Set aside 300 g ham and 60 g raisins.
+Roll out and fill::Gently deflate and roll into a rectangle about 40 × 35 cm. Distribute the ham, cooled bacon, olives and raisins evenly, leaving a 2 cm border.
+Roll up and prove again::Roll from a long edge, seal the seam and tuck the ends underneath. Set seam-side down on a parchment-lined tray. Cover loosely and prove for about 40 minutes until visibly puffier.
+Brush and bake::During the second rise, preheat the oven to 180 °C, conventional heat. Prick the top in 3 places with a fork and brush with 25 g beaten egg. Bake for 35–40 minutes until golden and the dough is cooked; cover with foil if it browns too soon.
+Rest and slice::Cool on a rack for 15 minutes before cutting into 12 slices. Serve warm, showing the bread spiral and evenly distributed filling.''',
+'''Can I make it the day before?::Bake, cool and refrigerate covered. Reheat the slices covered to soften the bread without drying the filling.
+Why does it split in the oven?::Too much wet filling, a poorly sealed seam or too short a second rise can cause splits. Drain the filling, seal carefully and let the loaf expand before baking.
+Can I freeze it?::Yes. Freeze the baked, cooled bread in well-wrapped slices for up to 2 months. Defrost in the refrigerator and reheat thoroughly.''','1 of 12 slices')
+add('de','venezolanisches-schinkenbrot-pan-de-jamon','Pan de jamón: venezolanisches Schinkenbrot zu Weihnachten',
+'Weiches venezolanisches Weihnachtsbrot mit Kochschinken, Speck, Oliven und Rosinen. Mit beiden Gehzeiten und der Ruhezeit vor dem Anschneiden.',
+'Gegarten Schinken verwenden und den gebratenen Speck vor dem Füllen abkühlen lassen. Die 130 Minuten Ruhezeit umfassen 75 Minuten erste Gare, 40 Minuten zweite Gare und 15 Minuten Abkühlen; bei Kälte verlängert sich die Gare. Nicht zu viel Mehl zugeben: der Teig soll weich und leicht klebrig bleiben. Enthält Weizen, Milch und Ei; die Füllung enthält Schweinefleisch. Reste innerhalb von 2 Stunden abgedeckt bei höchstens 4 °C kühlen, innerhalb von 2 Tagen essen und gründlich erhitzen.',
+'backstarkes Weizenmehl|lauwarme Vollmilch|lauwarmes Wasser|Vollei ohne Schale für den Teig|weiche ungesalzene Butter|Zucker|Instant-Trockenhefe zum Brotbacken|Salz|Kochschinken in Scheiben|geräucherter Speck|abgetropfte grüne Oliven ohne Stein|Rosinen|verquirltes Ei zum Bestreichen',
+'''Teig mischen::500 g Mehl, 7 g Instant-Trockenhefe, 35 g Zucker und 8 g Salz mischen. 200 ml Milch und 50 ml Wasser, beides lauwarm und höchstens 38 °C, sowie 50 g Ei zugeben. Vermengen, bis keine trockenen Stellen bleiben.
+Butter einarbeiten::8 Minuten kneten. 50 g weiche Butter nach und nach einarbeiten und weitere 4 Minuten kneten, bis der Teig glatt und elastisch ist und sich beim Arbeiten von der Fläche löst. Nicht mit viel zusätzlichem Mehl austrocknen.
+Volumen verdoppeln lassen::In eine Schüssel geben, abdecken und bei 24–26 °C etwa 75 Minuten gehen lassen, bis sich das Volumen verdoppelt. Das Wachstum entscheidet; in einer kalten Küche dauert es länger.
+Füllung vorbereiten::80 g Speck etwa 5 Minuten in einer Pfanne braten, bis er nicht mehr roh aussieht. Abtropfen und abkühlen lassen. 80 g Oliven abtropfen und trocken tupfen. 300 g Schinken und 60 g Rosinen bereitlegen.
+Ausrollen und belegen::Den Teig behutsam entgasen und etwa 40 × 35 cm groß ausrollen. Schinken, kalten Speck, Oliven und Rosinen gleichmäßig verteilen; rundherum 2 cm frei lassen.
+Aufrollen und erneut gehen lassen::Von einer langen Seite aufrollen, die Naht schließen und die Enden darunterlegen. Mit der Naht nach unten auf ein Blech mit Backpapier setzen. Locker abdecken und etwa 40 Minuten sichtbar aufgehen lassen.
+Bestreichen und backen::Während der zweiten Gare den Ofen auf 180 °C Ober-/Unterhitze vorheizen. Die Oberfläche an 3 Stellen mit einer Gabel einstechen und mit 25 g verquirltem Ei bestreichen. 35–40 Minuten goldbraun und durchgebacken backen; bei zu schneller Bräunung mit Alufolie abdecken.
+Ruhen lassen und schneiden::15 Minuten auf einem Gitter abkühlen lassen, dann in 12 Scheiben schneiden. Lauwarm servieren, sodass die Teigspirale und die gleichmäßig verteilte Füllung zu sehen sind.''',
+'''Kann ich das Brot am Vortag backen?::Backen, abkühlen lassen und abgedeckt kühlen. Die Scheiben abgedeckt aufwärmen, damit das Brot weich wird und die Füllung nicht austrocknet.
+Warum reißt es beim Backen auf?::Zu viel feuchte Füllung, eine schlecht verschlossene Naht oder eine zu kurze zweite Gare fördern Risse. Gut abtropfen lassen, verschließen und vor dem Backen ausreichend aufgehen lassen.
+Kann man es einfrieren?::Ja. Das gebackene, abgekühlte Brot in gut verpackten Scheiben bis zu 2 Monate einfrieren. Im Kühlschrank auftauen und gründlich erhitzen.''','1 von 12 Scheiben')
+add('fr','pain-jambon-venezuelien-pan-de-jamon','Pan de jamón : pain vénézuélien de Noël au jambon',
+'Un pain de Noël vénézuélien moelleux, roulé avec jambon cuit, lard fumé, olives et raisins secs. Les deux levées et le repos avant découpe sont inclus.',
+'Utilisez du jambon déjà cuit et laissez refroidir le lard avant de garnir. Les 130 minutes de repos comprennent 75 minutes de première levée, 40 de seconde levée et 15 de refroidissement ; une cuisine froide prolonge les levées. Ne surchargez pas de farine : la pâte doit rester souple et légèrement collante. Contient blé, lait et œuf ; la garniture contient du porc. Réfrigérez les restes couverts à 4 °C maximum sous 2 heures, consommez sous 2 jours et réchauffez à cœur.',
+'farine de blé de force|lait entier tiède|eau tiède|œuf entier sans coquille pour la pâte|beurre doux mou|sucre|levure boulangère sèche instantanée|sel|jambon cuit en tranches|lard fumé|olives vertes dénoyautées égouttées|raisins secs|œuf battu pour dorer',
+'''Mélangez la pâte::Mélangez 500 g de farine, 7 g de levure instantanée, 35 g de sucre et 8 g de sel. Ajoutez 200 ml de lait et 50 ml d’eau tièdes, sans dépasser 38 °C, puis 50 g d’œuf. Mélangez jusqu’à disparition de la farine sèche.
+Incorporez le beurre::Pétrissez 8 minutes. Ajoutez progressivement 50 g de beurre mou et pétrissez encore 4 minutes, jusqu’à une pâte lisse, élastique, qui se décolle du plan de travail pendant le pétrissage. Évitez l’excès de farine.
+Laissez doubler de volume::Placez dans un saladier, couvrez et laissez lever environ 75 minutes à 24–26 °C, jusqu’au doublement. Fiez-vous au volume : il faut davantage de temps au froid.
+Préparez la garniture::Faites cuire 80 g de lard à la poêle environ 5 minutes, jusqu’à disparition de l’aspect cru. Égouttez et laissez refroidir. Égouttez et séchez 80 g d’olives. Préparez 300 g de jambon et 60 g de raisins secs.
+Étalez et garnissez::Dégazez délicatement et étalez en rectangle d’environ 40 × 35 cm. Répartissez le jambon, le lard froid, les olives et les raisins, en laissant 2 cm libres sur les bords.
+Roulez et faites lever à nouveau::Roulez depuis un grand côté, soudez la jointure et repliez les extrémités dessous. Posez, jointure en dessous, sur une plaque avec papier cuisson. Couvrez sans serrer et laissez gonfler environ 40 minutes.
+Dorez et enfournez::Pendant la seconde levée, préchauffez le four à 180 °C, chaleur traditionnelle. Piquez la surface à 3 endroits avec une fourchette et badigeonnez de 25 g d’œuf battu. Faites cuire 35–40 minutes jusqu’à une pâte cuite et dorée ; couvrez d’aluminium si elle colore trop vite.
+Laissez reposer et tranchez::Laissez refroidir sur une grille 15 minutes avant de couper 12 tranches. Servez tiède en montrant la spirale de pâte et la garniture répartie.''',
+'''Peut-on le préparer la veille ?::Faites-le cuire, laissez refroidir puis réfrigérez à couvert. Réchauffez les tranches couvertes pour assouplir le pain sans dessécher la garniture.
+Pourquoi se fend-il au four ?::Une garniture trop abondante et humide, une jointure mal fermée ou une seconde levée trop courte favorisent les déchirures. Égouttez, soudez et laissez gonfler avant cuisson.
+Peut-on le congeler ?::Oui. Congelez le pain cuit et froid en tranches bien emballées jusqu’à 2 mois. Décongelez au réfrigérateur et réchauffez à cœur.''','1 des 12 tranches')
+add('it','pane-prosciutto-venezuelano-pan-de-jamon','Pan de jamón: pane venezuelano natalizio al prosciutto',
+'Pane natalizio venezuelano soffice, arrotolato con prosciutto cotto, pancetta affumicata, olive e uvetta. Comprende le due lievitazioni e il riposo prima del taglio.',
+'Usa prosciutto già cotto e lascia raffreddare la pancetta prima di farcire. I 130 minuti di riposo comprendono 75 minuti di prima lievitazione, 40 di seconda e 15 di raffreddamento; con il freddo la lievitazione si allunga. Non aggiungere troppa farina: l’impasto deve restare morbido e appena appiccicoso. Contiene frumento, latte e uova; il ripieno contiene maiale. Metti gli avanzi coperti in frigorifero a non più di 4 °C entro 2 ore, consumali entro 2 giorni e riscaldali a fondo.',
+'farina di frumento forte|latte intero tiepido|acqua tiepida|uovo intero senza guscio per l’impasto|burro non salato morbido|zucchero|lievito di birra secco istantaneo|sale|prosciutto cotto a fette|pancetta affumicata|olive verdi denocciolate e scolate|uvetta|uovo sbattuto per spennellare',
+'''Mescola l’impasto::Mescola 500 g di farina, 7 g di lievito istantaneo, 35 g di zucchero e 8 g di sale. Aggiungi 200 ml di latte e 50 ml d’acqua tiepidi, non oltre 38 °C, e 50 g d’uovo. Amalgama fino a eliminare la farina asciutta.
+Incorpora il burro::Impasta per 8 minuti. Aggiungi poco alla volta 50 g di burro morbido e impasta per altri 4 minuti, fino a una massa liscia ed elastica che si stacca dal piano mentre la lavori. Non asciugarla con troppa farina.
+Lascia raddoppiare::Metti in una ciotola, copri e fai lievitare circa 75 minuti a 24–26 °C, fino al raddoppio. Controlla il volume: in una cucina fredda serve più tempo.
+Prepara il ripieno::Cuoci 80 g di pancetta in padella per circa 5 minuti, finché non appare più cruda. Scola e raffredda. Scola e asciuga 80 g d’olive. Prepara 300 g di prosciutto e 60 g d’uvetta.
+Stendi e farcisci::Sgonfia delicatamente e stendi un rettangolo di circa 40 × 35 cm. Distribuisci prosciutto, pancetta fredda, olive e uvetta, lasciando 2 cm liberi sui bordi.
+Arrotola e fai lievitare ancora::Arrotola dal lato lungo, sigilla la giuntura e ripiega le estremità sotto. Metti con la chiusura in basso su una teglia rivestita di carta forno. Copri senza stringere e fai gonfiare circa 40 minuti.
+Spennella e inforna::Durante la seconda lievitazione scalda il forno statico a 180 °C. Bucherella la superficie in 3 punti con una forchetta e spennella con 25 g d’uovo sbattuto. Cuoci per 35–40 minuti, finché il pane è dorato e l’impasto cotto; copri con alluminio se colora troppo presto.
+Lascia riposare e affetta::Fai raffreddare su una griglia per 15 minuti prima di tagliare 12 fette. Servi tiepido mostrando la spirale e il ripieno ben distribuito.''',
+'''Posso prepararlo il giorno prima?::Cuocilo, lascialo raffreddare e mettilo coperto in frigorifero. Riscalda le fette coperte per ammorbidire il pane senza asciugare il ripieno.
+Perché si apre in forno?::Ripieno troppo umido e abbondante, chiusura poco sigillata o seconda lievitazione troppo breve favoriscono le spaccature. Scola, sigilla e lascia crescere prima di cuocere.
+Si può congelare?::Sì. Congela il pane cotto e freddo a fette ben avvolte per un massimo di 2 mesi. Scongela in frigorifero e riscalda completamente.''','1 delle 12 fette')
+add('pt','pao-de-presunto-venezuelano-pan-de-jamon','Pan de jamón: pão de presunto venezuelano de Natal',
+'Pão natalino venezuelano de massa macia, enrolado com presunto cozido, bacon, azeitonas e uvas-passas. Inclui as duas fermentações e o descanso antes de cortar.',
+'Use presunto já cozido e deixe o bacon esfriar antes de rechear. Os 130 minutos de descanso incluem 75 de primeira fermentação, 40 de segunda e 15 para esfriar; o frio pode prolongar a fermentação. Evite farinha em excesso: a massa deve ficar macia e levemente grudenta. Contém trigo, leite e ovo; o recheio leva carne suína. Guarde as sobras tampadas a 4 °C ou menos em até 2 horas, consuma em 2 dias e reaqueça por completo.',
+'farinha de trigo forte para pão|leite integral morno|água morna|ovo inteiro sem casca para a massa|manteiga sem sal macia|açúcar|fermento biológico seco instantâneo|sal|presunto cozido fatiado|bacon defumado|azeitonas verdes sem caroço escorridas|uvas-passas|ovo batido para pincelar',
+'''Misture a massa::Misture 500 g de farinha, 7 g de fermento instantâneo, 35 g de açúcar e 8 g de sal. Junte 200 ml de leite e 50 ml de água mornos, sem passar de 38 °C, e 50 g de ovo. Misture até não restar farinha seca.
+Incorpore a manteiga::Sove por 8 minutos. Junte 50 g de manteiga macia aos poucos e sove por mais 4 minutos, até a massa ficar lisa, elástica e se soltar da bancada durante o trabalho. Não resseque com farinha extra em excesso.
+Deixe dobrar de volume::Coloque em uma tigela, cubra e deixe fermentar cerca de 75 minutos a 24–26 °C, até dobrar. Observe o crescimento: em uma cozinha fria vai demorar mais.
+Prepare o recheio::Cozinhe 80 g de bacon em uma frigideira por cerca de 5 minutos, até perder a aparência crua. Escorra e esfrie. Escorra e seque 80 g de azeitonas. Separe 300 g de presunto e 60 g de passas.
+Abra e distribua::Retire o excesso de gás delicadamente e abra um retângulo de cerca de 40 × 35 cm. Distribua presunto, bacon frio, azeitonas e passas, deixando 2 cm livres nas bordas.
+Enrole e fermente novamente::Enrole a partir de um lado comprido, feche a emenda e dobre as pontas para baixo. Coloque com a emenda voltada para baixo em assadeira com papel-manteiga. Cubra sem apertar e deixe crescer cerca de 40 minutos, até ficar mais fofo.
+Pincele e asse::Durante a segunda fermentação, preaqueça o forno a 180 °C, calor superior e inferior. Fure a superfície em 3 pontos com um garfo e pincele com 25 g de ovo batido. Asse por 35–40 minutos, até dourar e cozinhar a massa; cubra com alumínio se dourar cedo demais.
+Descanse e corte::Deixe sobre uma grade por 15 minutos antes de cortar em 12 fatias. Sirva morno, mostrando a espiral de massa e o recheio bem distribuído.''',
+'''Posso preparar no dia anterior?::Asse, deixe esfriar e guarde tampado na geladeira. Reaqueça as fatias cobertas para amaciar o pão sem ressecar o recheio.
+Por que abre no forno?::Recheio úmido em excesso, emenda mal fechada ou segunda fermentação curta podem causar rachaduras. Escorra, vede e espere o pão crescer antes de assar.
+Posso congelar?::Sim. Congele o pão assado e frio em fatias bem embaladas por até 2 meses. Descongele na geladeira e reaqueça por completo.''','1 das 12 fatias')
+add('ja','venezuelan-ham-bread-pan-de-jamon','パン・デ・ハモン：ベネズエラのクリスマスハムパン',
+'やわらかな生地に加熱済みハム、ベーコン、オリーブ、レーズンを巻く、ベネズエラのクリスマスパンです。二度の発酵と、切る前の冷まし時間も含めて説明します。',
+'加熱済みのハムを使い、焼いたベーコンは冷ましてから包みます。休ませる130分は一次発酵75分、二次発酵40分、冷ます時間15分の合計です。寒い台所では発酵が長くなります。生地はやわらかく、少しべたつく状態にし、打ち粉を増やしすぎないでください。小麦、乳、卵を含み、具には豚肉を使います。残りは2時間以内にふた付き容器で4 °C以下に冷蔵し、2日以内に十分再加熱して食べてください。',
+'強力粉|ぬるく温めた牛乳（全乳）|ぬるま湯|生地用の全卵（殻を除く）|やわらかくした無塩バター|砂糖|インスタントドライイースト（パン用）|塩|加熱済みハムの薄切り|スモークベーコン|種を除いて水気を切ったグリーンオリーブ|レーズン|つや出し用の溶き卵',
+'''生地を混ぜる::強力粉500 g、インスタントドライイースト7 g、砂糖35 g、塩8 gを混ぜます。牛乳200 ml、ぬるま湯50 ml、卵50 gを加え、粉っぽさがなくなるまで混ぜます。牛乳と水は38 °C以下にしてください。
+バターを練り込む::8分こねます。やわらかいバター50 gを少しずつ加え、さらに4分こねます。なめらかで弾力があり、作業中に台から離れる生地にします。打ち粉で乾かしすぎないようにします。
+2倍になるまで発酵させる::ボウルに入れて覆い、24〜26 °Cで約75分、体積が2倍になるまで発酵させます。時間よりふくらみを目安にし、寒い場合は長めに取ってください。
+具を準備する::ベーコン80 gをフライパンで約5分、生の見た目がなくなるまで焼きます。脂を切って冷まします。オリーブ80 gの水気を切って拭き、ハム300 gとレーズン60 gを用意します。
+広げて具をのせる::生地のガスをやさしく抜き、約40 × 35 cmの長方形に伸ばします。ハム、冷めたベーコン、オリーブ、レーズンを均等にのせ、周囲を2 cm空けます。
+巻いて二次発酵させる::長い辺から巻き、綴じ目を閉じて両端を下に折ります。オーブンシートを敷いた天板に綴じ目を下にして置きます。ゆるく覆い、約40分、目に見えてふくらむまで発酵させます。
+溶き卵を塗って焼く::二次発酵中にオーブンを上下加熱180 °Cに予熱します。表面をフォークで3か所刺し、溶き卵25 gを塗ります。35〜40分、きつね色になって生地に火が通るまで焼きます。早く色づく場合はアルミホイルをかぶせます。
+休ませて切る::網の上で15分冷ましてから12切れに切ります。生地の渦巻きと均等に入った具が見えるように盛り、温かいうちに食べます。''',
+'''前日に作れますか？::焼いて冷まし、覆って冷蔵できます。切ったパンは覆って再加熱すると、具を乾かしすぎず生地のやわらかさを戻せます。
+焼くと割れるのはなぜですか？::水気の多い具の入れすぎ、綴じ目の閉じ不足、二次発酵の不足が原因になります。具の水気を切り、しっかり閉じ、ふくらませてから焼きます。
+冷凍できますか？::はい。焼いて冷ましたパンを切り、しっかり包んで最長2か月冷凍できます。冷蔵庫で解凍してから十分再加熱してください。''','12切れのうち1切れ')
+for l,r in L.items():assert len(r['steps'])==8 and len(r['ingredients'])==13 and len(r['faq'])==3,l
+p=Path(__file__).resolve().parents[1]/'editorial/lote-cinco-20261024/pan-de-jamon-venezolano-locales.json';p.write_text(json.dumps(L,ensure_ascii=False,indent=2)+'\n');print('Pan de jamon: six complete translations')
