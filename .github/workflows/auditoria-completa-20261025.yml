@@ -26,8 +26,13 @@ jobs:
           import json,os,pathlib,urllib.request,concurrent.futures,time
           secret=(os.environ.get('REVALIDATE_SECRET') or '').rstrip('\r\n')
           if not secret:raise SystemExit('Missing cache secret')
-          req=urllib.request.Request('https://manualdecocina.com/api/revalidate',data=b'{}',headers={'x-revalidate-secret':secret,'Content-Type':'application/json'})
-          with urllib.request.urlopen(req,timeout=40) as r:assert json.load(r).get('revalidated') is True
+          req=urllib.request.Request('https://manualdecocina.com/api/revalidate?publication='+str(time.time_ns()),data=b'{}',headers={'x-revalidate-secret':secret,'Content-Type':'application/json','Cache-Control':'no-cache'})
+          with urllib.request.urlopen(req,timeout=40) as r:info=json.load(r)
+          assert info.get('revalidated') is True
+          print('CACHE_RESPONSE_JSON '+json.dumps({k:info.get(k) for k in ['revalidated','cacheMode','at']}))
+          for path in ['/es','/focaccia-sin-amasado-romero']:
+              with urllib.request.urlopen(urllib.request.Request('https://manualdecocina.com'+path,headers={'Cache-Control':'no-cache'}),timeout=45) as r:
+                  print('CACHE_HEADERS_JSON '+json.dumps({'path':path,'headers':{k:v for k,v in r.headers.items() if k.lower() in ['age','cache-control','cdn-cache-control','x-cache','x-nextjs-cache','x-litespeed-cache','server','date']}}));r.read()
           urls=set(['/sitemap.xml'])
           for lang in ['es','de','en','fr','it','ja','pt']:urls.update(['/'+lang,'/'+lang+'/recetas'])
           D=pathlib.Path('editorial/lote-cinco-20261024')
