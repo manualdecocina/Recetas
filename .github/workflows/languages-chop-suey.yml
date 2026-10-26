@@ -1,0 +1,42 @@
+name: languages-chop-suey
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/lib/md-data.ts'
+      - '.github/workflows/languages-chop-suey.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Wait for deployed fix and refresh public cache
+        env:
+          REVALIDATE_SECRET: ${{ secrets.REVALIDATE_SECRET }}
+        run: |
+          python3 - <<'PY'
+          import os,time,urllib.request,urllib.error,json
+          base='https://manualdecocina.com'
+          for attempt in range(40):
+              try:
+                  with urllib.request.urlopen(base+'/.well-known/manualdecocina-languages-20261025.txt?probe='+str(time.time_ns()),timeout=20) as r:
+                      if r.read()==b'manualdecocina-languages-20261025-v1\n':break
+              except urllib.error.HTTPError:pass
+              if attempt==39:raise SystemExit('Language fix has not deployed')
+              time.sleep(15)
+          secret=(os.environ.get('REVALIDATE_SECRET') or '').rstrip('\r\n')
+          if not secret:raise SystemExit('Missing cache secret')
+          req=urllib.request.Request(base+'/api/revalidate?languages='+str(time.time_ns()),data=b'{}',headers={'x-revalidate-secret':secret,'Content-Type':'application/json'})
+          with urllib.request.urlopen(req,timeout=35) as r:assert json.load(r).get('revalidated') is True
+          PY
+      - name: Verify navigation, seven chop suey versions, media hashes and sitemap
+        run: python3 scripts/audit-languages-chop-suey.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: languages-chop-suey-production-qa
+          path: languages-chop-suey-qa.json

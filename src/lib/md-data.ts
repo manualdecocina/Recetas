@@ -1,5 +1,5 @@
 import { supabase } from '@/lib/supabase/public'
-import type { RecipeLanguage } from '@/types/recipe'
+import { SUPPORTED_LANGUAGES, type RecipeLanguage } from '@/types/recipe'
 import type { MdRecipeCardData } from '@/components/md/md-types'
 import type { MdCategorySummary } from '@/components/md/CategoryViews'
 import type { MdIngredientSummary } from '@/components/md/IngredientViews'
@@ -245,11 +245,16 @@ export async function getPantryMatchData(lang: RecipeLanguage = 'es'): Promise<{
 
 /** Idiomas que tienen al menos una receta publicada (los demás se muestran deshabilitados en el selector). */
 export async function getAvailableLanguages(): Promise<RecipeLanguage[]> {
-  const { data, error } = await supabase
-    .from('recipes')
-    .select('language')
-    .eq('published', true)
-    .limit(2000)
-  if (error) return ['es']
-  return Array.from(new Set((data ?? []).map((row: { language: string }) => row.language as RecipeLanguage)))
+  // PostgREST caps a response at 1,000 rows even with limit(2000). Checking
+  // existence per language keeps later languages visible as the catalog grows.
+  const available = await Promise.all(SUPPORTED_LANGUAGES.map(async (language) => {
+    const { data, error } = await supabase
+      .from('recipes')
+      .select('language')
+      .eq('published', true)
+      .eq('language', language)
+      .limit(1)
+    return !error && data?.length ? language : null
+  }))
+  return available.filter((language): language is RecipeLanguage => language !== null)
 }
