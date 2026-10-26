@@ -19,4 +19,5 @@ jobs:
       - run: npm run typecheck
       - run: npm run test:logic
       - run: node tests/components/consent-ratings.test.cjs
+      - run: node tests/components/available-languages.test.cjs
       - run: npm run build
