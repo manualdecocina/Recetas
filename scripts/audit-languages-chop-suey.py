@@ -29,9 +29,9 @@ class Page(HTMLParser):
     def handle_starttag(self, tag, attrs):
         a = dict(attrs)
         if tag == 'html': self.lang = a.get('lang')
-        if tag == 'link' and a.get('rel') == 'canonical': self.canonical.append(a['href'])
-        if tag == 'link' and a.get('hreflang'): self.alternates[a['hreflang']] = a['href']
-        if tag == 'a' and 'md-lang-item' in a.get('class', '').split(): self.lang_links.add(a['href'])
+        if tag == 'link' and a.get('rel') == 'canonical': self.canonical.append(urllib.parse.unquote(a['href']))
+        if tag == 'link' and a.get('hreflang'): self.alternates[a['hreflang']] = urllib.parse.unquote(a['href'])
+        if tag == 'a' and 'md-lang-item' in a.get('class', '').split(): self.lang_links.add(urllib.parse.unquote(a['href']))
         if tag == 'script' and a.get('type') == 'application/ld+json': self.buffer = ''
     def handle_data(self, text):
         if self.buffer is not None: self.buffer += text
@@ -86,7 +86,7 @@ def main():
     with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
         report['images'] = list(pool.map(check_image, sorted(images)))
     sitemap = ET.fromstring(fetch(BASE + '/sitemap.xml'))
-    locations = {element.text for element in sitemap.iter() if element.tag.endswith('}loc')}
+    locations = {urllib.parse.unquote(element.text) for element in sitemap.iter() if element.tag.endswith('}loc')}
     assert set(expected.values()) <= locations, ('sitemap missing', set(expected.values()) - locations)
     report['sitemap_recipes'] = 7
     Path('languages-chop-suey-qa.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n')
