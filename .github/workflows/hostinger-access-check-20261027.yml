@@ -1,0 +1,20 @@
+name: Hostinger existing deployment access
+on:
+  push:
+    branches: [ops/hostinger-access-check-20261027]
+permissions:
+  contents: read
+jobs:
+  inspect:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 2
+    steps:
+      - name: Check existing deployment credential availability without exposing values
+        env:
+          HOSTINGER_API_TOKEN: ${{ secrets.HOSTINGER_API_TOKEN }}
+          REVALIDATE_SECRET: ${{ secrets.REVALIDATE_SECRET }}
+        run: |
+          python3 - <<'PY'
+          import os,json
+          print(json.dumps({'hostinger_deployment_credential_configured':bool(os.environ.get('HOSTINGER_API_TOKEN','').strip()),'existing_cache_credential_configured':bool(os.environ.get('REVALIDATE_SECRET','').strip())}))
+          PY
