@@ -1,0 +1,1376 @@
+{
+  "slug": "vasitos-manzana-spekulatius",
+  "key": "spekulatius",
+  "date": "2026-10-27",
+  "target": "https://manualdecocina.com",
+  "origin_market": "de",
+  "languages": [
+    "es",
+    "de",
+    "en",
+    "fr",
+    "it",
+    "ja",
+    "pt"
+  ],
+  "category_slug": "postres",
+  "steps_es_sha256": "b0b2cee85d0be9e21f55bc8299b6db42ecf68ae5a6cf880ad9bbc68021cd3b56",
+  "physical_kitchen_test": false,
+  "pantry_slugs": [
+    "manzana",
+    "galletas",
+    "yogur-griego",
+    "crema-de-leche",
+    "azucar",
+    "agua",
+    "limon",
+    null
+  ],
+  "sources": [
+    "https://www.oetker.de/inspiration/anlaesse/weihnachten/spekulatius",
+    "https://www.lieblingszwei.de/spekulatius-apfel-dessert/"
+  ],
+  "nutrition_calculation": {
+    "foods": [
+      {
+        "ingredient": "manzanas peladas y sin corazón",
+        "grams": 500,
+        "reference_id": "9004",
+        "description": "Apples, raw, without skin",
+        "fdc_id": 171689,
+        "source_url": "https://fdc.nal.usda.gov/food-details/171689/nutrients",
+        "per_100g": {
+          "saturated_fat_g": 0.021,
+          "carbs_g": 12.8,
+          "calories": 48.0,
+          "sodium_mg": 0.0,
+          "fiber_g": 1.3,
+          "protein_g": 0.27,
+          "sugar_g": 10.1,
+          "fat_g": 0.13
+        }
+      },
+      {
+        "ingredient": "galletas Spekulatius",
+        "grams": 150,
+        "reference_id": "label-spekulatius",
+        "description": "EDEKA GUT&GÜNSTIG Gewürz-Spekulatius reference label",
+        "source_url": "https://www.edeka.de/sortiment/4311501462133/",
+        "per_100g": {
+          "calories": 470,
+          "protein_g": 5.9,
+          "carbs_g": 70,
+          "fat_g": 18,
+          "saturated_fat_g": 9,
+          "sugar_g": 29,
+          "sodium_mg": 352
+        }
+      },
+      {
+        "ingredient": "yogur griego natural entero",
+        "grams": 300,
+        "reference_id": "1293",
+        "description": "Yogurt, Greek, plain, whole milk",
+        "fdc_id": 171304,
+        "source_url": "https://fdc.nal.usda.gov/food-details/171304/nutrients",
+        "per_100g": {
+          "protein_g": 9.0,
+          "fiber_g": 0.0,
+          "sodium_mg": 35.0,
+          "sugar_g": 4.0,
+          "fat_g": 5.0,
+          "carbs_g": 3.98,
+          "calories": 97.0,
+          "saturated_fat_g": 2.4
+        }
+      },
+      {
+        "ingredient": "nata para montar, 35 % de grasa, fría",
+        "grams": 200,
+        "reference_id": "1053",
+        "description": "Cream, fluid, heavy whipping",
+        "fdc_id": 170859,
+        "source_url": "https://fdc.nal.usda.gov/food-details/170859/nutrients",
+        "per_100g": {
+          "fat_g": 36.1,
+          "calories": 340,
+          "sugar_g": 2.92,
+          "sodium_mg": 27.0,
+          "protein_g": 2.84,
+          "saturated_fat_g": 23.0,
+          "fiber_g": 0.0,
+          "carbs_g": 2.84
+        }
+      },
+      {
+        "ingredient": "azúcar: 20 g para manzana y 20 g para crema",
+        "grams": 40,
+        "reference_id": "19335",
+        "description": "Sugars, granulated",
+        "fdc_id": 169655,
+        "source_url": "https://fdc.nal.usda.gov/food-details/169655/nutrients",
+        "per_100g": {
+          "protein_g": 0.0,
+          "sodium_mg": 1.0,
+          "fat_g": 0.0,
+          "calories": 387,
+          "saturated_fat_g": 0.0,
+          "sugar_g": 99.8,
+          "carbs_g": 100,
+          "fiber_g": 0.0
+        }
+      },
+      {
+        "ingredient": "agua",
+        "grams": 40,
+        "reference_id": "14411",
+        "description": "Beverages, water, tap, drinking",
+        "fdc_id": 173647,
+        "source_url": "https://fdc.nal.usda.gov/food-details/173647/nutrients",
+        "per_100g": {
+          "fat_g": 0.0,
+          "carbs_g": 0.0,
+          "calories": 0.0,
+          "protein_g": 0.0,
+          "fiber_g": 0.0,
+          "sodium_mg": 4.0,
+          "sugar_g": 0.0,
+          "saturated_fat_g": 0.0
+        }
+      },
+      {
+        "ingredient": "zumo de limón",
+        "grams": 15,
+        "reference_id": "9152",
+        "description": "Lemon juice, raw",
+        "fdc_id": 167747,
+        "source_url": "https://fdc.nal.usda.gov/food-details/167747/nutrients",
+        "per_100g": {
+          "protein_g": 0.35,
+          "saturated_fat_g": 0.04,
+          "fiber_g": 0.3,
+          "sodium_mg": 1.0,
+          "sugar_g": 2.52,
+          "fat_g": 0.24,
+          "carbs_g": 6.9,
+          "calories": 22.0
+        }
+      },
+      {
+        "ingredient": "canela molida",
+        "grams": 1,
+        "reference_id": "2010",
+        "description": "Spices, cinnamon, ground",
+        "fdc_id": 171320,
+        "source_url": "https://fdc.nal.usda.gov/food-details/171320/nutrients",
+        "per_100g": {
+          "sugar_g": 2.17,
+          "fiber_g": 53.1,
+          "protein_g": 3.99,
+          "sodium_mg": 10.0,
+          "saturated_fat_g": 0.345,
+          "fat_g": 1.24,
+          "carbs_g": 80.6,
+          "calories": 247
+        }
+      }
+    ],
+    "result": {
+      "calories": 346,
+      "protein_g": 7.2,
+      "carbs_g": 38.1,
+      "fat_g": 19.1,
+      "saturated_fat_g": 11.1,
+      "sugar_g": 25.4,
+      "sodium_mg": 114.9
+    },
+    "servings": 6,
+    "assumptions": [
+      "Reference labels are examples, not brand requirements.",
+      "All edible inputs counted; bacon rendering and bean rinsing losses not deducted.",
+      "Stock and vinegar ml approximated as grams.",
+      "All coating and caramel counted even though some may remain; morango colouring dose about 1 g omitted from nutrient sum; this is not an exact product analysis.",
+      "White wine alcohol retention not modelled; label calories for full input counted."
+    ]
+  },
+  "records": [
+    {
+      "language": "es",
+      "slug": "vasitos-manzana-spekulatius",
+      "public_path": "/vasitos-manzana-spekulatius",
+      "title": "Vasitos de manzana y Spekulatius sin horno",
+      "excerpt": "Postre de manzana, galletas Spekulatius y crema de yogur y nata en seis vasitos. Sin huevo ni horno, con las capas y el tiempo de enfriado explicados.",
+      "summary": "Postre de manzana, galletas Spekulatius y crema de yogur y nata en seis vasitos. Sin huevo ni horno, con las capas y el tiempo de enfriado explicados.",
+      "notes": "<p>Usa galletas Spekulatius especiadas, no crema para untar. Contiene leche y trigo; revisa las galletas por posibles frutos secos. Enfría la manzana completamente antes de montar para que la nata no pierda volumen. Los 140 minutos de reposo incluyen 20 minutos para enfriar la compota y 2 horas de nevera. Guarda tapado a 4 °C o menos y consume en 2 días. Añade las migas finales al servir para que sigan crujientes.</p><h2>También puedes preparar</h2><ul><li><a href=\"/cerdo-repollo-vapor-seiro\">Cerdo y repollo al vapor en seiro con salsa de sésamo</a></li><li><a href=\"/morango-cravejado\">Morango cravejado: fresas con brigadeiro y cobertura crujiente</a></li></ul>",
+      "content_html": "<p>Postre de manzana, galletas Spekulatius y crema de yogur y nata en seis vasitos. Sin huevo ni horno, con las capas y el tiempo de enfriado explicados.</p><p>Usa galletas Spekulatius especiadas, no crema para untar. Contiene leche y trigo; revisa las galletas por posibles frutos secos. Enfría la manzana completamente antes de montar para que la nata no pierda volumen. Los 140 minutos de reposo incluyen 20 minutos para enfriar la compota y 2 horas de nevera. Guarda tapado a 4 °C o menos y consume en 2 días. Añade las migas finales al servir para que sigan crujientes.</p><h2>También puedes preparar</h2><ul><li><a href=\"/cerdo-repollo-vapor-seiro\">Cerdo y repollo al vapor en seiro con salsa de sésamo</a></li><li><a href=\"/morango-cravejado\">Morango cravejado: fresas con brigadeiro y cobertura crujiente</a></li></ul>",
+      "ingredients": [
+        {
+          "name": "manzanas peladas y sin corazón",
+          "amount": "500",
+          "unit": "g"
+        },
+        {
+          "name": "galletas Spekulatius",
+          "amount": "150",
+          "unit": "g"
+        },
+        {
+          "name": "yogur griego natural entero",
+          "amount": "300",
+          "unit": "g"
+        },
+        {
+          "name": "nata para montar, 35 % de grasa, fría",
+          "amount": "200",
+          "unit": "g"
+        },
+        {
+          "name": "azúcar: 20 g para manzana y 20 g para crema",
+          "amount": "40",
+          "unit": "g"
+        },
+        {
+          "name": "agua",
+          "amount": "40",
+          "unit": "ml"
+        },
+        {
+          "name": "zumo de limón",
+          "amount": "15",
+          "unit": "ml"
+        },
+        {
+          "name": "canela molida",
+          "amount": "1",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Corta la manzana",
+          "content": "Corta 500 g de manzana limpia en dados pequeños. Ponla en un cazo con 40 ml de agua, limón, canela y 20 g de azúcar.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/paso-01.webp",
+          "image_alt": "Vasitos de manzana y Spekulatius sin horno: Corta la manzana"
+        },
+        {
+          "title": "Cocina la compota",
+          "content": "Tapa y cocina a fuego medio-bajo 8–10 minutos, removiendo. La manzana debe estar tierna, con algunos dados enteros; destapa al final si sobra líquido.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/paso-02.webp",
+          "image_alt": "Vasitos de manzana y Spekulatius sin horno: Cocina la compota"
+        },
+        {
+          "title": "Enfría por completo",
+          "content": "Extiende la compota en un recipiente poco profundo y deja templar unos 20 minutos. Después refrigera mientras preparas la crema; no la uses caliente.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/paso-03.webp",
+          "image_alt": "Vasitos de manzana y Spekulatius sin horno: Enfría por completo"
+        },
+        {
+          "title": "Rompe las galletas",
+          "content": "Tritura groseramente 150 g de Spekulatius dentro de una bolsa alimentaria. Reserva 30 g de migas secas para decorar al servir.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/paso-04.webp",
+          "image_alt": "Vasitos de manzana y Spekulatius sin horno: Rompe las galletas"
+        },
+        {
+          "title": "Monta la nata",
+          "content": "Bate 200 g de nata bien fría con los 20 g restantes de azúcar hasta obtener picos suaves. No sigas batiendo hasta que se corte.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/paso-05.webp",
+          "image_alt": "Vasitos de manzana y Spekulatius sin horno: Monta la nata"
+        },
+        {
+          "title": "Prepara la crema",
+          "content": "Remueve 300 g de yogur hasta alisarlo. Incorpora la nata con una espátula, suavemente y en dos tandas, conservando el aire.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/paso-06.webp",
+          "image_alt": "Vasitos de manzana y Spekulatius sin horno: Prepara la crema"
+        },
+        {
+          "title": "Monta y refrigera",
+          "content": "Reparte los 120 g de migas, la compota fría y la crema entre seis vasos de 200 ml. Tapa y refrigera durante 2 horas.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/paso-07.webp",
+          "image_alt": "Vasitos de manzana y Spekulatius sin horno: Monta y refrigera"
+        },
+        {
+          "title": "Termina los vasitos",
+          "content": "Reparte los 30 g de migas reservadas por encima justo antes de servir. Sirve frío, un vaso por persona.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/paso-08.webp",
+          "image_alt": "Vasitos de manzana y Spekulatius sin horno: Termina los vasitos"
+        }
+      ],
+      "category": "Postres",
+      "course": "Postres",
+      "cuisine": "Alemana",
+      "difficulty": "Fácil",
+      "prep_time_minutes": 25,
+      "cook_time_minutes": 10,
+      "total_time_minutes": 175,
+      "servings": 6,
+      "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/portada.webp",
+      "gallery": [
+        {
+          "url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/portada.webp",
+          "alt": "Vasitos de manzana y Spekulatius sin horno"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "Vasitos de manzana y Spekulatius sin horno",
+        "manzanas peladas y sin corazón",
+        "galletas Spekulatius"
+      ],
+      "nutrition": {
+        "calories": 346,
+        "protein_g": 7.2,
+        "carbs_g": 38.1,
+        "fat_g": 19.1,
+        "saturated_fat_g": 11.1,
+        "sugar_g": 25.4,
+        "sodium_mg": 114.9,
+        "estimated": true,
+        "serving_size": "1 de 6 porciones",
+        "source": "USDA FoodData Central SR Legacy + reference product labels",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Suma de referencias por peso, dividida entre las porciones; todos los ingredientes principales contabilizados.",
+        "note": "Estimación orientativa, no medición del plato cocinado. Las marcas y el escurrido cambian los valores; los nutrientes sin dato completo no se muestran."
+      },
+      "seo": {
+        "title": "Vasitos de manzana y Spekulatius sin horno | Manual de Cocina",
+        "description": "Postre de manzana, galletas Spekulatius y crema de yogur y nata en seis vasitos. Sin huevo ni horno, con las capas y el tiempo de enfriado explicados.",
+        "image_alt": "Vasitos de manzana y Spekulatius sin horno",
+        "image_variants": [
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/portada-1x1.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/portada-4x3.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "¿Puedo prepararlo el día anterior?",
+            "a": "Sí. Guarda los vasos tapados en la nevera y las migas finales en un recipiente seco; añádelas al servir."
+          },
+          {
+            "q": "¿Qué uso si no encuentro Spekulatius?",
+            "a": "Galletas especiadas de canela o jengibre. El sabor y los nutrientes serán distintos; evita añadir más canela sin probar."
+          },
+          {
+            "q": "¿Por qué queda líquida la crema?",
+            "a": "La compota caliente, el yogur poco espeso o la nata sin montar pueden aflojarla. Usa todo frío y respeta las 2 horas de nevera."
+          }
+        ],
+        "rest_time_minutes": 140
+      },
+      "published": true,
+      "editorial_status": "published",
+      "source_url": null,
+      "source_post_id": null,
+      "recipe_group_id": "9ab5e2eb-de72-44b9-8024-e2ba13ef9530"
+    },
+    {
+      "language": "de",
+      "slug": "spekulatius-apfel-dessert-im-glas",
+      "public_path": "/de/spekulatius-apfel-dessert-im-glas",
+      "title": "Spekulatius-Apfel-Dessert im Glas ohne Backen",
+      "excerpt": "Sechs Dessertgläser mit Apfelkompott, Gewürzspekulatius und Joghurt-Sahne-Creme. Ohne Ei und Backofen, mit genauer Schichtung und eingerechneter Kühlzeit.",
+      "summary": "Sechs Dessertgläser mit Apfelkompott, Gewürzspekulatius und Joghurt-Sahne-Creme. Ohne Ei und Backofen, mit genauer Schichtung und eingerechneter Kühlzeit.",
+      "notes": "<p>Gewürzspekulatius verwenden, keinen Keksaufstrich. Enthält Milch und Weizen; auf mögliche Nüsse in den Keksen achten. Äpfel vollständig abkühlen lassen. Die Ruhezeit umfasst 20 Minuten Abkühlen und 2 Stunden Kühlschrank. Abgedeckt bei höchstens 4 °C bis zu 2 Tage lagern; die letzten Brösel erst beim Servieren aufstreuen.</p><h2>Auch ausprobieren</h2><ul><li><a href=\"/de/seiro-schweinefleisch-kohl\">Schweinefleisch und Kohl aus dem Seiro mit Sesamsauce</a></li><li><a href=\"/de/morango-cravejado-erdbeerpralinen\">Morango cravejado: Erdbeerpralinen mit rotem Karamell</a></li></ul>",
+      "content_html": "<p>Sechs Dessertgläser mit Apfelkompott, Gewürzspekulatius und Joghurt-Sahne-Creme. Ohne Ei und Backofen, mit genauer Schichtung und eingerechneter Kühlzeit.</p><p>Gewürzspekulatius verwenden, keinen Keksaufstrich. Enthält Milch und Weizen; auf mögliche Nüsse in den Keksen achten. Äpfel vollständig abkühlen lassen. Die Ruhezeit umfasst 20 Minuten Abkühlen und 2 Stunden Kühlschrank. Abgedeckt bei höchstens 4 °C bis zu 2 Tage lagern; die letzten Brösel erst beim Servieren aufstreuen.</p><h2>Auch ausprobieren</h2><ul><li><a href=\"/de/seiro-schweinefleisch-kohl\">Schweinefleisch und Kohl aus dem Seiro mit Sesamsauce</a></li><li><a href=\"/de/morango-cravejado-erdbeerpralinen\">Morango cravejado: Erdbeerpralinen mit rotem Karamell</a></li></ul>",
+      "ingredients": [
+        {
+          "name": "geschälte, entkernte Äpfel",
+          "amount": "500",
+          "unit": "g"
+        },
+        {
+          "name": "Gewürzspekulatius",
+          "amount": "150",
+          "unit": "g"
+        },
+        {
+          "name": "griechischer Naturjoghurt, Vollfett",
+          "amount": "300",
+          "unit": "g"
+        },
+        {
+          "name": "kalte Schlagsahne, 35 % Fett",
+          "amount": "200",
+          "unit": "g"
+        },
+        {
+          "name": "Zucker: 20 g für Äpfel, 20 g für Creme",
+          "amount": "40",
+          "unit": "g"
+        },
+        {
+          "name": "Wasser",
+          "amount": "40",
+          "unit": "ml"
+        },
+        {
+          "name": "Zitronensaft",
+          "amount": "15",
+          "unit": "ml"
+        },
+        {
+          "name": "gemahlener Zimt",
+          "amount": "1",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Äpfel würfeln",
+          "content": "500 g vorbereitete Äpfel klein würfeln. Mit 40 ml Wasser, Zitronensaft, Zimt und 20 g Zucker in einen Topf geben.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/paso-01.webp",
+          "image_alt": "Spekulatius-Apfel-Dessert im Glas ohne Backen: Äpfel würfeln"
+        },
+        {
+          "title": "Kompott kochen",
+          "content": "Zugedeckt bei mittlerer bis kleiner Hitze 8–10 Minuten unter gelegentlichem Rühren garen. Einige weiche Stücke erhalten; überschüssige Flüssigkeit offen einkochen.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/paso-02.webp",
+          "image_alt": "Spekulatius-Apfel-Dessert im Glas ohne Backen: Kompott kochen"
+        },
+        {
+          "title": "Vollständig abkühlen",
+          "content": "In eine flache Schale geben, etwa 20 Minuten abkühlen lassen und während der Cremezubereitung kühlen. Nicht warm einschichten.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/paso-03.webp",
+          "image_alt": "Spekulatius-Apfel-Dessert im Glas ohne Backen: Vollständig abkühlen"
+        },
+        {
+          "title": "Kekse zerbröseln",
+          "content": "150 g Spekulatius in einem Lebensmittelbeutel grob zerdrücken. 30 g trockene Brösel für das Servieren zurücklegen.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/paso-04.webp",
+          "image_alt": "Spekulatius-Apfel-Dessert im Glas ohne Backen: Kekse zerbröseln"
+        },
+        {
+          "title": "Sahne schlagen",
+          "content": "200 g kalte Sahne mit den übrigen 20 g Zucker weich aufschlagen. Aufhören, bevor sie körnig wird.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/paso-05.webp",
+          "image_alt": "Spekulatius-Apfel-Dessert im Glas ohne Backen: Sahne schlagen"
+        },
+        {
+          "title": "Creme mischen",
+          "content": "300 g Joghurt glatt rühren. Sahne in zwei Portionen vorsichtig unterheben, damit die Creme luftig bleibt.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/paso-06.webp",
+          "image_alt": "Spekulatius-Apfel-Dessert im Glas ohne Backen: Creme mischen"
+        },
+        {
+          "title": "Schichten und kühlen",
+          "content": "120 g Brösel, kaltes Kompott und Creme auf sechs Gläser mit je 200 ml verteilen. Abdecken und 2 Stunden kühlen.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/paso-07.webp",
+          "image_alt": "Spekulatius-Apfel-Dessert im Glas ohne Backen: Schichten und kühlen"
+        },
+        {
+          "title": "Gläser fertigstellen",
+          "content": "Die übrigen 30 g Brösel erst direkt vor dem Servieren aufstreuen. Kalt servieren, ein Glas pro Person.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/paso-08.webp",
+          "image_alt": "Spekulatius-Apfel-Dessert im Glas ohne Backen: Gläser fertigstellen"
+        }
+      ],
+      "category": "Desserts",
+      "course": "Desserts",
+      "cuisine": "Deutsch",
+      "difficulty": "Einfach",
+      "prep_time_minutes": 25,
+      "cook_time_minutes": 10,
+      "total_time_minutes": 175,
+      "servings": 6,
+      "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/portada.webp",
+      "gallery": [
+        {
+          "url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/portada.webp",
+          "alt": "Spekulatius-Apfel-Dessert im Glas ohne Backen"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "Spekulatius-Apfel-Dessert im Glas ohne Backen",
+        "geschälte, entkernte Äpfel",
+        "Gewürzspekulatius"
+      ],
+      "nutrition": {
+        "calories": 346,
+        "protein_g": 7.2,
+        "carbs_g": 38.1,
+        "fat_g": 19.1,
+        "saturated_fat_g": 11.1,
+        "sugar_g": 25.4,
+        "sodium_mg": 114.9,
+        "estimated": true,
+        "serving_size": "1 von 6 Portionen",
+        "source": "USDA FoodData Central SR Legacy + reference product labels",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Referenzwerte nach Zutatengewicht summiert und durch die Portionen geteilt.",
+        "note": "Ungefähre Schätzung, keine Messung des fertigen Gerichts. Marken und Abtropfen verändern die Werte; unvollständige Nährstoffdaten werden nicht angezeigt."
+      },
+      "seo": {
+        "title": "Spekulatius-Apfel-Dessert im Glas ohne Backen | Manual de Cocina",
+        "description": "Sechs Dessertgläser mit Apfelkompott, Gewürzspekulatius und Joghurt-Sahne-Creme. Ohne Ei und Backofen, mit genauer Schichtung und eingerechneter Kühlzeit.",
+        "image_alt": "Spekulatius-Apfel-Dessert im Glas ohne Backen",
+        "image_variants": [
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/portada-1x1.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/portada-4x3.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Kann ich das Dessert vorbereiten?",
+            "a": "Ja, am Vortag. Abgedeckt kühlen und die letzten Brösel bis zum Servieren trocken lagern."
+          },
+          {
+            "q": "Was ersetzt Spekulatius?",
+            "a": "Zimt- oder Ingwerkekse sind möglich; Geschmack und Nährwerte ändern sich."
+          },
+          {
+            "q": "Warum ist die Creme flüssig?",
+            "a": "Warmes Kompott, dünner Joghurt oder unzureichend geschlagene Sahne können sie verflüssigen. Kalt verarbeiten und ausreichend kühlen."
+          }
+        ],
+        "rest_time_minutes": 140
+      },
+      "published": true,
+      "editorial_status": "published",
+      "source_url": null,
+      "source_post_id": null,
+      "recipe_group_id": "9ab5e2eb-de72-44b9-8024-e2ba13ef9530"
+    },
+    {
+      "language": "en",
+      "slug": "apple-spekulatius-dessert-cups",
+      "public_path": "/en/apple-spekulatius-dessert-cups",
+      "title": "Apple and Spekulatius dessert cups",
+      "excerpt": "Six no-bake dessert cups with cooked apple, spiced Spekulatius biscuits and a light-textured yogurt cream. No eggs, with chilling time included.",
+      "summary": "Six no-bake dessert cups with cooked apple, spiced Spekulatius biscuits and a light-textured yogurt cream. No eggs, with chilling time included.",
+      "notes": "<p>Use spiced Spekulatius biscuits, not biscuit spread. Contains milk and wheat; check biscuits for nuts. Cool apples fully before layering. Resting time includes 20 minutes to cool apples and 2 hours chilling. Keep covered at 4 °C or below up to 2 days; add the final crumbs when serving.</p><h2>You may also like</h2><ul><li><a href=\"/en/seiro-steamed-pork-cabbage\">Seiro steamed pork and cabbage with sesame sauce</a></li><li><a href=\"/en/morango-cravejado-strawberry-bonbons\">Morango cravejado: crunchy strawberry bonbons</a></li></ul>",
+      "content_html": "<p>Six no-bake dessert cups with cooked apple, spiced Spekulatius biscuits and a light-textured yogurt cream. No eggs, with chilling time included.</p><p>Use spiced Spekulatius biscuits, not biscuit spread. Contains milk and wheat; check biscuits for nuts. Cool apples fully before layering. Resting time includes 20 minutes to cool apples and 2 hours chilling. Keep covered at 4 °C or below up to 2 days; add the final crumbs when serving.</p><h2>You may also like</h2><ul><li><a href=\"/en/seiro-steamed-pork-cabbage\">Seiro steamed pork and cabbage with sesame sauce</a></li><li><a href=\"/en/morango-cravejado-strawberry-bonbons\">Morango cravejado: crunchy strawberry bonbons</a></li></ul>",
+      "ingredients": [
+        {
+          "name": "peeled and cored apples",
+          "amount": "500",
+          "unit": "g"
+        },
+        {
+          "name": "Spekulatius spiced biscuits",
+          "amount": "150",
+          "unit": "g"
+        },
+        {
+          "name": "plain full-fat Greek yogurt",
+          "amount": "300",
+          "unit": "g"
+        },
+        {
+          "name": "cold whipping cream, 35% fat",
+          "amount": "200",
+          "unit": "g"
+        },
+        {
+          "name": "sugar: 20 g for apples, 20 g for cream",
+          "amount": "40",
+          "unit": "g"
+        },
+        {
+          "name": "water",
+          "amount": "40",
+          "unit": "ml"
+        },
+        {
+          "name": "lemon juice",
+          "amount": "15",
+          "unit": "ml"
+        },
+        {
+          "name": "ground cinnamon",
+          "amount": "1",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Dice the apples",
+          "content": "Dice 500 g prepared apples. Place in a saucepan with 40 ml water, lemon juice, cinnamon and 20 g sugar.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/paso-01.webp",
+          "image_alt": "Apple and Spekulatius dessert cups: Dice the apples"
+        },
+        {
+          "title": "Cook the compote",
+          "content": "Cover and cook over medium-low heat for 8–10 minutes, stirring. Leave some tender pieces; uncover briefly if too wet.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/paso-02.webp",
+          "image_alt": "Apple and Spekulatius dessert cups: Cook the compote"
+        },
+        {
+          "title": "Cool completely",
+          "content": "Spread in a shallow container and cool for about 20 minutes. Refrigerate while preparing cream; never layer it while hot.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/paso-03.webp",
+          "image_alt": "Apple and Spekulatius dessert cups: Cool completely"
+        },
+        {
+          "title": "Crush the biscuits",
+          "content": "Coarsely crush 150 g biscuits in a food bag. Reserve 30 g dry crumbs for serving.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/paso-04.webp",
+          "image_alt": "Apple and Spekulatius dessert cups: Crush the biscuits"
+        },
+        {
+          "title": "Whip the cream",
+          "content": "Whip 200 g cold cream with the remaining 20 g sugar to soft peaks. Stop before it becomes grainy.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/paso-05.webp",
+          "image_alt": "Apple and Spekulatius dessert cups: Whip the cream"
+        },
+        {
+          "title": "Fold in yogurt",
+          "content": "Stir 300 g yogurt until smooth. Gently fold in whipped cream in two additions, keeping the mixture airy.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/paso-06.webp",
+          "image_alt": "Apple and Spekulatius dessert cups: Fold in yogurt"
+        },
+        {
+          "title": "Layer and chill",
+          "content": "Divide 120 g crumbs, cold apples and cream among six 200 ml glasses. Cover and refrigerate for 2 hours.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/paso-07.webp",
+          "image_alt": "Apple and Spekulatius dessert cups: Layer and chill"
+        },
+        {
+          "title": "Finish the cups",
+          "content": "Add the reserved 30 g crumbs just before serving. Serve cold, one glass per person.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/paso-08.webp",
+          "image_alt": "Apple and Spekulatius dessert cups: Finish the cups"
+        }
+      ],
+      "category": "Desserts",
+      "course": "Desserts",
+      "cuisine": "German",
+      "difficulty": "Easy",
+      "prep_time_minutes": 25,
+      "cook_time_minutes": 10,
+      "total_time_minutes": 175,
+      "servings": 6,
+      "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/portada.webp",
+      "gallery": [
+        {
+          "url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/portada.webp",
+          "alt": "Apple and Spekulatius dessert cups"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "Apple and Spekulatius dessert cups",
+        "peeled and cored apples",
+        "Spekulatius spiced biscuits"
+      ],
+      "nutrition": {
+        "calories": 346,
+        "protein_g": 7.2,
+        "carbs_g": 38.1,
+        "fat_g": 19.1,
+        "saturated_fat_g": 11.1,
+        "sugar_g": 25.4,
+        "sodium_mg": 114.9,
+        "estimated": true,
+        "serving_size": "1 of 6 servings",
+        "source": "USDA FoodData Central SR Legacy + reference product labels",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Reference nutrients summed by ingredient weight and divided by servings.",
+        "note": "Approximate estimate, not a measurement of the cooked dish. Brands and draining change values; nutrients with incomplete data are omitted."
+      },
+      "seo": {
+        "title": "Apple and Spekulatius dessert cups | Manual de Cocina",
+        "description": "Six no-bake dessert cups with cooked apple, spiced Spekulatius biscuits and a light-textured yogurt cream. No eggs, with chilling time included.",
+        "image_alt": "Apple and Spekulatius dessert cups",
+        "image_variants": [
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/portada-1x1.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/portada-4x3.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Can I make these a day ahead?",
+            "a": "Yes. Refrigerate covered and keep the final crumbs dry until serving."
+          },
+          {
+            "q": "What replaces Spekulatius?",
+            "a": "Spiced cinnamon or ginger biscuits work, with a different flavour and nutrition."
+          },
+          {
+            "q": "Why is the cream runny?",
+            "a": "Warm apples, thin yogurt or underwhipped cream can loosen it. Use cold ingredients and chill fully."
+          }
+        ],
+        "rest_time_minutes": 140
+      },
+      "published": true,
+      "editorial_status": "published",
+      "source_url": null,
+      "source_post_id": null,
+      "recipe_group_id": "9ab5e2eb-de72-44b9-8024-e2ba13ef9530"
+    },
+    {
+      "language": "fr",
+      "slug": "verrines-pomme-spekulatius",
+      "public_path": "/fr/verrines-pomme-spekulatius",
+      "title": "Verrines pomme et Spekulatius sans cuisson au four",
+      "excerpt": "Six verrines de pommes fondantes, biscuits Spekulatius épicés et crème au yaourt. Sans œuf, avec les couches et le temps de réfrigération expliqués.",
+      "summary": "Six verrines de pommes fondantes, biscuits Spekulatius épicés et crème au yaourt. Sans œuf, avec les couches et le temps de réfrigération expliqués.",
+      "notes": "<p>Utilisez des biscuits Spekulatius, pas une pâte à tartiner. Contient lait et blé ; vérifiez les fruits à coque sur le paquet. Refroidissez entièrement les pommes. Le repos comprend 20 minutes de refroidissement et 2 heures au réfrigérateur. Gardez couvert à 4 °C maximum, jusqu’à 2 jours. Ajoutez les dernières miettes au service.</p><h2>À préparer aussi</h2><ul><li><a href=\"/fr/porc-chou-vapeur-seiro\">Porc et chou vapeur en seiro, sauce au sésame</a></li><li><a href=\"/fr/morango-cravejado-fraises-croquantes\">Morango cravejado : fraises enrobées au caramel rouge</a></li></ul>",
+      "content_html": "<p>Six verrines de pommes fondantes, biscuits Spekulatius épicés et crème au yaourt. Sans œuf, avec les couches et le temps de réfrigération expliqués.</p><p>Utilisez des biscuits Spekulatius, pas une pâte à tartiner. Contient lait et blé ; vérifiez les fruits à coque sur le paquet. Refroidissez entièrement les pommes. Le repos comprend 20 minutes de refroidissement et 2 heures au réfrigérateur. Gardez couvert à 4 °C maximum, jusqu’à 2 jours. Ajoutez les dernières miettes au service.</p><h2>À préparer aussi</h2><ul><li><a href=\"/fr/porc-chou-vapeur-seiro\">Porc et chou vapeur en seiro, sauce au sésame</a></li><li><a href=\"/fr/morango-cravejado-fraises-croquantes\">Morango cravejado : fraises enrobées au caramel rouge</a></li></ul>",
+      "ingredients": [
+        {
+          "name": "pommes épluchées et épépinées",
+          "amount": "500",
+          "unit": "g"
+        },
+        {
+          "name": "biscuits Spekulatius épicés",
+          "amount": "150",
+          "unit": "g"
+        },
+        {
+          "name": "yaourt grec nature entier",
+          "amount": "300",
+          "unit": "g"
+        },
+        {
+          "name": "crème liquide à fouetter, 35 % de matière grasse, froide",
+          "amount": "200",
+          "unit": "g"
+        },
+        {
+          "name": "sucre : 20 g pour les pommes, 20 g pour la crème",
+          "amount": "40",
+          "unit": "g"
+        },
+        {
+          "name": "eau",
+          "amount": "40",
+          "unit": "ml"
+        },
+        {
+          "name": "jus de citron",
+          "amount": "15",
+          "unit": "ml"
+        },
+        {
+          "name": "cannelle moulue",
+          "amount": "1",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Coupez les pommes",
+          "content": "Coupez 500 g de pommes préparées en petits dés. Mettez dans une casserole avec eau, citron, cannelle et 20 g de sucre.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/paso-01.webp",
+          "image_alt": "Verrines pomme et Spekulatius sans cuisson au four: Coupez les pommes"
+        },
+        {
+          "title": "Cuisez la compote",
+          "content": "Couvrez et cuisez 8–10 minutes à feu moyen-doux en remuant. Gardez quelques morceaux tendres ; découvrez si le mélange est trop liquide.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/paso-02.webp",
+          "image_alt": "Verrines pomme et Spekulatius sans cuisson au four: Cuisez la compote"
+        },
+        {
+          "title": "Refroidissez entièrement",
+          "content": "Étalez dans un récipient peu profond et laissez tiédir environ 20 minutes. Réfrigérez pendant la préparation de la crème ; ne montez pas à chaud.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/paso-03.webp",
+          "image_alt": "Verrines pomme et Spekulatius sans cuisson au four: Refroidissez entièrement"
+        },
+        {
+          "title": "Émiettez les biscuits",
+          "content": "Écrasez grossièrement 150 g de biscuits dans un sachet alimentaire. Réservez 30 g de miettes au sec pour le service.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/paso-04.webp",
+          "image_alt": "Verrines pomme et Spekulatius sans cuisson au four: Émiettez les biscuits"
+        },
+        {
+          "title": "Fouettez la crème",
+          "content": "Fouettez 200 g de crème froide avec les 20 g de sucre restants jusqu’à des pics souples. Arrêtez avant qu’elle ne graine.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/paso-05.webp",
+          "image_alt": "Verrines pomme et Spekulatius sans cuisson au four: Fouettez la crème"
+        },
+        {
+          "title": "Incorporez le yaourt",
+          "content": "Lissez 300 g de yaourt. Incorporez délicatement la crème fouettée en deux fois, sans faire retomber le mélange.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/paso-06.webp",
+          "image_alt": "Verrines pomme et Spekulatius sans cuisson au four: Incorporez le yaourt"
+        },
+        {
+          "title": "Montez et réfrigérez",
+          "content": "Répartissez 120 g de miettes, les pommes froides et la crème dans six verres de 200 ml. Couvrez et réfrigérez 2 heures.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/paso-07.webp",
+          "image_alt": "Verrines pomme et Spekulatius sans cuisson au four: Montez et réfrigérez"
+        },
+        {
+          "title": "Terminez les verrines",
+          "content": "Ajoutez les 30 g de miettes réservées juste avant de servir. Servez froid, un verre par personne.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/paso-08.webp",
+          "image_alt": "Verrines pomme et Spekulatius sans cuisson au four: Terminez les verrines"
+        }
+      ],
+      "category": "Desserts",
+      "course": "Desserts",
+      "cuisine": "Allemande",
+      "difficulty": "Facile",
+      "prep_time_minutes": 25,
+      "cook_time_minutes": 10,
+      "total_time_minutes": 175,
+      "servings": 6,
+      "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/portada.webp",
+      "gallery": [
+        {
+          "url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/portada.webp",
+          "alt": "Verrines pomme et Spekulatius sans cuisson au four"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "Verrines pomme et Spekulatius sans cuisson au four",
+        "pommes épluchées et épépinées",
+        "biscuits Spekulatius épicés"
+      ],
+      "nutrition": {
+        "calories": 346,
+        "protein_g": 7.2,
+        "carbs_g": 38.1,
+        "fat_g": 19.1,
+        "saturated_fat_g": 11.1,
+        "sugar_g": 25.4,
+        "sodium_mg": 114.9,
+        "estimated": true,
+        "serving_size": "1 des 6 portions",
+        "source": "USDA FoodData Central SR Legacy + reference product labels",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Somme des références selon le poids des ingrédients, divisée par le nombre de portions.",
+        "note": "Estimation indicative, pas une mesure du plat cuisiné. Marques et égouttage changent les valeurs ; les nutriments incomplets ne sont pas affichés."
+      },
+      "seo": {
+        "title": "Verrines pomme et Spekulatius sans cuisson au four | Manual de Cocina",
+        "description": "Six verrines de pommes fondantes, biscuits Spekulatius épicés et crème au yaourt. Sans œuf, avec les couches et le temps de réfrigération expliqués.",
+        "image_alt": "Verrines pomme et Spekulatius sans cuisson au four",
+        "image_variants": [
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/portada-1x1.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/portada-4x3.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Peut-on préparer la veille ?",
+            "a": "Oui, couvert au réfrigérateur. Gardez les dernières miettes au sec jusqu’au service."
+          },
+          {
+            "q": "Que mettre à la place des Spekulatius ?",
+            "a": "Des biscuits à la cannelle ou au gingembre, avec un goût et des valeurs nutritionnelles différents."
+          },
+          {
+            "q": "Pourquoi la crème est-elle liquide ?",
+            "a": "Des pommes chaudes, un yaourt fluide ou une crème peu montée peuvent la liquéfier. Travaillez froid et réfrigérez suffisamment."
+          }
+        ],
+        "rest_time_minutes": 140
+      },
+      "published": true,
+      "editorial_status": "published",
+      "source_url": null,
+      "source_post_id": null,
+      "recipe_group_id": "9ab5e2eb-de72-44b9-8024-e2ba13ef9530"
+    },
+    {
+      "language": "it",
+      "slug": "bicchierini-mele-spekulatius",
+      "public_path": "/it/bicchierini-mele-spekulatius",
+      "title": "Bicchierini di mele e Spekulatius senza forno",
+      "excerpt": "Sei bicchierini con mele cotte, biscotti Spekulatius speziati e crema di yogurt e panna. Senza uova, con istruzioni per gli strati e tempi di raffreddamento.",
+      "summary": "Sei bicchierini con mele cotte, biscotti Spekulatius speziati e crema di yogurt e panna. Senza uova, con istruzioni per gli strati e tempi di raffreddamento.",
+      "notes": "<p>Usa biscotti Spekulatius speziati, non crema spalmabile. Contiene latte e frumento; controlla eventuale frutta a guscio nei biscotti. Raffredda completamente le mele. Il riposo comprende 20 minuti di raffreddamento e 2 ore in frigorifero. Conserva coperto a 4 °C o meno fino a 2 giorni; aggiungi le ultime briciole al servizio.</p><h2>Da provare anche</h2><ul><li><a href=\"/it/maiale-cavolo-vapore-seiro\">Maiale e cavolo al vapore nel seiro con salsa al sesamo</a></li><li><a href=\"/it/morango-cravejado-fragole-croccanti\">Morango cravejado: fragole al brigadeiro e caramello rosso</a></li></ul>",
+      "content_html": "<p>Sei bicchierini con mele cotte, biscotti Spekulatius speziati e crema di yogurt e panna. Senza uova, con istruzioni per gli strati e tempi di raffreddamento.</p><p>Usa biscotti Spekulatius speziati, non crema spalmabile. Contiene latte e frumento; controlla eventuale frutta a guscio nei biscotti. Raffredda completamente le mele. Il riposo comprende 20 minuti di raffreddamento e 2 ore in frigorifero. Conserva coperto a 4 °C o meno fino a 2 giorni; aggiungi le ultime briciole al servizio.</p><h2>Da provare anche</h2><ul><li><a href=\"/it/maiale-cavolo-vapore-seiro\">Maiale e cavolo al vapore nel seiro con salsa al sesamo</a></li><li><a href=\"/it/morango-cravejado-fragole-croccanti\">Morango cravejado: fragole al brigadeiro e caramello rosso</a></li></ul>",
+      "ingredients": [
+        {
+          "name": "mele sbucciate e senza torsolo",
+          "amount": "500",
+          "unit": "g"
+        },
+        {
+          "name": "biscotti Spekulatius",
+          "amount": "150",
+          "unit": "g"
+        },
+        {
+          "name": "yogurt greco bianco intero",
+          "amount": "300",
+          "unit": "g"
+        },
+        {
+          "name": "panna da montare fredda, 35% di grassi",
+          "amount": "200",
+          "unit": "g"
+        },
+        {
+          "name": "zucchero: 20 g per le mele, 20 g per la crema",
+          "amount": "40",
+          "unit": "g"
+        },
+        {
+          "name": "acqua",
+          "amount": "40",
+          "unit": "ml"
+        },
+        {
+          "name": "succo di limone",
+          "amount": "15",
+          "unit": "ml"
+        },
+        {
+          "name": "cannella in polvere",
+          "amount": "1",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Taglia le mele",
+          "content": "Taglia 500 g di mele pulite a dadini. Metti in un pentolino con 40 ml d’acqua, limone, cannella e 20 g di zucchero.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/paso-01.webp",
+          "image_alt": "Bicchierini di mele e Spekulatius senza forno: Taglia le mele"
+        },
+        {
+          "title": "Cuoci la composta",
+          "content": "Copri e cuoci a fuoco medio-basso per 8–10 minuti mescolando. Mantieni alcuni pezzi morbidi; scopri se c’è troppo liquido.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/paso-02.webp",
+          "image_alt": "Bicchierini di mele e Spekulatius senza forno: Cuoci la composta"
+        },
+        {
+          "title": "Raffredda completamente",
+          "content": "Stendi in un contenitore basso e fai intiepidire circa 20 minuti. Refrigerare mentre prepari la crema; non montare gli strati a caldo.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/paso-03.webp",
+          "image_alt": "Bicchierini di mele e Spekulatius senza forno: Raffredda completamente"
+        },
+        {
+          "title": "Sbriciola i biscotti",
+          "content": "Rompi grossolanamente 150 g di biscotti in un sacchetto alimentare. Conserva 30 g di briciole asciutte per servire.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/paso-04.webp",
+          "image_alt": "Bicchierini di mele e Spekulatius senza forno: Sbriciola i biscotti"
+        },
+        {
+          "title": "Monta la panna",
+          "content": "Monta 200 g di panna fredda con i 20 g di zucchero rimasti fino a ciuffi morbidi, fermandoti prima che diventi granulosa.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/paso-05.webp",
+          "image_alt": "Bicchierini di mele e Spekulatius senza forno: Monta la panna"
+        },
+        {
+          "title": "Incorpora lo yogurt",
+          "content": "Lavora 300 g di yogurt fino a renderlo liscio. Unisci delicatamente la panna in due riprese mantenendo il composto arioso.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/paso-06.webp",
+          "image_alt": "Bicchierini di mele e Spekulatius senza forno: Incorpora lo yogurt"
+        },
+        {
+          "title": "Monta e refrigera",
+          "content": "Dividi 120 g di briciole, mele fredde e crema in sei bicchieri da 200 ml. Copri e refrigera per 2 ore.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/paso-07.webp",
+          "image_alt": "Bicchierini di mele e Spekulatius senza forno: Monta e refrigera"
+        },
+        {
+          "title": "Completa i bicchierini",
+          "content": "Distribuisci i 30 g di briciole tenuti da parte appena prima di servire. Servi freddo, un bicchiere a persona.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/paso-08.webp",
+          "image_alt": "Bicchierini di mele e Spekulatius senza forno: Completa i bicchierini"
+        }
+      ],
+      "category": "Dolci",
+      "course": "Dolci",
+      "cuisine": "Tedesca",
+      "difficulty": "Facile",
+      "prep_time_minutes": 25,
+      "cook_time_minutes": 10,
+      "total_time_minutes": 175,
+      "servings": 6,
+      "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/portada.webp",
+      "gallery": [
+        {
+          "url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/portada.webp",
+          "alt": "Bicchierini di mele e Spekulatius senza forno"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "Bicchierini di mele e Spekulatius senza forno",
+        "mele sbucciate e senza torsolo",
+        "biscotti Spekulatius"
+      ],
+      "nutrition": {
+        "calories": 346,
+        "protein_g": 7.2,
+        "carbs_g": 38.1,
+        "fat_g": 19.1,
+        "saturated_fat_g": 11.1,
+        "sugar_g": 25.4,
+        "sodium_mg": 114.9,
+        "estimated": true,
+        "serving_size": "1 di 6 porzioni",
+        "source": "USDA FoodData Central SR Legacy + reference product labels",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Somma dei valori di riferimento per peso, divisa per le porzioni.",
+        "note": "Stima indicativa, non misurazione del piatto cotto. Marche e scolatura modificano i valori; nutrienti con dati incompleti non sono mostrati."
+      },
+      "seo": {
+        "title": "Bicchierini di mele e Spekulatius senza forno | Manual de Cocina",
+        "description": "Sei bicchierini con mele cotte, biscotti Spekulatius speziati e crema di yogurt e panna. Senza uova, con istruzioni per gli strati e tempi di raffreddamento.",
+        "image_alt": "Bicchierini di mele e Spekulatius senza forno",
+        "image_variants": [
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/portada-1x1.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/portada-4x3.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Posso prepararli il giorno prima?",
+            "a": "Sì, coperti in frigorifero. Tieni le ultime briciole asciutte fino al servizio."
+          },
+          {
+            "q": "Cosa sostituisce gli Spekulatius?",
+            "a": "Biscotti alla cannella o allo zenzero, con gusto e valori nutrizionali diversi."
+          },
+          {
+            "q": "Perché la crema è liquida?",
+            "a": "Mele calde, yogurt fluido o panna poco montata possono smontarla. Lavora a freddo e rispetta il riposo."
+          }
+        ],
+        "rest_time_minutes": 140
+      },
+      "published": true,
+      "editorial_status": "published",
+      "source_url": null,
+      "source_post_id": null,
+      "recipe_group_id": "9ab5e2eb-de72-44b9-8024-e2ba13ef9530"
+    },
+    {
+      "language": "ja",
+      "slug": "apple-spekulatius-dessert",
+      "public_path": "/ja/apple-spekulatius-dessert",
+      "title": "りんごとスペキュラースのデザートカップ",
+      "excerpt": "煮りんご、スパイス入りスペキュラース、ヨーグルトクリームを重ねた6人分のデザート。卵とオーブンは使わず、冷やす時間も含めて紹介します。",
+      "summary": "煮りんご、スパイス入りスペキュラース、ヨーグルトクリームを重ねた6人分のデザート。卵とオーブンは使わず、冷やす時間も含めて紹介します。",
+      "notes": "<p>スパイス入りのスペキュラースビスケットを使い、スプレッドは使いません。乳・小麦を含み、ナッツ類は商品表示を確認してください。りんごは完全に冷ましてから重ねます。休ませ時間は粗熱取り20分と冷蔵2時間です。4 °C以下で覆って2日以内に食べ、最後のクラムは食べる直前にのせます。</p><h2>こちらのレシピも</h2><ul><li><a href=\"/ja/buta-cabbage-seiro-mushi\">豚肉とキャベツのせいろ蒸し、ごまだれ添え</a></li><li><a href=\"/ja/morango-cravejado\">モランゴ・クラヴェジャード：いちごのブラジル菓子</a></li></ul>",
+      "content_html": "<p>煮りんご、スパイス入りスペキュラース、ヨーグルトクリームを重ねた6人分のデザート。卵とオーブンは使わず、冷やす時間も含めて紹介します。</p><p>スパイス入りのスペキュラースビスケットを使い、スプレッドは使いません。乳・小麦を含み、ナッツ類は商品表示を確認してください。りんごは完全に冷ましてから重ねます。休ませ時間は粗熱取り20分と冷蔵2時間です。4 °C以下で覆って2日以内に食べ、最後のクラムは食べる直前にのせます。</p><h2>こちらのレシピも</h2><ul><li><a href=\"/ja/buta-cabbage-seiro-mushi\">豚肉とキャベツのせいろ蒸し、ごまだれ添え</a></li><li><a href=\"/ja/morango-cravejado\">モランゴ・クラヴェジャード：いちごのブラジル菓子</a></li></ul>",
+      "ingredients": [
+        {
+          "name": "皮と芯を除いたりんご",
+          "amount": "500",
+          "unit": "g"
+        },
+        {
+          "name": "スペキュラースビスケット",
+          "amount": "150",
+          "unit": "g"
+        },
+        {
+          "name": "無糖の全脂ギリシャヨーグルト",
+          "amount": "300",
+          "unit": "g"
+        },
+        {
+          "name": "冷たい生クリーム、乳脂肪35%",
+          "amount": "200",
+          "unit": "g"
+        },
+        {
+          "name": "砂糖：りんご用20 g、クリーム用20 g",
+          "amount": "40",
+          "unit": "g"
+        },
+        {
+          "name": "水",
+          "amount": "40",
+          "unit": "ml"
+        },
+        {
+          "name": "レモン汁",
+          "amount": "15",
+          "unit": "ml"
+        },
+        {
+          "name": "シナモンパウダー",
+          "amount": "1",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "りんごを切る",
+          "content": "りんご500 gを小さな角切りにし、水40 ml、レモン汁、シナモン、砂糖20 gとともに小鍋に入れます。",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/paso-01.webp",
+          "image_alt": "りんごとスペキュラースのデザートカップ: りんごを切る"
+        },
+        {
+          "title": "りんごを煮る",
+          "content": "ふたをして中弱火で8〜10分、時々混ぜて煮ます。柔らかい角切りを少し残し、水分が多ければふたを外します。",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/paso-02.webp",
+          "image_alt": "りんごとスペキュラースのデザートカップ: りんごを煮る"
+        },
+        {
+          "title": "完全に冷ます",
+          "content": "浅い容器に広げて約20分粗熱を取り、クリームを作る間は冷蔵します。熱いまま重ねないでください。",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/paso-03.webp",
+          "image_alt": "りんごとスペキュラースのデザートカップ: 完全に冷ます"
+        },
+        {
+          "title": "ビスケットを砕く",
+          "content": "ビスケット150 gを食品用袋で粗く砕きます。仕上げ用に30 gを乾いたまま取り分けます。",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/paso-04.webp",
+          "image_alt": "りんごとスペキュラースのデザートカップ: ビスケットを砕く"
+        },
+        {
+          "title": "生クリームを泡立てる",
+          "content": "冷たい生クリーム200 gと残りの砂糖20 gを、柔らかい角が立つまで泡立てます。分離する前に止めます。",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/paso-05.webp",
+          "image_alt": "りんごとスペキュラースのデザートカップ: 生クリームを泡立てる"
+        },
+        {
+          "title": "ヨーグルトと合わせる",
+          "content": "ヨーグルト300 gをなめらかにし、ホイップクリームを2回に分けて優しく混ぜ、空気を残します。",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/paso-06.webp",
+          "image_alt": "りんごとスペキュラースのデザートカップ: ヨーグルトと合わせる"
+        },
+        {
+          "title": "重ねて冷やす",
+          "content": "クラム120 g、冷たいりんご、クリームを200 mlのグラス6個に分けます。覆って2時間冷蔵します。",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/paso-07.webp",
+          "image_alt": "りんごとスペキュラースのデザートカップ: 重ねて冷やす"
+        },
+        {
+          "title": "仕上げて盛る",
+          "content": "食べる直前に残りのクラム30 gをのせます。1人1カップ、冷たいまま提供します。",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/paso-08.webp",
+          "image_alt": "りんごとスペキュラースのデザートカップ: 仕上げて盛る"
+        }
+      ],
+      "category": "デザート",
+      "course": "デザート",
+      "cuisine": "ドイツ料理",
+      "difficulty": "簡単",
+      "prep_time_minutes": 25,
+      "cook_time_minutes": 10,
+      "total_time_minutes": 175,
+      "servings": 6,
+      "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/portada.webp",
+      "gallery": [
+        {
+          "url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/portada.webp",
+          "alt": "りんごとスペキュラースのデザートカップ"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "りんごとスペキュラースのデザートカップ",
+        "皮と芯を除いたりんご",
+        "スペキュラースビスケット"
+      ],
+      "nutrition": {
+        "calories": 346,
+        "protein_g": 7.2,
+        "carbs_g": 38.1,
+        "fat_g": 19.1,
+        "saturated_fat_g": 11.1,
+        "sugar_g": 25.4,
+        "sodium_mg": 114.9,
+        "estimated": true,
+        "serving_size": "全6人分のうち1人分",
+        "source": "USDA FoodData Central SR Legacy + reference product labels",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "材料の重量に応じた参考栄養値を合計し、人数で割っています。",
+        "note": "調理済み料理の実測値ではなく概算です。商品や水切りで変わり、資料がそろわない栄養素は表示しません。"
+      },
+      "seo": {
+        "title": "りんごとスペキュラースのデザートカップ | Manual de Cocina",
+        "description": "煮りんご、スパイス入りスペキュラース、ヨーグルトクリームを重ねた6人分のデザート。卵とオーブンは使わず、冷やす時間も含めて紹介します。",
+        "image_alt": "りんごとスペキュラースのデザートカップ",
+        "image_variants": [
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/portada-1x1.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/portada-4x3.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "前日に作れますか？",
+            "a": "はい。覆って冷蔵し、最後にのせるクラムは別に乾燥保存します。"
+          },
+          {
+            "q": "スペキュラースの代わりは？",
+            "a": "シナモンやジンジャーのビスケットで代用できますが、味と栄養値は変わります。"
+          },
+          {
+            "q": "クリームがゆるいのはなぜ？",
+            "a": "温かいりんご、水分の多いヨーグルト、生クリームの泡立て不足が原因になります。冷たい材料を使い、十分冷やします。"
+          }
+        ],
+        "rest_time_minutes": 140
+      },
+      "published": true,
+      "editorial_status": "published",
+      "source_url": null,
+      "source_post_id": null,
+      "recipe_group_id": "9ab5e2eb-de72-44b9-8024-e2ba13ef9530"
+    },
+    {
+      "language": "pt",
+      "slug": "copinhos-maca-spekulatius",
+      "public_path": "/pt/copinhos-maca-spekulatius",
+      "title": "Copinhos de maçã e Spekulatius sem forno",
+      "excerpt": "Seis copinhos de maçã cozida, biscoitos Spekulatius e creme de iogurte com nata. Sem ovos e sem forno, com montagem e tempo de geladeira explicados.",
+      "summary": "Seis copinhos de maçã cozida, biscoitos Spekulatius e creme de iogurte com nata. Sem ovos e sem forno, com montagem e tempo de geladeira explicados.",
+      "notes": "<p>Use biscoitos Spekulatius com especiarias, não creme para passar. Contém leite e trigo; confira possíveis castanhas nos biscoitos. Esfrie a maçã completamente. O descanso inclui 20 minutos para esfriar e 2 horas na geladeira. Guarde coberto a 4 °C ou menos por até 2 dias e finalize com as migalhas ao servir.</p><h2>Prepare também</h2><ul><li><a href=\"/pt/porco-repolho-vapor-seiro\">Porco e repolho no vapor em seiro com molho de gergelim</a></li><li><a href=\"/pt/morango-cravejado\">Morango cravejado com brigadeiro branco e caramelo</a></li></ul>",
+      "content_html": "<p>Seis copinhos de maçã cozida, biscoitos Spekulatius e creme de iogurte com nata. Sem ovos e sem forno, com montagem e tempo de geladeira explicados.</p><p>Use biscoitos Spekulatius com especiarias, não creme para passar. Contém leite e trigo; confira possíveis castanhas nos biscoitos. Esfrie a maçã completamente. O descanso inclui 20 minutos para esfriar e 2 horas na geladeira. Guarde coberto a 4 °C ou menos por até 2 dias e finalize com as migalhas ao servir.</p><h2>Prepare também</h2><ul><li><a href=\"/pt/porco-repolho-vapor-seiro\">Porco e repolho no vapor em seiro com molho de gergelim</a></li><li><a href=\"/pt/morango-cravejado\">Morango cravejado com brigadeiro branco e caramelo</a></li></ul>",
+      "ingredients": [
+        {
+          "name": "maçãs descascadas e sem miolo",
+          "amount": "500",
+          "unit": "g"
+        },
+        {
+          "name": "biscoitos Spekulatius",
+          "amount": "150",
+          "unit": "g"
+        },
+        {
+          "name": "iogurte grego natural integral",
+          "amount": "300",
+          "unit": "g"
+        },
+        {
+          "name": "creme de leite fresco para bater, 35% de gordura, gelado",
+          "amount": "200",
+          "unit": "g"
+        },
+        {
+          "name": "açúcar: 20 g para maçã e 20 g para creme",
+          "amount": "40",
+          "unit": "g"
+        },
+        {
+          "name": "água",
+          "amount": "40",
+          "unit": "ml"
+        },
+        {
+          "name": "suco de limão",
+          "amount": "15",
+          "unit": "ml"
+        },
+        {
+          "name": "canela em pó",
+          "amount": "1",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Corte a maçã",
+          "content": "Corte 500 g de maçã limpa em cubinhos. Coloque numa panela com 40 ml de água, limão, canela e 20 g de açúcar.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/paso-01.webp",
+          "image_alt": "Copinhos de maçã e Spekulatius sem forno: Corte a maçã"
+        },
+        {
+          "title": "Cozinhe a compota",
+          "content": "Tampe e cozinhe em fogo médio-baixo por 8–10 minutos, mexendo. Deixe alguns pedaços macios; destampe se houver líquido demais.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/paso-02.webp",
+          "image_alt": "Copinhos de maçã e Spekulatius sem forno: Cozinhe a compota"
+        },
+        {
+          "title": "Esfrie completamente",
+          "content": "Espalhe em recipiente raso e deixe amornar cerca de 20 minutos. Refrigere enquanto prepara o creme; não monte com maçã quente.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/paso-03.webp",
+          "image_alt": "Copinhos de maçã e Spekulatius sem forno: Esfrie completamente"
+        },
+        {
+          "title": "Quebre os biscoitos",
+          "content": "Quebre grosseiramente 150 g de biscoitos dentro de saco próprio para alimentos. Reserve 30 g de migalhas secas para servir.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/paso-04.webp",
+          "image_alt": "Copinhos de maçã e Spekulatius sem forno: Quebre os biscoitos"
+        },
+        {
+          "title": "Bata o creme",
+          "content": "Bata 200 g de creme gelado com os 20 g de açúcar restantes até picos suaves, parando antes de ficar granulado.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/paso-05.webp",
+          "image_alt": "Copinhos de maçã e Spekulatius sem forno: Bata o creme"
+        },
+        {
+          "title": "Incorpore o iogurte",
+          "content": "Mexa 300 g de iogurte até alisar. Incorpore o creme batido delicadamente em duas etapas, mantendo o volume.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/paso-06.webp",
+          "image_alt": "Copinhos de maçã e Spekulatius sem forno: Incorpore o iogurte"
+        },
+        {
+          "title": "Monte e refrigere",
+          "content": "Divida 120 g de migalhas, maçã fria e creme entre seis copos de 200 ml. Tampe e leve à geladeira por 2 horas.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/paso-07.webp",
+          "image_alt": "Copinhos de maçã e Spekulatius sem forno: Monte e refrigere"
+        },
+        {
+          "title": "Finalize os copinhos",
+          "content": "Distribua os 30 g de migalhas reservadas apenas antes de servir. Sirva gelado, um copo por pessoa.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/paso-08.webp",
+          "image_alt": "Copinhos de maçã e Spekulatius sem forno: Finalize os copinhos"
+        }
+      ],
+      "category": "Sobremesas",
+      "course": "Sobremesas",
+      "cuisine": "Alemã",
+      "difficulty": "Fácil",
+      "prep_time_minutes": 25,
+      "cook_time_minutes": 10,
+      "total_time_minutes": 175,
+      "servings": 6,
+      "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/portada.webp",
+      "gallery": [
+        {
+          "url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/portada.webp",
+          "alt": "Copinhos de maçã e Spekulatius sem forno"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "Copinhos de maçã e Spekulatius sem forno",
+        "maçãs descascadas e sem miolo",
+        "biscoitos Spekulatius"
+      ],
+      "nutrition": {
+        "calories": 346,
+        "protein_g": 7.2,
+        "carbs_g": 38.1,
+        "fat_g": 19.1,
+        "saturated_fat_g": 11.1,
+        "sugar_g": 25.4,
+        "sodium_mg": 114.9,
+        "estimated": true,
+        "serving_size": "1 das 6 porções",
+        "source": "USDA FoodData Central SR Legacy + reference product labels",
+        "source_url": "https://fdc.nal.usda.gov/",
+        "method": "Soma das referências pelo peso dos ingredientes, dividida pelas porções.",
+        "note": "Estimativa orientativa, não medição do prato pronto. Marcas e escorrimento alteram os valores; nutrientes com dados incompletos não são mostrados."
+      },
+      "seo": {
+        "title": "Copinhos de maçã e Spekulatius sem forno | Manual de Cocina",
+        "description": "Seis copinhos de maçã cozida, biscoitos Spekulatius e creme de iogurte com nata. Sem ovos e sem forno, com montagem e tempo de geladeira explicados.",
+        "image_alt": "Copinhos de maçã e Spekulatius sem forno",
+        "image_variants": [
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/portada-1x1.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/portada-4x3.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/vasitos-manzana-spekulatius/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Posso fazer na véspera?",
+            "a": "Sim, coberto na geladeira. Guarde as últimas migalhas secas até servir."
+          },
+          {
+            "q": "O que substitui Spekulatius?",
+            "a": "Biscoitos de canela ou gengibre, com sabor e nutrientes diferentes."
+          },
+          {
+            "q": "Por que o creme fica líquido?",
+            "a": "Maçã quente, iogurte ralo ou creme pouco batido podem amolecer. Trabalhe com tudo frio e respeite a geladeira."
+          }
+        ],
+        "rest_time_minutes": 140
+      },
+      "published": true,
+      "editorial_status": "published",
+      "source_url": null,
+      "source_post_id": null,
+      "recipe_group_id": "9ab5e2eb-de72-44b9-8024-e2ba13ef9530"
+    }
+  ],
+  "recipe_group_id": "9ab5e2eb-de72-44b9-8024-e2ba13ef9530",
+  "state": "PUBLISHED_AWAITING_HTTP_QA"
+}
