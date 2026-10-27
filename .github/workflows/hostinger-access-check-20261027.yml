@@ -1,4 +1,4 @@
-name: Restore and verify published language navigation
+name: Refresh chop suey publication and verify navigation
 on:
   push:
     branches: [ops/hostinger-access-check-20261027]
@@ -52,4 +52,9 @@ jobs:
                   print('LIVE_LANGUAGE_NAVIGATION '+json.dumps(report,ensure_ascii=False))
                   raise SystemExit('Published navigation is still stale')
               time.sleep(5)
+          for lang in sorted(languages):
+              url=base+'/'+lang+'?publicacion=chop-suey-'+str(time.time_ns())
+              with urllib.request.urlopen(urllib.request.Request(url,headers={'Cache-Control':'no-cache'}),timeout=30) as response: html=response.read().decode()
+              assert ('chop-suey' in html or 'chopsuey' in html or 'チョップスイレシピ' in html or '%E3%83%81%E3%83%A7%E3%83%83%E3%83%97' in html), 'Chop suey missing from home '+lang
+              print('CHOP_SUEY_ON_HOME '+lang)
           PY
