@@ -1,4 +1,4 @@
-name: Refresh chop suey publication and verify navigation
+name: Refresh and verify seven-market publication
 on:
   push:
     branches: [ops/hostinger-access-check-20261027]
@@ -9,52 +9,31 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 5
     steps:
-      - name: Refresh existing app cache and verify seven-language navigation
+      - name: Refresh existing app cache and verify all 49 published pages
         env:
           REVALIDATE_SECRET: ${{ secrets.REVALIDATE_SECRET }}
         run: |
           python3 - <<'PY'
-          import os,json,time,urllib.request
-          from html.parser import HTMLParser
-          base='https://manualdecocina.com'
-          languages={'es','en','de','it','fr','ja','pt'}
-          headers={'apikey':'sb_publishable_5j3BnF3q24MVuU-BTEVzbg_UXTyp6CM','Cache-Control':'no-cache'}
-          req=urllib.request.Request('https://eqbdtctxbpepbeickhqi.supabase.co/rest/v1/recipes?select=language&published=eq.true&limit=2000',headers=headers)
-          with urllib.request.urlopen(req,timeout=25) as response: rows=json.load(response)
-          assert {row['language'] for row in rows}==languages,'API still truncates languages'
-          print('PUBLIC_API_LANGUAGES '+json.dumps({'rows':len(rows),'languages':sorted({r['language'] for r in rows})}))
+          import os,json,urllib.request,urllib.parse,concurrent.futures
+          groups=['1f07d138-ca88-4c8c-8b40-f052f43b9134','8c206415-7494-4077-8501-a61046095431','9ab5e2eb-de72-44b9-8024-e2ba13ef9530','ebd5b732-8694-4cd9-b24d-52f0c6e42f11','08c88198-fc8c-4a1a-8d83-a190815adad6','011dd8d1-b071-45af-95e6-607e977ef6e8','c099d1b2-4be4-4893-8f92-27536b517373']
+          query=urllib.parse.urlencode({'select':'language,public_path','published':'eq.true','recipe_group_id':'in.('+','.join(groups)+')'})
+          req=urllib.request.Request('https://eqbdtctxbpepbeickhqi.supabase.co/rest/v1/recipes?'+query,headers={'apikey':'sb_publishable_5j3BnF3q24MVuU-BTEVzbg_UXTyp6CM'})
+          with urllib.request.urlopen(req,timeout=30) as r:rows=json.load(r)
+          assert len(rows)==49 and all(sum(x['language']==l for x in rows)==7 for l in ['es','en','de','fr','it','ja','pt'])
+          print('PUBLIC_RECIPES',len(rows))
           secret=(os.environ.get('REVALIDATE_SECRET') or '').rstrip('\r\n')
-          if not secret:raise SystemExit('Existing cache credential is missing')
-          request=urllib.request.Request(base+'/api/revalidate?languages='+str(time.time_ns()),data=b'{}',headers={'x-revalidate-secret':secret,'Content-Type':'application/json','Cache-Control':'no-cache'})
-          with urllib.request.urlopen(request,timeout=35) as response: info=json.load(response)
+          assert secret,'Existing cache credential missing'
+          req=urllib.request.Request('https://manualdecocina.com/api/revalidate?publication=siete-mercados-20261027',data=b'{}',headers={'x-revalidate-secret':secret,'Content-Type':'application/json','Cache-Control':'no-cache'})
+          with urllib.request.urlopen(req,timeout=40) as r:info=json.load(r)
           assert info.get('revalidated') is True
-          print('CACHE_REFRESH '+json.dumps({key:info.get(key) for key in ['revalidated','cacheMode','at']}))
-          class Page(HTMLParser):
-              def __init__(self):
-                  super().__init__();self.links=set()
-              def handle_starttag(self,tag,attrs):
-                  data=dict(attrs)
-                  if tag=='a' and 'md-lang-item' in data.get('class','').split():
-                      self.links.add(data.get('href'))
-          for attempt in range(6):
-              failures=[];report=[]
-              for lang in ['es','ja','pt']:
-                  request=urllib.request.Request(base+'/'+lang,headers={'Cache-Control':'no-cache'})
-                  with urllib.request.urlopen(request,timeout=30) as response: html=response.read().decode()
-                  page=Page();page.feed(html)
-                  missing={'/'+code for code in languages-{lang}}-page.links
-                  report.append({'page':'/'+lang,'links':sorted(page.links),'missing':sorted(missing)})
-                  if missing:failures.append(lang)
-              if not failures:
-                  print('LIVE_LANGUAGE_NAVIGATION '+json.dumps(report,ensure_ascii=False))
-                  break
-              if attempt==5:
-                  print('LIVE_LANGUAGE_NAVIGATION '+json.dumps(report,ensure_ascii=False))
-                  raise SystemExit('Published navigation is still stale')
-              time.sleep(5)
-          for lang in sorted(languages):
-              url=base+'/'+lang+'?publicacion=chop-suey-'+str(time.time_ns())
-              with urllib.request.urlopen(urllib.request.Request(url,headers={'Cache-Control':'no-cache'}),timeout=30) as response: html=response.read().decode()
-              assert ('chop-suey' in html or 'chopsuey' in html or 'チョップスイレシピ' in html or '%E3%83%81%E3%83%A7%E3%83%83%E3%83%97' in html), 'Chop suey missing from home '+lang
-              print('CHOP_SUEY_ON_HOME '+lang)
+          print('CACHE_REFRESH',json.dumps({k:info.get(k) for k in ['revalidated','cacheMode','at']}))
+          def surface(pair):
+              lang,suffix=pair;path='/'+lang+suffix
+              req=urllib.request.Request('https://manualdecocina.com'+path+'?publicacion=siete-mercados-20261027',headers={'Cache-Control':'no-cache'})
+              with urllib.request.urlopen(req,timeout=45) as r:html=r.read().decode()
+              missing=[x['public_path'] for x in rows if x['language']==lang and x['public_path'] not in html]
+              assert not missing,(path,missing)
+              return {'path':path,'new_recipes':7,'ok':True}
+          with concurrent.futures.ThreadPoolExecutor(max_workers=7) as pool:report=list(pool.map(surface,[(l,s) for l in ['es','en','de','fr','it','ja','pt'] for s in ['','/recetas']]))
+          print('SEVEN_MARKET_SURFACES',json.dumps(report))
           PY
