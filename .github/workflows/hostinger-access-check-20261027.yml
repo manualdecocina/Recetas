@@ -1,20 +1,55 @@
-name: Hostinger existing deployment access
+name: Restore and verify published language navigation
 on:
   push:
     branches: [ops/hostinger-access-check-20261027]
 permissions:
   contents: read
 jobs:
-  inspect:
+  verify:
     runs-on: ubuntu-24.04
-    timeout-minutes: 2
+    timeout-minutes: 5
     steps:
-      - name: Check existing deployment credential availability without exposing values
+      - name: Refresh existing app cache and verify seven-language navigation
         env:
-          HOSTINGER_API_TOKEN: ${{ secrets.HOSTINGER_API_TOKEN }}
           REVALIDATE_SECRET: ${{ secrets.REVALIDATE_SECRET }}
         run: |
           python3 - <<'PY'
-          import os,json
-          print(json.dumps({'hostinger_deployment_credential_configured':bool(os.environ.get('HOSTINGER_API_TOKEN','').strip()),'existing_cache_credential_configured':bool(os.environ.get('REVALIDATE_SECRET','').strip())}))
+          import os,json,time,urllib.request
+          from html.parser import HTMLParser
+          base='https://manualdecocina.com'
+          languages={'es','en','de','it','fr','ja','pt'}
+          headers={'apikey':'sb_publishable_5j3BnF3q24MVuU-BTEVzbg_UXTyp6CM','Cache-Control':'no-cache'}
+          req=urllib.request.Request('https://eqbdtctxbpepbeickhqi.supabase.co/rest/v1/recipes?select=language&published=eq.true&limit=2000',headers=headers)
+          with urllib.request.urlopen(req,timeout=25) as response: rows=json.load(response)
+          assert {row['language'] for row in rows}==languages,'API still truncates languages'
+          print('PUBLIC_API_LANGUAGES '+json.dumps({'rows':len(rows),'languages':sorted({r['language'] for r in rows})}))
+          secret=(os.environ.get('REVALIDATE_SECRET') or '').rstrip('\r\n')
+          if not secret:raise SystemExit('Existing cache credential is missing')
+          request=urllib.request.Request(base+'/api/revalidate?languages='+str(time.time_ns()),data=b'{}',headers={'x-revalidate-secret':secret,'Content-Type':'application/json','Cache-Control':'no-cache'})
+          with urllib.request.urlopen(request,timeout=35) as response: info=json.load(response)
+          assert info.get('revalidated') is True
+          print('CACHE_REFRESH '+json.dumps({key:info.get(key) for key in ['revalidated','cacheMode','at']}))
+          class Page(HTMLParser):
+              def __init__(self):
+                  super().__init__();self.links=set()
+              def handle_starttag(self,tag,attrs):
+                  data=dict(attrs)
+                  if tag=='a' and 'md-lang-item' in data.get('class','').split():
+                      self.links.add(data.get('href'))
+          for attempt in range(6):
+              failures=[];report=[]
+              for lang in ['es','ja','pt']:
+                  request=urllib.request.Request(base+'/'+lang,headers={'Cache-Control':'no-cache'})
+                  with urllib.request.urlopen(request,timeout=30) as response: html=response.read().decode()
+                  page=Page();page.feed(html)
+                  missing={'/'+code for code in languages-{lang}}-page.links
+                  report.append({'page':'/'+lang,'links':sorted(page.links),'missing':sorted(missing)})
+                  if missing:failures.append(lang)
+              if not failures:
+                  print('LIVE_LANGUAGE_NAVIGATION '+json.dumps(report,ensure_ascii=False))
+                  break
+              if attempt==5:
+                  print('LIVE_LANGUAGE_NAVIGATION '+json.dumps(report,ensure_ascii=False))
+                  raise SystemExit('Published navigation is still stale')
+              time.sleep(5)
           PY
