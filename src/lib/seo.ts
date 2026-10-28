@@ -1,3 +1,4 @@
+import { reviewedRecipeSeo } from '@/lib/recipe-snippet-repairs'
 import type { Metadata } from 'next'
 import { SUPPORTED_LANGUAGES } from '@/types/recipe'
 import { getSiteUrl, normalizePublicPath, publicUrl, recipeCanonicalUrl, absoluteUrl, languageTag, isIndexingAllowed } from '@/lib/site'
@@ -70,8 +71,8 @@ export function recipeAlternates(
 }
 
 /** Título y descripción para buscadores: usa `seo.title` / `seo.description` si existen. */
-export function recipeMetaText(recipe: { title: string; excerpt: string | null; seo?: Record<string, unknown> | null }): { title: string; description: string | undefined } {
-  const seo = recipe.seo ?? {}
+export function recipeMetaText(recipe: { id?: string; title: string; excerpt: string | null; seo?: Record<string, unknown> | null }): { title: string; description: string | undefined } {
+  const seo = reviewedRecipeSeo(recipe.id, recipe.seo)
   const rawTitle = typeof seo.title === 'string' && seo.title.trim() ? seo.title.trim() : recipe.title
   const description = typeof seo.description === 'string' && seo.description.trim() ? seo.description.trim() : (recipe.excerpt ?? undefined)
   return { title: withSiteName(rawTitle), description }
