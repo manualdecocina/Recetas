@@ -23,19 +23,31 @@ jobs:
           REVALIDATE_SECRET: ${{ secrets.REVALIDATE_SECRET }}
         run: |
           python3 - <<'PY'
-          import json,os,time,urllib.request
+          import json,os,socket,time,urllib.request
+          # The first runner timed out on IPv4 then reported unreachable IPv6.
+          # Use IPv4 explicitly and retain each bounded attempt in the job log.
+          resolve=socket.getaddrinfo
+          socket.getaddrinfo=lambda *args,**kwargs:[entry for entry in resolve(*args,**kwargs) if entry[0]==socket.AF_INET]
           secret=(os.environ.get('REVALIDATE_SECRET') or '').rstrip('\r\n')
           if not secret:raise SystemExit('Missing publication cache secret')
           request=urllib.request.Request(
               'https://manualdecocina.com/api/revalidate?discovery='+str(time.time_ns()),
               data=b'{}',
               headers={'x-revalidate-secret':secret,'Content-Type':'application/json','Cache-Control':'no-cache'})
-          with urllib.request.urlopen(request,timeout=40) as response:info=json.load(response)
+          for attempt in range(2):
+              try:
+                  with urllib.request.urlopen(request,timeout=25) as response:info=json.load(response)
+                  break
+              except Exception as error:
+                  print(json.dumps({'attempt':attempt+1,'error':str(error)},ensure_ascii=False),flush=True)
+                  if attempt==1:raise
+                  time.sleep(3)
           print(json.dumps({key:info.get(key) for key in ('revalidated','cacheMode','at')}))
           if info.get('revalidated') is not True or info.get('cacheMode')!='expire-now':
               raise SystemExit('Current immediate-expiration endpoint is not confirmed')
           PY
       - name: Check ordinary home/catalog URLs, navigation response and Papa
+        if: always()
         run: python3 scripts/audit-discovery-papa-20261028.py
       - uses: actions/upload-artifact@v4
         if: always()
