@@ -60,7 +60,7 @@ const PREPARATION_IDENTITIES: Array<[RegExp, string]> = [
   [/^(?:queso )?ricotta\b/, 'queso-ricotta'],
   [/^pimenton dulce\b/, 'pimenton-dulce'],
   [/^(?:jugo|zumo) de pina\b/, 'zumo-de-pina'],
-  [/^(?:jugo|zumo) de limon\b|^limones?\b/, 'limon'],
+  [/^(?:jugo|zumo) de limon\b|^limon(?:es)?\b/, 'limon'],
   [/^vinagre de sidra\b/, 'vinagre-de-manzana'],
   [/^(?:hojas? de )?laurel\b/, 'laurel'],
 ]

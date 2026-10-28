@@ -43,3 +43,6 @@ assert.deepEqual(normalizeEditorialIngredientSections(ordered, '3225779c-4c03-4b
 
 assert.equal((ordered[3] as any).storagePosition, 7, 'keep saved checkbox identity when correcting ajiaco order')
 assert.equal((sections[0] as any).storagePosition, 1, 'keep saved checkbox identity when dropping section headings')
+
+const lemons = buildEditorialPantry([{ id: 'lemons', ingredients: [{ name: 'limón en gajos' }, { name: 'limones en gajos' }] }], [{ id: 'lemon', slug: 'limon', name: 'Limón' }], [])
+assert.deepEqual(lemons.requirements.get('lemons'), ['lemon', 'lemon'], 'singular and plural lemon share the reviewed identity')
