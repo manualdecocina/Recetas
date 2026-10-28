@@ -14,3 +14,9 @@ La organización de cuatro grupos con sus siete idiomas permanece estable. Las a
 No se cambiaron ingredientes, cantidades, imágenes, valores nutricionales numéricos, URL ni estado de publicación. La corrección se limita a 14 registros: las siete versiones de bondiola y las siete de Stroganoff. Los archivos revision-before.json, revision-after.json y revision-patches.json separan esta corrección del primer refuerzo, que conserva su evidencia histórica.
 
 La lectura posterior de los 28 registros coincidió con el resultado esperado, salvo las marcas updated_at. La verificación pública pasó 28/28 recetas y 50/50 formas de URL en [GitHub Actions 40607427604](https://github.com/manualdecocina/Recetas/actions/runs/40607427604). Su informe completo está en `editorial/refuerzo-cuatro-20261027/verified-revision-production-qa.json`, separado de la primera verificación. Estos resultados confirman publicación y las comprobaciones indicadas, no un incremento de clics o ingresos.
+
+## Límite observado en caché
+
+La comprobación desde el entorno local no coincidió con la ejecución de GitHub: tras sus reintentos aprobó 43/50 respuestas, equivalentes a 21/28 recetas con todas sus variantes correctas. No se debe ocultar esta discrepancia ni sustituirla por el resultado favorable de otro origen.
+
+Un control específico de `/de/creep-stroganoff` recibió la porción anterior («1 gefüllter Crêpe (ca. 300 g)»), mientras que la misma página con un parámetro nuevo recibió la porción corregida («1 Portion (1/4 des Rezepts, ohne Beilagen)»). Fecha de publicación y rendimiento coincidieron en ambas. Esto demuestra al menos una respuesta obsoleta de caché en el trayecto de consulta; no identifica por sí solo qué capa la conserva. No se afirma consistencia instantánea para todos los visitantes o ubicaciones. La evidencia local se conserva en `editorial/refuerzo-cuatro-20261027/local-cache-observations.json`.

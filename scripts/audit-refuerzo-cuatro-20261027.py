@@ -3,6 +3,7 @@ import concurrent.futures
 import json
 import re
 import time
+import traceback
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -98,7 +99,8 @@ def check_record(r, records, request_path=None):
         assert all(link in p.links for link in expected_links), ('internal-links', expected_links)
         return {'path': path, 'record_path': r['public_path'], 'language': r['language'], 'ok': True, 'faqs': len(r['seo']['faq']), 'links': len(expected_links)}
     except Exception as error:
-        return {'path': path, 'record_path': r['public_path'], 'ok': False, 'error': str(error)}
+        frame = traceback.extract_tb(error.__traceback__)[-1]
+        return {'path': path, 'record_path': r['public_path'], 'ok': False, 'error': str(error) or type(error).__name__, 'line': frame.lineno}
 
 def main():
     revised = (DATA/'revision-after.json').exists()
