@@ -1,0 +1,13 @@
+DO $review$
+DECLARE entries jsonb := $ingredients$[{"slug": "castanas", "name": "Castañas"}, {"slug": "tomates-secos", "name": "Tomates secos"}, {"slug": "concentrado-de-tomate", "name": "Concentrado de tomate"}, {"slug": "caldo-de-verduras", "name": "Caldo de verduras"}, {"slug": "levadura-seca", "name": "Levadura seca de panadería"}, {"slug": "crema-agria", "name": "Crema agria"}, {"slug": "alcaravea", "name": "Alcaravea"}, {"slug": "lentejas", "name": "Lentejas"}, {"slug": "chalota", "name": "Chalota"}, {"slug": "nueces", "name": "Nueces"}, {"slug": "chocolate-negro", "name": "Chocolate negro"}, {"slug": "boniato", "name": "Boniato"}, {"slug": "harina-de-mandioca-tostada", "name": "Harina de mandioca tostada"}, {"slug": "cebollino", "name": "Cebollino"}]$ingredients$::jsonb; x jsonb; previous_links jsonb;
+BEGIN
+SELECT coalesce(jsonb_agg(jsonb_build_array(ri.recipe_id,ri.ingredient_id,ri.amount,ri.unit,ri.preparation,ri.note,ri.position)),'[]'::jsonb) INTO previous_links FROM public.recipe_ingredients ri JOIN public.ingredients i ON i.id=ri.ingredient_id WHERE i.status='canonical';
+FOR x IN SELECT value FROM jsonb_array_elements(entries) LOOP
+ IF EXISTS(SELECT 1 FROM public.ingredients WHERE slug=x->>'slug') THEN RAISE EXCEPTION 'Ingredient slug exists: %',x->>'slug'; END IF;
+ IF EXISTS(SELECT 1 FROM public.ingredients WHERE status='canonical' AND lower(trim(name))=lower(trim(x->>'name'))) THEN RAISE EXCEPTION 'Canonical name exists'; END IF;
+ INSERT INTO public.ingredients(slug,name,normalized_name,status,searchable,indexable) VALUES(x->>'slug',x->>'name',lower(trim(x->>'name')),'canonical',true,false);
+END LOOP;
+IF EXISTS(SELECT 1 FROM jsonb_array_elements(previous_links) e WHERE NOT EXISTS(SELECT 1 FROM public.recipe_ingredients ri WHERE ri.recipe_id=(e->>0)::uuid AND ri.ingredient_id=(e->>1)::uuid AND ri.amount IS NOT DISTINCT FROM e->>2 AND ri.unit IS NOT DISTINCT FROM e->>3 AND ri.preparation IS NOT DISTINCT FROM e->>4 AND ri.note IS NOT DISTINCT FROM e->>5 AND ri.position=(e->>6)::int)) THEN RAISE EXCEPTION 'Existing canonical link changed'; END IF;
+IF NOT EXISTS(SELECT 1 FROM public.ingredients WHERE id='98322e50-1f0c-406c-8681-b5718d3801ee' AND slug='papas' AND name='Papa' AND status='canonical') THEN RAISE EXCEPTION 'Papa identity changed'; END IF;
+END $review$;
+SELECT slug,name,status,searchable,indexable FROM public.ingredients WHERE slug IN ('castanas','tomates-secos','concentrado-de-tomate','caldo-de-verduras','levadura-seca','crema-agria','alcaravea','lentejas','chalota','nueces','chocolate-negro','boniato','harina-de-mandioca-tostada','cebollino') ORDER BY slug;
