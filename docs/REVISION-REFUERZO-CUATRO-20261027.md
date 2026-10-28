@@ -1,0 +1,14 @@
+# Revisión del refuerzo editorial
+
+La segunda revisión encontró tres problemas de contenido y uno de alcance de verificación.
+
+1. La reescritura de las notas de bondiola había eliminado el bloque de sustituciones. Se recuperó su texto original en siete idiomas.
+2. La definición nutricional de Stroganoff decía «un crepe, aproximadamente 300 g», aunque el cálculo divide la formulación entre cuatro porciones. Se sustituyó únicamente serving_size por una cuarta parte de la receta, localizada. Los valores estimados no se recalcularon ni se presentan como medidos.
+3. En bondiola permanecía un paso que sacaba la carne 30 minutos antes de un adobo refrigerado y otro que daba dos horas como duración fija. Se ordenó la preparación y se subordinó el paso al dorado a la terneza, manteniendo los tiempos como orientación.
+4. El «28/28» anterior verificaba que las páginas reproducían el paquete esperado. No demostraba coherencia culinaria completa, mejoras de ranking ni ausencia de respuestas obsoletas en otras formas de URL. La revisión añade porción nutricional, rendimiento, fecha publicada, conservación de sustituciones y ambas formas de las 22 URL históricas: 50 respuestas para 28 recetas. Se conservan los errores de cada intento de caché en el informe.
+
+Las 49 entradas netas de FAQ son siete preguntas localizadas en siete idiomas; no son 49 temas nuevos distintos. Se conservan 56 enlaces internos.
+
+La organización de cuatro grupos con sus siete idiomas permanece estable. Las antiguas URL inglesa y alemana de bondiola que aparecen en Search Console ya redirigen con 308 a las traducciones del mismo grupo; no se encontró un segundo grupo de bondiola en esa revisión.
+
+No se cambiaron ingredientes, cantidades, imágenes, valores nutricionales numéricos, URL ni estado de publicación. La corrección se limita a 14 registros: las siete versiones de bondiola y las siete de Stroganoff. Los archivos revision-before.json, revision-after.json y revision-patches.json separan esta corrección del primer refuerzo, que conserva su evidencia histórica.

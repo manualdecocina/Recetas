@@ -66,8 +66,8 @@ def canonical(r):
 def lang_tag(language):
     return 'pt-BR' if language == 'pt' else language
 
-def check_record(r, records):
-    path = r['public_path']
+def check_record(r, records, request_path=None):
+    path = request_path or r['public_path']
     try:
         p = Page(fetch(path)); text = ' '.join(p.text)
         assert p.h1 == [r['title']], ('h1', p.h1)
@@ -87,40 +87,57 @@ def check_record(r, records):
         assert [x['text'] for x in recipe['recipeInstructions']] == [x['content'] for x in r['steps']]
         assert len(recipe['recipeIngredient']) == len(r['ingredients'])
         assert recipe['nutrition']['calories'] == str(r['nutrition']['calories'])+' calories'
+        assert recipe['nutrition']['servingSize'] == r['nutrition']['serving_size']
+        assert recipe['recipeYield'] == str(r['servings'])
+        assert recipe['datePublished'] == r['published_at']
         for faq in r['seo']['faq']:
             assert faq['q'] in text and faq['a'] in text, ('faq', faq['q'])
         for paragraph in r['summary'].split('\n\n'): assert paragraph in text, ('summary', paragraph[:30])
         expected_links = re.findall(r'href="(/[^"]+)"', r['notes'])
         assert len(expected_links) == 2
         assert all(link in p.links for link in expected_links), ('internal-links', expected_links)
-        return {'path': path, 'language': r['language'], 'ok': True, 'faqs': len(r['seo']['faq']), 'links': len(expected_links)}
+        return {'path': path, 'record_path': r['public_path'], 'language': r['language'], 'ok': True, 'faqs': len(r['seo']['faq']), 'links': len(expected_links)}
     except Exception as error:
-        return {'path': path, 'ok': False, 'error': str(error)}
+        return {'path': path, 'record_path': r['public_path'], 'ok': False, 'error': str(error)}
 
 def main():
-    records = json.loads((DATA/'after.json').read_text())
-    before = json.loads((DATA/'before.json').read_text())
-    mutable = {'title','excerpt','summary','notes','steps','total_time_minutes','keywords','seo'}
+    revised = (DATA/'revision-after.json').exists()
+    records = json.loads((DATA/('revision-after.json' if revised else 'after.json')).read_text())
+    before = json.loads((DATA/('revision-before.json' if revised else 'before.json')).read_text())
+    mutable = {'title','excerpt','summary','notes','steps','total_time_minutes','keywords','seo','nutrition'}
     assert len(records) == 28
     for old, new in zip(before, records):
         assert {k:v for k,v in old.items() if k not in mutable} == {k:v for k,v in new.items() if k not in mutable}
         assert [(s.get('image_url'),s.get('image_alt')) for s in old['steps']] == [(s.get('image_url'),s.get('image_alt')) for s in new['steps']]
         assert new['seo'].get('image_variants') == old['seo'].get('image_variants')
+        assert {k:v for k,v in old['nutrition'].items() if k!='serving_size'} == {k:v for k,v in new['nutrition'].items() if k!='serving_size'}
+    if revised:
+        original = json.loads((DATA/'before.json').read_text())
+        for r in records:
+            if r['recipe_group_id'] == 'af4f77b1-24cd-4c6f-8d02-dbc92e3cfc24':
+                old = next(x for x in original if x['id']==r['id'])
+                substitutions = re.findall(r'<h3>[\s\S]*?(?=<h3>|$)', old['notes'])[1]
+                assert substitutions in r['notes'], ('lost substitutions', r['language'])
+    cases = [(r, r['public_path']) for r in records]
+    cases += [(r, canonical(r)[len(BASE):]) for r in records if canonical(r) != BASE+r['public_path']]
     with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:
-        results = list(pool.map(lambda r: check_record(r, records), records))
+        results = list(pool.map(lambda case: check_record(case[0], records, case[1]), cases))
+    history = [results.copy()]
     # A stale ISR response may be served once while its replacement is generated.
     for attempt in range(2):
         failed = {item['path'] for item in results if not item['ok']}
         if not failed: break
         time.sleep(10)
         with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:
-            retried = list(pool.map(lambda r: check_record(r, records), [r for r in records if r['public_path'] in failed]))
+            retried = list(pool.map(lambda case: check_record(case[0], records, case[1]), [case for case in cases if case[1] in failed]))
         replacements = {item['path']: item for item in retried}
         results = [replacements.get(item['path'], item) for item in results]
+        history.append(retried)
     sitemap = ET.fromstring(fetch('/sitemap.xml'))
     urls = {urllib.parse.unquote(x.text).rstrip('/') for x in sitemap.iter() if x.tag.endswith('}loc')}
     missing = [r['public_path'] for r in records if (BASE+r['public_path']).rstrip('/') not in urls]
-    report = {'checked':len(results),'passed':sum(r['ok'] for r in results),'missing_sitemap':missing,'pages':results}
+    passed = sum(all(x['ok'] for x in results if x['record_path']==r['public_path']) for r in records)
+    report = {'checked':len(records),'passed':passed,'url_variants_checked':len(results),'url_variants_passed':sum(x['ok'] for x in results),'missing_sitemap':missing,'pages':results,'attempts':history,'scope':'Content, metadata, schema and URL checks; not a cooking test or evidence of ranking gains.'}
     (DATA/'production-qa.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
     print(json.dumps(report,ensure_ascii=False))
     raise SystemExit(0 if report['passed']==28 and not missing else 1)
