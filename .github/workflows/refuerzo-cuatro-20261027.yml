@@ -1,0 +1,40 @@
+name: refuerzo-cuatro-20261027
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/refuerzo-cuatro-20261027.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            scripts
+            editorial/refuerzo-cuatro-20261027
+      - name: Refresh protected production cache
+        env:
+          REVALIDATE_SECRET: ${{ secrets.REVALIDATE_SECRET }}
+        run: |
+          python3 - <<'PY'
+          import json,os,time,urllib.request
+          secret=(os.environ.get('REVALIDATE_SECRET') or '').rstrip('\r\n')
+          if not secret:raise SystemExit('Missing cache secret')
+          req=urllib.request.Request('https://manualdecocina.com/api/revalidate?refuerzo='+str(time.time_ns()),data=b'{}',headers={'x-revalidate-secret':secret,'Content-Type':'application/json','Cache-Control':'no-cache'})
+          with urllib.request.urlopen(req,timeout=40) as r:info=json.load(r)
+          assert info.get('revalidated') is True
+          assert info.get('cacheMode')=='expire-now'
+          print('PRODUCTION_CACHE_REFRESHED',info.get('at'))
+          PY
+      - name: Verify 28 public recipe pages
+        run: python3 scripts/audit-refuerzo-cuatro-20261027.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: refuerzo-cuatro-20261027-production-qa
+          path: editorial/refuerzo-cuatro-20261027/production-qa.json
