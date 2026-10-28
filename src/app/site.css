@@ -629,3 +629,17 @@ a.md-lang-item:hover { background: var(--md-sand); }
     display: none !important;
   }
 }
+
+/* Ingredient search keeps the catalog discoverable without rendering hundreds of buttons. */
+.md-pantry-autocomplete { position: relative; max-width: 760px; }
+.md-pantry-autocomplete .md-search-label { display: block; font-weight: 800; }
+.md-pantry-search-help { color: var(--md-muted); font-size: .95rem; margin: 6px 0 12px; }
+.md-pantry-autocomplete .md-pantry-filter { margin-bottom: 0; }
+.md-pantry-suggestions { margin: 6px 0 0; padding: 4px; list-style: none; border: 2px solid var(--md-olive); border-radius: var(--md-radius-sm); background: var(--md-white); max-height: 340px; overflow-y: auto; }
+.md-pantry-suggestions[hidden] { display: none; }
+.md-pantry-suggestions li { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 11px 12px; min-height: 44px; cursor: pointer; overflow-wrap: anywhere; }
+.md-pantry-suggestions li.md-pantry-option-active { background: var(--md-accent-soft); color: var(--md-ink); outline: 2px solid var(--md-olive); outline-offset: -2px; }
+.md-pantry-selection { margin-top: 20px; }
+.md-pantry-selection h3 { margin-bottom: 12px; }
+.md-pantry-chip { overflow-wrap: anywhere; max-width: 100%; text-align: start; }
+@media (prefers-reduced-motion: reduce) { .md-pantry-results-viewed { animation: none; } }

@@ -2,11 +2,10 @@ import { notFound, permanentRedirect, redirect } from 'next/navigation'
 import { cache } from 'react'
 import type { Metadata } from 'next'
 import { supabase } from '@/lib/supabase/public'
-import { getContentRedirect, getRelatedRecipes } from '@/lib/public-content'
+import { getContentRedirect, getRelatedRecipes, getRecipeByPublicPath } from '@/lib/public-content'
 import { recipeAlternates, recipeMetaText, recipeSocialImages } from '@/lib/seo'
 import { normalizePublicPath, recipePath, publicUrl, recipeCanonicalUrl, publicPathHref } from '@/lib/site'
 import { RecipeDocument } from '@/components/RecipeDocument'
-import type { RecipeIngredient } from '@/types/recipe'
 import { SUPPORTED_LANGUAGES, type Recipe, type RecipeLanguage } from '@/types/recipe'
 
 export const revalidate = 3600
@@ -18,37 +17,15 @@ interface Props {
 const getRecipe = cache(async (lang: string, slug: string): Promise<Recipe | null> => {
   const { data, error } = await supabase
     .from('recipes')
-    .select('*, recipe_ingredients(amount, unit, preparation, note, position, ingredients(id, name, slug, indexable))', { count: 'exact' })
+    .select('public_path')
     .eq('language', lang)
     .eq('slug', decodeURIComponent(slug))
     .eq('published', true)
     .maybeSingle()
   if (error) throw new Error(`No se pudo cargar la receta: ${error.message}`)
   if (!data) return null
-  const row = data as any
-  const structured = Array.isArray(row.recipe_ingredients) ? row.recipe_ingredients : []
-  const structuredByPosition = new Map<number, any>(
-    structured.map((item: any) => [Number(item.position ?? 0), item]),
-  )
-  const rawIngredients = Array.isArray(row.ingredients) ? row.ingredients : []
-  const ingredients: RecipeIngredient[] = rawIngredients.map((raw: any, index: number) => {
-    const item = structuredByPosition.get(index)
-    if (!item) return raw
-    const canonical = item.ingredients
-    return {
-      ...raw,
-      amount: item.amount ?? raw.amount ?? '',
-      unit: item.unit ?? raw.unit ?? undefined,
-      preparation: item.preparation ?? undefined,
-      note: item.note ?? undefined,
-      ...(canonical?.indexable && canonical?.slug ? {
-        canonicalIngredientSlug: canonical.slug,
-        canonicalIngredientName: canonical.name,
-      } : {}),
-    }
-  })
-  const { recipe_ingredients: _recipeIngredients, ...recipeRow } = row
-  return { ...recipeRow, ingredients } as Recipe
+  return getRecipeByPublicPath(data.public_path)
+
 })
 
 const getTranslations = cache(async (recipeGroupId: string) => {

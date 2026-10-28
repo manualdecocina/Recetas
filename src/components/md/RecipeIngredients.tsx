@@ -37,8 +37,8 @@ export default function RecipeIngredients({ recipeId, lang, ingredients }: {
 
       const merged = { ...saved };
       ingredients.forEach((item, index) => {
-        if (item.canonicalIngredientSlug && pantrySlugs.has(item.canonicalIngredientSlug)) {
-          merged[index] = true;
+        if ((item.pantryIngredientSlug ?? item.canonicalIngredientSlug) && pantrySlugs.has((item.pantryIngredientSlug ?? item.canonicalIngredientSlug)!)) {
+          merged[item.storagePosition ?? index] = true;
         }
       });
       setChecked(merged);
@@ -48,14 +48,15 @@ export default function RecipeIngredients({ recipeId, lang, ingredients }: {
 
   function toggle(index: number) {
     setChecked((previous) => {
-      const nextValue = !previous[index];
-      const next = { ...previous, [index]: nextValue };
+      const storagePosition = ingredients[index]?.storagePosition ?? index;
+      const nextValue = !previous[storagePosition];
+      const next = { ...previous, [storagePosition]: nextValue };
       try {
         localStorage.setItem(storageKey, JSON.stringify(next));
 
         // Si el ingrediente tiene canonical slug, la casilla de la receta también actualiza
         // el inventario global de "¿Qué puedo cocinar?". Así herramienta y receta no se contradicen.
-        const slug = ingredients[index]?.canonicalIngredientSlug;
+        const slug = ingredients[index]?.pantryIngredientSlug ?? ingredients[index]?.canonicalIngredientSlug;
         if (slug) {
           const pantryRaw = localStorage.getItem('manualdecocina:pantry:selectedSlugs');
           const pantryValue: unknown = pantryRaw ? JSON.parse(pantryRaw) : [];
@@ -84,7 +85,7 @@ export default function RecipeIngredients({ recipeId, lang, ingredients }: {
             <li key={`${recipeId}-ingredient-${index}`} className={showGroup ? 'md-ingredient-has-group' : undefined}>
               {showGroup && <h3 className="md-ingredient-group">{item.group}</h3>}
               <label className="md-ingredient-checkbox">
-                <input type="checkbox" checked={Boolean(checked[index])} onChange={() => toggle(index)} />
+                <input type="checkbox" checked={Boolean(checked[item.storagePosition ?? index])} onChange={() => toggle(index)} />
                 <span>
                   {amount && <span className="md-ingredient-amount">{amount} </span>}
                   {item.canonicalIngredientSlug && lang === 'es' ? (

@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
-    "test:logic": "node --experimental-strip-types --no-warnings --import ./tests/logic/register.mjs tests/logic/seo.test.mts && node --experimental-strip-types --no-warnings --import ./tests/logic/register.mjs tests/logic/sitemap.test.mts && node --experimental-strip-types --no-warnings --import ./tests/logic/register.mjs tests/logic/recipe-schema.test.mts && node --experimental-strip-types --no-warnings --import ./tests/logic/register.mjs tests/logic/categories.test.mts && node --experimental-strip-types --no-warnings --import ./tests/logic/register.mjs tests/logic/pantry.test.mts"
+    "test:logic": "node --experimental-strip-types --no-warnings --import ./tests/logic/register.mjs tests/logic/seo.test.mts && node --experimental-strip-types --no-warnings --import ./tests/logic/register.mjs tests/logic/sitemap.test.mts && node --experimental-strip-types --no-warnings --import ./tests/logic/register.mjs tests/logic/recipe-schema.test.mts && node --experimental-strip-types --no-warnings --import ./tests/logic/register.mjs tests/logic/categories.test.mts && node --experimental-strip-types --no-warnings --import ./tests/logic/register.mjs tests/logic/pantry.test.mts && node --experimental-strip-types --no-warnings --import ./tests/logic/register.mjs tests/logic/pantry-editorial.test.mts && node --experimental-strip-types --no-warnings --import ./tests/logic/register.mjs tests/logic/validation.test.mts"
   },
   "dependencies": {
     "@supabase/ssr": "^0.5.2",
@@ -17,7 +17,7 @@
     "react": "^18.3.0",
     "react-dom": "^18.3.0",
     "server-only": "^0.0.1",
-    "zod": "^3.23.8"
+    "zod": "4.6.7"
   },
   "devDependencies": {
     "@types/node": "^20.14.0",

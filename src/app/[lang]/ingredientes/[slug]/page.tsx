@@ -7,7 +7,7 @@ import { supabase } from '@/lib/supabase/public'
 import { IngredientDetailView } from '@/components/md/IngredientViews'
 import type { MdRecipeCardData } from '@/components/md/md-types'
 import { SUPPORTED_LANGUAGES, type RecipeLanguage } from '@/types/recipe'
-import { publicUrl, absoluteUrl } from '@/lib/site'
+import { publicUrl, absoluteUrl, recipeCanonicalUrl } from '@/lib/site'
 import { withSiteName, siteRobots, allLanguageAlternates } from '@/lib/seo'
 
 function parseLang(value: string): RecipeLanguage | null {
@@ -24,33 +24,10 @@ async function getIngredient(lang: RecipeLanguage, slug: string) {
   if (error) throw new Error('No se pudo cargar el ingrediente')
   if (!data || !data.indexable) return null
 
-  if (lang !== 'es') {
-    const pantry = await getPantryMatchData(lang)
-    return { ingredient: { ...data, name: ingredientLabel(data.slug, data.name, lang), description: null },
-      recipes: pantry.recipes.filter((recipe) => recipe.ingredientIds.includes(data.id)) }
-  }
+  const pantry = await getPantryMatchData(lang)
+  return { ingredient: { ...data, name: ingredientLabel(data.slug, data.name, lang), description: lang === 'es' ? data.description : null },
+    recipes: pantry.recipes.filter((recipe) => recipe.ingredientIds.includes(data.id)) }
 
-  const { data: relations, error: relationError } = await supabase
-    .from('recipe_ingredients')
-    .select('recipe_id, position')
-    .eq('ingredient_id', data.id)
-    .order('position', { ascending: true })
-
-  if (relationError) throw new Error('No se pudieron cargar las relaciones del ingrediente')
-
-  const ids = [...new Set((relations ?? []).map((row) => row.recipe_id))]
-  if (!ids.length) return { ingredient: data, recipes: [] }
-
-  const { data: recipes, error: recipesError } = await supabase
-    .from('recipes')
-    .select('id, language, slug, public_path, source_url, title, excerpt, category, image_url')
-    .in('id', ids)
-    .eq('language', lang)
-    .eq('published', true)
-    .order('ready_at', { ascending: false, nullsFirst: false })
-
-  if (recipesError) throw new Error('No se pudieron cargar las recetas del ingrediente')
-  return { ingredient: data, recipes: recipes ?? [] }
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string; slug: string }> }): Promise<Metadata> {
@@ -102,7 +79,7 @@ export default async function IngredientPage({ params }: { params: Promise<{ lan
     itemListElement: recipes.map((recipe, index) => ({
       '@type': 'ListItem',
       position: index + 1,
-      url: publicUrl(recipe.public_path),
+      url: recipeCanonicalUrl(recipe),
       name: recipe.title,
     })),
   } : null

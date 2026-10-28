@@ -46,22 +46,6 @@ export async function RecipeDocument({ recipe, relatedRecipes = [] }: { recipe: 
   ])
 
   const seoMeta = (recipe.seo ?? {}) as Record<string, unknown>
-  const faqEntries = Array.isArray(seoMeta.faq)
-    ? (seoMeta.faq as Array<{ q?: unknown; a?: unknown }>)
-        .filter((item): item is { q: string; a: string } =>
-          typeof item?.q === 'string' && item.q.trim().length > 0 &&
-          typeof item?.a === 'string' && item.a.trim().length > 0)
-    : []
-  // FAQPage refleja exactamente las preguntas visibles en RecipeDocumentVisual.
-  const faqLd = faqEntries.length ? {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: faqEntries.map((item) => ({
-      '@type': 'Question',
-      name: item.q,
-      acceptedAnswer: { '@type': 'Answer', text: item.a },
-    })),
-  } : null
   const imageVariants = Array.isArray(seoMeta.image_variants)
     ? seoMeta.image_variants.filter((u): u is string => typeof u === 'string' && u.trim().length > 0)
     : []
@@ -144,7 +128,6 @@ export async function RecipeDocument({ recipe, relatedRecipes = [] }: { recipe: 
       <main id="md-main">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd).replace(/</g, '\\u003c') }} />
-        {faqLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd).replace(/</g, '\\u003c') }} />}
         <RecipeDocumentVisual
           recipe={recipe}
           relatedRecipes={relatedRecipes}

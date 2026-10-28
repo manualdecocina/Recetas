@@ -1,4 +1,6 @@
+import { normalizeEditorialIngredientSections } from '@/lib/editorial-ingredient-sections'
 import { cache } from 'react'
+import { getPantryMatchData } from '@/lib/md-data'
 import { supabase } from '@/lib/supabase/public'
 import { normalizePublicPath } from '@/lib/site'
 import type { Recipe } from '@/types/recipe'
@@ -52,11 +54,15 @@ export const getRecipeByPublicPath = cache(async (path: string): Promise<Recipe 
   const canonicalByPosition = new Map(
     (row.recipe_ingredients ?? []).map((link) => [Number(link.position), link.ingredients]),
   )
-  const ingredients = row.ingredients.map((ingredient, index) => {
+  const pantry = await getPantryMatchData(row.language)
+  const pantryRecipe = pantry.recipes.find(r => r.id === row.id)
+  const slugById = new Map(pantry.ingredients.map(i => [i.id, i.slug]))
+  const ingredients = normalizeEditorialIngredientSections(row.ingredients, row.recipe_group_id, row.language).map((ingredient, index) => {
     const canonical = canonicalByPosition.get(index)
-    return canonical?.indexable && canonical.slug
-      ? { ...ingredient, canonicalIngredientSlug: canonical.slug, canonicalIngredientName: canonical.name }
-      : ingredient
+    const pantryIngredientSlug = slugById.get(pantryRecipe?.editorialIngredientIds?.[index] ?? '')
+    return { ...ingredient, pantryIngredientSlug,
+      ...(canonical?.indexable && canonical.slug ? { canonicalIngredientSlug: canonical.slug, canonicalIngredientName: canonical.name } : {}) }
+
   })
   const { recipe_ingredients: _links, ...recipeRow } = row
   return { ...recipeRow, ingredients } as Recipe
@@ -123,12 +129,17 @@ export const getRelatedRecipes = cache(async (recipe: Pick<Recipe, 'id' | 'langu
  *  No cambia public_path ni inventa rutas; solo convierte las rutas ya publicadas en params
  *  estáticos de Next para reducir TTFB en el primer acceso. */
 export const getPublishedPublicPaths = cache(async (): Promise<string[]> => {
-  const [{ data: recipes, error: recipesError }, { data: pages, error: pagesError }] = await Promise.all([
-    supabase.from('recipes').select('public_path').eq('published', true).not('public_path', 'is', null),
-    supabase.from('content_pages').select('public_path').eq('published', true).not('public_path', 'is', null),
-  ])
-  if (recipesError) throw new Error(`No se pudieron cargar rutas públicas de recetas: ${recipesError.message}`)
-  if (pagesError) throw new Error(`No se pudieron cargar rutas públicas de contenido: ${pagesError.message}`)
+  async function readPaths(table: 'recipes' | 'content_pages') {
+    const rows: Array<{ public_path: string }> = []
+    for (let from = 0; ; from += 1000) {
+      const { data, error } = await supabase.from(table).select('public_path')
+        .eq('published', true).not('public_path', 'is', null).order('id').range(from, from + 999)
+      if (error) throw new Error(`No se pudieron cargar rutas públicas: ${error.message}`)
+      rows.push(...(data ?? []))
+      if (!data || data.length < 1000) return rows
+    }
+  }
+  const [recipes, pages] = await Promise.all([readPaths('recipes'), readPaths('content_pages')])
 
   const paths = [...(recipes ?? []), ...(pages ?? [])]
     .map((row) => normalizePublicPath(row.public_path as string))
