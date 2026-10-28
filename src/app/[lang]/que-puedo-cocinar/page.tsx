@@ -74,7 +74,7 @@ export default async function PantryMatchPage({ params }: { params: Promise<{ la
     <div className="md-site" lang={languageTag(lang)}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <SiteHeader lang={lang} alternates={Object.fromEntries(SUPPORTED_LANGUAGES.map((l) => [l, pantryPath(l)]))} />
-      <PantryMatchView lang={lang} ingredients={ingredients} recipes={recipes} />
+      <PantryMatchView lang={lang} ingredients={ingredients} recipes={recipes.map(({ editorialIngredients, editorialIngredientIds, ...recipe }) => recipe)} />
       <SiteFooter lang={lang} />
     </div>
   )

@@ -1,6 +1,7 @@
 export type RecipeLanguage = 'es' | 'de' | 'ja' | 'it' | 'fr' | 'en' | 'pt'
 
 export interface RecipeIngredient {
+  storagePosition?: number
   name: string
   amount: string
   unit?: string

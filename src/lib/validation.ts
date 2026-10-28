@@ -23,7 +23,7 @@ const publicPathSchema = z.preprocess(
   z.string()
     .trim()
     .max(300, 'Máximo 300 caracteres')
-    .regex(/^\/(?!\/)[^\\s?#]+$/u, 'La URL pública debe empezar por / y no contener espacios, ? o #')
+    .regex(/^\/(?!\/)[^\s\\?#]+$/u, 'La URL pública debe empezar por / y no contener espacios, ? o #')
     .optional()
 )
 
@@ -61,7 +61,7 @@ const imageUrlSchema = z.preprocess(
     .url('URL no válida')
     .refine((value) => value.startsWith('https://'), 'La imagen debe usar https')
     .refine(
-      (value) => getAllowedImageHosts().includes(new URL(value).hostname),
+      (value) => { try { return getAllowedImageHosts().includes(new URL(value).hostname) } catch { return false } },
       'Dominio de imagen no permitido (ver NEXT_PUBLIC_IMAGE_HOSTS)'
     )
     .optional()

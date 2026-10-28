@@ -9,6 +9,8 @@ export interface MdIngredient {
   note?: string;
   group?: string;
   canonicalIngredientSlug?: string;
+  pantryIngredientSlug?: string;
+  storagePosition?: number;
 }
 
 export interface MdStep {
