@@ -2,6 +2,7 @@
 import concurrent.futures
 import json
 import re
+import time
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -25,10 +26,11 @@ class Page(HTMLParser):
         self.title = ''; self.h1 = []; self.description = None
         self.canonical = []; self.alternates = {}; self.links = set()
         self.ld = []; self.text = []; self.active = None; self.buffer = ''
-        self.robots = ''; self.html_lang = None
+        self.robots = ''; self.html_lang = None; self.hidden = 0
         self.feed(raw)
     def handle_starttag(self, tag, attrs):
         a = dict(attrs)
+        if tag in ('script', 'style'): self.hidden += 1
         if tag == 'html': self.html_lang = a.get('lang')
         if tag == 'title': self.active = 'title'; self.buffer = ''
         if tag == 'h1': self.active = 'h1'; self.buffer = ''
@@ -40,8 +42,9 @@ class Page(HTMLParser):
         if tag == 'a': self.links.add(urllib.parse.unquote(a.get('href', '')))
     def handle_data(self, data):
         if self.active: self.buffer += data
-        self.text.append(data)
+        if not self.hidden: self.text.append(data)
     def handle_endtag(self, tag):
+        if tag in ('script', 'style'): self.hidden = max(0, self.hidden-1)
         if self.active == 'title' and tag == 'title': self.title = self.buffer; self.active = None
         elif self.active == 'h1' and tag == 'h1': self.h1.append(self.buffer); self.active = None
         elif self.active == 'ld' and tag == 'script': self.ld.append(json.loads(self.buffer)); self.active = None
@@ -105,6 +108,15 @@ def main():
         assert new['seo'].get('image_variants') == old['seo'].get('image_variants')
     with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:
         results = list(pool.map(lambda r: check_record(r, records), records))
+    # A stale ISR response may be served once while its replacement is generated.
+    for attempt in range(2):
+        failed = {item['path'] for item in results if not item['ok']}
+        if not failed: break
+        time.sleep(10)
+        with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:
+            retried = list(pool.map(lambda r: check_record(r, records), [r for r in records if r['public_path'] in failed]))
+        replacements = {item['path']: item for item in retried}
+        results = [replacements.get(item['path'], item) for item in results]
     sitemap = ET.fromstring(fetch('/sitemap.xml'))
     urls = {urllib.parse.unquote(x.text).rstrip('/') for x in sitemap.iter() if x.tag.endswith('}loc')}
     missing = [r['public_path'] for r in records if (BASE+r['public_path']).rstrip('/') not in urls]

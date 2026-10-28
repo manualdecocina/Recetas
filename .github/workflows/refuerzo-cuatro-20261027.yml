@@ -25,13 +25,15 @@ jobs:
           import json,os,time,urllib.request
           secret=(os.environ.get('REVALIDATE_SECRET') or '').rstrip('\r\n')
           if not secret:raise SystemExit('Missing cache secret')
-          req=urllib.request.Request('https://manualdecocina.com/api/revalidate?refuerzo='+str(time.time_ns()),data=b'{}',headers={'x-revalidate-secret':secret,'Content-Type':'application/json','Cache-Control':'no-cache'})
-          with urllib.request.urlopen(req,timeout=40) as r:info=json.load(r)
-          assert info.get('revalidated') is True
-          assert info.get('cacheMode')=='expire-now'
-          print('PRODUCTION_CACHE_REFRESHED',info.get('at'))
+          for attempt in range(3):
+              req=urllib.request.Request('https://manualdecocina.com/api/revalidate?refuerzo='+str(time.time_ns()),data=b'{}',headers={'x-revalidate-secret':secret,'Content-Type':'application/json','Cache-Control':'no-cache'})
+              with urllib.request.urlopen(req,timeout=40) as r:info=json.load(r)
+              assert info.get('revalidated') is True
+              assert info.get('cacheMode')=='expire-now'
+              print('PRODUCTION_CACHE_REFRESHED',info.get('at'))
+              if attempt<2:time.sleep(3)
           PY
-      - name: Verify 28 public recipe pages
+      - name: Verify 28 public recipe pages after cache refresh
         run: python3 scripts/audit-refuerzo-cuatro-20261027.py
       - uses: actions/upload-artifact@v4
         if: always()
