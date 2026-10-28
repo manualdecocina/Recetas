@@ -20,3 +20,9 @@ La lectura posterior de los 28 registros coincidió con el resultado esperado, s
 La comprobación desde el entorno local no coincidió con la ejecución de GitHub: tras sus reintentos aprobó 43/50 respuestas, equivalentes a 21/28 recetas con todas sus variantes correctas. No se debe ocultar esta discrepancia ni sustituirla por el resultado favorable de otro origen.
 
 Un control específico de `/de/creep-stroganoff` recibió la porción anterior («1 gefüllter Crêpe (ca. 300 g)»), mientras que la misma página con un parámetro nuevo recibió la porción corregida («1 Portion (1/4 des Rezepts, ohne Beilagen)»). Fecha de publicación y rendimiento coincidieron en ambas. Esto demuestra al menos una respuesta obsoleta de caché en el trayecto de consulta; no identifica por sí solo qué capa la conserva. No se afirma consistencia instantánea para todos los visitantes o ubicaciones. La evidencia local se conserva en `editorial/refuerzo-cuatro-20261027/local-cache-observations.json`.
+
+## Revisión posterior de las respuestas públicas
+
+Tras la solicitud «Revisa», la auditoría local terminó con 28/28 recetas y 50/50 formas de URL correctas y ninguna ausente del sitemap. En el primer intento hubo tres respuestas anteriores; los reintentos limitados terminaron aprobando todas. El informe conserva cada intento en `editorial/refuerzo-cuatro-20261027/cache-recheck-20261027.json`.
+
+Una consulta independiente, con tolerancia de caché cero y sin parámetros en las URL, también mostró la porción corregida en `/de/creep-stroganoff` y las sustituciones recuperadas en `/en/pork-bondiola-recipe`. Se comprobó además el contenido español de Stroganoff y bondiola. La discrepancia anterior no apareció en los resultados finales. Este cierre describe las respuestas observadas; no identifica de forma concluyente la capa responsable ni garantiza propagación instantánea en publicaciones futuras. No se cambiaron otra vez los datos editoriales durante esta comprobación.
