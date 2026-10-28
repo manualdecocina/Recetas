@@ -24,3 +24,14 @@ El workflow `discovery-papa-20261028` utiliza exclusivamente el secreto existent
 
 La auditoría comprueba enlaces de portada y catálogo en los siete idiomas sin parámetros nuevos, una respuesta RSC de navegación, la búsqueda de bravas y el nombre Papa en los chips de ¿Qué cocino?. Conserva intentos fallidos en el informe. El informe y el estado de ejecución determinan el resultado; la creación del PR no se considera prueba de publicación.
 
+## Resultado posterior al refresco
+
+La primera ejecución, [40660613895](https://github.com/manualdecocina/Recetas/actions/runs/40660613895), falló al conectar con el sitio (`Network is unreachable`). No confirmó invalidación y no se presenta como aprobada.
+
+La ejecución por IPv4 [40661028530](https://github.com/manualdecocina/Recetas/actions/runs/40661028530) confirmó `revalidated=true`, `cacheMode=expire-now`, a las 09:01:33 UTC del 28 de octubre de 2026, y terminó con **17/17 comprobaciones**. El informe original de Actions está archivado en `discovery-after-refresh-20261028.json`.
+
+El primer informe local anterior al refresco aprobó 16/17: todas las superficies y búsquedas estaban bien; ¿Qué cocino? todavía devolvía la etiqueta anterior. Se conserva en `discovery-before-refresh-20261028.json`. Una nueva lectura independiente de la URL habitual de ¿Qué cocino?, después del refresco, confirmó el chip **Papa** y el mismo ID canónico en el primer intento; su evidencia está en `pantry-after-refresh-20261028.json`.
+
+Estos resultados verifican las respuestas observadas y la corrección del ingrediente. La sesión particular del usuario y la causa precisa de su discrepancia anterior no quedaron reproducidas de forma concluyente. El PR registra una corrección de datos ya aplicada y su auditoría; no necesita desplegar código nuevo para mostrar Papa.
+
+
