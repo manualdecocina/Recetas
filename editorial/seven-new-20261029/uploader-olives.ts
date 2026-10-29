@@ -1,0 +1,20 @@
+const ALLOWED:Record<string,string> = {"aceitunas-crujientes-freidora-aire/portada.webp":"0d234d81e75f0dcfc7d580647bc58e56ce6bfb2038393bae55043a0b489253a6","aceitunas-crujientes-freidora-aire/portada-4x3.webp":"0d234d81e75f0dcfc7d580647bc58e56ce6bfb2038393bae55043a0b489253a6","aceitunas-crujientes-freidora-aire/portada-1x1.webp":"9f3a325ffb3a41735c1d34672e0d7c911915aa4ae55f87b5dce587eeb1112d47","aceitunas-crujientes-freidora-aire/portada-16x9.webp":"0d585f839bd4b68bfd648d3ca0163f060ba83ae29a7e715c8751239ca20bd577","aceitunas-crujientes-freidora-aire/paso-08.webp":"142e234948000151acef417699e8bbf26f3933f5e376580c3b1ad8d0d5a220ed","aceitunas-crujientes-freidora-aire/paso-01.webp":"903a2294cf19657ed9f55ac681c36f77c78417d4332daac9be2a1629ab1d6641","aceitunas-crujientes-freidora-aire/paso-02.webp":"46ff7f9c28642ac9b0da575cec6c3de825d7fbaa460c15d7e5583bae494e225e","aceitunas-crujientes-freidora-aire/paso-03.webp":"9dee6fc7a6ed0137781612e33696cd6010bcc0d7a6aa624224f356dabac19da9","aceitunas-crujientes-freidora-aire/paso-04.webp":"b408d0c3cd27cfc92dd443b311d2e70c6a97c295a199227fcdf3d6459125321b","aceitunas-crujientes-freidora-aire/paso-05.webp":"c998d295844454ff8a03b1c4d2518549afcef87d5a105e9a778af0dbc5987a10","aceitunas-crujientes-freidora-aire/paso-06.webp":"526138ee1299a8ab26cace3769f3843368c7d350c73d9e2eece2d3b722e14e0b","aceitunas-crujientes-freidora-aire/paso-07.webp":"565ed27b77c8b2aac125e785bfbcbb30be4240c3268bccae7f11215e39d2a095"};
+const EXPIRES="2026-10-29T11:41:06.878Z";
+Deno.serve(async(req:Request)=>{
+const reply=(body:unknown,status=200)=>new Response(JSON.stringify(body),{status,headers:{"Content-Type":"application/json"}});
+if(req.method!=="POST")return reply({error:"POST required"},405);
+if(Date.now()>Date.parse(EXPIRES))return reply({error:"Upload window closed"},410);
+const path=new URL(req.url).searchParams.get("path")||"";
+if(!Object.hasOwn(ALLOWED,path))return reply({error:"Unapproved asset"},403);
+if(req.headers.get("content-type")!=="image/webp")return reply({error:"WebP only"},415);
+const body=await req.arrayBuffer();
+if(body.byteLength>150000||body.byteLength<100)return reply({error:"Invalid size"},413);
+const hash=Array.from(new Uint8Array(await crypto.subtle.digest("SHA-256",body))).map(x=>x.toString(16).padStart(2,"0")).join("");
+if(hash!==ALLOWED[path])return reply({error:"Unapproved bytes"},403);
+const base=Deno.env.get("SUPABASE_URL");
+const key=Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")||Object.values(JSON.parse(Deno.env.get("SUPABASE_SECRET_KEYS")||"{}"))[0];
+if(!base||!key)return reply({error:"Storage configuration unavailable"},503);
+const r=await fetch(base+"/storage/v1/object/recetas/"+path,{method:"POST",headers:{"Authorization":"Bearer "+key,"apikey":String(key),"Content-Type":"image/webp","Cache-Control":"max-age=31536000","x-upsert":"false"},body});
+if(!r.ok)return reply({error:"Storage write rejected",status:r.status},r.status);
+return reply({uploaded:true,path,sha256:hash});
+});
