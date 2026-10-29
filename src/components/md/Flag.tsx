@@ -9,11 +9,21 @@ export default function Flag({ code, className = 'md-flag' }: { code: MdLanguage
     case 'en':
       return (
         <svg {...common}>
-          <rect width="24" height="16" fill="#012169" />
-          <path d="M0 0L24 16M24 0L0 16" stroke="#fff" strokeWidth="3.2" />
-          <path d="M0 0L24 16M24 0L0 16" stroke="#C8102E" strokeWidth="1.2" />
-          <path d="M12 0V16M0 8H24" stroke="#fff" strokeWidth="5.2" />
-          <path d="M12 0V16M0 8H24" stroke="#C8102E" strokeWidth="3" />
+          <rect width="24" height="16" fill="#fff" />
+          {Array.from({ length: 7 }, (_, stripe) => (
+            <rect key={stripe} y={stripe * 32 / 13} width="24" height={16 / 13} fill="#B22234" />
+          ))}
+          <rect width="9.6" height={112 / 13} fill="#3C3B6E" />
+          {Array.from({ length: 9 }, (_, row) =>
+            Array.from({ length: row % 2 === 0 ? 6 : 5 }, (_, column) => (
+              <path
+                key={`${row}-${column}`}
+                d="M0-.38L.09-.12H.36L.14.04L.22.3L0 .14L-.22.3L-.14.04L-.36-.12H-.09Z"
+                transform={`translate(${(row % 2 === 0 ? 0.8 : 1.6) + column * 1.6} ${0.48 + row * 0.96})`}
+                fill="#fff"
+              />
+            ))
+          )}
         </svg>
       );
     case 'de':
