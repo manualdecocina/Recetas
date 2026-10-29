@@ -14,6 +14,11 @@ jobs:
     timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            editorial/seven-new-20261029
+            scripts/audit-seven-new-20261029.py
+          sparse-checkout-cone-mode: false
       - name: Invalidate production recipe cache
         env:
           REVALIDATE_SECRET: ${{ secrets.REVALIDATE_SECRET }}
