@@ -88,3 +88,10 @@
 .adm-auth-foot { text-align: center; margin: 18px 0 0; font-size: .92rem; }
 .adm-auth-foot a { color: #1f6b2e; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
 .adm-auth .adm-notice { margin: 0 0 14px; font-size: .92rem; }
+
+/* Sección plegable de recetas archivadas */
+details.adm-section > summary { cursor: pointer; list-style: none; }
+details.adm-section > summary::-webkit-details-marker { display: none; }
+details.adm-section > summary h2 { display: inline; }
+details.adm-section > summary::after { content: " ▸ ver"; color: #6e6a62; font-size: .9rem; }
+details.adm-section[open] > summary::after { content: " ▾ ocultar"; }

@@ -6,7 +6,7 @@ import {
   type GroupStage, type PublicationRow, type ReviewRow,
 } from './publication'
 
-const LIGHT_COLUMNS = 'id, recipe_group_id, language, title, public_path, published, updated_at'
+const LIGHT_COLUMNS = 'id, recipe_group_id, language, title, public_path, published, updated_at, editorial_status'
 const FULL_COLUMNS = `${LIGHT_COLUMNS}, image_url, ingredients, steps, nutrition, seo, excerpt, servings, total_time_minutes`
 
 export interface GroupSummary {
