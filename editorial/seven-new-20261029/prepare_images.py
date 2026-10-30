@@ -1,4 +1,4 @@
-import json,hashlib,shutil,sys
+import json,hashlib,shutil,sys,io,os
 from pathlib import Path
 from PIL import Image,ImageOps
 ROOT=Path(__file__).parent
@@ -17,10 +17,13 @@ for name,src in data['images'].items():
         frame=ImageOps.fit(im,size,method=Image.Resampling.LANCZOS)
         quality=88
         while True:
-            frame.save(p,'WEBP',quality=quality,method=6)
-            if p.stat().st_size<=150000 or quality<=60:break
+            buffer=io.BytesIO();frame.save(buffer,'WEBP',quality=quality,method=6);encoded=buffer.getvalue()
+            if len(encoded)<=150000 or quality<=60:break
             quality-=4
-        assert p.stat().st_size<=150000
+        assert len(encoded)<=150000
+        pending=p.with_suffix('.pending')
+        with pending.open('wb') as handle:handle.write(encoded);handle.flush();os.fsync(handle.fileno())
+        os.replace(pending,p)
         manifest.append(dict(path=f'{slug}/{filename}',file=str(p),sha256=hashlib.sha256(p.read_bytes()).hexdigest(),bytes=p.stat().st_size,width=size[0],height=size[1],original=str(originals/f'{name}.png'),original_sha256=hashlib.sha256(source.read_bytes()).hexdigest()))
 (ROOT/f'{key}-media.json').write_text(json.dumps(manifest,indent=2)+'\n')
 print(json.dumps({'slug':slug,'files':len(manifest),'bytes':sum(x['bytes'] for x in manifest)}))

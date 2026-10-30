@@ -42,7 +42,11 @@ def audit(bundle):
   assert 'aggregateRating' not in recipe or recipe['aggregateRating'].get('ratingCount',0)>0
   assert r['seo']['title'] in html.unescape(s) and r['seo']['description'] in html.unescape(s)
   for route in ['/'+r['language'],'/'+r['language']+'/recetas']:
-   _,listing,_=get('https://manualdecocina.com'+route);assert r['public_path'] in listing,(r['public_path'],'not in',route)
+   for attempt in range(3):
+    _,listing,_=get('https://manualdecocina.com'+route)
+    if r['public_path'] in listing:break
+    if attempt<2:time.sleep(1)
+   assert r['public_path'] in listing,(r['public_path'],'not in',route)
   return dict(language=r['language'],url=url,http=status,canonical=canonical[0],hreflang=len(alternates),ingredients=len(recipe['recipeIngredient']),steps=8,schema=True,home=True,catalog=True)
  with concurrent.futures.ThreadPoolExecutor(max_workers=3) as ex:out=list(ex.map(one,bundle['records']))
  return dict(slug=bundle['slug'],pages=out)
