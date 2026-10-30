@@ -1,98 +1,80 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import { requireAdmin } from '@/lib/supabase/admin-guard'
-import { normalizePublicPath } from '@/lib/site'
-import { deleteRecipeAction, signOutAction } from './actions'
-import { DeleteButton } from './DeleteButton'
+import { loadQueue, type GroupSummary } from '@/lib/admin/publication-data'
+import { STAGE_LABELS, type GroupStage } from '@/lib/admin/publication'
+import { signOutAction } from './actions'
 import { NotAdmin } from './NotAdmin'
 
 export const dynamic = 'force-dynamic'
 export const metadata: Metadata = {
-  title: 'Panel — Manual de Cocina',
+  title: 'Centro de publicación — Manual de Cocina',
   robots: { index: false, follow: false },
 }
 
-const PAGE_SIZE = 50
+// Orden de la cola: primero lo que necesita una decisión tuya.
+const SECTIONS: { stage: GroupStage; hint: string; limit?: number }[] = [
+  { stage: 'aprobada', hint: 'Ya las aprobaste: solo falta darles Publicar.' },
+  { stage: 'por-revisar', hint: 'Completas en 7 idiomas. Revísalas y apruébalas o devuélvelas.' },
+  { stage: 'devuelta', hint: 'Las devolviste con un comentario. Esperan corrección.' },
+  { stage: 'incompleta', hint: 'Les falta algo (idiomas, nutrición, SEO…). No se pueden publicar todavía.' },
+  { stage: 'publicada', hint: 'En línea en los 7 idiomas. Las más recientes primero.', limit: 20 },
+]
 
-export default async function AdminDashboardPage({
-  searchParams,
-}: {
-  searchParams: Promise<{ page?: string }>
-}) {
-  const query = await searchParams
+function Row({ group }: { group: GroupSummary }) {
+  return (
+    <li className="adm-row">
+      <Link href={`/admin/platos/${group.groupId}`} className="adm-row-link">
+        <span className="adm-row-title">{group.title}</span>
+        <span className="adm-row-meta">
+          {group.languages}/7 idiomas · {group.published}/7 publicadas
+          {group.stage === 'incompleta' && group.blockers.length > 0 && ` · ${group.blockers.length} pendiente(s)`}
+        </span>
+        {group.stage === 'devuelta' && group.review?.comment && (
+          <span className="adm-row-note">“{group.review.comment}”</span>
+        )}
+      </Link>
+    </li>
+  )
+}
+
+export default async function PublicationCenterPage() {
   const { supabase, user, isAdmin } = await requireAdmin()
   if (!isAdmin) return <NotAdmin email={user.email} />
 
-  const page = Math.max(1, Number.parseInt(query.page ?? '1', 10) || 1)
-  const from = (page - 1) * PAGE_SIZE
-
-  const { data: recipes, count, error } = await supabase
-    .from('recipes')
-    .select('id, recipe_group_id, language, slug, public_path, title, published, published_at, updated_at', {
-      count: 'exact',
-    })
-    .order('updated_at', { ascending: false })
-    .range(from, from + PAGE_SIZE - 1)
-
-  if (error) throw new Error(`No se pudieron cargar las recetas: ${error.message}`)
-
-  const total = count ?? 0
-  const totalPages = Math.max(1, Math.ceil(total / PAGE_SIZE))
+  const queue = await loadQueue(supabase)
+  const count = (stage: GroupStage) => queue.filter((g) => g.stage === stage).length
 
   return (
-    <main>
-      <h1>Panel de administración</h1>
-      <p>{total} recetas en total (todas las versiones de idioma).</p>
-
-      <p>
-        <Link href="/admin/recetas/nueva">Nueva receta</Link>
-      </p>
-      <form action={signOutAction}>
-        <button type="submit">Cerrar sesión</button>
-      </form>
-
-      {total === 0 ? (
-        <p>Todavía no hay recetas. Crea la primera con “Nueva receta”.</p>
-      ) : (
-        <table>
-          <thead>
-            <tr>
-              <th>Idioma</th>
-              <th>Título</th>
-              <th>Estado</th>
-              <th>Publicada desde</th>
-              <th>Acciones</th>
-            </tr>
-          </thead>
-          <tbody>
-            {(recipes ?? []).map((r) => (
-              <tr key={r.id}>
-                <td>{r.language}</td>
-                <td>{r.title}</td>
-                <td>{r.published ? 'Publicada' : 'Borrador'}</td>
-                <td>{r.published_at ? new Date(r.published_at).toLocaleDateString('es-CO') : '—'}</td>
-                <td>
-                  <Link href={`/admin/recetas/${r.id}`}>Editar</Link>{' '}
-                  <Link href={`/admin/recetas/nueva?from=${r.id}`}>Añadir traducción</Link>{' '}
-                  {r.published && <Link href={normalizePublicPath(r.public_path)}>Ver</Link>}{' '}
-                  <form action={deleteRecipeAction} style={{ display: 'inline' }}>
-                    <input type="hidden" name="id" value={r.id} />
-                    <DeleteButton title={r.title} />
-                  </form>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      )}
-
-      {totalPages > 1 && (
-        <nav aria-label="Paginación">
-          {page > 1 && <Link href={`/admin?page=${page - 1}`}>Anterior</Link>}{' '}
-          Página {page} de {totalPages}{' '}
-          {page < totalPages && <Link href={`/admin?page=${page + 1}`}>Siguiente</Link>}
+    <main className="adm">
+      <header className="adm-header">
+        <h1>Centro de publicación</h1>
+        <nav className="adm-nav">
+          <Link href="/admin/todas">Todas las recetas</Link>
+          <form action={signOutAction}><button type="submit" className="adm-link-button">Cerrar sesión</button></form>
         </nav>
-      )}
+      </header>
+
+      <ul className="adm-counters">
+        {SECTIONS.map(({ stage }) => (
+          <li key={stage}><a href={`#${stage}`}><strong>{count(stage)}</strong> {STAGE_LABELS[stage]}</a></li>
+        ))}
+      </ul>
+
+      {SECTIONS.map(({ stage, hint, limit }) => {
+        const groups = queue.filter((g) => g.stage === stage)
+        const shown = limit ? groups.slice(0, limit) : groups
+        return (
+          <section key={stage} id={stage} className={`adm-section adm-stage-${stage}`}>
+            <h2>{STAGE_LABELS[stage]} <span className="adm-count">{groups.length}</span></h2>
+            <p className="adm-hint">{hint}</p>
+            {shown.length === 0
+              ? <p className="adm-empty">Nada por aquí.</p>
+              : <ul className="adm-list">{shown.map((group) => <Row key={group.groupId} group={group} />)}</ul>}
+            {limit && groups.length > limit && <p className="adm-hint">Y {groups.length - limit} más.</p>}
+          </section>
+        )
+      })}
     </main>
   )
 }
