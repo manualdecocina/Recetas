@@ -1,6 +1,7 @@
 import 'server-only'
 import { cookies } from 'next/headers'
 import { createServerClient, type CookieOptions } from '@supabase/ssr'
+import { SUPABASE_PUBLIC_KEY, SUPABASE_URL } from './keys'
 
 // Cliente con la SESIÓN del usuario (cookies). Se usa en el panel admin y en las
 // Server Actions. Usa solo la anon key: los permisos los decide la RLS de Supabase
@@ -9,8 +10,8 @@ export async function createSupabaseServerClient() {
   const cookieStore = await cookies()
 
   return createServerClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+    SUPABASE_URL,
+    SUPABASE_PUBLIC_KEY,
     {
       cookies: {
         getAll() {

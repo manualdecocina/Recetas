@@ -1,11 +1,9 @@
 import { createClient } from '@supabase/supabase-js'
 import { PUBLIC_REVALIDATE_SECONDS, RECIPES_CACHE_TAG } from '@/lib/cache'
+import { SUPABASE_PUBLIC_KEY, SUPABASE_URL } from './keys'
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL ?? 'https://eqbdtctxbpepbeickhqi.supabase.co'
-const supabaseKey =
-  process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY ??
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ??
-  'sb_publishable_5j3BnF3q24MVuU-BTEVzbg_UXTyp6CM'
+const supabaseUrl = SUPABASE_URL
+const supabaseKey = SUPABASE_PUBLIC_KEY
 
 if (!supabaseUrl || !supabaseKey) {
   throw new Error(
