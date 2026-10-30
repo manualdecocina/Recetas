@@ -42,6 +42,13 @@ check('Etapas: incompleta, por revisar, devuelta, aprobada y publicada', () => {
   assert.equal(groupStage(REQUIRED_LANGUAGES.map((l) => complete(l, true)), undefined, []), 'publicada')
 })
 
+check('Las recetas viejas archivadas salen de la cola de trabajo', () => {
+  const archived = { ...complete('es'), editorial_status: 'archived' }
+  assert.equal(groupStage([archived], undefined, groupBlockers([archived])), 'archivada')
+  const draft = { ...complete('es'), editorial_status: 'draft' }
+  assert.equal(groupStage([draft], undefined, groupBlockers([draft])), 'incompleta')
+})
+
 check('Imágenes: portada, variantes y pasos sin repetidos', () => {
   const urls = groupImageUrls([complete('es'), complete('en')])
   assert.deepEqual(urls.sort(), ['/recetas/x/paso-01.webp', '/recetas/x/portada-1x1.webp', '/recetas/x/portada.webp'])

@@ -18,6 +18,7 @@ export interface PublicationRow {
   public_path: string
   published: boolean
   updated_at: string
+  editorial_status?: string | null
   image_url?: string | null
   ingredients?: unknown
   steps?: unknown
@@ -35,7 +36,7 @@ export interface ReviewRow {
 }
 
 /** Etapa de un plato en la cola, en el orden en que se trabaja. */
-export type GroupStage = 'incompleta' | 'por-revisar' | 'devuelta' | 'aprobada' | 'publicada'
+export type GroupStage = 'incompleta' | 'por-revisar' | 'devuelta' | 'aprobada' | 'publicada' | 'archivada'
 
 export const STAGE_LABELS: Record<GroupStage, string> = {
   'incompleta': 'Incompleta',
@@ -43,6 +44,7 @@ export const STAGE_LABELS: Record<GroupStage, string> = {
   'devuelta': 'Devuelta',
   'aprobada': 'Aprobada, sin publicar',
   'publicada': 'Publicada',
+  'archivada': 'Archivada',
 }
 
 const text = (value: unknown) => (typeof value === 'string' ? value.trim() : '')
@@ -68,6 +70,8 @@ export function groupBlockers(rows: PublicationRow[]): string[] {
 
 export function groupStage(rows: PublicationRow[], review: ReviewRow | undefined, blockers: string[]): GroupStage {
   if (rows.length === REQUIRED_LANGUAGES.length && rows.every((row) => row.published)) return 'publicada'
+  // Recetas viejas archivadas (descartadas o pendientes de rehacer): fuera de la cola de trabajo.
+  if (rows.every((row) => !row.published && row.editorial_status === 'archived')) return 'archivada'
   if (blockers.length > 0) return 'incompleta'
   if (review?.status === 'devuelta') return 'devuelta'
   if (review?.status === 'aprobada') return 'aprobada'

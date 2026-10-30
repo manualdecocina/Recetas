@@ -19,6 +19,7 @@ const SECTIONS: { stage: GroupStage; hint: string; limit?: number }[] = [
   { stage: 'devuelta', hint: 'Las devolviste con un comentario. Esperan corrección.' },
   { stage: 'incompleta', hint: 'Les falta algo (idiomas, nutrición, SEO…). No se pueden publicar todavía.' },
   { stage: 'publicada', hint: 'En línea en los 7 idiomas. Las más recientes primero.', limit: 20 },
+  { stage: 'archivada', hint: 'Recetas viejas archivadas: descartadas o pendientes de rehacer. No forman parte del trabajo.' },
 ]
 
 function Row({ group }: { group: GroupSummary }) {
@@ -64,14 +65,27 @@ export default async function PublicationCenterPage() {
       {SECTIONS.map(({ stage, hint, limit }) => {
         const groups = queue.filter((g) => g.stage === stage)
         const shown = limit ? groups.slice(0, limit) : groups
-        return (
-          <section key={stage} id={stage} className={`adm-section adm-stage-${stage}`}>
-            <h2>{STAGE_LABELS[stage]} <span className="adm-count">{groups.length}</span></h2>
+        const body = (
+          <>
             <p className="adm-hint">{hint}</p>
             {shown.length === 0
               ? <p className="adm-empty">Nada por aquí.</p>
               : <ul className="adm-list">{shown.map((group) => <Row key={group.groupId} group={group} />)}</ul>}
             {limit && groups.length > limit && <p className="adm-hint">Y {groups.length - limit} más.</p>}
+          </>
+        )
+        if (stage === 'archivada') {
+          return (
+            <details key={stage} id={stage} className="adm-section adm-stage-archivada">
+              <summary><h2>{STAGE_LABELS[stage]} <span className="adm-count">{groups.length}</span></h2></summary>
+              {body}
+            </details>
+          )
+        }
+        return (
+          <section key={stage} id={stage} className={`adm-section adm-stage-${stage}`}>
+            <h2>{STAGE_LABELS[stage]} <span className="adm-count">{groups.length}</span></h2>
+            {body}
           </section>
         )
       })}
