@@ -9,6 +9,7 @@ import RecipeCookingMode from './RecipeCookingMode';
 import FavoriteButton from './FavoriteButton';
 import RatingWidget from './RatingWidget';
 import SharePrintActions from './SharePrintActions';
+import PinterestSaveButton from './PinterestSaveButton';
 import AdSlot from './AdSlot';
 import RelatedRecipes from './RelatedRecipes';
 import { parseVideo } from '@/lib/video';
@@ -91,6 +92,12 @@ export default function RecipeDocumentVisual({ recipe, relatedRecipes = [], note
               <RecipeCookingMode lang={lang} steps={recipe.steps} />
               <FavoriteButton recipeId={recipe.id} lang={lang} />
               <SharePrintActions lang={lang} title={recipe.title} />
+              <PinterestSaveButton
+                url={recipeCanonicalUrl(recipe)}
+                image={recipe.image_url}
+                description={recipe.excerpt ? `${recipe.title}. ${recipe.excerpt}` : recipe.title}
+                label={t.pinterestSave}
+              />
             </div>
           </div>
           {recipe.image_url && (
