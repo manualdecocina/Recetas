@@ -1,0 +1,1531 @@
+{
+  "slug": "ensalada-lentejas-zanahoria-mostaza",
+  "key": "lentejas",
+  "date": "2026-10-28",
+  "target": "https://manualdecocina.com",
+  "origin_market": "fr",
+  "languages": [
+    "es",
+    "de",
+    "en",
+    "fr",
+    "it",
+    "ja",
+    "pt"
+  ],
+  "category_slug": "ensaladas",
+  "steps_es_sha256": "dedebe687babd5368213474a705220c2514837251f235bd6a37a188cb5765009",
+  "physical_kitchen_test": false,
+  "pantry_slugs": [
+    "lentejas",
+    "agua",
+    "zanahoria",
+    "aceite-de-oliva",
+    "chalota",
+    "nueces",
+    "mostaza-dijon",
+    "vinagre-de-manzana",
+    "perejil",
+    "sal",
+    "pimienta-negra"
+  ],
+  "sources": [
+    "https://www.editions-larousse.fr/recette/salade-de-lentilles-et-de-carottes/",
+    "https://www.swissmilk.ch/fr/recettes-idees/recettes/KB_EFZ1998_139/salade-de-lentilles-aux-poires-et-aux-carottes/"
+  ],
+  "nutrition_calculation": {
+    "foods": [
+      {
+        "ingredient": "Lentejas verdes secas",
+        "grams": 250,
+        "reference_key": "lentil",
+        "fdc_id": 172420,
+        "description": "Lentils, raw",
+        "source_url": "https://fdc.nal.usda.gov/food-details/172420/nutrients",
+        "per_100g": {
+          "sugar_g": 2.03,
+          "fat_g": 1.06,
+          "sodium_mg": 6.0,
+          "fiber_g": 10.7,
+          "protein_g": 24.63,
+          "saturated_fat_g": 0.154,
+          "carbs_g": 63.35,
+          "calories": 352.0
+        }
+      },
+      {
+        "ingredient": "Zanahorias peladas",
+        "grams": 400,
+        "reference_key": "carrot",
+        "fdc_id": 170393,
+        "description": "Carrots, raw",
+        "source_url": "https://fdc.nal.usda.gov/food-details/170393/nutrients",
+        "per_100g": {
+          "saturated_fat_g": 0.032,
+          "sodium_mg": 69.0,
+          "protein_g": 0.93,
+          "fat_g": 0.24,
+          "sugar_g": 4.74,
+          "carbs_g": 9.58,
+          "calories": 41.0,
+          "fiber_g": 2.8
+        }
+      },
+      {
+        "ingredient": "Aceite de oliva, repartido",
+        "grams": 35,
+        "reference_key": "olive",
+        "fdc_id": 171413,
+        "description": "Oil, olive, salad or cooking",
+        "source_url": "https://fdc.nal.usda.gov/food-details/171413/nutrients",
+        "per_100g": {
+          "fat_g": 100.0,
+          "carbs_g": 0.0,
+          "calories": 884.0,
+          "sodium_mg": 2.0,
+          "protein_g": 0.0,
+          "saturated_fat_g": 13.808,
+          "fiber_g": 0.0,
+          "sugar_g": 0.0
+        }
+      },
+      {
+        "ingredient": "Chalota pelada",
+        "grams": 60,
+        "reference_key": "shallot",
+        "fdc_id": 170499,
+        "description": "Shallots, raw",
+        "source_url": "https://fdc.nal.usda.gov/food-details/170499/nutrients",
+        "per_100g": {
+          "carbs_g": 16.8,
+          "calories": 72.0,
+          "fat_g": 0.1,
+          "sodium_mg": 12.0,
+          "protein_g": 2.5,
+          "saturated_fat_g": 0.017,
+          "sugar_g": 7.87,
+          "fiber_g": 3.2
+        }
+      },
+      {
+        "ingredient": "Nueces sin cáscara",
+        "grams": 40,
+        "reference_key": "walnut",
+        "fdc_id": 170187,
+        "description": "Nuts, walnuts, english",
+        "source_url": "https://fdc.nal.usda.gov/food-details/170187/nutrients",
+        "per_100g": {
+          "carbs_g": 13.71,
+          "calories": 654.0,
+          "saturated_fat_g": 6.126,
+          "sugar_g": 2.61,
+          "protein_g": 15.23,
+          "fiber_g": 6.7,
+          "sodium_mg": 2.0,
+          "fat_g": 65.21
+        }
+      },
+      {
+        "ingredient": "Mostaza de Dijon",
+        "grams": 20,
+        "reference_key": "mustard",
+        "fdc_id": 172234,
+        "description": "Mustard, prepared, yellow",
+        "source_url": "https://fdc.nal.usda.gov/food-details/172234/nutrients",
+        "per_100g": {
+          "protein_g": 3.74,
+          "fiber_g": 4.0,
+          "sodium_mg": 1104.0,
+          "saturated_fat_g": 0.214,
+          "fat_g": 3.34,
+          "carbs_g": 5.83,
+          "calories": 60.0,
+          "sugar_g": 0.92
+        }
+      },
+      {
+        "ingredient": "Vinagre de manzana",
+        "grams": 25,
+        "reference_key": "vinegar",
+        "fdc_id": 173469,
+        "description": "Vinegar, cider",
+        "source_url": "https://fdc.nal.usda.gov/food-details/173469/nutrients",
+        "per_100g": {
+          "saturated_fat_g": 0.0,
+          "fiber_g": 0.0,
+          "fat_g": 0.0,
+          "protein_g": 0.0,
+          "carbs_g": 0.93,
+          "calories": 21.0,
+          "sugar_g": 0.4,
+          "sodium_mg": 5.0
+        }
+      },
+      {
+        "ingredient": "Perejil fresco",
+        "grams": 15,
+        "reference_key": "parsley",
+        "fdc_id": 170416,
+        "description": "Parsley, fresh",
+        "source_url": "https://fdc.nal.usda.gov/food-details/170416/nutrients",
+        "per_100g": {
+          "carbs_g": 6.33,
+          "calories": 36.0,
+          "fat_g": 0.79,
+          "protein_g": 2.97,
+          "fiber_g": 3.3,
+          "sodium_mg": 56.0,
+          "saturated_fat_g": 0.132,
+          "sugar_g": 0.85
+        }
+      },
+      {
+        "ingredient": "Sal, repartida",
+        "grams": 4,
+        "reference_key": "salt",
+        "fdc_id": 173468,
+        "description": "Salt, table",
+        "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients",
+        "per_100g": {
+          "fiber_g": 0.0,
+          "sodium_mg": 38758.0,
+          "saturated_fat_g": 0.0,
+          "protein_g": 0.0,
+          "fat_g": 0.0,
+          "carbs_g": 0.0,
+          "calories": 0.0,
+          "sugar_g": 0.0
+        }
+      },
+      {
+        "ingredient": "Pimienta negra molida",
+        "grams": 0.5,
+        "reference_key": "pepper",
+        "fdc_id": 170931,
+        "description": "Spices, pepper, black",
+        "source_url": "https://fdc.nal.usda.gov/food-details/170931/nutrients",
+        "per_100g": {
+          "fat_g": 3.26,
+          "sugar_g": 0.64,
+          "carbs_g": 63.95,
+          "calories": 251.0,
+          "protein_g": 10.39,
+          "fiber_g": 25.3,
+          "sodium_mg": 20.0,
+          "saturated_fat_g": 1.392
+        }
+      }
+    ],
+    "result": {
+      "calories": 421,
+      "protein_g": 18.5,
+      "carbs_g": 53.7,
+      "fat_g": 16.4,
+      "saturated_fat_g": 2.0,
+      "fiber_g": 11.0,
+      "sugar_g": 7.6,
+      "sodium_mg": 520.0
+    },
+    "servings": 4,
+    "assumptions": [
+      "Edible chestnut yield estimated at 350 g from 500 g shell-on.",
+      "All listed salt, oil and bacon fat counted; no retention deduction.",
+      "Milk, broth and vinegar ml approximated as grams.",
+      "USDA prepared yellow mustard is a proxy for Dijon; generic sweet potato for Japanese variety, whole sesame for black, heavy cream for 35%, sunflower oil for vegetable oil, 70–85% dark chocolate for 70%.",
+      "Farofa cassava meal uses TBCA BRC0088B; missing sugar is omitted, never zero-filled.",
+      "Soaking and lentil cooking water are discarded and excluded; added glaze water has no macronutrients.",
+      "Accompanying bread, rice, beans, salads and optional toppings are excluded."
+    ]
+  },
+  "records": [
+    {
+      "language": "es",
+      "slug": "ensalada-lentejas-zanahoria-mostaza",
+      "public_path": "/ensalada-lentejas-zanahoria-mostaza",
+      "title": "Ensalada de lentejas con zanahoria asada y mostaza",
+      "excerpt": "Ensalada templada de lentejas verdes, zanahoria asada y nueces, con vinagreta de Dijon. Para cuatro personas, con cocción en paralelo y consejos para conservarla.",
+      "summary": "Ensalada templada de lentejas verdes, zanahoria asada y nueces, con vinagreta de Dijon. Para cuatro personas, con cocción en paralelo y consejos para conservarla.",
+      "notes": "<p>Las lentejas verdes mantienen mejor la forma que las rojas peladas. El tiempo total supone cocer las lentejas mientras se asan las zanahorias; por separado tardarás más. Contiene nueces y mostaza. Conserva en nevera hasta 3 días y añade las nueces al servir si prefieres mantenerlas crujientes.</p><h2>También puedes preparar</h2><ul><li><a href=\"/sopa-de-lentejas-con-verduras\">Sopa de lentejas con verduras, sin remojo</a></li><li><a href=\"/garbanzos-cremosos-tomates-secos\">Garbanzos cremosos con tomates secos: Marry Me Chickpeas</a></li></ul>",
+      "content_html": "<p>Ensalada templada de lentejas verdes, zanahoria asada y nueces, con vinagreta de Dijon. Para cuatro personas, con cocción en paralelo y consejos para conservarla.</p><p>Las lentejas verdes mantienen mejor la forma que las rojas peladas. El tiempo total supone cocer las lentejas mientras se asan las zanahorias; por separado tardarás más. Contiene nueces y mostaza. Conserva en nevera hasta 3 días y añade las nueces al servir si prefieres mantenerlas crujientes.</p><h2>También puedes preparar</h2><ul><li><a href=\"/sopa-de-lentejas-con-verduras\">Sopa de lentejas con verduras, sin remojo</a></li><li><a href=\"/garbanzos-cremosos-tomates-secos\">Garbanzos cremosos con tomates secos: Marry Me Chickpeas</a></li></ul>",
+      "ingredients": [
+        {
+          "name": "Lentejas verdes secas",
+          "amount": "250",
+          "unit": "g"
+        },
+        {
+          "name": "Agua para cocer las lentejas",
+          "amount": "1000",
+          "unit": "ml"
+        },
+        {
+          "name": "Zanahorias peladas",
+          "amount": "400",
+          "unit": "g"
+        },
+        {
+          "name": "Aceite de oliva, repartido",
+          "amount": "35",
+          "unit": "g"
+        },
+        {
+          "name": "Chalota pelada",
+          "amount": "60",
+          "unit": "g"
+        },
+        {
+          "name": "Nueces sin cáscara",
+          "amount": "40",
+          "unit": "g"
+        },
+        {
+          "name": "Mostaza de Dijon",
+          "amount": "20",
+          "unit": "g"
+        },
+        {
+          "name": "Vinagre de manzana",
+          "amount": "25",
+          "unit": "ml"
+        },
+        {
+          "name": "Perejil fresco",
+          "amount": "15",
+          "unit": "g"
+        },
+        {
+          "name": "Sal, repartida",
+          "amount": "4",
+          "unit": "g"
+        },
+        {
+          "name": "Pimienta negra molida",
+          "amount": "0.5",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepara las zanahorias",
+          "content": "Precalienta el horno a 200 °C. Corta las zanahorias en medias lunas de 1 cm y mézclalas en una bandeja con 15 g de aceite y 2 g de sal.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/paso-01.webp",
+          "image_alt": "Ensalada de lentejas con zanahoria asada y mostaza: Prepara las zanahorias"
+        },
+        {
+          "title": "Asa sin amontonar",
+          "content": "Hornea 25–30 minutos, girando a mitad de tiempo, hasta que las zanahorias estén tiernas y doradas en los bordes. Mientras se asan, cuece las lentejas del paso siguiente.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/paso-02.webp",
+          "image_alt": "Ensalada de lentejas con zanahoria asada y mostaza: Asa sin amontonar"
+        },
+        {
+          "title": "Cuece las lentejas",
+          "content": "Enjuaga las lentejas y ponlas con 1 litro de agua en una olla. Lleva a ebullición y cuece suavemente 20–30 minutos, hasta que estén tiernas pero enteras. Añade agua si quedan descubiertas.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/paso-03.webp",
+          "image_alt": "Ensalada de lentejas con zanahoria asada y mostaza: Cuece las lentejas"
+        },
+        {
+          "title": "Haz la vinagreta",
+          "content": "Pica muy fina la chalota. Bate la mostaza, el vinagre, los 20 g de aceite restantes, la pimienta y los 2 g de sal restantes; incorpora la chalota.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/paso-04.webp",
+          "image_alt": "Ensalada de lentejas con zanahoria asada y mostaza: Haz la vinagreta"
+        },
+        {
+          "title": "Escurre bien",
+          "content": "Prueba las lentejas y escúrrelas. Deja que pierdan el vapor más intenso durante 2 minutos: deben seguir templadas, sin soltar agua en la ensalada.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/paso-05.webp",
+          "image_alt": "Ensalada de lentejas con zanahoria asada y mostaza: Escurre bien"
+        },
+        {
+          "title": "Tuesta las nueces",
+          "content": "Trocea las nueces y tuéstalas en una sartén seca 2–3 minutos, moviéndolas para que no se quemen. Retira del fuego y pica el perejil lavado.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/paso-06.webp",
+          "image_alt": "Ensalada de lentejas con zanahoria asada y mostaza: Tuesta las nueces"
+        },
+        {
+          "title": "Mezcla con cuidado",
+          "content": "Aliña las lentejas templadas con la vinagreta. Incorpora las zanahorias, las nueces y el perejil suavemente para no romper las lentejas.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/paso-07.webp",
+          "image_alt": "Ensalada de lentejas con zanahoria asada y mostaza: Mezcla con cuidado"
+        },
+        {
+          "title": "Sirve templada o fría",
+          "content": "Reparte en cuatro platos. Para guardar, enfría pronto y refrigera en recipiente cerrado; sirve fría o ligeramente templada sin dejarla horas fuera de la nevera.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/paso-08.webp",
+          "image_alt": "Ensalada de lentejas con zanahoria asada y mostaza: Sirve templada o fría"
+        }
+      ],
+      "category": "Ensaladas",
+      "course": "Ensaladas",
+      "cuisine": "Francesa",
+      "difficulty": "Fácil",
+      "prep_time_minutes": 15,
+      "cook_time_minutes": 35,
+      "total_time_minutes": 50,
+      "servings": 4,
+      "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/portada.webp",
+      "gallery": [
+        {
+          "url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/portada.webp",
+          "alt": "Ensalada de lentejas con zanahoria asada y mostaza"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "Ensalada de lentejas con zanahoria asada y mostaza",
+        "Lentejas verdes secas",
+        "Agua para cocer las lentejas"
+      ],
+      "nutrition": {
+        "calories": 421,
+        "protein_g": 18.5,
+        "carbs_g": 53.7,
+        "fat_g": 16.4,
+        "saturated_fat_g": 2.0,
+        "fiber_g": 11.0,
+        "sugar_g": 7.6,
+        "sodium_mg": 520.0,
+        "estimated": true,
+        "serving_size": "1 de 4 porciones",
+        "source": "USDA FoodData Central SR Legacy",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "method": "Suma de referencias por peso, dividida entre las porciones; todos los ingredientes principales contabilizados.",
+        "note": "Estimación orientativa, no medición del plato cocinado. Las marcas y el escurrido cambian los valores; los nutrientes sin dato completo no se muestran. Referencias genéricas para mostaza preparada, crema, boniato, aceite y chocolate; las variedades y marcas concretas pueden diferir."
+      },
+      "seo": {
+        "title": "Ensalada de lentejas con zanahoria asada y mostaza",
+        "description": "Ensalada templada de lentejas verdes, zanahoria asada y nueces, con vinagreta de Dijon. Para cuatro personas, con cocción en paralelo y consejos para conservarla.",
+        "image_alt": "Ensalada de lentejas con zanahoria asada y mostaza",
+        "image_variants": [
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/portada-1x1.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/portada-4x3.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "¿Sirven lentejas de bote?",
+            "a": "Sí, sustituye las secas por unos 600 g de lentejas cocidas bien escurridas y omite su cocción. Cambian el tiempo y la estimación nutricional."
+          },
+          {
+            "q": "¿Qué mostaza uso?",
+            "a": "Mostaza de Dijon lisa. La dulce o con miel cambia la vinagreta: revisa la etiqueta y ajusta después de probar."
+          },
+          {
+            "q": "¿Puedo comerla al día siguiente?",
+            "a": "Sí, si la refrigeras pronto en un recipiente cerrado. Reserva las nueces aparte para conservar el crujiente."
+          }
+        ],
+        "rest_time_minutes": 0
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "source_url": null,
+      "source_post_id": null,
+      "recipe_group_id": "21c3a183-d3a0-4d83-8815-0dcbc08cc52a"
+    },
+    {
+      "language": "de",
+      "slug": "linsensalat-ofenmoehren-dijon-senf",
+      "public_path": "/de/linsensalat-ofenmoehren-dijon-senf",
+      "title": "Linsensalat mit Ofenmöhren, Walnüssen und Dijon-Senf",
+      "excerpt": "Grüne Linsen und geröstete Möhren mit Walnüssen und einem Dressing aus Dijon-Senf und Apfelessig. Französisch inspirierter Salat für vier, warm oder kalt.",
+      "summary": "Grüne Linsen und geröstete Möhren mit Walnüssen und einem Dressing aus Dijon-Senf und Apfelessig. Französisch inspirierter Salat für vier, warm oder kalt.",
+      "notes": "<p>Enthält Walnüsse und Senf. Innerhalb von 2 Stunden kühlen und in 3 Tagen verbrauchen. Alternativ sind 600 g gekochte, abgetropfte Linsen möglich; Zeit und Nährwerte ändern sich gegenüber 250 g trockenen Linsen. Die gesamte Salzmenge ist eingerechnet. Grüne, formstabile Linsen verwenden, keine geschälten roten Linsen.</p><h2>Auch ausprobieren</h2><ul><li><a href=\"/de/sopa-de-lentejas-con-verduras\">Linsensuppe mit Gemüse ohne Einweichen</a></li><li><a href=\"/de/marry-me-kichererbsen-cremige-sauce\">Marry Me Kichererbsen mit getrockneten Tomaten und Spinat</a></li></ul>",
+      "content_html": "<p>Grüne Linsen und geröstete Möhren mit Walnüssen und einem Dressing aus Dijon-Senf und Apfelessig. Französisch inspirierter Salat für vier, warm oder kalt.</p><p>Enthält Walnüsse und Senf. Innerhalb von 2 Stunden kühlen und in 3 Tagen verbrauchen. Alternativ sind 600 g gekochte, abgetropfte Linsen möglich; Zeit und Nährwerte ändern sich gegenüber 250 g trockenen Linsen. Die gesamte Salzmenge ist eingerechnet. Grüne, formstabile Linsen verwenden, keine geschälten roten Linsen.</p><h2>Auch ausprobieren</h2><ul><li><a href=\"/de/sopa-de-lentejas-con-verduras\">Linsensuppe mit Gemüse ohne Einweichen</a></li><li><a href=\"/de/marry-me-kichererbsen-cremige-sauce\">Marry Me Kichererbsen mit getrockneten Tomaten und Spinat</a></li></ul>",
+      "ingredients": [
+        {
+          "name": "Getrocknete grüne Linsen",
+          "amount": "250",
+          "unit": "g"
+        },
+        {
+          "name": "Wasser zum Kochen",
+          "amount": "1000",
+          "unit": "ml"
+        },
+        {
+          "name": "Geschälte Möhren",
+          "amount": "400",
+          "unit": "g"
+        },
+        {
+          "name": "Olivenöl",
+          "amount": "35",
+          "unit": "g"
+        },
+        {
+          "name": "Geschälte Schalotte",
+          "amount": "60",
+          "unit": "g"
+        },
+        {
+          "name": "Walnusskerne",
+          "amount": "40",
+          "unit": "g"
+        },
+        {
+          "name": "Glatter Dijon-Senf",
+          "amount": "20",
+          "unit": "g"
+        },
+        {
+          "name": "Apfelessig",
+          "amount": "25",
+          "unit": "ml"
+        },
+        {
+          "name": "Frische Petersilie",
+          "amount": "15",
+          "unit": "g"
+        },
+        {
+          "name": "Salz",
+          "amount": "4",
+          "unit": "g"
+        },
+        {
+          "name": "Gemahlener schwarzer Pfeffer",
+          "amount": "0.5",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Möhren vorbereiten",
+          "content": "Ofen auf 200 °C Ober-/Unterhitze vorheizen. Möhren in 1 cm dicke Halbmonde schneiden. Linsen abspülen und Steinchen oder beschädigte Körner entfernen.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/paso-01.webp",
+          "image_alt": "Linsensalat mit Ofenmöhren, Walnüssen und Dijon-Senf: Möhren vorbereiten"
+        },
+        {
+          "title": "Im Ofen rösten",
+          "content": "Möhren mit 15 g Öl und 2 g Salz mischen. Auf einem Blech 25–30 Minuten rösten, nach der Hälfte wenden, bis sie weich und leicht gebräunt sind.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/paso-02.webp",
+          "image_alt": "Linsensalat mit Ofenmöhren, Walnüssen und Dijon-Senf: Im Ofen rösten"
+        },
+        {
+          "title": "Linsen garen",
+          "content": "Währenddessen Linsen mit 1 Liter Wasser in einem Topf 20–30 Minuten sanft köcheln lassen, bis sie weich sind, aber ihre Form behalten. Bei Bedarf Wasser nachgießen.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/paso-03.webp",
+          "image_alt": "Linsensalat mit Ofenmöhren, Walnüssen und Dijon-Senf: Linsen garen"
+        },
+        {
+          "title": "Dressing rühren",
+          "content": "Schalotte fein hacken. Dijon-Senf, Essig, übrige 20 g Öl, übrige 2 g Salz und Pfeffer verquirlen und die Schalotte zugeben.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/paso-04.webp",
+          "image_alt": "Linsensalat mit Ofenmöhren, Walnüssen und Dijon-Senf: Dressing rühren"
+        },
+        {
+          "title": "Gut abtropfen lassen",
+          "content": "Gegarte Linsen in einem Sieb 2 Minuten abtropfen lassen. Für einen warmen Salat nicht abspülen; überschüssiges Wasser würde das Dressing verdünnen.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/paso-05.webp",
+          "image_alt": "Linsensalat mit Ofenmöhren, Walnüssen und Dijon-Senf: Gut abtropfen lassen"
+        },
+        {
+          "title": "Walnüsse rösten",
+          "content": "Walnüsse grob hacken und in einer trockenen Pfanne 2–3 Minuten unter Rühren rösten. Nicht verbrennen lassen. Petersilie hacken.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/paso-06.webp",
+          "image_alt": "Linsensalat mit Ofenmöhren, Walnüssen und Dijon-Senf: Walnüsse rösten"
+        },
+        {
+          "title": "Vermengen",
+          "content": "Warme Linsen mit Dressing, Ofenmöhren, Walnüssen und Petersilie vorsichtig mischen, damit die Linsen nicht zerfallen.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/paso-07.webp",
+          "image_alt": "Linsensalat mit Ofenmöhren, Walnüssen und Dijon-Senf: Vermengen"
+        },
+        {
+          "title": "Servieren",
+          "content": "Auf vier Portionen verteilen und warm servieren oder rasch abkühlen und für einen kalten Salat kühlen. Brot und zusätzliche Zutaten sind nicht eingerechnet.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/paso-08.webp",
+          "image_alt": "Linsensalat mit Ofenmöhren, Walnüssen und Dijon-Senf: Servieren"
+        }
+      ],
+      "category": "Salate",
+      "course": "Salate",
+      "cuisine": "Französisch",
+      "difficulty": "Einfach",
+      "prep_time_minutes": 15,
+      "cook_time_minutes": 35,
+      "total_time_minutes": 50,
+      "servings": 4,
+      "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/portada.webp",
+      "gallery": [
+        {
+          "url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/portada.webp",
+          "alt": "Linsensalat mit Ofenmöhren, Walnüssen und Dijon-Senf"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "Linsensalat mit Ofenmöhren, Walnüssen und Dijon-Senf",
+        "Getrocknete grüne Linsen",
+        "Wasser zum Kochen"
+      ],
+      "nutrition": {
+        "calories": 421,
+        "protein_g": 18.5,
+        "carbs_g": 53.7,
+        "fat_g": 16.4,
+        "saturated_fat_g": 2.0,
+        "fiber_g": 11.0,
+        "sugar_g": 7.6,
+        "sodium_mg": 520.0,
+        "estimated": true,
+        "serving_size": "1 von 4 Portionen",
+        "source": "USDA FoodData Central SR Legacy",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "method": "Referenzwerte nach Zutatengewicht summiert und durch die Portionen geteilt.",
+        "note": "Ungefähre Schätzung, keine Messung des fertigen Gerichts. Marken und Abtropfen verändern die Werte; unvollständige Nährstoffdaten werden nicht angezeigt. Generische Referenzen für Senf, Sahne, Süßkartoffeln, Öl und Schokolade; Sorten und Marken können abweichen."
+      },
+      "seo": {
+        "title": "Linsensalat mit Ofenmöhren, Walnüssen und Dijon-Senf",
+        "description": "Grüne Linsen und geröstete Möhren mit Walnüssen und einem Dressing aus Dijon-Senf und Apfelessig. Französisch inspirierter Salat für vier, warm oder kalt.",
+        "image_alt": "Linsensalat mit Ofenmöhren, Walnüssen und Dijon-Senf",
+        "image_variants": [
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/portada-1x1.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/portada-4x3.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Kann ich Linsen aus der Dose nehmen?",
+            "a": "Ja, etwa 600 g abgetropft verwenden und nur erwärmen. Die veröffentlichten Nährwerte basieren auf 250 g trockenen Linsen."
+          },
+          {
+            "q": "Schmeckt der Salat kalt?",
+            "a": "Ja. Rasch abkühlen, kühlen und vor dem Servieren umrühren, da die Linsen Dressing aufnehmen."
+          },
+          {
+            "q": "Wie ersetze ich die Walnüsse?",
+            "a": "Für eine nussfreie Variante weglassen und mögliche Kreuzkontakte anderer Zutaten prüfen. Konsistenz und Nährwerte ändern sich."
+          }
+        ],
+        "rest_time_minutes": 0
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "source_url": null,
+      "source_post_id": null,
+      "recipe_group_id": "21c3a183-d3a0-4d83-8815-0dcbc08cc52a"
+    },
+    {
+      "language": "en",
+      "slug": "warm-lentil-roasted-carrot-salad",
+      "public_path": "/en/warm-lentil-roasted-carrot-salad",
+      "title": "Warm lentil and roasted carrot salad with Dijon dressing",
+      "excerpt": "Green lentils, roasted carrots and toasted walnuts tossed with a mustard and cider-vinegar dressing. A French-inspired salad for four, served warm or chilled.",
+      "summary": "Green lentils, roasted carrots and toasted walnuts tossed with a mustard and cider-vinegar dressing. A French-inspired salad for four, served warm or chilled.",
+      "notes": "<p>Contains walnuts and mustard. Refrigerate within 2 hours and use within 3 days. You may substitute 600 g cooked, drained lentils, but the timing and nutrition will differ from this dry-lentil formulation. All the listed salt is included in the estimate. Use green lentils that hold their shape rather than split red lentils.</p><h2>You may also like</h2><ul><li><a href=\"/en/sopa-de-lentejas-con-verduras\">Lentil and vegetable soup without soaking</a></li><li><a href=\"/en/marry-me-chickpeas-creamy-skillet\">Marry Me Chickpeas with sun-dried tomatoes and spinach</a></li></ul>",
+      "content_html": "<p>Green lentils, roasted carrots and toasted walnuts tossed with a mustard and cider-vinegar dressing. A French-inspired salad for four, served warm or chilled.</p><p>Contains walnuts and mustard. Refrigerate within 2 hours and use within 3 days. You may substitute 600 g cooked, drained lentils, but the timing and nutrition will differ from this dry-lentil formulation. All the listed salt is included in the estimate. Use green lentils that hold their shape rather than split red lentils.</p><h2>You may also like</h2><ul><li><a href=\"/en/sopa-de-lentejas-con-verduras\">Lentil and vegetable soup without soaking</a></li><li><a href=\"/en/marry-me-chickpeas-creamy-skillet\">Marry Me Chickpeas with sun-dried tomatoes and spinach</a></li></ul>",
+      "ingredients": [
+        {
+          "name": "Dried green lentils",
+          "amount": "250",
+          "unit": "g"
+        },
+        {
+          "name": "Water for cooking",
+          "amount": "1000",
+          "unit": "ml"
+        },
+        {
+          "name": "Peeled carrots",
+          "amount": "400",
+          "unit": "g"
+        },
+        {
+          "name": "Olive oil",
+          "amount": "35",
+          "unit": "g"
+        },
+        {
+          "name": "Peeled shallot",
+          "amount": "60",
+          "unit": "g"
+        },
+        {
+          "name": "Shelled walnuts",
+          "amount": "40",
+          "unit": "g"
+        },
+        {
+          "name": "Smooth Dijon mustard",
+          "amount": "20",
+          "unit": "g"
+        },
+        {
+          "name": "Cider vinegar",
+          "amount": "25",
+          "unit": "ml"
+        },
+        {
+          "name": "Fresh parsley",
+          "amount": "15",
+          "unit": "g"
+        },
+        {
+          "name": "Salt",
+          "amount": "4",
+          "unit": "g"
+        },
+        {
+          "name": "Ground black pepper",
+          "amount": "0.5",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepare the carrots",
+          "content": "Heat the oven to 200 °C, conventional heat. Cut the carrots into 1 cm half-moons. Rinse the lentils and remove any stones or damaged seeds.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/paso-01.webp",
+          "image_alt": "Warm lentil and roasted carrot salad with Dijon dressing: Prepare the carrots"
+        },
+        {
+          "title": "Roast",
+          "content": "Toss the carrots with 15 g oil and 2 g salt. Spread on a tray and roast for 25–30 minutes, turning halfway, until tender and lightly browned.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/paso-02.webp",
+          "image_alt": "Warm lentil and roasted carrot salad with Dijon dressing: Roast"
+        },
+        {
+          "title": "Cook the lentils",
+          "content": "Meanwhile, cover the lentils with 1 litre water in a saucepan. Simmer gently for 20–30 minutes, until tender but holding their shape; add water if needed.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/paso-03.webp",
+          "image_alt": "Warm lentil and roasted carrot salad with Dijon dressing: Cook the lentils"
+        },
+        {
+          "title": "Make the dressing",
+          "content": "Finely chop the shallot. Whisk the Dijon mustard, vinegar, remaining 20 g oil, remaining 2 g salt and pepper, then add the shallot.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/paso-04.webp",
+          "image_alt": "Warm lentil and roasted carrot salad with Dijon dressing: Make the dressing"
+        },
+        {
+          "title": "Drain well",
+          "content": "Drain the cooked lentils in a sieve for 2 minutes. Avoid rinsing if serving warm; excess water would dilute the dressing.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/paso-05.webp",
+          "image_alt": "Warm lentil and roasted carrot salad with Dijon dressing: Drain well"
+        },
+        {
+          "title": "Toast the walnuts",
+          "content": "Roughly chop the walnuts and toast in a dry pan for 2–3 minutes, stirring and watching closely so they do not burn. Chop the parsley.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/paso-06.webp",
+          "image_alt": "Warm lentil and roasted carrot salad with Dijon dressing: Toast the walnuts"
+        },
+        {
+          "title": "Combine",
+          "content": "Toss the warm lentils with the dressing, roasted carrots, walnuts and parsley. Fold gently to keep the lentils intact.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/paso-07.webp",
+          "image_alt": "Warm lentil and roasted carrot salad with Dijon dressing: Combine"
+        },
+        {
+          "title": "Serve",
+          "content": "Divide into four portions and serve warm, or cool promptly and refrigerate for a cold salad. Bread and additional toppings are excluded from the nutrition.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/paso-08.webp",
+          "image_alt": "Warm lentil and roasted carrot salad with Dijon dressing: Serve"
+        }
+      ],
+      "category": "Salads",
+      "course": "Salads",
+      "cuisine": "French",
+      "difficulty": "Easy",
+      "prep_time_minutes": 15,
+      "cook_time_minutes": 35,
+      "total_time_minutes": 50,
+      "servings": 4,
+      "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/portada.webp",
+      "gallery": [
+        {
+          "url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/portada.webp",
+          "alt": "Warm lentil and roasted carrot salad with Dijon dressing"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "Warm lentil and roasted carrot salad with Dijon dressing",
+        "Dried green lentils",
+        "Water for cooking"
+      ],
+      "nutrition": {
+        "calories": 421,
+        "protein_g": 18.5,
+        "carbs_g": 53.7,
+        "fat_g": 16.4,
+        "saturated_fat_g": 2.0,
+        "fiber_g": 11.0,
+        "sugar_g": 7.6,
+        "sodium_mg": 520.0,
+        "estimated": true,
+        "serving_size": "1 of 4 servings",
+        "source": "USDA FoodData Central SR Legacy",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "method": "Reference nutrients summed by ingredient weight and divided by servings.",
+        "note": "Approximate estimate, not a measurement of the cooked dish. Brands and draining change values; nutrients with incomplete data are omitted. Generic references for prepared mustard, cream, sweet potato, oil and chocolate; specific varieties and brands can differ."
+      },
+      "seo": {
+        "title": "Warm lentil and roasted carrot salad with Dijon dressing",
+        "description": "Green lentils, roasted carrots and toasted walnuts tossed with a mustard and cider-vinegar dressing. A French-inspired salad for four, served warm or chilled.",
+        "image_alt": "Warm lentil and roasted carrot salad with Dijon dressing",
+        "image_variants": [
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/portada-1x1.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/portada-4x3.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Can I use canned lentils?",
+            "a": "Yes, use about 600 g after draining. Warm them gently and skip boiling; the published nutrition is based on 250 g dried lentils."
+          },
+          {
+            "q": "Can I serve it cold?",
+            "a": "Yes. Cool promptly, refrigerate and stir before serving, as the lentils absorb dressing."
+          },
+          {
+            "q": "How can I replace the walnuts?",
+            "a": "For a nut-free version, omit them and check other ingredients for cross-contact. This changes the texture and nutrition."
+          }
+        ],
+        "rest_time_minutes": 0
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "source_url": null,
+      "source_post_id": null,
+      "recipe_group_id": "21c3a183-d3a0-4d83-8815-0dcbc08cc52a"
+    },
+    {
+      "language": "fr",
+      "slug": "salade-lentilles-carottes-roties-moutarde",
+      "public_path": "/fr/salade-lentilles-carottes-roties-moutarde",
+      "title": "Salade de lentilles, carottes rôties et moutarde de Dijon",
+      "excerpt": "Lentilles vertes, carottes rôties et noix dans une vinaigrette à la moutarde et au vinaigre de cidre. Une salade pour quatre à déguster tiède ou froide.",
+      "summary": "Lentilles vertes, carottes rôties et noix dans une vinaigrette à la moutarde et au vinaigre de cidre. Une salade pour quatre à déguster tiède ou froide.",
+      "notes": "<p>Contient noix et moutarde. Réfrigérez avant 2 heures et consommez sous 3 jours. Vous pouvez utiliser 600 g de lentilles cuites égouttées ; temps et nutrition différeront de cette formulation à base de 250 g secs. Tout le sel est comptabilisé. Choisissez des lentilles vertes qui tiennent à la cuisson, pas des lentilles corail cassées.</p><h2>À préparer aussi</h2><ul><li><a href=\"/fr/sopa-de-lentejas-con-verduras\">Soupe de lentilles aux légumes sans trempage</a></li><li><a href=\"/fr/pois-chiches-cremeux-tomates-sechees\">Pois chiches crémeux aux tomates séchées : Marry Me Chickpeas</a></li></ul>",
+      "content_html": "<p>Lentilles vertes, carottes rôties et noix dans une vinaigrette à la moutarde et au vinaigre de cidre. Une salade pour quatre à déguster tiède ou froide.</p><p>Contient noix et moutarde. Réfrigérez avant 2 heures et consommez sous 3 jours. Vous pouvez utiliser 600 g de lentilles cuites égouttées ; temps et nutrition différeront de cette formulation à base de 250 g secs. Tout le sel est comptabilisé. Choisissez des lentilles vertes qui tiennent à la cuisson, pas des lentilles corail cassées.</p><h2>À préparer aussi</h2><ul><li><a href=\"/fr/sopa-de-lentejas-con-verduras\">Soupe de lentilles aux légumes sans trempage</a></li><li><a href=\"/fr/pois-chiches-cremeux-tomates-sechees\">Pois chiches crémeux aux tomates séchées : Marry Me Chickpeas</a></li></ul>",
+      "ingredients": [
+        {
+          "name": "Lentilles vertes sèches",
+          "amount": "250",
+          "unit": "g"
+        },
+        {
+          "name": "Eau de cuisson",
+          "amount": "1000",
+          "unit": "ml"
+        },
+        {
+          "name": "Carottes épluchées",
+          "amount": "400",
+          "unit": "g"
+        },
+        {
+          "name": "Huile d’olive",
+          "amount": "35",
+          "unit": "g"
+        },
+        {
+          "name": "Échalote épluchée",
+          "amount": "60",
+          "unit": "g"
+        },
+        {
+          "name": "Cerneaux de noix",
+          "amount": "40",
+          "unit": "g"
+        },
+        {
+          "name": "Moutarde de Dijon lisse",
+          "amount": "20",
+          "unit": "g"
+        },
+        {
+          "name": "Vinaigre de cidre",
+          "amount": "25",
+          "unit": "ml"
+        },
+        {
+          "name": "Persil frais",
+          "amount": "15",
+          "unit": "g"
+        },
+        {
+          "name": "Sel",
+          "amount": "4",
+          "unit": "g"
+        },
+        {
+          "name": "Poivre noir moulu",
+          "amount": "0.5",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Préparer les carottes",
+          "content": "Préchauffez le four à 200 °C, chaleur statique. Coupez les carottes en demi-rondelles de 1 cm. Rincez et triez les lentilles pour retirer cailloux et graines abîmées.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/paso-01.webp",
+          "image_alt": "Salade de lentilles, carottes rôties et moutarde de Dijon: Préparer les carottes"
+        },
+        {
+          "title": "Faire rôtir",
+          "content": "Mélangez les carottes avec 15 g d’huile et 2 g de sel. Étalez sur une plaque et cuisez 25–30 minutes en retournant à mi-cuisson, jusqu’à tendreté et légère coloration.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/paso-02.webp",
+          "image_alt": "Salade de lentilles, carottes rôties et moutarde de Dijon: Faire rôtir"
+        },
+        {
+          "title": "Cuire les lentilles",
+          "content": "Pendant ce temps, couvrez les lentilles d’un litre d’eau dans une casserole. Laissez frémir 20–30 minutes : elles doivent être tendres sans se défaire. Ajoutez de l’eau au besoin.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/paso-03.webp",
+          "image_alt": "Salade de lentilles, carottes rôties et moutarde de Dijon: Cuire les lentilles"
+        },
+        {
+          "title": "Préparer la vinaigrette",
+          "content": "Hachez finement l’échalote. Fouettez moutarde, vinaigre, 20 g d’huile restants, 2 g de sel restants et poivre, puis ajoutez l’échalote.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/paso-04.webp",
+          "image_alt": "Salade de lentilles, carottes rôties et moutarde de Dijon: Préparer la vinaigrette"
+        },
+        {
+          "title": "Égoutter soigneusement",
+          "content": "Égouttez les lentilles cuites 2 minutes dans une passoire. Ne les rincez pas pour un service tiède ; trop d’eau diluerait la vinaigrette.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/paso-05.webp",
+          "image_alt": "Salade de lentilles, carottes rôties et moutarde de Dijon: Égoutter soigneusement"
+        },
+        {
+          "title": "Torréfier les noix",
+          "content": "Concassez les noix et faites-les griller 2–3 minutes dans une poêle sèche, en remuant et en surveillant. Hachez le persil.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/paso-06.webp",
+          "image_alt": "Salade de lentilles, carottes rôties et moutarde de Dijon: Torréfier les noix"
+        },
+        {
+          "title": "Assembler",
+          "content": "Mélangez délicatement les lentilles tièdes avec vinaigrette, carottes rôties, noix et persil, sans écraser les lentilles.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/paso-07.webp",
+          "image_alt": "Salade de lentilles, carottes rôties et moutarde de Dijon: Assembler"
+        },
+        {
+          "title": "Servir",
+          "content": "Répartissez en quatre portions. Servez tiède ou refroidissez rapidement puis réfrigérez pour une salade froide. Pain et garnitures supplémentaires ne sont pas comptés.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/paso-08.webp",
+          "image_alt": "Salade de lentilles, carottes rôties et moutarde de Dijon: Servir"
+        }
+      ],
+      "category": "Salades",
+      "course": "Salades",
+      "cuisine": "Française",
+      "difficulty": "Facile",
+      "prep_time_minutes": 15,
+      "cook_time_minutes": 35,
+      "total_time_minutes": 50,
+      "servings": 4,
+      "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/portada.webp",
+      "gallery": [
+        {
+          "url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/portada.webp",
+          "alt": "Salade de lentilles, carottes rôties et moutarde de Dijon"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "Salade de lentilles, carottes rôties et moutarde de Dijon",
+        "Lentilles vertes sèches",
+        "Eau de cuisson"
+      ],
+      "nutrition": {
+        "calories": 421,
+        "protein_g": 18.5,
+        "carbs_g": 53.7,
+        "fat_g": 16.4,
+        "saturated_fat_g": 2.0,
+        "fiber_g": 11.0,
+        "sugar_g": 7.6,
+        "sodium_mg": 520.0,
+        "estimated": true,
+        "serving_size": "1 des 4 portions",
+        "source": "USDA FoodData Central SR Legacy",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "method": "Somme des références selon le poids des ingrédients, divisée par le nombre de portions.",
+        "note": "Estimation indicative, pas une mesure du plat cuisiné. Marques et égouttage changent les valeurs ; les nutriments incomplets ne sont pas affichés. Références génériques pour moutarde préparée, crème, patate douce, huile et chocolat ; variétés et marques peuvent différer."
+      },
+      "seo": {
+        "title": "Salade de lentilles, carottes rôties et moutarde de Dijon",
+        "description": "Lentilles vertes, carottes rôties et noix dans une vinaigrette à la moutarde et au vinaigre de cidre. Une salade pour quatre à déguster tiède ou froide.",
+        "image_alt": "Salade de lentilles, carottes rôties et moutarde de Dijon",
+        "image_variants": [
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/portada-1x1.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/portada-4x3.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Puis-je utiliser des lentilles en conserve ?",
+            "a": "Oui, environ 600 g égouttés. Réchauffez doucement sans les faire bouillir ; la nutrition publiée repose sur 250 g de lentilles sèches."
+          },
+          {
+            "q": "Peut-on manger cette salade froide ?",
+            "a": "Oui. Refroidissez rapidement, réfrigérez et mélangez avant de servir, car les lentilles absorbent la vinaigrette."
+          },
+          {
+            "q": "Comment remplacer les noix ?",
+            "a": "Pour une version sans fruits à coque, omettez-les et vérifiez les contaminations croisées des autres ingrédients. Texture et nutrition changent."
+          }
+        ],
+        "rest_time_minutes": 0
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "source_url": null,
+      "source_post_id": null,
+      "recipe_group_id": "21c3a183-d3a0-4d83-8815-0dcbc08cc52a"
+    },
+    {
+      "language": "it",
+      "slug": "insalata-lenticchie-carote-senape",
+      "public_path": "/it/insalata-lenticchie-carote-senape",
+      "title": "Insalata di lenticchie e carote arrosto con senape di Digione",
+      "excerpt": "Lenticchie verdi, carote arrosto e noci con un condimento alla senape e aceto di mele. Insalata d’ispirazione francese per quattro, da servire tiepida o fredda.",
+      "summary": "Lenticchie verdi, carote arrosto e noci con un condimento alla senape e aceto di mele. Insalata d’ispirazione francese per quattro, da servire tiepida o fredda.",
+      "notes": "<p>Contiene noci e senape. Riponi in frigorifero entro 2 ore e consuma entro 3 giorni. Puoi usare 600 g di lenticchie cotte e scolate, ma tempi e nutrizione differiranno dalla formulazione con 250 g secchi. Tutto il sale è conteggiato. Scegli lenticchie verdi che mantengano la forma, non lenticchie rosse decorticate.</p><h2>Da provare anche</h2><ul><li><a href=\"/it/sopa-de-lentejas-con-verduras\">Zuppa di lenticchie e verdure senza ammollo</a></li><li><a href=\"/it/ceci-cremosi-pomodori-secchi-marry-me\">Ceci cremosi con pomodori secchi: Marry Me Chickpeas</a></li></ul>",
+      "content_html": "<p>Lenticchie verdi, carote arrosto e noci con un condimento alla senape e aceto di mele. Insalata d’ispirazione francese per quattro, da servire tiepida o fredda.</p><p>Contiene noci e senape. Riponi in frigorifero entro 2 ore e consuma entro 3 giorni. Puoi usare 600 g di lenticchie cotte e scolate, ma tempi e nutrizione differiranno dalla formulazione con 250 g secchi. Tutto il sale è conteggiato. Scegli lenticchie verdi che mantengano la forma, non lenticchie rosse decorticate.</p><h2>Da provare anche</h2><ul><li><a href=\"/it/sopa-de-lentejas-con-verduras\">Zuppa di lenticchie e verdure senza ammollo</a></li><li><a href=\"/it/ceci-cremosi-pomodori-secchi-marry-me\">Ceci cremosi con pomodori secchi: Marry Me Chickpeas</a></li></ul>",
+      "ingredients": [
+        {
+          "name": "Lenticchie verdi secche",
+          "amount": "250",
+          "unit": "g"
+        },
+        {
+          "name": "Acqua di cottura",
+          "amount": "1000",
+          "unit": "ml"
+        },
+        {
+          "name": "Carote pelate",
+          "amount": "400",
+          "unit": "g"
+        },
+        {
+          "name": "Olio d’oliva",
+          "amount": "35",
+          "unit": "g"
+        },
+        {
+          "name": "Scalogno sbucciato",
+          "amount": "60",
+          "unit": "g"
+        },
+        {
+          "name": "Gherigli di noce",
+          "amount": "40",
+          "unit": "g"
+        },
+        {
+          "name": "Senape di Digione liscia",
+          "amount": "20",
+          "unit": "g"
+        },
+        {
+          "name": "Aceto di mele",
+          "amount": "25",
+          "unit": "ml"
+        },
+        {
+          "name": "Prezzemolo fresco",
+          "amount": "15",
+          "unit": "g"
+        },
+        {
+          "name": "Sale",
+          "amount": "4",
+          "unit": "g"
+        },
+        {
+          "name": "Pepe nero macinato",
+          "amount": "0.5",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepara le carote",
+          "content": "Scalda il forno statico a 200 °C. Taglia le carote a mezze rondelle di 1 cm. Sciacqua e controlla le lenticchie, eliminando sassolini e semi danneggiati.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/paso-01.webp",
+          "image_alt": "Insalata di lenticchie e carote arrosto con senape di Digione: Prepara le carote"
+        },
+        {
+          "title": "Arrostisci",
+          "content": "Mescola le carote con 15 g d’olio e 2 g di sale. Disponi su una teglia e cuoci 25–30 minuti, girando a metà, fino a renderle tenere e leggermente dorate.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/paso-02.webp",
+          "image_alt": "Insalata di lenticchie e carote arrosto con senape di Digione: Arrostisci"
+        },
+        {
+          "title": "Cuoci le lenticchie",
+          "content": "Nel frattempo copri le lenticchie con 1 litro d’acqua in una casseruola. Fai sobbollire 20–30 minuti, finché sono tenere ma integre; aggiungi acqua se necessario.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/paso-03.webp",
+          "image_alt": "Insalata di lenticchie e carote arrosto con senape di Digione: Cuoci le lenticchie"
+        },
+        {
+          "title": "Prepara il condimento",
+          "content": "Trita finemente lo scalogno. Sbatti senape, aceto, i 20 g d’olio e i 2 g di sale rimasti e il pepe, quindi aggiungi lo scalogno.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/paso-04.webp",
+          "image_alt": "Insalata di lenticchie e carote arrosto con senape di Digione: Prepara il condimento"
+        },
+        {
+          "title": "Scola bene",
+          "content": "Lascia scolare le lenticchie cotte in un colino per 2 minuti. Per servirle tiepide non sciacquarle; l’acqua in eccesso diluirebbe il condimento.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/paso-05.webp",
+          "image_alt": "Insalata di lenticchie e carote arrosto con senape di Digione: Scola bene"
+        },
+        {
+          "title": "Tosta le noci",
+          "content": "Spezzetta le noci e tostale in padella asciutta per 2–3 minuti, mescolando e controllando che non brucino. Trita il prezzemolo.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/paso-06.webp",
+          "image_alt": "Insalata di lenticchie e carote arrosto con senape di Digione: Tosta le noci"
+        },
+        {
+          "title": "Assembla",
+          "content": "Unisci delicatamente lenticchie tiepide, condimento, carote, noci e prezzemolo, senza schiacciare le lenticchie.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/paso-07.webp",
+          "image_alt": "Insalata di lenticchie e carote arrosto con senape di Digione: Assembla"
+        },
+        {
+          "title": "Servi",
+          "content": "Dividi in quattro porzioni e servi tiepido oppure raffredda rapidamente e conserva in frigorifero per servirle fredde. Pane e aggiunte non rientrano nella nutrizione.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/paso-08.webp",
+          "image_alt": "Insalata di lenticchie e carote arrosto con senape di Digione: Servi"
+        }
+      ],
+      "category": "Insalate",
+      "course": "Insalate",
+      "cuisine": "Francese",
+      "difficulty": "Facile",
+      "prep_time_minutes": 15,
+      "cook_time_minutes": 35,
+      "total_time_minutes": 50,
+      "servings": 4,
+      "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/portada.webp",
+      "gallery": [
+        {
+          "url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/portada.webp",
+          "alt": "Insalata di lenticchie e carote arrosto con senape di Digione"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "Insalata di lenticchie e carote arrosto con senape di Digione",
+        "Lenticchie verdi secche",
+        "Acqua di cottura"
+      ],
+      "nutrition": {
+        "calories": 421,
+        "protein_g": 18.5,
+        "carbs_g": 53.7,
+        "fat_g": 16.4,
+        "saturated_fat_g": 2.0,
+        "fiber_g": 11.0,
+        "sugar_g": 7.6,
+        "sodium_mg": 520.0,
+        "estimated": true,
+        "serving_size": "1 di 4 porzioni",
+        "source": "USDA FoodData Central SR Legacy",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "method": "Somma dei valori di riferimento per peso, divisa per le porzioni.",
+        "note": "Stima indicativa, non misurazione del piatto cotto. Marche e scolatura modificano i valori; nutrienti con dati incompleti non sono mostrati. Riferimenti generici per senape preparata, panna, patata dolce, olio e cioccolato; varietà e marche possono differire."
+      },
+      "seo": {
+        "title": "Insalata di lenticchie e carote arrosto con senape di Digione",
+        "description": "Lenticchie verdi, carote arrosto e noci con un condimento alla senape e aceto di mele. Insalata d’ispirazione francese per quattro, da servire tiepida o fredda.",
+        "image_alt": "Insalata di lenticchie e carote arrosto con senape di Digione",
+        "image_variants": [
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/portada-1x1.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/portada-4x3.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Posso usare lenticchie in scatola?",
+            "a": "Sì, circa 600 g scolati. Scaldale dolcemente saltando la bollitura; i valori pubblicati si basano su 250 g di lenticchie secche."
+          },
+          {
+            "q": "Si può mangiare fredda?",
+            "a": "Sì. Raffredda rapidamente, conserva in frigorifero e mescola prima di servire, perché le lenticchie assorbono il condimento."
+          },
+          {
+            "q": "Come sostituire le noci?",
+            "a": "Per una versione senza frutta a guscio omettile e verifica possibili contaminazioni degli altri ingredienti. Consistenza e nutrizione cambieranno."
+          }
+        ],
+        "rest_time_minutes": 0
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "source_url": null,
+      "source_post_id": null,
+      "recipe_group_id": "21c3a183-d3a0-4d83-8815-0dcbc08cc52a"
+    },
+    {
+      "language": "ja",
+      "slug": "lentil-roasted-carrot-mustard-salad",
+      "public_path": "/ja/lentil-roasted-carrot-mustard-salad",
+      "title": "レンズ豆とローストにんじんのサラダ：粒なしマスタード風味",
+      "excerpt": "緑レンズ豆、焼きにんじん、くるみをディジョンマスタードとりんご酢で和えるフランス風サラダ。4人分で、温かくても冷たくても楽しめます。",
+      "summary": "緑レンズ豆、焼きにんじん、くるみをディジョンマスタードとりんご酢で和えるフランス風サラダ。4人分で、温かくても冷たくても楽しめます。",
+      "notes": "<p>くるみとマスタードを含みます。2時間以内に冷蔵し、3日以内に食べます。水切りしたゆでレンズ豆600 gでも作れますが、乾燥250 gを使う本レシピとは時間と栄養値が変わります。塩は全量を計算に含めています。割った赤レンズ豆ではなく、形が残る緑レンズ豆を使います。</p><h2>こちらのレシピも</h2><ul><li><a href=\"/ja/sopa-de-lentejas-con-verduras\">水戻し不要のレンズ豆と野菜のスープ</a></li><li><a href=\"/ja/marry-me-chickpeas-cream-tomato\">マリーミー・チックピーズ：ひよこ豆のトマトクリーム煮</a></li></ul>",
+      "content_html": "<p>緑レンズ豆、焼きにんじん、くるみをディジョンマスタードとりんご酢で和えるフランス風サラダ。4人分で、温かくても冷たくても楽しめます。</p><p>くるみとマスタードを含みます。2時間以内に冷蔵し、3日以内に食べます。水切りしたゆでレンズ豆600 gでも作れますが、乾燥250 gを使う本レシピとは時間と栄養値が変わります。塩は全量を計算に含めています。割った赤レンズ豆ではなく、形が残る緑レンズ豆を使います。</p><h2>こちらのレシピも</h2><ul><li><a href=\"/ja/sopa-de-lentejas-con-verduras\">水戻し不要のレンズ豆と野菜のスープ</a></li><li><a href=\"/ja/marry-me-chickpeas-cream-tomato\">マリーミー・チックピーズ：ひよこ豆のトマトクリーム煮</a></li></ul>",
+      "ingredients": [
+        {
+          "name": "乾燥緑レンズ豆",
+          "amount": "250",
+          "unit": "g"
+        },
+        {
+          "name": "ゆでる水",
+          "amount": "1000",
+          "unit": "ml"
+        },
+        {
+          "name": "にんじん（皮を除く）",
+          "amount": "400",
+          "unit": "g"
+        },
+        {
+          "name": "オリーブ油",
+          "amount": "35",
+          "unit": "g"
+        },
+        {
+          "name": "エシャロット（皮を除く）",
+          "amount": "60",
+          "unit": "g"
+        },
+        {
+          "name": "くるみ（殻を除く）",
+          "amount": "40",
+          "unit": "g"
+        },
+        {
+          "name": "ディジョンマスタード（粒なし）",
+          "amount": "20",
+          "unit": "g"
+        },
+        {
+          "name": "りんご酢",
+          "amount": "25",
+          "unit": "ml"
+        },
+        {
+          "name": "パセリ",
+          "amount": "15",
+          "unit": "g"
+        },
+        {
+          "name": "塩",
+          "amount": "4",
+          "unit": "g"
+        },
+        {
+          "name": "黒こしょう（粉）",
+          "amount": "0.5",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "にんじんを準備",
+          "content": "オーブンを上下加熱200 °Cに予熱します。にんじんを厚さ1 cmの半月切りにします。レンズ豆を洗い、小石や傷んだ豆を除きます。",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/paso-01.webp",
+          "image_alt": "レンズ豆とローストにんじんのサラダ：粒なしマスタード風味: にんじんを準備"
+        },
+        {
+          "title": "にんじんを焼く",
+          "content": "にんじんに油15 gと塩2 gを絡め、天板に広げます。途中で返して25〜30分、柔らかく薄く色付くまで焼きます。",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/paso-02.webp",
+          "image_alt": "レンズ豆とローストにんじんのサラダ：粒なしマスタード風味: にんじんを焼く"
+        },
+        {
+          "title": "レンズ豆をゆでる",
+          "content": "その間、鍋に豆と水1リットルを入れます。20〜30分穏やかに煮て、形を保ちながら柔らかくします。必要なら水を補います。",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/paso-03.webp",
+          "image_alt": "レンズ豆とローストにんじんのサラダ：粒なしマスタード風味: レンズ豆をゆでる"
+        },
+        {
+          "title": "ドレッシングを作る",
+          "content": "エシャロットをみじん切りにします。マスタード、酢、残りの油20 g、残りの塩2 g、こしょうを混ぜ、エシャロットを加えます。",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/paso-04.webp",
+          "image_alt": "レンズ豆とローストにんじんのサラダ：粒なしマスタード風味: ドレッシングを作る"
+        },
+        {
+          "title": "水を切る",
+          "content": "ゆでた豆をざるで2分水切りします。温かく出す場合は洗い流しません。余分な水は味を薄めます。",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/paso-05.webp",
+          "image_alt": "レンズ豆とローストにんじんのサラダ：粒なしマスタード風味: 水を切る"
+        },
+        {
+          "title": "くるみを炒る",
+          "content": "くるみを粗く刻み、油をひかないフライパンで2〜3分、混ぜながら焦がさず炒ります。パセリを刻みます。",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/paso-06.webp",
+          "image_alt": "レンズ豆とローストにんじんのサラダ：粒なしマスタード風味: くるみを炒る"
+        },
+        {
+          "title": "和える",
+          "content": "温かい豆をドレッシング、焼きにんじん、くるみ、パセリと優しく和え、豆をつぶさないようにします。",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/paso-07.webp",
+          "image_alt": "レンズ豆とローストにんじんのサラダ：粒なしマスタード風味: 和える"
+        },
+        {
+          "title": "盛り付ける",
+          "content": "4人分に分けて温かく出します。冷製なら速やかに冷まして冷蔵します。添えるパンや追加の具は栄養計算に含みません。",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/paso-08.webp",
+          "image_alt": "レンズ豆とローストにんじんのサラダ：粒なしマスタード風味: 盛り付ける"
+        }
+      ],
+      "category": "サラダ",
+      "course": "サラダ",
+      "cuisine": "フランス料理",
+      "difficulty": "簡単",
+      "prep_time_minutes": 15,
+      "cook_time_minutes": 35,
+      "total_time_minutes": 50,
+      "servings": 4,
+      "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/portada.webp",
+      "gallery": [
+        {
+          "url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/portada.webp",
+          "alt": "レンズ豆とローストにんじんのサラダ：粒なしマスタード風味"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "レンズ豆とローストにんじんのサラダ：粒なしマスタード風味",
+        "乾燥緑レンズ豆",
+        "ゆでる水"
+      ],
+      "nutrition": {
+        "calories": 421,
+        "protein_g": 18.5,
+        "carbs_g": 53.7,
+        "fat_g": 16.4,
+        "saturated_fat_g": 2.0,
+        "fiber_g": 11.0,
+        "sugar_g": 7.6,
+        "sodium_mg": 520.0,
+        "estimated": true,
+        "serving_size": "全4人分のうち1人分",
+        "source": "USDA FoodData Central SR Legacy",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "method": "材料の重量に応じた参考栄養値を合計し、人数で割っています。",
+        "note": "調理済み料理の実測値ではなく概算です。商品や水切りで変わり、資料がそろわない栄養素は表示しません。 マスタード、生クリーム、さつまいも、油、チョコレートは一般的な参考値を使用し、品種や商品で異なります。"
+      },
+      "seo": {
+        "title": "レンズ豆とローストにんじんのサラダ：粒なしマスタード風味",
+        "description": "緑レンズ豆、焼きにんじん、くるみをディジョンマスタードとりんご酢で和えるフランス風サラダ。4人分で、温かくても冷たくても楽しめます。",
+        "image_alt": "レンズ豆とローストにんじんのサラダ：粒なしマスタード風味",
+        "image_variants": [
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/portada-1x1.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/portada-4x3.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "缶詰のレンズ豆は使えますか？",
+            "a": "水切り後約600 gを使い、煮る工程を省いて軽く温めます。掲載の栄養値は乾燥豆250 gが基準です。"
+          },
+          {
+            "q": "冷やして食べられますか？",
+            "a": "はい。速やかに冷まして冷蔵し、豆がドレッシングを吸うので盛る前に混ぜます。"
+          },
+          {
+            "q": "くるみを省けますか？",
+            "a": "ナッツを使わない場合は省き、ほかの材料への混入表示も確認してください。食感と栄養値は変わります。"
+          }
+        ],
+        "rest_time_minutes": 0
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "source_url": null,
+      "source_post_id": null,
+      "recipe_group_id": "21c3a183-d3a0-4d83-8815-0dcbc08cc52a"
+    },
+    {
+      "language": "pt",
+      "slug": "salada-lentilha-cenoura-mostarda",
+      "public_path": "/pt/salada-lentilha-cenoura-mostarda",
+      "title": "Salada de lentilha com cenoura assada e mostarda Dijon",
+      "excerpt": "Lentilhas verdes, cenouras assadas e nozes com molho de mostarda e vinagre de maçã. Uma salada de inspiração francesa para quatro, servida morna ou fria.",
+      "summary": "Lentilhas verdes, cenouras assadas e nozes com molho de mostarda e vinagre de maçã. Uma salada de inspiração francesa para quatro, servida morna ou fria.",
+      "notes": "<p>Contém nozes e mostarda. Refrigere antes de 2 horas e consuma em até 3 dias. É possível usar 600 g de lentilhas cozidas e escorridas, mas tempo e nutrição mudam em relação aos 250 g secos. Todo o sal está contabilizado. Prefira lentilhas verdes que mantenham a forma, não lentilhas vermelhas partidas.</p><h2>Prepare também</h2><ul><li><a href=\"/pt/sopa-de-lentejas-con-verduras\">Sopa de lentilhas com legumes, sem demolho</a></li><li><a href=\"/pt/grao-de-bico-cremoso-tomate-seco\">Grão-de-bico cremoso com tomate seco: Marry Me Chickpeas</a></li></ul>",
+      "content_html": "<p>Lentilhas verdes, cenouras assadas e nozes com molho de mostarda e vinagre de maçã. Uma salada de inspiração francesa para quatro, servida morna ou fria.</p><p>Contém nozes e mostarda. Refrigere antes de 2 horas e consuma em até 3 dias. É possível usar 600 g de lentilhas cozidas e escorridas, mas tempo e nutrição mudam em relação aos 250 g secos. Todo o sal está contabilizado. Prefira lentilhas verdes que mantenham a forma, não lentilhas vermelhas partidas.</p><h2>Prepare também</h2><ul><li><a href=\"/pt/sopa-de-lentejas-con-verduras\">Sopa de lentilhas com legumes, sem demolho</a></li><li><a href=\"/pt/grao-de-bico-cremoso-tomate-seco\">Grão-de-bico cremoso com tomate seco: Marry Me Chickpeas</a></li></ul>",
+      "ingredients": [
+        {
+          "name": "Lentilhas verdes secas",
+          "amount": "250",
+          "unit": "g"
+        },
+        {
+          "name": "Água para cozinhar",
+          "amount": "1000",
+          "unit": "ml"
+        },
+        {
+          "name": "Cenouras descascadas",
+          "amount": "400",
+          "unit": "g"
+        },
+        {
+          "name": "Azeite de oliva",
+          "amount": "35",
+          "unit": "g"
+        },
+        {
+          "name": "Chalota descascada",
+          "amount": "60",
+          "unit": "g"
+        },
+        {
+          "name": "Nozes sem casca",
+          "amount": "40",
+          "unit": "g"
+        },
+        {
+          "name": "Mostarda Dijon lisa",
+          "amount": "20",
+          "unit": "g"
+        },
+        {
+          "name": "Vinagre de maçã",
+          "amount": "25",
+          "unit": "ml"
+        },
+        {
+          "name": "Salsinha fresca",
+          "amount": "15",
+          "unit": "g"
+        },
+        {
+          "name": "Sal",
+          "amount": "4",
+          "unit": "g"
+        },
+        {
+          "name": "Pimenta-do-reino moída",
+          "amount": "0.5",
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Prepare as cenouras",
+          "content": "Preaqueça o forno convencional a 200 °C. Corte as cenouras em meias-luas de 1 cm. Enxágue e selecione as lentilhas, retirando pedrinhas e grãos danificados.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/paso-01.webp",
+          "image_alt": "Salada de lentilha com cenoura assada e mostarda Dijon: Prepare as cenouras"
+        },
+        {
+          "title": "Asse",
+          "content": "Misture as cenouras com 15 g de azeite e 2 g de sal. Espalhe numa assadeira e asse por 25–30 minutos, virando na metade, até amaciar e dourar levemente.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/paso-02.webp",
+          "image_alt": "Salada de lentilha com cenoura assada e mostarda Dijon: Asse"
+        },
+        {
+          "title": "Cozinhe as lentilhas",
+          "content": "Enquanto isso, cubra as lentilhas com 1 litro de água numa panela. Cozinhe em fervura branda por 20–30 minutos, até ficarem macias e inteiras. Acrescente água se necessário.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/paso-03.webp",
+          "image_alt": "Salada de lentilha com cenoura assada e mostarda Dijon: Cozinhe as lentilhas"
+        },
+        {
+          "title": "Faça o molho",
+          "content": "Pique a chalota finamente. Bata mostarda, vinagre, os 20 g de azeite e os 2 g de sal restantes e pimenta; junte a chalota.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/paso-04.webp",
+          "image_alt": "Salada de lentilha com cenoura assada e mostarda Dijon: Faça o molho"
+        },
+        {
+          "title": "Escorra bem",
+          "content": "Escorra as lentilhas cozidas numa peneira por 2 minutos. Não enxágue para servir morno; excesso de água dilui o molho.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/paso-05.webp",
+          "image_alt": "Salada de lentilha com cenoura assada e mostarda Dijon: Escorra bem"
+        },
+        {
+          "title": "Toste as nozes",
+          "content": "Pique as nozes grosseiramente e toste numa frigideira seca por 2–3 minutos, mexendo e cuidando para não queimar. Pique a salsinha.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/paso-06.webp",
+          "image_alt": "Salada de lentilha com cenoura assada e mostarda Dijon: Toste as nozes"
+        },
+        {
+          "title": "Misture",
+          "content": "Envolva delicadamente as lentilhas mornas no molho com cenouras, nozes e salsinha, preservando os grãos inteiros.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/paso-07.webp",
+          "image_alt": "Salada de lentilha com cenoura assada e mostarda Dijon: Misture"
+        },
+        {
+          "title": "Sirva",
+          "content": "Divida em quatro porções e sirva morno ou esfrie rapidamente e refrigere para servir frio. Pão e complementos não entram na nutrição.",
+          "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/paso-08.webp",
+          "image_alt": "Salada de lentilha com cenoura assada e mostarda Dijon: Sirva"
+        }
+      ],
+      "category": "Saladas",
+      "course": "Saladas",
+      "cuisine": "Francesa",
+      "difficulty": "Fácil",
+      "prep_time_minutes": 15,
+      "cook_time_minutes": 35,
+      "total_time_minutes": 50,
+      "servings": 4,
+      "image_url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/portada.webp",
+      "gallery": [
+        {
+          "url": "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/portada.webp",
+          "alt": "Salada de lentilha com cenoura assada e mostarda Dijon"
+        }
+      ],
+      "video_urls": [],
+      "keywords": [
+        "Salada de lentilha com cenoura assada e mostarda Dijon",
+        "Lentilhas verdes secas",
+        "Água para cozinhar"
+      ],
+      "nutrition": {
+        "calories": 421,
+        "protein_g": 18.5,
+        "carbs_g": 53.7,
+        "fat_g": 16.4,
+        "saturated_fat_g": 2.0,
+        "fiber_g": 11.0,
+        "sugar_g": 7.6,
+        "sodium_mg": 520.0,
+        "estimated": true,
+        "serving_size": "1 das 4 porções",
+        "source": "USDA FoodData Central SR Legacy",
+        "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+        "method": "Soma das referências pelo peso dos ingredientes, dividida pelas porções.",
+        "note": "Estimativa orientativa, não medição do prato pronto. Marcas e escorrimento alteram os valores; nutrientes com dados incompletos não são mostrados. Referências genéricas para mostarda preparada, creme, batata-doce, óleo e chocolate; variedades e marcas podem diferir."
+      },
+      "seo": {
+        "title": "Salada de lentilha com cenoura assada e mostarda Dijon",
+        "description": "Lentilhas verdes, cenouras assadas e nozes com molho de mostarda e vinagre de maçã. Uma salada de inspiração francesa para quatro, servida morna ou fria.",
+        "image_alt": "Salada de lentilha com cenoura assada e mostarda Dijon",
+        "image_variants": [
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/portada-1x1.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/portada-4x3.webp",
+          "https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/ensalada-lentejas-zanahoria-mostaza/portada-16x9.webp"
+        ],
+        "faq": [
+          {
+            "q": "Posso usar lentilha em conserva?",
+            "a": "Sim, cerca de 600 g escorridos. Aqueça suavemente e pule a fervura; os valores publicados usam 250 g de lentilhas secas."
+          },
+          {
+            "q": "Pode servir fria?",
+            "a": "Sim. Esfrie rapidamente, refrigere e misture antes de servir, pois as lentilhas absorvem o molho."
+          },
+          {
+            "q": "Como substituir as nozes?",
+            "a": "Para uma versão sem castanhas e nozes, omita-as e confira possíveis contaminações dos demais ingredientes. Textura e nutrição mudam."
+          }
+        ],
+        "rest_time_minutes": 0
+      },
+      "published": false,
+      "editorial_status": "draft",
+      "source_url": null,
+      "source_post_id": null,
+      "recipe_group_id": "21c3a183-d3a0-4d83-8815-0dcbc08cc52a"
+    }
+  ],
+  "recipe_group_id": "21c3a183-d3a0-4d83-8815-0dcbc08cc52a"
+}

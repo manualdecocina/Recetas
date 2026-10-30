@@ -1,0 +1,80 @@
+name: seven-markets-20261028-publication
+on:
+  push:
+    branches: [content/seven-markets-20261028]
+    paths:
+      - '.github/workflows/seven-markets-20261028-publication.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            scripts
+            editorial/siete-mercados-20261028
+      - name: Refresh protected production cache over IPv4
+        env:
+          REVALIDATE_SECRET: ${{ secrets.REVALIDATE_SECRET }}
+        run: |
+          python3 - <<'PY'
+          import json,os,time,urllib.request,socket
+          resolve=socket.getaddrinfo
+          socket.getaddrinfo=lambda *a,**k:[x for x in resolve(*a,**k) if x[0]==socket.AF_INET]
+          secret=(os.environ.get('REVALIDATE_SECRET') or '').rstrip('\r\n')
+          if not secret:raise SystemExit('Missing cache secret')
+          for attempt in range(2):
+              req=urllib.request.Request('https://manualdecocina.com/api/revalidate?batch='+str(time.time_ns()),data=b'{}',headers={'x-revalidate-secret':secret,'Content-Type':'application/json','Cache-Control':'no-cache'})
+              with urllib.request.urlopen(req,timeout=25) as r:info=json.load(r)
+              assert info.get('revalidated') is True and info.get('cacheMode')=='expire-now'
+              print('PRODUCTION_CACHE_REFRESHED',info.get('at'))
+              if attempt==0:time.sleep(3)
+          PY
+      - name: Check 49 pages, 84 images and 14 navigation surfaces
+        run: python3 scripts/audit-seven-markets-20261028.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: seven-markets-20261028-production-qa
+          path: editorial/siete-mercados-20261028/production-qa.json
+  preserve-media:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: content/seven-markets-20261028
+      - name: Preserve the 84 verified publication assets in the content branch
+        run: |
+          python3 - <<'PY'
+          import concurrent.futures,hashlib,json,urllib.request
+          from pathlib import Path
+          manifest=json.loads(Path('editorial/siete-mercados-20261028/media-upload-manifest.json').read_text())
+          allowed={'castanas-freidora-aire','garbanzos-cremosos-tomates-secos','zwiebelkuchen-tarta-cebolla','ensalada-lentejas-zanahoria-mostaza','chocolate-caliente-italiano-espeso','daigaku-imo-boniato-caramelizado','farofa-platano-maduro'}
+          names={f'paso-{n:02}.webp' for n in range(1,9)}|{'portada.webp','portada-1x1.webp','portada-4x3.webp','portada-16x9.webp'}
+          assert len(manifest)==84
+          def copy(item):
+              path,info=item
+              parts=path.split('/')
+              assert len(parts)==2 and parts[0] in allowed and parts[1] in names
+              with urllib.request.urlopen('https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/'+path,timeout=40) as r:data=r.read()
+              assert len(data)==info['bytes'] and hashlib.sha256(data).hexdigest()==info['sha256']
+              target=Path('public/recetas')/path
+              target.parent.mkdir(parents=True,exist_ok=True)
+              target.write_bytes(data)
+          with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:list(pool.map(copy,manifest.items()))
+          print('84 publication assets preserved with matching SHA-256')
+          PY
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add public/recetas/castanas-freidora-aire public/recetas/garbanzos-cremosos-tomates-secos public/recetas/zwiebelkuchen-tarta-cebolla public/recetas/ensalada-lentejas-zanahoria-mostaza public/recetas/chocolate-caliente-italiano-espeso public/recetas/daigaku-imo-boniato-caramelizado public/recetas/farofa-platano-maduro
+          if ! git diff --cached --quiet; then
+            git commit -m "Preservar 84 imágenes verificadas de las siete recetas nuevas"
+            git push origin HEAD:content/seven-markets-20261028
+          fi
