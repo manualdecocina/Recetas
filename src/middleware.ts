@@ -41,15 +41,18 @@ export async function middleware(request: NextRequest) {
   } = await supabase.auth.getUser()
 
   const isLoginPage = pathname === '/admin/login'
+  // Páginas del panel que se abren sin sesión: entrar, pedir el correo de recuperación
+  // y el destino del enlace de ese correo (que es justo el que crea la sesión).
+  const isPublicAuthPage = isLoginPage || pathname === '/admin/recuperar' || pathname === '/admin/auth/callback'
 
-  if (!user && !isLoginPage) {
+  if (!user && !isPublicAuthPage) {
     const url = request.nextUrl.clone()
     url.pathname = '/admin/login'
     url.search = ''
     return NextResponse.redirect(url)
   }
 
-  if (user && isLoginPage) {
+  if (user && (isLoginPage || pathname === '/admin/recuperar')) {
     const url = request.nextUrl.clone()
     url.pathname = '/admin'
     url.search = ''
