@@ -14,6 +14,8 @@ jobs:
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
+      - name: Restore archived originals in CI only
+        run: python3 scripts/restore-historical-originals.py 04
       - run: python3 -m pip install Pillow
       - run: python3 scripts/validate-lote04-complete.py
       - run: python3 scripts/build-lote04-publication.py --check
