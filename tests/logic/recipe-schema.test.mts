@@ -67,6 +67,23 @@ check('Ingredientes españoles: singular, plural y contracción de unidad', () =
   assert.equal(ingredientDisplayText({ amount: '4', unit: 'rebanada', name: 'pan crujiente' }, 'es'), '4 rebanadas de pan crujiente')
   assert.equal(ingredientDisplayPrefix({ amount: '1.5', unit: 'g' }, 'es'), '1,5 g')
 })
+check('Ingredientes españoles: unidades guardadas en plural, con "de", sustantivo o tamaño', () => {
+  assert.equal(ingredientDisplayText({ amount: '2', unit: 'dientes', name: 'ajo picado' }, 'es'), '2 dientes de ajo picado')
+  assert.equal(ingredientDisplayText({ amount: '2', unit: 'cucharadas', name: 'mantequilla' }, 'es'), '2 cucharadas de mantequilla')
+  assert.equal(ingredientDisplayText({ amount: '1 1/4', unit: 'tazas', name: 'leche' }, 'es'), '1 1/4 tazas de leche')
+  assert.equal(ingredientDisplayText({ amount: '1/2', unit: 'taza', name: 'azúcar' }, 'es'), '1/2 taza de azúcar')
+  assert.equal(ingredientDisplayText({ amount: '1', unit: 'taza de', name: 'arroz' }, 'es'), '1 taza de arroz')
+  assert.equal(ingredientDisplayText({ amount: '1', unit: 'grande', name: 'cebolla picada' }, 'es'), '1 cebolla grande picada')
+  assert.equal(ingredientDisplayText({ amount: '3', unit: 'und', name: 'tomates' }, 'es'), '3 tomates')
+  assert.equal(ingredientDisplayText({ amount: '2', unit: 'unidad de', name: 'huevos' }, 'es'), '2 huevos')
+})
+check('Otros idiomas: "unidad/pieza" no se repite delante del nombre; Stück alemán se conserva', () => {
+  assert.equal(ingredientDisplayText({ amount: '4', unit: 'unidade', name: 'ovos' }, 'pt'), '4 ovos')
+  assert.equal(ingredientDisplayText({ amount: '4', unit: 'piece', name: 'egg yolks' }, 'en'), '4 egg yolks')
+  assert.equal(ingredientDisplayText({ amount: '1', unit: 'pezzo', name: 'uovo' }, 'it'), '1 uovo')
+  assert.equal(ingredientDisplayText({ amount: '3', unit: 'unités', name: 'œufs' }, 'fr'), '3 œufs')
+  assert.equal(ingredientDisplayText({ amount: '2', unit: 'Stück', name: 'Eier' }, 'de'), '2 Stück Eier')
+  assert.equal(ingredientDisplayText({ amount: '200', unit: 'g', name: 'flour' }, 'en'), '200 g flour')})
 check('El mismo formateador alimenta el listado visible y Recipe JSON-LD sin tocar datos originales', () => {
   const sample = { amount: '2', unit: 'cucharada', name: 'cacao amargo' }
   assert.equal(ingredientDisplayPrefix(sample, 'es') + ' ' + sample.name, ingredientDisplayText(sample, 'es'))
