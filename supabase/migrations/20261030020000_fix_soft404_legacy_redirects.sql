@@ -11,6 +11,20 @@
 
 begin;
 
+-- 0. Respaldo de las filas afectadas (permite revertir). Sin acceso público.
+create table if not exists public.content_redirects_backup_20261030 as
+select c.* from public.content_redirects c
+ where (c.status_code in (302, 307) and exists (
+          select 1 from public.recipes r
+           where r.published and rtrim(r.public_path, '/') = rtrim(c.source_path, '/')))
+    or rtrim(c.source_path, '/') in (
+         '/vasitos-de-mousse-de-aguacate-y-cacao',
+         '/es/receta/hamburguesas-caseras',
+         '/es/receta/receta-clasica-de-galletas-toll-house-original-con-chispas-de-chocolate',
+         '/receta-pasta-bolognesa-original');
+alter table public.content_redirects_backup_20261030 enable row level security;
+revoke all on public.content_redirects_backup_20261030 from anon, authenticated;
+
 -- 1. Redirecciones permanentes hacia la receta reconstruida -------------------------------
 with fixes(source_path, target_path) as (values
   ('/vasitos-de-mousse-de-aguacate-y-cacao', '/es/receta/vasitos-de-mousse-de-aguacate-y-cacao'),
