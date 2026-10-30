@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import { requireAdmin } from '@/lib/supabase/admin-guard'
 import { loadQueue, type GroupSummary } from '@/lib/admin/publication-data'
 import { STAGE_LABELS, type GroupStage } from '@/lib/admin/publication'
-import { signOutAction } from './actions'
+import { AdminNav } from './AdminNav'
 import { NotAdmin } from './NotAdmin'
 
 export const dynamic = 'force-dynamic'
@@ -48,13 +48,8 @@ export default async function PublicationCenterPage() {
 
   return (
     <main className="adm">
-      <header className="adm-header">
-        <h1>Centro de publicación</h1>
-        <nav className="adm-nav">
-          <Link href="/admin/todas">Todas las recetas</Link>
-          <form action={signOutAction}><button type="submit" className="adm-link-button">Cerrar sesión</button></form>
-        </nav>
-      </header>
+      <AdminNav current="cola" />
+      <h1>Centro de publicación</h1>
 
       <ul className="adm-counters">
         {SECTIONS.map(({ stage }) => (

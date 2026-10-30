@@ -10,7 +10,9 @@ import {
 } from '@/lib/admin/publication'
 import { ingredientDisplayText } from '@/lib/recipe-ingredient-format'
 import { normalizePublicPath } from '@/lib/site'
+import { reviewedRecipeSeo } from '@/lib/recipe-snippet-repairs'
 import { NotAdmin } from '../../NotAdmin'
+import { AdminNav } from '../../AdminNav'
 import { publishGroupAction, reviewGroupAction, unpublishGroupAction } from '../actions'
 
 export const dynamic = 'force-dynamic'
@@ -51,11 +53,11 @@ export default async function GroupReviewPage({ params, searchParams }: Props) {
   const ingredients = (Array.isArray(current.ingredients) ? current.ingredients : []) as Ingredient[]
   const steps = (Array.isArray(current.steps) ? current.steps : []) as Step[]
   const nutrition = current.nutrition ?? {}
-  const seo = current.seo ?? {}
+  const seo = reviewedRecipeSeo(current.id, current.seo)
 
   return (
     <main className="adm">
-      <p><Link href="/admin">← Centro de publicación</Link></p>
+      <AdminNav current="cola" />
       <h1>{groupTitle(rows)}</h1>
       <p className={`adm-badge adm-stage-${stage}`}>{STAGE_LABELS[stage]}</p>
 
@@ -139,6 +141,7 @@ export default async function GroupReviewPage({ params, searchParams }: Props) {
             <strong>{String(seo.title ?? '')}</strong>
             <span>{String(seo.description ?? '')}</span>
           </div>
+          <p><Link href={`/admin/platos/${grupo}/google`} className="adm-btn">Editar para Google</Link></p>
 
           <h4>Ingredientes ({ingredients.length})</h4>
           <ul>
