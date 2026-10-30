@@ -2,9 +2,9 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 import { requireAdmin } from '@/lib/supabase/admin-guard'
 import { normalizePublicPath } from '@/lib/site'
-import { deleteRecipeAction, signOutAction } from './actions'
-import { DeleteButton } from './DeleteButton'
-import { NotAdmin } from './NotAdmin'
+import { deleteRecipeAction, signOutAction } from '../actions'
+import { DeleteButton } from '../DeleteButton'
+import { NotAdmin } from '../NotAdmin'
 
 export const dynamic = 'force-dynamic'
 export const metadata: Metadata = {
