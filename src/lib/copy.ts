@@ -114,6 +114,7 @@ const es = {
   saved: "Guardada",
   share: "Compartir",
   print: "Imprimir",
+  pinterestSave: "Guardar en Pinterest",
   cookingMode: "Modo cocina",
   closeCooking: "Cerrar modo cocina",
   previousStep: "Paso anterior",
@@ -259,6 +260,7 @@ const en = {
   saved: "Saved",
   share: "Share",
   print: "Print",
+  pinterestSave: "Save to Pinterest",
   cookingMode: "Cooking mode",
   closeCooking: "Close cooking mode",
   previousStep: "Previous step",
@@ -404,6 +406,7 @@ const de = {
   saved: "Gespeichert", // REVISAR
   share: "Teilen", // REVISAR
   print: "Drucken", // REVISAR
+  pinterestSave: "Auf Pinterest merken",
   cookingMode: "Kochmodus", // REVISAR
   closeCooking: "Kochmodus schließen", // REVISAR
   previousStep: "Vorheriger Schritt", // REVISAR
@@ -549,6 +552,7 @@ const it = {
   saved: "Salvata", // REVISAR
   share: "Condividi", // REVISAR
   print: "Stampa", // REVISAR
+  pinterestSave: "Salva su Pinterest",
   cookingMode: "Modalità cucina", // REVISAR
   closeCooking: "Chiudi modalità cucina", // REVISAR
   previousStep: "Passaggio precedente", // REVISAR
@@ -694,6 +698,7 @@ const fr = {
   saved: "Enregistrée", // REVISAR
   share: "Partager", // REVISAR
   print: "Imprimer", // REVISAR
+  pinterestSave: "Enregistrer sur Pinterest",
   cookingMode: "Mode cuisine", // REVISAR
   closeCooking: "Fermer le mode cuisine", // REVISAR
   previousStep: "Étape précédente", // REVISAR
@@ -839,6 +844,7 @@ const ja = {
   saved: "保存済み", // REVISAR
   share: "共有", // REVISAR
   print: "印刷", // REVISAR
+  pinterestSave: "Pinterestに保存",
   cookingMode: "調理モード", // REVISAR
   closeCooking: "調理モードを閉じる", // REVISAR
   previousStep: "前の手順", // REVISAR
@@ -985,6 +991,7 @@ const pt = {
   saved: "Salva",
   share: "Compartilhar",
   print: "Imprimir",
+  pinterestSave: "Salvar no Pinterest",
   cookingMode: "Modo cozinha",
   closeCooking: "Fechar modo cozinha",
   previousStep: "Passo anterior",

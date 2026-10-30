@@ -1,3 +1,4 @@
+import { pinterestSaveUrl } from '@/lib/pinterest'
 import assert from 'node:assert/strict'
 import { recipePublisher, recipeStepAnchor, shouldPublishAggregateRating } from '@/lib/recipe-schema'
 import { ingredientDisplayPrefix, ingredientDisplayText } from '@/lib/recipe-ingredient-format'
@@ -95,4 +96,13 @@ check('AggregateRating se omite si hay menos de cinco votos reales', () => {
   assert.equal(shouldPublishAggregateRating(true, 4), false)
   assert.equal(shouldPublishAggregateRating(true, 5), true)
   assert.equal(shouldPublishAggregateRating(false, 5), false)
+})
+
+check('Pinterest: enlace oficial con URL canónica, foto absoluta y descripción codificadas', () => {
+  const href = pinterestSaveUrl({ url: 'https://manualdecocina.com/creep-stroganoff/', image: 'https://cdn.example.com/a b.webp', description: 'Crepes & champiñones' })
+  const u = new URL(href)
+  assert.equal(u.origin + u.pathname, 'https://www.pinterest.com/pin/create/button/')
+  assert.equal(u.searchParams.get('url'), 'https://manualdecocina.com/creep-stroganoff/')
+  assert.equal(u.searchParams.get('media'), 'https://cdn.example.com/a b.webp')
+  assert.equal(u.searchParams.get('description'), 'Crepes & champiñones')
 })
