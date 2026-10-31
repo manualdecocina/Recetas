@@ -11,6 +11,9 @@ import SiteFooter from './SiteFooter';
 import RecipeCard from './RecipeCard';
 import { CategoryGrid } from './CategoryViews';
 import PantryBanner from './PantryBanner';
+import { CollectionGrid } from './CollectionViews';
+import type { CollectionSummary } from '@/lib/collections-data';
+import { collectionsIndexPath } from '@/lib/collections';
 
 export interface MdHomeData {
   /** Use only an actual published recipe of the requested language. */
@@ -21,6 +24,8 @@ export interface MdHomeData {
   categories: MdCategorySummary[];
   /** Canonical ingredient slugs with localized display names. */
   ingredients: MdIngredientSummary[];
+  /** Colecciones editoriales con al menos una receta publicada en este idioma. */
+  collections: CollectionSummary[];
 }
 
 /** Fully typed presentational home. DB calls remain in the existing route. */
@@ -55,6 +60,13 @@ export default function HomePageView({ lang, data }: { lang: MdLanguage; data: M
           )}
         </section>
         {<PantryBanner lang={lang} headingId="md-pantry-banner-heading" container />}
+        {data.collections.length > 0 && <section className="md-section" aria-labelledby="md-collections-heading">
+          <div className="md-container"><div className="md-section-head"><div><p className="md-eyebrow">{t.navCollections}</p>
+            <h2 className="md-title" id="md-collections-heading">{t.collectionsHomeTitle}</h2></div>
+            <Link className="md-link" href={collectionsIndexPath(lang)}>{t.seeAllCollections}</Link></div>
+            <CollectionGrid lang={lang} items={data.collections} />
+          </div>
+        </section>}
         {data.latest.length > 0 && <section className="md-section" aria-labelledby="md-latest-heading">
           <div className="md-container">
             <div className="md-section-head"><div><p className="md-eyebrow">{t.navRecipes}</p>

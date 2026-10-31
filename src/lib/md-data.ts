@@ -9,6 +9,8 @@ import { CATEGORY_TAXONOMY } from '@/lib/categories'
 import { ingredientLabel } from '@/lib/ingredient-labels'
 import { buildEditorialPantry, localizeEditorialIngredients, type PantryLink } from '@/lib/pantry-editorial'
 import { localizePantryRecipes, pantryIngredientCoverage } from '@/lib/pantry-localization'
+import { COLLECTIONS } from '@/lib/collections'
+import { loadCollectionSummaries } from '@/lib/collections-data'
 
 // Solo lectura, con el mismo cliente público y las mismas tablas/filtros que ya usan las
 // demás rutas (recetas publicadas por idioma). No inventa datos: si no hay, devuelve vacío.
@@ -61,7 +63,7 @@ export async function getIngredientSummaries(limit?: number, lang: RecipeLanguag
 }
 
 export async function getHomeData(lang: RecipeLanguage): Promise<MdHomeData> {
-  const [featuredResult, latestResult, categories, ingredients] = await Promise.all([
+  const [featuredResult, latestResult, categories, ingredients, collections] = await Promise.all([
     // Destacada: la receta publicada actualizada más recientemente que tenga foto real.
     supabase
       .from('recipes')
@@ -81,6 +83,7 @@ export async function getHomeData(lang: RecipeLanguage): Promise<MdHomeData> {
       .limit(10),
     getCategorySummaries(lang),
     getIngredientSummaries(12, lang),
+    loadCollectionSummaries(COLLECTIONS, lang),
   ])
   if (featuredResult.error) throw new Error(`No se pudo cargar la receta destacada: ${featuredResult.error.message}`)
   if (latestResult.error) throw new Error(`No se pudieron cargar las últimas recetas: ${latestResult.error.message}`)
@@ -90,7 +93,7 @@ export async function getHomeData(lang: RecipeLanguage): Promise<MdHomeData> {
   // La destacada ya se muestra en el hero; las otras nueve conservan su orden editorial.
   const latest = latestRaw.filter((recipe) => recipe.id !== featured?.id).slice(0, 9)
 
-  return { featured, latest, categories, ingredients }
+  return { featured, latest, categories, ingredients, collections: collections.filter((item) => item.count > 0) }
 }
 
 export interface MdPantryIngredient {

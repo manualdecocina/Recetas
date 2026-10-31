@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { collectionsIndexPath } from '@/lib/collections';
 import type { MdLanguage, MdRecipeCardData } from './md-types';
 import { getMdCopy } from '@/lib/copy';
 import { CATEGORY_TAXONOMY } from '@/lib/categories';
@@ -50,7 +51,8 @@ export default function RecipeListingView({ lang, recipes, filters, options, pag
   ];
   return (
     <main className="md-container" id="md-main">
-      <header className="md-page-head"><h1 className="md-display">{t.recipeCatalog}</h1></header>
+      <header className="md-page-head"><h1 className="md-display">{t.recipeCatalog}</h1>
+        <p className="md-page-intro"><Link className="md-link" href={collectionsIndexPath(lang)}>{t.navCollections}: {t.collectionsHomeTitle} →</Link></p></header>
       <div className="md-listing-layout">
         <aside className="md-filter-panel">
           <h2 className="md-subtitle">{t.filterHeading}</h2>
