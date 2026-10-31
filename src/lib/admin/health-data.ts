@@ -1,4 +1,6 @@
 import 'server-only'
+import { stat } from 'node:fs/promises'
+import path from 'node:path'
 import type { SupabaseClient } from '@supabase/supabase-js'
 import { reviewedRecipeSeo } from '@/lib/recipe-snippet-repairs'
 import { absoluteUrl, getSiteUrl } from '@/lib/site'
@@ -144,6 +146,21 @@ export interface PhotoProblem { groupId: string; title: string; url: string; sta
 
 /** Comprueba en la web en vivo la foto de portada de cada receta publicada en español.
  * Pocas peticiones a la vez para no cargar el servidor. */
+const PUBLIC_DIR = path.join(process.cwd(), 'public')
+
+/** ¿Existe el archivo en /public? Si no se puede saber (otra forma de despliegue), devuelve
+ * false y la foto se comprueba por internet como antes: nunca da por buena una foto sin mirarla. */
+async function existsInPublic(urlPath: string): Promise<boolean> {
+  try {
+    const clean = decodeURIComponent(urlPath.split(/[?#]/)[0])
+    const file = path.join(PUBLIC_DIR, clean)
+    if (!file.startsWith(PUBLIC_DIR + path.sep)) return false
+    return (await stat(file)).isFile()
+  } catch {
+    return false
+  }
+}
+
 export async function checkPublishedCovers(supabase: SupabaseClient): Promise<{ checked: number; problems: PhotoProblem[] }> {
   const rows = await readAll<{ recipe_group_id: string; title: string | null; image_url: string | null }>((from, to) =>
     supabase.from('recipes').select('recipe_group_id, title, image_url').eq('language', 'es').eq('published', true).order('id').range(from, to))
@@ -154,14 +171,18 @@ export async function checkPublishedCovers(supabase: SupabaseClient): Promise<{ 
   async function worker() {
     while (next < targets.length) {
       const row = targets[next++]
-      const path = text(row.image_url)
-      const url = /^https?:\/\//i.test(path) ? path : `${site}${path.startsWith('/') ? '' : '/'}${path}`
+      const imagePath = text(row.image_url)
+      const isRemote = /^https?:\/\//i.test(imagePath)
+      // Fotos de la propia web: se miran en el disco (instantáneo). Antes se pedían una por una
+      // a la web por internet (~200 peticiones del servidor a sí mismo) y la página daba 503.
+      if (!isRemote && await existsInPublic(imagePath)) continue
+      const url = isRemote ? imagePath : `${site}${imagePath.startsWith('/') ? '' : '/'}${imagePath}`
       let status: number | null = null
       try {
         const res = await fetch(url, { method: 'HEAD', cache: 'no-store', signal: AbortSignal.timeout(8000) })
         status = res.status
       } catch { /* sin respuesta */ }
-      if (status === null || status >= 400) problems.push({ groupId: row.recipe_group_id, title: text(row.title), url: absoluteUrl(path), status })
+      if (status === null || status >= 400) problems.push({ groupId: row.recipe_group_id, title: text(row.title), url: absoluteUrl(imagePath), status })
     }
   }
   await Promise.all(Array.from({ length: 10 }, worker))
