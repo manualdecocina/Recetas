@@ -65,6 +65,9 @@ export const COLLECTIONS: Collection[] = [
         '/pernil-de-cerdo-al-horno',
         '/natilla-colombiana',
         '/bunuelos-colombianos',
+        // Dulce de breva y manjar blanco: aparecen solos en cuanto estén publicados.
+        '/manjar-blanco-del-valle',
+        '/dulce-de-breva',
         '/hojuelas-colombianas',
         '/hojaldras-colombianas',
         '/receta-de-ajiaco',
