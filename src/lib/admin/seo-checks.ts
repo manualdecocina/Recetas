@@ -18,6 +18,16 @@ export const SEO_LIMITS = {
   descriptionHardMax: 300,
 } as const
 
+/** Cuándo avisar en Salud del sitio. El rango ideal de arriba sirve de guía mientras se escribe,
+ * pero quedarse 2–5 caracteres por fuera casi no se nota en Google (corta por ancho en pantalla
+ * y a menudo reescribe el texto). La lista de Salud solo marca lo que de verdad se corta o queda pobre. */
+export const SEO_ALERT_LIMITS = {
+  titleMin: 20,
+  titleMax: 70,
+  descriptionMin: 80,
+  descriptionMax: 180,
+} as const
+
 export type LengthStatus = 'ok' | 'corto' | 'largo'
 
 /** Longitud en caracteres visibles (los emoji y acentos cuentan como uno). */
@@ -45,16 +55,16 @@ export function measuresLength(language: string): boolean {
   return language !== 'ja'
 }
 
-/** Problemas de longitud en palabras sencillas. Lista vacía = bien. */
+/** Problemas de longitud que vale la pena arreglar, en palabras sencillas. Lista vacía = bien. */
 export function seoLengthIssues(language: string, title: string, description: string): string[] {
   if (!measuresLength(language)) return []
   const issues: string[] = []
-  const t = titleStatus(title)
-  const d = descriptionStatus(description)
-  if (t === 'largo') issues.push(`título largo (${visibleLength(title)} > ${SEO_LIMITS.titleMax}): Google lo corta`)
-  if (t === 'corto') issues.push(`título corto (${visibleLength(title)} < ${SEO_LIMITS.titleMin})`)
-  if (d === 'largo') issues.push(`descripción larga (${visibleLength(description)} > ${SEO_LIMITS.descriptionMax}): Google la corta`)
-  if (d === 'corto') issues.push(`descripción corta (${visibleLength(description)} < ${SEO_LIMITS.descriptionMin}): desaprovecha espacio`)
+  const t = visibleLength(title)
+  const d = visibleLength(description)
+  if (t > SEO_ALERT_LIMITS.titleMax) issues.push(`título largo (${t} caracteres): Google lo corta`)
+  if (t < SEO_ALERT_LIMITS.titleMin) issues.push(`título muy corto (${t} caracteres)`)
+  if (d > SEO_ALERT_LIMITS.descriptionMax) issues.push(`descripción larga (${d} caracteres): Google la corta`)
+  if (d < SEO_ALERT_LIMITS.descriptionMin) issues.push(`descripción muy corta (${d} caracteres): desaprovecha espacio`)
   return issues
 }
 

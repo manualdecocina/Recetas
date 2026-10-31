@@ -26,6 +26,14 @@ check('Japonés no se mide con la regla latina', () => {
   assert.equal(seoLengthIssues('es', 'x'.repeat(90), 'y'.repeat(140)).length, 1)
 })
 
+check('Salud solo avisa lo que de verdad se corta, no 2–5 caracteres de más', () => {
+  assert.deepEqual(seoLengthIssues('es', 'x'.repeat(64), 'y'.repeat(162)), [])
+  assert.deepEqual(seoLengthIssues('es', 'x'.repeat(70), 'y'.repeat(180)), [])
+  assert.equal(seoLengthIssues('es', 'x'.repeat(71), 'y'.repeat(140)).length, 1)
+  assert.equal(seoLengthIssues('es', 'x'.repeat(40), 'y'.repeat(181)).length, 1)
+  assert.equal(seoLengthIssues('es', 'x'.repeat(40), 'y'.repeat(79)).length, 1)
+})
+
 check('No deja guardar textos rotos', () => {
   assert.equal(seoSaveError('Título correcto de receta', 'd'.repeat(130)), null)
   assert.match(seoSaveError('Hola', 'd'.repeat(130)) ?? '', /corto/)

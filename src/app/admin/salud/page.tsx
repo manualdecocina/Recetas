@@ -4,7 +4,7 @@ import { requireAdmin } from '@/lib/supabase/admin-guard'
 import { checkPublishedCovers, loadHealth, type HealthItem } from '@/lib/admin/health-data'
 import { measureSpeed, runLiveChecks, type SpeedMetric } from '@/lib/admin/live-checks'
 import { LANGUAGE_NAMES, REQUIRED_LANGUAGES } from '@/lib/admin/publication'
-import { SEO_LIMITS } from '@/lib/admin/seo-checks'
+import { SEO_ALERT_LIMITS } from '@/lib/admin/seo-checks'
 import { getSiteUrl, recipeHref } from '@/lib/site'
 import { NotAdmin } from '../NotAdmin'
 import { AdminNav } from '../AdminNav'
@@ -196,9 +196,10 @@ export default async function HealthPage({ searchParams }: Props) {
       <section id="google" className="adm-section">
         <h2>Mejoras para Google</h2>
         <p className="adm-hint">
-          Títulos de más de {SEO_LIMITS.titleMax} caracteres o descripciones fuera de {SEO_LIMITS.descriptionMin}–{SEO_LIMITS.descriptionMax}:
-          Google los corta o desaprovecha espacio, y eso baja los clics. Entra a la receta y usa «Editar para Google».
-          No es urgente: arréglalas de a pocas, empezando por las que más visitas tienen.
+          Solo los que de verdad se notan: títulos de más de {SEO_ALERT_LIMITS.titleMax} caracteres o descripciones
+          fuera de {SEO_ALERT_LIMITS.descriptionMin}–{SEO_ALERT_LIMITS.descriptionMax}. Pasarse un par de caracteres no se marca:
+          Google corta por ancho en pantalla y muchas veces reescribe el texto. No es urgente; si arreglas alguna,
+          empieza por las recetas que más visitas traen («Editar para Google» en la receta).
         </p>
         <nav className="adm-tabs" aria-label="Idioma">
           {REQUIRED_LANGUAGES.filter((l) => l !== 'ja').map((l) => (
