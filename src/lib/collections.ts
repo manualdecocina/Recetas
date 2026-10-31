@@ -41,6 +41,13 @@ export function spanishPathVariants(path: string): string[] {
   return p.startsWith(prefix) ? [p, `/${p.slice(prefix.length)}`] : [p, `${prefix}${p.replace(/^\//, '')}`]
 }
 
+/** Colecciones que incluyen el plato cuya versión en español vive en `spanishPath`. */
+export function collectionsForSpanishPath(spanishPath: string | null | undefined, list: Collection[] = COLLECTIONS): Collection[] {
+  if (!spanishPath) return []
+  const target = new Set(spanishPathVariants(spanishPath))
+  return list.filter((c) => c.sections.flat().some((p) => spanishPathVariants(p).some((v) => target.has(v))))
+}
+
 /** Todas las rutas en español citadas por la colección, sin repetir y en orden. */
 export function collectionSpanishPaths(collection: Collection): string[] {
   return Array.from(new Set(collection.sections.flat().map(normalizePublicPath)))

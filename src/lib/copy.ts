@@ -14,6 +14,7 @@ const es = {
   seeAllCollections: "Ver colecciones",
   collectionsIndexIntro: "Selecciones de recetas por temporada y ocasión, hechas por nuestro chef con las recetas del sitio.",
   collectionCuratedBy: "Selección del chef Néstor Bastidas",
+  partOfCollection: "Parte de la colección:",
   searchLabel: "Buscar recetas",
   searchPlaceholder: "Busca por plato o ingrediente",
   searchButton: "Buscar",
@@ -165,6 +166,7 @@ const en = {
   seeAllCollections: "See all collections",
   collectionsIndexIntro: "Recipe selections by season and occasion, put together by our chef from the recipes on this site.",
   collectionCuratedBy: "Selected by chef Néstor Bastidas",
+  partOfCollection: "Part of the collection:",
   searchLabel: "Search recipes",
   searchPlaceholder: "Search by dish or ingredient",
   searchButton: "Search",
@@ -316,6 +318,7 @@ const de = {
   seeAllCollections: "Alle Sammlungen",
   collectionsIndexIntro: "Rezeptsammlungen nach Saison und Anlass, zusammengestellt von unserem Koch aus den Rezepten dieser Seite.",
   collectionCuratedBy: "Ausgewählt von Koch Néstor Bastidas",
+  partOfCollection: "Teil der Sammlung:",
   searchLabel: "Rezepte suchen", // REVISAR
   searchPlaceholder: "Nach Gericht oder Zutat suchen", // REVISAR
   searchButton: "Suchen", // REVISAR
@@ -467,6 +470,7 @@ const it = {
   seeAllCollections: "Vedi le raccolte",
   collectionsIndexIntro: "Raccolte di ricette per stagione e occasione, scelte dal nostro chef tra le ricette del sito.",
   collectionCuratedBy: "Selezione dello chef Néstor Bastidas",
+  partOfCollection: "Fa parte della raccolta:",
   searchLabel: "Cerca ricette", // REVISAR
   searchPlaceholder: "Cerca per piatto o ingrediente", // REVISAR
   searchButton: "Cerca", // REVISAR
@@ -618,6 +622,7 @@ const fr = {
   seeAllCollections: "Voir les collections",
   collectionsIndexIntro: "Des sélections de recettes par saison et par occasion, réunies par notre chef parmi les recettes du site.",
   collectionCuratedBy: "Sélection du chef Néstor Bastidas",
+  partOfCollection: "Fait partie de la collection :",
   searchLabel: "Rechercher des recettes", // REVISAR
   searchPlaceholder: "Rechercher un plat ou un ingrédient", // REVISAR
   searchButton: "Rechercher", // REVISAR
@@ -769,6 +774,7 @@ const ja = {
   seeAllCollections: "特集をすべて見る",
   collectionsIndexIntro: "季節や行事に合わせて、当サイトのシェフがレシピを選んでまとめた特集です。",
   collectionCuratedBy: "シェフ ネストル・バスティダス厳選",
+  partOfCollection: "掲載特集：",
   searchLabel: "レシピを検索", // REVISAR
   searchPlaceholder: "料理名や食材で検索", // REVISAR
   searchButton: "検索", // REVISAR
@@ -921,6 +927,7 @@ const pt = {
   seeAllCollections: "Ver coleções",
   collectionsIndexIntro: "Seleções de receitas por estação e ocasião, feitas pelo nosso chef com as receitas do site.",
   collectionCuratedBy: "Seleção do chef Néstor Bastidas",
+  partOfCollection: "Faz parte da coleção:",
   searchLabel: "Buscar receitas",
   searchPlaceholder: "Busque por prato ou ingrediente",
   searchButton: "Buscar",
