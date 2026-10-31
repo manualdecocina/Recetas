@@ -11,6 +11,7 @@ import { ingredientDisplayText } from '@/lib/recipe-ingredient-format'
 import SiteHeader from '@/components/md/SiteHeader'
 import SiteFooter from '@/components/md/SiteFooter'
 import RecipeDocumentVisual from '@/components/md/RecipeDocumentVisual'
+import { collectionPath, collectionsForSpanishPath } from '@/lib/collections'
 
 function cleanHtml(html: string): string {
   return html
@@ -29,6 +30,10 @@ export async function RecipeDocument({ recipe, relatedRecipes = [] }: { recipe: 
   const alternates = Object.fromEntries(
     translations.filter((t) => t.language !== recipe.language).map((t) => [t.language, recipeHref(t)])
   )
+  // Colecciones que incluyen este plato (se identifican por su versión en español).
+  const spanishPath = recipe.language === 'es' ? recipe.public_path : translations.find((t) => t.language === 'es')?.public_path
+  const collections = collectionsForSpanishPath(spanishPath)
+    .map((c) => ({ title: c.text[recipe.language].title, href: collectionPath(recipe.language, c) }))
   const notesHtml = recipe.notes ? cleanHtml(recipe.notes) : ''
   const totalMinutes = recipe.total_time_minutes ??
     ((recipe.prep_time_minutes != null && recipe.cook_time_minutes != null)
@@ -132,6 +137,7 @@ export async function RecipeDocument({ recipe, relatedRecipes = [] }: { recipe: 
           recipe={recipe}
           relatedRecipes={relatedRecipes}
           notesHtml={notesHtml}
+          collections={collections}
         />
       </main>
       <SiteFooter lang={recipe.language} />

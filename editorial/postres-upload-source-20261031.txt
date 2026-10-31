@@ -1,0 +1,27 @@
+const EXPECTED: Record<string,string> = {"manjar-blanco-del-valle/paso-03.webp": "81f8f479e6a028c5a7f99032dd3a30c0b36376dd24bca100544e06ebf7012ff1", "manjar-blanco-del-valle/paso-05.webp": "9de809f3478a7751e6d33391d82f1638ea6c25e1c950d4ec50f5964ae44a3235", "manjar-blanco-del-valle/paso-06.webp": "172de59ce67b018cc205cb46e04fa54b79ed6d3d2070815ef0ce9cd91a81f0db", "manjar-blanco-del-valle/paso-07.webp": "136d35b56c46fd9d008e3b2aef94345a57a881fdb55226450cff62e0fe52d762", "manjar-blanco-del-valle/paso-08.webp": "70075c5bce732bbbb3c6926689ab96b07f4be97d20e37b998a4898f2e00caa99", "manjar-blanco-del-valle/portada-16x9.webp": "6b55891f2ffabe1fdb27933e4898784903d9604fe3acef7814dd710ecd96f705", "manjar-blanco-del-valle/portada-1x1.webp": "9b5aa6388f6c54d65c98900eeb5b2211d9c8ca4855d34e75c6c40e9da7f5b1a8", "manjar-blanco-del-valle/portada-4x3.webp": "c76fed30294d32569db0134daf0318f1803cdb1f8053ecd426b42ccc14f5e021", "manjar-blanco-del-valle/portada.webp": "c76fed30294d32569db0134daf0318f1803cdb1f8053ecd426b42ccc14f5e021", "dulce-de-breva/paso-01.webp": "daaf0a0c1b532e76b19d41cf41240019effb792118a4ac11c9e497ea51a8c1ec", "dulce-de-breva/paso-02.webp": "211bc23e36cca588c5792680720983b82a2b9feffa092341feec3c1f27027525", "dulce-de-breva/paso-03.webp": "40e1c72a2dde3cf3f87b6294f0b2fb5f1e838542cf3da91f0f63169f14fd6c7e", "dulce-de-breva/paso-05.webp": "b04b59cd75e08da3788db7ad45fe6bdd3f94e25d29397c0b83937efa39cea6c3", "dulce-de-breva/paso-06.webp": "f54f555d55b4529375f91bd5e2a8bb363aac7f5665ea0b45628a81bbef1f0a8d", "dulce-de-breva/paso-07.webp": "ac21a836d12bfb4ea1067843852130ddf9cb91c053e26ae31d52a926fe4f0f56", "dulce-de-breva/paso-08.webp": "c8a53a081546d6d9d5072b964b0dd268c63b2b95a840f40324164bcadd2ef343", "dulce-de-breva/portada-16x9.webp": "8b2b5f12012d9b2e827f39f63687614c78a290d8063f3a6319a400ae6cadb563", "dulce-de-breva/portada-1x1.webp": "a8c8a12d95afe02b5088e580076e9ffb7f23e548dbd31701b756c2168c03b61f", "dulce-de-breva/portada-4x3.webp": "9ba141332a2af2eb23ff04434ac5a8531c75b675f91279722288bb95cbbd569f", "dulce-de-breva/portada.webp": "9ba141332a2af2eb23ff04434ac5a8531c75b675f91279722288bb95cbbd569f"};
+const TOKEN_HASH = "e65cc9fee78bb0b45b3b7362a6436ed373e102fef33d498cc2b82407c3551c1a";
+const REVISION = "26e8a1d1d71b648728148a3bc79bfcff769d70b1";
+const enc = new TextEncoder();
+async function hash(data: Uint8Array) { return Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',data))).map(b=>b.toString(16).padStart(2,'0')).join(''); }
+function reply(body: unknown,status=200){return new Response(JSON.stringify(body),{status,headers:{'Content-Type':'application/json','Cache-Control':'no-store'}});}
+Deno.serve(async(req: Request)=>{
+ if(req.method!== 'POST')return reply({error:'POST required'},405);
+ if(await hash(enc.encode(req.headers.get('x-upload-token')??''))!==TOKEN_HASH)return reply({error:'Unauthorized'},403);
+ const service=Deno.env.get('SUPABASE_SERVICE_ROLE_KEY');const base=Deno.env.get('SUPABASE_URL');
+ if(!service||!base)return reply({error:'Server configuration missing'},500);
+ const headers={Authorization:`Bearer ${service}`,apikey:service};
+ const results=[];
+ for(const [path,digest] of Object.entries(EXPECTED)){
+  const remote=await fetch(`https://raw.githubusercontent.com/manualdecocina/Recetas/${REVISION}/public/recetas/${path}`);
+  if(!remote.ok)return reply({error:'Source unavailable',path},502);
+  const bytes=new Uint8Array(await remote.arrayBuffer());
+  if(bytes.length>5242880||await hash(bytes)!==digest||new TextDecoder().decode(bytes.slice(8,12))!=='WEBP')return reply({error:'Source validation failed',path},422);
+  const check=await fetch(`${base}/storage/v1/object/public/recetas/${path}`);
+  if(check.ok){const old=new Uint8Array(await check.arrayBuffer());if(await hash(old)!==digest)return reply({error:'Destination exists with different bytes',path},409);results.push({path,status:'already-present'});continue;}
+  if(check.status!==400&&check.status!==404)return reply({error:'Destination check failed',path,status:check.status},502);
+  const uploaded=await fetch(`${base}/storage/v1/object/recetas/${path}`,{method:'POST',headers:{...headers,'Content-Type':'image/webp','cache-control':'31536000','x-upsert':'false'},body:bytes});
+  if(!uploaded.ok)return reply({error:'Upload failed',path,status:uploaded.status},502);
+  results.push({path,status:'uploaded',bytes:bytes.length});
+ }
+ return reply({ok:true,bucket:'recetas',files:results});
+});
