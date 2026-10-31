@@ -34,6 +34,13 @@ export function collectionText(collection: Collection, lang: RecipeLanguage): Co
   return collection.text[lang]
 }
 
+/** Formas equivalentes de una ruta española citada: tal cual y con/sin el prefijo /es/receta. */
+export function spanishPathVariants(path: string): string[] {
+  const p = normalizePublicPath(path)
+  const prefix = '/es/receta/'
+  return p.startsWith(prefix) ? [p, `/${p.slice(prefix.length)}`] : [p, `${prefix}${p.replace(/^\//, '')}`]
+}
+
 /** Todas las rutas en español citadas por la colección, sin repetir y en orden. */
 export function collectionSpanishPaths(collection: Collection): string[] {
   return Array.from(new Set(collection.sections.flat().map(normalizePublicPath)))

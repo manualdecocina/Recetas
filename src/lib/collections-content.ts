@@ -7,6 +7,8 @@ import type { RecipeLanguage } from '@/types/recipe'
  *
  * Reglas:
  * - Las recetas se citan por su public_path en español (estable: las URLs no cambian).
+ *   Se acepta también la forma /es/receta/<slug> para la misma entrada (las recetas nuevas
+ *   se publican así), de modo que '/dulce-de-breva' encuentra '/es/receta/dulce-de-breva'.
  *   En cada idioma se muestra la versión de ese idioma del mismo plato (recipe_group_id).
  * - Cada colección tiene los 7 idiomas completos (mismo sitio en todos los idiomas).
  * - El segmento /colecciones/ es igual en todos los idiomas, como /recetas/ y /categorias/;
@@ -60,12 +62,12 @@ export const COLLECTIONS: Collection[] = [
     sections: [
       [
         '/receta-de-lechona-colombiana',
-        // Tamal y pernil: se muestran solos en cuanto estén publicados (antes no aparecen).
-        '/tamal-tolimense',
-        '/pernil-de-cerdo-al-horno',
+        '/es/receta/tamal-tolimense',
+        '/es/receta/pernil-de-cerdo-al-horno',
         '/natilla-colombiana',
         '/bunuelos-colombianos',
-        // Dulce de breva y manjar blanco: aparecen solos en cuanto estén publicados.
+        // Dulce de breva y manjar blanco: aparecen solos en cuanto estén publicados
+        // (con /dulce-de-breva o /es/receta/dulce-de-breva: se aceptan las dos formas).
         '/manjar-blanco-del-valle',
         '/dulce-de-breva',
         '/hojuelas-colombianas',

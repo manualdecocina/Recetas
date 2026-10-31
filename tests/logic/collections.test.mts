@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import { existsSync } from 'node:fs'
-import { COLLECTIONS, COVER_FILES, collectionCover, arrangeCollection, collectionAlternatePaths, collectionPath, collectionSpanishPaths, findCollection } from '@/lib/collections'
+import { COLLECTIONS, COVER_FILES, collectionCover, spanishPathVariants, arrangeCollection, collectionAlternatePaths, collectionPath, collectionSpanishPaths, findCollection } from '@/lib/collections'
 import { SUPPORTED_LANGUAGES } from '@/types/recipe'
 import { seoSaveError } from '@/lib/admin/seo-checks'
 
@@ -57,6 +57,12 @@ check('Portada propia: si se pone la carpeta, los 4 archivos existen en /public'
       assert.ok(existsSync(path), `${c.id}: falta public${collectionCover(c, file)}`)
     }
   }
+})
+
+check('Acepta /slug y /es/receta/slug como la misma receta', () => {
+  assert.deepEqual(spanishPathVariants('/dulce-de-breva'), ['/dulce-de-breva', '/es/receta/dulce-de-breva'])
+  assert.deepEqual(spanishPathVariants('/es/receta/tamal-tolimense'), ['/es/receta/tamal-tolimense', '/tamal-tolimense'])
+  assert.deepEqual(spanishPathVariants('/natilla-colombiana/'), ['/natilla-colombiana', '/es/receta/natilla-colombiana'])
 })
 
 console.log(`\n${n} pruebas OK`)
