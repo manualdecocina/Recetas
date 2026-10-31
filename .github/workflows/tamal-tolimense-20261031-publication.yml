@@ -1,0 +1,31 @@
+name: tamal-tolimense-20261031-publication
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'editorial/tamal-tolimense-20261031.json'
+      - 'public/recetas/tamal-tolimense/**'
+      - '.github/workflows/tamal-tolimense-20261031-publication.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            editorial/tamal-tolimense-20261031.json
+            scripts/audit-tamal-tolimense-20261031.py
+          sparse-checkout-cone-mode: false
+      - name: Verify deployed media and seven-language production publication
+        env:
+          REVALIDATE_SECRET: ${{ secrets.REVALIDATE_SECRET }}
+        run: python3 scripts/audit-tamal-tolimense-20261031.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: tamal-tolimense-20261031-production-qa
+          path: tamal-tolimense-20261031-production-qa.json
