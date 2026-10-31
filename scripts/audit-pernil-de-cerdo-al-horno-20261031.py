@@ -40,7 +40,7 @@ try:
   assert 'noindex' not in page.lower(),r['slug']
   assert len(re.findall(r'<h1(?:\s|>)',page))==1,r['slug']
   assert BASE+r['public_path'] in page,r['slug']
-  assert re.search(r'<html[^>]+lang="'+r['language']+'"',page),r['slug']
+  assert re.search(r'<html[^>]+lang="'+('pt-BR' if r['language']=='pt' else r['language'])+'"',page),r['slug']
   for other in records:assert BASE+other['public_path'] in page,(r['slug'],'missing alternate',other['language'])
   assert 'Néstor Bastidas' in page,r['slug']
   schemas=[json.loads(html.unescape(x)) for x in re.findall(r'<script[^>]+type="application/ld\+json"[^>]*>(.*?)</script>',page,re.S)]
