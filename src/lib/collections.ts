@@ -1,7 +1,7 @@
 import type { RecipeLanguage } from '@/types/recipe'
 import { SUPPORTED_LANGUAGES } from '@/types/recipe'
 import { normalizePublicPath } from '@/lib/site'
-import { COLLECTIONS, type Collection, type CollectionText } from '@/lib/collections-content'
+import { COLLECTIONS, COVER_FILES, collectionCover, type Collection, type CollectionText } from '@/lib/collections-content'
 
 /** Lógica pura de colecciones (sin red): búsqueda por slug, rutas y orden de recetas. */
 
@@ -56,5 +56,5 @@ export function arrangeCollection<T>(
     .filter((recipe): recipe is T => recipe !== undefined))
 }
 
-export { COLLECTIONS }
+export { COLLECTIONS, COVER_FILES, collectionCover }
 export type { Collection, CollectionText }

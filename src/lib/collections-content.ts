@@ -36,7 +36,21 @@ export interface Collection {
   id: string
   /** Recetas por sección, en el orden en que se muestran (public_path en español). */
   sections: string[][]
+  /**
+   * Portada propia de la colección (opcional). Carpeta dentro de /public, p. ej.
+   * '/colecciones/navidad-colombiana', con 4 archivos: portada.webp (1440×960),
+   * portada-4x3.webp (1200×900), portada-1x1.webp (1024×1024) y portada-16x9.webp (1280×720).
+   * Sin esto, la tarjeta usa la foto de la primera receta. La prueba collections.test.mts
+   * falla si se pone la carpeta sin los 4 archivos.
+   */
+  coverDir?: string
   text: Record<RecipeLanguage, CollectionText>
+}
+
+export const COVER_FILES = ['portada.webp', 'portada-4x3.webp', 'portada-1x1.webp', 'portada-16x9.webp'] as const
+
+export function collectionCover(collection: Collection, file: (typeof COVER_FILES)[number]): string | null {
+  return collection.coverDir ? `${collection.coverDir.replace(/\/+$/, '')}/${file}` : null
 }
 
 export const COLLECTIONS: Collection[] = [

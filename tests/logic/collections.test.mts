@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict'
-import { COLLECTIONS, arrangeCollection, collectionAlternatePaths, collectionPath, collectionSpanishPaths, findCollection } from '@/lib/collections'
+import { existsSync } from 'node:fs'
+import { COLLECTIONS, COVER_FILES, collectionCover, arrangeCollection, collectionAlternatePaths, collectionPath, collectionSpanishPaths, findCollection } from '@/lib/collections'
 import { SUPPORTED_LANGUAGES } from '@/types/recipe'
 import { seoSaveError } from '@/lib/admin/seo-checks'
 
@@ -45,6 +46,17 @@ check('Ordena por secciones y omite lo que no existe en ese idioma', () => {
   const groups = new Map([['/receta-de-lechona-colombiana', 'g1'], ['/natilla-colombiana', 'g2'], ['/lomo-de-cerdo-relleno', 'g3']])
   const recipes = new Map([['g1', 'lechona'], ['g3', 'lomo']])
   assert.deepEqual(arrangeCollection(navidad, groups, recipes), [['lechona'], ['lomo']])
+})
+
+check('Portada propia: si se pone la carpeta, los 4 archivos existen en /public', () => {
+  for (const c of COLLECTIONS) {
+    if (!c.coverDir) continue
+    assert.match(c.coverDir, /^\/colecciones\/[a-z0-9-]+$/, `${c.id}: coverDir debe ser /colecciones/<id>`)
+    for (const file of COVER_FILES) {
+      const path = new URL(`../../public${collectionCover(c, file)}`, import.meta.url)
+      assert.ok(existsSync(path), `${c.id}: falta public${collectionCover(c, file)}`)
+    }
+  }
 })
 
 console.log(`\n${n} pruebas OK`)
