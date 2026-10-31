@@ -32,6 +32,9 @@ export interface CollectionText {
   /** Párrafos de introducción del chef. */
   intro: string[]
   sections: CollectionSection[]
+  /** Preguntas frecuentes al final de la página (texto visible; sin datos estructurados FAQ,
+   * que Google ya no muestra para sitios de recetas). */
+  faq?: { q: string; a: string }[]
 }
 
 export interface Collection {
@@ -70,6 +73,10 @@ export const COLLECTIONS: Collection[] = [
         // (con /dulce-de-breva o /es/receta/dulce-de-breva: se aceptan las dos formas).
         '/manjar-blanco-del-valle',
         '/dulce-de-breva',
+        // Sabajón, torta negra y dulce de papaya verde: aparecen solos al publicarse.
+        '/es/receta/sabajon-colombiano',
+        '/es/receta/torta-negra-colombiana',
+        '/es/receta/dulce-de-papaya-verde',
         '/hojuelas-colombianas',
         '/hojaldras-colombianas',
         '/receta-de-ajiaco',
@@ -98,6 +105,12 @@ export const COLLECTIONS: Collection[] = [
           { heading: 'La tradición colombiana', note: 'Los platos que no pueden faltar en diciembre: para la novena, la cena y el recalentado.' },
           { heading: 'Para completar la mesa', note: 'Un plato fuerte, una ensalada y dulces para compartir con la familia y las visitas.' },
         ],
+        faq: [
+          { q: "¿Qué se come en Navidad en Colombia?", a: "Depende de la región, pero en casi todo el país no faltan la natilla y los buñuelos, que se comparten durante la novena. Para la cena del 24 son comunes la lechona, el tamal o el pernil de cerdo, y de postre el manjar blanco, el dulce de breva y las hojuelas." },
+          { q: "¿Qué es la novena de aguinaldos?", a: "Es una tradición colombiana: durante los nueve días antes de Navidad, del 16 al 24 de diciembre, familias y vecinos se reúnen a rezar, cantar villancicos y compartir natilla, buñuelos y algo de tomar." },
+          { q: "¿Con qué se acompaña la natilla?", a: "Lo clásico es servirla con buñuelos recién fritos. En el Valle del Cauca también va con manjar blanco y dulce de breva, y en muchas casas se pone al lado de las hojuelas." },
+          { q: "¿Qué se puede preparar con anticipación?", a: "La natilla y el manjar blanco aguantan varios días en la nevera, y el dulce de breva aún más si queda bien cubierto con su almíbar. El tamal se puede cocinar un día antes y recalentar al vapor. Los buñuelos y las hojuelas son mejores recién hechos." },
+        ],
       },
       en: {
         slug: 'colombian-christmas-recipes',
@@ -111,6 +124,12 @@ export const COLLECTIONS: Collection[] = [
         sections: [
           { heading: 'Colombian tradition', note: 'The dishes no Colombian December is complete without: for the novena, Christmas Eve and the day-after leftovers.' },
           { heading: 'To round out the table', note: 'A main course, a salad and sweets to share with family and guests.' },
+        ],
+        faq: [
+          { q: "What do Colombians eat at Christmas?", a: "It depends on the region, but almost everywhere you will find natilla and buñuelos, shared during the novena. Christmas Eve dinner often includes lechona, tamales or roast pork leg (pernil), with manjar blanco, candied figs and hojuelas for dessert." },
+          { q: "What is the novena de aguinaldos?", a: "It is a Colombian tradition: for the nine days before Christmas, from December 16 to 24, families and neighbours gather to pray, sing carols and share natilla, buñuelos and something to drink." },
+          { q: "What is natilla served with?", a: "The classic pairing is freshly fried buñuelos. In the Valle del Cauca region it also comes with manjar blanco and candied figs, and many families serve it alongside hojuelas." },
+          { q: "What can I make ahead?", a: "Natilla and manjar blanco keep for several days in the fridge, and candied figs even longer if they stay covered in their syrup. Tamales can be cooked a day ahead and reheated by steaming. Buñuelos and hojuelas are best freshly made." },
         ],
       },
       de: {
@@ -126,6 +145,12 @@ export const COLLECTIONS: Collection[] = [
           { heading: 'Kolumbianische Tradition', note: 'Die Gerichte, die im kolumbianischen Dezember nicht fehlen dürfen: für die Novena, den Heiligabend und die Reste am Tag danach.' },
           { heading: 'Für den festlichen Tisch', note: 'Ein Hauptgericht, ein Salat und Süßes zum Teilen mit Familie und Gästen.' },
         ],
+        faq: [
+          { q: "Was isst man in Kolumbien an Weihnachten?", a: "Das hängt von der Region ab, aber fast überall gibt es Natilla und Buñuelos, die während der Novena geteilt werden. Am Heiligabend kommen oft Lechona, Tamales oder Schweinekeule (Pernil) auf den Tisch, als Dessert Manjar Blanco, Feigen in Sirup und Hojuelas." },
+          { q: "Was ist die Novena de Aguinaldos?", a: "Eine kolumbianische Tradition: In den neun Tagen vor Weihnachten, vom 16. bis 24. Dezember, kommen Familien und Nachbarn zusammen, um zu beten, Weihnachtslieder zu singen und Natilla, Buñuelos und etwas zu trinken zu teilen." },
+          { q: "Wozu isst man Natilla?", a: "Klassisch zu frisch frittierten Buñuelos. Im Valle del Cauca gehören auch Manjar Blanco und Feigen in Sirup dazu, und in vielen Familien stehen Hojuelas daneben." },
+          { q: "Was lässt sich vorbereiten?", a: "Natilla und Manjar Blanco halten sich mehrere Tage im Kühlschrank, Feigen in Sirup noch länger, wenn sie gut mit Sirup bedeckt sind. Tamales kann man am Vortag garen und im Dampf wieder erwärmen. Buñuelos und Hojuelas schmecken frisch am besten." },
+        ],
       },
       fr: {
         slug: 'recettes-noel-colombien',
@@ -139,6 +164,12 @@ export const COLLECTIONS: Collection[] = [
         sections: [
           { heading: 'La tradition colombienne', note: 'Les plats incontournables du mois de décembre en Colombie : pour la novena, le réveillon et les restes du lendemain.' },
           { heading: 'Pour compléter la table', note: 'Un plat principal, une salade et des douceurs à partager avec la famille et les invités.' },
+        ],
+        faq: [
+          { q: "Que mange-t-on à Noël en Colombie ?", a: "Cela dépend de la région, mais presque partout on trouve la natilla et les buñuelos, partagés pendant la novena. Au réveillon, on sert souvent la lechona, les tamales ou le cuisseau de porc rôti (pernil), et en dessert le manjar blanco, les figues confites et les hojuelas." },
+          { q: "Qu’est-ce que la novena de aguinaldos ?", a: "C’est une tradition colombienne : pendant les neuf jours qui précèdent Noël, du 16 au 24 décembre, familles et voisins se réunissent pour prier, chanter des chants de Noël et partager natilla, buñuelos et quelque chose à boire." },
+          { q: "Avec quoi sert-on la natilla ?", a: "Le classique, ce sont des buñuelos tout juste frits. Dans la vallée du Cauca, on l’accompagne aussi de manjar blanco et de figues confites, et beaucoup de familles la servent avec des hojuelas." },
+          { q: "Que peut-on préparer à l’avance ?", a: "La natilla et le manjar blanco se gardent plusieurs jours au réfrigérateur, les figues confites encore plus longtemps si elles restent couvertes de sirop. Les tamales peuvent être cuits la veille et réchauffés à la vapeur. Les buñuelos et les hojuelas sont meilleurs tout juste faits." },
         ],
       },
       it: {
@@ -154,6 +185,12 @@ export const COLLECTIONS: Collection[] = [
           { heading: 'La tradizione colombiana', note: 'I piatti che non possono mancare nel dicembre colombiano: per la novena, la vigilia e gli avanzi del giorno dopo.' },
           { heading: 'Per completare la tavola', note: 'Un secondo, un’insalata e dolci da condividere con la famiglia e gli ospiti.' },
         ],
+        faq: [
+          { q: "Cosa si mangia a Natale in Colombia?", a: "Dipende dalla regione, ma quasi ovunque non mancano la natilla e i buñuelos, condivisi durante la novena. Per la cena della vigilia sono comuni la lechona, i tamales o la coscia di maiale al forno (pernil), e come dolce il manjar blanco, i fichi sciroppati e le hojuelas." },
+          { q: "Che cos’è la novena de aguinaldos?", a: "È una tradizione colombiana: nei nove giorni prima di Natale, dal 16 al 24 dicembre, famiglie e vicini si riuniscono per pregare, cantare canti natalizi e condividere natilla, buñuelos e qualcosa da bere." },
+          { q: "Con cosa si accompagna la natilla?", a: "Il classico è con buñuelos appena fritti. Nella Valle del Cauca si serve anche con manjar blanco e fichi sciroppati, e in molte case accanto alle hojuelas." },
+          { q: "Cosa si può preparare in anticipo?", a: "La natilla e il manjar blanco si conservano per diversi giorni in frigorifero, i fichi sciroppati ancora di più se restano coperti dal loro sciroppo. I tamales si possono cuocere il giorno prima e riscaldare al vapore. Buñuelos e hojuelas sono migliori appena fatti." },
+        ],
       },
       ja: {
         slug: 'コロンビアのクリスマスレシピ',
@@ -168,6 +205,12 @@ export const COLLECTIONS: Collection[] = [
           { heading: 'コロンビアの伝統料理', note: 'コロンビアの12月に欠かせない料理。ノベナ、クリスマスイブ、そして翌日の温め直しにも。' },
           { heading: '食卓を彩るもう一品', note: 'メイン料理、サラダ、家族やお客さまと分け合うお菓子。' },
         ],
+        faq: [
+          { q: "コロンビアのクリスマスには何を食べますか？", a: "地域によって違いますが、ほぼ全国でナティージャとブニュエロは欠かせず、ノベナの間にみんなで分け合います。24日の夕食にはレチョナやタマル、豚もも肉のオーブン焼き（ペルニル）がよく並び、デザートにはマンハル・ブランコやいちじくのシロップ煮、ホフエラスが定番です。" },
+          { q: "「ノベナ・デ・アギナルドス」とは何ですか？", a: "コロンビアの伝統行事で、クリスマス前の9日間（12月16日〜24日）、家族や近所の人が集まって祈り、クリスマスの歌を歌い、ナティージャやブニュエロ、飲み物を分け合います。" },
+          { q: "ナティージャには何を合わせますか？", a: "定番は揚げたてのブニュエロです。バジェ・デル・カウカ地方ではマンハル・ブランコやいちじくのシロップ煮も添え、多くの家庭ではホフエラスと一緒に出します。" },
+          { q: "前もって作れるものは？", a: "ナティージャとマンハル・ブランコは冷蔵庫で数日もち、いちじくのシロップ煮はシロップにしっかり浸っていればさらに長もちします。タマルは前日に作って蒸し直せます。ブニュエロとホフエラスは作りたてがいちばんです。" },
+        ],
       },
       pt: {
         slug: 'receitas-natal-colombiano',
@@ -181,6 +224,12 @@ export const COLLECTIONS: Collection[] = [
         sections: [
           { heading: 'A tradição colombiana', note: 'Os pratos que não podem faltar no dezembro colombiano: para a novena, a ceia e as sobras do dia seguinte.' },
           { heading: 'Para completar a mesa', note: 'Um prato principal, uma salada e doces para dividir com a família e as visitas.' },
+        ],
+        faq: [
+          { q: "O que se come no Natal na Colômbia?", a: "Depende da região, mas em quase todo o país não faltam a natilla e os buñuelos, compartilhados durante a novena. Na ceia do dia 24 são comuns a lechona, o tamal ou o pernil de porco assado, e de sobremesa o manjar blanco, o doce de figo e as hojuelas." },
+          { q: "O que é a novena de aguinaldos?", a: "É uma tradição colombiana: nos nove dias antes do Natal, de 16 a 24 de dezembro, famílias e vizinhos se reúnem para rezar, cantar canções de Natal e dividir natilla, buñuelos e algo para beber." },
+          { q: "Com o que se acompanha a natilla?", a: "O clássico é servir com buñuelos fritos na hora. No Valle del Cauca ela também vem com manjar blanco e doce de figo, e em muitas casas é servida ao lado das hojuelas." },
+          { q: "O que dá para preparar com antecedência?", a: "A natilla e o manjar blanco duram vários dias na geladeira, e o doce de figo dura ainda mais se ficar bem coberto pela calda. O tamal pode ser cozido no dia anterior e reaquecido no vapor. Buñuelos e hojuelas ficam melhores feitos na hora." },
         ],
       },
     },

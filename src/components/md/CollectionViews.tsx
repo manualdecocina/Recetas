@@ -112,6 +112,17 @@ export function CollectionDetailView({ lang, collection, sections }: {
             </div>
           </section>
         ))}
+        {text.faq && text.faq.length > 0 && (
+          <section className="md-section md-faq md-collection-faq" aria-labelledby="md-collection-faq-heading">
+            <h2 className="md-title" id="md-collection-faq-heading">{t.faqTitle}</h2>
+            {text.faq.map((item) => (
+              <details key={item.q}>
+                <summary>{item.q}</summary>
+                <p>{item.a}</p>
+              </details>
+            ))}
+          </section>
+        )}
         {all.length === 0 && (
           <div className="md-empty-block">
             <h2 className="md-subtitle">{t.emptyTitle}</h2><p>{t.emptyBody}</p>
