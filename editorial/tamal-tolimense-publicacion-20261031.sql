@@ -24,7 +24,7 @@ BEGIN
  INSERT INTO public.recipes (recipe_group_id,language, slug, title, excerpt, summary, ingredients, steps, category, prep_time_minutes, cook_time_minutes, total_time_minutes, servings, image_url, content_html, notes, difficulty, course, cuisine, keywords, nutrition, seo, public_path, gallery,published,editorial_status)
  SELECT v_group,s.language, s.slug, s.title, s.excerpt, s.summary, s.ingredients, s.steps, s.category, s.prep_time_minutes, s.cook_time_minutes, s.total_time_minutes, s.servings, s.image_url, s.content_html, s.notes, s.difficulty, s.course, s.cuisine, s.keywords, s.nutrition, s.seo, s.public_path, s.gallery,false,'draft' FROM jsonb_populate_recordset(NULL::public.recipes,payload) s WHERE s.language<>'es';
  IF (SELECT count(*) FROM public.recipe_ingredients WHERE recipe_id=v_source)<>19 OR EXISTS (SELECT 1 FROM public.recipe_ingredient_pending WHERE recipe_id=v_source) THEN RAISE EXCEPTION 'Ingredient catalogue mapping incomplete'; END IF;
- UPDATE public.recipes SET published=true,editorial_status='published' WHERE recipe_group_id=v_group;
+ UPDATE public.recipes SET published=true,editorial_status='published',ready_at=coalesce(ready_at,now()) WHERE recipe_group_id=v_group;
  SELECT count(DISTINCT language) INTO v_n FROM public.recipes WHERE recipe_group_id=v_group AND published AND nutrition IS NOT NULL;
  IF v_n<>7 THEN RAISE EXCEPTION 'Incomplete seven-language publication'; END IF;
  RAISE NOTICE 'Published group % with seven languages',v_group;

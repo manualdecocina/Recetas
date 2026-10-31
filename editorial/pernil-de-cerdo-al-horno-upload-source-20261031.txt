@@ -1,0 +1,28 @@
+const EXPECTED: Record<string,string> = {"pernil-de-cerdo-al-horno/paso-24.webp": "2835572e522c7d59dfa092c5aa1ff1d85e1713c6d76afb3d468ed9b1a2a50223", "pernil-de-cerdo-al-horno/paso-17.webp": "d76d2accc90aba84878a7c957d6644497cd32ddb69376b40113be13807dd57ce", "pernil-de-cerdo-al-horno/portada-16x9.webp": "b10c3576523cdba45a4c22b1667ac41c06e49f8cc518420e7d75ed9ecb5985f9", "pernil-de-cerdo-al-horno/portada-1x1.webp": "f81d23d14a2fc56eb3f01d5eb5abc996ecdd3cc3453654e0460b6393370d537f", "pernil-de-cerdo-al-horno/paso-10.webp": "d74127cedb17c10ea09cacf70616a4b249256692e07878fccb905426defef293", "pernil-de-cerdo-al-horno/paso-16.webp": "08eb03dd6715135f5dfc42f2fcc90232aedd72b8e2d796059af24497a1fa8698", "pernil-de-cerdo-al-horno/paso-02.webp": "5d2bf5c1973d0baa72d0fa611867ece642cffa76e079902d23ebd61777029e51", "pernil-de-cerdo-al-horno/portada-4x3.webp": "1f8ff5f3231bc2a568a63fab4063810c4188bd132c5c8db735db838c5d05c381", "pernil-de-cerdo-al-horno/portada.webp": "1f8ff5f3231bc2a568a63fab4063810c4188bd132c5c8db735db838c5d05c381", "pernil-de-cerdo-al-horno/ingredientes.webp": "4cbda8de685cf757dc02fccd233cac5b42a85238d9055d6f069b56a186c607fe", "pernil-de-cerdo-al-horno/paso-03.webp": "7f35b6f698a721be47b2bd5a02b7b06c691c2a7a756f34bbf0085d2a63e6fc32"};
+const TOKEN_HASH = "3ff0f1ba8d1215488ab2a40bddb8e8343ceb82c8fe9b697ea887535de6a201d3";
+const REVISION = "14a14f84c06befc7c2b7bf05ae02621694026e83";
+const enc = new TextEncoder();
+async function hash(data: Uint8Array) { return Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',data))).map(b=>b.toString(16).padStart(2,'0')).join(''); }
+function reply(body: unknown,status=200){return new Response(JSON.stringify(body),{status,headers:{'Content-Type':'application/json','Cache-Control':'no-store'}});}
+Deno.serve(async(req: Request)=>{
+ if(req.method!== 'POST')return reply({error:'POST required'},405);
+ if(await hash(enc.encode(req.headers.get('x-upload-token')??''))!==TOKEN_HASH)return reply({error:'Unauthorized'},403);
+ const service=Deno.env.get('SUPABASE_SERVICE_ROLE_KEY');const base=Deno.env.get('SUPABASE_URL');
+ if(!service||!base)return reply({error:'Server configuration missing'},500);
+ const headers={Authorization:`Bearer ${service}`,apikey:service};
+ const results=[];
+ for(const [path,digest] of Object.entries(EXPECTED)){
+  const remote=await fetch(`https://raw.githubusercontent.com/manualdecocina/Recetas/${REVISION}/public/recetas/${path}`);
+  if(!remote.ok)return reply({error:'Source unavailable',path},502);
+  const bytes=new Uint8Array(await remote.arrayBuffer());
+  if(bytes.length>5242880||await hash(bytes)!==digest||new TextDecoder().decode(bytes.slice(8,12))!=='WEBP')return reply({error:'Source validation failed',path},422);
+  const check=await fetch(`${base}/storage/v1/object/public/recetas/${path}`);
+  if(check.ok){const old=new Uint8Array(await check.arrayBuffer());if(await hash(old)!==digest)return reply({error:'Destination exists with different bytes',path},409);results.push({path,status:'already-present'});continue;}
+  if(check.status!==400&&check.status!==404)return reply({error:'Destination check failed',path,status:check.status},502);
+  const uploaded=await fetch(`${base}/storage/v1/object/recetas/${path}`,{method:'POST',headers:{...headers,'Content-Type':'image/webp','cache-control':'31536000','x-upsert':'false'},body:bytes});
+  if(!uploaded.ok)return reply({error:'Upload failed',path,status:uploaded.status},502);
+  results.push({path,status:'uploaded',bytes:bytes.length});
+ }
+ return reply({ok:true,bucket:'recetas',files:results});
+});
+
