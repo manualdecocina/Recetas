@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import { CollectionDetailView } from '@/components/md/CollectionViews'
-import { COLLECTIONS, collectionPath, findCollection } from '@/lib/collections'
+import { COLLECTIONS, collectionCover, collectionPath, findCollection } from '@/lib/collections'
 import { loadCollectionRecipes } from '@/lib/collections-data'
 import { allLanguageAlternates, withSiteName } from '@/lib/seo'
 import { absoluteUrl, publicUrl } from '@/lib/site'
@@ -26,8 +26,14 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   const collection = lang ? findCollection(lang, slug) : null
   if (!lang || !collection) return {}
   const text = collection.text[lang]
-  const first = (await loadCollectionRecipes(collection, lang)).flat().find((r) => r.image_url)
-  const images = first?.image_url ? [{ url: absoluteUrl(recipeImageSrc(first.image_url)), alt: text.title }] : undefined
+  const wide = collectionCover(collection, 'portada-16x9.webp')
+  const first = wide ? null : (await loadCollectionRecipes(collection, lang)).flat().find((r) => r.image_url)
+  const images = wide
+    ? [
+      { url: absoluteUrl(wide), width: 1280, height: 720, alt: text.title },
+      { url: absoluteUrl(collectionCover(collection, 'portada-1x1.webp')!), width: 1024, height: 1024, alt: text.title },
+    ]
+    : first?.image_url ? [{ url: absoluteUrl(recipeImageSrc(first.image_url)), alt: text.title }] : undefined
   return {
     title: withSiteName(text.seoTitle),
     description: text.description,

@@ -6,7 +6,7 @@ import { getMdCopy } from '@/lib/copy';
 import { languageTag } from '@/lib/site';
 import { recipeListItem } from '@/lib/recipe-list-seo';
 import { SUPPORTED_LANGUAGES } from '@/types/recipe';
-import { collectionAlternatePaths, collectionPath, collectionsIndexPath, type Collection } from '@/lib/collections';
+import { collectionAlternatePaths, collectionCover, collectionPath, collectionsIndexPath, type Collection } from '@/lib/collections';
 import type { CollectionSummary } from '@/lib/collections-data';
 import SiteHeader from './SiteHeader';
 import SiteFooter from './SiteFooter';
@@ -70,6 +70,7 @@ export function CollectionDetailView({ lang, collection, sections }: {
   const t = getMdCopy(lang);
   const text = collection.text[lang];
   const all = sections.flat();
+  const cover = collectionCover(collection, 'portada.webp');
   // Página resumen de recetas: ItemList con la URL canónica de cada receta (como /recetas).
   const itemList = {
     '@context': 'https://schema.org',
@@ -96,6 +97,10 @@ export function CollectionDetailView({ lang, collection, sections }: {
           <p className="md-collection-curator">
             <Link className="md-link" href={`/${lang}/quienes-somos`}>{t.collectionCuratedBy}</Link>
           </p>
+          {cover && (
+            <Image className="md-collection-cover" src={cover} alt={text.title} width={1440} height={960}
+              priority sizes="(max-width: 1240px) calc(100vw - 36px), 1200px" />
+          )}
         </header>
         {sections.map((recipes, index) => recipes.length > 0 && (
           <section className="md-section md-collection-section" key={text.sections[index]?.heading ?? index}

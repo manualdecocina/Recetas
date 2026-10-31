@@ -1,7 +1,7 @@
 import { supabase } from '@/lib/supabase/public'
 import type { RecipeLanguage } from '@/types/recipe'
 import type { MdRecipeCardData } from '@/components/md/md-types'
-import { arrangeCollection, collectionSpanishPaths, type Collection } from '@/lib/collections'
+import { arrangeCollection, collectionCover, collectionSpanishPaths, type Collection } from '@/lib/collections'
 
 const CARD_FIELDS = 'id, language, slug, public_path, source_url, title, excerpt, category, image_url'
 
@@ -30,13 +30,14 @@ export async function loadCollectionRecipes(collection: Collection, lang: Recipe
 export interface CollectionSummary {
   collection: Collection
   count: number
-  /** Foto real de la primera receta de la colección en ese idioma, o null. */
+  /** Portada propia de la colección (4:3) o, si no tiene, la foto real de la primera receta. */
   image_url: string | null
 }
 
 export async function loadCollectionSummaries(collections: Collection[], lang: RecipeLanguage): Promise<CollectionSummary[]> {
   return Promise.all(collections.map(async (collection) => {
     const recipes = (await loadCollectionRecipes(collection, lang)).flat()
-    return { collection, count: recipes.length, image_url: recipes.find((r) => r.image_url)?.image_url ?? null }
+    const own = collectionCover(collection, 'portada-4x3.webp')
+    return { collection, count: recipes.length, image_url: own ?? recipes.find((r) => r.image_url)?.image_url ?? null }
   }))
 }
