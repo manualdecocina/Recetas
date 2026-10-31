@@ -56,6 +56,7 @@ export function collectionCover(collection: Collection, file: (typeof COVER_FILE
 export const COLLECTIONS: Collection[] = [
   {
     id: 'navidad-colombiana',
+    coverDir: '/colecciones/navidad-colombiana',
     sections: [
       [
         '/receta-de-lechona-colombiana',
