@@ -40,6 +40,10 @@ try:
   assert 'noindex' not in page.lower(),r['slug']
   assert len(re.findall(r'<h1(?:\s|>)',page))==1,r['slug']
   assert BASE+r['public_path'] in page,r['slug']
+  title_match=re.search(r'<title>(.*?)</title>',page,re.S)
+  assert title_match and len(html.unescape(title_match.group(1)))<=60,(r['slug'],'rendered SEO title')
+  desc_match=re.search(r'<meta name="description" content="([^"]+)"',page)
+  assert desc_match and 120<=len(html.unescape(desc_match.group(1)))<=160,(r['slug'],'meta description')
   assert re.search(r'<html[^>]+lang="'+('pt-BR' if r['language']=='pt' else r['language'])+'"',page),r['slug']
   for other in records:assert BASE+other['public_path'] in page,(r['slug'],'missing alternate',other['language'])
   assert 'Néstor Bastidas' in page,r['slug']
