@@ -1,7 +1,7 @@
 import { supabase } from '@/lib/supabase/public'
 import type { RecipeLanguage } from '@/types/recipe'
 import type { MdRecipeCardData } from '@/components/md/md-types'
-import { arrangeCollection, collectionCover, collectionSpanishPaths, type Collection } from '@/lib/collections'
+import { arrangeCollection, collectionCover, collectionSpanishPaths, spanishPathVariants, type Collection } from '@/lib/collections'
 
 const CARD_FIELDS = 'id, language, slug, public_path, source_url, title, excerpt, category, image_url'
 
@@ -9,10 +9,17 @@ const CARD_FIELDS = 'id, language, slug, public_path, source_url, title, excerpt
 export async function loadCollectionRecipes(collection: Collection, lang: RecipeLanguage): Promise<MdRecipeCardData[][]> {
   const paths = collectionSpanishPaths(collection)
   const { data: spanish, error } = await supabase.from('recipes')
-    .select('recipe_group_id, public_path').eq('language', 'es').eq('published', true).in('public_path', paths)
+    .select('recipe_group_id, public_path').eq('language', 'es').eq('published', true)
+    .in('public_path', paths.flatMap(spanishPathVariants))
   if (error) throw new Error(`No se pudieron cargar las recetas de la colección: ${error.message}`)
 
-  const groupBySpanishPath = new Map((spanish ?? []).map((r) => [r.public_path as string, r.recipe_group_id as string]))
+  // Cada ruta citada se resuelve con cualquiera de sus formas (tal cual o con /es/receta).
+  const groupByFoundPath = new Map((spanish ?? []).map((r) => [r.public_path as string, r.recipe_group_id as string]))
+  const groupBySpanishPath = new Map<string, string>()
+  for (const path of paths) {
+    const group = spanishPathVariants(path).map((v) => groupByFoundPath.get(v)).find(Boolean)
+    if (group) groupBySpanishPath.set(path, group)
+  }
   const groups = Array.from(new Set(groupBySpanishPath.values()))
   if (groups.length === 0) return collection.sections.map(() => [])
 
