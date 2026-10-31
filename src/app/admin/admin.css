@@ -99,9 +99,10 @@
 .adm-theme-toggle .adm-icon-moon { display: none; }
 :root[data-theme="light"] .adm-theme-toggle .adm-icon-sun { display: none; }
 :root[data-theme="light"] .adm-theme-toggle .adm-icon-moon { display: block; }
+/* Celular: el menú no se desliza de lado; los 4 botones quedan siempre a la vista en 2×2. */
 @media (max-width: 720px) {
-  .adm-main-nav { order: 3; flex-basis: 100%; flex-wrap: nowrap; overflow-x: auto; padding-bottom: 2px; scrollbar-width: none; }
-  .adm-main-nav a { white-space: nowrap; }
+  .adm-main-nav { order: 3; flex-basis: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+  .adm-main-nav a { text-align: center; padding: 10px 8px; border: 1px solid var(--a-line); border-radius: 12px; font-size: .88rem; line-height: 1.2; }
 }
 
 /* ───────── Cola: "qué hay que hacer" ───────── */
