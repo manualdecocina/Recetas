@@ -5,7 +5,7 @@ records=json.loads(source.read_text())['records']
 secret=(os.getenv('REVALIDATE_SECRET') or '').rstrip('\r\n')
 report={'images':[],'pages':[]}
 def get(path):
- req=urllib.request.Request(BASE+path,headers={'User-Agent':'ManualDeCocina-Publication-QA/1.0','Cache-Control':'no-cache'})
+ req=urllib.request.Request(path if path.startswith('https://') else BASE+path,headers={'User-Agent':'ManualDeCocina-Publication-QA/1.0','Cache-Control':'no-cache'})
  with urllib.request.urlopen(req,timeout=40) as r:return r.status,r.headers,r.read()
 def invalidate():
  if not secret:raise RuntimeError('Missing revalidation secret')
