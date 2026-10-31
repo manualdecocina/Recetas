@@ -9,9 +9,15 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 }
 
+// Oscuro por defecto (como pidió el chef). Si eligió claro, se aplica antes de pintar para que no parpadee.
+const THEME_SCRIPT = "try{if(localStorage.getItem('md-admin-theme')==='light')document.documentElement.dataset.theme='light'}catch(e){}"
+
 export default function AdminRootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="es" className={`${editorialSerif.variable} ${uiSans.variable}`}>
+    <html lang="es" data-theme="dark" suppressHydrationWarning className={`${editorialSerif.variable} ${uiSans.variable}`}>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: THEME_SCRIPT }} />
+      </head>
       <body className="adm-body">{children}</body>
     </html>
   )

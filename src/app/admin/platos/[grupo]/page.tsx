@@ -5,8 +5,8 @@ import { requireAdmin } from '@/lib/supabase/admin-guard'
 import { uuidSchema } from '@/lib/validation'
 import { checkImagesOnline, loadGroup } from '@/lib/admin/publication-data'
 import {
-  groupBlockers, groupImageUrls, groupStage, groupTitle,
-  LANGUAGE_NAMES, REQUIRED_LANGUAGES, STAGE_LABELS,
+  groupBlockers, groupImageUrls, groupStage, groupTitle, summarizeBlockers,
+  LANGUAGE_NAMES, REQUIRED_LANGUAGES, STAGE_LABELS, STAGE_NEXT_STEP,
 } from '@/lib/admin/publication'
 import { ingredientDisplayText } from '@/lib/recipe-ingredient-format'
 import { normalizePublicPath } from '@/lib/site'
@@ -60,6 +60,9 @@ export default async function GroupReviewPage({ params, searchParams }: Props) {
       <AdminNav current="cola" />
       <h1>{groupTitle(rows)}</h1>
       <p className={`adm-badge adm-stage-${stage}`}>{STAGE_LABELS[stage]}</p>
+      <p className={`adm-next adm-next-${stage}`}>
+        <span><strong>Siguiente paso</strong>{STAGE_NEXT_STEP[stage]}</span>
+      </p>
 
       {query.aviso && query.mensaje && (
         <p className={query.aviso === 'ok' ? 'adm-notice adm-notice-ok' : 'adm-notice adm-notice-error'} role="status">
@@ -71,8 +74,18 @@ export default async function GroupReviewPage({ params, searchParams }: Props) {
         <h2>Revisión automática</h2>
         <ul className="adm-checks">
           <li className={blockers.length ? 'bad' : 'good'}>
-            {blockers.length ? `Falta completar (${blockers.length})` : 'Contenido completo en los 7 idiomas'}
-            {blockers.length > 0 && <ul>{blockers.map((b) => <li key={b}>{b}</li>)}</ul>}
+            {blockers.length ? 'Falta completar el contenido' : 'Contenido completo en los 7 idiomas'}
+            {blockers.length > 0 && (
+              <>
+                <span className="adm-reasons">
+                  {summarizeBlockers(blockers).map((reason) => <span key={reason} className="adm-reason">{reason}</span>)}
+                </span>
+                <details>
+                  <summary>Ver el detalle ({blockers.length})</summary>
+                  <ul>{blockers.map((b) => <li key={b}>{b}</li>)}</ul>
+                </details>
+              </>
+            )}
           </li>
           {!isPublished && (
             <li className={missingImages.length ? 'bad' : 'good'}>
@@ -82,8 +95,15 @@ export default async function GroupReviewPage({ params, searchParams }: Props) {
               {missingImages.length > 0 && <ul>{missingImages.map((m) => <li key={m.url}>{m.url} ({m.status ?? 'sin respuesta'})</li>)}</ul>}
             </li>
           )}
-          <li className={review?.status === 'aprobada' ? 'good' : 'bad'}>
-            {review?.status === 'aprobada' ? 'Aprobada por el chef' : review?.status === 'devuelta' ? 'Devuelta por el chef' : 'Falta tu aprobación'}
+          {/* Mientras falta contenido, la aprobación no es lo que bloquea: se muestra en gris, no en rojo. */}
+          <li className={review?.status === 'aprobada' ? 'good' : review?.status === 'devuelta' || blockers.length === 0 ? 'bad' : 'wait'}>
+            {review?.status === 'aprobada'
+              ? 'Aprobada por el chef'
+              : review?.status === 'devuelta'
+                ? 'Devuelta por el chef'
+                : blockers.length > 0
+                  ? 'Aprobación pendiente: se hace cuando el contenido esté completo'
+                  : 'Falta tu aprobación'}
             {review?.comment && <span className="adm-quote"> — “{review.comment}”</span>}
           </li>
         </ul>

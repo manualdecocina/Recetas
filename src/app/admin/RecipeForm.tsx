@@ -39,14 +39,14 @@ interface Props {
 function SubmitButton({ label }: { label: string }) {
   const { pending } = useFormStatus()
   return (
-    <button type="submit" disabled={pending}>
+    <button type="submit" disabled={pending} className="adm-btn adm-btn-primary">
       {pending ? 'Guardando…' : label}
     </button>
   )
 }
 
 function FieldError({ errors }: { errors?: string[] }) {
-  return errors?.length ? <p role="alert">{errors[0]}</p> : null
+  return errors?.length ? <p role="alert" className="adm-field-error">{errors[0]}</p> : null
 }
 
 export function RecipeForm({ action, submitLabel, languageOptions, hidden, defaults = {}, fixedLanguage = 'es', showPublicPath = false }: Props) {
@@ -56,7 +56,7 @@ export function RecipeForm({ action, submitLabel, languageOptions, hidden, defau
   const e = state.fieldErrors ?? {}
 
   return (
-    <form action={formAction}>
+    <form action={formAction} className="adm-form adm-section">
       {hidden && <input type="hidden" name={hidden.name} value={hidden.value} />}
 
       {languageOptions && (
@@ -163,7 +163,7 @@ export function RecipeForm({ action, submitLabel, languageOptions, hidden, defau
         Publicada
       </label>
 
-      {state.message && <p role="alert">{state.message}</p>}
+      {state.message && <p role="alert" className="adm-notice adm-notice-error">{state.message}</p>}
       <SubmitButton label={submitLabel} />
     </form>
   )

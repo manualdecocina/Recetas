@@ -82,7 +82,7 @@ export async function loadHealth(supabase: SupabaseClient): Promise<HealthReport
       !text(row.image_url) && 'foto de portada',
       (!row.nutrition || row.nutrition.calories == null) && 'nutrición',
       (!text(seo.title) || !text(seo.description)) && 'título o descripción para Google',
-      !row.ready_at && 'fecha de listado (no sale en orden en Recetas)',
+      !row.ready_at && 'fecha de orden (sin ella la receta sale al final del listado de Recetas)',
     ].filter(Boolean)
     if (gaps.length) missing.push(item(row, `sin ${gaps.join(', ')}`))
   }
