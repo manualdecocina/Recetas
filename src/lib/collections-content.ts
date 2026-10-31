@@ -42,6 +42,7 @@ export interface Collection {
 export const COLLECTIONS: Collection[] = [
   {
     id: 'navidad-colombiana',
+    coverDir: '/colecciones/navidad-colombiana',
     sections: [
       [
         '/receta-de-lechona-colombiana',
