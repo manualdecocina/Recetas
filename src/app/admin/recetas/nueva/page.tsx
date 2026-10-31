@@ -5,6 +5,7 @@ import { requireAdmin } from '@/lib/supabase/admin-guard'
 import { uuidSchema } from '@/lib/validation'
 import { SUPPORTED_LANGUAGES } from '@/types/recipe'
 import { createRecipeAction, createTranslationAction } from '../../actions'
+import { AdminNav } from '../../AdminNav'
 import { RecipeForm } from '../../RecipeForm'
 import { NotAdmin } from '../../NotAdmin'
 
@@ -24,8 +25,9 @@ export default async function NewRecipePage({ searchParams }: { searchParams: Pr
 
   if (!query.from) {
     return (
-      <main>
-        <p><Link href="/admin">← Volver al panel</Link></p>
+      <main className="adm">
+        <AdminNav current="todas" />
+        <p className="adm-hint" style={{ marginTop: 18 }}><Link href="/admin/todas">← Volver a todas las recetas</Link></p>
         <h1>Nueva receta</h1>
         <RecipeForm
           action={createRecipeAction}
@@ -56,11 +58,12 @@ export default async function NewRecipePage({ searchParams }: { searchParams: Pr
   const available = SUPPORTED_LANGUAGES.filter((l) => !taken.has(l))
 
   return (
-    <main>
-      <p><Link href="/admin">← Volver al panel</Link></p>
+    <main className="adm">
+      <AdminNav current="todas" />
+      <p className="adm-hint" style={{ marginTop: 18 }}><Link href="/admin/todas">← Volver a todas las recetas</Link></p>
       <h1>Traducción de “{source.title}” ({source.language})</h1>
       {available.length === 0 ? (
-        <p>Esta receta ya existe en los 6 idiomas.</p>
+        <p className="adm-empty">Esta receta ya existe en los 6 idiomas.</p>
       ) : (
         <RecipeForm
           action={createTranslationAction}

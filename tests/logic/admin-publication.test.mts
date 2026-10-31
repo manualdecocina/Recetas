@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict'
-import { groupBlockers, groupStage, groupImageUrls, groupTitle, REQUIRED_LANGUAGES, type PublicationRow } from '@/lib/admin/publication'
+import { groupBlockers, groupStage, groupImageUrls, groupTitle, summarizeBlockers, REQUIRED_LANGUAGES, type PublicationRow } from '@/lib/admin/publication'
 
 let n = 0
 const check = (name: string, fn: () => void) => { fn(); n++; console.log('OK', name) }
@@ -56,6 +56,17 @@ check('Imágenes: portada, variantes y pasos sin repetidos', () => {
 
 check('El nombre en la cola es el título en español', () => {
   assert.equal(groupTitle([complete('en'), complete('es')]), 'Receta es')
+})
+
+check('El resumen de pendientes agrupa idiomas y repite menos', () => {
+  const onlySpanish = groupBlockers([{ ...complete('es'), nutrition: null, seo: null }])
+  assert.deepEqual(summarizeBlockers(onlySpanish), [
+    'Faltan 6 idiomas', 'Sin nutrición (es)', 'Sin título o descripción SEO (es)',
+  ])
+  const spread = groupBlockers(REQUIRED_LANGUAGES.map((l) => ({ ...complete(l), nutrition: null })).slice(0, 3))
+  assert.ok(summarizeBlockers(spread).includes('Sin nutrición en 3 idiomas'))
+  assert.deepEqual(summarizeBlockers([]), [])
+  assert.deepEqual(summarizeBlockers(['falta el idioma ja']), ['Falta 1 idioma'])
 })
 
 console.log(`\n${n} pruebas OK`)

@@ -39,12 +39,22 @@ export interface ReviewRow {
 export type GroupStage = 'incompleta' | 'por-revisar' | 'devuelta' | 'aprobada' | 'publicada' | 'archivada'
 
 export const STAGE_LABELS: Record<GroupStage, string> = {
-  'incompleta': 'Incompleta',
-  'por-revisar': 'Por revisar',
+  'incompleta': 'Falta contenido',
+  'por-revisar': 'Por aprobar',
   'devuelta': 'Devuelta',
   'aprobada': 'Aprobada, sin publicar',
   'publicada': 'Publicada',
   'archivada': 'Archivada',
+}
+
+/** Qué sigue para cada etapa, en una frase. Se muestra en la cola y en la ficha del plato. */
+export const STAGE_NEXT_STEP: Record<GroupStage, string> = {
+  'incompleta': 'Primero hay que completar el contenido; la aprobación va después.',
+  'por-revisar': 'Está completa: revísala y apruébala o devuélvela.',
+  'devuelta': 'Esperando la corrección que pediste.',
+  'aprobada': 'Ya la aprobaste: solo falta darle Publicar.',
+  'publicada': 'En línea en los 7 idiomas.',
+  'archivada': 'Receta vieja archivada: no forma parte del trabajo.',
 }
 
 const text = (value: unknown) => (typeof value === 'string' ? value.trim() : '')
@@ -66,6 +76,35 @@ export function groupBlockers(rows: PublicationRow[]): string[] {
     if (!text(row.seo?.title) || !text(row.seo?.description)) p('sin título o descripción SEO')
   }
   return problems.sort()
+}
+
+/**
+ * Resume los problemas de groupBlockers en frases cortas para la cola, p. ej.
+ * ["Faltan 6 idiomas", "Sin nutrición (es)", "Sin título o descripción SEO (es)"].
+ * Un mismo problema en varios idiomas se cuenta una sola vez.
+ */
+export function summarizeBlockers(blockers: string[]): string[] {
+  const missingLanguages: string[] = []
+  const byProblem = new Map<string, string[]>()
+  const other: string[] = []
+  for (const blocker of blockers) {
+    const missing = blocker.match(/^falta el idioma (\S+)$/)
+    if (missing) { missingLanguages.push(missing[1]); continue }
+    const split = blocker.indexOf(': ')
+    if (split === -1) { other.push(blocker); continue }
+    const language = blocker.slice(0, split)
+    const problem = blocker.slice(split + 2)
+    byProblem.set(problem, [...(byProblem.get(problem) ?? []), language])
+  }
+  const out: string[] = []
+  if (missingLanguages.length) {
+    out.push(`Falta${missingLanguages.length === 1 ? '' : 'n'} ${missingLanguages.length} ${missingLanguages.length === 1 ? 'idioma' : 'idiomas'}`)
+  }
+  for (const [problem, languages] of byProblem) {
+    const label = problem.charAt(0).toUpperCase() + problem.slice(1)
+    out.push(languages.length > 1 ? `${label} en ${languages.length} idiomas` : `${label} (${languages[0]})`)
+  }
+  return [...out, ...other]
 }
 
 export function groupStage(rows: PublicationRow[], review: ReviewRow | undefined, blockers: string[]): GroupStage {

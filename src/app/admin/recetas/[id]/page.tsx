@@ -5,6 +5,7 @@ import { requireAdmin } from '@/lib/supabase/admin-guard'
 import { ingredientsToText, stepsToText, uuidSchema } from '@/lib/validation'
 import type { Recipe } from '@/types/recipe'
 import { updateRecipeAction } from '../../actions'
+import { AdminNav } from '../../AdminNav'
 import { RecipeForm } from '../../RecipeForm'
 import { NotAdmin } from '../../NotAdmin'
 
@@ -24,10 +25,11 @@ export default async function EditRecipePage({ params }: { params: Promise<{ id:
   const recipe = data as Recipe
 
   return (
-    <main>
-      <p><Link href="/admin">← Volver al panel</Link></p>
+    <main className="adm">
+      <AdminNav current="todas" />
+      <p className="adm-hint" style={{ marginTop: 18 }}><Link href="/admin/todas">← Volver a todas las recetas</Link></p>
       <h1>Editar: {recipe.title}</h1>
-      <p>
+      <p className="adm-sub">
         Idioma: {recipe.language} (no editable). {recipe.published_at
           ? `Publicada por primera vez el ${new Date(recipe.published_at).toLocaleDateString('es-CO')}.`
           : 'Nunca publicada.'}

@@ -2,13 +2,14 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 import { requireAdmin } from '@/lib/supabase/admin-guard'
 import { normalizePublicPath } from '@/lib/site'
-import { deleteRecipeAction, signOutAction } from '../actions'
+import { deleteRecipeAction } from '../actions'
+import { AdminNav } from '../AdminNav'
 import { DeleteButton } from '../DeleteButton'
 import { NotAdmin } from '../NotAdmin'
 
 export const dynamic = 'force-dynamic'
 export const metadata: Metadata = {
-  title: 'Panel — Manual de Cocina',
+  title: 'Todas las recetas — Manual de Cocina',
   robots: { index: false, follow: false },
 }
 
@@ -40,58 +41,58 @@ export default async function AdminDashboardPage({
   const totalPages = Math.max(1, Math.ceil(total / PAGE_SIZE))
 
   return (
-    <main>
+    <main className="adm">
+      <AdminNav current="todas" />
       <h1>Todas las recetas</h1>
-      <p><Link href="/admin">← Centro de publicación</Link></p>
-      <p>{total} recetas en total (todas las versiones de idioma).</p>
-
-      <p>
-        <Link href="/admin/recetas/nueva">Nueva receta</Link>
-      </p>
-      <form action={signOutAction}>
-        <button type="submit">Cerrar sesión</button>
-      </form>
+      <div className="adm-toolbar">
+        <p className="adm-sub">{total} recetas en total (todas las versiones de idioma), las más recientes primero.</p>
+        <Link href="/admin/recetas/nueva" className="adm-btn adm-btn-primary">+ Nueva receta</Link>
+      </div>
 
       {total === 0 ? (
-        <p>Todavía no hay recetas. Crea la primera con “Nueva receta”.</p>
+        <p className="adm-hint">Todavía no hay recetas. Crea la primera con “Nueva receta”.</p>
       ) : (
-        <table>
-          <thead>
-            <tr>
-              <th>Idioma</th>
-              <th>Título</th>
-              <th>Estado</th>
-              <th>Publicada desde</th>
-              <th>Acciones</th>
-            </tr>
-          </thead>
-          <tbody>
-            {(recipes ?? []).map((r) => (
-              <tr key={r.id}>
-                <td>{r.language}</td>
-                <td>{r.title}</td>
-                <td>{r.published ? 'Publicada' : 'Borrador'}</td>
-                <td>{r.published_at ? new Date(r.published_at).toLocaleDateString('es-CO') : '—'}</td>
-                <td>
-                  <Link href={`/admin/recetas/${r.id}`}>Editar</Link>{' '}
-                  <Link href={`/admin/recetas/nueva?from=${r.id}`}>Añadir traducción</Link>{' '}
-                  {r.published && <Link href={normalizePublicPath(r.public_path)}>Ver</Link>}{' '}
-                  <form action={deleteRecipeAction} style={{ display: 'inline' }}>
-                    <input type="hidden" name="id" value={r.id} />
-                    <DeleteButton title={r.title} />
-                  </form>
-                </td>
+        <section className="adm-section adm-table-wrap">
+          <table className="adm-table">
+            <thead>
+              <tr>
+                <th>Idioma</th>
+                <th>Título</th>
+                <th>Estado</th>
+                <th>Publicada desde</th>
+                <th>Acciones</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {(recipes ?? []).map((r) => (
+                <tr key={r.id}>
+                  <td><span className="adm-lang">{r.language}</span></td>
+                  <td>{r.title}</td>
+                  <td><span className={r.published ? 'adm-chip adm-chip-ok' : 'adm-chip'}>{r.published ? 'Publicada' : 'Borrador'}</span></td>
+                  <td>{r.published_at ? new Date(r.published_at).toLocaleDateString('es-CO') : '—'}</td>
+                  <td>
+                    <div className="adm-cell-actions">
+                      <Link href={`/admin/recetas/${r.id}`}>Editar</Link>
+                      <Link href={`/admin/recetas/nueva?from=${r.id}`}>Añadir traducción</Link>
+                      {r.published && <Link href={normalizePublicPath(r.public_path)}>Ver</Link>}
+                      <form action={deleteRecipeAction}>
+                        <input type="hidden" name="id" value={r.id} />
+                        <DeleteButton title={r.title} />
+                      </form>
+                    </div>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </section>
       )}
 
       {totalPages > 1 && (
-        <nav aria-label="Paginación">
-          {page > 1 && <Link href={`/admin/todas?page=${page - 1}`}>Anterior</Link>}{' '}
-          Página {page} de {totalPages}{' '}
-          {page < totalPages && <Link href={`/admin/todas?page=${page + 1}`}>Siguiente</Link>}
+        <nav className="adm-pager" aria-label="Paginación">
+          {page > 1 && <Link href={`/admin/todas?page=${page - 1}`}>← Anterior</Link>}
+          <span>Página {page} de {totalPages}</span>
+          {page < totalPages && <Link href={`/admin/todas?page=${page + 1}`}>Siguiente →</Link>}
         </nav>
       )}
     </main>
