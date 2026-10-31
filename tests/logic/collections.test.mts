@@ -73,4 +73,12 @@ check('Cada receta sabe en qué colección está (enlace de vuelta)', () => {
   assert.deepEqual(collectionsForSpanishPath(undefined), [])
 })
 
+check('Las preguntas frecuentes están en los 7 idiomas, con la misma cantidad', () => {
+  for (const c of COLLECTIONS) {
+    const counts = SUPPORTED_LANGUAGES.map((l) => c.text[l].faq?.length ?? 0)
+    assert.equal(new Set(counts).size, 1, `${c.id}: distinta cantidad de preguntas por idioma (${counts.join(',')})`)
+    for (const l of SUPPORTED_LANGUAGES) for (const f of c.text[l].faq ?? []) assert.ok(f.q.trim() && f.a.trim(), `${c.id}/${l}: pregunta vacía`)
+  }
+})
+
 console.log(`\n${n} pruebas OK`)
