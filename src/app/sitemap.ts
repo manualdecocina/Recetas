@@ -4,6 +4,7 @@ import { getSiteUrl, normalizePublicPath, publicUrl, recipeCanonicalUrl, languag
 import { SUPPORTED_LANGUAGES, type RecipeLanguage } from '@/types/recipe'
 import { categorySlugFromLabel } from '@/lib/categories'
 import { withXDefault } from '@/lib/seo'
+import { COLLECTIONS, collectionPath, collectionsIndexPath } from '@/lib/collections'
 
 export const revalidate = 3600
 
@@ -106,6 +107,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }
   // Herramienta real (gratuita) sin página propia en el sitemap hasta ahora.
   for (const l of SUPPORTED_LANGUAGES) entries.push({ url: `${site}/${l}/que-puedo-cocinar`, alternates: staticAlternates((x) => `/${x}/que-puedo-cocinar`) })
+
+  // Colecciones editoriales (mismo contenido en los 7 idiomas, slug traducido).
+  for (const l of SUPPORTED_LANGUAGES) {
+    entries.push({ url: `${site}${collectionsIndexPath(l)}`, alternates: staticAlternates((x) => collectionsIndexPath(x)) })
+    for (const collection of COLLECTIONS) {
+      entries.push({ url: `${site}${collectionPath(l, collection)}`,
+        alternates: staticAlternates((x) => collectionPath(x as RecipeLanguage, collection)) })
+    }
+  }
 
   // Use the same ordered, paginated rows as recipe URLs. A separate unpaginated
   // query stops at the API row limit and can drop category routes in later languages.

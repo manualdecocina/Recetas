@@ -643,3 +643,12 @@ a.md-lang-item:hover { background: var(--md-sand); }
 .md-pantry-selection h3 { margin-bottom: 12px; }
 .md-pantry-chip { overflow-wrap: anywhere; max-width: 100%; text-align: start; }
 @media (prefers-reduced-motion: reduce) { .md-pantry-results-viewed { animation: none; } }
+
+/* Colecciones editoriales (Navidad colombiana, etc.). Tarjetas más grandes que las categorías. */
+.md-collection-grid { grid-template-columns: minmax(0,1fr); }
+@media (min-width: 600px) { .md-collection-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+@media (min-width: 900px) { .md-collection-grid { grid-template-columns: repeat(3,minmax(0,1fr)); } }
+.md-collection-card .md-category-photo { aspect-ratio: 4 / 3; }
+.md-collection-curator { margin: 14px 0 0; }
+.md-collection-section .md-title { margin: 0 0 6px; }
+.md-collection-note { margin: 0 0 22px; max-width: 60ch; }

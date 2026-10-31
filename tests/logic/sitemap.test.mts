@@ -35,8 +35,13 @@ const s: any[] = await sitemap()
 const urls = s.map((e) => e.url)
 
 // 7 idiomas × (home, listado, categorías) + 8 institucionales × 7 idiomas
-// + 3 recetas publicadas del mock + herramienta + índice ingredientes + 2 ingredientes + content page.
-assert.equal(s.length, 7 * 3 + 8 * 7 + 3 + 7 + 7 + 2 * 7 + 1)
+// + 3 recetas publicadas del mock + herramienta + índice ingredientes + 2 ingredientes + content page
+// + colecciones: índice + 1 colección (Navidad) en 7 idiomas.
+assert.equal(s.length, 7 * 3 + 8 * 7 + 3 + 7 + 7 + 2 * 7 + 1 + 7 * 2)
+const navidadEs = s.find((e) => e.url === 'https://manualdecocina.com/es/colecciones/recetas-navidad-colombiana')
+assert.ok(navidadEs, 'la colección de Navidad entra en el sitemap')
+assert.equal(navidadEs.alternates.languages.de, 'https://manualdecocina.com/de/colecciones/kolumbianische-weihnachtsrezepte')
+assert.equal(navidadEs.alternates.languages['x-default'], 'https://manualdecocina.com/es/colecciones/recetas-navidad-colombiana')
 assert.ok(!urls.some((url) => url.includes('/recipe-cards/')), 'recipe-cards no deben entrar en sitemap')
 assert.ok(urls.includes('https://manualdecocina.com/es/ingredientes'))
 assert.ok(urls.includes('https://manualdecocina.com/es/ingredientes/ajo'))
