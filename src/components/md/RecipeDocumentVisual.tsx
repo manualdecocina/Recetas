@@ -25,10 +25,12 @@ const LOCALES: Record<string, string> = { es: 'es-ES', en: 'en-GB', de: 'de-DE',
  * eso vive en RecipeDocument.tsx, que monta este componente. Aquí hay un único <h1>.
  * `notesHtml` llega ya saneado (cleanHtml en RecipeDocument).
  */
-export default function RecipeDocumentVisual({ recipe, relatedRecipes = [], notesHtml }: {
+export default function RecipeDocumentVisual({ recipe, relatedRecipes = [], notesHtml, collections = [] }: {
   recipe: MdRecipe;
   relatedRecipes?: MdRecipeCardData[];
   notesHtml?: string | null;
+  /** Colecciones editoriales que incluyen esta receta (enlace de vuelta). */
+  collections?: { title: string; href: string }[];
 }) {
   const t = getMdCopy(recipe.language);
   const ratingsEnabled = process.env.NEXT_PUBLIC_RATINGS_ENABLED === 'true';
@@ -84,6 +86,11 @@ export default function RecipeDocumentVisual({ recipe, relatedRecipes = [], note
             <h1 className="md-display">{recipe.title}</h1>
             {recipe.excerpt && <p className="md-lead">{recipe.excerpt}</p>}
             <p className="md-byline">{t.writtenBy} <Link href={`/${lang}/quienes-somos`} rel="author">{RECIPE_AUTHOR.name}</Link> · {t.updatedOn} <time dateTime={recipe.updated_at}>{updated}</time></p>
+            {collections.length > 0 && (
+              <p className="md-recipe-collections">{t.partOfCollection}{' '}
+                {collections.map((c, i) => <span key={c.href}>{i > 0 && ' · '}<Link href={c.href}>{c.title}</Link></span>)}
+              </p>
+            )}
             {facts.length > 0 && <dl className="md-recipe-facts">{facts.map((fact) => (
               <div className="md-recipe-fact" key={fact.label}><dt>{fact.label}</dt><dd>{fact.value}</dd></div>
             ))}</dl>}

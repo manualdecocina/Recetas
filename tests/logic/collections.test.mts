@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import { existsSync } from 'node:fs'
-import { COLLECTIONS, COVER_FILES, collectionCover, spanishPathVariants, arrangeCollection, collectionAlternatePaths, collectionPath, collectionSpanishPaths, findCollection } from '@/lib/collections'
+import { COLLECTIONS, COVER_FILES, collectionCover, spanishPathVariants, collectionsForSpanishPath, arrangeCollection, collectionAlternatePaths, collectionPath, collectionSpanishPaths, findCollection } from '@/lib/collections'
 import { SUPPORTED_LANGUAGES } from '@/types/recipe'
 import { seoSaveError } from '@/lib/admin/seo-checks'
 
@@ -63,6 +63,14 @@ check('Acepta /slug y /es/receta/slug como la misma receta', () => {
   assert.deepEqual(spanishPathVariants('/dulce-de-breva'), ['/dulce-de-breva', '/es/receta/dulce-de-breva'])
   assert.deepEqual(spanishPathVariants('/es/receta/tamal-tolimense'), ['/es/receta/tamal-tolimense', '/tamal-tolimense'])
   assert.deepEqual(spanishPathVariants('/natilla-colombiana/'), ['/natilla-colombiana', '/es/receta/natilla-colombiana'])
+})
+
+check('Cada receta sabe en qué colección está (enlace de vuelta)', () => {
+  assert.deepEqual(collectionsForSpanishPath('/natilla-colombiana').map((c) => c.id), ['navidad-colombiana'])
+  assert.deepEqual(collectionsForSpanishPath('/es/receta/tamal-tolimense').map((c) => c.id), ['navidad-colombiana'])
+  assert.deepEqual(collectionsForSpanishPath('/es/receta/dulce-de-breva').map((c) => c.id), ['navidad-colombiana'])
+  assert.deepEqual(collectionsForSpanishPath('/receta-bondiola-de-cerdo'), [])
+  assert.deepEqual(collectionsForSpanishPath(undefined), [])
 })
 
 console.log(`\n${n} pruebas OK`)
