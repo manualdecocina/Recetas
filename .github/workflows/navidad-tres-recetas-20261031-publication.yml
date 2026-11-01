@@ -1,0 +1,36 @@
+name: navidad-tres-recetas-20261031-publication
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'editorial/sabajon-colombiano-20261031.json'
+      - 'editorial/torta-negra-colombiana-20261031.json'
+      - 'editorial/dulce-de-papaya-verde-20261031.json'
+      - '.github/workflows/navidad-tres-recetas-20261031-publication.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            editorial/sabajon-colombiano-20261031.json
+            editorial/torta-negra-colombiana-20261031.json
+            editorial/dulce-de-papaya-verde-20261031.json
+            editorial/tamal-tolimense-20261031.json
+            editorial/pernil-de-cerdo-al-horno-20261031.json
+            scripts/audit-navidad-tres-recetas-20261031.py
+          sparse-checkout-cone-mode: false
+      - name: Verify deployed media and 35-page publication and complete step images
+        env:
+          REVALIDATE_SECRET: ${{ secrets.REVALIDATE_SECRET }}
+        run: python3 scripts/audit-navidad-tres-recetas-20261031.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: navidad-tres-recetas-20261031-production-qa
+          path: navidad-tres-recetas-20261031-production-qa.json
