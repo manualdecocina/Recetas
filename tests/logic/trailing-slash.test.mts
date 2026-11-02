@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict'
-import { buildSlashMap, slashRedirectTarget } from '@/lib/trailing-slash'
+import { buildSlashMap, slashRedirectTarget, slashRedirectUrl } from '@/lib/trailing-slash'
 import { recipeCanonicalUrl, recipeHref } from '@/lib/site'
 
 let n = 0
@@ -30,6 +30,16 @@ check('Receta nueva (sin URL histórica) con barra → redirige a la versión si
 check('Japonés: funciona con la ruta decodificada', () => {
   assert.equal(slashRedirectTarget('/ja/コロンビアのレチョナレシピ', map), '/ja/コロンビアのレチョナレシピ/')
   assert.equal(slashRedirectTarget('/ja/コロンビアのレチョナレシピ/', map), null)
+})
+
+check('Redirección HTTP conserva barra final, query y codificación japonesa', () => {
+  const jp = slashRedirectUrl('https://manualdecocina.com/ja/' + encodeURIComponent('コロンビアのレチョナレシピ') + '?utm_source=test', '/ja/コロンビアのレチョナレシピ/')
+  assert.equal(jp.pathname, '/ja/' + encodeURIComponent('コロンビアのレチョナレシピ') + '/')
+  assert.equal(jp.search, '?utm_source=test')
+  const it = slashRedirectUrl('https://manualdecocina.com/it/casuela-colombiana-di-fagioli', '/it/casuela-colombiana-di-fagioli/')
+  assert.equal(it.pathname, '/it/casuela-colombiana-di-fagioli/')
+  const pt = slashRedirectUrl('https://manualdecocina.com/pt/receita-de-lechona-colombiana/', '/pt/receita-de-lechona-colombiana')
+  assert.equal(pt.pathname, '/pt/receita-de-lechona-colombiana')
 })
 
 check('Lo que no es receta no se toca (portada, listados, categorías, desconocidas)', () => {
