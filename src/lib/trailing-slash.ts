@@ -50,3 +50,13 @@ export function slashRedirectTarget(pathname: string, map: SlashMap): string | n
   if (wantsSlash === hasSlash) return null
   return wantsSlash ? `${path}/` : path
 }
+
+/** Use the native URL, not NextURL: NextURL may strip a trailing slash from redirect
+ * destinations even with skipTrailingSlashRedirect enabled, causing 301 loops.
+ * The URL constructor also encodes Unicode paths and retains the search query.
+ */
+export function slashRedirectUrl(requestUrl: string, canonicalPath: string): URL {
+  const url = new URL(requestUrl)
+  url.pathname = canonicalPath
+  return url
+}

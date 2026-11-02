@@ -3,7 +3,7 @@ import { createServerClient, type CookieOptions } from '@supabase/ssr'
 import { createClient } from '@supabase/supabase-js'
 import { DEFAULT_LANGUAGE } from '@/types/recipe'
 import { SUPABASE_PUBLIC_KEY, SUPABASE_URL } from '@/lib/supabase/keys'
-import { buildSlashMap, slashRedirectTarget, type SlashMap, type SlashRow } from '@/lib/trailing-slash'
+import { buildSlashMap, slashRedirectTarget, slashRedirectUrl, type SlashMap, type SlashRow } from '@/lib/trailing-slash'
 
 // ── Una sola URL por receta ─────────────────────────────────────────────────────────────
 // Lista de recetas publicadas → si su canónica lleva barra final. Se guarda en memoria
@@ -53,8 +53,10 @@ async function recipeSlashRedirect(request: NextRequest): Promise<NextResponse |
   if (!map) return null
   const target = slashRedirectTarget(decoded, map)
   if (!target) return null
-  const url = request.nextUrl.clone()
-  url.pathname = encodeURI(target) // japonés y acentos van codificados; la query se conserva
+  // NextURL puede eliminar la barra final al construir Location, provocando un
+  // 301 infinito en URLs históricas. URL nativa respeta la barra y codifica Unicode.
+  const url = slashRedirectUrl(request.url, target)
+  if (url.href === request.url) return null // nunca redirigir a la misma URL
   return NextResponse.redirect(url, 301)
 }
 
