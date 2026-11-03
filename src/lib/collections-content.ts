@@ -115,7 +115,7 @@ export const COLLECTIONS: Collection[] = [
       en: {
         slug: 'colombian-christmas-recipes',
         title: 'Colombian Christmas recipes',
-        seoTitle: 'Colombian Christmas Recipes: Lechona, Natilla and Buñuelos',
+        seoTitle: 'Colombian Christmas: Lechona, Natilla and Buñuelos',
         description: 'Colombian Christmas recipes for the December novena and Christmas Eve dinner: oven lechona, panela natilla, buñuelos, hojuelas and desserts to share.',
         intro: [
           'In Colombia, December is cooked as a family. Between the nine-night novena and Christmas Eve dinner, the table fills with natilla, buñuelos and hojuelas, and in many homes lechona is the dish that brings everyone together.',
