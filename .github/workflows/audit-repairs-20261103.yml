@@ -1,0 +1,40 @@
+name: Audit repairs and cookie drawer
+on:
+  pull_request:
+    paths:
+      - 'src/**'
+      - 'tests/e2e/audit-repairs.cjs'
+      - '.github/workflows/audit-repairs-20261103.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  journeys:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      NEXT_PUBLIC_ADSENSE_CLIENT_ID: ca-pub-2592990699767586
+      NEXT_PUBLIC_GOOGLE_CMP_READY: 'true'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install
+      - run: npm install --no-save --package-lock=false playwright@1.64.1
+      - run: npm run build
+      - name: Start test server
+        run: |
+          npm run start -- -p 3000 > /tmp/repair-next.log 2>&1 &
+          for i in {1..60}; do
+            if curl -fsS http://127.0.0.1:3000/es >/dev/null; then exit 0; fi
+            sleep 1
+          done
+          cat /tmp/repair-next.log
+          exit 1
+      - run: node tests/e2e/audit-repairs.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: audit-repairs-responsive-qa
+          path: audit-repairs-qa

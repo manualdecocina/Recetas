@@ -50,6 +50,7 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
   const page = parseRecipePage(query.page)
 
   return {
+    ...(Object.entries(query).some(([key, value]) => key !== 'page' && !!value?.trim()) ? { robots: { index: false, follow: true } } : {}),
     title: withSiteName(page === 1 ? RECIPE_LISTING_TITLES[lang] : `${RECIPE_LISTING_TITLES[lang]} — ${text.page} ${page}`),
     description: RECIPE_LISTING_DESCRIPTIONS[lang],
     alternates: page === 1

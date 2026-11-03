@@ -3,6 +3,7 @@ import Image from 'next/image';
 import type { MdLanguage } from './md-types';
 import { getMdCopy } from '@/lib/copy';
 import LanguageSwitcher from './LanguageSwitcher';
+import { favoritesCopy } from '@/lib/favorites-copy';
 import ThemeToggle from './ThemeToggle';
 
 /** Vista síncrona (usable también desde componentes cliente). <details> da un menú móvil accesible por teclado. */
@@ -28,6 +29,7 @@ export default function SiteHeaderView({ lang, alternates, available }: { lang: 
             {nav.map((item) => <Link key={item.href} href={item.href}>{item.label}</Link>)}
           </nav>
           <div className="md-header-actions">
+            <Link className="md-favorites-link" href={`${base}/favoritos`} aria-label={favoritesCopy[lang].title} title={favoritesCopy[lang].title}><span aria-hidden="true">★</span></Link>
             <form className="md-header-search" action={`${base}/recetas`} method="get" role="search">
               <label className="md-search-label md-sr-only" htmlFor="md-header-query">{t.searchLabel}</label>
               <input className="md-search-input" id="md-header-query" type="search" name="q" placeholder={t.searchPlaceholder} />
@@ -42,6 +44,7 @@ export default function SiteHeaderView({ lang, alternates, available }: { lang: 
               </summary>
               <div className="md-menu-panel">
                 <nav className="md-stack" aria-label={t.openMenu}>
+                  <Link href={`${base}/favoritos`}>{favoritesCopy[lang].title}</Link>
                   {nav.map((item) => <Link key={item.href} href={item.href}>{item.label}</Link>)}
                 </nav>
                 <form action={`${base}/recetas`} method="get" role="search">

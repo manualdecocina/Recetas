@@ -147,3 +147,15 @@ html body .fc-consent-root .fc-dialog .fc-button.fc-secondary-button .fc-button-
 html body .fc-consent-root .fc-dialog .fc-button:is(.fc-primary-button, .fc-secondary-button) .fc-button-background {
   background: transparent !important;
 }
+
+/* Site-wide privacy drawer; Google's certified controls keep their own behavior. */
+.md-cookie-drawer { position: fixed; inset: auto 16px 16px; z-index: 10000; margin-inline: auto; max-width: 860px; max-height: calc(100dvh - 32px); overflow-y: auto; padding: clamp(18px, 3vw, 28px); background: var(--md-white); color: var(--md-ink); border-radius: var(--md-radius); border-top: 5px solid var(--md-accent); box-shadow: 0 8px 48px rgb(0 0 0 / 28%); }
+.md-cookie-drawer h2 { font-family: var(--md-serif); font-size: clamp(1.2rem, 3vw, 1.6rem); margin: 0 0 10px; }
+.md-cookie-drawer p { line-height: 1.55; margin: 8px 0 16px; }
+.md-cookie-drawer a { text-decoration: underline; color: inherit; }
+.md-cookie-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.md-cookie-actions > button { flex: 1 1 170px; white-space: normal; }
+.md-cookie-settings { margin: 16px 0; }
+.md-cookie-settings label { display: flex; align-items: center; gap: 10px; font-weight: 700; }
+.md-cookie-settings input { width: 20px; height: 20px; accent-color: var(--md-accent); }
+@media print { .md-cookie-drawer, .md-consent-preferences { display: none !important; } }

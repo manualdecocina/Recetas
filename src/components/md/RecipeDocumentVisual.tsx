@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { formatRecipeDuration, durationLabels } from '@/lib/duration';
 import { recipeImageSrc } from '@/lib/recipe-media';
 import Link from 'next/link';
 import type { MdRecipe, MdRecipeCardData } from './md-types';
@@ -39,7 +40,10 @@ export default function RecipeDocumentVisual({ recipe, relatedRecipes = [], note
       ? recipe.prep_time_minutes + recipe.cook_time_minutes : null
   );
   const facts = [
-    computedTotal != null && computedTotal > 0 ? { label: t.totalTime, value: `${computedTotal} min` } : null,
+    computedTotal != null && computedTotal > 0 ? { label: t.totalTime, value: formatRecipeDuration(computedTotal, recipe.language) } : null,
+    recipe.prep_time_minutes != null && recipe.prep_time_minutes > 0 ? { label: durationLabels[recipe.language][0], value: formatRecipeDuration(recipe.prep_time_minutes, recipe.language) } : null,
+    recipe.cook_time_minutes != null && recipe.cook_time_minutes > 0 ? { label: durationLabels[recipe.language][1], value: formatRecipeDuration(recipe.cook_time_minutes, recipe.language) } : null,
+    computedTotal != null && recipe.prep_time_minutes != null && recipe.cook_time_minutes != null && computedTotal > recipe.prep_time_minutes + recipe.cook_time_minutes ? { label: durationLabels[recipe.language][2], value: formatRecipeDuration(computedTotal - recipe.prep_time_minutes - recipe.cook_time_minutes, recipe.language) } : null,
     recipe.servings != null && recipe.servings > 0 ? { label: t.servings, value: String(recipe.servings) } : null,
     recipe.difficulty ? { label: t.difficulty, value: recipe.difficulty } : null,
     recipe.cuisine ? { label: t.cuisine, value: recipe.cuisine } : null,
@@ -159,7 +163,7 @@ export default function RecipeDocumentVisual({ recipe, relatedRecipes = [], note
                   <div className="md-nutrition-cal"><strong>{calories}</strong><span>{t.calories} · kcal</span></div>
                   <dl className="md-nutrition-grid">
                     {nutritionRows.map(([label, value, unit]) => (
-                      <div key={label}><dt>{label}</dt><dd>{value} {unit}</dd></div>
+                      <div key={label}><dt>{label}</dt><dd>{typeof value === 'number' ? value.toLocaleString(lang) : value} {unit}</dd></div>
                     ))}
                   </dl>
                 </div>
