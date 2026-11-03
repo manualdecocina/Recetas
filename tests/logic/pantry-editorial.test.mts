@@ -76,6 +76,8 @@ assert.equal(pantryFoodName('tomate triturado en conserva, con todo su líquido'
 assert.equal(pantryFoodName('aceitunas verdes sin hueso, escurridas'),'Aceitunas verdes')
 assert.notEqual(pantryFoodName('Ajo en polvo'),pantryFoodName('Ajo'))
 assert.notEqual(pantryFoodName('Leche en polvo'),pantryFoodName('Leche'))
+assert.equal(pantryFoodName('arroz blanco, aguacate, arepa y cilantro fresco'),'arroz blanco, aguacate, arepa y cilantro fresco', 'do not turn a combined ingredient list into rice')
+assert.equal(pantryFoodName('gochugaru (chile coreano, en escamas)'),'Gochugaru', 'never leave a half-open parenthetical preparation')
 for (const name of ['Papa', 'papas peladas, en trozos', 'papa mediana', 'papas harinosas (pastusa, russet o similar)']) {
   assert.equal(buildEditorialPantry([{ id: 'potato-recipe', ingredients: [{ name }] }], potatoCatalog, []).requirements.get('potato-recipe')?.[0], 'potato', name);
 }

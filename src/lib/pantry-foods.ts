@@ -76,7 +76,9 @@ const FOODS: Array<[RegExp, string]> = [
 
 export function pantryFoodName(name: string, lang = 'es'): string {
   const normalized = fold(name)
-  const alternatives = /\b(?:o|u)\b/.test(normalized.replace(/\([^)]*\)/g, ''))
+  const alternatives = /\b(?:o|u)\b/.test(normalized)
+  const combinedFoods = /,\s*(?:aguacate|arepa|chicharron|guacamole|cilantro fresco)\b/.test(normalized)
+  if (combinedFoods) return name
   if (lang === 'es' && !alternatives) {
     const food = FOODS.find(([pattern]) => pattern.test(normalized))
     if (food) return food[1]
@@ -84,7 +86,7 @@ export function pantryFoodName(name: string, lang = 'es'): string {
   // Remove subordinate preparation notes, keeping product descriptors before them.
   // Do not truncate lists of alternatives or combined ingredients.
   if (alternatives || /\by\b/.test(normalized.split(',')[0])) return name
-  let short = name.split(/[,;:]/)[0].replace(/\s*\([^)]*\)/g, '').trim()
+  let short = name.replace(/\s*\([^)]*\)/g, '').split(/[,;:]/)[0].trim()
   if (lang === 'es') {
     short = short.replace(/\s+(?:para (?:servir|decorar|espolvorear|la cobertura|el relleno)|(?:finamente )?(?:picad[oa]s?|pelad[oa]s?|rallad[oa]s?|cortad[oa]s?|laminad[oa]s?|trocead[oa]s?|desmenuzad[oa]s?|escurrid[oa]s?)|en (?:rodajas|gajos|cubos|dados|tiras|trozos)\b).*$/i, '')
   }
