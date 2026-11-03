@@ -1,0 +1,55 @@
+name: Full quality audit November 2026
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'public/.well-known/quality-audit-20261103.txt'
+      - 'scripts/verify-quality-fixes-20261103.py'
+      - '.github/workflows/full-quality-audit-20261103.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            scripts
+            editorial/quality-audit-20261103
+      - name: Wait for the actual hosting deployment and invalidate public caches
+        env:
+          REVALIDATE_SECRET: ${{ secrets.REVALIDATE_SECRET }}
+        run: |
+          python3 - <<'PY'
+          import os,time,urllib.request,json
+          for attempt in range(40):
+              try:
+                  with urllib.request.urlopen('https://manualdecocina.com/.well-known/quality-audit-20261103.txt?check='+str(time.time_ns()),timeout=20) as response:
+                      if 'manualdecocina-quality-20261103-v1' in response.read().decode(): break
+              except Exception: pass
+              if attempt==39: raise SystemExit('The expected application deployment is not live yet')
+              print('Waiting for hosting deployment',attempt+1,flush=True)
+              time.sleep(15)
+          secret=os.environ['REVALIDATE_SECRET'].rstrip('\r\n')
+          request=urllib.request.Request('https://manualdecocina.com/api/revalidate',data=b'{}',headers={'x-revalidate-secret':secret,'Content-Type':'application/json'})
+          with urllib.request.urlopen(request,timeout=40) as response: result=json.load(response)
+          assert result.get('revalidated') is True
+          print('Public cache invalidated')
+          PY
+      - name: Verify editorial, filters, indexing guards, schema and deployment assets
+        run: python3 scripts/verify-quality-fixes-20261103.py
+      - name: Crawl every sitemap page, internal links and images
+        if: success() || failure()
+        run: python3 scripts/audit-site-full-20261025.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: full-quality-audit-20261103
+          path: |
+            quality-fixes-20261103-verification.json
+            site-quality-page-checkpoint.json
+            site-full-20261025-audit.json
+            site-production-audit.json

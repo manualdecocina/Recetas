@@ -27,6 +27,13 @@ export function siteRobots(): NonNullable<Metadata['robots']> {
   }
 }
 
+/** Faceted results are useful navigation, but not separate search landing pages.
+ * Keep Google's explicit directive consistent with preview's indexing guard. */
+export function filteredPageRobots(): NonNullable<Metadata['robots']> {
+  const follow = isIndexingAllowed()
+  return { index: false, follow, googleBot: { index: false, follow } }
+}
+
 type Languages = NonNullable<NonNullable<Metadata['alternates']>['languages']>
 
 export function allLanguageAlternates(

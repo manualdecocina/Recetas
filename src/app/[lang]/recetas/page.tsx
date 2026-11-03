@@ -6,12 +6,15 @@ import SiteFooter from '@/components/md/SiteFooter'
 import RecipeListingView, { type MdListingFilters, type MdListingOptions } from '@/components/md/RecipeListingView'
 import type { MdRecipeCardData } from '@/components/md/md-types'
 import { UI_TEXT } from '@/lib/i18n'
-import { allLanguageAlternates, withSiteName } from '@/lib/seo'
+import { allLanguageAlternates, filteredPageRobots, withSiteName } from '@/lib/seo'
+import { ingredientLabel } from '@/lib/ingredient-labels'
+import { getPantryMatchData } from '@/lib/md-data'
+import { pantryIngredientRecipeIds } from '@/lib/pantry-foods'
 import { RECIPE_LISTING_TITLES, RECIPE_LISTING_DESCRIPTIONS, recipeListItem } from '@/lib/recipe-list-seo'
 import { getSiteUrl, languageTag } from '@/lib/site'
 import { SUPPORTED_LANGUAGES, type RecipeLanguage } from '@/types/recipe'
 import { categoryLabel } from '@/lib/categories'
-import { parseRecipePage, isUnsatisfiableRecipePage } from '@/lib/catalog-pagination'
+import { firstQueryValue, parseRecipePage, isUnsatisfiableRecipePage } from '@/lib/catalog-pagination'
 import { cuisineFilterLabel, difficultyFilterOptions, storedDifficultyValues, timeFilterOptions } from '@/lib/listing-filter-localization'
 import { recipeSearchOrFilter } from '@/lib/recipe-search-filter'
 import { uniqueCuisineGroupIds } from '@/lib/cuisine-filter-groups'
@@ -22,14 +25,14 @@ const CARD_FIELDS = 'id, language, slug, public_path, source_url, title, excerpt
 interface Props {
   params: Promise<{ lang: string }>
   searchParams: Promise<{
-    page?: string
-    q?: string
-    categoria?: string
-    cocina?: string
-    dificultad?: string
-    ingrediente?: string
-    tiempo?: string
-    ordenar?: string
+    page?: string | string[]
+    q?: string | string[]
+    categoria?: string | string[]
+    cocina?: string | string[]
+    dificultad?: string | string[]
+    ingrediente?: string | string[]
+    tiempo?: string | string[]
+    ordenar?: string | string[]
   }>
 }
 
@@ -37,8 +40,8 @@ function parseLang(value: string): RecipeLanguage | null {
   return (SUPPORTED_LANGUAGES as string[]).includes(value) ? (value as RecipeLanguage) : null
 }
 
-function clean(value?: string) {
-  return value?.trim().slice(0, 100) || ''
+function clean(value?: string | string[]) {
+  return firstQueryValue(value).trim().slice(0, 100)
 }
 
 export async function generateMetadata({ params, searchParams }: Props): Promise<Metadata> {
@@ -50,7 +53,7 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
   const page = parseRecipePage(query.page)
 
   return {
-    ...(Object.entries(query).some(([key, value]) => key !== 'page' && !!value?.trim()) ? { robots: { index: false, follow: true } } : {}),
+    ...(Object.entries(query).some(([key, value]) => key !== 'page' && !!clean(value)) ? { robots: filteredPageRobots() } : {}),
     title: withSiteName(page === 1 ? RECIPE_LISTING_TITLES[lang] : `${RECIPE_LISTING_TITLES[lang]} — ${text.page} ${page}`),
     description: RECIPE_LISTING_DESCRIPTIONS[lang],
     alternates: page === 1
@@ -73,7 +76,7 @@ export default async function RecipesListPage({ params, searchParams }: Props) {
   const dificultad = clean(search.dificultad)
   const ingrediente = clean(search.ingrediente)
   const tiempo = clean(search.tiempo)
-  const ordenar = search.ordenar === 'antiguas' ? 'antiguas' : 'recientes'
+  const ordenar = clean(search.ordenar) === 'antiguas' ? 'antiguas' : 'recientes'
   const from = (page - 1) * PAGE_SIZE
 
   const [{ data: cuisineOptions }, { data: ingredientOptions }] = await Promise.all([
@@ -142,11 +145,10 @@ export default async function RecipesListPage({ params, searchParams }: Props) {
       .maybeSingle()
     if (!ingredient) query = query.in('id', ['00000000-0000-0000-0000-000000000000'])
     else {
-      const { data: ingredientRelations } = await supabase
-        .from('recipe_ingredients')
-        .select('recipe_id')
-        .eq('ingredient_id', ingredient.id)
-      const ids = [...new Set((ingredientRelations ?? []).map((row) => row.recipe_id))]
+      // Use the complete localized editorial graph, just like ingredient pages.
+      // Legacy taxonomy links exist mainly on Spanish records and omit newer recipes.
+      const pantry = await getPantryMatchData(lang)
+      const ids = pantryIngredientRecipeIds(pantry, ingredient.id)
       query = query.in('id', ids.length ? ids : ['00000000-0000-0000-0000-000000000000'])
     }
   }
@@ -161,7 +163,9 @@ export default async function RecipesListPage({ params, searchParams }: Props) {
     ? query.order('published_at', { ascending: true, nullsFirst: false })
     : query.order('ready_at', { ascending: false, nullsFirst: false })
 
-  query = query.range(from, from + PAGE_SIZE - 1)
+  // Several publications share a timestamp. A stable tie-break prevents cards
+  // moving between pages or being skipped by offset pagination.
+  query = query.order('id').range(from, from + PAGE_SIZE - 1)
 
   const { data: recipes, count, error } = await query
   // PostgREST returns HTTP 416 when the requested offset exceeds the result
@@ -183,7 +187,8 @@ export default async function RecipesListPage({ params, searchParams }: Props) {
   const options: MdListingOptions = {
     cuisines: (cuisineOptions ?? []).map((item) => ({ value: item.slug, label: cuisineFilterLabel(lang, item.slug, item.name) })),
     difficulties: difficultyFilterOptions(lang),
-    ingredients: (ingredientOptions ?? []).map((item) => ({ value: item.slug, label: item.name })),
+    ingredients: (ingredientOptions ?? []).map((item) => ({ value: item.slug, label: ingredientLabel(item.slug, item.name, lang) }))
+      .sort((a, b) => a.label.localeCompare(b.label, lang)),
     times: timeFilterOptions(lang),
   }
 

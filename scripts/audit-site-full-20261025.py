@@ -328,8 +328,15 @@ def audit_page(url):
 
 
 with ThreadPoolExecutor(12) as ex:
-    pages = list(ex.map(audit_page, sorted(sitemap)))
+    pages = []
+    for count, page in enumerate(ex.map(audit_page, sorted(sitemap)), 1):
+        pages.append(page)
+        if count % 100 == 0:
+            print('pages audited:', count, '/', len(sitemap), flush=True)
 print("pages audited", flush=True)
+# Preserve a useful checkpoint before slower pagination, link and media checks.
+with open(os.environ.get('AUDIT_CHECKPOINT', 'site-quality-page-checkpoint.json'), 'w', encoding='utf-8') as f:
+    json.dump({'report': [{k: sorted(v) if isinstance(v, set) else v for k, v in p.items()} for p in pages], 'errors': errors}, f, ensure_ascii=False)
 
 by_url = {p["url"]: p for p in pages}
 for p in pages:

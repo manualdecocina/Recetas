@@ -9,8 +9,13 @@ export function isUnsatisfiableRecipePage(error: { code?: string | null } | null
 }
 
 /** Ignore malformed page numbers rather than running expensive/unsafe offsets. */
-export function parseRecipePage(value?: string): number {
-  if (!value || !/^[1-9]\d{0,5}$/.test(value)) return 1
-  const parsed = Number(value)
+export function firstQueryValue(value?: string | string[]): string {
+  return Array.isArray(value) ? value[0] ?? '' : value ?? ''
+}
+
+export function parseRecipePage(value?: string | string[]): number {
+  const first = firstQueryValue(value)
+  if (!first || !/^[1-9]\d{0,5}$/.test(first)) return 1
+  const parsed = Number(first)
   return Number.isSafeInteger(parsed) ? parsed : 1
 }

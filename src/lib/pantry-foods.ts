@@ -110,10 +110,23 @@ export function consolidatePantryFoods<T extends Pick<MdPantryRecipe, 'ingredien
     const winner = [...group].sort((a, b) => Number(a.id.startsWith('editorial:')) - Number(b.id.startsWith('editorial:')) || a.name.length - b.name.length)[0]
     const name = pantryFoodName(winner.name, lang)
     for (const item of group) ids.set(item.id, winner.id)
-    choices.push({ ...winner, name, aliases: [...new Set(group.flatMap(i => [i.slug, ...(i.aliases ?? [])]))] })
+    choices.push({ ...winner, name,
+      sourceIds: [...new Set(group.flatMap(i => [i.id, ...(i.sourceIds ?? [])]))],
+      aliases: [...new Set(group.flatMap(i => [i.slug, ...(i.aliases ?? [])]))] })
   }
   return { ingredients: choices.sort((a, b) => a.name.localeCompare(b.name, lang)), recipes: recipes.map(r => ({
     ...r, ingredientIds: [...new Set(r.ingredientIds.map(id => ids.get(id) ?? id))],
     ...(r.editorialIngredientIds ? { editorialIngredientIds: r.editorialIngredientIds.map(id => ids.get(id) ?? id) } : {}),
   })) }
+}
+
+/** Taxonomy pages and filters must resolve the same identities as the pantry.
+ * A canonical ID may have been merged into another equivalent choice. */
+export function pantryIngredientRecipeIds(
+  pantry: { ingredients: MdPantryIngredient[]; recipes: Array<{ id: string; ingredientIds: string[] }> },
+  ingredientId: string,
+): string[] {
+  const choice = pantry.ingredients.find(i => i.id === ingredientId || i.sourceIds?.includes(ingredientId))
+  const id = choice?.id ?? ingredientId
+  return pantry.recipes.filter(recipe => recipe.ingredientIds.includes(id)).map(recipe => recipe.id)
 }
