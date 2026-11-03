@@ -62,9 +62,9 @@ def fetch(url, body=True, method="GET"):
         except urllib.error.HTTPError as e:
             data = e.read().decode("utf-8", "replace") if body else ""
             return e.code, {k.lower(): v for k, v in e.headers.items()}, data
-        except Exception:
+        except Exception as e:
             if attempt == 2:
-                raise
+                return 0, {}, 'FETCH_ERROR: ' + str(e)
 
 
 def norm(url):

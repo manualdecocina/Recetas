@@ -12,6 +12,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 
 BASE = os.environ.get('AUDIT_BASE', 'https://manualdecocina.com').rstrip('/')
+CANONICAL_BASE = os.environ.get('QUALITY_CANONICAL_BASE', BASE).rstrip('/')
 ROOT = Path(__file__).resolve().parents[1]
 PATCHES = json.loads((ROOT / 'editorial/quality-audit-20261103/patches.json').read_text())
 LANGS = ['es', 'en', 'de', 'fr', 'it', 'ja', 'pt']
@@ -70,6 +71,7 @@ def fetch(path):
     try:
         with urllib.request.urlopen(req, timeout=40) as r: return r.status, r.url, r.read().decode('utf-8', 'replace')
     except urllib.error.HTTPError as e: return e.code, e.url, e.read().decode('utf-8', 'replace')
+    except Exception as e: return 0, url, 'FETCH_ERROR: ' + str(e)
 
 def nodes(data, kind):
     if isinstance(data, dict):
@@ -93,7 +95,7 @@ def check_editorial(patch):
         recipe = next(nodes(page.ld, 'Recipe'), None)
         if not recipe: problems.append('missing_recipe_schema')
         else:
-            if recipe.get('publisher', {}).get('url') != BASE + '/es': problems.append('publisher_url')
+            if recipe.get('publisher', {}).get('url') != CANONICAL_BASE + '/es': problems.append('publisher_url')
             if 'title' in patch['after'] and recipe['name'] != patch['after']['title']: problems.append('recipe_name')
             if 'ingredients' in patch['after'] and len(recipe.get('recipeIngredient', [])) != len(patch['after']['ingredients']): problems.append('ingredient_count')
             if recipe.get('url') != page.canonical: problems.append('schema_canonical')
@@ -107,6 +109,8 @@ with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:
         results.append(row)
         if row['problems']: errors.append(row)
 print('Editorial pages checked:', len(results), 'problems:', len(errors), flush=True)
+print('Editorial issues:', json.dumps(errors, ensure_ascii=False), flush=True)
+Path(os.environ.get('QUALITY_REPORT', 'quality-fixes-20261103-verification.json')).write_text(json.dumps({'phase': 'editorial', 'results': results, 'errors': errors}, ensure_ascii=False, indent=2))
 
 for lang in LANGS:
     status, _, body = fetch('/' + lang + '/recetas?ingrediente=ajo')
