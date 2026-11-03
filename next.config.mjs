@@ -13,6 +13,9 @@ for (const host of ['manualdecocina.com', 'www.manualdecocina.com']) hosts.add(h
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // The 1,700-page build must not flood the public Data API. Lower concurrency
+  // changes build scheduling only; public URLs and runtime caching stay the same.
+  experimental: { staticGenerationMaxConcurrency: 2 },
   // Historical KEEP URLs must respond directly, including their original slash.
   skipTrailingSlashRedirect: true,
   images: {

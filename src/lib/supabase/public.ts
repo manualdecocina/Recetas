@@ -1,4 +1,5 @@
 import { createClient } from '@supabase/supabase-js'
+import { publicReadFetch } from '@/lib/public-fetch'
 import { PUBLIC_REVALIDATE_SECONDS, RECIPES_CACHE_TAG } from '@/lib/cache'
 import { SUPABASE_PUBLIC_KEY, SUPABASE_URL } from './keys'
 
@@ -19,7 +20,7 @@ if (!supabaseUrl || !supabaseKey) {
 //   - revalidate: respaldo por tiempo.
 // Se llama a globalThis.fetch en cada petición para usar el fetch parcheado por Next.
 const taggedFetch: typeof fetch = (input, init) =>
-  globalThis.fetch(input, {
+  publicReadFetch(input, {
     ...init,
     next: { revalidate: PUBLIC_REVALIDATE_SECONDS, tags: [RECIPES_CACHE_TAG] },
   })

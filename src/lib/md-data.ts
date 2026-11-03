@@ -1,5 +1,6 @@
 import { normalizeEditorialIngredientSections } from '@/lib/editorial-ingredient-sections'
 import { cache } from 'react'
+import { coalescePublicLoad } from '@/lib/public-fetch'
 import { unstable_cache } from 'next/cache'
 import { PUBLIC_REVALIDATE_SECONDS, RECIPES_CACHE_TAG } from '@/lib/cache'
 import { supabase } from '@/lib/supabase/public'
@@ -131,7 +132,9 @@ export interface MdPantryRecipe extends MdRecipeCardData {
  */
 // Cache the computed public graph as well as its upstream reads. Ingredient
 // landings and recipe checklists reuse it; all publication paths invalidate recipes.
-export const getPantryMatchData = cache(unstable_cache(async (lang: RecipeLanguage = 'es'): Promise<{ ingredients: MdPantryIngredient[]; recipes: MdPantryRecipe[] }> => {
+type PantryData = { ingredients: MdPantryIngredient[]; recipes: MdPantryRecipe[] }
+const pantryPending = new Map<RecipeLanguage, Promise<PantryData>>()
+async function loadPantryMatchData(lang: RecipeLanguage): Promise<PantryData> {
   if (lang !== 'es') {
     const [source, { data, error }] = await Promise.all([
       getPantryMatchData('es'),
@@ -203,7 +206,11 @@ export const getPantryMatchData = cache(unstable_cache(async (lang: RecipeLangua
   const pantryIngredients = complete.ingredients.sort((a, b) => a.name.localeCompare(b.name, lang))
 
   return consolidatePantryFoods(pantryIngredients, pantryRecipes, lang)
-}, ['public-pantry-graph-v2'], { revalidate: PUBLIC_REVALIDATE_SECONDS, tags: [RECIPES_CACHE_TAG] }))
+}
+export const getPantryMatchData = cache(unstable_cache(
+  (lang: RecipeLanguage = 'es') => coalescePublicLoad(pantryPending, lang, () => loadPantryMatchData(lang)),
+  ['public-pantry-graph-v3'], { revalidate: PUBLIC_REVALIDATE_SECONDS, tags: [RECIPES_CACHE_TAG] },
+))
 
 /** Cuisine discovery follows the Spanish editorial origin shared by all seven
  * translations. Existing taxonomy links remain additional reviewed evidence. */
