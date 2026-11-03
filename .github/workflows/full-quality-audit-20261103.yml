@@ -28,7 +28,7 @@ jobs:
           for attempt in range(40):
               try:
                   with urllib.request.urlopen('https://manualdecocina.com/.well-known/quality-audit-20261103.txt?check='+str(time.time_ns()),timeout=20) as response:
-                      if 'manualdecocina-quality-20261103-v1' in response.read().decode(): break
+                      if 'manualdecocina-quality-20261103-v2' in response.read().decode(): break
               except Exception: pass
               if attempt==39: raise SystemExit('The expected application deployment is not live yet')
               print('Waiting for hosting deployment',attempt+1,flush=True)

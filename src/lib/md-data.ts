@@ -209,7 +209,7 @@ async function loadPantryMatchData(lang: RecipeLanguage): Promise<PantryData> {
 }
 export const getPantryMatchData = cache(unstable_cache(
   (lang: RecipeLanguage = 'es') => coalescePublicLoad(pantryPending, lang, () => loadPantryMatchData(lang)),
-  ['public-pantry-graph-v3'], { revalidate: PUBLIC_REVALIDATE_SECONDS, tags: [RECIPES_CACHE_TAG] },
+  ['public-pantry-graph-v4'], { revalidate: PUBLIC_REVALIDATE_SECONDS, tags: [RECIPES_CACHE_TAG] },
 ))
 
 /** Cuisine discovery follows the Spanish editorial origin shared by all seven

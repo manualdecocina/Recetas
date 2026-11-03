@@ -160,7 +160,7 @@ for path, expected in [('/en/recetas?q=rice&q=beans', 200), ('/es/recetas?page=9
     if problems: errors.append(row)
 
 status, _, marker = fetch('/.well-known/quality-audit-20261103.txt')
-if status != 200 or 'manualdecocina-quality-20261103-v1' not in marker: errors.append({'problems': ['deployment_marker']})
+if status != 200 or 'manualdecocina-quality-20261103-v2' not in marker: errors.append({'problems': ['deployment_marker']})
 status, _, body = fetch('/es')
 home = Page(body)
 styles = ''.join(fetch(path)[2] for path in home.styles)

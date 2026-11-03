@@ -80,10 +80,11 @@ export default async function RecipesListPage({ params, searchParams }: Props) {
   const ordenar = clean(search.ordenar) === 'antiguas' ? 'antiguas' : 'recientes'
   const from = (page - 1) * PAGE_SIZE
 
-  const [{ data: cuisineOptions }, { data: ingredientOptions }, cuisineRows] = await Promise.all([
+  const [{ data: cuisineOptions }, { data: ingredientOptions }, cuisineRows, pantry] = await Promise.all([
     supabase.from('cuisines').select('slug, name').eq('status', 'canonical').eq('searchable', true).order('name'),
-    supabase.from('ingredients').select('slug, name').eq('status', 'canonical').eq('indexable', true).order('name'),
+    supabase.from('ingredients').select('id, slug, name').eq('status', 'canonical').eq('searchable', true).order('name'),
     getCuisineDiscoveryRows(),
+    getPantryMatchData(lang),
   ])
 
   let query = supabase
@@ -143,13 +144,12 @@ export default async function RecipesListPage({ params, searchParams }: Props) {
       .select('id')
       .eq('slug', ingrediente)
       .eq('status', 'canonical')
-      .eq('indexable', true)
+      .eq('searchable', true)
       .maybeSingle()
     if (!ingredient) query = query.in('id', ['00000000-0000-0000-0000-000000000000'])
     else {
       // Use the complete localized editorial graph, just like ingredient pages.
       // Legacy taxonomy links exist mainly on Spanish records and omit newer recipes.
-      const pantry = await getPantryMatchData(lang)
       const ids = pantryIngredientRecipeIds(pantry, ingredient.id)
       query = query.in('id', ids.length ? ids : ['00000000-0000-0000-0000-000000000000'])
     }
@@ -189,7 +189,7 @@ export default async function RecipesListPage({ params, searchParams }: Props) {
   const options: MdListingOptions = {
     cuisines: cuisineDiscoveryOptions(lang, cuisineRows, cuisineOptions ?? []),
     difficulties: difficultyFilterOptions(lang),
-    ingredients: (ingredientOptions ?? []).map((item) => ({ value: item.slug, label: ingredientLabel(item.slug, item.name, lang) }))
+    ingredients: (ingredientOptions ?? []).filter(item => pantryIngredientRecipeIds(pantry, item.id).length > 0).map((item) => ({ value: item.slug, label: ingredientLabel(item.slug, item.name, lang) }))
       .sort((a, b) => a.label.localeCompare(b.label, lang)),
     times: timeFilterOptions(lang),
   }

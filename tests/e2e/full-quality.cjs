@@ -52,6 +52,11 @@ const base = process.env.AUDIT_BASE || 'http://127.0.0.1:3000';
    assert.equal(mushroom.status(),200,`searchable Unicode ingredient in ${lang}`);
    assert(!/404/.test(await page.locator('main').innerText()),`ingredient body in ${lang}`);
    assert((await page.locator('meta[name="googlebot"]').getAttribute('content')).includes('noindex'),'non-indexable searchable ingredient remains noindex');
+   const mushroomCards=await page.locator('.md-card-photo-link').evaluateAll(els=>els.map(a=>a.getAttribute('href')));
+   assert(mushroomCards.length>0,'reviewed mushroom preparations must resolve to the real taxonomy identity');
+   await page.goto(`${base}/${lang}/recetas?ingrediente=champi%C3%B1ones`,{waitUntil:'networkidle'});
+   const mushroomFiltered=await page.locator('.md-card-photo-link').evaluateAll(els=>els.map(a=>a.getAttribute('href')));
+   assert(mushroomFiltered.length>0&&mushroomFiltered.every(href=>mushroomCards.includes(href)),'searchable ingredients stay discoverable independently of SEO indexability');
   }
   await context.close();console.log('PASS: unfilled ad layout, served ads, translated ingredient filters, duplicate parameters, photo dialog and responsive widths.');
  } finally {await browser.close();}
