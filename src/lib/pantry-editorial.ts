@@ -151,10 +151,12 @@ export function ingredientSuggestions(ingredients: MdPantryIngredient[], query: 
   const normalized = normalizeIngredientSearch(query)
   if (!normalized) return []
   const words = normalized.split(' ')
-  return ingredients.filter(i => !selected.has(i.id) && words.every(word => normalizeIngredientSearch(i.name).includes(word)))
+  const searchable = (i: MdPantryIngredient) => normalizeIngredientSearch([i.name, ...(i.aliases ?? []), ...(i.slug === 'papas' ? ['papa papas patata patatas'] : [])].join(' '))
+  return ingredients.filter(i => !selected.has(i.id) && words.every(word => searchable(i).includes(word)))
     .sort((a, b) => {
       const an = normalizeIngredientSearch(a.name), bn = normalizeIngredientSearch(b.name)
       const rank = (s: string) => s === normalized ? 0 : s.startsWith(normalized) ? 1 : 2
-      return rank(an) - rank(bn) || a.name.length - b.name.length || a.name.localeCompare(b.name, lang)
+      const foodRank = (i: MdPantryIngredient, name: string) => i.slug === 'papas' && ['papa','papas','patata','patatas'].some(alias => alias.startsWith(normalized)) ? 0 : rank(name)
+      return foodRank(a, an) - foodRank(b, bn) || a.name.length - b.name.length || a.name.localeCompare(b.name, lang)
     }).slice(0, limit)
 }

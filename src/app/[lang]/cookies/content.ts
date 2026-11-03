@@ -14,15 +14,15 @@ export const COOKIES_CONTENT: LegalPageContentMap = {
       },
       {
         "heading": "2. Almacenamiento del navegador",
-        "html": "<p>El navegador recuerda tus preferencias de privacidad, tema, ingredientes marcados y recetas favoritas. La elección de publicidad se conserva hasta 180 días y puedes cambiarla desde «Preferencias de cookies» en el pie de página. La lista de favoritas se guarda en tu dispositivo; al abrirla, el sitio consulta los identificadores guardados para mostrar las recetas publicadas, también en otros idiomas. No se crea una cuenta ni un perfil de favoritos en el servidor.</p>"
+        "html": "<p>Guardamos en el navegador el tema, favoritos, ingredientes seleccionados y la confirmación de lectura del aviso durante un máximo de 180 días. Cerrar el aviso no autoriza publicidad personalizada. Los favoritos permanecen en tu dispositivo; no se crea una cuenta ni un perfil de favoritos en el servidor.</p>"
       },
       {
         "heading": "3. Cookies de terceros: Google AdSense",
-        "html": "<p>Manual de Cocina utiliza Google AdSense para publicidad. El script publicitario solo se carga cuando permites publicidad en nuestro cajón de privacidad y está habilitada la integración de consentimiento de Google. Google y sus socios pueden usar cookies para mostrar y medir anuncios y prevenir fraude, según sus propias opciones de consentimiento. Consulta la <a href=\"https://policies.google.com/technologies/cookies\" target=\"_blank\" rel=\"noopener noreferrer\">política de cookies de Google</a>.</p>"
+        "html": "<p>La publicidad ayuda a financiar las recetas gratuitas. La integración de Google AdSense se carga cuando están habilitados el identificador del editor y la integración de consentimiento. Google y sus socios pueden utilizar datos y almacenamiento para servir y medir anuncios y prevenir fraude, de acuerdo con las opciones aplicables. Consulta la <a href=\"https://policies.google.com/technologies/cookies\" target=\"_blank\" rel=\"noopener noreferrer\">política de cookies de Google</a>.</p>"
       },
       {
         "heading": "4. Gestión del consentimiento",
-        "html": "<p>En la primera visita puedes aceptar publicidad, rechazarla o configurar tu elección. Rechazarla mantiene bloqueada la carga del script de anuncios. Puedes reabrir el cajón desde «Preferencias de cookies», aunque el mensaje de Google no corresponda a tu región. Si autorizas cargar publicidad, Google puede mostrar opciones adicionales mediante su plataforma certificada. Nuestro cajón no sustituye ni registra una elección en esa plataforma. Si retiras el permiso después de cargar anuncios, la página se recarga para detener su carga posterior; las cookies ya guardadas se pueden borrar desde el navegador.</p>"
+        "html": "<p>El aviso local es informativo: Continuar solo lo cierra. Google recoge y aplica las decisiones publicitarias mediante su plataforma de consentimiento según la región. Rechazar el consentimiento o la personalización no implica necesariamente eliminar todos los anuncios: pueden mostrarse anuncios limitados cuando corresponda. No fabricamos ni modificamos señales TCF. Puedes reabrir la información desde Preferencias de cookies y acceder a Opciones de Google cuando estén disponibles. También puedes borrar el almacenamiento desde tu navegador.</p>"
       },
       {
         "heading": "5. Cómo borrar cookies y almacenamiento local desde tu navegador",
@@ -43,15 +43,15 @@ export const COOKIES_CONTENT: LegalPageContentMap = {
       },
       {
         "heading": "2. Browser storage",
-        "html": "<p>Your browser remembers privacy, theme, ingredient checkboxes and favorite recipes. The advertising choice lasts up to 180 days and can be changed through Cookie preferences in the footer. Favorites stay on your device; when you open the collection, the site looks up saved recipe identifiers to display published recipes, including other languages. No account or server-side favorites profile is created.</p>"
+        "html": "<p>We store your theme, favorites, selected ingredients and acknowledgement of this notice in your browser for up to 180 days. Closing the notice does not consent to personalized ads. Favorites stay on your device; no account or server-side favorites profile is created.</p>"
       },
       {
         "heading": "3. Third-party cookies: Google AdSense",
-        "html": "<p>Manual de Cocina uses Google AdSense for advertising. Its advertising script loads only after you allow advertising in our privacy drawer and the Google consent integration is enabled. Google and its partners may use cookies to display and measure ads and prevent fraud, subject to their consent options. Read <a href=\"https://policies.google.com/technologies/cookies\" target=\"_blank\" rel=\"noopener noreferrer\">Google’s cookie policy</a>.</p>"
+        "html": "<p>Advertising helps fund free recipes. The Google AdSense integration loads when the publisher ID and consent integration are enabled. Google and its partners may use data and storage to serve and measure ads and prevent fraud, according to applicable choices. See <a href=\"https://policies.google.com/technologies/cookies\" target=\"_blank\" rel=\"noopener noreferrer\">Google’s cookie policy</a>.</p>"
       },
       {
         "heading": "4. Managing consent",
-        "html": "<p>On your first visit you can accept advertising, reject it or configure your choice. Rejection blocks the advertising script. Cookie preferences in the footer always reopens the drawer, even where Google’s message does not apply. If you allow advertising to load, Google may show additional choices through its certified platform. Our drawer does not replace that platform or record a choice in it. Withdrawing permission after ads load reloads the page to stop subsequent loading; existing cookies can be cleared in your browser.</p>"
+        "html": "<p>The local notice is informational: Continue only closes it. Google collects and applies advertising choices through its consent platform for your region. Refusing consent or personalization does not necessarily remove all ads: limited ads may appear when eligible. We do not fabricate or modify TCF signals. Reopen the notice from Cookie preferences and access Google options when available. Browser settings also let you delete stored data.</p>"
       },
       {
         "heading": "5. How to clear cookies and local storage from your browser",
@@ -72,15 +72,15 @@ export const COOKIES_CONTENT: LegalPageContentMap = {
       },
       {
         "heading": "2. Browserspeicher",
-        "html": "<p>Dein Browser speichert Datenschutz- und Designeinstellungen, markierte Zutaten und Lieblingsrezepte. Die Werbeauswahl gilt bis zu 180 Tage und lässt sich über Cookie-Einstellungen in der Fußzeile ändern. Favoriten bleiben auf deinem Gerät; beim Öffnen der Sammlung fragt die Website die gespeicherten Rezeptkennungen ab, um veröffentlichte Rezepte auch in anderen Sprachen anzuzeigen. Es entsteht kein Konto oder Favoritenprofil auf dem Server.</p>"
+        "html": "<p>Wir speichern Design, Favoriten, ausgewählte Zutaten und die Bestätigung dieses Hinweises im Browser, letztere bis zu 180 Tage. Das Schließen stimmt keiner personalisierten Werbung zu. Favoriten bleiben auf deinem Gerät; es wird kein Konto oder serverseitiges Favoritenprofil erstellt.</p>"
       },
       {
         "heading": "3. Cookies von Dritten: Google AdSense",
-        "html": "<p>Manual de Cocina nutzt Google AdSense für Werbung. Das Werbeskript wird erst geladen, wenn du Werbung in unserem Datenschutzhinweis erlaubst und die Google-Einwilligungsintegration aktiviert ist. Google und seine Partner können nach ihren Einwilligungsoptionen Cookies für Anzeige, Messung und Betrugsprävention verwenden. Weitere Informationen: <a href=\"https://policies.google.com/technologies/cookies\" target=\"_blank\" rel=\"noopener noreferrer\">Google-Cookie-Richtlinie</a>.</p>"
+        "html": "<p>Werbung finanziert kostenlose Rezepte. Die Google-AdSense-Integration lädt, wenn Publisher-ID und Einwilligungsintegration aktiviert sind. Google und seine Partner können entsprechend den geltenden Einstellungen Daten und Speicher für Anzeigen, Messung und Betrugsschutz nutzen. Siehe die <a href=\"https://policies.google.com/technologies/cookies\" target=\"_blank\" rel=\"noopener noreferrer\">Cookie-Richtlinie von Google</a>.</p>"
       },
       {
         "heading": "4. Einwilligungsverwaltung",
-        "html": "<p>Beim ersten Besuch kannst du Werbung akzeptieren, ablehnen oder konfigurieren. Eine Ablehnung blockiert das Werbeskript. Über Cookie-Einstellungen lässt sich der Hinweis jederzeit öffnen, auch außerhalb der Regionen mit Google-Meldung. Wenn du Werbung erlaubst, kann Google zusätzliche Optionen über seine zertifizierte Plattform anzeigen. Unser Hinweis ersetzt diese Plattform nicht und speichert dort keine Entscheidung. Ein späterer Widerruf lädt die Seite neu, um weiteres Laden zu stoppen; vorhandene Cookies kannst du im Browser löschen.</p>"
+        "html": "<p>Der lokale Hinweis informiert nur; Weiter schließt ihn. Google erfasst und berücksichtigt die Werbeauswahl über seine Einwilligungsplattform für deine Region. Eine Ablehnung entfernt nicht unbedingt alle Anzeigen: eingeschränkte Anzeigen sind möglich, wenn die Voraussetzungen erfüllt sind. Wir erstellen oder verändern keine TCF-Signale. Cookie-Einstellungen öffnet den Hinweis erneut; Google-Optionen ist verfügbar, sobald Google diese anbietet. Gespeicherte Daten lassen sich im Browser löschen.</p>"
       },
       {
         "heading": "5. Cookies und lokalen Speicher im Browser löschen",
@@ -101,15 +101,15 @@ export const COOKIES_CONTENT: LegalPageContentMap = {
       },
       {
         "heading": "2. Stockage du navigateur",
-        "html": "<p>Votre navigateur mémorise les préférences de confidentialité et de thème, les ingrédients cochés et les recettes favorites. Le choix publicitaire est conservé jusqu’à 180 jours et peut être modifié via Préférences de cookies en pied de page. Les favoris restent sur votre appareil ; à l’ouverture de la collection, le site consulte les identifiants enregistrés pour afficher les recettes publiées, y compris dans d’autres langues. Aucun compte ni profil de favoris n’est créé sur le serveur.</p>"
+        "html": "<p>Nous enregistrons le thème, les favoris, les ingrédients et la confirmation de lecture de cet avis dans votre navigateur, cette dernière pendant 180 jours au maximum. Fermer l’avis n’accepte pas les annonces personnalisées. Les favoris restent sur votre appareil, sans compte ni profil de favoris sur le serveur.</p>"
       },
       {
         "heading": "3. Cookies tiers : Google AdSense",
-        "html": "<p>Manual de Cocina utilise Google AdSense. Le script publicitaire se charge uniquement si vous autorisez la publicité dans notre panneau de confidentialité et si l’intégration du consentement Google est activée. Google et ses partenaires peuvent utiliser des cookies pour afficher et mesurer les annonces et prévenir la fraude, selon leurs options de consentement. Consultez la <a href=\"https://policies.google.com/technologies/cookies\" target=\"_blank\" rel=\"noopener noreferrer\">politique de cookies de Google</a>.</p>"
+        "html": "<p>La publicité finance les recettes gratuites. L’intégration Google AdSense se charge lorsque l’identifiant éditeur et l’intégration de consentement sont activés. Google et ses partenaires peuvent utiliser des données et du stockage pour diffuser et mesurer des annonces et prévenir la fraude selon les choix applicables. Consultez la <a href=\"https://policies.google.com/technologies/cookies\" target=\"_blank\" rel=\"noopener noreferrer\">politique de cookies de Google</a>.</p>"
       },
       {
         "heading": "4. Gestion du consentement",
-        "html": "<p>À la première visite, vous pouvez accepter, refuser ou configurer la publicité. Le refus bloque le script publicitaire. Le lien Préférences de cookies permet toujours de rouvrir le panneau, même lorsque le message Google ne concerne pas votre région. Si vous autorisez le chargement publicitaire, Google peut afficher des choix supplémentaires sur sa plateforme certifiée. Notre panneau ne remplace pas cette plateforme et n’y enregistre aucune décision. Un retrait après chargement recharge la page pour arrêter les chargements suivants ; les cookies existants peuvent être effacés dans le navigateur.</p>"
+        "html": "<p>L’avis local est informatif : Continuer le ferme uniquement. Google recueille et applique les choix publicitaires via sa plateforme de consentement selon la région. Un refus ne supprime pas nécessairement toutes les annonces : des annonces limitées peuvent apparaître lorsque les conditions le permettent. Nous ne créons ni ne modifions les signaux TCF. Préférences de cookies rouvre cet avis et permet d’accéder aux options Google lorsqu’elles sont disponibles. Les données stockées peuvent être effacées dans le navigateur.</p>"
       },
       {
         "heading": "5. Comment effacer les cookies et le stockage local depuis ton navigateur",
@@ -130,15 +130,15 @@ export const COOKIES_CONTENT: LegalPageContentMap = {
       },
       {
         "heading": "2. Memoria del browser",
-        "html": "<p>Il browser ricorda preferenze di privacy e tema, ingredienti selezionati e ricette preferite. La scelta pubblicitaria dura fino a 180 giorni e si modifica da Preferenze cookie nel piè di pagina. I preferiti restano sul dispositivo; aprendo la raccolta, il sito consulta gli identificatori salvati per mostrare le ricette pubblicate, anche in altre lingue. Non viene creato un account o un profilo di preferiti sul server.</p>"
+        "html": "<p>Salviamo tema, preferiti, ingredienti e conferma di lettura dell’avviso nel browser, quest’ultima per un massimo di 180 giorni. Chiudere l’avviso non accetta annunci personalizzati. I preferiti restano sul dispositivo senza creare un account o un profilo sul server.</p>"
       },
       {
         "heading": "3. Cookie di terze parti: Google AdSense",
-        "html": "<p>Manual de Cocina usa Google AdSense. Lo script pubblicitario si carica solo quando consenti la pubblicità nel nostro pannello privacy e l’integrazione del consenso Google è attiva. Google e i suoi partner possono usare cookie per mostrare e misurare annunci e prevenire frodi, secondo le loro opzioni di consenso. Consulta l’<a href=\"https://policies.google.com/technologies/cookies\" target=\"_blank\" rel=\"noopener noreferrer\">informativa sui cookie di Google</a>.</p>"
+        "html": "<p>La pubblicità finanzia le ricette gratuite. L’integrazione Google AdSense viene caricata quando sono abilitati l’ID editore e l’integrazione del consenso. Google e i suoi partner possono utilizzare dati e memoria per annunci, misurazione e prevenzione delle frodi secondo le scelte applicabili. Consulta le <a href=\"https://policies.google.com/technologies/cookies\" target=\"_blank\" rel=\"noopener noreferrer\">norme sui cookie di Google</a>.</p>"
       },
       {
         "heading": "4. Gestione del consenso",
-        "html": "<p>Alla prima visita puoi accettare, rifiutare o configurare la pubblicità. Il rifiuto blocca lo script pubblicitario. Preferenze cookie riapre sempre il pannello, anche se il messaggio Google non riguarda la tua regione. Se autorizzi il caricamento, Google può mostrare altre scelte sulla sua piattaforma certificata. Il nostro pannello non sostituisce questa piattaforma e non vi registra una scelta. Revocando il permesso dopo il caricamento, la pagina si ricarica per interrompere i caricamenti successivi; i cookie già salvati si possono eliminare dal browser.</p>"
+        "html": "<p>L’avviso locale è informativo: Continua lo chiude soltanto. Google raccoglie e applica le scelte pubblicitarie tramite la sua piattaforma di consenso per la regione. Un rifiuto non elimina necessariamente tutti gli annunci: possono apparire annunci con limitazioni quando consentito. Non creiamo né modifichiamo segnali TCF. Preferenze cookie riapre l’avviso e permette di accedere alle opzioni Google quando disponibili. I dati salvati possono essere eliminati dal browser.</p>"
       },
       {
         "heading": "5. Come cancellare cookie e archiviazione locale dal browser",
@@ -159,15 +159,15 @@ export const COOKIES_CONTENT: LegalPageContentMap = {
       },
       {
         "heading": "2. ブラウザへの保存",
-        "html": "<p>ブラウザにプライバシー、テーマ、選択した食材、お気に入りを保存します。広告の選択は最大180日間有効で、ページ下部のCookie設定から変更できます。お気に入りは端末に保存し、一覧を開く際に保存済みのレシピIDを照会して、ほかの言語を含む公開レシピを表示します。アカウントやサーバー上のお気に入りプロフィールは作成しません。</p>"
+        "html": "<p>テーマ、お気に入り、食材、この案内の確認をブラウザに保存します。案内の確認は最大180日間保存します。案内を閉じても広告のパーソナライズに同意したことにはなりません。お気に入りは端末に保存され、アカウントやサーバー上のプロフィールは作成しません。</p>"
       },
       {
         "heading": "3. 第三者のクッキー：Google AdSense",
-        "html": "<p>Manual de CocinaはGoogle AdSenseを使用します。当サイトのプライバシーパネルで広告を許可し、Googleの同意管理連携が有効な場合にのみ広告スクリプトを読み込みます。Googleとそのパートナーは、それぞれの同意設定に従って広告表示、効果測定、不正防止にCookieを使用することがあります。<a href=\"https://policies.google.com/technologies/cookies\" target=\"_blank\" rel=\"noopener noreferrer\">GoogleのCookieポリシー</a>をご確認ください。</p>"
+        "html": "<p>広告収入は無料レシピを支えます。サイト運営者IDと同意管理の連携が有効な場合にGoogle AdSenseを読み込みます。Googleとパートナーは、適用される選択に応じて、広告の配信、測定、不正防止にデータやストレージを使用する場合があります。<a href=\"https://policies.google.com/technologies/cookies\" target=\"_blank\" rel=\"noopener noreferrer\">GoogleのCookieポリシー</a>をご覧ください。</p>"
       },
       {
         "heading": "4. 同意の管理",
-        "html": "<p>初回訪問時に広告の許可、拒否、設定を選択できます。拒否すると広告スクリプトの読み込みをブロックします。地域にGoogleのメッセージが適用されなくても、ページ下部のCookie設定からパネルを開けます。広告を許可した場合、Googleの認定プラットフォームが追加の選択を表示することがあります。当サイトのパネルはその代わりにはならず、Google側の選択を記録しません。広告読み込み後に許可を撤回するとページを再読み込みし、以後の読み込みを停止します。既存のCookieはブラウザで削除できます。</p>"
+        "html": "<p>この案内は情報提供用です。「続ける」は案内を閉じるだけです。広告に関する選択は地域に応じたGoogleの同意管理システムが収集し適用します。同意を拒否しても、条件を満たす場合は制限付き広告が表示されます。当サイトはTCF信号を作成・変更しません。Cookie設定から案内を再度開き、利用可能な場合はGoogleの設定に進めます。保存データはブラウザで削除できます。</p>"
       },
       {
         "heading": "5. ブラウザでクッキーとローカルストレージを削除する方法",
@@ -188,15 +188,15 @@ export const COOKIES_CONTENT: LegalPageContentMap = {
       },
       {
         "heading": "2. Armazenamento do navegador",
-        "html": "<p>O navegador lembra suas preferências de privacidade e tema, ingredientes marcados e receitas favoritas. A escolha de publicidade dura até 180 dias e pode ser alterada em Preferências de cookies no rodapé. Os favoritos ficam no dispositivo; ao abrir a coleção, o site consulta os identificadores salvos para mostrar receitas publicadas, inclusive em outros idiomas. Não é criada uma conta nem um perfil de favoritos no servidor.</p>"
+        "html": "<p>Salvamos tema, favoritos, ingredientes e confirmação de leitura deste aviso no navegador, esta última por até 180 dias. Fechar o aviso não aceita anúncios personalizados. Os favoritos ficam no dispositivo; não criamos conta nem perfil de favoritos no servidor.</p>"
       },
       {
         "heading": "3. Cookies de terceiros: Google AdSense",
-        "html": "<p>O Manual de Cocina usa Google AdSense. O script de publicidade só é carregado quando você permite publicidade no nosso painel de privacidade e a integração de consentimento do Google está habilitada. O Google e seus parceiros podem usar cookies para mostrar e medir anúncios e prevenir fraudes, conforme suas opções de consentimento. Consulte a <a href=\"https://policies.google.com/technologies/cookies\" target=\"_blank\" rel=\"noopener noreferrer\">política de cookies do Google</a>.</p>"
+        "html": "<p>A publicidade financia as receitas gratuitas. A integração Google AdSense carrega quando o ID do editor e a integração de consentimento estão habilitados. O Google e seus parceiros podem usar dados e armazenamento para anúncios, medição e prevenção de fraude conforme as opções aplicáveis. Consulte a <a href=\"https://policies.google.com/technologies/cookies\" target=\"_blank\" rel=\"noopener noreferrer\">política de cookies do Google</a>.</p>"
       },
       {
         "heading": "4. Gerenciamento de consentimento",
-        "html": "<p>Na primeira visita, você pode aceitar, recusar ou configurar a publicidade. A recusa bloqueia o script de anúncios. Preferências de cookies sempre reabre o painel, mesmo onde a mensagem do Google não se aplica. Se permitir o carregamento de anúncios, o Google poderá mostrar escolhas adicionais na sua plataforma certificada. Nosso painel não substitui essa plataforma nem registra uma escolha nela. Retirar a permissão após o carregamento recarrega a página para interromper carregamentos posteriores; cookies já salvos podem ser apagados no navegador.</p>"
+        "html": "<p>O aviso local é informativo: Continuar apenas o fecha. O Google coleta e aplica as escolhas publicitárias pela sua plataforma de consentimento conforme a região. Uma recusa não elimina necessariamente todos os anúncios: anúncios limitados podem aparecer quando permitido. Não criamos nem alteramos sinais TCF. Preferências de cookies reabre o aviso e permite acessar as opções do Google quando disponíveis. Os dados salvos também podem ser apagados no navegador.</p>"
       },
       {
         "heading": "5. Como apagar cookies e armazenamento local no seu navegador",

@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict'
+import { consolidatePantryFoods, pantryFoodName } from '@/lib/pantry-foods'
 import { buildEditorialPantry, editorialIngredientId, ingredientSuggestions, localizeEditorialIngredients } from '@/lib/pantry-editorial'
 const catalog = [
   { id: 'tomato', slug: 'tomate', name: 'Tomate' },
@@ -48,6 +49,35 @@ const lemons = buildEditorialPantry([{ id: 'lemons', ingredients: [{ name: 'lim�
 assert.deepEqual(lemons.requirements.get('lemons'), ['lemon', 'lemon'], 'singular and plural lemon share the reviewed identity')
 
 const potatoCatalog = [{ id: 'potato', slug: 'papas', name: 'Papa' }];
+const foods = [
+  ...potatoCatalog,
+  {id:'boiled',slug:'editorial:patata hervida',name:'patata hervida con piel, pelada después, sin sal; peso de pulpa cocida y escurrida'},
+  {id:'cooking',slug:'editorial:patatas para cocer',name:'Patatas para cocer'},
+  {id:'diced',slug:'editorial:papas medianas',name:'papas medianas peladas en dados de 1 cm'},
+  {id:'criolla',slug:'papa-criolla',name:'Papa criolla'},
+  {id:'flour',slug:'harina-de-papa',name:'Harina de papa'},
+  {id:'fries',slug:'papas-fritas',name:'Papas fritas congeladas'},
+  {id:'chicken',slug:'pechuga-de-pollo',name:'Pechuga de pollo'},
+  {id:'cut-chicken',slug:'editorial:pechuga en dados',name:'Pechuga de pollo sin piel, en dados de 2,5 cm'},
+]
+const clean = consolidatePantryFoods(foods, [{ingredientIds:['potato','boiled','diced','cooking','cut-chicken'],editorialIngredientIds:['boiled','diced']}])
+assert.deepEqual(clean.recipes[0].ingredientIds,['potato','chicken'], 'matching must use unified food IDs, not merely short labels')
+assert.deepEqual(clean.recipes[0].editorialIngredientIds,['potato','potato'], 'preserve editorial positions for translation joins')
+assert.equal(clean.ingredients.filter(i=>i.name==='Papa').length,1)
+assert(clean.ingredients.some(i=>i.id==='criolla'))
+assert(clean.ingredients.some(i=>i.id==='flour'))
+assert(clean.ingredients.some(i=>i.id==='fries'))
+assert(clean.ingredients.find(i=>i.id==='potato')?.aliases?.includes('editorial:patata hervida'), 'restore old saved selections')
+for (const query of ['papa','papas','pata','patata','patatas']) {
+ assert.equal(ingredientSuggestions(clean.ingredients,query,new Set(),'es')[0]?.id,'potato',query)
+ assert(!ingredientSuggestions(clean.ingredients,query,new Set(['potato']),'es').some(i=>i.id==='potato'))
+}
+assert.equal(pantryFoodName('tomate triturado en conserva, con todo su líquido'),'Tomate triturado')
+assert.equal(pantryFoodName('aceitunas verdes sin hueso, escurridas'),'Aceitunas verdes')
+assert.notEqual(pantryFoodName('Ajo en polvo'),pantryFoodName('Ajo'))
+assert.notEqual(pantryFoodName('Leche en polvo'),pantryFoodName('Leche'))
+assert.equal(pantryFoodName('arroz blanco, aguacate, arepa y cilantro fresco'),'arroz blanco, aguacate, arepa y cilantro fresco', 'do not turn a combined ingredient list into rice')
+assert.equal(pantryFoodName('gochugaru (chile coreano, en escamas)'),'Gochugaru', 'never leave a half-open parenthetical preparation')
 for (const name of ['Papa', 'papas peladas, en trozos', 'papa mediana', 'papas harinosas (pastusa, russet o similar)']) {
   assert.equal(buildEditorialPantry([{ id: 'potato-recipe', ingredients: [{ name }] }], potatoCatalog, []).requirements.get('potato-recipe')?.[0], 'potato', name);
 }

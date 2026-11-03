@@ -10,10 +10,11 @@ for (const lang of ['es','en','de','fr','it','ja','pt'] as const) {
 const now = 100000000000
 assert.equal(parsePrivacyChoice(null, now), null)
 assert.equal(parsePrivacyChoice('{', now), null)
-assert.equal(parsePrivacyChoice(JSON.stringify({version:1,advertising:true,savedAt:now-CONSENT_MAX_AGE}), now), null)
-assert.equal(parsePrivacyChoice(JSON.stringify({version:1,advertising:true,savedAt:now+1}), now), null)
-assert.equal(parsePrivacyChoice(JSON.stringify({version:1,advertising:'yes',savedAt:now}), now), null)
-assert.equal(parsePrivacyChoice(JSON.stringify({version:1,advertising:false,savedAt:now}), now)?.advertising, false)
+assert.equal(parsePrivacyChoice(JSON.stringify({version:2,acknowledged:true,savedAt:now-CONSENT_MAX_AGE}), now), null)
+assert.equal(parsePrivacyChoice(JSON.stringify({version:2,acknowledged:true,savedAt:now+1}), now), null)
+assert.equal(parsePrivacyChoice(JSON.stringify({version:2,acknowledged:'yes',savedAt:now}), now), null)
+assert.equal(parsePrivacyChoice(JSON.stringify({version:1,advertising:false,savedAt:now}), now), null, 'legacy refusal is not new consent')
+assert.equal(parsePrivacyChoice(JSON.stringify({version:2,acknowledged:true,savedAt:now}), now)?.acknowledged, true)
 assert.deepEqual(parseFavoriteIds('["a","b","a"]'), ['a','b'])
 assert.throws(() => parseFavoriteIds('{"a":true}'))
 console.log('OK: durations in seven languages, expired/malformed consent, explicit refusal, compatible favorite IDs')
@@ -33,7 +34,7 @@ assert(sanitizeEditorialHtml('<h3>Notas</h3><p><a href="/arepa-de-huevo">Receta<
 const { PRIVACY_BOOTSTRAP } = await import('@/lib/consent')
 for (const allowed of [true, false]) {
  const document = { documentElement: { dataset: {} as Record<string,string> } }
- const storage = { getItem: () => JSON.stringify({version:1,advertising:allowed,savedAt:Date.now()}) }
+ const storage = { getItem: () => JSON.stringify({version:2,acknowledged:allowed,savedAt:Date.now()}) }
  new Function('document','localStorage',PRIVACY_BOOTSTRAP)(document,storage)
- assert.equal(document.documentElement.dataset.mdPrivacy,'known','both choices hide repeat-visit drawer before paint')
+ assert.equal(document.documentElement.dataset.mdPrivacy,allowed ? 'known' : undefined,'only a valid notice acknowledgement hides it')
 }
