@@ -30,6 +30,7 @@ class Page(HTMLParser):
         self.select = None
         self.option = None
         self.ingredients = {}
+        self.cuisines = {}
         self._buf = None
         self._ignore = False
         self.feed(body)
@@ -44,13 +45,16 @@ class Page(HTMLParser):
         if tag == 'link' and a.get('rel') == 'stylesheet': self.styles.append(a.get('href'))
         if tag == 'a' and 'md-card-photo-link' in a.get('class', '').split(): self.cards.add(a.get('href'))
         if tag == 'select': self.select = a.get('name')
-        if tag == 'option' and self.select == 'ingrediente':
+        if tag == 'option' and self.select in ['ingrediente', 'cocina']:
             self.option = a.get('value', '')
-            self.ingredients[self.option] = ''
+            target = self.ingredients if self.select == 'ingrediente' else self.cuisines
+            target[self.option] = ''
     def handle_data(self, data):
         if self._buf is not None: self._buf += data
         if not self._ignore: self.text.append(data)
-        if self.option is not None: self.ingredients[self.option] += data
+        if self.option is not None:
+            target = self.ingredients if self.select == 'ingrediente' else self.cuisines
+            target[self.option] += data
     def handle_endtag(self, tag):
         if tag == 'script':
             if self._buf is not None:
@@ -120,6 +124,7 @@ for lang in LANGS:
     problems = []
     if status != 200 or detail_status != 200: problems.append('http')
     if filtered.ingredients.get('ajo') != GARLIC[lang]: problems.append('localized_ingredient_option')
+    if 'cocina-estadounidense' not in filtered.cuisines: problems.append('missing_cuisine_discovery_groups')
     if not filtered.cards: problems.append('empty_ingredient_filter')
     if not filtered.cards.issubset(detail.cards): problems.append('filter_vs_landing')
     if not all('noindex' in filtered.robots.get(key, '') for key in ['robots', 'googlebot']): problems.append('facet_indexing')
@@ -127,6 +132,12 @@ for lang in LANGS:
     results.append(row)
     if problems: errors.append(row)
     print('Ingredient filter:', lang, row, flush=True)
+    cuisine_status, _, cuisine_body = fetch('/' + lang + '/recetas?cocina=cocina-estadounidense')
+    cuisine = Page(cuisine_body)
+    cuisine_problems = [] if cuisine_status == 200 and cuisine.cards else ['empty_american_cuisine_filter']
+    cuisine_result = {'language': lang, 'cuisine_filter_cards': len(cuisine.cards), 'problems': cuisine_problems}
+    results.append(cuisine_result)
+    if cuisine_problems: errors.append(cuisine_result)
 
 for path, expected in [('/en/recetas?q=rice&q=beans', 200), ('/es/recetas?page=999', 404), ('/xx', 404), ('/es/quality-audit-page-does-not-exist', 404)]:
     status, _, body = fetch(path)

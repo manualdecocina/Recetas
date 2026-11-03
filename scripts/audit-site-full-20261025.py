@@ -353,6 +353,20 @@ for p in pages:
         if p["url"] not in back.values():
             err("hreflang_not_reciprocal", p["url"], alt)
 
+# A metadata-only pass can finish independently of slow external link/media checks.
+if os.environ.get('AUDIT_STOP_AFTER_PAGES') == 'true':
+    from collections import Counter
+    report = [{k: sorted(v) if isinstance(v, set) else v for k, v in p.items()} for p in pages]
+    summary = {'phase': 'html-and-hreflang', 'sitemap_urls': len(sitemap), 'pages': len(pages),
+               'http_status': dict(Counter(str(p['status']) for p in pages)),
+               'recipe_pages': sum(bool(p.get('recipe_schema')) for p in pages),
+               'recipe_schema_valid': sum(bool(p.get('recipe_valid')) for p in pages),
+               'errors': len(errors), 'errors_by_kind': dict(Counter(e['kind'] for e in errors))}
+    with open(os.environ.get('AUDIT_HTML_REPORT', 'site-quality-html-report.json'), 'w', encoding='utf-8') as f:
+        json.dump({'summary': summary, 'errors': errors, 'report': report}, f, ensure_ascii=False)
+    print('HTML_AUDIT_SUMMARY', json.dumps(summary), flush=True)
+    sys.exit(bool(errors))
+
 # Enlaces internos entrantes (páginas huérfanas dentro del sitemap).
 # Las páginas 2..N del listado de recetas no están en el sitemap pero son
 # indexables y Google las rastrea, así que también cuentan como origen.

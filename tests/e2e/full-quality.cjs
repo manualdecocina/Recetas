@@ -46,6 +46,8 @@ const base = process.env.AUDIT_BASE || 'http://127.0.0.1:3000';
    await page.goto(`${base}/${lang}/recetas?ingrediente=ajo`,{waitUntil:'networkidle'});
    assert.equal(await page.locator('select[name="ingrediente"] option[value="ajo"]').innerText(),label);
    assert(await page.locator('.md-recipe-card').count()>0,lang);
+   await page.goto(`${base}/${lang}/recetas?cocina=cocina-estadounidense`,{waitUntil:'networkidle'});
+   assert(await page.locator('.md-recipe-card').count()>0,`new cuisine taxonomy in ${lang}`);
   }
   await context.close();console.log('PASS: unfilled ad layout, served ads, translated ingredient filters, duplicate parameters, photo dialog and responsive widths.');
  } finally {await browser.close();}

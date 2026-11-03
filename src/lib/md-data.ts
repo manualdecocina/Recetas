@@ -205,6 +205,19 @@ export const getPantryMatchData = cache(unstable_cache(async (lang: RecipeLangua
   return consolidatePantryFoods(pantryIngredients, pantryRecipes, lang)
 }, ['public-pantry-graph-v2'], { revalidate: PUBLIC_REVALIDATE_SECONDS, tags: [RECIPES_CACHE_TAG] }))
 
+/** Cuisine discovery follows the Spanish editorial origin shared by all seven
+ * translations. Existing taxonomy links remain additional reviewed evidence. */
+export const getCuisineDiscoveryRows = cache(unstable_cache(async (): Promise<Array<{ recipe_group_id: string; cuisine: string | null }>> => {
+  const rows: Array<{ recipe_group_id: string; cuisine: string | null }> = []
+  for (let from = 0; ; from += 1000) {
+    const { data, error } = await supabase.from('recipes').select('recipe_group_id, cuisine')
+      .eq('published', true).eq('language', 'es').order('id').range(from, from + 999)
+    if (error) throw new Error(`No se pudieron cargar las cocinas publicadas: ${error.message}`)
+    rows.push(...(data ?? []))
+    if (!data || data.length < 1000) return rows
+  }
+}, ['published-cuisine-discovery-v1'], { revalidate: PUBLIC_REVALIDATE_SECONDS, tags: [RECIPES_CACHE_TAG] }))
+
 /** Idiomas que tienen al menos una receta publicada (los demás se muestran deshabilitados en el selector). */
 export async function getAvailableLanguages(): Promise<RecipeLanguage[]> {
   // PostgREST caps a response at 1,000 rows even with limit(2000). Checking

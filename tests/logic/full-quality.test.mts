@@ -3,6 +3,7 @@ import { consolidatePantryFoods, pantryIngredientRecipeIds } from '@/lib/pantry-
 import { filteredPageRobots } from '@/lib/seo'
 import { firstQueryValue, parseRecipePage } from '@/lib/catalog-pagination'
 import { taxonomyLanding } from '@/lib/taxonomy-landing-seo'
+import { cuisineDiscoverySlugs, cuisineDiscoveryGroupIds, cuisineDiscoveryOptions } from '@/lib/cuisine-discovery'
 
 const choices = [
   { id: 'short-id', slug: 'limon', name: 'Limón' },
@@ -25,6 +26,17 @@ assert.equal(parseRecipePage(['2x', '3']), 1)
 assert.match(taxonomyLanding('ingredient', 'en', 'Garlic', 1).heading, /^1 recipe using Garlic$/)
 assert.match(taxonomyLanding('ingredient', 'fr', 'Ail', 1).heading, /^1 recette avec ail$/)
 assert.match(taxonomyLanding('ingredient', 'es', 'Ajo', 1).title, /1 idea$/)
+assert.deepEqual(cuisineDiscoverySlugs('Colombiana, Caribe'), ['cocina-colombiana'])
+assert.deepEqual(cuisineDiscoverySlugs('Italoamericana'), ['cocina-estadounidense', 'cocina-italiana'])
+assert.deepEqual(cuisineDiscoverySlugs('Gallega, España'), ['cocina-espanola', 'cocina-gallega'])
+assert.deepEqual(cuisineDiscoverySlugs('Undocumented origin'), [], 'never invent a national origin')
+const origins = [
+  { recipe_group_id: 'new-colombian', cuisine: 'Colombiana, Valle del Cauca' },
+  { recipe_group_id: 'new-italian', cuisine: 'Inspiración italiana' },
+  { recipe_group_id: 'new-american', cuisine: 'Estadounidense' },
+]
+assert.deepEqual(cuisineDiscoveryGroupIds(origins, 'cocina-colombiana'), ['new-colombian'], 'new recipes do not need an old relation to be discoverable')
+assert(cuisineDiscoveryOptions('ja', origins, []).some(o => o.value === 'cocina-estadounidense' && o.label === 'アメリカ料理・アメリカ風'))
 const twice = consolidatePantryFoods(pantry.ingredients, pantry.recipes)
 assert.deepEqual(pantryIngredientRecipeIds(twice, 'second-id'), ['first', 'second'], 'identity survives repeated consolidation')
 for (const lang of ['en', 'de', 'fr', 'it', 'ja', 'pt']) {
