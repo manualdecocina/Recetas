@@ -7,6 +7,7 @@ PAGES=json.loads((ROOT/'editorial/complete-step-photos-pages-20261103.json').rea
 REPORT={'stage':None,'checks':[]}
 def get(path):
  url=path if path.startswith('https://') else BASE+path
+ url=urllib.parse.quote(url,safe=':/?&=%')
  req=urllib.request.Request(url,headers={'User-Agent':'ManualDeCocina-StepPhotosQA/1.0','Cache-Control':'no-cache'})
  with urllib.request.urlopen(req,timeout=30) as r:return r.status,r.headers,r.read(),r.url
 def asset(a):
