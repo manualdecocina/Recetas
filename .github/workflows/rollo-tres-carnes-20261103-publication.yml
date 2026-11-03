@@ -1,0 +1,31 @@
+name: rollo-tres-carnes-20261103-publication
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'editorial/rollo-tres-carnes-navideno-20261103.json'
+      - 'scripts/audit-rollo-tres-carnes-20261103.py'
+      - '.github/workflows/rollo-tres-carnes-20261103-publication.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            editorial/rollo-tres-carnes-navideno-20261103.json
+            scripts/audit-rollo-tres-carnes-20261103.py
+          sparse-checkout-cone-mode: false
+      - name: Refresh public cache and verify seven complete language versions
+        env:
+          REVALIDATE_SECRET: ${{ secrets.REVALIDATE_SECRET }}
+        run: python3 scripts/audit-rollo-tres-carnes-20261103.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: rollo-tres-carnes-20261103-production-qa
+          path: rollo-publication-qa.json
