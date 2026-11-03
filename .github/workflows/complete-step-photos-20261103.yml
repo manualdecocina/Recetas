@@ -1,0 +1,41 @@
+name: Complete recipe step photos
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'editorial/complete-step-photos-media-20261103.json'
+      - 'editorial/complete-step-photos-pages-20261103.json'
+      - 'scripts/verify-complete-step-photos-20261103.py'
+      - '.github/workflows/complete-step-photos-20261103.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  assets:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify every published WebP and exact new-file hash
+        run: python3 scripts/verify-complete-step-photos-20261103.py assets
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: complete-step-photos-assets-qa
+          path: complete-step-photos-assets-qa.json
+  content:
+    needs: assets
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Refresh and verify the 133 translated recipe pages
+        env:
+          REVALIDATE_SECRET: ${{ secrets.REVALIDATE_SECRET }}
+        run: python3 scripts/verify-complete-step-photos-20261103.py content
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: complete-step-photos-content-qa
+          path: complete-step-photos-content-qa.json
+
