@@ -123,6 +123,7 @@ function text(tree) {
     const queued = d.win.googlefc.callbackQueue;
     assert.equal(queued.length, 1, 'footer queues the real Google API');
     d.win.googlefc.showRevocationMessage = () => { reopened++; };
+    d.win.__tcfapi = (command, version, callback) => callback({gdprApplies:true},true);
     queued[0].CONSENT_API_READY();
     assert.equal(reopened, 1, 'delayed Google availability still opens its own dialog');
     assert.equal(d.stored.size, 0, 'opening preferences must never save consent');
@@ -132,6 +133,7 @@ function text(tree) {
     const d = harness('src/components/md/CookieDrawer.tsx');
     d.render({lang:'es'});
     let opened = 0;
+    d.win.__tcfapi = (command, version, callback) => callback({gdprApplies:true},true);
     d.win.googlefc = { callbackQueue: { push: entry => entry.CONSENT_API_READY() }, showRevocationMessage: () => {opened++;} };
     d.win.dispatchEvent(new Event('manualdecocina:privacy-open'));
     assert.equal(opened, 1, 'already-ready CMP is invoked through the supported callback queue');
@@ -144,6 +146,37 @@ function text(tree) {
     for (const callback of d.timers.values()) callback();
     assert.match(text(d.render({lang:'es'})), /No se pudieron abrir/,'failed CMP availability must be visible');
     assert.doesNotMatch(text(d.render({lang:'es'})), /Continuar|Aceptar publicidad|Rechazar publicidad/,'no fake fallback consent controls');
+    let lateOpens = 0;
+    d.win.googlefc.showRevocationMessage = () => { lateOpens++; };
+    d.win.__tcfapi = (command, version, callback) => callback({gdprApplies:true},true);
+    d.win.googlefc.callbackQueue[0].CONSENT_API_READY();
+    assert.equal(lateOpens, 0, 'timed-out requests cannot open an unexpected modal later');
+    const close = elements(d.render({lang:'es'}), n => n.type === 'button')[0];
+    assert.equal(text(close), 'Cerrar', 'failure has a dismiss action instead of a retry loop');
+    close.props.onClick();
+    assert.equal(d.render({lang:'es'}), null);
+  }
+  for (const applies of [false, undefined]) {
+    const d = harness('src/components/md/CookieDrawer.tsx');
+    d.render({lang:'es'});
+    let opened = 0;
+    d.win.__tcfapi = (command, version, callback) => callback({gdprApplies:applies},true);
+    d.win.googlefc = { callbackQueue: { push: entry => entry.CONSENT_API_READY() }, showRevocationMessage: () => {opened++;} };
+    d.win.dispatchEvent(new Event('manualdecocina:privacy-open'));
+    assert.equal(opened, 0, 'an inapplicable or unknown region cannot reopen EU consent');
+    assert.equal(d.render({lang:'es'}), null);
+  }
+  {
+    const d = harness('src/components/md/CookieDrawer.tsx');
+    d.render({lang:'es'});
+    let regionCallback, opened = 0;
+    d.win.__tcfapi = (command, version, callback) => { if (command === 'addEventListener') regionCallback = callback; };
+    d.win.googlefc = { callbackQueue: { push: entry => entry.CONSENT_API_READY() }, showRevocationMessage: () => {opened++;} };
+    d.win.dispatchEvent(new Event('manualdecocina:privacy-open'));
+    regionCallback({gdprApplies:undefined,listenerId:1},true);
+    regionCallback({gdprApplies:true,listenerId:1},true);
+    regionCallback({gdprApplies:true,listenerId:1},true);
+    assert.equal(opened, 1, 'late region determination opens once, despite repeated TCF events');
   }
   for (const oldChoice of [undefined, true, false]) {
     const a = harness('src/components/md/AdSenseLoader.tsx');
