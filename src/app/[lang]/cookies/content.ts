@@ -14,7 +14,7 @@ export const COOKIES_CONTENT: LegalPageContentMap = {
       },
       {
         "heading": "2. Almacenamiento del navegador",
-        "html": "<p>Guardamos en el navegador el tema, favoritos, ingredientes seleccionados y la confirmación de lectura del aviso durante un máximo de 180 días. Cerrar el aviso no autoriza publicidad personalizada. Los favoritos permanecen en tu dispositivo; no se crea una cuenta ni un perfil de favoritos en el servidor.</p>"
+        "html": "<p>Guardamos en el navegador el tema, las recetas favoritas y los ingredientes seleccionados para las funciones que utilizas. Los favoritos permanecen en tu dispositivo; no se crea una cuenta ni un perfil de favoritos en el servidor.</p>"
       },
       {
         "heading": "3. Cookies de terceros: Google AdSense",
@@ -22,7 +22,7 @@ export const COOKIES_CONTENT: LegalPageContentMap = {
       },
       {
         "heading": "4. Gestión del consentimiento",
-        "html": "<p>El aviso local es informativo: Continuar solo lo cierra. Google recoge y aplica las decisiones publicitarias mediante su plataforma de consentimiento según la región. Rechazar el consentimiento o la personalización no implica necesariamente eliminar todos los anuncios: pueden mostrarse anuncios limitados cuando corresponda. No fabricamos ni modificamos señales TCF. Puedes reabrir la información desde Preferencias de cookies y acceder a Opciones de Google cuando estén disponibles. También puedes borrar el almacenamiento desde tu navegador.</p>"
+        "html": "<p>El consentimiento publicitario se recoge directamente en el gestor certificado de Google. Cuando corresponde el mensaje europeo, este ofrece aceptar, rechazar el consentimiento y gestionar opciones. No mostramos otro aviso local con un botón Continuar como sustituto. Puedes volver a abrir el gestor desde Preferencias de cookies o desde el enlace de privacidad de Google. La web no interpreta cerrar un aviso o seguir navegando como consentimiento. Rechazar puede permitir anuncios limitados cuando se cumplan las condiciones aplicables; no fabricamos ni cambiamos las señales TCF.</p>"
       },
       {
         "heading": "5. Cómo borrar cookies y almacenamiento local desde tu navegador",
@@ -43,7 +43,7 @@ export const COOKIES_CONTENT: LegalPageContentMap = {
       },
       {
         "heading": "2. Browser storage",
-        "html": "<p>We store your theme, favorites, selected ingredients and acknowledgement of this notice in your browser for up to 180 days. Closing the notice does not consent to personalized ads. Favorites stay on your device; no account or server-side favorites profile is created.</p>"
+        "html": "<p>We store your theme, favorite recipes and selected ingredients in your browser for the features you use. Favorites stay on your device; no account or server-side favorites profile is created.</p>"
       },
       {
         "heading": "3. Third-party cookies: Google AdSense",
@@ -51,7 +51,7 @@ export const COOKIES_CONTENT: LegalPageContentMap = {
       },
       {
         "heading": "4. Managing consent",
-        "html": "<p>The local notice is informational: Continue only closes it. Google collects and applies advertising choices through its consent platform for your region. Refusing consent or personalization does not necessarily remove all ads: limited ads may appear when eligible. We do not fabricate or modify TCF signals. Reopen the notice from Cookie preferences and access Google options when available. Browser settings also let you delete stored data.</p>"
+        "html": "<p>Advertising consent is collected directly by Google's certified CMP. Where the European message applies, it offers consent, refusal and options management. We do not show a second local Continue notice as a substitute. Reopen the CMP from Cookie preferences or Google's privacy link. Closing a notice or continuing to browse is not treated as consent. Limited ads may be eligible after refusal under applicable conditions; we do not fabricate or alter TCF signals.</p>"
       },
       {
         "heading": "5. How to clear cookies and local storage from your browser",
@@ -72,7 +72,7 @@ export const COOKIES_CONTENT: LegalPageContentMap = {
       },
       {
         "heading": "2. Browserspeicher",
-        "html": "<p>Wir speichern Design, Favoriten, ausgewählte Zutaten und die Bestätigung dieses Hinweises im Browser, letztere bis zu 180 Tage. Das Schließen stimmt keiner personalisierten Werbung zu. Favoriten bleiben auf deinem Gerät; es wird kein Konto oder serverseitiges Favoritenprofil erstellt.</p>"
+        "html": "<p>Wir speichern Design, Lieblingsrezepte und ausgewählte Zutaten im Browser für die von dir genutzten Funktionen. Favoriten bleiben auf deinem Gerät; es wird kein Konto oder serverseitiges Favoritenprofil erstellt.</p>"
       },
       {
         "heading": "3. Cookies von Dritten: Google AdSense",
@@ -80,7 +80,7 @@ export const COOKIES_CONTENT: LegalPageContentMap = {
       },
       {
         "heading": "4. Einwilligungsverwaltung",
-        "html": "<p>Der lokale Hinweis informiert nur; Weiter schließt ihn. Google erfasst und berücksichtigt die Werbeauswahl über seine Einwilligungsplattform für deine Region. Eine Ablehnung entfernt nicht unbedingt alle Anzeigen: eingeschränkte Anzeigen sind möglich, wenn die Voraussetzungen erfüllt sind. Wir erstellen oder verändern keine TCF-Signale. Cookie-Einstellungen öffnet den Hinweis erneut; Google-Optionen ist verfügbar, sobald Google diese anbietet. Gespeicherte Daten lassen sich im Browser löschen.</p>"
+        "html": "<p>Die Werbeeinwilligung wird direkt von Googles zertifizierter CMP eingeholt. Soweit die europäische Meldung gilt, bietet sie Zustimmung, Ablehnung und die Verwaltung von Optionen. Wir ersetzen sie nicht durch einen zweiten lokalen Weiter-Hinweis. Cookie-Einstellungen oder Googles Datenschutzlink öffnen die CMP erneut. Das Schließen eines Hinweises oder Weitersurfen gilt nicht als Einwilligung. Nach einer Ablehnung können eingeschränkte Anzeigen unter den geltenden Bedingungen möglich sein; wir erzeugen oder verändern keine TCF-Signale.</p>"
       },
       {
         "heading": "5. Cookies und lokalen Speicher im Browser löschen",
@@ -101,7 +101,7 @@ export const COOKIES_CONTENT: LegalPageContentMap = {
       },
       {
         "heading": "2. Stockage du navigateur",
-        "html": "<p>Nous enregistrons le thème, les favoris, les ingrédients et la confirmation de lecture de cet avis dans votre navigateur, cette dernière pendant 180 jours au maximum. Fermer l’avis n’accepte pas les annonces personnalisées. Les favoris restent sur votre appareil, sans compte ni profil de favoris sur le serveur.</p>"
+        "html": "<p>Nous enregistrons le thème, les recettes favorites et les ingrédients sélectionnés dans le navigateur pour les fonctions que vous utilisez. Les favoris restent sur votre appareil, sans compte ni profil de favoris sur le serveur.</p>"
       },
       {
         "heading": "3. Cookies tiers : Google AdSense",
@@ -109,7 +109,7 @@ export const COOKIES_CONTENT: LegalPageContentMap = {
       },
       {
         "heading": "4. Gestion du consentement",
-        "html": "<p>L’avis local est informatif : Continuer le ferme uniquement. Google recueille et applique les choix publicitaires via sa plateforme de consentement selon la région. Un refus ne supprime pas nécessairement toutes les annonces : des annonces limitées peuvent apparaître lorsque les conditions le permettent. Nous ne créons ni ne modifions les signaux TCF. Préférences de cookies rouvre cet avis et permet d’accéder aux options Google lorsqu’elles sont disponibles. Les données stockées peuvent être effacées dans le navigateur.</p>"
+        "html": "<p>Le consentement publicitaire est recueilli directement par la CMP certifiée de Google. Lorsque le message européen s'applique, il propose de consentir, de refuser et de gérer les options. Aucun deuxième avis local Continuer ne le remplace. Préférences de cookies ou le lien de confidentialité de Google permettent de rouvrir la CMP. Fermer un avis ou poursuivre la navigation ne vaut pas consentement. Des annonces limitées peuvent être admissibles après un refus selon les conditions applicables ; nous ne créons ni ne modifions les signaux TCF.</p>"
       },
       {
         "heading": "5. Comment effacer les cookies et le stockage local depuis ton navigateur",
@@ -130,7 +130,7 @@ export const COOKIES_CONTENT: LegalPageContentMap = {
       },
       {
         "heading": "2. Memoria del browser",
-        "html": "<p>Salviamo tema, preferiti, ingredienti e conferma di lettura dell’avviso nel browser, quest’ultima per un massimo di 180 giorni. Chiudere l’avviso non accetta annunci personalizzati. I preferiti restano sul dispositivo senza creare un account o un profilo sul server.</p>"
+        "html": "<p>Salviamo tema, ricette preferite e ingredienti selezionati nel browser per le funzioni che utilizzi. I preferiti restano sul dispositivo, senza creare un account o un profilo sul server.</p>"
       },
       {
         "heading": "3. Cookie di terze parti: Google AdSense",
@@ -138,7 +138,7 @@ export const COOKIES_CONTENT: LegalPageContentMap = {
       },
       {
         "heading": "4. Gestione del consenso",
-        "html": "<p>L’avviso locale è informativo: Continua lo chiude soltanto. Google raccoglie e applica le scelte pubblicitarie tramite la sua piattaforma di consenso per la regione. Un rifiuto non elimina necessariamente tutti gli annunci: possono apparire annunci con limitazioni quando consentito. Non creiamo né modifichiamo segnali TCF. Preferenze cookie riapre l’avviso e permette di accedere alle opzioni Google quando disponibili. I dati salvati possono essere eliminati dal browser.</p>"
+        "html": "<p>Il consenso pubblicitario viene raccolto direttamente dalla CMP certificata di Google. Quando si applica il messaggio europeo, sono disponibili consenso, rifiuto e gestione delle opzioni. Non lo sostituiamo con un secondo avviso locale Continua. Preferenze cookie o il link di Google sulla privacy riaprono la CMP. Chiudere un avviso o continuare a navigare non equivale al consenso. Dopo un rifiuto possono essere ammessi annunci con limitazioni alle condizioni applicabili; non creiamo né modifichiamo segnali TCF.</p>"
       },
       {
         "heading": "5. Come cancellare cookie e archiviazione locale dal browser",
@@ -159,7 +159,7 @@ export const COOKIES_CONTENT: LegalPageContentMap = {
       },
       {
         "heading": "2. ブラウザへの保存",
-        "html": "<p>テーマ、お気に入り、食材、この案内の確認をブラウザに保存します。案内の確認は最大180日間保存します。案内を閉じても広告のパーソナライズに同意したことにはなりません。お気に入りは端末に保存され、アカウントやサーバー上のプロフィールは作成しません。</p>"
+        "html": "<p>利用する機能のために、テーマ、お気に入りのレシピ、選択した食材をブラウザに保存します。お気に入りは端末に保存され、アカウントやサーバー上のプロフィールは作成しません。</p>"
       },
       {
         "heading": "3. 第三者のクッキー：Google AdSense",
@@ -167,7 +167,7 @@ export const COOKIES_CONTENT: LegalPageContentMap = {
       },
       {
         "heading": "4. 同意の管理",
-        "html": "<p>この案内は情報提供用です。「続ける」は案内を閉じるだけです。広告に関する選択は地域に応じたGoogleの同意管理システムが収集し適用します。同意を拒否しても、条件を満たす場合は制限付き広告が表示されます。当サイトはTCF信号を作成・変更しません。Cookie設定から案内を再度開き、利用可能な場合はGoogleの設定に進めます。保存データはブラウザで削除できます。</p>"
+        "html": "<p>広告の同意はGoogleの認定CMPが直接取得します。欧州向けメッセージが適用される場合、同意、拒否、オプションの管理を選べます。代わりに「続ける」だけの独自案内を表示しません。Cookie設定またはGoogleのプライバシーリンクからCMPを開き直せます。案内を閉じることや閲覧を続けることを同意として扱いません。拒否後も適用条件を満たす制限付き広告が表示される場合があります。当サイトはTCF信号を作成・変更しません。</p>"
       },
       {
         "heading": "5. ブラウザでクッキーとローカルストレージを削除する方法",
@@ -188,7 +188,7 @@ export const COOKIES_CONTENT: LegalPageContentMap = {
       },
       {
         "heading": "2. Armazenamento do navegador",
-        "html": "<p>Salvamos tema, favoritos, ingredientes e confirmação de leitura deste aviso no navegador, esta última por até 180 dias. Fechar o aviso não aceita anúncios personalizados. Os favoritos ficam no dispositivo; não criamos conta nem perfil de favoritos no servidor.</p>"
+        "html": "<p>Salvamos tema, receitas favoritas e ingredientes selecionados no navegador para as funções que você utiliza. Os favoritos ficam no dispositivo; não criamos conta nem perfil de favoritos no servidor.</p>"
       },
       {
         "heading": "3. Cookies de terceiros: Google AdSense",
@@ -196,7 +196,7 @@ export const COOKIES_CONTENT: LegalPageContentMap = {
       },
       {
         "heading": "4. Gerenciamento de consentimento",
-        "html": "<p>O aviso local é informativo: Continuar apenas o fecha. O Google coleta e aplica as escolhas publicitárias pela sua plataforma de consentimento conforme a região. Uma recusa não elimina necessariamente todos os anúncios: anúncios limitados podem aparecer quando permitido. Não criamos nem alteramos sinais TCF. Preferências de cookies reabre o aviso e permite acessar as opções do Google quando disponíveis. Os dados salvos também podem ser apagados no navegador.</p>"
+        "html": "<p>O consentimento publicitário é coletado diretamente pela CMP certificada do Google. Quando a mensagem europeia se aplica, ela oferece aceitar, recusar e gerenciar opções. Não a substituímos por um segundo aviso local Continuar. Preferências de cookies ou o link de privacidade do Google reabre a CMP. Fechar um aviso ou continuar navegando não é tratado como consentimento. Após uma recusa, anúncios limitados podem ser elegíveis conforme as condições aplicáveis; não criamos nem alteramos sinais TCF.</p>"
       },
       {
         "heading": "5. Como apagar cookies e armazenamento local no seu navegador",

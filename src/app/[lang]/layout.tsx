@@ -1,4 +1,3 @@
-import { PRIVACY_BOOTSTRAP } from '@/lib/consent'
 import type { Metadata } from 'next'
 import '../public-base.css'
 import '../site.css'
@@ -80,7 +79,6 @@ export default async function LanguageRootLayout({
   return (
     <html lang={languageTag(lang)} className={`${editorialSerif.variable} ${uiSans.variable}`} suppressHydrationWarning data-scroll-behavior="smooth">
       <head>
-        <script dangerouslySetInnerHTML={{ __html: PRIVACY_BOOTSTRAP }} />
         <meta property="og:locale" content={OG_LOCALES[lang] ?? OG_LOCALES.es} />
         <script dangerouslySetInnerHTML={{ __html: "try{var t=localStorage.getItem('md-theme');if(t==='dark'||t==='light')document.documentElement.dataset.theme=t}catch(e){}" }} />
       </head>
