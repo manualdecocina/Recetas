@@ -2,6 +2,7 @@
 import concurrent.futures
 import hashlib
 import json
+import os
 from pathlib import Path
 import re
 import urllib.parse
@@ -47,9 +48,9 @@ def nodes(value, kind):
         for child in value: yield from nodes(child, kind)
 
 def main():
-    source = (ROOT / 'src/lib/supabase/public.ts').read_text()
-    endpoint = re.search(r'https://[^\s\x27]+supabase.co', source)[0]
-    key = re.search(r'sb_publishable_[^\x27]+', source)[0]
+    source = (ROOT / 'src/lib/supabase/keys.ts').read_text()
+    endpoint = os.environ.get('NEXT_PUBLIC_SUPABASE_URL') or re.search(r'https://[^\s\x27]+supabase.co', source)[0]
+    key = (os.environ.get('NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY') or os.environ.get('NEXT_PUBLIC_SUPABASE_ANON_KEY') or re.search(r'sb_publishable_[A-Za-z0-9_-]+', source)[0])
     records = json.loads(fetch(endpoint + '/rest/v1/recipes?select=*&recipe_group_id=eq.5ac7582a-4040-4983-a837-2e4f64ae0451', {'apikey': key}))
     assert {r['language'] for r in records} == LANGUAGES
     assert len(records) == 7 and all(r['published'] for r in records)

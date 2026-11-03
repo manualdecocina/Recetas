@@ -84,3 +84,13 @@ for (const name of ['Papa', 'papas peladas, en trozos', 'papa mediana', 'papas h
 for (const name of ['papa criolla', 'papa sabanera', 'papa pastusa', 'papas fritas congeladas', 'papas o yuca']) {
   assert.equal(buildEditorialPantry([{ id: 'potato-recipe', ingredients: [{ name }] }], potatoCatalog, []).requirements.get('potato-recipe')?.[0], editorialIngredientId(name), name);
 }
+
+const mushrooms = buildEditorialPantry([{ id: 'mushrooms', ingredients: [
+  'champiñones blancos crudos', 'champiñones blancos frescos', 'Champiñones',
+  'champiñones laminados', 'Champiñones blancos', 'champiñones blancos y marrones, laminados',
+].map(name => ({ name })) }], [{ id: 'mushroom', slug: 'champiñones', name: 'Champiñones' }], [])
+assert.deepEqual(mushrooms.requirements.get('mushrooms'), Array(6).fill('mushroom'), 'the six published preparations retain the actual Unicode taxonomy identity')
+for (const name of ['champiñones deshidratados', 'champiñones en conserva']) {
+  const r = buildEditorialPantry([{ id: 'processed', ingredients: [{ name }] }], [{ id: 'mushroom', slug: 'champiñones', name: 'Champiñones' }], [])
+  assert.deepEqual(r.requirements.get('processed'), [editorialIngredientId(name)], 'processed mushrooms remain distinct')
+}

@@ -456,6 +456,11 @@ def check_redirect(item):
     redirect_status[item["source"]] = status
     if status == 200:
         return  # ya se sirve una receta reconstruida en esa ruta: correcto
+    # This manifest predates restored recipes. A permanent redirect directly
+    # to a now-published, validated recipe canonical is the intended recovery.
+    restored = by_url.get(loc)
+    if status in (301, 308) and restored and restored.get("recipe_valid"):
+        return
     permanent = item["status"] in (301, 308)
     ok_codes = (301, 308) if permanent else (302, 307)
     if status not in ok_codes or loc != norm(item["target"]):

@@ -44,7 +44,7 @@ const PREPARATION_IDENTITIES: Array<[RegExp, string]> = [
   [/^pepino\b/, 'pepino'],
   [/^calabacin\b|^calabacitas\b/, 'calabacin'],
   [/^berenjena\b/, 'berenjena'],
-  [/^champinones\b/, 'champinones'],
+  [/^champinones(?: blancos(?: y marrones)?)?(?: (?:crudos|frescos|laminados))?(?:, laminados)?$/, 'champiñones'],
   [/^espinacas?\b/, 'espinacas'],
   [/^brocoli\b/, 'brocoli'],
   [/^pimiento rojo\b/, 'pimiento-rojo'],

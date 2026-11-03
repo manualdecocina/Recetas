@@ -23,8 +23,8 @@ jobs:
           base='https://manualdecocina.com'
           for attempt in range(40):
               try:
-                  with urllib.request.urlopen(base+'/.well-known/manualdecocina-languages-20261025.txt?probe='+str(time.time_ns()),timeout=20) as r:
-                      if r.read()==b'manualdecocina-languages-20261025-v1\n':break
+                  with urllib.request.urlopen(base+'/.well-known/quality-audit-20261103.txt?probe='+str(time.time_ns()),timeout=20) as r:
+                      if r.read()==b'manualdecocina-quality-20261103-v2\n':break
               except urllib.error.HTTPError:pass
               if attempt==39:raise SystemExit('Language fix has not deployed')
               time.sleep(15)

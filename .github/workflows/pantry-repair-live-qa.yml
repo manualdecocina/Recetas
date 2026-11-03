@@ -20,13 +20,25 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Wait for the current production deployment
+        run: |
+          python3 - <<'PY'
+          import time,urllib.request
+          for attempt in range(30):
+              try:
+                  with urllib.request.urlopen('https://manualdecocina.com/.well-known/quality-audit-20261103.txt?probe='+str(time.time_ns()),timeout=10) as response:
+                      if 'manualdecocina-quality-20261103-v2' in response.read().decode(): break
+              except Exception: pass
+              if attempt==29: raise SystemExit('The expected production deployment is not live')
+              time.sleep(15)
+          PY
       - name: Verify seven languages after the automatic deployment
         run: |
           python - <<'PY'
           import subprocess, time
           for attempt in range(20):
               result = subprocess.run(["python", "scripts/verify-pantry-repair.py", "--base-url",
-                  "https://preview.manualdecocina.com", "--output", "pantry-live-qa.json"])
+                  "https://manualdecocina.com", "--output", "pantry-live-qa.json"])
               if result.returncode == 0:
                   break
               if attempt == 19:
