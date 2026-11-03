@@ -271,13 +271,6 @@ const PHOTOS: Record<string, IngredientPhoto> = {
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
   },
-  "harina-de-maiz-precocida": {
-    "src": "/ingredientes/harina-de-maiz-precocida.webp",
-    "author": "Popo le Chien",
-    "source": "https://commons.wikimedia.org/wiki/File:Polenta_uncooked.jpg",
-    "license": "CC BY-SA 3.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
-  },
   "hielo": {
     "src": "/ingredientes/hielo.webp",
     "author": "Darren Hester",
@@ -641,13 +634,6 @@ const PHOTOS: Record<string, IngredientPhoto> = {
     "source": "https://commons.wikimedia.org/wiki/File:Batido_de_pi%C3%B1a.jpg",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
-  },
-  "castanas": {
-    "src": "/ingredientes/castanas.webp",
-    "author": "Mira Bozhko miroslava",
-    "source": "https://commons.wikimedia.org/wiki/File:Biscuits,_cakes,_nuts_and_chestnuts_(Unsplash).jpg",
-    "license": "CC0",
-    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
   },
   "aceite-de-girasol": {
     "src": "/ingredientes/aceite-de-girasol.webp",
