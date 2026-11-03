@@ -11,7 +11,7 @@ const base = process.env.AUDIT_BASE || 'http://127.0.0.1:3000';
    const page = await context.newPage();
    const errors = [];
    page.on('pageerror', e => errors.push(e.message));
-   await context.route(/pagead2\.googlesyndication\.com/, route => route.fulfill({status:200,contentType:'application/javascript',body:'/* Advertising transport mocked in QA. */'}));
+   await context.route(/pagead2\.googlesyndication\.com/, route => route.fulfill({status:200,contentType:'application/javascript',body:`window.__tcfapi = (command, version, callback) => callback({gdprApplies:true,listenerId:1},true); const pending = window.googlefc?.callbackQueue || []; window.googlefc = {showRevocationMessage:()=>{},callbackQueue:{push:entry=>entry.CONSENT_API_READY?.()}}; pending.forEach(entry=>entry.CONSENT_API_READY?.());`}));
    await page.goto(`${base}/es`, { waitUntil: 'networkidle' });
    assert.equal(await page.locator('.md-cookie-drawer').count(),0,'no informational banner replaces the real CMP');
    await page.locator('#md-adsense-script').waitFor({state:'attached'});
@@ -65,7 +65,7 @@ const base = process.env.AUDIT_BASE || 'http://127.0.0.1:3000';
   for (const lang of ['es','en','de','fr','it','ja','pt']) {
    await page.goto(`${base}/${lang}`, {waitUntil:'networkidle'});
    assert.equal(await page.locator('.md-cookie-drawer').count(),0);
-   assert.equal(await page.locator('.md-footer-cookie-btn').count(),1);
+   assert.equal(await page.locator('footer a[href$="/cookies"]').count(),1);
   }
   await context.close();
   console.log('PASS: no duplicate consent banner, persistent footer access, CMP-managed choices, favorite save/reload/language/remove, Papa/purée, responsive widths, seven languages.');

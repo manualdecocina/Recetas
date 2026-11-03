@@ -97,8 +97,20 @@ function text(tree) {
 
   for (const lang of ['es', 'en', 'de', 'it', 'fr', 'ja', 'pt']) {
     const c = harness('src/components/md/ConsentPreferences.tsx');
-    const tree = c.render({ lang });
-    assert(text(tree).trim().length > 0, 'preferences must be available without a region-specific CMP');
+    assert.equal(c.render({ lang }), null, 'do not offer a dead link before Google is ready');
+    let gdprApplies;
+    c.win.googlefc.showRevocationMessage = () => {};
+    c.win.__tcfapi = (command, version, callback) => { gdprApplies = callback; };
+    c.win.googlefc.callbackQueue[0].CONSENT_API_READY();
+    for (const applies of [undefined, false]) {
+      gdprApplies({gdprApplies:applies}, true);
+      assert.equal(c.render({lang}), null, 'unknown and non-European visits have no European revocation link');
+    }
+    gdprApplies({gdprApplies:true}, false);
+    assert.equal(c.render({lang}), null, 'an API failure must not offer a broken action');
+    gdprApplies({gdprApplies:true}, true);
+    const tree = c.render({lang});
+    assert(text(tree).trim().length > 0, 'European visits retain a working revocation link');
     let opened = false;
     c.win.addEventListener('manualdecocina:privacy-open', () => { opened = true; });
     elements(tree, n => n.type === 'button')[0].props.onClick();
@@ -147,5 +159,5 @@ function text(tree) {
     a.render(props);
     assert.equal(a.scripts.length, 0, 'retain configuration and CMP readiness guards');
   }
-  console.log('OK: ratings; 7-language preferences; no duplicate local banner; queued Google revocation; failure visibility; local choices cannot disable ad integration; configuration guards.');
+  console.log('OK: ratings; 7-language region-aware preferences; no duplicate local banner; queued Google revocation; failure visibility; local choices cannot disable ad integration; configuration guards.');
 })().catch(error => { console.error(error); process.exitCode = 1; });
