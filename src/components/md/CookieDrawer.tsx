@@ -21,7 +21,7 @@ export default function CookieDrawer({ lang }: { lang: MdLanguage }) {
       if (timer) clearTimeout(timer);
       const fc = w.googlefc ?? (w.googlefc = {});
       timer = setTimeout(() => { if (active && currentRequest === request) setUnavailable(true); }, 15000);
-      (fc.callbackQueue ??= []).push({ CONSENT_API_READY: () => {
+      (fc.callbackQueue ??= [] as Array<Record<string, () => void>>).push({ CONSENT_API_READY: () => {
         if (!active || currentRequest !== request) return;
         if (timer) clearTimeout(timer);
         const current = w.googlefc;
