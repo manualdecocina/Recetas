@@ -3,6 +3,11 @@ import type { RecipeLanguage } from '@/types/recipe'
 // Display labels only: canonical IDs/slugs and matching relationships stay unchanged.
 // Order: English, German, French, Italian, Japanese, Brazilian Portuguese.
 const LABELS: Record<string, readonly string[]> = {
+  "queso-fresco": ["Queso fresco (fresh cheese)", "Queso fresco (frischer Käse)", "Queso fresco (fromage frais)", "Queso fresco (formaggio fresco)", "ケソ・フレスコ（フレッシュチーズ）", "Queso fresco (queijo fresco)"],
+  "brevas": ["Brevas (figs)", "Brevas (Feigen)", "Brevas (figues)", "Brevas (fichi)", "ブレバ（イチジク）", "Brevas (figos)"],
+  "brandy": ["Brandy", "Brandy", "Brandy", "Brandy", "ブランデー", "Brandy"],
+  "arequipe": ["Arequipe (dulce de leche)", "Arequipe (Milchkaramell)", "Arequipe (confiture de lait)", "Arequipe (crema di latte caramellato)", "アレキペ（ドゥルセ・デ・レチェ）", "Arequipe (doce de leite)"],
+  "panela": ["Panela (unrefined cane sugar)", "Panela (unraffinierter Rohrzucker)", "Panela (sucre de canne non raffiné)", "Panela (zucchero di canna non raffinato)", "パネラ（未精製のきび砂糖）", "Panela (açúcar de cana não refinado)"],
   "canela-en-rama": ["Cinnamon sticks", "Zimtstangen", "Bâtons de cannelle", "Stecche di cannella", "シナモンスティック", "Canela em pau"],
   "canela-molida": ["Ground cinnamon", "Gemahlener Zimt", "Cannelle moulue", "Cannella in polvere", "シナモンパウダー", "Canela em pó"],
   "carne-de-cerdo-molida": ["Ground pork", "Schweinehackfleisch", "Porc haché", "Carne di maiale macinata", "豚ひき肉", "Carne suína moída"],
