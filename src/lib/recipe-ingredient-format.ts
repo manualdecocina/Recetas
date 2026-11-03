@@ -47,6 +47,29 @@ const NOUN_UNITS_BY_LANGUAGE: Record<string, ReadonlySet<string>> = {
   pt: new Set(['unidade', 'unidades', 'und', 'un']),
 }
 
+/** Reviewed count units only. SI symbols, free-text ranges and annotations stay intact. */
+const LOCAL_COUNT_UNITS: Record<string, ReadonlyArray<readonly [string, string]>> = {
+  en: [['teaspoon', 'teaspoons'], ['tablespoon', 'tablespoons'], ['cup', 'cups'], ['pinch', 'pinches'], ['clove', 'cloves'], ['leaf', 'leaves'], ['sprig', 'sprigs'], ['bunch', 'bunches'], ['can', 'cans'], ['slice', 'slices'], ['stick', 'sticks']],
+  de: [['Tasse', 'Tassen'], ['Prise', 'Prisen'], ['Zehe', 'Zehen'], ['Blatt', 'Blätter'], ['Zweig', 'Zweige'], ['Bund', 'Bünde'], ['Dose', 'Dosen'], ['Scheibe', 'Scheiben'], ['Stange', 'Stangen']],
+  fr: [['cuillère à café', 'cuillères à café'], ['cuillère à soupe', 'cuillères à soupe'], ['tasse', 'tasses'], ['pincée', 'pincées'], ['gousse', 'gousses'], ['feuille', 'feuilles'], ['brin', 'brins'], ['botte', 'bottes'], ['boîte', 'boîtes'], ['tranche', 'tranches'], ['bâton', 'bâtons'], ['lanière', 'lanières']],
+  it: [['cucchiaino', 'cucchiaini'], ['cucchiaio', 'cucchiai'], ['tazza', 'tazze'], ['pizzico', 'pizzichi'], ['spicchio', 'spicchi'], ['foglia', 'foglie'], ['rametto', 'rametti'], ['mazzo', 'mazzi'], ['lattina', 'lattine'], ['fetta', 'fette'], ['stecca', 'stecche']],
+  pt: [['colher de chá', 'colheres de chá'], ['colher de sopa', 'colheres de sopa'], ['xícara', 'xícaras'], ['pitada', 'pitadas'], ['dente', 'dentes'], ['folha', 'folhas'], ['ramo', 'ramos'], ['maço', 'maços'], ['lata', 'latas'], ['fatia', 'fatias'], ['pau', 'paus']],
+}
+
+function localCountUnit(ingredient: Pick<RecipeIngredientText, 'amount' | 'unit'>, language: string): string | null {
+  const value = parseSpanishAmount(String(ingredient.amount ?? ''))
+  if (!Number.isFinite(value)) return null
+  const unit = (ingredient.unit?.trim() ?? '')
+    .replace(/\s+(?:de|di|of)$/i, '')
+    .replace(/colher \(chá\)/i, 'colher de chá').replace(/colher \(sopa\)/i, 'colher de sopa')
+  const forms = LOCAL_COUNT_UNITS[language]?.find(pair => pair.some(form => form.toLocaleLowerCase(language) === unit.toLocaleLowerCase(language)))
+  if (!forms) return null
+  // Fractions up to one use the singular in recipe measures; French also uses
+  // the singular below two. The original amount is always preserved.
+  const plural = language === 'fr' ? value >= 2 : value > 1 || value === 0
+  return forms[plural ? 1 : 0]
+}
+
 /** Size adjectives stored as a unit ("1 grande" + "cebolla picada") belong after the noun. */
 const SPANISH_SIZE_UNITS = new Set(['grande', 'grandes', 'mediana', 'medianas', 'mediano', 'medianos', 'pequeña', 'pequeñas', 'pequeño', 'pequeños'])
 
@@ -73,6 +96,13 @@ export function ingredientDisplayPrefix(
   const rawUnit = ingredient.unit?.trim() ?? ''
   if (language !== 'es') {
     if (NOUN_UNITS_BY_LANGUAGE[language]?.has(rawUnit.toLocaleLowerCase(language))) return rawAmount
+    const countUnit = localCountUnit(ingredient, language)
+    if (countUnit) return [rawAmount, countUnit].filter(Boolean).join(' ')
+    if (language === 'ja' && rawAmount) {
+      if (rawUnit === '小さじ' || rawUnit === '大さじ') return rawUnit + rawAmount
+      if (rawUnit === 'ひとつまみ' && parseSpanishAmount(rawAmount) === 1) return rawUnit
+      if (/^(?:個|個分|本|片|かけ|枚|カップ|缶|束|枝|粒|つまみ)$/.test(rawUnit)) return rawAmount + rawUnit
+    }
     return [rawAmount, rawUnit].filter(Boolean).join(' ')
   }
 
@@ -94,7 +124,16 @@ export function ingredientDisplayPrefix(
 /** Ingredient name as displayed after the prefix (shared by the visible list and JSON-LD). */
 export function ingredientDisplayName(ingredient: RecipeIngredientText, language: string): string {
   const name = ingredient.name.trim()
-  if (language !== 'es') return name
+  if (language !== 'es') {
+    if (!localCountUnit(ingredient, language)) return name
+    if (language === 'fr') {
+      const noun = name.replace(/^(?:de\s+|d['’]\s*)/i, '')
+      return /^(?:[aeiouyàâäéèêëîïôöùûüœæ]|huile|herbe)/i.test(noun) ? `d’${noun}` : `de ${noun}`
+    }
+    if (language === 'it') return `di ${name.replace(/^(?:di\s+|d['’]\s*)/i, '')}`
+    if (language === 'pt') return `de ${name.replace(/^de\s+/i, '')}`
+    return name
+  }
   const unit = spanishUnit(ingredient.unit?.trim() ?? '')
   const prefix = ingredientDisplayPrefix(ingredient, language)
   const withoutDe = prefix.endsWith(' de') ? name.replace(/^de\s+/i, '') : name

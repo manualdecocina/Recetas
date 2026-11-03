@@ -2,6 +2,7 @@ import { isIndexingAllowed } from '@/lib/site'
 import { ingredientPhoto } from '@/lib/ingredient-photos'
 import { ingredientLabel } from '@/lib/ingredient-labels'
 import { getPantryMatchData } from '@/lib/md-data'
+import { pantryIngredientRecipeIds } from '@/lib/pantry-foods'
 import { taxonomyLanding } from '@/lib/taxonomy-landing-seo'
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
@@ -27,8 +28,9 @@ async function getIngredient(lang: RecipeLanguage, slug: string) {
   if (!data) return null
 
   const pantry = await getPantryMatchData(lang)
+  const recipeIds = new Set(pantryIngredientRecipeIds(pantry, data.id))
   return { ingredient: { ...data, name: ingredientLabel(data.slug, data.name, lang), description: lang === 'es' ? data.description : null },
-    recipes: pantry.recipes.filter((recipe) => recipe.ingredientIds.includes(data.id)) }
+    recipes: pantry.recipes.filter((recipe) => recipeIds.has(recipe.id)) }
 
 }
 

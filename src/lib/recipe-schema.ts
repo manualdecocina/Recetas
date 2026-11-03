@@ -8,7 +8,7 @@ export function recipePublisher() {
     '@type': 'Organization',
     '@id': `${site}/#organization`,
     name: 'Manual de Cocina',
-    url: site,
+    url: `${site}/es`,
     logo: {
       '@type': 'ImageObject',
       url: absoluteUrl('/brand/logo-manual-de-cocina.png'),

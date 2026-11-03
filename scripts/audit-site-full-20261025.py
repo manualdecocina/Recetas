@@ -19,6 +19,7 @@ import json
 import os
 import re
 import sys
+import time
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -52,6 +53,9 @@ def quote(url):
     return urllib.parse.urlunsplit((parts.scheme or "https", parts.netloc or HOST, path, parts.query, ""))
 
 
+transient_http_retries = []
+
+
 def fetch(url, body=True, method="GET"):
     req = urllib.request.Request(quote(url), headers=UA, method=method)
     for attempt in range(3):
@@ -61,10 +65,14 @@ def fetch(url, body=True, method="GET"):
                 return r.status, {k.lower(): v for k, v in r.headers.items()}, data
         except urllib.error.HTTPError as e:
             data = e.read().decode("utf-8", "replace") if body else ""
+            if e.code in (500, 502, 503, 504) and attempt < 2:
+                transient_http_retries.append({'url': url, 'status': e.code, 'attempt': attempt + 1})
+                time.sleep(attempt + 1)
+                continue
             return e.code, {k.lower(): v for k, v in e.headers.items()}, data
-        except Exception:
+        except Exception as e:
             if attempt == 2:
-                raise
+                return 0, {}, 'FETCH_ERROR: ' + str(e)
 
 
 def norm(url):
@@ -327,9 +335,16 @@ def audit_page(url):
     return row
 
 
-with ThreadPoolExecutor(12) as ex:
-    pages = list(ex.map(audit_page, sorted(sitemap)))
+with ThreadPoolExecutor(6) as ex:
+    pages = []
+    for count, page in enumerate(ex.map(audit_page, sorted(sitemap)), 1):
+        pages.append(page)
+        if count % 100 == 0:
+            print('pages audited:', count, '/', len(sitemap), flush=True)
 print("pages audited", flush=True)
+# Preserve a useful checkpoint before slower pagination, link and media checks.
+with open(os.environ.get('AUDIT_CHECKPOINT', 'site-quality-page-checkpoint.json'), 'w', encoding='utf-8') as f:
+    json.dump({'report': [{k: sorted(v) if isinstance(v, set) else v for k, v in p.items()} for p in pages], 'errors': errors, 'transient_http_events': transient_http_retries}, f, ensure_ascii=False)
 
 by_url = {p["url"]: p for p in pages}
 for p in pages:
@@ -345,6 +360,20 @@ for p in pages:
         back = by_url[alt]["hreflang"]
         if p["url"] not in back.values():
             err("hreflang_not_reciprocal", p["url"], alt)
+
+# A metadata-only pass can finish independently of slow external link/media checks.
+if os.environ.get('AUDIT_STOP_AFTER_PAGES') == 'true':
+    from collections import Counter
+    report = [{k: sorted(v) if isinstance(v, set) else v for k, v in p.items()} for p in pages]
+    summary = {'phase': 'html-and-hreflang', 'sitemap_urls': len(sitemap), 'pages': len(pages),
+               'http_status': dict(Counter(str(p['status']) for p in pages)),
+               'recipe_pages': sum(bool(p.get('recipe_schema')) for p in pages),
+               'recipe_schema_valid': sum(bool(p.get('recipe_valid')) for p in pages),
+               'transient_http_retries': len(transient_http_retries), 'errors': len(errors), 'errors_by_kind': dict(Counter(e['kind'] for e in errors))}
+    with open(os.environ.get('AUDIT_HTML_REPORT', 'site-quality-html-report.json'), 'w', encoding='utf-8') as f:
+        json.dump({'summary': summary, 'errors': errors, 'report': report, 'transient_http_events': transient_http_retries}, f, ensure_ascii=False)
+    print('HTML_AUDIT_SUMMARY', json.dumps(summary), flush=True)
+    sys.exit(bool(errors))
 
 # Enlaces internos entrantes (páginas huérfanas dentro del sitemap).
 # Las páginas 2..N del listado de recetas no están en el sitemap pero son
@@ -411,7 +440,7 @@ def check_image(url):
         err("broken_image", url, {"status": status, "type": ctype})
 
 
-with ThreadPoolExecutor(16) as ex:
+with ThreadPoolExecutor(8) as ex:
     list(ex.map(check_link, links))
     list(ex.map(check_image, images))
 print("links", len(links), "images", len(images), flush=True)
@@ -433,7 +462,7 @@ def check_redirect(item):
         err("legacy_redirect", item["source"], {"status": status, "location": loc, "expected": item})
 
 
-with ThreadPoolExecutor(16) as ex:
+with ThreadPoolExecutor(8) as ex:
     list(ex.map(check_redirect, redirects))
 
 # 5. 404 real
@@ -479,6 +508,7 @@ for lang in LANGS:
                                                   "with_x_default": sum(1 for p in with_h if p.get("x_default")), "errors": lang_errors}
 
 summary = {
+    "transient_http_retries": len(transient_http_retries),
     "sitemap_urls": len(sitemap),
     "status": status_counts,
     "internal_links_outside_sitemap": len(links),
@@ -508,7 +538,7 @@ report = []
 for p in pages:
     report.append({k: (sorted(v) if isinstance(v, set) else v) for k, v in p.items() if k not in ("links", "images", "recipe_images")})
 with open("site-production-audit.json", "w", encoding="utf-8") as f:
-    json.dump({"summary": summary, "errors": errors, "report": report}, f, ensure_ascii=False, indent=1)
+    json.dump({"summary": summary, "errors": errors, "report": report, "transient_http_events": transient_http_retries}, f, ensure_ascii=False, indent=1)
 print(json.dumps(summary, ensure_ascii=False))
 print('AUDIT_SUMMARY_JSON ' + json.dumps(summary, ensure_ascii=False))
 print('AUDIT_ERRORS_JSON ' + json.dumps(errors, ensure_ascii=False))

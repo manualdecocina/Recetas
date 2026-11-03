@@ -4,10 +4,15 @@ on:
     paths:
       - 'src/**'
       - 'tests/e2e/audit-repairs.cjs'
+      - 'tests/e2e/full-quality.cjs'
       - '.github/workflows/audit-repairs-20261103.yml'
   workflow_dispatch:
 permissions:
   contents: read
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   journeys:
     runs-on: ubuntu-latest
@@ -33,6 +38,7 @@ jobs:
           cat /tmp/repair-next.log
           exit 1
       - run: node tests/e2e/audit-repairs.cjs
+      - run: node tests/e2e/full-quality.cjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:

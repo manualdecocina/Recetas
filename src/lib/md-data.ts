@@ -1,4 +1,8 @@
 import { normalizeEditorialIngredientSections } from '@/lib/editorial-ingredient-sections'
+import { cache } from 'react'
+import { coalescePublicLoad } from '@/lib/public-fetch'
+import { unstable_cache } from 'next/cache'
+import { PUBLIC_REVALIDATE_SECONDS, RECIPES_CACHE_TAG } from '@/lib/cache'
 import { supabase } from '@/lib/supabase/public'
 import { SUPPORTED_LANGUAGES, type RecipeLanguage } from '@/types/recipe'
 import type { MdRecipeCardData } from '@/components/md/md-types'
@@ -6,7 +10,7 @@ import type { MdCategorySummary } from '@/components/md/CategoryViews'
 import type { MdIngredientSummary } from '@/components/md/IngredientViews'
 import type { MdHomeData } from '@/components/md/HomePageView'
 import { CATEGORY_TAXONOMY } from '@/lib/categories'
-import { consolidatePantryFoods } from '@/lib/pantry-foods'
+import { consolidatePantryFoods, pantryIngredientRecipeIds } from '@/lib/pantry-foods'
 import { ingredientPhoto } from '@/lib/ingredient-photos'
 import { ingredientLabel } from '@/lib/ingredient-labels'
 import { buildEditorialPantry, localizeEditorialIngredients, type PantryLink } from '@/lib/pantry-editorial'
@@ -53,7 +57,8 @@ export async function getIngredientSummaries(limit?: number, lang: RecipeLanguag
   ])
   if (error) throw new Error(`No se pudieron cargar los ingredientes: ${error.message}`)
   const summaries = (data ?? []).map((ingredient) => {
-    const recipes = pantry.recipes.filter((recipe) => recipe.ingredientIds.includes(ingredient.id))
+    const recipeIds = new Set(pantryIngredientRecipeIds(pantry, ingredient.id))
+    const recipes = pantry.recipes.filter((recipe) => recipeIds.has(recipe.id))
     return { slug: ingredient.slug, name: ingredientLabel(ingredient.slug, ingredient.name, lang), count: recipes.length,
       image_url: ingredientPhoto(ingredient.slug)?.src ?? null }
   }).sort((a, b) => a.name.localeCompare(b.name, lang))
@@ -100,6 +105,8 @@ export interface MdPantryIngredient {
   slug: string;
   name: string;
   aliases?: string[];
+  /** Original identities retained when equivalent pantry choices are consolidated. */
+  sourceIds?: string[];
 }
 
 export interface MdPantryRecipe extends MdRecipeCardData {
@@ -123,7 +130,11 @@ export interface MdPantryRecipe extends MdRecipeCardData {
  * (qué receta calza con qué ingredientes elegidos) se calcula en el cliente sobre estos
  * datos; aquí solo se leen datos reales, sin inventar coincidencias ni opciones huérfanas.
  */
-export async function getPantryMatchData(lang: RecipeLanguage = 'es'): Promise<{ ingredients: MdPantryIngredient[]; recipes: MdPantryRecipe[] }> {
+// Cache the computed public graph as well as its upstream reads. Ingredient
+// landings and recipe checklists reuse it; all publication paths invalidate recipes.
+type PantryData = { ingredients: MdPantryIngredient[]; recipes: MdPantryRecipe[] }
+const pantryPending = new Map<RecipeLanguage, Promise<PantryData>>()
+async function loadPantryMatchData(lang: RecipeLanguage): Promise<PantryData> {
   if (lang !== 'es') {
     const [source, { data, error }] = await Promise.all([
       getPantryMatchData('es'),
@@ -196,6 +207,23 @@ export async function getPantryMatchData(lang: RecipeLanguage = 'es'): Promise<{
 
   return consolidatePantryFoods(pantryIngredients, pantryRecipes, lang)
 }
+export const getPantryMatchData = cache(unstable_cache(
+  (lang: RecipeLanguage = 'es') => coalescePublicLoad(pantryPending, lang, () => loadPantryMatchData(lang)),
+  ['public-pantry-graph-v3'], { revalidate: PUBLIC_REVALIDATE_SECONDS, tags: [RECIPES_CACHE_TAG] },
+))
+
+/** Cuisine discovery follows the Spanish editorial origin shared by all seven
+ * translations. Existing taxonomy links remain additional reviewed evidence. */
+export const getCuisineDiscoveryRows = cache(unstable_cache(async (): Promise<Array<{ recipe_group_id: string; cuisine: string | null }>> => {
+  const rows: Array<{ recipe_group_id: string; cuisine: string | null }> = []
+  for (let from = 0; ; from += 1000) {
+    const { data, error } = await supabase.from('recipes').select('recipe_group_id, cuisine')
+      .eq('published', true).eq('language', 'es').order('id').range(from, from + 999)
+    if (error) throw new Error(`No se pudieron cargar las cocinas publicadas: ${error.message}`)
+    rows.push(...(data ?? []))
+    if (!data || data.length < 1000) return rows
+  }
+}, ['published-cuisine-discovery-v1'], { revalidate: PUBLIC_REVALIDATE_SECONDS, tags: [RECIPES_CACHE_TAG] }))
 
 /** Idiomas que tienen al menos una receta publicada (los demás se muestran deshabilitados en el selector). */
 export async function getAvailableLanguages(): Promise<RecipeLanguage[]> {

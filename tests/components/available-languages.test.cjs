@@ -34,6 +34,8 @@ function load(records, failedLanguage) {
   } }).outputText;
   const mod = { exports: {} };
   const requireMock = name => name === '@/lib/supabase/public' ? { supabase }
+    : name === 'react' ? { cache: fn => fn }
+    : name === 'next/cache' ? { unstable_cache: fn => fn }
     : name === '@/types/recipe' ? { SUPPORTED_LANGUAGES: languages } : {};
   new Function('require', 'module', 'exports', js)(requireMock, mod, mod.exports);
   return mod.exports.getAvailableLanguages;

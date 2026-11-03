@@ -6,12 +6,12 @@ import FavoritesCollection from '@/components/md/FavoritesCollection';
 import { SUPPORTED_LANGUAGES } from '@/types/recipe';
 import type { MdLanguage } from '@/components/md/md-types';
 import { favoritesCopy } from '@/lib/favorites-copy';
-import { withSiteName } from '@/lib/seo';
+import { filteredPageRobots, withSiteName } from '@/lib/seo';
 type Props = { params: Promise<{ lang: string }> };
 function language(raw: string): MdLanguage { if (!(SUPPORTED_LANGUAGES as string[]).includes(raw)) notFound(); return raw as MdLanguage; }
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const lang = language((await params).lang);
-  return { title: withSiteName(favoritesCopy[lang].title), description: favoritesCopy[lang].intro, robots: { index: false, follow: true } };
+  return { title: withSiteName(favoritesCopy[lang].title), description: favoritesCopy[lang].intro, robots: filteredPageRobots() };
 }
 export default async function FavoritesPage({ params }: Props) {
   const lang = language((await params).lang), t = favoritesCopy[lang];

@@ -392,6 +392,12 @@
 .md-about .md-rich p, .md-about .md-rich li { line-height: 1.75; }
 .md-ad-slot { width: 100%; min-height: 0; margin: 0; background: transparent; }
 .md-ad-slot:empty { display: none; }
+
+/* Google's unfilled zero-width slot can retain a 1200px iframe and push the
+ * whole document sideways. Hide only explicitly unfilled in-content slots;
+ * leave served ads, fixed anchors and the certified consent UI untouched. */
+.google-auto-placed ins.adsbygoogle[data-ad-status="unfilled"] { display: none !important; }
+.google-auto-placed { min-width: 0; max-width: 100%; }
 /* Modo cocina */
 .md-cooking-overlay { position: fixed; inset: 0; z-index: 1000; overflow-y: auto; background: var(--md-paper); color: var(--md-ink); display: grid; grid-template-rows: auto 1fr auto; }
 .md-cooking-header { padding: 16px 18px; border-bottom: 2px solid var(--md-stone); display: flex; justify-content: space-between; align-items: center; gap: 16px; }

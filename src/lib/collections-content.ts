@@ -95,7 +95,7 @@ export const COLLECTIONS: Collection[] = [
       es: {
         slug: 'recetas-navidad-colombiana',
         title: 'Recetas de Navidad colombiana',
-        seoTitle: 'Recetas de Navidad colombiana: lechona, natilla y buñuelos',
+        seoTitle: 'Navidad colombiana: lechona, natilla y buñuelos',
         description: 'Recetas de Navidad colombiana para la novena y la cena de diciembre: lechona al horno, natilla con panela, buñuelos, hojuelas y postres para la mesa.',
         intro: [
           'En Colombia, diciembre se cocina en familia. Entre la novena de aguinaldos y la cena del 24, la mesa se llena de natilla, buñuelos y hojuelas, y en muchas casas la lechona es el plato que reúne a todos.',
@@ -115,7 +115,7 @@ export const COLLECTIONS: Collection[] = [
       en: {
         slug: 'colombian-christmas-recipes',
         title: 'Colombian Christmas recipes',
-        seoTitle: 'Colombian Christmas Recipes: Lechona, Natilla and Buñuelos',
+        seoTitle: 'Colombian Christmas: Lechona, Natilla and Buñuelos',
         description: 'Colombian Christmas recipes for the December novena and Christmas Eve dinner: oven lechona, panela natilla, buñuelos, hojuelas and desserts to share.',
         intro: [
           'In Colombia, December is cooked as a family. Between the nine-night novena and Christmas Eve dinner, the table fills with natilla, buñuelos and hojuelas, and in many homes lechona is the dish that brings everyone together.',
@@ -155,7 +155,7 @@ export const COLLECTIONS: Collection[] = [
       fr: {
         slug: 'recettes-noel-colombien',
         title: 'Recettes de Noël colombien',
-        seoTitle: 'Recettes de Noël colombien : lechona, natilla et buñuelos',
+        seoTitle: 'Noël colombien : lechona, natilla et buñuelos',
         description: 'Recettes de Noël colombien pour la novena et le réveillon : lechona au four, natilla à la panela, buñuelos, hojuelas et desserts à partager en famille.',
         intro: [
           'En Colombie, décembre se cuisine en famille. Entre la novena, les neuf soirées avant Noël, et le repas du 24, la table se remplit de natilla, de buñuelos et d’hojuelas, et dans beaucoup de maisons la lechona est le plat qui réunit tout le monde.',
@@ -175,7 +175,7 @@ export const COLLECTIONS: Collection[] = [
       it: {
         slug: 'ricette-natale-colombiano',
         title: 'Ricette del Natale colombiano',
-        seoTitle: 'Ricette del Natale colombiano: lechona, natilla e buñuelos',
+        seoTitle: 'Natale colombiano: lechona, natilla e buñuelos',
         description: 'Ricette del Natale colombiano per la novena e la cena della vigilia: lechona al forno, natilla con panela, buñuelos, hojuelas e dolci da condividere.',
         intro: [
           'In Colombia dicembre si cucina in famiglia. Tra la novena, le nove sere prima di Natale, e la cena della vigilia, la tavola si riempie di natilla, buñuelos e hojuelas, e in molte case la lechona è il piatto che riunisce tutti.',
@@ -215,7 +215,7 @@ export const COLLECTIONS: Collection[] = [
       pt: {
         slug: 'receitas-natal-colombiano',
         title: 'Receitas de Natal colombiano',
-        seoTitle: 'Receitas de Natal colombiano: lechona, natilla e buñuelos',
+        seoTitle: 'Natal colombiano: lechona, natilla e buñuelos',
         description: 'Receitas de Natal colombiano para a novena e a ceia de 24 de dezembro: lechona no forno, natilla com rapadura, buñuelos, hojuelas e sobremesas para a mesa.',
         intro: [
           'Na Colômbia, dezembro se cozinha em família. Entre a novena, as nove noites antes do Natal, e a ceia do dia 24, a mesa se enche de natilla, buñuelos e hojuelas, e em muitas casas a lechona é o prato que reúne todo mundo.',

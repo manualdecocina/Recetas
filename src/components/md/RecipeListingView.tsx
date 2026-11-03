@@ -43,7 +43,7 @@ export default function RecipeListingView({ lang, recipes, filters, options, pag
     { key: 'categoria', label: t.category, options: CATEGORY_TAXONOMY.map((item) => ({ value: item.slug, label: item.labels[lang] })) },
     { key: 'cocina', label: t.cuisine, options: options.cuisines },
     { key: 'dificultad', label: t.difficulty, options: options.difficulties },
-    ...(lang === 'es' ? [{ key: 'ingrediente' as const, label: t.ingredient, options: options.ingredients }] : []),
+    { key: 'ingrediente', label: t.ingredient, options: options.ingredients },
     { key: 'tiempo', label: t.time, options: options.times },
     { key: 'ordenar', label: t.sort, options: [
       { value: 'recientes', label: t.mostRecent }, { value: 'antiguas', label: t.oldest },
