@@ -79,7 +79,7 @@ export default function PantryMatchView({ lang, ingredients, recipes }: { lang: 
       const storedSlugs: unknown = raw ? JSON.parse(raw) : [];
       if (!Array.isArray(storedSlugs) || storedSlugs.length === 0) return;
       const slugs = new Set(storedSlugs.filter((value): value is string => typeof value === 'string'));
-      const restored = ingredients.filter((ingredient) => slugs.has(ingredient.slug)).map((ingredient) => ingredient.id);
+      const restored = ingredients.filter((ingredient) => (slugs.has(ingredient.slug) || ingredient.aliases?.some(alias => slugs.has(alias)))).map((ingredient) => ingredient.id);
       if (restored.length) setSelected(new Set(restored));
     } catch { /* La herramienta funciona aunque localStorage no esté disponible. */ }
   }, [ingredients]);

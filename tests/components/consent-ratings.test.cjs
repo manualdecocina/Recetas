@@ -108,32 +108,35 @@ function text(tree) {
     d.render({ lang });
     assert.match(text(d.render({ lang })), /Google/);
     const buttons = elements(d.render({ lang }), n => n.type === 'button');
-    buttons[0].props.onClick();
-    assert.equal(JSON.parse(d.stored.get('manualdecocina:privacy:v1')).advertising, false);
+    buttons.at(-1).props.onClick();
+    assert.deepEqual(Object.keys(JSON.parse(d.stored.get('manualdecocina:privacy:v2'))).sort(), ['acknowledged','savedAt','version']);
     assert.equal(d.render({ lang }), null);
   }
   {
     const d = harness('src/components/md/CookieDrawer.tsx');
     d.render({ lang: 'es' });
-    elements(d.render({ lang: 'es' }), n => n.type === 'button')[2].props.onClick();
-    assert.equal(JSON.parse(d.stored.get('manualdecocina:privacy:v1')).advertising, true);
-    assert.equal(d.render({ lang: 'es' }), null);
+    let opened = 0;
+    d.win.googlefc.showRevocationMessage = () => { opened++; };
+    d.win.googlefc.callbackQueue[0].CONSENT_API_READY();
+    const tree = d.render({ lang: 'es' });
+    elements(tree, n => n.type === 'button' && text(n) === 'Opciones de Google')[0].props.onClick();
+    assert.equal(opened, 1, 'open the real CMP immediately even after its ready event');
+    assert.equal(d.stored.size, 0, 'opening Google is never local acceptance');
+    assert.equal(d.render({ lang: 'es' }), null, 'do not overlay the Google CMP with the local notice');
   }
-  {
+  for (const oldChoice of [undefined, true, false]) {
     const a = harness('src/components/md/AdSenseLoader.tsx');
+    if (oldChoice !== undefined) a.stored.set('manualdecocina:privacy:v1', JSON.stringify({ version: 1, advertising: oldChoice, savedAt: Date.now() }));
     a.render({ clientId: 'ca-pub-test', cmpReady: true });
-    assert.equal(a.scripts.length, 0, 'no advertising request before an explicit choice');
-    a.stored.set('manualdecocina:privacy:v1', JSON.stringify({ version: 1, advertising: false, savedAt: Date.now() }));
-    a.win.dispatchEvent(new Event('manualdecocina:privacy-changed'));
-    assert.equal(a.scripts.length, 0, 'rejection blocks advertising');
-    a.stored.set('manualdecocina:privacy:v1', JSON.stringify({ version: 1, advertising: true, savedAt: Date.now() }));
-    a.win.dispatchEvent(new Event('manualdecocina:privacy-changed'));
-    assert.equal(a.scripts.length, 1);
-    a.win.dispatchEvent(new Event('manualdecocina:privacy-changed'));
+    assert.equal(a.scripts.length, 1, 'local acknowledgement or legacy refusal must not disable the certified Google integration');
+    a.render({ clientId: 'ca-pub-test', cmpReady: true });
     assert.equal(a.scripts.length, 1, 'no duplicate script');
-    a.stored.set('manualdecocina:privacy:v1', JSON.stringify({ version: 1, advertising: false, savedAt: Date.now() }));
-    a.win.dispatchEvent(new Event('manualdecocina:privacy-changed'));
-    assert.equal(a.win.reloaded, true, 'withdrawal removes third-party code through a new document');
+    assert.equal(a.win.reloaded, undefined);
   }
-  console.log('OK: failed/offline/malformed ratings remain retryable; successful votes persist once; duplicate clicks and votes; 7 global consent labels; reject/accept persistence; no ads before acceptance; revocation reload; preferences available without CMP.');
+  for (const props of [{clientId:'ca-pub-test',cmpReady:false},{cmpReady:true}]) {
+    const a = harness('src/components/md/AdSenseLoader.tsx');
+    a.render(props);
+    assert.equal(a.scripts.length, 0, 'retain configuration and CMP readiness guards');
+  }
+  console.log('OK: ratings; 7-language informational notice; acknowledgement without consent; real Google options; local choices cannot disable ad integration; configuration guards.');
 })().catch(error => { console.error(error); process.exitCode = 1; });

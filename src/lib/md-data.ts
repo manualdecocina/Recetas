@@ -6,6 +6,7 @@ import type { MdCategorySummary } from '@/components/md/CategoryViews'
 import type { MdIngredientSummary } from '@/components/md/IngredientViews'
 import type { MdHomeData } from '@/components/md/HomePageView'
 import { CATEGORY_TAXONOMY } from '@/lib/categories'
+import { consolidatePantryFoods } from '@/lib/pantry-foods'
 import { ingredientLabel } from '@/lib/ingredient-labels'
 import { buildEditorialPantry, localizeEditorialIngredients, type PantryLink } from '@/lib/pantry-editorial'
 import { localizePantryRecipes, pantryIngredientCoverage } from '@/lib/pantry-localization'
@@ -100,6 +101,7 @@ export interface MdPantryIngredient {
   id: string;
   slug: string;
   name: string;
+  aliases?: string[];
 }
 
 export interface MdPantryRecipe extends MdRecipeCardData {
@@ -152,7 +154,7 @@ export async function getPantryMatchData(lang: RecipeLanguage = 'es'): Promise<{
       .map((ingredient) => ({ ...ingredient, name: ingredientLabel(ingredient.slug, ingredient.name, lang) }))
       .sort((a, b) => a.name.localeCompare(b.name, lang))
 
-    return { recipes, ingredients }
+    return consolidatePantryFoods(ingredients, recipes, lang)
   }
   const { data: ingredientRows, error: ingredientsError } = await supabase
     .from('ingredients')
@@ -194,7 +196,7 @@ export async function getPantryMatchData(lang: RecipeLanguage = 'es'): Promise<{
   })
   const pantryIngredients = complete.ingredients.sort((a, b) => a.name.localeCompare(b.name, lang))
 
-  return { ingredients: pantryIngredients, recipes: pantryRecipes }
+  return consolidatePantryFoods(pantryIngredients, pantryRecipes, lang)
 }
 
 /** Idiomas que tienen al menos una receta publicada (los demás se muestran deshabilitados en el selector). */
