@@ -41,6 +41,11 @@ def verify(lang, html, plan):
     assert data["lang"] == lang, f"{lang}: wrong language"
     recipes = {r["recipe_group_id"]: r for r in data["recipes"]}
     ingredients = {i["slug"]: i for i in data["ingredients"]}
+    # A localized choice can consolidate equivalent canonical slugs. Resolve
+    # the declared aliases while preserving exact-slug priority and ID checks.
+    for ingredient in data["ingredients"]:
+        for alias in ingredient.get("aliases", []):
+            ingredients.setdefault(alias, ingredient)
     for source in plan["recipes"]:
         recipe = recipes.get(source["recipe_group_id"])
         assert recipe is not None, f"{lang}: missing {source['slug']}"
@@ -54,8 +59,8 @@ def verify(lang, html, plan):
     for ingredient in plan["newIngredients"]:
         expected_name = ingredient["name"] if lang == "es" else ingredient["labels"][LANGUAGES[1:].index(lang)]
         assert ingredients[ingredient["slug"]]["name"] == expected_name, f"{lang}: missing translation {ingredient['slug']}"
-    return {"language": lang, "tool_recipes": len(recipes), "ingredient_choices": len(ingredients),
-            "repaired_recipes_verified": len(plan["recipes"]), "ingredient_entries_verified": 81,
+    return {"language": lang, "tool_recipes": len(recipes), "ingredient_choices": len(data["ingredients"]),
+            "repaired_recipes_verified": len(plan["recipes"]), "ingredient_entries_verified": sum(len(source["resolutions"]) for source in plan["recipes"]),
             "new_ingredient_labels_verified": len(plan["newIngredients"])}
 
 
