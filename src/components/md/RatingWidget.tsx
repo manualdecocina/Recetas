@@ -93,7 +93,7 @@ export default function RatingWidget({ recipeId, lang, ratingCount, ratingSum }:
             key={n}
             type="button"
             className="md-rating-star"
-            aria-label={`${n} ${t.ratingStarLabel}`}
+            aria-label={countLabel(lang, n, 'star')}
             aria-pressed={myVote === n}
             disabled={sending || myVote !== null}
             onMouseEnter={() => myVote === null && setHover(n)}
