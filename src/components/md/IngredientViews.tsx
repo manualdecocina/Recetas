@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import Image from 'next/image';
-import { recipeImageSrc } from '@/lib/recipe-media';
+import IngredientCatalog from './IngredientCatalog';
+import { ingredientPhoto, photoCreditsLabel } from '@/lib/ingredient-photos';
 import { SUPPORTED_LANGUAGES } from '@/types/recipe';
 import { languageTag } from '@/lib/site';
 import type { MdLanguage } from './md-types';
@@ -20,7 +20,7 @@ export interface MdIngredientSummary {
   name: string;
   /** Conteo real de recetas publicadas que lo usan (recipe_ingredients). */
   count?: number;
-  /** Foto real de una de esas recetas; nunca inventada. Null si aún no hay ninguna. */
+  /** Fotografía verificada del alimento. Nunca una receta que lo contenga. */
   image_url?: string | null;
 }
 
@@ -37,24 +37,16 @@ export function IngredientsIndexView({ lang, ingredients }: { lang: MdLanguage; 
         </header>
         <PantryBanner lang={lang} headingId="md-ingredient-pantry-cta" card />
         {withRecipes.length > 0 ? (
-          <div className="md-category-grid md-section">
-            {withRecipes.map((item) => (
-              <Link className="md-category-card" href={`/${lang}/ingredientes/${item.slug}`} key={item.slug}>
-                {item.image_url ? (
-                  <Image className="md-category-photo" src={recipeImageSrc(item.image_url)} alt="" width={360} height={270} loading="lazy"
-                    sizes="(max-width: 599px) 50vw, (max-width: 899px) 33vw, 20vw" />
-                ) : (
-                  <span className="md-category-fallback" aria-hidden="true">
-                    <img src="/brand/mark.png" alt="" width="42" height="42" />
-                  </span>
-                )}
-                <span className="md-category-body">
-                  <strong className="md-category-name">{item.name}</strong>
-                  <span className="md-category-count">{countLabel(lang, item.count ?? 0, 'recipe')}</span>
-                </span>
-              </Link>
-            ))}
-          </div>
+          <>
+            <IngredientCatalog lang={lang} ingredients={withRecipes} />
+            <details className="md-photo-credits">
+              <summary>{photoCreditsLabel[lang]}</summary>
+              <ul>{withRecipes.flatMap(item => {
+                const photo = ingredientPhoto(item.slug);
+                return photo ? [<li key={item.slug}>{item.name}: <a href={photo.source} target="_blank" rel="noopener noreferrer">{photo.author}</a> · <a href={photo.licenseUrl} target="_blank" rel="noopener noreferrer">{photo.license}</a></li>] : [];
+              })}</ul>
+            </details>
+          </>
         ) : (
           <div className="md-empty-block">
             <h2 className="md-subtitle">{t.emptyTitle}</h2><p>{t.emptyBody}</p>

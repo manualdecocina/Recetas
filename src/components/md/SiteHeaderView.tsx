@@ -5,6 +5,7 @@ import { getMdCopy } from '@/lib/copy';
 import LanguageSwitcher from './LanguageSwitcher';
 import { favoritesCopy } from '@/lib/favorites-copy';
 import ThemeToggle from './ThemeToggle';
+import { collectionsIndexPath } from '@/lib/collections';
 
 /** Vista síncrona (usable también desde componentes cliente). <details> da un menú móvil accesible por teclado. */
 export default function SiteHeaderView({ lang, alternates, available }: { lang: MdLanguage; alternates?: Partial<Record<MdLanguage, string>>; available: MdLanguage[] }) {
@@ -15,6 +16,7 @@ export default function SiteHeaderView({ lang, alternates, available }: { lang: 
     { href: `${base}/que-puedo-cocinar`, label: t.navPantryTool },
     { href: `${base}/categorias`, label: t.navCategories },
     { href: `${base}/ingredientes`, label: t.navIngredients },
+    { href: collectionsIndexPath(lang), label: t.navCollections },
   ];
 
   return (

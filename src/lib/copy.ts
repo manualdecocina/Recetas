@@ -42,7 +42,7 @@ const es = {
   recipeCatalog: "Todas las recetas",
   categoryCatalog: "Categorías",
   ingredientCatalog: "Ingredientes",
-  ingredientCatalogIntro: "Cada ingrediente reúne las recetas reales que lo usan, con su foto y el número de recetas disponibles.",
+  ingredientCatalogIntro: "Explora los ingredientes, busca el que tienes en casa y descubre las recetas que lo usan.",
   ingredientRecipeCountSuffix: "recetas",
   resultCount: "Recetas encontradas",
   recipesInCategory: "Recetas de esta categoría",
@@ -194,7 +194,7 @@ const en = {
   recipeCatalog: "All recipes",
   categoryCatalog: "Categories",
   ingredientCatalog: "Ingredients",
-  ingredientCatalogIntro: "Each ingredient gathers the real recipes that use it, with its photo and how many recipes are available.",
+  ingredientCatalogIntro: "Browse ingredients, find what you have at home and discover the recipes that use it.",
   ingredientRecipeCountSuffix: "recipes",
   resultCount: "Recipes found",
   recipesInCategory: "Recipes in this category",
@@ -346,7 +346,7 @@ const de = {
   recipeCatalog: "Alle Rezepte", // REVISAR
   categoryCatalog: "Kategorien", // REVISAR
   ingredientCatalog: "Zutaten", // REVISAR
-  ingredientCatalogIntro: "Jede Zutat zeigt die echten Rezepte, die sie verwenden, mit Foto und Anzahl der Rezepte.", // REVISAR
+  ingredientCatalogIntro: "Entdecke Zutaten, finde deine Vorräte und passende Rezepte dazu.", // REVISAR
   ingredientRecipeCountSuffix: "Rezepte", // REVISAR
   resultCount: "Gefundene Rezepte", // REVISAR
   recipesInCategory: "Rezepte dieser Kategorie", // REVISAR
@@ -498,7 +498,7 @@ const it = {
   recipeCatalog: "Tutte le ricette", // REVISAR
   categoryCatalog: "Categorie", // REVISAR
   ingredientCatalog: "Ingredienti", // REVISAR
-  ingredientCatalogIntro: "Ogni ingrediente raccoglie le ricette reali che lo usano, con la sua foto e il numero di ricette disponibili.", // REVISAR
+  ingredientCatalogIntro: "Esplora gli ingredienti, cerca quelli che hai in casa e scopri le ricette che li usano.", // REVISAR
   ingredientRecipeCountSuffix: "ricette", // REVISAR
   resultCount: "Ricette trovate", // REVISAR
   recipesInCategory: "Ricette di questa categoria", // REVISAR
@@ -650,7 +650,7 @@ const fr = {
   recipeCatalog: "Toutes les recettes", // REVISAR
   categoryCatalog: "Catégories", // REVISAR
   ingredientCatalog: "Ingrédients", // REVISAR
-  ingredientCatalogIntro: "Chaque ingrédient réunit les recettes réelles qui l'utilisent, avec sa photo et son nombre de recettes.", // REVISAR
+  ingredientCatalogIntro: "Parcourez les ingrédients, trouvez ceux que vous avez chez vous et découvrez les recettes qui les utilisent.", // REVISAR
   ingredientRecipeCountSuffix: "recettes", // REVISAR
   resultCount: "Recettes trouvées", // REVISAR
   recipesInCategory: "Recettes de cette catégorie", // REVISAR
@@ -802,7 +802,7 @@ const ja = {
   recipeCatalog: "すべてのレシピ", // REVISAR
   categoryCatalog: "カテゴリー", // REVISAR
   ingredientCatalog: "食材", // REVISAR
-  ingredientCatalogIntro: "各食材には、それを使う実際のレシピと写真、レシピ数が表示されます。", // REVISAR
+  ingredientCatalogIntro: "家にある食材を探して、その食材を使うレシピを見つけましょう。", // REVISAR
   ingredientRecipeCountSuffix: "件のレシピ", // REVISAR
   resultCount: "検索結果", // REVISAR
   recipesInCategory: "このカテゴリーのレシピ", // REVISAR
@@ -955,7 +955,7 @@ const pt = {
   recipeCatalog: "Todas as receitas",
   categoryCatalog: "Categorias",
   ingredientCatalog: "Ingredientes",
-  ingredientCatalogIntro: "Cada ingrediente reúne as receitas reais que o usam, com foto e o número de receitas disponíveis.",
+  ingredientCatalogIntro: "Explore os ingredientes, procure o que tem em casa e descubra as receitas que o utilizam.",
   ingredientRecipeCountSuffix: "receitas",
   resultCount: "Receitas encontradas",
   recipesInCategory: "Receitas desta categoria",

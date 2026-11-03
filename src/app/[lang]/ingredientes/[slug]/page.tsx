@@ -1,3 +1,5 @@
+import { isIndexingAllowed } from '@/lib/site'
+import { ingredientPhoto } from '@/lib/ingredient-photos'
 import { ingredientLabel } from '@/lib/ingredient-labels'
 import { getPantryMatchData } from '@/lib/md-data'
 import { taxonomyLanding } from '@/lib/taxonomy-landing-seo'
@@ -22,7 +24,7 @@ async function getIngredient(lang: RecipeLanguage, slug: string) {
     .eq('status', 'canonical')
     .maybeSingle()
   if (error) throw new Error('No se pudo cargar el ingrediente')
-  if (!data || !data.indexable) return null
+  if (!data) return null
 
   const pantry = await getPantryMatchData(lang)
   return { ingredient: { ...data, name: ingredientLabel(data.slug, data.name, lang), description: lang === 'es' ? data.description : null },
@@ -40,13 +42,14 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const title = withSiteName(landing.title)
   const description = landing.description
   const url = publicUrl(`/${lang}/ingredientes/${result.ingredient.slug}`)
-  const images = result.ingredient.image_url
-    ? [{ url: absoluteUrl(result.ingredient.image_url), alt: result.ingredient.name }]
+  const photo = ingredientPhoto(result.ingredient.slug)
+  const images = photo?.src
+    ? [{ url: absoluteUrl(photo.src), alt: result.ingredient.name }]
     : undefined
   return {
     title,
     description,
-    robots: siteRobots(),
+    robots: result.ingredient.indexable ? siteRobots() : { index: false, follow: isIndexingAllowed(), googleBot: { index: false, follow: isIndexingAllowed() } },
     alternates: allLanguageAlternates(`/${lang}/ingredientes/${result.ingredient.slug}`, (l) => `/${l}/ingredientes/${result.ingredient.slug}`),
     openGraph: {
       type: 'website',

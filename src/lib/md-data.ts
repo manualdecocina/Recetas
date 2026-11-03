@@ -7,6 +7,7 @@ import type { MdIngredientSummary } from '@/components/md/IngredientViews'
 import type { MdHomeData } from '@/components/md/HomePageView'
 import { CATEGORY_TAXONOMY } from '@/lib/categories'
 import { consolidatePantryFoods } from '@/lib/pantry-foods'
+import { ingredientPhoto } from '@/lib/ingredient-photos'
 import { ingredientLabel } from '@/lib/ingredient-labels'
 import { buildEditorialPantry, localizeEditorialIngredients, type PantryLink } from '@/lib/pantry-editorial'
 import { localizePantryRecipes, pantryIngredientCoverage } from '@/lib/pantry-localization'
@@ -42,22 +43,19 @@ export async function getCategorySummaries(lang: RecipeLanguage): Promise<MdCate
   })
 }
 
-/**
- * Ingredientes canónicos indexables (los mismos que lista /es/ingredientes), con conteo
- * real de recetas publicadas y una foto real de una de esas recetas (nunca inventada;
- * mismo criterio que getCategorySummaries). Sin recetas asociadas, count queda en 0 y el
- * llamador decide si lo muestra o no (la página lo filtra, igual que categorías).
- */
+/** Canonical searchable ingredients with actual published-recipe counts. Search
+ * discovery is independent of the per-ingredient SEO/indexable flag. Photographs
+ * depict the ingredient itself and come from the reviewed, attributed photo catalog. */
 export async function getIngredientSummaries(limit?: number, lang: RecipeLanguage = 'es'): Promise<MdIngredientSummary[]> {
   const [{ data, error }, pantry] = await Promise.all([
-    supabase.from('ingredients').select('id, slug, name').eq('status', 'canonical').eq('indexable', true),
+    supabase.from('ingredients').select('id, slug, name').eq('status', 'canonical').eq('searchable', true),
     getPantryMatchData(lang),
   ])
   if (error) throw new Error(`No se pudieron cargar los ingredientes: ${error.message}`)
   const summaries = (data ?? []).map((ingredient) => {
     const recipes = pantry.recipes.filter((recipe) => recipe.ingredientIds.includes(ingredient.id))
     return { slug: ingredient.slug, name: ingredientLabel(ingredient.slug, ingredient.name, lang), count: recipes.length,
-      image_url: recipes.find((recipe) => recipe.image_url)?.image_url ?? null }
+      image_url: ingredientPhoto(ingredient.slug)?.src ?? null }
   }).sort((a, b) => a.name.localeCompare(b.name, lang))
   const used = summaries.filter(i => i.count > 0)
   return limit ? used.slice(0, limit) : used
