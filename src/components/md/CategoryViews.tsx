@@ -85,7 +85,7 @@ export function CategoryDetailView({ lang, category, recipes }: {
       <SiteHeader lang={lang} alternates={alternates} />
       <main className="md-container" id="md-main">
         <header className="md-page-head">
-          <Breadcrumbs items={[
+          <Breadcrumbs lang={lang} items={[
             { name: 'Manual de Cocina', path: `/${lang}` },
             { name: t.navCategories, path: `/${lang}/categorias` },
             { name: category.label, path: `/${lang}/categorias/${category.slug}` },

@@ -13,7 +13,7 @@ export default function SiteHeaderView({ lang, alternates, available }: { lang: 
   const base = `/${lang}`;
   const nav = [
     { href: `${base}/recetas`, label: t.navRecipes },
-    { href: `${base}/que-puedo-cocinar`, label: t.navPantryTool },
+    { href: `${base}/que-puedo-cocinar`, label: t.navPantryTool, prefetch: false as const },
     { href: `${base}/categorias`, label: t.navCategories },
     { href: `${base}/ingredientes`, label: t.navIngredients },
     { href: collectionsIndexPath(lang), label: t.navCollections },
@@ -25,10 +25,10 @@ export default function SiteHeaderView({ lang, alternates, available }: { lang: 
       <header className="md-header">
         <div className="md-container md-header-inner">
           <Link className="md-brand" href={base} aria-label="Manual de Cocina">
-            <Image className="md-brand-image" src="/brand/logo-manual-de-cocina.png" alt="Manual de Cocina" width={214} height={63} sizes="214px" quality={65} />
+            <Image className="md-brand-image" src="/brand/logo-manual-de-cocina.png" alt="Manual de Cocina" width={640} height={188} unoptimized />
           </Link>
           <nav className="md-header-nav" aria-label={t.navRecipes}>
-            {nav.map((item) => <Link key={item.href} href={item.href}>{item.label}</Link>)}
+            {nav.map((item) => <Link key={item.href} href={item.href} prefetch={item.prefetch}>{item.label}</Link>)}
           </nav>
           <div className="md-header-actions">
             <Link className="md-favorites-link" href={`${base}/favoritos`} aria-label={favoritesCopy[lang].title} title={favoritesCopy[lang].title}><span aria-hidden="true">★</span></Link>
@@ -47,7 +47,7 @@ export default function SiteHeaderView({ lang, alternates, available }: { lang: 
               <div className="md-menu-panel">
                 <nav className="md-stack" aria-label={t.openMenu}>
                   <Link href={`${base}/favoritos`}>{favoritesCopy[lang].title}</Link>
-                  {nav.map((item) => <Link key={item.href} href={item.href}>{item.label}</Link>)}
+                  {nav.map((item) => <Link key={item.href} href={item.href} prefetch={item.prefetch}>{item.label}</Link>)}
                 </nav>
                 <form action={`${base}/recetas`} method="get" role="search">
                   <label className="md-search-label" htmlFor="md-mobile-query">{t.searchLabel}</label>

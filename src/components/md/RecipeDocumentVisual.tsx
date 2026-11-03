@@ -81,7 +81,7 @@ export default function RecipeDocumentVisual({ recipe, relatedRecipes = [], note
         </div>
         <header className="md-container md-recipe-hero">
           <div className="md-recipe-hero-copy">
-            <nav className="md-crumbs" aria-label="Breadcrumb">
+            <nav className="md-crumbs" aria-label={t.breadcrumbLabel}>
               <Link href={`/${lang}`}>Manual de Cocina</Link><span aria-hidden="true">/</span>
               <Link href={`/${lang}/recetas`}>{t.navRecipes}</Link>
               {recipe.category && categorySlug && <><span aria-hidden="true">/</span><Link href={`/${lang}/categorias/${categorySlug}`}>{recipe.category}</Link></>}
