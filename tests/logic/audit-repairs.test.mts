@@ -17,3 +17,23 @@ assert.equal(parsePrivacyChoice(JSON.stringify({version:1,advertising:false,save
 assert.deepEqual(parseFavoriteIds('["a","b","a"]'), ['a','b'])
 assert.throws(() => parseFavoriteIds('{"a":true}'))
 console.log('OK: durations in seven languages, expired/malformed consent, explicit refusal, compatible favorite IDs')
+
+const { recipeCoverVariants } = await import('@/lib/cover-variants')
+assert.equal(recipeCoverVariants('/recetas/creep-stroganoff/portada.webp', null).length, 3)
+assert.deepEqual(recipeCoverVariants('/recetas/new-cover.webp', null), [])
+assert.deepEqual(recipeCoverVariants('/recetas/creep-stroganoff/portada.webp', ['a','b','c']), ['a','b','c'])
+
+const { sanitizeEditorialHtml } = await import('@/lib/sanitize-editorial')
+for (const html of ['<p onclick=alert(1)>hola</p>', '<svg onload=alert(1)>bad</svg>', '<a href="jav&#97;script:alert(1)">bad</a>', '<iframe src="https://example.com"></iframe>', '<script>alert(1)</script>']) {
+  const safe = sanitizeEditorialHtml(html)
+  assert(!/onclick|onload|javascript:|<script|<iframe|<svg/i.test(safe))
+}
+assert(sanitizeEditorialHtml('<h3>Notas</h3><p><a href="/arepa-de-huevo">Receta</a></p>').includes('href="/arepa-de-huevo"'))
+
+const { PRIVACY_BOOTSTRAP } = await import('@/lib/consent')
+for (const allowed of [true, false]) {
+ const document = { documentElement: { dataset: {} as Record<string,string> } }
+ const storage = { getItem: () => JSON.stringify({version:1,advertising:allowed,savedAt:Date.now()}) }
+ new Function('document','localStorage',PRIVACY_BOOTSTRAP)(document,storage)
+ assert.equal(document.documentElement.dataset.mdPrivacy,'known','both choices hide repeat-visit drawer before paint')
+}

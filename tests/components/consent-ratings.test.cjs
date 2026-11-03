@@ -10,7 +10,7 @@ function harness(file, fetch = async () => ({ ok: false, status: 503 })) {
   const listeners = new Map();
   const scripts = [];
   const win = { addEventListener: (name, fn) => { const set = listeners.get(name) ?? new Set(); set.add(fn); listeners.set(name, set); }, removeEventListener: (name, fn) => listeners.get(name)?.delete(fn), dispatchEvent: event => { for (const fn of listeners.get(event.type) ?? []) fn(event); }, location: { reload: () => { win.reloaded = true; } } };
-  const doc = { activeElement: null, getElementById: id => scripts.find(s => s.id === id), createElement: () => ({}), head: { appendChild: node => scripts.push(node) } };
+  const doc = { documentElement: { dataset: {} }, activeElement: null, getElementById: id => scripts.find(s => s.id === id), createElement: () => ({}), head: { appendChild: node => scripts.push(node) } };
   const react = {
     useState(initial) {
       const i = cursor++;

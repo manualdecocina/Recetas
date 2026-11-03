@@ -29,7 +29,7 @@ const es = {
   browseIngredients: "Empieza por un ingrediente",
   editorialTitle: "Recetas para volver a cocinar",
   editorialBody: "Manual de Cocina reúne recetas de distintas cocinas para consultar, preparar y compartir, con instrucciones claras y una navegación sencilla.",
-  editorialPoint1: "Instrucciones claras, paso a paso, con una imagen ilustrativa de cada paso.",
+  editorialPoint1: "Instrucciones claras, paso a paso, con fotografías de las fases principales.",
   editorialPoint2: "Notas de conservación, sustituciones y preguntas frecuentes en cada receta.",
   editorialPoint3: "Sin datos inventados: valoraciones solo de lectores reales y fuentes nutricionales citadas.",
   editorialPoint4: "Guarda tus recetas favoritas y compártelas fácilmente.",
@@ -181,7 +181,7 @@ const en = {
   browseIngredients: "Start with an ingredient",
   editorialTitle: "Recipes worth cooking again",
   editorialBody: "Manual de Cocina brings together recipes from different cuisines with clear instructions and easy navigation.",
-  editorialPoint1: "Clear, step-by-step instructions with an illustrative image for each step.",
+  editorialPoint1: "Clear, step-by-step instructions with photographs of the main stages.",
   editorialPoint2: "Storage tips, substitutions and FAQs on every recipe.",
   editorialPoint3: "No invented data: ratings come only from real readers and nutrition sources are cited.",
   editorialPoint4: "Save your favorite recipes and share them easily.",
@@ -333,7 +333,7 @@ const de = {
   browseIngredients: "Mit einer Zutat beginnen", // REVISAR
   editorialTitle: "Rezepte, die man gerne wieder kocht", // REVISAR
   editorialBody: "Manual de Cocina vereint Rezepte verschiedener Küchen mit klaren Anleitungen und einfacher Navigation.", // REVISAR
-  editorialPoint1: "Klare Schritt-für-Schritt-Anleitungen mit einem illustrativen Bild zu jedem Schritt.",
+  editorialPoint1: "Klare Schritt-für-Schritt-Anleitungen mit Fotos der wichtigsten Zubereitungsschritte.",
   editorialPoint2: "Aufbewahrungstipps, Alternativen und FAQ bei jedem Rezept.", // REVISAR
   editorialPoint3: "Keine erfundenen Daten: Bewertungen nur von echten Lesern, Nährwertquellen werden genannt.",
   editorialPoint4: "Speichere deine Lieblingsrezepte und teile sie einfach.", // REVISAR
@@ -485,7 +485,7 @@ const it = {
   browseIngredients: "Parti da un ingrediente", // REVISAR
   editorialTitle: "Ricette da cucinare ancora", // REVISAR
   editorialBody: "Manual de Cocina raccoglie ricette di cucine diverse con istruzioni chiare e una navigazione semplice.", // REVISAR
-  editorialPoint1: "Istruzioni chiare, passo dopo passo, con un'immagine illustrativa per ogni passaggio.",
+  editorialPoint1: "Istruzioni chiare, passo dopo passo, con fotografie delle fasi principali.",
   editorialPoint2: "Consigli di conservazione, sostituzioni e FAQ in ogni ricetta.", // REVISAR
   editorialPoint3: "Nessun dato inventato: valutazioni solo da lettori reali e fonti nutrizionali citate.",
   editorialPoint4: "Salva le tue ricette preferite e condividile facilmente.", // REVISAR
@@ -637,7 +637,7 @@ const fr = {
   browseIngredients: "Partir d’un ingrédient", // REVISAR
   editorialTitle: "Des recettes à refaire", // REVISAR
   editorialBody: "Manual de Cocina rassemble des recettes de différentes cuisines, avec des instructions claires et une navigation simple.", // REVISAR
-  editorialPoint1: "Instructions claires, étape par étape, avec une image illustrative pour chaque étape.",
+  editorialPoint1: "Instructions claires, étape par étape, avec des photos des principales phases.",
   editorialPoint2: "Conseils de conservation, substitutions et FAQ pour chaque recette.", // REVISAR
   editorialPoint3: "Aucune donnée inventée : avis uniquement de vrais lecteurs et sources nutritionnelles citées.",
   editorialPoint4: "Enregistrez vos recettes préférées et partagez-les facilement.", // REVISAR
@@ -789,7 +789,7 @@ const ja = {
   browseIngredients: "食材から探す", // REVISAR
   editorialTitle: "何度も作りたくなるレシピ", // REVISAR
   editorialBody: "Manual de Cocina は、さまざまな国のレシピをわかりやすい手順と使いやすい構成で紹介します。", // REVISAR
-  editorialPoint1: "各手順にイメージ画像を添えて、わかりやすく紹介。",
+  editorialPoint1: "主な調理工程の写真とともに、手順をわかりやすく紹介。",
   editorialPoint2: "保存方法、代用品、よくある質問を各レシピに掲載。", // REVISAR
   editorialPoint3: "架空のデータはなし。評価は実際の読者によるもの、栄養情報は出典を明記。",
   editorialPoint4: "お気に入りのレシピを保存して、簡単に共有できます。", // REVISAR
@@ -942,7 +942,7 @@ const pt = {
   browseIngredients: "Comece por um ingrediente",
   editorialTitle: "Receitas para voltar a cozinhar",
   editorialBody: "O Manual de Cocina reúne receitas de diferentes cozinhas para consultar, preparar e compartilhar, com instruções claras e navegação simples.",
-  editorialPoint1: "Instruções claras, passo a passo, com uma imagem ilustrativa de cada passo.",
+  editorialPoint1: "Instruções claras, passo a passo, com fotos das principais etapas.",
   editorialPoint2: "Dicas de conservação, substituições e perguntas frequentes em cada receita.",
   editorialPoint3: "Sem dados inventados: avaliações só de leitores reais e fontes nutricionais citadas.",
   editorialPoint4: "Salve suas receitas favoritas e compartilhe facilmente.",

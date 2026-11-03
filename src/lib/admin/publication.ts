@@ -1,3 +1,4 @@
+import { recipeCoverVariants } from '@/lib/cover-variants'
 /**
  * Reglas del centro de publicación del panel. Funciones puras (sin red ni base de datos)
  * para poder probarlas. La base de datos repite las mismas reglas en
@@ -122,8 +123,8 @@ export function groupImageUrls(rows: PublicationRow[]): string[] {
   const urls = new Set<string>()
   for (const row of rows) {
     if (text(row.image_url)) urls.add(text(row.image_url))
-    const variants = row.seo?.image_variants
-    if (Array.isArray(variants)) for (const v of variants) if (text(v)) urls.add(text(v))
+    const variants = recipeCoverVariants(row.image_url ?? null, row.seo?.image_variants)
+    for (const v of variants) urls.add(v)
     if (Array.isArray(row.steps)) {
       for (const step of row.steps) {
         const url = text((step as { image_url?: unknown })?.image_url)

@@ -159,3 +159,6 @@ html body .fc-consent-root .fc-dialog .fc-button:is(.fc-primary-button, .fc-seco
 .md-cookie-settings label { display: flex; align-items: center; gap: 10px; font-weight: 700; }
 .md-cookie-settings input { width: 20px; height: 20px; accent-color: var(--md-accent); }
 @media print { .md-cookie-drawer, .md-consent-preferences { display: none !important; } }
+
+/* The initial drawer is server-rendered; a saved choice hides it before paint. */
+html[data-md-privacy="known"] .md-cookie-drawer:not([data-open="true"]) { display: none; }
