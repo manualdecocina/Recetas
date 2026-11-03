@@ -1,0 +1,32 @@
+name: cerveza-artesanal-20261102-publication
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'editorial/cerveza-artesanal-20261102.json'
+      - 'scripts/audit-cerveza-artesanal-20261102.py'
+      - '.github/workflows/cerveza-artesanal-20261102-publication.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            editorial/cerveza-artesanal-20261102.json
+            editorial/cerveza-artesanal-imagenes-20261102.json
+            scripts/audit-cerveza-artesanal-20261102.py
+          sparse-checkout-cone-mode: false
+      - name: Refresh recipe cache and verify the complete seven-language publication
+        env:
+          REVALIDATE_SECRET: ${{ secrets.REVALIDATE_SECRET }}
+        run: python3 scripts/audit-cerveza-artesanal-20261102.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: cerveza-artesanal-20261102-production-qa
+          path: cerveza-artesanal-20261102-production-qa.json
