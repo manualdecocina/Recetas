@@ -4,7 +4,7 @@
 
 PR #234, merge 61d4fac3ff3a0db46794512ca04d82f9fd2b470a.
 
-- Cajón global de privacidad en siete idiomas; no depende de la región de Google. Aceptar, rechazar y configurar; preferencias siempre accesibles. Persistencia limitada a 180 días. El script de anuncios espera una autorización explícita y la integración CMP habilitada; retirar permiso recarga el documento. No se fabrica una cadena TCF ni se sustituye la plataforma certificada de Google.
+- Cajón global de privacidad en siete idiomas; no depende de la región de Google. Aceptar, rechazar y configurar; preferencias siempre accesibles. Persistencia limitada a 180 días. El cajón se renderiza en el servidor y una elección válida lo oculta antes de pintar la página en visitas posteriores. El script de anuncios espera una autorización explícita y la integración CMP habilitada; retirar permiso recarga el documento. No se fabrica una cadena TCF ni se sustituye la plataforma certificada de Google.
 - Favoritos guardados, recuperables y eliminables, incluidos sus equivalentes publicados en otros idiomas. La API de consulta solo lee tarjetas publicadas, valida identificadores e idioma y devuelve respuestas no almacenables.
 - Alias culinarios revisados: papa genérica, tamaños/preparaciones y la alternativa de papas harinosas del puré. Las variedades concretas y los productos procesados conservan identidades distintas.
 - Duraciones localizadas, con preparación, cocción y espera calculada cuando los tres datos están disponibles. No se alteraron tiempos SEO, cantidades ni instrucciones.

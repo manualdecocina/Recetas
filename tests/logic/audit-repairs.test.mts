@@ -29,3 +29,11 @@ for (const html of ['<p onclick=alert(1)>hola</p>', '<svg onload=alert(1)>bad</s
   assert(!/onclick|onload|javascript:|<script|<iframe|<svg/i.test(safe))
 }
 assert(sanitizeEditorialHtml('<h3>Notas</h3><p><a href="/arepa-de-huevo">Receta</a></p>').includes('href="/arepa-de-huevo"'))
+
+const { PRIVACY_BOOTSTRAP } = await import('@/lib/consent')
+for (const allowed of [true, false]) {
+ const document = { documentElement: { dataset: {} as Record<string,string> } }
+ const storage = { getItem: () => JSON.stringify({version:1,advertising:allowed,savedAt:Date.now()}) }
+ new Function('document','localStorage',PRIVACY_BOOTSTRAP)(document,storage)
+ assert.equal(document.documentElement.dataset.mdPrivacy,'known','both choices hide repeat-visit drawer before paint')
+}

@@ -8,7 +8,7 @@ type Fc = { callbackQueue?: Array<Record<string, () => void>>; showRevocationMes
 /** Global first-visit control. It gates loading; it does not create a Google/TCF consent string. */
 export default function CookieDrawer({ lang }: { lang: MdLanguage }) {
   const t = consentCopy[lang];
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(true);
   const [settings, setSettings] = useState(false);
   const [advertising, setAdvertising] = useState(false);
   const [googleReady, setGoogleReady] = useState(false);
@@ -24,7 +24,7 @@ export default function CookieDrawer({ lang }: { lang: MdLanguage }) {
       setAdvertising(readPrivacyChoice()?.advertising ?? false);
       setSettings(true); setVisible(true);
     };
-    const sync = () => { const choice = readPrivacyChoice(); setAdvertising(choice?.advertising ?? false); setVisible(!choice); };
+    const sync = () => { const choice = readPrivacyChoice(); document.documentElement.dataset.mdPrivacy = choice ? 'known' : 'unknown'; setAdvertising(choice?.advertising ?? false); setVisible(!choice); };
     window.addEventListener(CONSENT_OPEN, open);
     window.addEventListener('storage', sync);
     const w = window as Window & { googlefc?: Fc };
@@ -48,7 +48,7 @@ export default function CookieDrawer({ lang }: { lang: MdLanguage }) {
     fc?.callbackQueue?.push({ CONSENT_API_READY: () => fc.showRevocationMessage?.() });
   }
   if (!visible) return null;
-  return <section className="md-cookie-drawer" aria-labelledby="md-cookie-title" aria-describedby="md-cookie-description" role="region">
+  return <section className="md-cookie-drawer" data-open={settings ? 'true' : undefined} aria-labelledby="md-cookie-title" aria-describedby="md-cookie-description" role="region">
     <h2 id="md-cookie-title" ref={heading} tabIndex={-1}>{t.title}</h2>
     <p id="md-cookie-description">{t.body} <a href={`/${lang}/cookies`}>{t.policy}</a>.</p>
     {settings && <div className="md-cookie-settings"><label><input type="checkbox" checked={advertising} onChange={e => setAdvertising(e.target.checked)} /> {t.advertising}</label><p>{t.detail}</p></div>}
