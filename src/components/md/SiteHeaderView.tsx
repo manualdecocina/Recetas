@@ -21,7 +21,7 @@ export default function SiteHeaderView({ lang, alternates, available }: { lang: 
 
   return (
     <>
-      <Link className="md-skip" href="#md-main">{t.skipToContent}</Link>
+      <a className="md-skip" href="#md-main">{t.skipToContent}</a>
       <header className="md-header">
         <div className="md-container md-header-inner">
           <Link className="md-brand" href={base} aria-label="Manual de Cocina">
