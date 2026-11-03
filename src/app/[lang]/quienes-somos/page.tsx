@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { InstitutionalPage } from '@/components/InstitutionalPage'
 import { absoluteUrl, getSiteUrl } from '@/lib/site'
 import { SUPPORTED_LANGUAGES, type RecipeLanguage } from '@/types/recipe'
-import { allLanguageAlternates } from '@/lib/seo'
+import { allLanguageAlternates, pageSocialMeta } from '@/lib/seo'
 
 interface QuienesSomosContent {
   metaTitle: string
@@ -195,6 +195,12 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     title: t.metaTitle,
     description: t.metaDescription,
     alternates: allLanguageAlternates(`/${language}/quienes-somos`, (l) => `/${l}/quienes-somos`),
+    ...pageSocialMeta({
+      title: t.metaTitle,
+      description: t.metaDescription,
+      path: `/${language}/quienes-somos`,
+      image: { url: absoluteUrl('/autor/nestor-bastidas.webp'), alt: t.photoAlt },
+    }),
   }
 }
 

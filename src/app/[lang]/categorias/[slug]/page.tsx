@@ -5,7 +5,8 @@ import { CategoryDetailView } from '@/components/md/CategoryViews'
 import type { MdRecipeCardData } from '@/components/md/md-types'
 import { SUPPORTED_LANGUAGES, type RecipeLanguage } from '@/types/recipe'
 import { CATEGORY_TAXONOMY, categoryLabel } from '@/lib/categories'
-import { allLanguageAlternates, withSiteName } from '@/lib/seo'
+import { allLanguageAlternates, pageSocialMeta, withSiteName } from '@/lib/seo'
+import { absoluteUrl } from '@/lib/site'
 import { taxonomyLanding } from '@/lib/taxonomy-landing-seo'
 
 function parseLang(value: string): RecipeLanguage | null {
@@ -23,10 +24,26 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     .eq('language', lang).eq('published', true).eq('category', label)
   if (error) throw new Error('No se pudo calcular el total publicado de la categoría')
   const landing = taxonomyLanding('category', lang, label, count ?? 0)
+  // Imagen social: portada de la receta más reciente de la categoría. Si la consulta falla o no
+  // hay ninguna con imagen, la página sale sin imagen en vez de romper los metadatos.
+  const { data: cover } = await supabase.from('recipes')
+    .select('image_url, title')
+    .eq('language', lang).eq('published', true).eq('category', label)
+    .not('image_url', 'is', null)
+    .order('ready_at', { ascending: false, nullsFirst: false })
+    .limit(1)
+  const first = cover?.[0] as { image_url: string | null; title: string } | undefined
+  const title = withSiteName(landing.title)
   return {
-    title: withSiteName(landing.title),
+    title,
     description: landing.description,
     alternates: allLanguageAlternates(`/${lang}/categorias/${slug}`, (l) => `/${l}/categorias/${slug}`),
+    ...pageSocialMeta({
+      title,
+      description: landing.description,
+      path: `/${lang}/categorias/${slug}`,
+      image: first?.image_url ? { url: absoluteUrl(first.image_url), alt: first.title } : null,
+    }),
   }
 }
 
