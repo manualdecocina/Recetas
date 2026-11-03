@@ -40,7 +40,18 @@ jobs:
           print('Public cache invalidated')
           PY
       - name: Verify editorial, filters, indexing guards, schema and deployment assets
-        run: python3 scripts/verify-quality-fixes-20261103.py
+        run: |
+          # A static deployment marker can reach the edge before every rendered
+          # page is refreshed. Recheck the actual content, with a bounded wait.
+          python3 - <<'PY'
+          import subprocess,time
+          for attempt in range(3):
+              result=subprocess.run(['python3','scripts/verify-quality-fixes-20261103.py'])
+              if result.returncode==0: break
+              if attempt==2: raise SystemExit(result.returncode)
+              print('Waiting for rendered pages to finish refreshing',attempt+1,flush=True)
+              time.sleep(60)
+          PY
       - name: Crawl every sitemap page, internal links and images
         if: success() || failure()
         run: python3 scripts/audit-site-full-20261025.py

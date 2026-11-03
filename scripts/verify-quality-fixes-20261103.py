@@ -5,6 +5,7 @@ import json
 import os
 import re
 import sys
+import time
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -72,10 +73,21 @@ def fetch(path):
     parts = urllib.parse.urlsplit(url)
     url = urllib.parse.urlunsplit((parts.scheme, parts.netloc, urllib.parse.quote(urllib.parse.unquote(parts.path), safe='/'), parts.query, ''))
     req = urllib.request.Request(url, headers={'User-Agent': 'ManualDeCocina-QualityVerification/1.0'})
-    try:
-        with urllib.request.urlopen(req, timeout=40) as r: return r.status, r.url, r.read().decode('utf-8', 'replace')
-    except urllib.error.HTTPError as e: return e.code, e.url, e.read().decode('utf-8', 'replace')
-    except Exception as e: return 0, url, 'FETCH_ERROR: ' + str(e)
+    for attempt in range(3):
+        try:
+            with urllib.request.urlopen(req, timeout=40) as r: return r.status, r.url, r.read().decode('utf-8', 'replace')
+        except urllib.error.HTTPError as e:
+            body = e.read().decode('utf-8', 'replace')
+            if e.code not in [500, 502, 503, 504] or attempt == 2: return e.code, e.url, body
+        except Exception as e:
+            if attempt == 2: return 0, url, 'FETCH_ERROR: ' + str(e)
+        time.sleep(attempt + 1)
+
+def canonical_identity(url):
+    # IRI text in JSON-LD and percent-encoded HTML canonical URLs identify the
+    # same Japanese path. Keep slash, query and host distinctions significant.
+    parts = urllib.parse.urlsplit(url or '')
+    return parts.scheme, parts.netloc, urllib.parse.unquote(parts.path), parts.query
 
 def nodes(data, kind):
     if isinstance(data, dict):
@@ -102,8 +114,8 @@ def check_editorial(patch):
             if recipe.get('publisher', {}).get('url') != CANONICAL_BASE + '/es': problems.append('publisher_url')
             if 'title' in patch['after'] and recipe['name'] != patch['after']['title']: problems.append('recipe_name')
             if 'ingredients' in patch['after'] and len(recipe.get('recipeIngredient', [])) != len(patch['after']['ingredients']): problems.append('ingredient_count')
-            if recipe.get('url') != page.canonical: problems.append('schema_canonical')
-            if any(s.get('url', '').split('#')[0] != page.canonical for s in recipe.get('recipeInstructions', [])): problems.append('step_canonical')
+            if canonical_identity(recipe.get('url')) != canonical_identity(page.canonical): problems.append('schema_canonical')
+            if any(canonical_identity(s.get('url', '').split('#')[0]) != canonical_identity(page.canonical) for s in recipe.get('recipeInstructions', [])): problems.append('step_canonical')
         result = {'path': patch['public_path'], 'status': status, 'faq_checked': len(faqs), 'problems': sorted(set(problems))}
     except Exception as e: result = {'path': patch['public_path'], 'problems': [str(e)]}
     return result

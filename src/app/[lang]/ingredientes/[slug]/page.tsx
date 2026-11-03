@@ -1,3 +1,4 @@
+import { cache } from 'react'
 import { isIndexingAllowed } from '@/lib/site'
 import { ingredientPhoto } from '@/lib/ingredient-photos'
 import { ingredientLabel } from '@/lib/ingredient-labels'
@@ -17,7 +18,11 @@ function parseLang(value: string): RecipeLanguage | null {
   return (SUPPORTED_LANGUAGES as string[]).includes(value) ? value as RecipeLanguage : null
 }
 
-async function getIngredient(lang: RecipeLanguage, slug: string) {
+// Share metadata and page resolution, including negative results, within a render.
+// Both decoded and percent-encoded Unicode segments resolve to the stored slug.
+const getIngredient = cache(async (lang: RecipeLanguage, rawSlug: string) => {
+  let slug: string
+  try { slug = decodeURIComponent(rawSlug).normalize('NFC') } catch { return null }
   const { data, error } = await supabase
     .from('ingredients')
     .select('id, name, slug, description, image_url, indexable, status')
@@ -32,7 +37,7 @@ async function getIngredient(lang: RecipeLanguage, slug: string) {
   return { ingredient: { ...data, name: ingredientLabel(data.slug, data.name, lang), description: lang === 'es' ? data.description : null },
     recipes: pantry.recipes.filter((recipe) => recipeIds.has(recipe.id)) }
 
-}
+})
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string; slug: string }> }): Promise<Metadata> {
   const { lang: rawLang, slug } = await params
