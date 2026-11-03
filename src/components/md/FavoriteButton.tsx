@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 import type { MdLanguage } from './md-types';
+import { favoritesCopy } from '@/lib/favorites-copy';
 import { getMdCopy } from '@/lib/copy';
 
 const KEY = 'manualdecocina:favorites';
@@ -34,11 +35,11 @@ export default function FavoriteButton({ recipeId, lang }: { recipeId: string; l
       localStorage.setItem(KEY, JSON.stringify(next));
       setSaved(next.includes(recipeId));
       window.dispatchEvent(new CustomEvent('manualdecocina:favorites-changed'));
-    } catch { /* Restricted storage: preserve the existing user data. */ }
+    } catch { setCompatible(false); }
   }
   return (
     <button className="md-button-quiet" type="button" onClick={toggle}
-      aria-pressed={saved} disabled={!compatible} title={!compatible ? 'Existing favorites format requires integration' : undefined}>
+      aria-pressed={saved} disabled={!compatible} title={!compatible ? favoritesCopy[lang].storageError : undefined}>
       <span aria-hidden="true">{saved ? '★' : '☆'}</span>{saved ? t.saved : t.save}
     </button>
   );

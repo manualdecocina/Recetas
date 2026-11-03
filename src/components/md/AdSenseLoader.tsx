@@ -1,5 +1,6 @@
 'use client';
 import { useEffect } from 'react';
+import { CONSENT_CHANGED, readPrivacyChoice } from '@/lib/consent';
 
 const SCRIPT_ID = 'md-adsense-script';
 
@@ -25,7 +26,16 @@ function loadAdsense(clientId: string) {
 export default function AdSenseLoader({ clientId, cmpReady }: { clientId?: string; cmpReady: boolean }) {
   useEffect(() => {
     if (!clientId || !cmpReady) return;
-    loadAdsense(clientId);
+    const sync = () => {
+      if (readPrivacyChoice()?.advertising) loadAdsense(clientId);
+      // Loaded third-party code cannot be unloaded safely: a fresh document
+      // removes it, and the saved refusal prevents it loading again.
+      else if (document.getElementById(SCRIPT_ID)) window.location.reload();
+    };
+    sync();
+    window.addEventListener(CONSENT_CHANGED, sync);
+    window.addEventListener('storage', sync);
+    return () => { window.removeEventListener(CONSENT_CHANGED, sync); window.removeEventListener('storage', sync); };
   }, [clientId, cmpReady]);
 
   return null;

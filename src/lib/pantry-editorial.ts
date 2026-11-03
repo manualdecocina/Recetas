@@ -67,6 +67,13 @@ const PREPARATION_IDENTITIES: Array<[RegExp, string]> = [
 
 function verifiedPreparationId(name: string, catalog: MdPantryIngredient[]): string | undefined {
   const normalized = normalizeIngredientSearch(name)
+  if (/^(?:papas?|patatas?)(?:$|[ ,(])/.test(normalized)) {
+    // A generic potato can satisfy a recipe accepting several floury varieties.
+    // Never collapse a specific criolla/sabanera/etc. or processed product.
+    const flouryChoice = /^(?:papas?|patatas?) harinosas \(pastusa, russet o similar\)$/.test(normalized);
+    const generic = /^(?:papas?|patatas?)(?:[ ,]*(?:peladas?|medianas?|grandes?|pequenas?|crudas?|lavadas?|sin piel|en (?:trozos|cubos|rodajas)|cortadas?))*$/.test(normalized);
+    if (flouryChoice || generic) return catalog.find(i => i.slug === 'papas')?.id;
+  }
   if (/\b(?:o|u)\b|sal y pimienta|de tu eleccion/.test(normalized)) return undefined
   if (/^(?:ajo|cebolla|tomate|tomates|cilantro|perejil|menta)\b.*\b(?:polvo|seco|seca|secos|secas|deshidratado|deshidratada)\b/.test(normalized) || /^ajo negro\b/.test(normalized)) return undefined
   // Cooking water and ice water are not carbonated water or ice itself.

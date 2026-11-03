@@ -46,3 +46,11 @@ assert.equal((sections[0] as any).storagePosition, 1, 'keep saved checkbox ident
 
 const lemons = buildEditorialPantry([{ id: 'lemons', ingredients: [{ name: 'limón en gajos' }, { name: 'limones en gajos' }] }], [{ id: 'lemon', slug: 'limon', name: 'Limón' }], [])
 assert.deepEqual(lemons.requirements.get('lemons'), ['lemon', 'lemon'], 'singular and plural lemon share the reviewed identity')
+
+const potatoCatalog = [{ id: 'potato', slug: 'papas', name: 'Papa' }];
+for (const name of ['Papa', 'papas peladas, en trozos', 'papa mediana', 'papas harinosas (pastusa, russet o similar)']) {
+  assert.equal(buildEditorialPantry([{ id: 'potato-recipe', ingredients: [{ name }] }], potatoCatalog, []).requirements.get('potato-recipe')?.[0], 'potato', name);
+}
+for (const name of ['papa criolla', 'papa sabanera', 'papa pastusa', 'papas fritas congeladas', 'papas o yuca']) {
+  assert.equal(buildEditorialPantry([{ id: 'potato-recipe', ingredients: [{ name }] }], potatoCatalog, []).requirements.get('potato-recipe')?.[0], editorialIngredientId(name), name);
+}

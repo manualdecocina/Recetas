@@ -655,3 +655,5 @@ a.md-lang-item:hover { background: var(--md-sand); }
 .md-collection-cover { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; border-radius: var(--md-radius); margin-top: 22px; box-shadow: var(--md-shadow-soft); }
 .md-recipe-collections { margin: 6px 0 0; font-size: .92rem; color: var(--md-muted); }
 .md-recipe-collections a { color: var(--md-olive-dark); font-weight: 700; text-decoration: underline; text-underline-offset: .2em; }
+
+.md-favorites-link { display: inline-flex; align-items: center; justify-content: center; min-width: 40px; min-height: 44px; text-decoration: none; color: var(--md-accent); font-size: 1.4rem; flex-shrink: 0; }

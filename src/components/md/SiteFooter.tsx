@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { favoritesCopy } from '@/lib/favorites-copy';
 import ConsentPreferences from './ConsentPreferences';
 import Image from 'next/image';
 import type { MdLanguage } from './md-types';
@@ -8,6 +9,7 @@ export default function SiteFooter({ lang }: { lang: MdLanguage }) {
   const t = getMdCopy(lang);
   const base = `/${lang}`;
   const institutional = [
+    { slug: 'favoritos', label: favoritesCopy[lang].title },
     { slug: 'quienes-somos', label: t.about },
     { slug: 'contacto', label: t.contact },
     { slug: 'politica-editorial', label: t.editorialPolicy },

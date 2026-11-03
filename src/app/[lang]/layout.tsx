@@ -3,6 +3,8 @@ import '../public-base.css'
 import '../site.css'
 import '../consent.css'
 import { editorialSerif, uiSans } from '../fonts'
+import CookieDrawer from '@/components/md/CookieDrawer'
+import type { MdLanguage } from '@/components/md/md-types'
 import ThemeSync from '@/components/md/ThemeSync'
 import AdSenseLoader from '@/components/md/AdSenseLoader'
 import { getSiteUrl, adsenseClientId, adsenseCmpReady, absoluteUrl, languageTag } from '@/lib/site'
@@ -88,6 +90,7 @@ export default async function LanguageRootLayout({
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(entityGraph).replace(/</g, '\\u003c') }} />
         <ThemeSync />
         {children}
+        <CookieDrawer lang={lang as MdLanguage} />
         {adsenseClient && cmpReady && <AdSenseLoader clientId={adsenseClient} cmpReady />}
       </body>
     </html>
