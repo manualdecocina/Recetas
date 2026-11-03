@@ -1,3 +1,5 @@
+import { sanitizeEditorialHtml } from '@/lib/sanitize-editorial'
+import { recipeCoverVariants } from '@/lib/cover-variants'
 import type { Recipe } from '@/types/recipe'
 import { parseVideo, isoDuration } from '@/lib/video'
 import { publicUrl, recipeCanonicalUrl, absoluteUrl, getSiteUrl, RECIPE_AUTHOR, authorUrl, languageTag } from '@/lib/site'
@@ -13,14 +15,6 @@ import SiteFooter from '@/components/md/SiteFooter'
 import RecipeDocumentVisual from '@/components/md/RecipeDocumentVisual'
 import { collectionPath, collectionsForSpanishPath } from '@/lib/collections'
 
-function cleanHtml(html: string): string {
-  return html
-    .replace(/<script[\s\S]*?<\/script>/gi, '')
-    .replace(/<style[\s\S]*?<\/style>/gi, '')
-    .replace(/\son\w+\s*=\s*(['"]).*?\1/gi, '')
-    .replace(/javascript:/gi, '')
-}
-
 // Contrato público: mismas props; JSON-LD Recipe y BreadcrumbList (igual a la miga visible).
 // Solo cambió la presentación (src/components/md/*). Este componente ahora también
 // pinta cabecera y pie, para que las rutas que lo usan no tengan que hacerlo.
@@ -34,7 +28,7 @@ export async function RecipeDocument({ recipe, relatedRecipes = [] }: { recipe: 
   const spanishPath = recipe.language === 'es' ? recipe.public_path : translations.find((t) => t.language === 'es')?.public_path
   const collections = collectionsForSpanishPath(spanishPath)
     .map((c) => ({ title: c.text[recipe.language].title, href: collectionPath(recipe.language, c) }))
-  const notesHtml = recipe.notes ? cleanHtml(recipe.notes) : ''
+  const notesHtml = recipe.notes ? sanitizeEditorialHtml(recipe.notes) : ''
   const totalMinutes = recipe.total_time_minutes ??
     ((recipe.prep_time_minutes != null && recipe.cook_time_minutes != null)
       ? recipe.prep_time_minutes + recipe.cook_time_minutes
@@ -51,9 +45,7 @@ export async function RecipeDocument({ recipe, relatedRecipes = [] }: { recipe: 
   ])
 
   const seoMeta = (recipe.seo ?? {}) as Record<string, unknown>
-  const imageVariants = Array.isArray(seoMeta.image_variants)
-    ? seoMeta.image_variants.filter((u): u is string => typeof u === 'string' && u.trim().length > 0)
-    : []
+  const imageVariants = recipeCoverVariants(recipe.image_url, seoMeta.image_variants)
   const galleryImages = [
     ...imageVariants,
     recipe.image_url,

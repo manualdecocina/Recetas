@@ -1,3 +1,4 @@
+import { recipeCoverVariants } from '@/lib/cover-variants'
 import { reviewedRecipeSeo } from '@/lib/recipe-snippet-repairs'
 import type { Metadata } from 'next'
 import { SUPPORTED_LANGUAGES } from '@/types/recipe'
@@ -88,9 +89,7 @@ export function recipeSocialImages(recipe: {
   seo?: Record<string, unknown> | null
 }): Array<{ url: string; alt: string }> | undefined {
   const seo = recipe.seo ?? {}
-  const variants = Array.isArray(seo.image_variants)
-    ? seo.image_variants.filter((value): value is string => typeof value === 'string' && value.trim().length > 0)
-    : []
+  const variants = recipeCoverVariants(recipe.image_url, seo.image_variants)
   const urls = [...variants, recipe.image_url]
     .filter((value): value is string => Boolean(value))
     .map(absoluteUrl)
