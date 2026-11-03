@@ -76,7 +76,7 @@ export default function RecipeDocumentVisual({ recipe, relatedRecipes = [], note
     <>
       <article className="md-article">
         <div className="md-print-brand" aria-hidden="true">
-          <img src="/brand/logo-manual-de-cocina.png" alt="" width="640" height="188" />
+          <img src="/brand/logo-manual-de-cocina.webp" alt="" width="640" height="188" />
           <span>manualdecocina.com</span>
         </div>
         <header className="md-container md-recipe-hero">

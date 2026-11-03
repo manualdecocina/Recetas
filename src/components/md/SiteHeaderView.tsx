@@ -25,7 +25,7 @@ export default function SiteHeaderView({ lang, alternates, available }: { lang: 
       <header className="md-header">
         <div className="md-container md-header-inner">
           <Link className="md-brand" href={base} aria-label="Manual de Cocina">
-            <Image className="md-brand-image" src="/brand/logo-manual-de-cocina.png" alt="Manual de Cocina" width={640} height={188} unoptimized />
+            <Image className="md-brand-image" src="/brand/logo-manual-de-cocina.webp" alt="Manual de Cocina" width={640} height={188} unoptimized />
           </Link>
           <nav className="md-header-nav" aria-label={t.navRecipes}>
             {nav.map((item) => <Link key={item.href} href={item.href} prefetch={item.prefetch}>{item.label}</Link>)}
