@@ -71,6 +71,33 @@ export function recipeAlternates(
   return { canonical, languages: map as Languages }
 }
 
+/** Open Graph + Twitter para páginas que no son receta. Misma estructura que usan ingredientes y
+ * colecciones. Sin imagen propia se omite `images` (no se inventa una) y la tarjeta queda `summary`. */
+export function pageSocialMeta(opts: {
+  title: string
+  description: string | undefined
+  path: string
+  image?: { url: string; alt: string } | null
+}): Pick<Metadata, 'openGraph' | 'twitter'> {
+  const images = opts.image ? [opts.image] : undefined
+  return {
+    openGraph: {
+      type: 'website',
+      title: opts.title,
+      description: opts.description,
+      url: publicUrl(normalizePublicPath(opts.path)),
+      siteName: SITE_NAME,
+      images,
+    },
+    twitter: {
+      card: images ? 'summary_large_image' : 'summary',
+      title: opts.title,
+      description: opts.description,
+      images,
+    },
+  }
+}
+
 /** Título y descripción para buscadores: usa `seo.title` / `seo.description` si existen. */
 export function recipeMetaText(recipe: { id?: string; title: string; excerpt: string | null; seo?: Record<string, unknown> | null }): { title: string; description: string | undefined } {
   const seo = reviewedRecipeSeo(recipe.id, recipe.seo)

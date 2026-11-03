@@ -57,7 +57,8 @@ export default async function LanguageRootLayout({
         '@type': 'Organization',
         '@id': `${siteUrl}/#organization`,
         name: 'Manual de Cocina',
-        url: siteUrl,
+        // La raíz responde 308 a /es; el esquema apunta a la URL final, no a la que redirige.
+        url: `${siteUrl}/${DEFAULT_LANGUAGE}`,
         logo: {
           '@type': 'ImageObject',
           url: absoluteUrl('/brand/logo-manual-de-cocina.png'),
@@ -67,7 +68,7 @@ export default async function LanguageRootLayout({
         '@type': 'WebSite',
         '@id': `${siteUrl}/#website`,
         name: 'Manual de Cocina',
-        url: siteUrl,
+        url: `${siteUrl}/${DEFAULT_LANGUAGE}`,
         inLanguage: SUPPORTED_LANGUAGES.map(languageTag),
         publisher: { '@id': `${siteUrl}/#organization` },
       },
