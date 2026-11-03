@@ -61,17 +61,34 @@ jobs:
           TOOL_URL: http://127.0.0.1:3000/es/que-puedo-cocinar
         run: |
           set -euo pipefail
-          # Primera pasada: calienta el optimizador de imágenes y las rutas ISR igual que
-          # ocurriría en producción tras las primeras visitas. Se descarta para evitar medir
-          # el coste excepcional de una caché completamente fría en cada runner efímero.
-          npm exec --yes --package=lighthouse@13.5.0 -- lighthouse "$HOME_URL" --quiet --chrome-flags="--headless --no-sandbox" --only-categories=performance --form-factor=mobile --output=json --output-path=/tmp/home-warm.json
-          npm exec --yes --package=lighthouse@13.5.0 -- lighthouse "$RECIPE_URL" --quiet --chrome-flags="--headless --no-sandbox" --only-categories=performance --form-factor=mobile --output=json --output-path=/tmp/recipe-warm.json
-          npm exec --yes --package=lighthouse@13.5.0 -- lighthouse "$TOOL_URL" --quiet --chrome-flags="--headless --no-sandbox" --only-categories=performance --form-factor=mobile --output=json --output-path=/tmp/tool-warm.json
+          # Retry only a failed trace recording, never a completed low score or
+          # another audit failure. Keep every attempt log for diagnosis.
+          run_lighthouse() {
+            local audit_target="$1" audit_output="$2" audit_status=0 audit_attempt
+            for audit_attempt in 1 2; do
+              echo "Recording ${audit_output}, attempt ${audit_attempt}"
+              if npm exec --yes --package=lighthouse@13.5.0 -- lighthouse "$audit_target" --quiet --chrome-flags="--headless --no-sandbox" --only-categories=performance --form-factor=mobile --output=json --output-path="$audit_output" > "${audit_output}.attempt-${audit_attempt}.log" 2>&1; then
+                cat "${audit_output}.attempt-${audit_attempt}.log"
+                return 0
+              else
+                audit_status=$?
+              fi
+              cat "${audit_output}.attempt-${audit_attempt}.log"
+              if [ "$audit_attempt" -eq 2 ] || ! python3 -c 'import pathlib,sys;sys.exit(0 if "NO_NAVSTART" in pathlib.Path(sys.argv[1]).read_text() else 1)' "${audit_output}.attempt-${audit_attempt}.log"; then
+                return "$audit_status"
+              fi
+              echo "Retrying the failed navigation trace recording"
+            done
+          }
 
-          # Segunda pasada: medición comparable con caché del servidor ya caliente.
-          npm exec --yes --package=lighthouse@13.5.0 -- lighthouse "$HOME_URL" --quiet --chrome-flags="--headless --no-sandbox" --only-categories=performance --form-factor=mobile --output=json --output-path=home.json
-          npm exec --yes --package=lighthouse@13.5.0 -- lighthouse "$RECIPE_URL" --quiet --chrome-flags="--headless --no-sandbox" --only-categories=performance --form-factor=mobile --output=json --output-path=recipe.json
-          npm exec --yes --package=lighthouse@13.5.0 -- lighthouse "$TOOL_URL" --quiet --chrome-flags="--headless --no-sandbox" --only-categories=performance --form-factor=mobile --output=json --output-path=tool.json
+          # Warm the image optimizer, then retain the first successful measured
+          # report. Device, throttling and scoring settings stay unchanged.
+          run_lighthouse "$HOME_URL" home-warm.json
+          run_lighthouse "$RECIPE_URL" recipe-warm.json
+          run_lighthouse "$TOOL_URL" tool-warm.json
+          run_lighthouse "$HOME_URL" home.json
+          run_lighthouse "$RECIPE_URL" recipe.json
+          run_lighthouse "$TOOL_URL" tool.json
 
       - name: Print performance summary
         run: |
@@ -102,5 +119,7 @@ jobs:
             home.json
             recipe.json
             tool.json
+            *-warm.json
+            *.attempt-*.log
           if-no-files-found: ignore
           retention-days: 14
