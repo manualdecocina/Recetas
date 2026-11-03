@@ -3,6 +3,20 @@
    only style its existing DOM; they never hide a choice or force a consent state.
    If Google changes these hooks, its original usable UI remains the fallback. */
 html body .fc-consent-root {
+  /* Google supplies additional fixed dark text colors. Keep the entire CMP on
+     an isolated light palette so the site's dark theme cannot break contrast. */
+  color-scheme: only light;
+  --md-white: #ffffff;
+  --md-ink: #16261a;
+  --md-muted: #4a6152;
+  --md-stone: #cfe3c6;
+  --md-sand: #e3f1dc;
+  --md-header-bg: #ffffff;
+  --md-olive: #1f6b2e;
+  --md-olive-dark: #124a1e;
+  --md-accent: #ffd84d;
+  --md-on-accent: #16261a;
+  --md-focus: #254f8a;
   align-items: flex-end !important;
   justify-content: center !important;
   padding: 14px !important;
