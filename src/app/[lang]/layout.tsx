@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import '../public-base.css'
 import '../site.css'
+import '../recipe-print.css'
 import '../consent.css'
 import { editorialSerif, uiSans } from '../fonts'
 import CookieDrawer from '@/components/md/CookieDrawer'

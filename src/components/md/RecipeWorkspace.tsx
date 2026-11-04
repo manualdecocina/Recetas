@@ -22,7 +22,7 @@ export function ServingsValue({ initial }: { initial: number }) { return <>{useR
 export function ServingsSelector({ lang }: { lang: MdLanguage }) {
  const state = useRecipeWorkspace(), t = kitchenCopy(lang);
  if (!state?.base) return null;
- return <div className="md-servings-controls">
+ return <div className="md-servings-controls" data-base-servings={state.base} data-current-servings={state.servings}>
   <div className="md-servings-bar">
    <label className="md-servings-label" htmlFor="md-servings">{t.servings}</label>
    <div className="md-servings-stepper">
