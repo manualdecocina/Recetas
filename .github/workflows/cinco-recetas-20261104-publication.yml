@@ -20,7 +20,7 @@ jobs:
       - name: Refresh production cache and verify published recipes
         env:
           REVALIDATE_SECRET: ${{ secrets.REVALIDATE_SECRET }}
-        run: python3 editorial/cinco-recetas-20261104/audit.py
+        run: python3 editorial/cinco-recetas-20261104/audit.py --latest
       - uses: actions/upload-artifact@v4
         if: always()
         with:

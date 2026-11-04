@@ -1,5 +1,5 @@
 """Read-only publication QA, with the existing protected cache refresh when configured."""
-import concurrent.futures,hashlib,html,json,os,re,time,urllib.request
+import concurrent.futures,hashlib,html,json,os,re,sys,time,urllib.request
 from pathlib import Path
 D=Path(__file__).resolve().parent;BASE='https://manualdecocina.com'
 REPORT={'pages':[],'images':[],'discovery':[]}
@@ -48,6 +48,7 @@ def main():
         with urllib.request.urlopen(req,timeout=45) as r:assert json.load(r).get('revalidated') is True
         REPORT['cache_refreshed']=True
     keys=json.loads((D/'published.json').read_text())
+    if '--latest' in sys.argv:keys=keys[-1:]
     docs=[json.loads((D/(key+'.json')).read_text()) for key in keys]
     media=[m for key in keys for m in json.loads((D/(key+'-media.json')).read_text())['images']]
     with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:REPORT['images']=list(pool.map(image,media))
@@ -63,6 +64,7 @@ def main():
         for doc in docs:assert doc['records'][0]['public_path'] in text,('discovery',path,doc['key'])
         REPORT['discovery'].append(dict(path=path,http=status,recipes=len(docs)))
     REPORT['status']='PASS';REPORT['checked_at']=time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime())
+    if len(keys)==1:(D/(keys[0]+'-production-qa.json')).write_text(json.dumps(REPORT,ensure_ascii=False,indent=2)+'\n')
     print('PASS',len(docs),'recipes',len(REPORT['pages']),'pages',len(media),'images; canonical, alternates, Recipe schema, nutrition and discovery')
 if __name__=='__main__':
     try:main()

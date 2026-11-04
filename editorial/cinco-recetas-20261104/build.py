@@ -33,6 +33,9 @@ def build(key, specs, amounts, units, prep, cook, wait, servings, profiles, sour
             title,content=line.split('::',1)
             record['steps'].append(dict(title=title,content=content,image_url=f'{media}/paso-{i:02}.webp',image_alt=title+' — '+x['title']))
         record['category']=CATEGORIES[specs['es']['category']][LANGS.index(lang)]
+        for ing in record['ingredients']:
+            if ing['unit']=='unidad':ing['unit']={'es':'unidades','en':'pieces','de':'Stück','fr':'unités','it':'unità','ja':'個','pt':'unidades'}[lang]
+        record['cuisine']=x.get('cuisine',labels[4])
         record['nutrition'].update(estimated=True,serving_size=x['portion'],note=labels[5],source='Generic food composition profiles; editorial estimate, not laboratory analysis',method='Sum ingredient edible weights × generic per-100-g profiles; divide by recipe servings. See source JSON nutrition_calculation.')
         record['nutrition']['source']={
             'es':'Cálculo editorial con perfiles genéricos de ingredientes',
