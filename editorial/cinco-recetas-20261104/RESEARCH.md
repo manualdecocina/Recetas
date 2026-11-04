@@ -25,3 +25,8 @@ La tendencia del cottage comenzó antes de 2026; la cebolla asada también tiene
 ## Cierre de publicación por receta
 
 Siete idiomas reales (es, en, de, fr, it, ja, pt), máximo diez pasos, ocho fotografías originales relacionadas con los pasos, portada reutilizada del plato final con tres recortes, cantidades escalables, tiempos activos y de espera separados, cálculo nutricional trazable con limitaciones, FAQ útil, fuentes, conservación, canonical y alternates. Comprobar rutas públicas, archivos WebP, Recipe JSON-LD y aparición en catálogo/sitemap antes de pasar a la siguiente.
+
+
+## Revisión del nombre de los dumplings
+
+Tras la observación del usuario se cambió el título visible a «Dumplings en capas al vapor con cerdo y wonton». Se conserva la URL y la consulta secundaria «lasaña de dumplings», con explicación expresa de que no es una lasaña italiana con queso o bechamel. Se corrigieron portada y fotos finales para mostrar wonton blando, ligeramente arrugado y servido con cuchara y sus jugos. No se afirma una prueba física de cocina.

@@ -1,18 +1,23 @@
-import json,hashlib,sys
+import json,hashlib,sys,io,os
 from pathlib import Path
 from PIL import Image,ImageOps
 D=Path(__file__).resolve().parent;ROOT=D.parents[1];key=sys.argv[1]
 doc=json.loads((D/(key+'.json')).read_text())
 paths=json.loads((D/(key+'-generated.json')).read_text());out=ROOT/'public/recetas'/key;out.mkdir(parents=True,exist_ok=True)
 manifest=[]
+def save_webp(image,path):
+    data=io.BytesIO();image.save(data,'WEBP',quality=84,method=5);body=data.getvalue();assert len(body)>1024
+    temp=path.with_name(path.name+'.tmp')
+    with temp.open('wb') as f:f.write(body);f.flush();os.fsync(f.fileno())
+    os.replace(temp,path)
 for n in range(1,9):
     src=Path(paths[str(n)]);im=Image.open(src).convert('RGB')
     im=ImageOps.fit(im,(1600,1200),method=Image.Resampling.LANCZOS)
-    im.save(out/f'paso-{n:02}.webp','WEBP',quality=84,method=5)
+    save_webp(im,out/f'paso-{n:02}.webp')
     if n==8:
-        im.save(out/'portada.webp','WEBP',quality=84,method=5)
+        save_webp(im,out/'portada.webp')
         for aspect,size in [('1x1',(1200,1200)),('4x3',(1600,1200)),('16x9',(1600,900))]:
-            ImageOps.fit(im,size,method=Image.Resampling.LANCZOS).save(out/f'portada-{aspect}.webp','WEBP',quality=84,method=5)
+            save_webp(ImageOps.fit(im,size,method=Image.Resampling.LANCZOS),out/f'portada-{aspect}.webp')
 for p in sorted(out.glob('*.webp')):
     assert p.stat().st_size>1024,(p,'Empty image')
     manifest.append(dict(path=str(p.relative_to(ROOT)),url=doc['records'][0]['image_url'].rsplit('/',1)[0]+'/'+p.name,bytes=p.stat().st_size,sha256=hashlib.sha256(p.read_bytes()).hexdigest(),size=Image.open(p).size))
