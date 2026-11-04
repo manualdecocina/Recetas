@@ -22,11 +22,18 @@ export function ServingsValue({ initial }: { initial: number }) { return <>{useR
 export function ServingsSelector({ lang }: { lang: MdLanguage }) {
  const state = useRecipeWorkspace(), t = kitchenCopy(lang);
  if (!state?.base) return null;
- return <div className="md-servings-controls"><div className="md-kitchen-actions">
-  <label htmlFor="md-servings">{t.servings}</label>
-  <button type="button" className="md-button-quiet" aria-label={`${t.servings} −`} disabled={(state.servings ?? 1) <= 1} onClick={() => state.setServings((state.servings ?? state.base!) - 1)}>−</button>
-  <input id="md-servings" type="number" min="1" max="100" step="1" value={state.servings ?? state.base} onChange={e => { if (e.currentTarget.value) state.setServings(Number(e.currentTarget.value)); }} />
-  <button type="button" className="md-button-quiet" aria-label={`${t.servings} +`} disabled={(state.servings ?? 1) >= 100} onClick={() => state.setServings((state.servings ?? state.base!) + 1)}>+</button>
-  <button type="button" className="md-button-quiet" onClick={() => state.setServings(state.base!)}>{t.reset}</button>
- </div><p className="md-kitchen-hint">{t.scaleNote}</p></div>;
+ return <div className="md-servings-controls">
+  <div className="md-servings-bar">
+   <label className="md-servings-label" htmlFor="md-servings">{t.servings}</label>
+   <div className="md-servings-stepper">
+    <button type="button" className="md-servings-adjust" aria-label={`${t.servings} −`} disabled={(state.servings ?? 1) <= 1} onClick={() => state.setServings((state.servings ?? state.base!) - 1)}>−</button>
+    <input id="md-servings" type="number" inputMode="numeric" min="1" max="100" step="1" aria-describedby="md-servings-help" value={state.servings ?? state.base} onChange={e => { if (e.currentTarget.value) state.setServings(Number(e.currentTarget.value)); }} />
+    <button type="button" className="md-servings-adjust" aria-label={`${t.servings} +`} disabled={(state.servings ?? 1) >= 100} onClick={() => state.setServings((state.servings ?? state.base!) + 1)}>+</button>
+   </div>
+   <button type="button" className="md-servings-reset" aria-label={t.reset} title={t.reset} disabled={state.servings === state.base} onClick={() => state.setServings(state.base!)}>
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M3 10a9 9 0 1 1 2.6 8.4" /><path d="M3 4v6h6" /></svg>
+   </button>
+  </div>
+  <p className="md-servings-help" id="md-servings-help">{t.scaleNote}</p>
+ </div>;
 }
