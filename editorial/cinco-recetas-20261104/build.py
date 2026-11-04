@@ -4,6 +4,11 @@ from pathlib import Path
 D=Path(__file__).resolve().parent
 BASE='https://manualdecocina.com'
 LANGS=['es','en','de','fr','it','ja','pt']
+CATEGORIES={
+'Entradas':['Entrantes y aperitivos','Starters & appetizers','Vorspeisen','Entrées et apéritifs','Antipasti','前菜・おつまみ','Entradas e aperitivos'],
+'Platos principales':['Platos principales','Main dishes','Hauptgerichte','Plats principaux','Secondi piatti','主菜','Pratos principais'],
+'Guarniciones':['Guarniciones','Side dishes','Beilagen','Accompagnements','Contorni','付け合わせ','Acompanhamentos'],
+'Postres':['Postres','Desserts','Desserts','Desserts','Dolci','デザート','Sobremesas']}
 LABEL={
 'es':['Sobre esta receta','Consejos y conservación','Fuentes','Fácil','Internacional','Estimación por ración; los productos y el rendimiento pueden cambiar los valores.'],
 'en':['About this recipe','Tips and storage','Sources','Easy','International','Estimated per serving; products and yield can change these values.'],
@@ -27,6 +32,7 @@ def build(key, specs, amounts, units, prep, cook, wait, servings, profiles, sour
         for i,line in enumerate(steps,1):
             title,content=line.split('::',1)
             record['steps'].append(dict(title=title,content=content,image_url=f'{media}/paso-{i:02}.webp',image_alt=title+' — '+x['title']))
+        record['category']=CATEGORIES[specs['es']['category']][LANGS.index(lang)]
         record['nutrition'].update(estimated=True,serving_size=x['portion'],note=labels[5],source='Generic food composition profiles; editorial estimate, not laboratory analysis',method='Sum ingredient edible weights × generic per-100-g profiles; divide by recipe servings. See source JSON nutrition_calculation.')
         record['seo']=dict(title=x['title'],description=x['excerpt'],author='Néstor Bastidas',image_alt=x['alt'],image_variants=[media+'/portada-'+a+'.webp' for a in ['1x1','4x3','16x9']],faq=[dict(q=q,a=a) for q,a in x['faq']],additional_time_minutes=wait)
         records.append(record)

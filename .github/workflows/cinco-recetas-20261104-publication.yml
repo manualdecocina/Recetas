@@ -1,0 +1,28 @@
+name: cinco-recetas-20261104-publication
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'editorial/cinco-recetas-20261104/published.json'
+      - 'editorial/cinco-recetas-20261104/audit.py'
+      - '.github/workflows/cinco-recetas-20261104-publication.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: editorial/cinco-recetas-20261104
+      - name: Refresh production cache and verify published recipes
+        env:
+          REVALIDATE_SECRET: ${{ secrets.REVALIDATE_SECRET }}
+        run: python3 editorial/cinco-recetas-20261104/audit.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: cinco-recetas-20261104-production-qa
+          path: editorial/cinco-recetas-20261104/production-qa.json
