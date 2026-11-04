@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict'
+import { COLLECTIONS, collectionAlternatePaths } from '@/lib/collections'
 
 process.env.NEXT_PUBLIC_SITE_URL = 'https://manualdecocina.com'
 
@@ -36,8 +37,13 @@ const urls = s.map((e) => e.url)
 
 // 7 idiomas × (home, listado, categorías) + 8 institucionales × 7 idiomas
 // + 3 recetas publicadas del mock + herramienta + índice ingredientes + 2 ingredientes + content page
-// + colecciones: índice + 1 colección (Navidad) en 7 idiomas.
-assert.equal(s.length, 7 * 3 + 8 * 7 + 3 + 7 + 7 + 2 * 7 + 1 + 7 * 2)
+// + colecciones: índice y todas las colecciones en los 7 idiomas.
+assert.equal(s.length, 7 * 3 + 8 * 7 + 3 + 7 + 7 + 2 * 7 + 1 + 7 * (1 + COLLECTIONS.length))
+for (const collection of COLLECTIONS) {
+  for (const path of Object.values(collectionAlternatePaths(collection))) {
+    assert.equal(urls.filter((url) => url === `https://manualdecocina.com${path}`).length, 1)
+  }
+}
 const navidadEs = s.find((e) => e.url === 'https://manualdecocina.com/es/colecciones/recetas-navidad-colombiana')
 assert.ok(navidadEs, 'la colección de Navidad entra en el sitemap')
 assert.equal(navidadEs.alternates.languages.de, 'https://manualdecocina.com/de/colecciones/kolumbianische-weihnachtsrezepte')

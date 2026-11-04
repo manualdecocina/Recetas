@@ -1,4 +1,5 @@
 import type { RecipeLanguage } from '@/types/recipe'
+import { DINNERS_COLLECTION } from '@/lib/dinners-collection'
 
 /**
  * Colecciones editoriales: páginas temáticas que reúnen recetas que ya existen
@@ -59,6 +60,7 @@ export function collectionCover(collection: Collection, file: (typeof COVER_FILE
 }
 
 export const COLLECTIONS: Collection[] = [
+  DINNERS_COLLECTION,
   {
     id: 'navidad-colombiana',
     coverDir: '/colecciones/navidad-colombiana',
