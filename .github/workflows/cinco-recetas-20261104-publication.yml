@@ -4,6 +4,11 @@ on:
     branches: [main]
     paths:
       - 'editorial/cinco-recetas-20261104/published.json'
+      - 'editorial/cinco-recetas-20261104/dip-de-charcuteria.json'
+      - 'editorial/cinco-recetas-20261104/lasana-dumplings-al-vapor.json'
+      - 'editorial/cinco-recetas-20261104/huevo-katsu.json'
+      - 'editorial/cinco-recetas-20261104/cebolla-asada-onion-boil.json'
+      - 'editorial/cinco-recetas-20261104/helado-queso-cottage-fresas.json'
       - 'editorial/cinco-recetas-20261104/audit.py'
       - '.github/workflows/cinco-recetas-20261104-publication.yml'
   workflow_dispatch:
