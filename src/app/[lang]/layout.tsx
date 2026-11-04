@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+import { Suspense } from 'react'
+import NavigationScroll from '@/components/md/NavigationScroll'
 import '../public-base.css'
 import '../site.css'
 import '../recipe-print.css'
@@ -91,6 +93,7 @@ export default async function LanguageRootLayout({
       <body className="google-anno-skip">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(entityGraph).replace(/</g, '\\u003c') }} />
         <ThemeSync />
+        <Suspense fallback={null}><NavigationScroll /></Suspense>
         {children}
         <CookieDrawer lang={lang as MdLanguage} />
         {adsenseClient && cmpReady && <AdSenseLoader clientId={adsenseClient} cmpReady />}

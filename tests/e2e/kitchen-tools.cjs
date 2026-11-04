@@ -87,13 +87,19 @@ async function waitServer() {
    assert.equal(await page.locator('#md-servings').inputValue(),'16','servings survive reload/navigation');
    await page.getByRole('button',{name:'Empezar a cocinar',exact:true}).click();
    await page.getByRole('dialog').waitFor();
+   await page.locator('.md-cooking-main').evaluate(el=>el.scrollTop=el.scrollHeight);
    await page.getByRole('button',{name:'Siguiente paso',exact:true}).click();
+   assert.equal(await page.locator('.md-cooking-main').evaluate(el=>el.scrollTop),0,'new step starts at its heading');
+   const footer=await page.locator('.md-cooking-footer').boundingBox();
+   assert(footer.y+footer.height<=900,'controls stay inside the viewport');
    await page.locator('.md-cooking-ingredients summary').click();
    assert.match(await page.locator('.md-cooking-ingredients').innerText(),/2000 ml/);
    const activeTimer=page.locator('.md-step-timer').filter({has:page.locator('input')}).last();
+   if (!(await activeTimer.locator('input').isVisible())) await activeTimer.locator('summary').click();
    await activeTimer.locator('input').fill('0.05');
    await activeTimer.getByRole('button',{name:'Iniciar',exact:true}).click();
    await page.getByRole('button',{name:'Siguiente paso',exact:true}).click();
+   assert.equal(await page.locator('.md-timer-chip').count(),1,'other step timer becomes compact');
    await page.getByRole('button',{name:'Cerrar modo cocina',exact:true}).click();
    await page.reload();
    await page.getByRole('button',{name:'Empezar a cocinar',exact:true}).click();
@@ -103,6 +109,17 @@ async function waitServer() {
    await page.keyboard.press('Escape');
    assert(await page.evaluate(()=>window.__wakeReleased));
    console.log('Cooking mode passed',width);
+   if (width === 390) {
+    await page.goto(`${base}/es/recetas`);
+    await page.locator('.md-pagination a[href*="page=2"]').click();
+    await page.waitForURL(url => url.searchParams.get('page') === '2');
+    await page.waitForFunction(()=>window.scrollY <= 1);
+    await page.locator('.md-card-title a').last().click();
+    await page.waitForURL(url => !url.pathname.endsWith('/recetas'));
+    await page.locator('.md-recipe-hero').waitFor();
+    await page.waitForFunction(()=>window.scrollY <= 1);
+    console.log('PASS: catalogue pagination and opening a recipe from the bottom reset the page to its start');
+   }
    await page.goto(`${base}/es/que-puedo-cocinar`);
    await page.locator('.md-pantry-chip-selected').first().waitFor();
    await page.locator('.md-pantry-view-results').click();

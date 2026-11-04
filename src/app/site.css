@@ -399,9 +399,27 @@
 .google-auto-placed ins.adsbygoogle[data-ad-status="unfilled"] { display: none !important; }
 .google-auto-placed { min-width: 0; max-width: 100%; }
 /* Modo cocina */
-.md-cooking-overlay { position: fixed; inset: 0; z-index: 1000; overflow-y: auto; background: var(--md-paper); color: var(--md-ink); display: grid; grid-template-rows: auto 1fr auto; }
+.md-cooking-overlay { position: fixed; inset: 0; height: 100dvh; z-index: 1000; overflow: hidden; background: var(--md-paper); color: var(--md-ink); display: grid; grid-template-rows: auto minmax(0, 1fr) auto; }
 .md-cooking-header { padding: 16px 18px; border-bottom: 2px solid var(--md-stone); display: flex; justify-content: space-between; align-items: center; gap: 16px; }
-.md-cooking-main { width: min(calc(100% - 36px),760px); margin: auto; padding: 42px 0; }
+.md-cooking-main { min-height: 0; width: 100%; overflow-y: auto; overscroll-behavior: contain; scroll-behavior: auto; overflow-anchor: none; padding: 24px 18px; }
+.md-cooking-step { max-width: 760px; margin: 0 auto; }
+.md-cooking-footer { border-top: 1px solid var(--md-line); background: var(--md-paper); padding-top: 12px; }
+.md-cooking-footer .md-cooking-controls { max-width: 796px; margin: 0 auto; }
+.md-cooking-controls > button { flex: 1; min-width: 0; }
+.md-cooking-timers { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-block: 16px; }
+.md-cooking-timers:empty { display: none; }
+.md-cooking-timers .md-step-timer { flex-basis: 100%; order: 0; margin: 0; padding: 14px 0; }
+.md-step-timer-manual summary { cursor: pointer; min-height: 44px; display: flex; align-items: center; gap: 10px; font-size: .95rem; font-weight: 700; }
+.md-step-timer-manual summary::before { content: '+'; font-size: 1.3rem; }
+.md-step-timer-manual[open] summary::before { content: '−'; }
+.md-step-timer-manual summary::-webkit-details-marker { display: none; }
+.md-step-timer-manual[open] summary { margin-bottom: 14px; }
+.md-timer-chip { order: 1; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 8px 12px; border: 1px solid var(--md-input-border); border-radius: 10px; background: var(--md-white); color: var(--md-ink); font-size: .8rem; line-height: 1.4; }
+.md-timer-chip svg { flex-shrink: 0; }
+.md-timer-chip strong { font-variant-numeric: tabular-nums; color: var(--md-olive-dark); }
+.md-timer-chip-done { border-color: var(--md-olive); }
+.md-cooking-header strong { min-width: 0; }
+@media (max-width: 540px) { .md-cooking-controls { gap: 10px; } .md-cooking-controls > button { font-size: .85rem; padding: 10px 12px; } }
 .md-cooking-main h2 { font-size: clamp(1.9rem,5vw,3.5rem); margin: 8px 0 24px; }
 .md-cooking-main p { font-size: clamp(1.15rem,2.4vw,1.5rem); line-height: 1.7; white-space: pre-line; }
 .md-cooking-progress { width: min(calc(100% - 36px),760px); margin: 0 auto 12px; height: 8px; background: var(--md-stone); border-radius: 8px; overflow: hidden; }
