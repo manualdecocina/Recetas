@@ -23,3 +23,9 @@
 - Catálogo real: cambio a la página 2 desde la paginación inferior y apertura de la última receta del listado, ambos desde el inicio. Receta comprobada: Sloppy Joes caseros.
 - La prueba permanente `tests/e2e/kitchen-tools.cjs` comprueba ahora el reinicio del paso, los controles dentro de pantalla, el temporizador compacto, la apertura del temporizador manual y la navegación real desde el catálogo.
 - Las rutas locales de prueba y sus tipos generados se retiraron antes de publicar.
+
+## Fotos dentro del modo cocina
+
+El paso activo muestra su imagen existente debajo de las instrucciones, con texto alternativo localizado y el mismo tratamiento de URLs que las fotos de la receta. Solo se monta la imagen del paso visible al abrir el modo cocina. Al avanzar o retroceder cambia la foto; no se añade un hueco cuando el paso no tiene imagen.
+
+La foto conserva sus proporciones y se limita en altura para dejar espacio a las instrucciones y los controles. La comprobación en navegador usó fotos reales del sabajón mediante el optimizador de producción: carga correcta, cambio de foto al avanzar y retroceder, inicio del contenido después de cargar, texto alternativo y ausencia de desbordamiento a 320/390/1366 px. Se revisaron ambos temas. La prueba permanente de herramientas de cocina también comprueba que aparece una sola foto y cambia con el paso.

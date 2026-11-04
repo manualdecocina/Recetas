@@ -87,9 +87,12 @@ async function waitServer() {
    assert.equal(await page.locator('#md-servings').inputValue(),'16','servings survive reload/navigation');
    await page.getByRole('button',{name:'Empezar a cocinar',exact:true}).click();
    await page.getByRole('dialog').waitFor();
+   assert.equal(await page.locator('.md-cooking-photo img').count(),1,'current step photo appears in cooking mode');
+   const firstStepPhoto = await page.locator('.md-cooking-photo img').getAttribute('src');
    await page.locator('.md-cooking-main').evaluate(el=>el.scrollTop=el.scrollHeight);
    await page.getByRole('button',{name:'Siguiente paso',exact:true}).click();
    assert.equal(await page.locator('.md-cooking-main').evaluate(el=>el.scrollTop),0,'new step starts at its heading');
+   assert.notEqual(await page.locator('.md-cooking-photo img').getAttribute('src'),firstStepPhoto,'photo follows the new step');
    const footer=await page.locator('.md-cooking-footer').boundingBox();
    assert(footer.y+footer.height<=900,'controls stay inside the viewport');
    await page.locator('.md-cooking-ingredients summary').click();

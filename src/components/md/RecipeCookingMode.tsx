@@ -1,5 +1,7 @@
 'use client';
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
+import Image from 'next/image';
+import { recipeImageSrc } from '@/lib/recipe-media';
 import type { MdLanguage, MdStep } from './md-types';
 import { getMdCopy } from '@/lib/copy';
 import { kitchenCopy } from '@/lib/kitchen-copy';
@@ -66,6 +68,10 @@ export default function RecipeCookingMode({ recipeId, lang, steps: originalSteps
    <div ref={mainRef} className="md-cooking-main"><div className="md-cooking-step">
     <span className="md-eyebrow">{t.step} {index + 1} {t.of} {steps.length}</span>
     <h2 ref={headingRef} tabIndex={-1} className="md-title" id="md-cooking-heading">{current.title || `${t.step} ${index + 1}`}</h2><p>{current.content}</p>
+    {current.image_url && <figure className="md-cooking-photo">
+     <Image key={current.image_url} src={recipeImageSrc(current.image_url)} alt={current.image_alt || current.title || `${t.step} ${index + 1}`}
+      width={1200} height={900} sizes="(max-width: 796px) calc(100vw - 36px), 760px" quality={75} loading="eager" />
+    </figure>}
     {workspace?.ingredients.length ? <details className="md-cooking-ingredients"><summary>{ui.ingredients}{workspace.servings ? ` · ${workspace.servings} ${ui.servings.toLowerCase()}` : ''}</summary><ul>{workspace.ingredients.map((item, i) => <li key={i}>{ingredientDisplayText(item, lang)}{item.preparation ? `, ${item.preparation}` : ''}</li>)}</ul></details> : null}
     <div className="md-cooking-timers">{steps.map((step, position) => <RecipeTimer key={`${recipeId}-${position}`} recipeId={recipeId} step={step} position={position} lang={lang} current={position === index} onSelect={() => go(position)} />)}</div>
     <small className="md-kitchen-hint">{ui.timerNote}</small><p className="md-kitchen-hint">{awake ? ui.screenOn : ui.screenOff}</p>
