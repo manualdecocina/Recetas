@@ -80,10 +80,10 @@ const compact = text => text.replace(/\s+/gu, '');
       // list. Visual row order would interleave ingredients from both columns.
       const pdfText = execFileSync('pdftotext', ['-raw', pdfPath, '-'], { encoding: 'utf8' });
       assert(!pdfText.includes(canonical), 'PDF uses the content-only template, not the fallback page with its raw URL footer');
-      // A paragraph can continue across a page. Remove only the leading margin
-      // counter/domain emitted by Chromium before comparing editorial text.
-      const contentText = pdfText.split('\f').map(value => value
-        .replace(/^\s*\d+\s*\nmanualdecocina\.com\s*\n/u, '')).join('\n');
+      // Crop only the 14 mm footer margin of our A4 sheet. Poppler versions
+      // differ in margin-text order, which must not interrupt a paragraph that
+      // continues on the next page. Every editorial line remains in this area.
+      const contentText = execFileSync('pdftotext', ['-raw', '-x', '0', '-y', '0', '-W', '595', '-H', '802', pdfPath, '-'], { encoding: 'utf8' });
       for (const phrase of [title, ...ingredients, ...steps, ...notes]) assert(compact(contentText).includes(compact(phrase)), `PDF retains: ${phrase}`);
       for (const forbidden of ['FORBIDDEN_', 'Pinterest', 'CONSENTIMIENTO_FLOTANTE', 'PUBLICIDAD_CABECERA']) assert(!pdfText.includes(forbidden), `${forbidden} is not printed`);
       const pages = pdfText.split('\f').filter(value => value.trim());

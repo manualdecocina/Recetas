@@ -22,6 +22,7 @@ jobs:
     env:
       NEXT_PUBLIC_ADSENSE_CLIENT_ID: ca-pub-2592990699767586
       NEXT_PUBLIC_GOOGLE_CMP_READY: 'true'
+      NEXT_PUBLIC_PREVIEW_SITE_URL: https://manualdecocina.com
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
