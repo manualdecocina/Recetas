@@ -1,6 +1,7 @@
 import { cache } from 'react'
 import { isIndexingAllowed } from '@/lib/site'
-import { ingredientPhoto } from '@/lib/ingredient-photos'
+import { ingredientImageSrc } from '@/lib/ingredient-photos'
+import { ingredientTitleRank } from '@/lib/ingredient-discovery'
 import { ingredientLabel } from '@/lib/ingredient-labels'
 import { getPantryMatchData } from '@/lib/md-data'
 import { pantryIngredientRecipeIds } from '@/lib/pantry-foods'
@@ -34,8 +35,12 @@ const getIngredient = cache(async (lang: RecipeLanguage, rawSlug: string) => {
 
   const pantry = await getPantryMatchData(lang)
   const recipeIds = new Set(pantryIngredientRecipeIds(pantry, data.id))
-  return { ingredient: { ...data, name: ingredientLabel(data.slug, data.name, lang), description: lang === 'es' ? data.description : null },
-    recipes: pantry.recipes.filter((recipe) => recipeIds.has(recipe.id)) }
+  const name = ingredientLabel(data.slug, data.name, lang)
+  const recipes = pantry.recipes.filter(recipe => recipeIds.has(recipe.id))
+    .map(recipe => ({ recipe, rank: ingredientTitleRank(recipe.title, name, slug, lang) }))
+    .sort((a, b) => a.rank - b.rank)
+    .map(item => item.recipe)
+  return { ingredient: { ...data, name, description: lang === 'es' ? data.description : null }, recipes }
 
 })
 
@@ -49,9 +54,9 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const title = withSiteName(landing.title)
   const description = landing.description
   const url = publicUrl(`/${lang}/ingredientes/${result.ingredient.slug}`)
-  const photo = ingredientPhoto(result.ingredient.slug)
-  const images = photo?.src
-    ? [{ url: absoluteUrl(photo.src), alt: result.ingredient.name }]
+  const photo = ingredientImageSrc(result.ingredient.slug)
+  const images = photo
+    ? [{ url: absoluteUrl(photo), alt: result.ingredient.name }]
     : undefined
   return {
     title,

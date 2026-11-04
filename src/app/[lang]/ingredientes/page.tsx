@@ -5,29 +5,40 @@ import { getIngredientSummaries } from '@/lib/md-data'
 import { SUPPORTED_LANGUAGES, type RecipeLanguage } from '@/types/recipe'
 import { getMdCopy } from '@/lib/copy'
 import { withSiteName, allLanguageAlternates } from '@/lib/seo'
+import { publicUrl } from '@/lib/site'
+import { firstQueryValue, parseRecipePage } from '@/lib/catalog-pagination'
+import { INGREDIENT_PAGE_SIZE, ingredientDirectoryCopy, ingredientDirectoryPath } from '@/lib/ingredient-discovery'
+
+type Props = { params: Promise<{ lang: string }>; searchParams: Promise<{ page?: string | string[] }> }
 
 function parseLang(value: string): RecipeLanguage | null {
   return (SUPPORTED_LANGUAGES as string[]).includes(value) ? value as RecipeLanguage : null
 }
 
-// Ingredient discovery is backed by the canonical ingredient model in Supabase.
-// Population/alias normalization is intentionally a separate migration phase.
-export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
-  const { lang: rawLang } = await params
-  const lang = parseLang(rawLang)
+function directoryPage(value: string | string[] | undefined): number {
+  return firstQueryValue(value) ? parseRecipePage(value) : 0
+}
+
+export async function generateMetadata({ params, searchParams }: Props): Promise<Metadata> {
+  const lang = parseLang((await params).lang)
   if (!lang) return {}
+  const page = directoryPage((await searchParams).page)
+  const t = getMdCopy(lang)
+  const [,, pageLabel] = ingredientDirectoryCopy[lang]
   return {
-    title: withSiteName(getMdCopy(lang).ingredientCatalog),
-    description: getMdCopy(lang).ingredientCatalogIntro,
-    alternates: allLanguageAlternates(`/${lang}/ingredientes`, (l) => `/${l}/ingredientes`),
+    title: withSiteName(page ? `${t.ingredientCatalog} · ${pageLabel} ${page}` : t.ingredientCatalog),
+    description: t.ingredientCatalogIntro,
+    alternates: page
+      ? { canonical: publicUrl(ingredientDirectoryPath(lang, page)) }
+      : allLanguageAlternates(ingredientDirectoryPath(lang), language => ingredientDirectoryPath(language)),
   }
 }
 
-export default async function IngredientsPage({ params }: { params: Promise<{ lang: string }> }) {
-  const { lang: rawLang } = await params
-  const lang = parseLang(rawLang)
+export default async function IngredientsPage({ params, searchParams }: Props) {
+  const lang = parseLang((await params).lang)
   if (!lang) notFound()
-
+  const page = directoryPage((await searchParams).page)
   const ingredients = await getIngredientSummaries(undefined, lang)
-  return <IngredientsIndexView lang={lang} ingredients={ingredients} />
+  if (page && (page - 1) * INGREDIENT_PAGE_SIZE >= ingredients.length) notFound()
+  return <IngredientsIndexView lang={lang} ingredients={ingredients} page={page} />
 }

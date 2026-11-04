@@ -1101,3 +1101,31 @@ const PHOTOS: Record<string, IngredientPhoto> = {
 
 export function ingredientPhoto(slug: string): IngredientPhoto | undefined { return PHOTOS[slug]; }
 export const photoCreditsLabel: Record<MdLanguage,string> = {"es": "Créditos de las fotografías", "en": "Photo credits", "de": "Bildnachweise", "fr": "Crédits photographiques", "it": "Crediti fotografici", "ja": "写真のクレジット", "pt": "Créditos das fotografias"};
+
+// Original ingredient illustrations complement the separately attributed photo collection.
+const INGREDIENT_ILLUSTRATIONS = new Set([
+  'albahaca-seca',
+  'brocoli',
+  'caldo-de-pollo',
+  'caldo-de-res',
+  'caldo-de-verduras',
+  'carne-de-cerdo-molida',
+  'carne-de-pollo-molida',
+  'castanas',
+  'crema-de-leche',
+  'extracto-seco-malta-cebada-claro',
+  'harina-de-maiz-precocida',
+  'harina-de-mandioca-tostada',
+  'hogao',
+  'levadura-cervecera-us-05',
+  'lupulo-cascade',
+  'pasta-de-tamarindo',
+  'platano-verde',
+  'pollo',
+  'polvo-de-hornear',
+  'ron-blanco',
+]);
+
+export function ingredientImageSrc(slug: string): string | null {
+  return ingredientPhoto(slug)?.src ?? (INGREDIENT_ILLUSTRATIONS.has(slug) ? `/ingredientes/${slug}.webp` : null);
+}
