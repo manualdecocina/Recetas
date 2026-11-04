@@ -11,7 +11,8 @@ import type { MdIngredientSummary } from '@/components/md/IngredientViews'
 import type { MdHomeData } from '@/components/md/HomePageView'
 import { CATEGORY_TAXONOMY } from '@/lib/categories'
 import { consolidatePantryFoods, pantryIngredientRecipeIds } from '@/lib/pantry-foods'
-import { ingredientPhoto } from '@/lib/ingredient-photos'
+import { ingredientImageSrc } from '@/lib/ingredient-photos'
+import { featuredIngredients } from '@/lib/ingredient-discovery'
 import { ingredientLabel } from '@/lib/ingredient-labels'
 import { buildEditorialPantry, localizeEditorialIngredients, type PantryLink } from '@/lib/pantry-editorial'
 import { localizePantryRecipes, pantryIngredientCoverage } from '@/lib/pantry-localization'
@@ -50,20 +51,24 @@ export async function getCategorySummaries(lang: RecipeLanguage): Promise<MdCate
 /** Canonical searchable ingredients with actual published-recipe counts. Search
  * discovery is independent of the per-ingredient SEO/indexable flag. Photographs
  * depict the ingredient itself and come from the reviewed, attributed photo catalog. */
-export async function getIngredientSummaries(limit?: number, lang: RecipeLanguage = 'es'): Promise<MdIngredientSummary[]> {
+const loadIngredientSummaries = cache(async (lang: RecipeLanguage): Promise<MdIngredientSummary[]> => {
   const [{ data, error }, pantry] = await Promise.all([
     supabase.from('ingredients').select('id, slug, name').eq('status', 'canonical').eq('searchable', true),
     getPantryMatchData(lang),
   ])
   if (error) throw new Error(`No se pudieron cargar los ingredientes: ${error.message}`)
   const summaries = (data ?? []).map((ingredient) => {
-    const recipeIds = new Set(pantryIngredientRecipeIds(pantry, ingredient.id))
-    const recipes = pantry.recipes.filter((recipe) => recipeIds.has(recipe.id))
-    return { slug: ingredient.slug, name: ingredientLabel(ingredient.slug, ingredient.name, lang), count: recipes.length,
-      image_url: ingredientPhoto(ingredient.slug)?.src ?? null }
+    const recipeIds = pantryIngredientRecipeIds(pantry, ingredient.id)
+    const aliases = pantry.ingredients.find(item => item.id === ingredient.id || item.sourceIds?.includes(ingredient.id))?.aliases
+    return { slug: ingredient.slug, name: ingredientLabel(ingredient.slug, ingredient.name, lang), count: recipeIds.length,
+      image_url: ingredientImageSrc(ingredient.slug), aliases: aliases?.filter(alias => alias !== ingredient.slug) }
   }).sort((a, b) => a.name.localeCompare(b.name, lang))
-  const used = summaries.filter(i => i.count > 0)
-  return limit ? used.slice(0, limit) : used
+  return summaries.filter(item => item.count > 0)
+})
+
+export async function getIngredientSummaries(limit?: number, lang: RecipeLanguage = 'es'): Promise<MdIngredientSummary[]> {
+  const ingredients = await loadIngredientSummaries(lang)
+  return limit ? featuredIngredients(ingredients, limit) : ingredients
 }
 
 export async function getHomeData(lang: RecipeLanguage): Promise<MdHomeData> {

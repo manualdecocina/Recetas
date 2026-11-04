@@ -5,7 +5,7 @@ import RecipeCard from './RecipeCard';
 import { getMdCopy } from '@/lib/copy';
 import type { MdLanguage } from './md-types';
 import { getPantryCopy } from '@/lib/pantry-copy';
-import { ingredientSuggestions } from '@/lib/pantry-editorial';
+import IngredientAutocomplete from './IngredientAutocomplete';
 import { countLabel } from '@/lib/plural';
 import type { MdPantryIngredient, MdPantryRecipe } from '@/lib/md-data';
 
@@ -63,10 +63,6 @@ export default function PantryMatchView({ lang, ingredients, recipes }: { lang: 
   const t = getMdCopy(lang);
   const ui = getPantryCopy(lang);
   const [selected, setSelected] = useState<Set<string>>(new Set());
-  const [filter, setFilter] = useState('');
-  const [suggestionsOpen, setSuggestionsOpen] = useState(false);
-  const [activeSuggestion, setActiveSuggestion] = useState(-1);
-  const inputRef = useRef<HTMLInputElement>(null);
   const [hasViewedResults, setHasViewedResults] = useState(false);
   const resultsHeadingRef = useRef<HTMLHeadingElement>(null);
 
@@ -83,19 +79,12 @@ export default function PantryMatchView({ lang, ingredients, recipes }: { lang: 
       if (restored.length) setSelected(new Set(restored));
     } catch { /* La herramienta funciona aunque localStorage no esté disponible. */ }
   }, [ingredients]);
-  const suggestions = useMemo(() => ingredientSuggestions(ingredients, filter, selected, lang), [ingredients, filter, selected, lang]);
   const selectedIngredients = useMemo(() => ingredients.filter(i => selected.has(i.id)), [ingredients, selected]);
-  const expanded = suggestionsOpen && filter.trim().length > 0;
-
-  function selectIngredient(id: string) {
-    toggle(id);
-    setFilter('');
-    setActiveSuggestion(-1);
-    setSuggestionsOpen(false);
-    inputRef.current?.focus();
-  }
 
   const matches = useMemo(() => computeMatches(recipes, selected, ingredientNameById, lang), [recipes, selected, ingredientNameById, lang]);
+
+  const complete = matches.filter(match => match.isComplete);
+  const partial = matches.filter(match => !match.isComplete);
 
   function persistSelection(next: Set<string>) {
     try {
@@ -157,51 +146,9 @@ export default function PantryMatchView({ lang, ingredients, recipes }: { lang: 
             </button>
           )}
         </div>
-        <div className="md-pantry-autocomplete" onBlur={(event) => {
-          if (!event.currentTarget.contains(event.relatedTarget as Node | null)) setSuggestionsOpen(false);
-        }}>
-          <label className="md-search-label" htmlFor="md-pantry-filter">{ui.search}</label>
-          <p id="md-pantry-search-help" className="md-pantry-search-help">{ui.searchHelp}</p>
-          <input
-            ref={inputRef}
-            className="md-search-input md-pantry-filter"
-            id="md-pantry-filter"
-            type="search"
-            role="combobox"
-            aria-autocomplete="list"
-            aria-expanded={expanded}
-            aria-controls="md-pantry-suggestions"
-            aria-describedby="md-pantry-search-help"
-            aria-activedescendant={expanded && activeSuggestion >= 0 && suggestions[activeSuggestion] ? `md-pantry-option-${activeSuggestion}` : undefined}
-            autoComplete="off"
-            placeholder={t.pantrySearchPlaceholder}
-            value={filter}
-            onFocus={() => setSuggestionsOpen(true)}
-            onChange={(event) => { setFilter(event.target.value); setSuggestionsOpen(true); setActiveSuggestion(-1); }}
-            onKeyDown={(event) => {
-              if (event.key === 'Escape') { setSuggestionsOpen(false); setActiveSuggestion(-1); }
-              if ((event.key === 'ArrowDown' || event.key === 'ArrowUp') && suggestions.length) {
-                event.preventDefault(); setSuggestionsOpen(true);
-                setActiveSuggestion(prev => event.key === 'ArrowDown' ? (prev + 1) % suggestions.length : (prev <= 0 ? suggestions.length - 1 : prev - 1));
-              }
-              if (event.key === 'Enter' && expanded && suggestions.length) {
-                event.preventDefault(); selectIngredient(suggestions[activeSuggestion >= 0 ? activeSuggestion : 0].id);
-              }
-            }}
-          />
-          <ul id="md-pantry-suggestions" role="listbox" aria-label={ui.search} className="md-pantry-suggestions" hidden={!expanded}>
-            {suggestions.map((ingredient, index) => (
-              <li key={ingredient.id} id={`md-pantry-option-${index}`} role="option" aria-selected={index === activeSuggestion}
-                className={index === activeSuggestion ? 'md-pantry-option-active' : undefined}
-                onPointerDown={event => event.preventDefault()} onClick={() => selectIngredient(ingredient.id)}
-                onPointerMove={() => setActiveSuggestion(index)}>
-                <span>{ingredient.name}</span><span aria-hidden="true">+</span>
-              </li>
-            ))}
-          </ul>
-          <p className="md-sr-only" role="status">{expanded ? ui.suggestions(suggestions.length) : ''}</p>
-          {expanded && suggestions.length === 0 && <p className="md-pantry-no-ingredients">{t.pantryNoIngredientsFound}</p>}
-        </div>
+        <IngredientAutocomplete lang={lang} inputId="md-pantry-filter" optionPrefix="md-pantry" ingredients={ingredients}
+          selected={selected} help={ui.searchHelp} onSelect={ingredient => toggle(ingredient.id)}
+          renderOption={ingredient => <><span>{ingredient.name}</span><span aria-hidden="true">+</span></>} />
         {selectedIngredients.length > 0 && (
           <div className="md-pantry-selection">
             <h3 className="md-subtitle">{ui.selectedHeading}</h3>
@@ -243,32 +190,38 @@ export default function PantryMatchView({ lang, ingredients, recipes }: { lang: 
             <p>{t.pantryEmptyNoSelection}</p>
           </div>
         )}
-        {selected.size > 0 && matches.length === 0 && (
+        {selected.size > 0 && !hasViewedResults && <p>{ui.step2}</p>}
+        {hasViewedResults && selected.size > 0 && matches.length === 0 && (
           <div className="md-empty-block">
             <h2 className="md-subtitle">{t.emptyTitle}</h2>
             <p>{t.pantryEmptyNoMatches}</p>
             <Link className="md-button" href={`/${lang}/recetas`}>{t.seeAllRecipes}</Link>
           </div>
         )}
-        {matches.length > 0 && (
-          <div className="md-card-grid">
-            {matches.map(({ recipe, checklist, effectiveMissingCount, isComplete }) => (
-              <div className="md-pantry-result" key={recipe.id}>
-                <span className={`md-pantry-badge${isComplete ? ' md-pantry-badge-complete' : ''}`}>
-                  {isComplete ? t.pantryComplete : countLabel(lang, effectiveMissingCount, 'missingIngredient')}
-                </span>
-                <RecipeCard recipe={recipe} />
-                {checklist.length > 0 && (
-                  <details className="md-pantry-checklist">
-                    <summary>
-                      {isComplete ? ui.checklist : `${ui.checklist} · ${countLabel(lang, effectiveMissingCount, 'missingIngredient')}`}
-                    </summary>
-                    <ul>
-                      {checklist.map((item) => (
-                        <li key={item.id} className={item.owned ? 'md-pantry-check-owned' : 'md-pantry-check-missing'}>
-                          <span aria-hidden="true">{item.owned ? '✓' : '○'}</span>
-                          <span>{item.name}</span>
-                        </li>
+        {hasViewedResults && matches.length > 0 && (
+          <>
+            {complete.length === 0 && <p className="md-muted">{ui.noComplete}</p>}
+            {([[ui.ready, complete], [ui.missing, partial]] as const).filter(([, group]) => group.length).map(([title, group]) => (
+              <div key={title} className="md-pantry-result-group">
+                <h3 className="md-subtitle">{title}</h3>
+                <div className="md-card-grid">
+                  {group.map(({ recipe, checklist, effectiveMissingCount, isComplete }) => (
+                    <div className="md-pantry-result" key={recipe.id}>
+                      <span className={`md-pantry-badge${isComplete ? ' md-pantry-badge-complete' : ''}`}>
+                        {isComplete ? t.pantryComplete : countLabel(lang, effectiveMissingCount, 'missingIngredient')}
+                      </span>
+                      <RecipeCard recipe={recipe} />
+                      {checklist.length > 0 && (
+                        <details className="md-pantry-checklist">
+                          <summary>
+                            {isComplete ? ui.checklist : `${ui.checklist} · ${countLabel(lang, effectiveMissingCount, 'missingIngredient')}`}
+                          </summary>
+                          <ul>
+                            {checklist.map((item) => (
+                              <li key={item.id} className={item.owned ? 'md-pantry-check-owned' : 'md-pantry-check-missing'}>
+                                <span aria-hidden="true">{item.owned ? '✓' : '○'}</span>
+                                <span>{item.name}</span>
+                              </li>
                       ))}
                     </ul>
                     {recipe.uncanonicalizedCount > 0 && (
@@ -279,8 +232,11 @@ export default function PantryMatchView({ lang, ingredients, recipes }: { lang: 
                   </details>
                 )}
               </div>
+                  ))}
+                </div>
+              </div>
             ))}
-          </div>
+          </>
         )}
       </section>
     </main>

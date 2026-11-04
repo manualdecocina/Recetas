@@ -675,10 +675,20 @@ a.md-lang-item:hover { background: var(--md-sand); }
 @media (min-width: 1100px) {
   .md-header-nav a { padding-inline: 9px; font-size: .9rem; white-space: nowrap; }
 }
-.md-ingredient-search { max-width: 560px; margin-bottom: 12px; }
 .md-ingredient-card { min-width: 0; }
 .md-ingredient-card .md-category-photo { height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
 .md-ingredient-card-text { align-content: center; min-height: 180px; background: var(--md-sand); }
 .md-photo-credits { padding-block: 20px 40px; font-size: .85rem; color: var(--md-muted); overflow-wrap: anywhere; }
 .md-photo-credits summary { cursor: pointer; font-weight: 700; }
 .md-photo-credits ul { padding-left: 20px; }
+
+.md-ingredient-grid-head { margin-top: 28px; align-items: center; flex-wrap: wrap; gap: 10px; }
+.md-ingredient-option { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.md-ingredient-option-photo { flex: none; object-fit: cover; border-radius: 6px; }
+.md-ingredient-pagination { display: flex; align-items: center; flex-wrap: wrap; gap: 16px; margin-top: 24px; }
+.md-pantry-result-group { margin-top: 22px; }
+.md-pantry-result-group > h3 { margin-bottom: 12px; }
+.md-recipe-jumps { display: flex; flex-wrap: wrap; gap: 10px; margin-block: 18px; }
+.md-recipe-jumps a { text-decoration: none; }
+#md-ingredientes, #md-preparacion, .md-collection-section > h2 { scroll-margin-top: 96px; }
+@media print { .md-recipe-jumps { display: none; } }

@@ -97,6 +97,13 @@ export function CollectionDetailView({ lang, collection, sections }: {
           <p className="md-collection-curator">
             <Link className="md-link" href={`/${lang}/quienes-somos`}>{t.collectionCuratedBy}</Link>
           </p>
+          {sections.filter(recipes => recipes.length > 0).length > 1 && (
+            <nav className="md-recipe-jumps" aria-label={text.title}>
+              {sections.map((recipes, index) => recipes.length > 0 && (
+                <a className="md-button-quiet" href={`#md-collection-section-${index}`} key={index}>{text.sections[index].heading} <span aria-hidden="true">↓</span></a>
+              ))}
+            </nav>
+          )}
           {cover && (
             <Image className="md-collection-cover" src={cover} alt={text.title} width={1440} height={960}
               priority sizes="(max-width: 1240px) calc(100vw - 36px), 1200px" />

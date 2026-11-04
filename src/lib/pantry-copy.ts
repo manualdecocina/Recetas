@@ -20,10 +20,21 @@ const SEARCH = {
   pt: ['Buscar ingredientes', 'Digite um ingrediente e escolha uma sugestão. Os selecionados aparecem abaixo.', 'Ingredientes que você tem', 'Remover ingrediente', 'sugestões'],
 } satisfies Record<RecipeLanguage, string[]>
 
+const RESULTS = {
+  es: ['Puedes preparar ahora', 'Te faltan ingredientes', 'Con la selección actual, todavía te faltan ingredientes para las recetas encontradas.'],
+  en: ['You can make these now', 'You need more ingredients', 'With your current selection, you still need ingredients for the recipes we found.'],
+  de: ['Das kannst du jetzt kochen', 'Dafür fehlen dir Zutaten', 'Mit deiner aktuellen Auswahl fehlen dir noch Zutaten für die gefundenen Rezepte.'],
+  fr: ['À préparer dès maintenant', 'Il vous manque des ingrédients', 'Avec votre sélection actuelle, il manque encore des ingrédients pour les recettes trouvées.'],
+  it: ['Puoi prepararle subito', 'Ti mancano degli ingredienti', 'Con la selezione attuale mancano ancora degli ingredienti per le ricette trovate.'],
+  ja: ['今すぐ作れるレシピ', '食材が足りないレシピ', '現在の選択では、見つかったレシピを作るために追加の食材が必要です。'],
+  pt: ['Você já pode preparar', 'Faltam ingredientes', 'Com a seleção atual, ainda faltam ingredientes para as receitas encontradas.'],
+} satisfies Record<RecipeLanguage, [string, string, string]>
+
 export function getPantryCopy(lang: RecipeLanguage) {
   const [how, step1, step2, step3, start, view, update, checklist, selectedOne, selectedMany, pendingOne, pendingMany] = COPY[lang]
   const [search, searchHelp, selectedHeading, remove, suggestionNoun] = SEARCH[lang]
-  return { how, step1: searchHelp, step2, step3, start, view, update, checklist, search, searchHelp, selectedHeading, remove,
+  const [ready, missing, noComplete] = RESULTS[lang]
+  return { ready, missing, noComplete, how, step1: searchHelp, step2, step3, start, view, update, checklist, search, searchHelp, selectedHeading, remove,
     suggestions: (n: number) => `${n} ${suggestionNoun}`,
     selected: (n: number) => `${n}${lang === 'ja' ? '' : ' '}${n === 1 ? selectedOne : selectedMany}`,
     pending: (n: number) => `${n} · ${n === 1 ? pendingOne : pendingMany}` }
