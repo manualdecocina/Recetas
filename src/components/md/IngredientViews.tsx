@@ -72,7 +72,7 @@ export function IngredientDetailView({ lang, ingredient, description, recipes }:
       <SiteHeader lang={lang} alternates={Object.fromEntries(SUPPORTED_LANGUAGES.map((l) => [l, `/${l}/ingredientes/${ingredient.slug}`]))} />
       <main className="md-container" id="md-main">
         <header className="md-page-head">
-          <Breadcrumbs items={[
+          <Breadcrumbs lang={lang} items={[
             { name: 'Manual de Cocina', path: `/${lang}` },
             { name: t.navIngredients, path: `/${lang}/ingredientes` },
             { name: ingredient.name, path: `/${lang}/ingredientes/${ingredient.slug}` },

@@ -6,6 +6,8 @@
 import type { MdLanguage } from '@/components/md/md-types';
 
 const es = {
+  changeLanguage: "Cambiar idioma",
+  breadcrumbLabel: "Ruta de navegación",
   navRecipes: "Recetas",
   navCategories: "Categorías",
   navIngredients: "Ingredientes",
@@ -158,6 +160,8 @@ const es = {
 } as const;
 
 const en = {
+  changeLanguage: "Change language",
+  breadcrumbLabel: "Breadcrumb",
   navRecipes: "Recipes",
   navCategories: "Categories",
   navIngredients: "Ingredients",
@@ -310,6 +314,8 @@ const en = {
 };
 
 const de = {
+  changeLanguage: "Sprache wechseln",
+  breadcrumbLabel: "Brotkrümelnavigation",
   navRecipes: "Rezepte", // REVISAR
   navCategories: "Kategorien", // REVISAR
   navIngredients: "Zutaten", // REVISAR
@@ -462,6 +468,8 @@ const de = {
 };
 
 const it = {
+  changeLanguage: "Cambia lingua",
+  breadcrumbLabel: "Percorso di navigazione",
   navRecipes: "Ricette", // REVISAR
   navCategories: "Categorie", // REVISAR
   navIngredients: "Ingredienti", // REVISAR
@@ -614,6 +622,8 @@ const it = {
 };
 
 const fr = {
+  changeLanguage: "Changer de langue",
+  breadcrumbLabel: "Fil d’Ariane",
   navRecipes: "Recettes", // REVISAR
   navCategories: "Catégories", // REVISAR
   navIngredients: "Ingrédients", // REVISAR
@@ -766,6 +776,8 @@ const fr = {
 };
 
 const ja = {
+  changeLanguage: "言語を切り替える",
+  breadcrumbLabel: "パンくずリスト",
   navRecipes: "レシピ", // REVISAR
   navCategories: "カテゴリー", // REVISAR
   navIngredients: "食材", // REVISAR
@@ -919,6 +931,8 @@ const ja = {
 
 export type MdCopy = Record<keyof typeof es, string>;
 const pt = {
+  changeLanguage: "Alterar idioma",
+  breadcrumbLabel: "Trilha de navegação",
   navRecipes: "Receitas",
   navCategories: "Categorias",
   navIngredients: "Ingredientes",

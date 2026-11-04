@@ -44,7 +44,7 @@ export function CollectionsIndexView({ lang, items }: { lang: MdLanguage; items:
       <SiteHeader lang={lang} alternates={alternates} />
       <main className="md-container" id="md-main">
         <header className="md-page-head">
-          <Breadcrumbs items={[
+          <Breadcrumbs lang={lang} items={[
             { name: 'Manual de Cocina', path: `/${lang}` },
             { name: t.navCollections, path: collectionsIndexPath(lang) },
           ]} />
@@ -86,7 +86,7 @@ export function CollectionDetailView({ lang, collection, sections }: {
       )}
       <main className="md-container" id="md-main">
         <header className="md-page-head">
-          <Breadcrumbs items={[
+          <Breadcrumbs lang={lang} items={[
             { name: 'Manual de Cocina', path: `/${lang}` },
             { name: t.navCollections, path: collectionsIndexPath(lang) },
             { name: text.title, path: collectionPath(lang, collection) },
