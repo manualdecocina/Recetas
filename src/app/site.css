@@ -692,3 +692,39 @@ a.md-lang-item:hover { background: var(--md-sand); }
 .md-recipe-jumps a { text-decoration: none; }
 #md-ingredientes, #md-preparacion, .md-collection-section > h2 { scroll-margin-top: 96px; }
 @media print { .md-recipe-jumps { display: none; } }
+
+/* Recipe tools reuse the site's controls and theme tokens. */
+.md-kitchen-actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.md-servings-controls { margin: 20px 0; }
+.md-servings-controls input, .md-step-timer input { width: 5.5rem; min-height: 44px; padding: 8px; border: 1px solid var(--md-stone); border-radius: 6px; background: var(--md-paper); color: var(--md-ink); font: inherit; }
+.md-kitchen-hint { display: block; font-size: .9rem !important; line-height: 1.5 !important; color: var(--md-muted); margin: 12px 0; }
+.md-kitchen-status { font-size: .9rem; margin: 8px 0; }
+.md-shopping-add { margin: 18px 0; }
+.md-shopping-add .md-button-secondary, .md-shopping-add .md-button-quiet { font-size: .9rem; white-space: normal; text-align: left; }
+.md-shopping-link { display: inline-flex; flex: 0 0 auto; justify-content: center; align-items: center; width: 40px; min-height: 44px; color: var(--md-ink); }
+.md-shopping-list { max-width: 850px; }
+.md-shopping-items { list-style: none; padding: 0; margin: 24px 0; }
+.md-shopping-items > li { border-bottom: 1px solid var(--md-stone); padding: 12px 0; }
+.md-shopping-items input:checked + span { text-decoration: line-through; opacity: .65; }
+.md-shopping-sources { list-style: none; padding: 0; }
+.md-shopping-sources li { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin: 12px 0; }
+.md-shopping-sources a { overflow-wrap: anywhere; }
+.md-copy-fallback { width: 100%; min-height: 220px; font: inherit; }
+.md-cooking-ingredients { border-block: 1px solid var(--md-stone); padding: 18px 0; margin: 24px 0; }
+.md-cooking-ingredients summary { cursor: pointer; font-weight: 700; min-height: 44px; }
+.md-cooking-ingredients li { margin: 10px 0; }
+.md-step-timer { margin: 18px 0; padding: 16px 0; border-bottom: 1px solid var(--md-stone); }
+.md-timer-clock { display: block; font-variant-numeric: tabular-nums; font-size: 2rem; margin: 8px 0; }
+.md-step-timer label { display: inline-flex; align-items: center; gap: 8px; }
+.md-cooking-overlay { overscroll-behavior: contain; }
+.md-cooking-controls { padding-bottom: max(24px, env(safe-area-inset-bottom)); }
+@media (max-width: 600px) {
+ .md-servings-controls .md-kitchen-actions { gap: 6px; }
+ .md-servings-controls .md-button-quiet { padding: 8px 12px; }
+ .md-shopping-sources li { align-items: flex-start; }
+ .md-cooking-controls button { white-space: normal; }
+}
+@media print { .md-servings-controls .md-kitchen-actions, .md-shopping-add, .md-shopping-link { display: none !important; } }
+@media (max-width: 340px) {
+ .md-header-actions > .md-shopping-link { display: none; }
+}

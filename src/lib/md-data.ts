@@ -152,7 +152,7 @@ async function loadPantryMatchData(lang: RecipeLanguage): Promise<PantryData> {
     const localChoices: MdPantryIngredient[] = []
     const recipes = localizedRecipes.map(recipe => {
       const translated = translationById.get(recipe.id)
-      if (translated?.ingredients?.length === recipe.totalIngredients) return recipe
+      if (translated?.ingredients?.length === recipe.totalIngredients) return { ...recipe, editorialIngredients: translated.ingredients }
       // Some localized recipes have a different formulation. Their actual list takes
       // precedence over a positional join to the Spanish source.
       const actual = buildEditorialPantry([{ id: recipe.id, ingredients: translated?.ingredients }], [], [])
@@ -214,7 +214,7 @@ async function loadPantryMatchData(lang: RecipeLanguage): Promise<PantryData> {
 }
 export const getPantryMatchData = cache(unstable_cache(
   (lang: RecipeLanguage = 'es') => coalescePublicLoad(pantryPending, lang, () => loadPantryMatchData(lang)),
-  ['public-pantry-graph-v4'], { revalidate: PUBLIC_REVALIDATE_SECONDS, tags: [RECIPES_CACHE_TAG] },
+  ['public-pantry-graph-v5'], { revalidate: PUBLIC_REVALIDATE_SECONDS, tags: [RECIPES_CACHE_TAG] },
 ))
 
 /** Cuisine discovery follows the Spanish editorial origin shared by all seven

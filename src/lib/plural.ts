@@ -56,3 +56,13 @@ export function countLabel(lang: string, count: number, kind: CountKind): string
   // Japonés: el contador va pegado al número ("3件のレシピ").
   return lang === 'ja' ? `${count}${word}` : `${count} ${word}`
 }
+
+export function resultCountLabel(lang: string, count: number): string {
+ const forms: Record<string, [string, string]> = {
+  es: ['receta encontrada', 'recetas encontradas'], en: ['recipe found', 'recipes found'],
+  de: ['Rezept gefunden', 'Rezepte gefunden'], fr: ['recette trouvée', 'recettes trouvées'],
+  it: ['ricetta trovata', 'ricette trovate'], pt: ['receita encontrada', 'receitas encontradas'],
+ };
+ if (lang === 'ja') return `${count.toLocaleString(lang)}件のレシピが見つかりました`;
+ return `${count.toLocaleString(lang)} ${(forms[lang] ?? forms.es)[count === 1 ? 0 : 1]}`;
+}

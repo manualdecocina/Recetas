@@ -15,7 +15,9 @@ import AdSlot from './AdSlot';
 import RelatedRecipes from './RelatedRecipes';
 import { parseVideo } from '@/lib/video';
 import VideoFacade from './VideoFacade';
-import StepPhoto from './StepPhoto';
+import RecipeSteps from './RecipeSteps';
+import RecipeWorkspace, { ServingsValue } from './RecipeWorkspace';
+import { AddToShoppingList } from './ShoppingList';
 import PantryBanner from './PantryBanner';
 import { RECIPE_AUTHOR, recipeCanonicalUrl } from '@/lib/site';
 
@@ -74,6 +76,7 @@ export default function RecipeDocumentVisual({ recipe, relatedRecipes = [], note
 
   return (
     <>
+      <RecipeWorkspace recipeId={recipe.id} lang={lang} ingredients={recipe.ingredients} steps={recipe.steps} servings={recipe.servings}>
       <article className="md-article">
         <div className="md-print-brand" aria-hidden="true">
           <img src="/brand/logo-manual-de-cocina.webp" alt="" width="640" height="188" />
@@ -102,11 +105,11 @@ export default function RecipeDocumentVisual({ recipe, relatedRecipes = [], note
               </div>
             )}
             {facts.length > 0 && <dl className="md-recipe-facts">{facts.map((fact) => (
-              <div className="md-recipe-fact" key={fact.label}><dt>{fact.label}</dt><dd>{fact.value}</dd></div>
+              <div className="md-recipe-fact" key={fact.label}><dt>{fact.label}</dt><dd>{fact.label === t.servings && recipe.servings ? <ServingsValue initial={recipe.servings} /> : fact.value}</dd></div>
             ))}</dl>}
             {ratingsEnabled && <RatingWidget recipeId={recipe.id} lang={lang} ratingCount={recipe.rating_count ?? 0} ratingSum={recipe.rating_sum ?? 0} />}
             <div className="md-article-actions">
-              <RecipeCookingMode lang={lang} steps={recipe.steps} />
+              <RecipeCookingMode recipeId={recipe.id} lang={lang} steps={recipe.steps} />
               <FavoriteButton recipeId={recipe.id} lang={lang} />
               <SharePrintActions lang={lang} title={recipe.title} />
               <PinterestSaveButton
@@ -136,18 +139,13 @@ export default function RecipeDocumentVisual({ recipe, relatedRecipes = [], note
           <div className="md-recipe-body">
             {recipe.ingredients.length > 0 && <div className="md-recipe-side">
               <RecipeIngredients recipeId={recipe.id} lang={lang} ingredients={recipe.ingredients} />
+              <AddToShoppingList lang={lang} source={{ id: recipe.recipe_group_id ?? recipe.id, recipeId: recipe.id, title: recipe.title, href: recipe.public_path, lang, ingredients: recipe.ingredients }} />
               <AdSlot placement="after-ingredients" />
             </div>}
             {recipe.steps.length > 0 && (
               <section className="md-recipe-section" id="md-preparacion" aria-labelledby="md-preparation-heading">
                 <h2 className="md-title" id="md-preparation-heading">{t.preparation}</h2>
-                <ol className="md-step-list">{recipe.steps.map((step, index) => (
-                  <li className={`md-step-item${step.image_url ? ' has-photo' : ''}`} id={`paso-${index + 1}`} key={`${recipe.id}-step-${index}`}>
-                    <span className="md-step-count" aria-hidden="true">{index + 1}</span>
-                    <div className="md-step-text"><h3>{step.title || `${t.step} ${index + 1}`}</h3><p>{step.content}</p></div>
-                    {step.image_url && <StepPhoto src={step.image_url} alt={step.image_alt || step.title || `${t.step} ${index + 1}`} closeLabel={t.close} />}
-                  </li>
-                ))}</ol>
+                <RecipeSteps recipeId={recipe.id} lang={lang} steps={recipe.steps} />
                 {hasStepPhotos && <p className="md-step-photos-note">{t.stepPhotosNote}</p>}
               </section>
             )}
@@ -212,6 +210,7 @@ export default function RecipeDocumentVisual({ recipe, relatedRecipes = [], note
           <span>{recipeCanonicalUrl(recipe)}</span>
         </div>
       </article>
+      </RecipeWorkspace>
       <RelatedRecipes lang={lang} recipes={relatedRecipes} />
     </>
   );

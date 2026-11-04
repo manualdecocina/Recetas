@@ -6,6 +6,10 @@ import { getMdCopy } from '@/lib/copy';
 import type { MdLanguage } from './md-types';
 import { getPantryCopy } from '@/lib/pantry-copy';
 import IngredientAutocomplete from './IngredientAutocomplete';
+import { AddToShoppingList } from './ShoppingList';
+import { kitchenCopy } from '@/lib/kitchen-copy';
+import { PANTRY_EVENT } from '@/lib/shopping-list';
+import type { MdIngredient } from './md-types';
 import { countLabel } from '@/lib/plural';
 import type { MdPantryIngredient, MdPantryRecipe } from '@/lib/md-data';
 
@@ -70,14 +74,17 @@ export default function PantryMatchView({ lang, ingredients, recipes }: { lang: 
   const ingredientById = useMemo(() => new Map(ingredients.map((i) => [i.id, i])), [ingredients]);
 
   useEffect(() => {
-    try {
+    function restore() { try {
       const raw = localStorage.getItem(PANTRY_STORAGE_KEY);
       const storedSlugs: unknown = raw ? JSON.parse(raw) : [];
-      if (!Array.isArray(storedSlugs) || storedSlugs.length === 0) return;
+      if (!Array.isArray(storedSlugs)) return;
       const slugs = new Set(storedSlugs.filter((value): value is string => typeof value === 'string'));
       const restored = ingredients.filter((ingredient) => (slugs.has(ingredient.slug) || ingredient.aliases?.some(alias => slugs.has(alias)))).map((ingredient) => ingredient.id);
-      if (restored.length) setSelected(new Set(restored));
+      setSelected(new Set(restored));
     } catch { /* La herramienta funciona aunque localStorage no esté disponible. */ }
+    }
+    restore(); window.addEventListener(PANTRY_EVENT, restore); window.addEventListener('storage', restore);
+    return () => { window.removeEventListener(PANTRY_EVENT, restore); window.removeEventListener('storage', restore); };
   }, [ingredients]);
   const selectedIngredients = useMemo(() => ingredients.filter(i => selected.has(i.id)), [ingredients, selected]);
 
@@ -92,17 +99,18 @@ export default function PantryMatchView({ lang, ingredients, recipes }: { lang: 
         .map((id) => ingredientById.get(id)?.slug)
         .filter((slug): slug is string => Boolean(slug));
       localStorage.setItem(PANTRY_STORAGE_KEY, JSON.stringify(slugs));
+      window.dispatchEvent(new Event(PANTRY_EVENT));
     } catch { /* Sin persistencia: la selección actual sigue funcionando. */ }
   }
 
   function toggle(id: string) {
-    setSelected((prev) => {
-      const next = new Set(prev);
+    {
+      const next = new Set(selected);
       if (next.has(id)) next.delete(id);
       else next.add(id);
       persistSelection(next);
-      return next;
-    });
+      setSelected(next);
+    }
   }
 
   function viewResults() {
@@ -127,6 +135,7 @@ export default function PantryMatchView({ lang, ingredients, recipes }: { lang: 
         <p className="md-eyebrow">{t.pantryEyebrow}</p>
         <h1 className="md-display">{t.pantryToolHeading}</h1>
         <p className="md-lead md-page-intro">{t.pantryToolIntro}</p>
+        <p><Link className="md-link" href={`/${lang}/lista-de-compra`} prefetch={false}>{kitchenCopy(lang).shopping} →</Link></p>
         <div className="md-pantry-how" aria-label={ui.how}>
           <strong>{ui.how}</strong>
           <ol>
@@ -211,6 +220,15 @@ export default function PantryMatchView({ lang, ingredients, recipes }: { lang: 
                         {isComplete ? t.pantryComplete : countLabel(lang, effectiveMissingCount, 'missingIngredient')}
                       </span>
                       <RecipeCard recipe={recipe} />
+                      {!isComplete && (() => {
+                        const missing = (recipe.editorialIngredients ?? []).flatMap((raw, index) => {
+                          const item = raw as MdIngredient;
+                          if (!item?.name || selected.has(recipe.editorialIngredientIds?.[index] ?? '')) return [];
+                          const choice = ingredientById.get(recipe.editorialIngredientIds?.[index] ?? '');
+                          return [{ ...item, amount: String(item.amount ?? ''), pantryIngredientSlug: choice?.slug }];
+                        });
+                        return <AddToShoppingList lang={lang} source={{ id: recipe.recipe_group_id, recipeId: recipe.id, title: recipe.title, href: recipe.public_path, lang, ingredients: missing }} missing={missing} />;
+                      })()}
                       {checklist.length > 0 && (
                         <details className="md-pantry-checklist">
                           <summary>

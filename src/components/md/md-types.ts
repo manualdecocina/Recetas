@@ -22,6 +22,7 @@ export interface MdStep {
 }
 
 export interface MdRecipe {
+  recipe_group_id?: string;
   id: string;
   language: MdLanguage;
   slug: string;
