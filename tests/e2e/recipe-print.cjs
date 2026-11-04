@@ -63,13 +63,14 @@ const compact = text => text.replace(/\s+/gu, '');
       assert.equal(await page.locator('#md-recipe-print-root iframe,#md-recipe-print-root button,#md-recipe-print-root input').count(), 0);
       const pdfPath = `${output}/${entry.lang}.pdf`;
       await page.pdf({ path: pdfPath, printBackground: true, preferCSSPageSize: true, displayHeaderFooter: false });
-      const pdfText = execFileSync('pdftotext', ['-layout', pdfPath, '-'], { encoding: 'utf8' });
+      // Content order keeps wrapped items together in the two-column ingredient
+      // list. Visual row order would interleave ingredients from both columns.
+      const pdfText = execFileSync('pdftotext', ['-raw', pdfPath, '-'], { encoding: 'utf8' });
       assert(!pdfText.includes(canonical), 'PDF uses the content-only template, not the fallback page with its raw URL footer');
-      // A paragraph can continue after a page counter. Remove only that trailing
-      // margin counter before comparing the complete editorial text.
+      // A paragraph can continue across a page. Remove only the leading margin
+      // counter/domain emitted by Chromium before comparing editorial text.
       const contentText = pdfText.split('\f').map(value => value
-        .replace(/\n[ \t]*\d+[ \t]*\s*$/u, '')
-        .replace(/\n[ \t]*manualdecocina\.com(?:[ \t]+\d+)?[ \t]*\s*$/u, '')).join('\n');
+        .replace(/^\s*\d+\s*\nmanualdecocina\.com\s*\n/u, '')).join('\n');
       for (const phrase of [title, ...ingredients, ...steps, ...notes]) assert(compact(contentText).includes(compact(phrase)), `PDF retains: ${phrase}`);
       for (const forbidden of ['FORBIDDEN_', 'Pinterest', 'CONSENTIMIENTO_FLOTANTE', 'PUBLICIDAD_CABECERA']) assert(!pdfText.includes(forbidden), `${forbidden} is not printed`);
       const pages = pdfText.split('\f').filter(value => value.trim());
