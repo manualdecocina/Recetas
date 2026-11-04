@@ -1,14 +1,20 @@
 name: recipe-print-no-ads
 on:
   push:
-    branches: [fix/print-recipe-hide-third-party-ads-20261010]
+    branches: [main, fix/recipe-print-book-20261104]
     paths:
       - 'src/app/site.css'
+      - 'src/app/recipe-print.css'
+      - 'src/lib/recipe-print.ts'
+      - 'src/components/md/SharePrintActions.tsx'
       - 'scripts/test-print-no-ads.sh'
       - '.github/workflows/recipe-print-no-ads.yml'
   pull_request:
     paths:
       - 'src/app/site.css'
+      - 'src/app/recipe-print.css'
+      - 'src/lib/recipe-print.ts'
+      - 'src/components/md/SharePrintActions.tsx'
       - 'scripts/test-print-no-ads.sh'
 permissions:
   contents: read
@@ -18,6 +24,11 @@ jobs:
     timeout-minutes: 8
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
       - name: Install pdftotext if missing
         run: |
           if ! command -v pdftotext >/dev/null; then

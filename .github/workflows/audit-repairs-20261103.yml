@@ -39,8 +39,21 @@ jobs:
           exit 1
       - run: node tests/e2e/audit-repairs.cjs
       - run: node tests/e2e/full-quality.cjs
+      - name: Print real recipes to PDF
+        run: |
+          if ! command -v pdftotext >/dev/null; then
+            sudo apt-get update -qq
+            sudo apt-get install -y -qq poppler-utils
+          fi
+          sudo apt-get install -y -qq fonts-noto-cjk
+          node tests/e2e/recipe-print.cjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: audit-repairs-responsive-qa
           path: audit-repairs-qa
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: recipe-print-editorial-qa
+          path: recipe-print-qa
