@@ -1,3 +1,4 @@
+import { kitchenCopy } from '@/lib/kitchen-copy';
 import Link from 'next/link';
 import { favoritesCopy } from '@/lib/favorites-copy';
 import ConsentPreferences from './ConsentPreferences';
@@ -9,6 +10,7 @@ export default function SiteFooter({ lang }: { lang: MdLanguage }) {
   const t = getMdCopy(lang);
   const base = `/${lang}`;
   const institutional = [
+    { slug: 'lista-de-compra', label: kitchenCopy(lang).shopping },
     { slug: 'favoritos', label: favoritesCopy[lang].title },
     { slug: 'quienes-somos', label: t.about },
     { slug: 'contacto', label: t.contact },

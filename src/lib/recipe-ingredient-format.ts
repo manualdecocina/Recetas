@@ -147,3 +147,19 @@ export function ingredientDisplayText(ingredient: RecipeIngredientText, language
   return [ingredientDisplayPrefix(ingredient, language), ingredientDisplayName(ingredient, language)]
     .filter(Boolean).join(' ')
 }
+
+/** Reviewed count measures reused by the serving selector in instruction text. */
+export function recipeCountUnits(language: string): string[] {
+  if (language === 'es') return [...Object.keys(SPANISH_COUNT_UNITS), ...Object.keys(SPANISH_PLURAL_KEYS)]
+  return (LOCAL_COUNT_UNITS[language] ?? []).flatMap(pair => [...pair])
+}
+
+export function recipeCountUnitIdentity(raw: string, language: string): string | null {
+  const unit = raw.trim().replace(/\s+(?:de|di|of)$/i, '')
+  if (language === 'es') {
+    const key = spanishUnit(unit)
+    return SPANISH_COUNT_UNITS[key] ? key : SPANISH_PLURAL_KEYS[key] ?? null
+  }
+  const forms = LOCAL_COUNT_UNITS[language]?.find(pair => pair.some(form => form.toLocaleLowerCase(language) === unit.toLocaleLowerCase(language)))
+  return forms?.[0] ?? null
+}

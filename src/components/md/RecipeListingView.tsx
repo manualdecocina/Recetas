@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { resultCountLabel } from '@/lib/plural';
 import { collectionsIndexPath } from '@/lib/collections';
 import type { MdLanguage, MdRecipeCardData } from './md-types';
 import { getMdCopy } from '@/lib/copy';
@@ -78,7 +79,7 @@ export default function RecipeListingView({ lang, recipes, filters, options, pag
           </form>
         </aside>
         <section aria-label={t.recipeCatalog}>
-          <p className="md-result-summary" role="status">{totalResults.toLocaleString(lang)} {t.resultCount.toLowerCase()}</p>
+          <p className="md-result-summary" role="status">{resultCountLabel(lang, totalResults)}</p>
           {active.length > 0 && <nav className="md-active-filters" aria-label={t.activeFilters}>
             {active.map((key) => {
               const pretty = selectFields.find((field) => field.key === key);

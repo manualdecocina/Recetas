@@ -21,9 +21,10 @@ No se cambian recetas, URLs, schema, indexación ni configuración publicitaria.
   receta visible y el generador `renderPrintableRecipe`.
 - La proyección selecciona solo campos conocidos, elimina contenido ajeno y
   escapa todo texto. No clona HTML activo ni publicidad de terceros.
-- Los ingredientes, pasos y raciones proceden de lo que se muestra en pantalla.
-  Al integrar controles de cantidades, conservar esos selectores y comprobar
-  que la impresión refleja el estado elegido.
+- Los ingredientes, pasos y raciones proceden de lo que se muestra en pantalla,
+  incluidos los ajustes del selector ya integrado. Los atributos de las raciones
+  conservan la referencia original; si cambian las cantidades, una nota localizada
+  distingue ese ajuste de la descripción, notas y referencia nutricional original.
 - Las notas admiten texto plano y bloques editoriales. Las filas de tablas se
   convierten en líneas de texto conservando sus valores.
 - `SharePrintActions` prepara una hoja fuera del árbol de pantalla y espera la
@@ -72,7 +73,8 @@ desactivados. Referencia: https://developer.chrome.com/blog/print-margins.
 5. Revisar `recipe-print-qa/report.json` y renderizar los PDF con Poppler para
    comprobar portada, legibilidad, saltos, espaciado y ausencia de contenido ajeno.
 
-La prueba cubre las siete versiones del tiramisú, guacamole y tamal tolimense;
+La prueba cubre las siete versiones del tiramisú, guacamole, tamal tolimense y
+tiramisú ajustado de ocho a dieciséis raciones;
 inyecta publicidad dentro y fuera del artículo, incluido un contenedor de nombre
 desconocido y anuncios dentro de las notas. Compara ingredientes, pasos y notas
 completos con el texto del PDF. Comprueba portada, tema oscuro, ausencia de páginas

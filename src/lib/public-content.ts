@@ -1,5 +1,8 @@
 import { normalizeEditorialIngredientSections } from '@/lib/editorial-ingredient-sections'
 import { cache } from 'react'
+import { unstable_cache } from 'next/cache'
+import { PUBLIC_REVALIDATE_SECONDS, RECIPES_CACHE_TAG } from '@/lib/cache'
+import { rankRelated, recipeTechniques, type RelatedProfile } from '@/lib/related-recipes'
 import { getPantryMatchData } from '@/lib/md-data'
 import { supabase } from '@/lib/supabase/public'
 import { normalizePublicPath } from '@/lib/site'
@@ -93,36 +96,34 @@ export const getRecipeTranslations = cache(async (recipeGroupId: string) => {
 
 type RelatedRecipeCard = Pick<Recipe, 'id' | 'language' | 'slug' | 'public_path' | 'source_url' | 'title' | 'excerpt' | 'category' | 'image_url'>
 
-export const getRelatedRecipes = cache(async (recipe: Pick<Recipe, 'id' | 'language' | 'category' | 'cuisine'>): Promise<RelatedRecipeCard[]> => {
-  const selected: RelatedRecipeCard[] = []
-  const seen = new Set<string>()
-
-  // Una categoría puede tener una sola receta publicada. Completar con la misma cocina
-  // y luego con recetas recientes evita dejar sin enlaces las URLs históricas.
-  async function collect(filter?: { column: 'category' | 'cuisine'; value: string }) {
-    let query = supabase.from('recipes')
-      .select('id, language, slug, public_path, source_url, title, excerpt, category, image_url')
-      .eq('language', recipe.language)
-      .eq('published', true)
-      .neq('id', recipe.id)
-      .order('published_at', { ascending: false, nullsFirst: false })
-      .order('title', { ascending: true })
-      .order('id', { ascending: true })
-    if (filter) query = query.eq(filter.column, filter.value)
-    const { data, error } = await query.limit(filter ? 4 : 8)
-    if (error) throw new Error(`No se pudieron cargar recetas relacionadas: ${error.message}`)
-    for (const row of data ?? []) {
-      if (selected.length === 4) break
-      if (seen.has(row.id)) continue
-      selected.push(row as RelatedRecipeCard)
-      seen.add(row.id)
-    }
+const relatedProfiles = cache(unstable_cache(async (): Promise<RelatedProfile[]> => {
+  const pantry = await getPantryMatchData('es')
+  const rows: Array<{ id: string; recipe_group_id: string; title: string; steps: Recipe['steps']; total_time_minutes: number | null; prep_time_minutes: number | null; cook_time_minutes: number | null; category: string | null; cuisine: string | null }> = []
+  for (let from = 0; ; from += 1000) {
+    const { data, error } = await supabase.from('recipes')
+      .select('id, recipe_group_id, title, steps, total_time_minutes, prep_time_minutes, cook_time_minutes, category, cuisine')
+      .eq('published', true).eq('language', 'es').order('id').range(from, from + 999)
+    if (error) throw new Error(`No se pudieron cargar las afinidades de recetas: ${error.message}`)
+    rows.push(...(data ?? []))
+    if (!data || data.length < 1000) break
   }
+  const ingredients = new Map(pantry.recipes.map(r => [r.id, r.ingredientIds]))
+  return rows.map(r => ({ id: r.id, group: r.recipe_group_id, ingredients: ingredients.get(r.id) ?? [], techniques: recipeTechniques(r.title, r.steps ?? []),
+    minutes: r.total_time_minutes ?? (r.prep_time_minutes != null && r.cook_time_minutes != null ? r.prep_time_minutes + r.cook_time_minutes : null), category: r.category, cuisine: r.cuisine }))
+}, ['related-profiles-v1'], { revalidate: PUBLIC_REVALIDATE_SECONDS, tags: [RECIPES_CACHE_TAG] }))
 
-  if (recipe.category) await collect({ column: 'category', value: recipe.category })
-  if (selected.length < 4 && recipe.cuisine) await collect({ column: 'cuisine', value: recipe.cuisine })
-  if (selected.length < 4) await collect()
-  return selected
+export const getRelatedRecipes = cache(async (recipe: Pick<Recipe, 'id' | 'language' | 'category' | 'cuisine'>): Promise<RelatedRecipeCard[]> => {
+  const [profiles, pantry] = await Promise.all([relatedProfiles(), getPantryMatchData(recipe.language)])
+  const current = pantry.recipes.find(r => r.id === recipe.id)
+  const target = profiles.find(p => p.group === current?.recipe_group_id)
+  const available = new Map(pantry.recipes.filter(r => r.id !== recipe.id).map(r => [r.recipe_group_id, r]))
+  const groups = target ? rankRelated(target, profiles.filter(p => available.has(p.group) || p.group === target.group)) : [...available.keys()].sort().slice(0, 4)
+  return groups.flatMap(group => {
+    const row = available.get(group)
+    if (!row) return []
+    const { id, language, slug, public_path, source_url, title, excerpt, category, image_url } = row
+    return [{ id, language, slug, public_path, source_url: source_url ?? null, title, excerpt, category, image_url }]
+  })
 })
 
 /** Rutas públicas publicadas para prerenderizar las URLs históricas/localizadas conocidas.

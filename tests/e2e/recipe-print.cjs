@@ -10,8 +10,12 @@ const compact = text => text.replace(/\s+/gu, '');
 
 (async () => {
   fs.mkdirSync(output, { recursive: true });
-  const browser = await chromium.launch({ executablePath: process.env.CHROME_PATH || '/usr/bin/google-chrome', args: ['--no-sandbox'] });
+  const browser = await chromium.launch({ executablePath: process.env.CHROME_PATH || '/usr/bin/google-chrome', args: ['--no-sandbox', '--no-zygote', '--single-process'] });
   const context = await browser.newContext({ viewport: { width: 1366, height: 900 } });
+  // This is an isolated application test. Published covers are replayed below;
+  // unrelated external services must not stall the print readiness check.
+  await context.route('**/*', route => new URL(route.request().url()).origin === new URL(base).origin
+    ? route.continue() : route.abort());
   await context.route(/googlesyndication|doubleclick|fundingchoices|googletagmanager/, route => route.abort());
   // Production media is not stored in Git. Use the exact published cover bytes
   // prepared for this isolated build, without depending on the image optimizer.
@@ -29,9 +33,13 @@ const compact = text => text.replace(/\s+/gu, '');
         lang: link.hreflang, path: new URL(link.href).pathname,
       })));
     assert.equal(languages.length, 7, 'all seven translations are covered');
-    const cases = [...languages, { lang: 'es-guacamole', path: '/receta-guacamole/' }, { lang: 'es-tamal', path: '/es/receta/tamal-tolimense' }];
+    const cases = [...languages, { lang: 'es-guacamole', path: '/receta-guacamole/' }, { lang: 'es-tamal', path: '/es/receta/tamal-tolimense' }, { lang: 'es-scaled', path: '/tiramisu', servings: 16 }];
     for (const entry of cases) {
       await page.goto(`${base}${entry.path}`, { waitUntil: 'networkidle' });
+      if (entry.servings) {
+        await page.locator('#md-servings').fill(String(entry.servings));
+        await page.waitForFunction(() => document.querySelector('.md-ingredient-checkbox > span')?.textContent.includes('8 yemas'));
+      }
       const title = await page.locator('.md-recipe-hero h1').innerText();
       const canonical = await page.locator('link[rel="canonical"]').getAttribute('href');
       const ingredients = await page.locator('.md-ingredient-checkbox > span').allTextContents();
@@ -60,6 +68,11 @@ const compact = text => text.replace(/\s+/gu, '');
       const sheet = await page.locator('#md-recipe-print-root').textContent();
       for (const phrase of [title, ...ingredients, ...steps, ...notes]) assert(compact(sheet).includes(compact(phrase)), `print retains: ${phrase}`);
       assert(!sheet.includes('FORBIDDEN_'));
+      if (entry.servings) {
+        assert(sheet.includes('de 8 a 16 porciones'), 'adjusted quantities are identified against the original editorial reference');
+        assert(sheet.includes('600 ml'), 'the selected ingredient quantities are printed');
+        assert(sheet.includes('Prepara 600 ml'), 'the selected method quantities are printed');
+      }
       assert.equal(await page.locator('#md-recipe-print-root iframe,#md-recipe-print-root button,#md-recipe-print-root input').count(), 0);
       const pdfPath = `${output}/${entry.lang}.pdf`;
       await page.pdf({ path: pdfPath, printBackground: true, preferCSSPageSize: true, displayHeaderFooter: false });

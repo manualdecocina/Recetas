@@ -8,6 +8,7 @@ export interface PrintableRecipe {
   category: string;
   url: string;
   cover?: { src: string; alt: string };
+  adjustment?: string;
   facts: Array<{ label: string; value: string }>;
   ingredientsHeading: string;
   ingredients: Array<{ group: string; text: string }>;
@@ -19,6 +20,25 @@ export interface PrintableRecipe {
 }
 
 export const PRINT_ROOT_ID = 'md-recipe-print-root';
+
+const adjustmentCopy: Record<string, (base: number, selected: number) => string> = {
+  es: (base, selected) => `Ingredientes y preparación ajustados de ${base} a ${selected} porciones. La descripción, las notas y la referencia nutricional conservan los datos de la receta original.`,
+  en: (base, selected) => `Ingredients and method adjusted from ${base} to ${selected} servings. The description, notes and nutrition reference retain the original recipe's data.`,
+  de: (base, selected) => `Zutaten und Zubereitung von ${base} auf ${selected} Portionen angepasst. Beschreibung, Hinweise und Nährwertangaben beziehen sich auf das Originalrezept.`,
+  fr: (base, selected) => `Ingrédients et préparation adaptés de ${base} à ${selected} portions. La description, les notes et les références nutritionnelles conservent les données de la recette d’origine.`,
+  it: (base, selected) => `Ingredienti e preparazione adattati da ${base} a ${selected} porzioni. Descrizione, note e riferimenti nutrizionali conservano i dati della ricetta originale.`,
+  ja: (base, selected) => `材料と作り方を${base}人分から${selected}人分に調整しています。紹介文、メモ、栄養成分の参照情報は元のレシピの内容です。`,
+  pt: (base, selected) => `Ingredientes e preparo ajustados de ${base} para ${selected} porções. A descrição, as notas e a referência nutricional mantêm os dados da receita original.`,
+};
+
+function readAdjustment(article: Element): string | undefined {
+  const controls = article.querySelector<HTMLElement>('.md-servings-controls');
+  const base = Number(controls?.dataset.baseServings);
+  const selected = Number(controls?.dataset.currentServings);
+  if (!Number.isFinite(base) || !Number.isFinite(selected) || base <= 0 || selected <= 0 || base === selected) return;
+  const lang = article.ownerDocument.documentElement.lang.split('-')[0];
+  return (adjustmentCopy[lang] ?? adjustmentCopy.es)(base, selected);
+}
 
 // Covers both known placements and unrelated hidden UI inside an editorial block.
 const OMIT = 'script,style,iframe,ins,button,input,select,textarea,svg,video,[hidden],[aria-hidden="true"],.md-sr-only,.md-lightbox,.md-ad-slot,.google-auto-placed,.adsbygoogle-noablate,[data-ad-client],[data-ad-slot],[data-google-query-id],[id^="google_ads_iframe"],[id^="aswift_"],[role="dialog"]';
@@ -88,6 +108,7 @@ export function readPrintableRecipe(article: Element, url: string): PrintableRec
     author: text(article.querySelector('.md-byline [rel="author"]')),
     category: text(article.querySelector('.md-recipe-hero .md-eyebrow')),
     url,
+    adjustment: readAdjustment(article),
     cover: cover ? { src: cover.currentSrc || cover.src, alt: cover.alt } : undefined,
     facts: Array.from(article.querySelectorAll('.md-recipe-fact')).map(item => ({
       label: text(item.querySelector('dt')), value: text(item.querySelector('dd')),
@@ -129,6 +150,7 @@ export function renderPrintableRecipe(recipe: PrintableRecipe): string {
   ${recipe.author ? `<p class="md-print-author">${escape(recipe.author)}</p>` : ''}
 </header>
 ${recipe.facts.length ? `<dl class="md-print-facts">${recipe.facts.map(fact => `<div><dt>${escape(fact.label)}</dt><dd>${escape(fact.value)}</dd></div>`).join('')}</dl>` : ''}
+${recipe.adjustment ? `<p class="md-print-adjustment">${escape(recipe.adjustment)}</p>` : ''}
 <section class="md-print-ingredients"><h2>${escape(recipe.ingredientsHeading)}</h2><ul>${recipe.ingredients.map(item => `<li>${item.group ? `<h3>${escape(item.group)}</h3>` : ''}<span>${escape(item.text)}</span></li>`).join('')}</ul></section>
 <section class="md-print-method"><h2>${escape(recipe.preparationHeading)}</h2><ol>${recipe.steps.map((step, index) => `<li><h3><span>${index + 1}.</span> ${escape(step.title)}</h3><p>${escape(step.text)}</p></li>`).join('')}</ol></section>
 ${recipe.notes.length ? `<section class="md-print-notes"><h2>${escape(recipe.notesHeading)}</h2>${recipe.notes.map(note => `<${note.heading ? 'h3' : 'p'}>${escape(note.text)}</${note.heading ? 'h3' : 'p'}>`).join('')}</section>` : ''}

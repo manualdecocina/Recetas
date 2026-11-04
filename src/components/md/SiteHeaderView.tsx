@@ -1,3 +1,4 @@
+import { kitchenCopy } from '@/lib/kitchen-copy';
 import Link from 'next/link';
 import Image from 'next/image';
 import type { MdLanguage } from './md-types';
@@ -31,6 +32,7 @@ export default function SiteHeaderView({ lang, alternates, available }: { lang: 
             {nav.map((item) => <Link key={item.href} href={item.href} prefetch={item.prefetch}>{item.label}</Link>)}
           </nav>
           <div className="md-header-actions">
+            <Link className="md-shopping-link" href={`${base}/lista-de-compra`} aria-label={kitchenCopy(lang).shopping} title={kitchenCopy(lang).shopping}><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><path d="M6 7h12l2 14H4L6 7ZM9 8V6a3 3 0 0 1 6 0v2" /></svg></Link>
             <Link className="md-favorites-link" href={`${base}/favoritos`} aria-label={favoritesCopy[lang].title} title={favoritesCopy[lang].title}><span aria-hidden="true">★</span></Link>
             <form className="md-header-search" action={`${base}/recetas`} method="get" role="search">
               <label className="md-search-label md-sr-only" htmlFor="md-header-query">{t.searchLabel}</label>
@@ -46,6 +48,7 @@ export default function SiteHeaderView({ lang, alternates, available }: { lang: 
               </summary>
               <div className="md-menu-panel">
                 <nav className="md-stack" aria-label={t.openMenu}>
+                  <Link href={`${base}/lista-de-compra`}>{kitchenCopy(lang).shopping}</Link>
                   <Link href={`${base}/favoritos`}>{favoritesCopy[lang].title}</Link>
                   {nav.map((item) => <Link key={item.href} href={item.href} prefetch={item.prefetch}>{item.label}</Link>)}
                 </nav>

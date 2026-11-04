@@ -1,5 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
+import { useRecipeWorkspace, ServingsSelector } from './RecipeWorkspace';
+import { PANTRY_EVENT } from '@/lib/shopping-list';
 import Link from 'next/link';
 import type { MdIngredient, MdLanguage } from './md-types';
 import { getMdCopy } from '@/lib/copy';
@@ -10,17 +12,18 @@ import { ingredientDisplayName, ingredientDisplayPrefix } from '@/lib/recipe-ing
  * (`manualdecocina:ingredients:<id>`) y mismo formato, un objeto { [índice]: boolean }.
  * Así las casillas que un lector ya marcó siguen marcadas.
  */
-export default function RecipeIngredients({ recipeId, lang, ingredients }: {
+export default function RecipeIngredients({ recipeId, lang, ingredients: originalIngredients }: {
   recipeId: string;
   lang: MdLanguage;
   ingredients: MdIngredient[];
 }) {
+  const ingredients = useRecipeWorkspace()?.ingredients ?? originalIngredients;
   const [checked, setChecked] = useState<Record<number, boolean>>({});
   const storageKey = `manualdecocina:ingredients:${recipeId}`;
   const t = getMdCopy(lang);
 
   useEffect(() => {
-    try {
+    function restore() { try {
       const raw = localStorage.getItem(storageKey);
       const value: unknown = raw ? JSON.parse(raw) : {};
       const saved = value && typeof value === 'object' && !Array.isArray(value)
@@ -36,18 +39,23 @@ export default function RecipeIngredients({ recipeId, lang, ingredients }: {
       );
 
       const merged = { ...saved };
-      ingredients.forEach((item, index) => {
-        if ((item.pantryIngredientSlug ?? item.canonicalIngredientSlug) && pantrySlugs.has((item.pantryIngredientSlug ?? item.canonicalIngredientSlug)!)) {
-          merged[item.storagePosition ?? index] = true;
-        }
+      originalIngredients.forEach((item, index) => {
+        const slug = item.pantryIngredientSlug ?? item.canonicalIngredientSlug;
+        if (slug) merged[item.storagePosition ?? index] = pantrySlugs.has(slug);
       });
       setChecked(merged);
       localStorage.setItem(storageKey, JSON.stringify(merged));
     } catch { /* Las casillas siguen funcionando sin almacenamiento persistente. */ }
-  }, [storageKey, ingredients]);
+    }
+    restore();
+    window.addEventListener(PANTRY_EVENT, restore);
+    window.addEventListener('storage', restore);
+    return () => { window.removeEventListener(PANTRY_EVENT, restore); window.removeEventListener('storage', restore); };
+  }, [storageKey, originalIngredients]);
 
   function toggle(index: number) {
-    setChecked((previous) => {
+    const previous = checked;
+    {
       const storagePosition = ingredients[index]?.storagePosition ?? index;
       const nextValue = !previous[storagePosition];
       const next = { ...previous, [storagePosition]: nextValue };
@@ -68,15 +76,17 @@ export default function RecipeIngredients({ recipeId, lang, ingredients }: {
           if (nextValue) pantrySlugs.add(slug);
           else pantrySlugs.delete(slug);
           localStorage.setItem('manualdecocina:pantry:selectedSlugs', JSON.stringify(Array.from(pantrySlugs)));
+          window.dispatchEvent(new Event(PANTRY_EVENT));
         }
       } catch { /* Sin persistencia: la casilla actual sigue funcionando. */ }
-      return next;
-    });
+      setChecked(next);
+    }
   }
 
   return (
     <section className="md-recipe-section" id="md-ingredientes" aria-labelledby="md-ingredients-heading">
       <h2 className="md-title" id="md-ingredients-heading">{t.ingredients}</h2>
+      <ServingsSelector lang={lang} />
       <ul className="md-ingredient-checks">
         {ingredients.map((item, index) => {
           const amount = ingredientDisplayPrefix(item, lang);
