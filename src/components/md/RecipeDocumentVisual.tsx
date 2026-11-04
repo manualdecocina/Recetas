@@ -95,15 +95,15 @@ export default function RecipeDocumentVisual({ recipe, relatedRecipes = [], note
                 {collections.map((c, i) => <span key={c.href}>{i > 0 && ' · '}<Link href={c.href}>{c.title}</Link></span>)}
               </p>
             )}
-            {facts.length > 0 && <dl className="md-recipe-facts">{facts.map((fact) => (
-              <div className="md-recipe-fact" key={fact.label}><dt>{fact.label}</dt><dd>{fact.value}</dd></div>
-            ))}</dl>}
             {(recipe.ingredients.length > 0 || recipe.steps.length > 0) && (
               <div className="md-article-toc md-recipe-jumps">
                 {recipe.ingredients.length > 0 && <a className="md-button-quiet" href="#md-ingredientes">{t.ingredients} <span aria-hidden="true">↓</span></a>}
                 {recipe.steps.length > 0 && <a className="md-button-quiet" href="#md-preparacion">{t.preparation} <span aria-hidden="true">↓</span></a>}
               </div>
             )}
+            {facts.length > 0 && <dl className="md-recipe-facts">{facts.map((fact) => (
+              <div className="md-recipe-fact" key={fact.label}><dt>{fact.label}</dt><dd>{fact.value}</dd></div>
+            ))}</dl>}
             {ratingsEnabled && <RatingWidget recipeId={recipe.id} lang={lang} ratingCount={recipe.rating_count ?? 0} ratingSum={recipe.rating_sum ?? 0} />}
             <div className="md-article-actions">
               <RecipeCookingMode lang={lang} steps={recipe.steps} />
