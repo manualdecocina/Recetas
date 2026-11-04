@@ -713,8 +713,21 @@ a.md-lang-item:hover { background: var(--md-sand); }
 .md-step-timer input { width: 5.5rem; min-height: 44px; padding: 8px; border: 1px solid var(--md-stone); border-radius: 6px; background: var(--md-paper); color: var(--md-ink); font: inherit; }
 .md-kitchen-hint { display: block; font-size: .9rem !important; line-height: 1.5 !important; color: var(--md-muted); margin: 12px 0; }
 .md-kitchen-status { font-size: .9rem; margin: 8px 0; }
-.md-shopping-add { margin: 18px 0; }
-.md-shopping-add .md-button-secondary, .md-shopping-add .md-button-quiet { font-size: .9rem; white-space: normal; text-align: left; }
+.md-shopping-add { margin: 24px 0 30px; }
+.md-shopping-add-heading { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px; }
+.md-shopping-add-heading > svg { flex-shrink: 0; margin-top: 2px; color: var(--md-olive-dark); }
+.md-shopping-add-heading strong { display: block; font-size: 1rem; line-height: 1.4; }
+.md-shopping-add-heading p { margin: 5px 0 0; font-size: .85rem; line-height: 1.5; color: var(--md-muted); }
+.md-shopping-add-actions { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; }
+.md-shopping-add-actions > button { width: 100%; min-width: 0; white-space: normal; text-align: center; font-size: .9rem; padding: 12px 16px; }
+.md-shopping-add-primary { min-height: 50px; box-shadow: 0 2px 0 color-mix(in srgb, var(--md-btn-bg) 65%, #000); }
+.md-shopping-add-primary svg { flex-shrink: 0; }
+.md-shopping-add-primary:active { transform: translateY(2px); box-shadow: none; }
+.md-shopping-add-all { min-height: 44px; border: 1px solid var(--md-input-border); background: transparent; }
+.md-shopping-add-view { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 44px; margin-top: 14px; padding: 12px 2px; border-top: 1px solid var(--md-line); font-size: .88rem; font-weight: 700; color: var(--md-olive-dark); text-decoration: none; }
+.md-shopping-add-view > svg { flex-shrink: 0; }
+.md-shopping-add-view:hover > span { text-decoration: underline; text-underline-offset: 3px; }
+.md-shopping-add .md-kitchen-status:not(:empty) { margin: 14px 0 0; padding: 10px 12px; border-inline-start: 3px solid var(--md-olive); background: var(--md-white); border-radius: 0 8px 8px 0; }
 .md-shopping-link { display: inline-flex; flex: 0 0 auto; justify-content: center; align-items: center; width: 40px; min-height: 44px; color: var(--md-ink); }
 .md-shopping-list { max-width: 850px; }
 .md-shopping-items { list-style: none; padding: 0; margin: 24px 0; }

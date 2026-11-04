@@ -24,11 +24,20 @@ export function AddToShoppingList({ lang, source, missing }: { lang: MdLanguage;
   const saved = writeShopping(addShoppingSource(readShopping(), { ...source, ingredients: items }));
   setMessage(saved ? t.added : t.notSaved);
  }
- return <div className="md-shopping-add"><div className="md-kitchen-actions">
-  <button type="button" className="md-button-secondary" onClick={() => add(true)}>{t.addMissing}</button>
-  {!missing && <button type="button" className="md-button-quiet" onClick={() => add(false)}>{t.addAll}</button>}
-  <Link className="md-link" href={`/${lang}/lista-de-compra`} prefetch={false}>{t.shopping} →</Link>
- </div><p className="md-kitchen-status" role="status">{message}</p></div>;
+ return <div className="md-shopping-add">
+  {!missing && <div className="md-shopping-add-heading">
+   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Z" /><path d="M9 8V6a3 3 0 0 1 6 0v2" /></svg>
+   <div><strong>{t.shopping}</strong><p>{t.shoppingHelp}</p></div>
+  </div>}
+  <div className="md-shopping-add-actions">
+   <button type="button" className="md-button md-shopping-add-primary" aria-label={t.addMissing} onClick={() => add(true)}>
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg><span>{t.addMissingShort}</span>
+   </button>
+   {!missing && <button type="button" className="md-button-quiet md-shopping-add-all" aria-label={t.addAll} onClick={() => add(false)}>{t.addAllShort}</button>}
+  </div>
+  <p className="md-kitchen-status" role="status">{message}</p>
+  <Link className="md-shopping-add-view" href={`/${lang}/lista-de-compra`} prefetch={false}><span>{t.viewList}</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" /></svg></Link>
+ </div>;
 }
 export default function ShoppingList({ lang }: { lang: MdLanguage }) {
  const t = kitchenCopy(lang), [state, setState] = useState(emptyShopping), [message, setMessage] = useState(''), [fallback, setFallback] = useState(false);
