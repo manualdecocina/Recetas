@@ -10,7 +10,7 @@ const compact = text => text.replace(/\s+/gu, '');
 
 (async () => {
   fs.mkdirSync(output, { recursive: true });
-  const browser = await chromium.launch({ executablePath: process.env.CHROME_PATH || '/usr/bin/google-chrome', args: ['--no-sandbox', '--no-zygote', '--single-process'] });
+  const browser = await chromium.launch({ executablePath: process.env.CHROME_PATH || '/usr/bin/google-chrome', args: ['--no-sandbox'] });
   const context = await browser.newContext({ viewport: { width: 1366, height: 900 } });
   // This is an isolated application test. Published covers are replayed below;
   // unrelated external services must not stall the print readiness check.
