@@ -20,7 +20,7 @@ LABEL={
 
 def build(key, specs, amounts, units, prep, cook, wait, servings, profiles, sources, canonical, newfoods=None):
     """Profiles: ingredient grams + generic nutrient profile kcal/P/C/F per 100g."""
-    media=f'{BASE}/recetas/{key}'
+    media=f'https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/{key}'
     totals=[round(sum(g/100*p[j] for g,p in profiles)/servings,1) for j in range(4)]
     records=[]
     for lang in LANGS:
@@ -34,6 +34,14 @@ def build(key, specs, amounts, units, prep, cook, wait, servings, profiles, sour
             record['steps'].append(dict(title=title,content=content,image_url=f'{media}/paso-{i:02}.webp',image_alt=title+' — '+x['title']))
         record['category']=CATEGORIES[specs['es']['category']][LANGS.index(lang)]
         record['nutrition'].update(estimated=True,serving_size=x['portion'],note=labels[5],source='Generic food composition profiles; editorial estimate, not laboratory analysis',method='Sum ingredient edible weights × generic per-100-g profiles; divide by recipe servings. See source JSON nutrition_calculation.')
+        record['nutrition']['source']={
+            'es':'Cálculo editorial con perfiles genéricos de ingredientes',
+            'en':'Editorial calculation using generic ingredient profiles',
+            'de':'Redaktionelle Berechnung mit allgemeinen Zutatenprofilen',
+            'fr':'Calcul éditorial à partir de profils génériques des ingrédients',
+            'it':'Calcolo redazionale con profili generici degli ingredienti',
+            'ja':'材料の一般的な栄養成分から算出した編集部による推定',
+            'pt':'Cálculo editorial com perfis genéricos dos ingredientes'}[lang]
         record['seo']=dict(title=x['title'],description=x['excerpt'],author='Néstor Bastidas',image_alt=x['alt'],image_variants=[media+'/portada-'+a+'.webp' for a in ['1x1','4x3','16x9']],faq=[dict(q=q,a=a) for q,a in x['faq']],additional_time_minutes=wait)
         records.append(record)
     out=dict(key=key,created='2026-11-04',kind='standalone-recipe',editorial_origin='Original formulation and original generated photographs; not adapted from WordPress. Not kitchen-tested.',records=records,sources=[dict(name=n,url=u) for n,u in sources],nutrition_calculation=dict(servings=servings,ingredient_order=specs['es']['ingredients'].split('|'),grams_and_generic_profiles=profiles,profile_order=['kcal','protein_g','carbs_g','fat_g'],per_serving=totals,limitations='Generic profiles, brands and water loss vary. Optional accompaniments excluded unless explicitly included. Not a nutrient database extraction.'),canonical=canonical,newfoods=newfoods or [])

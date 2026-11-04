@@ -14,7 +14,8 @@ for n in range(1,9):
         for aspect,size in [('1x1',(1200,1200)),('4x3',(1600,1200)),('16x9',(1600,900))]:
             ImageOps.fit(im,size,method=Image.Resampling.LANCZOS).save(out/f'portada-{aspect}.webp','WEBP',quality=84,method=5)
 for p in sorted(out.glob('*.webp')):
-    manifest.append(dict(path=str(p.relative_to(ROOT)),url=f'https://manualdecocina.com/recetas/{key}/{p.name}',bytes=p.stat().st_size,sha256=hashlib.sha256(p.read_bytes()).hexdigest(),size=Image.open(p).size))
+    assert p.stat().st_size>1024,(p,'Empty image')
+    manifest.append(dict(path=str(p.relative_to(ROOT)),url=doc['records'][0]['image_url'].rsplit('/',1)[0]+'/'+p.name,bytes=p.stat().st_size,sha256=hashlib.sha256(p.read_bytes()).hexdigest(),size=Image.open(p).size))
 (D/(key+'-media.json')).write_text(json.dumps(dict(images=manifest,visual_review='Eight individual generated frames reviewed in sequence; coherent ingredients, utensils, action and final serving.'),ensure_ascii=False,indent=2)+'\n')
 payload=json.dumps(doc['records'],ensure_ascii=False);foods=json.dumps(doc['newfoods'],ensure_ascii=False)
 aliases=[dict(slug=s,alias=ing['name']) for ing,s in zip(doc['records'][0]['ingredients'],doc['canonical'])]
