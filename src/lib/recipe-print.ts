@@ -23,8 +23,17 @@ export const PRINT_ROOT_ID = 'md-recipe-print-root';
 // Covers both known placements and unrelated hidden UI inside an editorial block.
 const OMIT = 'script,style,iframe,ins,button,input,select,textarea,svg,video,[hidden],[aria-hidden="true"],.md-sr-only,.md-lightbox,.md-ad-slot,.google-auto-placed,.adsbygoogle-noablate,[data-ad-client],[data-ad-slot],[data-google-query-id],[id^="google_ads_iframe"],[id^="aswift_"],[role="dialog"]';
 
+function omitted(element: Element): boolean {
+  // A consent dialog can mark the whole site aria-hidden. That must not hide
+  // the requested recipe; only omit controls/ads inside the recipe boundary.
+  for (let node: Element | null = element; node && !node.matches('.md-article'); node = node.parentElement) {
+    if (node.matches(OMIT)) return true;
+  }
+  return false;
+}
+
 function text(element: Element | null): string {
-  if (!element || element.closest(OMIT)) return '';
+  if (!element || omitted(element)) return '';
   const copy = element.cloneNode(true) as Element;
   copy.querySelectorAll(OMIT).forEach(node => node.remove());
   return (copy.textContent ?? '').replace(/\s+/g, ' ').trim();
@@ -42,7 +51,7 @@ function readNotes(container: Element | null): PrintableRecipe['notes'] {
     if (node.nodeType === 3) { pending += node.textContent ?? ''; return; }
     if (node.nodeType !== 1) return;
     const element = node as Element;
-    if (element.closest(OMIT)) return;
+    if (omitted(element)) return;
     if (element.tagName === 'BR') { flush(); return; }
     if (/^(H[2-6]|P|LI|BLOCKQUOTE|PRE|SUMMARY|TR)$/.test(element.tagName)) {
       flush();

@@ -13,6 +13,13 @@ const compact = text => text.replace(/\s+/gu, '');
   const browser = await chromium.launch({ executablePath: process.env.CHROME_PATH || '/usr/bin/google-chrome', args: ['--no-sandbox'] });
   const context = await browser.newContext({ viewport: { width: 1366, height: 900 } });
   await context.route(/googlesyndication|doubleclick|fundingchoices|googletagmanager/, route => route.abort());
+  // Production media is not stored in Git. Use the exact published cover bytes
+  // prepared for this isolated build, without depending on the image optimizer.
+  const assets = new Map(JSON.parse(fs.readFileSync(`${output}/assets.json`, 'utf8')).map(asset => [asset.source, asset]));
+  await context.route('**/_next/image?**', route => {
+    const asset = assets.get(new URL(route.request().url()).searchParams.get('url'));
+    return asset ? route.fulfill({ path: asset.file, contentType: asset.mime }) : route.continue();
+  });
   const page = await context.newPage();
   const report = [];
   try {
@@ -22,7 +29,7 @@ const compact = text => text.replace(/\s+/gu, '');
         lang: link.hreflang, path: new URL(link.href).pathname,
       })));
     assert.equal(languages.length, 7, 'all seven translations are covered');
-    const cases = [...languages, { lang: 'es-guacamole', path: '/receta-guacamole/' }, { lang: 'es-tamal', path: '/tamal-tolimense' }];
+    const cases = [...languages, { lang: 'es-guacamole', path: '/receta-guacamole/' }, { lang: 'es-tamal', path: '/es/receta/tamal-tolimense' }];
     for (const entry of cases) {
       await page.goto(`${base}${entry.path}`, { waitUntil: 'networkidle' });
       const title = await page.locator('.md-recipe-hero h1').innerText();
@@ -32,6 +39,7 @@ const compact = text => text.replace(/\s+/gu, '');
       assert(ingredients.length && steps.length, 'real recipe content is present');
       await page.evaluate(() => {
         document.documentElement.dataset.theme = 'dark';
+        document.querySelector('.md-site').setAttribute('aria-hidden', 'true');
         const add = (parent, className, value) => {
           const node = document.createElement('div');
           node.className = className;
@@ -46,6 +54,7 @@ const compact = text => text.replace(/\s+/gu, '');
       });
       await page.locator('.md-article-actions button[aria-busy]').click();
       await page.locator('#md-recipe-print-root').waitFor({ state: 'attached' });
+      assert.equal(await page.locator('#md-recipe-print-root .md-print-cover').count(), 1, 'the recipe cover is retained');
       const sheet = await page.locator('#md-recipe-print-root').textContent();
       for (const phrase of [title, ...ingredients, ...steps, ...notes]) assert(compact(sheet).includes(compact(phrase)), `print retains: ${phrase}`);
       assert(!sheet.includes('FORBIDDEN_'));
