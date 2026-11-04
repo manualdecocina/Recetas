@@ -11,13 +11,13 @@ const COPY = {
 } satisfies Record<RecipeLanguage, string[]>
 
 const SEARCH = {
-  es: ['Buscar ingredientes', 'Escribe un ingrediente y elígelo en las sugerencias. Los seleccionados aparecen debajo.', 'Ingredientes que tienes', 'Quitar ingrediente', 'sugerencias'],
-  en: ['Search ingredients', 'Type an ingredient and choose a suggestion. Your selected ingredients appear below.', 'Ingredients you have', 'Remove ingredient', 'suggestions'],
-  de: ['Zutaten suchen', 'Gib eine Zutat ein und wähle einen Vorschlag. Ausgewählte Zutaten erscheinen darunter.', 'Deine Zutaten', 'Zutat entfernen', 'Vorschläge'],
-  fr: ['Rechercher des ingrédients', 'Saisissez un ingrédient et choisissez une suggestion. Votre sélection apparaît dessous.', 'Vos ingrédients', 'Retirer l’ingrédient', 'suggestions'],
-  it: ['Cerca ingredienti', 'Scrivi un ingrediente e scegli un suggerimento. Gli ingredienti selezionati appaiono sotto.', 'I tuoi ingredienti', 'Rimuovi ingrediente', 'suggerimenti'],
-  ja: ['材料を検索', '材料名を入力して候補から選んでください。選んだ材料は下に表示されます。', '持っている材料', '材料を削除', '件の候補'],
-  pt: ['Buscar ingredientes', 'Digite um ingrediente e escolha uma sugestão. Os selecionados aparecem abaixo.', 'Ingredientes que você tem', 'Remover ingrediente', 'sugestões'],
+  es: ['Buscar ingredientes', 'Escribe un ingrediente y elígelo en las sugerencias. Los seleccionados aparecen debajo.', 'Ingredientes que tienes', 'Quitar ingrediente', 'sugerencia', 'sugerencias'],
+  en: ['Search ingredients', 'Type an ingredient and choose a suggestion. Your selected ingredients appear below.', 'Ingredients you have', 'Remove ingredient', 'suggestion', 'suggestions'],
+  de: ['Zutaten suchen', 'Gib eine Zutat ein und wähle einen Vorschlag. Ausgewählte Zutaten erscheinen darunter.', 'Deine Zutaten', 'Zutat entfernen', 'Vorschlag', 'Vorschläge'],
+  fr: ['Rechercher des ingrédients', 'Saisissez un ingrédient et choisissez une suggestion. Votre sélection apparaît dessous.', 'Vos ingrédients', 'Retirer l’ingrédient', 'suggestion', 'suggestions'],
+  it: ['Cerca ingredienti', 'Scrivi un ingrediente e scegli un suggerimento. Gli ingredienti selezionati appaiono sotto.', 'I tuoi ingredienti', 'Rimuovi ingrediente', 'suggerimento', 'suggerimenti'],
+  ja: ['材料を検索', '材料名を入力して候補から選んでください。選んだ材料は下に表示されます。', '持っている材料', '材料を削除', '件の候補', '件の候補'],
+  pt: ['Buscar ingredientes', 'Digite um ingrediente e escolha uma sugestão. Os selecionados aparecem abaixo.', 'Ingredientes que você tem', 'Remover ingrediente', 'sugestão', 'sugestões'],
 } satisfies Record<RecipeLanguage, string[]>
 
 const RESULTS = {
@@ -32,10 +32,10 @@ const RESULTS = {
 
 export function getPantryCopy(lang: RecipeLanguage) {
   const [how, step1, step2, step3, start, view, update, checklist, selectedOne, selectedMany, pendingOne, pendingMany] = COPY[lang]
-  const [search, searchHelp, selectedHeading, remove, suggestionNoun] = SEARCH[lang]
+  const [search, searchHelp, selectedHeading, remove, suggestionOne, suggestionMany] = SEARCH[lang]
   const [ready, missing, noComplete] = RESULTS[lang]
   return { ready, missing, noComplete, how, step1: searchHelp, step2, step3, start, view, update, checklist, search, searchHelp, selectedHeading, remove,
-    suggestions: (n: number) => `${n} ${suggestionNoun}`,
+    suggestions: (n: number) => String(n) + (lang === 'ja' ? '' : ' ') + (n === 1 ? suggestionOne : suggestionMany),
     selected: (n: number) => `${n}${lang === 'ja' ? '' : ' '}${n === 1 ? selectedOne : selectedMany}`,
     pending: (n: number) => `${n} · ${n === 1 ? pendingOne : pendingMany}` }
 }
