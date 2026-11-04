@@ -8,7 +8,7 @@ export const PANTRY_KEY = 'manualdecocina:pantry:selectedSlugs'
 export const PANTRY_EVENT = 'manualdecocina:pantry-change'
 export type ShoppingSource = { id: string; recipeId?: string; title: string; href: string; lang: MdLanguage; ingredients: MdIngredient[] }
 export type ShoppingState = { sources: ShoppingSource[]; checked: string[] }
-export type ShoppingRow = { key: string; name: string; amount: string; unit?: string; text: string; quantity: string; slugs: string[] }
+export type ShoppingRow = { key: string; name: string; amount: string; unit?: string; text: string; quantity: string; legacyKey?: string; slugs: string[] }
 export const emptyShopping = (): ShoppingState => ({ sources: [], checked: [] })
 let memory: ShoppingState = emptyShopping()
 let memoryOnly = false
@@ -19,7 +19,13 @@ export function readShopping(): ShoppingState {
   if (!raw) return memory = emptyShopping()
   const data = JSON.parse(raw)
   if (!Array.isArray(data?.sources) || !Array.isArray(data?.checked)) return memory = emptyShopping()
-  return memory = { sources: data.sources.filter((s: ShoppingSource) => s && typeof s.id === 'string' && typeof s.title === 'string' && typeof s.href === 'string' && /^\/(?!\/)/.test(s.href) && ['es','en','de','fr','it','ja','pt'].includes(s.lang) && Array.isArray(s.ingredients)).map((s: ShoppingSource) => ({ ...s, ingredients: s.ingredients.filter(i => i && typeof i.name === 'string' && typeof i.amount === 'string') })), checked: data.checked.filter((s: unknown) => typeof s === 'string') }
+  const state: ShoppingState = { sources: data.sources.filter((s: ShoppingSource) => s && typeof s.id === 'string' && typeof s.title === 'string' && typeof s.href === 'string' && /^\/(?!\/)/.test(s.href) && ['es','en','de','fr','it','ja','pt'].includes(s.lang) && Array.isArray(s.ingredients)).map((s: ShoppingSource) => ({ ...s, ingredients: s.ingredients.filter(i => i && typeof i.name === 'string' && typeof i.amount === 'string') })), checked: data.checked.filter((s: unknown) => typeof s === 'string') }
+  // Keep purchased marks when correcting the old keys of nonnumeric measures.
+  const replacements = new Map<string, string[]>()
+  for (const row of shoppingRows(state, state.sources[0]?.lang ?? 'es')) {
+   if (row.legacyKey) replacements.set(row.legacyKey, [...(replacements.get(row.legacyKey) ?? []), row.key])
+  }
+  return memory = { ...state, checked: [...new Set(state.checked.flatMap(key => replacements.get(key) ?? [key]))] }
  } catch { return memory }
 }
 export function writeShopping(state: ShoppingState): boolean {
@@ -54,19 +60,23 @@ function unitIdentity(raw: string, lang: MdLanguage): { key: string; factor: num
 }
 export function shoppingRows(state: ShoppingState, lang: MdLanguage): ShoppingRow[] {
  const rows = new Map<string, ShoppingRow & { value: number | null }>()
- for (const source of state.sources) for (const item of source.ingredients) {
+ for (const source of state.sources) for (const [position, item] of source.ingredients.entries()) {
   const slug = item.pantryIngredientSlug ?? item.canonicalIngredientSlug
   const identity = slug || `${source.lang}:${fold(item.name)}`
   const unit = unitIdentity(item.unit ?? '', source.lang)
   const quantity = parseQuantity(String(item.amount ?? ''))
   // Free text/ranges are not summed into invented numeric amounts.
-  const key = JSON.stringify([identity, unit.key, quantity === null ? String(item.amount ?? '') : 'numeric'])
+  const raw = String(item.amount ?? '')
+  const bounds = raw.split(/\s*[–—\-〜～~]\s*/)
+  const range = quantity === null && bounds.length === 2 && bounds.every(part => parseQuantity(part) !== null)
+  const legacyKey = JSON.stringify([identity, unit.key, quantity === null ? raw : 'numeric'])
+  const key = JSON.stringify([identity, quantity === null && unit.factor !== 1 ? `${unit.key}:${unit.factor}` : unit.key, quantity === null ? raw : 'numeric', ...(range ? [source.id, item.storagePosition ?? position] : [])])
   const previous = rows.get(key)
   const value = quantity === null ? null : quantity * unit.factor
   if (previous) {
    if (previous.value !== null && value !== null) previous.value += value
    if (slug && !previous.slugs.includes(slug)) previous.slugs.push(slug)
-  } else rows.set(key, { key, name: pantryFoodName(item.name, source.lang), amount: String(item.amount ?? ''), unit: unit.unit, text: '', quantity: '', slugs: slug ? [slug] : [], value })
+  } else rows.set(key, { key, name: pantryFoodName(item.name, source.lang), amount: String(item.amount ?? ''), unit: quantity === null ? (item.unit ?? '') : unit.unit, text: '', quantity: '', ...(legacyKey !== key ? { legacyKey } : {}), slugs: slug ? [slug] : [], value })
  }
  return [...rows.values()].map(({ value, ...row }) => {
   const amount = value === null ? row.amount : formatQuantity(value, lang)
