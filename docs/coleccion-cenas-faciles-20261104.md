@@ -32,4 +32,6 @@ Photorealistic editorial cover for quick easy weeknight dinners. Warm Colombian 
 
 ## Validación
 
-TypeScript, suite de lógica (incluidas colecciones y sitemap) y pruebas de componentes de consentimiento e idiomas. La prueba de sitemap dejó de asumir una sola colección: verifica todas las rutas declaradas una vez por idioma. La comprobación HTTP de producción se conserva en `editorial/cenas-faciles-20261104-live-qa.json` cuando está disponible.
+TypeScript, suite de lógica (incluidas colecciones y sitemap), pruebas de componentes de consentimiento e idiomas y compilación completa: correctas. CI `quality` de GitHub también terminó correctamente. La prueba de sitemap dejó de asumir una sola colección: verifica todas las rutas declaradas una vez por idioma.
+
+La comprobación HTTP de producción está en `editorial/cenas-faciles-20261104-live-qa.json`: 27 comprobaciones correctas, sin errores. Cubre las siete páginas de la colección (20 recetas, tres secciones, cinco preguntas, canonical de producción, ocho hreflang e ItemList de 20 entradas), los siete índices, las siete portadas de inicio, sitemap, cuatro imágenes WebP y un enlace de vuelta desde una receta. Revisión visual: se conserva únicamente el menú de secciones que ya tenía la plantilla, evitando duplicarlo.

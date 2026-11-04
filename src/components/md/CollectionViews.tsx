@@ -95,11 +95,6 @@ export function CollectionDetailView({ lang, collection, sections }: {
           <p className="md-eyebrow">{t.navCollections}</p>
           <h1 className="md-display">{text.title}</h1>
           {text.intro.map((paragraph) => <p className="md-page-intro md-lead" key={paragraph}>{paragraph}</p>)}
-          <nav className="md-collection-jumps" aria-label={text.title}>
-            {text.sections.map((section, index) => sections[index]?.length > 0 && (
-              <a className="md-link" href={`#md-collection-section-${index}`} key={section.heading}>{section.heading}</a>
-            ))}
-          </nav>
           <p className="md-collection-curator">
             <Link className="md-link" href={`/${lang}/quienes-somos`}>{t.collectionCuratedBy}</Link>
           </p>
