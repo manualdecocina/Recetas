@@ -16,6 +16,7 @@ class CoverParser(HTMLParser):
         super().__init__()
         self.hero = False
         self.source = None
+        self.variants = []
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
@@ -23,6 +24,7 @@ class CoverParser(HTMLParser):
             self.hero = True
         if tag == "img" and self.hero:
             self.source = attrs.get("src")
+            self.variants = [candidate.strip().rsplit(" ", 1) for candidate in attrs.get("srcset", "").split(",") if candidate.strip()]
 
     def handle_endtag(self, tag):
         if tag == "figure":
@@ -41,10 +43,14 @@ for path in ["/tiramisu", "/receta-guacamole/", "/es/receta/tamal-tolimense"]:
     if not parser.source:
         raise ValueError(f"No published cover in {url}")
     source = parse_qs(urlparse(parser.source).query).get("url", [parser.source])[0]
+    variants = [(candidate, int(width[:-1])) for candidate, width in parser.variants if width.endswith("w") and width[:-1].isdigit()]
+    # At 46 mm on paper, a 640px web variant supplies over 300dpi. Fetch the
+    # declared display variant instead of embedding a multi-megapixel original.
+    display = min((item for item in variants if item[1] >= 640), key=lambda item: item[1], default=(parser.source, 0))[0]
     if not source.startswith("/recetas/") and urlparse(source).scheme != "https":
         raise ValueError(f"Expected a public recipe image, got {source}")
     target = output / "assets" / (hashlib.sha256(source.encode()).hexdigest()[:16] + ".webp")
-    with urlopen(Request(urljoin(url, source), headers={"User-Agent": "Mozilla/5.0"}), timeout=30) as response:
+    with urlopen(Request(urljoin(url, display), headers={"User-Agent": "Mozilla/5.0"}), timeout=30) as response:
         if not response.headers.get("Content-Type", "").startswith("image/"):
             raise ValueError("Cover response is not an image")
         mime = response.headers["Content-Type"].split(";")[0]

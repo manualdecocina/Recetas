@@ -62,7 +62,10 @@ const compact = text => text.replace(/\s+/gu, '');
       const pdfPath = `${output}/${entry.lang}.pdf`;
       await page.pdf({ path: pdfPath, printBackground: true, preferCSSPageSize: true, displayHeaderFooter: false });
       const pdfText = execFileSync('pdftotext', ['-layout', pdfPath, '-'], { encoding: 'utf8' });
-      for (const phrase of [title, ...ingredients, ...steps, ...notes]) assert(compact(pdfText).includes(compact(phrase)), `PDF retains: ${phrase}`);
+      // A paragraph can continue after a page counter. Remove only that trailing
+      // margin counter before comparing the complete editorial text.
+      const contentText = pdfText.split('\f').map(value => value.replace(/\n[ \t]*\d+[ \t]*\s*$/u, '')).join('\n');
+      for (const phrase of [title, ...ingredients, ...steps, ...notes]) assert(compact(contentText).includes(compact(phrase)), `PDF retains: ${phrase}`);
       for (const forbidden of ['FORBIDDEN_', 'Pinterest', 'CONSENTIMIENTO_FLOTANTE', 'PUBLICIDAD_CABECERA']) assert(!pdfText.includes(forbidden), `${forbidden} is not printed`);
       const pages = pdfText.split('\f').filter(value => value.trim());
       assert(pages.every(value => value.trim().length > 100), 'no empty or page-number-only pages');
