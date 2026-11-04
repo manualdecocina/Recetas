@@ -1,14 +1,14 @@
 import type { MdIngredient, MdLanguage } from '@/components/md/md-types'
 import { parseQuantity, formatQuantity } from '@/lib/recipe-quantities'
 import { pantryFoodName } from '@/lib/pantry-foods'
-import { ingredientDisplayText, recipeCountUnitIdentity } from '@/lib/recipe-ingredient-format'
+import { ingredientDisplayText, ingredientDisplayPrefix, recipeCountUnitIdentity } from '@/lib/recipe-ingredient-format'
 export const SHOPPING_KEY = 'manualdecocina:shopping:v1'
 export const SHOPPING_EVENT = 'manualdecocina:shopping-change'
 export const PANTRY_KEY = 'manualdecocina:pantry:selectedSlugs'
 export const PANTRY_EVENT = 'manualdecocina:pantry-change'
 export type ShoppingSource = { id: string; recipeId?: string; title: string; href: string; lang: MdLanguage; ingredients: MdIngredient[] }
 export type ShoppingState = { sources: ShoppingSource[]; checked: string[] }
-export type ShoppingRow = { key: string; name: string; amount: string; unit?: string; text: string; slugs: string[] }
+export type ShoppingRow = { key: string; name: string; amount: string; unit?: string; text: string; quantity: string; slugs: string[] }
 export const emptyShopping = (): ShoppingState => ({ sources: [], checked: [] })
 let memory: ShoppingState = emptyShopping()
 let memoryOnly = false
@@ -66,11 +66,16 @@ export function shoppingRows(state: ShoppingState, lang: MdLanguage): ShoppingRo
   if (previous) {
    if (previous.value !== null && value !== null) previous.value += value
    if (slug && !previous.slugs.includes(slug)) previous.slugs.push(slug)
-  } else rows.set(key, { key, name: pantryFoodName(item.name, source.lang), amount: String(item.amount ?? ''), unit: unit.unit, text: '', slugs: slug ? [slug] : [], value })
+  } else rows.set(key, { key, name: pantryFoodName(item.name, source.lang), amount: String(item.amount ?? ''), unit: unit.unit, text: '', quantity: '', slugs: slug ? [slug] : [], value })
  }
  return [...rows.values()].map(({ value, ...row }) => {
   const amount = value === null ? row.amount : formatQuantity(value, lang)
-  return { ...row, amount, text: ingredientDisplayText({ ...row, amount }, lang) }
+  // Convert only the displayed SI measure; stable keys and base quantities keep
+  // purchased checkmarks and aggregation intact across recipes and reloads.
+  const largeUnit = value !== null && value >= 1000 && (row.unit === 'g' || row.unit === 'ml')
+  const display = { ...row, amount: largeUnit ? formatQuantity(value / 1000, lang) : amount, unit: largeUnit ? (row.unit === 'g' ? 'kg' : 'L') : row.unit }
+  const quantity = ingredientDisplayPrefix(display, lang), text = ingredientDisplayText(display, lang)
+  return { ...row, name: text.slice(quantity.length).trim(), amount, quantity, text }
  })
 }
 export function readPantrySlugs(): Set<string> {

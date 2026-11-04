@@ -105,11 +105,10 @@ export default function RecipeDocumentVisual({ recipe, relatedRecipes = [], note
               </div>
             )}
             {facts.length > 0 && <dl className="md-recipe-facts">{facts.map((fact) => (
-              <div className="md-recipe-fact" key={fact.label}><dt>{fact.label}</dt><dd>{fact.label === t.servings && recipe.servings ? <ServingsValue initial={recipe.servings} /> : fact.value}</dd></div>
+              <div className={`md-recipe-fact${fact.label === t.totalTime ? ' md-recipe-fact-total' : ''}`} key={fact.label}><dt>{fact.label}</dt><dd>{fact.label === t.servings && recipe.servings ? <ServingsValue initial={recipe.servings} /> : fact.value}</dd></div>
             ))}</dl>}
             {ratingsEnabled && <RatingWidget recipeId={recipe.id} lang={lang} ratingCount={recipe.rating_count ?? 0} ratingSum={recipe.rating_sum ?? 0} />}
             <div className="md-article-actions">
-              <RecipeCookingMode recipeId={recipe.id} lang={lang} steps={recipe.steps} />
               <FavoriteButton recipeId={recipe.id} lang={lang} />
               <SharePrintActions lang={lang} title={recipe.title} />
               <PinterestSaveButton
@@ -145,6 +144,7 @@ export default function RecipeDocumentVisual({ recipe, relatedRecipes = [], note
             {recipe.steps.length > 0 && (
               <section className="md-recipe-section" id="md-preparacion" aria-labelledby="md-preparation-heading">
                 <h2 className="md-title" id="md-preparation-heading">{t.preparation}</h2>
+                <RecipeCookingMode recipeId={recipe.id} lang={lang} steps={recipe.steps} />
                 <RecipeSteps recipeId={recipe.id} lang={lang} steps={recipe.steps} />
                 {hasStepPhotos && <p className="md-step-photos-note">{t.stepPhotosNote}</p>}
               </section>

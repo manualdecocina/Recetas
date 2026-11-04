@@ -49,19 +49,19 @@ export default function ShoppingList({ lang }: { lang: MdLanguage }) {
   await copy();
  }
  return <section className="md-section md-shopping-list" aria-label={t.shopping}>
-  <p>{t.local}</p>
+  <p className="md-shopping-intro">{t.local}</p>
   {!rows.length ? <p className="md-empty-block">{t.empty}</p> : <>
    <ul className="md-shopping-items">{rows.map(row => <li key={row.key}>
     <label className="md-ingredient-checkbox"><input type="checkbox" checked={state.checked.includes(row.key)} aria-label={`${t.bought}: ${row.text}`} onChange={() => {
      const latest = readShopping(), bought = !latest.checked.includes(row.key);
      save({ ...latest, checked: bought ? [...latest.checked, row.key] : latest.checked.filter(key => key !== row.key) }); markBought(row.slugs, bought);
-    }} /><span>{row.text}</span></label>
+    }} /><span className="md-shopping-item-text"><strong>{row.quantity}</strong>{' '}{row.name}</span></label>
    </li>)}</ul>
-   <div className="md-kitchen-actions"><button type="button" className="md-button" onClick={copy}>{t.copy}</button><button type="button" className="md-button-secondary" onClick={share}>{t.share}</button></div>
-   <h2 className="md-subtitle">{t.sources}</h2><ul className="md-shopping-sources">{state.sources.map(source => <li key={source.id}><Link href={source.href}>{source.title}</Link><button type="button" className="md-button-quiet" aria-label={`${t.remove}: ${source.title}`} onClick={() => { const latest = readShopping(); save({ ...latest, sources: latest.sources.filter(s => s.id !== source.id) }); }}>{t.remove}</button></li>)}</ul>
-   <button type="button" className="md-button-quiet" onClick={() => save(emptyShopping())}>{t.clear}</button>
+   <div className="md-kitchen-actions md-shopping-actions"><button type="button" className="md-button" onClick={copy}>{t.copy}</button><button type="button" className="md-button-secondary" onClick={share}>{t.share}</button></div>
+   <div className="md-shopping-recipes"><h2 className="md-subtitle">{t.sources}</h2><ul className="md-shopping-sources">{state.sources.map(source => <li key={source.id}><Link href={source.href}>{source.title}</Link><button type="button" className="md-button-quiet" aria-label={`${t.remove}: ${source.title}`} onClick={() => { const latest = readShopping(); save({ ...latest, sources: latest.sources.filter(s => s.id !== source.id) }); }}>{t.remove}</button></li>)}</ul>
+   </div><div className="md-shopping-footer"><button type="button" className="md-shopping-clear" onClick={() => save(emptyShopping())}>{t.clear}</button></div>
   </>}
-  <p role="status">{message}</p>
+  <p className="md-kitchen-status" role="status">{message}</p>
   {fallback && <textarea className="md-copy-fallback" aria-label={t.copy} value={text} readOnly onFocus={e => e.currentTarget.select()} />}
   <p><Link className="md-link" href={`/${lang}/que-puedo-cocinar`} prefetch={false}>{t.pantry} →</Link></p>
  </section>;

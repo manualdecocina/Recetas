@@ -54,3 +54,18 @@ console.log('OK kitchen tools: fractions, ranges, partial step quantities, uncha
 const spoons = shoppingRows({sources:[{id:'a',title:'a',href:'/a',lang:'es',ingredients:[{name:'Azúcar',amount:'1',unit:'cucharada',pantryIngredientSlug:'azucar'},{name:'Azúcar',amount:'2',unit:'cucharadas',pantryIngredientSlug:'azucar'}]}],checked:[]},'es')
 assert.equal(spoons.length,1)
 assert.equal(spoons[0].text,'3 cucharadas de Azúcar')
+
+// Display SI quantities compactly without changing totals or purchased keys.
+const beer = { sources: [{ id: 'beer', title: 'Beer', href: '/beer', lang: 'es' as MdLanguage, ingredients: [
+ { name: 'Agua', amount: '14000', unit: 'ml' }, { name: 'Malta', amount: '1200', unit: 'g' },
+ { name: 'Lúpulo', amount: '20', unit: 'g' }, { name: 'Azúcar', amount: 'al gusto', unit: '' },
+]}], checked: [] }
+const beerRows = shoppingRows(beer, 'es')
+assert.equal(beerRows[0].text, '14 L Agua')
+assert.equal(beerRows[1].text, '1,2 kg Malta')
+assert.equal(beerRows[2].text, '20 g Lúpulo')
+assert.equal(beerRows[3].text, 'al gusto Azúcar')
+assert.equal(beerRows[0].amount, '14000')
+assert.equal(beerRows[0].quantity, '14 L')
+assert.equal(shoppingRows(beer, 'en')[1].quantity, '1.2 kg')
+assert.equal(shoppingRows({ ...beer, checked: [beerRows[0].key] }, 'es')[0].key, beerRows[0].key)

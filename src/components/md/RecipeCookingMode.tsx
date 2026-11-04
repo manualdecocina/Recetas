@@ -47,7 +47,14 @@ export default function RecipeCookingMode({ recipeId, lang, steps: originalSteps
  if (!steps.length) return null;
  const current = steps[Math.min(index, steps.length - 1)];
  return <>
-  <button ref={startRef} className="md-button" type="button" onClick={() => setOpen(true)}>{t.cookingMode}</button>
+  <div className="md-cooking-entry">
+   <button ref={startRef} className="md-button md-cooking-start" type="button" aria-haspopup="dialog" aria-expanded={open} aria-describedby="md-cooking-help" onClick={() => setOpen(true)}>
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 4.5v15l12-7.5z" /></svg>
+    {ui.startCooking}
+    <span aria-hidden="true">→</span>
+   </button>
+   <p id="md-cooking-help">{ui.cookingHelp}</p>
+  </div>
   {open && <div ref={overlayRef} className="md-cooking-overlay" role="dialog" aria-modal="true" aria-labelledby="md-cooking-heading">
    <header className="md-cooking-header"><strong>{t.cookingMode}</strong><button ref={closeRef} className="md-button-quiet" type="button" onClick={() => setOpen(false)}>{t.closeCooking}</button></header>
    <div className="md-cooking-main">
