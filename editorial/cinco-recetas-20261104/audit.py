@@ -33,6 +33,9 @@ def page(pair):
     recipes=[x for schema in schemas for x in objects(schema) if x.get('@type')=='Recipe'];assert len(recipes)==1
     r=recipes[0];assert r['name']==record['title']
     assert len(r['recipeInstructions'])==8 and len(r['recipeIngredient'])==len(record['ingredients'])
+    assert [s['text'] for s in r['recipeInstructions']]==[s['content'] for s in record['steps']],(record['public_path'],'step content differs from editorial source')
+    assert [s.get('image') for s in r['recipeInstructions']]==[s['image_url'] for s in record['steps']],(record['public_path'],'step image differs from editorial source')
+    assert all(i['name'] in text for i,text in zip(record['ingredients'],r['recipeIngredient'])),(record['public_path'],'ingredient differs from editorial source')
     assert r.get('nutrition') and r.get('totalTime')
     assert all(s['image_url'] in text for s in record['steps'])
     assert 'Néstor Bastidas' in text
