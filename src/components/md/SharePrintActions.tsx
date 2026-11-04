@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import type { MdLanguage } from './md-types';
 import { getMdCopy } from '@/lib/copy';
 import { prepareRecipePrint, PRINT_ROOT_ID } from '@/lib/recipe-print';
-import '@/app/recipe-print.css';
 
 export default function SharePrintActions({ title, lang }: { title: string; lang: MdLanguage }) {
   const t = getMdCopy(lang);

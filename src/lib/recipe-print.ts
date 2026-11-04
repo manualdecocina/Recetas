@@ -124,7 +124,7 @@ export function renderPrintableRecipe(recipe: PrintableRecipe): string {
 <header class="md-print-header">
   ${coverUrl ? `<img class="md-print-cover" src="${escape(coverUrl)}" alt="${escape(recipe.cover!.alt)}">` : ''}
   ${recipe.category ? `<p class="md-print-category">${escape(recipe.category)}</p>` : ''}
-  <h1>${escape(recipe.title)}</h1>
+  <h1>${url ? `<a href="${escape(url)}">${escape(recipe.title)}</a>` : escape(recipe.title)}</h1>
   ${recipe.excerpt ? `<p class="md-print-intro">${escape(recipe.excerpt)}</p>` : ''}
   ${recipe.author ? `<p class="md-print-author">${escape(recipe.author)}</p>` : ''}
 </header>
@@ -132,8 +132,7 @@ ${recipe.facts.length ? `<dl class="md-print-facts">${recipe.facts.map(fact => `
 <section class="md-print-ingredients"><h2>${escape(recipe.ingredientsHeading)}</h2><ul>${recipe.ingredients.map(item => `<li>${item.group ? `<h3>${escape(item.group)}</h3>` : ''}<span>${escape(item.text)}</span></li>`).join('')}</ul></section>
 <section class="md-print-method"><h2>${escape(recipe.preparationHeading)}</h2><ol>${recipe.steps.map((step, index) => `<li><h3><span>${index + 1}.</span> ${escape(step.title)}</h3><p>${escape(step.text)}</p></li>`).join('')}</ol></section>
 ${recipe.notes.length ? `<section class="md-print-notes"><h2>${escape(recipe.notesHeading)}</h2>${recipe.notes.map(note => `<${note.heading ? 'h3' : 'p'}>${escape(note.text)}</${note.heading ? 'h3' : 'p'}>`).join('')}</section>` : ''}
-${recipe.nutrition?.values.length ? `<section class="md-print-nutrition"><h2>${escape(recipe.nutrition.heading)}</h2>${recipe.nutrition.serving ? `<p>${escape(recipe.nutrition.serving)}</p>` : ''}<p class="md-print-nutrients">${recipe.nutrition.values.map(escape).join(' · ')}</p>${recipe.nutrition.notes.map(note => `<p class="md-print-source">${escape(note)}</p>`).join('')}</section>` : ''}
-<footer class="md-print-credit">${url ? `<a href="${escape(url)}">manualdecocina.com</a>` : 'manualdecocina.com'}<span>${escape(recipe.author)}</span></footer>`;
+${recipe.nutrition?.values.length ? `<section class="md-print-nutrition"><h2>${escape(recipe.nutrition.heading)}</h2>${recipe.nutrition.serving ? `<p>${escape(recipe.nutrition.serving)}</p>` : ''}<p class="md-print-nutrients">${recipe.nutrition.values.map(escape).join(' · ')}</p>${recipe.nutrition.notes.map(note => `<p class="md-print-source">${escape(note)}</p>`).join('')}</section>` : ''}`;
 }
 
 export function prepareRecipePrint(document: Document): HTMLElement | null {

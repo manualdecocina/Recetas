@@ -35,6 +35,9 @@ No se cambian recetas, URLs, schema, indexación ni configuración publicitaria.
 - `src/app/recipe-print.css` deja únicamente la hoja en el flujo impreso. Así
   tampoco ocupan espacio los contenedores publicitarios desconocidos añadidos
   después de cargar la página.
+- Los estilos se cargan desde el layout público para estar disponibles antes
+  de imprimir. La prueba exige que la hoja esté oculta en pantalla y que el PDF
+  no vuelva a la presentación de respaldo con la URL larga del pie.
 
 ## Maquetación
 
@@ -44,8 +47,9 @@ los pasos siguen una columna continua. Las notas pueden pasar a otra página.
 No se fuerzan alturas de pantalla ni bloques grandes indivisibles para llenar
 una página. Las recetas largas ocupan las páginas necesarias sin cortar texto.
 
-El crédito impreso utiliza un enlace corto a `manualdecocina.com`; no expande
-URLs históricas o codificadas en japonés en largas tiras de texto.
+El margen inferior identifica `manualdecocina.com` y el número de página sin
+crear un bloque al final que pueda saltar solo a otra hoja. El título enlaza a
+la receta original; no se expanden URLs históricas o codificadas en japonés.
 
 Al guardar como PDF en el navegador, usar A4 y escala 100 %, desactivar sus
 **Encabezados y pies de página** y activar los gráficos de fondo si se quieren

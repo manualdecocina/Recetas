@@ -33,6 +33,7 @@ const compact = text => text.replace(/\s+/gu, '');
     for (const entry of cases) {
       await page.goto(`${base}${entry.path}`, { waitUntil: 'networkidle' });
       const title = await page.locator('.md-recipe-hero h1').innerText();
+      const canonical = await page.locator('link[rel="canonical"]').getAttribute('href');
       const ingredients = await page.locator('.md-ingredient-checkbox > span').allTextContents();
       const steps = await page.locator('.md-step-text p').allTextContents();
       const notes = await page.locator('.md-notes .md-rich').allTextContents();
@@ -54,6 +55,7 @@ const compact = text => text.replace(/\s+/gu, '');
       });
       await page.locator('.md-article-actions button[aria-busy]').click();
       await page.locator('#md-recipe-print-root').waitFor({ state: 'attached' });
+      assert.equal(await page.locator('#md-recipe-print-root').isVisible(), false, 'the editorial sheet is screen-hidden before native printing');
       assert.equal(await page.locator('#md-recipe-print-root .md-print-cover').count(), 1, 'the recipe cover is retained');
       const sheet = await page.locator('#md-recipe-print-root').textContent();
       for (const phrase of [title, ...ingredients, ...steps, ...notes]) assert(compact(sheet).includes(compact(phrase)), `print retains: ${phrase}`);
@@ -62,9 +64,12 @@ const compact = text => text.replace(/\s+/gu, '');
       const pdfPath = `${output}/${entry.lang}.pdf`;
       await page.pdf({ path: pdfPath, printBackground: true, preferCSSPageSize: true, displayHeaderFooter: false });
       const pdfText = execFileSync('pdftotext', ['-layout', pdfPath, '-'], { encoding: 'utf8' });
+      assert(!pdfText.includes(canonical), 'PDF uses the content-only template, not the fallback page with its raw URL footer');
       // A paragraph can continue after a page counter. Remove only that trailing
       // margin counter before comparing the complete editorial text.
-      const contentText = pdfText.split('\f').map(value => value.replace(/\n[ \t]*\d+[ \t]*\s*$/u, '')).join('\n');
+      const contentText = pdfText.split('\f').map(value => value
+        .replace(/\n[ \t]*\d+[ \t]*\s*$/u, '')
+        .replace(/\n[ \t]*manualdecocina\.com(?:[ \t]+\d+)?[ \t]*\s*$/u, '')).join('\n');
       for (const phrase of [title, ...ingredients, ...steps, ...notes]) assert(compact(contentText).includes(compact(phrase)), `PDF retains: ${phrase}`);
       for (const forbidden of ['FORBIDDEN_', 'Pinterest', 'CONSENTIMIENTO_FLOTANTE', 'PUBLICIDAD_CABECERA']) assert(!pdfText.includes(forbidden), `${forbidden} is not printed`);
       const pages = pdfText.split('\f').filter(value => value.trim());
