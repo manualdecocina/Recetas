@@ -1,7 +1,7 @@
-Cinco recetas independientes — 4 noviembre 2026
+CERRADO — 5 recetas independientes publicadas en 7 idiomas.
 
-Publicadas en siete idiomas: dip-de-charcuteria, lasana-dumplings-al-vapor (nombre visible: Dumplings en capas al vapor), huevo-katsu, cebolla-asada-onion-boil y helado-queso-cottage-fresas.
+PASS: 35 páginas, 60 WebP activos con SHA-256, 8 pasos ilustrados por receta, canonical, alternates, Recipe schema, nutrición, catálogo y sitemap.
 
-Ocho pasos con fotos por receta. Dumplings corregidos tras la observación del usuario: sin queso y con wonton blando, sin bloques rígidos.
+Dumplings revisados tras la observación del usuario; nombre y fotos finales corregidos.
 
-Comprobación final conjunta pendiente de cerrar; ver production-qa.json al terminar.
+Ver FINAL-REPORT.md y production-qa.json.
