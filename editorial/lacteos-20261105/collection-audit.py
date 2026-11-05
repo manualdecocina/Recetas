@@ -61,7 +61,7 @@ class Page(HTMLParser):
 def get(url):
     request = urllib.request.Request(urllib.parse.quote(url, safe=':/?=&%'), headers={'User-Agent': 'ManualDeCocina-CollectionQA/1.0'})
     with urllib.request.urlopen(request, timeout=45) as response:
-        assert response.status == 120, (url, response.status)
+        assert response.status == 200, (url, response.status)
         return response.read()
 
 
