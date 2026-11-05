@@ -10,21 +10,22 @@ const check = (name: string, fn: () => void) => { fn(); n++; console.log('OK', n
 const navidad = COLLECTIONS.find((c) => c.id === 'navidad-colombiana')!
 
 check('Navidad fija, novedades después y máximo dos colecciones en inicio', () => {
-  assert.deepEqual(COLLECTIONS.map(c => c.id), ['navidad-colombiana', 'postres-caseros', 'cenas-faciles-rapidas'])
-  assert.deepEqual(homeCollections(COLLECTIONS).map(c => c.id), ['navidad-colombiana', 'postres-caseros'])
+  assert.deepEqual(COLLECTIONS.map(c => c.id), ['navidad-colombiana', 'derivados-de-la-leche', 'postres-caseros', 'cenas-faciles-rapidas'])
+  assert.deepEqual(homeCollections(COLLECTIONS).map(c => c.id), ['navidad-colombiana', 'derivados-de-la-leche'])
   // Una futura publicación reemplaza la segunda tarjeta, sin desplazar Navidad ni perder las anteriores.
   const future = { ...COLLECTIONS[1], id: 'futura', publishedAt: '2026-12-01T12:00:00Z' }
-  const input = [COLLECTIONS[2], future, navidad, COLLECTIONS[1]]
+  const input = [COLLECTIONS[3], future, navidad, COLLECTIONS[1], COLLECTIONS[2]]
   const before = [...input]
-  assert.deepEqual(orderCollections(input).map(c => c.id), ['navidad-colombiana', 'futura', 'postres-caseros', 'cenas-faciles-rapidas'])
+  assert.deepEqual(orderCollections(input).map(c => c.id), ['navidad-colombiana', 'futura', 'derivados-de-la-leche', 'postres-caseros', 'cenas-faciles-rapidas'])
   assert.deepEqual(homeCollections(input).map(c => c.id), ['navidad-colombiana', 'futura'])
   assert.deepEqual(input, before, 'Ordenar no modifica el catálogo recibido')
   assert.deepEqual(homeCollections([]), [])
   assert.deepEqual(homeCollections([navidad]), [navidad])
 })
 
-check('Cada colección mantiene la selección editorial de 20 recetas', () => {
-  for (const c of COLLECTIONS) assert.equal(collectionSpanishPaths(c).length, 20, `${c.id}: se requieren 20 recetas`)
+check('Cada colección mantiene su selección editorial completa', () => {
+  const counts: Record<string, number> = { 'navidad-colombiana': 20, 'derivados-de-la-leche': 12, 'postres-caseros': 20, 'cenas-faciles-rapidas': 20 }
+  for (const c of COLLECTIONS) assert.equal(collectionSpanishPaths(c).length, counts[c.id], `${c.id}: selección incompleta`)
 })
 
 check('Cada colección tiene los 7 idiomas completos', () => {

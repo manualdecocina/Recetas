@@ -3,6 +3,9 @@ import type { RecipeLanguage } from '@/types/recipe'
 // Display labels only: canonical IDs/slugs and matching relationships stay unchanged.
 // Order: English, German, French, Italian, Japanese, Brazilian Portuguese.
 const LABELS: Record<string, readonly string[]> = {
+  "yogur-natural": ["Plain yogurt", "Naturjoghurt", "Yaourt nature", "Yogurt bianco", "プレーンヨーグルト", "Iogurte natural"],
+  "cuajo": ["Rennet", "Lab", "Présure", "Caglio", "レンネット", "Coalho"],
+  "acido-citrico": ["Food-grade citric acid", "Lebensmittelechte Zitronensäure", "Acide citrique alimentaire", "Acido citrico alimentare", "食品用クエン酸", "Ácido cítrico alimentício"],
   "queso-fresco": ["Queso fresco (fresh cheese)", "Queso fresco (frischer Käse)", "Queso fresco (fromage frais)", "Queso fresco (formaggio fresco)", "ケソ・フレスコ（フレッシュチーズ）", "Queso fresco (queijo fresco)"],
   "brevas": ["Brevas (figs)", "Brevas (Feigen)", "Brevas (figues)", "Brevas (fichi)", "ブレバ（イチジク）", "Brevas (figos)"],
   "brandy": ["Brandy", "Brandy", "Brandy", "Brandy", "ブランデー", "Brandy"],

@@ -1,6 +1,7 @@
 import type { RecipeLanguage } from '@/types/recipe'
 import { DINNERS_COLLECTION } from '@/lib/dinners-collection'
 import { DESSERTS_COLLECTION } from '@/lib/desserts-collection'
+import { DAIRY_COLLECTION } from '@/lib/dairy-collection'
 import { orderCollections } from '@/lib/collection-order'
 
 /**
@@ -64,6 +65,7 @@ export function collectionCover(collection: Collection, file: (typeof COVER_FILE
 }
 
 export const COLLECTIONS: Collection[] = orderCollections<Collection>([
+  DAIRY_COLLECTION,
   DESSERTS_COLLECTION,
   DINNERS_COLLECTION,
   {
