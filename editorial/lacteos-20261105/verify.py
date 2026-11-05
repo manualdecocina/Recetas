@@ -1,5 +1,5 @@
 """Bounded verification of exact public images and recipe HTML/schema."""
-import concurrent.futures,hashlib,json,sys,urllib.request,urllib.parse
+import concurrent.futures,hashlib,json,re,sys,urllib.request,urllib.parse
 from pathlib import Path
 from html.parser import HTMLParser
 D=Path(__file__).resolve().parent
@@ -38,6 +38,10 @@ def pages(key):
    recipes.extend(x for x in vals if x.get('@type')=='Recipe')
   assert len(recipes)==1,(url,'Recipe schema',len(recipes))
   s=recipes[0];assert s['name']==r['title'] and len(s['recipeInstructions'])==len(r['steps']),(url,'content')
+  assert [x['text'] for x in s['recipeInstructions']]==[x['content'] for x in r['steps']],(url,'step text')
+  assert [x.get('image') for x in s['recipeInstructions']]==[x['image_url'] for x in r['steps']],(url,'step images')
+  duration=re.fullmatch(r'PT(?:(\d+)H)?(?:(\d+)M)?',s['totalTime'])
+  assert duration and int(duration[1] or 0)*60+int(duration[2] or 0)==r['total_time_minutes'],(url,'total time',s['totalTime'])
   assert s.get('nutrition') and len(s.get('image',[]))>=3,(url,'nutrition/images')
   canonical=[x['href'].rstrip('/') for x in p.links if x.get('rel')=='canonical'];assert canonical==[url.rstrip('/')],(url,'canonical')
   assert len([x for x in p.links if x.get('hreflang')])>=7,(url,'alternates')

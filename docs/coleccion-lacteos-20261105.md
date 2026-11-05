@@ -20,4 +20,4 @@ La colección se organiza en tres secciones: yogures; quesos frescos; mantequill
 
 ## Verificación
 
-TypeScript, la suite de lógica y las pruebas de consentimiento e idiomas pasan. Los informes `*.assets-qa.json` comprueban bytes y SHA-256 públicos; `*.live-qa.json` comprueba las siete páginas por receta, ingredientes, fotos, nutrición, canonical y hreflang. La compilación y la verificación final de colección se registran al cerrar el despliegue.
+TypeScript, la suite de lógica y las pruebas de consentimiento e idiomas pasan. Los informes `*.assets-qa.json` comprueban bytes y SHA-256 públicos; `*.live-qa.json` comprueba las siete páginas por receta, ingredientes, fotos, nutrición, canonical y hreflang. La compilación completa de Next.js pasa (1.896 páginas estáticas). La verificación final de colección se registra al cerrar el despliegue.
