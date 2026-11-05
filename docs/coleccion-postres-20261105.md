@@ -33,3 +33,7 @@ Prompt: «Use case: photorealistic-natural. Asset type: original editorial cover
 ## Verificación
 
 TypeScript y suite completa de lógica correctos, incluidos el orden con una futura colección, el límite de dos y el patrón de 20 recetas por colección. Pruebas de consentimiento e idiomas correctas. Compilación completa de Next.js correcta (1.826 páginas estáticas). El resultado de producción se guarda en el mismo directorio editorial.
+
+CI `quality` correcto para `977e512941b0193d8947b95e213213411f5d5ce1` (ejecución 41981207276). Se comprobaron además los 21 HTML generados de inicio, índice y colección en los siete idiomas.
+
+Producción: 27 comprobaciones correctas en `live-qa.json`: siete páginas de colección con 20 recetas, tres secciones, cinco preguntas, canonical, alternates y ItemList; siete índices con las tres colecciones ordenadas; siete inicios con solo Navidad y postres; cuatro imágenes verificadas por hash, sitemap con las 21 rutas de colección y enlace de vuelta desde tiramisú. Comprobación en navegador: el enlace «Ver más colecciones» abre el índice completo, las dos imágenes del inicio están cargadas, hay dos columnas en escritorio y no hay desbordamiento horizontal. El diseño móvil conserva una columna; no se simuló un teléfono en el navegador.
