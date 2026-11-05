@@ -3,6 +3,7 @@ import type { Collection } from '@/lib/collections-content'
 /** Evergreen selection. Total times include preparation and any stated resting time. */
 export const DINNERS_COLLECTION: Collection = {
   id: 'cenas-faciles-rapidas',
+  publishedAt: '2026-11-04T02:00:00Z',
   coverDir: '/colecciones/cenas-faciles-rapidas',
   sections: [
     ['/pollo-con-salsa-de-miel-y-mostaza', '/salmon-en-air-fryer-saludable', '/ensalada-de-pollo-y-aguacate', '/hamburguesas-caseras', '/receta-trucha-al-ajillo-con-limon', '/camarones-al-ajillo'],

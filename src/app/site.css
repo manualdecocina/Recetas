@@ -674,6 +674,7 @@ a.md-lang-item:hover { background: var(--md-sand); }
 .md-collection-grid { grid-template-columns: minmax(0,1fr); }
 @media (min-width: 600px) { .md-collection-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
 @media (min-width: 900px) { .md-collection-grid { grid-template-columns: repeat(3,minmax(0,1fr)); } }
+@media (min-width: 900px) { .md-collection-grid-featured { grid-template-columns: repeat(2,minmax(0,1fr)); } }
 .md-collection-card .md-category-photo { aspect-ratio: 4 / 3; }
 .md-collection-description { display: block; margin: 8px 0 12px; color: var(--md-muted); font-size: .92rem; line-height: 1.55; }
 .md-collection-curator { margin: 14px 0 0; }

@@ -14,6 +14,7 @@ import PantryBanner from './PantryBanner';
 import { CollectionGrid } from './CollectionViews';
 import type { CollectionSummary } from '@/lib/collections-data';
 import { collectionsIndexPath } from '@/lib/collections';
+import { HOME_COLLECTION_LIMIT } from '@/lib/collection-order';
 
 export interface MdHomeData {
   /** Use only an actual published recipe of the requested language. */
@@ -64,7 +65,7 @@ export default function HomePageView({ lang, data }: { lang: MdLanguage; data: M
           <div className="md-container"><div className="md-section-head"><div><p className="md-eyebrow">{t.navCollections}</p>
             <h2 className="md-title" id="md-collections-heading">{t.collectionsHomeTitle}</h2></div>
             <Link className="md-link" href={collectionsIndexPath(lang)}>{t.seeAllCollections}</Link></div>
-            <CollectionGrid lang={lang} items={data.collections} />
+            <CollectionGrid lang={lang} items={data.collections.slice(0, HOME_COLLECTION_LIMIT)} featured />
           </div>
         </section>}
         {data.latest.length > 0 && <section className="md-section" aria-labelledby="md-latest-heading">

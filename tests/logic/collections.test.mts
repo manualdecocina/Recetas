@@ -3,10 +3,29 @@ import { existsSync } from 'node:fs'
 import { COLLECTIONS, COVER_FILES, collectionCover, spanishPathVariants, collectionsForSpanishPath, arrangeCollection, collectionAlternatePaths, collectionPath, collectionSpanishPaths, findCollection } from '@/lib/collections'
 import { SUPPORTED_LANGUAGES } from '@/types/recipe'
 import { seoSaveError } from '@/lib/admin/seo-checks'
+import { orderCollections, homeCollections } from '@/lib/collection-order'
 
 let n = 0
 const check = (name: string, fn: () => void) => { fn(); n++; console.log('OK', name) }
 const navidad = COLLECTIONS.find((c) => c.id === 'navidad-colombiana')!
+
+check('Navidad fija, novedades después y máximo dos colecciones en inicio', () => {
+  assert.deepEqual(COLLECTIONS.map(c => c.id), ['navidad-colombiana', 'postres-caseros', 'cenas-faciles-rapidas'])
+  assert.deepEqual(homeCollections(COLLECTIONS).map(c => c.id), ['navidad-colombiana', 'postres-caseros'])
+  // Una futura publicación reemplaza la segunda tarjeta, sin desplazar Navidad ni perder las anteriores.
+  const future = { ...COLLECTIONS[1], id: 'futura', publishedAt: '2026-12-01T12:00:00Z' }
+  const input = [COLLECTIONS[2], future, navidad, COLLECTIONS[1]]
+  const before = [...input]
+  assert.deepEqual(orderCollections(input).map(c => c.id), ['navidad-colombiana', 'futura', 'postres-caseros', 'cenas-faciles-rapidas'])
+  assert.deepEqual(homeCollections(input).map(c => c.id), ['navidad-colombiana', 'futura'])
+  assert.deepEqual(input, before, 'Ordenar no modifica el catálogo recibido')
+  assert.deepEqual(homeCollections([]), [])
+  assert.deepEqual(homeCollections([navidad]), [navidad])
+})
+
+check('Cada colección mantiene la selección editorial de 20 recetas', () => {
+  for (const c of COLLECTIONS) assert.equal(collectionSpanishPaths(c).length, 20, `${c.id}: se requieren 20 recetas`)
+})
 
 check('Cada colección tiene los 7 idiomas completos', () => {
   for (const c of COLLECTIONS) for (const l of SUPPORTED_LANGUAGES) {

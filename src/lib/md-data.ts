@@ -17,6 +17,7 @@ import { ingredientLabel } from '@/lib/ingredient-labels'
 import { buildEditorialPantry, localizeEditorialIngredients, type PantryLink } from '@/lib/pantry-editorial'
 import { localizePantryRecipes, pantryIngredientCoverage } from '@/lib/pantry-localization'
 import { COLLECTIONS } from '@/lib/collections'
+import { homeCollections } from '@/lib/collection-order'
 import { loadCollectionSummaries } from '@/lib/collections-data'
 
 // Solo lectura, con el mismo cliente público y las mismas tablas/filtros que ya usan las
@@ -92,7 +93,7 @@ export async function getHomeData(lang: RecipeLanguage): Promise<MdHomeData> {
       .limit(10),
     getCategorySummaries(lang),
     getIngredientSummaries(12, lang),
-    loadCollectionSummaries(COLLECTIONS, lang),
+    loadCollectionSummaries(homeCollections(COLLECTIONS), lang),
   ])
   if (featuredResult.error) throw new Error(`No se pudo cargar la receta destacada: ${featuredResult.error.message}`)
   if (latestResult.error) throw new Error(`No se pudieron cargar las últimas recetas: ${latestResult.error.message}`)

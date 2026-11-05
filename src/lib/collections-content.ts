@@ -1,5 +1,7 @@
 import type { RecipeLanguage } from '@/types/recipe'
 import { DINNERS_COLLECTION } from '@/lib/dinners-collection'
+import { DESSERTS_COLLECTION } from '@/lib/desserts-collection'
+import { orderCollections } from '@/lib/collection-order'
 
 /**
  * Colecciones editoriales: páginas temáticas que reúnen recetas que ya existen
@@ -40,6 +42,8 @@ export interface CollectionText {
 
 export interface Collection {
   id: string
+  /** Fecha editorial ISO 8601. Las novedades van después de Navidad, de más reciente a más antigua. */
+  publishedAt?: string
   /** Recetas por sección, en el orden en que se muestran (public_path en español). */
   sections: string[][]
   /**
@@ -59,7 +63,8 @@ export function collectionCover(collection: Collection, file: (typeof COVER_FILE
   return collection.coverDir ? `${collection.coverDir.replace(/\/+$/, '')}/${file}` : null
 }
 
-export const COLLECTIONS: Collection[] = [
+export const COLLECTIONS: Collection[] = orderCollections<Collection>([
+  DESSERTS_COLLECTION,
   DINNERS_COLLECTION,
   {
     id: 'navidad-colombiana',
@@ -236,4 +241,4 @@ export const COLLECTIONS: Collection[] = [
       },
     },
   },
-]
+])

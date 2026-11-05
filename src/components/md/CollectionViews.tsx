@@ -14,15 +14,15 @@ import RecipeCard from './RecipeCard';
 import Breadcrumbs from './Breadcrumbs';
 
 /** Tarjetas de colecciones (portada y /colecciones). Reutiliza el estilo de las categorías. */
-export function CollectionGrid({ lang, items }: { lang: MdLanguage; items: CollectionSummary[] }) {
+export function CollectionGrid({ lang, items, featured = false }: { lang: MdLanguage; items: CollectionSummary[]; featured?: boolean }) {
   const t = getMdCopy(lang);
   return (
-    <div className="md-category-grid md-collection-grid">
+    <div className={`md-category-grid md-collection-grid${featured ? ' md-collection-grid-featured' : ''}`}>
       {items.map(({ collection, count, image_url }) => (
         <Link className="md-category-card md-collection-card" key={collection.id} href={collectionPath(lang, collection)}>
           {image_url ? (
             <Image className="md-category-photo" src={recipeImageSrc(image_url)} alt="" width={640} height={480} loading="lazy"
-              sizes="(max-width: 599px) calc(100vw - 36px), (max-width: 899px) 50vw, 33vw" />
+              sizes={featured ? '(max-width: 599px) calc(100vw - 36px), 50vw' : '(max-width: 599px) calc(100vw - 36px), (max-width: 899px) 50vw, 33vw'} />
           ) : (
             <span className="md-category-fallback" aria-hidden="true"><img src="/brand/mark.png" alt="" width="42" height="42" /></span>
           )}
