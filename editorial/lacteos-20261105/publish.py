@@ -3,7 +3,7 @@ import json,sys
 from pathlib import Path
 D=Path(__file__).resolve().parent
 key=sys.argv[1]; c=json.loads((D/f'{key}.source.json').read_text()); payload=json.loads((D/f'{key}.json').read_text())['records']
-names={'yogur-natural':'Yogur natural','cuajo':'Cuajo','acido-citrico':'Ácido cítrico alimentario'}
+names={'yogur-natural':'Yogur natural','cuajo':'Cuajo','acido-citrico':'Ácido cítrico alimentario','cultivo-lactico-mesofilo':'Cultivo láctico mesófilo'}
 food=[dict(slug=s,name=names[s]) for s in c['canonical'] if s in names]
 aliases=[dict(slug=s,alias=i['name']) for s,i in zip(c['canonical'],payload[0]['ingredients'],strict=True)]
 sql="""DO $dairy$
