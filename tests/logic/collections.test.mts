@@ -24,7 +24,7 @@ check('Navidad fija, novedades después y máximo dos colecciones en inicio', ()
 })
 
 check('Cada colección mantiene su selección editorial completa', () => {
-  const counts: Record<string, number> = { 'navidad-colombiana': 20, 'derivados-de-la-leche': 12, 'postres-caseros': 20, 'cenas-faciles-rapidas': 20 }
+  const counts: Record<string, number> = { 'navidad-colombiana': 20, 'derivados-de-la-leche': 13, 'postres-caseros': 20, 'cenas-faciles-rapidas': 20 }
   for (const c of COLLECTIONS) assert.equal(collectionSpanishPaths(c).length, counts[c.id], `${c.id}: selección incompleta`)
 })
 
@@ -89,6 +89,7 @@ check('Cada receta sabe en qué colección está (enlace de vuelta)', () => {
   assert.deepEqual(collectionsForSpanishPath('/natilla-colombiana').map((c) => c.id), ['navidad-colombiana'])
   assert.deepEqual(collectionsForSpanishPath('/es/receta/tamal-tolimense').map((c) => c.id), ['navidad-colombiana'])
   assert.deepEqual(collectionsForSpanishPath('/es/receta/dulce-de-breva').map((c) => c.id), ['navidad-colombiana'])
+  assert.deepEqual(collectionsForSpanishPath('/suero-costeno-casero').map((c) => c.id), ['derivados-de-la-leche'])
   assert.deepEqual(collectionsForSpanishPath('/receta-bondiola-de-cerdo'), [])
   assert.deepEqual(collectionsForSpanishPath(undefined), [])
 })
