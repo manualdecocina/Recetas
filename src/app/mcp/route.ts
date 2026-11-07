@@ -43,7 +43,7 @@ async function callTool(name: unknown, args: Record<string, unknown>) {
     const lang = languageArg(args.language)
     const limit = args.limit === undefined ? 5 : args.limit
     if (typeof raw !== 'string' || raw.trim().length < 2 || raw.length > 80 || !lang ||
-        !Number.isInteger(limit) || (limit as number) < 1 || (limit as number) > 10) {
+        typeof limit !== 'number' || !Number.isInteger(limit) || limit < 1 || limit > 10) {
       return invalidTool('Enter a title query (2–80 characters), a supported language, and a limit of 1–10.')
     }
     // Wildcards / PostgREST punctuation must not turn title search into a broad table scan.
@@ -56,7 +56,7 @@ async function callTool(name: unknown, args: Record<string, unknown>) {
       .eq('language', lang)
       .ilike('title', `%${query}%`)
       .order('updated_at', { ascending: false })
-      .limit(limit as number)
+      .limit(limit)
     if (error) return invalidTool('Recipe search is temporarily unavailable.')
     return toolText((data ?? []).map(recipe => ({
       title: recipe.title, excerpt: recipe.excerpt, language: recipe.language,
