@@ -51,6 +51,15 @@ const CATEGORY_LABELS: Record<string, Record<RecipeLanguage, string>> = {
     ja: '付け合わせ',
     pt: 'Acompanhamentos',
   },
+  'lacteos-caseros': {
+    es: 'Lácteos caseros',
+    en: 'Homemade dairy',
+    de: 'Hausgemachte Milchprodukte',
+    fr: 'Produits laitiers maison',
+    it: 'Latticini fatti in casa',
+    ja: '手作り乳製品',
+    pt: 'Laticínios caseiros',
+  },
   'salsas-y-aderezos': {
     es: 'Salsas y aderezos',
     en: 'Sauces & dressings',
