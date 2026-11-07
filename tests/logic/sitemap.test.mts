@@ -34,6 +34,7 @@ console.log('OK sitemap de preview: rutas históricas e hreflang en el propio en
 process.env.NEXT_PUBLIC_ALLOW_INDEXING = 'true'
 const s: any[] = await sitemap()
 const urls = s.map((e) => e.url)
+assert.ok(s.every((e) => e.lastModified), 'todas las URL del sitemap deben tener lastmod verificable')
 
 // 7 idiomas × (home, listado, categorías) + 8 institucionales × 7 idiomas
 // + 3 recetas publicadas del mock + herramienta + índice ingredientes + 2 ingredientes + content page

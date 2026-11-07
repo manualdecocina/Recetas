@@ -60,6 +60,22 @@ export default async function LanguageRootLayout({
         '@type': 'Organization',
         '@id': `${siteUrl}/#organization`,
         name: 'Manual de Cocina',
+        description: 'Proyecto editorial de recetas de cocina y herramientas culinarias en siete idiomas.',
+        email: 'hola@manualdecocina.com',
+        telephone: '+573028150839',
+        contactPoint: {
+          '@type': 'ContactPoint',
+          contactType: 'legal inquiries',
+          email: 'hola@manualdecocina.com',
+          telephone: '+573028150839',
+        },
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: 'Cali',
+          addressRegion: 'Valle del Cauca',
+          addressCountry: 'CO',
+        },
+        sameAs: ['https://www.instagram.com/manual.cocina/'],
         // La raíz responde 308 a /es; el esquema apunta a la URL final, no a la que redirige.
         url: `${siteUrl}/${DEFAULT_LANGUAGE}`,
         logo: {

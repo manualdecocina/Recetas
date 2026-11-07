@@ -6,7 +6,7 @@ import { allLanguageAlternates, SITE_NAME } from '@/lib/seo'
 import { SUPPORTED_LANGUAGES, type RecipeLanguage } from '@/types/recipe'
 import { legacyMetadata, LegacyPublicPage } from '@/lib/legacy-route'
 import { getPublishedPublicPaths } from '@/lib/public-content'
-import { absoluteUrl, getSiteUrl } from '@/lib/site'
+import { absoluteUrl, getSiteUrl, recipeHref, languageTag } from '@/lib/site'
 
 // Sin foto propia de portada para el home; se usa el logo real de la marca como
 // respaldo en vez de inventar una imagen que no existe.
@@ -65,5 +65,30 @@ export default async function LanguageHome({ params }: { params: Promise<{ lang:
   if (!lang) return <LegacyPublicPage path={'/' + rawLang} />
 
   const data = await getHomeData(lang)
-  return <HomePageView lang={lang} data={data} />
+  const site = getSiteUrl()
+  const recipes = [data.featured, ...data.latest].filter((item): item is NonNullable<typeof item> => item != null)
+  const homeGraph = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    '@id': `${site}/${lang}#webpage`,
+    url: `${site}/${lang}`,
+    name: UI_TEXT[lang].homeTitle,
+    description: UI_TEXT[lang].homeDescription,
+    inLanguage: languageTag(lang),
+    isPartOf: { '@id': `${site}/#website` },
+    publisher: { '@id': `${site}/#organization` },
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: recipes.map((item, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name: item.title,
+        url: `${site}${recipeHref(item)}`,
+      })),
+    },
+  }
+  return <>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homeGraph).replace(/</g, '\\u003c') }} />
+    <HomePageView lang={lang} data={data} />
+  </>
 }
