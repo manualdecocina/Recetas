@@ -90,7 +90,7 @@ check('Pollo navideño colombiano: 7 idiomas, res y cerdo, pasas, pan rallado, a
     assert.deepEqual(r.ingredients.map((i: any) => [i.amount, i.unit]), amounts, `${lang}: cantidades iguales`)
     const ingredients = r.ingredients.map((i: any) => i.name).join(' ').toLowerCase()
     for (const term of required[lang]) assert.ok(ingredients.includes(term.toLowerCase()), `${lang}: falta ${term}`)
-    assert.ok(r.ingredients[5].name.match(/opcional|optional|facultativ|facoltativ|省略可|opcionais|optiona/i), `${lang}: arvejas opcionales`)
+    assert.ok(r.ingredients[5].name.match(/opcional|optional|facultatif|facoltativ|省略可|opcionais|optiona/i), `${lang}: arvejas opcionales`)
     assert.ok(r.steps.some((s: any) => s.content.includes('74')), `${lang}: seguridad 74 °C`)
     assert.equal(r.servings, 8)
     assert.equal(r.total_time_minutes_estimate, r.prep_time_minutes + r.cook_time_minutes_estimate + r.rest_time_minutes)
