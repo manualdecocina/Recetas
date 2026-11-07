@@ -24,7 +24,7 @@ check('Navidad fija, novedades después y máximo dos colecciones en inicio', ()
 })
 
 check('Cada colección mantiene su selección editorial completa', () => {
-  const counts: Record<string, number> = { 'navidad-colombiana': 20, 'derivados-de-la-leche': 13, 'postres-caseros': 20, 'cenas-faciles-rapidas': 20 }
+  const counts: Record<string, number> = { 'navidad-colombiana': 21, 'derivados-de-la-leche': 13, 'postres-caseros': 20, 'cenas-faciles-rapidas': 20 }
   for (const c of COLLECTIONS) assert.equal(collectionSpanishPaths(c).length, counts[c.id], `${c.id}: selección incompleta`)
 })
 
@@ -56,6 +56,16 @@ check('Encuentra la colección por slug, también codificado (japonés)', () => 
 check('Rutas: /<idioma>/colecciones/<slug> en los 7 idiomas', () => {
   assert.equal(collectionPath('de', navidad), '/de/colecciones/kolumbianische-weihnachtsrezepte')
   assert.equal(Object.keys(collectionAlternatePaths(navidad)).length, 7)
+})
+
+check('Papaya se usa una sola vez por URL canónica; pollo relleno navideño tiene su posición reservada', () => {
+  const christmas = navidad.sections.flat()
+  assert.equal(christmas.filter((path) => path.includes('papaya-verde')).length, 1)
+  assert.ok(christmas.includes('/dulce-de-papaya-verde'))
+  assert.ok(!christmas.includes('/es/receta/dulce-de-papaya-verde'))
+  assert.ok(christmas.includes('/es/receta/pollo-relleno-navideno'))
+  assert.deepEqual(collectionsForSpanishPath('/dulce-de-papaya-verde').map(c => c.id), ['navidad-colombiana'])
+  assert.deepEqual(collectionsForSpanishPath('/es/receta/pollo-relleno-navideno').map(c => c.id), ['navidad-colombiana'])
 })
 
 check('Ninguna receta repetida dentro de la colección', () => {
