@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict'
-import { existsSync } from 'node:fs'
+import { existsSync, readFileSync } from 'node:fs'
 import { COLLECTIONS, COVER_FILES, collectionCover, spanishPathVariants, collectionsForSpanishPath, arrangeCollection, collectionAlternatePaths, collectionPath, collectionSpanishPaths, findCollection } from '@/lib/collections'
 import { SUPPORTED_LANGUAGES } from '@/types/recipe'
 import { seoSaveError } from '@/lib/admin/seo-checks'
@@ -66,6 +66,39 @@ check('Papaya se usa una sola vez por URL canónica; pollo relleno navideño tie
   assert.ok(christmas.includes('/es/receta/pollo-relleno-navideno'))
   assert.deepEqual(collectionsForSpanishPath('/dulce-de-papaya-verde').map(c => c.id), ['navidad-colombiana'])
   assert.deepEqual(collectionsForSpanishPath('/es/receta/pollo-relleno-navideno').map(c => c.id), ['navidad-colombiana'])
+})
+
+
+check('Pollo navideño colombiano: 7 idiomas, res y cerdo, pasas, pan rallado, arvejas opcionales y 8 pasos', () => {
+  const spanish = JSON.parse(readFileSync(new URL('../../docs/borradores/pollo-relleno-navideno-v1.json', import.meta.url), 'utf8'))
+  const locales = JSON.parse(readFileSync(new URL('../../docs/borradores/pollo-relleno-navideno-locales-v1.json', import.meta.url), 'utf8'))
+  const records: Record<string, any> = { es: spanish.es, ...locales.records }
+  assert.deepEqual(Object.keys(records).sort(), [...SUPPORTED_LANGUAGES].sort())
+  const amounts = spanish.es.ingredients.map((i: any) => [i.amount, i.unit])
+  const required: Record<string, string[]> = {
+    es: ['carne molida de cerdo', 'carne molida de res', 'pan rallado', 'uvas pasas', 'arvejas'],
+    en: ['ground pork', 'ground beef', 'bread crumbs', 'raisins', 'green peas'],
+    de: ['Schweinehack', 'Rinderhack', 'Semmelbrösel', 'Rosinen', 'Erbsen'],
+    fr: ['porc haché', 'bœuf haché', 'chapelure', 'raisins secs', 'petits pois'],
+    it: ['maiale macinata', 'manzo macinata', 'pangrattato', 'uvetta', 'piselli'],
+    ja: ['豚ひき肉', '牛ひき肉', 'パン粉', 'レーズン', 'グリーンピース'],
+    pt: ['carne suína', 'carne bovina', 'farinha de rosca', 'uvas-passas', 'ervilhas']
+  }
+  for (const [lang, r] of Object.entries(records)) {
+    assert.equal(r.ingredients.length, 17, `${lang}: 17 ingredientes`)
+    assert.equal(r.steps.length, 8, `${lang}: 8 pasos`)
+    assert.deepEqual(r.ingredients.map((i: any) => [i.amount, i.unit]), amounts, `${lang}: cantidades iguales`)
+    const ingredients = r.ingredients.map((i: any) => i.name).join(' ').toLowerCase()
+    for (const term of required[lang]) assert.ok(ingredients.includes(term.toLowerCase()), `${lang}: falta ${term}`)
+    assert.ok(r.ingredients[5].name.match(/opcional|optional|facultatif|facoltativ|省略可|opcionais|optiona/i), `${lang}: arvejas opcionales`)
+    assert.ok(r.steps.some((s: any) => s.content.includes('74')), `${lang}: seguridad 74 °C`)
+    assert.equal(r.servings, 8)
+    assert.equal(r.total_time_minutes_estimate, r.prep_time_minutes + r.cook_time_minutes_estimate + r.rest_time_minutes)
+  }
+  assert.ok(!/manzana|ciruelas/i.test(spanish.es.ingredients.map((i: any) => i.name).join(' ')))
+  assert.ok(!/apple|prunes/i.test(locales.records.en.ingredients.map((i: any) => i.name).join(' ')))
+  assert.equal(spanish.status, 'editorial_draft_not_published')
+  assert.equal(locales.status, 'corrected_localizations_drafted_not_published')
 })
 
 check('Ninguna receta repetida dentro de la colección', () => {
