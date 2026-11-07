@@ -16,7 +16,7 @@ import { siteRobots } from '@/lib/seo'
 
 // Open Graph requires underscore-separated locale identifiers (unlike hreflang).
 const OG_LOCALES: Record<string, string> = {
-  es: 'es_ES', en: 'en_US', de: 'de_DE', fr: 'fr_FR', it: 'it_IT', pt: 'pt_BR', ja: 'ja_JP',
+  es: 'es_CO', en: 'en_US', de: 'de_DE', fr: 'fr_FR', it: 'it_IT', pt: 'pt_BR', ja: 'ja_JP',
 }
 
 // Layout RAÍZ del sitio público (patrón i18n oficial de Next.js App Router).
