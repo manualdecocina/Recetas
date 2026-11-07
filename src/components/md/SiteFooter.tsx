@@ -36,10 +36,10 @@ export default function SiteFooter({ lang }: { lang: MdLanguage }) {
           <nav className="md-footer-links" aria-label={t.institutional}>
             <strong className="md-footer-heading">{t.institutional}</strong>
             {institutional.map((item) => (
-              <Link key={item.slug} href={`${base}/${item.slug}`}
+              <Link key={item.slug} href={item.slug === 'quienes-somos' && lang === 'es' ? '/about' : `${base}/${item.slug}`}
                 rel={item.slug === 'quienes-somos' ? 'about' : undefined}
-                title={item.slug === 'quienes-somos' ? 'About Manual de Cocina' : undefined}>
-                {item.slug === 'quienes-somos' && lang === 'es' ? `${item.label} / About` : item.label}
+                title={item.slug === 'quienes-somos' ? 'About us — Manual de Cocina' : undefined}>
+                {item.slug === 'quienes-somos' && lang === 'es' ? `${item.label} (About us)` : item.label}
               </Link>
             ))}
             <a href="mailto:hola@manualdecocina.com">hola@manualdecocina.com</a>

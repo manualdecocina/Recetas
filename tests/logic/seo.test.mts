@@ -101,6 +101,19 @@ check('preview: siteRobots bloquea index/follow también para googlebot', () => 
   assert.equal(r.follow, false)
   assert.deepEqual(r.googleBot, { index: false, follow: false })
 })
+const { GET: aboutPage } = await import('@/app/about/route')
+const aboutResponse = aboutPage()
+check('About /about responde 200, sin duplicar indexación, con enlace a página canónica', () => {
+  assert.equal(aboutResponse.status, 200)
+  assert.match(aboutResponse.headers.get('content-type') ?? '', /text\/html/)
+  assert.match(aboutResponse.headers.get('x-robots-tag') ?? '', /noindex/)
+})
+const aboutHtml = await aboutResponse.text()
+check('About es reconocible sin JavaScript y enlaza su versión canónica', () => {
+  assert.match(aboutHtml, /<h1>About us/)
+  assert.match(aboutHtml, /href="\/es\/quienes-somos"/)
+  assert.match(aboutHtml, /rel="canonical"/)
+})
 const { robotsText } = await import('@/app/robots.txt/route')
 check('robots sin permiso: Disallow / y sin sitemap', () => {
   const r = robotsText()
