@@ -3,11 +3,11 @@ import { readFileSync } from 'node:fs'
 import { CATEGORY_TAXONOMY, MD_CATEGORIES, categoryLabel, categorySlugFromLabel, canonicalCategoryLabel } from '../../src/lib/categories.ts'
 import { readRecipeForm } from '../../src/lib/validation.ts'
 import { SUPPORTED_LANGUAGES } from '../../src/types/recipe.ts'
-assert.equal(CATEGORY_TAXONOMY.length, 10)
-assert.equal(new Set(CATEGORY_TAXONOMY.map(x => x.slug)).size, 10)
+assert.equal(CATEGORY_TAXONOMY.length, 11)
+assert.equal(new Set(CATEGORY_TAXONOMY.map(x => x.slug)).size, 11)
 assert.deepEqual(MD_CATEGORIES, CATEGORY_TAXONOMY.map(x => ({slug:x.slug,label:x.labels.es})))
 for (const lang of SUPPORTED_LANGUAGES) {
-  assert.equal(new Set(CATEGORY_TAXONOMY.map(x => x.labels[lang])).size, 10)
+  assert.equal(new Set(CATEGORY_TAXONOMY.map(x => x.labels[lang])).size, 11)
   for (const entry of CATEGORY_TAXONOMY) {
     assert.equal(categoryLabel(lang,entry.slug),entry.labels[lang])
     assert.equal(categorySlugFromLabel(lang,entry.labels[lang]),entry.slug)
@@ -31,6 +31,6 @@ assert.equal(readRecipeForm(form('Soups & creams'),'es').success,false)
 assert.equal(readRecipeForm(form(''),'es').success,true)
 assert.equal(readRecipeForm(form('',true),'es').success,false)
 for(const lang of SUPPORTED_LANGUAGES) for(const entry of CATEGORY_TAXONOMY) assert.equal(readRecipeForm(form(entry.labels[lang],true),lang).success,true)
-const sql=readFileSync(new URL('../../supabase/migrations/20261005100242_reconcile_recipe_categories.sql',import.meta.url),'utf8')
+const sql=readFileSync(new URL('../../supabase/migrations/20261005100242_reconcile_recipe_categories.sql',import.meta.url),'utf8') + '\n' + readFileSync(new URL('../../supabase/migrations/20261107043503_add_homemade_dairy_category.sql',import.meta.url),'utf8')
 for(const lang of SUPPORTED_LANGUAGES) for(const entry of CATEGORY_TAXONOMY) assert.ok(sql.includes("'"+entry.labels[lang].replaceAll("'","''")+"'"))
-console.log('OK: 10 categorías, 70 nombres canónicos, correspondencia de idiomas y rechazo de categorías libres/vacías al publicar.')
+console.log('OK: 11 categorías, 77 nombres canónicos, correspondencia de idiomas y rechazo de categorías libres/vacías al publicar.')

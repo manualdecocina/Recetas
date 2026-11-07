@@ -72,7 +72,14 @@ export default function RecipeDocumentVisual({ recipe, relatedRecipes = [], note
   const nutritionNote = typeof nutrition.note === 'string' ? nutrition.note : t.nutritionEstimated;
   const nutritionSource = typeof nutrition.source === 'string' ? nutrition.source : null;
   const nutritionSourceUrl = nutritionSource?.includes('USDA FoodData Central') ? 'https://fdc.nal.usda.gov/' : null;
-  const summaryParagraphs = (recipe.summary ?? '').split(/\n{2,}/).map((x) => x.trim()).filter(Boolean);
+  // Do not repeat the same introduction under "About this recipe" in any language.
+  // Keep distinct editorial summaries, including longer practical notes.
+  const normalizeIntro = (value: string) => value.replace(/\s+/g, ' ').trim().toLocaleLowerCase(lang);
+  const displayedExcerpt = normalizeIntro(recipe.excerpt ?? '');
+  const summaryParagraphs = (recipe.summary ?? '')
+    .split(/\n{2,}/)
+    .map((x) => x.trim())
+    .filter((paragraph) => Boolean(paragraph) && normalizeIntro(paragraph) !== displayedExcerpt);
 
   return (
     <>
