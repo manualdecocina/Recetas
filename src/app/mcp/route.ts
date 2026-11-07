@@ -1,6 +1,6 @@
 import { supabase } from '@/lib/supabase/public'
 import { MCP_NAME, MCP_PROTOCOL_VERSION, MCP_TOOLS, MCP_VERSION } from '@/lib/mcp-manifest'
-import { getSiteUrl, recipeCanonicalUrl } from '@/lib/site'
+import { getSiteUrl, recipeCanonicalUrl, normalizePublicPath } from '@/lib/site'
 
 // A stateless, read-only MCP Streamable HTTP endpoint. No login, user data,
 // database writes, or external fetches; all queries use public RLS and hard limits.
@@ -70,11 +70,16 @@ async function callTool(name: unknown, args: Record<string, unknown>) {
         !path.startsWith('/') || path.includes('?') || path.includes('#')) {
       return invalidTool('Provide a published recipe URL path beginning with /, without query or fragment.')
     }
+    // Historic WordPress paths may retain a trailing slash in their canonical URL
+    // while public_path does not. Match either stored representation.
+    const normalized = normalizePublicPath(path)
+    const candidates = [...new Set([path, normalized, `${normalized}/`])]
     const { data, error } = await supabase
       .from('recipes')
       .select('title, excerpt, public_path, source_url, language, ingredients, steps, category, prep_time_minutes, cook_time_minutes, servings, updated_at')
       .eq('published', true)
-      .eq('public_path', path)
+      .in('public_path', candidates)
+      .limit(1)
       .maybeSingle()
     if (error) return invalidTool('Recipe lookup is temporarily unavailable.')
     if (!data) return toolText({ found: false })
