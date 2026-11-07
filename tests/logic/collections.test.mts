@@ -98,7 +98,24 @@ check('Pollo navideño colombiano: 7 idiomas, res y cerdo, pasas, pan rallado, a
   assert.ok(!/manzana|ciruelas/i.test(spanish.es.ingredients.map((i: any) => i.name).join(' ')))
   assert.ok(!/apple|prunes/i.test(locales.records.en.ingredients.map((i: any) => i.name).join(' ')))
   assert.equal(spanish.status, 'editorial_draft_not_published')
-  assert.equal(locales.status, 'corrected_localizations_drafted_not_published')
+  assert.equal(locales.status, 'silhouette_and_crosswise_slicing_corrected_drafts_not_published')
+  const naturalShape: Record<string, string[]> = {
+    es: ['patas', 'alas'], en: ['legs', 'wings'], de: ['Keulen', 'Flügeln'],
+    fr: ['cuisses', 'ailes'], it: ['cosce', 'ali'], ja: ['脚', '翼'], pt: ['pernas', 'asas']
+  }
+  const cleanSlices: Record<string, string> = {
+    es: 'TAJADAS TRANSVERSALES', en: 'CROSSWISE SLICES',
+    de: 'QUERSCHEIBEN', fr: 'TRANCHES TRANSVERSALES',
+    it: 'FETTE TRASVERSALI', ja: '輪切り', pt: 'FATIAS TRANSVERSAIS'
+  }
+  for (const [lang, r] of Object.entries(records)) {
+    const prep = r.steps[0].content.toLowerCase()
+    for (const term of naturalShape[lang]) assert.ok(prep.includes(term.toLowerCase()), `${lang}: falta extremidad ${term}`)
+    assert.ok(r.steps[7].content.includes(cleanSlices[lang]), `${lang}: debe cortar tajadas transversales limpias`)
+  }
+  assert.ok(spanish.media_plan.sequence[7].includes('NO presentación de Hora 13'))
+  assert.ok(spanish.media_plan.sequence[7].includes('2–3 cm'))
+
 })
 
 check('Ninguna receta repetida dentro de la colección', () => {
