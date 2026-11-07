@@ -113,7 +113,8 @@ check('robots con permiso: permite /, bloquea /admin/, declara sitemap', () => {
   const r = robotsText()
   assert.match(r, /Allow: \/\nDisallow: \/admin\//)
   assert.match(r, /Content-Signal: search=yes, ai-train=no/)
-  assert.match(r, /Sitemap: https:\/\/manualdecocina.com\/sitemap_index.xml/)
+  assert.match(r, /Sitemap: https:\/\/manualdecocina.com\/sitemap.xml/)
+  assert.doesNotMatch(r, /sitemap_index.xml/, 'El rastreador debe encontrar el sitemap de URLs y sus lastmod directamente')
 })
 process.env.NEXT_PUBLIC_ALLOW_INDEXING = 'TRUE'
 check('robots: solo "true" exacto habilita indexación', () => {

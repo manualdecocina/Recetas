@@ -1,6 +1,7 @@
 import { getSiteUrl, isIndexingAllowed } from '@/lib/site'
 
 // Preserve the production indexing rules and keep preview fully disallowed.
+// Advertise the URL-level sitemap directly: some host scanners do not follow sitemap indexes.
 // A custom route is necessary: MetadataRoute.Robots does not support Content-Signal.
 export function robotsText(): string {
   if (!isIndexingAllowed()) return [
@@ -15,7 +16,7 @@ export function robotsText(): string {
     'Allow: /',
     'Disallow: /admin/',
     'Content-Signal: search=yes, ai-train=no',
-    `Sitemap: ${getSiteUrl()}/sitemap_index.xml`,
+    `Sitemap: ${getSiteUrl()}/sitemap.xml`,
     '',
   ].join('\n')
 }
