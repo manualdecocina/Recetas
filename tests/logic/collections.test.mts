@@ -98,7 +98,7 @@ check('Pollo navideño colombiano: 7 idiomas, res y cerdo, pasas, pan rallado, a
   assert.ok(!/manzana|ciruelas/i.test(spanish.es.ingredients.map((i: any) => i.name).join(' ')))
   assert.ok(!/apple|prunes/i.test(locales.records.en.ingredients.map((i: any) => i.name).join(' ')))
   assert.equal(spanish.status, 'editorial_draft_not_published')
-  assert.equal(locales.status, 'silhouette_and_crosswise_slicing_corrected_drafts_not_published')
+  assert.equal(locales.status, 'corrected_bones_thigh_stuffing_stitches_drafts_not_published')
   const naturalShape: Record<string, string[]> = {
     es: ['patas', 'alas'], en: ['legs', 'wings'], de: ['Keulen', 'Flügel'],
     fr: ['cuisses', 'ailes'], it: ['cosce', 'ali'], ja: ['脚', '翼'], pt: ['pernas', 'asas']
@@ -113,9 +113,38 @@ check('Pollo navideño colombiano: 7 idiomas, res y cerdo, pasas, pan rallado, a
     for (const term of naturalShape[lang]) assert.ok(prep.includes(term.toLowerCase()), `${lang}: falta extremidad ${term}`)
     assert.ok(r.steps[7].content.includes(cleanSlices[lang]), `${lang}: debe cortar tajadas transversales limpias`)
   }
-  assert.ok(spanish.media_plan.sequence[7].includes('NO presentación de Hora 13'))
-  assert.ok(spanish.media_plan.sequence[7].includes('2–3 cm'))
+  assert.ok(spanish.media_plan.sequence[7].includes('2–3 tajadas TRANSVERSALES'))
+  assert.ok(spanish.media_plan.sequence[7].includes('sin texto'))
 
+})
+
+
+check('Anatomía del pollo: huesos fuera del contramuslo, dentro de la parte baja, rellenar ambos y coser atrás', () => {
+  const es = JSON.parse(readFileSync(new URL('../../docs/borradores/pollo-relleno-navideno-v1.json', import.meta.url), 'utf8'))
+  const locales = JSON.parse(readFileSync(new URL('../../docs/borradores/pollo-relleno-navideno-locales-v1.json', import.meta.url), 'utf8'))
+  const records: Record<string, any> = { es: es.es, ...locales.records }
+  const words: Record<string, { thigh: string; lower: string; wing: string; stitch: string }> = {
+    es: { thigh: 'CONTRAMUSLO', lower: 'PARTES BAJAS', wing: 'PUNTAS DE LAS ALAS', stitch: 'COSE' },
+    en: { thigh: 'UPPER THIGH', lower: 'LOWER DRUMSTICKS', wing: 'WING TIPS', stitch: 'STITCH' },
+    de: { thigh: 'OBERKEULEN', lower: 'UNTERKEULEN', wing: 'FLÜGELSPITZEN', stitch: 'zunähen' },
+    fr: { thigh: 'HAUTS DE CUISSE', lower: 'PILONS', wing: 'POINTES D’AILES', stitch: 'Cousez' },
+    it: { thigh: 'SOVRACOSCE', lower: 'FUSI', wing: 'PUNTE DELLE ALI', stitch: 'Cuci' },
+    ja: { thigh: '上もも', lower: 'すね', wing: '翼の先端', stitch: '縫' },
+    pt: { thigh: 'SOBRECOXAS', lower: 'PERNAS', wing: 'PONTAS DAS ASAS', stitch: 'Costure' }
+  }
+  for (const [lang, r] of Object.entries(records)) {
+    const text = [r.ingredients[0].name, r.summary, ...r.steps.map((s: any) => s.content), r.notes].join(' ')
+    const parts = words[lang]
+    for (const [part, word] of Object.entries(parts)) {
+      assert.ok(text.toLocaleLowerCase().includes(word.toLocaleLowerCase()), `${lang}: anatomical detail ${part} missing`)
+    }
+    assert.ok(r.steps[4].content.includes('74'), `${lang}: residual stuffing safety missing`)
+    assert.ok(r.steps[6].content.includes('74'), `${lang}: check 74 C in all stuffing pockets`)
+    assert.equal(r.steps.length, 8)
+    assert.equal(r.ingredients.length, 17)
+  }
+  assert.ok(es.media_plan.reject_previous_visuals.includes('DESCARTAR collage'))
+  assert.ok(es.media_plan.photography_shape_check.includes('huesos superiores'))
 })
 
 check('Ninguna receta repetida dentro de la colección', () => {
