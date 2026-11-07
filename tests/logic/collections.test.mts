@@ -100,8 +100,8 @@ check('Pollo navideño colombiano: 7 idiomas, res y cerdo, pasas, pan rallado, a
   assert.equal(spanish.status, 'editorial_draft_not_published')
   assert.equal(locales.status, 'corrected_bones_thigh_stuffing_stitches_drafts_not_published')
   const naturalShape: Record<string, string[]> = {
-    es: ['patas', 'alas'], en: ['legs', 'wings'], de: ['Keulen', 'Flügel'],
-    fr: ['cuisses', 'ailes'], it: ['cosce', 'ali'], ja: ['脚', '翼'], pt: ['pernas', 'asas']
+    es: ['patas', 'alas'], en: ['legs', 'wing'], de: ['Keulen', 'Flügel'],
+    fr: ['cuisses', 'ailes'], it: ['zampe', 'ali'], ja: ['脚', '翼'], pt: ['pernas', 'asas']
   }
   const cleanSlices: Record<string, string> = {
     es: 'TAJADAS TRANSVERSALES', en: 'CROSSWISE SLICES',
