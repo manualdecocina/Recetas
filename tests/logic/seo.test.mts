@@ -101,21 +101,23 @@ check('preview: siteRobots bloquea index/follow también para googlebot', () => 
   assert.equal(r.follow, false)
   assert.deepEqual(r.googleBot, { index: false, follow: false })
 })
-const robots = (await import('@/app/robots')).default
+const { robotsText } = await import('@/app/robots.txt/route')
 check('robots sin permiso: Disallow / y sin sitemap', () => {
-  const r: any = robots()
-  assert.deepEqual(r.rules, { userAgent: '*', disallow: '/' })
-  assert.equal(r.sitemap, undefined)
+  const r = robotsText()
+  assert.match(r, /Disallow: \/(?:\n|$)/)
+  assert.doesNotMatch(r, /Sitemap:/)
+  assert.match(r, /Content-Signal: search=no, ai-train=no/)
 })
 process.env.NEXT_PUBLIC_ALLOW_INDEXING = 'true'
 check('robots con permiso: permite /, bloquea /admin/, declara sitemap', () => {
-  const r: any = robots()
-  assert.deepEqual((robots() as any).rules, [{ userAgent: '*', allow: '/', disallow: '/admin/' }])
-  assert.equal(r.sitemap, 'https://manualdecocina.com/sitemap_index.xml')
+  const r = robotsText()
+  assert.match(r, /Allow: \/\nDisallow: \/admin\//)
+  assert.match(r, /Content-Signal: search=yes, ai-train=no/)
+  assert.match(r, /Sitemap: https:\/\/manualdecocina.com\/sitemap_index.xml/)
 })
 process.env.NEXT_PUBLIC_ALLOW_INDEXING = 'TRUE'
 check('robots: solo "true" exacto habilita indexación', () => {
-  assert.deepEqual((robots() as any).rules, { userAgent: '*', disallow: '/' })
+  assert.match(robotsText(), /Disallow: \/(?:\n|$)/)
 })
 
 console.log(`\n${n} pruebas OK`)

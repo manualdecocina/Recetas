@@ -34,7 +34,8 @@ export default function SiteHeaderView({ lang, alternates, available }: { lang: 
           <div className="md-header-actions">
             <Link className="md-shopping-link" href={`${base}/lista-de-compra`} aria-label={kitchenCopy(lang).shopping} title={kitchenCopy(lang).shopping}><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><path d="M6 7h12l2 14H4L6 7ZM9 8V6a3 3 0 0 1 6 0v2" /></svg></Link>
             <Link className="md-favorites-link" href={`${base}/favoritos`} aria-label={favoritesCopy[lang].title} title={favoritesCopy[lang].title}><span aria-hidden="true">★</span></Link>
-            <form className="md-header-search" action={`${base}/recetas`} method="get" role="search">
+            <form className="md-header-search" action={`${base}/recetas`} method="get" role="search"
+              {...{ toolname: 'search-recipes', tooldescription: 'Search published cooking recipes by dish name or ingredient in the current language.' }}>
               <label className="md-search-label md-sr-only" htmlFor="md-header-query">{t.searchLabel}</label>
               <input className="md-search-input" id="md-header-query" type="search" name="q" placeholder={t.searchPlaceholder} />
               <button className="md-search-submit" type="submit">{t.searchButton}</button>

@@ -2,6 +2,17 @@ import { NextResponse, type NextRequest } from 'next/server'
 import { createServerClient, type CookieOptions } from '@supabase/ssr'
 import { createClient } from '@supabase/supabase-js'
 import { DEFAULT_LANGUAGE } from '@/types/recipe'
+
+const homepagePath = /^\/(es|en|de|fr|it|ja|pt)\/?$/
+function homepageAgentResponse(request: NextRequest, lang: string): NextResponse {
+  const acceptsMarkdown = /(?:^|,)\s*text\/markdown(?:\s*;|\s*(?:,|$))/i.test(request.headers.get('accept') ?? '')
+  const response = acceptsMarkdown
+    ? NextResponse.rewrite(new URL(`/markdown?lang=${lang}`, request.url))
+    : NextResponse.next()
+  response.headers.set('Link', `</llms.txt>; rel="describedby"; type="text/plain", </markdown?lang=${lang}>; rel="alternate"; type="text/markdown"`)
+  response.headers.set('Vary', 'Accept')
+  return response
+}
 import { SUPABASE_PUBLIC_KEY, SUPABASE_URL } from '@/lib/supabase/keys'
 import { buildSlashMap, slashRedirectTarget, slashRedirectUrl, type SlashMap, type SlashRow } from '@/lib/trailing-slash'
 
@@ -67,10 +78,18 @@ export async function middleware(request: NextRequest) {
   // como lo era la raíz del sitio anterior. Sin detección de idioma a propósito:
   // Googlebot no envía Accept-Language útil y una redirección variable confunde el rastreo.
   if (pathname === '/') {
+    if (/(?:^|,)\s*text\/markdown(?:\s*;|\s*(?:,|$))/i.test(request.headers.get('accept') ?? '')) {
+      return homepageAgentResponse(request, DEFAULT_LANGUAGE)
+    }
     const url = request.nextUrl.clone()
     url.pathname = `/${DEFAULT_LANGUAGE}`
-    return NextResponse.redirect(url, 308)
+    const response = NextResponse.redirect(url, 308)
+    response.headers.set('Link', '</llms.txt>; rel="describedby"; type="text/plain", </markdown?lang=es>; rel="alternate"; type="text/markdown"')
+    return response
   }
+
+  const home = homepagePath.exec(pathname)
+  if (home) return homepageAgentResponse(request, home[1])
 
   // Rutas públicas: solo se corrige la barra final de las recetas. Todo lo demás pasa igual.
   if (pathname !== '/admin' && !pathname.startsWith('/admin/')) {

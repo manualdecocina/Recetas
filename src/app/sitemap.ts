@@ -12,6 +12,10 @@ type Entry = MetadataRoute.Sitemap[number]
 type SitemapLanguages = NonNullable<NonNullable<Entry['alternates']>['languages']>
 
 const BATCH = 1000
+// The global Organization/WebSite markup was meaningfully revised on 2026-11-06.
+// Keep this as a fixed revision date, not the request time (Google rejects rolling lastmod).
+const SITEWIDE_SCHEMA_REVISION = '2026-11-06'
+
 
 const INSTITUTIONAL_SLUGS = [
   'quienes-somos',
@@ -95,24 +99,26 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }
 
   for (const l of SUPPORTED_LANGUAGES) {
-    entries.push({ url: `${site}/${l}`, alternates: staticAlternates((x) => `/${x}`) })
-    entries.push({ url: `${site}/${l}/recetas`, alternates: staticAlternates((x) => `/${x}/recetas`) })
-    entries.push({ url: `${site}/${l}/categorias`, alternates: staticAlternates((x) => `/${x}/categorias`) })
+    entries.push({ url: `${site}/${l}`, lastModified: SITEWIDE_SCHEMA_REVISION, alternates: staticAlternates((x) => `/${x}`) })
+    entries.push({ url: `${site}/${l}/recetas`, lastModified: SITEWIDE_SCHEMA_REVISION, alternates: staticAlternates((x) => `/${x}/recetas`) })
+    entries.push({ url: `${site}/${l}/categorias`, lastModified: SITEWIDE_SCHEMA_REVISION, alternates: staticAlternates((x) => `/${x}/categorias`) })
     for (const slug of INSTITUTIONAL_SLUGS) {
       entries.push({
         url: `${site}/${l}/${slug}`,
+        lastModified: SITEWIDE_SCHEMA_REVISION,
         alternates: staticAlternates((x) => `/${x}/${slug}`),
       })
     }
   }
   // Herramienta real (gratuita) sin página propia en el sitemap hasta ahora.
-  for (const l of SUPPORTED_LANGUAGES) entries.push({ url: `${site}/${l}/que-puedo-cocinar`, alternates: staticAlternates((x) => `/${x}/que-puedo-cocinar`) })
+  for (const l of SUPPORTED_LANGUAGES) entries.push({ url: `${site}/${l}/que-puedo-cocinar`, lastModified: SITEWIDE_SCHEMA_REVISION, alternates: staticAlternates((x) => `/${x}/que-puedo-cocinar`) })
 
   // Colecciones editoriales (mismo contenido en los 7 idiomas, slug traducido).
   for (const l of SUPPORTED_LANGUAGES) {
-    entries.push({ url: `${site}${collectionsIndexPath(l)}`, alternates: staticAlternates((x) => collectionsIndexPath(x)) })
+    entries.push({ url: `${site}${collectionsIndexPath(l)}`, lastModified: SITEWIDE_SCHEMA_REVISION, alternates: staticAlternates((x) => collectionsIndexPath(x)) })
     for (const collection of COLLECTIONS) {
       entries.push({ url: `${site}${collectionPath(l, collection)}`,
+        lastModified: SITEWIDE_SCHEMA_REVISION,
         alternates: staticAlternates((x) => collectionPath(x as RecipeLanguage, collection)) })
     }
   }
@@ -128,6 +134,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     seenCategories.add(key)
     entries.push({
       url: `${site}/${row.language}/categorias/${slug}`,
+      lastModified: SITEWIDE_SCHEMA_REVISION,
       alternates: staticAlternates((x) => `/${x}/categorias/${slug}`),
     })
   }
@@ -141,7 +148,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   if (ingredientError) throw new Error(`Sitemap ingredients: ${ingredientError.message}`)
 
   for (const l of SUPPORTED_LANGUAGES) {
-    entries.push({ url: `${site}/${l}/ingredientes`, alternates: staticAlternates((x) => `/${x}/ingredientes`) })
+    entries.push({ url: `${site}/${l}/ingredientes`, lastModified: SITEWIDE_SCHEMA_REVISION, alternates: staticAlternates((x) => `/${x}/ingredientes`) })
     for (const ingredient of (ingredients ?? []) as IngredientRow[]) {
       entries.push({ url: `${site}/${l}/ingredientes/${ingredient.slug}`, lastModified: ingredient.updated_at,
         alternates: staticAlternates((x) => `/${x}/ingredientes/${ingredient.slug}`) })

@@ -36,6 +36,7 @@ export default function SiteFooter({ lang }: { lang: MdLanguage }) {
           <nav className="md-footer-links" aria-label={t.institutional}>
             <strong className="md-footer-heading">{t.institutional}</strong>
             {institutional.map((item) => <Link key={item.slug} href={`${base}/${item.slug}`}>{item.label}</Link>)}
+            <a href="mailto:hola@manualdecocina.com">hola@manualdecocina.com</a>
           </nav>
           <nav className="md-footer-links" aria-label={t.legal}>
             <strong className="md-footer-heading">{t.legal}</strong>
