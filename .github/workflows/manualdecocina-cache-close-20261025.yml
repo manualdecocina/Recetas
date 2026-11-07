@@ -31,7 +31,8 @@ jobs:
               if attempt<11:time.sleep(15)
           secret=(os.environ.get('REVALIDATE_SECRET') or '').rstrip('\r\n')
           if not secret:raise SystemExit('Missing cache secret')
-          req=urllib.request.Request(base+'/api/revalidate?close='+str(time.time_ns()),data=b'{}',headers={'x-revalidate-secret':secret,'Content-Type':'application/json','Cache-Control':'no-cache'})
+          # Origin WAF can block POST from Actions; the app explicitly supports protected GET too.
+          req=urllib.request.Request(base+'/api/revalidate?close='+str(time.time_ns()),headers={'x-revalidate-secret':secret,'Cache-Control':'no-cache'})
           with urllib.request.urlopen(req,timeout=35) as r:info=json.load(r)
           print('CACHE_CLOSE_JSON '+json.dumps({'checked_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'deployment_marker':found,'cache_mode':info.get('cacheMode'),'revalidated':info.get('revalidated'),'at':info.get('at')},ensure_ascii=False))
           if not found or info.get('cacheMode')!='expire-now' or info.get('revalidated') is not True:raise SystemExit('Hosting has not confirmed the current application deployment')
