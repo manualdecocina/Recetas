@@ -77,6 +77,12 @@ export default async function LanguageHome({ params }: { params: Promise<{ lang:
     inLanguage: languageTag(lang),
     isPartOf: { '@id': `${site}/#website` },
     publisher: { '@id': `${site}/#organization` },
+    significantLink: [
+      `${site}/${lang}/quienes-somos`,
+      `${site}/${lang}/contacto`,
+      `${site}/${lang}/privacidad`,
+      `${site}/${lang}/terminos`,
+    ],
     mainEntity: {
       '@type': 'ItemList',
       itemListElement: recipes.map((item, index) => ({

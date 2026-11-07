@@ -20,6 +20,11 @@ process.env.NEXT_PUBLIC_SITE_URL = 'https://manualdecocina.com'
 ]
 
 const sitemap = (await import('@/app/sitemap')).default
+const { latestSitemapChange } = await import('@/app/sitemap_index.xml/route')
+assert.equal(latestSitemapChange(['2026-11-02T10:00:00Z', '2026-11-09T13:20:00Z']),
+  '2026-11-09T13:20:00.000Z', 'index lastmod takes the latest actual published change')
+assert.equal(latestSitemapChange([null, 'invalid date']),
+  '2026-11-07T00:00:00.000Z', 'index lastmod falls back to known code revision')
 
 process.env.NEXT_PUBLIC_ALLOW_INDEXING = 'false'
 process.env.NEXT_PUBLIC_PREVIEW_SITE_URL = 'https://preview.manualdecocina.com/'
