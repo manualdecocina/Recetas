@@ -42,6 +42,11 @@ export default function HomePageView({ lang, data }: { lang: MdLanguage; data: M
             <h1 className="md-display" id="md-home-heading">{t.homeHeading}</h1>
             <p className="md-lead">{t.homeLead}</p>
             <Link className="md-button" href={`/${lang}/recetas`}>{t.seeAllRecipes}</Link>
+            <p className="md-home-about-link">
+              <Link className="md-link" href={`/${lang}/quienes-somos`} rel="about" title="About Manual de Cocina">
+                {lang === 'es' ? 'Quiénes somos / About' : t.about}
+              </Link>
+            </p>
           </div>
           {data.featured && (
             <figure className="md-home-hero-figure">
