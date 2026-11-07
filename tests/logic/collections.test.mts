@@ -98,7 +98,7 @@ check('Pollo navideño colombiano: 7 idiomas, res y cerdo, pasas, pan rallado, a
   assert.ok(!/manzana|ciruelas/i.test(spanish.es.ingredients.map((i: any) => i.name).join(' ')))
   assert.ok(!/apple|prunes/i.test(locales.records.en.ingredients.map((i: any) => i.name).join(' ')))
   assert.equal(spanish.status, 'editorial_draft_not_published')
-  assert.equal(locales.status, 'silhouette_and_crosswise_slicing_corrected_drafts_not_published')
+  assert.equal(locales.status, 'accurate_partial_deboning_drafts_not_published')
   const naturalShape: Record<string, string[]> = {
     es: ['patas', 'alas'], en: ['legs', 'wings'], de: ['Keulen', 'Flügel'],
     fr: ['cuisses', 'ailes'], it: ['cosce', 'ali'], ja: ['脚', '翼'], pt: ['pernas', 'asas']
@@ -113,7 +113,26 @@ check('Pollo navideño colombiano: 7 idiomas, res y cerdo, pasas, pan rallado, a
     for (const term of naturalShape[lang]) assert.ok(prep.includes(term.toLowerCase()), `${lang}: falta extremidad ${term}`)
     assert.ok(r.steps[7].content.includes(cleanSlices[lang]), `${lang}: debe cortar tajadas transversales limpias`)
   }
-  assert.ok(spanish.media_plan.sequence[7].includes('NO presentación de Hora 13'))
+  const anatomicalTerms: Record<string, string[]> = {
+    es: ['CONTRAMUSLO', 'MUSLITO INFERIOR', 'PUNTAS'],
+    en: ['UPPER THIGH', 'LOWER DRUMSTICK', 'wing tips'],
+    de: ['OBERSCHENKEL', 'UNTEREN KEULE', 'FLÜGELSPITZEN'],
+    fr: ['HAUT DE CUISSE', 'PILON INFÉRIEUR', 'POINTES'],
+    it: ['SOVRACOSCIA', 'FUSO INFERIORE', 'PUNTE'],
+    ja: ['もも上部', '脚の下部', '翼の先端'],
+    pt: ['SOBRECOXA', 'COXINHA INFERIOR', 'PONTAS']
+  }
+  for (const [lang, r] of Object.entries(records)) {
+    const debone = r.steps[1].content.toUpperCase()
+    for (const term of anatomicalTerms[lang]) assert.ok(debone.includes(term.toUpperCase()), `${lang}: debe explicar ${term}`)
+    const fill = r.steps[4].content
+    assert.ok(/74|contramuslos|upper thigh|Oberschenkel|hauts de cuisse|sovracosce|もも上部|sobrecoxas/i.test(fill), `${lang}: incluir relleno de ambos contramuslos`)
+    assert.ok(r.steps[3].content.length > 100, `${lang}: detallar costuras de cuello y extremos`)
+    assert.ok(r.steps[5].content.length > 100, `${lang}: detallar cierre posterior`)
+    assert.equal(r.prep_time_minutes, 75, `${lang}: preparación incluye deshuesado`)
+    assert.equal(r.cook_time_minutes_estimate, 140, `${lang}: cocción orientativa`)
+    assert.equal(r.total_time_minutes_estimate, 230, `${lang}: preparación+cocción+reposo`)
+  }
   assert.ok(spanish.media_plan.sequence[7].includes('2–3 cm'))
 
 })
