@@ -61,6 +61,26 @@ export default function RecipeDocumentVisual({ recipe, relatedRecipes = [], note
   const video = parseVideo(recipe.video_urls?.[0]);
   const videoPoster = typeof seo.video_poster === 'string' ? seo.video_poster : recipe.image_url;
   const hasStepPhotos = recipe.steps.some((s) => s.image_url);
+  // Muestra fotos editoriales adicionales solo con activación explícita, sin
+  // introducir cambios visuales en las galerías históricas de otras recetas.
+  const additionalPhotos = (Array.isArray(recipe.gallery) ? recipe.gallery : []).flatMap((entry) => {
+    const url = typeof entry?.url === 'string' ? entry.url : '';
+    if (!url || entry.show_on_page !== true || url === recipe.image_url) return [];
+    return [{
+      url,
+      alt: typeof entry.alt === 'string' ? entry.alt : `${t.photoOf} ${recipe.title}`,
+      caption: typeof entry.caption === 'string' ? entry.caption : '',
+    }];
+  });
+  const additionalPhotosTitle = ({
+    es: 'Más fotos de esta receta',
+    en: 'More photos of this recipe',
+    de: 'Weitere Fotos zu diesem Rezept',
+    fr: 'Autres photos de cette recette',
+    it: 'Altre foto di questa ricetta',
+    ja: 'このレシピの追加写真',
+    pt: 'Mais fotos desta receita',
+  } as Record<string, string>)[lang] ?? 'More photos';
   const nutrition = (recipe.nutrition ?? {}) as Record<string, unknown>;
   const nv = (k: string) => (typeof nutrition[k] === 'number' ? (nutrition[k] as number) : null);
   const calories = nv('calories');
@@ -206,6 +226,25 @@ export default function RecipeDocumentVisual({ recipe, relatedRecipes = [], note
               <section className="md-faq" id="md-faq" aria-labelledby="md-faq-heading">
                 <h2 className="md-title" id="md-faq-heading">{t.faqTitle}</h2>
                 {faq.map((item, i) => <details key={i}><summary>{item.q}</summary><p>{item.a}</p></details>)}
+              </section>
+            )}
+            {additionalPhotos.length > 0 && (
+              <section className="md-gallery" id="md-fotos-adicionales" aria-labelledby="md-fotos-adicionales-heading">
+                <h2 className="md-title" id="md-fotos-adicionales-heading">{additionalPhotosTitle}</h2>
+                {additionalPhotos.map((photo) => (
+                  <figure className="md-recipe-hero-photo" key={photo.url}>
+                    <Image
+                      src={recipeImageSrc(photo.url)}
+                      alt={photo.alt}
+                      width={1200}
+                      height={900}
+                      sizes="(max-width: 900px) calc(100vw - 36px), 560px"
+                      loading="lazy"
+                      quality={75}
+                    />
+                    {photo.caption && <figcaption>{photo.caption}</figcaption>}
+                  </figure>
+                ))}
               </section>
             )}
             {<PantryBanner lang={lang} headingId="md-recipe-pantry-cta" card />}
