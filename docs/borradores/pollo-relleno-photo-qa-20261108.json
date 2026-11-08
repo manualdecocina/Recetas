@@ -1,7 +1,7 @@
 {
   "recipe": "pollo-relleno-navideno",
   "date": "2026-11-08",
-  "status": "6 distinct step photographs staged, 2 missing",
+  "status": "6 distinct step photographs published and verified in all 7 languages; 2 missing",
   "existing_images": [
     "paso-06.webp",
     "paso-07.webp",
@@ -25,5 +25,27 @@
     "dorsal seam",
     "roasted bird with exposed bone tips"
   ],
-  "note": "Do not claim photo contract completed (8 distinct images) until two remaining independent anatomically accurate photos exist and are published."
+  "note": "Recipe and translations are live but the eight-photo original editorial requirement has NOT been met. Do not claim photo QA complete.",
+  "published_check": {
+    "date": "2026-11-08",
+    "languages": [
+      "es",
+      "en",
+      "de",
+      "fr",
+      "it",
+      "ja",
+      "pt"
+    ],
+    "verified_step_numbers": [
+      2,
+      4,
+      6,
+      7,
+      9,
+      10
+    ],
+    "status": "public HTML shows all 6 steps' image URLs on 7 live recipe pages",
+    "source": "Production rendered HTML and Supabase published rows"
+  }
 }
