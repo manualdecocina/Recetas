@@ -68,7 +68,25 @@ export const getRecipeByPublicPath = cache(async (path: string): Promise<Recipe 
 
   })
   const { recipe_ingredients: _links, ...recipeRow } = row
-  return { ...recipeRow, ingredients } as Recipe
+  // Editorial media: the original full-frame deboning photo is a shared asset
+  // across all seven translations. Do not override an explicitly saved DB photo.
+  const polloRellenoSlugs = new Set([
+    'pollo-relleno-navideno',
+    'christmas-stuffed-whole-chicken',
+    'gefuelltes-weihnachtshuhn',
+    'poulet-entier-farci-de-noel',
+    'pollo-intero-ripieno-di-natale',
+    'クリスマスの丸鶏詰め',
+    'frango-inteiro-recheado-de-natal',
+  ])
+  const steps = polloRellenoSlugs.has(recipeRow.slug) && Array.isArray(recipeRow.steps)
+    ? recipeRow.steps.map((step, index) =>
+        index === 2 && !step.image_url
+          ? { ...step, image_url: '/recetas/pollo-relleno-navideno/paso-03.webp' }
+          : step,
+      )
+    : recipeRow.steps
+  return { ...recipeRow, ingredients, steps } as Recipe
 })
 
 export const getContentPageByPublicPath = cache(async (path: string): Promise<ContentPage | null> => {
