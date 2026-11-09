@@ -1,4 +1,4 @@
-name: Pollo relleno - verificar imagen paso 3 en produccion
+name: Pollo relleno - verificar foto visible paso 3 en produccion
 on:
   push:
     branches: [main]
@@ -12,59 +12,99 @@ permissions:
 jobs:
   production:
     runs-on: ubuntu-24.04
-    timeout-minutes: 9
+    timeout-minutes: 8
     steps:
-      - name: Verify public full-frame WebP and all seven live translations
+      - name: Revalidate and verify actual Step 3 image in rendered DOM
         env:
           REVALIDATE_SECRET: ${{ secrets.REVALIDATE_SECRET }}
         run: |
           python - <<'PY'
-          import json, os, time, urllib.request, urllib.parse, urllib.error
-          base = "https://manualdecocina.com"
-          filename = "paso-03.webp"
-          image_path = "/recetas/pollo-relleno-navideno/" + filename
-          slugs = {
-            "es": "pollo-relleno-navideno",
-            "en": "christmas-stuffed-whole-chicken",
-            "de": "gefuelltes-weihnachtshuhn",
-            "fr": "poulet-entier-farci-de-noel",
-            "it": "pollo-intero-ripieno-di-natale",
-            "ja": "クリスマスの丸鶏詰め",
-            "pt": "frango-inteiro-recheado-de-natal",
+          from html.parser import HTMLParser
+          from urllib.parse import quote, unquote, urljoin
+          import json, os, time, urllib.request
+
+          BASE='https://manualdecocina.com'
+          PHOTO='/recetas/pollo-relleno-navideno/paso-03.webp'
+          SLUGS={
+              'es':'pollo-relleno-navideno',
+              'en':'christmas-stuffed-whole-chicken',
+              'de':'gefuelltes-weihnachtshuhn',
+              'fr':'poulet-entier-farci-de-noel',
+              'it':'pollo-intero-ripieno-di-natale',
+              'ja':'クリスマスの丸鶏詰め',
+              'pt':'frango-inteiro-recheado-de-natal',
           }
-          headers={"User-Agent":"ManualDeCocina-PublicationQA/1.0","Cache-Control":"no-cache"}
-          secret=os.getenv("REVALIDATE_SECRET","").strip()
-          if secret:
-            try:
-              req=urllib.request.Request(base+"/api/revalidate",data=b'{}',headers={"x-revalidate-secret":secret,"Content-Type":"application/json"},method="POST")
-              with urllib.request.urlopen(req,timeout=35) as response:
-                print("Cache revalidation:",response.status)
-            except Exception as e: print("Cache revalidation warning:",str(e))
-          results={}
-          for attempt in range(1,13):
-            results={}
-            try:
-              req=urllib.request.Request(base+image_path,headers=headers)
-              with urllib.request.urlopen(req,timeout=30) as response:
-                data=response.read()
-                results["image"]={"status":response.status,"size_bytes":len(data),"webp_magic": data[:4]==b"RIFF" and data[8:12]==b"WEBP"}
-            except Exception as e:
-              results["image"]={"error":str(e)}
-            for lang,slug in slugs.items():
-              path="/"+lang+"/receta/"+urllib.parse.quote(slug,safe="-")
+          HEADERS={'User-Agent':'ManualDeCocina-VisibleStepQA/2.0','Cache-Control':'no-cache'}
+
+          class Step3Parser(HTMLParser):
+              def __init__(self):
+                  super().__init__()
+                  self.inside=False
+                  self.has_photo_class=False
+                  self.button=False
+                  self.images=[]
+              def handle_starttag(self,tag,attrs):
+                  d=dict(attrs)
+                  if tag=='li' and d.get('id')=='paso-3':
+                      self.inside=True
+                      self.has_photo_class='has-photo' in d.get('class','').split()
+                  if self.inside and tag=='button' and 'md-step-photo' in d.get('class','').split():
+                      self.button=True
+                  if self.inside and self.button and tag=='img':
+                      self.images.append(d.get('src',''))
+              def handle_endtag(self,tag):
+                  if tag=='button':
+                      self.button=False
+                  if tag=='li':
+                      self.inside=False
+
+          secret=os.getenv('REVALIDATE_SECRET','').strip()
+          if not secret:
+              raise SystemExit('FAIL: missing REVALIDATE_SECRET; cannot invalidate production cache')
+          req=urllib.request.Request(BASE+'/api/revalidate',data=b'{}',
+              headers={'x-revalidate-secret':secret,'Content-Type':'application/json'},method='POST')
+          with urllib.request.urlopen(req,timeout=30) as res:
+              body=json.loads(res.read().decode('utf-8'))
+              if res.status!=200 or body.get('revalidated') is not True:
+                  raise SystemExit('FAIL: production revalidation did not confirm success')
+              print('Production cache revalidated',body.get('at'),flush=True)
+
+          last={}
+          for attempt in range(1,9):
+              current={}
               try:
-                req=urllib.request.Request(base+path,headers=headers)
-                with urllib.request.urlopen(req,timeout=30) as response:
-                  html=response.read().decode("utf-8",errors="replace")
-                  results[lang]={"status":response.status,"step03_photo_present":filename in html,"url":path}
+                  with urllib.request.urlopen(urllib.request.Request(BASE+PHOTO,headers=HEADERS),timeout=30) as r:
+                      binary=r.read()
+                      current['original_photo_ok']=(r.status==200 and len(binary)>50000 and binary[:4]==b'RIFF' and binary[8:12]==b'WEBP')
               except Exception as e:
-                results[lang]={"error":str(e),"url":path}
-            print(json.dumps({"attempt":attempt,"results":results},ensure_ascii=False),flush=True)
-            if (results.get("image",{}).get("webp_magic") and results.get("image",{}).get("size_bytes",0)>50000
-                and all(results.get(lang,{}).get("status")==200 and results[lang].get("step03_photo_present") for lang in slugs)):
-              print("PASS: public WebP and seven language pages linked to step-03")
-              break
-            if attempt<12: time.sleep(20)
+                  current['original_photo_error']=str(e)
+                  current['original_photo_ok']=False
+              for lang,slug in SLUGS.items():
+                  uri=BASE+'/'+lang+'/receta/'+quote(slug,safe='-')
+                  try:
+                      with urllib.request.urlopen(urllib.request.Request(uri,headers=HEADERS),timeout=30) as r:
+                          html=r.read().decode('utf-8','replace')
+                          p=Step3Parser()
+                          p.feed(html)
+                          imgs=[s for s in p.images if PHOTO in unquote(s)]
+                          current[lang]={'status':r.status,'step3_has_photo':p.has_photo_class,'step3_visible_img':bool(imgs)}
+                          if lang=='es' and imgs:
+                              src=urljoin(BASE,imgs[0])
+                              with urllib.request.urlopen(urllib.request.Request(src,headers=HEADERS),timeout=40) as img:
+                                  current[lang]['optimized_image_ok']=(img.status==200 and img.headers.get('content-type','').startswith('image/'))
+                  except Exception as e:
+                      current[lang]={'error':str(e)}
+              print(json.dumps({'attempt':attempt,'results':current},ensure_ascii=False),flush=True)
+              last=current
+              if current.get('original_photo_ok') and all(
+                  current.get(lang,{}).get('status')==200
+                  and current[lang].get('step3_has_photo')
+                  and current[lang].get('step3_visible_img')
+                  for lang in SLUGS
+              ) and current['es'].get('optimized_image_ok'):
+                  print('PASS: actual visible Step 3 img inside li#paso-3 in all 7 locales; original and optimized images respond 200',flush=True)
+                  break
+              if attempt<8:time.sleep(15)
           else:
-            raise SystemExit("FAIL: full live step-03 photo not yet confirmed in seven translations")
+              raise SystemExit('FAIL: Step 3 not visibly rendered correctly in all locales: '+json.dumps(last,ensure_ascii=False))
           PY
