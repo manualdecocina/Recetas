@@ -1,0 +1,70 @@
+name: Pollo relleno - verificar imagen paso 3 en produccion
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/pollo-relleno-step03-live-qa.yml'
+      - 'src/lib/public-content.ts'
+      - 'public/recetas/pollo-relleno-navideno/paso-03.webp'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  production:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 9
+    steps:
+      - name: Verify public full-frame WebP and all seven live translations
+        env:
+          REVALIDATE_SECRET: ${{ secrets.REVALIDATE_SECRET }}
+        run: |
+          python - <<'PY'
+          import json, os, time, urllib.request, urllib.parse, urllib.error
+          base = "https://manualdecocina.com"
+          filename = "paso-03.webp"
+          image_path = "/recetas/pollo-relleno-navideno/" + filename
+          slugs = {
+            "es": "pollo-relleno-navideno",
+            "en": "christmas-stuffed-whole-chicken",
+            "de": "gefuelltes-weihnachtshuhn",
+            "fr": "poulet-entier-farci-de-noel",
+            "it": "pollo-intero-ripieno-di-natale",
+            "ja": "クリスマスの丸鶏詰め",
+            "pt": "frango-inteiro-recheado-de-natal",
+          }
+          headers={"User-Agent":"ManualDeCocina-PublicationQA/1.0","Cache-Control":"no-cache"}
+          secret=os.getenv("REVALIDATE_SECRET","").strip()
+          if secret:
+            try:
+              req=urllib.request.Request(base+"/api/revalidate",data=b'{}',headers={"x-revalidate-secret":secret,"Content-Type":"application/json"},method="POST")
+              with urllib.request.urlopen(req,timeout=35) as response:
+                print("Cache revalidation:",response.status)
+            except Exception as e: print("Cache revalidation warning:",str(e))
+          results={}
+          for attempt in range(1,13):
+            results={}
+            try:
+              req=urllib.request.Request(base+image_path,headers=headers)
+              with urllib.request.urlopen(req,timeout=30) as response:
+                data=response.read()
+                results["image"]={"status":response.status,"size_bytes":len(data),"webp_magic": data[:4]==b"RIFF" and data[8:12]==b"WEBP"}
+            except Exception as e:
+              results["image"]={"error":str(e)}
+            for lang,slug in slugs.items():
+              path="/"+lang+"/receta/"+urllib.parse.quote(slug,safe="-")
+              try:
+                req=urllib.request.Request(base+path,headers=headers)
+                with urllib.request.urlopen(req,timeout=30) as response:
+                  html=response.read().decode("utf-8",errors="replace")
+                  results[lang]={"status":response.status,"step03_photo_present":filename in html,"url":path}
+              except Exception as e:
+                results[lang]={"error":str(e),"url":path}
+            print(json.dumps({"attempt":attempt,"results":results},ensure_ascii=False),flush=True)
+            if (results.get("image",{}).get("webp_magic") and results.get("image",{}).get("size_bytes",0)>50000
+                and all(results.get(lang,{}).get("status")==200 and results[lang].get("step03_photo_present") for lang in slugs)):
+              print("PASS: public WebP and seven language pages linked to step-03")
+              break
+            if attempt<12: time.sleep(20)
+          else:
+            raise SystemExit("FAIL: full live step-03 photo not yet confirmed in seven translations")
+          PY
