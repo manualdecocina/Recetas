@@ -1,29 +1,28 @@
 {
   "recipe": "pollo-relleno-navideno",
   "checked_on": "2026-11-08",
-  "status": "7 independently generated and publicly linked recipe-step photos; anatomical upper-thigh photo for step 03 still pending",
+  "status": "PASS — eight independent original step photographs are published; anatomical step 03 verified live in seven languages",
   "source": "Individual original rendered photos, no collage source or video crop; each WebP preserves full source image within expanded 4:3 canvas",
   "published_or_staged_files": [
     "paso-02.webp",
+    "paso-03.webp",
     "paso-04.webp",
     "paso-06.webp",
     "paso-07.webp",
     "paso-08.webp",
     "paso-09.webp",
     "paso-10.webp",
-    "portada-4x3.webp",
+    "portada-16x9.webp",
     "portada-1x1.webp",
-    "portada-16x9.webp"
+    "portada-4x3.webp"
   ],
   "excluded": [
     "paso-08.webp: dorsal stitch inaccurate for rear cavity, reject",
     "every butterfly/spatchcocked chicken image because body should not be opened flat",
     "any multi-panel collage"
   ],
-  "missing_photo_subjects": [
-    "Step 03: both upper-thigh femurs removed while keeping drumstick bones and wingtips, whole chicken intact, not spatchcocked"
-  ],
-  "gate": "Seven truly independent photos are online and linked across all seven published languages. The cover is a derived variant of step 10, not a unique photo. Last step-03 AI generation was a multi-panel collage depicting spatchcocking and wrong ingredients; rejected, not uploaded. Photo QA remains incomplete until one anatomically correct individual 4:3 step-03 photo exists and is live.",
+  "missing_photo_subjects": [],
+  "gate": "PASS — step 03 is a standalone 4:3 original, depicting the removal of both upper-thigh femurs while preserving lower drumsticks. Public WebP HTTP 200 and linked on all seven production recipe pages; neither a collage nor a video crop.",
   "production_checks": {
     "languages": [
       "es",
@@ -37,6 +36,7 @@
     "published": true,
     "step_photos_online": [
       2,
+      3,
       4,
       6,
       7,
@@ -44,10 +44,13 @@
       9,
       10
     ],
-    "remaining_step_photos": [
-      3
-    ],
+    "remaining_step_photos": [],
     "public_page_image_links_checked": true,
-    "existing_slugs_preserved": true
+    "existing_slugs_preserved": true,
+    "live_photo_url": "https://manualdecocina.com/recetas/pollo-relleno-navideno/paso-03.webp",
+    "step_03_webp_dimensions": "1448x1086 (4:3)",
+    "step_03_webp_bytes": 224136,
+    "production_verification": "https://github.com/manualdecocina/Recetas/actions/runs/42557423070",
+    "verification_result": "PASS: 200 WebP plus 200 and step-03 photo link in es,en,de,fr,it,ja,pt"
   }
 }
