@@ -1,0 +1,48 @@
+name: Pollo relleno - convertir foto del paso 3 a WebP
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'public/recetas/pollo-relleno-navideno/paso-03-source.png'
+      - '.github/workflows/pollo-relleno-paso03-webp.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  convert:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install image tools
+        run: python -m pip install --disable-pip-version-check 'Pillow==11.3.0'
+      - name: Validate original and publish full-frame 4:3 WebP
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image
+          source = Path('public/recetas/pollo-relleno-navideno/paso-03-source.png')
+          target = source.with_name('paso-03.webp')
+          assert source.exists(), 'Missing full original'
+          im = Image.open(source).convert('RGB')
+          assert im.width * 3 == im.height * 4, f'Not 4:3: {im.size}'
+          assert im.width >= 1200, f'Insufficient resolution: {im.size}'
+          im.save(target, 'WEBP', quality=89, method=6)
+          out = Image.open(target)
+          assert out.size == im.size and out.format == 'WEBP'
+          print(f'Generated {target} {out.size}: {target.stat().st_size} bytes')
+          PY
+      - name: Commit optimized image on main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/recetas/pollo-relleno-navideno/paso-03.webp
+          if ! git diff --cached --quiet; then
+            git commit -m "Pollo relleno: publish original full-frame step-03 WebP"
+            git push origin HEAD:main
+          fi
