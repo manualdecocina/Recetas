@@ -32,11 +32,13 @@ const base = process.env.AUDIT_BASE || 'http://127.0.0.1:3000';
    await page.goto(`${base}/en/recetas?q=rice&q=beans`,{waitUntil:'networkidle'});
    assert.equal(await page.locator('main#md-main h1').count(),1,'repeated keys must render the actual catalog');
    await page.goto(`${base}/porra-antequerana-receta`,{waitUntil:'networkidle'});
+   assert.equal(await page.locator('dialog.md-lightbox').count(),0,'large photos are not mounted before opening');
    await page.locator('.md-step-photo').first().click();
    await page.getByRole('dialog').waitFor({state:'visible'});
    assert((await page.getByRole('dialog').getAttribute('aria-label')).length>0,'photo dialog has an accessible name');
    await page.keyboard.press('Escape');
    assert.equal(await page.getByRole('dialog').count(),0);
+   assert.equal(await page.locator('dialog.md-lightbox').count(),0,'closing releases the large photo and its dialog');
    assert.deepEqual(errors,[],`runtime errors at width ${width}`);
    await context.close();
   }

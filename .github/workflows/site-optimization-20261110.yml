@@ -1,0 +1,67 @@
+name: Site optimization - browser and mobile performance
+on:
+  pull_request:
+    paths:
+      - 'src/components/md/StepPhoto.tsx'
+      - 'src/components/md/RecipeTimer.tsx'
+      - 'src/lib/recipe-timer.ts'
+      - 'src/lib/pantry-editorial.ts'
+      - '.github/workflows/site-optimization-20261110.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  browser:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      NEXT_PUBLIC_ALLOW_INDEXING: 'true'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci
+      - run: npm install --no-save --package-lock=false playwright@1.64.1
+      - run: npm run build
+      - name: Start isolated production server
+        run: |
+          nohup npm run start -- -p 3000 > /tmp/site-audit-next.log 2>&1 &
+          for i in {1..60}; do
+            if curl -fsS http://127.0.0.1:3000/icon.png >/dev/null; then exit 0; fi
+            sleep 1
+          done
+          cat /tmp/site-audit-next.log
+          exit 1
+      - name: Browser checks - responsive layout, filters and photo dialogs
+        run: node tests/e2e/full-quality.cjs
+      - name: Browser checks - cooking, timers, portions and shopping in seven languages
+        env:
+          KITCHEN_BASE: http://127.0.0.1:3000
+          CHROME_PATH: /usr/bin/google-chrome
+        run: node tests/e2e/kitchen-tools.cjs
+      - name: Mobile Lighthouse - same local app and full production photo content
+        run: |
+          for route in es sabajon-colombiano es/que-puedo-cocinar; do
+            output="lighthouse-${route//\//-}.json"
+            npm exec --yes --package=lighthouse@13.5.0 -- lighthouse "http://127.0.0.1:3000/$route" --quiet --chrome-flags="--headless --no-sandbox" --only-categories=performance,accessibility,best-practices,seo --form-factor=mobile --output=json --output-path="$output"
+          done
+      - name: Record measured scores and failing audits
+        if: always()
+        run: |
+          node <<'JS'
+          const fs=require('fs');const rows=[];
+          for(const file of fs.readdirSync('.').filter(f=>f.startsWith('lighthouse-')&&f.endsWith('.json'))){
+            const r=JSON.parse(fs.readFileSync(file));
+            rows.push({file,url:r.finalDisplayedUrl||r.finalUrl,scores:Object.fromEntries(Object.entries(r.categories).map(([k,v])=>[k,Math.round(v.score*100)])),metrics:Object.fromEntries(['first-contentful-paint','largest-contentful-paint','total-blocking-time','cumulative-layout-shift'].map(k=>[k,r.audits[k]?.numericValue])),failed:Object.values(r.audits).filter(a=>a.score!==null&&a.score<1&&a.scoreDisplayMode!=='informative').map(a=>({id:a.id,title:a.title,value:a.displayValue}))});
+          }
+          fs.writeFileSync('lighthouse-summary.json',JSON.stringify(rows,null,2));console.log(JSON.stringify(rows,null,2));
+          JS
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: site-optimization-browser-and-performance
+          path: |
+            lighthouse-*.json
+            audit-repairs-qa/
+            /tmp/kitchen-qa/
