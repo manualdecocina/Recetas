@@ -12,6 +12,7 @@ const base = process.env.AUDIT_BASE || 'http://127.0.0.1:3000';
    const page = await context.newPage();
    const errors=[];page.on('pageerror',e=>errors.push(e.message));
    await page.goto(`${base}/es`,{waitUntil:'networkidle'});
+   assert(await page.locator('section[aria-labelledby="md-latest-heading"]').evaluate(section=>[...section.querySelectorAll('.md-recipe-card')].every(card=>card.getBoundingClientRect().bottom<=section.getBoundingClientRect().bottom+1)),'home recipe cards stay within their section before scrolling');
    // Reproduce Google's observed zero-width unfilled slot with a surviving large iframe.
    await page.evaluate(()=>{
     const slot=document.createElement('div');slot.className='google-auto-placed';slot.id='quality-unfilled-fixture';slot.style.textAlign='center';
@@ -32,11 +33,13 @@ const base = process.env.AUDIT_BASE || 'http://127.0.0.1:3000';
    await page.goto(`${base}/en/recetas?q=rice&q=beans`,{waitUntil:'networkidle'});
    assert.equal(await page.locator('main#md-main h1').count(),1,'repeated keys must render the actual catalog');
    await page.goto(`${base}/porra-antequerana-receta`,{waitUntil:'networkidle'});
+   assert.equal(await page.locator('dialog.md-lightbox').count(),0,'large photos are not mounted before opening');
    await page.locator('.md-step-photo').first().click();
    await page.getByRole('dialog').waitFor({state:'visible'});
    assert((await page.getByRole('dialog').getAttribute('aria-label')).length>0,'photo dialog has an accessible name');
    await page.keyboard.press('Escape');
    assert.equal(await page.getByRole('dialog').count(),0);
+   await page.locator('dialog.md-lightbox').waitFor({state:'detached'});
    assert.deepEqual(errors,[],`runtime errors at width ${width}`);
    await context.close();
   }

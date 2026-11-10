@@ -1,0 +1,27 @@
+name: Site optimization - production verification
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/components/md/StepPhoto.tsx'
+      - 'src/lib/pantry-foods.ts'
+      - 'src/app/site.css'
+      - '.github/workflows/site-optimization-production-20261110.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  production:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Wait for deployment, refresh cache and verify seven recipe pages
+        env:
+          REVALIDATE_SECRET: ${{ secrets.REVALIDATE_SECRET }}
+        run: python3 scripts/verify-site-optimization-20261110.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: site-optimization-production
+          path: site-optimization-publication.json

@@ -21,7 +21,7 @@ const FOODS: Array<[RegExp, string]> = [
   [/^langostinos\b/, 'Langostinos'],
   [/^calamar\b/, 'Calamar'],
   [/^mejillones\b/, 'Mejillones'],
-  [/^(?:hojas de )?albahaca\b/, 'Albahaca'],
+  [/^(?:hojas de )?albahaca\b(?! (?:sec[oa]s?|deshidratad[oa]s?|en polvo))/, 'Albahaca fresca'],
   [/^(?:ramas? de |tallos de )apio\b|^apio\b/, 'Apio'],
   [/^calabaza\b/, 'Calabaza'],
   [/^coliflor\b/, 'Coliflor'],
@@ -40,7 +40,7 @@ const FOODS: Array<[RegExp, string]> = [
   [/^aceitunas verdes\b/, 'Aceitunas verdes'],
   [/^pasas\b/, 'Pasas'],
   [/^bananas?\b/, 'Banana'],
-  [/^higos\b/, 'Higos'],
+  [/^higos\b(?! (?:secos?|deshidratados?|en (?:almibar|conserva)))/, 'Higos'],
   [/^naranja\b/, 'Naranja'],
   [/^(?:jugo|zumo) de naranja\b/, 'Jugo de naranja'],
   [/^(?:jugo|zumo) de lima\b/, 'Jugo de lima'],
@@ -59,9 +59,10 @@ const FOODS: Array<[RegExp, string]> = [
   [/^hojaldre\b/, 'Hojaldre'],
   [/^pan blanco\b/, 'Pan blanco'],
   [/^panes? (?:de|tipo) hamburguesa\b/, 'Pan de hamburguesa'],
+  [/^(?:pan rallado(?: tipo)? panko|panko)\b/, 'Panko'],
   [/^pan rallado(?! panko)\b/, 'Pan rallado'],
-  [/^espaguet[is]\b|^espaguetis\b/, 'Espaguetis'],
-  [/^fettuccine\b/, 'Fettuccine'],
+  [/^(?:espaguetis?|espagueti)\b(?! (?:frescos?|cocidos?))/, 'Espaguetis'],
+  [/^fettuccine\b(?! (?:frescos?|cocidos?))/, 'Fettuccine'],
   [/^tortillas de maiz\b/, 'Tortillas de maíz'],
   [/^tortillas (?:grandes )?de (?:trigo|harina)\b/, 'Tortillas de trigo'],
   [/^tomate triturado\b/, 'Tomate triturado'],
@@ -87,7 +88,10 @@ export function pantryFoodName(name: string, lang = 'es'): string {
   // Do not truncate lists of alternatives or combined ingredients.
   if (alternatives || /\by\b/.test(normalized.split(',')[0])) return name
   let short = name.replace(/\s*\([^)]*\)/g, '').split(/[,;:]/)[0].trim()
-  if (lang === 'es') {
+  // Product form is meaningful: peeling a canned tomato or grating dried
+  // coconut does not turn either into the fresh food. Preserve those descriptors.
+  const productForm = /\b(?:en conserva|en lata|deshidratad[oa]s?|congelad[oa]s?|secos?|secas?|en polvo|salmuera|ahumad[oa]s?|panko)\b/.test(fold(short))
+  if (lang === 'es' && !productForm) {
     short = short.replace(/\s+(?:para (?:servir|decorar|espolvorear|la cobertura|el relleno)|(?:finamente )?(?:picad[oa]s?|pelad[oa]s?|rallad[oa]s?|cortad[oa]s?|laminad[oa]s?|trocead[oa]s?|desmenuzad[oa]s?|escurrid[oa]s?)|en (?:rodajas|gajos|cubos|dados|tiras|trozos)\b).*$/i, '')
   }
   return short ? short[0].toLocaleUpperCase(lang) + short.slice(1) : name

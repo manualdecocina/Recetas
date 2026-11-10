@@ -10,6 +10,8 @@ export interface RecipeIngredient {
   group?: string
   canonicalIngredientSlug?: string
   canonicalIngredientName?: string
+  pantryIngredientSlug?: string
+  pantryIngredientAliases?: string[]
 }
 
 export interface RecipeStep {

@@ -27,14 +27,14 @@ const PREPARATION_IDENTITIES: Array<[RegExp, string]> = [
   [/^sal\b(?! y )/, 'sal'],
   [/^pimienta negra\b/, 'pimienta-negra'],
   [/^agua(?: (?:potable|fria|caliente|tibia|para|de coccion|limpia)|,|$)/, 'agua'],
-  [/^huevos?\b(?!.*yemas separadas)/, 'huevo'],
+  [/^huevos?\b(?!.*(?:yemas separadas|de codorniz|\b(?:duros?|cocidos?)\b))/, 'huevo'],
   [/^leche(?: entera)?(?: pasteurizada| caliente|,|$)/, 'leche'],
   [/^(?:mantequilla)(?: sin sal)?(?: fria| blanda|,| \(|$)/, 'mantequilla'],
   [/^azucar(?: blanca| blanco| granulada| para| \(|$)/, 'azucar'],
   [/^harina de trigo(?: comun| de todo uso| de uso comun| de uso general|,|$)/, 'harina-de-trigo'],
   [/^fresas\b/, 'fresas'],
   [/^frambuesas\b/, 'frambuesas'],
-  [/^arandanos\b/, 'arandanos'],
+  [/^arandanos\b(?! rojos)/, 'arandanos'],
   [/^moras\b/, 'moras'],
   [/^cilantro(?: fresco)?\b/, 'cilantro'],
   [/^perejil(?: fresco)?\b/, 'perejil'],
@@ -119,7 +119,10 @@ export function buildEditorialPantry(sources: PantrySource[], catalog: MdPantryI
       const exact = exactNames.get(normalized)
       const id = linksByRecipe.get(source.id)?.get(position)
         ?? (exact?.size === 1 ? [...exact][0] : verifiedPreparationId(name, catalog) ?? editorialIngredientId(name))
-      const ingredient = byId.get(id) ?? { id, slug: id, name }
+      const base = used.get(id) ?? byId.get(id) ?? { id, slug: id, name }
+      // A reviewed taxonomy link may replace the old editorial identity. Keep
+      // that exact saved choice as an alias so existing inventories still restore.
+      const ingredient = { ...base, aliases: [...new Set([...(base.aliases ?? []), editorialIngredientId(name)])] }
       used.set(id, ingredient); ids.push(id)
     })
     requirements.set(source.id, ids)

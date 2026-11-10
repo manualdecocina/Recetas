@@ -24,7 +24,7 @@ async function waitServer() {
   console.log('Starting kitchen browser QA');
   if(server) await waitServer();
   console.log('Server ready');
-  const launch = () => chromium.launch({ ...(process.env.KITCHEN_PROXY ? {proxy:{server:process.env.KITCHEN_PROXY}} : {}), ...(executablePath ? {executablePath} : {}), args: ['--no-sandbox','--no-zygote','--single-process'] });
+   const launch = () => chromium.launch({ ...(process.env.KITCHEN_PROXY ? {proxy:{server:process.env.KITCHEN_PROXY}} : {}), ...(executablePath ? {executablePath} : {}), args: ['--no-sandbox','--disable-dev-shm-usage'] });
   fs.mkdirSync('/tmp/kitchen-qa',{recursive:true});
   for (const width of [390,1366]) {
    browser = await launch();
@@ -52,6 +52,11 @@ async function waitServer() {
    assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'recipe has no horizontal overflow');
    if(width===390) { for(const small of [320,360]) { await page.setViewportSize({width:small,height:900}); assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`header and recipe fit ${small}px`); } await page.setViewportSize({width,height:900}); }
    const alternates=await page.locator('link[rel="alternate"][hreflang]').evaluateAll(links=>links.map(link=>({lang:link.hreflang.split('-')[0],path:new URL(link.href).pathname})).filter(x=>x.lang!=='x'));
+   // A reviewed taxonomy alias must not erase an existing saved inventory choice.
+   await page.evaluate(()=>{localStorage.setItem('manualdecocina:pantry:selectedSlugs',JSON.stringify(['editorial:leche']));window.dispatchEvent(new Event('storage'));});
+   await page.waitForFunction(()=>document.querySelector('.md-ingredient-checkbox input')?.checked);
+   await page.locator('.md-ingredient-checkbox input').first().uncheck();
+   assert(!(await page.evaluate(()=>JSON.parse(localStorage.getItem('manualdecocina:pantry:selectedSlugs')))).includes('editorial:leche'),'unchecking removes the prior alias as well as its canonical choice');
    await page.locator('.md-ingredient-checkbox input').first().check();
    await page.getByRole('button',{name:'Añadir faltantes a la lista',exact:true}).click();
    let cart=await page.evaluate(key=>JSON.parse(localStorage.getItem(key)),cartKey);
