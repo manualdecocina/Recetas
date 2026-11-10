@@ -83,3 +83,5 @@ Tras el aviso del usuario se comprobó que la ficha, la búsqueda y Navidad colo
 Causa confirmada: las siete versiones tenían `ready_at = NULL`; portada y catálogo ordenan por ese campo colocando los nulos al final. Eran las únicas siete recetas publicadas con ese dato vacío. Se completó con el `published_at` original (7 de noviembre de 2026), conservando la fecha real de publicación y todos los contenidos. La consulta posterior sitúa el pollo primero en las novedades.
 
 Se amplió el comprobador público de producción para exigir enlaces a la receta en portada, primera página del catálogo y Navidad colombiana después de renovar la caché. La comprobación anterior solo verificaba que el inicio respondiera y que la receta se encontrara al buscarla.
+
+Comprobación pública posterior: pollo visible como destacada en portada, en la primera página del catálogo y en Navidad colombiana. Confirmado mediante HTTP y navegador. Las siete fichas conservan diez pasos, diez fotos y sus alternancias. Evidencia: `discovery-verified.json`.
