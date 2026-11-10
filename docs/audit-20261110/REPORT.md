@@ -75,3 +75,11 @@ También pasaron en el commit publicado las comprobaciones de calidad, rendimien
 ## Evidencia
 
 `crawl-evidence.zip` contiene los registros del rastreo y los inventarios. Los JSON de esta carpeta resumen integridad de medios, estructura, conciliación y tamaños. El script `scripts/audit-live-20261110.py` permite repetir el rastreo público y `scripts/verify-site-optimization-20261110.py` verifica la publicación.
+
+## Corrección adicional: pollo ausente de portada y primeras recetas
+
+Tras el aviso del usuario se comprobó que la ficha, la búsqueda y Navidad colombiana sí incluían el pollo, pero la portada y la primera página del catálogo no. La auditoría inicial comprobó acceso y búsqueda, y no detectó esa ausencia de descubrimiento.
+
+Causa confirmada: las siete versiones tenían `ready_at = NULL`; portada y catálogo ordenan por ese campo colocando los nulos al final. Eran las únicas siete recetas publicadas con ese dato vacío. Se completó con el `published_at` original (7 de noviembre de 2026), conservando la fecha real de publicación y todos los contenidos. La consulta posterior sitúa el pollo primero en las novedades.
+
+Se amplió el comprobador público de producción para exigir enlaces a la receta en portada, primera página del catálogo y Navidad colombiana después de renovar la caché. La comprobación anterior solo verificaba que el inicio respondiera y que la receta se encontrara al buscarla.

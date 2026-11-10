@@ -7,6 +7,7 @@ on:
       - 'src/lib/pantry-foods.ts'
       - 'src/app/site.css'
       - '.github/workflows/site-optimization-production-20261110.yml'
+      - 'scripts/verify-site-optimization-20261110.py'
   workflow_dispatch:
 permissions:
   contents: read

@@ -49,8 +49,14 @@ if __name__=='__main__':
         with urlopen(req,timeout=35) as response: assert json.load(response).get('revalidated') is True
     with ThreadPoolExecutor(max_workers=4) as pool: pages=list(pool.map(check,SLUGS.items()))
     home=fetch('/es');pantry=fetch('/es/que-puedo-cocinar');sitemap=fetch('/sitemap.xml')
+    catalogue=fetch('/es/recetas')
+    collection=fetch('/es/colecciones/recetas-navidad-colombiana')
+    recipe_path='/es/receta/pollo-relleno-navideno'
+    assert f'href="{recipe_path}"' in home, 'Chicken missing from home discovery'
+    assert f'href="{recipe_path}"' in catalogue, 'Chicken missing from first catalogue page'
+    assert f'href="{recipe_path}"' in collection, 'Chicken missing from Christmas collection'
     assert 'Albahaca fresca' in pantry and 'Albahaca seca' in pantry
     assert 'pollo-relleno-navideno' in sitemap and '<h1' in home
-    result={'pages':pages,'home':True,'distinct_fresh_dried_basil':True,'sitemap':True,'cache_revalidated':bool(secret)}
+    result={'pages':pages,'home':True,'home_chicken_visible':True,'catalogue_first_page_chicken_visible':True,'christmas_collection_chicken_visible':True,'distinct_fresh_dried_basil':True,'sitemap':True,'cache_revalidated':bool(secret)}
     Path('site-optimization-publication.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
     print(json.dumps(result,ensure_ascii=False,indent=2))
