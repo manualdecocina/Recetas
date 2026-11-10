@@ -1,0 +1,25 @@
+name: Pollo relleno - fotos completas y publicacion verificada
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'editorial/pollo-relleno-navideno-20261110/media.json'
+      - '.github/workflows/pollo-relleno-complete-20261110.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  production:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verificar fotos, actualizar cache y comprobar siete idiomas
+        env:
+          REVALIDATE_SECRET: ${{ secrets.REVALIDATE_SECRET }}
+        run: python3 scripts/verify-pollo-relleno-20261110.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pollo-relleno-final-qa
+          path: pollo-relleno-final-qa.json
