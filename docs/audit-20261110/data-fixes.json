@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-10",
+  "published_recipes": 1764,
+  "recipe_groups": 252,
+  "languages": 7,
+  "missing_required_content": 0,
+  "duplicate_public_paths": 0,
+  "duplicate_recipe_ingredient_positions": 0,
+  "reviewed_aliases_added": 38,
+  "pending_positions_before": 991,
+  "pending_positions_after": 885,
+  "positions_reconciled": 106,
+  "aliases_reconciled_by": "existing ingredient_aliases_reconcile_pending trigger",
+  "editorial_fixes": [
+    "Remove internal production instruction from Spanish and English chicken notes",
+    "Clarify Spanish step 8 sentence"
+  ],
+  "security": {
+    "admin_publish_functions": "Checked: existing is_admin guard and review approval required; no privilege widening",
+    "leaked_password_protection": "Provider warning remains; no paid changes made"
+  },
+  "dependency_audit": {
+    "vulnerabilities": 0
+  }
+}
