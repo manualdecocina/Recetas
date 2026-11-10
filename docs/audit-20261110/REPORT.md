@@ -1,5 +1,7 @@
 # Manual de Cocina — auditoría técnica y optimización
 
+**Estado: correcciones publicadas y verificadas en el dominio público.**
+
 Corte: 10 de noviembre de 2026. Sitio: https://manualdecocina.com. Implementación: PR [#271](https://github.com/manualdecocina/Recetas/pull/271).
 
 ## Cobertura comprobada
@@ -45,7 +47,23 @@ El pequeño aumento del buscador permite conservar las equivalencias de seleccio
 
 ## Validación y publicación
 
-TypeScript, pruebas de lógica y componentes y compilación de 1.920 páginas completados localmente. Las pruebas de navegador, impresión, siete idiomas, Lighthouse y la comprobación de producción se registran en GitHub Actions y se completan antes de cerrar esta intervención. El comprobador de producción espera a detectar el código desplegado, renueva la caché por el endpoint protegido y revisa las siete versiones del pollo, el inicio, el sitemap y la distinción de albahacas.
+TypeScript, pruebas de lógica y componentes y compilación de 1.920 páginas completados localmente. Las pruebas de navegador móvil/escritorio, fotos, modo cocina, temporizadores, porciones, lista de compra y siete idiomas pasaron en la ejecución [42923661249](https://github.com/manualdecocina/Recetas/actions/runs/42923661249). La compilación y pruebas generales pasaron también en [42924590851](https://github.com/manualdecocina/Recetas/actions/runs/42924590851). El comprobador de producción espera a detectar el código desplegado, renueva la caché por el endpoint protegido y revisa las siete versiones del pollo, el inicio, el sitemap y la distinción de albahacas.
+
+Medición móvil de laboratorio (primera visita, código corregido, fotos completas):
+
+| Página | Rendimiento | Accesibilidad | Buenas prácticas | SEO | CLS |
+|---|---:|---:|---:|---:|---:|
+| Inicio | 84 | 100 | 100 | 100 | 0 |
+| Sabajón | 93 | 100 | 100 | 100 | 0 |
+| Qué puedo cocinar | 94 | 100 | 100 | 100 | 0 |
+
+La accesibilidad del inicio pasó de 93 a 100 en esta comprobación tras corregir la geometría y las áreas táctiles. El rendimiento del inicio en primera visita sigue siendo el margen principal de mejora; las medidas con imágenes ya procesadas deben interpretarse aparte.
+
+La ejecución separada [42924590804](https://github.com/manualdecocina/Recetas/actions/runs/42924590804), que procesa las imágenes primero y conserva la primera medición posterior, obtuvo rendimiento móvil **94 en inicio, 93 en receta y 95 en el buscador**, con CLS 0 en las tres. Es una condición distinta de la primera visita; se conservan ambos resultados.
+
+Publicación confirmada en el commit `daec737df9045e71f9e2042894a3ca8c1557f3e6`. La [verificación pública 42925149870](https://github.com/manualdecocina/Recetas/actions/runs/42925149870) pasó: caché renovada, inicio y sitemap correctos, siete versiones del pollo con diez pasos/diez fotos, siete alternancias y cero diálogos de foto montados inicialmente. En navegador real se comprobó la separación de albahaca fresca/seca y la apertura/cierre de la foto del paso 3.
+
+También pasaron en el commit publicado las comprobaciones de calidad, rendimiento, impresión sin anuncios, despensa pública, idiomas y foto pública del pollo. Evidencia estructurada: `production-verified.json`.
 
 ## Pendientes y límites verificables
 
