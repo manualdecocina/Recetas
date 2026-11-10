@@ -140,7 +140,7 @@
 .md-footer-intro { max-width: 36ch; color: var(--md-footer-fg); opacity: .85; margin-top: 14px; }
 .md-footer-heading { font-size: .78rem; letter-spacing: .09em; font-weight: 800; text-transform: uppercase; color: var(--md-accent); }
 .md-footer-links { display: grid; gap: 10px; }
-.md-footer-links a { width: fit-content; color: var(--md-footer-fg); font-size: .92rem; text-decoration: none; }
+.md-footer-links a { display: inline-flex; align-items: center; min-height: 32px; width: fit-content; color: var(--md-footer-fg); font-size: .92rem; text-decoration: none; }
 .md-footer-links a:hover { color: var(--md-accent); text-decoration: underline; }
 .md-footer-cookie-btn { display: block; width: fit-content; background: transparent; border: 0; padding: 0; color: var(--md-footer-fg); font: inherit; font-size: .92rem; text-align: start; cursor: pointer; }
 .md-footer-cookie-btn:hover { color: var(--md-accent); text-decoration: underline; }
@@ -170,7 +170,7 @@
 .md-card-photo-placeholder { aspect-ratio: 4 / 3; padding: 14px; display: grid; place-content: center; justify-items: center; gap: 12px; color: var(--md-muted); text-align: center; }
 .md-card-photo-placeholder img { width: 52px; height: 52px; opacity: .5; }
 .md-card-content { padding: 16px 18px 20px; }
-.md-card-category { display: inline-block; margin-bottom: 8px; color: var(--md-olive-dark); font-size: .74rem; letter-spacing: .07em; font-weight: 800; text-transform: uppercase; }
+.md-card-category { display: inline-flex; align-items: center; min-height: 32px; margin-bottom: 8px; color: var(--md-olive-dark); font-size: .74rem; letter-spacing: .07em; font-weight: 800; text-transform: uppercase; }
 .md-card-title { font-family: var(--md-serif); font-size: clamp(1.3rem, 2vw, 1.6rem); line-height: 1.15; font-weight: 800; margin-bottom: 8px; overflow-wrap: anywhere; }
 .md-card-title a { text-decoration: none; }
 .md-card-title a:hover { color: var(--md-olive-dark); text-decoration: underline; }
@@ -622,13 +622,10 @@ a.md-lang-item:hover { background: var(--md-sand); }
   .md-pantry-view-results { width: 100%; }
 }
 
-/* La home contiene varias parrillas largas por debajo del primer viewport.
- * El navegador puede posponer su render sin ocultarlas del DOM ni cambiar el HTML SEO. */
-.md-home-hero ~ .md-section,
-.md-home-hero ~ .md-editorial {
-  content-visibility: auto;
-  contain-intrinsic-size: auto 900px;
-}
+/* Keep the actual height of home sections in the initial layout. A shared 900px
+ * intrinsic placeholder underestimated the nine-card mobile grid and placed its
+ * skipped descendants across later sections during accessibility traversal.
+ * Images below the viewport remain lazy-loaded by their Image components. */
 
 
 /* Impresión de recetas: aislar el artículo del documento y de los anuncios

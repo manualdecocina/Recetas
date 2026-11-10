@@ -12,6 +12,7 @@ const base = process.env.AUDIT_BASE || 'http://127.0.0.1:3000';
    const page = await context.newPage();
    const errors=[];page.on('pageerror',e=>errors.push(e.message));
    await page.goto(`${base}/es`,{waitUntil:'networkidle'});
+   assert(await page.locator('section[aria-labelledby="md-latest-heading"]').evaluate(section=>[...section.querySelectorAll('.md-recipe-card')].every(card=>card.getBoundingClientRect().bottom<=section.getBoundingClientRect().bottom+1)),'home recipe cards stay within their section before scrolling');
    // Reproduce Google's observed zero-width unfilled slot with a surviving large iframe.
    await page.evaluate(()=>{
     const slot=document.createElement('div');slot.className='google-auto-placed';slot.id='quality-unfilled-fixture';slot.style.textAlign='center';
