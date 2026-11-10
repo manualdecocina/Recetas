@@ -10,6 +10,7 @@ export interface MdIngredient {
   group?: string;
   canonicalIngredientSlug?: string;
   pantryIngredientSlug?: string;
+  pantryIngredientAliases?: string[];
   storagePosition?: number;
 }
 

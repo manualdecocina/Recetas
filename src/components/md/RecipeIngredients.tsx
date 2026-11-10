@@ -41,7 +41,7 @@ export default function RecipeIngredients({ recipeId, lang, ingredients: origina
       const merged = { ...saved };
       originalIngredients.forEach((item, index) => {
         const slug = item.pantryIngredientSlug ?? item.canonicalIngredientSlug;
-        if (slug) merged[item.storagePosition ?? index] = pantrySlugs.has(slug);
+        if (slug) merged[item.storagePosition ?? index] = pantrySlugs.has(slug) || Boolean(item.pantryIngredientAliases?.some(alias => pantrySlugs.has(alias)));
       });
       setChecked(merged);
       localStorage.setItem(storageKey, JSON.stringify(merged));
@@ -74,7 +74,10 @@ export default function RecipeIngredients({ recipeId, lang, ingredients: origina
               : [],
           );
           if (nextValue) pantrySlugs.add(slug);
-          else pantrySlugs.delete(slug);
+          else {
+            pantrySlugs.delete(slug);
+            for (const alias of ingredients[index]?.pantryIngredientAliases ?? []) pantrySlugs.delete(alias);
+          }
           localStorage.setItem('manualdecocina:pantry:selectedSlugs', JSON.stringify(Array.from(pantrySlugs)));
           window.dispatchEvent(new Event(PANTRY_EVENT));
         }

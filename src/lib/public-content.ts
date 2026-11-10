@@ -59,11 +59,11 @@ export const getRecipeByPublicPath = cache(async (path: string): Promise<Recipe 
   )
   const pantry = await getPantryMatchData(row.language)
   const pantryRecipe = pantry.recipes.find(r => r.id === row.id)
-  const slugById = new Map(pantry.ingredients.map(i => [i.id, i.slug]))
+  const choiceById = new Map(pantry.ingredients.map(i => [i.id, i]))
   const ingredients = normalizeEditorialIngredientSections(row.ingredients, row.recipe_group_id, row.language).map((ingredient, index) => {
     const canonical = canonicalByPosition.get(index)
-    const pantryIngredientSlug = slugById.get(pantryRecipe?.editorialIngredientIds?.[index] ?? '')
-    return { ...ingredient, pantryIngredientSlug,
+    const choice = choiceById.get(pantryRecipe?.editorialIngredientIds?.[index] ?? '')
+    return { ...ingredient, pantryIngredientSlug: choice?.slug, pantryIngredientAliases: choice?.aliases,
       ...(canonical?.indexable && canonical.slug ? { canonicalIngredientSlug: canonical.slug, canonicalIngredientName: canonical.name } : {}) }
 
   })

@@ -17,7 +17,7 @@ export function AddToShoppingList({ lang, source, missing }: { lang: MdLanguage;
    else {
     const owned = readPantrySlugs(); let checked: Record<string, boolean> = {};
     try { checked = JSON.parse(localStorage.getItem(`manualdecocina:ingredients:${source.recipeId ?? source.id}`) ?? '{}') ?? {}; } catch {}
-    items = ingredients.filter((item, index) => !owned.has(item.pantryIngredientSlug ?? item.canonicalIngredientSlug ?? '') && !checked[item.storagePosition ?? index]);
+    items = ingredients.filter((item, index) => !owned.has(item.pantryIngredientSlug ?? item.canonicalIngredientSlug ?? '') && !item.pantryIngredientAliases?.some(alias => owned.has(alias)) && !checked[item.storagePosition ?? index]);
    }
   }
   if (onlyMissing && !items.length) { setMessage(t.emptyMissing); return; }

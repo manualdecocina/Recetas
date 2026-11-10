@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict'
 import { advanceRecipeTimer, timerInputSeconds } from '@/lib/recipe-timer'
 import { buildEditorialPantry } from '@/lib/pantry-editorial'
+import { consolidatePantryFoods, pantryFoodName } from '@/lib/pantry-foods'
 
 const running = { remaining: 3, deadline: 4000, duration: 3, started: true }
 assert.equal(advanceRecipeTimer(running, 1000), running, 'unchanged second does not cause another render')
@@ -30,7 +31,19 @@ const sources = [
 ]
 const pantry = buildEditorialPantry(sources, catalog, [])
 assert.deepEqual(pantry.requirements.get('raw'), ['egg'])
+assert(pantry.ingredients.find(i=>i.id==='egg')?.aliases?.includes('editorial:huevo grande'), 'reviewed food identities retain old saved selections')
 assert.deepEqual(pantry.requirements.get('blue'), ['blueberry'])
 for (const id of ['cooked', 'boil', 'quail']) assert.notDeepEqual(pantry.requirements.get(id), ['egg'], 'cooked and quail eggs are distinct foods')
 assert.notDeepEqual(pantry.requirements.get('red'), ['blueberry'], 'cranberries must not become blueberries')
+assert.equal(pantryFoodName('pan rallado panko'), 'Panko')
+assert.match(pantryFoodName('coco rallado seco sin azúcar'), /rallado seco/)
+assert.notEqual(pantryFoodName('Tomate pelado en conserva con su jugo'), pantryFoodName('Tomate'))
+assert.notEqual(pantryFoodName('higos secos'), pantryFoodName('higos frescos'))
+assert.notEqual(pantryFoodName('espaguetis cocidos'), pantryFoodName('espaguetis secos'))
+const basil = consolidatePantryFoods([
+  { id:'fresh', slug:'albahaca-fresca', name:'Albahaca fresca' },
+  { id:'dried', slug:'albahaca-seca', name:'Albahaca seca' },
+], [{ ingredientIds:['fresh','dried'] }])
+assert.equal(basil.ingredients.length, 2, 'fresh and dried basil must not merge into one pantry selection')
+assert.equal(basil.recipes[0].ingredientIds.length, 2)
 console.log('OK site optimization: timers stop at zero; subsecond invalid input; cooked/raw eggs and distinct berries preserved')

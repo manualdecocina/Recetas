@@ -119,7 +119,10 @@ export function buildEditorialPantry(sources: PantrySource[], catalog: MdPantryI
       const exact = exactNames.get(normalized)
       const id = linksByRecipe.get(source.id)?.get(position)
         ?? (exact?.size === 1 ? [...exact][0] : verifiedPreparationId(name, catalog) ?? editorialIngredientId(name))
-      const ingredient = byId.get(id) ?? { id, slug: id, name }
+      const base = used.get(id) ?? byId.get(id) ?? { id, slug: id, name }
+      // A reviewed taxonomy link may replace the old editorial identity. Keep
+      // that exact saved choice as an alias so existing inventories still restore.
+      const ingredient = { ...base, aliases: [...new Set([...(base.aliases ?? []), editorialIngredientId(name)])] }
       used.set(id, ingredient); ids.push(id)
     })
     requirements.set(source.id, ids)
