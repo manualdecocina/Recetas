@@ -38,7 +38,7 @@ const base = process.env.AUDIT_BASE || 'http://127.0.0.1:3000';
    assert((await page.getByRole('dialog').getAttribute('aria-label')).length>0,'photo dialog has an accessible name');
    await page.keyboard.press('Escape');
    assert.equal(await page.getByRole('dialog').count(),0);
-   assert.equal(await page.locator('dialog.md-lightbox').count(),0,'closing releases the large photo and its dialog');
+   await page.locator('dialog.md-lightbox').waitFor({state:'detached'});
    assert.deepEqual(errors,[],`runtime errors at width ${width}`);
    await context.close();
   }

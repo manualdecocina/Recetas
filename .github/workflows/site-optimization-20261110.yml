@@ -16,13 +16,14 @@ jobs:
     timeout-minutes: 30
     env:
       NEXT_PUBLIC_ALLOW_INDEXING: 'true'
+      NODE_PATH: /tmp/manual-audit-tools/node_modules
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 22
       - run: npm ci
-      - run: npm install --no-save --package-lock=false playwright@1.64.1
+      - run: npm install --prefix /tmp/manual-audit-tools --no-save --package-lock=false playwright@1.64.1
       - run: npm run build
       - name: Start isolated production server
         run: |
@@ -41,6 +42,7 @@ jobs:
           CHROME_PATH: /usr/bin/google-chrome
         run: node tests/e2e/kitchen-tools.cjs
       - name: Mobile Lighthouse - same local app and full production photo content
+        if: ${{ !cancelled() }}
         run: |
           for route in es sabajon-colombiano es/que-puedo-cocinar; do
             output="lighthouse-${route//\//-}.json"
