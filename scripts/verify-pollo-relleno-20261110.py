@@ -15,7 +15,7 @@ manifest = json.loads((DATA / 'media.json').read_text())
 records = json.loads((DATA / 'recipe.json').read_text())['records']
 
 def fetch(path):
-    request = Request(BASE + quote(path, safe='/?=&:-'), headers={'User-Agent': 'ManualDeCocina-RecipeQA/1.0', 'Cache-Control': 'no-cache'})
+    request = Request(BASE + quote(path, safe='/?=&:-%'), headers={'User-Agent': 'ManualDeCocina-RecipeQA/1.0', 'Cache-Control': 'no-cache'})
     with urlopen(request, timeout=40) as response:
         return response.status, response.read(), response.headers.get('Content-Type', '')
 
@@ -68,7 +68,7 @@ def page(row):
     assert len(p.steps) == 10, (row['language'], p.steps)
     for i, step in enumerate(row['steps'], 1):
         assert any(unquote(step['image_url']).removeprefix(BASE) in src for src in p.steps[i]), (row['language'], i, p.steps[i])
-    assert all(lang in p.alternates for lang in ['es','de','en','fr','it','ja','pt'])
+    assert all(lang in p.alternates for lang in ['es','de','en','fr','it','ja','pt-BR']), p.alternates
     schema = find_recipe(p.jsonld)
     assert schema and schema.get('nutrition') and len(schema.get('recipeInstructions', [])) == 10
     assert len(schema.get('recipeIngredient', [])) == 17
