@@ -2,6 +2,7 @@ import { NextResponse, type NextRequest } from 'next/server'
 import { createServerClient, type CookieOptions } from '@supabase/ssr'
 import { createClient } from '@supabase/supabase-js'
 import { DEFAULT_LANGUAGE } from '@/types/recipe'
+import { isMysqlCutoverEnabled } from '@/lib/mysql/cutover-config'
 
 const homepagePath = /^\/(es|en|de|fr|it|ja|pt)\/?$/
 function homepageAgentResponse(request: NextRequest, lang: string): NextResponse {
@@ -119,6 +120,10 @@ export async function middleware(request: NextRequest) {
   if (pathname !== '/admin' && !pathname.startsWith('/admin/')) {
     return (await recipeSlashRedirect(request)) ?? NextResponse.next()
   }
+
+  // En el corte MySQL la sesión se valida en requireAdmin() contra MySQL;
+  // no dejar que el middleware Supabase bloquee ese acceso.
+  if (isMysqlCutoverEnabled()) return NextResponse.next()
 
   // Ruta aislada de QA: tiene su propia sesión MySQL y validación completa en Node.
   // Nunca concede acceso a /admin normal, cuyo guard Supabase permanece intacto.
