@@ -5,7 +5,7 @@ import { type RowDataPacket } from 'mysql2/promise'
 import { requireAdmin } from '@/lib/supabase/admin-guard'
 import { mysqlServerPool } from '@/lib/mysql/public'
 import { readRatingsSecrets } from '@/lib/ratings-config'
-import { validateRatingHistorySnapshot } from '@/lib/mysql/rating-history-snapshot'
+import { validateRatingHistorySnapshot, type HistoricalVote } from '@/lib/mysql/rating-history-snapshot'
 import { AdminNav } from '../AdminNav'
 import { NotAdmin } from '../NotAdmin'
 import { reconcileRatingCountersAction } from './actions'
@@ -34,6 +34,7 @@ export default async function MigrationPage({searchParams}:{
     process.env.ADMIN_AUTH_PROVIDER!=='mysql'
   let source:Totals|null=null, target:Totals|null=null
   let sourceHistory:number|null=null, targetHistory:number|null=null
+  let sourceRows:HistoricalVote[]|null=null, targetRows:RowDataPacket[]|null=null
   if(process.env.ADMIN_AUTH_PROVIDER!=='mysql'){
     try{
       const rows:{rating_count:number|null;rating_sum:number|null}[]=[]
@@ -66,21 +67,34 @@ export default async function MigrationPage({searchParams}:{
           serviceKey,{auth:{persistSession:false,autoRefreshToken:false}},
         )
         const {data,error}=await server.rpc('mdc_rating_migration_snapshot')
-        if(!error)sourceHistory=validateRatingHistorySnapshot(data).source_vote_count
+        if(!error){
+          const snapshot=validateRatingHistorySnapshot(data)
+          sourceHistory=snapshot.source_vote_count
+          sourceRows=snapshot.votes
+        }
       }
     }catch {sourceHistory=null}
   }
   if(enabled){
     try{
       const [rows]=await mysqlServerPool().execute<RowDataPacket[]>(
-        'SELECT COUNT(*) AS n FROM recipe_rating_votes',
+        'SELECT id,recipe_id,voter_hash,rating FROM recipe_rating_votes',
       )
-      targetHistory=Number(rows[0]?.n??0)
+      targetRows=rows
+      targetHistory=rows.length
     }catch {targetHistory=null}
   }
   const equal=source!==null&&target!==null &&
     source.recipes===target.recipes&&source.votes===target.votes&&source.stars===target.stars
-  const sameHistory=equal&&sourceHistory!==null&&targetHistory!==null&&sourceHistory===targetHistory
+  // Comparar filas una a una en el servidor, no solo el total (que podría
+  // coincidir accidentalmente con hashes o ratings equivocados).
+  const byId=new Map(targetRows?.map(row=>[String(row.id),row])??[])
+  const sameHistory=equal&&sourceRows!==null&&targetRows!==null&&
+    sourceRows.length===targetRows.length&&sourceRows.every(v=>{
+      const row=byId.get(v.id)
+      return row && String(row.recipe_id)===v.recipe_id&&
+        String(row.voter_hash)===v.voter_hash&&Number(row.rating)===v.rating
+    })
   return <main className="adm">
     <AdminNav current="salud"/>
     <h1>Valoraciones: Supabase → MySQL</h1>
