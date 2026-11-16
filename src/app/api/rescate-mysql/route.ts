@@ -96,6 +96,9 @@ export async function GET(request: NextRequest) {
           return NextResponse.json({
             status: 'admin_editorial_diagnostic_failure',
             classification, typeName, queryNumber, messageChars: message.length,
+            runtimeHint: error instanceof TypeError && /^Cannot read properties of (null|undefined) \(reading '[a-zA-Z]+'\)$/.test(message)
+              ? message.replace(/^Cannot read properties of (null|undefined) \(reading '([a-zA-Z]+)'\)$/,'$1:$2')
+              : null,
             production_untouched: true,
           }, { headers })
         }
