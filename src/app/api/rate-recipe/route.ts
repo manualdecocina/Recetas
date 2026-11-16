@@ -2,7 +2,7 @@ import { createHmac, randomUUID } from 'node:crypto'
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
 import { readRatingsSecrets } from '@/lib/ratings-config'
-import { voteMysql } from '@/lib/mysql/ratings'
+import { voteMysql, mirrorSupabaseRatingCounters } from '@/lib/mysql/ratings'
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL ?? 'https://eqbdtctxbpepbeickhqi.supabase.co'
 const ratingsEnabled = process.env.NEXT_PUBLIC_RATINGS_ENABLED === 'true'
@@ -105,6 +105,19 @@ export async function POST(request: NextRequest) {
   }
 
   const row = Array.isArray(data) ? data[0] : data
+  const count = Number(row?.rating_count)
+  const sum = Number(row?.rating_sum)
+  // El RPC sigue siendo autoritativo hasta el corte. Si la web lee MySQL,
+  // reflejar los contadores después del voto para no mostrar cifras antiguas
+  // al refrescar. Un fallo secundario NO debe anular el voto ya registrado.
+  if (Number.isSafeInteger(count) && count > 0 &&
+      Number.isSafeInteger(sum) && sum >= count && sum <= count * 5) {
+    try {
+      await mirrorSupabaseRatingCounters(recipeId, count, sum)
+    } catch {
+      console.error('[ratings/mysql] No se pudieron sincronizar los contadores')
+    }
+  }
   const response = NextResponse.json({
     rating_count: row?.rating_count ?? 0,
     rating_sum: row?.rating_sum ?? 0,
