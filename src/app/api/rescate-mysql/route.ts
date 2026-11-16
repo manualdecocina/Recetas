@@ -83,13 +83,20 @@ export async function GET(request: NextRequest) {
           // No se exponen SQL, datos editoriales, títulos ni secretos. Solo etapa y código estándar.
           const message = error instanceof Error ? error.message : ''
           const classification = driverErrorCode ?? (
-            /json/i.test(message) ? 'json_normalization' :
+            /json|unexpected token|unexpected end|not valid/i.test(message) ? 'json_normalization' :
             /column/i.test(message) ? 'unknown_column' :
-            /undefined|null/i.test(message) ? 'unexpected_data' : 'editorial_conversion'
+            /map|filter|reduce|is not a function|not iterable/i.test(message) ? 'array_operation' :
+            /sort|localeCompare/i.test(message) ? 'sorting' :
+            /undefined|null/i.test(message) ? 'unexpected_data' :
+            /stack|recursion/i.test(message) ? 'stack_limit' : 'editorial_conversion'
           )
+          const typeName = error instanceof SyntaxError ? 'SyntaxError' :
+            error instanceof TypeError ? 'TypeError' :
+            error instanceof RangeError ? 'RangeError' : 'Error'
           return NextResponse.json({
             status: 'admin_editorial_diagnostic_failure',
-            classification, queryNumber, production_untouched: true,
+            classification, typeName, queryNumber, messageChars: message.length,
+            production_untouched: true,
           }, { headers })
         }
         const stages = Object.fromEntries(
