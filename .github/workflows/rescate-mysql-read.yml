@@ -10,6 +10,8 @@ on:
       - 'tests/logic/mysql-public-read.test.mts'
       - 'package.json'
       - 'package-lock.json'
+      - 'scripts/migracion-hostinger/05-verificar-mysql.mjs'
+      - 'scripts/migracion-hostinger/rescatar-media.py'
       - '.github/workflows/rescate-mysql-read.yml'
   workflow_dispatch:
 permissions:
@@ -29,3 +31,7 @@ jobs:
         run: npm run typecheck
       - name: Comprobar SQL parametrizado sin base real
         run: node --experimental-strip-types --no-warnings tests/logic/mysql-public-read.test.mts
+      - name: Validar scripts de rescate, sin ejecutar conexiones externas
+        run: |
+          node --check scripts/migracion-hostinger/05-verificar-mysql.mjs
+          python3 -m py_compile scripts/migracion-hostinger/rescatar-media.py
