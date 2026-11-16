@@ -88,7 +88,7 @@ export default async function MigrationPage({searchParams}:{
     source.recipes===target.recipes&&source.votes===target.votes&&source.stars===target.stars
   // Comparar filas una a una en el servidor, no solo el total (que podría
   // coincidir accidentalmente con hashes o ratings equivocados).
-  const byId=new Map(targetRows?.map(row=>[String(row.id),row])??[])
+  const byId=new Map<string,RowDataPacket>(targetRows?.map(row=>[String(row.id),row] as const)??[])
   const sameHistory=equal&&sourceRows!==null&&targetRows!==null&&
     sourceRows.length===targetRows.length&&sourceRows.every(v=>{
       const row=byId.get(v.id)
