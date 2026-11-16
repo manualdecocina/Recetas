@@ -18,7 +18,7 @@ jobs:
         image: mysql:8.0
         env:
           MYSQL_ROOT_PASSWORD: local-test-only
-          MYSQL_DATABASE: mdc_schema_test
+          MYSQL_DATABASE: u357006512_mdc_migracion
         ports:
           - 3306:3306
         options: >-
@@ -35,10 +35,10 @@ jobs:
             docker run --rm --network host \
               -v "$PWD/scripts/migracion-hostinger/08-admin-auth-schema.sql:/schema.sql:ro" \
               -e MYSQL_PWD mysql:8.0 sh -c \
-              'mysql -h127.0.0.1 -uroot mdc_schema_test < /schema.sql'
+              'mysql -h127.0.0.1 -uroot u357006512_mdc_migracion < /schema.sql'
           done
           count="$(docker run --rm --network host -e MYSQL_PWD mysql:8.0 \
-            mysql -N -s -h127.0.0.1 -uroot mdc_schema_test \
-            -e "SELECT COUNT(*) FROM information_schema.tables WHERE table_schema='mdc_schema_test' AND table_name LIKE 'admin_auth_%';")"
+            mysql -N -s -h127.0.0.1 -uroot u357006512_mdc_migracion \
+            -e "SELECT COUNT(*) FROM information_schema.tables WHERE table_schema='u357006512_mdc_migracion' AND table_name LIKE 'admin_auth_%';")"
           test "$count" = "4"
           echo "PASS: 4 admin_auth_ tables, repeatable SQL, no effects on real database"
