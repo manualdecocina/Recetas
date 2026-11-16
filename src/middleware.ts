@@ -102,7 +102,7 @@ export async function middleware(request: NextRequest) {
       response.headers.set('X-Robots-Tag', 'noindex, nofollow')
       return response
     }
-    if (/(?:^|,)\\s*text\\/markdown(?:\s*;|\s*(?:,|$))/i.test(request.headers.get('accept') ?? '')) {
+    if (/(?:^|,)\s*text\/markdown(?:\s*;|\s*(?:,|$))/i.test(request.headers.get('accept') ?? '')) {
       return homepageAgentResponse(request, DEFAULT_LANGUAGE)
     }
     const url = request.nextUrl.clone()
