@@ -2,8 +2,9 @@ import { NextRequest, NextResponse } from 'next/server'
 import { adminMysqlPool } from '@/lib/mysql/admin-db'
 import {
   ADMIN_COOKIE, SESSION_DAYS, bootstrapFirstAdmin, loginAdmin, revokeAdminSession,
-  constantTimeSecret,
+  constantTimeSecret, getAdminByToken,
 } from '@/lib/mysql/admin-auth'
+import { testMysqlEditorialWritesRollback } from '@/lib/mysql/qa-editorial-writes'
 import type { RowDataPacket } from 'mysql2'
 
 export const runtime='nodejs'
@@ -54,6 +55,14 @@ export async function POST(request:NextRequest){
     const redirect=go('salida')
     redirect.cookies.set(ADMIN_COOKIE,'',{path:'/',httpOnly:true,secure:true,sameSite:'strict',expires:new Date(0)})
     return redirect
+  }
+  if(action==='smoke'){
+    const current=await getAdminByToken(request.cookies.get(ADMIN_COOKIE)?.value)
+    if(!current)return go('entrada_invalida')
+    try {
+      const ok=await testMysqlEditorialWritesRollback(current.id)
+      return go(ok?'qa_escritura_ok':'qa_escritura_error')
+    }catch{return go('qa_escritura_error')}
   }
   if(action==='bootstrap'){
     const secret=process.env.ADMIN_BOOTSTRAP_SECRET??''
