@@ -120,6 +120,14 @@ export async function middleware(request: NextRequest) {
     return (await recipeSlashRedirect(request)) ?? NextResponse.next()
   }
 
+  // Solo dashboard /admin en la vista previa, nunca en producción:
+  // su autenticación MySQL se valida contra DB dentro de requireAdmin() en Node.
+  // El resto de /admin conserva el middleware Supabase hasta migrar sus acciones.
+  if (pathname === '/admin' && process.env.ADMIN_AUTH_PROVIDER === 'mysql' &&
+      request.nextUrl.hostname === 'mintcream-squirrel-383743.hostingersite.com') {
+    return NextResponse.next()
+  }
+
   // Ruta aislada de QA: tiene su propia sesión MySQL y validación completa en Node.
   // Nunca concede acceso a /admin normal, cuyo guard Supabase permanece intacto.
   if (pathname === '/admin/qa-mysql') return NextResponse.next()
