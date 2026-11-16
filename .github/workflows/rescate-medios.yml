@@ -37,4 +37,6 @@ jobs:
             exit 0
           fi
           git commit -m "Rescate: conservar 103 fotos y un video públicos en Hostinger"
+          git fetch origin refs/heads/rescate-supabase-20261115
+          git rebase origin/rescate-supabase-20261115
           git push origin HEAD:refs/heads/rescate-supabase-20261115
