@@ -141,8 +141,10 @@ class ReadBuilder implements PromiseLike<ResponseShape> {
       return {data:data[0],error:null,count}
     }catch(error){return {data:null,error:{message:error instanceof Error?error.message:'Error de lectura MySQL'},count:null}}
   }
-  maybeSingle(){this.size=2;return this.run(true,true)}
-  single(){this.size=2;return this.run(true,false)}
+  // Respetar .limit(1) y .range(0,0): antes se forzaban 2 filas y la home
+  // fallaba durante el prerender al detectar dos recetas destacadas.
+  maybeSingle(){this.size=Math.min(this.size,2);return this.run(true,true)}
+  single(){this.size=Math.min(this.size,2);return this.run(true,false)}
   then<R1=ResponseShape,R2=never>(ok?:((v:ResponseShape)=>R1|PromiseLike<R1>)|null,fail?:((e:any)=>R2|PromiseLike<R2>)|null):Promise<R1|R2>{return this.run().then(ok,fail)}
 }
 export function createMysqlReadClient(execute:Executor,options?:{includeUnpublished?:boolean;preserveMediaUrls?:boolean}) {
