@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import mysql from 'mysql2/promise'
+import { createMysqlReadClient } from '@/lib/mysql/read-query'
 
 /**
  * QA temporal y de solo lectura para la vista previa del PR #274.
@@ -37,6 +38,50 @@ export async function GET(request: NextRequest) {
          (SELECT COUNT(*) FROM content_redirects) AS redirects,
          (SELECT COUNT(*) FROM content_redirects_backup_20261030) AS old_redirects`)
       const row = rows[0]
+      // Comprobación profunda y no destructiva del adaptador en el MISMO servidor.
+      // Nunca imprime recetas, usuarios ni variables secretas.
+      if (request.nextUrl.searchParams.get('adapter') === '1') {
+        const execute = async (query: string, values: unknown[]) => {
+          const [result] = await conn.execute<mysql.RowDataPacket[]>(query, values as any[])
+          return result as Record<string, any>[]
+        }
+        const client = createMysqlReadClient(execute)
+        const languages = ['es','en','de','fr','it','ja','pt']
+        const checks: Record<string, boolean> = {}
+        for (const language of languages) {
+          const result = await client.from('recipes')
+            .select('id,language,title,public_path,image_url,ingredients,steps,seo')
+            .eq('language', language).eq('published', true)
+            .order('ready_at', { ascending: false, nullsFirst: false }).limit(2)
+          checks['recipes_' + language] = result.error === null && result.data?.length === 2 &&
+            result.data.every((row: any) => Array.isArray(row.ingredients) && Array.isArray(row.steps))
+        }
+        const count = await client.from('recipes').select('id', { count: 'exact', head: true })
+          .eq('language', 'es').eq('published', true)
+        checks['count_es'] = count.error === null && count.count === 252
+        const pantry = await client.from('ingredients').select('id,slug,name')
+          .eq('status', 'canonical').eq('searchable', true).order('name').limit(3)
+        checks['ingredients'] = pantry.error === null && pantry.data?.length === 3
+        const search = await client.from('recipes').select('id,title').eq('language', 'es')
+          .or('title.ilike."%a%",excerpt.ilike."%a%"').order('ready_at', { ascending: false }).limit(3)
+        checks['search'] = search.error === null && search.data?.length > 0
+        const redirect = await client.from('content_redirects').select('source_path,target_path,status_code').limit(1)
+        checks['redirects'] = redirect.error === null && redirect.data?.length === 1
+        const es = await client.from('recipes').select('id,public_path').eq('language', 'es').limit(1)
+        const canonical = es.data?.[0]?.public_path
+        if (typeof canonical === 'string') {
+          const details = await client.from('recipes')
+            .select('*, recipe_ingredients(position, ingredients(name, slug, indexable))')
+            .in('public_path', [canonical]).limit(1).maybeSingle()
+          checks['detail_join'] = details.error === null && details.data?.public_path === canonical &&
+            Array.isArray(details.data?.recipe_ingredients)
+        } else checks['detail_join'] = false
+        const passed = Object.values(checks).every(Boolean)
+        return NextResponse.json({
+          status: passed ? 'mysql_adapter_pass' : 'mysql_adapter_partial',
+          database: 'mysql', checks, production_untouched: true,
+        }, { status: passed ? 200 : 503, headers })
+      }
       const [langs] = await conn.execute<mysql.RowDataPacket[]>(
         'SELECT language, COUNT(*) AS total FROM recipes WHERE published = 1 GROUP BY language ORDER BY language'
       )
