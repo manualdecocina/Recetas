@@ -74,9 +74,14 @@ export async function publishGroupMysql(groupId:string){
     }
     const blockers=groupBlockers(rows)
     if(blockers.length)throw Error('No se puede publicar: '+blockers.join('; '))
+    // Las páginas, sitemap y reportes de salud necesitan ambas fechas. La RPC
+    // anterior fijaba published_at en la primera publicación; no reiniciar fechas
+    // existentes al republicar o corregir un grupo parcialmente publicado.
     await conn.execute(
       'UPDATE recipes SET published=1,editorial_status=?,ready_at=COALESCE(ready_at,UTC_TIMESTAMP(6)),'+
-      'updated_at=UTC_TIMESTAMP(6) WHERE recipe_group_id=? AND (published=0 OR ready_at IS NULL)',
+      'published_at=COALESCE(published_at,UTC_TIMESTAMP(6)),updated_at=UTC_TIMESTAMP(6) '+
+      'WHERE recipe_group_id=? AND (published=0 OR ready_at IS NULL OR published_at IS NULL '+
+      "OR editorial_status <> 'published')",
       ['published',groupId],
     )
     const canonical=rows.map(r=>r.public_path).filter((p):p is string=>typeof p==='string'&&p.length>0)
