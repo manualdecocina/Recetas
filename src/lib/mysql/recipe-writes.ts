@@ -5,6 +5,7 @@ import type {RecipeFields} from '@/lib/validation'
 import {REQUIRED_LANGUAGES} from '@/lib/admin/publication'
 import {adminConnection} from './admin-db'
 import {requireMysqlAdminWrites} from './editorial-writes'
+import {syncRecipePantryMysql} from './pantry-sync'
 
 const UUID=/^[0-9a-f]{8}-(?:[0-9a-f]{4}-){3}[0-9a-f]{12}$/i
 const ISO_LANGS=new Set<string>(REQUIRED_LANGUAGES)
@@ -58,6 +59,7 @@ export async function createRecipeMysql(language:string,fields:RecipeFields){
     await assertSlugAvailable(conn,language,fields.slug)
     const id=randomUUID(),group=randomUUID()
     await recipeInsert(conn,id,group,language,fields)
+    await syncRecipePantryMysql(conn,id,language,fields.ingredients)
     await conn.commit()
     return {id,recipe_group_id:group}
   }catch(error){await conn.rollback();throw error}finally{conn.release()}
@@ -83,6 +85,7 @@ export async function createTranslationMysql(sourceId:string,language:string,fie
     await assertSlugAvailable(conn,language,fields.slug)
     const id=randomUUID()
     await recipeInsert(conn,id,group,language,fields)
+    await syncRecipePantryMysql(conn,id,language,fields.ingredients)
     await conn.commit()
     return {id,recipe_group_id:group}
   }catch(error){await conn.rollback();throw error}finally{conn.release()}
@@ -117,6 +120,10 @@ export async function updateRecipeMysql(id:string,fields:RecipeFields){
       'WHERE id=?',
       [...baseFields(fields),id],
     )
+    const pantry=await syncRecipePantryMysql(conn,id,language,fields.ingredients)
+    if(language==='es' && fields.published && (pantry?.indexableMatches??0)<1){
+      throw Error('Una receta publicada necesita un ingrediente canónico buscable')
+    }
     await conn.commit()
     return {id}
   }catch(error){await conn.rollback();throw error}finally{conn.release()}
