@@ -120,11 +120,13 @@ export async function middleware(request: NextRequest) {
     return (await recipeSlashRedirect(request)) ?? NextResponse.next()
   }
 
-  // Solo dashboard /admin en la vista previa, nunca en producción:
-  // su autenticación MySQL se valida contra DB dentro de requireAdmin() en Node.
-  // El resto de /admin conserva el middleware Supabase hasta migrar sus acciones.
-  if (pathname === '/admin' && process.env.ADMIN_AUTH_PROVIDER === 'mysql' &&
-      request.nextUrl.hostname === 'mintcream-squirrel-383743.hostingersite.com') {
+  // Solo las rutas editoriales verificadas en la vista previa; todas ellas
+  // llaman requireAdmin() en Node y comprueban una sesión MySQL real.
+  // La autenticación de recuperación y el resto conservan su protección anterior.
+  const mysqlPreviewPanel = /^\\/admin(?:\\/(?:todas|salud|recetas\\/nueva|recetas\\/[0-9a-f-]{36}|platos\\/[0-9a-f-]{36}(?:\\/google)?))?\\/?$/i
+  if (process.env.ADMIN_AUTH_PROVIDER === 'mysql' &&
+      request.nextUrl.hostname === 'mintcream-squirrel-383743.hostingersite.com' &&
+      mysqlPreviewPanel.test(pathname)) {
     return NextResponse.next()
   }
 
