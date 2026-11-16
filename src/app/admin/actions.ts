@@ -2,13 +2,26 @@
 
 import { revalidateTag } from 'next/cache'
 import { redirect } from 'next/navigation'
+import { cookies, headers } from 'next/headers'
+import { ADMIN_COOKIE, SESSION_DAYS, loginAdmin, revokeAdminSession } from '@/lib/mysql/admin-auth'
 import { z } from 'zod'
 import type { PostgrestError } from '@supabase/supabase-js'
 import { createSupabaseServerClient } from '@/lib/supabase/server'
+import { createDraftMysql, createTranslationMysql, updateDraftMysql, deleteDraftMysql } from '@/lib/mysql/editorial-crud'
 import { requireAdmin } from '@/lib/supabase/admin-guard'
 import { languageSchema, readRecipeForm, uuidSchema, type RecipeFields } from '@/lib/validation'
 import { RECIPES_CACHE_TAG } from '@/lib/cache'
 import type { FormState } from './form-state'
+
+async function isMysqlAdminPreview(): Promise<boolean> {
+  if (process.env.ADMIN_AUTH_PROVIDER !== 'mysql') return false
+  const h = await headers()
+  const hosts = [
+    h.get('host')?.split(':')[0],
+    h.get('x-forwarded-host')?.split(',')[0]?.trim()?.split(':')[0],
+  ]
+  return hosts.includes('mintcream-squirrel-383743.hostingersite.com')
+}
 
 // ---------- Sesión ----------
 
@@ -26,6 +39,21 @@ export async function signInAction(_prev: FormState, formData: FormData): Promis
     return { ok: false, fieldErrors: parsed.error.flatten().fieldErrors }
   }
 
+  if (await isMysqlAdminPreview()) {
+    try {
+      const result = await loginAdmin(parsed.data.email, parsed.data.password)
+      if (!result.ok) return { ok: false, message: 'Email o contraseña incorrectos.' }
+      ;(await cookies()).set(ADMIN_COOKIE, result.token, {
+        path: '/', httpOnly: true, secure: true, sameSite: 'strict',
+        maxAge: SESSION_DAYS * 24 * 60 * 60,
+      })
+    } catch (error) {
+      console.error('[admin/mysql] login failed', error)
+      return { ok: false, message: 'Inicio de sesión no disponible. Comprueba la configuración MySQL.' }
+    }
+    redirect('/admin')
+  }
+
   const supabase = await createSupabaseServerClient()
   const { error } = await supabase.auth.signInWithPassword(parsed.data)
   if (error) {
@@ -36,6 +64,18 @@ export async function signInAction(_prev: FormState, formData: FormData): Promis
 }
 
 export async function signOutAction() {
+  if (await isMysqlAdminPreview()) {
+    const store = await cookies()
+    try {
+      await revokeAdminSession(store.get(ADMIN_COOKIE)?.value)
+    } catch (error) {
+      console.error('[admin/mysql] revocation failed', error)
+      throw new Error('No se pudo revocar la sesión de MySQL.')
+    }
+    store.delete(ADMIN_COOKIE)
+    redirect('/admin/qa-mysql')
+  }
+
   const supabase = await createSupabaseServerClient()
   await supabase.auth.signOut()
   redirect('/admin/login')
@@ -117,6 +157,17 @@ export async function createRecipeAction(_prev: FormState, formData: FormData): 
   if (!fields.success) return { ok: false, fieldErrors: fields.error.flatten().fieldErrors }
   if (fields.data.published) return draftOnlyMessage()
 
+  if (await isMysqlAdminPreview()) {
+    try {
+      await createDraftMysql(language.data, fields.data)
+    } catch (error) {
+      console.error('[admin/mysql] create draft failed', error)
+      return { ok: false, message: 'No se pudo crear el borrador en MySQL. Comprueba que las escrituras estén habilitadas en la vista previa.' }
+    }
+    revalidatePublicRecipes()
+    redirect('/admin')
+  }
+
   const { error } = await supabase.rpc('create_recipe', {
     p_language: language.data,
     ...toRpcParams(fields.data),
@@ -146,6 +197,17 @@ export async function createTranslationAction(_prev: FormState, formData: FormDa
   if (!fields.success) return { ok: false, fieldErrors: fields.error.flatten().fieldErrors }
   if (fields.data.published) return draftOnlyMessage()
 
+  if (await isMysqlAdminPreview()) {
+    try {
+      await createTranslationMysql(sourceId.data, language.data, fields.data)
+    } catch (error) {
+      console.error('[admin/mysql] create translation failed', error)
+      return { ok: false, message: 'No se pudo crear la traducción en MySQL. Comprueba la sesión y posibles duplicados.' }
+    }
+    revalidatePublicRecipes()
+    redirect('/admin')
+  }
+
   const { error } = await supabase.rpc('create_recipe_translation', {
     p_source_recipe_id: sourceId.data,
     p_language: language.data,
@@ -171,6 +233,18 @@ export async function updateRecipeAction(_prev: FormState, formData: FormData): 
   if (!language.success) return { ok: false, message: 'No se pudo comprobar el idioma de la receta.' }
   const fields = readRecipeForm(formData, language.data)
   if (!fields.success) return { ok: false, fieldErrors: fields.error.flatten().fieldErrors }
+
+  if (await isMysqlAdminPreview()) {
+    if (fields.data.published) return draftOnlyMessage()
+    try {
+      await updateDraftMysql(id.data, fields.data)
+    } catch (error) {
+      console.error('[admin/mysql] update draft failed', error)
+      return { ok: false, message: 'No se pudo actualizar el borrador en MySQL. No se permite editar una receta publicada desde el formulario básico.' }
+    }
+    revalidatePublicRecipes()
+    redirect('/admin')
+  }
 
   if (fields.data.published) {
     const { data: current, error: currentError } = await supabase
@@ -218,6 +292,17 @@ export async function deleteRecipeAction(formData: FormData) {
 
   const id = uuidSchema.safeParse(formData.get('id'))
   if (!id.success) redirect('/admin')
+
+  if (await isMysqlAdminPreview()) {
+    try {
+      await deleteDraftMysql(id.data)
+    } catch (error) {
+      console.error('[admin/mysql] delete draft refused', error)
+      redirect('/admin/todas?aviso=error-borrar')
+    }
+    revalidatePublicRecipes()
+    redirect('/admin/todas')
+  }
 
   const { error } = await supabase.from('recipes').delete().eq('id', id.data)
   if (error) console.error('[admin] no se pudo eliminar', error.code, error.message)

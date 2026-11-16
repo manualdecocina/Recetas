@@ -1,0 +1,44 @@
+name: Rescate MySQL - esquema admin en MySQL 8 aislado
+on:
+  push:
+    branches: [rescate-supabase-20261115]
+    paths:
+      - 'scripts/migracion-hostinger/08-admin-auth-schema.sql'
+      - 'scripts/migracion-hostinger/08-admin-auth-schema-corregido.sql.zip'
+      - '.github/workflows/rescate-admin-schema-mysql.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  mysql-schema:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: local-test-only
+          MYSQL_DATABASE: u357006512_mdc_migracion
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping -h 127.0.0.1 -uroot -plocal-test-only --silent"
+          --health-interval=5s --health-timeout=4s --health-retries=20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validar sentencias en MySQL 8 real (sin usar Hostinger)
+        env:
+          MYSQL_PWD: local-test-only
+        run: |
+          set -euo pipefail
+          for attempt in 1 2; do
+            docker run --rm --network host \
+              -v "$PWD/scripts/migracion-hostinger/08-admin-auth-schema.sql:/schema.sql:ro" \
+              -e MYSQL_PWD mysql:8.0 sh -c \
+              'mysql -h127.0.0.1 -uroot u357006512_mdc_migracion < /schema.sql'
+          done
+          count="$(docker run --rm --network host -e MYSQL_PWD mysql:8.0 \
+            mysql -N -s -h127.0.0.1 -uroot u357006512_mdc_migracion \
+            -e "SELECT COUNT(*) FROM information_schema.tables WHERE table_schema='u357006512_mdc_migracion' AND table_name LIKE 'admin_auth_%';")"
+          test "$count" = "4"
+          echo "PASS: 4 admin_auth_ tables, repeatable SQL, no effects on real database"

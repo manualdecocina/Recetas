@@ -1,0 +1,46 @@
+name: Rescate MySQL - pruebas sin tocar producción
+on:
+  push:
+    branches: [rescate-supabase-20261115]
+    paths:
+      - 'src/lib/mysql/**'
+      - 'src/app/api/rescate-mysql/route.ts'
+      - 'src/app/qa-mysql/page.tsx'
+      - 'src/app/qa-mysql/layout.tsx'
+      - 'src/lib/supabase/public.ts'
+      - 'src/middleware.ts'
+      - 'src/generated/published-recipe-slash-map.json'
+      - 'tests/logic/mysql-public-read.test.mts'
+      - 'tests/logic/mysql-admin-crypto.test.mts'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'scripts/migracion-hostinger/05-verificar-mysql.mjs'
+      - 'scripts/migracion-hostinger/08-admin-auth-schema.sql'
+      - 'scripts/migracion-hostinger/rescatar-media.py'
+      - '.github/workflows/rescate-mysql-read.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - name: Comprobar TypeScript
+        run: npm run typecheck
+      - name: Compilar Next.js incluyendo la vista previa MySQL
+        run: npm run build
+      - name: Comprobar SQL parametrizado sin base real
+        run: node --experimental-strip-types --no-warnings tests/logic/mysql-public-read.test.mts
+      - name: Probar hash de contraseñas y sesiones administrativas
+        run: node --experimental-strip-types --no-warnings tests/logic/mysql-admin-crypto.test.mts
+      - name: Validar scripts de rescate, sin ejecutar conexiones externas
+        run: |
+          node --check scripts/migracion-hostinger/05-verificar-mysql.mjs
+          python3 -m py_compile scripts/migracion-hostinger/rescatar-media.py

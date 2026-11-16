@@ -1,0 +1,63 @@
+name: Rescate MySQL - indices editoriales
+on:
+  push:
+    branches: [rescate-supabase-20261115]
+    paths:
+      - 'scripts/migracion-hostinger/09-indices-editoriales.sql'
+      - '.github/workflows/rescate-editorial-integrity.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  unique-indexes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: local-test-only
+          MYSQL_DATABASE: u357006512_mdc_migracion
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping -h 127.0.0.1 -uroot -plocal-test-only --silent"
+          --health-interval=5s --health-timeout=4s --health-retries=20
+    env:
+      MYSQL_PWD: local-test-only
+    steps:
+      - uses: actions/checkout@v4
+      - name: Crear esquema sintético, aplicar índices, probar concurrencia y colisiones
+        run: |
+          set -euo pipefail
+          cat > /tmp/setup.sql <<'SQL'
+          CREATE TABLE IF NOT EXISTS `u357006512_mdc_migracion`.`recipes` (
+            id CHAR(36) CHARACTER SET ascii COLLATE ascii_bin PRIMARY KEY,
+            recipe_group_id CHAR(36) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+            language VARCHAR(12) NOT NULL,
+            slug VARCHAR(1024) NOT NULL,
+            public_path VARCHAR(1024) NULL
+          ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+          INSERT INTO recipes (id,recipe_group_id,language,slug,public_path) VALUES
+          ('00000000-0000-4000-8000-000000000001','10000000-0000-4000-8000-000000000001','es','arepa','/es/arepa'),
+          ('00000000-0000-4000-8000-000000000002','10000000-0000-4000-8000-000000000001','en','arepa','/en/arepa');
+          SQL
+          docker run --rm --network host -v /tmp/setup.sql:/setup.sql:ro -e MYSQL_PWD \
+            mysql:8.0 sh -c 'mysql -h127.0.0.1 -uroot u357006512_mdc_migracion < /setup.sql'
+          docker run --rm --network host \
+            -v "$PWD/scripts/migracion-hostinger/09-indices-editoriales.sql:/index.sql:ro" \
+            -e MYSQL_PWD mysql:8.0 sh -c 'mysql -h127.0.0.1 -uroot u357006512_mdc_migracion < /index.sql'
+          for test_sql in \
+            "INSERT INTO recipes VALUES ('00000000-0000-4000-8000-000000000003','10000000-0000-4000-8000-000000000001','es','otra','/es/otra',DEFAULT,DEFAULT)" \
+            "INSERT INTO recipes VALUES ('00000000-0000-4000-8000-000000000004','10000000-0000-4000-8000-000000000002','es','arepa','/es/unique',DEFAULT,DEFAULT)" \
+            "INSERT INTO recipes VALUES ('00000000-0000-4000-8000-000000000005','10000000-0000-4000-8000-000000000003','es','otro','/es/arepa',DEFAULT,DEFAULT)"; do
+            if docker run --rm --network host -e MYSQL_PWD mysql:8.0 mysql -h127.0.0.1 -uroot \
+              u357006512_mdc_migracion -e "$test_sql" > /dev/null 2>&1; then
+              echo "FAIL: un índice permitió un duplicado"
+              exit 1
+            fi
+          done
+          docker run --rm --network host -e MYSQL_PWD mysql:8.0 mysql -h127.0.0.1 -uroot \
+            u357006512_mdc_migracion -e \
+            "INSERT INTO recipes (id,recipe_group_id,language,slug,public_path) VALUES ('00000000-0000-4000-8000-000000000006','10000000-0000-4000-8000-000000000004','es','arépà','/es/arepa-con-acentos');"
+          echo "PASS: group-language, language-slug, public_path uniques and Unicode"

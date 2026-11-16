@@ -15,6 +15,7 @@ function homepageAgentResponse(request: NextRequest, lang: string): NextResponse
 }
 import { SUPABASE_PUBLIC_KEY, SUPABASE_URL } from '@/lib/supabase/keys'
 import { buildSlashMap, slashRedirectTarget, slashRedirectUrl, type SlashMap, type SlashRow } from '@/lib/trailing-slash'
+import publishedRecipeSlashMap from '@/generated/published-recipe-slash-map.json'
 
 // ── Una sola URL por receta ─────────────────────────────────────────────────────────────
 // Lista de recetas publicadas → si su canónica lleva barra final. Se guarda en memoria
@@ -31,7 +32,13 @@ const slashClient = createClient(SUPABASE_URL, SUPABASE_PUBLIC_KEY, {
   auth: { persistSession: false, autoRefreshToken: false },
 })
 
+// Plan de contingencia de MySQL: 1.764 rutas públicas reales a fecha 16/11/2026.
+// Este mapa se utiliza solamente al activar explícitamente MYSQL_READS_ENABLED.
+// No consulta Supabase ni cambia las URLs canónicas. Regenerar al publicar nuevas recetas.
+const frozenSlashMap = buildSlashMap(publishedRecipeSlashMap as SlashRow[])
+
 async function fetchSlashMap(): Promise<SlashMap | null> {
+  if (process.env.MYSQL_READS_ENABLED === 'true') return frozenSlashMap
   const rows: SlashRow[] = []
   for (let from = 0; ; from += 1000) {
     const { data, error } = await slashClient.from('recipes').select('public_path, source_url')
@@ -78,6 +85,23 @@ export async function middleware(request: NextRequest) {
   // como lo era la raíz del sitio anterior. Sin detección de idioma a propósito:
   // Googlebot no envía Accept-Language útil y una redirección variable confunde el rastreo.
   if (pathname === '/') {
+    // Solo en la vista previa del rescate: mostrar los datos MySQL al abrir el dominio.
+    // La home pública del dominio principal mantiene su redirección canónica /es.
+    const previewHost = 'mintcream-squirrel-383743.hostingersite.com'
+    const hosts = [
+      request.nextUrl.hostname,
+      request.headers.get('host')?.split(':')[0],
+      request.headers.get('x-forwarded-host')?.split(',')[0]?.trim()?.split(':')[0],
+    ]
+    if (hosts.includes(previewHost)) {
+      const preview = request.nextUrl.clone()
+      preview.pathname = '/qa-mysql'
+      preview.search = ''
+      const response = NextResponse.redirect(preview, 307)
+      response.headers.set('Cache-Control', 'no-store')
+      response.headers.set('X-Robots-Tag', 'noindex, nofollow')
+      return response
+    }
     if (/(?:^|,)\s*text\/markdown(?:\s*;|\s*(?:,|$))/i.test(request.headers.get('accept') ?? '')) {
       return homepageAgentResponse(request, DEFAULT_LANGUAGE)
     }
@@ -95,6 +119,24 @@ export async function middleware(request: NextRequest) {
   if (pathname !== '/admin' && !pathname.startsWith('/admin/')) {
     return (await recipeSlashRedirect(request)) ?? NextResponse.next()
   }
+
+  // Solo las rutas editoriales verificadas en la vista previa; todas ellas
+  // llaman requireAdmin() en Node y comprueban una sesión MySQL real.
+  // La autenticación de recuperación y el resto conservan su protección anterior.
+  const mysqlPreviewPanel = /^\/admin(?:\/(?:todas|salud|recetas\/nueva|recetas\/[0-9a-f-]{36}|platos\/[0-9a-f-]{36}(?:\/google)?))?\/?$/i
+  const isMysqlPreviewHost = [
+    request.nextUrl.hostname,
+    request.headers.get('host')?.split(':')[0],
+    request.headers.get('x-forwarded-host')?.split(',')[0]?.trim()?.split(':')[0],
+  ].includes('mintcream-squirrel-383743.hostingersite.com')
+  if (process.env.ADMIN_AUTH_PROVIDER === 'mysql' && isMysqlPreviewHost &&
+      (mysqlPreviewPanel.test(pathname) || pathname === '/admin/login')) {
+    return NextResponse.next()
+  }
+
+  // Ruta aislada de QA: tiene su propia sesión MySQL y validación completa en Node.
+  // Nunca concede acceso a /admin normal, cuyo guard Supabase permanece intacto.
+  if (pathname === '/admin/qa-mysql') return NextResponse.next()
 
   // A partir de aquí solo /admin/* (ver matcher).
   let response = NextResponse.next({ request })
