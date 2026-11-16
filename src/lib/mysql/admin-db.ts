@@ -4,7 +4,7 @@ import { createPool, type Pool, type PoolConnection } from 'mysql2/promise'
 /** Conexión administrativa, separada del SELECT público. No usar desde Edge ni Client Components. */
 const state=globalThis as unknown as {__mdcAdminPool?:Pool}
 export function adminMysqlPool():Pool{
-  if(process.env.ADMIN_AUTH_PROVIDER!=='mysql')throw Error('Auth MySQL no está activada')
+  // Durante la migración, la sesión Supabase del administrador puede ejecutar\n  // un test real de login MySQL sin activar el nuevo proveedor en producción.\n  if(process.env.ADMIN_AUTH_PROVIDER!=='mysql'&&process.env.MYSQL_READS_ENABLED!=='true')\n    throw Error('Auth MySQL no disponible en este entorno')
   if(state.__mdcAdminPool)return state.__mdcAdminPool
   const host=process.env.MYSQL_HOST,user=process.env.MYSQL_USER,password=process.env.MYSQL_PASSWORD,
     database=process.env.MYSQL_DATABASE
