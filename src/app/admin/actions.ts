@@ -2,7 +2,7 @@
 
 import { revalidateTag } from 'next/cache'
 import { redirect } from 'next/navigation'
-import { cookies } from 'next/headers'
+import { cookies, headers } from 'next/headers'
 import { ADMIN_COOKIE, SESSION_DAYS, loginAdmin, revokeAdminSession } from '@/lib/mysql/admin-auth'
 import { z } from 'zod'
 import type { PostgrestError } from '@supabase/supabase-js'
@@ -12,6 +12,14 @@ import { requireAdmin } from '@/lib/supabase/admin-guard'
 import { languageSchema, readRecipeForm, uuidSchema, type RecipeFields } from '@/lib/validation'
 import { RECIPES_CACHE_TAG } from '@/lib/cache'
 import type { FormState } from './form-state'
+
+async function isMysqlAdminPreview(): Promise<boolean> {
+  if (process.env.ADMIN_AUTH_PROVIDER !== 'mysql') return false
+  const h = await headers()
+  const host = h.get('x-forwarded-host')?.split(',')[0]?.trim()?.split(':')[0] ??
+    h.get('host')?.split(':')[0]
+  return host === 'mintcream-squirrel-383743.hostingersite.com'
+}
 
 // ---------- Sesión ----------
 
@@ -29,7 +37,7 @@ export async function signInAction(_prev: FormState, formData: FormData): Promis
     return { ok: false, fieldErrors: parsed.error.flatten().fieldErrors }
   }
 
-  if (process.env.ADMIN_AUTH_PROVIDER === 'mysql') {
+  if (await isMysqlAdminPreview()) {
     try {
       const result = await loginAdmin(parsed.data.email, parsed.data.password)
       if (!result.ok) return { ok: false, message: 'Email o contraseña incorrectos.' }
@@ -54,7 +62,7 @@ export async function signInAction(_prev: FormState, formData: FormData): Promis
 }
 
 export async function signOutAction() {
-  if (process.env.ADMIN_AUTH_PROVIDER === 'mysql') {
+  if (await isMysqlAdminPreview()) {
     const store = await cookies()
     try {
       await revokeAdminSession(store.get(ADMIN_COOKIE)?.value)
@@ -147,7 +155,7 @@ export async function createRecipeAction(_prev: FormState, formData: FormData): 
   if (!fields.success) return { ok: false, fieldErrors: fields.error.flatten().fieldErrors }
   if (fields.data.published) return draftOnlyMessage()
 
-  if (process.env.ADMIN_AUTH_PROVIDER === 'mysql') {
+  if (await isMysqlAdminPreview()) {
     try {
       await createDraftMysql(language.data, fields.data)
     } catch (error) {
@@ -187,7 +195,7 @@ export async function createTranslationAction(_prev: FormState, formData: FormDa
   if (!fields.success) return { ok: false, fieldErrors: fields.error.flatten().fieldErrors }
   if (fields.data.published) return draftOnlyMessage()
 
-  if (process.env.ADMIN_AUTH_PROVIDER === 'mysql') {
+  if (await isMysqlAdminPreview()) {
     try {
       await createTranslationMysql(sourceId.data, language.data, fields.data)
     } catch (error) {
@@ -224,7 +232,7 @@ export async function updateRecipeAction(_prev: FormState, formData: FormData): 
   const fields = readRecipeForm(formData, language.data)
   if (!fields.success) return { ok: false, fieldErrors: fields.error.flatten().fieldErrors }
 
-  if (process.env.ADMIN_AUTH_PROVIDER === 'mysql') {
+  if (await isMysqlAdminPreview()) {
     if (fields.data.published) return draftOnlyMessage()
     try {
       await updateDraftMysql(id.data, fields.data)
@@ -283,7 +291,7 @@ export async function deleteRecipeAction(formData: FormData) {
   const id = uuidSchema.safeParse(formData.get('id'))
   if (!id.success) redirect('/admin')
 
-  if (process.env.ADMIN_AUTH_PROVIDER === 'mysql') {
+  if (await isMysqlAdminPreview()) {
     try {
       await deleteDraftMysql(id.data)
     } catch (error) {
