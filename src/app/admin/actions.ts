@@ -2,10 +2,12 @@
 
 import { revalidateTag } from 'next/cache'
 import { redirect } from 'next/navigation'
+import { cookies } from 'next/headers'
+import { ADMIN_COOKIE, SESSION_DAYS, loginAdmin, revokeAdminSession } from '@/lib/mysql/admin-auth'
 import { z } from 'zod'
 import type { PostgrestError } from '@supabase/supabase-js'
 import { createSupabaseServerClient } from '@/lib/supabase/server'
-import { createDraftMysql, createTranslationMysql, updateDraftMysql } from '@/lib/mysql/editorial-crud'
+import { createDraftMysql, createTranslationMysql, updateDraftMysql, deleteDraftMysql } from '@/lib/mysql/editorial-crud'
 import { requireAdmin } from '@/lib/supabase/admin-guard'
 import { languageSchema, readRecipeForm, uuidSchema, type RecipeFields } from '@/lib/validation'
 import { RECIPES_CACHE_TAG } from '@/lib/cache'
@@ -27,6 +29,21 @@ export async function signInAction(_prev: FormState, formData: FormData): Promis
     return { ok: false, fieldErrors: parsed.error.flatten().fieldErrors }
   }
 
+  if (process.env.ADMIN_AUTH_PROVIDER === 'mysql') {
+    try {
+      const result = await loginAdmin(parsed.data.email, parsed.data.password)
+      if (!result.ok) return { ok: false, message: 'Email o contraseña incorrectos.' }
+      ;(await cookies()).set(ADMIN_COOKIE, result.token, {
+        path: '/', httpOnly: true, secure: true, sameSite: 'strict',
+        maxAge: SESSION_DAYS * 24 * 60 * 60,
+      })
+    } catch (error) {
+      console.error('[admin/mysql] login failed', error)
+      return { ok: false, message: 'Inicio de sesión no disponible. Comprueba la configuración MySQL.' }
+    }
+    redirect('/admin')
+  }
+
   const supabase = await createSupabaseServerClient()
   const { error } = await supabase.auth.signInWithPassword(parsed.data)
   if (error) {
@@ -37,6 +54,18 @@ export async function signInAction(_prev: FormState, formData: FormData): Promis
 }
 
 export async function signOutAction() {
+  if (process.env.ADMIN_AUTH_PROVIDER === 'mysql') {
+    const store = await cookies()
+    try {
+      await revokeAdminSession(store.get(ADMIN_COOKIE)?.value)
+    } catch (error) {
+      console.error('[admin/mysql] revocation failed', error)
+      throw new Error('No se pudo revocar la sesión de MySQL.')
+    }
+    store.delete(ADMIN_COOKIE)
+    redirect('/admin/qa-mysql')
+  }
+
   const supabase = await createSupabaseServerClient()
   await supabase.auth.signOut()
   redirect('/admin/login')
@@ -253,6 +282,17 @@ export async function deleteRecipeAction(formData: FormData) {
 
   const id = uuidSchema.safeParse(formData.get('id'))
   if (!id.success) redirect('/admin')
+
+  if (process.env.ADMIN_AUTH_PROVIDER === 'mysql') {
+    try {
+      await deleteDraftMysql(id.data)
+    } catch (error) {
+      console.error('[admin/mysql] delete draft refused', error)
+      redirect('/admin/todas?aviso=error-borrar')
+    }
+    revalidatePublicRecipes()
+    redirect('/admin/todas')
+  }
 
   const { error } = await supabase.from('recipes').delete().eq('id', id.data)
   if (error) console.error('[admin] no se pudo eliminar', error.code, error.message)
