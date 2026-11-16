@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import {
-  ADMIN_COOKIE, SESSION_DAYS, attemptsKey, constantTimeSecret, emailKey, passwordHash,
+  ADMIN_COOKIE, SESSION_DAYS, attemptsKey, adminAttemptsSecret, constantTimeSecret, emailKey, passwordHash,
   sessionToken, strongPassword, tokenHash, validToken, verifyPassword,
 } from '../../src/lib/mysql/admin-crypto.ts'
 
@@ -34,4 +34,14 @@ assert.deepEqual(attemptsKey('A'.repeat(32),'email','ADMIN@TEST.COM'),
   attemptsKey('A'.repeat(32),'email','admin@test.com'))
 assert.notDeepEqual(attemptsKey('A'.repeat(32),'email','a@test.com'),
   attemptsKey('A'.repeat(32),'email','b@test.com'))
+// La nueva cuenta puede utilizar una clave privada derivada de un secreto HMAC
+// ya existente sin reutilizar directamente el mismo secreto entre sistemas.
+const hmacKey='s'.repeat(64)
+const derived=adminAttemptsSecret({RATINGS_HASH_SECRET:hmacKey})
+assert.equal(derived.length,64)
+assert.notEqual(derived,hmacKey)
+assert.equal(derived,adminAttemptsSecret({RATINGS_HASH_SECRET:hmacKey}))
+assert.notEqual(derived,adminAttemptsSecret({RATINGS_HASH_SECRET:'t'.repeat(64)}))
+assert.equal(adminAttemptsSecret({ADMIN_AUTH_KEY:'d'.repeat(48),RATINGS_HASH_SECRET:hmacKey}),'d'.repeat(48))
+assert.throws(()=>adminAttemptsSecret({RATINGS_HASH_SECRET:'too-short'}))
 console.log('MySQL admin crypto security tests PASS')
