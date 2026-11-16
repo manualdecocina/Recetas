@@ -4,8 +4,8 @@
  * Algoritmo: scrypt N=2^15, r=8, p=1, 64 bytes; salts aleatorios individuales.
  */
 import { createHash, createHmac, randomBytes, scrypt as nodeScrypt, timingSafeEqual } from 'node:crypto'
-import { promisify } from 'node:util'
-const scrypt = promisify(nodeScrypt)
+const derive = (password:string,salt:Buffer)=>new Promise<Buffer>((resolve,reject)=>
+  nodeScrypt(password,salt,64,SCRYPT_PARAMS,(error,key)=>error?reject(error):resolve(key)))
 export const ADMIN_COOKIE = 'mdc-admin-session'
 export const SESSION_DAYS = 7
 export const RESET_MINUTES = 20
@@ -35,13 +35,13 @@ export function constantTimeSecret(received:unknown,expected:string):boolean {
 export async function passwordHash(password:string,salt:Buffer=randomBytes(32)):
   Promise<{salt:Buffer;hash:Buffer}> {
   if(!strongPassword(password)||salt.length!==32)throw Error('Contraseña inválida')
-  const hash=await scrypt(password,salt,64,SCRYPT_PARAMS) as Buffer
+  const hash=await derive(password,salt)
   return {salt,hash}
 }
 export async function verifyPassword(password:unknown,salt:Buffer,hash:Buffer):Promise<boolean>{
   const candidate=typeof password==='string'?password:''
   if(candidate.length>256||salt.length!==32||hash.length!==64)return false
-  const digest=await scrypt(candidate,salt,64,SCRYPT_PARAMS) as Buffer
+  const digest=await derive(candidate,salt)
   return timingSafeEqual(digest,hash)
 }
 export function attemptsKey(secret:string,type:'email'|'ip-email',email:string,ip=''):Buffer {
