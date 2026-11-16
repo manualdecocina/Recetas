@@ -88,13 +88,13 @@ export async function middleware(request: NextRequest) {
   if (pathname === '/') {
     // Solo en la vista previa del rescate: mostrar los datos MySQL al abrir el dominio.
     // La home pública del dominio principal mantiene su redirección canónica /es.
-    const previewHost = 'mintcream-squirrel-383743.hostingersite.com'
+    const previewHosts = new Set(['mintcream-squirrel-383743.hostingersite.com', 'valiant-tan-hornet-51.hostingersite.com'])
     const hosts = [
       request.nextUrl.hostname,
       request.headers.get('host')?.split(':')[0],
       request.headers.get('x-forwarded-host')?.split(',')[0]?.trim()?.split(':')[0],
     ]
-    if (hosts.includes(previewHost)) {
+    if (hosts.some(host => typeof host === 'string' && previewHosts.has(host))) {
       const preview = request.nextUrl.clone()
       preview.pathname = '/qa-mysql'
       preview.search = ''

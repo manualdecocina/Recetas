@@ -14,7 +14,7 @@ export const metadata:Metadata={
   title:'Prueba aislada del nuevo acceso — Manual de Cocina',
   robots:{index:false,follow:false},
 }
-const PREVIEW='mintcream-squirrel-383743.hostingersite.com'
+const PREVIEWS = new Set(['mintcream-squirrel-383743.hostingersite.com', 'valiant-tan-hornet-51.hostingersite.com'])
 const notices:Record<string,string>={
   entrada_invalida:'Credenciales incorrectas o acceso temporalmente limitado.',
   datos_invalidos:'Revisa los datos y utiliza una contraseña segura de al menos 14 caracteres.',
@@ -33,7 +33,7 @@ export default async function MysqlAuthQAPage({
 }){
   const h=await headers()
   const hosts=[h.get('host')?.split(':')[0],h.get('x-forwarded-host')?.split(',')[0]?.trim()?.split(':')[0]]
-  if(!hosts.includes(PREVIEW))notFound()
+  if(!hosts.some(host=>typeof host==='string'&&PREVIEWS.has(host)))notFound()
   const {aviso}=await searchParams
   if(process.env.ADMIN_AUTH_PROVIDER!=='mysql'){
     return <AuthCard title="Acceso MySQL (pruebas)" subtitle="Aún no está activada la autenticación MySQL. El panel real sigue en Supabase.">
