@@ -23,6 +23,8 @@ const notices:Record<string,string>={
   cuenta_creada:'Cuenta preparada. Inicia sesión con la contraseña nueva.',
   bienvenido:'Sesión MySQL iniciada correctamente en el entorno de pruebas.',
   salida:'Sesión cerrada.',
+  qa_escritura_ok:'MySQL escribió y leyó la prueba correctamente; la transacción se revirtió y no quedó ningún dato de prueba.',
+  qa_escritura_error:'Falló la prueba de escritura MySQL. No se guardaron los datos de prueba.',
 }
 export default async function MysqlAuthQAPage({
   searchParams,
@@ -69,6 +71,11 @@ export default async function MysqlAuthQAPage({
       <p>Acceso autorizado en entorno aislado.</p>
       <p>Usuario: <strong>{current.email}</strong></p>
       <p role="status">{editorialSummary}</p>
+      {aviso&&notices[aviso]&&<p role="status" className="adm-notice">{notices[aviso]}</p>}
+      <form method="post" action="/api/rescate-admin">
+        <input type="hidden" name="action" value="smoke"/>
+        <button className="adm-btn adm-btn-primary" type="submit">Probar escritura MySQL sin guardar datos</button>
+      </form>
       <form method="post" action="/api/rescate-admin">
         <input type="hidden" name="action" value="logout"/>
         <button className="adm-btn adm-btn-primary" type="submit">Cerrar sesión</button>
