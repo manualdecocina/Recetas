@@ -11,8 +11,12 @@ export const dynamic = 'force-dynamic'
 const PREVIEW = 'mintcream-squirrel-383743.hostingersite.com'
 const headers = { 'Cache-Control': 'private, no-store', 'X-Robots-Tag': 'noindex, nofollow', 'X-Content-Type-Options': 'nosniff' }
 export async function GET(request: NextRequest) {
-  if (request.nextUrl.hostname !== PREVIEW) {
-    return new Response(null, { status: 404, headers })
+  // Hostinger puede reenviar el hostname del proceso interno a NextRequest;
+  // permitir Host y X-Forwarded-Host de preview sin revelar el valor real.
+  const names = [request.nextUrl.hostname, request.headers.get('host')?.split(':')[0],
+    request.headers.get('x-forwarded-host')?.split(',')[0]?.trim()?.split(':')[0]]
+  if (!names.includes(PREVIEW)) {
+    return NextResponse.json({ status: 'preview_host_mismatch', mysql: false }, { headers })
   }
   const { MYSQL_HOST, MYSQL_USER, MYSQL_PASSWORD, MYSQL_DATABASE, MYSQL_PORT, MYSQL_SSL_MODE } = process.env
   if (!MYSQL_HOST || !MYSQL_USER || !MYSQL_PASSWORD || !MYSQL_DATABASE) {
