@@ -37,6 +37,9 @@ function pool(): Pool {
   })
   return shared.__mdcReadMysqlPool
 }
+// Uso exclusivo desde rutas del servidor. No se exporta al navegador.
+export function mysqlServerPool(): Pool { return pool() }
+
 async function read(sql: string, params: unknown[]): Promise<Record<string, any>[]> {
   if (process.env.MYSQL_READS_ENABLED !== 'true') {
     throw new Error('Lectura MySQL deshabilitada')
