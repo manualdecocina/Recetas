@@ -3,7 +3,7 @@ import { randomUUID, createHash } from 'node:crypto'
 import { type RowDataPacket, type ResultSetHeader } from 'mysql2/promise'
 import { adminConnection, adminMysqlPool } from './admin-db'
 import {
-  ADMIN_COOKIE, SESSION_DAYS, attemptsKey, constantTimeSecret, emailKey,
+  ADMIN_COOKIE, SESSION_DAYS, attemptsKey, adminAttemptsSecret, constantTimeSecret, emailKey,
   passwordHash, sessionToken, strongPassword, tokenHash, validToken, verifyPassword,
 } from './admin-crypto'
 
@@ -18,9 +18,7 @@ function validEmail(email:string):boolean {
   return email.length>=5 && email.length<=320 && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
 }
 function requireAuthSecret():string {
-  const secret=process.env.ADMIN_AUTH_KEY
-  if(!secret||secret.length<32)throw Error('ADMIN_AUTH_KEY no configurada')
-  return secret
+  return adminAttemptsSecret(process.env)
 }
 
 /** Solo se invoca con una autorización de bootstrap muy fuerte, fuera de este módulo.
