@@ -2,7 +2,7 @@ import { createHmac, randomUUID } from 'node:crypto'
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
 import { readRatingsSecrets } from '@/lib/ratings-config'
-import { voteMysql } from '@/lib/mysql/ratings'
+import { mirrorMysqlVote, voteMysql } from '@/lib/mysql/ratings'
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL ?? 'https://eqbdtctxbpepbeickhqi.supabase.co'
 const ratingsEnabled = process.env.NEXT_PUBLIC_RATINGS_ENABLED === 'true'
@@ -102,6 +102,17 @@ export async function POST(request: NextRequest) {
       })
     }
     return response
+  }
+
+  // Con Supabase como fuente, copiar cada nuevo voto a MySQL tras confirmar la RPC.
+  // Si falla el espejo, el voto original sigue guardado: la sincronización
+  // administrativa idempotente recuperará cualquier hueco.
+  if (process.env.MYSQL_READS_ENABLED === 'true' && !mysqlRatingsEnabled) {
+    try {
+      await mirrorMysqlVote(recipeId, rating, voterHash)
+    } catch (error) {
+      console.warn('[ratings] espejo MySQL pendiente', { code: (error as {code?:string})?.code ?? 'retry_required' })
+    }
   }
 
   const row = Array.isArray(data) ? data[0] : data
