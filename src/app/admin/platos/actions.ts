@@ -10,6 +10,7 @@ import { groupBlockers, groupImageUrls } from '@/lib/admin/publication'
 import { checkImagesOnline, loadGroup } from '@/lib/admin/publication-data'
 import { seoSaveError } from '@/lib/admin/seo-checks'
 import { reviewedRecipeSeo } from '@/lib/recipe-snippet-repairs'
+import { reviewGroupMysql, publishGroupMysql, unpublishGroupMysql, saveSeoMysql } from '@/lib/mysql/editorial-writes'
 
 // Las acciones vuelven a la página del plato con un aviso en la URL (?aviso=…), así
 // funcionan como formularios normales, incluso desde el celular y sin JavaScript.
@@ -36,6 +37,17 @@ export async function reviewGroupAction(formData: FormData) {
   const { supabase, user, isAdmin } = await requireAdmin()
   if (!isAdmin) back(group, 'error', 'Tu usuario no tiene permisos de administrador.')
   if (decision === 'devuelta' && !comment) back(group, 'error', 'Para devolver la receta escribe qué hay que corregir.')
+
+  if (process.env.ADMIN_AUTH_PROVIDER === 'mysql') {
+    try {
+      await reviewGroupMysql(group, decision, comment ?? null)
+    } catch (error) {
+      console.error('[admin/mysql] review failed', error)
+      back(group, 'error', 'No se pudo guardar la revisión en MySQL; comprueba el acceso y el modo de escritura.')
+    }
+    revalidatePath('/admin')
+    back(group, 'ok', decision === 'aprobada' ? 'Receta aprobada.' : 'Receta devuelta con tu comentario.')
+  }
 
   const { error } = await supabase.from('recipe_reviews').upsert({
     recipe_group_id: group,
@@ -66,6 +78,20 @@ export async function publishGroupAction(formData: FormData) {
   const missing = images.filter((image) => !image.ok)
   if (missing.length) back(group.data, 'error', `${missing.length} foto(s) todavía no cargan en la web. Espera a que termine el despliegue y vuelve a intentar.`)
 
+  if (process.env.ADMIN_AUTH_PROVIDER === 'mysql') {
+    let removed = 0
+    try {
+      const result = await publishGroupMysql(group.data)
+      removed = result.redirects_removed
+    } catch (error) {
+      console.error('[admin/mysql] publication failed', error)
+      back(group.data, 'error', 'No se pudo publicar en MySQL. Se conserva el estado anterior del grupo.')
+    }
+    revalidateTag(RECIPES_CACHE_TAG, 'max')
+    revalidatePath('/admin')
+    back(group.data, 'ok', `Publicada en los 7 idiomas.${removed ? ` Se quitaron ${removed} redirección(es) vieja(s).` : ''}`)
+  }
+
   const { data, error } = await supabase.rpc('admin_publish_recipe_group', { p_group: group.data })
   if (error) back(group.data, 'error', error.message)
 
@@ -81,6 +107,18 @@ export async function unpublishGroupAction(formData: FormData) {
   if (formData.get('confirm') !== 'si') back(group.data, 'error', 'Marca la casilla de confirmación para retirar la receta.')
   const { supabase, isAdmin } = await requireAdmin()
   if (!isAdmin) back(group.data, 'error', 'Tu usuario no tiene permisos de administrador.')
+
+  if (process.env.ADMIN_AUTH_PROVIDER === 'mysql') {
+    try {
+      await unpublishGroupMysql(group.data, true)
+    } catch (error) {
+      console.error('[admin/mysql] unpublish failed', error)
+      back(group.data, 'error', 'No se pudo retirar la receta en MySQL. Se conserva su estado anterior.')
+    }
+    revalidateTag(RECIPES_CACHE_TAG, 'max')
+    revalidatePath('/admin')
+    back(group.data, 'ok', 'Receta retirada en los 7 idiomas.')
+  }
 
   const { error } = await supabase.rpc('admin_unpublish_recipe_group', { p_group: group.data })
   if (error) back(group.data, 'error', error.message)
@@ -125,6 +163,21 @@ export async function saveSeoAction(formData: FormData) {
     updates.push({ id: row.id, language: row.language, seo: { ...(row.seo ?? {}), title, description } })
   }
   if (updates.length === 0) backToSeo(group.data, 'ok', 'No había cambios que guardar.')
+
+  if (process.env.ADMIN_AUTH_PROVIDER === 'mysql') {
+    try {
+      await saveSeoMysql(group.data, updates.map(u => ({
+        id: u.id, language: u.language,
+        title: String(u.seo.title ?? ''), description: String(u.seo.description ?? ''),
+      })))
+    } catch (error) {
+      console.error('[admin/mysql] save seo failed', error)
+      backToSeo(group.data, 'error', 'No se pudo guardar el SEO en MySQL. No se aplicó ningún cambio parcial.')
+    }
+    revalidateTag(RECIPES_CACHE_TAG, 'max')
+    revalidatePath('/admin/salud')
+    backToSeo(group.data, 'ok', `Guardado en ${updates.map((u) => u.language).join(', ')}.`)
+  }
 
   for (const update of updates) {
     const { error } = await supabase.from('recipes').update({ seo: update.seo }).eq('id', update.id)

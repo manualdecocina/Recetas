@@ -32,8 +32,9 @@ const slashClient = createClient(SUPABASE_URL, SUPABASE_PUBLIC_KEY, {
   auth: { persistSession: false, autoRefreshToken: false },
 })
 
-// Respaldo estático: evita consultar Supabase en cada recálculo de URLs si MySQL está activo.
-// Regenerar este mapa tras publicar nuevas recetas; las escrituras siguen en Supabase.
+// Plan de contingencia de MySQL: 1.764 rutas públicas reales a fecha 16/11/2026.
+// Este mapa se utiliza solamente al activar explícitamente MYSQL_READS_ENABLED.
+// No consulta Supabase ni cambia las URLs canónicas. Regenerar al publicar nuevas recetas.
 const frozenSlashMap = buildSlashMap(publishedRecipeSlashMap as SlashRow[])
 
 async function fetchSlashMap(): Promise<SlashMap | null> {
@@ -101,6 +102,21 @@ export async function middleware(request: NextRequest) {
   if (pathname !== '/admin' && !pathname.startsWith('/admin/')) {
     return (await recipeSlashRedirect(request)) ?? NextResponse.next()
   }
+
+  // Solo las rutas editoriales verificadas en la vista previa; todas ellas
+  // llaman requireAdmin() en Node y comprueban una sesión MySQL real.
+  // La autenticación de recuperación y el resto conservan su protección anterior.
+  const mysqlPreviewPanel = /^\/admin(?:\/(?:todas|salud|recetas\/nueva|recetas\/[0-9a-f-]{36}|platos\/[0-9a-f-]{36}(?:\/google)?))?\/?$/i
+  const isMysqlPreviewHost = request.nextUrl.hostname === 'mintcream-squirrel-383743.hostingersite.com' &&
+    request.headers.get('host')?.split(':')[0] === 'mintcream-squirrel-383743.hostingersite.com'
+  if (process.env.ADMIN_AUTH_PROVIDER === 'mysql' && isMysqlPreviewHost &&
+      (mysqlPreviewPanel.test(pathname) || pathname === '/admin/login')) {
+    return NextResponse.next()
+  }
+
+  // Ruta aislada de QA: tiene su propia sesión MySQL y validación completa en Node.
+  // Nunca concede acceso a /admin normal, cuyo guard Supabase permanece intacto.
+  if (pathname === '/admin/qa-mysql') return NextResponse.next()
 
   // A partir de aquí solo /admin/* (ver matcher).
   let response = NextResponse.next({ request })
