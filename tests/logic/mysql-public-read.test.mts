@@ -69,7 +69,7 @@ const featured=await client.from('recipes').select('id,title').eq('language','es
 assert.equal(featured.error,null)
 assert.equal(featured.data?.id,'destacada')
 assert.deepEqual(queries[0].params.slice(-2),[1,0])
-assert.match(queries[0].sql,/LIMIT \\? OFFSET \\?/)
+assert.match(queries[0].sql,/LIMIT \? OFFSET \?/)
 
 reset([{id:'single',published:1}])
 const exact=await client.from('recipes').select('id').eq('id','single').limit(1).single()
