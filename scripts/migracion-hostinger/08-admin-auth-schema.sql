@@ -1,4 +1,6 @@
 -- Manual de Cocina / NUEVO backend de sesiones. Hostinger MySQL 8.
+-- VERSIÓN CORREGIDA: sin CHECK de tabla, para evitar el analizador antiguo de phpMyAdmin.
+-- `is_active` se valida de forma estricta en el código Node.
 -- Operación ADITIVA: no borra ni altera tablas existentes. No contiene usuarios ni contraseñas.
 -- APLICAR ÚNICAMENTE en u357006512_mdc_migracion y sólo tras respaldo de esquema.
 -- Actualmente no se usa en producción. Datos de usuarios se inicializan por Node, no mediante SQL público.
@@ -16,8 +18,7 @@ CREATE TABLE IF NOT EXISTS `admin_auth_users` (
   `updated_at` DATETIME(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6) ON UPDATE CURRENT_TIMESTAMP(6),
   `last_login_at` DATETIME(6) NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `uq_admin_auth_email` (`email`),
-  CONSTRAINT `chk_admin_auth_active` CHECK (`is_active` IN (0,1))
+  UNIQUE KEY `uq_admin_auth_email` (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 CREATE TABLE IF NOT EXISTS `admin_auth_sessions` (
