@@ -36,6 +36,7 @@ export async function prepareMysqlAdminFromCurrentSession(formData:FormData):Pro
     redirect('/admin/migracion?admin=sin_clave')
   }
 
+  let verified=false
   try{
     // Cliente aislado sin cookies persistentes: verificar el secreto actual
     // sin renovar ni sustituir la sesión de administración del navegador.
@@ -45,15 +46,11 @@ export async function prepareMysqlAdminFromCurrentSession(formData:FormData):Pro
     const checked=await verification.auth.signInWithPassword({
       email:user.email,password:current,
     })
-    if(checked.error||checked.data.user?.id!==user.id)
-      redirect('/admin/migracion?admin=credenciales_invalidas')
-  }catch(error){
-    // Los redireccionamientos de Next son excepciones de control de flujo.
-    // No atrapar ni registrar errores que contengan contraseñas.
-    if(error instanceof Error && error.message==='NEXT_REDIRECT')throw error
-    // Usamos un único aviso y no mostramos los detalles del proveedor.
-    redirect('/admin/migracion?admin=credenciales_invalidas')
+    verified=!checked.error && checked.data.user?.id===user.id
+  }catch{
+    // Nunca imprimir la contraseña ni detalles del proveedor.
   }
+  if(!verified)redirect('/admin/migracion?admin=credenciales_invalidas')
 
   const {salt,hash}=await passwordHash(proposed)
   const conn=await mysqlServerPool().getConnection()
