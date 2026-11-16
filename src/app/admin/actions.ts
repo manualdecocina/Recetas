@@ -5,6 +5,7 @@ import { redirect } from 'next/navigation'
 import { z } from 'zod'
 import type { PostgrestError } from '@supabase/supabase-js'
 import { createSupabaseServerClient } from '@/lib/supabase/server'
+import { createDraftMysql, createTranslationMysql, updateDraftMysql } from '@/lib/mysql/editorial-crud'
 import { requireAdmin } from '@/lib/supabase/admin-guard'
 import { languageSchema, readRecipeForm, uuidSchema, type RecipeFields } from '@/lib/validation'
 import { RECIPES_CACHE_TAG } from '@/lib/cache'
@@ -117,6 +118,17 @@ export async function createRecipeAction(_prev: FormState, formData: FormData): 
   if (!fields.success) return { ok: false, fieldErrors: fields.error.flatten().fieldErrors }
   if (fields.data.published) return draftOnlyMessage()
 
+  if (process.env.ADMIN_AUTH_PROVIDER === 'mysql') {
+    try {
+      await createDraftMysql(language.data, fields.data)
+    } catch (error) {
+      console.error('[admin/mysql] create draft failed', error)
+      return { ok: false, message: 'No se pudo crear el borrador en MySQL. Comprueba que las escrituras estén habilitadas en la vista previa.' }
+    }
+    revalidatePublicRecipes()
+    redirect('/admin')
+  }
+
   const { error } = await supabase.rpc('create_recipe', {
     p_language: language.data,
     ...toRpcParams(fields.data),
@@ -146,6 +158,17 @@ export async function createTranslationAction(_prev: FormState, formData: FormDa
   if (!fields.success) return { ok: false, fieldErrors: fields.error.flatten().fieldErrors }
   if (fields.data.published) return draftOnlyMessage()
 
+  if (process.env.ADMIN_AUTH_PROVIDER === 'mysql') {
+    try {
+      await createTranslationMysql(sourceId.data, language.data, fields.data)
+    } catch (error) {
+      console.error('[admin/mysql] create translation failed', error)
+      return { ok: false, message: 'No se pudo crear la traducción en MySQL. Comprueba la sesión y posibles duplicados.' }
+    }
+    revalidatePublicRecipes()
+    redirect('/admin')
+  }
+
   const { error } = await supabase.rpc('create_recipe_translation', {
     p_source_recipe_id: sourceId.data,
     p_language: language.data,
@@ -171,6 +194,18 @@ export async function updateRecipeAction(_prev: FormState, formData: FormData): 
   if (!language.success) return { ok: false, message: 'No se pudo comprobar el idioma de la receta.' }
   const fields = readRecipeForm(formData, language.data)
   if (!fields.success) return { ok: false, fieldErrors: fields.error.flatten().fieldErrors }
+
+  if (process.env.ADMIN_AUTH_PROVIDER === 'mysql') {
+    if (fields.data.published) return draftOnlyMessage()
+    try {
+      await updateDraftMysql(id.data, fields.data)
+    } catch (error) {
+      console.error('[admin/mysql] update draft failed', error)
+      return { ok: false, message: 'No se pudo actualizar el borrador en MySQL. No se permite editar una receta publicada desde el formulario básico.' }
+    }
+    revalidatePublicRecipes()
+    redirect('/admin')
+  }
 
   if (fields.data.published) {
     const { data: current, error: currentError } = await supabase
