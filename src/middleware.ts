@@ -103,6 +103,10 @@ export async function middleware(request: NextRequest) {
     return (await recipeSlashRedirect(request)) ?? NextResponse.next()
   }
 
+  // Ruta aislada de QA: tiene su propia sesión MySQL y validación completa en Node.
+  // Nunca concede acceso a /admin normal, cuyo guard Supabase permanece intacto.
+  if (pathname === '/admin/qa-mysql') return NextResponse.next()
+
   // A partir de aquí solo /admin/* (ver matcher).
   let response = NextResponse.next({ request })
 
