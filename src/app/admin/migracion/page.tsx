@@ -168,7 +168,7 @@ export default async function MigrationPage({searchParams}:{
         No se pudo verificar tu contraseña actual. No se modificó la cuenta MySQL.
       </p>}
       {adminNotice==='datos_invalidos'&&<p role="alert" className="adm-notice adm-notice-error">
-        Para usar la misma clave, debe tener al menos 14 caracteres, mayúscula, minúscula y número. Si no cumple, escribe una contraseña distinta solo para MySQL en los campos opcionales.
+        La contraseña actual puede conservarse aunque tenga menos de 14 caracteres. Solo una contraseña nueva y diferente debe cumplir 14 caracteres, mayúscula, minúscula y número.
       </p>}
       {adminNotice==='esquema_o_escritura'&&<p role="alert" className="adm-notice adm-notice-error">
         No se pudieron guardar o verificar las credenciales MySQL. El acceso anterior no cambió.
@@ -188,7 +188,7 @@ export default async function MigrationPage({searchParams}:{
           <p className="adm-hint">Puedes conservar tu contraseña actual. Es necesaria una sola vez para verificar que eres el administrador y generar su hash en MySQL; la contraseña de Supabase no cambia.</p>
           <label htmlFor="mdc_current_password">Contraseña actual del panel</label>
           <input id="mdc_current_password" type="password" name="current_password" autoComplete="current-password" required/>
-          <p className="adm-hint">Opcional: solo si quieres una contraseña distinta para MySQL, o si tu contraseña actual no cumple el mínimo de 14 caracteres, mayúscula, minúscula y número.</p>
+          <p className="adm-hint">Opcional: únicamente si quieres usar una contraseña diferente para MySQL. La actual puede conservarse sin cambios.</p>
           <label htmlFor="mdc_new_password">Contraseña distinta para MySQL (opcional)</label>
           <input id="mdc_new_password" type="password" name="new_password" autoComplete="new-password" minLength={14}/>
           <label htmlFor="mdc_confirm_password">Confirmar contraseña distinta (opcional)</label>

@@ -23,7 +23,7 @@ async function isMysqlAdminPreview(): Promise<boolean> {
 
 const loginSchema = z.object({
   email: z.string().trim().email('Email no válido'),
-  password: z.string().min(8, 'Mínimo 8 caracteres'),
+  password: z.string().min(6, 'Mínimo 6 caracteres'),
 })
 
 export async function signInAction(_prev: FormState, formData: FormData): Promise<FormState> {

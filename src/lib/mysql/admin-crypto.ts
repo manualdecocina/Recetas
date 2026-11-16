@@ -38,6 +38,16 @@ export async function passwordHash(password:string,salt:Buffer=randomBytes(32)):
   const hash=await derive(password,salt)
   return {salt,hash}
 }
+/** Sólo para una clave EXISTENTE verificada con éxito por Supabase Auth.
+ * El usuario no está cambiando de contraseña: se genera en MySQL un hash
+ * scrypt independiente y no se debilita el requisito para claves nuevas.
+ */
+export async function passwordHashVerifiedExisting(password:string,salt:Buffer=randomBytes(32)):
+  Promise<{salt:Buffer;hash:Buffer}>{
+  if(typeof password!=='string'||password.length<6||password.length>256||
+     password.includes(String.fromCharCode(0))||salt.length!==32)throw Error('Contraseña existente inválida')
+  return {salt,hash:await derive(password,salt)}
+}
 export async function verifyPassword(password:unknown,salt:Buffer,hash:Buffer):Promise<boolean>{
   const candidate=typeof password==='string'?password:''
   if(candidate.length>256||salt.length!==32||hash.length!==64)return false
