@@ -75,7 +75,7 @@ export async function GET(request: NextRequest) {
             throw error
           }
         }
-        const privateRead = createMysqlReadClient(execute, { includeUnpublished: true })
+        const privateRead = createMysqlReadClient(execute, { includeUnpublished: true, preserveMediaUrls: true })
         let queue: Awaited<ReturnType<typeof loadQueue>>
         try {
           queue = await loadQueue(privateRead as unknown as SupabaseClient)
