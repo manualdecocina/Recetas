@@ -14,8 +14,7 @@ export async function requireAdmin() {
   // pueden leer el panel con sesión MySQL. El sitio público sigue en Supabase.
   if (process.env.ADMIN_AUTH_PROVIDER === 'mysql') {
     const h = await headers()
-    const hosts = [h.get('host')?.split(':')[0], h.get('x-forwarded-host')?.split(',')[0]?.trim()?.split(':')[0]]
-    if (!hosts.includes('mintcream-squirrel-383743.hostingersite.com')) redirect('/admin/login')
+    if (h.get('host')?.split(':')[0] !== 'mintcream-squirrel-383743.hostingersite.com') redirect('/admin/login')
     const mysql = await getMysqlAdminRead()
     if (!mysql) redirect('/admin/qa-mysql')
     return {
