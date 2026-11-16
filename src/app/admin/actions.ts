@@ -16,9 +16,11 @@ import type { FormState } from './form-state'
 async function isMysqlAdminPreview(): Promise<boolean> {
   if (process.env.ADMIN_AUTH_PROVIDER !== 'mysql') return false
   const h = await headers()
-  const host = h.get('x-forwarded-host')?.split(',')[0]?.trim()?.split(':')[0] ??
-    h.get('host')?.split(':')[0]
-  return host === 'mintcream-squirrel-383743.hostingersite.com'
+  const hosts = [
+    h.get('host')?.split(':')[0],
+    h.get('x-forwarded-host')?.split(',')[0]?.trim()?.split(':')[0],
+  ]
+  return hosts.includes('mintcream-squirrel-383743.hostingersite.com')
 }
 
 // ---------- Sesión ----------
