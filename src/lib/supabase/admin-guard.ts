@@ -13,8 +13,9 @@ export async function requireAdmin() {
   // Migración por etapas: únicamente el preview y con el proveedor activado
   // pueden leer el panel con sesión MySQL. El sitio público sigue en Supabase.
   if (process.env.ADMIN_AUTH_PROVIDER === 'mysql') {
-    const host = (await headers()).get('host')?.split(':')[0]
-    if (host !== 'mintcream-squirrel-383743.hostingersite.com') redirect('/admin/login')
+    const h = await headers()
+    const hosts = [h.get('host')?.split(':')[0], h.get('x-forwarded-host')?.split(',')[0]?.trim()?.split(':')[0]]
+    if (!hosts.includes('mintcream-squirrel-383743.hostingersite.com')) redirect('/admin/login')
     const mysql = await getMysqlAdminRead()
     if (!mysql) redirect('/admin/qa-mysql')
     return {
