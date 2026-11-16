@@ -57,9 +57,11 @@ class ReadBuilder implements PromiseLike<ResponseShape> {
   private head=false
   private table:string
   private execute:Executor
-  constructor(table:string,execute:Executor,private includeUnpublished=false) {
+  private includeUnpublished:boolean
+  constructor(table:string,execute:Executor,includeUnpublished=false) {
     this.table=table
     this.execute=execute
+    this.includeUnpublished=includeUnpublished
     if(!tables.has(table))throw Error('Tabla no autorizada: '+table)
     // Seguro por defecto: jamás exponer borradores a una lectura pública.
     if(!includeUnpublished&&(table==='recipes'||table==='content_pages'))this.filters.push({sql:name('published')+' = ?',args:[1]})
