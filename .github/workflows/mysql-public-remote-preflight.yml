@@ -1,0 +1,65 @@
+name: MySQL emergency remote preflight
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/mysql-public-remote-preflight.yml'
+      - 'src/lib/mysql/**'
+      - 'src/lib/supabase/public.ts'
+      - 'src/middleware.ts'
+      - 'src/generated/published-recipe-slash-map.json'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: mysql-preflight-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  remote-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Check existing MySQL staging and production, read-only
+        env:
+          PREVIEW: https://mintcream-squirrel-383743.hostingersite.com
+          PUBLIC: https://manualdecocina.com
+        run: |
+          python3 - <<'PY'
+          import json, os, urllib.request, urllib.error, time
+          def fetch(path):
+              req = urllib.request.Request(path, headers={'User-Agent':'Manual-de-Cocina-GitHub-Preflight/1.0','Accept':'application/json,text/html'})
+              last = None
+              for attempt in range(3):
+                  try:
+                      with urllib.request.urlopen(req, timeout=22) as r:
+                          if r.status != 200:
+                              raise RuntimeError(f"HTTP {r.status}: {path}")
+                          return r.read(1_000_000).decode('utf-8',errors='replace')
+                  except Exception as exc:
+                      last = exc
+                      if attempt < 2: time.sleep(2)
+              raise RuntimeError(f"Unreachable {path}: {type(last).__name__}")
+          base=os.environ['PREVIEW']
+          cases=[
+              ('adapter=1','mysql_adapter_pass'),
+              ('editorial=1','admin_editorial_read_pass'),
+              ('schema=admin','admin_schema_pass'),
+          ]
+          for suffix, expected in cases:
+              raw=fetch(base+'/api/rescate-mysql?'+suffix)
+              parsed=json.loads(raw)
+              if parsed.get('status')!=expected or parsed.get('production_untouched') is not True:
+                  raise RuntimeError('MySQL stage failed expected gate: '+suffix)
+              if suffix=='adapter=1' and len(parsed.get('checks',{}))!=12:
+                  raise RuntimeError('Adapter check count changed: must review')
+              print('PASS staging',suffix,expected)
+          for path,phrase in [('/es','Manual de Cocina'),('/es/recetas','recetas encontradas')]:
+              html=fetch(os.environ['PUBLIC']+path)
+              if phrase not in html:
+                  raise RuntimeError('Production content does not match: '+path)
+              print('PASS live',path)
+          print('PASS: remote read-only preflight. This does NOT verify production MYSQL_* variables or staging deployment of this PR.')
+          PY

@@ -1,4 +1,5 @@
 import { createClient } from '@supabase/supabase-js'
+import { mysqlPublicRead } from '@/lib/mysql/public'
 import { publicReadFetch } from '@/lib/public-fetch'
 import { PUBLIC_REVALIDATE_SECONDS, RECIPES_CACHE_TAG } from '@/lib/cache'
 import { SUPABASE_PUBLIC_KEY, SUPABASE_URL } from './keys'
@@ -27,7 +28,14 @@ const taggedFetch: typeof fetch = (input, init) =>
 
 // Cliente público (sin sesión): solo lee recetas publicadas (RLS "public read published recipes").
 // Usado en páginas públicas y sitemap. El panel admin usa ./server.ts (sin caché, con sesión).
-export const supabase = createClient(supabaseUrl, supabaseKey, {
+const supabaseOriginal = createClient(supabaseUrl, supabaseKey, {
   global: { fetch: taggedFetch },
   auth: { persistSession: false, autoRefreshToken: false },
 })
+
+// Cortafuegos de migración: por defecto todo sigue en Supabase. Solo staging
+// habilita MYSQL_READS_ENABLED=true después de configurar MySQL y probar el panel.
+// No afecta auth/admin, que usa createSupabaseServerClient por separado.
+export const supabase = process.env.MYSQL_READS_ENABLED === 'true'
+  ? (mysqlPublicRead as unknown as typeof supabaseOriginal)
+  : supabaseOriginal
