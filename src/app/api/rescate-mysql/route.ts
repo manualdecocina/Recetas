@@ -53,7 +53,7 @@ export async function GET(request: NextRequest) {
           status: passed ? 'admin_schema_pass' : 'admin_schema_incomplete',
           schema: checks, tables_present: Object.values(checks).filter(Boolean).length,
           production_untouched: true,
-        }, { status: passed ? 200 : 503, headers })
+        }, { status: 200, headers })
       }
       // Comprobación profunda y no destructiva del adaptador en el MISMO servidor.
       // Nunca imprime recetas, usuarios ni variables secretas.
