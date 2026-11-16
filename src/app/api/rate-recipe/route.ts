@@ -3,10 +3,11 @@ import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
 import { readRatingsSecrets } from '@/lib/ratings-config'
 import { voteMysql } from '@/lib/mysql/ratings'
+import { isMysqlCutoverEnabled } from '@/lib/mysql/cutover-config'
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL ?? 'https://eqbdtctxbpepbeickhqi.supabase.co'
 const ratingsEnabled = process.env.NEXT_PUBLIC_RATINGS_ENABLED === 'true'
-const mysqlRatingsEnabled = process.env.MYSQL_RATINGS_ENABLED === 'true'
+const mysqlRatingsEnabled = isMysqlCutoverEnabled()
 
 function disabled() {
   return NextResponse.json({ error: 'Valoraciones no disponibles.' }, { status: 404 })

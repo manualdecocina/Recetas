@@ -2,6 +2,11 @@
 
 import { revalidateTag } from 'next/cache'
 import { redirect } from 'next/navigation'
+import { cookies } from 'next/headers'
+import { isMysqlCutoverEnabled } from '@/lib/mysql/cutover-config'
+import { ADMIN_COOKIE, SESSION_DAYS, loginAdmin, revokeAdminSession } from '@/lib/mysql/admin-auth'
+import { createRecipeMysql, createTranslationMysql, updateRecipeMysql } from '@/lib/mysql/recipe-writes'
+import { getMysqlAdminRead } from '@/lib/mysql/admin-content'
 import { z } from 'zod'
 import type { PostgrestError } from '@supabase/supabase-js'
 import { createSupabaseServerClient } from '@/lib/supabase/server'
@@ -26,6 +31,15 @@ export async function signInAction(_prev: FormState, formData: FormData): Promis
     return { ok: false, fieldErrors: parsed.error.flatten().fieldErrors }
   }
 
+  if (isMysqlCutoverEnabled()) {
+    const result = await loginAdmin(parsed.data.email, parsed.data.password)
+    if (!result.ok) return { ok: false, message: 'Email o contraseña incorrectos.' }
+    ;(await cookies()).set(ADMIN_COOKIE,result.token,{
+      httpOnly:true,secure:true,sameSite:'strict',path:'/',
+      maxAge:SESSION_DAYS*24*60*60,
+    })
+    redirect('/admin')
+  }
   const supabase = await createSupabaseServerClient()
   const { error } = await supabase.auth.signInWithPassword(parsed.data)
   if (error) {
@@ -36,6 +50,12 @@ export async function signInAction(_prev: FormState, formData: FormData): Promis
 }
 
 export async function signOutAction() {
+  if (isMysqlCutoverEnabled()) {
+    const store=await cookies()
+    await revokeAdminSession(store.get(ADMIN_COOKIE)?.value)
+    store.set(ADMIN_COOKIE,'',{path:'/',httpOnly:true,secure:true,sameSite:'strict',maxAge:0})
+    redirect('/admin/login')
+  }
   const supabase = await createSupabaseServerClient()
   await supabase.auth.signOut()
   redirect('/admin/login')
@@ -107,6 +127,17 @@ function publicationGaps(row: Record<string, any>): string[] {
 // ---------- Crear plato nuevo (genera recipe_group_id en la base de datos) ----------
 
 export async function createRecipeAction(_prev: FormState, formData: FormData): Promise<FormState> {
+  if (isMysqlCutoverEnabled()) {
+    const language = languageSchema.safeParse(formData.get('language'))
+    if (!language.success) return {ok:false,fieldErrors:{language:['Idioma no válido']}}
+    const fields = readRecipeForm(formData, language.data)
+    if (!fields.success) return {ok:false,fieldErrors:fields.error.flatten().fieldErrors}
+    if (fields.data.published) return draftOnlyMessage()
+    try { await createRecipeMysql(language.data,fields.data) }
+    catch(error){return {ok:false,message:error instanceof Error?error.message:'No se pudo guardar.'}}
+    revalidatePublicRecipes()
+    redirect('/admin')
+  }
   const { supabase, isAdmin } = await requireAdmin()
   if (!isAdmin) return NOT_ADMIN
 
@@ -133,6 +164,19 @@ export async function createRecipeAction(_prev: FormState, formData: FormData): 
 // Server Action leen ni envían el grupo.
 
 export async function createTranslationAction(_prev: FormState, formData: FormData): Promise<FormState> {
+  if (isMysqlCutoverEnabled()) {
+    const sourceId=uuidSchema.safeParse(formData.get('source_id'))
+    if (!sourceId.success) return {ok:false,message:'Receta de origen no válida.'}
+    const language=languageSchema.safeParse(formData.get('language'))
+    if (!language.success) return {ok:false,fieldErrors:{language:['Idioma no válido']}}
+    const fields=readRecipeForm(formData,language.data)
+    if (!fields.success) return {ok:false,fieldErrors:fields.error.flatten().fieldErrors}
+    if (fields.data.published) return draftOnlyMessage()
+    try { await createTranslationMysql(sourceId.data,language.data,fields.data) }
+    catch(error){return {ok:false,message:error instanceof Error?error.message:'No se pudo guardar la traducción.'}}
+    revalidatePublicRecipes()
+    redirect('/admin')
+  }
   const { supabase, isAdmin } = await requireAdmin()
   if (!isAdmin) return NOT_ADMIN
 
@@ -160,6 +204,21 @@ export async function createTranslationAction(_prev: FormState, formData: FormDa
 // ---------- Editar (no cambia idioma, grupo ni published_at) ----------
 
 export async function updateRecipeAction(_prev: FormState, formData: FormData): Promise<FormState> {
+  if (isMysqlCutoverEnabled()) {
+    const id=uuidSchema.safeParse(formData.get('id'))
+    if (!id.success) return {ok:false,message:'Receta no válida.'}
+    const access=await getMysqlAdminRead()
+    if(!access) return NOT_ADMIN
+    const result=await access.client.from('recipes').select('language').eq('id',id.data).maybeSingle()
+    const language=languageSchema.safeParse(result.data?.language)
+    if(!language.success) return {ok:false,message:'No se pudo comprobar el idioma.'}
+    const fields=readRecipeForm(formData,language.data)
+    if(!fields.success) return {ok:false,fieldErrors:fields.error.flatten().fieldErrors}
+    try { await updateRecipeMysql(id.data,fields.data) }
+    catch(error){return {ok:false,message:error instanceof Error?error.message:'No se pudo editar.'}}
+    revalidatePublicRecipes()
+    redirect('/admin')
+  }
   const { supabase, isAdmin } = await requireAdmin()
   if (!isAdmin) return NOT_ADMIN
 
@@ -213,6 +272,11 @@ export async function updateRecipeAction(_prev: FormState, formData: FormData): 
 // ---------- Eliminar (protegido por RLS: solo admin) ----------
 
 export async function deleteRecipeAction(formData: FormData) {
+  if (isMysqlCutoverEnabled()) {
+    // La eliminación definitiva aún no tiene flujo seguro de cascada en MySQL:
+    // bloquearla en lugar de borrar recetas o dejar registros huérfanos.
+    redirect('/admin?aviso=error&mensaje=Eliminacion%20pendiente%20de%20validacion%20MySQL')
+  }
   const { supabase, isAdmin } = await requireAdmin()
   if (!isAdmin) redirect('/admin')
 

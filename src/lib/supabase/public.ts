@@ -1,5 +1,6 @@
 import { createClient } from '@supabase/supabase-js'
 import { mysqlPublicRead } from '@/lib/mysql/public'
+import { isMysqlCutoverEnabled } from '@/lib/mysql/cutover-config'
 import { publicReadFetch } from '@/lib/public-fetch'
 import { PUBLIC_REVALIDATE_SECONDS, RECIPES_CACHE_TAG } from '@/lib/cache'
 import { SUPABASE_PUBLIC_KEY, SUPABASE_URL } from './keys'
@@ -36,6 +37,6 @@ const supabaseOriginal = createClient(supabaseUrl, supabaseKey, {
 // Cortafuegos de migración: por defecto todo sigue en Supabase. Solo staging
 // habilita MYSQL_READS_ENABLED=true después de configurar MySQL y probar el panel.
 // No afecta auth/admin, que usa createSupabaseServerClient por separado.
-export const supabase = process.env.MYSQL_READS_ENABLED === 'true'
+export const supabase = isMysqlCutoverEnabled()
   ? (mysqlPublicRead as unknown as typeof supabaseOriginal)
   : supabaseOriginal

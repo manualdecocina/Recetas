@@ -2,6 +2,7 @@ import { NextResponse, type NextRequest } from 'next/server'
 import { createServerClient, type CookieOptions } from '@supabase/ssr'
 import { createClient } from '@supabase/supabase-js'
 import { DEFAULT_LANGUAGE } from '@/types/recipe'
+import { isMysqlCutoverEnabled } from '@/lib/mysql/cutover-config'
 
 const homepagePath = /^\/(es|en|de|fr|it|ja|pt)\/?$/
 function homepageAgentResponse(request: NextRequest, lang: string): NextResponse {
@@ -38,7 +39,7 @@ const slashClient = createClient(SUPABASE_URL, SUPABASE_PUBLIC_KEY, {
 const frozenSlashMap = buildSlashMap(publishedRecipeSlashMap as SlashRow[])
 
 async function fetchSlashMap(): Promise<SlashMap | null> {
-  if (process.env.MYSQL_READS_ENABLED === 'true') return frozenSlashMap
+  if (isMysqlCutoverEnabled()) return frozenSlashMap
   const rows: SlashRow[] = []
   for (let from = 0; ; from += 1000) {
     const { data, error } = await slashClient.from('recipes').select('public_path, source_url')
@@ -87,13 +88,13 @@ export async function middleware(request: NextRequest) {
   if (pathname === '/') {
     // Solo en la vista previa del rescate: mostrar los datos MySQL al abrir el dominio.
     // La home pública del dominio principal mantiene su redirección canónica /es.
-    const previewHost = 'mintcream-squirrel-383743.hostingersite.com'
+    const previewHosts = new Set(['mintcream-squirrel-383743.hostingersite.com', 'valiant-tan-hornet-51.hostingersite.com'])
     const hosts = [
       request.nextUrl.hostname,
       request.headers.get('host')?.split(':')[0],
       request.headers.get('x-forwarded-host')?.split(',')[0]?.trim()?.split(':')[0],
     ]
-    if (hosts.includes(previewHost)) {
+    if (hosts.some(host => typeof host === 'string' && previewHosts.has(host))) {
       const preview = request.nextUrl.clone()
       preview.pathname = '/qa-mysql'
       preview.search = ''
@@ -119,6 +120,10 @@ export async function middleware(request: NextRequest) {
   if (pathname !== '/admin' && !pathname.startsWith('/admin/')) {
     return (await recipeSlashRedirect(request)) ?? NextResponse.next()
   }
+
+  // En el corte MySQL la sesión se valida en requireAdmin() contra MySQL;
+  // no dejar que el middleware Supabase bloquee ese acceso.
+  if (isMysqlCutoverEnabled()) return NextResponse.next()
 
   // Ruta aislada de QA: tiene su propia sesión MySQL y validación completa en Node.
   // Nunca concede acceso a /admin normal, cuyo guard Supabase permanece intacto.

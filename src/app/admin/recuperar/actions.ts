@@ -3,6 +3,8 @@
 import { redirect } from 'next/navigation'
 import { z } from 'zod'
 import { createSupabaseServerClient } from '@/lib/supabase/server'
+import { isMysqlCutoverEnabled } from '@/lib/mysql/cutover-config'
+import { recoverAdminWithSetupSecret } from '@/lib/mysql/admin-auth'
 import { getSiteUrl } from '@/lib/site'
 import type { FormState } from '../form-state'
 
@@ -39,5 +41,27 @@ export async function updatePasswordAction(_prev: FormState, formData: FormData)
   if (error) return { ok: false, message: 'No se pudo cambiar la contraseña. Pide un enlace nuevo e inténtalo otra vez.' }
 
   await supabase.auth.signOut()
+  redirect('/admin/login?aviso=contrasena-cambiada')
+}
+
+
+/** Recuperación MySQL separada de los enlaces de Supabase.
+ * Requiere la clave de recuperación configurada exclusivamente en Hostinger.
+ */
+export async function resetMysqlPasswordAction(formData:FormData){
+  if(!isMysqlCutoverEnabled())redirect('/admin/login')
+  const email=formData.get('email')
+  const password=formData.get('password')
+  const confirm=formData.get('confirm')
+  const secret=formData.get('setup_secret')
+  if(typeof email!=='string'||typeof password!=='string'||typeof secret!=='string'||
+     typeof confirm!=='string'||confirm!==password||
+     email.length>320||password.length>256||secret.length>512){
+    redirect('/admin/recuperar?aviso=error')
+  }
+  let updated=false
+  try {updated=await recoverAdminWithSetupSecret(email,password,secret)}
+  catch {updated=false}
+  if(!updated)redirect('/admin/recuperar?aviso=error')
   redirect('/admin/login?aviso=contrasena-cambiada')
 }

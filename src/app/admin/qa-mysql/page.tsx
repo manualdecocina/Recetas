@@ -14,7 +14,7 @@ export const metadata:Metadata={
   title:'Prueba aislada del nuevo acceso — Manual de Cocina',
   robots:{index:false,follow:false},
 }
-const PREVIEW='mintcream-squirrel-383743.hostingersite.com'
+const PREVIEWS = new Set(['mintcream-squirrel-383743.hostingersite.com', 'valiant-tan-hornet-51.hostingersite.com'])
 const notices:Record<string,string>={
   entrada_invalida:'Credenciales incorrectas o acceso temporalmente limitado.',
   datos_invalidos:'Revisa los datos y utiliza una contraseña segura de al menos 14 caracteres.',
@@ -23,6 +23,8 @@ const notices:Record<string,string>={
   cuenta_creada:'Cuenta preparada. Inicia sesión con la contraseña nueva.',
   bienvenido:'Sesión MySQL iniciada correctamente en el entorno de pruebas.',
   salida:'Sesión cerrada.',
+  qa_escritura_ok:'MySQL escribió y leyó la prueba correctamente; la transacción se revirtió y no quedó ningún dato de prueba.',
+  qa_escritura_error:'Falló la prueba de escritura MySQL. No se guardaron los datos de prueba.',
 }
 export default async function MysqlAuthQAPage({
   searchParams,
@@ -31,7 +33,7 @@ export default async function MysqlAuthQAPage({
 }){
   const h=await headers()
   const hosts=[h.get('host')?.split(':')[0],h.get('x-forwarded-host')?.split(',')[0]?.trim()?.split(':')[0]]
-  if(!hosts.includes(PREVIEW))notFound()
+  if(!hosts.some(host=>typeof host==='string'&&PREVIEWS.has(host)))notFound()
   const {aviso}=await searchParams
   if(process.env.ADMIN_AUTH_PROVIDER!=='mysql'){
     return <AuthCard title="Acceso MySQL (pruebas)" subtitle="Aún no está activada la autenticación MySQL. El panel real sigue en Supabase.">
@@ -69,6 +71,11 @@ export default async function MysqlAuthQAPage({
       <p>Acceso autorizado en entorno aislado.</p>
       <p>Usuario: <strong>{current.email}</strong></p>
       <p role="status">{editorialSummary}</p>
+      {aviso&&notices[aviso]&&<p role="status" className="adm-notice">{notices[aviso]}</p>}
+      <form method="post" action="/api/rescate-admin">
+        <input type="hidden" name="action" value="smoke"/>
+        <button className="adm-btn adm-btn-primary" type="submit">Probar escritura MySQL sin guardar datos</button>
+      </form>
       <form method="post" action="/api/rescate-admin">
         <input type="hidden" name="action" value="logout"/>
         <button className="adm-btn adm-btn-primary" type="submit">Cerrar sesión</button>

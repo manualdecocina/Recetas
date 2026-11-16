@@ -11,14 +11,14 @@ import type { SupabaseClient } from '@supabase/supabase-js'
  */
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
-const PREVIEW = 'mintcream-squirrel-383743.hostingersite.com'
+const PREVIEWS = new Set(['mintcream-squirrel-383743.hostingersite.com', 'valiant-tan-hornet-51.hostingersite.com'])
 const headers = { 'Cache-Control': 'private, no-store', 'X-Robots-Tag': 'noindex, nofollow', 'X-Content-Type-Options': 'nosniff' }
 export async function GET(request: NextRequest) {
   // Hostinger puede reenviar el hostname del proceso interno a NextRequest;
   // permitir Host y X-Forwarded-Host de preview sin revelar el valor real.
   const names = [request.nextUrl.hostname, request.headers.get('host')?.split(':')[0],
     request.headers.get('x-forwarded-host')?.split(',')[0]?.trim()?.split(':')[0]]
-  if (!names.includes(PREVIEW)) {
+  if (!names.some(name => typeof name === 'string' && PREVIEWS.has(name))) {
     return NextResponse.json({ status: 'preview_host_mismatch', mysql: false }, { headers })
   }
   const { MYSQL_HOST, MYSQL_USER, MYSQL_PASSWORD, MYSQL_DATABASE, MYSQL_PORT, MYSQL_SSL_MODE } = process.env
@@ -40,6 +40,44 @@ export async function GET(request: NextRequest) {
          (SELECT COUNT(*) FROM content_redirects) AS redirects,
          (SELECT COUNT(*) FROM content_redirects_backup_20261030) AS old_redirects`)
       const row = rows[0]
+      // Diagnóstico previo al corte. Solo agregados, sin hashes, correos ni secretos.
+      if (request.nextUrl.searchParams.get('corte') === '1') {
+        const [tableRows]=await conn.query<mysql.RowDataPacket[]>('SHOW TABLES')
+        const allTables=new Set(tableRows.map(row=>String(Object.values(row)[0]??'')))
+        const hasRatings=allTables.has('recipe_rating_votes')
+        const hasAdmin=allTables.has('admin_auth_users')
+        let adminCount=0,ratingCount=0
+        if(hasAdmin){
+          const [users]=await conn.execute<mysql.RowDataPacket[]>(
+            'SELECT COUNT(*) AS n FROM admin_auth_users WHERE is_active=1',
+          )
+          adminCount=Number(users[0]?.n??0)
+        }
+        if(hasRatings){
+          const [votes]=await conn.execute<mysql.RowDataPacket[]>(
+            'SELECT COUNT(*) AS n FROM recipe_rating_votes',
+          )
+          ratingCount=Number(votes[0]?.n??0)
+        }
+        const [counterRows]=await conn.execute<mysql.RowDataPacket[]>(
+          'SELECT COALESCE(SUM(rating_count),0) AS n FROM recipes',
+        )
+        const expectedAdmin=['admin_auth_users','admin_auth_sessions','admin_auth_attempts',
+          'admin_auth_password_resets'].every(name=>allTables.has(name))
+        const ready=expectedAdmin&&hasRatings&&adminCount>0&&ratingCount>=23&&
+          Number(row.recipes)===1782&&Number(row.published)===1764
+        return NextResponse.json({
+          status:ready?'corte_mysql_schema_ready':'corte_mysql_incomplete',
+          checks:{
+            admin_schema:expectedAdmin,admin_account_present:adminCount>0,
+            ratings_table:hasRatings,ratings_votes:ratingCount,
+            total_rating_counters:Number(counterRows[0]?.n??0),
+            recipes:Number(row.recipes),published:Number(row.published),
+          },
+          note:'Comprobación de datos y esquema, no sustituye prueba de escritura.',
+          production_untouched:true,
+        },{headers})
+      }
       // Comprobación directa de 4 tablas del esquema administrativo,
       // únicamente SHOW TABLES de la base actual. No consulta information_schema.
       if (request.nextUrl.searchParams.get('schema') === 'admin') {

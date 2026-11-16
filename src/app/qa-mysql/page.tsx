@@ -14,12 +14,12 @@ export const metadata: Metadata = {
   title: 'QA MySQL — Manual de Cocina',
   robots: { index: false, follow: false },
 }
-const PREVIEW = 'mintcream-squirrel-383743.hostingersite.com'
+const PREVIEWS = new Set(['mintcream-squirrel-383743.hostingersite.com', 'valiant-tan-hornet-51.hostingersite.com'])
 const langs = ['es', 'en', 'de', 'fr', 'it', 'ja', 'pt'] as const
 export default async function MysqlPreviewQA() {
   const h = await headers()
   const names = [h.get('host')?.split(':')[0], h.get('x-forwarded-host')?.split(',')[0]?.trim()?.split(':')[0]]
-  if (!names.includes(PREVIEW)) notFound()
+  if (!names.some(name => typeof name === 'string' && PREVIEWS.has(name))) notFound()
   const { MYSQL_HOST, MYSQL_USER, MYSQL_PASSWORD, MYSQL_DATABASE, MYSQL_PORT, MYSQL_SSL_MODE } = process.env
   if (!MYSQL_HOST || !MYSQL_USER || !MYSQL_PASSWORD || !MYSQL_DATABASE) {
     return <main style={{padding:24}}><h1>Vista previa MySQL</h1><p>Conexión no configurada.</p></main>

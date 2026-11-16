@@ -1,0 +1,33 @@
+name: Cierre MySQL seguro - pruebas aisladas
+on:
+  push:
+    branches:
+      - cierre-mysql-seguro-20261116
+    paths:
+      - 'src/lib/mysql/**'
+      - 'src/app/admin/**'
+      - 'src/app/api/**'
+      - 'tests/logic/**'
+      - '.github/workflows/cierre-mysql-seguro.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - name: Comprobar TypeScript
+        run: npm run typecheck
+      - name: Probar lecturas MySQL
+        run: node --experimental-strip-types --no-warnings tests/logic/mysql-public-read.test.mts
+      - name: Probar criptografía administrativa
+        run: node --experimental-strip-types --no-warnings tests/logic/mysql-admin-crypto.test.mts
+      - name: Compilar Next.js completo sin desplegar
+        run: npm run build

@@ -122,3 +122,39 @@ export async function revokeAllAdminSessions(userId:string):Promise<void>{
   )
 }
 export { ADMIN_COOKIE, SESSION_DAYS, constantTimeSecret }
+
+/** Recuperación de propietario sin Supabase, solo con la clave fuerte guardada en
+ * las variables privadas de Hostinger. No envía contraseñas ni tokens por correo.
+ * Revoca TODAS las sesiones tras el cambio y mantiene errores genéricos.
+ */
+export async function recoverAdminWithSetupSecret(
+  email:string,newPassword:string,setupProof:string,
+):Promise<boolean>{
+  const secret=process.env.ADMIN_BOOTSTRAP_SECRET??''
+  if(secret.length<48||!constantTimeSecret(setupProof,secret))return false
+  const key=emailKey(email)
+  if(!validEmail(key)||!strongPassword(newPassword))return false
+  const {salt,hash}=await passwordHash(newPassword)
+  const conn=await adminConnection()
+  try{
+    await conn.beginTransaction()
+    const [users]=await conn.execute<RowDataPacket[]>(
+      'SELECT id FROM admin_auth_users WHERE email=? AND is_active=1 LIMIT 1 FOR UPDATE',[key],
+    )
+    if(!users.length){await conn.rollback();return false}
+    const id=String(users[0].id)
+    await conn.execute(
+      'UPDATE admin_auth_users SET password_salt=?,password_hash=?,password_version=1 WHERE id=?',
+      [salt,hash,id],
+    )
+    await conn.execute(
+      'UPDATE admin_auth_sessions SET revoked_at=UTC_TIMESTAMP(6) WHERE user_id=? AND revoked_at IS NULL',
+      [id],
+    )
+    await conn.execute(
+      'DELETE FROM admin_auth_password_resets WHERE user_id=?',[id],
+    )
+    await conn.commit()
+    return true
+  }catch(error){await conn.rollback();throw error}finally{conn.release()}
+}
