@@ -6,6 +6,7 @@ import { type RowDataPacket } from 'mysql2/promise'
 import { requireAdmin } from '@/lib/supabase/admin-guard'
 import { SUPABASE_PUBLIC_KEY, SUPABASE_URL } from '@/lib/supabase/keys'
 import { mysqlServerPool } from '@/lib/mysql/public'
+import { loginAdmin, getAdminByToken, revokeAdminSession } from '@/lib/mysql/admin-auth'
 import { adminAttemptsSecret, emailKey, passwordHash, strongPassword, verifyPassword } from '@/lib/mysql/admin-crypto'
 
 const FIRST_ADMIN_ID='00000000-0000-4000-8000-000000000001'
@@ -95,5 +96,23 @@ export async function prepareMysqlAdminFromCurrentSession(formData:FormData):Pro
     await conn.rollback()
     redirect('/admin/migracion?admin=esquema_o_escritura')
   }finally{conn.release()}
+
+  // Prueba completa y real de login + sesión MySQL, SIN activar el proveedor
+  // nuevo ni entregar la cookie al navegador. El token temporal se revoca.
+  let verifiedLogin=false
+  try{
+    const result=await loginAdmin(emailKey(user.email),proposed)
+    if(result.ok){
+      try{
+        const session=await getAdminByToken(result.token)
+        verifiedLogin=session?.email===emailKey(user.email)
+      }finally{
+        await revokeAdminSession(result.token)
+      }
+    }
+  }catch{
+    // El administrador Supabase permanece operativo.
+  }
+  if(!verifiedLogin)redirect('/admin/migracion?admin=verificacion_error')
   redirect('/admin/migracion?admin=preparado')
 }
