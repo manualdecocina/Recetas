@@ -1,6 +1,7 @@
 import 'server-only'
 import { randomUUID } from 'node:crypto'
 import { type RowDataPacket } from 'mysql2/promise'
+import { ratingCounterMirrorUpdate } from './rating-counter-mirror'
 import { mysqlServerPool } from './public'
 
 type Outcome =
@@ -44,4 +45,17 @@ export async function voteMysql(recipeId:string,rating:number,voterHash:string):
     await conn.commit()
     return {status:'ok',rating_count:Number(updated[0]?.rating_count??0),rating_sum:Number(updated[0]?.rating_sum??0)}
   }catch(error){await conn.rollback();throw error}finally{conn.release()}
+}
+
+/** Mientras el RPC de Supabase sigue aceptando votos, mantener visibles sus
+ * contadores en las fichas que ya se sirven desde MySQL. No crea votos, ni toca
+ * recipe_rating_votes, ni incrementa de nuevo un contador en MySQL.
+ * Las escrituras fuera de orden no pueden disminuir rating_count.
+ */
+export async function mirrorSupabaseRatingCounters(
+  recipeId:string,ratingCount:number,ratingSum:number,
+):Promise<void>{
+  if(process.env.MYSQL_READS_ENABLED!=='true'||process.env.MYSQL_RATINGS_ENABLED==='true')return
+  const {sql,params}=ratingCounterMirrorUpdate(recipeId,ratingCount,ratingSum)
+  await mysqlServerPool().execute(sql,params)
 }
