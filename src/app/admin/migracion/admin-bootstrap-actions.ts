@@ -14,7 +14,7 @@ const validEmail=(email:string)=>email.length>=5&&email.length<=320&&/^[^\s@]+@[
 
 /** Prepara el administrador MySQL desde la sesión administrativa ya existente.
  * Exige comprobar también la CONTRASEÑA ACTUAL contra Supabase antes de escribir,
- * y una contraseña nueva robusta (scrypt). No habilita el login MySQL ni cambia
+ * y reutiliza esa contraseña por defecto (o una distinta, opcional, si se elige).\n * Sólo almacena scrypt en MySQL; no modifica credenciales de Supabase. No habilita el login MySQL ni cambia
  * ADMIN_AUTH_PROVIDER: el usuario mantiene el acceso actual hasta completar QA.
  */
 export async function prepareMysqlAdminFromCurrentSession(formData:FormData):Promise<never>{
@@ -27,10 +27,15 @@ export async function prepareMysqlAdminFromCurrentSession(formData:FormData):Pro
     redirect('/admin/migracion?admin=no_autorizado')
 
   const current=formData.get('current_password')
-  const proposed=formData.get('new_password')
-  const confirm=formData.get('confirm_password')
+  const optionalNew=formData.get('new_password')
+  const optionalConfirm=formData.get('confirm_password')
+  // Reutilizar la contraseña actual por defecto. No cambiar la de Supabase.
+  // Sólo pedir otra para MySQL si el administrador lo elige o si la clave
+  // actual no cumple los requisitos de seguridad del nuevo login.
+  const useCurrent=optionalNew==='' && optionalConfirm===''
+  const proposed=useCurrent ? current : optionalNew
   if(typeof current!=='string'||current.length<1||current.length>256||
-     !strongPassword(proposed)||proposed!==confirm)
+     !strongPassword(proposed)||(!useCurrent&&proposed!==optionalConfirm))
     redirect('/admin/migracion?admin=datos_invalidos')
 
   try { adminAttemptsSecret(process.env) } catch {

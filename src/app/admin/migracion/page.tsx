@@ -168,7 +168,7 @@ export default async function MigrationPage({searchParams}:{
         No se pudo verificar tu contraseña actual. No se modificó la cuenta MySQL.
       </p>}
       {adminNotice==='datos_invalidos'&&<p role="alert" className="adm-notice adm-notice-error">
-        Revisa las contraseñas: la nueva debe tener mínimo 14 caracteres, mayúsculas, minúsculas y números.
+        Para usar la misma clave, debe tener al menos 14 caracteres, mayúscula, minúscula y número. Si no cumple, escribe una contraseña distinta solo para MySQL en los campos opcionales.
       </p>}
       {adminNotice==='esquema_o_escritura'&&<p role="alert" className="adm-notice adm-notice-error">
         No se pudieron guardar o verificar las credenciales MySQL. El acceso anterior no cambió.
@@ -185,14 +185,16 @@ export default async function MigrationPage({searchParams}:{
       {!adminSecretReady&&<p role="alert">Falta una clave privada robusta para proteger los intentos de inicio de sesión. No se permite preparar la cuenta.</p>}
       {adminSchemaReady&&!adminHasForeignAccount&&adminSecretReady&&adminAccountCount<=1&&
         <form action={prepareMysqlAdminFromCurrentSession} className="adm-auth-form" autoComplete="off">
-          <label htmlFor="mdc_current_password">Contraseña que utilizas actualmente en el panel</label>
+          <p className="adm-hint">Puedes conservar tu contraseña actual. Es necesaria una sola vez para verificar que eres el administrador y generar su hash en MySQL; la contraseña de Supabase no cambia.</p>
+          <label htmlFor="mdc_current_password">Contraseña actual del panel</label>
           <input id="mdc_current_password" type="password" name="current_password" autoComplete="current-password" required/>
-          <label htmlFor="mdc_new_password">Contraseña del administrador MySQL (mínimo 14 caracteres)</label>
-          <input id="mdc_new_password" type="password" name="new_password" autoComplete="new-password" minLength={14} required/>
-          <label htmlFor="mdc_confirm_password">Confirmar nueva contraseña</label>
-          <input id="mdc_confirm_password" type="password" name="confirm_password" autoComplete="new-password" minLength={14} required/>
+          <p className="adm-hint">Opcional: solo si quieres una contraseña distinta para MySQL, o si tu contraseña actual no cumple el mínimo de 14 caracteres, mayúscula, minúscula y número.</p>
+          <label htmlFor="mdc_new_password">Contraseña distinta para MySQL (opcional)</label>
+          <input id="mdc_new_password" type="password" name="new_password" autoComplete="new-password" minLength={14}/>
+          <label htmlFor="mdc_confirm_password">Confirmar contraseña distinta (opcional)</label>
+          <input id="mdc_confirm_password" type="password" name="confirm_password" autoComplete="new-password"/>
           <button className="adm-btn adm-btn-primary" type="submit">
-            {adminMatchesCurrent?'Verificar o actualizar cuenta MySQL':'Preparar y verificar cuenta MySQL'}
+            {adminMatchesCurrent?'Verificar cuenta MySQL':'Preparar cuenta MySQL usando mi contraseña actual'}
           </button>
         </form>}
       <p className="adm-hint">No es necesario desactivar Supabase ni cambiar las variables de Hostinger en este paso.</p>
