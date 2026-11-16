@@ -70,6 +70,8 @@ export default async function PublicationCenterPage() {
   return (
     <main className="adm">
       <AdminNav current="cola" />
+      {process.env.MYSQL_READS_ENABLED === 'true' && process.env.MYSQL_RATINGS_ENABLED !== 'true' &&
+        <p className="adm-sub"><Link href="/admin/migracion-votos">Sincronizar valoraciones con MySQL</Link></p>}
       <h1>Centro de publicación</h1>
       <p className="adm-sub">
         {nothingToDecide

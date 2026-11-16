@@ -10,8 +10,7 @@ type Outcome =
  * La tabla recipe_rating_votes debe tener importados y verificados todos los votos históricos antes del corte.
  * Transacción atómica protege los contadores de recetas bajo concurrencia.
  */
-export async function voteMysql(recipeId:string,rating:number,voterHash:string):Promise<Outcome>{
-  if(process.env.MYSQL_RATINGS_ENABLED!=='true')throw Error('Valoraciones MySQL desactivadas')
+async function writeMysqlVote(recipeId:string,rating:number,voterHash:string):Promise<Outcome>{
   if(!/^[0-9a-f]{8}-(?:[0-9a-f]{4}-){3}[0-9a-f]{12}$/i.test(recipeId))throw Error('ID inválido')
   if(!Number.isInteger(rating)||rating<1||rating>5)throw Error('Valoración inválida')
   if(!/^[0-9a-f]{64}$/.test(voterHash))throw Error('Hash inválido')
@@ -44,4 +43,20 @@ export async function voteMysql(recipeId:string,rating:number,voterHash:string):
     await conn.commit()
     return {status:'ok',rating_count:Number(updated[0]?.rating_count??0),rating_sum:Number(updated[0]?.rating_sum??0)}
   }catch(error){await conn.rollback();throw error}finally{conn.release()}
+}
+
+/** Se usa únicamente después de activar el corte. */
+export async function voteMysql(recipeId:string,rating:number,voterHash:string):Promise<Outcome> {
+  if(process.env.MYSQL_RATINGS_ENABLED!=='true')throw Error('Valoraciones MySQL desactivadas')
+  return writeMysqlVote(recipeId,rating,voterHash)
+}
+
+/** Espejo opcional: Supabase sigue siendo la fuente hasta cerrar el corte.
+ * Se ejecuta DESPUÉS de que la RPC de Supabase confirmó el voto. Idempotente
+ * por la unicidad de (recipe_id,voter_hash); evita huecos entre la copia y el cambio.
+ */
+export async function mirrorMysqlVote(recipeId:string,rating:number,voterHash:string):Promise<Outcome> {
+  if(process.env.MYSQL_READS_ENABLED!=='true'||process.env.MYSQL_RATINGS_ENABLED==='true')
+    throw Error('Espejo MySQL inactivo')
+  return writeMysqlVote(recipeId,rating,voterHash)
 }
