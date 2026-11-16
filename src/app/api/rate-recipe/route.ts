@@ -2,9 +2,11 @@ import { createHmac, randomUUID } from 'node:crypto'
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
 import { readRatingsSecrets } from '@/lib/ratings-config'
+import { voteMysql } from '@/lib/mysql/ratings'
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL ?? 'https://eqbdtctxbpepbeickhqi.supabase.co'
 const ratingsEnabled = process.env.NEXT_PUBLIC_RATINGS_ENABLED === 'true'
+const mysqlRatingsEnabled = process.env.MYSQL_RATINGS_ENABLED === 'true'
 
 function disabled() {
   return NextResponse.json({ error: 'Valoraciones no disponibles.' }, { status: 404 })
@@ -16,7 +18,7 @@ export async function POST(request: NextRequest) {
   const { serviceKey, hashSecret } = readRatingsSecrets(process.env)
 
   // Fail closed: nunca usar anon/publishable para una escritura privilegiada.
-  if (!serviceKey || !hashSecret) {
+  if (!hashSecret || (!mysqlRatingsEnabled && !serviceKey)) {
     console.error('[ratings] configuración incompleta', { serviceKeyConfigured: Boolean(serviceKey), hashSecretConfigured: Boolean(hashSecret) })
     return NextResponse.json({ error: 'Valoraciones temporalmente no disponibles.' }, { status: 503 })
   }
@@ -47,6 +49,32 @@ export async function POST(request: NextRequest) {
   const voterHash = createHmac('sha256', hashSecret)
     .update(`${visitorId}|${forwardedFor}|${userAgent}`)
     .digest('hex')
+
+  // Cambio independiente del catálogo, desactivado hasta conservar TODOS los votos
+  // del origen y comprobar el esquema privado recipe_rating_votes en Hostinger.
+  if (mysqlRatingsEnabled) {
+    try {
+      const outcome = await voteMysql(recipeId, rating, voterHash)
+      if (outcome.status !== 'ok') {
+        const duplicate = outcome.status === 'duplicate'
+        const response = NextResponse.json(
+          { error: duplicate ? 'Ya registramos tu valoración para esta receta.' : 'Receta no encontrada.' },
+          { status: duplicate ? 409 : 404 },
+        )
+        if (!existingVisitorId) response.cookies.set('md-rating-id', visitorId, {
+          httpOnly: true, secure: true, sameSite: 'lax', path: '/', maxAge: 60 * 60 * 24 * 365,
+        })
+        return response
+      }
+      const response = NextResponse.json({rating_count: outcome.rating_count, rating_sum: outcome.rating_sum})
+      if (!existingVisitorId) response.cookies.set('md-rating-id', visitorId, {
+        httpOnly: true, secure: true, sameSite: 'lax', path: '/', maxAge: 60 * 60 * 24 * 365,
+      })
+      return response
+    } catch {
+      return NextResponse.json({ error: 'Valoraciones temporalmente no disponibles.' }, { status: 503 })
+    }
+  }
 
   const supabaseServer = createClient(supabaseUrl, serviceKey, {
     auth: { persistSession: false, autoRefreshToken: false },
