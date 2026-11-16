@@ -1,5 +1,7 @@
 import { createHmac, randomUUID } from 'node:crypto'
 import { NextRequest, NextResponse } from 'next/server'
+import { revalidateTag } from 'next/cache'
+import { RECIPES_CACHE_TAG } from '@/lib/cache'
 import { createClient } from '@supabase/supabase-js'
 import { readRatingsSecrets } from '@/lib/ratings-config'
 import { voteMysql, mirrorSupabaseRatingCounters } from '@/lib/mysql/ratings'
@@ -114,6 +116,7 @@ export async function POST(request: NextRequest) {
       Number.isSafeInteger(sum) && sum >= count && sum <= count * 5) {
     try {
       await mirrorSupabaseRatingCounters(recipeId, count, sum)
+      if (process.env.MYSQL_READS_ENABLED === 'true') revalidateTag(RECIPES_CACHE_TAG, 'max')
     } catch {
       console.error('[ratings/mysql] No se pudieron sincronizar los contadores')
     }
