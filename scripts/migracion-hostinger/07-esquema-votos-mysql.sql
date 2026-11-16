@@ -1,6 +1,8 @@
 -- Manual de Cocina · Esquema para conservar valoraciones existentes (NO son los votos)
 -- Procedencia: Supabase private.recipe_rating_votes, inspeccionada 2026-11-16
--- Conservar los 23 registros históricos en un respaldo PRIVADO: jamás incluir voter_hash en GitHub.
+-- Inventario original: 23 votos; consulta real al origen el 16/11/2026: 24 votos.
+-- El recuento sigue cambiando: conservar TODOS los registros al momento del corte.
+-- Nunca incluir voter_hash ni datos individuales de votantes en GitHub.
 -- Solo preparado para la nueva MySQL; NO ejecutado sobre Hostinger.
 -- Prohibido borrar votos originales o reiniciar contadores.
 SET NAMES utf8mb4;
@@ -20,7 +22,8 @@ CREATE TABLE IF NOT EXISTS `recipe_rating_votes` (
       ON DELETE CASCADE ON UPDATE RESTRICT
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- La comprobación final debe dar 23 votos históricos, 22 recetas distintas.
+-- No utilizar un recuento fijo: cotejar total_votos y recetas_votadas con
+-- Supabase inmediatamente antes del corte. La consulta de 16/11/2026 dio 24 votos.
 -- IMPORTANTE: esta instrucción no agrega los datos; requieren importación cifrada o archivo privado.
 SELECT COUNT(*) AS total_votos, COUNT(DISTINCT recipe_id) AS recetas_votadas
 FROM `recipe_rating_votes`;
