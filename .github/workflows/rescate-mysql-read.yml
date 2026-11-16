@@ -9,9 +9,11 @@ on:
       - 'src/middleware.ts'
       - 'src/generated/published-recipe-slash-map.json'
       - 'tests/logic/mysql-public-read.test.mts'
+      - 'tests/logic/mysql-admin-crypto.test.mts'
       - 'package.json'
       - 'package-lock.json'
       - 'scripts/migracion-hostinger/05-verificar-mysql.mjs'
+      - 'scripts/migracion-hostinger/08-admin-auth-schema.sql'
       - 'scripts/migracion-hostinger/rescatar-media.py'
       - '.github/workflows/rescate-mysql-read.yml'
   workflow_dispatch:
@@ -32,6 +34,8 @@ jobs:
         run: npm run typecheck
       - name: Comprobar SQL parametrizado sin base real
         run: node --experimental-strip-types --no-warnings tests/logic/mysql-public-read.test.mts
+      - name: Probar hash de contraseñas y sesiones administrativas
+        run: node --experimental-strip-types --no-warnings tests/logic/mysql-admin-crypto.test.mts
       - name: Validar scripts de rescate, sin ejecutar conexiones externas
         run: |
           node --check scripts/migracion-hostinger/05-verificar-mysql.mjs
