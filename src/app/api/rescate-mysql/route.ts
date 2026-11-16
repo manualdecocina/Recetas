@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import mysql from 'mysql2/promise'
 import { createMysqlReadClient } from '@/lib/mysql/read-query'
+import { loadQueue } from '@/lib/admin/publication-data'
+import type { SupabaseClient } from '@supabase/supabase-js'
 
 /**
  * QA temporal y de solo lectura para la vista previa del PR #274.
@@ -54,6 +56,32 @@ export async function GET(request: NextRequest) {
           schema: checks, tables_present: Object.values(checks).filter(Boolean).length,
           production_untouched: true,
         }, { status: 200, headers })
+      }
+      // Verifica las lecturas privadas editoriales con todas las recetas,
+      // sin publicar borradores, correos ni títulos en la respuesta.
+      if (request.nextUrl.searchParams.get('editorial') === '1') {
+        const execute = async (query: string, values: unknown[]) => {
+          const [result] = await conn.execute<mysql.RowDataPacket[]>(query, values as any[])
+          return result as Record<string, any>[]
+        }
+        const privateRead = createMysqlReadClient(execute, { includeUnpublished: true })
+        const queue = await loadQueue(privateRead as unknown as SupabaseClient)
+        const stages = Object.fromEntries(
+          [...new Set(queue.map((item) => item.stage))].map(stage => [
+            stage, queue.filter((item) => item.stage === stage).length,
+          ]),
+        )
+        const [draftRows] = await conn.execute<mysql.RowDataPacket[]>(
+          'SELECT COUNT(*) AS n FROM recipes WHERE published=0',
+        )
+        const drafts = Number(draftRows[0]?.n ?? -1)
+        const total = queue.length
+        const passed = drafts === 18 && total === 252 &&
+          queue.every((item) => item.languages >= 1 && item.languages <= 7)
+        return NextResponse.json({
+          status: passed ? 'admin_editorial_read_pass' : 'admin_editorial_read_mismatch',
+          groups: total, drafts, stages, production_untouched: true,
+        }, { headers })
       }
       // Comprobación profunda y no destructiva del adaptador en el MISMO servidor.
       // Nunca imprime recetas, usuarios ni variables secretas.
