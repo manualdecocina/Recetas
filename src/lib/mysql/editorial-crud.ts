@@ -119,3 +119,31 @@ export async function updateDraftMysql(id:string,fields:RecipeFields):Promise<vo
     await conn.commit()
   }catch(error){await conn.rollback();throw error}finally{conn.release()}
 }
+
+/** Borra exclusivamente borradores. Limpia relaciones de MySQL sin confiar en
+ * cascadas (el esquema inicial no creó las FK). Jamás borra una receta publicada.
+ */
+export async function deleteDraftMysql(id:string):Promise<void>{
+  if(!UUID.test(id))throw Error('ID inválido')
+  await requireMysqlAdminWrites()
+  const conn=await adminConnection()
+  try{
+    await conn.beginTransaction()
+    const [rows]=await conn.execute<RowDataPacket[]>(
+      'SELECT recipe_group_id,published FROM recipes WHERE id=? FOR UPDATE',[id],
+    )
+    if(!rows.length)throw Error('Receta inexistente')
+    if(Number(rows[0].published)!==0)throw Error('No se pueden eliminar recetas publicadas')
+    const group=String(rows[0].recipe_group_id)
+    for(const table of ['recipe_ingredients','recipe_ingredient_pending','recipe_cuisines']){
+      await conn.execute('DELETE FROM '+table+' WHERE recipe_id=?',[id])
+    }
+    const [result]=await conn.execute<ResultSetHeader>('DELETE FROM recipes WHERE id=?',[id])
+    if(result.affectedRows!==1)throw Error('Eliminación incompleta')
+    const [remaining]=await conn.execute<RowDataPacket[]>(
+      'SELECT id FROM recipes WHERE recipe_group_id=? LIMIT 1',[group],
+    )
+    if(remaining.length===0)await conn.execute('DELETE FROM recipe_reviews WHERE recipe_group_id=?',[group])
+    await conn.commit()
+  }catch(error){await conn.rollback();throw error}finally{conn.release()}
+}
