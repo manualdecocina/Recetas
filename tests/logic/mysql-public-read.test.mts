@@ -47,7 +47,7 @@ const search=await client.from('recipes').select('id, title').eq('language','es'
   .order('published_at',{ascending:false,nullsFirst:false}).range(24,47)
 assert.equal(search.error,null)
 assert.equal(search.data.length,1)
-assert.deepEqual(queries[0].params.slice(-4),['es','%sopa, pollo%','%sopa, pollo%',24].slice(-4).map((x,i)=>x))
+assert.deepEqual(queries[0].params,[1,'es','%sopa, pollo%','%sopa, pollo%',24,24])
 assert.match(queries[0].sql,/LIMIT \? OFFSET \?/)
 assert.equal(queries[0].params.at(-1),24)
 
