@@ -74,6 +74,19 @@ export async function publishGroupMysql(groupId:string){
     }
     const blockers=groupBlockers(rows)
     if(blockers.length)throw Error('No se puede publicar: '+blockers.join('; '))
+    // Postgres tiene recipes_require_pantry_ingredient (trigger diferido).
+    // En MySQL todavía no existe ese trigger, así que aplicar el mismo gate
+    // dentro de la transacción y antes de publicar las siete traducciones.
+    const [pantry]=await conn.execute<RowDataPacket[]>(
+      'SELECT COUNT(*) AS n FROM recipe_ingredients ri '+
+      'JOIN ingredients i ON i.id=ri.ingredient_id '+
+      'JOIN recipes r ON r.id=ri.recipe_id '+
+      'WHERE r.recipe_group_id=? AND r.language=? AND i.status=? AND i.searchable=1',
+      [groupId,'es','canonical'],
+    )
+    if(Number(pantry[0]?.n??0)<1){
+      throw Error('La receta publicada necesita al menos un ingrediente canónico buscable.')
+    }
     await conn.execute(
       'UPDATE recipes SET published=1,editorial_status=?,ready_at=COALESCE(ready_at,UTC_TIMESTAMP(6)),'+
       'updated_at=UTC_TIMESTAMP(6) WHERE recipe_group_id=? AND (published=0 OR ready_at IS NULL)',
