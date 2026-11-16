@@ -60,12 +60,38 @@ export async function GET(request: NextRequest) {
       // Verifica las lecturas privadas editoriales con todas las recetas,
       // sin publicar borradores, correos ni títulos en la respuesta.
       if (request.nextUrl.searchParams.get('editorial') === '1') {
+        let queryNumber = 0
+        let driverErrorCode: string | null = null
         const execute = async (query: string, values: unknown[]) => {
-          const [result] = await conn.execute<mysql.RowDataPacket[]>(query, values as any[])
-          return result as Record<string, any>[]
+          queryNumber += 1
+          try {
+            const [result] = await conn.execute<mysql.RowDataPacket[]>(query, values as any[])
+            return result as Record<string, any>[]
+          } catch (error) {
+            const code = (error as { code?: unknown }).code
+            if (typeof code === 'string' && /^ER_[A-Z0-9_]{1,48}$/.test(code)) {
+              driverErrorCode = code
+            }
+            throw error
+          }
         }
         const privateRead = createMysqlReadClient(execute, { includeUnpublished: true })
-        const queue = await loadQueue(privateRead as unknown as SupabaseClient)
+        let queue: Awaited<ReturnType<typeof loadQueue>>
+        try {
+          queue = await loadQueue(privateRead as unknown as SupabaseClient)
+        } catch (error) {
+          // No se exponen SQL, datos editoriales, títulos ni secretos. Solo etapa y código estándar.
+          const message = error instanceof Error ? error.message : ''
+          const classification = driverErrorCode ?? (
+            /json/i.test(message) ? 'json_normalization' :
+            /column/i.test(message) ? 'unknown_column' :
+            /undefined|null/i.test(message) ? 'unexpected_data' : 'editorial_conversion'
+          )
+          return NextResponse.json({
+            status: 'admin_editorial_diagnostic_failure',
+            classification, queryNumber, production_untouched: true,
+          }, { headers })
+        }
         const stages = Object.fromEntries(
           [...new Set(queue.map((item) => item.stage))].map(stage => [
             stage, queue.filter((item) => item.stage === stage).length,
