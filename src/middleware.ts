@@ -39,7 +39,7 @@ const slashClient = createClient(SUPABASE_URL, SUPABASE_PUBLIC_KEY, {
 const frozenSlashMap = buildSlashMap(publishedRecipeSlashMap as SlashRow[])
 
 async function fetchSlashMap(): Promise<SlashMap | null> {
-  if (process.env.MYSQL_READS_ENABLED === 'true') return frozenSlashMap
+  if (isMysqlCutoverEnabled()) return frozenSlashMap
   const rows: SlashRow[] = []
   for (let from = 0; ; from += 1000) {
     const { data, error } = await slashClient.from('recipes').select('public_path, source_url')
