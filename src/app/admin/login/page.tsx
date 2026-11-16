@@ -21,7 +21,8 @@ export default async function AdminLoginPage({ searchParams }: { searchParams: P
         <p className="adm-notice adm-notice-error" role="alert">El enlace venció o ya se usó. Pide uno nuevo.</p>
       )}
       <LoginForm />
-      <p className="adm-auth-foot"><Link href="/admin/recuperar">¿Olvidaste tu contraseña?</Link></p>
+      {process.env.ADMIN_AUTH_PROVIDER !== 'mysql' &&
+        <p className="adm-auth-foot"><Link href="/admin/recuperar">¿Olvidaste tu contraseña?</Link></p>}
     </AuthCard>
   )
 }

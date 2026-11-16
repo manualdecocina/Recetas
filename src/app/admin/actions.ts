@@ -2,7 +2,7 @@
 
 import { revalidateTag } from 'next/cache'
 import { redirect } from 'next/navigation'
-import { cookies, headers } from 'next/headers'
+import { cookies } from 'next/headers'
 import { ADMIN_COOKIE, SESSION_DAYS, loginAdmin, revokeAdminSession } from '@/lib/mysql/admin-auth'
 import { z } from 'zod'
 import type { PostgrestError } from '@supabase/supabase-js'
@@ -13,10 +13,11 @@ import { languageSchema, readRecipeForm, uuidSchema, type RecipeFields } from '@
 import { RECIPES_CACHE_TAG } from '@/lib/cache'
 import type { FormState } from './form-state'
 
-async function isMysqlAdminPreview(): Promise<boolean> {
-  if (process.env.ADMIN_AUTH_PROVIDER !== 'mysql') return false
-  const h = await headers()
-  return h.get('host')?.split(':')[0] === 'mintcream-squirrel-383743.hostingersite.com'
+/** Single runtime switch for both preview and the real site.
+ * The old Supabase login remains a rollback via ADMIN_AUTH_PROVIDER=supabase.
+ */
+function isMysqlAdminActive(): boolean {
+  return process.env.ADMIN_AUTH_PROVIDER === 'mysql'
 }
 
 // ---------- Sesión ----------
@@ -35,7 +36,7 @@ export async function signInAction(_prev: FormState, formData: FormData): Promis
     return { ok: false, fieldErrors: parsed.error.flatten().fieldErrors }
   }
 
-  if (await isMysqlAdminPreview()) {
+  if (isMysqlAdminActive()) {
     try {
       const result = await loginAdmin(parsed.data.email, parsed.data.password)
       if (!result.ok) return { ok: false, message: 'Email o contraseña incorrectos.' }
@@ -60,7 +61,7 @@ export async function signInAction(_prev: FormState, formData: FormData): Promis
 }
 
 export async function signOutAction() {
-  if (await isMysqlAdminPreview()) {
+  if (isMysqlAdminActive()) {
     const store = await cookies()
     try {
       await revokeAdminSession(store.get(ADMIN_COOKIE)?.value)
@@ -69,7 +70,7 @@ export async function signOutAction() {
       throw new Error('No se pudo revocar la sesión de MySQL.')
     }
     store.delete(ADMIN_COOKIE)
-    redirect('/admin/qa-mysql')
+    redirect('/admin/login')
   }
 
   const supabase = await createSupabaseServerClient()
@@ -153,7 +154,7 @@ export async function createRecipeAction(_prev: FormState, formData: FormData): 
   if (!fields.success) return { ok: false, fieldErrors: fields.error.flatten().fieldErrors }
   if (fields.data.published) return draftOnlyMessage()
 
-  if (await isMysqlAdminPreview()) {
+  if (isMysqlAdminActive()) {
     try {
       await createDraftMysql(language.data, fields.data)
     } catch (error) {
@@ -193,7 +194,7 @@ export async function createTranslationAction(_prev: FormState, formData: FormDa
   if (!fields.success) return { ok: false, fieldErrors: fields.error.flatten().fieldErrors }
   if (fields.data.published) return draftOnlyMessage()
 
-  if (await isMysqlAdminPreview()) {
+  if (isMysqlAdminActive()) {
     try {
       await createTranslationMysql(sourceId.data, language.data, fields.data)
     } catch (error) {
@@ -230,7 +231,7 @@ export async function updateRecipeAction(_prev: FormState, formData: FormData): 
   const fields = readRecipeForm(formData, language.data)
   if (!fields.success) return { ok: false, fieldErrors: fields.error.flatten().fieldErrors }
 
-  if (await isMysqlAdminPreview()) {
+  if (isMysqlAdminActive()) {
     if (fields.data.published) return draftOnlyMessage()
     try {
       await updateDraftMysql(id.data, fields.data)
@@ -289,7 +290,7 @@ export async function deleteRecipeAction(formData: FormData) {
   const id = uuidSchema.safeParse(formData.get('id'))
   if (!id.success) redirect('/admin')
 
-  if (await isMysqlAdminPreview()) {
+  if (isMysqlAdminActive()) {
     try {
       await deleteDraftMysql(id.data)
     } catch (error) {

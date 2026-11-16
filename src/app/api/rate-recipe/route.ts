@@ -68,6 +68,14 @@ export async function POST(request: NextRequest) {
         })
         return response
       }
+      // Un voto ya confirmado en MySQL no debe parecer perdido por el
+      // caché de páginas públicas. La invalidación es secundaria al voto:
+      // si falla, nunca devolver un 503 que induzca a votar de nuevo.
+      try {
+        revalidateTag(RECIPES_CACHE_TAG, 'max')
+      } catch {
+        console.error('[ratings/mysql] Falló la invalidación del caché')
+      }
       const response = NextResponse.json({rating_count: outcome.rating_count, rating_sum: outcome.rating_sum})
       if (!existingVisitorId) response.cookies.set('md-rating-id', visitorId, {
         httpOnly: true, secure: true, sameSite: 'lax', path: '/', maxAge: 60 * 60 * 24 * 365,
