@@ -1,5 +1,8 @@
 import 'server-only'
 import { redirect } from 'next/navigation'
+import { headers } from 'next/headers'
+import type { SupabaseClient, User } from '@supabase/supabase-js'
+import { getMysqlAdminRead } from '@/lib/mysql/admin-content'
 import { createSupabaseServerClient } from './server'
 
 // Doble verificación en el servidor para cada página y acción del panel:
@@ -7,6 +10,19 @@ import { createSupabaseServerClient } from './server'
 // 2) el usuario está en la tabla admins.
 // El middleware solo filtra "sin sesión"; la autorización real se hace aquí y en la RLS.
 export async function requireAdmin() {
+  // Migración por etapas: únicamente el preview y con el proveedor activado
+  // pueden leer el panel con sesión MySQL. El sitio público sigue en Supabase.
+  if (process.env.ADMIN_AUTH_PROVIDER === 'mysql') {
+    const host = (await headers()).get('host')?.split(':')[0]
+    if (host !== 'mintcream-squirrel-383743.hostingersite.com') redirect('/admin/login')
+    const mysql = await getMysqlAdminRead()
+    if (!mysql) redirect('/admin/qa-mysql')
+    return {
+      supabase: mysql.client as unknown as SupabaseClient,
+      user: mysql.user as unknown as User,
+      isAdmin: true as const,
+    }
+  }
   const supabase = await createSupabaseServerClient()
   const {
     data: { user },
