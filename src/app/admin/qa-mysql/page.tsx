@@ -4,6 +4,9 @@ import { notFound } from 'next/navigation'
 import { AuthCard } from '../AuthCard'
 import { ADMIN_COOKIE, getAdminByToken } from '@/lib/mysql/admin-auth'
 import { adminMysqlPool } from '@/lib/mysql/admin-db'
+import { getMysqlAdminRead } from '@/lib/mysql/admin-content'
+import { loadQueue } from '@/lib/admin/publication-data'
+import type { SupabaseClient } from '@supabase/supabase-js'
 import type { RowDataPacket } from 'mysql2'
 
 export const dynamic='force-dynamic'
@@ -49,9 +52,23 @@ export default async function MysqlAuthQAPage({
   const cookie=await cookies()
   const current=await getAdminByToken(cookie.get(ADMIN_COOKIE)?.value)
   if(current){
+    let editorialSummary:string|null=null
+    try{
+      const admin=await getMysqlAdminRead()
+      if(admin){
+        const queue=await loadQueue(admin.client as unknown as SupabaseClient)
+        const published=queue.filter(group=>group.stage==='publicada').length
+        const pending=queue.length-published
+        editorialSummary='Lectura privada MySQL aprobada: '+queue.length+
+          ' grupos editoriales, '+published+' publicados y '+pending+' pendientes o archivados.'
+      }
+    }catch{
+      editorialSummary='Sesión válida, pero falta verificar las consultas editoriales en MySQL.'
+    }
     return <AuthCard title="Sesión MySQL comprobada" subtitle="Autenticación en la vista previa, no en el panel público.">
       <p>Acceso autorizado en entorno aislado.</p>
       <p>Usuario: <strong>{current.email}</strong></p>
+      <p role="status">{editorialSummary}</p>
       <form method="post" action="/api/rescate-admin">
         <input type="hidden" name="action" value="logout"/>
         <button className="adm-btn adm-btn-primary" type="submit">Cerrar sesión</button>
