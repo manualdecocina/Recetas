@@ -4,6 +4,7 @@ on:
     branches: [rescate-supabase-20261115]
     paths:
       - 'src/lib/mysql/**'
+      - 'src/app/api/rescate-mysql/route.ts'
       - 'src/lib/supabase/public.ts'
       - 'src/middleware.ts'
       - 'src/generated/published-recipe-slash-map.json'
