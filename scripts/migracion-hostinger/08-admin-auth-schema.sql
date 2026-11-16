@@ -1,5 +1,6 @@
 -- Manual de Cocina / NUEVO backend de sesiones. Hostinger MySQL 8.
--- VERSIÓN CORREGIDA: sin CHECK de tabla, para evitar el analizador antiguo de phpMyAdmin.
+-- VERSIÓN 2: crea EXCLUSIVAMENTE en la DB especificada, evitando contextos erróneos de phpMyAdmin.
+-- Sin CHECK ni consultas de information_schema.
 -- `is_active` se valida de forma estricta en el código Node.
 -- Operación ADITIVA: no borra ni altera tablas existentes. No contiene usuarios ni contraseñas.
 -- APLICAR ÚNICAMENTE en u357006512_mdc_migracion y sólo tras respaldo de esquema.
@@ -7,7 +8,7 @@
 SET NAMES utf8mb4;
 SET time_zone = '+00:00';
 
-CREATE TABLE IF NOT EXISTS `admin_auth_users` (
+CREATE TABLE IF NOT EXISTS `u357006512_mdc_migracion`.`admin_auth_users` (
   `id` CHAR(36) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
   `email` VARCHAR(320) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `password_salt` VARBINARY(32) NOT NULL,
@@ -21,7 +22,7 @@ CREATE TABLE IF NOT EXISTS `admin_auth_users` (
   UNIQUE KEY `uq_admin_auth_email` (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-CREATE TABLE IF NOT EXISTS `admin_auth_sessions` (
+CREATE TABLE IF NOT EXISTS `u357006512_mdc_migracion`.`admin_auth_sessions` (
   `token_hash` BINARY(32) NOT NULL,
   `user_id` CHAR(36) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
   `created_at` DATETIME(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
@@ -29,10 +30,10 @@ CREATE TABLE IF NOT EXISTS `admin_auth_sessions` (
   `revoked_at` DATETIME(6) NULL,
   PRIMARY KEY (`token_hash`),
   KEY `idx_session_user_expiry` (`user_id`,`expires_at`),
-  CONSTRAINT `fk_session_user` FOREIGN KEY (`user_id`) REFERENCES `admin_auth_users` (`id`) ON DELETE CASCADE
+  CONSTRAINT `fk_session_user` FOREIGN KEY (`user_id`) REFERENCES `u357006512_mdc_migracion`.`admin_auth_users` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-CREATE TABLE IF NOT EXISTS `admin_auth_attempts` (
+CREATE TABLE IF NOT EXISTS `u357006512_mdc_migracion`.`admin_auth_attempts` (
   `attempt_key` BINARY(32) NOT NULL,
   `failed_count` SMALLINT UNSIGNED NOT NULL DEFAULT 0,
   `locked_until` DATETIME(6) NULL,
@@ -40,7 +41,7 @@ CREATE TABLE IF NOT EXISTS `admin_auth_attempts` (
   PRIMARY KEY (`attempt_key`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-CREATE TABLE IF NOT EXISTS `admin_auth_password_resets` (
+CREATE TABLE IF NOT EXISTS `u357006512_mdc_migracion`.`admin_auth_password_resets` (
   `token_hash` BINARY(32) NOT NULL,
   `user_id` CHAR(36) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
   `created_at` DATETIME(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
@@ -48,10 +49,8 @@ CREATE TABLE IF NOT EXISTS `admin_auth_password_resets` (
   `consumed_at` DATETIME(6) NULL,
   PRIMARY KEY (`token_hash`),
   KEY `idx_reset_user` (`user_id`,`expires_at`),
-  CONSTRAINT `fk_reset_user` FOREIGN KEY (`user_id`) REFERENCES `admin_auth_users` (`id`) ON DELETE CASCADE
+  CONSTRAINT `fk_reset_user` FOREIGN KEY (`user_id`) REFERENCES `u357006512_mdc_migracion`.`admin_auth_users` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Comprobación sin cambios:
-SELECT table_name FROM information_schema.tables
-WHERE table_schema = DATABASE() AND table_name LIKE 'admin_auth_%'
-ORDER BY table_name;
+-- La comprobación se hará en la vista previa con SHOW TABLES (sin information_schema).
+-- Importar desde el apartado BASE DE DATOS, no desde una tabla individual.
