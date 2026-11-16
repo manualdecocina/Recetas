@@ -39,9 +39,16 @@ function normalize(table:string,row:Row,preserveMediaUrls=false):Row {
   }
   for(const field of Object.keys(result)){
     if(bools.has(field) && (result[field]===0||result[field]===1))result[field]=!!result[field]
-    if(/^(created_at|updated_at|published_at|ready_at|reviewed_at)$/.test(field)
-       &&typeof result[field]==='string' && /^\d{4}-\d\d-\d\d \d\d:\d\d:\d\d/.test(result[field])) {
-      result[field]=result[field].replace(' ','T')+'Z'
+    // mysql2 devuelve Date cuando dateStrings no está activado; el código editorial
+    // espera una cadena ISO con localeCompare y no debe recibir un Date.
+    if(/^(created_at|updated_at|published_at|ready_at|reviewed_at)$/.test(field)) {
+      const value=result[field]
+      if(value instanceof Date) {
+        if(Number.isNaN(value.getTime())) throw Error('Fecha MySQL no válida')
+        result[field]=value.toISOString()
+      } else if(typeof value==='string' && /^\d{4}-\d\d-\d\d \d\d:\d\d:\d\d/.test(value)) {
+        result[field]=value.replace(' ','T')+'Z'
+      }
     }
   }
   return result
