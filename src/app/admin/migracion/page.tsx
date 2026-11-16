@@ -6,10 +6,12 @@ import { requireAdmin } from '@/lib/supabase/admin-guard'
 import { mysqlServerPool } from '@/lib/mysql/public'
 import { readRatingsSecrets } from '@/lib/ratings-config'
 import { validateRatingHistorySnapshot, type HistoricalVote } from '@/lib/mysql/rating-history-snapshot'
+import { adminAttemptsSecret, emailKey } from '@/lib/mysql/admin-crypto'
 import { AdminNav } from '../AdminNav'
 import { NotAdmin } from '../NotAdmin'
 import { reconcileRatingCountersAction } from './actions'
 import { migrateIndividualRatingVotesAction } from './history-actions'
+import { prepareMysqlAdminFromCurrentSession } from './admin-bootstrap-actions'
 
 export const dynamic='force-dynamic'
 export const metadata:Metadata={
@@ -24,14 +26,29 @@ function totals(rows:ReadonlyArray<{rating_count:number|null;rating_sum:number|n
     stars:rated.reduce((v,r)=>v+Number(r.rating_sum||0),0)}
 }
 export default async function MigrationPage({searchParams}:{
-  searchParams:Promise<{estado?:string}>
+  searchParams:Promise<{estado?:string;admin?:string}>
 }){
   const {supabase,user,isAdmin}=await requireAdmin()
   if(!isAdmin)return <NotAdmin email={user.email}/>
-  const {estado}=await searchParams
+  const {estado,admin:adminNotice}=await searchParams
+  let adminSchemaReady=false, adminMatchesCurrent=false
+  let adminHasForeignAccount=false, adminAccountCount=0, adminSecretReady=false
   const enabled=process.env.MYSQL_READS_ENABLED==='true'
   const canReconcile=enabled && process.env.MYSQL_RATINGS_ENABLED!=='true' &&
     process.env.ADMIN_AUTH_PROVIDER!=='mysql'
+  if(enabled&&process.env.ADMIN_AUTH_PROVIDER!=='mysql'){
+    try { adminAttemptsSecret(process.env); adminSecretReady=true } catch { /* no secrets logged */ }
+    try{
+      const [rows]=await mysqlServerPool().execute<RowDataPacket[]>(
+        'SELECT email FROM admin_auth_users',
+      )
+      adminSchemaReady=true
+      adminAccountCount=rows.length
+      adminMatchesCurrent=rows.some(r=>emailKey(String(r.email))===emailKey(user.email??''))
+      adminHasForeignAccount=rows.some(r=>emailKey(String(r.email))!==emailKey(user.email??''))
+    }catch{ /* missing admin schema or unavailable connection */ }
+  }
+
   let source:Totals|null=null, target:Totals|null=null
   let sourceHistory:number|null=null, targetHistory:number|null=null
   let sourceRows:HistoricalVote[]|null=null, targetRows:RowDataPacket[]|null=null
@@ -139,6 +156,47 @@ export default async function MigrationPage({searchParams}:{
     </section>}
     {!enabled&&<p role="alert">Las lecturas públicas de MySQL no están activadas aquí. No se realizan escrituras.</p>}
     {enabled&&!target&&<p role="alert">No se pudo consultar MySQL desde este servidor. La sincronización queda bloqueada.</p>}
+    {enabled&&process.env.ADMIN_AUTH_PROVIDER!=='mysql'&&<section>
+      <h2>Preparar el administrador MySQL</h2>
+      <p>Tu panel actual continuará funcionando. Este paso verifica tu acceso
+        vigente y prepara una contraseña para la cuenta MySQL, sin cambiar
+        el proveedor de inicio de sesión.</p>
+      {adminNotice==='preparado'&&<p role="status" className="adm-notice adm-notice-ok">
+        Cuenta MySQL preparada y contraseña cifrada verificada. El acceso anterior continúa activo.
+      </p>}
+      {adminNotice==='credenciales_invalidas'&&<p role="alert" className="adm-notice adm-notice-error">
+        No se pudo verificar tu contraseña actual. No se modificó la cuenta MySQL.
+      </p>}
+      {adminNotice==='datos_invalidos'&&<p role="alert" className="adm-notice adm-notice-error">
+        Revisa las contraseñas: la nueva debe tener mínimo 14 caracteres, mayúsculas, minúsculas y números.
+      </p>}
+      {adminNotice==='esquema_o_escritura'&&<p role="alert" className="adm-notice adm-notice-error">
+        No se pudieron guardar o verificar las credenciales MySQL. El acceso anterior no cambió.
+      </p>}
+      {adminNotice==='verificacion_error'&&<p role="alert" className="adm-notice adm-notice-error">
+        La cuenta se guardó, pero no pasó la prueba de inicio de sesión MySQL. No se ha activado el nuevo acceso; el administrador original sigue funcionando.
+      </p>}
+      <ul className="adm-counters">
+        <li><strong>{adminSchemaReady?'Lista':'Pendiente'}</strong> estructura de cuentas</li>
+        <li className={adminMatchesCurrent?'good':undefined}><strong>{adminMatchesCurrent?'Preparada':'Sin preparar'}</strong> cuenta actual</li>
+      </ul>
+      {!adminSchemaReady&&<p role="alert">El esquema de autenticación MySQL no responde. La preparación está bloqueada para proteger el acceso actual.</p>}
+      {adminHasForeignAccount&&<p role="alert">MySQL contiene otra cuenta administrativa. No se permite sustituirla desde esta página.</p>}
+      {!adminSecretReady&&<p role="alert">Falta una clave privada robusta para proteger los intentos de inicio de sesión. No se permite preparar la cuenta.</p>}
+      {adminSchemaReady&&!adminHasForeignAccount&&adminSecretReady&&adminAccountCount<=1&&
+        <form action={prepareMysqlAdminFromCurrentSession} className="adm-auth-form" autoComplete="off">
+          <label htmlFor="mdc_current_password">Contraseña que utilizas actualmente en el panel</label>
+          <input id="mdc_current_password" type="password" name="current_password" autoComplete="current-password" required/>
+          <label htmlFor="mdc_new_password">Contraseña del administrador MySQL (mínimo 14 caracteres)</label>
+          <input id="mdc_new_password" type="password" name="new_password" autoComplete="new-password" minLength={14} required/>
+          <label htmlFor="mdc_confirm_password">Confirmar nueva contraseña</label>
+          <input id="mdc_confirm_password" type="password" name="confirm_password" autoComplete="new-password" minLength={14} required/>
+          <button className="adm-btn adm-btn-primary" type="submit">
+            {adminMatchesCurrent?'Verificar o actualizar cuenta MySQL':'Preparar y verificar cuenta MySQL'}
+          </button>
+        </form>}
+      <p className="adm-hint">No es necesario desactivar Supabase ni cambiar las variables de Hostinger en este paso.</p>
+    </section>}
     <p><Link href="/admin">Volver al centro de publicación</Link></p>
   </main>
 }

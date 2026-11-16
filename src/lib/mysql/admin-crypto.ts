@@ -44,6 +44,17 @@ export async function verifyPassword(password:unknown,salt:Buffer,hash:Buffer):P
   const digest=await derive(candidate,salt)
   return timingSafeEqual(digest,hash)
 }
+/** Separa criptográficamente la clave de bloqueo de intentos del HMAC de
+ * valoraciones cuando no hay ADMIN_AUTH_KEY dedicada. No reutiliza la clave
+ * directamente: deriva un valor sólo para el módulo administrativo.
+ */
+export function adminAttemptsSecret(env:Record<string,string|undefined>):string{
+  const dedicated=env.ADMIN_AUTH_KEY?.trim()
+  if(dedicated&&dedicated.length>=32)return dedicated
+  const ratings=env.RATINGS_HASH_SECRET?.trim()
+  if(!ratings||ratings.length<32)throw Error('Falta secreto privado robusto para el administrador')
+  return createHmac('sha256',ratings).update('manualdecocina/admin-attempts/v1').digest('hex')
+}
 export function attemptsKey(secret:string,type:'email'|'ip-email',email:string,ip=''):Buffer {
   if(secret.length<32)throw Error('ADMIN_AUTH_KEY debe contener al menos 32 caracteres')
   return createHmac('sha256',secret).update(type).update('\0').update(emailKey(email)).update('\0').update(ip).digest()
