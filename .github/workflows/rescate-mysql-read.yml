@@ -1,0 +1,31 @@
+name: Rescate MySQL - pruebas sin tocar producción
+on:
+  push:
+    branches: [rescate-supabase-20261115]
+    paths:
+      - 'src/lib/mysql/**'
+      - 'src/lib/supabase/public.ts'
+      - 'src/middleware.ts'
+      - 'src/generated/published-recipe-slash-map.json'
+      - 'tests/logic/mysql-public-read.test.mts'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/rescate-mysql-read.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - name: Comprobar TypeScript
+        run: npm run typecheck
+      - name: Comprobar SQL parametrizado sin base real
+        run: node --experimental-strip-types --no-warnings tests/logic/mysql-public-read.test.mts
