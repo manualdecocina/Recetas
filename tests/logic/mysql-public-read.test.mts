@@ -60,6 +60,23 @@ assert.deepEqual(queries[0].params,[1,'es','%sopa, pollo%','%sopa, pollo%',24,24
 assert.match(queries[0].sql,/LIMIT \? OFFSET \?/)
 assert.equal(queries[0].params.at(-1),24)
 
+// Regression: la home llama .limit(1).maybeSingle() para la receta destacada.
+// El builder no debe cambiarlo a LIMIT 2: provocaba PGRST116 en el build.
+reset([{id:'destacada',title:'Arepa',published:1}])
+const featured=await client.from('recipes').select('id,title').eq('language','es')
+  .eq('published',true).not('image_url','is',null)
+  .order('ready_at',{ascending:false,nullsFirst:false}).limit(1).maybeSingle()
+assert.equal(featured.error,null)
+assert.equal(featured.data?.id,'destacada')
+assert.deepEqual(queries[0].params.slice(-2),[1,0])
+assert.match(queries[0].sql,/LIMIT \\? OFFSET \\?/)
+
+reset([{id:'single',published:1}])
+const exact=await client.from('recipes').select('id').eq('id','single').limit(1).single()
+assert.equal(exact.error,null)
+assert.equal(exact.data?.id,'single')
+assert.deepEqual(queries[0].params.slice(-2),[1,0])
+
 reset([])
 const nothing=await client.from('recipes').select('id').in('id',[]).maybeSingle()
 assert.equal(nothing.error,null)
