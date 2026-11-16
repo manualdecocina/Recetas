@@ -4,6 +4,8 @@ import { revalidatePath, revalidateTag } from 'next/cache'
 import { redirect } from 'next/navigation'
 import { z } from 'zod'
 import { requireAdmin } from '@/lib/supabase/admin-guard'
+import { isMysqlCutoverEnabled } from '@/lib/mysql/cutover-config'
+import { reviewGroupMysql, publishGroupMysql, unpublishGroupMysql, saveSeoMysql } from '@/lib/mysql/editorial-writes'
 import { RECIPES_CACHE_TAG } from '@/lib/cache'
 import { uuidSchema } from '@/lib/validation'
 import { groupBlockers, groupImageUrls } from '@/lib/admin/publication'
@@ -37,14 +39,19 @@ export async function reviewGroupAction(formData: FormData) {
   if (!isAdmin) back(group, 'error', 'Tu usuario no tiene permisos de administrador.')
   if (decision === 'devuelta' && !comment) back(group, 'error', 'Para devolver la receta escribe qué hay que corregir.')
 
-  const { error } = await supabase.from('recipe_reviews').upsert({
-    recipe_group_id: group,
-    status: decision,
-    comment: comment || null,
-    reviewed_by: user.id,
-    reviewed_at: new Date().toISOString(),
-  })
-  if (error) back(group, 'error', `No se pudo guardar la revisión: ${error.message}`)
+  if (isMysqlCutoverEnabled()) {
+    try { await reviewGroupMysql(group,decision,comment ?? null) }
+    catch(error){back(group,'error',error instanceof Error?error.message:'No se pudo guardar la revisión.')}
+  } else {
+    const { error } = await supabase.from('recipe_reviews').upsert({
+      recipe_group_id: group,
+      status: decision,
+      comment: comment || null,
+      reviewed_by: user.id,
+      reviewed_at: new Date().toISOString(),
+    })
+    if (error) back(group, 'error', `No se pudo guardar la revisión: ${error.message}`)
+  }
 
   revalidatePath('/admin')
   back(group, 'ok', decision === 'aprobada' ? 'Receta aprobada.' : 'Receta devuelta con tu comentario.')
@@ -66,8 +73,15 @@ export async function publishGroupAction(formData: FormData) {
   const missing = images.filter((image) => !image.ok)
   if (missing.length) back(group.data, 'error', `${missing.length} foto(s) todavía no cargan en la web. Espera a que termine el despliegue y vuelve a intentar.`)
 
-  const { data, error } = await supabase.rpc('admin_publish_recipe_group', { p_group: group.data })
-  if (error) back(group.data, 'error', error.message)
+  let data: {redirects_removed?: number} | null
+  if (isMysqlCutoverEnabled()) {
+    try {data=await publishGroupMysql(group.data)}
+    catch(error){back(group.data,'error',error instanceof Error?error.message:'No se pudo publicar.')}
+  } else {
+    const result = await supabase.rpc('admin_publish_recipe_group', { p_group: group.data })
+    if (result.error) back(group.data,'error',result.error.message)
+    data = result.data as {redirects_removed?:number}|null
+  }
 
   revalidateTag(RECIPES_CACHE_TAG, 'max')
   revalidatePath('/admin')
@@ -82,8 +96,13 @@ export async function unpublishGroupAction(formData: FormData) {
   const { supabase, isAdmin } = await requireAdmin()
   if (!isAdmin) back(group.data, 'error', 'Tu usuario no tiene permisos de administrador.')
 
-  const { error } = await supabase.rpc('admin_unpublish_recipe_group', { p_group: group.data })
-  if (error) back(group.data, 'error', error.message)
+  if (isMysqlCutoverEnabled()) {
+    try {await unpublishGroupMysql(group.data,true)}
+    catch(error){back(group.data,'error',error instanceof Error?error.message:'No se pudo retirar.')}
+  } else {
+    const { error } = await supabase.rpc('admin_unpublish_recipe_group', { p_group: group.data })
+    if (error) back(group.data, 'error', error.message)
+  }
 
   revalidateTag(RECIPES_CACHE_TAG, 'max')
   revalidatePath('/admin')
@@ -126,9 +145,21 @@ export async function saveSeoAction(formData: FormData) {
   }
   if (updates.length === 0) backToSeo(group.data, 'ok', 'No había cambios que guardar.')
 
-  for (const update of updates) {
-    const { error } = await supabase.from('recipes').update({ seo: update.seo }).eq('id', update.id)
-    if (error) backToSeo(group.data, 'error', `${update.language}: no se pudo guardar (${error.message}).`)
+  if (isMysqlCutoverEnabled()) {
+    try {
+      await saveSeoMysql(group.data,updates.map(u=>({
+        id:u.id,language:u.language,
+        title:String(u.seo.title??''),
+        description:String(u.seo.description??''),
+      })))
+    } catch(error){
+      backToSeo(group.data,'error',error instanceof Error?error.message:'No se pudo guardar el SEO.')
+    }
+  } else {
+    for (const update of updates) {
+      const { error } = await supabase.from('recipes').update({ seo: update.seo }).eq('id', update.id)
+      if (error) backToSeo(group.data, 'error', `${update.language}: no se pudo guardar (${error.message}).`)
+    }
   }
 
   revalidateTag(RECIPES_CACHE_TAG, 'max')
