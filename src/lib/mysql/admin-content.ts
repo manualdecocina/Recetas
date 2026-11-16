@@ -19,5 +19,5 @@ export async function getMysqlAdminRead(){
     const [result]=await adminMysqlPool().execute<RowDataPacket[]>(sql,params as any[])
     return result as Record<string,any>[]
   }
-  return {user,client:createMysqlReadClient(execute,{includeUnpublished:true})}
+  return {user,client:createMysqlReadClient(execute,{includeUnpublished:true,preserveMediaUrls:true})}
 }
