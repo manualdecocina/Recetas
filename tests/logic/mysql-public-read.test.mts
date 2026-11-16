@@ -57,5 +57,16 @@ assert.equal(nothing.error,null)
 assert.equal(nothing.data,null)
 assert.match(queries[0].sql,/1=0/)
 
+const originalImage='https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/test/portada.webp'
+reset([{id:'r4',published:1,image_url:originalImage,ingredients:'[]',steps:'[]',seo:'{}'}])
+const publicImage=await client.from('recipes').select('id, image_url').eq('id','r4').maybeSingle()
+assert.equal(publicImage.data?.image_url,'/recetas/test/portada.webp')
+const adminClient=createMysqlReadClient(execute,{includeUnpublished:true,preserveMediaUrls:true})
+reset([{id:'r4',published:0,image_url:originalImage,ingredients:'[]',steps:'[]',seo:'{}'}])
+const adminImage=await adminClient.from('recipes').select('id, image_url').eq('id','r4').maybeSingle()
+assert.equal(adminImage.data?.image_url,originalImage)
+assert.equal(adminImage.data?.published,false)
+assert.equal(queries[0].params[0],'r4')
+
 assert.throws(() => client.from('admins'), /no autorizada/)
 console.log('MySQL public read adapter: checks PASS')
