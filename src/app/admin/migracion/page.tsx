@@ -1,11 +1,15 @@
 import Link from 'next/link'
+import { createClient } from '@supabase/supabase-js'
 import type { Metadata } from 'next'
 import { type RowDataPacket } from 'mysql2/promise'
 import { requireAdmin } from '@/lib/supabase/admin-guard'
 import { mysqlServerPool } from '@/lib/mysql/public'
+import { readRatingsSecrets } from '@/lib/ratings-config'
+import { validateRatingHistorySnapshot } from '@/lib/mysql/rating-history-snapshot'
 import { AdminNav } from '../AdminNav'
 import { NotAdmin } from '../NotAdmin'
 import { reconcileRatingCountersAction } from './actions'
+import { migrateIndividualRatingVotesAction } from './history-actions'
 
 export const dynamic='force-dynamic'
 export const metadata:Metadata={
@@ -29,6 +33,7 @@ export default async function MigrationPage({searchParams}:{
   const canReconcile=enabled && process.env.MYSQL_RATINGS_ENABLED!=='true' &&
     process.env.ADMIN_AUTH_PROVIDER!=='mysql'
   let source:Totals|null=null, target:Totals|null=null
+  let sourceHistory:number|null=null, targetHistory:number|null=null
   if(process.env.ADMIN_AUTH_PROVIDER!=='mysql'){
     try{
       const rows:{rating_count:number|null;rating_sum:number|null}[]=[]
@@ -52,13 +57,38 @@ export default async function MigrationPage({searchParams}:{
         votes:Number(rows[0]?.votes??0),stars:Number(rows[0]?.stars??0)}
     }catch {target=null}
   }
+  if(canReconcile&&source){
+    try{
+      const {serviceKey}=readRatingsSecrets(process.env)
+      if(serviceKey){
+        const server=createClient(
+          process.env.NEXT_PUBLIC_SUPABASE_URL??'https://eqbdtctxbpepbeickhqi.supabase.co',
+          serviceKey,{auth:{persistSession:false,autoRefreshToken:false}},
+        )
+        const {data,error}=await server.rpc('mdc_rating_migration_snapshot')
+        if(!error)sourceHistory=validateRatingHistorySnapshot(data).source_vote_count
+      }
+    }catch {sourceHistory=null}
+  }
+  if(enabled){
+    try{
+      const [rows]=await mysqlServerPool().execute<RowDataPacket[]>(
+        'SELECT COUNT(*) AS n FROM recipe_rating_votes',
+      )
+      targetHistory=Number(rows[0]?.n??0)
+    }catch {targetHistory=null}
+  }
   const equal=source!==null&&target!==null &&
     source.recipes===target.recipes&&source.votes===target.votes&&source.stars===target.stars
+  const sameHistory=equal&&sourceHistory!==null&&targetHistory!==null&&sourceHistory===targetHistory
   return <main className="adm">
     <AdminNav current="salud"/>
     <h1>Valoraciones: Supabase → MySQL</h1>
     <p className="adm-sub">Comprobación privada de contadores. No se copian datos personales ni se reinician votos.</p>
     {estado==='sincronizado'&&<p role="status" className="adm-notice adm-notice-ok">Los totales de MySQL se reconciliaron con Supabase.</p>}
+    {estado==='historial_ok'&&<p role="status" className="adm-notice adm-notice-ok">Se importó y verificó el historial individual de votos en MySQL. Supabase permanece activo por seguridad.</p>}
+    {estado==='historial_error'&&<p role="alert" className="adm-notice adm-notice-error">No se pudo completar la importación del historial. No se alteraron los votos de Supabase ni los contadores existentes.</p>}
+    {estado==='historial_desactivado'&&<p role="alert" className="adm-notice">La importación privada no está habilitada en este entorno.</p>}
     {estado==='error'&&<p role="alert" className="adm-notice adm-notice-error">No se aplicaron cambios: la operación falló o los totales no coincidieron. Los datos anteriores se conservaron.</p>}
     {estado==='desactivado'&&<p role="alert" className="adm-notice">Esta operación no está habilitada en este entorno.</p>}
     <ul className="adm-counters">
@@ -70,11 +100,29 @@ export default async function MigrationPage({searchParams}:{
     <p>El historial individual de votos se migra por separado. Esta comprobación
       solo sincroniza <code>rating_count</code> y <code>rating_sum</code>
       de las recetas, sin modificar el registro original.</p>
-    {canReconcile&&source&&target&&<form action={reconcileRatingCountersAction}>
+    {canReconcile&&source&&target&&!equal&&<form action={reconcileRatingCountersAction}>
       <button className="adm-btn adm-btn-primary" type="submit">
         Sincronizar contadores de forma segura
       </button>
     </form>}
+    {canReconcile&&<section>
+      <h2>Historial individual de votos</h2>
+      <p>Registro de protección contra votos duplicados. Esta operación no borra
+        ninguna valoración ni reconstruye los 31 votos a partir de los 25 registros individuales.</p>
+      <ul className="adm-counters">
+        <li><strong>{sourceHistory??'—'}</strong> registros individuales en Supabase</li>
+        <li><strong>{targetHistory??'—'}</strong> registros individuales en MySQL</li>
+        <li className={sameHistory?'good':'bad'}><strong>{sameHistory?'Iguales':'Pendiente'}</strong> historial</li>
+      </ul>
+      {equal&&sourceHistory!==null&&!sameHistory&&
+        <form action={migrateIndividualRatingVotesAction}>
+          <button className="adm-btn adm-btn-primary" type="submit">
+            Migrar historial individual a MySQL de forma segura
+          </button>
+        </form>}
+      {sameHistory&&<p role="status">Los registros individuales y los contadores coinciden. Mantén Supabase activo hasta completar el panel administrativo.</p>}
+      {sourceHistory===null&&<p role="alert">No se pudo consultar el registro privado del origen. La importación se mantiene desactivada.</p>}
+    </section>}
     {!enabled&&<p role="alert">Las lecturas públicas de MySQL no están activadas aquí. No se realizan escrituras.</p>}
     {enabled&&!target&&<p role="alert">No se pudo consultar MySQL desde este servidor. La sincronización queda bloqueada.</p>}
     <p><Link href="/admin">Volver al centro de publicación</Link></p>
