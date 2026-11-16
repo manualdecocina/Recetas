@@ -15,6 +15,7 @@ function homepageAgentResponse(request: NextRequest, lang: string): NextResponse
 }
 import { SUPABASE_PUBLIC_KEY, SUPABASE_URL } from '@/lib/supabase/keys'
 import { buildSlashMap, slashRedirectTarget, slashRedirectUrl, type SlashMap, type SlashRow } from '@/lib/trailing-slash'
+import publishedRecipeSlashMap from '@/generated/published-recipe-slash-map.json'
 
 // ── Una sola URL por receta ─────────────────────────────────────────────────────────────
 // Lista de recetas publicadas → si su canónica lleva barra final. Se guarda en memoria
@@ -31,7 +32,12 @@ const slashClient = createClient(SUPABASE_URL, SUPABASE_PUBLIC_KEY, {
   auth: { persistSession: false, autoRefreshToken: false },
 })
 
+// Respaldo estático: evita consultar Supabase en cada recálculo de URLs si MySQL está activo.
+// Regenerar este mapa tras publicar nuevas recetas; las escrituras siguen en Supabase.
+const frozenSlashMap = buildSlashMap(publishedRecipeSlashMap as SlashRow[])
+
 async function fetchSlashMap(): Promise<SlashMap | null> {
+  if (process.env.MYSQL_READS_ENABLED === 'true') return frozenSlashMap
   const rows: SlashRow[] = []
   for (let from = 0; ; from += 1000) {
     const { data, error } = await slashClient.from('recipes').select('public_path, source_url')
