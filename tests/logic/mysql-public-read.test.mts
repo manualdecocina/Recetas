@@ -17,6 +17,15 @@ assert.equal(found.error,null)
 assert.equal(found.data?.[0]?.id,'r1')
 assert.deepEqual(found.data[0].ingredients,[{name:'Harina'}])
 assert.equal(found.data[0].published,true)
+
+reset([{id:'date-test',updated_at:new Date('2026-11-16T09:15:00.000Z'),
+  created_at:new Date('2026-11-16T08:00:00.000Z'),published:1}])
+const dates=await client.from('recipes').select('id,updated_at,created_at,published').limit(1)
+assert.equal(dates.error,null)
+assert.equal(dates.data[0].updated_at,'2026-11-16T09:15:00.000Z')
+assert.equal(dates.data[0].created_at,'2026-11-16T08:00:00.000Z')
+assert.equal(typeof dates.data[0].updated_at,'string')
+
 assert.match(queries[0].sql,/WHERE/)
 assert.equal(queries[0].params[0],1)
 assert.deepEqual(queries[0].params.slice(-2),[1,0])
