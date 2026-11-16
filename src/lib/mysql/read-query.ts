@@ -57,12 +57,12 @@ class ReadBuilder implements PromiseLike<ResponseShape> {
   private head=false
   private table:string
   private execute:Executor
-  constructor(table:string,execute:Executor) {
+  constructor(table:string,execute:Executor,private includeUnpublished=false) {
     this.table=table
     this.execute=execute
-    if(!tables.has(table))throw Error('Tabla pública no autorizada: '+table)
+    if(!tables.has(table))throw Error('Tabla no autorizada: '+table)
     // Seguro por defecto: jamás exponer borradores a una lectura pública.
-    if(table==='recipes'||table==='content_pages')this.filters.push({sql:name('published')+' = ?',args:[1]})
+    if(!includeUnpublished&&(table==='recipes'||table==='content_pages'))this.filters.push({sql:name('published')+' = ?',args:[1]})
   }
   select(fields='*',opts?:{count?:string;head?:boolean}) {
     const relation=/,\s*recipe_ingredients\(position,\s*ingredients\(name,\s*slug,\s*indexable\)\)\s*$/
@@ -134,6 +134,6 @@ class ReadBuilder implements PromiseLike<ResponseShape> {
   single(){this.size=2;return this.run(true,false)}
   then<R1=ResponseShape,R2=never>(ok?:((v:ResponseShape)=>R1|PromiseLike<R1>)|null,fail?:((e:any)=>R2|PromiseLike<R2>)|null):Promise<R1|R2>{return this.run().then(ok,fail)}
 }
-export function createMysqlReadClient(execute:Executor) {
-  return {from(table:string){return new ReadBuilder(table,execute).select('*')}}
+export function createMysqlReadClient(execute:Executor,options?:{includeUnpublished?:boolean}) {
+  return {from(table:string){return new ReadBuilder(table,execute,options?.includeUnpublished===true).select('*')}}
 }
