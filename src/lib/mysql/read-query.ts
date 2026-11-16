@@ -31,10 +31,10 @@ function rewritePublicMedia(value:any):any {
   if(value && typeof value==='object') return Object.fromEntries(Object.entries(value).map(([k,v])=>[k,rewritePublicMedia(v)]))
   return value
 }
-function normalize(table:string,row:Row):Row {
+function normalize(table:string,row:Row,preserveMediaUrls=false):Row {
   const result = {...row}
   for(const field of jsonFields[table]??[]) if(typeof result[field]==='string') result[field]=JSON.parse(result[field])
-  for(const field of ['image_url','featured_image_url','ingredients','steps','gallery','video_urls','seo']) {
+  if(!preserveMediaUrls) for(const field of ['image_url','featured_image_url','ingredients','steps','gallery','video_urls','seo']) {
     if(Object.hasOwn(result,field)) result[field]=rewritePublicMedia(result[field])
   }
   for(const field of Object.keys(result)){
@@ -58,10 +58,12 @@ class ReadBuilder implements PromiseLike<ResponseShape> {
   private table:string
   private execute:Executor
   private includeUnpublished:boolean
-  constructor(table:string,execute:Executor,includeUnpublished=false) {
+  private preserveMediaUrls:boolean
+  constructor(table:string,execute:Executor,includeUnpublished=false,preserveMediaUrls=false) {
     this.table=table
     this.execute=execute
     this.includeUnpublished=includeUnpublished
+    this.preserveMediaUrls=preserveMediaUrls
     if(!tables.has(table))throw Error('Tabla no autorizada: '+table)
     // Seguro por defecto: jamás exponer borradores a una lectura pública.
     if(!includeUnpublished&&(table==='recipes'||table==='content_pages'))this.filters.push({sql:name('published')+' = ?',args:[1]})
@@ -110,7 +112,7 @@ class ReadBuilder implements PromiseLike<ResponseShape> {
       if(this.head)return {data:null,error:null,count}
       const ordering=this.sorts.length?' ORDER BY '+this.sorts.join(', '):''
       const rows=await this.execute('SELECT '+this.fields+' FROM '+name(this.table)+predicate+ordering+' LIMIT ? OFFSET ?',[...params,this.size,this.start])
-      const data=rows.map(row=>normalize(this.table,row))
+      const data=rows.map(row=>normalize(this.table,row,this.preserveMediaUrls))
       if(this.relations&&data.length){
         if(this.table!=='recipes')throw Error('Relación anidada no autorizada')
         const ids=data.map(r=>r.id)
@@ -136,6 +138,6 @@ class ReadBuilder implements PromiseLike<ResponseShape> {
   single(){this.size=2;return this.run(true,false)}
   then<R1=ResponseShape,R2=never>(ok?:((v:ResponseShape)=>R1|PromiseLike<R1>)|null,fail?:((e:any)=>R2|PromiseLike<R2>)|null):Promise<R1|R2>{return this.run().then(ok,fail)}
 }
-export function createMysqlReadClient(execute:Executor,options?:{includeUnpublished?:boolean}) {
-  return {from(table:string){return new ReadBuilder(table,execute,options?.includeUnpublished===true).select('*')}}
+export function createMysqlReadClient(execute:Executor,options?:{includeUnpublished?:boolean;preserveMediaUrls?:boolean}) {
+  return {from(table:string){return new ReadBuilder(table,execute,options?.includeUnpublished===true,options?.preserveMediaUrls===true).select('*')}}
 }
