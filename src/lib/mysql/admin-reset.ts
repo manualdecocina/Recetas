@@ -1,5 +1,5 @@
 import 'server-only'
-import { type RowDataPacket } from 'mysql2/promise'
+import { type RowDataPacket, type ResultSetHeader } from 'mysql2/promise'
 import { adminConnection, adminMysqlPool } from './admin-db'
 import {
   RESET_MINUTES, emailKey, passwordHash, sessionToken, strongPassword,
@@ -60,11 +60,12 @@ export async function completeResetToken(token:unknown,newPassword:unknown):Prom
       await conn.rollback();return false
     }
     const id=String(found.user_id)
-    await conn.execute(
+    const [saved]=await conn.execute<ResultSetHeader>(
       'UPDATE admin_auth_users SET password_salt=?,password_hash=?,password_version=1,'+
       'updated_at=UTC_TIMESTAMP(6) WHERE id=? AND is_active=1',
       [salt,hash,id],
     )
+    if(saved.affectedRows!==1)throw Error('Cuenta administrativa ya no está activa')
     await conn.execute(
       'UPDATE admin_auth_password_resets SET consumed_at=UTC_TIMESTAMP(6) '+
       'WHERE user_id=? AND consumed_at IS NULL',
