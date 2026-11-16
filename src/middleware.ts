@@ -103,19 +103,26 @@ export async function middleware(request: NextRequest) {
     return (await recipeSlashRedirect(request)) ?? NextResponse.next()
   }
 
-  // Solo las rutas editoriales verificadas en la vista previa; todas ellas
-  // llaman requireAdmin() en Node y comprueban una sesión MySQL real.
-  // La autenticación de recuperación y el resto conservan su protección anterior.
-  const mysqlPreviewPanel = /^\/admin(?:\/(?:todas|salud|recetas\/nueva|recetas\/[0-9a-f-]{36}|platos\/[0-9a-f-]{36}(?:\/google)?))?\/?$/i
-  const isMysqlPreviewHost = request.nextUrl.hostname === 'mintcream-squirrel-383743.hostingersite.com' &&
-    request.headers.get('host')?.split(':')[0] === 'mintcream-squirrel-383743.hostingersite.com'
-  if (process.env.ADMIN_AUTH_PROVIDER === 'mysql' && isMysqlPreviewHost &&
-      (mysqlPreviewPanel.test(pathname) || pathname === '/admin/login')) {
+  // En modo MySQL la autorización definitiva ocurre en requireAdmin()
+  // (Node), que verifica que la sesión siga vigente y no esté revocada.
+  // El middleware Edge NO puede consultar MySQL. No pedir JWT de Supabase:
+  // hacerlo bloquearía usuarios que ya iniciaron sesión en MySQL.
+  if (process.env.ADMIN_AUTH_PROVIDER === 'mysql') {
+    // La recuperación heredada sólo cambia contraseñas Supabase. Mantenerla
+    // cerrada evita una experiencia falsa o cambios que bloqueen el acceso.
+    if (pathname === '/admin/recuperar' ||
+        pathname === '/admin/nueva-contrasena' ||
+        pathname === '/admin/auth/callback') {
+      const login = request.nextUrl.clone()
+      login.pathname = '/admin/login'
+      login.search = ''
+      return NextResponse.redirect(login)
+    }
     return NextResponse.next()
   }
 
-  // Ruta aislada de QA: tiene su propia sesión MySQL y validación completa en Node.
-  // Nunca concede acceso a /admin normal, cuyo guard Supabase permanece intacto.
+  // La página aislada de QA tiene sus propias protecciones y se valida
+  // mediante su comprobación estricta de hostname en Node.
   if (pathname === '/admin/qa-mysql') return NextResponse.next()
 
   // A partir de aquí solo /admin/* (ver matcher).
