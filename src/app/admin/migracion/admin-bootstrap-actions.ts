@@ -7,7 +7,7 @@ import { requireAdmin } from '@/lib/supabase/admin-guard'
 import { SUPABASE_PUBLIC_KEY, SUPABASE_URL } from '@/lib/supabase/keys'
 import { mysqlServerPool } from '@/lib/mysql/public'
 import { loginAdmin, getAdminByToken, revokeAdminSession } from '@/lib/mysql/admin-auth'
-import { adminAttemptsSecret, emailKey, passwordHash, strongPassword, verifyPassword } from '@/lib/mysql/admin-crypto'
+import { adminAttemptsSecret, emailKey, passwordHash, passwordHashVerifiedExisting, strongPassword, verifyPassword } from '@/lib/mysql/admin-crypto'
 
 const FIRST_ADMIN_ID='00000000-0000-4000-8000-000000000001'
 const validEmail=(email:string)=>email.length>=5&&email.length<=320&&/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
@@ -30,12 +30,15 @@ export async function prepareMysqlAdminFromCurrentSession(formData:FormData):Pro
   const optionalNew=formData.get('new_password')
   const optionalConfirm=formData.get('confirm_password')
   // Reutilizar la contraseña actual por defecto. No cambiar la de Supabase.
-  // Sólo pedir otra para MySQL si el administrador lo elige o si la clave
-  // actual no cumple los requisitos de seguridad del nuevo login.
-  const useCurrent=optionalNew==='' && optionalConfirm===''
+  // Una contraseña distinta para MySQL es totalmente opcional. Las claves
+  // existentes verificadas heredan su longitud original desde Supabase.
+  const useCurrent=!optionalNew && !optionalConfirm
   const proposed=useCurrent ? current : optionalNew
-  if(typeof current!=='string'||current.length<1||current.length>256||
-     !strongPassword(proposed)||(!useCurrent&&proposed!==optionalConfirm))
+  // Reutilizar la contraseña ya comprobada por Supabase, aunque no tenga 14
+  // caracteres. El requisito fuerte sólo aplica al crear una clave NUEVA.
+  if(typeof current!=='string'||current.length<6||current.length>256||
+     typeof proposed!=='string'||
+     (useCurrent ? false : (!strongPassword(proposed)||proposed!==optionalConfirm)))
     redirect('/admin/migracion?admin=datos_invalidos')
 
   try { adminAttemptsSecret(process.env) } catch {
@@ -58,7 +61,7 @@ export async function prepareMysqlAdminFromCurrentSession(formData:FormData):Pro
   }
   if(!verified)redirect('/admin/migracion?admin=credenciales_invalidas')
 
-  const {salt,hash}=await passwordHash(proposed)
+  const {salt,hash}=useCurrent ? await passwordHashVerifiedExisting(proposed) : await passwordHash(proposed)
   const conn=await mysqlServerPool().getConnection()
   try{
     await conn.beginTransaction()

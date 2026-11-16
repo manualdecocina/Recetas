@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import {
-  ADMIN_COOKIE, SESSION_DAYS, attemptsKey, adminAttemptsSecret, constantTimeSecret, emailKey, passwordHash,
+  ADMIN_COOKIE, SESSION_DAYS, attemptsKey, adminAttemptsSecret, constantTimeSecret, emailKey, passwordHash, passwordHashVerifiedExisting,
   sessionToken, strongPassword, tokenHash, validToken, verifyPassword,
 } from '../../src/lib/mysql/admin-crypto.ts'
 
@@ -16,6 +16,12 @@ assert.equal(hashed.salt.length,32)
 assert.equal(hashed.hash.length,64)
 assert.equal(await verifyPassword(password,hashed.salt,hashed.hash),true)
 assert.equal(await verifyPassword('another secure wrong password',hashed.salt,hashed.hash),false)
+const existingShort='Clave123' // 8 caracteres: válida en Supabase, sin cumplir la nueva política 14
+assert.equal(strongPassword(existingShort),false)
+const migrated=await passwordHashVerifiedExisting(existingShort)
+assert.equal(await verifyPassword(existingShort,migrated.salt,migrated.hash),true)
+assert.equal(await verifyPassword('otraClave',migrated.salt,migrated.hash),false)
+await assert.rejects(()=>passwordHashVerifiedExisting('corta'))
 const second=await passwordHash(password)
 assert.notDeepEqual(second.salt,hashed.salt)
 assert.notDeepEqual(second.hash,hashed.hash)

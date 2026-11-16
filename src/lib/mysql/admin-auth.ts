@@ -49,7 +49,7 @@ export async function bootstrapFirstAdmin(email:string,password:string):Promise<
  */
 export async function loginAdmin(email:string,password:string):Promise<LoginOutcome>{
   const key=emailKey(email)
-  if(!validEmail(key)||typeof password!=='string'||password.length<8||password.length>256)return {ok:false}
+  if(!validEmail(key)||typeof password!=='string'||password.length<6||password.length>256)return {ok:false}
   const attempt=attemptsKey(requireAuthSecret(),'email',key)
   const conn=await adminConnection()
   try{
