@@ -18,9 +18,25 @@ function name(value:string) {
   if(!/^[a-z_][a-z0-9_]*$/i.test(value)) throw Error('Identificador MySQL no permitido')
   return bt + value + bt
 }
+// En MySQL la URL se sirve desde Hostinger; conservar la ruta relativa real.
+// No sustituir URLs externas, de terceros ni source_url (proveniencia editorial).
+const storagePrefix='https://eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/'
+function rewritePublicMedia(value:any):any {
+  if(typeof value==='string') {
+    if(value.startsWith(storagePrefix+'recetas/')) return '/recetas/'+value.slice((storagePrefix+'recetas/').length)
+    if(value.startsWith(storagePrefix+'receta-videos/')) return '/videos/'+value.slice((storagePrefix+'receta-videos/').length)
+    return value
+  }
+  if(Array.isArray(value)) return value.map(rewritePublicMedia)
+  if(value && typeof value==='object') return Object.fromEntries(Object.entries(value).map(([k,v])=>[k,rewritePublicMedia(v)]))
+  return value
+}
 function normalize(table:string,row:Row):Row {
   const result = {...row}
   for(const field of jsonFields[table]??[]) if(typeof result[field]==='string') result[field]=JSON.parse(result[field])
+  for(const field of ['image_url','featured_image_url','ingredients','steps','gallery','video_urls','seo']) {
+    if(Object.hasOwn(result,field)) result[field]=rewritePublicMedia(result[field])
+  }
   for(const field of Object.keys(result)){
     if(bools.has(field) && (result[field]===0||result[field]===1))result[field]=!!result[field]
     if(/^(created_at|updated_at|published_at|ready_at|reviewed_at)$/.test(field)
