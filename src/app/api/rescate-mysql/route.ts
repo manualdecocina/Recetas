@@ -72,11 +72,15 @@ export async function GET(request: NextRequest) {
           ]),
         )
         const [draftRows] = await conn.execute<mysql.RowDataPacket[]>(
-          'SELECT COUNT(*) AS n FROM recipes WHERE published=0',
+          'SELECT COUNT(*) AS n, COUNT(DISTINCT recipe_group_id) AS draft_groups FROM recipes WHERE published=0',
+        )
+        const [groupRows] = await conn.execute<mysql.RowDataPacket[]>(
+          'SELECT COUNT(DISTINCT recipe_group_id) AS n FROM recipes',
         )
         const drafts = Number(draftRows[0]?.n ?? -1)
+        const expectedGroups = Number(groupRows[0]?.n ?? -1)
         const total = queue.length
-        const passed = drafts === 18 && total === 252 &&
+        const passed = drafts === 18 && total === expectedGroups && total > 0 &&
           queue.every((item) => item.languages >= 1 && item.languages <= 7)
         return NextResponse.json({
           status: passed ? 'admin_editorial_read_pass' : 'admin_editorial_read_mismatch',
