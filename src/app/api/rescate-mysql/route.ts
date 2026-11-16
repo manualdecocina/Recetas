@@ -38,6 +38,23 @@ export async function GET(request: NextRequest) {
          (SELECT COUNT(*) FROM content_redirects) AS redirects,
          (SELECT COUNT(*) FROM content_redirects_backup_20261030) AS old_redirects`)
       const row = rows[0]
+      // Comprobación directa de 4 tablas del esquema administrativo,
+      // únicamente SHOW TABLES de la base actual. No consulta information_schema.
+      if (request.nextUrl.searchParams.get('schema') === 'admin') {
+        const expected = [
+          'admin_auth_users','admin_auth_sessions','admin_auth_attempts',
+          'admin_auth_password_resets',
+        ]
+        const [tableRows] = await conn.query<mysql.RowDataPacket[]>('SHOW TABLES')
+        const names = new Set(tableRows.map((item) => String(Object.values(item)[0] ?? '')))
+        const checks = Object.fromEntries(expected.map((table) => [table, names.has(table)]))
+        const passed = Object.values(checks).every(Boolean)
+        return NextResponse.json({
+          status: passed ? 'admin_schema_pass' : 'admin_schema_incomplete',
+          schema: checks, tables_present: Object.values(checks).filter(Boolean).length,
+          production_untouched: true,
+        }, { status: passed ? 200 : 503, headers })
+      }
       // Comprobación profunda y no destructiva del adaptador en el MISMO servidor.
       // Nunca imprime recetas, usuarios ni variables secretas.
       if (request.nextUrl.searchParams.get('adapter') === '1') {
