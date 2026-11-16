@@ -124,9 +124,13 @@ export async function middleware(request: NextRequest) {
   // llaman requireAdmin() en Node y comprueban una sesión MySQL real.
   // La autenticación de recuperación y el resto conservan su protección anterior.
   const mysqlPreviewPanel = /^\/admin(?:\/(?:todas|salud|recetas\/nueva|recetas\/[0-9a-f-]{36}|platos\/[0-9a-f-]{36}(?:\/google)?))?\/?$/i
-  if (process.env.ADMIN_AUTH_PROVIDER === 'mysql' &&
-      request.nextUrl.hostname === 'mintcream-squirrel-383743.hostingersite.com' &&
-      mysqlPreviewPanel.test(pathname)) {
+  const isMysqlPreviewHost = [
+    request.nextUrl.hostname,
+    request.headers.get('host')?.split(':')[0],
+    request.headers.get('x-forwarded-host')?.split(',')[0]?.trim()?.split(':')[0],
+  ].includes('mintcream-squirrel-383743.hostingersite.com')
+  if (process.env.ADMIN_AUTH_PROVIDER === 'mysql' && isMysqlPreviewHost &&
+      (mysqlPreviewPanel.test(pathname) || pathname === '/admin/login')) {
     return NextResponse.next()
   }
 
