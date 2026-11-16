@@ -39,7 +39,11 @@ class ReadBuilder implements PromiseLike<ResponseShape> {
   private size=1000
   private counting=false
   private head=false
-  constructor(private table:string,private execute:Executor) {
+  private table:string
+  private execute:Executor
+  constructor(table:string,execute:Executor) {
+    this.table=table
+    this.execute=execute
     if(!tables.has(table))throw Error('Tabla pública no autorizada: '+table)
     // Seguro por defecto: jamás exponer borradores a una lectura pública.
     if(table==='recipes'||table==='content_pages')this.filters.push({sql:name('published')+' = ?',args:[1]})
@@ -65,7 +69,7 @@ class ReadBuilder implements PromiseLike<ResponseShape> {
   ilike(col:string,val:string){this.filters.push({sql:name(col)+' LIKE ? COLLATE utf8mb4_unicode_ci',args:[val]});return this}
   or(text:string){
     // Solo el filtro OR del buscador, nunca SQL arbitrario de un visitante.
-    const parts=/^title\.ilike\."(.*)",excerpt\.ilike\."(.*)"$/s.exec(text)
+    const parts=/^title\.ilike\."(.*)",excerpt\.ilike\."(.*)"$/.exec(text)
     if(!parts)throw Error('OR no autorizado')
     const decode=(v:string)=>v.replace(/\\"/g,'"').replace(/\\\\/g,'\\')
     this.filters.push({sql:'(title LIKE ? COLLATE utf8mb4_unicode_ci OR excerpt LIKE ? COLLATE utf8mb4_unicode_ci)',args:[decode(parts[1]),decode(parts[2])]})
