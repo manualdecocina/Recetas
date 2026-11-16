@@ -6,6 +6,7 @@ on:
       - 'src/lib/mysql/**'
       - 'src/app/api/rescate-mysql/route.ts'
       - 'src/app/qa-mysql/page.tsx'
+      - 'src/app/qa-mysql/layout.tsx'
       - 'src/lib/supabase/public.ts'
       - 'src/middleware.ts'
       - 'src/generated/published-recipe-slash-map.json'
@@ -33,6 +34,8 @@ jobs:
       - run: npm ci
       - name: Comprobar TypeScript
         run: npm run typecheck
+      - name: Compilar Next.js incluyendo la vista previa MySQL
+        run: npm run build
       - name: Comprobar SQL parametrizado sin base real
         run: node --experimental-strip-types --no-warnings tests/logic/mysql-public-read.test.mts
       - name: Probar hash de contraseñas y sesiones administrativas
