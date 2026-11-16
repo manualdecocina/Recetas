@@ -31,8 +31,7 @@ export default async function MysqlAuthQAPage({
   searchParams:Promise<{aviso?:string}>
 }){
   const h=await headers()
-  const hosts=[h.get('host')?.split(':')[0],h.get('x-forwarded-host')?.split(',')[0]?.trim()?.split(':')[0]]
-  if(!hosts.includes(PREVIEW))notFound()
+  if(h.get('host')?.split(':')[0]!==PREVIEW)notFound()
   const {aviso}=await searchParams
   if(process.env.ADMIN_AUTH_PROVIDER!=='mysql'){
     return <AuthCard title="Acceso MySQL (pruebas)" subtitle="Aún no está activada la autenticación MySQL. El panel real sigue en Supabase.">
