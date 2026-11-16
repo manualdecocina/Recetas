@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { cookies, headers } from 'next/headers'
 import { notFound } from 'next/navigation'
 import { AuthCard } from '../AuthCard'
@@ -69,6 +70,7 @@ export default async function MysqlAuthQAPage({
       <p>Acceso autorizado en entorno aislado.</p>
       <p>Usuario: <strong>{current.email}</strong></p>
       <p role="status">{editorialSummary}</p>
+      <p><Link href="/admin">Ver cola editorial con lecturas MySQL (vista previa)</Link></p>
       <form method="post" action="/api/rescate-admin">
         <input type="hidden" name="action" value="logout"/>
         <button className="adm-btn adm-btn-primary" type="submit">Cerrar sesión</button>
