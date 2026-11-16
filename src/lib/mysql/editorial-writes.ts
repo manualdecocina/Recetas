@@ -117,3 +117,45 @@ export async function unpublishGroupMysql(groupId:string,confirmed:boolean){
     return {unpublished:Number(result.affectedRows??0)}
   }catch(error){await conn.rollback();throw error}finally{conn.release()}
 }
+
+
+/** Guarda SEO de cualquier combinación válida de idiomas en UNA sola transacción.
+ * Nunca sobreescribe los demás campos de seo ni edita otra receta/grupo.
+ * El caller de la acción mantiene validación de longitudes y revalidación de caché.
+ */
+export async function saveSeoMysql(groupId:string,updates:ReadonlyArray<{
+  id:string;language:string;title:string;description:string
+}>) {
+  await requireMysqlAdminWrites()
+  validGroup(groupId)
+  if(!Array.isArray(updates)||updates.length<1||updates.length>7)throw Error('Cantidad de cambios SEO inválida')
+  const seen=new Set<string>()
+  for(const x of updates){
+    if(!uuidPattern.test(x.id)||!REQUIRED_LANGUAGES.includes(x.language as typeof REQUIRED_LANGUAGES[number])||
+       typeof x.title!=='string'||typeof x.description!=='string'||x.title.trim().length<1||
+       x.description.trim().length<1||x.title.length>220||x.description.length>320||
+       seen.has(x.language))throw Error('SEO de idioma inválido')
+    seen.add(x.language)
+  }
+  const conn=await adminConnection()
+  try{
+    await conn.beginTransaction()
+    const [rows]=await conn.execute<RowDataPacket[]>(
+      'SELECT id,language,seo FROM recipes WHERE recipe_group_id=? FOR UPDATE',[groupId],
+    )
+    const available=new Map(rows.map(r=>[String(r.language),r]))
+    for(const item of updates){
+      const row=available.get(item.language)
+      if(!row||String(row.id)!==item.id)throw Error('Receta de idioma distinta del grupo')
+      const seo=parseJson(row.seo)
+      if(!seo||typeof seo!=='object'||Array.isArray(seo))throw Error('SEO actual inválido')
+      const updated={...seo,title:item.title.trim(),description:item.description.trim()}
+      await conn.execute(
+        'UPDATE recipes SET seo=?,updated_at=UTC_TIMESTAMP(6) WHERE id=?',
+        [JSON.stringify(updated),item.id],
+      )
+    }
+    await conn.commit()
+    return {updated:updates.length}
+  }catch(error){await conn.rollback();throw error}finally{conn.release()}
+}
