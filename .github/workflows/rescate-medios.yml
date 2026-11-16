@@ -1,0 +1,40 @@
+name: Rescate medios Supabase (solo rama aislada)
+on:
+  push:
+    branches: [rescate-supabase-20261115]
+    paths:
+      - 'scripts/migracion-hostinger/media-pendientes.json'
+      - 'scripts/migracion-hostinger/rescatar-media.py'
+      - '.github/workflows/rescate-medios.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  download-public-media:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: rescate-supabase-20261115
+          persist-credentials: true
+      - name: Rescue only missing public WebP and MP4 bytes
+        run: python3 scripts/migracion-hostinger/rescatar-media.py
+      - name: Save proof of rescued image hashes
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: media-rescue-qa
+          path: media-rescue-qa.json
+          if-no-files-found: ignore
+      - name: Commit rescued bytes on rescue branch (NEVER main)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- public/recetas public/videos
+          if git diff --cached --quiet; then
+            echo "No missing media remained."
+            exit 0
+          fi
+          git commit -m "Rescate: conservar 103 fotos y un video públicos en Hostinger"
+          git push origin HEAD:refs/heads/rescate-supabase-20261115
