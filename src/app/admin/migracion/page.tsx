@@ -173,6 +173,9 @@ export default async function MigrationPage({searchParams}:{
       {adminNotice==='esquema_o_escritura'&&<p role="alert" className="adm-notice adm-notice-error">
         No se pudieron guardar o verificar las credenciales MySQL. El acceso anterior no cambió.
       </p>}
+      {adminNotice==='verificacion_error'&&<p role="alert" className="adm-notice adm-notice-error">
+        La cuenta se guardó, pero no pasó la prueba de inicio de sesión MySQL. No se ha activado el nuevo acceso; el administrador original sigue funcionando.
+      </p>}
       <ul className="adm-counters">
         <li><strong>{adminSchemaReady?'Lista':'Pendiente'}</strong> estructura de cuentas</li>
         <li className={adminMatchesCurrent?'good':undefined}><strong>{adminMatchesCurrent?'Preparada':'Sin preparar'}</strong> cuenta actual</li>
