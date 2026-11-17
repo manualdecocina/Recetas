@@ -14,6 +14,7 @@ import { reviewedRecipeSeo } from '@/lib/recipe-snippet-repairs'
 import { NotAdmin } from '../../NotAdmin'
 import { AdminNav } from '../../AdminNav'
 import { publishGroupAction, reviewGroupAction, unpublishGroupAction } from '../actions'
+import { correctPublishedIngredientAction } from '../ingredient-actions'
 
 export const dynamic = 'force-dynamic'
 export const metadata: Metadata = {
@@ -26,7 +27,7 @@ type Props = {
   searchParams: Promise<{ idioma?: string; aviso?: string; mensaje?: string }>
 }
 
-type Ingredient = { name: string; amount?: string; unit?: string; group?: string }
+type Ingredient = { name: string; amount?: string; unit?: string; group?: string; preparation?: string | null }
 type Step = { title?: string; content?: string; image_url?: string; image_alt?: string }
 
 export default async function GroupReviewPage({ params, searchParams }: Props) {
@@ -54,6 +55,8 @@ export default async function GroupReviewPage({ params, searchParams }: Props) {
   const steps = (Array.isArray(current.steps) ? current.steps : []) as Step[]
   const nutrition = current.nutrition ?? {}
   const seo = reviewedRecipeSeo(current.id, current.seo)
+  const canCorrectPublished = Boolean(current.published) &&
+    process.env.ADMIN_AUTH_PROVIDER === 'mysql' && process.env.ADMIN_WRITE_PROVIDER === 'mysql'
 
   return (
     <main className="adm">
@@ -163,10 +166,35 @@ export default async function GroupReviewPage({ params, searchParams }: Props) {
           </div>
           <p><Link href={`/admin/platos/${grupo}/google`} className="adm-btn">Editar para Google</Link></p>
 
-          <h4>Ingredientes ({ingredients.length})</h4>
+          <h4 id="ingredientes">Ingredientes ({ingredients.length})</h4>
+          {canCorrectPublished && <p className="adm-hint">Para corregir el nombre o su aclaración sin perder cantidades, fotos, notas ni otros datos, abre «Corregir ingrediente».</p>}
           <ul>
             {ingredients.map((ingredient, i) => (
-              <li key={i}>{ingredientDisplayText({ name: ingredient.name, amount: ingredient.amount, unit: ingredient.unit }, current.language)}</li>
+              <li key={i}>
+                {ingredientDisplayText({ name: ingredient.name, amount: ingredient.amount, unit: ingredient.unit }, current.language)}
+                {canCorrectPublished && (
+                  <details className="adm-inline-correction">
+                    <summary>Corregir ingrediente</summary>
+                    <form action={correctPublishedIngredientAction} className="adm-form">
+                      <input type="hidden" name="group" value={grupo} />
+                      <input type="hidden" name="recipe_id" value={current.id} />
+                      <input type="hidden" name="language" value={current.language} />
+                      <input type="hidden" name="ingredient_index" value={i} />
+                      <input type="hidden" name="expected_name" value={ingredient.name} />
+                      <input type="hidden" name="expected_preparation" value={ingredient.preparation ?? ''} />
+                      <label>
+                        Nombre del ingrediente
+                        <input name="new_name" defaultValue={ingredient.name} maxLength={200} required />
+                      </label>
+                      <label>
+                        Preparación o aclaración (opcional)
+                        <input name="new_preparation" defaultValue={ingredient.preparation ?? ''} maxLength={200} />
+                      </label>
+                      <button type="submit" className="adm-btn adm-btn-primary">Guardar corrección</button>
+                    </form>
+                  </details>
+                )}
+              </li>
             ))}
           </ul>
 
