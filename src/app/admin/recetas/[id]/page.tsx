@@ -24,6 +24,21 @@ export default async function EditRecipePage({ params }: { params: Promise<{ id:
   if (!data) notFound()
   const recipe = data as Recipe
 
+  // Un formulario básico reconstruiría los arrays y perdería imágenes, notas y metadatos.
+  // En MySQL las recetas publicadas sólo reciben correcciones puntuales protegidas.
+  if (recipe.published && process.env.ADMIN_AUTH_PROVIDER === 'mysql') {
+    return (
+      <main className="adm">
+        <AdminNav current="todas" />
+        <p className="adm-hint" style={{ marginTop: 18 }}><Link href="/admin/todas">← Volver a todas las recetas</Link></p>
+        <h1>Corregir: {recipe.title}</h1>
+        <p className="adm-sub">Esta receta está publicada. Para conservar fotos, SEO, cantidades, notas y sus siete idiomas, no se abre el editor básico.</p>
+        <p><Link className="adm-btn adm-btn-primary" href={`/admin/platos/${recipe.recipe_group_id}?idioma=${recipe.language}#ingredientes`}>Corregir ingredientes</Link></p>
+        <p><Link href={`/admin/platos/${recipe.recipe_group_id}/google`}>Editar título y descripción para Google</Link></p>
+      </main>
+    )
+  }
+
   return (
     <main className="adm">
       <AdminNav current="todas" />
