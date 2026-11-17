@@ -10,7 +10,7 @@ import { uuidSchema } from '@/lib/validation'
 /** El formulario de corrección es deliberadamente acotado: no acepta cambios
  * de cantidades, publicación, URLs, medios, SEO ni otros idiomas.
  */
-export async function correctPublishedIngredientAction(formData: FormData): Promise<never> {
+export async function correctPublishedIngredientAction(formData: FormData): Promise<void> {
   const group = uuidSchema.safeParse(formData.get('group'))
   const recipe = uuidSchema.safeParse(formData.get('recipe_id'))
   const language = formData.get('language')
@@ -35,7 +35,7 @@ export async function correctPublishedIngredientAction(formData: FormData): Prom
   if (process.env.ADMIN_AUTH_PROVIDER !== 'mysql' || process.env.ADMIN_WRITE_PROVIDER !== 'mysql') {
     back('error', 'La edición MySQL aún no está habilitada.')
   }
-  let outcome: 'updated' | 'unchanged'
+  let outcome: 'updated' | 'unchanged' = 'unchanged'
   try {
     outcome = await correctPublishedIngredientNameMysql({
       recipeId: recipe.data, groupId: group.data, language,
@@ -44,12 +44,12 @@ export async function correctPublishedIngredientAction(formData: FormData): Prom
   } catch (error) {
     console.error('[admin/mysql] ingredient correction failed',
       error instanceof Error ? error.message : 'Error desconocido')
-    back('error', 'No se pudo guardar. Si otra edición cambió el ingrediente, actualiza la ficha.')
+    return back('error', 'No se pudo guardar. Si otra edición cambió el ingrediente, actualiza la ficha.')
   }
   if (outcome === 'updated') {
     revalidateTag(RECIPES_CACHE_TAG, 'max')
     revalidatePath('/admin/platos/' + group.data)
     revalidatePath('/admin/recetas/' + recipe.data)
   }
-  back('ok', outcome === 'updated' ? 'Ingrediente corregido en MySQL. Comprueba la ficha pública.' : 'No había cambios que guardar.')
+  return back('ok', outcome === 'updated' ? 'Ingrediente corregido en MySQL. Comprueba la ficha pública.' : 'No había cambios que guardar.')
 }
