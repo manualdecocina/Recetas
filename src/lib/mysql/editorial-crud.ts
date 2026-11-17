@@ -147,3 +147,56 @@ export async function deleteDraftMysql(id:string):Promise<void>{
     await conn.commit()
   }catch(error){await conn.rollback();throw error}finally{conn.release()}
 }
+
+/**
+ * Edición editorial conservadora de una receta publicada: permite corregir
+ * únicamente el nombre de ingredientes existentes. Nunca reconstruye pasos,
+ * fotos, metadatos SEO, URLs, cantidades, ni campos de publicación.
+ * Los campos extra del JSON original permanecen intactos.
+ */
+export async function correctPublishedIngredientNamesMysql(id:string,fields:RecipeFields):Promise<void>{
+  if(!UUID.test(id))throw Error('ID inválido')
+  await requireMysqlAdminWrites()
+  if(fields.published!==true)throw Error('Una receta publicada debe permanecer publicada')
+  const conn=await adminConnection()
+  try{
+    await conn.beginTransaction()
+    const [rows]=await conn.execute<RowDataPacket[]>(
+      'SELECT slug,title,excerpt,category,prep_time_minutes,cook_time_minutes,servings,image_url,ingredients,steps,published FROM recipes WHERE id=? FOR UPDATE',[id],
+    )
+    const current=rows[0]
+    if(!current||Number(current.published)!==1)throw Error('Receta publicada no encontrada')
+    const originalIngredients=typeof current.ingredients==='string'?JSON.parse(current.ingredients):current.ingredients
+    const originalSteps=typeof current.steps==='string'?JSON.parse(current.steps):current.steps
+    if(!Array.isArray(originalIngredients)||!Array.isArray(originalSteps)||
+       originalIngredients.length!==fields.ingredients.length||
+       originalSteps.length!==fields.steps.length)throw Error('La corrección no puede cambiar el número de ingredientes ni de pasos')
+    const same=(a:unknown,b:unknown)=>String(a??'')===String(b??'')
+    if(!same(fields.slug,current.slug)||!same(fields.title,current.title)||
+       !same(fields.excerpt,current.excerpt)||!same(fields.category,current.category)||
+       !same(fields.prep_time_minutes,current.prep_time_minutes)||
+       !same(fields.cook_time_minutes,current.cook_time_minutes)||
+       !same(fields.servings,current.servings)||!same(fields.image_url,current.image_url)||
+       fields.public_path!==undefined)throw Error('En recetas publicadas, este editor solo permite corregir nombres de ingredientes')
+    for(let i=0;i<originalSteps.length;i++){
+      if(!same(fields.steps[i].title,originalSteps[i].title)||
+         !same(fields.steps[i].content,originalSteps[i].content))throw Error('No modificar los pasos desde la corrección de ingredientes')
+    }
+    const updated=originalIngredients.map((item:any,i:number)=>{
+      if(!item||typeof item!=='object'||Array.isArray(item)||
+         !same(fields.ingredients[i].amount,item.amount)||
+         !same(fields.ingredients[i].unit,item.unit))throw Error('No modificar cantidades ni unidades')
+      return {...item,name:fields.ingredients[i].name}
+    })
+    if(JSON.stringify(updated)===JSON.stringify(originalIngredients)){
+      await conn.commit()
+      return
+    }
+    const [result]=await conn.execute<ResultSetHeader>(
+      'UPDATE recipes SET ingredients=?,updated_at=UTC_TIMESTAMP(6) WHERE id=? AND published=1',
+      [JSON.stringify(updated),id],
+    )
+    if(result.affectedRows!==1)throw Error('No se guardó la corrección')
+    await conn.commit()
+  }catch(error){await conn.rollback();throw error}finally{conn.release()}
+}
