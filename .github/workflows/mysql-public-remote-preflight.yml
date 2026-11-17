@@ -63,3 +63,28 @@ jobs:
               print('PASS live',path)
           print('PASS: remote read-only preflight. This does NOT verify production MYSQL_* variables or staging deployment of this PR.')
           PY
+
+      - name: Confirm active production MySQL routes without modifying production
+        run: |
+          python3 - <<'PY'
+          import html, re, urllib.request
+          base='https://manualdecocina.com'
+          def fetch(path):
+              req=urllib.request.Request(base+path,headers={'User-Agent':'Manual-de-Cocina-Migration-ReadOnly/1.0','Accept':'text/html'})
+              with urllib.request.urlopen(req,timeout=25) as res:
+                  if res.status!=200: raise RuntimeError(f'Unexpected HTTP {res.status} on {path}')
+                  return html.unescape(res.read(1_500_000).decode('utf-8','replace'))
+          login=fetch('/admin/login')
+          if 'Panel de administración' not in login: raise RuntimeError('Login page did not render')
+          if re.search(r'href=["\\\'](?:/admin/recuperar|https://manualdecocina.com/admin/recuperar)',login):
+              raise RuntimeError('PRODUCTION ADMIN STILL ON SUPABASE: password recovery link present')
+          print('PROVED: production ADMIN_AUTH_PROVIDER=mysql (Supabase recovery removed)')
+          catalog=fetch('/es/recetas')
+          local=('/recetas/helado-queso-cottage-fresas/portada.webp' in catalog or
+                 '%2Frecetas%2Fhelado-queso-cottage-fresas%2Fportada.webp' in catalog)
+          original=('eqbdtctxbpepbeickhqi.supabase.co/storage/v1/object/public/recetas/helado-queso-cottage-fresas/portada.webp' in catalog or
+                    'eqbdtctxbpepbeickhqi.supabase.co%2Fstorage%2Fv1%2Fobject%2Fpublic%2Frecetas%2Fhelado-queso-cottage-fresas%2Fportada.webp' in catalog)
+          if original: raise RuntimeError('PRODUCTION PUBLIC CATALOG STILL USING SUPABASE IMAGE URL')
+          if not local: raise RuntimeError('Could not positively identify LOCAL MySQL-normalized cover URL in catalog')
+          print('PROVED: production MYSQL_READS_ENABLED=true (cover URL rewritten by MySQL public adapter)')
+          PY
