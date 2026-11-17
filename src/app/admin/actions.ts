@@ -7,7 +7,7 @@ import { ADMIN_COOKIE, SESSION_DAYS, loginAdmin, revokeAdminSession } from '@/li
 import { z } from 'zod'
 import type { PostgrestError } from '@supabase/supabase-js'
 import { createSupabaseServerClient } from '@/lib/supabase/server'
-import { createDraftMysql, createTranslationMysql, updateDraftMysql, deleteDraftMysql } from '@/lib/mysql/editorial-crud'
+import { createDraftMysql, createTranslationMysql, updateDraftMysql, correctPublishedIngredientNamesMysql, deleteDraftMysql } from '@/lib/mysql/editorial-crud'
 import { requireAdmin } from '@/lib/supabase/admin-guard'
 import { languageSchema, readRecipeForm, uuidSchema, type RecipeFields } from '@/lib/validation'
 import { RECIPES_CACHE_TAG } from '@/lib/cache'
@@ -232,12 +232,19 @@ export async function updateRecipeAction(_prev: FormState, formData: FormData): 
   if (!fields.success) return { ok: false, fieldErrors: fields.error.flatten().fieldErrors }
 
   if (isMysqlAdminActive()) {
-    if (fields.data.published) return draftOnlyMessage()
     try {
-      await updateDraftMysql(id.data, fields.data)
+      if (fields.data.published) {
+        await correctPublishedIngredientNamesMysql(id.data, fields.data)
+      } else {
+        await updateDraftMysql(id.data, fields.data)
+      }
     } catch (error) {
-      console.error('[admin/mysql] update draft failed', error)
-      return { ok: false, message: 'No se pudo actualizar el borrador en MySQL. No se permite editar una receta publicada desde el formulario básico.' }
+      console.error('[admin/mysql] update recipe failed', error)
+      return { ok: false, message: error instanceof Error && (
+        error.message.startsWith('En recetas publicadas') ||
+        error.message.startsWith('No modificar') ||
+        error.message.startsWith('La corrección')
+      ) ? error.message : 'No se pudo guardar en MySQL. No se ha modificado la receta.' }
     }
     revalidatePublicRecipes()
     redirect('/admin')
