@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { notFound, permanentRedirect, redirect } from 'next/navigation'
+import { isRetiredListingRedirect, redirectLocation } from '@/lib/content-redirect'
 import { getContentRedirect, getContentPageByPublicPath, getRecipeByPublicPath, getRecipeTranslations, getRelatedRecipes, getPublishedPublicPaths } from '@/lib/public-content'
 import { recipeAlternates, recipeMetaText, recipeSocialImages, withSiteName } from '@/lib/seo'
 import { publicUrl, recipeCanonicalUrl, absoluteUrl } from '@/lib/site'
@@ -116,8 +117,10 @@ export default async function PublicLanguageRoute({ params }: Props) {
 
   const redirectTo = await getContentRedirect(path)
   if (redirectTo) {
-    if (redirectTo.permanent) permanentRedirect(redirectTo.target_path)
-    redirect(redirectTo.target_path)
+    if (isRetiredListingRedirect(path, redirectTo.target_path)) notFound()
+    const location = redirectLocation(redirectTo.target_path)
+    if (redirectTo.permanent) permanentRedirect(location)
+    redirect(location)
   }
 
   notFound()
