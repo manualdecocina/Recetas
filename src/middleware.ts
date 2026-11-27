@@ -96,7 +96,14 @@ export async function middleware(request: NextRequest) {
   }
 
   const home = homepagePath.exec(pathname)
-  if (home) return homepageAgentResponse(request, home[1])
+  if (home) {
+    // Una sola portada por idioma: /es/ → /es, que es la canónica.
+    if (pathname.endsWith('/')) {
+      const url = slashRedirectUrl(request.url, `/${home[1]}`)
+      if (url.href !== request.url) return NextResponse.redirect(url, 301)
+    }
+    return homepageAgentResponse(request, home[1])
+  }
 
   // Rutas públicas: solo se corrige la barra final de las recetas. Todo lo demás pasa igual.
   if (pathname !== '/admin' && !pathname.startsWith('/admin/')) {
